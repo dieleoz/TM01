@@ -1,3 +1,31 @@
+﻿# PARTE GENERAL - APP PUERTO SALGAR - BARRANCABERMEJA
+## Proyecto Vehicular - Concesion APP
+
+**Fecha de actualizacion:** 16/10/2025  
+**Proyecto:** APP Puerto Salgar - Barrancabermeja  
+**Contrato:** Concesion APP  
+**Documento:** PARTE GENERAL  
+**Tipo:** Contrato Principal - Parte General  
+**Estado:** Contenido completo  
+
+---
+
+## 1. INFORMACION DEL DOCUMENTO
+
+| Campo | Valor |
+|-------|-------|
+| **Fecha de actualizacion** | 16/10/2025 |
+| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
+| **Contrato** | Concesion APP |
+| **Responsable** | Administrador Contractual EPC |
+| **Tipo** | Contrato Principal - Parte General |
+| **Numero** | PARTE GENERAL |
+| **Estado** | Contenido completo |
+
+---
+
+## 2. CONTENIDO DEL DOCUMENTO
+
 
 
 
@@ -6931,3 +6959,19 @@ Sin perjuicio de lo establecido en otros apartes de este Contrato, toda la infor
 
 
 Página 288 de 288
+
+
+---
+
+## 3. CONTROL DE VERSIONES
+
+| Version | Fecha | Responsable | Descripcion |
+|:---:|:---:|:---|:---|
+| **v1.0** | 16/10/2025 | Administrador Contractual EPC | Conversion inicial a Markdown - Metodologia Punto 42 |
+
+---
+
+**Estado del documento:** Contenido completo  
+**Version:** 1.0  
+**Responsable:** Administrador Contractual EPC  
+**Proxima actualizacion:** Segun necesidad contractual
