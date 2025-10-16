@@ -1,30 +1,67 @@
-﻿# PARTE ESPECIAL C1 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿# CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP
+## PROYECTO PUERTO SALGAR - BARRANCABERMEJA
+### PARTE ESPECIAL (C1 - ADENDA 6)
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** PARTE ESPECIAL C1  
-**Tipo:** Contrato Principal - Parte Especial  
-**Estado:** Contenido completo  
+**República de Colombia**  
+**Ministerio de Transporte**  
+**Agencia Nacional de Infraestructura (ANI)**
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## ⚠️ JERARQUÍA CONTRACTUAL
+
+> **IMPORTANTE:** Conforme a la Sección 19.15 de la Parte General, esta **Parte Especial PRIMA** sobre todos los demás documentos del contrato en lo expresamente regulado en su contenido.
+
+---
+
+## INFORMACIÓN DEL DOCUMENTO
 
 | Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
+|:------|:------|
+| **Tipo de documento** | Parte Especial del Contrato de Concesión |
+| **Concedente** | Agencia Nacional de Infraestructura (ANI) |
+| **Concesionario** | [Por definir en Sección 3.1(b)] |
+| **Corredor** | Troncal del Magdalena Medio |
+| **Esquema** | APP (Asociación Público Privada) |
+| **Páginas totales** | ~60 |
+| **Adenda** | Adenda 6 (última versión) |
+| **Fecha** | [Fecha de suscripción] |
+| **Versión** | v1.0 |
+| **Estado** | ✅ Vigente |
+| **Archivo fuente** | PARTE ESPECIAL C1 ADENDA 6 SIN MARCAS.txt |
+| **Fecha conversión** | 16/10/2025 |
 | **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Contrato Principal - Parte Especial |
-| **Numero** | PARTE ESPECIAL C1 |
-| **Estado** | Contenido completo |
 
 ---
 
-## 2. CONTENIDO DEL DOCUMENTO
+## RELACIÓN CON PARTE GENERAL
+
+Esta Parte Especial:
+- ✅ **Complementa** las secciones de la Parte General con datos específicos del proyecto
+- ✅ **Modifica** ciertas disposiciones de la Parte General cuando se indica expresamente
+- ✅ **Desarrolla** aspectos económicos, técnicos y operativos particulares del proyecto
+- ⚠️ **Prima** sobre la Parte General en caso de contradicción (Sección 19.15)
+
+Para consultar las **reglas generales** del contrato → Ver [Parte General](1_Parte_General_v1.0.md)
+
+---
+
+## 📑 TABLA DE CONTENIDOS
+
+| Capítulo | Título | Página |
+|:---------|:-------|:------:|
+| **I** | [Reglas de Interpretación](#capítulo-i---reglas-de-interpretación) | 4 |
+| **II** | [Tabla de Referencias a la Parte General](#capítulo-ii---tabla-de-referencias) | 5 |
+| **III** | [Aspectos Generales](#capítulo-iii---aspectos-generales) | 24 |
+| **IV** | [Aspectos Económicos del Contrato](#capítulo-iv---aspectos-económicos) | 32 |
+| **V** | [Etapa Preoperativa](#capítulo-v---etapa-preoperativa) | 50 |
+| **VI** | [Sanciones y Esquemas de Apremio](#capítulo-vi---sanciones-y-apremio) | 52 |
+| **VII** | [Garantías](#capítulo-vii---garantías) | 58 |
+| **VIII** | [Cesión de Licencias y Permisos Ambientales](#capítulo-viii---cesión-licencias-ambientales) | 63 |
+
+---
+
+## 2. CONTENIDO DEL CONTRATO
 
 
 
@@ -3778,15 +3815,42 @@ Cesión Total
 
 ---
 
-## 3. CONTROL DE VERSIONES
+## RELACIÓN CON OTROS DOCUMENTOS
 
-| Version | Fecha | Responsable | Descripcion |
-|:---:|:---:|:---|:---|
-| **v1.0** | 16/10/2025 | Administrador Contractual EPC | Conversion inicial a Markdown - Metodologia Punto 42 |
+### Documentos Complementarios
+
+| Documento | Descripción | Ubicación |
+|:----------|:------------|:----------|
+| [Parte General](1_Parte_General_v1.0.md) | Reglas generales del contrato | I. Contrato General |
+| [AT1 - Alcance](../II.%20Apendices%20Tecnicos/AT1_Alcance_Proyecto_v1.0.md) | Alcance del Proyecto | II. Apéndices Técnicos |
+| [AT2 - O&M](../II.%20Apendices%20Tecnicos/AT2_Operacion_Mantenimiento_v1.0.md) | Operación y Mantenimiento | II. Apéndices Técnicos |
+| [AT4 - Indicadores](../II.%20Apendices%20Tecnicos/AT4_Indicadores_v1.0.md) | Indicadores de Desempeño | II. Apéndices Técnicos |
+| [AF1 - Info Financiera](../II.%20Apendices%20Tecnicos/AF1_Informacion_Financiera_v1.0.md) | Información Financiera | II. Apéndices Técnicos |
 
 ---
 
-**Estado del documento:** Contenido completo  
-**Version:** 1.0  
+## CONTROL DE VERSIONES
+
+| Versión | Fecha | Descripción | Aprobado por |
+|:-------:|:------|:------------|:-------------|
+| v1.0 | [Fecha suscripción] | Versión inicial Parte Especial (Adenda 6) | ANI / Concesionario |
+| v1.1 | 16/10/2025 | Conversión a Markdown con Metodología Punto 42 | Administrador Contractual EPC |
+
+---
+
+## NOTAS FINALES
+
+**Estado del documento:** ✅ Contenido completo  
+**Última actualización:** 16/10/2025  
 **Responsable:** Administrador Contractual EPC  
-**Proxima actualizacion:** Segun necesidad contractual
+**Metodología aplicada:** Punto 42 v1.0  
+**Jerarquía:** Nivel 1 (Prima sobre todos los documentos)  
+
+**Referencia:** Ver Sección 19.15 de la Parte General para orden de prelación completo
+
+---
+
+**Fin del documento - Parte Especial**  
+*Corredor: Troncal del Magdalena Medio*  
+*Puerto Salgar - San Roque: 259.6 km*  
+*Conversión a Markdown: 16 de octubre de 2025*
