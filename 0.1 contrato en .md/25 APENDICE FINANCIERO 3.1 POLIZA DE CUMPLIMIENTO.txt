@@ -1,0 +1,429 @@
+AGENCIA NACIONAL DE INFRAESTRUCTURA ANI PÓLIZA ÚNICA DE SEGURO DE CUMPLIMIENTO PARA CONTRATOS ESTATALES
+CARÁTULA
+
+1. CIUDAD Y FECHA DE EXPEDICIÓN
+2. PÓLIZA NÚMERO
+3. INTERMEDIARIO
+4. ASEGURADORA
+a) Nombre
+b) NIT
+c) Dirección
+5. CONTRATISTA, TOMADOR DEL SEGURO
+a) Nombre
+b) NIT
+c) Dirección
+6. ENTIDAD ASEGURADA (AGENCIA NACIONAL DE INFRAESTRUCTURA)
+a) Nombre
+b) NIT
+c) Dirección
+7. ENTIDAD BENEFICIARIA (AGENCIA NACIONAL DE INFRAESTRUCTURA)
+a) Nombre
+b) NIT
+c) Dirección
+8. AMPAROS OTORGADOS
+9. LÍMITES ASEGURADOS OTORGADOS POR CADA AMPARO
+10. VIGENCIA DE CADA UNO DE LOS AMPAROS OTORGADOS
+a) Desde         a las 00:00 horas
+b) Hasta          a las 00:00 horas
+c) Días
+11. IDENTIFICACIÓN Y OBJETO DEL CONTRATO GARANTIZADO POR EL SEGURO
+12. CONDICIONES PARTICULARES DEL SEGURO
+13. PRIMA POR CADA UNO DE LOS AMPAROS OTORGADOS (TASA DISCRIMINADA)
+14. PRIMA TOTAL DE TODOS LOS AMPAROS CONTRATADOS
+15. IVA.
+16. PRIMA FINAL A PAGAR POR EL CONTRATISTA TOMADOR DEL SEGURO Y FECHA DE PAGO
+17. DIRECCIÓN DE NOTIFICACIONES Y COBROS
+18. CIUDAD
+19. ANEXOS
+20. FIRMA AUTORIZADA
+
+
+1
+
+EL PAGO DE LA PRIMA CORRERÁ A CARGO DEL CONTRATISTA, TOMADOR DEL SEGURO. LA MORA EN EL PAGO DE LA PRIMA DE LA PÓLIZA O DE LOS CERTIFICADOS O ANEXOS QUE SE EXPIDAN CON FUNDAMENTO EN ELLA, NO PRODUCIRÁ LA TERMINACIÓN AUTOMÁTICA DEL CONTRATO, SIN PERJUICIO DEL DERECHO, EN CABEZA DE LA ASEGURADORA, DE EXIGIR EL PAGO DE LA PRIMA Y DE LOS GASTOS CAUSADOS CON OCASIÓN DE LA EXPEDICIÓN DEL CONTRATO, TODO ELLO DE CONFORMIDAD CON LO ESTABLECIDO EN EL ART. 7 DE LA LEY 1150 DE 2007 Y EN LA SECCION 3 DEL DECRETO 1082 DE 2015.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2
+
+AGENCIA NACIONAL DE INFRAESTRUCTURA ANI PÓLIZA ÚNICA DE SEGURO DE CUMPLIMIENTO PARA CONTRATOS ESTATALES
+
+ÍNDICE
+
+SECCIÓN I: AMPAROS
+
+1. AMPARO DE SERIEDAD DE LA OFERTA
+2. AMPARO DE CUMPLIMIENTO DEL CONTRATO
+3. AMPARO PARA EL PAGO DE SALARIOS, PRESTACIONES SOCIALES LEGALES E INDEMNIZACIONES LABORALES
+4. AMPARO DE ESTABILIDAD Y CALIDAD DE LA OBRA
+5. AMPARO  DE  CALIDAD  Y  CORRECTO  FUNCIONAMIENTO  DE  LOS  BIENES SUMINISTRADOS
+6. AMPARO DE CALIDAD DEL SERVICIO
+7. OTROS AMPAROS
+8. INDEPENDENCIA DE LOS AMPAROS
+9. CONTRATOS CON PLAZO MAYOR A CINCO (5) AÑOS
+
+SECCIÓN II: EXCLUSIONES
+1. CAUSA EXTRAÑA
+2. DAÑOS A BIENES NO DESTINADOS AL CONTRATO
+3. EL USO INDEBIDO O INADECUADO O LA FALTA DE MANTENIMIENTO
+4. DETERIORO NORMAL DE LOS BIENES
+
+SECCIÓN III: CONDICIONES GENERALES
+1. VIGENCIA
+2.  EFECTIVIDAD DE LA GARANTÍA
+2.1. EN EL EVENTO DE CADUCIDAD
+2.2. PARA HACER EFECTIVO EL PAGO DE MULTAS
+
+3
+
+2.3. EN LOS DEMÁS EVENTOS
+3.  DEMOSTRACIÓN DEL SINIESTRO Y DE LA CUANTÍA A INDEMNIZAR
+4.  SUMA ASEGURADA
+5.  PAGO DE SINIESTROS
+6.  PROCESO DE RESPONSABILIDAD FISCAL
+7.  COMPENSACIÓN DE OBLIGACIONES
+8. SUBROGACIÓN
+9.  CESIÓN DEL CONTRATO
+10. NO TERMINACIÓN POR FALTA DE PAGO DE LA PRIMA
+11. IRREVOCABILIDAD
+12. INDIVISIBILIDAD DE LA GARANTÍA - EXCEPCIONES
+13. CONDUCTA DEL CONTRATISTA, TOMADOR DEL SEGURO
+14. NOTIFICACIÓN DE LOS ACTOS ADMINISTRATIVOS Y RECURSOS
+15. MODIFICACIONES
+16. LLAMAMIENTO EN GARANTÍA
+17. VIGILANCIA
+18. COASEGURO
+19. PRESCRIPCIÓN
+20. ALTERACIONES O ADICIONES
+21. SOLUCIÓN DE CONFLICTOS
+22. NOTIFICACIONES
+23. DOMICILIO
+SECCIÓN IV: ANEXO
+
+1. AMPARO DE PROVISIÓN DE RESPUESTOS, ACCESORIOS E INSUMOS
+
+
+
+
+
+
+
+
+
+4
+
+PÓLIZA ÚNICA DE SEGURO DE CUMPLIMIENTO PARA CONTRATOS ESTATALES A FAVOR DE LA AGENCIA NACIONAL DE INFRAESTRUCTURA ANI
+
+             ,  SOCIEDAD  LEGALMENTE  ESTABLECIDA  EN  COLOMBIA  Y DEBIDAMENTE AUTORIZADA  POR LA SUPERINTENDENCIA FINANCIERA PARA OPERAR EN EL PAÍS, LA CUAL EN LO SUCESIVO SE DENOMINARÁ LA ASEGURADORA, OTORGA A FAVOR DE LA AGENCIA NACIONAL DE INFRAESTRUCTURA ANI , QUE EN LO SUCESIVO SE DENOMINARÁ  LA  ANI,  ENTIDAD  ASEGURADA  Y  BENEFICIARIA,  LOS  AMPAROS ESPECIFICADOS EN LA CARÁTULA DE ESTA PÓLIZA CON SUJECIÓN, EN SU ALCANCE Y CONTENIDO, A LAS CONDICIONES GENERALES Y PARTICULARES DE LA MISMA Y SIN EXCEDER  EL  CORRESPONDIENTE  VALOR  ASEGURADO,  DE  ACUERDO  CON  LO ESTABLECIDO EN EL ARTÍCULO 1079 DEL CÓDIGO DE COMERCIO Y EN EL DECRETO 1082 DE 2015, SEGÚN LAS DEFINICIONES Y ALCANCE QUE DE LOS RESPECTIVOS AMPAROS A CONTINUACIÓN SE ESTIPULAN:
+
+SECCIÓN I. AMPAROS
+
+1.    AMPARO DE SERIEDAD DE LA OFERTA
+MEDIANTE ESTE AMPARO SE GARANTIZA EL PAGO A LA ANI DE LA SANCIÓN QUE SE DERIVE DEL INCUMPLIMIENTO DE LA OFERTA, EN LOS SIGUIENTES EVENTOS:
+
+-  LA NO AMPLIACIÓN DE LA VIGENCIA DE LA GARANTÍA DE SERIEDAD DE LA OFERTA CUANDO EL PLAZO PARA LA ADJUDICACIÓN O PARA SUSCRIBIR EL CONTRATO ES PRORROGADO, SIEMPRE QUE TAL PRÓRROGA SEA INFERIOR A TRES MESES.
+-  EL RETIRO DE LA OFERTA DESPUÉS DE VENCIDO EL PLAZO FIJADO PARA LA PRESENTACIÓN DE LAS PROPUESTAS.
+-  LA  NO  SUSCRIPCIÓN  DEL  CONTRATO  SIN  JUSTA  CAUSA  POR  PARTE  DEL ADJUDICATARIO.
+-  LA FALTA DE OTORGAMIENTO POR PARTE DEL PROPONENTE SELECCIONADO, DE LA GARANTÍA DE CUMPLIMIENTO DEL CONTRATO.
+LA SUMA ASEGURADA ESTABLECIDA PARA EL AMPARO DE SERIEDAD DE LA OFERTA TIENE CARÁCTER PUNITIVO O SANCIONATORIO.
+
+2.    AMPARO DE CUMPLIMIENTO DEL CONTRATO
+
+MEDIANTE ESTE AMPARO SE CUBRE A LA ANI CONTRA LOS PERJUICIOS DERIVADOS DE:
+(a) EL INCUMPLIMIENTO TOTAL O PARCIAL DE LAS OBLIGACIONES NACIDAS DEL CONTRATO, CUANDO EL INCUMPLIMIENTO ES IMPUTABLE AL CONTRATISTA.
+
+5
+
+(b) EL    CUMPLIMIENTO TARDÍO O DEFECTUOSO DEL CONTRATO, CUANDO EL INCUMPLIMIENTO ES IMPUTABLE AL CONTRATISTA.
+(c) LOS DAÑOS IMPUTABLES AL CONTRATISTA POR ENTREGAS PARCIALES DE LA OBRA, CUANDO EL CONTRATO NO PREVÉ ENTREGAS PARCIALES.
+(d) EL PAGO DEL VALOR DE LAS MULTAS Y LA CLÁUSULA PENAL PECUNIARIA QUE SE HAYAN PACTADO EN EL CONTRATO GARANTIZADO.
+
+LA INDEMNIZACIÓN TOTAL A QUE HUBIERE LUGAR NO EXCEDERÁ, EN NINGÚN CASO, LA SUMA ASEGURADA ESTABLECIDA PARA EL EFECTO.
+3.    AMPARO PARA EL PAGO DE SALARIOS, PRESTACIONES SOCIALES LEGALES E INDEMNIZACIONES LABORALES
+MEDIANTE ESTE AMPARO, SE CUBRE A LA ANI CONTRA LOS PERJUICIOS OCASIONADOS POR  EL  INCUMPLIMIENTO  DE  LAS  OBLIGACIONES  LABORALES  LEGALES  DEL CONTRATISTA, DERIVADAS DE LA CONTRATACIÓN DEL PERSONAL UTILIZADO EN EL TERRITORIO NACIONAL PARA LA EJECUCIÓN DEL CONTRATO AMPARADO.
+
+LA PRESENTE COBERTURA OPERA RESPECTO DE LOS EVENTOS EN QUE PUEDA PREDICARSE LA SOLIDARIDAD PATRONAL DEL ASEGURADO, DE CONFORMIDAD CON LO CONSIGNADO EN EL ARTÍCULO 34 DEL CÓDIGO SUSTANTIVO DEL TRABAJO.
+
+ESTA GARANTÍA NO SE APLICARÁ PARA LOS CONTRATOS QUE SE EJECUTEN EN SU TOTALIDAD FUERA DEL TERRITORIO NACIONAL POR PERSONAL CONTRATADO BAJO UN RÉGIMEN JURÍDICO DISTINTO AL COLOMBIANO.
+
+LA ASEGURADORA REALIZARÁ LOS PAGOS EN LA MEDIDA EN QUE CADA UNO DE LOS TRABAJADORES ACREDITE ANTE LA ANI SU DERECHO Y EL VALOR ASEGURADO SE IRÁ DISMINUYENDO EN LA MEDIDA EN QUE SE VAYAN EJECUTANDO LOS PAGOS, HASTA AGOTARLO, SI A ELLO HUBIERE LUGAR.
+4.    AMPARO DE ESTABILIDAD Y CALIDAD DE LA OBRA
+
+MEDIANTE ESTE AMPARO SE CUBRE A LA ANI CONTRA LOS PERJUICIOS QUE SE LE OCASIONEN COMO CONSECUENCIA DE CUALQUIER TIPO DE DAÑO O DETERIORO, IMPUTABLE AL CONTRATISTA, SUFRIDO POR LA OBRA ENTREGADA A SATISFACCIÓN.
+
+ESTE AMPARO COMENZARÁ SU VIGENCIA A PARTIR DE LA EXPEDICIÓN DEL ACTA DE TERMINACIÓN DE LA ETAPA, PERIODO CONTRACTUAL, O UNIDAD FUNCIONAL, SEGÚN SEA EL CASO, CON LA RESPECTIVA CONSTANCIA DE RECIBO A SATISFACCIÓN POR LA ANI.
+
+
+
+
+6
+
+EN  NINGÚN  CASO  SE  PRESENTARÁ  SOLUCIÓN  DE  CONTINUIDAD  ENTRE  LA TERMINACIÓN DE  LA  COBERTURA BAJO  EL  AMPARO DE  CUMPLIMIENTO Y  LA INICIACIÓN DE LA COBERTURA DEL PRESENTE AMPARO.
+5.    AMPARO DE CALIDAD Y CORRECTO FUNCIONAMIENTO DE LOS BIENES SUMINISTRADOS
+
+MEDIANTE ESTE AMPARO SE CUBRE A LA ANI CONTRA LOS PERJUICIOS IMPUTABLES AL CONTRATISTA GARANTIZADO, (I) DERIVADOS DE LA MALA CALIDAD O DEFICIENCIAS TÉCNICAS  DE  LOS  BIENES  POR  ÉL  SUMINISTRADOS,  DE  ACUERDO  CON  LAS ESPECIFICACIONES  TÉCNICAS  ESTABLECIDAS  EN  EL  CONTRATO,  O  (II)  POR  EL INCUMPLIMIENTO DE LOS PARÁMETROS O NORMAS TÉCNICAS ESTABLECIDAS PARA EL RESPECTIVO BIEN.
+ESTE AMPARO COMENZARÁ SU VIGENCIA A PARTIR DE LA EXPEDICIÓN DEL ACTA DE ENTREGA DE LOS BIENES.
+EN  NINGÚN  CASO  SE  PRESENTARÁ  SOLUCIÓN  DE  CONTINUIDAD  ENTRE  LA TERMINACIÓN DE  LA  COBERTURA BAJO  EL  AMPARO DE  CUMPLIMIENTO Y  LA INICIACIÓN DE LA COBERTURA DEL PRESENTE AMPARO.
+6.    AMPARO DE CALIDAD DEL SERVICIO
+MEDIANTE ESTE AMPARO SE CUBRE A LA ANI CONTRA LOS PERJUICIOS SUFRIDOS POR ÉSTA,  IMPUTABLES  AL  CONTRATISTA,  QUE  SURJAN  CON  POSTERIORIDAD  A  LA TERMINACIÓN DEL CONTRATO Y QUE SE DERIVEN DE: (I) LA MALA CALIDAD O INSUFICIENCIA DE LOS PRODUCTOS ENTREGADOS CON OCASIÓN DE UN CONTRATO DE CONSULTORÍA, O (II) LA MALA CALIDAD DEL SERVICIO PRESTADO, TENIENDO EN CUENTA LAS CONDICIONES PACTADAS EN EL CONTRATO.
+
+ESTE AMPARO COMENZARÁ SU VIGENCIA A PARTIR DEL ACTA DE ENTREGA DEL SERVICIO CONTRATADO.
+EN  NINGÚN  CASO  SE  PRESENTARÁ  SOLUCIÓN  DE  CONTINUIDAD  ENTRE  LA TERMINACIÓN DE  LA  COBERTURA BAJO  EL  AMPARO DE  CUMPLIMIENTO Y  LA INICIACIÓN DE LA COBERTURA DEL PRESENTE AMPARO.
+
+7.   OTROS AMPAROS
+ADICIONALMENTE, EN LA MEDIDA EN QUE FUEREN EXIGIDOS POR LA ANI DENTRO DEL PLIEGO DE LICITACIÓN, LA ASEGURADORA OTORGARÁ LOS AMPAROS REQUERIDOS PARA  CUBRIR  LOS  DEMÁS  INCUMPLIMIENTOS  DE  OBLIGACIONES  QUE  LA  ANI CONSIDERA DEBEN SER AMPARADOS DE MANERA PROPORCIONAL Y ACORDE A LA
+
+
+7
+
+NATURALEZA DEL CONTRATO Y QUE SE DEFINAN EN LA CARÁTULA O EN LOS ANEXOS QUE SE EXPIDAN A LA PRESENTE PÓLIZA.
+8.    INDEPENDENCIA DE LOS AMPAROS
+
+LOS AMPAROS DE LA PÓLIZA SON INDEPENDIENTES UNOS DE OTROS RESPECTO TANTO DE LOS RIESGOS COMO DE LOS VALORES ASEGURADOS. ESTOS SON POR LO TANTO EXCLUYENTES ENTRE SÍ Y NO SE PUEDEN ACUMULAR.
+
+9.    CONTRATOS CON PLAZO MAYOR A CINCO (5) AÑOS
+
+EN TRATÁNDOSE DE CONTRATOS CON UN PLAZO MAYOR A CINCO (5) AÑOS Y EN LOS CUALES EL PROYECTO SE DIVIDA EN ETAPAS, PERÍODOS CONTRACTUALES O UNIDADES FUNCIONALES  SUBSIGUIENTES  Y  DIFERENCIADAS,  CADA  ETAPA  DEL  CONTRATO, PERIODO CONTRACTUAL O UNIDAD FUNCIONAL REQUERIRÁ DE UNA GARANTÍA INDEPENDIENTE. EN TAL EVENTO, LA PÓLIZA PARA LA ETAPA O PERIODO CONTRACTUAL INDEPENDIENTE, INCLUIRÁ LAS OBLIGACIONES DE OPERACIÓN Y MANTENIMIENTO DE AQUELLAS UNIDADES FUNCIONALES RESPECTO DE LAS CUALES SE HAYA SUSCRITO ACTA DE TERMINACIÓN DE LA UNIDAD FUNCIONAL AL CONTRATISTA.
+
+SIN PERJUICIO DEL PRINCIPIO DE INDEPENDENCIA DE LOS AMPAROS PREVISTO EN EL ARTÍCULO 2.2.1.2.3.2.1 DEL DECRETO 1082 DE 2015, EN TRATÁNDOSE DE DICHOS CONTRATOS, LA VIGENCIA DE LOS AMPAROS POSTCONTRACTUALES INICIARÁ AL FINALIZAR LA ETAPA DE EJECUCIÓN DEL CONTRATO O PERÍODO CONTRACTUAL O UNIDAD FUNCIONAL RESPECTIVO, DE CONFORMIDAD CON LO CONSIGNADO EN LA CORRESPONDIENTE EL ACTA DE ENTREGA. POR LO TANTO, EN TALES CASOS, LA COBERTURA  POSTCONTRACTUAL  PODRÁ  CORRER  SIMULTÁNEAMENTE  CON  LA COBERTURA CORRESPONDIENTE A LOS AMPAROS CONTRACTUALES DE OTRAS ETAPAS, PERÍODOS CONTRACTUALES O UNIDADES FUNCIONALES.
+
+PARÁGRAFO.  LAS  GARANTÍAS  QUE  PARA  AMPARAR  UNIDADES  FUNCIONALES LLEGAREN A REQUERIRSE BAJO EL CONTRATO OBJETO DE LA PRESENTE PÓLIZA, SE OTORGARÁN COMO ANEXO A LA MISMA Y CON ESTRICTA SUJECIÓN A LOS TÉRMINOS Y CONDICIONES DE ESTA.
+SECCIÓN II. EXCLUSIONES
+
+LOS AMPAROS PREVISTOS EN LA PRESENTE PÓLIZA NO OPERAN EN LOS SIGUIENTES CASOS:
+1.   CAUSA EXTRAÑA
+EN EL EVENTO DE FUERZA MAYOR, CASO FORTUITO, EL HECHO DE UN TERCERO O LA CULPA EXCLUSIVA DE LA VICTIMA.
+8
+
+2.    DAÑOS A BIENES NO DESTINADOS AL CONTRATO
+
+DAÑOS CAUSADOS POR EL CONTRATISTA A LOS BIENES DE LA ANI NO DESTINADOS AL CONTRATO.
+
+3.    EL USO INDEBIDO O INADECUADO O LA FALTA DE MANTENIMIENTO
+EL USO INDEBIDO O INADECUADO O LA FALTA DE MANTENIMIENTO PREVENTIVO A QUE ESTÁ OBLIGADA LA ANI.
+
+4.    DETERIORO NORMAL DE LOS BIENES
+
+EL DETERIORO NORMAL QUE SUFRAN LOS BIENES ENTREGADOS CON OCASIÓN DEL CONTRATO GARANTIZADO, COMO CONSECUENCIA DEL TRANSCURSO DEL TIEMPO.
+SECCIÓN III. CONDICIONES GENERALES
+
+1.   VIGENCIA
+La vigencia de los amparos otorgados por la presente póliza se hará constar en la carátula de la misma o mediante cláusulas o anexos, según la naturaleza de cada uno de ellos.
+
+2.    EFECTIVIDAD DE LA GARANTÍA
+Para lograr la efectividad de cualquiera de los amparos otorgados en esta póliza, a LA ANI le corresponderá demostrar la ocurrencia del siniestro y acreditar la cuantía de la pérdida, previo agotamiento del derecho de defensa y, con sujeción al debido proceso que les asiste tanto al contratista, como a LA ASEGURADORA, de conformidad con las normas legales vigentes. En lo tocante con el amparo de seriedad de la oferta y respecto de las multas, no le será exigible a LA ANI acreditar la cuantía de la pérdida, en la medida en que la suma asegurada para dicho amparo tiene carácter punitivo o sancionatorio y en lo que respecta a la cláusula penal pecuniaria se trata de una estimación anticipada del perjuicio.
+
+El procedimiento que debe seguir LA ANI, para hacer efectivos los amparos otorgados por esta póliza, será el siguiente:
+
+2.1. En el evento de Caducidad
+
+Una vez agotado el debido proceso y garantizados los derechos de defensa y contradicción  del  contratista  y  de  LA  ASEGURADORA,  LA  ANI  proferirá  el
+9
+
+correspondiente acto administrativo debidamente motivado en el cual, además de la declaratoria de caducidad, procederá a hacer efectiva la cláusula penal si esta se encuentra pactada, o a cuantificar el monto del perjuicio y a ordenar tanto al contratista como a LA ASEGURADORA el pago de los mismos. En tal eventualidad el acto administrativo constituye el siniestro. De conformidad con las normas legales el acto administrativo deberá ser notificado tanto al contratista como a LA ASEGURADORA.
+2.2. Para hacer efectivo el Pago de Multas
+
+En caso de que deba hacerse efectivo el pago de multas, una vez agotado el debido proceso y garantizados los derechos de defensa y contradicción del contratista y de LA ASEGURADORA, LA ANI proferirá el correspondiente acto administrativo, debidamente motivado que declare el incumplimiento y mediante el cual impondrá la multa y ordenará el pago de la misma tanto al contratista como a LA ASEGURADORA. Para este evento el acto administrativo constituye el siniestro. De conformidad con las normas legales el acto administrativo deberá ser notificado tanto al contratista como a LA ASEGURADORA.
+
+2.3. En los demás Eventos
+En  los demás casos de  incumplimiento, una vez agotado el debido proceso y garantizados  los  derechos de  defensa y contradicción  del  contratista  y de  LA ASEGURADORA, LA ANI proferirá el correspondiente acto administrativo debidamente motivado en el cual declarará el incumplimiento, y procederá a cuantificar el monto de la pérdida o a hacer efectiva la cláusula penal si ella está pactada y a ordenar tanto al contratista como a LA ASEGURADORA el pago de la misma. Para estos eventos el acto administrativo constituye la reclamación. De conformidad con las normas legales el acto administrativo deberá ser notificado tanto al contratista como a LA ASEGURADORA.
+
+3.    DEMOSTRACIÓN DEL SINIESTRO Y DE LA CUANTÍA A INDEMNIZAR
+
+Se demostrará el siniestro para el caso del numeral 2.1., mediante notificación escrita fehaciente que dirija LA ANI a LA ASEGURADORA, acompañada del correspondiente acto administrativo debidamente motivado, ejecutoriado y en firme, por el cual se declare la caducidad del contrato y del acta de liquidación del mismo o de la resolución ejecutoriada mediante la cual se adopte su liquidación unilateral.
+Se demostrará el siniestro para el caso del numeral 2.2., mediante notificación escrita fehaciente que dirija LA ANI a LA ASEGURADORA, acompañada de la copia auténtica del acto o actos administrativos debidamente motivados, ejecutoriados y en firme, por el cual o los cuales se ordene el pago o los pagos respectivos.
+
+Se demostrará el siniestro para los casos previstos en el numeral 2.3., mediante notificación escrita fehaciente que dirija LA ANI a LA ASEGURADORA, acompañada de
+10
+
+una copia del acto o actos administrativos debidamente motivados, ejecutoriados y en firme, en el que o en los que se hubieren hecho efectivos el amparo o los amparos correspondientes, y hubiese sido cuantificada la pérdida sufrida por LA ANI.
+Se podrá probar la cuantía de la pérdida, según el caso: a) Con el acta de liquidación del contrato; b) con el acto administrativo en firme de liquidación unilateral del contrato; c) con el acto administrativo en firme que cuantifique los perjuicios para aquellos contratos en los que no procede la liquidación, o d) con el acto administrativo debidamente motivado mediante el cual se reclame el pago de una multa o de la cláusula penal, acompañado del texto de la parte correspondiente del contrato en el cual se hubiere estipulado la aplicación de la misma.
+
+4.   SUMA ASEGURADA
+La responsabilidad de LA ASEGURADORA con respecto a cada uno de los amparos se limita al valor establecido como suma asegurada en la carátula o en los anexos que se expidan con fundamento en ella respecto del mismo y no excederá, en ningún caso, de dicha suma, de conformidad con lo establecido en el artículo 1079 del Código de Comercio.
+
+El valor asegurado podrá restablecerse previa aceptación expresa y por escrito por parte de LA ASEGURADORA, cuando exista solicitud formal de LA ANI o del contratista, dando de esa manera lugar al cobro de prima adicional, la cual deberá ser pagada por el contratista, tomador del seguro.
+
+5.    PAGO DE SINIESTROS
+Sin perjuicio de lo consignado en la Condición General 8, LA ASEGURADORA estará obligada a efectuar el pago del siniestro dentro del mes siguiente a la fecha en que LA ANI acredite su derecho con arreglo a lo consignado en la Condición General 3.
+6.    PROCESO DE RESPONSABILIDAD FISCAL
+
+En virtud de lo dispuesto por el artículo 44 de la Ley 610 de 2000, cuando el contratista fuere objeto de un proceso de responsabilidad fiscal en relación con alguno de los amparos otorgados bajo la presente póliza, y LA ASEGURADORA fuere vinculada a dicho proceso en calidad de tercero civilmente responsable, esta tendrá los mismos derechos y facultades del contratista implicado.
+
+La vinculación deberá surtirse mediante comunicación al representante legal de LA ASEGURADORA o al apoderado de la misma, del auto de apertura del proceso, con indicación del motivo de procedencia de aquella.
+
+
+
+11
+
+7.   COMPENSACIÓN DE OBLIGACIONES
+
+Si al momento de la presentación de la reclamación judicial o extrajudicial del siniestro LA ANI fuere deudora del contratista, con sujeción a lo señalado en el artículo 1714 y siguientes del Código Civil ésta deberá compensar los valores adeudados, disminuyendo en tal forma el monto de la indemnización a pagar por parte de LA ASEGURADORA a LA ANI.
+8.   SUBROGACIÓN
+En virtud del pago de la indemnización, de acuerdo con el artículo 1096 del Código de Comercio, en concordancia con el artículo 203 del Decreto 663 de 1.993 -  Estatuto Orgánico del Sistema Financiero (E.O.S.F.), LA ASEGURADORA se subroga hasta concurrencia del importe pagado por ésta, en los derechos que LA ANI tuviere contra el contratista, derivados de la ocurrencia del siniestro.
+
+9.    CESIÓN DEL CONTRATO
+En el evento en que por incumplimiento del contratista LA ASEGURADORA resolviera continuar, como cesionario, con la ejecución del contrato directamente o a través de un tercero y LA ANI estuviese de acuerdo con ello, el contratista acepta desde el momento de la contratación de la presente póliza, la cesión del contrato a favor de LA ASEGURADORA.
+
+En virtud de esta cesión LA ASEGURADORA está obligada a constituir las garantías previstas en el contrato.
+10.   NO TERMINACIÓN POR FALTA DE PAGO DE LA PRIMA
+
+La presente póliza no terminará por falta de pago de la prima.
+11.   IRREVOCABILIDAD
+
+La presente póliza no será revocable unilateralmente.
+
+12.   INDIVISIBILIDAD DE LA GARANTÍA – EXCEPCIONES
+La presente garantía es en principio indivisible. Sin embargo, con sujeción a lo previsto en el artículo 2.2.1.2.3.1.3 del Decreto 1082 de 2015, en el evento de que el contrato objeto de la misma tenga una duración mayor a cinco (5) años, se amparan los riesgos de la etapa del contrato o período contractual indicado en la carátula, con arreglo a lo previsto en las condiciones particulares de la presente póliza.
+
+
+12
+
+La garantía será independiente para cada etapa del contrato, para cada período contractual o para cada unidad funcional, según sea el caso.
+La vigencia será igual a la de la respectiva etapa, período contractual o unidad funcional y el valor asegurado corresponde a las obligaciones del contratista que nacen y que son exigibles en cada una de las respectivas etapas, períodos contractuales o unidades funcionales.
+Antes del vencimiento de cada etapa del contrato o cada período contractual, el contratista está obligado a prorrogar la póliza o a obtener una nueva que ampare el cumplimiento de sus obligaciones para la etapa del contrato o el periodo contractual subsiguiente, si no lo hiciere se aplicarán las reglas previstas para el restablecimiento de la garantía.
+
+Ahora bien, si LA ASEGURADORA decide no continuar garantizando la etapa del contrato o período contractual subsiguiente, debe informar su decisión por escrito a la ANI seis
+(6) meses antes del vencimiento del plazo de la garantía correspondiente. Este aviso no afecta la garantía de la etapa contractual o período contractual en ejecución. Si LA ASEGURADORA no da el aviso con la anticipación mencionada y el contratista no obtiene una nueva garantía, queda obligada a garantizar la etapa del contrato o el período contractual subsiguiente.
+
+En consecuencia, en la medida en que LA ASEGURADORA cumpla estrictamente con la obligación de informar por escrito a LA ANI con 6 meses de anticipación a la fecha de vencimiento de la garantía, sobre su decisión de no continuar garantizando la etapa subsiguiente del contrato, si el contratista incumpliere la obligación de prorrogar u obtener la póliza para dicha etapa, no se afectará por tal hecho la presente garantía.
+13.   CONDUCTA DEL CONTRATISTA, TOMADOR DEL SEGURO
+
+Se deja constancia de que LA ASEGURADORA no puede oponerse o defenderse de las reclamaciones que presente LA ANI alegando la conducta del tomador del seguro, en especial respecto de las inexactitudes o reticencias en que este hubiere incurrido con ocasión de la contratación del seguro o de cualquier otra excepción que tenga LA ASEGURADORA en contra del contratista.
+14.   NOTIFICACIÓN DE LOS ACTOS ADMINISTRATIVOS Y RECURSOS
+
+LA ANI deberá notificar oportunamente a LA ASEGURADORA los actos administrativos que se profieran por o con ocasión del contrato garantizado, en especial los de declaratoria de  incumplimiento, caducidad  y  liquidación  unilateral del  contrato, teniendo ésta derecho a interponer los recursos legales pertinentes contra dichos actos administrativos, de conformidad con las normas legales vigentes.
+
+
+13
+
+15.   MODIFICACIONES
+En los casos en que el valor del contrato o la vigencia del mismo fueren aumentados o disminuidos o, en general cuando las estipulaciones del contrato original fueren en alguna otra forma modificadas de acuerdo con la ley por las partes, la respectiva modificación del seguro a que hubiere lugar, para que sea exigible a LA ASEGURADORA, deberá haber sido previamente y por escrito aceptada por esta.
+Igualmente, LA ASEGURADORA podrá exigir al contratista, previo a la expedición del anexo respectivo, el pago de la prima y la firma de las contragarantías a que hubiere lugar con motivo de la modificación.
+
+Cualquier ajuste que se estime necesario realizar a la presente póliza, deberá ser fruto de un acuerdo previo entre LA ANI, LA ASEGURADORA y el contratista afianzado tomador del seguro.
+
+Así mismo, cualquier ajuste al contrato que se realice entre la ANI y el contratista afianzado, deberá ser aprobado por LA ASEGURADORA para que pueda obligar a esta.
+16.   LLAMAMIENTO EN GARANTÍA
+
+Cuando la discusión acerca del incumplimiento o no del contrato se ventile en un proceso ordinario o arbitral entre LA ANI y el contratista, LA ASEGURADORA se compromete de antemano a aceptar el llamamiento en garantía que se le haga por LA ANI al interior de dicho proceso.
+
+17.   VIGILANCIA
+LA ASEGURADORA tiene derecho a ejercer la vigilancia del contratista en la ejecución del contrato, para lo cual LA ANI le prestará la colaboración necesaria. En los casos en los cuales el contrato tenga por objeto asuntos relacionados con el orden público y la seguridad nacional, LA ANI podrá prohibir o limitar esta facultad a LA ASEGURADORA.
+
+18.   COASEGURO
+
+En caso de otorgarse la respectiva cobertura bajo la modalidad de coaseguro a que se refiere el artículo 1095 del Código de Comercio, el importe de la indemnización a que haya lugar se distribuirá entre los aseguradores en proporción de las cuantías de sus respectivos seguros, sin que exista solidaridad entre las aseguradoras participantes. En tal virtud, LA ANI reclamará a cada una de las aseguradoras su parte correspondiente de la indemnización, debiendo llamar igualmente a cada una de ellas al procedimiento administrativo o trámite arbitral pertinente desde su inicio, con miras a garantizar los derechos de defensa y contradicción de todas las aseguradoras.
+
+
+14
+
+19.   PRESCRIPCIÓN
+La prescripción de las acciones derivadas del presente contrato se regirá de acuerdo con las normas legales aplicables.
+
+20.   ALTERACIONES O ADICIONES
+
+Cualquier modificación, alteración o adición que se haga a las condiciones impresas de esta Póliza, deberá constar por escrito.
+21.   SOLUCIÓN DE CONFLICTOS
+
+En el caso de diferencias, conflictos o disputas relacionados con la interpretación, ejecución y aplicación de la presente póliza, las partes procurarán acudir a los mecanismos alternativos de solución de conflictos a que alude la Ley 80 de 1.993.
+
+22.   NOTIFICACIONES
+
+Para los efectos del presente contrato cualquier notificación deberá consignarse por escrito, salvo que la ley disponga lo contrario y será prueba suficiente de la notificación, la constancia de la entrega personal al destinatario,  o del envío a éste por correo electrónico o por correo certificado.
+
+23.   DOMICILIO
+
+Sin perjuicio de las disposiciones procesales, para los efectos relacionados con el presente contrato se fija como domicilio de las partes la ciudad de Bogotá D.C. República de Colombia.
+SECCIÓN IV: ANEXO
+
+De acuerdo con el tipo de contrato, en la SECCION I. se deberá incluir el amparo descrito a continuación según sea requerido por la AGENCIA:
+1.    AMPARO DE PROVISIÓN DE REPUESTOS, ACCESORIOS E INSUMOS.
+
+MEDIANTE ESTE AMPARO SE CUBRE A LA ANI CONTRA LOS PERJUICIOS SUFRIDOS POR ÉSTA,  IMPUTABLES  AL  CONTRATISTA,  QUE  SURJAN  CON  POSTERIORIDAD  A  LA TERMINACIÓN DEL CONTRATO Y QUE SE DERIVEN DEL INCUMPLIMIENTO EN EL SUMINISTRO DE REPUESTOS, ACCESORIOS, E INSUMOS, DE CONFORMIDAD CON LO PREVISTO EN DICHO CONTRATO.
+
+
+
+
+15
+
+ESTE AMPARO COMENZARÁ SU VIGENCIA UNA VEZ SUSCRITA EL ACTA FINAL DEL RESPECTIVO  CONTRATO, SIEMPRE QUE SE HAYA PACTADO LA OBLIGACIÓN DE CONTINUAR SUMINISTRANDO REPUESTOS, ACCESORIOS O INSUMOS.
+EN  NINGÚN  CASO  SE  PRESENTARÁ  SOLUCIÓN  DE  CONTINUIDAD  ENTRE  LA TERMINACIÓN DE  LA  COBERTURA BAJO  EL  AMPARO DE  CUMPLIMIENTO Y  LA INICIACIÓN DE LA COBERTURA DEL PRESENTE AMPARO.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16

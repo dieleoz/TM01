@@ -1,0 +1,143 @@
+# PROYECTO APP PUERTO SALGAR - BARRANCABERMEJA
+# .gitignore - Archivos a excluir de Git
+
+# ==========================================
+# CARPETAS GRANDES Y TEMPORALES
+# ==========================================
+
+# Históricos y backups
+old/
+backup_originales/
+Versiones_Anteriores/
+Datos_Layout_Temporales/
+
+# Archivos temporales de trabajo
+*.tmp
+*.temp
+~$*.docx
+~$*.xlsx
+*.bak
+
+# ==========================================
+# ARCHIVOS DE SISTEMA
+# ==========================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ==========================================
+# HERRAMIENTAS DE DESARROLLO
+# ==========================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Cursor
+.cursor/
+
+# PowerShell
+*.ps1.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Node.js (si se usa)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# DOCUMENTOS CONFIDENCIALES
+# ==========================================
+
+# Credenciales y configuración sensible
+CREDENCIALES_*.md
+*.env
+.env.local
+secrets.json
+credentials.json
+
+# Información financiera privada
+*_CONFIDENCIAL.md
+*_PRIVADO.*
+
+# ==========================================
+# ARCHIVOS GENERADOS
+# ==========================================
+
+# Documentos servidos (generados automáticamente)
+X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/WORD/*.docx
+X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/*.html
+
+# JSON/JS generados (se regeneran con scripts)
+# layout_datos.js
+# datos_wbs_TODOS_items.js
+# criterios_tecnicos_base.js
+
+# ==========================================
+# ARCHIVOS ESPECÍFICOS DEL PROYECTO
+# ==========================================
+
+# Scripts legacy (mantener solo activos)
+scripts/legacy_scripts/
+
+# Reportes antiguos
+Reportes/old/
+
+# Archivos editables grandes (solo mantener versión final)
+02. Contrato Editables V1/
+
+# ==========================================
+# ARCHIVOS DE OFFICE
+# ==========================================
+
+# Temporales de Word/Excel
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+*.tmp
+
+# ==========================================
+# OTROS
+# ==========================================
+
+# Logs
+*.log
+logs/
+
+# Archivos comprimidos grandes
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# Archivos de cache
+.cache/
+*.cache
+
+# Archivos de test
+test_output/
+*.test.md
+
