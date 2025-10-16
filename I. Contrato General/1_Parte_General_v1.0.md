@@ -1,30 +1,60 @@
-﻿# PARTE GENERAL - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿# CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP
+## PROYECTO PUERTO SALGAR - BARRANCABERMEJA
+### PARTE GENERAL
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** PARTE GENERAL  
-**Tipo:** Contrato Principal - Parte General  
-**Estado:** Contenido completo  
+**República de Colombia**  
+**Ministerio de Transporte**  
+**Agencia Nacional de Infraestructura (ANI)**
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## INFORMACIÓN DEL DOCUMENTO
 
 | Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
+|:------|:------|
+| **Tipo de documento** | Parte General del Contrato de Concesión |
+| **Concedente** | Agencia Nacional de Infraestructura (ANI) |
+| **Concesionario** | [Según Parte Especial] |
+| **Esquema** | APP (Asociación Público Privada) |
+| **Páginas totales** | 288 |
+| **Fecha** | [Fecha de suscripción] |
+| **Versión** | v1.0 |
+| **Estado** | ✅ Vigente |
+| **Archivo fuente** | PARTE GENERAL PUBLICAS TRONCAL SIN MARCAS.txt |
+| **Fecha conversión** | 16/10/2025 |
 | **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Contrato Principal - Parte General |
-| **Numero** | PARTE GENERAL |
-| **Estado** | Contenido completo |
 
 ---
 
-## 2. CONTENIDO DEL DOCUMENTO
+## 📑 TABLA DE CONTENIDOS
+
+### Estructura del Documento
+
+| Capítulo | Título | Página |
+|:---------|:-------|:------:|
+| **I** | [Definiciones](#capítulo-i---definiciones) | 13 |
+| **II** | [Aspectos Generales del Contrato](#capítulo-ii---aspectos-generales-del-contrato) | 49 |
+| **III** | [Aspectos Económicos del Contrato](#capítulo-iii---aspectos-económicos-del-contrato) | 59 |
+| **IV** | [Etapa Preoperativa - Generalidades](#capítulo-iv---etapa-preoperativa-generalidades) | 116 |
+| **V** | [Etapa Preoperativa - Contratos](#capítulo-v---etapa-preoperativa-contratos) | 152 |
+| **VI** | [Etapa Preoperativa - Estudios y Diseños](#capítulo-vi---etapa-preoperativa-estudios-y-diseños) | 155 |
+| **VII** | [Etapa Preoperativa - Gestión Predial](#capítulo-vii---etapa-preoperativa-gestión-predial) | 160 |
+| **VIII** | [Etapa Preoperativa - Gestión Social, Ambiental, Redes](#capítulo-viii---etapa-preoperativa-gestión-social-ambiental-redes) | 172 |
+| **IX** | [Etapa de Operación y Mantenimiento](#capítulo-ix---etapa-de-operación-y-mantenimiento) | 182 |
+| **X** | [Sanciones y Esquemas de Apremio](#capítulo-x---sanciones-y-esquemas-de-apremio) | 192 |
+| **XI** | [Cláusulas Excepcionales](#capítulo-xi---cláusulas-excepcionales) | 195 |
+| **XII** | [Garantías y Mecanismos de Cobertura](#capítulo-xii---garantías-y-mecanismos-de-cobertura) | 198 |
+| **XIII** | [Ecuación Contractual y Asignación de Riesgos](#capítulo-xiii---ecuación-contractual-y-riesgos) | 208 |
+| **XIV** | [Circunstancias de Terminación](#capítulo-xiv---circunstancias-de-terminación) | 212 |
+| **XV** | [Solución de Controversias](#capítulo-xv---solución-de-controversias) | 230 |
+| **XVI** | [Supervisión, Inspección, Control](#capítulo-xvi---supervisión-inspección-control) | 239 |
+| **XVII** | [Facultades de la ANI](#capítulo-xvii---facultades-de-la-ani) | 255 |
+| **XVIII** | [Entrega de la Infraestructura y Reversión](#capítulo-xviii---entrega-infraestructura-reversión) | 260 |
+| **XIX** | [Disposiciones Finales](#capítulo-xix---disposiciones-finales) | 271 |
+
+---
+
+## 2. CONTENIDO DEL CONTRATO
 
 
 
@@ -6881,28 +6911,37 @@ Salvo lo previsto expresamente en el Contrato, la falta o demora de cualquiera d
 
 Cuando el presente Contrato señale que el Interventor solicita correcciones o ajustes a documentos y como consecuencia de lo anterior, el Concesionario presenta nuevamente el documento con las correcciones y ajustes sin que el Interventor esté de acuerdo, el Interventor y el Concesionario se reunirán a concluir el documento conjuntamente hasta lograr un acuerdo. Estas reuniones serán presenciales y a las mismas podrán asistir funcionarios de la ANI y los Amigables Componedores, de manera que al cabo de máximo 15 Días Hábiles el documento quede concluido a satisfacción del Concesionario y el Interventor. De persistir el desacuerdo, cualquiera de las Partes podrá acudir al Amigable Componedor para que solucione la controversia.
 
-19.15 Prelación de Documentos
+### 19.15 Prelación de Documentos
 
 El siguiente será el orden de prelación de los documentos que hacen parte del presente Contrato, el cual hará referencia a lo expresamente regulado en el contenido de cada uno de dichos documentos:
 
-Página 286 de 288
+| Nivel | Documento | Descripción | Archivo |
+|:-----:|:----------|:------------|:--------|
+| **1** | **Parte Especial** | Máxima jerarquía - Prima sobre todos los documentos | `2_Parte_Especial_v1.0.md` |
+| **2** | **Parte General** | Segunda jerarquía | `1_Parte_General_v1.0.md` |
+| **3** | Oferta del Concesionario | Propuesta técnica y económica adjudicada | [Según proceso] |
+| **4** | Apéndice Técnico 1 | Alcance del Proyecto | `AT1_Alcance_Proyecto_v1.0.md` |
+| **5** | Apéndice Técnico 9 | Plan de Obras | [Por definir] |
+| **6** | Apéndice Técnico 4 | Indicadores de Desempeño | `AT4_Indicadores_v1.0.md` |
+| **7** | Apéndice Técnico 2 | Condiciones de Operación y Mantenimiento | `AT2_Operacion_Mantenimiento_v1.0.md` |
+| **8** | Apéndice Técnico 5 | Interferencia con Redes | `AT5_Interferencia_Redes_v1.0.md` |
+| **9** | Apéndice Técnico 3 | Especificaciones Generales (incluido su anexo) | `AT3_Especificaciones_Generales_v1.0.md` |
+| **10** | Apéndice Técnico 6 | Gestión Ambiental | `AT6_Gestion_Ambiental_v1.0.md` |
+| **11** | Apéndice Técnico 7 | Gestión Predial (incluidos sus anexos) | `AT7_Gestion_Predial_v1.0.md` |
+| **12** | Apéndice Técnico 8 | Gestión Social | `AT8_Gestion_Social_v1.0.md` |
+| **13** | Apéndice Financiero 1 | Información Financiera | `AF1_Informacion_Financiera_v1.0.md` |
+| **14** | Apéndice Financiero 2 | Cesión Especial de la Retribución | `AF2_Cesion_Especial_Retribucion_v1.0.md` |
+| **15** | Apéndice Financiero 3 | Garantías y Seguros (Pólizas) | `AF3.1-AF3.3_Polizas_v1.0.md` |
+| **16** | Pliego de Condiciones | Con sus adendas y anexos | [Proceso de selección] |
+| **17** | Invitación a Precalificar | | [Proceso de selección] |
 
-Parte Especial Parte General.
-Oferta del Concesionario. Apéndice Técnico 1.
-Apéndice Técnico 9.
-Apéndice Técnico 4.
-Apéndice Técnico 2.
-Apéndice Técnico 5.
-Apéndice Técnico 3 (incluido su anexo). Apéndice Técnico 6.
-Apéndice Técnico 7 (incluidos sus anexos). Apéndice Técnico 8.
-Apéndice Financiero 1.
-Apéndice Financiero 2.
-Apéndice Financiero 3.
-Pliego de Condiciones con sus adendas y anexos. Invitación a Precalificar.
+#### Interpretación de documentos:
 
-En todo caso, los documentos que hacen parte del presente Contrato deberán interpretarse armónicamente y con observancia de la Ley Aplicable, sin perjuicio de lo previsto en la Sección 4.12 de esta Parte General sobre la modificación de Especificaciones Técnicas.
+En todo caso, los documentos que hacen parte del presente Contrato deberán interpretarse **armónicamente** y con observancia de la **Ley Aplicable**, sin perjuicio de lo previsto en la Sección 4.12 de esta Parte General sobre la modificación de Especificaciones Técnicas.
 
-Parágrafo: La matriz de riesgos del Proyecto publicada en el SECOP en ningún caso será vinculante, aplicándose exclusivamente lo señalado en el CAPÍTULO XIII y demás Secciones de este Contrato.
+#### Parágrafo:
+
+La **matriz de riesgos del Proyecto** publicada en el SECOP en ningún caso será vinculante, aplicándose exclusivamente lo señalado en el **CAPÍTULO XIII** y demás Secciones de este Contrato.
 
 19.16 Información Financiera
 
@@ -6963,15 +7002,67 @@ Página 288 de 288
 
 ---
 
-## 3. CONTROL DE VERSIONES
+## CONTROL DE VERSIONES
 
-| Version | Fecha | Responsable | Descripcion |
-|:---:|:---:|:---|:---|
-| **v1.0** | 16/10/2025 | Administrador Contractual EPC | Conversion inicial a Markdown - Metodologia Punto 42 |
+| Versión | Fecha | Descripción | Aprobado por |
+|:-------:|:------|:------------|:-------------|
+| v1.0 | [Fecha suscripción] | Versión inicial del contrato suscrito | ANI / Concesionario |
+| v1.1 | 16/10/2025 | Conversión a Markdown con Metodología Punto 42 | Administrador Contractual EPC |
 
 ---
 
-**Estado del documento:** Contenido completo  
-**Version:** 1.0  
+## REFERENCIAS CRUZADAS
+
+### Documentos relacionados:
+
+#### Contratos:
+- [Parte Especial](2_Parte_Especial_v1.0.md) - Condiciones específicas del proyecto
+- Oferta del Concesionario - [Según proceso de selección]
+
+#### Apéndices Técnicos:
+- [AT1 - Alcance del Proyecto](../II.%20Apendices%20Tecnicos/AT1_Alcance_Proyecto_v1.0.md)
+- [AT2 - Operación y Mantenimiento](../II.%20Apendices%20Tecnicos/AT2_Operacion_Mantenimiento_v1.0.md)
+- [AT3 - Especificaciones Generales](../II.%20Apendices%20Tecnicos/AT3_Especificaciones_Generales_v1.0.md)
+- [AT4 - Indicadores de Desempeño](../II.%20Apendices%20Tecnicos/AT4_Indicadores_v1.0.md)
+- [AT5 - Interferencia con Redes](../II.%20Apendices%20Tecnicos/AT5_Interferencia_Redes_v1.0.md)
+- [AT6 - Gestión Ambiental](../II.%20Apendices%20Tecnicos/AT6_Gestion_Ambiental_v1.0.md)
+- [AT7 - Gestión Predial](../II.%20Apendices%20Tecnicos/AT7_Gestion_Predial_v1.0.md)
+- [AT8 - Gestión Social](../II.%20Apendices%20Tecnicos/AT8_Gestion_Social_v1.0.md)
+
+#### Apéndices Financieros:
+- [AF1 - Información Financiera](../II.%20Apendices%20Tecnicos/AF1_Informacion_Financiera_v1.0.md)
+- [AF2 - Cesión Especial de la Retribución](../II.%20Apendices%20Tecnicos/AF2_Cesion_Especial_Retribucion_v1.0.md)
+- [AF3 - Garantías y Seguros (Pólizas)](../II.%20Apendices%20Tecnicos/AF3.1_Poliza_Cumplimiento_v1.0.md)
+
+### Normativa aplicable:
+
+#### Leyes marco:
+- **Ley 1508 de 2012:** Régimen Jurídico de las Asociaciones Público Privadas
+- **Ley 80 de 1993:** Estatuto General de Contratación de la Administración Pública
+- **Ley 1150 de 2007:** Medidas de eficiencia y transparencia en contratación
+- **Decreto 1082 de 2015:** Decreto Único Reglamentario del Sector Administrativo
+
+#### Normativa ANI:
+- **Decreto 4165 de 2011:** Creación de la Agencia Nacional de Infraestructura
+- Resoluciones y circulares ANI aplicables durante la ejecución
+
+#### Normativa sectorial:
+- Ministerio de Transporte: Resoluciones de tarifas, señalización, peajes
+- INVIAS: Manuales y especificaciones técnicas
+- Ministerio de Ambiente: Normativa ambiental
+
+---
+
+## NOTAS FINALES
+
+**Estado del documento:** ✅ Contenido completo  
+**Última actualización:** 16/10/2025  
 **Responsable:** Administrador Contractual EPC  
-**Proxima actualizacion:** Segun necesidad contractual
+**Metodología aplicada:** Punto 42 v1.0  
+**Proyecto de referencia:** APP La Dorada-Chiriguaná (Férreo) v14.7.6
+
+---
+
+**Fin del documento - Parte General**  
+*Total de páginas originales: 288*  
+*Conversión a Markdown: 16 de octubre de 2025*
