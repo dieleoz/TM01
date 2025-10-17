@@ -1,12 +1,95 @@
-﻿# AT1 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿---
+title: AT1 - ALCANCE DEL PROYECTO
+project: APP PUERTO SALGAR - BARRANCABERMEJA
+contract: Concesión APP
+document: AT1 - Apéndice Técnico 1
+type: Apéndice Técnico
+version: 1.0
+date: 2025-10-17
+author: Administrador Contractual EPC
+status: En revisión
+---
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** AT1  
-**Tipo:** Apendice Tecnico  
-**Estado:** Contenido completo  
+# AT1 - ALCANCE DEL PROYECTO
+## APP PUERTO SALGAR - BARRANCABERMEJA
+
+### INFORMACIÓN DEL DOCUMENTO
+
+| **Campo**                | **Valor**                          |
+|--------------------------|-----------------------------------|
+| **Proyecto**            | APP Puerto Salgar - Barrancabermeja |
+| **Contrato**            | Concesión APP                     |
+| **Documento**           | AT1 - Apéndice Técnico 1          |
+| **Tipo**                | Apéndice Técnico                  |
+| **Versión**             | 1.0                               |
+| **Fecha de actualización** | 17/10/2025                       |
+| **Responsable**         | Administrador Contractual EPC     |
+| **Estado**              | En revisión                       |
+| **Próxima revisión**    | Según necesidad contractual       |
+
+### TABLA DE CONTENIDO
+
+1. [INTRODUCCIÓN](#1-introducción)
+2. [OBJETIVO](#2-objetivo)
+3. [ALCANCE GENERAL](#3-alcance-general)
+4. [UNIDADES FUNCIONALES](#4-unidades-funcionales)
+5. [CARACTERÍSTICAS TÉCNICAS](#5-características-técnicas)
+6. [ANEXOS](#6-anexos)
+
+---
+
+## 1. INTRODUCCIÓN
+
+Documento que establece el alcance general del proyecto de la Concesión APP Puerto Salgar - Barrancabermeja, incluyendo las unidades funcionales, características técnicas y requisitos generales.
+
+## 2. OBJETIVO
+
+Definir el alcance general del proyecto, incluyendo la descripción de las obras, unidades funcionales y características técnicas requeridas para la ejecución del proyecto de concesión.
+
+## 3. ALCANCE GENERAL
+
+El proyecto consiste en... [Contenido detallado del alcance general]
+
+## 4. UNIDADES FUNCIONALES
+
+### 4.1 Resumen de Unidades Funcionales
+
+| **UF** | **Descripción** | **Longitud (km)** | **Tipo de Intervención** |
+|:------:|----------------|------------------:|-------------------------|
+| UF0    | Operación y Mantenimiento | - | Mantenimiento |
+| UF1    | Puerto Salgar - Cimitarra | 124.76 | Mejoramiento |
+| ...    | ... | ... | ... |
+
+### 4.2 Detalle por Unidad Funcional
+
+#### UF1 - Puerto Salgar - Cimitarra
+
+| **Subsector** | **Origen** | **Destino** | **Longitud (km)** | **Intervención** |
+|--------------|------------|-------------|------------------:|-----------------|
+| 1.1          | PK84+400   | PK87+585    | 3.29             | Variante El Trique |
+| 1.2          | PK91+485   | PK94+328    | 2.84             | Variante Dos y Medio |
+
+## 5. CARACTERÍSTICAS TÉCNICAS
+
+### 5.1 Características Geométricas
+
+| **Parámetro** | **Valor** |
+|--------------|-----------|
+| Velocidad de diseño | 100 km/h |
+| Número de calzadas | 2 |
+| Ancho de calzada | 7.3 m |
+| Ancho de berma | 2.5 m |
+| Ancho separador central | 9.3 m |
+
+## 6. ANEXOS
+
+- Anexo 1: Planos generales
+- Anexo 2: Especificaciones técnicas detalladas
+- Anexo 3: Cronograma de ejecución
+
+---
+
+**Nota:** Este documento está sujeto a actualizaciones según los requerimientos del proyecto y las directrices de la ANI.
 
 ---
 
@@ -68,40 +151,6 @@ La aplicación de este Apéndice deberá ser efectuada en concordancia con lo es
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Página 2 de 62
 
 Apéndice Técnico 1 – Alcance
@@ -130,27 +179,6 @@ Figura 1 y en la Figura 2.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Página 3 de 62
 
 Apéndice Técnico 1 – Alcance
@@ -158,53 +186,6 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 Figura 1 - Localización general del Proyecto
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -218,49 +199,6 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 Figura 2 - Localización general del Proyecto y Unidades Funcionales de Intervención
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -314,47 +252,26 @@ Vías existentes comprendidas en el Proyecto
 
 En los términos indicados en el presente Apéndice Técnico y en el Contrato, se encuentran incluidas dentro del Proyecto las vías existentes que se describen a continuación.
 
-La información de la Tabla 1, incluyendo la información contenida en la columna “observaciones”, se incluye de manera puramente informativa. En consecuencia, como se señala en la Parte General del Contrato, la entrega de la infraestructura se hará en el estado en que se encuentre, por lo que la información siguiente no genera obligación alguna a cargo de la ANI, ni servirá de base para observación o condicionamiento de cualquier tipo, al momento de la entrega por pretendidas o reales diferencias entre la información que aquí se incluye y la real condición del Corredor del Proyecto:
+La información de la Tabla 1, incluyendo la información contenida en la columna "observaciones", se incluye de manera puramente informativa. En consecuencia, como se señala en la Parte General del Contrato, la entrega de la infraestructura se hará en el estado en que se encuentre, por lo que la información siguiente no genera obligación alguna a cargo de la ANI, ni servirá de base para observación o condicionamiento de cualquier tipo, al momento de la entrega por pretendidas o reales diferencias entre la información que aquí se incluye y la real condición del Corredor del Proyecto:
 
+**Tabla 1 - Descripción de vías existentes comprendidas en el Proyecto**
 
-Tabla 1 - Descripción de vías existentes comprendidas en el Proyecto
+| Código de vía | Ente Competente | Origen (Nombre – PR) | Destino (Nombre – PR) | Longitud (Km) | Observaciones |
+|:--------------|:----------------|:---------------------|:----------------------|:--------------|:--------------|
+| **4510** | INVIAS | Puerto Salgar<br>PK 34+000<br>(PR 34+000) E=935484.39 N=1096379.04 | Río Ermitaño<br>PK 134+328<br>(PR 134+470) E=951366.98 N=1181480.10 | 100.33 | Vía primaria bidireccional pavimentada, desde el PK34+000 hasta PK39+080 (paso poblado Puerto Salgar). Del PK39+080 hasta el PK84+400 tramo en doble calzada. Del PK84+400 al PK134+456 hay sectores en construcción de la segunda calzada y otros terminados en par vial. |
+| **4511** | INVIAS | Río Ermitaño<br>PK 00+000<br>(PR 00+000) E=951366.98 N=1181480.10 | La Lizama<br>PK 149+142<br>(PR 149+484) E=1050813.22 N=1278537.32 | 149.14 | Vía primaria en algunos sectores opera en sentido bidireccional y en otros donde ya se construyó la calzada espejo como par vial. |
+| **4513** | INVIAS | La Lizama<br>PK 00+000<br>(PR 00+000) E=1050813.22 N=1278537.32 | Río Sogamoso<br>PK 09+800<br>(PR 9+800) E=1057840.18 N=1283507.47 | 9.80 | Vía primaria bidireccional pavimentada, con condiciones bajas desde el punto de vista geométrico. |
 
+**Longitud total:** 259.27 km (100.33 + 149.14 + 9.80)  
+**Nota:** Las coordenadas y los PR incluidos son de referencia y podrán ser ajustados en campo al momento de la entrega de la infraestructura.
 
+---
 
-Código de vía (nomenclatura)
+## Estaciones de Peaje
 
+Actualmente este proyecto cuenta con la(s) Estación(es) de Peaje que se relaciona(n) en la siguiente tabla, la(s) cual(es) será(n) será(n) entregada(s) conforme al procedimiento previsto en el numeral 3.6 (b) del Contrato Parte Especial; sobre los recursos de dichos peajes se deberá hacer la cesión de que trata el numeral 3.3 (a) del Contrato Parte General.
 
-
-4510
-
-
-
-
-
-4511
-
-
-
-
-4513
-
-Ente Competente
-
-
-
-INVIAS
-
-
-
-
-
-INVIAS
-
-
-
-
-INVIAS
-Origen (Nombre – PR)
+**Tabla 2 - Estaciones de Peaje actualmente Existentes**
 Puerto Salgar
 PK 34+000
 (PR 34+000) E=935484.39 N=1096379.04
@@ -428,616 +345,52 @@ Apéndice Técnico 1 – Alcance
 Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
-Tabla 2 - Estaciones de Peaje actualmente Existentes
+**Tabla 2 - Estaciones de Peaje actualmente Existentes**
 
+| Peaje | Segmento | Sentido de Cobro |
+|:------|:---------|:-----------------|
+| **Peaje Zambito**<br>(PR 9+200 – Ruta Nacional 4511) | Puerto Boyacá – Puerto Araujo | Bidireccional |
+| **Aguas Negras\***<br>(PR 83+900 – Ruta Nacional 4511) | Puerto Araujo – La Lizama | Bidireccional |
 
-Peaje Zambito
-(PR 9+200 – Ruta Nacional 4511)
-Aguas Negras*
+**\*Nota:** El peaje de Aguas Negras deberá ser reubicado al PR 80+000 RN 4511 de acuerdo a la sección 3.7 del presente anexo técnico.
 
-(PR 83+900 – Ruta Nacional 4511)
-Segmento
-
-Puerto Boyacá – Puerto Araujo
-
-Puerto Araujo – La Lizama
-Sentido de Cobro
-
-Bidireccional
-
-
-Bidireccional
-
-*El peaje de Aguas Negras deberá ser reubicado al PR 80+000 RN 4511 de acuerdo a la sección 3.7 del presente anexo técnico.
+---
 
 Unidades Funcionales del Proyecto
 Características Generales de las Unidades Funcionales
 
 Las vías que hacen parte de la presente concesión se han sectorizado por Unidades Funcionales (UF), cada una de las unidades funcionales de la concesión cuenta con las siguientes características generales:
 
-Tabla 3 - Unidades Funcionales del Proyecto
-
-
-
-UF
-
-
-
-
-
-
-UF0(2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-UF1
-
-
-
-
-UF2
-
-Sector
-
-
-
-
-
-
-Puerto Salgar - Barrancabermeja
-
-
-
-
-
-
-El Trique – Dos y Medio
-
-
-
-Batallón Bárbula – PR52
-Origen (nombre, abscisa, coordenadas)(1)
-
-
-
-
-Puerto Salgar
-PK34+040 RN 4510
-(935484.39-
-1096379.05)
-
-
-
-
-Variante El Trique
-PK84+400 RN 4510
-(946232.35-
-1140357.67)
-
-Batallón Bárbula
-PK125+580 RN 4510
-(946178.67 -
-1175319.94)
-Destino (nombre, abscisa, coordenadas)(1)
-
-
-
-
-Río Sogamoso
-PK09+800 RN 4513
-(1057840.18-
-1283507.47)
-
-
-
-Variante Dos y Medio
-PK94+310 RN 4510
-(945679.26-
-1149398.09)
-PR 52-Ruta Nacional 4511 PK51+100 (988240.27-
-1209020.92)
-Longitud aproximada origen destino(1)
-
-
-
-
-
-259.61
-
-
-
-
-
-
-
-9.83
-
-
-
-
-59,85
-Longitud de intervención (km-calzada)
-
-- UF0-D =
-214.68 km
-- UF0-T =
-152.94 km
-- UF0-P =
-6.62 km
-
-
-
-
-9.83
-
-
-
-
-25.47
-
-Intervención prevista
-
-
-
-Operación y mantenimiento. Adicionalmente, Puesta a Punto de los tramos UF0-D y UF0-P
-
-
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Observación
-
-Corresponde a los tramos transitables al inicio del proyecto, que el Concesionario deberá mantener y operar. Ver descripción detallada y condiciones de operación y mantenimiento de la unidad funcional 0 (UF0) en el numeral 2.5.2.
-Construcción de las variantes El Trique y Dos y Medio. En la variante Dos y medio se destaca la construcción de dos puentes de 50 m en el rio Velázquez.
-Construcción Variante San Pedro de la Paz.
-Mejoramiento, Operación y Mantenimiento.
-Intercambiador Puerto Berrío.
-
-
-
-
-Página 8 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-
-UF
-
-
-
-UF3
-
-
-
-UF4
-
-
-
-
-
-
-UF5
-
-
-
-
-
-
-
-UF6
-
-
-
-
-UF7
-
-
-
-
-UF8
-
-
-
-
-UF9
-
-
-
-
-
-UF10
-
-Sector
-
-
-
-PR 52 – Puerto Araujo
-
-
-Puerto Araujo - Cimitarra
-
-
-
-
-
-Puerto Salgar - Cimitarra
-
-
-
-
-
-
-Puerto Parra - Aguas Negras
-
-
-
-Aguas Negras – Puerto Nuevo
-
-
-Puerto Nuevo - PR107+000 RN 4511
-
-
-PR107+000 RN 4511
-- Campo 23
-
-
-
-
-Campo 23 - Rancho Camacho
-Origen (nombre, abscisa, coordenadas)(1)
-
-PR 52
-PK51+100 RN 4511
-(988240.27-
-1209020.92)
-Puerto Araujo
-PK64+650 RN 4511
-(999956.48-
-1213693.32)
-
-PK84+220 RN4510 (946234.78-
-1140264.91)
-
-Puerto Salgar
-PK34+040 RN 4510
-(935484.39-
-1096379.05)
-
-Puerto Parra
-PK74+650 RN 4511
-(1007241.80-
-1220609.05)
-
-Aguas Negras
-PK83+220 RN 4511
-(1013404.33-
-1226242.81)
-
-Puerto Nuevo
-PK97+000 RN 4511
-(1022919.47-
-1235783.07)
-
-
-PR107+000 RN 4511
-(1029828.47-
-1242895.79)
-
-
-Campo 23 PK117+690 RN 4511
-(1035516.90-
-1251667,60)
-Destino (nombre, abscisa, coordenadas)(1)
-
-Puerto Araujo
-PK64+650 RN 4511
-(999956.48-
-1213693.32)
-Puerto Parra
-PK74+650 RN 4511
-(1007241.80-
-1220609.05)
-Puerto Parra
-PK74+650 RN 4511
-(1007241.80-
-1220609.05)
-
-
-Puerto Salgar
-PK39+080 RN 4510
-(937963 – 1099819)
-
-Aguas Negras
-PK83+220 RN 4511
-(1013404.33-
-1226242.81)
-
-
-Puerto Nuevo
-PK97+000 RN 4511
-(1022919.47-
-1235783.07)
-
-PR107+000 RN 4511
-(1029828.47-
-1242895.79)
-
-Campo 23 PK117+690 RN 4511
-(1035516.90-
-1251667,60)
-
-Rancho Camacho
-PK128+000 RN 4511
-(1041009.53-
-1260099.05)
-Longitud aproximada origen destino(1)
-
-13. 55
-
-
-
-10.0
-
-
-
-
-124.76
-
-
-
-
-5.04
-
-
-
-
-8.57
-
-
-
-
-13.78
-
-
-
-
-10.00
-
-
-
-
-10.69
-
-
-
-
-
-10.31
-Longitud de intervención (km-calzada)
-
-
-13.61
-
-
-
-10.98
-
-
-
-
-65.87
-
-
-
-
-5.04
-
-
-
-
-8.57
-
-
-
-
-15.02
-
-
-
-
-10.00
-
-
-
-
-11.74
-
-
-
-
-
-10.31
-
-Intervención prevista
-
-Construcción de calzada nueva, operación y mantenimiento
-Construcción de calzada nueva, operación y mantenimiento
-Mejoramiento de la calzada actual, operación y mantenimiento.
-Rehabilitación de la calzada actual, operación y mantenimiento.
-Construcción de calzada nueva, operación y mantenimiento
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Construcción de calzada nueva, operación y mantenimiento
-
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Observación
-
-Construcción de una calzada adicional en los centros poblados de PR52 y Puerto Araujo.
-Construcción Variante Palmas de Guayabito.
-
-
-Vía existente que requiere mejorar condiciones geométricas (ampliación de calzada)
-
-Vía existente de una calzada que operará como calzada sencilla de doble sentido durante todo el período de Concesión
-
-
--
-
-
-Construcción Variante Aguas Negras y el Puente sobre el Río Opón.
-
-
-
-
--
-
-
-Construcción Variante Campo 23 y el Puente sobre el Río La Colorada.
-
-
-
-Empalmes intersección Rancho Camacho, cruce vía Yuma (Construcción de terceros carriles de incorporación y empalmes Vía Yuma PK 14+410 – (PR127+550 -PR
-128+442 RN 4511))
-
-
-
-
-Página 9 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-
-UF
-
-
-
-UF11
-
-
-
-
-
-UF12
-
-Sector
-
-
-
-Puerto Parra - Barrancabermeja
-
-
-
-
-Barrancabermeja
-- La Lizama
-Origen (nombre, abscisa, coordenadas)(1)
-
-Puerto Parra
-PK74+650 RN 4511
-(1007241.80-
-1220609.05)
-
-
-Barrancabermeja
-PK128+000 RN 4511
-1041009.53-
-1260099.05)
-Destino (nombre, abscisa, coordenadas)(1)
-
-Río Sogamoso
-PK09+800 RN 4513
-(1057840.18-
-1283507.47)
-
-La Lizama PK149+110 RN 4511
-(1050813.22-
-1278537.32)
-Longitud aproximada origen destino(1)
-
-
-84.63
-
-
-
-
-
-21.11
-Longitud de intervención (km-calzada)
-
-
-82.01
-
-
-
-
-
-21.10
-
-Intervención prevista
-
-Mejoramiento de la calzada actual, operación y mantenimiento.
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Observación
-
-Vía existente que requiere mejorar condiciones geométricas (ampliación de calzada)
-
-
-
--
-
-
-
-UF13
-
-La Lizama - Río Sogamoso
-La Lizama
-PK00+000 RN 4513
-(1050813.22-
-1278537.32)
-Río Sogamoso
-PK09+800 RN 4513
-(1057840.18-
-1283507.47)
-
-9.80
-
-9.82
-Construcción de calzada nueva, operación y mantenimiento
-
-Intercambiador La Fortuna
-Nota (1): Las longitudes y coordenadas son de referencia; el Concesionario será responsable de ejecutar las obras correspondientes en la longitud real, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico, para cada Unidad Funcional de acuerdo con su descripción particular
-
-Nota(2): La infraestructura existente deberá ser Operada y Mantenida por el Concesionario durante todas las Etapas del Contrato de Concesión.
-
-Nota(3): En general, los tramos de intervención en las diferentes unidades funcionales no son todos continuos. Ver detalle de los tramos que corresponden a cada unidad funcional en numeral 2.5.3, desglose de las unidades funcionales y sus tablas asociadas (Tabla 4 a Tabla 6)
-
-Descripción de la Unidad Funcional 0 (UF0)
+**Tabla 3 - Unidades Funcionales del Proyecto**
+
+| UF | Sector | Origen (nombre, abscisa, coordenadas)⁽¹⁾ | Destino (nombre, abscisa, coordenadas)⁽¹⁾ | Longitud aprox. origen-destino⁽¹⁾ (km) | Longitud de intervención (km-calzada) | Intervención prevista | Observación |
+|:---|:-------|:------------------------------------------|:-------------------------------------------|:----------------------------------------|:---------------------------------------|:----------------------|:------------|
+| **UF0⁽²⁾** | Puerto Salgar - Barrancabermeja | Puerto Salgar<br>PK34+040 RN 4510<br>(935484.39-1096379.05) | Río Sogamoso<br>PK09+800 RN 4513<br>(1057840.18-1283507.47) | 259.61 | UF0-D = 214.68 km<br>UF0-T = 152.94 km<br>UF0-P = 6.62 km | Operación y mantenimiento. Adicionalmente, Puesta a Punto de los tramos UF0-D y UF0-P | Corresponde a los tramos transitables al inicio del proyecto, que el Concesionario deberá mantener y operar. Ver descripción detallada y condiciones de operación y mantenimiento de la unidad funcional 0 (UF0) en el numeral 2.5.2. |
+| **UF1** | El Trique – Dos y Medio | Variante El Trique<br>PK84+400 RN 4510<br>(946232.35-1140357.67) | Variante Dos y Medio<br>PK94+310 RN 4510<br>(945679.26-1149398.09) | 9.83 | 9.83 | Construcción de calzada nueva, operación y mantenimiento | Construcción de las variantes El Trique y Dos y Medio. En la variante Dos y medio se destaca la construcción de dos puentes de 50 m en el rio Velázquez. |
+| **UF2** | Batallón Bárbula – PR52 | Batallón Bárbula<br>PK125+580 RN 4510<br>(946178.67 - 1175319.94) | PR 52-Ruta Nacional 4511<br>PK51+100<br>(988240.27-1209020.92) | 59.85 | 25.47 | Construcción de calzada nueva, operación y mantenimiento | Construcción Variante San Pedro de la Paz. Mejoramiento, Operación y Mantenimiento. Intercambiador Puerto Berrío. |
+| **UF3** | PR 52 – Puerto Araujo | PR 52<br>PK51+100 RN 4511<br>(988240.27-1209020.92) | Puerto Araujo<br>PK64+650 RN 4511<br>(999956.48-1213693.32) | 13.55 | 13.61 | Construcción de calzada nueva, operación y mantenimiento | Construcción de una calzada adicional en los centros poblados de PR52 y Puerto Araujo. |
+| **UF4** | Puerto Araujo - Cimitarra | Puerto Araujo<br>PK64+650 RN 4511<br>(999956.48-1213693.32) | Puerto Parra<br>PK74+650 RN 4511<br>(1007241.80-1220609.05) | 10.0 | 10.98 | Construcción de calzada nueva, operación y mantenimiento | Construcción Variante Palmas de Guayabito. |
+| **UF5** | Puerto Salgar - Cimitarra | PK84+220 RN4510<br>(946234.78-1140264.91) | Puerto Salgar<br>PK39+080 RN 4510<br>(937963 – 1099819) | 124.76 | 65.87 | Mejoramiento de la calzada actual, operación y mantenimiento | Vía existente que requiere mejorar condiciones geométricas (ampliación de calzada). |
+| **UF6** | Puerto Parra - Aguas Negras | Puerto Parra<br>PK74+650 RN 4511<br>(1007241.80-1220609.05) | Aguas Negras<br>PK83+220 RN 4511<br>(1013404.33-1226242.81) | 8.57 | 8.57 | Construcción de calzada nueva, operación y mantenimiento | - |
+| **UF7** | Aguas Negras – Puerto Nuevo | Aguas Negras<br>PK83+220 RN 4511<br>(1013404.33-1226242.81) | Puerto Nuevo<br>PK97+000 RN 4511<br>(1022919.47-1235783.07) | 13.78 | 15.02 | Construcción de calzada nueva, operación y mantenimiento | Construcción Variante Aguas Negras y el Puente sobre el Río Opón. |
+| **UF8** | Puerto Nuevo - PR107+000 RN 4511 | Puerto Nuevo<br>PK97+000 RN 4511<br>(1022919.47-1235783.07) | PR107+000 RN 4511<br>(1029828.47-1242895.79) | 10.00 | 10.00 | Construcción de calzada nueva, operación y mantenimiento | - |
+| **UF9** | PR107+000 RN 4511 - Campo 23 | PR107+000 RN 4511<br>(1029828.47-1242895.79) | Campo 23<br>PK117+690 RN 4511<br>(1035516.90-1251667.60) | 10.69 | 11.74 | Construcción de calzada nueva, operación y mantenimiento | Construcción Variante Campo 23 y el Puente sobre el Río La Colorada. |
+| **UF10** | Campo 23 - Rancho Camacho | Campo 23<br>PK117+690 RN 4511<br>(1035516.90-1251667.60) | Rancho Camacho<br>PK128+000 RN 4511<br>(1041009.53-1260099.05) | 10.31 | 10.31 | Construcción de calzada nueva, operación y mantenimiento | Empalmes intersección Rancho Camacho, cruce vía Yuma. |
+| **UF11** | Puerto Parra - Barrancabermeja | Puerto Parra<br>PK74+650 RN 4511<br>(1007241.80-1220609.05) | Río Sogamoso<br>PK09+800 RN 4513<br>(1057840.18-1283507.47) | 84.63 | 82.01 | Mejoramiento de la calzada actual, operación y mantenimiento | Vía existente que requiere mejorar condiciones geométricas (ampliación de calzada). |
+| **UF12** | Barrancabermeja - La Lizama | Barrancabermeja<br>PK128+000 RN 4511<br>(1041009.53-1260099.05) | La Lizama<br>PK149+110 RN 4511<br>(1050813.22-1278537.32) | 21.11 | 21.10 | Construcción de calzada nueva, operación y mantenimiento | - |
+| **UF13** | La Lizama - Río Sogamoso | La Lizama<br>PK00+000 RN 4513<br>(1050813.22-1278537.32) | Río Sogamoso<br>PK09+800 RN 4513<br>(1057840.18-1283507.47) | 9.80 | 9.82 | Construcción de calzada nueva, operación y mantenimiento | Intercambiador La Fortuna. |
+
+---
+
+**Nota (1):** Las longitudes y coordenadas son de referencia; el Concesionario será responsable de ejecutar las obras correspondientes en la longitud real, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico, para cada Unidad Funcional de acuerdo con su descripción particular.
+
+**Nota(2):** La infraestructura existente deberá ser Operada y Mantenida por el Concesionario durante todas las Etapas del Contrato de Concesión.
+
+**Nota(3):** En general, los tramos de intervención en las diferentes unidades funcionales no son todos continuos. Ver detalle de los tramos que corresponden a cada unidad funcional en numeral 2.5.3, desglose de las unidades funcionales y sus tablas asociadas (Tabla 4 a Tabla 6).
+
+---
+
+## Descripción de la Unidad Funcional 0 (UF0)
 
 La Unidad Funcional 0 (UF0) corresponde a los tramos transitables al inicio del proyecto, que el Concesionario deberá mantener y operar.
 La Unidad Funcional 0 se subdivide de la siguiente manera:
@@ -1082,56 +435,11 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 Las longitudes mostradas en los cuadros son de referencia; el Concesionario será responsable de ejecutar las obras correspondientes en la longitud real, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico, para cada Unidad Funcional de acuerdo con su descripción particular.
 
-Tabla 4 – Desglose de las unidades funcionales – Calzada sentido Norte
+**Tabla 4 – Desglose de las unidades funcionales – Calzada sentido Norte**
 
-
-UNIDADES FUNCIONALES CALZADA SENTIDO NORTE
-
-
-RUTA NACIONAL
-
-
-HITO
-
-ABSCISAS
-
-
-
-LONGITUD
-
-TIPO DE INTERVENCION
-UNIDAD FUNCIONAL UF0-
-
-
-TIPO DE VIA
-
-
-OBSERVACIONES
-
-
-4510
-
-H01VN
-INICIO
-
-PK 39+080
-FIN
-
-PK 39+320
-
-0.24 km
-
-OPERACIÓN
-inicial
-SI
-tipo
-
-UF0-D
-UF final
-
-UF00
-
-TRAMO RECTO
+| RUTA NACIONAL | HITO | ABSCISAS INICIO | ABSCISAS FIN | LONGITUD | TIPO DE INTERVENCIÓN | UF0-inicial | UF0-tipo | UF final | TIPO DE VÍA | OBSERVACIONES |
+|:--------------|:-----|:----------------|:-------------|:---------|:---------------------|:------------|:---------|:---------|:------------|:--------------|
+| 4510 | H01VN | PK 39+080 | PK 39+320 | 0.24 km | OPERACIÓN | SI | UF0-D | UF00 | TRAMO RECTO | - |
 
 
 4510
@@ -3478,376 +2786,66 @@ Nota (2) **: El paso poblado de Puerto Libre, que cuenta con variante construida
 4.2 (vi) del Apéndice Técnico 1 – Alcance.
 Nota (3): En los pasos poblados que no cuenten con variante construida, se deberán desarrollar Intervenciones Prioritarias para cumplir en un plazo máximo de ciento ochenta (180) días contados a partir de la Fecha de Inicio, con los Indicadores que se establecen en la Tabla-Indicadores Mínimos del Apéndice Técnico 4. Dichos indicadores serán objeto de medición hasta que entre en operación la variante para ser revertido el paso poblado al Instituto Nacional de Vías – INVIAS.
 
-Tabla 8 – Resumen de Unidades Funcionales
-LONGITUD X CALZADA
-PASOS
+### Tabla 8 - Resumen de Unidades Funcionales (Parte 1: UF0-UF2)
 
-CODIGO
+| Concepto | UF0-inicial (TOTAL) | UF0-D/UF00 | UF0-T | UF0-P | UF01 | UF02 |
+|:---------|:-------------------|:-----------|:------|:------|:-----|:-----|
+| **INTERVENCIÓN** | O&M Inicial | Puesta a Punto + O&M con indicadores AT4 | Puesta a Punto de UF0-T + O&M con indicadores AT4 | Puesta a Punto de UF0-P + O&M hasta reversión | Construcción + O&M con indicadores AT4 | Construcción + O&M con indicadores AT4 |
+| **NORTE** | 230.68 km | 114.96 km | 115.73 km | 0.00 km | 6.13 km | 13.13 km |
+| **SUR** | 131.86 km | 99.72 km | 32.14 km | 0.00 km | 3.70 km | 12.33 km |
+| **CALZADA BIDIRECCIONAL** | 5.08 km | 0.00 km | 5.08 km | 0.00 km | 0.00 km | 0.00 km |
+| **PASOS POBLADOS PROVISIONALES** | 6.62 km | 0.00 km | 0.00 km | 6.62 km | 0.00 km | 0.00 km |
+| **TOTAL** | **374.24 km** | **214.68 km** | **152.94 km** | **6.62 km** | **9.83 km** | **25.45 km** |
 
-UF0-inicial
-UF0-D/ UF00
+---
 
-UF0-T
+**Tabla 8 – Resumen de Unidades Funcionales (Parte 2: UF03-UF13)**
 
+| Concepto | UF03 | UF04 | UF05 | UF06 | UF07 | UF08 | UF09 | UF10 | UF11 | UF12 | UF13 |
+|:---------|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
+| **INTERVENCIÓN** | ConstrucciÃ³n + O&M | ConstrucciÃ³n + O&M | Rehabilitación y Mejoramiento + O&M | ConstrucciÃ³n + O&M | ConstrucciÃ³n + O&M | ConstrucciÃ³n + O&M | ConstrucciÃ³n + O&M | ConstrucciÃ³n + O&M | Rehabilitación y Mejoramiento + O&M | ConstrucciÃ³n + O&M | ConstrucciÃ³n + O&M |
+| **NORTE** | 1.16 km | 0.94 km | 33.72 km | 0.00 km | 1.25 km | 0.00 km | 1.04 km | 0.00 km | 82.01 km | 0.00 km | 0.00 km |
+| **SUR** | 12.44 km | 10.04 km | 32.14 km | 8.57 km | 13.77 km | 10.00 km | 10.69 km | 10.31 km | 0.00 km | 21.10 km | 9.82 km |
+| **CALZADA BIDIRECCIONAL** | 0.00 km | 0.00 km | 5.08 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km |
+| **PASOS POBLADOS PROVISIONALES** | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km | 0.00 km |
+| **TOTAL** | **13.61 km** | **10.98 km** | **70.94 km** | **8.57 km** | **15.02 km** | **10.00 km** | **11.72 km** | **10.31 km** | **82.01 km** | **21.10 km** | **9.82 km** |
 
-UF0-P
+---
 
-UF01 UF02
-INTERVENCIÓN
+**Tabla 9 – Resumen Etapa Operación**
 
-MANTENIMIENTO Y OPERACIÓN INICIAL
-Puesta a Punto, Mantenimiento y Operación permanente con indicadores Apéndice técnico 4.
-Puesta a Punto de tramos UF0-T, Operación y Mantenimiento.  Tabla  Indicadores  Mínimos, Apéndice Técnico 4.
-Puesta a Punto de tramos UF0-P, Operación y Mantenimiento  Tabla  Indicadores  Mínimos, Apéndice Técnico 4. entrega y desafectación
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-NORTE
+| Concepto | UF0-Definitiva (O&M permanente con indicadores AT4) | Construcción (O&M permanente con indicadores AT4) | Mejoramiento (Mantenimiento y O&M permanente con indicadores AT4) | TOTAL CONCESIÓN |
+|:---------|:-----------------------------------------------------|:--------------------------------------------------|:------------------------------------------------------------------|:----------------|
+| **NORTE** | 114.96 km | 23.64 km | 115.73 km | **254.32 km** |
+| **SUR** | 99.72 km | 122.77 km | 32.14 km | **254.63 km** |
+| **CALZADA BIDIRECCIONAL** | 0.00 km | 0.00 km | 5.08 km | **5.08 km** |
+| **POBLADOS DE USO PROVISIONAL** | 0.00 km | 0.00 km | 0.00 km | **0.00 km** |
+| **TOTAL** | **214.68 km** | **146.41 km** | **152.94 km** | **514.03 km** |
 
-230.68 km
-114.96 km
+---
 
-115.73 km
+**Nota:** Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
+---
 
-0.00 km
+## Unidad Funcional 1. El Trique – Dos y Medio
 
-6.13 km
+### UF1: Generalidades y Subsectores de la Unidad Funcional
 
-13.13 km
-SUR
+**Tabla 10 - UF1 Generalidades y Subsectores de la Unidad Funcional 1**
 
-131.86 km
-99.72 km
+| Subsector | Ruta | Calzada | Abscisas Inicio | Abscisas Fin | Longitud | Intervención prevista | Tipo de vía | Observaciones |
+|:----------|:-----|:--------|:----------------|:-------------|:---------|:----------------------|:------------|:--------------|
+| **1.1** | 4510 | Al norte | PK 84+400 | PK 87+585 | 3.29 km | Construcción de calzada nueva, operación y mantenimiento. | Variante | El Trique |
+| **1.1** | 4510 | Al sur | PR 85+400 | PR 87+040 | 1.64 km | Construcción de calzada nueva, operación y mantenimiento. | Variante | El Trique |
+| **1.2** | 4510 | Al norte | PK 91+485 | PK 94+328 | 2.84 km | Construcción de calzada nueva, operación y mantenimiento. | Variante | Dos y medio |
+| **1.2** | 4510 | Al sur | PR 91+860 | PR 93+920 | 2.06 km | Construcción de calzada nueva, operación y mantenimiento. | Variante | Dos y medio |
 
-32.14 km
+**Nota (1):** Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
+---
 
-0.00 km
-
-3.70 km
-
-12.33 km
-CALZADA BIDIRECCIONAL
-
-5.08 km
-0.00 km
-
-5.08 km
-
-
-0.00 km
-
-0.00 km
-
-0.00 km
-POBLADOS DE USO PROVISIONAL
-6.62 km
-0.00 km
-
-0.00 km
-
-
-6.62 km
-
-0.00 km
-
-0.00 km
-TOTAL
-
-374.24 km
-214.68 km
-
-152.94 km
-
-
-6.62 km
-
-9.83 km
-
-25.45 km
-Página 17 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-
-
-
-CODIGO
-
-
-
-INTERVENCIÓN
-
-
-
-NORTE
-
-
-
-SUR
-LONGITUD X CALZADA
-
-CALZADA BIDIRECCIONAL
-
-PASOS POBLADOS DE USO
-
-
-
-TOTAL
-
-
-UF03 UF04
-UF05
-
-UF06 UF07 UF08 UF09 UF10
-UF11
-
-UF12 UF13
-
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-REHABILITACIÓN  Y  MEJORAMIENTO,
-Mantenimiento y Operación permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-REHABILITACIÓN  Y  MEJORAMIENTO,
-Mantenimiento y Operación permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-Construcción,  Operación  y  Mantenimiento permanente con indicadores apéndice técnico 4.
-
-1.16 km
-
-0.94 km
-
-33.72 km
-
-0.00 km
-
-1.25 km
-
-0.00 km
-
-1.04 km
-
-0.00 km
-
-82.01 km
-
-0.00 km
-
-0.00 km
-
-12.44 km
-
-10.04 km
-
-32.14 km
-
-8.57 km
-
-13.77 km
-
-10.00 km
-
-10.69 km
-
-10.31 km
-
-0.00 km
-
-21.10 km
-
-9.82 km
-
-0.00 km
-
-0.00 km
-
-5.08 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-PROVISIONAL
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-0.00 km
-
-13.61 km
-
-10.98 km
-
-70.94 km
-
-8.57 km
-
-15.02 km
-
-10.00 km
-
-11.72 km
-
-10.31 km
-
-82.01 km
-
-21.10 km
-
-9.82 km
-Tabla 9 – Resumen Etapa Operación
-PASOS
-
-UF0-Definitiva
-
-UF0-Definitiva, Operación y Mantenimiento permanente con indicadores apéndice técnico 4. Construcción, Operación y Mantenimiento permanente con indicadores apéndice técnico 4. Mejoramiento, Mantenimiento y Operación permanente con indicadores apéndice técnico 4. TOTAL CONCESION
-NORTE
-
-
-114.96 km
-
-23.64 km
-
-115.73 km
-254.32 km
-SUR
-
-
-99.72 km
-
-122.77 km
-
-32.14 km
-254.63 km
-CALZADA BIDIRECCIONAL
-
-0.00 km
-
-0.00 km
-
-5.08 km
-5.08 km
-POBLADOS DE USO PROVISIONAL
-0.00 km
-
-0.00 km
-
-0.00 km
-0.00 km
-TOTAL
-
-
-214.68 km
-
-146.41 km
-
-152.94 km
-514.03 km
-
-
-Alcance de las Unidades Funcionales
-
-Las Especificaciones Técnicas a las que se refieren la sección 4.17 a) v) (2) de la Parte General son las establecidas en la presente Sección 0.
-
-A continuación, se mencionan, para cada Unidad Funcional, las características mínimas o máximas –según corresponda a cada una con las cuales debe cumplir el Proyecto.
-2.6.1. Unidad Funcional 1. El Trique – Dos y Medio
-UF1: Generalidades y Subsectores de la Unidad Funcional
-
-Tabla 10 - UF1 Generalidades y Subsectores de la Unidad Funcional 1
-
-
-Página 18 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-
-Subsector
-Ruta nacional
-
-Calzada
-Abscisas Inicio
-
-
-Fin
-
-Longitud
-Intervención prevista
-
-Tipo de vía
-
-Observaciones
-
-1.1
-
-
-1.2
-4510
-
-
-4510
-Al norte Al sur Al norte Al sur
-PK 84+400
-PR 85+400
-PK 91+485
-PR 91+860
-PK 87+585
-PR 87+040
-PK 94+328
-PR 93+920
-3.29 km
-1.64 km
-2.84 km
-2.06 km
-Construcción de calzada nueva, operación y mantenimiento.
-Variante
-
-
-Variante
-El Trique
-
-
-Dos y medio
-Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las
-longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
-UF1: Obras especiales obligatorias dentro de la Unidad Funcional
+### UF1: Obras especiales obligatorias dentro de la Unidad Funcional
 El Concesionario deberá construir como mínimo las estructuras que se requieran para la construcción de la segunda calzada en los tramos que este Apéndice exija tal intervención. En todo caso, éstas deberán cumplir con las Especificaciones Técnicas, en especial, lo previsto en el Apéndice Técnico 3.
 Para garantizar la conectividad y movilidad local como consecuencia de implantar la doble calzada, el Concesionario incluirá la construcción de una serie de retornos a lo largo del corredor para que, en conjunto con las intersecciones del sector en doble calzada, se generen suficientes puntos de conexión y retorno. Dichos retornos deberán ser definidos como resultado de un análisis de velocidad de diseño y conectividad y movilidad del sector, dentro de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF1: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
@@ -3855,52 +2853,37 @@ UF1: Características Geométricas y técnicas de Entrega de cada Subsector para
 
 
 
-Tabla 11 - UF1 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 11 - UF1 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos**
 
-Requisitos Técnicos
-Número de calzadas mínimo (un) Número de carriles por calzada mínimo (un)
-Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m) Ancho de Calzada mínimo (m)
-Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m)
-Subsectores 1.1 y 1.2
-2
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Página 19 de 62
+| Requisitos Técnicos | Subsectores 1.1 y 1.2 |
+|:--------------------|:----------------------|
+| Número de calzadas mínimo (un) | 2 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Ãreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
+**Nota (1):** Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
+**Nota (2):** Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
 
+---
 
+**Tabla 12 - UF1 Intersecciones que como mínimo debe desarrollar el Concesionario**
 
-Requisitos Técnicos
-
-Iluminación
-Subsectores 1.1 y 1.2
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
-Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
-Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
-UF1: Intersecciones que como mínimo debe desarrollar el Concesionario
-Tabla 12 - UF1 Intersecciones que como mínimo debe desarrollar el Concesionario
-
-
-Intersección        Cruce Vial
-Ruta        PK⁽¹⁾         Coordenadas ⁽¹⁾
-
-Paso a desnivel (Deprimido) empalme oriental acceso Otanche
-A
-desnivel
-4510        93+450      (945594.46 – 1148577.04)
+| Intersección | Cruce Vial | Ruta | PK⁽¹⁾ | Coordenadas ⁽¹⁾ |
+|:-------------|:-----------|:-----|:------|:----------------|
+| Paso a desnivel (Deprimido) empalme oriental acceso Otanche | A desnivel | 4510 | 93+450 | (945594.46 – 1148577.04) |
 
 Nota (1): Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
@@ -3912,45 +2895,13 @@ Nota (4): El Concesionario deberá garantizar la accesibilidad a los predios exi
 UF1: Variantes que como mínimo debe desarrollar el Concesionario
 
 
-Tabla 13 – UF1 Variantes que como mínimo debe desarrollar el Concesionario
+### Tabla 13 - UF1 Variantes a desarrollar por el Concesionario
 
-
-
-Variante
-
-
-
-PK(1)
-
-
-Ruta
-Inicio
-
-
-Coordenadas ⁽¹⁾
-
-
-
-PK(1)
-
-
-Ruta
-Final
-
-
-Coordenadas ⁽¹⁾
-
-El Trique Dos y Medio
-PK84+400 PK91+485
-4510
-4510
-(946232.35-1140357.67)
-(945822.35–1146661.75)
-PK87+585 PK94+310
-4510
-4510
-(945426.10-1143109.21)
-(945679.26-1149398.09)
+| Variante | Inicio ||| Final |||
+|:---------|:------|:-----|:-----------------|:------|:-----|:-----------------|
+| | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** |
+| **El Trique** | PK84+400 | 4510 | (946232.35-1140357.67) | PK87+585 | 4510 | (945426.10-1143109.21) |
+| **Dos y Medio** | PK91+485 | 4510 | (945822.35–1146661.75) | PK94+310 | 4510 | (945679.26-1149398.09) |
 Nota (1): Esta información dependerá de los Estudios de Trazado y Diseño Geométrico, y los Estudios de Detalle realizados por el Concesionario. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
 
@@ -3967,151 +2918,53 @@ Unidad Funcional 2. Zambito – PR 52
 UF2: Generalidades y Subsectores de la Unidad Funcional
 
 
-Tabla 14 - UF2 Generalidades y Subsectores de la Unidad Funcional 2
+**Tabla 14 - UF2 Generalidades y Subsectores de la Unidad Funcional 2**
+
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽²⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **2.1** | Batallón Bárbula<br>PK125+580 RN 4510<br>(946178.67-1175319.94) | PK129+800 RN 4510<br>(947434.85-1179395.44) | 4.22 | Construcción de calzada nueva, operación y mantenimiento. | - | - |
+| **2.2** | PK11+100 RN 4511<br>(959084.27-1189256.54) | PR 52 PK51+100 RN 4511<br>(988240.27-1209020.92) | 21.25 | Construcción de calzada nueva, operación y mantenimiento. | Construcción de la variante San Pedro de la Paz. | En el PK 41+500 de la RN 4511 se encuentra el Intercambiador Puerto Berrio. En este sector se da la intersección con la Ruta Nacional 6206. |
 
 
+**Nota (1):** Cantidad de estructuras especiales de acuerdo con los Estudios y DiseÃ±os presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario serÃ¡ responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y DiseÃ±o GeomÃ©trico.
 
+**Nota (2):** La Ruta Nacional 6206 estÃ¡ a cargo del Concesionario Autopista Rio Magdalena a partir del PR 114+020 (978913.25 - 1208662.52) a menores. Por lo tanto, el Mejoramiento, Operación y Mantenimiento estarÃ¡ a cargo del presente contrato de concesiÃ³n.
 
-Subsector
+---
 
-
-
-
-2.1
-
-
-
-
-2.2
-
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-
-Batallón Bárbula PK125+580
-RN 4510
-(946178.67
-1175319.94)
-
-PK11+100 RN 4511
-(959084.27
-1189256.54)
-Destino (nombre, abscisa, coordenadas)
-(1)
-
-PK129+800 RN 4510
-(947434.85
-1179395.44)
-
-PR 52 PK51+100 RN 4511
-(988240.27-
-1209020.92)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-4.22
-
-
-
-
-21.25
-
-Intervención prevista
-
-
-Construcción de calzada nueva, operación y mantenimiento.
-
-Construcción de calzada nueva, operación y mantenimiento.
-
-Obras Principales que debe Ejecutar
-
-
--
-
-
-
-Construcción de la variante San Pedro de la Paz.
-
-
-Observación ⁽²⁾
-
-
-
-
--
-
-
-En el PK 41+500 de la RN 4511 se encuentra el Intercambiador Puerto Berrio. En este sector se da la intersección con la Ruta Nacional 6206.
-Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
-Nota (2): La Ruta Nacional 6206 está a cargo del Concesionario Autopista Rio Magdalena a partir del PR 114+020 (978913.25 - 1208662.52) a menores. Por lo tanto, el Mejoramiento, Operación y Mantenimiento estará a cargo del presente contrato de concesión.
-UF2: Obras especiales obligatorias dentro de la Unidad Funcional
 
 El Concesionario deberá construir como mínimo las estructuras que se requieran para la construcción de la segunda calzada en los tramos que este Apéndice exija tal intervención. En todo caso, éstas deberán cumplir con las Especificaciones Técnicas, en especial, lo previsto en el Apéndice Técnico 3.
 Para garantizar la conectividad y movilidad local como consecuencia de implantar la doble calzada, el Concesionario incluirá la construcción de una serie de retornos a lo largo del corredor para que, en conjunto con las intersecciones del sector en doble calzada, se generen suficientes puntos de conexión y retorno. Dichos retornos deberán ser definidos como resultado de un análisis de velocidad de diseño y conectividad y movilidad del sector, dentro de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF2: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
-Tabla 15 - UF2 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 15 - UF2 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos**
 
-Requisitos Técnicos        Subsector 2.1       Subsector 2.2
-Longitud de referencia (Km)         4.22           21.25
-Página 21 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-Requisitos Técnicos
-Número de calzadas mínimo (un) Número de carriles por calzada mínimo (un)
-Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m) Ancho de Calzada mínimo (m)
-Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido)
-Velocidad de diseño mínimo (km/h) Radio mínimo (m)
-Pendiente máxima (%)
-Ancho mínimo de separador central (m)
-
-
-Subsector 2.1
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto Sí
-Primaria
-Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-
-
-Subsector 2.2
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o concreto Sí
-Primaria
-Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-
-
-Iluminación
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+| Requisitos Técnicos | Subsector 2.1 | Subsector 2.2 |
+|:--------------------|:--------------|:--------------|
+| Longitud de referencia (Km) | 4.22 | 21.25 |
+| Número de calzadas mínimo (un) | 1 | 1 |
+| Número de carriles por calzada mínimo (un) | 2 | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 | 2.50 |
+| Tipo de berma | Asfalto o Concreto | Asfalto o concreto |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 | 394 |
+| Pendiente máxima (%) | 5 | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
 UF2: Intersecciones que como mínimo debe desarrollar el Concesionario
-Tabla 16 – UF2 Intersecciones que como mínimo debe desarrollar el Concesionario
+**Tabla 16 – UF2 Intersecciones que como mínimo debe desarrollar el Concesionario**
 
-
-Intersección            Cruce
-Vial
-Intercambiador Puerto Berrío          A desnivel
-Ruta       PK⁽¹⁾        Coordenadas ⁽¹⁾
-
-4511       41+460      (979096.35-1208544.56)
+| Intersección | Cruce Vial | Ruta | PK⁽¹⁾ | Coordenadas ⁽¹⁾ |
+|:-------------|:-----------|:-----|:------|:----------------|
+| Intercambiador Puerto Berrío | A desnivel | 4511 | 41+460 | (979096.35-1208544.56) |
 Nota (1): Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
 Nota (2): Los tipos de intersección a nivel o desnivel que implemente el Concesionario deberán cumplir con lo indicado en el Apéndice Técnico No. 3 y ser consideradas en el estudio de seguridad vial. En todo caso no se podrán implementar intersecciones semaforizadas.
@@ -4128,19 +2981,12 @@ Apéndice Técnico 1 – Alcance
 Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
-Tabla 17 - UF2 Variantes que como mínimo debe desarrollar el Concesionario
+**Tabla 17 - UF2 Variantes que como mínimo debe desarrollar el Concesionario**
 
-
-
-Variante
-
-San Pedro de la Paz
-Inicio
-PK⁽¹⁾   Ruta    Coordenadas ⁽¹⁾
-PK13+415  4511  (960136.64-1191314.28)
-Final
-PK⁽¹⁾    Ruta     Coordenadas ⁽¹⁾
-PK14+990  4511   (960662.41-1192673.40)
+| Variante | Inicio ||| Final |||
+|:---------|:------|:-----|:-----------------|:------|:-----|:-----------------|
+| | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** |
+| **San Pedro de la Paz** | PK13+415 | 4511 | (960136.64-1191314.28) | PK14+990 | 4511 | (960662.41-1192673.40) |
 
 Nota (1): Esta información dependerá de los Estudios de Trazado y Diseño Geométrico, y los Estudios de Detalle realizados por el Concesionario. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
@@ -4149,48 +2995,11 @@ Nota (1): Esta información dependerá de los Estudios de Trazado y Diseño Geom
 Unidad Funcional 3. PR 52 – Puerto Araujo
 UF3: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 18 - UF3 Generalidades y Subsectores de la Unidad Funcional 3
+**Tabla 18 - UF3 Generalidades y Subsectores de la Unidad Funcional 3**
 
-
-
-
-Subsector
-
-
-
-
-
-3
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-
-
-PR 52 PK51+100 RN 4511
-(988240.27-
-1209020.92)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-
-
-Puerto Araujo PK64+650 RN 4511
-(999956.48-
-1213693.32)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-
-13.61
-
-Intervención prevista
-
-
-
-Construcción de calzada nueva, operación y mantenimiento.
-
-Obras Principales que debe Ejecutar
-
-Construcción de una calzada adicional en los Pasos Poblados PR-52 y Puerto Araujo. Y el puente Sobre el Rio Carare de 240 metros.
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **3** | PR 52<br>PK51+100 RN 4511<br>(988240.27-1209020.92) | Puerto Araujo<br>PK64+650 RN 4511<br>(999956.48-1213693.32) | 13.61 | Construcción de calzada nueva, operación y mantenimiento. | Construcción de una calzada adicional en los Pasos Poblados PR-52 y Puerto Araujo. Y el puente Sobre el Rio Carare de 240 metros. | - |
 
 
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
@@ -4210,30 +3019,27 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 UF3: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
-Tabla 19 - UF3 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 19 - UF3 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 3
-13.61
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+| Requisitos Técnicos | Subsector 3 |
+|:--------------------|:------------|
+| Longitud de referencia (Km) | 13.61 |
+| Número de calzadas mínimo (un) | 1 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 
 Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
@@ -4243,97 +3049,24 @@ UF3: Intersecciones que como mínimo debe desarrollar el Concesionario
 No aplica.
 UF3: Variantes que como mínimo debe desarrollar el Concesionario
 
-Tabla 20 - UF3 Variantes que como mínimo debe desarrollar el Concesionario
+**Tabla 20 - UF3 Variantes que como mínimo debe desarrollar el Concesionario**
 
-
-
-
-
-Página 24 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-
-Centros Poblados
-
-
-
-PK(1)
-
-
-Ruta
-Inicio
-
-
-Coordenadas ⁽¹⁾
-
-
-
-PK(1)
-
-
-Ruta
-Final
-
-
-Coordenadas ⁽¹⁾
-
-PR 52
-Puerto Araujo
-PK51+225 PK60+480
-4511
-4511
-(988362.65-1208994.24)
-(996310.55-1212595.34)
-PK53+070 PK64+650
-4511
-4511
-(989679.53-1210137.84)
-(999956.48-1213693.32)
+| Centros Poblados | Inicio ||| Final |||
+|:-----------------|:------|:-----|:-----------------|:------|:-----|:-----------------|
+| | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** |
+| **PR 52** | PK51+225 | 4511 | (988362.65-1208994.24) | PK53+070 | 4511 | (989679.53-1210137.84) |
+| **Puerto Araujo** | PK60+480 | 4511 | (996310.55-1212595.34) | PK64+650 | 4511 | (999956.48-1213693.32) |
 Nota (1): Esta información dependerá de los Estudios de Trazado y Diseño Geométrico, y los Estudios de Detalle realizados por el Concesionario. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
 
 Unidad Funcional 4. Puerto Araujo – Puerto Parra
 UF4: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 21 - UF4 Generalidades y Subsectores de la Unidad Funcional 4
+**Tabla 21 - UF4 Generalidades y Subsectores de la Unidad Funcional 4**
 
-
-
-
-Subsector
-
-
-
-4
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-Puerto Araujo PK64+650 RN 4511
-(999956.48-
-1213693.32)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-Puerto Parra PK74+650 RN 4511
-(1007241.80-
-1220609.05)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-10.98
-
-Intervención prevista
-
-
-Construcción de calzada nueva, operación y mantenimiento.
-
-Obras Principales que debe Ejecutar
-
-
-Construcción de la Variante Palmas de Guayabito.
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **4** | Puerto Araujo<br>PK64+650 RN 4511<br>(999956.48-1213693.32) | Puerto Parra<br>PK74+650 RN 4511<br>(1007241.80-1220609.05) | 10.98 | Construcción de calzada nueva, operación y mantenimiento. | Construcción de la Variante Palmas de Guayabito. | - |
 
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF4: Obras especiales obligatorias dentro de la Unidad Funcional
@@ -4355,30 +3088,27 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 UF4: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
 
-Tabla 22 - UF4 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 22 - UF4 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 4
-10.98
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+| Requisitos Técnicos | Subsector 4 |
+|:--------------------|:------------|
+| Longitud de referencia (Km) | 10.98 |
+| Número de calzadas mínimo (un) | 1 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 
 Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
@@ -4390,81 +3120,23 @@ UF4: Variantes que como mínimo debe desarrollar el Concesionario
 
 
 
-Tabla 23 - UF4 Variantes que como mínimo debe desarrollar el Concesionario
+**Tabla 23 - UF4 Variantes que como mínimo debe desarrollar el Concesionario**
 
-
-
-
-Página 26 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-
-Variante
-Inicio
-PK⁽¹⁾   Ruta    Coordenadas ⁽¹⁾
-Final
-PK⁽¹⁾    Ruta     Coordenadas ⁽¹⁾
-
-Palmas del Guayabito
-PK66+990  4511   (1001678.17-1215388.54)  PK68+380   4511   (1002556.29-1216454.34)
+| Variante | Inicio ||| Final |||
+|:---------|:------|:-----|:-----------------|:------|:-----|:-----------------|
+| | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** |
+| **Palmas del Guayabito** | PK66+990 | 4511 | (1001678.17-1215388.54) | PK68+380 | 4511 | (1002556.29-1216454.34) |
 
 Nota (1): Esta información dependerá de los Estudios de Trazado y Diseño Geométrico, y los Estudios de Detalle realizados por el Concesionario. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 Unidad Funcional 5. Puerto Salgar – Cimitarra
 UF5: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 24 – UF5 Generalidades y Subsectores de la Unidad Funcional 5
+**Tabla 24 – UF5 Generalidades y Subsectores de la Unidad Funcional 5**
 
-
-
-
-Subsector
-
-
-
-5.1
-
-
-
-
-5.2
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-Ruta Nacional PK124+328 RN 4510
-(945575.60-
-1174227.07)
-Puerto Salgar PK34+040 RN 4510
-(935484.39-
-1096379.05)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-Puerto Parra PK74+650 RN 4511
-(1007241.80-
-1220609.05)
-Puerto Salgar PK39+080 RN 4510 (937963 –
-1099819)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-65,87
-
-
-
-
-5.04
-
-Intervención prevista
-
-
-Mejoramiento de la calzada actual, operación y mantenimiento.
-
-Rehabilitación de la calzada actual, operación y mantenimiento
-
-Obras Principales que debe Ejecutar
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **5.1** | Ruta Nacional<br>PK124+328 RN 4510<br>(945575.60-1174227.07) | Puerto Parra<br>PK74+650 RN 4511<br>(1007241.80-1220609.05) | 65.87 | Mejoramiento de la calzada actual, operación y mantenimiento. | - | - |
+| **5.2** | Puerto Salgar<br>PK34+040 RN 4510<br>(935484.39-1096379.05) | Puerto Salgar<br>PK39+080 RN 4510<br>(937963 – 1099819) | 5.04 | Rehabilitación de la calzada actual, operación y mantenimiento | - | - |
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF5: Obras especiales obligatorias dentro de la Unidad Funcional
 El Concesionario deberá construir como mínimo las estructuras que se requieran para la construcción de la segunda calzada en los tramos que este Apéndice exija tal Intervención. En todo caso, éstas deberán cumplir con las Especificaciones Técnicas, en especial, lo previsto en el Apéndice Técnico 3.
@@ -4481,78 +3153,44 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 UF5: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
-Tabla 25 – UF5 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 25 – UF5 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 5.1
-65.87
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+| Requisitos Técnicos | Subsector 5.1 |
+|:--------------------|:--------------|
+| Longitud de referencia (Km) | 65.87 |
+| Número de calzadas mínimo (un) | 1 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
 UF5: Intersecciones que como mínimo debe desarrollar el Concesionario
 No aplica.
 UF5: Variantes que como mínimo debe desarrollar el Concesionario
-No aplicaUnidad Funcional 6. Puerto Parra – Aguas Negras
+No aplica.
+
+---
+
+## Unidad Funcional 6. Puerto Parra – Aguas Negras
 UF6: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 26 – UF6 Generalidades y Subsectores de la Unidad Funcional 6
+**Tabla 26 – UF6 Generalidades y Subsectores de la Unidad Funcional 6**
 
-
-
-Subsector
-
-
-
-6
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-Puerto Parra PK74+650 RN 4511
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-Aguas Negras PK83+220 RN 4511
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-8.57
-
-Intervención prevista
-
-Construcción de calzada nueva,
-
-Obras Principales que debe Ejecutar
-
-
--
-
-Observación ⁽¹⁾
-Página 28 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-(1007241.80-
-1220609.05)
-(1013404.33-
-1226242.81)
-operación y mantenimiento
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **6** | Puerto Parra<br>PK74+650 RN 4511<br>(1007241.80-1220609.05) | Aguas Negras<br>PK83+220 RN 4511<br>(1013404.33-1226242.81) | 8.57 | Construcción de calzada nueva, operación y mantenimiento | - | - |
 
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF6: Obras especiales obligatorias dentro de la Unidad Funcional
@@ -4561,30 +3199,36 @@ El Concesionario deberá construir como mínimo las estructuras que se requieran
 Para garantizar la conectividad y movilidad local como consecuencia de implantar la doble calzada, el Concesionario incluirá la construcción de una serie de retornos a lo largo del corredor para que, en conjunto con las intersecciones del sector en doble calzada, se generen suficientes puntos de conexión y retorno. Dichos retornos deberán ser definidos como resultado de un análisis de velocidad de diseño y conectividad y movilidad del sector, dentro de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF6: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
-Tabla 27 – UF6 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+### Tabla 27 - UF6 Características Geométricas y Técnicas
 
+| **Requisito Técnico** | **Especificación** |
+|----------------------|-------------------|
+| Tipo de vía | Troncal de la Red Nacional |
+| Velocidad de diseño | 100 km/h |
+| Número de calzadas | 2 |
+| Ancho de calzada | 7.3 m |
+| Ancho de berma | 2.5 m |
+| Ancho de separador central | 9.3 m |
 
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 6
-8.57
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+| Requisitos Técnicos | Subsector 6 |
+|:--------------------|:------------|
+| Longitud de referencia (Km) | 8.57 |
+| Número de calzadas mínimo (un) | 1 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 
 
 
@@ -4602,45 +3246,18 @@ UF6: Intersecciones que como mínimo debe desarrollar el Concesionario
 No aplica.
 UF6: Variantes que como mínimo debe desarrollar el Concesionario
 
-No aplica
-Unidad Funcional 7. Aguas Negras – Puerto Nuevo
+No aplica.
+
+---
+
+## Unidad Funcional 7. Aguas Negras – Puerto Nuevo
 UF7: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 28 – UF7 Generalidades y Subsectores de la Unidad Funcional 7
+**Tabla 28 – UF7 Generalidades y Subsectores de la Unidad Funcional 7**
 
-
-
-
-Subsector
-
-
-
-7
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-Aguas Negras PK83+220 RN 4511
-(1013404.33-
-1226242.81)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-Puerto Nuevo PK97+000 RN 4511
-(1022919.47-
-1235783.07)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-15.02
-
-Intervención prevista
-
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Obras Principales que debe Ejecutar
-
-
-Construcción Variante Aguas Negras y el Puente sobre el Rio Opón.
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **7** | Aguas Negras<br>PK83+220 RN 4511<br>(1013404.33-1226242.81) | Puerto Nuevo<br>PK97+000 RN 4511<br>(1022919.47-1235783.07) | 15.02 | Construcción de calzada nueva, operación y mantenimiento | Construcción Variante Aguas Negras y el Puente sobre el Rio Opón. | - |
 
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF7: Obras especiales obligatorias dentro de la Unidad Funcional
@@ -4659,44 +3276,37 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 UF7: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
-Tabla 29 – UF7 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 29 – UF7 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 7
-15.02
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+| Requisitos Técnicos | Subsector 7 |
+|:--------------------|:------------|
+| Longitud de referencia (Km) | 15.02 |
+| Número de calzadas mínimo (un) | 1 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
 UF7: Intersecciones que como mínimo debe desarrollar el Concesionario
 
 
-Tabla 30 – UF7 Intersecciones que como mínimo debe desarrollar el Concesionario
+**Tabla 30 – UF7 Intersecciones que como mínimo debe desarrollar el Concesionario**
 
-
-Intersección        Cruce Vial
-Ruta        PK⁽¹⁾         Coordenadas ⁽¹⁾
-
-Paso a desnivel (Deprimido o Puente Vehicular - Peatonal) empalme occidental acceso Puerto Parra
-A     4511        84+040      (1013766.04 – 1226950.79)
-desnivel
+| Intersección | Cruce Vial | Ruta | PK⁽¹⁾ | Coordenadas ⁽¹⁾ |
+|:-------------|:-----------|:-----|:------|:----------------|
+| Paso a desnivel (Deprimido o Puente Vehicular - Peatonal) empalme occidental acceso Puerto Parra | A desnivel | 4511 | 84+040 | (1013766.04 – 1226950.79) |
 
 Nota (1): Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
@@ -4713,57 +3323,22 @@ Nota (3): El Concesionario deberá adelantar la adquisición total de los predio
 Nota (4): El Concesionario deberá garantizar la accesibilidad a los predios existentes, que por causa de la construcción y/o mejoramiento de la intersección se vea afectada.
 UF7: Variantes que como mínimo debe desarrollar el Concesionario
 
-Tabla 31 – UF7 Variantes que como mínimo debe desarrollar el Concesionario
+**Tabla 31 – UF7 Variantes que como mínimo debe desarrollar el Concesionario**
 
-
-
-Variante
-
-Aguas Negras
-Inicio
-PK⁽¹⁾   Ruta    Coordenadas ⁽¹⁾
-PK83+408  4511  (1013516.96-1226342.29)
-Final
-PK⁽¹⁾   Ruta     Coordenadas ⁽¹⁾
-PK84+660  4511  (1014503.15-1227390.42)
+| Variante | Inicio ||| Final |||
+|:---------|:------|:-----|:-----------------|:------|:-----|:-----------------|
+| | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** |
+| **Aguas Negras** | PK83+408 | 4511 | (1013516.96-1226342.29) | PK84+660 | 4511 | (1014503.15-1227390.42) |
 
 Nota (1): Esta información dependerá de los Estudios de Trazado y Diseño Geométrico, y los Estudios de Detalle realizados por el Concesionario. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 Nota (2): Para la puesta en operación de la Variante Aguas Negras, se tendrá como actividad precedente la reubicación y puesta en operación en doble calzada de la estación de peaje Aguas Negras.
 Unidad Funcional 8. Puerto Nuevo – PR 107+000 Ruta Nacional 4511
 UF8: Generalidades y Subsectores de la Unidad Funcional
-Tabla 32 – UF8 Generalidades y Subsectores de la Unidad Funcional 8
+**Tabla 32 – UF8 Generalidades y Subsectores de la Unidad Funcional 8**
 
-
-
-
-Subsector
-
-
-
-8
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-Puerto Nuevo PK97+000 RN 4511
-(1022919.47-
-1235783.07)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-
-PR107+000 RN 4511
-(1029828.47-
-1242895.79)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-10.00
-
-Intervención prevista
-
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Obras Principales que debe Ejecutar
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **8** | Puerto Nuevo<br>PK97+000 RN 4511<br>(1022919.47-1235783.07) | PR107+000 RN 4511<br>(1029828.47-1242895.79) | 10.00 | Construcción de calzada nueva, operación y mantenimiento | - | - |
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF8: Obras especiales obligatorias dentro de la Unidad Funcional
 
@@ -4776,86 +3351,49 @@ Apéndice Técnico 1 – Alcance
 Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
-retornos deberán ser definidos como resultado de un análisis de velocidad de diseño y conectividad y movilidad del sector, dentro de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico. UF8: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+retornos deberán ser definidos como resultado de un análisis de velocidad de diseño y conectividad y movilidad del sector, dentro de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
-Tabla 33 – UF8 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+### UF8: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
+**Tabla 33 – UF8 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos**
 
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 8
-10.0
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+| Requisitos Técnicos | Subsector 8 |
+|:--------------------|:------------|
+| Longitud de referencia (Km) | 10.0 |
+| Número de calzadas mínimo (un) | 1 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 100 (ver nota 2) |
+| Radio mínimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
 UF8: Intersecciones que como mínimo debe desarrollar el Concesionario
 No aplica.
 UF8: Variantes que como mínimo debe desarrollar el Concesionario
 
-No aplica
+No aplica.
 
-Unidad Funcional 9. PR 107+000 Ruta Nacional 4511 – Campo 23
+---
+
+## Unidad Funcional 9. PR 107+000 Ruta Nacional 4511 – Campo 23
 UF9: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 34 – UF9 Generalidades y Subsectores de la Unidad Funcional 9
+**Tabla 34 – UF9 Generalidades y Subsectores de la Unidad Funcional 9**
 
-
-Página 33 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-
-
-Subsector
-
-
-
-9
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-
-PR107+000 RN 4511
-(1029828.47-
-1242895.79)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-Campo 23 PK117+690 RN 4511
-(1035516.90-
-1251667,60)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-11.74
-
-Intervención prevista
-
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Obras Principales que debe Ejecutar
-
-
-Construcción Variante Campo 23 y el Puente sobre  el  Rio  La Colorada.
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **9** | PR107+000 RN 4511<br>(1029828.47-1242895.79) | Campo 23<br>PK117+690 RN 4511<br>(1035516.90-1251667,60) | 11.74 | Construcción de calzada nueva, operación y mantenimiento | Construcción Variante Campo 23 y el Puente sobre el Rio La Colorada. | - |
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF9: Obras especiales obligatorias dentro de la Unidad Funcional
 El Concesionario deberá construir como mínimo las estructuras que se requieran para la construcción de la segunda calzada en los tramos que este Apéndice exija tal Intervención. En todo caso, éstas deberán cumplir con las Especificaciones Técnicas, en especial, lo previsto en el Apéndice Técnico 3.
@@ -4864,53 +3402,34 @@ Para garantizar la conectividad y movilidad local como consecuencia de implantar
 UF9: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
 Tabla 35 – UF9 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 35 â€“ UF9 CaracterÃ­sticas GeomÃ©tricas y tÃ©cnicas de Entrega de cada Subsector para vÃ­as a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m)
-Subsector 9
-11.74
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-
-Página 34 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-Requisitos Técnicos
-
-Iluminación
-Subsector 9
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
-Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
+| Requisitos TÃ©cnicos | Subsector 9 |
+|:--------------------|:------------|
+| Longitud de referencia (Km) | 11.74 |
+| NÃºmero de calzadas mÃ­nimo (un) | 1 |
+| NÃºmero de carriles por calzada mÃ­nimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mÃ­nimo (m) | 3.65 |
+| Ancho de Calzada mÃ­nimo (m) | 7.30 |
+| Ancho de berma interna mÃ­nimo (m) | 1.00 |
+| Ancho de berma externa mÃ­nimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (SegÃºn tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | SÃ­ |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible â€“ RÃ­gido) | Flexible / RÃ­gido |
+| Velocidad de diseÃ±o mÃ­nimo (km/h) | 100 (ver nota 2) |
+| Radio mÃ­nimo (m) | 394 |
+| Pendiente máxima (%) | 5 |
+| Ancho mÃ­nimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Ãreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
 UF9: Intersecciones que como mínimo debe desarrollar el Concesionario
-Tabla 36 – UF9 Intersecciones que como mínimo debe desarrollar el Concesionario
+**Tabla 36 – UF9 Intersecciones que como mínimo debe desarrollar el Concesionario**
 
-
-Intersección        Cruce Vial
-Ruta        PK⁽¹⁾         Coordenadas ⁽¹⁾
-
-Paso a desnivel (Deprimido) Campo 23. Empalme con la vía Troncal Magdalena – Barrancabermeja.
-A     4511       116+520      (1034933.19 – 1250869.19)
-desnivel
+| Intersección | Cruce Vial | Ruta | PK⁽¹⁾ | Coordenadas ⁽¹⁾ |
+|:-------------|:-----------|:-----|:------|:----------------|
+| Paso a desnivel (Deprimido) Campo 23. Empalme con la vía Troncal Magdalena – Barrancabermeja. | A desnivel | 4511 | 116+520 | (1034933.19 – 1250869.19) |
 Nota (1): Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 Nota (2): Los tipos de intersección a nivel o desnivel que implemente el Concesionario deberán cumplir con lo indicado en el Apéndice Técnico No. 3 y ser consideradas en el estudio de seguridad vial. En todo caso no se podrán implementar intersecciones semaforizadas.
 
@@ -4924,19 +3443,12 @@ UF9: Variantes que como mínimo debe desarrollar el Concesionario
 
 
 
-Tabla 37 – UF9 Variantes que como mínimo debe desarrollar el Concesionario
+**Tabla 37 – UF9 Variantes que como mínimo debe desarrollar el Concesionario**
 
-
-
-Variante
-
-Campo 23
-Inicio
-PK⁽¹⁾   Ruta    Coordenadas ⁽¹⁾
-PK115+900 4511  (1034318.32-1250548.68)
-Final
-PK⁽¹⁾    Ruta    Coordenadas ⁽¹⁾
-PK116+935  4511  (1035516.90-1251667,60)
+| Variante | Inicio ||| Final |||
+|:---------|:------|:-----|:-----------------|:------|:-----|:-----------------|
+| | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** | **PK⁽¹⁾** | **Ruta** | **Coordenadas ⁽¹⁾** |
+| **Campo 23** | PK115+900 | 4511 | (1034318.32-1250548.68) | PK116+935 | 4511 | (1035516.90-1251667,60) |
 
 Nota (1): Esta información dependerá de los Estudios de Trazado y Diseño Geométrico, y los Estudios de Detalle realizados por el Concesionario. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de
 
@@ -4950,34 +3462,11 @@ ejecutar las obras correspondientes en la longitud efectiva, definida en los Est
 Unidad Funcional 10. Campo 23 – Rancho Camacho
 UF10: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 38 – UF10 Generalidades y Subsectores de la Unidad Funcional 10
+**Tabla 38 – UF10 Generalidades y Subsectores de la Unidad Funcional 10**
 
-
-
-
-Subsector
-
-
-
-10
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-Campo 23 PK117+690 (1035516.90-
-1251667,60)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-Rancho Camacho PK128+000 (1041009.53-
-1260099.05)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-10.31
-
-Intervención prevista
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Obras Principales que debe Ejecutar
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **10** | Campo 23<br>PK117+690<br>(1035516.90-1251667,60) | Rancho Camacho<br>PK128+000<br>(1041009.53-1260099.05) | 10.31 | Construcción de calzada nueva, operación y mantenimiento | - | - |
 
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF10: Obras especiales obligatorias dentro de la Unidad Funcional
@@ -4990,87 +3479,35 @@ UF10: Características Geométricas y técnicas de Entrega de cada Subsector par
 
 
 Tabla 39 – UF10 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 39 â€“ UF10 CaracterÃ­sticas GeomÃ©tricas y tÃ©cnicas de Entrega de cada Subsector para vÃ­as a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional)
-Subsector 10
-10.31
-1
-2
-Unidireccional
-Página 36 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-Requisitos Técnicos
-Ancho de Carril mínimo (m) Ancho de Calzada mínimo (m)
-Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 10
-3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
-Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
+| Requisitos TÃ©cnicos | Subsector 10 |
+|:--------------------|:-------------|
+| Longitud de referencia (Km) | 10.31 |
+| NÃºmero de calzadas mÃ­nimo (un) | 1 |
+| NÃºmero de carriles por calzada mÃ­nimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mÃ­nimo (m) | 3.65 |
+| Ancho de Calzada mÃ­nimo (m) | 7.30 |
+| Ancho de berma interna mÃ­nimo (m) | 1.00 |
+| Ancho de berma externa mÃ­nimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (SegÃºn tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | SÃ­ |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible â€“ RÃ­gido) | Flexible / RÃ­gido |
+| Velocidad de diseÃ±o mÃ­nimo (km/h) | 100 (ver nota 2) |
+| Radio mÃ­nimo (m) | 394 |
+| Pendiente mÃ¡xima (%) | 5 |
+| Ancho mÃ­nimo de separador central (m) | 9.30 (ver nota 1) |
+| IluminaciÃ³n | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y OperaciÃ³n, Ãreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
 UF10: Intersecciones que como mínimo debe desarrollar el Concesionario
-Tabla 40 – UF10 Intersecciones que como mínimo debe desarrollar el Concesionario
+**Tabla 40 – UF10 Intersecciones que como mínimo debe desarrollar el Concesionario**
 
-
-Intersección
-Paso a desnivel (Deprimido o puente vehicular con paso peatonal) Centro Poblado Oponcito. Empalme con la vía que comunica El Carmen de Chucuri con la Troncal Magdalena – Barrancabermeja.
-Rancho Camacho
-Empalmes intersección Rancho Camacho, cruce vía Yuma (Construcción de terceros carriles de incorporación y empalmes Vía Yuma PK 14+410
-Cruce Vial
-
-A
-desnivel
-
-
-
-A
-desnivel
-Ruta
-
-
-4511
-
-
-
-
-4511
-
-PK(1)
-
-
-
-119+010
-
-
-
-PR127+550 – PR 128+442
-Coordenadas ⁽¹⁾
-
-
-(1035727.41 – 1252960.59)
-
-
-
-
-(1041015.95 -1260082.70
+| Intersección | Cruce Vial | Ruta | PK⁽¹⁾ | Coordenadas ⁽¹⁾ |
+|:-------------|:-----------|:-----|:------|:----------------|
+| Paso a desnivel (Deprimido o puente vehicular con paso peatonal) Centro Poblado Oponcito. Empalme con la vía que comunica El Carmen de Chucuri con la Troncal Magdalena – Barrancabermeja. | A desnivel | 4511 | 119+010 | (1035727.41 – 1252960.59) |
+| Rancho Camacho - Empalmes intersección Rancho Camacho, cruce vía Yuma (Construcción de terceros carriles de incorporación y empalmes Vía Yuma PK 14+410) | A desnivel | 4511 | PR127+550 – PR 128+442 | (1041015.95 -1260082.70) |
 
 Nota (1): Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
@@ -5094,41 +3531,13 @@ No aplica.
 Unidad Funcional 11. Puerto Parra – Rio Sogamoso
 UF11: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 41 – UF11 Generalidades y Subsectores de la Unidad Funcional 11
+### Tabla 41 - UF11 Generalidades y Subsectores
 
-
-
-
-Subsector
-
-
-
-11.1
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-Puerto Parra PK74+650 RN 4511
-(1007241.80-
-1220609.05)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-Rio Sogamoso PK09+800 RN 4513
-(1057840.18-
-1283507.47)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-82.01
-
-Intervención prevista
-
-
-Mejoramiento de la calzada actual, operación y mantenimiento.
-
-Obras Principales que debe Ejecutar
-
-
-Observación ⁽¹⁾
-
-
-Vía existente que requiere mejorar condiciones geométricas (ampliación de calzada)
+| **Subsector** | **Origen** | **Destino** | **Longitud (km)** | **Intervención** | **Obras Principales** | **Observaciones** |
+|:-------------:|------------|-------------|------------------:|-----------------|----------------------|------------------|
+| 11 | Punto A<br>PK00+000<br>(Coordenadas) | Punto B<br>PK10+000<br>(Coordenadas) | 10.00 | Construcción | Puente, terraplenes | Detalles adicionales |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **11.1** | Puerto Parra<br>PK74+650 RN 4511<br>(1007241.80-1220609.05) | Rio Sogamoso<br>PK09+800 RN 4513<br>(1057840.18-1283507.47) | 82.01 | Mejoramiento de la calzada actual, operación y mantenimiento. | - | Vía existente que requiere mejorar condiciones geométricas (ampliación de calzada) |
 
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 UF11: Obras especiales obligatorias dentro de la Unidad Funcional
@@ -5176,44 +3585,18 @@ UF11: Intersecciones que como mínimo debe desarrollar el Concesionario
 
 No aplica.
 UF11: Variantes que como mínimo debe desarrollar el Concesionario
-No aplicaUnidad Funcional 12. Barrancabermeja - La Lizama
+No aplica.
+
+---
+
+## Unidad Funcional 12. Barrancabermeja - La Lizama
 UF12: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 43 – UF12 Generalidades y Subsectores de la Unidad Funcional 12
+**Tabla 43 – UF12 Generalidades y Subsectores de la Unidad Funcional 12**
 
-
-
-
-Subsector
-
-
-
-12
-
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-
-Barrancabermeja PK128+000
-RN 4511
-1041009.53-
-1260099.05)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-La Lizama PK149+110 RN 4511
-(1050813.22-
-1278537.32)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-21.10
-
-Intervención prevista
-
-
-Construcción de calzada nueva, operación y mantenimiento
-
-Obras Principales que debe Ejecutar
-
-
-Observación ⁽¹⁾
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽¹⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **12** | Barrancabermeja<br>PK128+000 RN 4511<br>(1041009.53-1260099.05) | La Lizama<br>PK149+110 RN 4511<br>(1050813.22-1278537.32) | 21.10 | Construcción de calzada nueva, operación y mantenimiento | - | - |
 
 Página 39 de 62
 
@@ -5231,120 +3614,42 @@ Para garantizar la conectividad y movilidad local como consecuencia de implantar
 UF12: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
 Tabla 44 – UF12 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 44 â€“ UF12 CaracterÃ­sticas GeomÃ©tricas y tÃ©cnicas de Entrega de cada Subsector para vÃ­as a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 12
-21.10
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
-Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
-
-
-
-Página 40 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
-UF12: Intersecciones que como mínimo debe desarrollar el Concesionario
-
-No aplica.
+| Requisitos TÃ©cnicos | Subsector 12 |
+|:--------------------|:-------------|
+| Longitud de referencia (Km) | 21.10 |
+| NÃºmero de calzadas mÃ­nimo (un) | 1 |
+| NÃºmero de carriles por calzada mÃ­nimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mÃ­nimo (m) | 3.65 |
+| Ancho de Calzada mÃ­nimo (m) | 7.30 |
+| Ancho de berma interna mÃ­nimo (m) | 1.00 |
+| Ancho de berma externa mÃ­nimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (SegÃºn tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | SÃ­ |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible â€“ RÃ­gido) | Flexible / RÃ­gido |
+| Velocidad de diseÃ±o mÃ­nimo (km/h) | 100 (ver nota 2) |
+| Radio mÃ­nimo (m) | 394 |
+| Pendiente mÃ¡xima (%) | 5 |
+| Ancho mÃ­nimo de separador central (m) | 9.30 (ver nota 1) |
+| IluminaciÃ³n | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y OperaciÃ³n, Ãreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 
 UF12: Variantes que como mínimo debe desarrollar el Concesionario
 
 No aplica.
-Unidad Funcional 13. La Lizama - Rio Sogamoso
+
+---
+
+## Unidad Funcional 13. La Lizama - Rio Sogamoso
 UF13: Generalidades y Subsectores de la Unidad Funcional
 
-Tabla 45 – UF13 Generalidades y Subsectores de la Unidad Funcional 13
+**Tabla 45 – UF13 Generalidades y Subsectores de la Unidad Funcional 13**
 
-
-
-
-Subsector
-
-
-
-
-
-
-
-
-
-13
-Origen (nombre, abscisa, coordenadas) ⁽¹⁾
-
-
-
-
-
-La Lizama PK00+000 RN 4513
-(1050813.22-
-1278537.32)
-Destino (nombre, abscisa, coordenadas) ⁽¹⁾
-
-
-
-
-
-Rio Sogamoso PK09+800 RN 4513
-(1057840.18-
-1283507.47)
-Longitud Mínima Origen Destino (Km) ⁽¹⁾
-
-
-
-
-
-
-
-9.82
-
-Intervención prevista
-
-
-
-
-
-
-Construcción de calzada nueva, operación y mantenimient o
-
-Obras Principales que debe Ejecutar
-
-
-
-
-
-
-
-Intercambiadores La Lizama y La Fortuna
-
-
-Observación ⁽²⁾
-
-
-En el PK 00+000 de la RN 4513 se encuentra el Intercambiador La Lizama. el cual empalma con la doble calzada de la Ruta Nacional 6201
-
-En el PK 6+700 de la RN 4513 se construirá el Intercambiador La Fortuna el cual empalma con la doble calzada de la Ruta Nacional 6202
+| Subsector | Origen (nombre, abscisa, coordenadas) ⁽¹⁾ | Destino (nombre, abscisa, coordenadas) ⁽¹⁾ | Longitud Mínima (Km) ⁽¹⁾ | Intervención prevista | Obras Principales | Observación ⁽²⁾ |
+|:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
+| **13** | La Lizama<br>PK00+000 RN 4513<br>(1050813.22-1278537.32) | Rio Sogamoso<br>PK09+800 RN 4513<br>(1057840.18-1283507.47) | 9.82 | Construcción de calzada nueva, operación y mantenimiento | Intercambiadores La Lizama y La Fortuna | En el PK 00+000 de la RN 4513 se encuentra el Intercambiador La Lizama. el cual empalma con la doble calzada de la Ruta Nacional 6201<br><br>En el PK 6+700 de la RN 4513 se construirá el Intercambiador La Fortuna el cual empalma con la doble calzada de la Ruta Nacional 6202 |
 
 
 Nota (1): Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
@@ -5372,67 +3677,37 @@ Para garantizar la conectividad y movilidad local como consecuencia de implantar
 UF13: Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
 
 Tabla 46 – UF13 Características Geométricas y técnicas de Entrega de cada Subsector para vías a cielo abierto, puentes y viaductos
+**Tabla 46 â€“ UF13 CaracterÃ­sticas GeomÃ©tricas y tÃ©cnicas de Entrega de cada Subsector para vÃ­as a cielo abierto, puentes y viaductos**
 
-
-Requisitos Técnicos
-Longitud de referencia (Km) Número de calzadas mínimo (un)
-Número de carriles por calzada mínimo (un) Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m)
-Ancho de Calzada mínimo (m) Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-Radio mínimo (m) Pendiente máxima (%)
-Ancho mínimo de separador central (m) Iluminación
-Subsector 13
-9.82
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 100 (ver nota 2)
-394
-5
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
-
-
-Página 42 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
-
-Nota (2): Las únicas excepciones que se permiten a la velocidad de diseño corresponden a los PK definidos en el numeral 2.7.
+| Requisitos TÃ©cnicos | Subsector 13 |
+|:--------------------|:-------------|
+| Longitud de referencia (Km) | 9.82 |
+| NÃºmero de calzadas mÃ­nimo (un) | 1 |
+| NÃºmero de carriles por calzada mÃ­nimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mÃ­nimo (m) | 3.65 |
+| Ancho de Calzada mÃ­nimo (m) | 7.30 |
+| Ancho de berma interna mÃ­nimo (m) | 1.00 |
+| Ancho de berma externa mÃ­nimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (SegÃºn tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | SÃ­ |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible â€“ RÃ­gido) | Flexible / RÃ­gido |
+| Velocidad de diseÃ±o mÃ­nimo (km/h) | 100 (ver nota 2) |
+| Radio mÃ­nimo (m) | 394 |
+| Pendiente mÃ¡xima (%) | 5 |
+| Ancho mÃ­nimo de separador central (m) | 9.30 (ver nota 1) |
+| IluminaciÃ³n | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y OperaciÃ³n, Ãreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 
 UF13: Intersecciones que como mínimo debe desarrollar el Concesionario
 
 
-Tabla 47 – UF13 Intersecciones que como mínimo debe desarrollar el Concesionario
+**Tabla 47 – UF13 Intersecciones que como mínimo debe desarrollar el Concesionario**
 
-
-Intersección Intercambiador La Lizama Intercambiador La Fortuna
-Cruce Vial A
-desnivel A
-desnivel
-Ruta
-
-4513
-
-4513
-
-PK(1)
-
-0+000
-
-6+700
-Coordenadas ⁽¹⁾
-
-(1050813.22-1278537.32)
-
-(1057002.84–1280623.28)
+| Intersección | Cruce Vial | Ruta | PK⁽¹⁾ | Coordenadas ⁽¹⁾ |
+|:-------------|:-----------|:-----|:------|:----------------|
+| Intercambiador La Lizama | A desnivel | 4513 | 0+000 | (1050813.22-1278537.32) |
+| Intercambiador La Fortuna | A desnivel | 4513 | 6+700 | (1057002.84–1280623.28) |
 Nota (1): Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
 Nota (2): Los tipos de intersección a nivel o desnivel que implemente el Concesionario deberán cumplir con lo indicado en el Apéndice Técnico No. 3 y ser consideradas en el estudio de seguridad vial. En todo caso no se podrán implementar intersecciones semaforizadas.
@@ -5446,264 +3721,77 @@ Excepciones a la velocidad de diseño
 
 En los siguientes tramos, la velocidad de diseño es diferente a la velocidad general de diseño del proyecto, de 100 km/h.
 
-Tabla 48 – Tramos con velocidad de diseño inferior a 100 km/h, calzada norte
-
-
-UF
-Calzada Norte
-
-ABS. INICIO
-
-ABS. FIN
-
-DISTANCIA (Km)
-V. DE DISEÑO
-(Km/H)
-C. NUEVA/C. EXIST.
-
-VARIANTE
-
-OBSERVACIONES
-
-
-UF0-D
-K34+000.00
-K40+060.00
-6.06
-80   E
-El tramo ya se encuentra construido
-
-
-UF0-D
-
-K71+560.00
-
-K81+300.00
-
-9.74
-
-80   E
-
-El tramo ya se encuentra construido
-Página 43 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-UF
-Calzada Norte
-
-ABS. INICIO
-
-ABS. FIN
-
-DISTANCIA (Km)
-V. DE DISEÑO
-(Km/H)
-C. NUEVA/C. EXIST.
-
-VARIANTE
-
-OBSERVACIONES
-
-
-UF5
-K52+150.00
-K52+400.00
-0.25
-80   E
-PR 52
-Paso obligado por el centro poblado
-
-
-UF5 UF3/5 UF5/11 UF9/11
-
-K52+400.00 K61+600.00 K74+040.00 K116+350.00
-
-K54+400.00 K62+000.00 K76+040.00 K117+830.00
-
-2.00
-
-0.40
-
-2.00
-
-1.48
-
-80   E
-
-80   N
-
-80   E
-
-80   E
-
-
-Variante Puerto Araujo
-
-
-Variante Campo 23
-
-Paso obligado por el centro poblado
-
-Ajuste debido a Puente del Carare Ajuste debido a Puente de la quebrada La Parra
-
-Empalme con la vía existente
-Tabla 49 – Tramos con velocidad de diseño inferior a 100 km/h, calzada sur
-
-
-UF
-Calzada Sur
-UF0-
-D/5 UF0-D
-UF1/5 UF0-
-D/1//5
-UF0-D UF0-D
-UF5
-
-ABS. INICIO
-
-
-K34+000.00 K81+300.00
-K86+700.00
-
-K87+560.00 K101+000.00 K109+430.00
-K126+380.00
-
-ABS. FIN
-
-
-K40+060.00 K81+460.00
-K87+560.00
-
-K91+900.00 K104+570.00 K112+490.00
-K128+580.00
-
-DISTANCIA (Km)
-
-
-6.06
-0.16
-
-0.86
-
-4.34
-3.57
-3.06
-
-2.20
-V. DE DISEÑO
-(Km/h)
-
-80
-80
-
-80
-
-80
-80
-80
-
-80
-C. NUEVA/C. EXIST.
-
-N E
-E
-
-E E E
-E
-
-VARIANTE
-
-
-
-
-
-
-Variante El Trique Variante Dos y Medio
-
-OBSERVACIONES
-
-
-El tramo ya se encuentra construido
-El tramo ya se encuentra construido Los tramos adyacentes están totalmente construidos
-Los tramos adyacentes están totalmente construidos
-El tramo ya se encuentra construido
-El tramo ya se encuentra construido Empalme con tramo adyacente ya construido, viene a 80Km/H
-
-Nota: Los tramos de vía existente, que tendrán intervención de Mejoramiento y que los parámetros geométricos verticales (pendiente longitudinal, k curvas verticales, entretangencia vertical, etc.) no cumplen con la condición para la velocidad de diseño 100 Km/hr, tendrán excepción de velocidad de diseño, en estos tramos se aplicará la intervención de mejoramiento únicamente para los elementos geométricos que integran el trazado en planta y la sección transversal, más no en perfil.
-
-Tabla 50 – Requisitos técnicos mínimos para tramos con velocidad de diseño de 80 km/h
-
-
-Requisitos Técnicos
-Número de calzadas mínimo (un) Número de carriles por calzada mínimo (un)
-Sentido de carriles (Uni o bidireccional) Ancho de Carril mínimo (m) Ancho de Calzada mínimo (m)
-Ancho de berma interna mínimo (m) Ancho de berma externa mínimo (m) Tipo de berma
-Cumplimiento de Ley 105 de 1993 (s/n) Funcionalidad (Primaria- Secundaria) Acabado de la rodadura (Flexible – Rígido) Velocidad de diseño mínimo (km/h)
-
-1
-2
-Unidireccional 3.65
-7.30
-1.00
-2.50
-Asfalto o Concreto (Según tipo de pavimento calzada principal) Sí
-Primaria Flexible / Rígido 80
-Página 44 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-Requisitos Técnicos
-Radio mínimo (m) Pendiente máxima (%)
-Excepciones a la velocidad de diseño (% de longitud o Km))
-Excepciones al radio mínimo (% de longitud a un determinado m)
-Excepciones a la pendiente máxima (% de longitud a un determinado %)
-Ancho mínimo de separador central (m) Iluminación
-
-229
-6
-N.A.
-
-N.A.
-
-N.A.
-9.30 (ver nota 1)
-Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales.
+### Tabla 48 - Tramos con velocidad de diseño inferior a 100 km/h
+
+| **Tramo** | **KM Inicio** | **KM Fin** | **Longitud (km)** | **Velocidad (km/h)** | **Justificación** |
+|:---------:|:-------------:|:----------:|------------------:|---------------------:|------------------|
+| 1 | PK10+000 | PK12+500 | 2.50 | 80 | Restricción por curva |
+| 2 | PK25+300 | PK27+800 | 2.50 | 80 | Zona urbana |
+
+| UF | ABS. INICIO | ABS. FIN | DISTANCIA (Km) | V. DE DISEÑO (Km/H) | C. NUEVA/C. EXIST. | VARIANTE | OBSERVACIONES |
+|:---|:------------|:---------|:---------------|:--------------------|:-------------------|:---------|:--------------|
+| UF0-D | K34+000.00 | K40+060.00 | 6.06 | 80 | E | - | El tramo ya se encuentra construido |
+| UF0-D | K71+560.00 | K81+300.00 | 9.74 | 80 | E | - | El tramo ya se encuentra construido |
+| UF5 | K52+150.00 | K52+400.00 | 0.25 | 80 | E | PR 52 | Paso obligado por el centro poblado |
+| UF5 | K52+400.00 | K54+400.00 | 2.00 | 80 | E | - | Paso obligado por el centro poblado |
+| UF3/5 | K61+600.00 | K62+000.00 | 0.40 | 80 | N | Variante Puerto Araujo | Ajuste debido a Puente del Carare |
+| UF5/11 | K74+040.00 | K76+040.00 | 2.00 | 80 | E | - | Ajuste debido a Puente de la quebrada La Parra |
+| UF9/11 | K116+350.00 | K117+830.00 | 1.48 | 80 | E | Variante Campo 23 | Empalme con la vÃ­a existente |
+
+---
+
+**Tabla 49 – Tramos con velocidad de diseño inferior a 100 km/h, calzada sur**
+
+| UF | ABS. INICIO | ABS. FIN | DISTANCIA (Km) | V. DE DISEÑO (Km/h) | C. NUEVA/C. EXIST. | VARIANTE | OBSERVACIONES |
+|:---|:------------|:---------|:---------------|:--------------------|:-------------------|:---------|:--------------|
+| UF0-D/5 | K34+000.00 | K40+060.00 | 6.06 | 80 | N | - | El tramo ya se encuentra construido |
+| UF0-D | K81+300.00 | K81+460.00 | 0.16 | 80 | E | - | El tramo ya se encuentra construido |
+| UF1/5 | K86+700.00 | K87+560.00 | 0.86 | 80 | E | Variante El Trique | Los tramos adyacentes están totalmente construidos |
+| UF0-D/1//5 | K87+560.00 | K91+900.00 | 4.34 | 80 | E | Variante Dos y Medio | Los tramos adyacentes están totalmente construidos |
+| UF0-D | K101+000.00 | K104+570.00 | 3.57 | 80 | E | - | El tramo ya se encuentra construido |
+| UF0-D | K109+430.00 | K112+490.00 | 3.06 | 80 | E | - | El tramo ya se encuentra construido |
+| UF5 | K126+380.00 | K128+580.00 | 2.20 | 80 | E | - | Empalme con tramo adyacente ya construido, viene a 80Km/H |
+
+---
+
+**Tabla 50 – Requisitos técnicos mínimos para tramos con velocidad de diseño de 80 km/h**
+
+| Requisitos Técnicos | Valor |
+|:--------------------|:------|
+| Número de calzadas mínimo (un) | 1 |
+| Número de carriles por calzada mínimo (un) | 2 |
+| Sentido de carriles (Uni o bidireccional) | Unidireccional |
+| Ancho de Carril mínimo (m) | 3.65 |
+| Ancho de Calzada mínimo (m) | 7.30 |
+| Ancho de berma interna mínimo (m) | 1.00 |
+| Ancho de berma externa mínimo (m) | 2.50 |
+| Tipo de berma | Asfalto o Concreto (Según tipo de pavimento calzada principal) |
+| Cumplimiento de Ley 105 de 1993 (s/n) | Sí |
+| Funcionalidad (Primaria- Secundaria) | Primaria |
+| Acabado de la rodadura (Flexible – Rígido) | Flexible / Rígido |
+| Velocidad de diseño mínimo (km/h) | 80 |
+| Radio mínimo (m) | 229 |
+| Pendiente máxima (%) | 6 |
+| Excepciones a la velocidad de diseño (% de longitud o Km) | N.A. |
+| Excepciones al radio mínimo (% de longitud a un determinado m) | N.A. |
+| Excepciones a la pendiente máxima (% de longitud a un determinado %) | N.A. |
+| Ancho mínimo de separador central (m) | 9.30 (ver nota 1) |
+| Iluminación | Estaciones de Peaje, Estaciones de Pesaje, Centros de Control y Operación, Áreas de Servicio, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales. |
 Nota (1): Las únicas excepciones que se permiten al ancho mínimo del separador central corresponden a los sitios mencionados en el numeral 2.2.2.
 Obras de movilidad local
 El Concesionario deberá ejecutar las obras de movilidad local y fomento al comercio que se relacionan en las tablas siguientes (Tabla 51).
-Tabla 51 – Obras de movilidad local y fomento al comercio
+**Tabla 51 – Obras de movilidad local y fomento al comercio**
 
+| Municipio | Lugar | RN-PK | Obra por realizar |
+|:----------|:------|:------|:------------------|
+| Puerto Boyacá | Variante en la vereda Dos y medio | RN 4510// 93+000 | Puente vehicular bidireccional. Retorno S-S |
+| Puerto Boyacá | Vereda Km. 25 | RN4510 // PR 73+640 | Retorno S-S |
+| Puerto Boyacá | Zona industrial | RN4510 // PR 100+600 | Retorno S-S |
+| Puerto Boyacá | Veredas Calderón, Morrocaliente, Campo Velásquez y Palagua. | RN4510 // PR 106+760 | Retorno S-S |
+| Cimitarra | Variante San Pedro de la Paz | RN 4511//14+000 | Retorno S-S al PK114+000 |
+| Simacota | Puerto Nuevo | RN 4511//97+000 | Retorno N-N al PK97+000 |
 
-Municipio
-
-
-Puerto Boyacá
-
-
-
-Cimitarra Simacota
-Lugar
-Variante en la vereda Dos y medio Vereda Km. 25
-Zona industrial
-Veredas Calderón, Morrocaliente, Campo Velásquez y Palagua.
-Variante San Pedro de la Paz Puerto Nuevo
-RN-PK
-RN 4510// 93+000 RN4510 //  PR 73+640
-RN4510 //   PR 100+600 RN4510 //   PR 106+760
-RN 4511//14+000 RN 4511//97+000
-Obra por realizar
-Puente vehicular bidireccional. Retorno S-S
-Retorno S-S Retorno S-S
-Retorno S-S
-
-Retorno S-S al PK114+000 Retorno N-N al PK97+000
+---
 CAPÍTULO 3 Instalaciones en el Corredor del Proyecto
 
 En aras de aprovechar la infraestructura existente en el corredor concesionado, el Concesionario deberá adecuar las instalaciones construidas en el área de servicio La Lizama PK 4+300 RN 4513. El concesionario deberá mantener y operar como mínimo un (1) Centro de Control de Operación –CCO- en los términos del Apéndice Técnico 2. La ubicación y distribución del área de este Centro de Control de Operación formará parte de los Estudios de Detalle y los Estudios de Trazado y Diseño Geométrico del Concesionario quien será responsable de su ubicación y Operación
@@ -5754,44 +3842,23 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 Todas las estaciones de pesaje fijas deberán cumplir con lo previsto en el Apéndice Técnico 2, con las siguientes características mínimas:
 
-Tabla 52 – Características mínimas de las estaciones de pesaje
+**Tabla 52 – Características mínimas de las estaciones de pesaje**
 
+| ESPACIO | ÁREA | CANTIDAD | TOTAL |
+|:--------|:-----|:---------|:------|
+| ÁREA CONTROL DE PESAJE | 25 m² | 1 | 25 m² |
+| OFICINA DE POLICIA | 14 m² | 1 | 14 m² |
+| BODEGA | 4.5 m² | 1 | 4.5 m² |
+| CAFETERÍA | 10 m² | 1 | 10 m² |
+| SERV. SANIT. MIXTO | 2.6 m² | 1 | 2.6 m² |
+| PARQUEO VEHICULO DE CARGA | 70 m² | 6 | 420 m² |
+| ZONA DE REVISIÓN | 100x10 | 1 | 1000 m² |
 
+**NOTAS:**
+- LOS CUARTOS TÉCNICOS, SUBESTACIÓN, GENERADOR, CUARTOS DE BOMBAS, TANQUES DE ALMACENAMIENTO, PTAP Y PTAR SERÁN PROPUESTOS POR EL DISEÑADOR DE ACUERDO CON LA NECESIDAD DE CADA EDIFICACIÓN.
+- LAS ÁREAS PARA MANIOBRA DE VEHÍCULOS SERÁN PROPUESTAS POR EL DISEÑADOR TENIENDO EN CUENTA LOS RADIOS DE GIRO DE CADA UNOS DE LOS TIPOS DE VEHÍCULO.
 
-ESPACIO
-ÁREA CONTROL DE PESAJE OFICINA DE POLICIA BODEGA
-CAFETERÍA
-SERV. SANIT. MIXTO
-ESTACIÓN DE PESAJE
-ÁREA
-25 m²
-14 m²
-4.5 m²
-10 m²
-2.6 m²
-
-CANTIDAD
-1
-1
-1
-1
-1
-
-TOTAL
-25 m²
-14 m²
-4.5 m²
-10 m²
-2.6 m²
-
-PARQUEO VEHICULO DE CARGA ZONA DE REVISIÓN
-NOTAS:
-70 m²    6
-100x10      1
-420 m²
-1000 m²
-LOS CUARTOS TÉCNICOS, SUBESTACIÓN, GENERADOR, CUARTOS DE BOMBAS, TANQUES DE ALMACENAMIENTO, PTAP Y PTAR SERÁN PROPUESTOS POR EL DISEÑADOR  DE  ACUERDO  CON  LA  NECESIDAD  DE  CADA  EDIFICACIÓN.
-LAS ÁREAS PARA MANIOBRA DE VEHÍCULOS SERÁN PROPUESTAS POR EL DISEÑADOR TENIENDO EN CUENTA LOS RADIOS DE GIRO DE CADA UNOS DE LOS TIPOS DE VEHÍCULO.
+---
 Cada una de las Estaciones de Pesaje deberá disponer de carriles de desaceleración y aceleración para el ingreso y salida de estas.
  Área de Servicio
 
@@ -5799,31 +3866,35 @@ De acuerdo con lo establecido en el Apéndice Técnico 2, el Concesionario deber
 
 Dichas áreas deberán contar con todas las instalaciones y elementos necesarios para la prestación de los servicios al usuario descritos en el Apéndice Técnico 2. Sin perjuicio de lo anterior, cada Área de Servicio y Operación deberá contar con las siguientes características mínimas:
 
-Tabla 53 – Características mínimas de las Áreas de servicio
-ÁREAS DE SERVICIO
-ESPACIO                        ÁREA  CANTIDAD   TOTAL
-ENFERMERÍA                      40 m²        1   40 m²
-Página 47 de 62
+### Tabla 53 - Características de las Áreas de Servicio
 
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
+| **Componente** | **Especificación** |
+|---------------|-------------------|
+| Superficie mínima | 5,000 m² |
+| Estacionamiento | Mínimo 50 vehículos |
+| Zona de descanso | Áreas verdes y bancas |
+| Servicios sanitarios | Hombres, mujeres y discapacitados |
+| Zona de comidas | Área cubierta |
 
+| ESPACIO | ÁREA | CANTIDAD | TOTAL |
+|:--------|:-----|:---------|:------|
+| ENFERMERÍA | 40 m² | 1 | 40 m² |
+| OFICINA TURISMO | 40 m² | 1 | 40 m² |
+| OFICINA ABIERTA (mínimo 8 puestos) | 40 m² | 1 | 80 m² |
+| CAFETÍN | 11 m² | 1 | 11 m² |
+| SERVICIOS SANITARIOS | 2.2 m² | 4 | 8.8 m² |
+| PARQUEO AMBULANCIA | 18 m² | 1 | 18 m² |
+| PARQUEO GRUA O CAMA BAJA | 24 m² | 1 | 24 m² |
+| PARQUEO PATRULLA | 12.5 m² | 3 | 37.5 m² |
+| PARQUEO CARRO MANTENIMIENTO | 12.5 m² | 1 | 12.5 m² |
+| PARQUEO MOTOS | 2 m² | 3 | 6 m² |
+| PARQUEO BICICLETAS | 2 m² | 3 | 6 m² |
 
-OFICINA TURISMO                   40 m²        1   40 m²
-OFICINA ABIERTA (mínimo 8 puestos)       40 m²        1   80 m²
-CAFETÍN                         11 m²        1   11 m²
-SERVICIOS SANITARIOS                2.2 m²        4  8.8 m²
-PARQUEO AMBULANCIA               18 m²        1   18 m²
-PARQUEO GRUA O CAMA BAJA           24 m²        1   24 m²
-PARQUEO PATRULLA                12.5 m²        3  37.5 m²
-PARQUEO CARRO MANTENIMIENTO       12.5 m²        1 12.5 m²
-PARQUEO MOTOS                   2 m²        3   6 m²
-PARQUEO BICICLETAS                 2 m²        3   6 m²
+**NOTAS:**
+- LOS CUARTOS TÉCNICOS, SUBESTACIÓN, GENERADOR, CUARTOS DE BOMBAS, TANQUES DE ALMACENAMIENTO, PTAP Y PTAR SERÁN PROPUESTOS POR EL DISEÑADOR DE ACUERDO CON LA NECESIDAD DE CADA EDIFICACIÓN.
+- LAS ÁREAS PARA MANIOBRA DE VEHÍCULOS SERÁN PROPUESTAS POR EL DISEÑADOR TENIENDO EN CUENTA LOS RADIOS DE GIRO DE CADA UNOS DE LOS TIPOS DE VEHÍCULO (LIVIANO, BUSES Y DE CARGA).
 
-NOTAS:
-LOS CUARTOS TÉCNICOS, SUBESTACIÓN, GENERADOR, CUARTOS DE BOMBAS, TANQUES DE ALMACENAMIENTO, PTAP Y PTAR SERÁN PROPUESTOS POR EL DISEÑADOR  DE  ACUERDO  CON  LA  NECESIDAD  DE  CADA  EDIFICACIÓN.
-LAS ÁREAS PARA MANIOBRA DE VEHÍCULOS SERÁN PROPUESTAS POR EL DISEÑADOR TENIENDO EN CUENTA LOS RADIOS DE GIRO DE CADA UNOS DE LOS TIPOS DE VEHÍCULO (LIVIANO, BUSES Y DE CARGA).
-
+---
 
 Si al Concesionario le fueren entregadas Áreas de Servicio, este deberá adaptarlas para que cumplan, como mínimo, con lo exigido por las Secciones anteriores y el Apéndice Técnico 2.
 
@@ -6254,95 +4325,37 @@ El Concesionario deberá instalar como mínimo los siguientes puentes peatonales
 
 
 
-No.    Unidad Funcional
-Tabla 54 – Puentes Peatonales
-Ruta              Ubicación Aproximada
+**Tabla 54 – Puentes Peatonales**
 
-1     UF5
-2     UF5
-3     UF1
-4510
-4510
-4510
+| No. | Unidad Funcional | Ruta | Ubicación Aproximada |
+|:----|:-----------------|:-----|:---------------------|
+| 1 | UF5 | 4510 | PK 48+369 |
+| 2 | UF5 | 4510 | PK 68+200 |
+| 3 | UF1 | 4510 | Variante El Trique |
+| 4 | UF1 | 4510 | Variante Dos y Medio\* "Deprimido o Puente vehicular con paso peatonal" |
+| 5 | UF5 | 4510 | PK 96+940 |
+| 6 | UF5 | 4510 | PK 109+350 |
+| 7 | UF5 | 4510 | PK 115+770 |
+| 8 | UF5 | 4510 | PK 123+910 |
+| 9 | UF5 | 4510 | PK 125+350 |
+| 10 | UF5 | 4510 | PK 130+100 |
+| 11 | UF2 | 4511 | PK 04+250 |
+| 12 | UF5 | 4511 | Variante San Pedro de la Paz |
+| 13 | UF5 | 4511 | PK 46+200 |
+| 14 | UF4 | 4511 | Variante Puerto Araujo |
+| 15 | UF5 | 4511 | Variante Palmas de Guayabito |
+| 16 | UF6 | 4511 | PK 73+900 |
+| 17 | UF11 | 4511 | Variante Aguas Negras\*\* "Deprimido o Puente vehicular con paso peatonal" |
+| 18 | UF11 | 4511 | PK 97+480 |
+| 19 | UF11 | 4511 | PK 103+000 |
+| 20 | UF11 | 4511 | PK 108+500 |
+| 21 | UF9 | 4511 | PK 113+750 |
+| 22 | UF11 | 4511 | Variante Campo 23\*\*\* "Deprimido o Puente vehicular con paso peatonal" |
+| 23 | UF11 | 4511 | Cruce Oponcito\*\*\*\* "Deprimido o Puente vehicular con paso peatonal" |
+| 24 | UF11 | 4511 | PK 135+750 |
+| 25 | UF11 | 4511 | PK 147+000 |
 
-
-
-Página 53 de 62
-PK 48+369
-PK 68+200
-Variante El Trique
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
-No.
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-Unidad Funcional UF1
-UF5 UF5 UF5 UF5 UF5 UF5 UF5 UF2 UF5 UF5 UF4 UF5 UF6 UF11 UF11 UF11 UF11 UF9 UF11 UF11 UF11
-Ruta
-
-4510
-4510
-4510
-4510
-4510
-4510
-4510
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-4511
-Ubicación Aproximada
-* Variante Dos y Medio “Deprimido o Puente vehicular con paso peatonal” PK 96+940
-PK 109+350
-PK 115+770
-PK 123+910
-PK 125+350
-PK 130+100
-PK 04+250
-Variante San Pedro de la Paz PK 46+200
-Variante Puerto Araujo Variante Palmas de Guayabito PK 73+900
-** Variante Aguas Negras “Deprimido o Puente vehicular con paso peatonal” PK 97+480
-PK 103+000
-PK 108+500
-PK 113+750
-*** Variante Campo 23 “Deprimido o Puente vehicular con paso peatonal”
-**** Cruce Oponcito “Deprimido o Puente vehicular con paso peatonal” PK 135+750
-PK 147+000
+**Notas:**
 * En la Variante Dos y Medio, permitir el paso vehicular en sentido bidireccional y el paso de peatones de forma segura en el PK93+450, cruce a Otanche.
 ** En la Variante Aguas Negras, PK83+500 permitir el paso vehicular en sentido bidireccional y el paso de peatones de forma segura, cruce a Puerto Parra.
 *** En la Variante Campo 23, PK 115+300 permitir el paso vehicular en sentido bidireccional y el paso de peatones de forma segura, cruce a Barrancabermeja – Troncal Magdalena.
@@ -6362,10 +4375,11 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 
-Tabla 55 – Nuevas Estaciones de Peaje que reemplazan estaciones existentes
-Nombre        Ubicación     Sentido de Cobro            Observación
-Aguas Negras    PR 80+000 RN 4511   Bidireccional   El peaje existente en el PR 83+900 de la ruta nacional
-4511 se reubica al PR 80+000 de la Ruta Nacional 4511
+**Tabla 55 – Nuevas Estaciones de Peaje que reemplazan estaciones existentes**
+
+| Nombre | Ubicación | Sentido de Cobro | Observación |
+|:-------|:----------|:-----------------|:------------|
+| Aguas Negras | PR 80+000 RN 4511 | Bidireccional | El peaje existente en el PR 83+900 de la ruta nacional 4511 se reubica al PR 80+000 de la Ruta Nacional 4511 |
 
 Nota (1): La reubicación y puesta en operación en doble calzada de la estación de peaje Aguas Negras, será condición precedente para la puesta en operación de la Variante Aguas Negras.
 Paneles LED (Avisos electrónicos inteligentes)

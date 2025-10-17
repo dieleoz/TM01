@@ -1,30 +1,51 @@
-﻿# AT3 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿---
+title: AT3 - ESPECIFICACIONES GENERALES
+project: APP PUERTO SALGAR - BARRANCABERMEJA
+contract: Concesión APP
+document: AT3 - Apéndice Técnico 3
+type: Apéndice Técnico
+version: 1.0
+date: 2025-10-16
+author: Administrador Contractual EPC
+status: Contenido completo
+---
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** AT3  
-**Tipo:** Apendice Tecnico  
-**Estado:** Contenido completo  
+# AT3 - ESPECIFICACIONES GENERALES
+## APP PUERTO SALGAR - BARRANCABERMEJA
+
+### INFORMACIÓN DEL DOCUMENTO
+
+| **Campo**                | **Valor**                          |
+|--------------------------|-----------------------------------|
+| **Proyecto**            | APP Puerto Salgar - Barrancabermeja |
+| **Contrato**            | Concesión APP                     |
+| **Documento**           | AT3 - Apéndice Técnico 3          |
+| **Tipo**                | Apéndice Técnico                  |
+| **Versión**             | 1.0                               |
+| **Fecha de actualización** | 16/10/2025                       |
+| **Responsable**         | Administrador Contractual EPC     |
+| **Estado**              | Contenido completo                |
+| **Próxima revisión**    | Según necesidad contractual       |
+
+### TABLA DE CONTENIDO
+
+1. [INTRODUCCIÓN](#1-introducción)
+2. [OBJETIVO](#2-objetivo)
+3. [ALCANCE](#3-alcance)
+4. [ESPECIFICACIONES TÉCNICAS](#4-especificaciones-técnicas)
+   - [4.1 Especificaciones de Diseño](#41-especificaciones-de-diseño)
+   - [4.2 Materiales y Normativas](#42-materiales-y-normativas)
+   - [4.3 Control de Calidad](#43-control-de-calidad)
+5. [PROCEDIMIENTOS CONSTRUCTIVOS](#5-procedimientos-constructivos)
+6. [SEGURIDAD Y SALUD EN EL TRABAJO](#6-seguridad-y-salud-en-el-trabajo)
+7. [MEDIO AMBIENTE](#7-medio-ambiente)
+8. [ANEXOS](#8-anexos)
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## 1. INTRODUCCIÓN
 
-| Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
-| **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Apendice Tecnico |
-| **Numero** | AT3 |
-| **Estado** | Contenido completo |
-
----
-
-## 2. CONTENIDO DEL DOCUMENTO
+Documento que establece las especificaciones generales aplicables al proyecto de la Concesión APP Puerto Salgar - Barrancabermeja, incluyendo los estándares técnicos, materiales, procedimientos constructivos y controles de calidad requeridos para la ejecución de las obras.
 
 
 

@@ -1,30 +1,52 @@
-﻿# AF1 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿---
+title: AF1 - INFORMACIÓN FINANCIERA
+project: APP PUERTO SALGAR - BARRANCABERMEJA
+contract: Concesión APP
+document: AF1 - Apéndice Financiero 1
+type: Apéndice Financiero
+version: 1.0
+date: 2025-10-16
+author: Administrador Contractual EPC
+status: Contenido completo
+---
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** AF1  
-**Tipo:** Apendice Financiero  
-**Estado:** Contenido completo  
+# AF1 - INFORMACIÓN FINANCIERA
+## APP PUERTO SALGAR - BARRANCABERMEJA
+
+### INFORMACIÓN DEL DOCUMENTO
+
+| **Campo**                | **Valor**                          |
+|--------------------------|-----------------------------------|
+| **Proyecto**            | APP Puerto Salgar - Barrancabermeja |
+| **Contrato**            | Concesión APP                     |
+| **Documento**           | AF1 - Apéndice Financiero 1       |
+| **Tipo**                | Apéndice Financiero               |
+| **Versión**             | 1.0                               |
+| **Fecha de actualización** | 16/10/2025                       |
+| **Responsable**         | Administrador Contractual EPC     |
+| **Estado**              | Contenido completo                |
+| **Próxima revisión**    | Según necesidad contractual       |
+
+### TABLA DE CONTENIDO
+
+1. [INTRODUCCIÓN](#1-introducción)
+2. [OBJETIVO](#2-objetivo)
+3. [ALCANCE](#3-alcance)
+4. [ESTRUCTURA FINANCIERA](#4-estructura-financiera)
+   - [4.1 Fuentes de Financiamiento](#41-fuentes-de-financiamiento)
+   - [4.2 Esquema de Inversión](#42-esquema-de-inversión)
+5. [PROYECCIONES FINANCIERAS](#5-proyecciones-financieras)
+   - [5.1 Ingresos](#51-ingresos)
+   - [5.2 Egresos](#52-egresos)
+   - [5.3 Flujo de Caja](#53-flujo-de-caja)
+6. [INDICADORES FINANCIEROS](#6-indicadores-financieros)
+7. [ANEXOS](#7-anexos)
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## 1. INTRODUCCIÓN
 
-| Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
-| **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Apendice Financiero |
-| **Numero** | AF1 |
-| **Estado** | Contenido completo |
-
----
-
-## 2. CONTENIDO DEL DOCUMENTO
+Documento que contiene la información financiera del proyecto de la Concesión APP Puerto Salgar - Barrancabermeja, incluyendo la estructura de financiamiento, proyecciones financieras y análisis de indicadores.
 
 
 
