@@ -1,11 +1,12 @@
 # ROADMAP: PROYECTO FORMATOS PARA IA
 ## Plan de Trabajo y Cronograma
 
-**Versión:** 3.0  
+**Versión:** 3.1  
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 18 de octubre de 2025 (02:00)  
-**Progreso total:** 95% ✅ (ADELANTO DE 9-10 SEMANAS) 🏆🎉🎉🎉
+**Última actualización:** 18 de octubre de 2025 (04:00)  
+**Progreso total:** 98% ✅ (ADELANTO DE 9-10 SEMANAS) 🏆🎉🎉🎉  
+**🔴 ALERTA CRÍTICA:** Validación contractual de cantidades de equipos PENDIENTE
 
 ---
 
@@ -530,7 +531,8 @@ Aplicar **Template T04** a equipos principales (ver GUIA_REPLICACION, línea 109
 | **Templates T01 aplicados** | 13 | 13 | ✅ 100% |
 | **Templates T02 aplicados** | 13 | 13 | ✅ 100% 🎉 |
 | **Templates T03 aplicados** | 13 | 13 | ✅ 100% 🎉🎉 |
-| **Templates T04 aplicados** | 5 | 0 | ⏳ 0% |
+| **Templates T04 aplicados** | 12 | 12 | ✅ 100% 🎉🎉 |
+| **Validación Contractual** | 1 | 1 | 🔴 **CRÍTICO** |
 | **Sistemas identificados** | 15+ | 13 | ✅ 87% |
 | **Subsistemas identificados** | - | 50+ | ✅ Bonus |
 | **Matrices de trazabilidad** | 4 | 1 | 🔄 25% |
@@ -661,4 +663,5 @@ Aplicar **Template T04** a equipos principales (ver GUIA_REPLICACION, línea 109
 **Última actualización:** 17 de octubre de 2025 (23:30)  
 **Responsable:** Administrador Contractual EPC  
 **GitHub:** https://github.com/dieleoz/TM01  
-**Progreso:** 95% (13/13 T01 + 13/13 T02 + 13/13 T03 completados) 🏆🎉🎉🎉
+**Progreso:** 98% (13 T01 + 13 T02 + 13 T03 + 12 T04 completados) 🏆🎉🎉🎉  
+**🔴 ALERTA:** Validación contractual de cantidades pendiente antes de RFQ
