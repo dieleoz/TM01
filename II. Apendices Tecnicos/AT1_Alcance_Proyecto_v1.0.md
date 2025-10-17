@@ -36,7 +36,6 @@ status: En revisión
 5. [CARACTERÍSTICAS TÉCNICAS](#5-características-técnicas)
 6. [ANEXOS](#6-anexos)
 
----
 
 ## 1. INTRODUCCIÓN
 

@@ -4,8 +4,8 @@
 **Versión:** 1.4  
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 17 de octubre de 2025 (19:00)  
-**Progreso total:** 72% ✅ (ADELANTO DE 5-6 SEMANAS)
+**Última actualización:** 17 de octubre de 2025 (20:00)  
+**Progreso total:** 75% ✅ (ADELANTO DE 4-5 SEMANAS)
 
 ---
 
@@ -662,4 +662,3 @@ Aplicar **Template T04** a equipos principales (ver GUIA_REPLICACION, línea 109
 **Responsable:** Administrador Contractual EPC  
 **GitHub:** https://github.com/dieleoz/TM01  
 **Progreso:** 72% (13/13 T01 + 6/13 T02 completados) ⚡
-

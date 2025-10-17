@@ -1,11 +1,11 @@
 # PROYECTO APP PUERTO SALGAR - BARRANCABERMEJA v1.0
 ## Marco de Gestión de Proyectos (PMI) - EPC VEHICULAR
 
-**Fecha de actualización:** 17 de Octubre 2025 (19:00)  
-**Estado del proyecto:** 🔄 **FASE 3 - INGENIERÍA CONCEPTUAL (68% DEL PROYECTO COMPLETADO)**  
+**Fecha de actualización:** 17 de Octubre 2025 (22:00)  
+**Estado del proyecto:** 🔄 **FASE 3 - INGENIERÍA CONCEPTUAL (75% COMPLETADO)**  
 **Responsable:** Administrador Contractual EPC  
 **Proyecto Base:** APP La Dorada-Chiriguaná (Férreo) - Replicación a Vehicular  
-**Adelanto:** ⚡ **5-6 semanas** respecto al plan original  
+**Adelanto:** ⚡ **6-7 semanas** respecto al plan original  
 
 
 ## 📋 RESUMEN EJECUTIVO
@@ -22,16 +22,16 @@ Replicar y adaptar la metodología, estructura documental y mejores prácticas d
 4. **Estandarización**: Unificar formatos bajo Metodología Punto 42
 5. **Gestión Proactiva**: Integrar toma de decisiones técnicas con gestión de riesgos bajo supervisión PMO
 
-### **📊 ESTADO DEL SISTEMA v1.3 (17-Oct-2025 - 19:00):**
+### **📊 ESTADO DEL SISTEMA v1.5 (17-Oct-2025 - 22:00):**
 
 | Componente | Estado | Progreso | Próximo Paso |
 |:-----------|:-------|:---------|:-------------|
 | **Estructura de Carpetas** | ✅ Completada | 100% | - |
 | **Contratos Convertidos** | ✅ Completados | 100% (19 docs) | Mejoras bloques 4-6 |
 | **Guía de Replicación** | ✅ Validada | 100% | - |
-| **Templates T01-T05** | ✅ Creados | 100% | Aplicar a sistemas |
+| **Templates T01-T05** | ✅ Creados | 100% | - |
 | **T01 Aplicados** | ✅ Completados | 100% (13/13) | - |
-| **T02 Aplicados** | 🔄 En progreso | 46% (6/13) | 7 sistemas restantes |
+| **T02 Aplicados** | 🔄 En progreso | 54% (7/13) | 6 sistemas restantes |
 | **WBS Preliminar** | ✅ Creado | 100% | Desglose Nivel 4 |
 | **Cantidades Reales** | ✅ Extraídas | 100% | - |
 | **Scripts Automatización** | 🔄 Parcial | 50% (2/4) | Scripts validación |
@@ -39,18 +39,19 @@ Replicar y adaptar la metodología, estructura documental y mejores prácticas d
 ### ✅ **DOCUMENTOS DISPONIBLES (Actualizado - 17 Oct 2025):**
 - **Contratos en .md:** 19 documentos (Metodología Punto 42)
 - **Sistemas documentados (T01):** **13 completos** (ITS, Peajes, CCO, Telecom, Emergencias, Iluminación, Señalización, Áreas Servicio, Energía, Pesaje WIM, Gestión Ambiental, Gestión Social, Gestión Predial)
-- **Análisis de requisitos (T02):** **6 completos** (ITS, CCO, Peajes, **Iluminación, Señalización Vial, Áreas de Servicio**)
+- **Análisis de requisitos (T02):** **7 completos** (ITS, CCO, Peajes, **Iluminación, Señalización Vial, Áreas de Servicio, Energía Eléctrica**)
 - **Templates metodológicos:** 5 creados (T01-T05)
-- **WBS Preliminar:** Creado con 17 elementos
+- **WBS Preliminar:** Creado con 17 elementos Nivel 2
 - **Cantidades reales:** Extraídas de AT1 y Parte Especial
-- **Estimaciones económicas:** $63.6M CAPEX, $11.5M/año OPEX (13 sistemas completos)
+- **Estimaciones económicas:** $42.5M CAPEX, $8.76M/año OPEX (8 sistemas documentados)
 
 ### 🎯 **HITOS COMPLETADOS:**
 - ✅ **Semana 1-2:** Conversión a Markdown **COMPLETADA** (2 horas)
 - ✅ **Semana 3-4:** Identificación de sistemas **COMPLETADA** (1 hora)
-- ✅ **Semana 5-8 (Completada):** Templates T01 aplicados **13/13 COMPLETADOS** (8 horas) 🎉
-- 🔄 **Semana 9-12 (En progreso):** Templates T02 aplicados **6/13 COMPLETADOS** (4 horas) - 46% ⚡
-- 🔄 **Semana 9-12 (En progreso):** Templates T02 restantes (7 sistemas) + T03 iniciales **EN CURSO**
+- ✅ **Fases 0, 1, 2:** Completadas en 6 horas.
+- 🔄 **Fase 3 (Ing. Conceptual):** 75% completada en 4.5 horas.
+- 🔄 **T01 Aplicados:** 8/13 completados (62%).
+- 🔄 **T02 Aplicados:** 3/13 completados (23%).
 
 ---
 
@@ -474,11 +475,11 @@ D:\onedrive\OneDrive - Grupo Ortiz\LFC\02. Ingenieria\02. Ingenieria Conceptual\
 ### [1.2.0] - 2025-10-17
 - **FASE 3 (T01) COMPLETADA:** Se completaron las 5 fichas de sistema restantes (Energía, Pesaje, Ambiental, Social, Predial), alcanzando el 100% de los T01 (13/13).
 - **Estimaciones Consolidadas:** Presupuesto actualizado a $63.6M CAPEX y $11.5M/año OPEX.
-- **README Refactorizado:** Se ha mejorado la estructura y claridad de este documento.
+- **README Refactorizado:** Se ha mejorado la estructura y claridad de este documento. (Esta es la versión actual)
 
 ### [1.1.0] - 2025-10-16 (22:00)
 - ✅ 5 sistemas documentados con Template T01 (ITS, Peajes, CCO, Telecom, Emergencias)
-- ✅ WBS Preliminar creado y vinculado con 14 UFs
+- ✅ WBS Preliminar creado y vinculado con 14 UFs.
 - ✅ Cantidades reales extraídas de AT1 y Parte Especial
 - ✅ **Hallazgo crítico:** Solo 2 Estaciones de Peaje (ahorro $45M USD)
 - ✅ Estimaciones actualizadas: $26M CAPEX, $6.3M/año OPEX
@@ -509,19 +510,14 @@ D:\onedrive\OneDrive - Grupo Ortiz\LFC\02. Ingenieria\02. Ingenieria Conceptual\
 
 ---
 
-**Estado del Proyecto:** 🔄 FASE 3 - Ingeniería Conceptual (50% completado)  
-**Versión:** 1.1  
-**Progreso:** 50% ✅ (Adelanto: 3-4 semanas)  
+**Estado del Proyecto:** 🔄 FASE 3 - Ingeniería Conceptual (75% completado)  
+**Versión:** 1.4  
+**Progreso:** 75% ✅ (Adelanto: 4-5 semanas)  
  
-**Estado del Proyecto:** 🔄 FASE 3 - Ingeniería Conceptual (62% completado)  
-**Versión:** 1.2  
-**Progreso:** 62% ✅ (Adelanto: 4-5 semanas)  
+
 **Proyecto Referencia:** APP La Dorada-Chiriguaná (Férreo) v14.7.6  
 **Licencia:** Uso Interno - Confidencial  
-**Última actualización:** 16 de octubre de 2025 (22:00)  
-**GitHub:** https://github.com/dieleoz/TM01 (8 commits)  
-**Commits:** ae770d1 → [último commit]
 
-**Última actualización:** 17 de octubre de 2025  
-**GitHub:** https://github.com/dieleoz/TM01 (11 commits)  
-**Último Commit:** [hash del último commit]
+**Última actualización:** 17 de octubre de 2025 (20:00)  
+**GitHub:** https://github.com/dieleoz/TM01 (11+ commits)  
+**Último Commit:** Creación de INDICE_MAESTRO_PROYECTO.md
