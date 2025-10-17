@@ -159,15 +159,15 @@ Garantizar el cumplimiento de todas las obligaciones ambientales del proyecto du
 
 ---
 
-## 7. RIESGOS IDENTIFICADOS
+## 7. RIESGOS Y ACCIONES DE MITIGACIÓN TEMPRANA
 
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|:-------|:-------------|:--------|:-----------|
-| **Incumplimiento de Licencia Ambiental** | Media | 🔴 Crítico | Cumplimiento estricto del PAGA/PMAR. Personal capacitado |
-| **Sanciones de Autoridad Ambiental** | Media | 🔴 Alto | Auditorías ambientales internas. Reportes oportunos |
-| **Atropellamiento de fauna silvestre** | Alta | 🟠 Medio | Pasos de fauna. Señalización. Monitoreo |
-| **Emergencia ambiental (derrame)** | Baja | 🔴 Alto | PRGD. Plan de contingencias. Personal entrenado |
-| **Afectación de cuerpos de agua** | Media | 🟠 Alto | Monitoreo de calidad de agua. Permisos de vertimientos |
+| Riesgo | Probabilidad | Impacto | Acción de Mitigación Temprana |
+|:-------|:-------------|:--------|:--------------------------------|
+| **Incumplimiento de Licencia Ambiental** | Media | 🔴 Crítico | **Mes 1:** Crear matriz de obligaciones ambientales detallada. **Mes 2:** Asignar responsable por cada obligación. |
+| **Sanciones de Autoridad Ambiental** | Media | 🔴 Alto | **Mes 2:** Establecer calendario de reportes a autoridades. **Mes 3:** Realizar primera auditoría interna de cumplimiento. |
+| **Atropellamiento de fauna silvestre** | Alta | 🟠 Medio | **Mes 4:** Iniciar monitoreo de puntos críticos de atropellamiento. **Mes 6:** Definir ubicación de pasos de fauna. |
+| **Emergencia ambiental (derrame)** | Baja | 🔴 Alto | **Mes 3:** Realizar primer simulacro de atención de derrames. **Mes 4:** Verificar stock de kits anti-derrames. |
+| **Afectación de cuerpos de agua** | Media | 🟠 Alto | **Mes 2:** Iniciar monitoreo de línea base de calidad de agua. **Mes 5:** Diseñar sistemas de tratamiento de aguas. |
 
 ---
 
@@ -175,10 +175,11 @@ Garantizar el cumplimiento de todas las obligaciones ambientales del proyecto du
 
 | Indicador | Valor Mínimo Aceptación | Frecuencia |
 |:----------|:------------------------|:-----------|
-| Cumplimiento del PAGA/PMAR | 100% de programas ejecutados | Mensual |
-| Reportes ambientales a tiempo | 100% entregados | Mensual |
-| Incidentes ambientales | 0 incidentes graves | Mensual |
-| Permisos ambientales vigentes | 100% al día | Trimestral |
+| **KPI-AMB-01:** Cumplimiento PAGA/PMAR | 100% de las actividades programadas para el mes ejecutadas. | Mensual |
+| **KPI-AMB-02:** Oportunidad de Reportes | 100% de los informes a autoridades entregados antes de la fecha límite. | Mensual |
+| **KPI-AMB-03:** Incidentes Ambientales Graves | 0 (cero) incidentes clasificados como graves por la autoridad ambiental. | Mensual |
+| **KPI-AMB-04:** Vigencia de Permisos | 100% de los permisos, licencias y concesiones ambientales vigentes y al día. | Trimestral |
+| **KPI-AMB-05:** Cierre de No Conformidades | 100% de las no conformidades de auditorías cerradas en < 30 días. | Por Auditoría |
 
 ---
 
@@ -219,4 +220,3 @@ Garantizar el cumplimiento de todas las obligaciones ambientales del proyecto du
 ---
 
 **FIN DEL DOCUMENTO T01 - GESTIÓN AMBIENTAL** 🌿🌍✅
-

@@ -87,4 +87,3 @@
 ---
 
 **PRÓXIMO PASO:** Formatear Tablas 4-9 (Desgloses de Unidades Funcionales)
-

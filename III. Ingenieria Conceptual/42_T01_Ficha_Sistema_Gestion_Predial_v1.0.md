@@ -171,17 +171,17 @@ Garantizar la adquisición legal, oportuna y justa de todos los predios necesari
 
 ---
 
-## 7. RIESGOS IDENTIFICADOS
+## 7. RIESGOS Y ACCIONES DE MITIGACIÓN TEMPRANA
 
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|:-------|:-------------|:--------|:-----------|
-| **Retraso en adquisición predial (ruta crítica)** | Alta | 🔴 Crítico | Inicio temprano. Personal suficiente. Subcuenta Predial fondeada |
-| **Negociación voluntaria fallida (>20%)** | Media | 🔴 Alto | Ofertas justas. Negociadores capacitados. Expropiación como último recurso |
-| **Procesos de expropiación largos (>2 años)** | Alta | 🔴 Alto | Inicio temprano de expropiaciones. Abogados especializados |
-| **Problemas de títulos (sucesiones, embargos)** | Media | 🟠 Alto | Estudio de títulos preventivo. Saneamiento proactivo |
-| **Conflictos con poseedores/arrendatarios** | Media | 🟠 Medio | Negociación justa con ocupantes. Coordinación con Gestión Social |
-| **Insuficiencia de Subcuenta Predial** | Baja | 🔴 Alto | Solicitudes oportunas a ANI. Avalúos realistas |
-| **Oposición comunitaria a adquisiciones** | Media | 🟠 Alto | Participación comunitaria (AT8). Información transparente |
+| Riesgo | Probabilidad | Impacto | Acción de Mitigación Temprana |
+|:-------|:-------------|:--------|:--------------------------------|
+| **Retraso en adquisición predial (ruta crítica)** | Alta | 🔴 Crítico | **Mes 1:** Iniciar censo predial y estudio de títulos. **Mes 2:** Contratar equipo predial completo. |
+| **Negociación voluntaria fallida (>20%)** | Media | 🔴 Alto | **Mes 3:** Elaborar estrategia de negociación con incentivos por acuerdo rápido. Capacitar equipo. |
+| **Procesos de expropiación largos (>2 años)** | Alta | 🔴 Alto | **Mes 4:** Iniciar procesos de expropiación inmediatamente al día 31 de una oferta sin acuerdo. |
+| **Problemas de títulos (sucesiones, embargos)** | Media | 🟠 Alto | **Mes 2:** Crear equipo legal dedicado exclusivamente al saneamiento de títulos complejos. |
+| **Conflictos con poseedores/arrendatarios** | Media | 🟠 Medio | **Mes 1:** Protocolo de coordinación firmado con Gestión Social para manejo conjunto de ocupantes. |
+| **Insuficiencia de Subcuenta Predial** | Baja | 🔴 Alto | **Mes 3:** Presentar a la ANI una proyección de flujo de caja para la subcuenta predial para los primeros 12 meses. |
+| **Oposición comunitaria a adquisiciones** | Media | 🟠 Alto | **Mes 2:** Incluir al líder de Gestión Social en el comité semanal de seguimiento predial. |
 
 ---
 
@@ -189,11 +189,11 @@ Garantizar la adquisición legal, oportuna y justa de todos los predios necesari
 
 | Indicador | Valor Mínimo Aceptación | Frecuencia |
 |:----------|:------------------------|:-----------|
-| % Predios adquiridos vs. requeridos | 100% según Plan de Obras | Mensual |
-| Tiempo promedio de adquisición voluntaria | < 6 meses por predio | Mensual |
-| % Adquisición voluntaria vs. Expropiación | ≥ 80% voluntaria, ≤ 20% expropiación | Trimestral |
-| Expedientes prediales completos | 100% (físico + digital) | Mensual |
-| Cumplimiento de entregas según Plan de Obras | 100% entregas a tiempo | Mensual |
+| **KPI-PRE-01:** % de Predios Entregados a Construcción vs. Plan | 100% de los predios requeridos para la UF-N entregados 30 días antes del inicio de obras de la UF-N. | Mensual |
+| **KPI-PRE-02:** Tasa de Adquisición Voluntaria | ≥ 80% del total de predios adquiridos por negociación directa. | Trimestral |
+| **KPI-PRE-03:** Tiempo Promedio de Adquisición Voluntaria | ≤ 9 meses (desde censo hasta firma de escritura). | Mensual |
+| **KPI-PRE-04:** Calidad de Expedientes Prediales | 100% de expedientes con "No Objeción" de la Interventoría en la primera revisión. | Por Expediente |
+| **KPI-PRE-05:** Impacto en Ruta Crítica | 0 (cero) días de retraso en el cronograma de obra atribuibles a la no disponibilidad de predios. | Semanal |
 
 ---
 
@@ -311,4 +311,3 @@ Garantizar la adquisición legal, oportuna y justa de todos los predios necesari
 5. ✅ 42_T01_Ficha_Sistema_Gestion_Predial_v1.0.md (~450 líneas)
 
 **TOTAL:** ~2,950 líneas de documentación técnica de calidad ✅
-

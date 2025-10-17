@@ -211,17 +211,16 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 
 ---
 
-## 7. RIESGOS IDENTIFICADOS
+## 7. RIESGOS Y ACCIONES DE MITIGACIÓN TEMPRANA
 
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|:-------|:-------------|:--------|:-----------|
-| Vandalismo/robo de señales | Media | Medio | Señales con anclajes antivandalismo, patrullaje, reposición rápida |
-| Desgaste acelerado por condiciones climáticas (lluvias, sol) | Alta | Alto | Materiales Tipo XI, termoplásticos de alta durabilidad, inspección mensual |
-| Daños por impactos vehiculares (defensas, señales) | Alta | Alto | Postes fracturables, defensas diseñadas para absorber impactos, stock de repuestos |
-| Incumplimiento indicadores E11/E12/E13 | Media | Crítico | Programa de mantenimiento preventivo riguroso, mediciones mensuales |
-| Obsolescencia de diseño señalización (cambios normativos) | Media | Medio | Monitoreo continuo de actualizaciones de Resolución 1885, SGSV |
-| Interferencia con obras civiles/ampliaciones | Media | Medio | Coordinación con WBS 2.0 (Obras Civiles), señalización temporal |
-| Escasez de proveedores de termoplástico/tachas en zona | Baja | Medio | Contratos marco con múltiples proveedores, stock mínimo |
+| Riesgo | Probabilidad | Impacto | Acción de Mitigación Temprana |
+|:-------|:-------------|:--------|:--------------------------------|
+| **Incumplimiento indicadores E11/E12/E13** | Media | 🔴 Crítico | **Mes 2:** Elaborar Plan de Mantenimiento Preventivo detallado con frecuencias de inspección y medición. |
+| **Desgaste acelerado por clima** | Alta | 🔴 Alto | **Mes 3:** Contratar proveedor certificado de láminas Tipo XI y termoplástico de alta durabilidad. |
+| **Daños por impactos vehiculares** | Alta | 🔴 Alto | **Mes 4:** Definir stock mínimo de seguridad (5% de defensas, 10% de señales). **Mes 5:** Especificar postes frangibles en diseños. |
+| **Vandalismo/robo de señales** | Media | 🟠 Medio | **Mes 2:** Definir zonas de alto vandalismo en coordinación con Gestión Social. **Mes 4:** Especificar anclajes antivandalismo en diseños. |
+| **Obsolescencia normativa** | Media | 🟠 Medio | **Mes 6:** Establecer protocolo de revisión anual de la Resolución 1885/2015 y normativas SGSV. |
+| **Escasez de proveedores** | Baja | 🟠 Medio | **Mes 3:** Precalificar al menos 3 proveedores para cada material crítico (láminas, termoplástico, defensas). |
 
 ---
 
@@ -235,15 +234,15 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 | **E12** | Señalización Horizontal | ≥ 85% de demarcación visible y reflectiva | Mensual |
 | **E13** | Barreras y Elementos de Contención | 100% libres de defectos estructurales | Mensual |
 
-**KPIs Adicionales Propuestos:**
+**KPIs Operativos Clave Propuestos:**
 
-| KPI | Descripción | Meta |
-|:----|:------------|:-----|
-| **Tiempo de reposición de señales críticas** | Desde detección hasta reposición | < 24 horas |
-| **Reflectividad promedio señales verticales** | Medición con retrorreflectómetro | ≥ 250 cd/lux/m² (Tipo XI) |
-| **% de km con demarcación completa** | Líneas centro + borde + carriles | ≥ 95% |
-| **Disponibilidad de defensas metálicas** | % de km sin daños estructurales | ≥ 98% |
-| **Reducción de accidentalidad** | % reducción anual según SGSV | ≥ 5% anual |
+| Indicador ID | Descripción | Meta | Frecuencia Medición |
+|:-------------|:------------|:-----|:--------------------|
+| **KPI-SEG-01:** Tiempo de Reposición de Señales Críticas | Tiempo desde la detección de una señal crítica faltante o ilegible (PARE, Límite Velocidad) hasta su reposición. | < 24 horas | Por evento |
+| **KPI-SEG-02:** Reflectividad Mínima en Servicio | Valor mínimo de reflectividad medido en campo para señales verticales Tipo XI (blanco). | ≥ 125 cd/lux/m² (50% del valor inicial) | Semestral |
+| **KPI-SEG-03:** Tiempo de Reparación de Defensas | Tiempo desde la detección de una defensa dañada que compromete la seguridad hasta su reparación funcional. | < 48 horas | Por evento |
+| **KPI-SEG-04:** Cumplimiento de Limpieza Mensual | Porcentaje de señales verticales limpiadas según el plan de mantenimiento mensual. | 100% | Mensual |
+| **KPI-SEG-05:** Tasa de Reducción de Siniestralidad | Reducción porcentual anual de siniestros en puntos negros intervenidos con mejoras de señalización. | ≥ 5% anual | Anual (SGSV) |
 
 ---
 
@@ -316,4 +315,3 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 
 **CHANGELOG:**
 - v1.0 (16/10/2025): Creación inicial de ficha de sistema Señalización Vial
-

@@ -84,4 +84,3 @@ Write-Host "`n================================================`n" -ForegroundCol
 # Mostrar vista previa de Tabla 1
 Write-Host "VISTA PREVIA - Tabla 1:" -ForegroundColor Cyan
 Write-Host $tabla1Formateada -ForegroundColor White
-

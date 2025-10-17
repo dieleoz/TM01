@@ -339,6 +339,19 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 
 ---
 
+### 3.8 Requisitos de Ciberseguridad
+
+| ID | Requisito | Descripción | Fuente |
+|:---|:----------|:------------|:-------|
+| **RNF-038** | Plan de Respuesta a Incidentes de Ciberseguridad | El sistema debe contar con un plan documentado para detectar, responder y recuperarse de ciberataques. | ISO 27001 |
+| **RNF-039** | Evaluaciones de Vulnerabilidad | Se deben realizar escaneos de vulnerabilidad y pruebas de penetración trimestrales a la red ITS. | Buenas Prácticas |
+| **RNF-040** | Sistema de Detección de Intrusiones (IDS) | La red ITS debe contar con un IDS para monitorear el tráfico en busca de actividad maliciosa. | Seguridad de Red |
+| **RNF-041** | Hardening de Equipos | Todos los equipos de campo (cámaras, sensores) deben tener sus puertos no utilizados deshabilitados y contraseñas por defecto cambiadas. | Seguridad de Dispositivos |
+| **RNF-042** | Actualizaciones de Seguridad | Se debe implementar un proceso para aplicar parches de seguridad a todos los componentes del sistema de forma mensual. | Mantenibilidad |
+| **RNF-043** | Acceso Remoto Seguro | Todo acceso remoto para mantenimiento debe realizarse a través de una VPN con autenticación de dos factores. | ISO 27001 |
+
+---
+
 ## 4. REQUISITOS DE INTERFACES
 
 ### 4.1 Interface ITS ↔ CCO
@@ -440,7 +453,7 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 | **RNF-016** | Seguridad | Registro inviolable | AT2, 3.3.5.1 | CCO, BD | 🔴 Alta |
 | **RNF-033** | Ambiental | Protección IP66 | Clima | Equipos exteriores | 🔴 Alta |
 
-**Total requisitos identificados:** 37 (10 funcionales + 27 no funcionales)
+**Total requisitos identificados:** 43 (10 funcionales + 33 no funcionales)
 
 ---
 
@@ -621,48 +634,43 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 
 ---
 
-## 8. CRITERIOS DE ACEPTACIÓN
+## 8. CHECKLIST DE CRITERIOS DE ACEPTACIÓN
 
-### 8.1 Criterios Funcionales
+### 8.1 Aceptación por Subsistema
 
-- [ ] El sistema detecta y muestra en CCO el 100% de las cámaras CCTV instaladas
-- [ ] Los PMV muestran mensajes actualizados en < 5 segundos desde comando en CCO
-- [ ] El sistema WIM pesa vehículos con precisión ≥ 95% (±5% a velocidades < 80 km/h)
-- [ ] Las estaciones meteorológicas envían datos cada 5-10 minutos sin falla
-- [ ] Los teléfonos SOS conectan con CCO en < 30 segundos
-- [ ] El sistema DAI detecta ≥ 90% de incidentes reales con < 10% de falsos positivos
-- [ ] El sistema de aforo cuenta con precisión ≥ 98%
-- [ ] Los radares miden velocidad con precisión ±2 km/h
-- [ ] Los detectores de altura alertan 100% de vehículos con altura excesiva
-- [ ] El 100% de la información se transmite a ANI según sus requerimientos
+- [ ] **CCTV:** 100% de las cámaras transmiten video a CCO con latencia < 500ms y resolución ≥ 1080p. El control PTZ responde en < 1 segundo.
+- [ ] **PMV:** 100% de los paneles responden a comandos desde CCO en < 5 segundos. Los mensajes son legibles a 300m de día y de noche.
+- [ ] **WIM:** El sistema clasifica el 100% de los vehículos y pesa con una precisión de ±5% a velocidades de hasta 80 km/h, validado con báscula estática.
+- [ ] **Estaciones Meteorológicas:** 100% de las estaciones reportan datos (lluvia, temperatura, viento, visibilidad) a CCO cada 5 minutos.
+- [ ] **Teléfonos SOS:** 100% de los postes establecen comunicación con CCO en < 30 segundos y reportan su geolocalización automáticamente.
+- [ ] **DAI:** El sistema detecta correctamente ≥ 90% de los incidentes simulados (vehículo detenido, contraflujo) con < 10% de falsas alarmas.
+- [ ] **Radares de Velocidad:** 100% de los radares miden velocidad con precisión de ±2 km/h y capturan matrículas legibles.
+- [ ] **Detectores de Altura:** El sistema activa alarmas visuales y en CCO para el 100% de los vehículos que superan la altura configurada.
+- [ ] **Aforo Vehicular:** El conteo de vehículos tiene una precisión ≥ 98% y la clasificación por categoría ≥ 95%, comparado con conteos manuales.
 
-### 8.2 Criterios de Performance
+### 8.2 Aceptación de Performance y Disponibilidad
 
-- [ ] Disponibilidad del sistema ITS completo ≥ 99% anual
-- [ ] Latencia de video CCTV → CCO ≤ 500 ms
-- [ ] Frame rate de video ≥ 25 fps @ 1080p
-- [ ] Ancho de banda de red con margen ≥ 30% en operación normal
-- [ ] Tiempo de respuesta de interfaces < 2 segundos
-- [ ] Almacenamiento de video para 30 días sin degradación
+- [ ] **Disponibilidad General:** El sistema ITS completo demuestra una disponibilidad ≥ 99% durante un período de prueba de 30 días.
+- [ ] **Disponibilidad por Subsistema:** Cada subsistema (CCTV, PMV, etc.) demuestra una disponibilidad individual ≥ 99.5%.
+- [ ] **Rendimiento de Red:** La red de fibra óptica mantiene una utilización < 50% en horas pico y una tasa de pérdida de paquetes < 0.1%.
+- [ ] **Almacenamiento de Video:** El sistema graba 24/7 desde todas las cámaras y permite recuperar video de hace 30 días en < 1 minuto.
 
-### 8.3 Criterios de Calidad
+### 8.3 Aceptación de Seguridad y Cumplimiento
 
-- [ ] Cumplir Resolución 546/2018 (PMV, Equipos Meteorológicos)
-- [ ] Cumplir NEMA TS-2 (Controladores de Tráfico)
-- [ ] Cumplir ISO 14823 (Señalización Gráfica Variable)
-- [ ] Cumplir ASTM E2213 (Pesaje en Movimiento)
-- [ ] Cumplir ONVIF Profile S (Interoperabilidad de CCTV)
-- [ ] Cumplir IEC 62676 (Sistemas CCTV)
-- [ ] Protección IP66 e IK10 en equipos de campo
-- [ ] Certificaciones vigentes durante toda la concesión
+- [ ] **Ciberseguridad:** Se presenta informe de pruebas de penetración sin vulnerabilidades críticas abiertas. El IDS está operativo.
+- [ ] **Cumplimiento Normativo:** Se entregan certificados de cumplimiento para:
+    - Resolución 546/2018 (PMV, Meteo)
+    - ASTM E2213 (WIM)
+    - ONVIF Profile S (CCTV)
+    - RETIE (Instalaciones eléctricas)
+- [ ] **Protección Física:** Se verifica en campo que el 100% de los equipos exteriores tienen carcasas IP66 e IK10.
 
-### 8.4 Criterios de Integración
+### 8.4 Aceptación de Interfaces
 
-- [ ] Interfaz con CCO funcional (transmisión de todos los datos)
-- [ ] Interfaz con ANI funcional (SIINCO operativo)
-- [ ] Interfaz con Peajes funcional (comparación aforo/recaudo)
-- [ ] Interfaz con Emergencias funcional (despacho automático)
-- [ ] Todas las alarmas llegan a CCO en < 5 segundos
+- [ ] **Integración con CCO:** El dashboard del CCO recibe y muestra correctamente datos de todos los 10 subsistemas ITS en tiempo real.
+- [ ] **Integración con ANI:** Se realiza una prueba de transmisión de datos exitosa a la plataforma ANIscopio.
+- [ ] **Integración con Peajes:** El sistema de peajes recibe datos de aforo del ITS y los concilia con el recaudo.
+- [ ] **Integración con Emergencias:** Una alarma de DAI genera automáticamente un ticket en el sistema de despacho de emergencias.
 
 ---
 
@@ -731,7 +739,7 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 ---
 
 **Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
+**Estado:** ✅ **v1.0** - Análisis de Requisitos Completado  
 **Fecha:** 16/10/2025  
 **Responsable:** Ingeniero de Sistemas ITS  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema ITS  
@@ -741,4 +749,3 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 **Fin del documento - T02 Análisis de Requisitos Sistema ITS**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
-

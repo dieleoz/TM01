@@ -339,6 +339,19 @@ Este análisis cubre el **sistema integral de señalización vial** a lo largo d
 
 ---
 
+### 3.8 Requisitos de Riesgo y Mitigación
+
+| ID | Requisito | Descripción | Fuente |
+|:---|:----------|:------------|:-------|
+| **RNF-036** | Plan de Reposición por Vandalismo | El sistema debe tener un plan para reponer señales en zonas de alto vandalismo en < 24 horas, incluyendo un stock de seguridad del 10% de las señales críticas. | Riesgos Operativos |
+| **RNF-037** | Monitoreo de Degradación Acelerada | Se debe implementar un programa de monitoreo de reflectividad en zonas de alta contaminación o exposición solar para prever la reposición antes de los 10 años de vida útil. | Riesgos de Durabilidad |
+| **RNF-038** | Protocolo de Actualización Normativa | El sistema debe incluir un proceso para revisar anualmente el Manual de Señalización Vial y adaptar la señalización a cualquier cambio normativo. | Riesgo Regulatorio |
+| **RNF-039** | Plan de Contingencia por Desgaste de Demarcación | Si el desgaste de la demarcación supera el 40% anual, se debe activar un plan para usar materiales de mayor durabilidad (ej. termoplástico de alto espesor). | Riesgos de Mantenimiento |
+| **RNF-040** | Seguro contra Hurto de Señalización | El sistema debe contar con una póliza de seguro que cubra el hurto de señales verticales y defensas metálicas. | Riesgo Financiero |
+| **RNF-041** | Análisis de Causa Raíz de Daños en Defensas | Para cada reparación de defensas, se debe realizar un análisis de causa raíz para determinar si se requiere una mejora en el diseño (ej. cambiar a barrera de concreto). | SGSV |
+
+---
+
 ## 4. REQUISITOS DE INTERFACES
 
 ### 4.1 Interface Señalización ↔ ITS (PMV)
@@ -428,7 +441,7 @@ Este análisis cubre el **sistema integral de señalización vial** a lo largo d
 | **RNF-003** | Disponibilidad | E13 100% sin defectos | AT4 | Defensas | 🔴 Alta |
 | **RNF-006** | Performance | Reflectividad ≥250 cd/lux/m² | Res. 3027/2010 | Señalización Vertical | 🔴 Alta |
 
-**Total requisitos identificados:** 46 (11 funcionales + 35 no funcionales)
+**Total requisitos identificados:** 52 (11 funcionales + 41 no funcionales)
 
 ---
 
@@ -582,48 +595,37 @@ Este análisis cubre el **sistema integral de señalización vial** a lo largo d
 
 ---
 
-## 8. CRITERIOS DE ACEPTACIÓN
+## 8. CHECKLIST DE CRITERIOS DE ACEPTACIÓN
 
-### 8.1 Criterios Funcionales
+### 8.1 Aceptación de Señalización Vertical
 
-- [ ] El 100% de señales verticales son Tipo XI (retroreflectividad prismática)
-- [ ] El 100% de la demarcación horizontal es termoplástica reflectiva
-- [ ] El 100% de defensas metálicas son Tipo U galvanizadas
-- [ ] El 100% de defensas tienen protección para motociclistas
-- [ ] El 100% de intersecciones tienen señalización completa
-- [ ] El 100% de cruces peatonales tienen demarcación tipo cebra
-- [ ] El sistema tiene stock mínimo de señalización temporal (50 señales, 500 conos)
-- [ ] El sistema tiene programa de mantenimiento mensual activo
-- [ ] El 100% de señales tienen anclajes antivandalismo
-- [ ] El 100% de terminales de defensas tienen amortiguadores de impacto
+- [ ] **Material:** 100% de las señales utilizan lámina retroreflectiva Tipo XI. Se presenta certificado del fabricante (ej. 3M, Avery).
+- [ ] **Instalación:** 100% de las señales están instaladas a la altura y distancia lateral correctas según el Manual de Señalización Vial.
+- [ ] **Reflectividad Inicial:** Muestra del 10% de las señales nuevas mide ≥ 250 cd/lux/m² (blanco) con retrorreflectómetro.
+- [ ] **Anclajes:** 100% de las señales en zonas urbanas tienen tornillería antivandalismo.
+- [ ] **Postes:** 100% de los postes en zonas de alta velocidad (>80 km/h) son de tipo frangible (colapsables).
 
-### 8.2 Criterios de Performance
+### 8.2 Aceptación de Señalización Horizontal
 
-- [ ] Indicador E11 ≥ 80% de señales con reflectividad Tipo XI
-- [ ] Indicador E12 ≥ 85% de demarcación visible y reflectiva
-- [ ] Indicador E13 = 100% de defensas sin defectos estructurales
-- [ ] Reflectividad señales verticales (blanco): ≥ 250 cd/lux/m² (inicial)
-- [ ] Reflectividad demarcación horizontal: ≥ 300 mcd/lux/m² (inicial)
-- [ ] Tiempo de reposición señales críticas: < 24 horas
-- [ ] Tiempo de reparación defensas críticas: < 48 horas
+- [ ] **Material:** 100% de la demarcación es termoplástica con microesferas de vidrio. Se presenta certificado del material.
+- [ ] **Dimensiones:** El ancho de línea es de 15 cm (±0.5 cm) y el espesor es de 2.5 mm (±0.5 mm).
+- [ ] **Reflectividad Inicial:** Muestra del 10% de la demarcación nueva mide ≥ 300 mcd/lux/m² (blanco).
+- [ ] **Patrón:** Las líneas discontinuas cumplen el patrón 3m pintado / 9m sin pintar (±10 cm).
 
-### 8.3 Criterios de Calidad
+### 8.3 Aceptación de Defensas y Contención
 
-- [ ] Cumplir Resolución 1885/2015 (Manual de Señalización Vial)
-- [ ] Cumplir Resolución 3027/2010 (Especificaciones de Reflectividad)
-- [ ] Cumplir INVIAS Artículo 700 (Demarcación)
-- [ ] Cumplir Guía Técnica Zonas Laterales (Defensas)
-- [ ] Certificación de materiales (3M, Avery Dennison, Reflexite para Tipo XI)
-- [ ] Ensayos de control de calidad (reflectividad, espesor, adhesión)
-- [ ] Vida útil señales Tipo XI: ≥ 10 años
-- [ ] Vida útil demarcación: ≥ 2 años
+- [ ] **Material:** 100% de las defensas metálicas son de perfil "U" con galvanizado en caliente (espesor ≥ 85 μm).
+- [ ] **Instalación:** La altura de la viga es de 70 cm (±5 cm) al centro. Los postes están espaciados cada 2m (±10 cm).
+- [ ] **Protección Motociclistas:** 100% de las defensas en curvas y zonas de riesgo tienen la pantalla inferior de protección instalada.
+- [ ] **Terminales:** 100% de los terminales de defensa son de tipo amortiguador de impacto o están correctamente abatidos.
+- **Barreras de Concreto:** 100% de las barreras tipo New Jersey no presentan fisuras > 0.5 mm y están correctamente alineadas.
 
-### 8.4 Criterios de Integración
+### 8.4 Aceptación Operativa y de Mantenimiento
 
-- [ ] Coordinación con ITS (PMV complementan señales fijas)
-- [ ] Coordinación con Iluminación (reflectividad nocturna)
-- [ ] Integración con SGSV (actualización según análisis de accidentalidad)
-- [ ] Integración con Mantenimiento (inspecciones E11/E12/E13 mensuales)
+- [ ] **Indicadores AT4:** Se demuestra el cumplimiento de los indicadores E11 (≥80%), E12 (≥85%) y E13 (100%) durante el primer mes de operación.
+- [ ] **Tiempos de Respuesta:** Se realiza simulacro de reposición de señal crítica (< 24h) y reparación de defensa (< 48h) con éxito.
+- [ ] **Stock de Seguridad:** Se verifica en bodega la existencia del stock mínimo de señalización temporal (50 señales, 500 conos, 5 PMV portátiles).
+- [ ] **Integración con SGSV:** Se presenta el protocolo de comunicación entre el equipo de señalización y el de seguridad vial para el análisis de puntos negros.
 
 ---
 
@@ -689,7 +691,7 @@ Este análisis cubre el **sistema integral de señalización vial** a lo largo d
 ---
 
 **Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
+**Estado:** ✅ **v1.0** - Análisis de Requisitos Completado  
 **Fecha:** 17/10/2025  
 **Responsable:** Ingeniero de Seguridad Vial  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Señalización Vial  
@@ -699,4 +701,3 @@ Este análisis cubre el **sistema integral de señalización vial** a lo largo d
 **Fin del documento - T02 Análisis de Requisitos Sistema de Señalización Vial**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
-

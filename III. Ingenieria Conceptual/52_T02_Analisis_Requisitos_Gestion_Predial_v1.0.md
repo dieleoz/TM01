@@ -286,6 +286,20 @@ Este análisis cubre el **sistema completo de gestión predial**:
 
 ---
 
+### 3.5 Requisitos de Riesgo y Mitigación
+
+| ID | Requisito | Descripción | Fuente |
+|:---|:----------|:------------|:-------|
+| **RNF-009** | Plan de Mitigación de Retrasos | El sistema debe incluir un plan de acción para mitigar retrasos en la adquisición, considerando la ruta crítica del proyecto. | T01-Riesgos |
+| **RNF-010** | Estrategia de Negociación Flexible | El sistema debe permitir ajustar la estrategia de negociación si la tasa de adquisición voluntaria es < 80%. | T01-Riesgos |
+| **RNF-011** | Protocolo de Expropiación Acelerada | El sistema debe tener un protocolo para iniciar procesos de expropiación de forma inmediata tras 30 días de oferta sin acuerdo. | T01-Riesgos |
+| **RNF-012** | Provisión para Saneamiento de Títulos | El sistema debe contar con un fondo de contingencia y un equipo legal dedicado para procesos de saneamiento complejos. | T01-Riesgos |
+| **RNF-013** | Protocolo de Gestión de Conflictos Sociales | El sistema debe integrarse con Gestión Social para manejar la oposición comunitaria a las adquisiciones. | T01-Riesgos |
+| **RNF-014** | Monitoreo de Subcuenta Predial | El sistema debe generar alertas automáticas cuando el saldo de la subcuenta predial sea inferior al 20% del fondeo requerido para el trimestre. | T01-Riesgos |
+| **RNF-015** | Trazabilidad de la Ruta Crítica | El sistema debe mapear cada predio con su respectiva actividad en el cronograma de obra para visualizar su impacto en la ruta crítica. | Cronograma |
+
+---
+
 ## 4. REQUISITOS DE INTERFACES
 
 ### 4.1 Interface Gestión Predial ↔ Gestión Social
@@ -375,7 +389,7 @@ Este análisis cubre el **sistema completo de gestión predial**:
 | **RNF-001** | Tiempo | Adquisición 6-12 meses | Cronograma | 🔴 Alta |
 | **RNF-004** | Calidad Jurídica | Títulos saneados | AT7 | 🔴 CRÍTICA |
 
-**Total requisitos identificados:** 25 (10 funcionales + 15 no funcionales)
+**Total requisitos identificados:** 32 (10 funcionales + 22 no funcionales)
 
 ---
 
@@ -588,7 +602,7 @@ Este análisis cubre el **sistema completo de gestión predial**:
 ---
 
 **Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
+**Estado:** ✅ **v1.0** - Análisis de Requisitos Completado  
 **Fecha:** 17/10/2025  
 **Responsable:** Gerente Predial / Abogado Especialista  
 **Próximo documento:** T03 - Plan de Gestión Predial Detallado  
@@ -598,4 +612,3 @@ Este análisis cubre el **sistema completo de gestión predial**:
 **Fin del documento - T02 Análisis de Requisitos Sistema de Gestión Predial**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
-

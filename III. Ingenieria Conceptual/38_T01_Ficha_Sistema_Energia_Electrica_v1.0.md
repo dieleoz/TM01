@@ -315,44 +315,35 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 
 ---
 
-## 7. RIESGOS IDENTIFICADOS
+## 7. RIESGOS Y ACCIONES DE MITIGACIÓN TEMPRANA
 
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|:-------|:-------------|:--------|:-----------|
-| **Falla de red eléctrica nacional (apagones)** | Media | 🔴 Crítico | UPS + Generadores en todas las instalaciones críticas (CCO, Peajes). Autonomía 24-48h |
-| **Falla de generadores durante emergencia** | Media | 🔴 Alto | Mantenimiento preventivo estricto (mensual). Contratos de suministro de combustible. Generadores redundantes en CCO |
-| **Agotamiento de baterías UPS** | Media | 🔴 Alto | Reemplazo programado cada 3-5 años. Monitoreo SCADA de estado de baterías |
-| **Descargas atmosféricas (rayos) en equipos** | Alta | 🔴 Alto | Sistema de puesta a tierra < 5 Ω. Pararrayos en todas las instalaciones. SPDs en todos los tableros |
-| **Vandalismo/robo de cables de cobre** | Alta | 🟠 Medio | Cableado subterráneo en zonas vulnerables. CCTV en subestaciones. Alarmas perimetrales |
-| **Sobrecarga de transformadores** | Baja | 🟠 Medio | Dimensionamiento con factor de seguridad 1.25. Medidores de demanda. Planes de expansión |
-| **Falta de repuestos críticos (transformadores)** | Baja | 🔴 Alto | Stock mínimo de transformadores de respaldo. Contratos marco con proveedores |
-| **Incumplimiento de normativa RETIE/RETILAP** | Baja | 🟠 Medio | Auditorías anuales de cumplimiento. Personal certificado. Certificaciones al día |
-| **Corrosión en puestas a tierra (clima húmedo)** | Media | 🟠 Medio | Medición anual de resistencia de tierra. Tratamiento químico del suelo. Electrodos Copperweld |
-| **Falla de sistema SCADA eléctrico** | Baja | 🟡 Medio-Bajo | Servidor SCADA redundante. Backup diario. Operación manual como contingencia |
-| **Aumento de tarifas eléctricas (OPEX)** | Alta | 🟡 Bajo | Eficiencia energética (LED, equipos clase A). Posible instalación futura de paneles solares |
-| **Falta de combustible para generadores** | Media | 🟠 Medio | Contratos de suministro con proveedores locales. Tanques de almacenamiento 48h autonomía |
+| Riesgo | Probabilidad | Impacto | Acción de Mitigación Temprana |
+|:-------|:-------------|:--------|:--------------------------------|
+| **Falla de red eléctrica nacional (apagones)** | Media | 🔴 Crítico | **Mes 3:** Diseñar sistemas de respaldo (UPS + Generador) para CCO y Peajes con autonomía de 48h. |
+| **Falla de generadores durante emergencia** | Media | 🔴 Alto | **Mes 4:** Firmar contratos de suministro de combustible garantizado. **Mes 6:** Realizar primera prueba de generadores. |
+| **Agotamiento de baterías UPS** | Media | 🔴 Alto | **Mes 5:** Implementar monitoreo de estado de baterías en SCADA. **Mes 12:** Programar primer test de descarga. |
+| **Descargas atmosféricas (rayos) en equipos** | Alta | 🔴 Alto | **Mes 2:** Diseñar sistema de puesta a tierra (< 5 Ω) y protección contra sobretensiones (SPD) para todas las instalaciones. |
+| **Vandalismo/robo de cables de cobre** | Alta | 🟠 Medio | **Mes 3:** Definir tramos con cableado subterráneo y especificar alarmas perimetrales para subestaciones. |
+| **Sobrecarga de transformadores** | Baja | 🟠 Medio | **Mes 2:** Validar dimensionamiento de transformadores con un factor de seguridad del 25% sobre la demanda calculada. |
+| **Falta de repuestos críticos (transformadores)** | Baja | 🔴 Alto | **Mes 6:** Definir y adquirir stock mínimo de repuestos críticos (1 transformador de cada tipo, fusibles, etc.). |
+| **Incumplimiento de normativa RETIE/RETILAP** | Baja | 🟠 Medio | **Mes 1:** Contratar especialista certificado en RETIE para revisión de diseños. **Mes 6:** Programar primera auditoría. |
 
 **Riesgos Críticos:** 4 riesgos con impacto crítico identificados  
 **Estrategia General:** Redundancia N+1 en componentes críticos + Mantenimiento preventivo riguroso
 
 ---
 
-## 8. INDICADORES DE DESEMPEÑO (KPIs)
+## 8. INDICADORES DE DESEMPEÑO (KPIs) CLAVE
 
-**Según AT4 (Indicadores de Desempeño) e interpretación de requisitos:**
-
-| Indicador ID | Descripción | Valor Mínimo Aceptación | Frecuencia Medición |
-|:-------------|:------------|:------------------------|:--------------------|
-| **E14** | Iluminación | ≥ 80% de puntos luminosos operativos | Mensual |
-| **Disponibilidad CCO** | Equipos del CCO operativos | ≥ 99% disponibilidad mensual | Mensual |
-| **Disponibilidad Peajes** | Sistemas de peaje operativos (energía disponible) | 100% (con equipos de emergencia) | Mensual |
-| **MTBF (Mean Time Between Failures)** | Tiempo promedio entre fallas de componentes eléctricos | > 8,760 horas (1 año) | Continuo |
-| **MTTR (Mean Time To Repair)** | Tiempo promedio de reparación de fallas eléctricas | < 4 horas (fallas críticas) | Por evento |
-| **Resistencia de Puesta a Tierra** | Resistencia de sistemas de tierra | < 5 Ω (RETIE) | Anual |
-| **Factor de Potencia** | Factor de potencia en instalaciones principales | ≥ 0.90 | Mensual |
-| **Consumo Energético Anual** | Consumo total de energía del corredor | Dentro del presupuesto OPEX | Mensual |
-| **Disponibilidad de Generadores** | Generadores listos para operar ante falla | ≥ 99% disponibilidad | Semanal (prueba) |
-| **Autonomía de UPS** | Tiempo de respaldo de UPS ante falla de red | ≥ 30 minutos (CCO, Peajes) | Trimestral (prueba) |
+| Indicador ID | Descripción | Valor Mínimo Aceptación | Frecuencia Medición | Fuente |
+|:-------------|:------------|:------------------------|:--------------------|:-------|
+| **KPI-ENE-01:** Disponibilidad Energética CCO | Disponibilidad de energía en el CCO (Red + Respaldo). | ≥ 99.9% mensual | Continuo (SCADA) | AT4 |
+| **KPI-ENE-02:** Disponibilidad Energética Peajes | Disponibilidad de energía en Estaciones de Peaje. | ≥ 99.5% mensual | Continuo (SCADA) | AT4 |
+| **KPI-ENE-03:** Tiempo de Transferencia a Respaldo | Tiempo desde corte de red hasta activación de generador. | < 60 segundos | Por evento | NFPA 110 |
+| **KPI-ENE-04:** Cumplimiento RETIE | Resistencia de puesta a tierra en todas las instalaciones. | < 5 Ω | Anual | RETIE |
+| **KPI-ENE-05:** Calidad de Energía | Factor de potencia en acometidas principales. | ≥ 0.92 | Mensual | CREG |
+| **KPI-ENE-06:** Autonomía de Respaldo | Autonomía demostrada de UPS y Generadores en pruebas. | UPS: ≥ 30 min, Generador: ≥ 48h | Semestral | AT2 |
+| **KPI-ENE-07:** Cumplimiento Indicador E14 | Porcentaje de puntos de iluminación operativos. | ≥ 80% | Mensual | AT4 |
 
 **Penalizaciones:** Según AT4, el incumplimiento de indicadores de disponibilidad de sistemas críticos (CCO, Peajes, ITS, Iluminación) puede resultar en **deducciones mensuales a la Retribución**.
 
@@ -543,4 +534,3 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 ---
 
 **FIN DEL DOCUMENTO T01 - SISTEMA DE ENERGÍA ELÉCTRICA** ⚡🔌✅
-

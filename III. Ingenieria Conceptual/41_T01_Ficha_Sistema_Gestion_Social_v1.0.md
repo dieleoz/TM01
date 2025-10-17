@@ -162,15 +162,15 @@ ificada |
 
 ---
 
-## 7. RIESGOS IDENTIFICADOS
+## 7. RIESGOS Y ACCIONES DE MITIGACIÓN TEMPRANA
 
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|:-------|:-------------|:--------|:-----------|
-| **Conflictos con comunidades locales** | Alta | 🔴 Crítico | Participación temprana. Comunicación continua. Atención de PQRS oportuna |
-| **Incumplimiento de contratación local** | Media | 🟠 Alto | Convocatorias públicas. Base de datos de mano de obra local. Seguimiento |
-| **PQRS no atendidas a tiempo** | Media | 🟠 Medio | Sistema PQRS automatizado. Personal dedicado. Plazos claros (Ley 1437/2011) |
-| **Oposición a reasentamientos** | Media | 🔴 Alto | Plan de Reasentamientos con enfoque de derechos. Negociación justa |
-| **Accidentes viales con comunidades** | Media | 🔴 Alto | Educación Vial. Señalización. Control de velocidad en pasos urbanos |
+| Riesgo | Probabilidad | Impacto | Acción de Mitigación Temprana |
+|:-------|:-------------|:--------|:--------------------------------|
+| **Conflictos con comunidades locales** | Alta | 🔴 Crítico | **Mes 1:** Mapeo de actores clave (JAC, líderes). **Mes 2:** Iniciar reuniones informativas del PGS. |
+| **Incumplimiento de contratación local** | Media | 🟠 Alto | **Mes 2:** Establecer convenios con SENA y alcaldías. **Mes 3:** Crear base de datos de hojas de vida locales. |
+| **PQRS no atendidas a tiempo** | Media | 🟠 Medio | **Mes 1:** Implementar software de gestión de PQRS. **Mes 2:** Capacitar al personal de las Oficinas de Atención. |
+| **Oposición a reasentamientos** | Media | 🔴 Alto | **Mes 3:** Iniciar caracterización socioeconómica de hogares a reasentar. Coordinar con equipo predial. |
+| **Accidentes viales con comunidades** | Media | 🔴 Alto | **Mes 4:** Iniciar campañas de educación vial en escuelas y comunidades cercanas a la vía. |
 
 ---
 
@@ -178,11 +178,11 @@ ificada |
 
 | Indicador | Valor Mínimo Aceptación | Frecuencia |
 |:----------|:------------------------|:-----------|
-| PQRS atendidas a tiempo | 100% dentro de los plazos legales (15 días) | Mensual |
-| % Contratación local (mano de obra no calificada) | ≥ 50% de la región | Mensual |
-| Reuniones comunitarias realizadas | Según cronograma del PGS (mínimo 1/mes por municipio) | Mensual |
-| Hogares reasentados satisfactoriamente | 100% con acuerdos formalizados | Por evento |
-| Campañas de Educación Vial | Mínimo 2 campañas/año por municipio | Anual |
+| **KPI-SOC-01:** Oportunidad en PQRS | 100% de las PQRS respondidas dentro de los 15 días hábiles (Ley 1437/2011). | Mensual |
+| **KPI-SOC-02:** Contratación Local | ≥ 60% de la mano de obra no calificada y semiccalificada contratada proviene de los municipios del área de influencia. | Mensual |
+| **KPI-SOC-03:** Participación Comunitaria | 100% de las reuniones programadas en el PGS ejecutadas. | Mensual |
+| **KPI-SOC-04:** Acuerdos de Reasentamiento | 100% de los hogares a reasentar con Plan de Reasentamiento firmado y aceptado. | Por evento |
+| **KPI-SOC-05:** Cobertura de Educación Vial | Mínimo 4 campañas anuales por municipio, cubriendo al menos el 50% de las escuelas del área de influencia. | Anual |
 
 ---
 
@@ -224,4 +224,3 @@ ificada |
 ---
 
 **FIN DEL DOCUMENTO T01 - GESTIÓN SOCIAL** 👥🤝✅
-
