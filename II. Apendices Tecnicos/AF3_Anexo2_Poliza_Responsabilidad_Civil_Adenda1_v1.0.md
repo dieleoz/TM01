@@ -1,30 +1,182 @@
-﻿# AF3-Anexo2-Adenda1 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿---
+title: AF3 - ANEXO 2 - PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL EXTRACONTRACTUAL - ADENDA 1
+project: APP PUERTO SALGAR - BARRANCABERMEJA
+contract: Concesión APP
+document: AF3 - Apéndice Financiero 3 - Anexo 2
+type: Apéndice Financiero - Anexo
+version: 1.0
+date: 2025-10-16
+author: Administrador Contractual EPC
+status: Contenido completo
+---
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** AF3-Anexo2-Adenda1  
-**Tipo:** Apendice Financiero - Anexo  
-**Estado:** Contenido completo  
+# AF3 - ANEXO 2: PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL EXTRACONTRACTUAL
+## ADENDA 1
+### APP PUERTO SALGAR - BARRANCABERMEJA
+
+### INFORMACIÓN DEL DOCUMENTO
+
+| **Campo**                | **Valor**                          |
+|--------------------------|-----------------------------------|
+| **Proyecto**            | APP Puerto Salgar - Barrancabermeja |
+| **Contrato**            | Concesión APP                     |
+| **Documento**           | AF3 - Anexo 2 - Adenda 1          |
+| **Tipo**                | Apéndice Financiero               |
+| **Versión**             | 1.0                               |
+| **Fecha de actualización** | 16/10/2025                       |
+| **Responsable**         | Administrador Contractual EPC     |
+| **Estado**              | Contenido completo                |
+| **Próxima revisión**    | Según necesidad contractual       |
+
+### TABLA DE CONTENIDO
+
+1. [INFORMACIÓN DE LA PÓLIZA](#1-información-de-la-póliza)
+2. [PARTES INTERVINIENTES](#2-partes-intervinientes)
+3. [COBERTURAS](#3-coberturas)
+4. [EXCLUSIONES](#4-exclusiones)
+5. [CONDICIONES GENERALES](#5-condiciones-generales)
+6. [OBLIGACIONES DE LAS PARTES](#6-obligaciones-de-las-partes)
+7. [PROCEDIMIENTO DE RECLAMACIÓN](#7-procedimiento-de-reclamación)
+8. [VIGENCIA Y TERMINACIÓN](#8-vigencia-y-terminación)
+9. [DISPOSICIONES FINALES](#9-disposiciones-finales)
+10. [ANEXOS](#10-anexos)
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## 1. INFORMACIÓN DE LA PÓLIZA
 
-| Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
-| **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Apendice Financiero - Anexo |
-| **Numero** | AF3-Anexo2-Adenda1 |
-| **Estado** | Contenido completo |
+| **Concepto**            | **Detalle**                        |
+|-------------------------|-----------------------------------|
+| **Número de Póliza**   | [Número de póliza]                |
+| **Vigencia**           | Desde [fecha] hasta [fecha]       |
+| **Moneda**             | Pesos Colombianos (COP)           |
+| **Suma Asegurada**     | $[Valor]                          |
+| **Deducible**          | $[Valor]                          |
+| **Aseguradora**        | [Nombre de la aseguradora]        |
+| **Intermediario**      | [Nombre del intermediario]        |
+
+## 2. PARTES INTERVINIENTES
+
+### 2.1 TOMADOR DEL SEGURO (CONTRATISTA)
+- **Nombre:** [Nombre del contratista]
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+- **Representante Legal:** [Nombre completo]
+- **Documento de Identidad:** [Número de identificación]
+
+### 2.2 ASEGURADOS
+
+#### 2.2.1 ASEGURADO PRINCIPAL (CONTRATISTA)
+- **Nombre:** [Nombre del contratista]
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+
+#### 2.2.2 ASEGURADO ADICIONAL
+- **Nombre:** AGENCIA NACIONAL DE INFRAESTRUCTURA ANI
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+
+### 2.3 BENEFICIARIO
+- **Nombre:** TERCEROS AFECTADOS Y/O AGENCIA NACIONAL DE INFRAESTRUCTURA ANI
+
+## 3. COBERTURAS
+
+### 3.1 RESPONSABILIDAD CIVIL GENERAL
+Cobertura por daños a terceros derivados de la ejecución del contrato de concesión.
+
+### 3.2 RESPONSABILIDAD CIVIL POR CONSTRUCCIÓN
+Cobertura por daños ocasionados durante la fase de construcción del proyecto.
+
+### 3.3 GASTOS DE DEFENSA Y APERTURA DE INCIDENTE
+Cobertura de gastos legales en caso de reclamaciones.
+
+### 3.4 RESPONSABILIDAD PATRONAL
+Cobertura por accidentes de trabajo y enfermedades laborales.
+
+## 4. EXCLUSIONES
+
+1. Actos dolosos del asegurado o beneficiario
+2. Daños nucleares o radioactivos
+3. Guerra, rebelión o actos terroristas
+4. Contaminación ambiental gradual
+5. Daños por productos en fase experimental
+6. Responsabilidad contractual asumida por el asegurado
+7. Multas o sanciones administrativas
+8. Daños a bienes propiedad del asegurado
+
+## 5. CONDICIONES GENERALES
+
+### 5.1 DECLARACIONES
+El tomador declara que toda la información proporcionada es veraz y completa.
+
+### 5.2 OBLIGACIONES DEL ASEGURADO
+- Notificar cualquier cambio en las condiciones de riesgo
+- Pagar puntualmente las primas
+- Tomar medidas para prevenir siniestros
+- Notificar siniestros en el plazo establecido
+
+### 5.3 OBLIGACIONES DE LA ASEGURADORA
+- Indemnizar los daños cubiertos según lo pactado
+- Asistencia legal en caso de reclamaciones
+- Asesoramiento en prevención de riesgos
+
+## 6. OBLIGACIONES DE LAS PARTES
+
+### 6.1 DEL CONTRATISTA
+- Mantener vigente la póliza durante la ejecución del contrato
+- Informar cualquier modificación sustancial del riesgo
+- Permitir las inspecciones de la aseguradora
+
+### 6.2 DE LA ANI
+- Verificar el cumplimiento de las coberturas
+- Recibir notificación de siniestros que le afecten
+- Supervisar el cumplimiento de las obligaciones aseguradoras
+
+## 7. PROCEDIMIENTO DE RECLAMACIÓN
+
+1. Notificar el siniestro a la aseguradora en un plazo máximo de 24 horas
+2. Presentar la documentación requerida:
+   - Formulario de reclamación
+   - Documentos que acrediten el daño
+   - Pruebas de responsabilidad
+   - Informes técnicos si aplica
+3. La aseguradora designará un perito para evaluar los daños
+4. Resolución de la reclamación en el plazo establecido
+
+## 8. VIGENCIA Y TERMINACIÓN
+
+### 8.1 VIGENCIA
+La póliza tendrá vigencia desde [fecha] hasta [fecha], prorrogable por períodos anuales sucesivos.
+
+### 8.2 TERMINACIÓN
+La póliza podrá terminar por:
+1. Vencimiento del plazo
+2. Cumplimiento del objeto asegurado
+3. Mutuo acuerdo
+4. Incumplimiento de las obligaciones
+
+## 9. DISPOSICIONES FINALES
+
+- La póliza se rige por las leyes colombianas
+- Para controversias, las partes se someten a los jueces de [ciudad]
+- Cualquier modificación deberá constar por escrito
+
+## 10. ANEXOS
+
+1. Condiciones generales detalladas
+2. Endosos y modificaciones
+3. Formularios de reclamación
+4. Certificados de cobertura
 
 ---
 
-## 2. CONTENIDO DEL DOCUMENTO
+**Nota:** Este documento es de carácter confidencial y su uso está restringido a las partes involucradas en el contrato de concesión.
+
+---
+
+## REPÚBLICA DE COLOMBIA
+### MINISTERIO DE TRANSPORTE
+### AGENCIA NACIONAL DE INFRAESTRUCTURA
 
 AGENCIA NACIONAL DE INFRAESTRUCTURA ANI
 PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL EXTRACONTRACTUAL CARÁTULA

@@ -1,30 +1,182 @@
-﻿# AF3.1 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿---
+title: AF3.1 - PÓLIZA DE SEGURO DE CUMPLIMIENTO
+project: APP PUERTO SALGAR - BARRANCABERMEJA
+contract: Concesión APP
+document: AF3.1 - Apéndice Financiero 3.1
+type: Apéndice Financiero
+version: 1.0
+date: 2025-10-16
+author: Administrador Contractual EPC
+status: Contenido completo
+---
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** AF3.1  
-**Tipo:** Apendice Financiero  
-**Estado:** Contenido completo  
+# AF3.1 - PÓLIZA DE SEGURO DE CUMPLIMIENTO
+## PARA CONTRATOS ESTATALES
+### APP PUERTO SALGAR - BARRANCABERMEJA
+
+### INFORMACIÓN DEL DOCUMENTO
+
+| **Campo**                | **Valor**                          |
+|--------------------------|-----------------------------------|
+| **Proyecto**            | APP Puerto Salgar - Barrancabermeja |
+| **Contrato**            | Concesión APP                     |
+| **Documento**           | AF3.1 - Póliza de Cumplimiento    |
+| **Tipo**                | Apéndice Financiero               |
+| **Versión**             | 1.0                               |
+| **Fecha de actualización** | 16/10/2025                       |
+| **Responsable**         | Administrador Contractual EPC     |
+| **Estado**              | Contenido completo                |
+| **Próxima revisión**    | Según necesidad contractual       |
+
+### TABLA DE CONTENIDO
+
+1. [INFORMACIÓN DE LA PÓLIZA](#1-información-de-la-póliza)
+2. [PARTES INTERVINIENTES](#2-partes-intervinientes)
+3. [COBERTURAS](#3-coberturas)
+   - [3.1 Cumplimiento Contractual](#31-cumplimiento-contractual)
+   - [3.2 Calidad del Servicio](#32-calidad-del-servicio)
+   - [3.3 Suministro de Repuestos](#33-suministro-de-repuestos)
+4. [EXCLUSIONES](#4-exclusiones)
+5. [PROCEDIMIENTO DE RECLAMACIÓN](#5-procedimiento-de-reclamación)
+6. [OBLIGACIONES DE LAS PARTES](#6-obligaciones-de-las-partes)
+7. [VIGENCIA Y TERMINACIÓN](#7-vigencia-y-terminación)
+8. [DISPOSICIONES FINALES](#8-disposiciones-finales)
+9. [ANEXOS](#9-anexos)
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## 1. INFORMACIÓN DE LA PÓLIZA
 
-| Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
-| **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Apendice Financiero |
-| **Numero** | AF3.1 |
-| **Estado** | Contenido completo |
+| **Concepto**            | **Detalle**                        |
+|-------------------------|-----------------------------------|
+| **Número de Póliza**   | [Número de póliza]                |
+| **Vigencia**           | Desde [fecha] hasta [fecha]       |
+| **Moneda**             | Pesos Colombianos (COP)           |
+| **Suma Asegurada**     | $[Valor]                          |
+| **Aseguradora**        | [Nombre de la aseguradora]        |
+| **Intermediario**      | [Nombre del intermediario]        |
+| **Base Legal**         | Art. 1079 C. de Comercio, Decreto 1082 de 2015 |
+
+## 2. PARTES INTERVINIENTES
+
+### 2.1 TOMADOR DEL SEGURO (CONTRATISTA)
+- **Nombre:** [Nombre del contratista]
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+- **Representante Legal:** [Nombre completo]
+- **Documento de Identidad:** [Número de identificación]
+
+### 2.2 ENTIDAD ASEGURADA Y BENEFICIARIA
+- **Nombre:** AGENCIA NACIONAL DE INFRAESTRUCTURA - ANI
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+- **Representante Legal:** [Nombre completo]
+
+## 3. COBERTURAS
+
+### 3.1 CUMPLIMIENTO CONTRACTUAL
+Cobertura de las obligaciones derivadas del contrato de concesión, incluyendo:
+- Incumplimiento de obligaciones contractuales
+- Incumplimiento de plazos de ejecución
+- Incumplimiento de especificaciones técnicas
+
+### 3.2 CALIDAD DEL SERVICIO
+Cobertura por perjuicios derivados de:
+- Mala calidad o insuficiencia de productos entregados
+- Deficiencias en la prestación del servicio
+- No conformidades detectadas en la entrega
+
+### 3.3 SUMINISTRO DE REPUESTOS
+Cobertura por incumplimiento en el suministro de:
+- Repuestos y accesorios
+- Insumos necesarios
+- Partes y componentes
+
+## 4. EXCLUSIONES
+
+1. Hechos o circunstancias conocidos al momento de la contratación
+2. Fuerza mayor o caso fortuito no imputable al contratista
+3. Actos dolosos o culpa grave del asegurado
+4. Hechos derivados de disposiciones legales posteriores
+5. Conflictos armados, disturbios o actos terroristas
+6. Contaminación ambiental gradual
+7. Multas o sanciones de carácter administrativo
+
+## 5. PROCEDIMIENTO DE RECLAMACIÓN
+
+1. **Notificación del Siniestro**
+   - Plazo máximo: 5 días hábiles desde la ocurrencia
+   - Medio: Escrito dirigido a la aseguradora
+   - Documentos mínimos requeridos:
+     - Copia del contrato
+     - Acta de incumplimiento
+     - Cuantificación del perjuicio
+
+2. **Evaluación**
+   - La aseguradora designará un perito dentro de los 3 días hábiles
+   - Plazo máximo para evaluación: 15 días hábiles
+
+3. **Indemnización**
+   - Pago dentro de los 30 días siguientes a la aceptación
+   - Forma de pago: Transferencia electrónica
+
+## 6. OBLIGACIONES DE LAS PARTES
+
+### 6.1 DEL ASEGURADO (CONTRATISTA)
+- Pagar puntualmente las primas
+- Comunicar cambios sustanciales en el riesgo
+- Permitir inspecciones de la aseguradora
+- Proporcionar información veraz y completa
+
+### 6.2 DE LA ASEGURADORA
+- Mantener coberturas vigentes
+- Responder oportunamente los siniestros
+- Designar peritos calificados
+- Emitir certificados de cobertura
+
+### 6.3 DE LA ANI
+- Notificar oportunamente los siniestros
+- Proporcionar la documentación requerida
+- Permitir la inspección de obras o servicios
+
+## 7. VIGENCIA Y TERMINACIÓN
+
+### 7.1 VIGENCIA
+- Inicio: [Fecha de inicio]
+- Término: [Fecha de término]
+- Renovación: Automática por períodos anuales
+
+### 7.2 TERMINACIÓN
+La póliza podrá terminar por:
+1. Vencimiento del plazo
+2. Cumplimiento total del contrato
+3. Mutuo acuerdo
+4. Incumplimiento de obligaciones
+
+## 8. DISPOSICIONES FINALES
+
+1. **Ley Aplicable:** Legislación colombiana
+2. **Competencia:** Jueces de la República de Colombia
+3. **Modificaciones:** Por escrito y firmadas por las partes
+4. **Cesión:** Requiere autorización previa de la ANI
+5. **Notificaciones:** Al domicilio señalado en la póliza
+
+## 9. ANEXOS
+
+1. Condiciones generales detalladas
+2. Formulario de reclamación
+3. Certificado de cobertura vigente
+4. Endosos y modificaciones
 
 ---
 
-## 2. CONTENIDO DEL DOCUMENTO
+**Nota:** Este documento es de carácter confidencial y su uso está restringido a las partes involucradas en el contrato de concesión.
+
+---
+
+## REPÚBLICA DE COLOMBIA
+### MINISTERIO DE TRANSPORTE
+### AGENCIA NACIONAL DE INFRAESTRUCTURA
 
 AGENCIA NACIONAL DE INFRAESTRUCTURA ANI PÓLIZA ÚNICA DE SEGURO DE CUMPLIMIENTO PARA CONTRATOS ESTATALES
 CARÁTULA

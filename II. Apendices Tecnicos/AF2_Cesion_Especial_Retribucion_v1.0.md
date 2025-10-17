@@ -1,53 +1,150 @@
-﻿# AF2 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿---
+title: AF2 - CESIÓN ESPECIAL DE LA RETRIBUCIÓN
+project: APP PUERTO SALGAR - BARRANCABERMEJA
+contract: Concesión APP
+document: AF2 - Apéndice Financiero 2
+type: Apéndice Financiero
+version: 1.0
+date: 2025-10-16
+author: Administrador Contractual EPC
+status: Contenido completo
+---
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** AF2  
-**Tipo:** Apendice Financiero  
-**Estado:** Contenido completo  
+# AF2 - CESIÓN ESPECIAL DE LA RETRIBUCIÓN
+## APP PUERTO SALGAR - BARRANCABERMEJA
+
+### INFORMACIÓN DEL DOCUMENTO
+
+| **Campo**                | **Valor**                          |
+|--------------------------|-----------------------------------|
+| **Proyecto**            | APP Puerto Salgar - Barrancabermeja |
+| **Contrato**            | Concesión APP                     |
+| **Documento**           | AF2 - Apéndice Financiero 2       |
+| **Tipo**                | Apéndice Financiero               |
+| **Versión**             | 1.0                               |
+| **Fecha de actualización** | 16/10/2025                       |
+| **Responsable**         | Administrador Contractual EPC     |
+| **Estado**              | Contenido completo                |
+| **Próxima revisión**    | Según necesidad contractual       |
+
+### TABLA DE CONTENIDO
+
+1. [INTRODUCCIÓN](#1-introducción)
+2. [OBJETIVO](#2-objetivo)
+3. [ALCANCE](#3-alcance)
+4. [DEFINICIONES](#4-definiciones)
+5. [PROCESO DE CESIÓN](#5-proceso-de-cesión)
+   - [5.1 Solicitud de Cesión](#51-solicitud-de-cesión)
+   - [5.2 Documentación Requerida](#52-documentación-requerida)
+   - [5.3 Aprobación y Certificación](#53-aprobación-y-certificación)
+6. [OBLIGACIONES DE LAS PARTES](#6-obligaciones-de-las-partes)
+7. [VIGENCIA Y TERMINACIÓN](#7-vigencia-y-terminación)
+8. [DISPOSICIONES FINALES](#8-disposiciones-finales)
+9. [ANEXOS](#9-anexos)
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## 1. INTRODUCCIÓN
 
-| Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
-| **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Apendice Financiero |
-| **Numero** | AF2 |
-| **Estado** | Contenido completo |
+Documento que regula el procedimiento y condiciones para la cesión especial de la retribución establecida en el Contrato de Concesión APP Puerto Salgar - Barrancabermeja, en cumplimiento de lo establecido en la normativa vigente y el marco contractual.
+
+## 2. OBJETIVO
+
+Establecer los lineamientos y procedimientos para la cesión especial de la retribución a favor de los cesionarios autorizados, garantizando el cumplimiento de las obligaciones contractuales y legales.
+
+## 3. ALCANCE
+
+El presente apéndice aplica a todas las cesiones de retribución que realice el Concesionario a favor de los cesionarios autorizados, en el marco del contrato de concesión APP Puerto Salgar - Barrancabermeja.
+
+## 4. DEFINICIONES
+
+Para los efectos del presente apéndice, se entenderá por:
+
+| **Término** | **Definición** |
+|------------|----------------|
+| **Cesión Especial** | Transferencia de derechos económicos sobre la retribución |
+| **Cesionario** | Entidad a favor de la cual se realiza la cesión |
+| **Retribución** | Contraprestación económica a la que tiene derecho el Concesionario |
+| **Monto Cedido** | Valor total de la retribución objeto de cesión |
+| **Fiduciaria** | Entidad encargada de administrar los recursos |
+
+## 5. PROCESO DE CESIÓN
+
+### 5.1. Solicitud de Cesión
+
+El Concesionario deberá presentar una solicitud de cesión que contenga:
+
+- Identificación del cesionario
+- Monto a ceder
+- Plazo de la cesión
+- Unidad(es) Funcional(es) involucrada(s)
+- Documentos de respaldo
+
+### 5.2. Documentación Requerida
+
+- Carta de solicitud firmada
+- Documentos que acrediten la capacidad del cesionario
+- Estudio de viabilidad financiera
+- Términos y condiciones de la cesión
+
+### 5.3. Aprobación y Certificación
+
+La ANI contará con un plazo de diez (10) días hábiles para:
+
+1. Revisar la documentación presentada
+2. Solicitar información adicional si es necesario
+3. Emitir la certificación de cesión o notificar el rechazo
+
+## 6. OBLIGACIONES DE LAS PARTES
+
+### 6.1. Del Concesionario
+
+- Presentar la documentación completa y veraz
+- Informar cualquier modificación sustancial
+- Cumplir con los términos de la cesión
+
+### 6.2. De la ANI
+
+- Revisar la documentación en los plazos establecidos
+- Emitir las certificaciones correspondientes
+- Supervisar el cumplimiento de la cesión
+
+## 7. VIGENCIA Y TERMINACIÓN
+
+La cesión especial de retribución tendrá una vigencia determinada en el acto de cesión y podrá terminar por:
+
+1. Vencimiento del plazo establecido
+2. Cumplimiento de las obligaciones garantizadas
+3. Terminación anticipada del contrato de concesión
+4. Mutuo acuerdo entre las partes
+
+## 8. DISPOSICIONES FINALES
+
+- La cesión no exime al Concesionario de sus obligaciones contractuales
+- Cualquier modificación deberá ser autorizada por la ANI
+- Se aplicará la normativa vigente en materia de cesión de derechos
+
+## 9. ANEXOS
+
+- Formato de solicitud de cesión
+- Modelo de certificación de cesión
+- Documentos de respaldo
 
 ---
 
-## 2. CONTENIDO DEL DOCUMENTO
+**Nota:** Este documento es de carácter confidencial y su uso está restringido a las partes involucradas en el contrato de concesión.
 
+---
 
+## REPÚBLICA DE COLOMBIA
+### MINISTERIO DE TRANSPORTE
+### AGENCIA NACIONAL DE INFRAESTRUCTURA
 
+**CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP**  
+**APÉNDICE FINANCIERO 2: CESIÓN ESPECIAL DE LA RETRIBUCIÓN**
 
-
-
-
-REPÚBLICA DE COLOMBIA
-
-
-
-
-MINISTERIO DE TRANSPORTE
-
-
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-
-CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No   APÉNDICE FINANCIERO 2: CESIÓN ESPECIAL DE LA RETRIBUCIÓN
-
-Entre: Concedente:
+**Entre las partes:**  
+**Concedente:**
 Agencia Nacional de Infraestructura
 
 

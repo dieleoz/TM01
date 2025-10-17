@@ -1,30 +1,203 @@
-﻿# AF3.2 - APP PUERTO SALGAR - BARRANCABERMEJA
-## Proyecto Vehicular - Concesion APP
+﻿---
+title: AF3.2 - PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL EXTRACONTRACTUAL
+project: APP PUERTO SALGAR - BARRANCABERMEJA
+contract: Concesión APP
+document: AF3.2 - Apéndice Financiero 3.2
+type: Apéndice Financiero
+version: 1.0
+date: 2025-10-16
+author: Administrador Contractual EPC
+status: Contenido completo
+---
 
-**Fecha de actualizacion:** 16/10/2025  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Contrato:** Concesion APP  
-**Documento:** AF3.2  
-**Tipo:** Apendice Financiero  
-**Estado:** Contenido completo  
+# AF3.2 - PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL EXTRACONTRACTUAL
+## APP PUERTO SALGAR - BARRANCABERMEJA
+
+### INFORMACIÓN DEL DOCUMENTO
+
+| **Campo**                | **Valor**                          |
+|--------------------------|-----------------------------------|
+| **Proyecto**            | APP Puerto Salgar - Barrancabermeja |
+| **Contrato**            | Concesión APP                     |
+| **Documento**           | AF3.2 - Responsabilidad Civil     |
+| **Tipo**                | Apéndice Financiero               |
+| **Versión**             | 1.0                               |
+| **Fecha de actualización** | 16/10/2025                       |
+| **Responsable**         | Administrador Contractual EPC     |
+| **Estado**              | Contenido completo                |
+| **Próxima revisión**    | Según necesidad contractual       |
+
+### TABLA DE CONTENIDO
+
+1. [INFORMACIÓN DE LA PÓLIZA](#1-información-de-la-póliza)
+2. [PARTES INTERVINIENTES](#2-partes-intervinientes)
+3. [COBERTURAS](#3-coberturas)
+   - [3.1 Responsabilidad Civil General](#31-responsabilidad-civil-general)
+   - [3.2 Responsabilidad Civil por Construcción](#32-responsabilidad-civil-por-construcción)
+   - [3.3 Gastos de Defensa](#33-gastos-de-defensa)
+4. [EXCLUSIONES](#4-exclusiones)
+5. [DEFINICIONES](#5-definiciones)
+6. [OBLIGACIONES DE LAS PARTES](#6-obligaciones-de-las-partes)
+7. [PROCEDIMIENTO DE RECLAMACIÓN](#7-procedimiento-de-reclamación)
+8. [VIGENCIA Y TERMINACIÓN](#8-vigencia-y-terminación)
+9. [DISPOSICIONES FINALES](#9-disposiciones-finales)
+10. [ANEXOS](#10-anexos)
 
 ---
 
-## 1. INFORMACION DEL DOCUMENTO
+## 1. INFORMACIÓN DE LA PÓLIZA
 
-| Campo | Valor |
-|-------|-------|
-| **Fecha de actualizacion** | 16/10/2025 |
-| **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Contrato** | Concesion APP |
-| **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Apendice Financiero |
-| **Numero** | AF3.2 |
-| **Estado** | Contenido completo |
+| **Concepto**            | **Detalle**                        |
+|-------------------------|-----------------------------------|
+| **Número de Póliza**   | [Número de póliza]                |
+| **Vigencia**           | Desde [fecha] hasta [fecha]       |
+| **Moneda**             | Pesos Colombianos (COP)           |
+| **Suma Asegurada**     | $[Valor]                          |
+| **Deducible**          | $[Valor]                          |
+| **Aseguradora**        | [Nombre de la aseguradora]        |
+| **Intermediario**      | [Nombre del intermediario]        |
+| **Base Legal**         | Art. 1079 C. de Comercio, Decreto 1082 de 2015 |
+
+## 2. PARTES INTERVINIENTES
+
+### 2.1 TOMADOR DEL SEGURO (CONTRATISTA)
+- **Nombre:** [Nombre del contratista]
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+- **Representante Legal:** [Nombre completo]
+- **Documento de Identidad:** [Número de identificación]
+
+### 2.2 ASEGURADOS
+
+#### 2.2.1 ASEGURADO PRINCIPAL (CONTRATISTA)
+- **Nombre:** [Nombre del contratista]
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+
+#### 2.2.2 ASEGURADO ADICIONAL
+- **Nombre:** AGENCIA NACIONAL DE INFRAESTRUCTURA ANI
+- **NIT:** [NIT]
+- **Dirección:** [Dirección completa]
+
+### 2.3 BENEFICIARIO
+- **Nombre:** TERCEROS AFECTADOS Y/O AGENCIA NACIONAL DE INFRAESTRUCTURA ANI
+
+## 3. COBERTURAS
+
+### 3.1 RESPONSABILIDAD CIVIL GENERAL
+Cobertura por daños a terceros derivados de la ejecución del contrato de concesión, incluyendo:
+- Daños materiales
+- Lesiones personales
+- Muerte de terceros
+
+### 3.2 RESPONSABILIDAD CIVIL POR CONSTRUCCIÓN
+Cobertura específica para daños ocasionados durante la fase de construcción del proyecto, incluyendo:
+- Daños a obras contiguas
+- Daños por trabajos subterráneos
+- Daños por derrumbes o deslizamientos
+
+### 3.3 GASTOS DE DEFENSA
+Cobertura de gastos legales en caso de reclamaciones, incluyendo:
+- Honorarios de abogados
+- Costas judiciales
+- Gastos de peritaje
+
+## 4. EXCLUSIONES
+
+1. Actos dolosos del asegurado o beneficiario
+2. Daños nucleares o radioactivos
+3. Guerra, rebelión o actos terroristas
+4. Contaminación ambiental gradual
+5. Daños por productos en fase experimental
+6. Responsabilidad contractual asumida por el asegurado
+7. Multas o sanciones administrativas
+8. Daños a bienes propiedad del asegurado
+
+## 5. DEFINICIONES
+
+### 5.1 TÉRMINOS CLAVE
+
+| **Término** | **Definición** |
+|-------------|----------------|
+| **Asegurado** | Incluye tanto al Contratista Asegurado Principal como a la ANI |
+| **Asegurado Principal** | El Contratista Tomador del seguro |
+| **Asegurado Adicional** | La Entidad Contratante (ANI) |
+| **Accidente de Trabajo** | Suceso imprevisto que causa lesión o muerte durante labores |
+| **Tercero** | Persona ajena a la relación contractual |
+
+## 6. OBLIGACIONES DE LAS PARTES
+
+### 6.1 DEL CONTRATISTA
+- Mantener la póliza vigente durante la ejecución del contrato
+- Informar cualquier modificación sustancial del riesgo
+- Permitir las inspecciones de la aseguradora
+
+### 6.2 DE LA ASEGURADORA
+- Mantener coberturas vigentes
+- Responder oportunamente los siniestros
+- Designar peritos calificados
+
+### 6.3 DE LA ANI
+- Verificar el cumplimiento de las coberturas
+- Recibir notificación de siniestros que le afecten
+- Supervisar el cumplimiento de obligaciones
+
+## 7. PROCEDIMIENTO DE RECLAMACIÓN
+
+1. **Notificación del Siniestro**
+   - Plazo máximo: 24 horas desde la ocurrencia
+   - Medio: Escrito dirigido a la aseguradora
+   - Documentos mínimos requeridos:
+     - Relación detallada del hecho
+     - Pruebas documentales
+     - Testimonios si los hubiere
+
+2. **Evaluación**
+   - Designación de perito dentro de 3 días hábiles
+   - Plazo máximo para evaluación: 15 días hábiles
+
+3. **Indemnización**
+   - Pago dentro de los 30 días siguientes a la aceptación
+   - Forma de pago: Transferencia electrónica
+
+## 8. VIGENCIA Y TERMINACIÓN
+
+### 8.1 VIGENCIA
+- Inicio: [Fecha de inicio]
+- Término: [Fecha de término]
+- Renovación: Automática por períodos anuales
+
+### 8.2 TERMINACIÓN
+La póliza podrá terminar por:
+1. Vencimiento del plazo
+2. Cumplimiento total del contrato
+3. Mutuo acuerdo
+4. Incumplimiento de obligaciones
+
+## 9. DISPOSICIONES FINALES
+
+1. **Ley Aplicable:** Legislación colombiana
+2. **Competencia:** Jueces de la República de Colombia
+3. **Modificaciones:** Por escrito y firmadas por las partes
+4. **Cesión:** Requiere autorización previa de la ANI
+5. **Notificaciones:** Al domicilio señalado en la póliza
+
+## 10. ANEXOS
+
+1. Condiciones generales detalladas
+2. Formulario de reclamación
+3. Certificado de cobertura vigente
+4. Endosos y modificaciones
 
 ---
 
-## 2. CONTENIDO DEL DOCUMENTO
+**Nota:** Este documento es de carácter confidencial y su uso está restringido a las partes involucradas en el contrato de concesión.
+
+---
+
+## REPÚBLICA DE COLOMBIA
+### MINISTERIO DE TRANSPORTE
+### AGENCIA NACIONAL DE INFRAESTRUCTURA
 
 AGENCIA NACIONAL DE INFRAESTRUCTURA ANI
 PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL EXTRACONTRACTUAL
