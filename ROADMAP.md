@@ -1,11 +1,11 @@
 # ROADMAP: PROYECTO FORMATOS PARA IA
 ## Plan de Trabajo y Cronograma
 
-**Versión:** 1.3  
+**Versión:** 1.4  
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 17 de octubre de 2025  
-**Progreso total:** 68% ✅ (ADELANTO DE 5-6 SEMANAS)
+**Última actualización:** 17 de octubre de 2025 (19:00)  
+**Progreso total:** 72% ✅ (ADELANTO DE 5-6 SEMANAS)
 
 ---
 
@@ -313,15 +313,15 @@ Aplicar **Template T01** a cada sistema principal (ver GUIA_REPLICACION, línea 
 - Estimación preliminar CAPEX/OPEX
 - Riesgos identificados
 
-#### T3.2: Templates T02 - Análisis de Requisitos (2 semanas) ✅ 23% COMPLETADO
+#### T3.2: Templates T02 - Análisis de Requisitos (2 semanas) 🔄 46% COMPLETADO
 
 Aplicar **Template T02** a sistemas críticos:
 
 - [x] ✅ **T3.2.1** ITS - Análisis detallado de requisitos (31_T02_Analisis_Requisitos_ITS_v1.0.md)
-  - 8 Funcionales (RF-001 a RF-008)
-  - 16 No funcionales (RNF-001 a RNF-016)
+  - 10 Funcionales (RF-001 a RF-010)
+  - 27 No funcionales (RNF-001 a RNF-027)
   - 5 Interfaces (RI-001 a RI-005)
-  - 3 Casos de Uso
+  - 5 Casos de Uso
 - [x] ✅ **T3.2.2** CCO - Análisis de requisitos (32_T02_Analisis_Requisitos_CCO_v1.0.md)
   - 9 Funcionales (RF-001 a RF-009)
   - 16 No funcionales (RNF-001 a RNF-016)
@@ -332,9 +332,19 @@ Aplicar **Template T02** a sistemas críticos:
   - 16 No funcionales (RNF-001 a RNF-016)
   - 5 Interfaces (RI-001 a RI-005)
   - 3 Casos de Uso
-- [ ] ⏳ **T3.2.4** Iluminación - Análisis de requisitos
-- [ ] ⏳ **T3.2.5** Señalización - Análisis de requisitos
-- [ ] ⏳ **T3.2.6** Áreas de Servicio - Análisis de requisitos
+- [x] ✅ **T3.2.4** Iluminación - Análisis de requisitos (43_T02_Analisis_Requisitos_Iluminacion_v1.0.md)
+  - 10 Funcionales, 36 No funcionales, 5 Interfaces, 4 Casos de Uso
+- [x] ✅ **T3.2.5** Señalización Vial - Análisis de requisitos (44_T02_Analisis_Requisitos_Senalizacion_Vial_v1.0.md)
+  - 11 Funcionales, 35 No funcionales, 5 Interfaces, 4 Casos de Uso
+- [x] ✅ **T3.2.6** Áreas de Servicio - Análisis de requisitos (45_T02_Analisis_Requisitos_Areas_Servicio_v1.0.md)
+  - 11 Funcionales, 31 No funcionales, 5 Interfaces, 4 Casos de Uso
+- [ ] ⏳ **T3.2.7** Energía Eléctrica - Análisis de requisitos
+- [ ] ⏳ **T3.2.8** Pesaje WIM - Análisis de requisitos
+- [ ] ⏳ **T3.2.9** Telecomunicaciones - Análisis de requisitos
+- [ ] ⏳ **T3.2.10** Emergencias - Análisis de requisitos
+- [ ] ⏳ **T3.2.11** Gestión Ambiental - Análisis de requisitos
+- [ ] ⏳ **T3.2.12** Gestión Social - Análisis de requisitos
+- [ ] ⏳ **T3.2.13** Gestión Predial - Análisis de requisitos
 
 #### T3.3: Estimaciones Preliminares (1 semana)
 - [ ] **T3.3.1** Cotizaciones preliminares de equipos principales
@@ -346,13 +356,13 @@ Aplicar **Template T02** a sistemas críticos:
 
 ### Entregables Fase 3
 - ✅ **13 documentos T01 (Fichas de Sistema) - COMPLETADOS** 🎉
-- 🔄 3 documentos T02 (Análisis de Requisitos) - En progreso
-- ✅ Presupuesto preliminar consolidado ($63.5M CAPEX, $11.6M/año OPEX)
+- 🔄 **6 documentos T02 (Análisis de Requisitos) - 46% COMPLETADO** ⚡
+- ✅ Presupuesto preliminar consolidado ($63.6M CAPEX, $11.5M/año OPEX)
 - ⏳ Listado de fabricantes/proveedores preseleccionados - Pendiente
 
 ### Criterios de Salida
 - [x] ✅ Cada sistema principal tiene su ficha T01 (13/13 completados)
-- [ ] 🔄 Sistemas críticos tienen análisis T02 (3/13 completados)
+- [ ] 🔄 Sistemas críticos tienen análisis T02 (6/13 completados - 46%)
 - [x] ✅ Presupuesto preliminar definido (13 sistemas estimados)
 - [x] ✅ Riesgos principales identificados (en cada T01)
 
@@ -517,8 +527,8 @@ Aplicar **Template T04** a equipos principales (ver GUIA_REPLICACION, línea 109
 |:--------|:---------|:-------|:-------|
 | **Documentos convertidos (.md)** | 15 | 19 | ✅ 127% |
 | **Templates creados** | 5 | 5 | ✅ 100% |
-| **Templates T01 aplicados** | 8 | 0 | ⏳ 0% |
-| **Templates T02 aplicados** | 4 | 0 | ⏳ 0% |
+| **Templates T01 aplicados** | 13 | 13 | ✅ 100% |
+| **Templates T02 aplicados** | 13 | 6 | 🔄 46% |
 | **Templates T03 aplicados** | 4 | 0 | ⏳ 0% |
 | **Templates T04 aplicados** | 5 | 0 | ⏳ 0% |
 | **Sistemas identificados** | 15+ | 13 | ✅ 87% |
@@ -647,9 +657,9 @@ Aplicar **Template T04** a equipos principales (ver GUIA_REPLICACION, línea 109
 
 **Estado del ROADMAP:** 🟢 Activo y actualizado  
 **Próxima revisión:** Fin de Semana 1 (23/10/2025)  
-**Versión:** 1.3  
-**Última actualización:** 17 de octubre de 2025  
+**Versión:** 1.4  
+**Última actualización:** 17 de octubre de 2025 (19:00)  
 **Responsable:** Administrador Contractual EPC  
 **GitHub:** https://github.com/dieleoz/TM01  
-**Progreso:** 68% (13/13 T01 completados) 🎉
+**Progreso:** 72% (13/13 T01 + 6/13 T02 completados) ⚡
 
