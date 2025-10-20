@@ -181,7 +181,53 @@ Para cada tramo entre dos nodos L3, aplicar el criterio de **PUNTO MEDIO**:
 
 ## 3. ARQUITECTURA DE RED
 
-### 3.1 Topología Anillo L3 + Sub-Anillos L2
+### 3.1 Topología Anillo L3 - Backbone Principal
+
+#### **ESPECIFICACIONES TÉCNICAS TRONCAL L3**
+
+**Tecnología:** 10 Gigabit Ethernet  
+**Equipos:** Cisco Catalyst 9200 (switches L3)  
+**SFP Módulos:** SFP-10G-ZR-S (10GBASE-ZR, hasta 80 km)  
+**Atenuación:** Atenuadores LC 5dB o 10dB según distancia  
+**Fibra:** Monomodo OS2 9/125 μm  
+
+#### **Especificaciones SFP Troncal:**
+
+| Parámetro | Especificación |
+|:----------|:---------------|
+| **Modelo** | SFP-10G-ZR-S (Cisco Enterprise-Class) |
+| **Velocidad** | 10 Gbps |
+| **Alcance máximo** | **80 km** ⚠️ |
+| **Longitud de onda** | 1550 nm |
+| **Tipo fibra** | Monomodo (SMF) |
+| **Conector** | LC duplex |
+| **Presupuesto óptico** | ~25 dB |
+| **Atenuador requerido** | +5dB o +10dB según distancia |
+
+#### **⚠️ REGLA DE DISEÑO L3:**
+
+**✅ Distancia máxima entre nodos L3:** ≤80 km (limitado por SFP-10G-ZR-S)  
+**✅ Todos los tramos L3 del proyecto:** ≤73 km (cumple con margen de seguridad)  
+**✅ Atenuación:** 5dB para distancias <60 km, 10dB para distancias 60-80 km  
+
+#### **Topología del Anillo L3:**
+
+```
+N1 (CCO) ←──────→ N2 (Zambito) ←──────→ N4 (Aguas Negras) ←──────→ N6 (AS Zambito)
+  39.45km            73.00km                  70.85km
+  10G-ZR             10G-ZR                   10G-ZR
+  +5dB               +5dB                     +5dB
+
+N7 (BUNKER 02) ←──────→ N5 (AS Aguas Negras) ←──────→ N3 (BUNKER 01) ←──────→ N1 (CCO)
+  49.85km                  39.20km                      31.65km              70.45km
+  10G-ZR                   10G-ZR                       10G-ZR               10G-ZR
+  +5dB                     +5dB                         +5dB                 +5dB
+```
+
+**Validación:**
+- ✅ **Tramo más largo:** N2→N4 = 73 km (<80 km límite SFP)
+- ✅ **Todos los tramos:** Utilizan SFP-10G-ZR-S + atenuador 5dB
+- ✅ **Redundancia completa:** 2 caminos independientes entre cualquier par de nodos
 
 ```
 ═══════════════════════════════════════════════════════════════════════════════
@@ -218,7 +264,7 @@ STACKS:
 - N7: BUNKER 02 (punto medio del anillo)
 
 TOTAL: 7 nodos L3 | 283 km de fibra
-✅ TODAS LAS DISTANCIAS ≤70 KM
+✅ TODAS LAS DISTANCIAS ≤73 KM (dentro de límite de 80 km)
 
 ═══════════════════════════════════════════════════════════════════════════════
 ```
@@ -240,10 +286,118 @@ PUNTOS DE CIERRE:
 - ✅ **7 nodos L3:** CCO, 2 Peajes, 2 Áreas Servicio, 2 Bunkers
 - ✅ **WIM con L2:** Solo 120 m del CCO, no justifica L3
 - ✅ **2 STACKS:** N1 (CCO) + N7 (BUNKER 02) - puntos de convergencia
-- ✅ **2 BUNKERS:** BUNKER 01 (N3) + BUNKER 02 (N7) para mantener ≤70km
+- ✅ **2 BUNKERS:** BUNKER 01 (N3) + BUNKER 02 (N7) para mantener ≤80km
 - ✅ **Redundancia dual-path:** Dos caminos independientes N1→N7
 
-### 3.2 VLANs por Sistema
+### 3.2 Topología Sub-Anillos L2 - Equipos ITS de Campo
+
+#### **ESPECIFICACIONES TÉCNICAS SUB-ANILLOS L2**
+
+**Tecnología:** Gigabit Ethernet  
+**Equipos:** Advantech EKI-7706G / EKI-7710E / EKI-7712G (switches industriales L2)  
+**SFP Módulos:** SFP-GLX/LC-10E (1000Base-LX, hasta 10 km)  
+**Fibra:** Monomodo OS2 9/125 μm  
+
+#### **Especificaciones SFP Sub-Anillos:**
+
+| Parámetro | Especificación |
+|:----------|:---------------|
+| **Modelo** | SFP-GLX/LC-10E (Advantech/Moxa) |
+| **Velocidad** | 1.25 Gbps (Gigabit Ethernet) |
+| **Alcance máximo** | **10 km** ⚠️ |
+| **Longitud de onda** | 1310 nm |
+| **Tipo fibra** | Monomodo (SMF) |
+| **Conector** | LC duplex |
+| **Temperatura** | -40°C a +85°C (industrial) |
+
+#### **⚠️ REGLA CRÍTICA DE DISEÑO L2:**
+
+**DISTANCIA MÁXIMA ENTRE EQUIPOS L2:** ≤10 km
+
+Esta limitación es impuesta por el SFP industrial 1.25G utilizado en los switches Advantech.
+
+✅ **Válido:** Distancia L2 ↔ L2 ≤ 10 km  
+❌ **Inválido:** Distancia L2 ↔ L2 > 10 km  
+
+**Excepción:** El último equipo L2 del sub-anillo puede estar a >10 km del nodo L3, porque el nodo L3 tiene capacidad de largo alcance (SFP-10G-ZR).
+
+#### **Topología Típica de Sub-Anillo:**
+
+```
+Ejemplo: Sub-Anillo SA1-A (AMAYORES)
+
+Nodo L3 A (PKD 0+000)
+    ↓ 7 km ✅ (SFP 1.25G Moxa)
+  L2-001: SOS (PKD 7+000)
+    ↓ 10 km ✅ (SFP 1.25G Moxa - MÁXIMO)
+  L2-002: CCTV (PKD 17+000)
+    ↓ 2.7 km ✅ (SFP 1.25G Moxa)
+  L2-003: PMV (PKD 19+700)
+    ↓ 19.7 km ✅ (Regreso al L3 - puede ser >10km)
+Nodo L3 A (PKD 0+000) ← CIERRE DEL ANILLO
+
+Validación:
+✅ L2→L2: 7 km, 10 km, 2.7 km (todos ≤10 km)
+✅ L2→L3: 19.7 km (válido porque el L3 tiene SFP de largo alcance)
+```
+
+#### **Metodología de Diseño:**
+
+1. **Calcular punto medio del tramo L3:**
+   - Punto Medio = (PKD_inicial + PKD_final) / 2
+
+2. **Dividir en dos sub-anillos:**
+   - Sub-Anillo A (AMAYORES): Equipos con PKD < Punto Medio
+   - Sub-Anillo B (AMENORES): Equipos con PKD ≥ Punto Medio
+
+3. **Validar distancias:**
+   - Verificar que NINGÚN salto L2→L2 supere 10 km
+   - Si hay saltos >10 km, agregar equipo L2 intermedio o reasignar a otro sub-anillo
+
+4. **Cierre del anillo:**
+   - Cada sub-anillo sale de un nodo L3 y regresa al mismo nodo L3
+   - El último salto L2→L3 puede ser >10 km (sin limitación)
+
+### 3.3 Tabla Comparativa de Módulos SFP
+
+| Modelo | Tipo | Velocidad | Alcance | Aplicación | Cantidad | Precio Unit. (USD) | Total (USD) |
+|:-------|:-----|:----------|:--------|:-----------|:---------|:-------------------|:------------|
+| **SFP-10G-ZR-S** | 10G Long Range | 10 Gbps | **80 km** | **Troncal L3** | 11 | $5,339.48 | $58,734.32 |
+| **SFP-10G-LR-S** | 10G Medium | 10 Gbps | 10 km | Conexiones L3 cortas | 5 | $1,020.55 | $5,102.75 |
+| **SFP-10G-ER-S** | 10G Extended | 10 Gbps | 40 km | Alternativa media distancia | 2 | $3,869.90 | $7,739.81 |
+| **SFP-GLX/LC-10E** | 1G Moxa | 1.25 Gbps | **≤10 km** | **Sub-anillos L2** | 188 | $88.00 | $16,544.00 |
+| **TOTAL** | - | - | - | - | **206** | - | **$88,120.88** |
+
+**Notas:**
+- **SFP-10G-ZR-S:** Requiere atenuador +5dB o +10dB según distancia
+- **SFP-GLX/LC-10E:** ⚠️ **Limitación de 10 km entre equipos L2** (propiedad del módulo Moxa)
+- **Total módulos SFP:** 206 unidades
+- **Aplicación crítica:** La regla de 10 km L2 es una limitación física del hardware
+
+### 3.4 Reglas de Oro - Arquitectura de Red
+
+#### **Nivel L3 (Troncal):**
+✅ **Distancia máxima entre nodos L3:** ≤80 km (límite SFP-10G-ZR-S)  
+✅ **Proyecto actual:** Todos los tramos ≤73 km (cumple con margen)  
+✅ **SFP utilizado:** SFP-10G-ZR-S + atenuador 5dB  
+✅ **Velocidad:** 10 Gbps  
+✅ **Redundancia:** Anillo completo con 2 caminos independientes  
+
+#### **Nivel L2 (Sub-anillos):**
+⚠️ **CRÍTICO: Distancia máxima L2↔L2:** ≤10 km (límite SFP Moxa 1.25G)  
+✅ **Excepción:** Último salto L2→L3 puede ser >10 km  
+✅ **SFP utilizado:** SFP-GLX/LC-10E (1.25 Gbps)  
+✅ **Metodología:** Punto medio flexible + validación de distancias  
+✅ **Cierre:** Cada sub-anillo sale y regresa al mismo nodo L3  
+
+#### **Metodología de Validación:**
+1. Listar todos los equipos ITS por PKD
+2. Asignar a sub-anillo según punto medio del tramo
+3. Calcular distancia entre equipos consecutivos
+4. Verificar que NINGÚN salto L2→L2 supere 10 km
+5. Si hay saltos >10 km: agregar equipo intermedio o reasignar
+
+### 3.5 VLANs por Sistema
 
 | VLAN ID | Sistema | Subnet |
 |:--------|:--------|:-------|
