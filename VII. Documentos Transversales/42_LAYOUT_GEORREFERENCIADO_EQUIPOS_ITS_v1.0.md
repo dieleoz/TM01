@@ -203,22 +203,105 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 - **SEPARACIÓN:** Distancia desde equipo anterior del mismo tipo (km)
 - **L2:** Switch L2 asociado (Advantech EKI-7706G/7710E/7712G)
 
-### **Criterios para Equipos L2**
+### **METODOLOGÍA DE DISTRIBUCIÓN L2 - CRITERIO PUNTO MEDIO**
 
-**Ubicación:** Los switches L2 se colocan cada **≤10 km** entre equipos ITS para:
-1. **Agregación de tráfico** de equipos cercanos (SOS, CCTV, PMV, Radares)
-2. **Conexión al backbone** de fibra óptica (separador central)
-3. **Redundancia local** en caso de falla de fibra
-4. **Gestión de VLANs** por segmento de red
+**METODOLOGÍA DE DISEÑO:**
 
-**Distribución por Sub-Anillo:**
-- **Sub-Anillo 1 (N1→N2):** 12 equipos L2 para 8 SOS + 4 CCTV + 2 PMV
-- **Sub-Anillo 2 (N2→N4):** 15 equipos L2 para 10 SOS + 6 CCTV + 3 Radares  
-- **Sub-Anillo 3 (N4→N6):** 14 equipos L2 para 8 SOS + 5 CCTV + 4 Gálibos
-- **Sub-Anillo 4 (N6→N7):** 10 equipos L2 para 6 SOS + 3 CCTV + 2 Radares
-- **Sub-Anillo 5 (N7→N5):** 8 equipos L2 para 5 SOS + 2 CCTV + 1 Gálibo
-- **Sub-Anillo 6 (N5→N3):** 12 equipos L2 para 8 SOS + 3 CCTV + 2 PMV
-- **Sub-Anillo 7 (N3→N1):** 10 equipos L2 para 6 SOS + 3 CCTV + 1 WIM
+Para cada tramo entre dos nodos L3, aplicar el siguiente criterio:
+
+1. **Identificar el tramo entre nodos L3:**
+   - Ejemplo: N1 (CCO, PKD 0+000) → N2 (Peaje Zambito, PKD 39+450)
+   - Distancia total del tramo: 39.45 km
+
+2. **Calcular el PUNTO MEDIO del tramo:**
+   - Punto Medio = (PKD_inicial + PKD_final) / 2
+   - Ejemplo: (0+000 + 39+450) / 2 = PKD 19+725
+
+3. **Dividir el tramo en DOS SUB-ANILLOS:**
+   
+   **Sub-Anillo A (AMAYORES):** 
+   - Desde Nodo L3 inicial hasta Punto Medio
+   - Ejemplo: PKD 0+000 → PKD 19+725
+   - Longitud: ~19.7 km
+   - Los equipos L2 en este rango forman un anillo que:
+     * Sale del Nodo L3 inicial
+     * Conecta equipos en orden creciente de PKD
+     * Regresa al Nodo L3 inicial (cierre del anillo)
+   
+   **Sub-Anillo B (AMENORES):**
+   - Desde Punto Medio hasta Nodo L3 final
+   - Ejemplo: PKD 19+725 → PKD 39+450
+   - Longitud: ~19.7 km
+   - Los equipos L2 en este rango forman un anillo que:
+     * Sale del Nodo L3 final
+     * Conecta equipos en orden decreciente de PKD
+     * Regresa al Nodo L3 final (cierre del anillo)
+
+**VENTAJAS DE ESTE CRITERIO:**
+
+✅ **Redundancia máxima:** Cada mitad del tramo tiene su propio anillo independiente
+✅ **Distancias cortas:** Ningún sub-anillo supera ~35 km
+✅ **Fácil mantenimiento:** Puedo aislar medio tramo sin afectar al otro
+✅ **Escalabilidad:** Puedo agregar equipos en cualquier sub-anillo sin rediseñar
+✅ **Resiliencia:** Falla en un sub-anillo no afecta al sub-anillo adyacente
+
+---
+
+## 📊 **DISTRIBUCIÓN COMPLETA DE SUB-ANILLOS L2**
+
+### **APLICACIÓN A TODOS LOS TRAMOS L3:**
+
+| Tramo | Nodo Inicial | Nodo Final | PKD Inicial | PKD Final | Punto Medio | Distancia | Sub-Anillos |
+|:------|:-------------|:-----------|:------------|:----------|:------------|:----------|:------------|
+| 1 | N1 (CCO) | N2 (Zambito) | 0+000 | 39+450 | 19+725 | 39.45 km | SA1-A + SA1-B |
+| 2 | N2 (Zambito) | N4 (Aguas Negras) | 39+450 | 112+450 | 75+950 | 73.00 km | SA2-A + SA2-B |
+| 3 | N4 (Aguas Negras) | N6 (AS Zambito) | 112+450 | 183+300 | 147+875 | 70.85 km | SA3-A + SA3-B |
+| 4 | N6 (AS Zambito) | N7 (BUNKER 02) | 183+300 | 233+150 | 208+225 | 49.85 km | SA4-A + SA4-B |
+| 5 | N7 (BUNKER 02) | N5 (AS Aguas Negras) | 233+150 | 144+100 | 188+625 | 39.20 km | SA5-A + SA5-B |
+| 6 | N5 (AS Aguas Negras) | N3 (BUNKER 01) | 144+100 | 70+450 | 107+275 | 31.65 km | SA6-A + SA6-B |
+| 7 | N3 (BUNKER 01) | N1 (CCO) | 70+450 | 283+000 | 176+725 | 70.45 km | SA7-A + SA7-B |
+
+**RESULTADO TOTAL:**
+- **7 tramos entre nodos L3**
+- **14 sub-anillos L2** (2 por cada tramo: AMAYORES + AMENORES)
+- **298 equipos L2** distribuidos proporcionalmente
+
+### **EJEMPLO DETALLADO: TRAMO N1 (CCO) → N2 (PEAJE ZAMBITO)**
+
+| Parámetro | Valor |
+|:----------|:------|
+| **Nodo L3 Inicial** | N1 (CCO) - PKD 0+000 |
+| **Nodo L3 Final** | N2 (Peaje Zambito) - PKD 39+450 |
+| **Distancia Total** | 39.45 km |
+| **Punto Medio** | PKD 19+725 |
+
+**Sub-Anillo SA1-A (AMAYORES - N1 → Punto Medio):**
+
+| ID L2 | PKD | Equipos ITS | Modelo | Conexión Entrada | Conexión Salida | Dirección |
+|:------|:----|:------------|:-------|:-----------------|:----------------|:----------|
+| L2-001 | 5+000 | SOS-01, CCTV-01 | EKI-7710E | N1 (uplink) | L2-002 | → AMAYORES |
+| L2-002 | 10+000 | PMV-01 | EKI-7706G | L2-001 | L2-003 | → AMAYORES |
+| L2-003 | 15+000 | SOS-02, Radar-01 | EKI-7712G | L2-002 | L2-004 | → AMAYORES |
+| L2-004 | 19+000 | CCTV-02 | EKI-7706G | L2-003 | N1 (retorno) | → cierre en N1 |
+
+**Topología del anillo SA1-A:**
+```
+N1 → L2-001 → L2-002 → L2-003 → L2-004 → N1 (cierre)
+```
+
+**Sub-Anillo SA1-B (AMENORES - Punto Medio → N2):**
+
+| ID L2 | PKD | Equipos ITS | Modelo | Conexión Entrada | Conexión Salida | Dirección |
+|:------|:----|:------------|:-------|:-----------------|:----------------|:----------|
+| L2-005 | 39+000 | SOS-03 | EKI-7706G | N2 (uplink) | L2-006 | ← AMENORES |
+| L2-006 | 34+000 | CCTV-03, PMV-02 | EKI-7710E | L2-005 | L2-007 | ← AMENORES |
+| L2-007 | 29+000 | SOS-04 | EKI-7706G | L2-006 | L2-008 | ← AMENORES |
+| L2-008 | 24+000 | Gálibo-01 | EKI-7706G | L2-007 | N2 (retorno) | ← cierre en N2 |
+
+**Topología del anillo SA1-B:**
+```
+N2 → L2-005 → L2-006 → L2-007 → L2-008 → N2 (cierre)
+```
 
 ---
 

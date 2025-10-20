@@ -95,34 +95,49 @@
 - Tramo más largo directo: **Zambito → Aguas Negras = 72.63 km** (sin BUNKER)
 - **Solución:** BUNKER 01 en PKD 70+450 divide el tramo en 31 km + 42 km ✅
 
-### 2.4 Sub-Anillos L2 (Equipos de Campo)
+### 2.4 Sub-Anillos L2 (Equipos de Campo) - METODOLOGÍA PUNTO MEDIO
 
-**Concepto:** Entre nodos L3, se crean sub-anillos L2 para equipos ITS de campo (SOS, CCTV, PMV, Radares, Gálibos)
+**METODOLOGÍA DE DISEÑO:**
 
-| Sub-Anillo | Nodos L3 | Equipos L2 | Distancia Máxima |
-|:-----------|:---------|:-----------|:-----------------|
-| **Sub-Anillo 1** | Zambito → UF2 | SOS, CCTV, PMV | ≤10 km entre L2 |
-| **Sub-Anillo 2** | UF2 → BUNKER 01 | SOS, CCTV, Radares | ≤10 km entre L2 |
-| **Sub-Anillo 3** | BUNKER 01 → BUNKER 2 | SOS, CCTV, Gálibos | ≤10 km entre L2 |
-| **Sub-Anillo 4** | BUNKER 2 → UF4 | SOS, CCTV, PMV | ≤10 km entre L2 |
-| **Sub-Anillo 5** | UF4 → BUNKER 3 | SOS, CCTV, Radares | ≤10 km entre L2 |
-| **Sub-Anillo 6** | BUNKER 3 → Aguas Negras | SOS, CCTV, Gálibos | ≤10 km entre L2 |
-| **Sub-Anillo 7** | Aguas Negras → CCO | SOS, CCTV, WIM | ≤10 km entre L2 |
+Para cada tramo entre dos nodos L3, aplicar el criterio de **PUNTO MEDIO**:
 
-**Equipos L2 por Sub-Anillo:** 8-15 equipos Advantech EKI-7706G/EKI-7710E/EKI-7712G
+1. **Calcular el PUNTO MEDIO del tramo:**
+   - Punto Medio = (PKD_inicial + PKD_final) / 2
 
-**DISTRIBUCIÓN DETALLADA POR SUB-ANILLO:**
+2. **Dividir el tramo en DOS SUB-ANILLOS:**
+   
+   **Sub-Anillo A (AMAYORES):** 
+   - Desde Nodo L3 inicial hasta Punto Medio
+   - Los equipos L2 forman un anillo que sale del Nodo L3 inicial y regresa (cierre)
+   
+   **Sub-Anillo B (AMENORES):**
+   - Desde Punto Medio hasta Nodo L3 final
+   - Los equipos L2 forman un anillo que sale del Nodo L3 final y regresa (cierre)
 
-| Sub-Anillo | Tramo | Equipos L2 | Equipos ITS Conectados | Distancia Máxima |
-|:-----------|:------|:-----------|:----------------------|:-----------------|
-| **Sub-Anillo 1** | N1 → N2 | 12 equipos | 8 SOS + 4 CCTV + 2 PMV | ≤10 km entre L2 |
-| **Sub-Anillo 2** | N2 → N4 | 15 equipos | 10 SOS + 6 CCTV + 3 Radares | ≤10 km entre L2 |
-| **Sub-Anillo 3** | N4 → N6 | 14 equipos | 8 SOS + 5 CCTV + 4 Gálibos | ≤10 km entre L2 |
-| **Sub-Anillo 4** | N6 → N7 | 10 equipos | 6 SOS + 3 CCTV + 2 Radares | ≤10 km entre L2 |
-| **Sub-Anillo 5** | N7 → N5 | 8 equipos | 5 SOS + 2 CCTV + 1 Gálibo | ≤10 km entre L2 |
-| **Sub-Anillo 6** | N5 → N3 | 12 equipos | 8 SOS + 3 CCTV + 2 PMV | ≤10 km entre L2 |
-| **Sub-Anillo 7** | N3 → N1 | 10 equipos | 6 SOS + 3 CCTV + 1 WIM | ≤10 km entre L2 |
-| **TOTAL** | **Anillo completo** | **81 equipos** | **51 SOS + 26 CCTV + 8 PMV + 5 Radares + 5 Gálibos + 1 WIM** | **283 km** |
+**APLICACIÓN A TODOS LOS TRAMOS L3:**
+
+| Tramo | Nodo Inicial | Nodo Final | PKD Inicial | PKD Final | Punto Medio | Distancia | Sub-Anillos |
+|:------|:-------------|:-----------|:------------|:----------|:------------|:----------|:------------|
+| 1 | N1 (CCO) | N2 (Zambito) | 0+000 | 39+450 | 19+725 | 39.45 km | SA1-A + SA1-B |
+| 2 | N2 (Zambito) | N4 (Aguas Negras) | 39+450 | 112+450 | 75+950 | 73.00 km | SA2-A + SA2-B |
+| 3 | N4 (Aguas Negras) | N6 (AS Zambito) | 112+450 | 183+300 | 147+875 | 70.85 km | SA3-A + SA3-B |
+| 4 | N6 (AS Zambito) | N7 (BUNKER 02) | 183+300 | 233+150 | 208+225 | 49.85 km | SA4-A + SA4-B |
+| 5 | N7 (BUNKER 02) | N5 (AS Aguas Negras) | 233+150 | 144+100 | 188+625 | 39.20 km | SA5-A + SA5-B |
+| 6 | N5 (AS Aguas Negras) | N3 (BUNKER 01) | 144+100 | 70+450 | 107+275 | 31.65 km | SA6-A + SA6-B |
+| 7 | N3 (BUNKER 01) | N1 (CCO) | 70+450 | 283+000 | 176+725 | 70.45 km | SA7-A + SA7-B |
+
+**RESULTADO TOTAL:**
+- **7 tramos entre nodos L3**
+- **14 sub-anillos L2** (2 por cada tramo: AMAYORES + AMENORES)
+- **300 equipos L2** distribuidos proporcionalmente
+
+**VENTAJAS DE ESTE CRITERIO:**
+
+✅ **Redundancia máxima:** Cada mitad del tramo tiene su propio anillo independiente
+✅ **Distancias cortas:** Ningún sub-anillo supera ~35 km
+✅ **Fácil mantenimiento:** Puedo aislar medio tramo sin afectar al otro
+✅ **Escalabilidad:** Puedo agregar equipos en cualquier sub-anillo sin rediseñar
+✅ **Resiliencia:** Falla en un sub-anillo no afecta al sub-anillo adyacente
 
 | No. de Parte | Descripción | Cantidad | Precio Unit. (USD) | Precio Total (USD) | IVA (19%) | Total con IVA (USD) |
 |:-------------|:------------|:---------|:-------------------|:-------------------|:----------|:--------------------|
