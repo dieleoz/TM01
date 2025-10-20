@@ -174,7 +174,7 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 |:--------|:--------------|:---------------------|:-------|:--------------------|
 | **Postes SOS** | 87 | 87 (≤3 km) | ✅ Cumple | 2.84 km |
 | **PMV** | 28 | 28 (2 por peaje + cada 20 km) | ✅ Cumple | 18.96 km |
-| **CCTV** | 30 | 30 (puntos críticos) | ✅ Cumple | Variable |
+| **CCTV** | 30 | 30 (puntos críticos) | ✅ Cumple (ajustado) | Variable |
 | **RADAR-ANPR** | 12 | 15 (13 ETD + 2 Radares) | ⚠️ Revisar | Variable |
 | **Gálibos** | 8 | 25 (estimación) | ⚠️ Parcial | Variable |
 | **Estaciones Meteo** | 2 | 2 (peajes) | ✅ Cumple | En peajes |
@@ -183,10 +183,10 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 | Ruta | Longitud (km) | Postes SOS | PMV | CCTV | RADAR-ANPR | Gálibos |
 |:-----|:--------------|:-----------|:----|:-----|:-----------|:--------|
-| **RN 4510** | ~134 km | 41 | 10 | 10 | 4 | 2 |
-| **RN 4511** | ~149 km | 44 | 16 | 18 | 7 | 5 |
+| **RN 4510** | ~134 km | 41 | 10 | 9 | 4 | 2 |
+| **RN 4511** | ~149 km | 44 | 16 | 17 | 7 | 5 |
 | **RN 4513** | ~10 km | 2 | 2 | 4 | 1 | 1 |
-| **TOTAL** | **~293 km** | **87** | **28** | **32** | **12** | **8** |
+| **TOTAL** | **~293 km** | **87** | **28** | **30** | **12** | **8** |
 
 > **Nota:** La longitud total incluye ambos sentidos. La longitud del corredor es 259.6 km (sentido único).
 
@@ -312,8 +312,7 @@ N2 → L2-005 → L2-006 → L2-007 → L2-008 → N2 (cierre)
 | # | PKR | PKD | UF | VÍA | SISTEMA | SEPARACIÓN (km) | L2 SWITCH | OBSERVACIÓN |
 |:--|:----|:----|:---|:----|:--------|:----------------|:----------|:------------|
 | 1 | 38+100 | PKD 245+100 | 5.2 | Unidireccional | CCTV | - | L2-245 | Inicio monitoreo |
-| 2 | 40+050 | PKD 243+050 | 0D | Separador | CCTV | - | L2-243 | |
-| 3 | 41+000 | PKD 242+100 | 0D | Derecha | PMV | - | L2-242 | Inter Koran (40+450) |
+| 2 | 41+000 | PKD 242+100 | 0D | Derecha | PMV | - | L2-242 | Inter Koran (40+450) |
 | 4 | 41+200 | PKD 241+900 | 0D | Izquierda | PMV | - | L2-242 | |
 | 5 | 41+180 | PKD 241+920 | 0D | Derecha | **SOS** | - | L2-242 | **SOS #1** |
 | 6 | 41+350 | PKD 241+750 | 0D | Derecha | Gálibo | - | L2-242 | |
@@ -395,7 +394,7 @@ Esta tabla muestra cómo se integran:
 **Subtotal RN 4510:**
 - **Postes SOS:** 33 unidades
 - **PMV:** 10 unidades (5 por sentido)
-- **CCTV:** 10 unidades
+- **CCTV:** 9 unidades (eliminada 1 de menor prioridad: PKR 40+050)
 - **RADAR-ANPR:** 4 unidades (2 pares bidireccionales)
 - **Gálibos:** 2 unidades
 - **Estaciones Meteo:** 1 unidad
@@ -436,8 +435,7 @@ Esta tabla muestra cómo se integran:
 | 86 | 37+400 | 0D | Derecha | RADAR-ANPR | - | |
 | 87 | 39+100 | 0D | Derecha | **SOS** | 2.85 | **SOS #47** |
 | 88 | 41+150 | 5.1 | Separador | CCTV | - | |
-| 89 | 41+800 | 0D | Separador | CCTV | - | |
-| 90 | 41+940 | 2 | Izquierda | **SOS** | 2.84 | **SOS #48** |
+| 89 | 41+940 | 2 | Izquierda | **SOS** | 2.84 | **SOS #48** |
 | 91 | 42+300 | 5.1 | Derecha | PMV | 20.00 | |
 | 92 | 44+550 | 5.1 | Derecha | **SOS** | 2.61 | **SOS #49** |
 | 93 | 46+900 | 2 | Izquierda | RADAR-ANPR | - | Peatonal 46+143 |
@@ -510,7 +508,7 @@ Esta tabla muestra cómo se integran:
 **Subtotal RN 4511:**
 - **Postes SOS:** 51 unidades (34-84)
 - **PMV:** 16 unidades
-- **CCTV:** 18 unidades
+- **CCTV:** 17 unidades (eliminada 1 de menor prioridad: PKR 41+800)
 - **RADAR-ANPR:** 7 unidades
 - **Gálibos:** 5 unidades
 - **Estaciones Meteo:** 1 unidad (Peaje Aguas Negras)
@@ -600,10 +598,10 @@ Esta tabla muestra cómo se integran:
 | **Intercambios** | 4 | ✅ |
 | **Pasos peatonales** | 12 | ✅ |
 | **Báscula WIM** | 4 | ✅ |
-| **Otros estratégicos** | 4 | ✅ |
-| **Cantidad total** | 32 unidades | ⚠️ **2 más que contrato (30)** |
+| **Otros estratégicos** | 2 | ✅ |
+| **Cantidad total** | 30 unidades | ✅ **Cumple contrato** |
 
-> **Nota:** Se identificaron 32 ubicaciones en el draft vs. 30 validadas contractualmente. Requiere ajuste.
+> **Nota:** Ajustado de 32 a 30 unidades. Eliminadas 2 CCTV de menor prioridad (PKR 40+050 y 41+800) sin justificación contractual específica.
 
 ---
 
@@ -649,10 +647,10 @@ Esta tabla muestra cómo se integran:
    - [ ] Asegurar cobertura de 13 UFs
    - [ ] Actualizar layout con nuevas ubicaciones
 
-3. **Ajustar cantidad CCTV**
-   - [ ] Reducir de 32 a 30 unidades
-   - [ ] O justificar 2 adicionales
-   - [ ] Actualizar documento de validación
+3. ~~**Ajustar cantidad CCTV**~~ ✅ **COMPLETADO**
+   - [x] ✅ Reducidas de 32 a 30 unidades
+   - [x] ✅ Eliminadas 2 CCTV sin justificación contractual (PKR 40+050 y 41+800)
+   - [x] ✅ Documento actualizado
 
 ### **🟡 Prioridad MEDIA (Próximas 2 Semanas)**
 
@@ -711,7 +709,7 @@ Esta tabla muestra cómo se integran:
 |:---------|:--------|:-------|
 | **5 separaciones SOS >3 km** | 🟡 Medio | Justificar o agregar postes |
 | **3 radares/ETD faltantes** | 🔴 Alto | Agregar para cumplir contrato |
-| **2 CCTV adicionales** | 🟢 Bajo | Ajustar o justificar |
+| ~~**2 CCTV adicionales**~~ | ✅ Resuelto | Eliminadas 2 CCTV de menor prioridad |
 | **17 gálibos faltantes** | 🟡 Medio | Completar análisis geométrico |
 
 ### **Estado de Cumplimiento Contractual**
@@ -720,7 +718,7 @@ Esta tabla muestra cómo se integran:
 |:--------|:------------|:-----|:-------|
 | Postes SOS | 87 (≤3 km) | 87 (5 >3km) | ⚠️ 94% |
 | PMV | 28 | 28 | ✅ 100% |
-| CCTV | 30 | 32 | ⚠️ 107% |
+| CCTV | 30 | 30 | ✅ 100% |
 | RADAR-ANPR | 15 | 12 | ❌ 80% |
 | Gálibos | 25 | 8 | ⏳ 32% |
 | Est. Meteo | 2 | 2 | ✅ 100% |
