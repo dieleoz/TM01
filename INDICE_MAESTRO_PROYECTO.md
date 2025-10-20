@@ -1,8 +1,8 @@
 # ÍNDICE MAESTRO DEL PROYECTO
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Última actualización:** 18 de octubre de 2025 (05:00)  
-**Versión:** 2.1  
-**⚠️ ALERTA CRÍTICA:** Documento de Validación Contractual creado - Revisar cantidades de equipos
+**Última actualización:** 21 de octubre de 2025 (21:00)  
+**Versión:** 2.2  
+**✅ ESTADO:** Fase 3 completada + Arquitectura red L2/L3 validada al 100%
 
 ---
 
@@ -75,9 +75,11 @@
   - 58: Ambulancias TAM
 - **README:** 1 archivo (46)
 
-### VII. Documentos Transversales (5 archivos) - ✅ VALIDACIÓN COMPLETADA
+### VII. Documentos Transversales (15 archivos) - ✅ VALIDACIÓN COMPLETADA + ARQUITECTURA RED
 - **00_VALIDACION_CONTRACTUAL_vs_PRESUPUESTO_v1.0.md** - Análisis inicial del problema
 - **01_MATRIZ_JUSTIFICACION_CONTRACTUAL_EQUIPOS_v1.0.md** - Matriz detallada por equipo
+- **42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md** - Ubicaciones exactas equipos ITS (PKR + PKD)
+- **REGLAS_DISENO_RED_L2_L3.md** - Reglas críticas arquitectura red (10 km L2, 80 km L3)
 - **02_RESUMEN_VALIDACION_CONTRACTUAL_FINAL_v1.0.md** - Resumen ejecutivo con hallazgos críticos
 - **03_INFORME_DIFERENCIAS_JUSTIFICACIONES_TECNICAS_v1.0.md** - Informe para especialistas con formato de aprobación
 - **04_INFORME_VALIDACION_COMPLETO_TODOS_SISTEMAS_v1.0.md** - **VALIDACIÓN EXHAUSTIVA de 14 sistemas** (992 líneas)

@@ -13,9 +13,9 @@
 ![T04](https://img.shields.io/badge/T04_Especificaciones-13%2F13-success)
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 
-**Versión:** 2.4  
-**Fecha de actualización:** 21 de Octubre 2025 (20:45)  
-**Estado:** ✅ FASE 2 COMPLETADA | FASE 3 COMPLETADA (100%)  
+**Versión:** 2.5  
+**Fecha de actualización:** 21 de Octubre 2025 (21:00)  
+**Estado:** ✅ FASE 2 COMPLETADA | FASE 3 COMPLETADA (100%) | **ARQUITECTURA RED L2/L3 VALIDADA**  
 **Responsable:** Administrador Contractual EPC  
 **Metodología:** Punto 42 v1.0  
 **GitHub:** https://github.com/dieleoz/TM01  
@@ -41,16 +41,17 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 Fase 0: Preparación        [████████████] 100% ✅ Completada
 Fase 1: Conversión         [██████░░░░░░]  50% ← Parcial (1/15 docs)
 Fase 2: Ingeniería Concept [████████████] 100% ✅ COMPLETADA
-Fase 3: Especificaciones   [█████░░░░░░░]  38% ← AQUÍ ESTAMOS (5/13 T04)
+Fase 3: Especificaciones   [████████████] 100% ✅ COMPLETADA
+Fase 3.1: Arquitectura Red [████████████] 100% ✅ COMPLETADA ← AQUÍ ESTAMOS
 Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0% 
 Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
-**Última actualización:** Hoy (21-oct-2025 19:30)  
-**Logro principal:** 5/13 especificaciones técnicas T04 completadas (38%)  
-**Próxima acción:** Continuar con T04 restantes (Telecomunicaciones, Energía, Iluminación...)  
+**Última actualización:** Hoy (21-oct-2025 21:00)  
+**Logro principal:** Arquitectura de red L2/L3 validada al 100% (regla crítica 10 km)  
+**Próxima acción:** Validación con Google Earth + completar datos faltantes  
 **Bloqueador:** Ninguno  
-**Estado:** ✅ Fase 3 en progreso - 5 sistemas ITS prioritarios completados
+**Estado:** ✅ Fase 3 completada + Arquitectura de red L2/L3 validada
 
 ### 🎯 **ESTADO ACTUAL DEL PROYECTO**
 
@@ -60,14 +61,14 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 - Presupuesto consolidado (USD 57.4M)
 - Metodología genérica aplicada
 - Eliminación de duplicados
+- Especificaciones técnicas T04 (13/13 completados - 100%)
+- **Arquitectura de red L2/L3 validada (100% cumplimiento regla 10 km)**
+- **Layout georreferenciado de equipos ITS**
+- **Tabla de integración equipos ITS ↔ switches L2**
 
 **🔄 EN PROGRESO:**
-- Especificaciones técnicas T04 (5/13 completados - 38%)
-  - ✅ Postes SOS
-  - ✅ ETD + Radares
-  - ✅ CCTV
-  - ✅ PMV
-  - ✅ WIM
+- Validación con Google Earth (georreferenciación)
+- Completar datos faltantes (3 radares, 17 gálibos)
 - Pliegos de cotización (pendientes)
 - Justificaciones técnicas (parcial)
 
