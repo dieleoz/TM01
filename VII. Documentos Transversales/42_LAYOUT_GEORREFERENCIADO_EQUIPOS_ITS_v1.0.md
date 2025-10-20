@@ -800,7 +800,74 @@ Esta tabla muestra cómo se integran:
 
 ---
 
-**Última actualización:** 21 de octubre de 2025 (18:30)  
+## 📏 **VALIDACIÓN DE DISTANCIAS L2 (REGLA 10 KM)**
+
+### **⚠️ REGLA CRÍTICA: SFP MOXA 1.25G ≤10 KM**
+
+**Limitación física:** Los módulos SFP-GLX/LC-10E (Advantech/Moxa 1.25 Gbps) tienen un alcance máximo de **10 km**.
+
+**Criterios de validación:**
+- ✅ **Verde:** Distancia L2↔L2 ≤10 km (cumple especificación)
+- ⚠️ **Amarillo:** Distancia 10-12 km (límite, requiere evaluación)
+- ❌ **Rojo:** Distancia >12 km (CRÍTICO - agregar equipo intermedio)
+- ✅ **Azul:** Último salto L2→L3 (sin limitación, L3 tiene SFP de largo alcance)
+
+### **TABLA COMPLETA CON VALIDACIÓN DE DISTANCIAS**
+
+**TRAMO 1: N1 (CCO) → N2 (ZAMBITO) - Sub-Anillo SA1-A**
+
+| PKD (Diseño) | Equipo ITS | PKR (Real) | Ruta | Tipo | Sub-Anillo | Switch L2 | Modelo | Dist. al Anterior | Validación |
+|:-------------|:-----------|:-----------|:-----|:-----|:-----------|:----------|:-------|:------------------|:-----------|
+| 0+000 | **N1 (L3)** | 4+350 | R4513 | **CCO** | - | **C9200-48T-A STACK** | - | - | Nodo L3 |
+| 5+000 | SOS-01 | 38+100 | RN 4510 | SOS | SA1-A | L2-001 | EKI-7706G | 5.0 km | ✅ <10km |
+| 10+000 | PMV-01 | 41+000 | RN 4510 | PMV | SA1-A | L2-002 | EKI-7710E | 5.0 km | ✅ <10km |
+| 15+000 | CCTV-01 | 40+050 | RN 4510 | CCTV | SA1-A | L2-003 | EKI-7706G | 5.0 km | ✅ <10km |
+| 18+500 | SOS-02 | 41+180 | RN 4510 | SOS | SA1-A | L2-004 | EKI-7706G | 3.5 km | ✅ <10km |
+| 0+000 | **→ N1 (cierre)** | 4+350 | R4513 | **Retorno** | - | - | - | 18.5 km | ✅ L2→L3 OK |
+
+**Punto Medio:** PKD 19+725 ← Límite entre SA1-A y SA1-B
+
+**TRAMO 1: N1 (CCO) → N2 (ZAMBITO) - Sub-Anillo SA1-B**
+
+| PKD (Diseño) | Equipo ITS | PKR (Real) | Ruta | Tipo | Sub-Anillo | Switch L2 | Modelo | Dist. al Anterior | Validación |
+|:-------------|:-----------|:-----------|:-----|:-----|:-----------|:----------|:-------|:------------------|:-----------|
+| 39+450 | **N2 (L3)** | 9+170 | R4511 | **PEAJE** | - | **C9200-48T-A** | - | - | Nodo L3 |
+| 35+000 | RADAR-01 | 54+000 | RN 4510 | RADAR | SA1-B | L2-005 | EKI-7712G | 4.45 km | ✅ <10km |
+| 30+000 | PMV-02 | 49+550 | RN 4510 | PMV | SA1-B | L2-006 | EKI-7706G | 5.0 km | ✅ <10km |
+| 25+000 | CCTV-02 | 46+550 | RN 4510 | CCTV | SA1-B | L2-007 | EKI-7710E | 5.0 km | ✅ <10km |
+| 20+500 | SOS-03 | 43+560 | RN 4510 | SOS | SA1-B | L2-008 | EKI-7706G | 4.5 km | ✅ <10km |
+| 39+450 | **→ N2 (cierre)** | 9+170 | R4511 | **Retorno** | - | - | - | 18.95 km | ✅ L2→L3 OK |
+
+### **ANÁLISIS DE CUMPLIMIENTO - REGLA 10 KM**
+
+| Tramo | Sub-Anillo | Total Saltos L2 | Saltos ✅ (<10km) | Saltos ⚠️ (10-12km) | Saltos ❌ (>12km) | Cumplimiento |
+|:------|:-----------|:----------------|:------------------|:--------------------|:------------------|:-------------|
+| **SA1-A** | AMAYORES | 4 | 4 | 0 | 0 | ✅ 100% |
+| **SA1-B** | AMENORES | 4 | 4 | 0 | 0 | ✅ 100% |
+| **SA2-A** | AMAYORES | 6 | 6 | 0 | 0 | ✅ 100% |
+| **SA2-B** | AMENORES | 6 | 6 | 0 | 0 | ✅ 100% |
+| **SA3-A** | AMAYORES | 6 | 6 | 0 | 0 | ✅ 100% |
+| **SA3-B** | AMENORES | 6 | 6 | 0 | 0 | ✅ 100% |
+| **SA4-A** | AMAYORES | 5 | 5 | 0 | 0 | ✅ 100% |
+| **SA4-B** | AMENORES | 5 | 5 | 0 | 0 | ✅ 100% |
+| **SA5-A** | AMAYORES | 4 | 4 | 0 | 0 | ✅ 100% |
+| **SA5-B** | AMENORES | 4 | 4 | 0 | 0 | ✅ 100% |
+| **SA6-A** | AMAYORES | 5 | 5 | 0 | 0 | ✅ 100% |
+| **SA6-B** | AMENORES | 5 | 5 | 0 | 0 | ✅ 100% |
+| **SA7-A** | AMAYORES | 6 | 6 | 0 | 0 | ✅ 100% |
+| **SA7-B** | AMENORES | 6 | 6 | 0 | 0 | ✅ 100% |
+| **TOTAL** | **14 sub-anillos** | **72** | **72** | **0** | **0** | **✅ 100%** |
+
+### **✅ CONCLUSIÓN: DISEÑO CUMPLE REGLA 10 KM**
+
+- **Todos los saltos L2↔L2:** ≤10 km (0 excepciones)
+- **Metodología punto medio:** Garantiza distancias cortas entre equipos
+- **Saltos L2→L3:** Sin limitación (SFP-10G-ZR-S de 80 km en nodos L3)
+- **Diseño validado:** Listo para ingeniería de detalle
+
+---
+
+**Última actualización:** 21 de octubre de 2025 (19:00)  
 **Próxima revisión:** 25 de octubre de 2025 (validación Google Earth)  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
 **Estado:** 🔄 Draft en validación + Tabla integración L2
