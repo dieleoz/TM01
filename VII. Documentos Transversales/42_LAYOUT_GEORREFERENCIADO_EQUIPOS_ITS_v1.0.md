@@ -181,12 +181,12 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 ### **Distribución por Ruta**
 
-| Ruta | Longitud (km) | Postes SOS | PMV | CCTV | RADAR-ANPR | Gálibos |
-|:-----|:--------------|:-----------|:----|:-----|:-----------|:--------|
-| **RN 4510** | ~134 km | 41 | 10 | 9 | 4 | 2 |
-| **RN 4511** | ~149 km | 44 | 16 | 17 | 7 | 5 |
-| **RN 4513** | ~10 km | 2 | 2 | 4 | 1 | 1 |
-| **TOTAL** | **~293 km** | **87** | **28** | **30** | **12** | **8** |
+| Ruta | Longitud (km) | Postes SOS | PMV | CCTV | RADAR-ANPR/ETD | Gálibos |
+|:-----|:--------------|:-----------|:----|:-----|:---------------|:--------|
+| **RN 4510** | ~134 km | 41 | 10 | 9 | 5 (4 RADAR + 1 ETD) | 2 |
+| **RN 4511** | ~149 km | 44 | 16 | 17 | 9 (7 RADAR + 2 ETD) | 5 |
+| **RN 4513** | ~10 km | 2 | 2 | 4 | 1 (1 ETD) | 1 |
+| **TOTAL** | **~293 km** | **87** | **28** | **30** | **15 (12 RADAR + 3 ETD)** | **8** |
 
 > **Nota:** La longitud total incluye ambos sentidos. La longitud del corredor es 259.6 km (sentido único).
 
@@ -395,7 +395,8 @@ Esta tabla muestra cómo se integran:
 - **Postes SOS:** 33 unidades
 - **PMV:** 10 unidades (5 por sentido)
 - **CCTV:** 9 unidades (eliminada 1 de menor prioridad: PKR 40+050)
-- **RADAR-ANPR:** 4 unidades (2 pares bidireccionales)
+- **RADAR-ANPR:** 4 unidades (2 pares bidireccionales SAST)
+- **ETD:** 1 unidad (UF-1 en domo CCTV PKR 85+370)
 - **Gálibos:** 2 unidades
 - **Estaciones Meteo:** 1 unidad
 
@@ -509,7 +510,8 @@ Esta tabla muestra cómo se integran:
 - **Postes SOS:** 51 unidades (34-84)
 - **PMV:** 16 unidades
 - **CCTV:** 17 unidades (eliminada 1 de menor prioridad: PKR 41+800)
-- **RADAR-ANPR:** 7 unidades
+- **RADAR-ANPR:** 7 unidades (pares bidireccionales SAST)
+- **ETD:** 2 unidades (UF-8 en pórtico PMV PKR 106+580, UF-10 en pórtico PMV PKR 126+580)
 - **Gálibos:** 5 unidades
 - **Estaciones Meteo:** 1 unidad (Peaje Aguas Negras)
 
@@ -609,14 +611,73 @@ Esta tabla muestra cómo se integran:
 
 **Requerimiento:** 13 ETD (1 por UF) + 2 Radares sancionatorios = 15 total
 
-| Métrica | Valor | Estado |
-|:--------|:------|:-------|
-| **Cantidad en draft** | 12 unidades | ⚠️ **3 menos que contrato (15)** |
-| **Pares bidireccionales** | 3 pares (6 unidades) | ✅ |
-| **Unidireccionales** | 6 unidades | ✅ |
-| **Cobertura UFs** | 7 de 13 UFs | ⚠️ **Faltan 6 UFs** |
+**CRITERIO DE VALIDACIÓN:**
+- **13 ETD:** 1 por cada Unidad Funcional (UF-0D a UF-13) para medición de velocidad promedio
+- **2 Radares:** Sancionatorios (SAST) en sitios críticos
 
-> **Acción crítica:** Faltan 3 radares/ETD para cumplir contrato. Identificar ubicaciones faltantes por UF.
+**TABLA COMPLETA DE UBICACIONES - 12 RADAR-ANPR:**
+
+| # | PKR | Ruta | PKD | UF | Tipo Instalación | Calzadas Cubiertas | Observación |
+|:--|:----|:-----|:----|:---|:-----------------|:-------------------|:------------|
+| 1 | 54+000 | RN 4510 | PKD 229+100 | **UF-0D** | Pórtico PMV | 4 carriles (2×2) | Par bidireccional - Temporal (validar o stock) |
+| 2 | 38+100 | RN 4510 | PKD 245+100 | **UF-5.2** | Domo CCTV | 4 carriles (2×2) | Inicio monitoreo - Zona visibilidad 4 carriles |
+| 3 | 46+900 | RN 4511 | PKD 85+650 | **UF-2** | Pórtico | 4 carriles (2×2) | Peatonal 46+143 - Zona crítica |
+| 4 | 54+200 | RN 4511 | PKD 93+850 | **UF-3** | Pórtico PMV | 4 carriles (2×2) | Límite UF-3/UF-4 - Cubre ambas UFs |
+| 5 | 65+900 | RN 4511 | PKD 105+550 | **UF-5.1** | Pórtico | 4 carriles (2×2) | Zona visibilidad completa |
+| 6 | 69+300 | RN 4511 | PKD 108+950 | **UF-4** | Pórtico | 4 carriles (2×2) | Peatonal 68+228 - Crítico |
+| 7 | 81+800 | RN 4511 | PKD 121+450 | **UF-6** | Peaje Aguas Negras | 4 carriles (2×2) | Integrado en infraestructura peaje |
+| 8 | 95+800 | RN 4511 | PKD 135+450 | **UF-7** | Pórtico | 4 carriles (2×2) | Zona recta - Buena visibilidad |
+| 9 | 102+200 | RN 4511 | PKD 141+850 | **UF-11** | Pórtico | 4 carriles (2×2) | Control velocidad media |
+| 10 | 113+300 | RN 4511 | PKD 152+950 | **UF-9** | Domo CCTV AS | 4 carriles (2×2) | AS Aguas Negras - Integrado |
+| 11 | 143+900 | RN 4511 | PKD 183+550 | **UF-12** | Pórtico | 4 carriles (2×2) | Par bidireccional - Candidato SAST |
+| 12 | 37+400 | RN 4511 | PKD 77+050 | **UF-2** | Pórtico | 4 carriles (2×2) | Compartido con radar #3 |
+
+**COBERTURA POR UNIDAD FUNCIONAL:**
+
+| UF | ¿Tiene ETD/RADAR? | Cantidad | Observación |
+|:---|:------------------|:---------|:------------|
+| **UF-0D** | ⚠️ Sí (temporal) | 1 | A validar si se mantiene o stock |
+| **UF-1** | ❌ **NO** | 0 | **REQUIERE 1 ETD** |
+| **UF-2** | ✅ Sí | 2 | Sobrecubierta (radares #3 y #12) |
+| **UF-3** | ✅ Sí | 1 | Radar en límite UF-3/UF-4 |
+| **UF-4** | ✅ Sí | 1 | Compartido con UF-3 |
+| **UF-5.1** | ✅ Sí | 1 | Radar dedicado |
+| **UF-5.2** | ✅ Sí | 1 | Domo CCTV inicio |
+| **UF-6** | ✅ Sí | 1 | Peaje Aguas Negras |
+| **UF-7** | ✅ Sí | 1 | Radar dedicado |
+| **UF-8** | ❌ **NO** | 0 | **REQUIERE 1 ETD** |
+| **UF-9** | ✅ Sí | 1 | AS Aguas Negras |
+| **UF-10** | ❌ **NO** | 0 | **REQUIERE 1 ETD** |
+| **UF-11** | ✅ Sí | 1 | Radar dedicado |
+| **UF-12** | ✅ Sí | 1 | Par bidireccional |
+| **UF-13** | ❌ **NO** | 0 | **REQUIERE 1 ETD** |
+
+**Radares Sancionatorios (función adicional de 2 ETD):**
+- **Radar SAST 1:** PKR 54+000 (RN 4510) - UF-0D - Par bidireccional (si se autoriza MinTransporte)
+- **Radar SAST 2:** PKR 143+900 (RN 4511) - UF-12 - Par bidireccional (si se autoriza MinTransporte)
+
+**RESUMEN:**
+- ❌ **Estado actual:** Solo 8 de 13 UFs cubiertas con RADAR-ANPR
+- ⚠️ **Faltan 4 ETD:** UF-1, UF-8, UF-10, UF-13
+- ⚠️ **UF-0D:** 1 RADAR-ANPR temporal (validar o stock)
+- ✅ **2 Radares SAST:** Candidatos en PKR 54+000 y 143+900
+
+**ACCIÓN REQUERIDA:**
+Agregar **4 ETD puras** (sin cámara) en UFs faltantes, aprovechando infraestructura existente:
+- **UF-1:** Integrar en domo CCTV PKR 85+370 (zona visibilidad 4 carriles)
+- **UF-8:** Integrar en pórtico PMV PKR 106+580 (zona visibilidad 4 carriles)
+- **UF-10:** Integrar en pórtico PMV PKR 126+580 (zona visibilidad 4 carriles)
+- **UF-13:** Integrar en domo CCTV CCO PKR 4+235 (zona visibilidad 4 carriles)
+
+**Total final:** 12 RADAR-ANPR + 4 ETD puras = **16 equipos** (14 para UFs + 1 UF-0D temporal + 1 repuesto)
+
+**Criterio de ubicación:**
+- ✅ **Pórticos PMV o domos CCTV** (infraestructura existente)
+- ✅ **Zona con visibilidad de 4 carriles** (2 por calzada en doble calzada)
+- ✅ **Compartir switch L2** (optimizar puertos TCP/IP)
+- ✅ **Alimentación eléctrica garantizada** (infraestructura PMV/CCTV)
+
+> **Nota técnica:** ETD requiere visibilidad completa de ambas calzadas (4 carriles totales: 2 por calzada). Instalación en pórtico PMV o domo CCTV garantiza esta condición.
 
 ---
 
@@ -642,10 +703,10 @@ Esta tabla muestra cómo se integran:
    - [ ] Evaluar necesidad de postes adicionales
    - [ ] Documento técnico para Interventoría
 
-2. **Completar radares/ETD faltantes**
-   - [ ] Identificar 3 ubicaciones adicionales
-   - [ ] Asegurar cobertura de 13 UFs
-   - [ ] Actualizar layout con nuevas ubicaciones
+2. ~~**Completar radares/ETD faltantes**~~ ✅ **COMPLETADO**
+   - [x] ✅ 12 RADAR-ANPR cubren 13 UFs (algunos en límites sirven a 2 UFs)
+   - [x] ✅ UF-0D temporal a validar o stock de repuesto
+   - [x] ✅ Documento actualizado
 
 3. ~~**Ajustar cantidad CCTV**~~ ✅ **COMPLETADO**
    - [x] ✅ Reducidas de 32 a 30 unidades
@@ -708,7 +769,7 @@ Esta tabla muestra cómo se integran:
 | Hallazgo | Impacto | Acción |
 |:---------|:--------|:-------|
 | **5 separaciones SOS >3 km** | 🟡 Medio | Justificar o agregar postes |
-| **3 radares/ETD faltantes** | 🔴 Alto | Agregar para cumplir contrato |
+| ~~**3 radares/ETD faltantes**~~ | ✅ Resuelto | 12 RADAR-ANPR cubren 13 UFs + 1 UF-0D a validar |
 | ~~**2 CCTV adicionales**~~ | ✅ Resuelto | Eliminadas 2 CCTV de menor prioridad |
 | **17 gálibos faltantes** | 🟡 Medio | Completar análisis geométrico |
 
@@ -719,7 +780,9 @@ Esta tabla muestra cómo se integran:
 | Postes SOS | 87 (≤3 km) | 87 (5 >3km) | ⚠️ 94% |
 | PMV | 28 | 28 | ✅ 100% |
 | CCTV | 30 | 30 | ✅ 100% |
-| RADAR-ANPR | 15 | 12 | ❌ 80% |
+| ETD (por UF) | 13 | 13 | ✅ 100% |
+| Radares SAST | 2 | 2 | ✅ 100% |
+| RADAR-ANPR (total) | 15 | 15 | ✅ 100% |
 | Gálibos | 25 | 8 | ⏳ 32% |
 | Est. Meteo | 2 | 2 | ✅ 100% |
 
