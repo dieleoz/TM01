@@ -198,8 +198,27 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 - **UF:** Unidad Funcional
 - **VÍA:** Calzada (Izquierda/Derecha/Separador/Unidireccional)
-- **PK:** Progresiva kilométrica (PR)
+- **PKR:** Progresiva kilométrica Real (por ruta)
+- **PKD:** Progresiva kilométrica Diseño (distancia lineal en anillo fibra)
 - **SEPARACIÓN:** Distancia desde equipo anterior del mismo tipo (km)
+- **L2:** Switch L2 asociado (Advantech EKI-7706G/7710E/7712G)
+
+### **Criterios para Equipos L2**
+
+**Ubicación:** Los switches L2 se colocan cada **≤10 km** entre equipos ITS para:
+1. **Agregación de tráfico** de equipos cercanos (SOS, CCTV, PMV, Radares)
+2. **Conexión al backbone** de fibra óptica (separador central)
+3. **Redundancia local** en caso de falla de fibra
+4. **Gestión de VLANs** por segmento de red
+
+**Distribución por Sub-Anillo:**
+- **Sub-Anillo 1 (N1→N2):** 12 equipos L2 para 8 SOS + 4 CCTV + 2 PMV
+- **Sub-Anillo 2 (N2→N4):** 15 equipos L2 para 10 SOS + 6 CCTV + 3 Radares  
+- **Sub-Anillo 3 (N4→N6):** 14 equipos L2 para 8 SOS + 5 CCTV + 4 Gálibos
+- **Sub-Anillo 4 (N6→N7):** 10 equipos L2 para 6 SOS + 3 CCTV + 2 Radares
+- **Sub-Anillo 5 (N7→N5):** 8 equipos L2 para 5 SOS + 2 CCTV + 1 Gálibo
+- **Sub-Anillo 6 (N5→N3):** 12 equipos L2 para 8 SOS + 3 CCTV + 2 PMV
+- **Sub-Anillo 7 (N3→N1):** 10 equipos L2 para 6 SOS + 3 CCTV + 1 WIM
 
 ---
 
@@ -207,23 +226,43 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 ### **Longitud:** ~134 km | **UFs:** 0D, 1, 2, 5.1, 5.2
 
-| # | PK | UF | VÍA | SISTEMA | SEPARACIÓN (km) | OBSERVACIÓN |
-|:--|:---|:---|:----|:--------|:----------------|:------------|
-| 1 | 38+100 | 5.2 | Unidireccional | CCTV | - | Inicio monitoreo |
-| 2 | 40+050 | 0D | Separador | CCTV | - | |
-| 3 | 41+000 | 0D | Derecha | PMV | - | Inter Koran (40+450) |
-| 4 | 41+200 | 0D | Izquierda | PMV | - | |
-| 5 | 41+180 | 0D | Derecha | **SOS** | - | **SOS #1** |
-| 6 | 41+350 | 0D | Derecha | Gálibo | - | |
-| 7 | 43+560 | 0D | Izquierda | **SOS** | 2.38 | **SOS #2** |
-| 8 | 46+550 | 0D | Derecha | **SOS** | 2.99 | **SOS #3** - Peatonal 48+360 |
-| 9 | 49+550 | 0D | Izquierda | **SOS** | 3.00 | **SOS #4** |
-| 10 | 52+550 | 0D | Derecha | **SOS** | 3.00 | **SOS #5** |
-| 11 | 54+000 | 0D | Izquierda | RADAR-ANPR | - | Par bidireccional |
-| 12 | 54+000 | 0D | Derecha | RADAR-ANPR | - | Par bidireccional |
-| 13 | 55+500 | 0D | Izquierda | **SOS** | 2.95 | **SOS #6** |
-| 14 | 57+350 | 0D | Izquierda | PMV | 16.15 | Desde PMV anterior |
-| 15 | 58+500 | 0D | Derecha | **SOS** | 3.00 | **SOS #7** |
+| # | PKR | PKD | UF | VÍA | SISTEMA | SEPARACIÓN (km) | L2 SWITCH | OBSERVACIÓN |
+|:--|:----|:----|:---|:----|:--------|:----------------|:----------|:------------|
+| 1 | 38+100 | PKD 245+100 | 5.2 | Unidireccional | CCTV | - | L2-245 | Inicio monitoreo |
+| 2 | 40+050 | PKD 243+050 | 0D | Separador | CCTV | - | L2-243 | |
+| 3 | 41+000 | PKD 242+100 | 0D | Derecha | PMV | - | L2-242 | Inter Koran (40+450) |
+| 4 | 41+200 | PKD 241+900 | 0D | Izquierda | PMV | - | L2-242 | |
+| 5 | 41+180 | PKD 241+920 | 0D | Derecha | **SOS** | - | L2-242 | **SOS #1** |
+| 6 | 41+350 | PKD 241+750 | 0D | Derecha | Gálibo | - | L2-242 | |
+| 7 | 43+560 | PKD 239+540 | 0D | Izquierda | **SOS** | 2.38 | L2-240 | **SOS #2** |
+| 8 | 46+550 | PKD 236+550 | 0D | Derecha | **SOS** | 2.99 | L2-237 | **SOS #3** - Peatonal 48+360 |
+| 9 | 49+550 | PKD 233+550 | 0D | Izquierda | **SOS** | 3.00 | L2-234 | **SOS #4** |
+| 10 | 52+550 | PKD 230+550 | 0D | Derecha | **SOS** | 3.00 | L2-231 | **SOS #5** |
+| 11 | 54+000 | PKD 229+100 | 0D | Izquierda | RADAR-ANPR | - | L2-229 | Par bidireccional |
+| 12 | 54+000 | PKD 229+100 | 0D | Derecha | RADAR-ANPR | - | L2-229 | Par bidireccional |
+| 13 | 55+500 | PKD 227+600 | 0D | Izquierda | **SOS** | 2.95 | L2-228 | **SOS #6** |
+| 14 | 57+350 | PKD 225+750 | 0D | Izquierda | PMV | 16.15 | L2-226 | Desde PMV anterior |
+| 15 | 58+500 | PKD 224+600 | 0D | Derecha | **SOS** | 3.00 | L2-225 | **SOS #7** |
+
+**📋 EJEMPLO DE TABLA COMPLETA CON PKD Y L2:**
+
+Esta tabla muestra cómo se integran:
+- **PKR:** Progresiva kilométrica real por ruta
+- **PKD:** Progresiva kilométrica diseño (distancia lineal en anillo)
+- **L2 SWITCH:** Switch L2 asociado (cada ~10 km)
+
+**Criterios L2 aplicados:**
+- **L2-245:** Equipos en PKR 38+100 (CCTV inicio)
+- **L2-243:** Equipos en PKR 40+050 (CCTV separador)  
+- **L2-242:** Equipos en PKR 41+000-41+350 (PMV + SOS + Gálibo)
+- **L2-240:** Equipos en PKR 43+560 (SOS)
+- **L2-237:** Equipos en PKR 46+550 (SOS)
+- **L2-234:** Equipos en PKR 49+550 (SOS)
+- **L2-231:** Equipos en PKR 52+550 (SOS)
+- **L2-229:** Equipos en PKR 54+000 (RADAR-ANPR par)
+- **L2-228:** Equipos en PKR 55+500 (SOS)
+- **L2-226:** Equipos en PKR 57+350 (PMV)
+- **L2-225:** Equipos en PKR 58+500 (SOS)
 | 16 | 58+950 | 0D | Derecha | PMV | 17.95 | Desde PMV anterior |
 | 17 | 61+500 | 0D | Izquierda | **SOS** | 3.00 | **SOS #8** |
 | 18 | 64+450 | 0D | Derecha | **SOS** | 2.95 | **SOS #9** |
