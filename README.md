@@ -82,23 +82,25 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 
 | # | Equipo/Sistema | Estado | Documento | Conclusión |
 |:--|:---------------|:-------|:----------|:-----------|
-| 1 | **SOS Poles** | ✅ | `06_ANALISIS_JERARQUICO_CONTRACTUAL_POR_EQUIPO_v1.0.md` | 87 unidades obligatorias |
-| 2 | **Áreas de Servicio** | ✅ | `08_ANALISIS_DETALLADO_CORRECCION_AREAS_SERVICIO_v1.0.md` | 2 áreas integradas a peajes |
-| 3 | **PMV** | ✅ | `16_VALIDACION_PMV_v1.0.md` | 28 unidades (2 por peaje + 20km) |
-| 4 | **CCTV** | ✅ | `20_ANALISIS_CCTV_MINIMO_v1.0.md` | 30 cámaras + nota optimización |
-| 5 | **Radares/ETD** | ✅ | `23_VALIDACION_CONTRACTUAL_RADARES_ETD_v1.0.md` | 12 RADAR-ANPR unidades |
-| 6 | **WIM** | ✅ | `24_VALIDACION_CONTRACTUAL_PESAJE_v1.0.md` | 1 estación bidireccional |
-| 7 | **Gálibos** | ✅ | `LECCIONES_APRENDIDAS.md` | 25 unidades (8 confirmadas) |
-| 8 | **Radio Comunicaciones** | ✅ | `25_ANALISIS_COBERTURA_CELULAR_vs_RADIO_VHF_v1.0.md` | Opcional (sujeto a cobertura) |
-| 9 | **Estaciones Meteorológicas** | ✅ | `26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0.md` | 2 Davis Pro2 en peajes |
-| 10 | **Señalización Vial** | ✅ | `29_VALIDACION_CONTRACTUAL_SENALIZACION_VIAL_v1.0.md` | 1,895 señales + 1,000 km demarcación |
-| 11 | **Iluminación** | ✅ | `30_VALIDACION_CONTRACTUAL_ILUMINACION_v1.0.md` | 572 luminarias LED |
-| 12 | **Energía Eléctrica** | ✅ | `31_VALIDACION_CONTRACTUAL_ENERGIA_ELECTRICA_v1.0.md` | 3 subestaciones + respaldos |
-| 13 | **Telecomunicaciones** | ✅ | `32_VALIDACION_CONTRACTUAL_TELECOMUNICACIONES_v1.0.md` | 285 km fibra óptica |
+| 1 | **Postes SOS** | ✅ | `34_VALIDACION_CONTRACTUAL_POSTES_SOS_v1.0.md` | 87 unidades obligatorias |
+| 2 | **ETD + Radares** | ✅ | `35_VALIDACION_CONTRACTUAL_ETD_RADARES_v1.0.md` | 13 ETD + 2 Radares |
+| 3 | **Gálibos** | ✅ | `36_VALIDACION_CONTRACTUAL_GALIBOS_v1.0.md` | 25 unidades (estimación) |
+| 4 | **CCTV** | ✅ | `37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md` | 30 cámaras estratégicas |
+| 5 | **PMV** | ✅ | `38_VALIDACION_CONTRACTUAL_PMV_v1.0.md` | 28 unidades (2 por peaje + estratégicos) |
+| 6 | **Estaciones Meteorológicas** | ✅ | `26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0.md` | 2 Davis Pro2 en peajes |
+| 7 | **Telecomunicaciones** | ✅ | `32_VALIDACION_CONTRACTUAL_TELECOMUNICACIONES_v1.0.md` | 285 km fibra óptica |
+| 8 | **Peajes** | ✅ | T01 | 2 estaciones |
+| 9 | **Pesaje WIM** | ✅ | `24_VALIDACION_CONTRACTUAL_PESAJE_v1.0.md` | 1 estación bidireccional |
+| 10 | **Radio Comunicaciones** | ✅ | `25_ANALISIS_COBERTURA_CELULAR_vs_RADIO_VHF_v1.0.md` | Opcional (sujeto a cobertura) |
+| 11 | **CCO** | ✅ | T01 | 1 centro |
+| 12 | **Señalización Vial** | ✅ | `29_VALIDACION_CONTRACTUAL_SENALIZACION_VIAL_v1.0.md` | 1,895 señales + 1,000 km demarcación |
+| 13 | **Iluminación** | ✅ | `30_VALIDACION_CONTRACTUAL_ILUMINACION_v1.0.md` | 572 luminarias LED |
 
 ### Documentos de Metodología
 
 - **Metodología Genérica:** `27_METODOLOGIA_VALIDACION_CONTRACTUAL_GENERICA_v1.0.md`
+- **Índice Cruzado Organizado:** `39_INDICE_CRUZADO_SUBSISTEMAS_ORGANIZADO_v2.0.md`
+- **Plan de Limpieza:** `40_PLAN_LIMPIEZA_ORGANIZACION_DOCUMENTAL_v1.0.md`
 - **Plantilla Replicable:** Incluida en metodología
 - **Checklist de Validación:** Incluido en metodología
 
