@@ -181,12 +181,14 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 ### **Distribución por Ruta**
 
-| Ruta | Longitud (km) | Postes SOS | PMV | CCTV | RADAR-ANPR/ETD | Gálibos |
-|:-----|:--------------|:-----------|:----|:-----|:---------------|:--------|
-| **RN 4510** | ~134 km | 41 | 10 | 9 | 5 (4 RADAR + 1 ETD) | 2 |
-| **RN 4511** | ~149 km | 44 | 16 | 17 | 9 (7 RADAR + 2 ETD) | 5 |
-| **RN 4513** | ~10 km | 2 | 2 | 4 | 1 (1 ETD) | 1 |
-| **TOTAL** | **~293 km** | **87** | **28** | **30** | **15 (12 RADAR + 3 ETD)** | **8** |
+| Ruta | Longitud (km) | Postes SOS | PMV | CCTV | RADAR-ANPR | ETD puras | Gálibos |
+|:-----|:--------------|:-----------|:----|:-----|:-----------|:----------|:--------|
+| **RN 4510** | ~134 km | 41 | 10 | 9 | 4 | 1 | 2 |
+| **RN 4511** | ~149 km | 44 | 16 | 17 | 7 | 2 | 5 |
+| **RN 4513** | ~10 km | 2 | 2 | 4 | 0 | 1 | 1 |
+| **TOTAL** | **~293 km** | **87** | **28** | **30** | **12** | **4** | **8** |
+
+**Nota:** Total ETD/RADAR = 16 equipos (12 RADAR-ANPR + 4 ETD puras = 13 UFs + 1 UF-0D temporal + reserva)
 
 > **Nota:** La longitud total incluye ambos sentidos. La longitud del corredor es 259.6 km (sentido único).
 
@@ -361,6 +363,7 @@ Esta tabla muestra cómo se integran:
 | 29 | 83+250 | 0D | Separador | **METEO** | - | **Estación Meteo #1** |
 | 30 | 83+950 | 0D | Izquierda | **SOS** | 2.45 | **SOS #16** |
 | 31 | 85+370 | 1 | Separador | CCTV | - | |
+| 31b | 85+370 | 1 | Separador | **ETD** | - | **ETD-UF1** - Sensor radar 4 carriles (sin cámara) - Integrado domo CCTV |
 | 32 | 86+900 | 1 | Derecha | **SOS** | 2.95 | **SOS #17** - Peatonal 86+290 |
 | 33 | 87+100 | 1 | Separador | CCTV | - | |
 | 34 | 89+780 | 0D | Izquierda | **SOS** | 2.88 | **SOS #18** |
@@ -396,7 +399,7 @@ Esta tabla muestra cómo se integran:
 - **PMV:** 10 unidades (5 por sentido)
 - **CCTV:** 9 unidades (eliminada 1 de menor prioridad: PKR 40+050)
 - **RADAR-ANPR:** 4 unidades (2 pares bidireccionales SAST)
-- **ETD:** 1 unidad (UF-1 en domo CCTV PKR 85+370)
+- **ETD puras:** 1 unidad (UF-1, PKR 85+370, integrada en domo CCTV)
 - **Gálibos:** 2 unidades
 - **Estaciones Meteo:** 1 unidad
 
@@ -480,6 +483,7 @@ Esta tabla muestra cómo se integran:
 | 131 | 103+300 | 11 | Izquierda | **SOS** | 2.70 | **SOS #69** - Peatonal 103+000 |
 | 132 | 106+145 | 11 | Derecha | **SOS** | 2.85 | **SOS #70** |
 | 133 | 106+580 | 8 | Izquierda | PMV | 19.78 | |
+| 133b | 106+580 | 8 | Izquierda | **ETD** | - | **ETD-UF8** - Sensor radar 4 carriles (sin cámara) - Integrado pórtico PMV |
 | 134 | 109+100 | 9 | Izquierda | **SOS** | 2.96 | **SOS #71** - Peatonal 108+411 |
 | 135 | 111+930 | 11 | Derecha | **SOS** | 2.83 | **SOS #72** |
 | 136 | 113+300 | 9 | Separador | CCTV | - | A.S. Aguas Negras 113+450 |
@@ -491,6 +495,7 @@ Esta tabla muestra cómo se integran:
 | 142 | 122+185 | 11 | Derecha | **SOS** | 2.95 | **SOS #75** |
 | 143 | 125+305 | 10 | Izquierda | **SOS** | 3.12 | **SOS #76** |
 | 144 | 126+580 | 10 | Izquierda | PMV | 20.00 | |
+| 144b | 126+580 | 10 | Izquierda | **ETD** | - | **ETD-UF10** - Sensor radar 4 carriles (sin cámara) - Integrado pórtico PMV |
 | 145 | 127+250 | 11 | Derecha | Gálibo | - | |
 | 146 | 127+490 | 11 | Derecha | **SOS** | 2.19 | **SOS #77** - Inter Yumá 127+850 |
 | 147 | 128+000 | 11 | Separador | CCTV | - | |
@@ -511,7 +516,7 @@ Esta tabla muestra cómo se integran:
 - **PMV:** 16 unidades
 - **CCTV:** 17 unidades (eliminada 1 de menor prioridad: PKR 41+800)
 - **RADAR-ANPR:** 7 unidades (pares bidireccionales SAST)
-- **ETD:** 2 unidades (UF-8 en pórtico PMV PKR 106+580, UF-10 en pórtico PMV PKR 126+580)
+- **ETD puras:** 2 unidades (UF-8 PKR 106+580 pórtico PMV, UF-10 PKR 126+580 pórtico PMV)
 - **Gálibos:** 5 unidades
 - **Estaciones Meteo:** 1 unidad (Peaje Aguas Negras)
 
@@ -529,6 +534,7 @@ Esta tabla muestra cómo se integran:
 | 162 | 3+875 | 13 | Separador | CCTV | - | Báscula Izquierda 3+900 |
 | 163 | 4+150 | 11 | Separador | CCTV | - | |
 | 164 | 4+235 | 13 | Izquierda | **METEO** | - | **CCO - Báscula Derecha 4+360** |
+| 164b | 4+235 | 13 | Separador | **ETD** | - | **ETD-UF13** - Sensor radar 4 carriles (sin cámara) - Integrado CCO |
 | 165 | 4+400 | 11 | Separador | CCTV | - | CCO Izquierda 4+400 |
 | 166 | 5+900 | 11 | Derecha | PMV | 18.15 | |
 | 167 | 5+900 | 13 | Izquierda | Gálibo | - | |
@@ -541,6 +547,7 @@ Esta tabla muestra cómo se integran:
 - **PMV:** 2 unidades
 - **CCTV:** 4 unidades
 - **RADAR-ANPR:** 0 unidades
+- **ETD puras:** 1 unidad (UF-13, PKR 4+235, integrada en CCO)
 - **Gálibos:** 1 unidad
 - **Estaciones Meteo:** 1 unidad (CCO)
 
