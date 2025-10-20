@@ -655,20 +655,22 @@ Aplicar **Template T02** a sistemas críticos:
 ## 📊 MÉTRICAS Y KPIs DEL PROYECTO (Actualizado 17 Oct 2025)
 
 ### Métricas de Progreso
+
 | Métrica | Objetivo | Actual | Estado |
 |:--------|:---------|:-------|:-------|
-| **Documentos convertidos (.md)** | 15 | 19 | ✅ 127% |
-| **Templates creados** | 5 | 5 | ✅ 100% |
-| **Templates T01 aplicados** | 13 | 13 | ✅ 100% |
-| **Templates T02 aplicados** | 13 | 13 | ✅ 100% 🎉 |
-| **Templates T03 aplicados** | 13 | 13 | ✅ 100% 🎉🎉 |
-| **Templates T04 aplicados** | 12 | 12 | ✅ 100% 🎉🎉 |
-| **Validación Contractual** | 6 | 6 | ✅ **COMPLETADA** (Análisis jerárquico legal) |
-| **Sistemas identificados** | 15+ | 13 | ✅ 87% |
+| **Documentos base (.txt)** | 15 | 15 | ✅ 100% |
+| **Documentos convertidos (.md)** | 15 | 1 | 🔄 7% |
+| **Sistemas identificados** | 15 | 13 | ✅ 87% |
+| **Templates T01 creados** | 13 | 13 | ✅ 100% |
+| **Templates T02 creados** | 13 | 13 | ✅ 100% |
+| **Templates T03 creados** | 13 | 13 | ✅ 100% |
+| **Templates T04 creados** | 13 | 0 | ⏳ 0% ← **PRÓXIMO** |
+| **Validaciones contractuales** | 13 | 13 | ✅ 100% 🎉 |
+| **Presupuesto consolidado** | 1 | 1 | ✅ 100% |
+| **Metodología genérica** | 1 | 1 | ✅ 100% |
+| **Rediseños arquitectónicos** | 4 | 4 | ✅ 100% |
 | **Subsistemas identificados** | - | 50+ | ✅ Bonus |
-| **Matrices de trazabilidad** | 4 | 1 | 🔄 25% |
-| **WBS completitud** | 100% | 0% | ⏳ 0% |
-| **Mejoras de formato (bonus)** | - | 7 bloques | ✅ Extra |
+| **WBS completitud** | 100% | 15% | 🔄 En progreso |
 
 ### KPIs de Calidad (17 Oct)
 | KPI | Objetivo | Actual | Estado |

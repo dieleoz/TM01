@@ -1,11 +1,17 @@
 # PROYECTO APP PUERTO SALGAR - BARRANCABERMEJA v2.0
 ## Marco de Gestión de Proyectos (PMI) - EPC VEHICULAR
 
-![Status](https://img.shields.io/badge/Status-Fase%202%20Completada-green)
-![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
+![Status](https://img.shields.io/badge/Status-Fase%203%20Iniciada-yellow)
+![Progress](https://img.shields.io/badge/Progress-75%25-brightgreen)
 ![Validations](https://img.shields.io/badge/Validations-13%2F13-success)
 ![Budget](https://img.shields.io/badge/Budget-USD%2057.4M-blue)
 ![Docs](https://img.shields.io/badge/Docs-65%2B%20Files-orange)
+
+![T01](https://img.shields.io/badge/T01_Fichas-13%2F13-success)
+![T02](https://img.shields.io/badge/T02_Requisitos-13%2F13-success)
+![T03](https://img.shields.io/badge/T03_Arquitecturas-13%2F13-success)
+![T04](https://img.shields.io/badge/T04_Especificaciones-0%2F13-red)
+![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 
 **Versión:** 2.1  
 **Fecha de actualización:** 21 de Octubre 2025 (15:45)  
@@ -32,16 +38,19 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 ## 📍 **DÓNDE ESTAMOS HOY** (21-Oct-2025)
 
 ```
-Fase 0: Preparación    [████████████] 100% ✅
-Fase 1: Conversión     [██░░░░░░░░░░]  17% ← AQUÍ ESTAMOS
-Fase 2: Estructura     [████████████] 100% ✅ COMPLETADA
-Fase 3: Detalle        [░░░░░░░░░░░░]   0% ← PRÓXIMA
+Fase 0: Preparación        [████████████] 100% ✅ Completada
+Fase 1: Conversión         [██████░░░░░░]  50% ← Parcial (1/15 docs)
+Fase 2: Ingeniería Concept [████████████] 100% ✅ COMPLETADA
+Fase 3: Especificaciones   [██░░░░░░░░░░]  15% ← AQUÍ ESTAMOS
+Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0% 
+Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
 **Última actualización:** Hoy (21-oct-2025)  
-**Próxima acción:** Crear especificaciones técnicas (T04)  
+**Logro principal:** 13 sistemas validados contractualmente (100%)  
+**Próxima acción:** Especificaciones técnicas T04 (SOS, ETD, CCTV prioritarios)  
 **Bloqueador:** Ninguno  
-**Estado:** ✅ Sistema documental completamente validado y listo
+**Estado:** ✅ Fase 2 completada - Iniciando Fase 3
 
 ### 🎯 **ESTADO ACTUAL DEL PROYECTO**
 

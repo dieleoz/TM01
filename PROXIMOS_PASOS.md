@@ -2,8 +2,8 @@
 ## Hoja de Ruta Post-Validación Contractual
 
 **Fecha:** 21 de octubre de 2025  
-**Versión:** 1.0  
-**Estado:** ✅ TODAS LAS VALIDACIONES CONTRACTUALES COMPLETADAS (13/13 - 100%)  
+**Versión:** 1.1  
+**Estado:** ✅ FASE 2 COMPLETADA (100%) - INICIANDO FASE 3  
 
 ---
 
@@ -24,38 +24,77 @@
 
 ## 🎯 **PRÓXIMOS PASOS INMEDIATOS**
 
-### Opción A: Completar Fase 2 - Documentación Final
+### ✅ Fase 2 COMPLETADA (21-Oct-2025)
 
-**Objetivo:** Cerrar definitivamente la Fase 2 con toda la documentación consolidada.
+**Logros:**
+- [x] ✅ 13/13 validaciones contractuales completadas
+- [x] ✅ Índice cruzado actualizado (v2.0)
+- [x] ✅ Presupuesto consolidado (v2.0)
+- [x] ✅ Lecciones aprendidas documentadas
+- [x] ✅ Organización documental por subsistemas
+- [x] ✅ Push a Git completado
 
-#### **Paso 1: Actualizar Índice Cruzado de Validaciones** (30 min)
-- [ ] Actualizar `28_INDICE_CRUZADO_VALIDACIONES_CONTRACTUALES_v1.0.md`
-- [ ] Incluir los 4 nuevos sistemas validados (Señalización, Iluminación, Energía, Telecomunicaciones)
-- [ ] Actualizar totales y estadísticas
+---
 
-#### **Paso 2: Consolidar Presupuesto Maestro Final** (1 hora)
-- [ ] Verificar presupuestos de los 4 sistemas validados
-- [ ] Actualizar `PRESUPUESTO_MAESTRO_CONSOLIDADO_FINAL_v2.0.md`
-- [ ] Validar CAPEX/km ($221K USD/km)
-- [ ] Generar gráficos de distribución por sistema
+### 🚀 **FASE 3: ESPECIFICACIONES TÉCNICAS (T04)** ← ACTUAL
 
-#### **Paso 3: Actualizar LECCIONES_APRENDIDAS.md** (30 min)
-- [ ] Incluir aprendizajes de los 4 últimos sistemas
-- [ ] Consolidar metodología refinada v1.1
-- [ ] Documentar patrones identificados
+**Objetivo:** Crear especificaciones técnicas detalladas para los 13 subsistemas.
 
-#### **Paso 4: Crear Resumen Ejecutivo para Interventoría** (1 hora)
-- [ ] Documento consolidado con todas las validaciones
-- [ ] Tabla resumen de 13 sistemas validados
-- [ ] Presupuesto final justificado
-- [ ] Cronograma de siguiente fase
+**Tiempo Total Estimado:** 2-3 semanas (40-50 horas)
 
-#### **Paso 5: Push a Git y Limpieza** (30 min)
-- [ ] Commit de todos los cambios
-- [ ] Push a GitHub
-- [ ] Verificar integridad de repositorio
+#### **🔴 Prioridad ALTA (Esta semana: 21-27 Oct)**
 
-**Tiempo Total Estimado:** 3-4 horas
+**Sistemas ITS prioritarios:**
+
+1. **Postes SOS** (T04 - 3h)
+   - [ ] Especificaciones técnicas detalladas
+   - [ ] Normativa aplicable (AT1, AT2)
+   - [ ] Criterios de aceptación
+   - [ ] Referencias de fabricantes
+
+2. **ETD + Radares** (T04 - 4h)
+   - [ ] Especificaciones RADAR-ANPR
+   - [ ] Normativa (Res. 718/2018)
+   - [ ] Pliego base de condiciones
+   - [ ] Interoperabilidad SIMIT
+
+3. **CCTV** (T04 - 3h)
+   - [ ] Especificaciones cámaras IP PTZ
+   - [ ] Integración CCO/SCADA
+   - [ ] Criterios de instalación
+   - [ ] Lista de fabricantes aprobados
+
+4. **PMV** (T04 - 3h)
+   - [ ] Especificaciones paneles mensaje variable
+   - [ ] Protocolo NTCIP
+   - [ ] Integración fibra óptica
+   - [ ] Criterios de visibilidad
+
+5. **WIM** (T04 - 3h)
+   - [ ] Especificaciones básculas dinámicas/estáticas
+   - [ ] Precisión y calibración
+   - [ ] Integración con peajes
+   - [ ] Certificaciones requeridas
+
+**Tiempo Estimado:** 16 horas (2 días)
+
+#### **🟡 Prioridad MEDIA (Próxima semana: 28 Oct - 3 Nov)**
+
+6. **Telecomunicaciones** (T04 - 4h)
+7. **Energía Eléctrica** (T04 - 4h)
+8. **Iluminación** (T04 - 2h)
+9. **Peajes** (T04 - 4h)
+10. **CCO** (T04 - 3h)
+
+**Tiempo Estimado:** 17 horas (2-3 días)
+
+#### **🟢 Prioridad BAJA (Después: 4-10 Nov)**
+
+11. **Gálibos** (T04 - 2h)
+12. **Estaciones Meteorológicas** (T04 - 2h)
+13. **Señalización Vial** (T04 - 2h)
+
+**Tiempo Estimado:** 6 horas (1 día)
 
 ---
 
