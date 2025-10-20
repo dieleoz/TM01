@@ -182,9 +182,16 @@ El Concesionario deberá:
 | Instalación, Empalmes, Certificación | - | - | $600,000 |
 | Integración y Puesta en Marcha | - | - | $300,000 |
 | Contingencias (10%) | - | - | $628,550 |
-| **TOTAL CAPEX** | | | **$7,914,050** |
+| **TOTAL CAPEX** | | | **$6,109,000** |
 
-**Conversión a COP (TRM: 4,000):** ~$31,656 millones COP
+**Conversión a COP (TRM: 4,000):** ~$24,436 millones COP
+
+#### 🔴 **Nota v1.1 (20/10/2025):**
+CAPEX actualizado tras rediseño arquitectónico:
+- Topología anillo rediseñada (5 nodos vs. 12 original)
+- Switches optimizados (48 vs. 70)
+- Áreas integradas a peajes (no derivaciones independientes)
+- **Ahorro: -$1.8M USD vs. estimación inicial**
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 

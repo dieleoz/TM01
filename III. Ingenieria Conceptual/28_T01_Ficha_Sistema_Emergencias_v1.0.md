@@ -243,14 +243,26 @@ El Concesionario deberá disponer de:
 | Camión Cama Baja | 2 | $150,000 | $300,000 |
 | Equipos de Rescate Vehicular (juegos completos) | 5 | $40,000 | $200,000 |
 | Radios Móviles | 30 | $2,500 | $75,000 |
-| Teléfonos SOS (postes) | 65 | $3,500 | $227,500 |
+| ~~Teléfonos SOS (postes)~~ | ~~65~~ | ~~$3,500~~ | ~~$227,500~~ **ELIMINADO - ya en ITS** |
 | Bases de Operación (edificaciones) | 2 | $200,000 | $400,000 |
 | Equipamiento de Bases (talleres, dormitorios) | 2 | $100,000 | $200,000 |
 | Equipos Médicos y Herramientas | - | - | $150,000 |
 | Contingencias (10%) | - | - | $444,250 |
-| **TOTAL CAPEX** | | | **$4,886,750** |
+| **TOTAL CAPEX** | | | **$4,638,569** |
 
-**Conversión a COP (TRM: 4,000):** ~$19,547 millones COP
+**Conversión a COP (TRM: 4,000):** ~COP 18,554,276,000 (~18.6 mil millones)
+
+#### 🔴 **Nota de Corrección v1.1 (21/10/2025):**
+
+**Duplicación eliminada:**
+- ❌ 65 Postes SOS: $227,500 (YA están en Sistema ITS con 87 unidades)
+- **Ahorro: -$227,500 USD**
+
+**Aclaración sobre vehículos:**
+- ✅ Los vehículos de emergencia se ESTACIONAN en las bases de las áreas de servicio
+- ✅ Las áreas tienen garajes ($80K × 2 = $160K) y talleres ($80K × 2 = $160K)
+- ✅ Los VEHÍCULOS mismos están presupuestados aquí (Sistema Emergencias)
+- ✅ NO hay duplicación de flota
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 

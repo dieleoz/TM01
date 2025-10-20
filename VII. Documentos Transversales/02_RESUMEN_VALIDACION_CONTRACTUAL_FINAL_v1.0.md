@@ -27,7 +27,7 @@ Se realizó un análisis cruzado entre:
 |:---------------|:---------------------|:-------------------|:-------|
 | **Estaciones de Peaje** | 2 | AT1 Tabla 2: Zambito (PK 9.2), Aguas Negras (PK 80) | ✅ VALIDADO |
 | **Centro de Control (CCO)** | 1 mínimo | AT1 Cap. 3: "mínimo un (1) CCO" | ✅ VALIDADO |
-| **Postes SOS** | 87 postes | AT1 Cap. 3: "máx. 3 km entre sí" → 259.6÷3=87 | ✅ VALIDADO |
+| **Postes SOS** | 87 postes | AT1 Cap. 3: "máx. 3 km entre sí" → 259.6÷3=87 | ✅ VALIDADO ✅ **T01/T03 ACTUALIZADOS** |
 | **PMV en Peajes** | 4 mínimo | AT2 Sec. 3.3.5.1: "Mín. 2 por bidireccional" → 2x2=4 | ✅ VALIDADO |
 | **CCTV en Peajes** | 2 mínimo | AT2 Sec. 3.3.5.1: "Mín. 1 panorámica por peaje" | ✅ VALIDADO |
 | **Intersecciones a Desnivel** | 6-7 mínimo | AT1 Tablas 12,16,30,36,40,47 | ✅ VALIDADO |
@@ -58,7 +58,7 @@ El contrato **NO especifica cantidades exactas** para:
 |:--------|:-----------------|:------------------|:-----------|:---------|
 | **Peajes** | 2 | 2 | 2 | ✅ Todos coinciden |
 | **CCO** | 1 | 1 | 1 | ✅ Todos coinciden |
-| **Postes SOS** | 87 | 30-50 | 88 | ✅ Excel correcto, T03 **INCORRECTO** |
+| **Postes SOS** | 87 | **87** ✅ | 88 ✅ | ✅ **T01/T03 CORREGIDOS (v1.1)** |
 | **PMV Mínimo** | 4 | 12-18 | 29 | ✅ T03 razonable, Excel exagerado |
 | **CCTV Mínimo** | 2 | 100-130 | 121 | ⚠️ Todos exceden (50-65x) |
 | **Intersecciones** | 6-7 | 8-12 estimado | - | ✅ Similar |
@@ -69,15 +69,18 @@ El contrato **NO especifica cantidades exactas** para:
 
 ## 🔴 HALLAZGOS CRÍTICOS
 
-### 1. POSTES SOS: T03 SUBESTIMADO
+### 1. POSTES SOS: ✅ **CORREGIDO**
 
-**Problema:** T03 ITS propone 30-50 postes, pero el contrato exige **87 postes** (cada 3 km)
+**Problema (RESUELTO):** T03 ITS v1.0 proponía 30-50 postes, pero el contrato exige **87 postes** (cada 3 km)
 
-**Impacto:**
-- Costo subestimado en 43-66%
-- Incumplimiento contractual si solo se instalan 30-50
+**Impacto identificado:**
+- Costo subestimado en 43-66% (~$77-94K USD)
+- Incumplimiento contractual si solo se instalaban 30-50
 
-**Acción:** ✅ **Ajustar T03 ITS a 87 postes**
+**Acción:** ✅ **COMPLETADA** (20/10/2025)
+- T03 ITS actualizado a v1.1 con 87 postes (+$94K USD)
+- T01 ITS actualizado a v1.1 con 87 postes (+$77K USD)
+- Justificación legal AT1 Cap. 3 documentada en ambos archivos
 
 ---
 
@@ -351,6 +354,12 @@ El contrato **NO especifica cantidades exactas** para:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Validación contractual completa de cantidades |
+| **v1.1** | **20/10/2025** | Administrador Contractual EPC | **Actualización: Postes SOS corregidos** - T01/T03 ITS actualizados a 87 postes (+$77-94K USD). Hallazgo crítico 1 resuelto |
+
+---
+
+**Versión:** v1.1 ✅ **POSTES SOS CORREGIDOS**  
+**Fecha:** 20/10/2025  
 
 ---
 

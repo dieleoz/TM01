@@ -23,13 +23,16 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 ### 1.2 Alcance
 
-Este análisis cubre el **sistema completo de áreas de servicio** a lo largo de 259.6 km:
-1. **Paraderos Tipo A (Completos):** 3 unidades con sanitarios, restaurante, taller 24/7, base operativa
-2. **Paraderos Tipo B (Intermedios):** 3 unidades con sanitarios, área de descanso
-3. **Servicios incluidos:** Agua potable, saneamiento, energía, iluminación, CCTV
-4. **Operación:** 24/7 durante toda la concesión (25 años)
+Este análisis cubre el **sistema de áreas de servicio obligatorias** según AT1 Cap. 3:
+1. **Cantidad:** 2 Áreas de Servicio (1 asociada a cada peaje)
+2. **Ubicación:** Peaje Zambito (PK 9.2) y Peaje Aguas Negras (PK 80)
+3. **Tipo:** Áreas completas con servicios integrales según AT1 Tabla 53
+4. **Servicios incluidos:** Sanitarios, restaurante, taller 24/7, base operativa, agua potable, saneamiento, energía, iluminación, CCTV
+5. **Operación:** 24/7 durante toda la concesión (25 años)
 
 **Usuarios estimados:** 500-1,000 usuarios/día por área de servicio.
+
+**Fundamento contractual:** AT1 Cap. 3 - "el Concesionario deberá construir, operar y mantener **un Área de Servicio asociada a cada Estación de peaje** dentro del Proyecto"
 
 ### 1.3 Definiciones y Acrónimos
 
@@ -59,14 +62,13 @@ Este análisis cubre el **sistema completo de áreas de servicio** a lo largo de
 **Fuente:** AT2, Sección 6.2.6; NTC 6047  
 
 **Criterios de Aceptación:**
-- **Paraderos Tipo A:** 8-12 inodoros (50% hombres, 50% mujeres) + 1 baño accesible
-- **Paraderos Tipo B:** 6 inodoros + 1 baño accesible
+- **Ambas áreas:** 8-12 inodoros (50% hombres, 50% mujeres) + 1 baño accesible por área
 - Baños para personas con discapacidad: Cumplir NTC 6047 (puertas 90 cm, barras de apoyo, lavamanos accesible)
 - Agua potable continua (24/7)
 - Iluminación LED eficiente
 - Ventilación natural y mecánica
 - Espejos, secadores de manos eléctricos, dispensadores de jabón
-- Limpieza mínima 3 veces/día en Tipo A, 2 veces/día en Tipo B
+- Limpieza mínima 3 veces/día (AT2 Sección 6.2.6)
 - Disponibilidad: ≥ 95% (máximo 5% de sanitarios fuera de servicio)
 
 ---
@@ -79,27 +81,27 @@ Este análisis cubre el **sistema completo de áreas de servicio** a lo largo de
 **Fuente:** AT1; AT2, Sección 6.2.6  
 
 **Criterios de Aceptación:**
-- **Paraderos Tipo A:** 50 espacios (30 automóviles, 10 buses, 10 camiones)
-- **Paraderos Tipo B:** 30 espacios (20 automóviles, 5 buses, 5 camiones)
+- **Cada área:** 50 espacios mínimo (30 automóviles, 10 buses, 10 camiones)
 - Superficie: Pavimento rígido o flexible (concreto o asfalto)
 - Segregación clara (señalización horizontal)
 - Iluminación nocturna (10-15 lux)
 - Accesos y salidas señalizados (Resolución 1885/2015)
 - Espacios para personas con discapacidad (5% del total, NTC 6047)
 - Drenajes pluviales
+- **Total proyecto:** 2 áreas × 50 espacios = 100 espacios de parqueo
 
 ---
 
 ### 2.3 Restaurantes/Cafeterías
 
 **ID:** RF-003  
-**Descripción:** El sistema debe incluir edificios de restaurantes/cafeterías en Paraderos Tipo A  
+**Descripción:** El sistema debe incluir edificios de restaurantes/cafeterías en ambas áreas de servicio  
 **Prioridad:** 🟡 Alta  
-**Fuente:** AT1 (implícito), servicios complementarios  
+**Fuente:** AT1 Tabla 53 (servicios integrales), AT2  
 
 **Criterios de Aceptación:**
-- Área construida: 100-150 m² por restaurante
-- Capacidad: 60-80 comensales
+- Área construida: 100-150 m² por restaurante (2 restaurantes)
+- Capacidad: 60-80 comensales por restaurante
 - Cocina equipada (concesionada a operadores privados)
 - Baños independientes para empleados
 - Conexión eléctrica, agua potable, saneamiento
@@ -113,12 +115,12 @@ Este análisis cubre el **sistema completo de áreas de servicio** a lo largo de
 ### 2.4 Talleres de Auxilio Mecánico 24/7
 
 **ID:** RF-004  
-**Descripción:** El sistema debe incluir talleres de auxilio mecánico en Paraderos Tipo A para reparaciones menores  
+**Descripción:** El sistema debe incluir talleres de auxilio mecánico en ambas áreas de servicio para reparaciones menores  
 **Prioridad:** 🔴 Alta  
-**Fuente:** AT2 (servicios de emergencia)  
+**Fuente:** AT1 Tabla 53, AT2 (servicios de emergencia)  
 
 **Criterios de Aceptación:**
-- Área construida: 200 m² por taller
+- Área construida: 200 m² por taller (2 talleres totales)
 - 2 bahías de trabajo (elevadores o fosas)
 - Herramientas básicas (llaves, gatos, compresores, soldadura)
 - Iluminación: 300 lux (áreas de trabajo)
@@ -646,11 +648,11 @@ Este análisis cubre el **sistema completo de áreas de servicio** a lo largo de
 - [ ] Diseñar planos arquitectónicos y estructurales de Paraderos Tipo A y B
 - [ ] Solicitar permisos ambientales (PTARs, conexiones de agua)
 - [ ] Licitar operación de restaurantes y servicios complementarios
-- [ ] Coordinar con Predial para adquisición de terrenos (6 lotes)
+- [ ] Coordinar con Predial para adquisición de terrenos (**2 lotes** según AT1 Cap. 3)
 - [ ] Elaborar especificaciones técnicas de edificaciones (Templates T04)
 - [ ] Validar con ANI, Interventoría y comunidades locales
 - [ ] Estimar costos detallados con cotizaciones reales (Template T05)
-- [ ] Definir ubicaciones exactas (PK) de las 6 áreas de servicio
+- [ ] Confirmar ubicaciones exactas: Peaje Zambito (PK 9.2) y Peaje Aguas Negras (PK 80)
 
 ---
 
@@ -684,12 +686,13 @@ Este análisis cubre el **sistema completo de áreas de servicio** a lo largo de
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema de áreas de servicio |
+| **v1.1** | **20/10/2025** | Administrador Contractual EPC | **Ajuste contractual:** 6 áreas → 2 áreas obligatorias (AT1 Cap. 3). Actualización de requisitos |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Análisis Validado Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero de Arquitectura e Infraestructura  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Áreas de Servicio  
 

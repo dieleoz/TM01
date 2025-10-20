@@ -29,7 +29,7 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 2. **PMV** (Paneles de Mensaje Variable)
 3. **WIM** (Estaciones de Pesaje en Movimiento)
 4. **Estaciones Meteorológicas**
-5. **Teléfonos SOS** (30-50 unidades)
+5. **Teléfonos SOS** (87 unidades - **Obligatorio contractual AT1**)
 6. **DAI** (Detectores Automáticos de Incidentes)
 7. **Aforo Vehicular**
 8. **Radares de Velocidad**
@@ -61,7 +61,7 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 │       │             │              │              │             │
 │  ┌────┴─────┐  ┌───┴──────┐  ┌───┴──────┐  ┌───┴──────┐      │
 │  │   SOS    │  │   DAI    │  │  Aforo   │  │  Radares │      │
-│  │ 30-50 un │  │Analítica │  │ 10-15 un │  │ 15-20 un │      │
+│  │  87 un   │  │Analítica │  │ 10-15 un │  │ 15-20 un │      │
 │  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘      │
 │       │             │              │              │             │
 │       └─────────────┴──────────────┴──────────────┘            │
@@ -108,7 +108,7 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 | **PMV (Paneles Mensaje Variable)** | Información dinámica a usuarios | LED full-color, control remoto, Res. 546/2018 | 12-18 |
 | **Estaciones WIM** | Pesaje dinámico sin detención | Piezoeléctricas, ±5%, 100 ton | 4-6 |
 | **Estaciones Meteorológicas** | Monitoreo climático | Según IDEAM, precipitación, temp, viento | 6-8 |
-| **Teléfonos SOS** | Emergencias de usuarios | VoIP, geolocalización, conexión directa CCO | 30-50 |
+| **Teléfonos SOS** | Emergencias de usuarios | VoIP, geolocalización, conexión directa CCO | **87** ✅ |
 | **DAI (Detección Incidentes)** | Detección automática | Analítica de video, 90% detección, <10% FP | Integrado CCTV |
 | **Estaciones Aforo** | Conteo y clasificación | Loops/Video, precisión ≥98%, Cat. I-VI | 10-15 |
 | **Radares de Velocidad** | Control de velocidad | Precisión ±2 km/h, foto matrícula | 15-20 |
@@ -498,7 +498,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 | **PMV LED** | 15 | $35,000 | $525,000 |
 | **Estaciones WIM** | 5 | $120,000 | $600,000 |
 | **Estaciones Meteo** | 7 | $25,000 | $175,000 |
-| **Teléfonos SOS** | 40 | $2,000 | $80,000 |
+| **Teléfonos SOS** | **87** | $2,000 | **$174,000** |
 | **Radares velocidad** | 18 | $15,000 | $270,000 |
 | **Estaciones Aforo** | 12 | $12,000 | $144,000 |
 | **Detectores Altura** | 10 | $8,000 | $80,000 |
@@ -506,7 +506,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 | **Servidores NVR (CCO)** | 5 | $25,000 | $125,000 |
 | **Almacenamiento SAN** | 100 TB | $1,200/TB | $120,000 |
 | **Videowall** | 1 sistema | $180,000 | $180,000 |
-| **TOTAL HARDWARE** | | | **$2,756,500** |
+| **TOTAL HARDWARE** | | | **$2,850,500** |
 
 ### 13.2 Software y Licencias
 
@@ -531,9 +531,16 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 
 ### 13.4 CAPEX Total Estimado
 
-**TOTAL CAPEX ITS:** $2,756,500 + $380,000 + $1,030,000 = **$4,166,500 USD**
+**TOTAL CAPEX ITS:** $2,850,500 + $380,000 + $1,030,000 = **$4,260,500 USD**
 
-**Conversión COP (TRM 4,000):** COP 16,666,000,000 (~16.7 mil millones)
+**Conversión COP (TRM 4,000):** COP 17,042,000,000 (~17.0 mil millones)
+
+#### 🔴 **Nota de Ajuste Contractual - Postes SOS:**
+**Versión anterior:** 40 postes SOS ($80,000 USD)  
+**Versión ajustada:** 87 postes SOS ($174,000 USD)  
+**Incremento:** +47 postes (+$94,000 USD)  
+**Fundamento legal:** AT1, Cap. 3 "Sistemas de comunicación y postes SOS" - Requisito explícito: "distancia máxima de tres (3) kilómetros entre sí"  
+**Cálculo:** 259.6 km ÷ 3 km = 87 postes mínimos (OBLIGATORIO, no negociable)
 
 ---
 
@@ -556,12 +563,13 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial del sistema ITS |
+| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** Postes SOS 40→87 unidades según AT1 Cap. 3 (+$94K USD) |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Arquitectura Conceptual Definida  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Arquitectura Conceptual Validada vs Contrato  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero de Sistemas ITS / Arquitecto de Redes  
 **Próximo documento:** T04 - Especificaciones Técnicas de Componentes ITS  
 

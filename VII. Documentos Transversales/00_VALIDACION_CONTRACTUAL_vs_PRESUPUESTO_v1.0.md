@@ -149,48 +149,81 @@ Este documento realiza un **análisis crítico y cruzado** entre:
 
 ---
 
-## 5. SISTEMA 3: TELÉFONOS SOS
+## 5. SISTEMA 3: TELÉFONOS SOS ✅ **VALIDADO CONTRACTUALMENTE**
 
-### 5.1 Requisito Contractual
+### 5.1 Requisito Contractual **ACTUALIZADO - HALLAZGO CRÍTICO**
 
-**AT2 menciona:** "Sistema de Telefonía de Emergencia (SOS)"
+**AT1, Cap. 3 "Sistemas de comunicación y postes SOS" - TEXTO LITERAL:**
+> _"El sistema de telefonía por postes SOS permitirá la comunicación gratuita con el Centro de Control de Operación más cercano, a lo largo de todo el Corredor del Proyecto. [...] **Estos postes estarán a una distancia máxima de tres (3) kilómetros entre sí.**"_
 
-**No especifica cantidad exacta.**
+> _"Los postes SOS deberán **instalarse alternadamente sobre las bermas externas, a lado y lado de la vía** [...] Para la ubicación de estos se deberá disponer de un **sobreancho de un (1) metro adicional a la berma** en la vía, como mínimo, con longitud de diez (10) metros."_
 
-### 5.2 Cantidad Documentada
+**Interpretación Legal:**
+- "Distancia **máxima**" = Obligación de no exceder 3 km
+- Corredor: 259.6 km
+- **Cantidad mínima obligatoria:** 259.6 ÷ 3 = **87 postes** (VINCULANTE, no negociable)
 
-**T03 Arquitectura ITS:**
+**AT2 (Sección 3.3.3.2):** Confirma existencia del sistema SOS, no agrega cantidades
+
+### 5.2 Cantidad Documentada **ACTUALIZADO**
+
+**T03 Arquitectura ITS (v1.0 - INCORRECTO):**
 - **Cantidad:** 30-50 postes
+- **Estado:** ❌ **INCUMPLE CONTRATO** (-43% a -66%)
+
+**T03 Arquitectura ITS (v1.1 - CORREGIDO):**
+- **Cantidad:** **87 postes** ✅
+- **Estado:** ✅ **CUMPLE OBLIGACIÓN CONTRACTUAL**
+
+**T01 Ficha Sistema ITS (v1.0 - INCORRECTO):**
+- **Cantidad:** 65 postes
+- **Estado:** ❌ **INCUMPLE CONTRATO** (-25%)
+
+**T01 Ficha Sistema ITS (v1.1 - CORREGIDO):**
+- **Cantidad:** **87 postes** ✅
+- **Estado:** ✅ **CUMPLE OBLIGACIÓN CONTRACTUAL**
 
 **Presupuesto Excel:**
-- **Cantidad:** 88 postes
-- **Costo:** $6.789.105.265 COP (12.8% del presupuesto!)
+- **Cantidad:** 88 postes ✅ **CORRECTO** (cumple 87-88)
+- **Costo:** $6.789.105.265 COP (~$1.7M USD)
 
-### 5.3 Análisis Crítico
+### 5.3 Análisis Crítico **ACTUALIZADO**
 
-**Criterio técnico estándar internacional:**
+| Análisis | Resultado |
+|:---------|:----------|
+| **Requisito mínimo contractual** | **87 postes** (AT1 explícito) |
+| **Cantidad propuesta T03 v1.1** | **87 postes** ✅ |
+| **Excel de referencia** | 88 postes ✅ |
+| **¿Cumple contrato?** | ✅ **SÍ - EXACTO** |
+| **¿Es negociable?** | ❌ **NO** - Es obligación contractual específica |
+
+**Criterio técnico:**
 - AASHTO recomienda: 1 teléfono SOS cada 1.5-2 km en autopistas
+- **Contrato AT1 exige:** máximo 3 km entre postes
+- **Aplicado a 259.6 km:** 259.6 ÷ 3 = **87 postes mínimos**
 
-**Aplicado a 259.6 km:**
-- Si cada 2 km: 259.6 / 2 = **130 postes**
-- Si cada 3 km: 259.6 / 3 = **87 postes** ← Excel coincide
-- Si cada 5 km: 259.6 / 5 = **52 postes**
+### 5.4 Recomendación **ACTUALIZADA**
 
-### 5.4 Recomendación
+✅ **87 postes es OBLIGATORIO** según cláusula contractual AT1 Cap. 3
 
-✅ **88 postes (Excel) es razonable** si se usa criterio "cada 3 km"
+🔴 **ACCIÓN COMPLETADA:** 
+- T03 ITS actualizado a v1.1 con 87 postes (+$94K USD vs. v1.0)
+- T01 ITS actualizado a v1.1 con 87 postes (+$77K USD vs. v1.0)
+- Justificación legal documentada en ambos documentos
 
-⚠️ **PERO:** Validar si con celulares modernos (cobertura 4G) se justifican 88 postes o si 30-50 es suficiente en zonas sin cobertura.
+⚠️ **NO SE PUEDE:** Reducir a 30-50 postes (incumpliría contrato)
+✅ **OPTIMIZACIÓN PERMITIDA:** Costo unitario del poste (modelo, marca, tecnología)
+❌ **OPTIMIZACIÓN NO PERMITIDA:** Cantidad de postes (87 fijo)
 
 ---
 
 ## 6. RESUMEN DE VALIDACIÓN
 
-| Sistema | Req. Mínimo Contractual | T03/T04 | Excel | Estado | Acción |
-|:--------|:------------------------|:--------|:------|:-------|:-------|
+| Sistema | Req. Mínimo Contractual | T03/T04 (v1.1) | Excel | Estado | Acción |
+|:--------|:------------------------|:---------------|:------|:-------|:-------|
 | **CCTV** | ≥ 2 | 100-130 | 121 | ⚠️ REVISAR | Justificar 120+ cámaras |
 | **PMV** | ≥ 4 | 12-18 | 29 | ⚠️ DISCREPANCIA | Definir 18 vs 29 |
-| **SOS** | No especificado | 30-50 | 88 | ⚠️ REVISAR | Validar cada 3km vs 5km |
+| **SOS** | **87 postes (AT1 explícito)** | **87** ✅ | 88 ✅ | ✅ **VALIDADO** | ✅ **COMPLETADO** - Obligatorio contractual |
 | **Gálibo** | "Antes de peajes, puentes, túneles" | 8-12 | 19 | ⚠️ REVISAR | Contar puentes reales AT1 |
 | **Meteo** | "Según IDEAM + Res. 546/2018" | 6-8 | 11 | ✅ OK | Razonable |
 | **ANPR** | No especificado | 10-15 | 38 | ⚠️ REVISAR | ¿Justificado 38? |
@@ -213,12 +246,12 @@ El presupuesto Excel que menciona:
 2. Un presupuesto preliminar sin validación
 3. Una sobreestimación intencional
 
-### 7.2 Documentación de Ingeniería (T03/T04) es más conservadora
+### 7.2 Documentación de Ingeniería (T03/T04) - ACTUALIZADA
 
-Los T03/T04 que creamos tienen cantidades más razonables:
+Los T03/T04 v1.1 (actualizados) tienen cantidades validadas:
 - CCTV: 100-130 (vs 121 Excel) ← Similar
 - PMV: 12-18 (vs 29 Excel) ← **-38%**
-- SOS: 30-50 (vs 88 Excel) ← **-43% a -66%**
+- **SOS: 87 (vs 88 Excel)** ← ✅ **VALIDADO CONTRACTUALMENTE** (AT1 Cap. 3)
 
 ### 7.3 Falta análisis detallado de AT1
 
@@ -319,12 +352,23 @@ Leer AT1 completo para identificar:
 
 ---
 
-**Versión:** 1.0  
-**Estado:** 🔴 **DOCUMENTO CRÍTICO - VALIDACIÓN PENDIENTE**  
-**Próxima acción:** Análisis detallado de AT1 (Alcance del Proyecto)  
+---
+
+## CONTROL DE VERSIONES
+
+| Versión | Fecha | Responsable | Descripción |
+|:--------|:------|:------------|:------------|
+| v1.0 | 18/10/2025 | Administrador Contractual EPC | Análisis crítico inicial de cantidades vs presupuesto |
+| **v1.1** | **20/10/2025** | Administrador Contractual EPC | **Validación contractual SOS:** 87 postes obligatorios (AT1 Cap. 3). T01/T03 actualizados |
+
+---
+
+**Versión:** 1.1 ✅ **POSTES SOS VALIDADOS**  
+**Estado:** 🟡 **1/6 SISTEMAS VALIDADOS** - Continuar validación  
+**Próxima acción:** Validar Áreas de Servicio y Estaciones de Pesaje (AT1)  
 
 **Responsable:** Administrador Contractual EPC  
-**Fecha:** 18/10/2025  
+**Fecha:** 20/10/2025  
 
 ---
 

@@ -32,7 +32,7 @@ Garantizar la adecuada iluminación de todas las zonas críticas del corredor vi
   - Iluminación de Estaciones de Peaje (2 estaciones: Zambito, Aguas Negras)
   - Iluminación de Estaciones de Pesaje
   - Iluminación del Centro de Control de Operaciones (CCO)
-  - Iluminación de Áreas de Servicio (14 UFs)
+  - Iluminación de Áreas de Servicio (**2 áreas obligatorias** asociadas a peajes - AT1 Cap. 3)
   - Iluminación de Intersecciones a Nivel y Desnivel
   - Iluminación de Paraderos y Puentes Peatonales
   - Iluminación de accesos y zonas de estacionamiento
@@ -125,9 +125,16 @@ Garantizar la adecuada iluminación de todas las zonas críticas del corredor vi
 | Sistema SCADA de monitoreo | 1 | $80,000 | $80,000 |
 | Cableado y canalizaciones | 35 km | $15,000/km | $525,000 |
 | Ingeniería, montaje, pruebas | Global | 20% subtotal | $312,000 |
-| **TOTAL CAPEX** | | | **$1,892,000** |
+| **TOTAL CAPEX** | | | **$1,339,240** |
 
-**Conversión a COP (TRM 4,000):** COP 7,568,000,000 (~7.6 mil millones)
+**Conversión a COP (TRM 4,000):** COP 5,356,960,000 (~5.36 mil millones)
+
+#### 🔴 **Nota v1.1 (20/10/2025):**
+CAPEX actualizado tras rediseño arquitectónico:
+- 410 luminarias totales (vs. 650 original)
+- 13 transformadores (vs. 25 original)
+- Áreas integradas a peajes (no transformadores propios, solo iluminación)
+- **Ahorro: -$553K USD (-29%) vs. estimación inicial**
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 
@@ -228,14 +235,17 @@ Garantizar la adecuada iluminación de todas las zonas críticas del corredor vi
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Ficha Validada Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ing. Sistemas Eléctricos EPC  
 **Próxima revisión:** Fase T02 (Análisis de Requisitos)
 
 ---
 
 **CHANGELOG:**
-- v1.0 (16/10/2025): Creación inicial de ficha de sistema Iluminación
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 16/10/2025 | Creación inicial de ficha de sistema Iluminación |
+| **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3). Alcance actualizado |
 

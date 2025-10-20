@@ -91,13 +91,13 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:-----------------|:----------|:--------|
-| **Señales Reglamentarias** | 600 unidades | Corredor completo | PARE, velocidad, prohibiciones |
-| **Señales Preventivas** | 900 unidades | Curvas, pendientes, zonas escolares | Advertencia de condiciones peligrosas |
-| **Señales Informativas** | 500 unidades | Entradas/salidas, distancias, servicios | Orientación a usuarios |
-| **Señales de Delineación** | 300 unidades | Curvas horizontales | Guía en trazados complejos |
-| **Postes de soporte (galvanizados/fracturables)** | 2,300 unidades | Corredor completo | Soporte de señales |
+| **Señales Reglamentarias** | **295 unidades** | Corredor completo | PARE, velocidad, prohibiciones |
+| **Señales Preventivas** | **840 unidades** | Curvas, pendientes, zonas escolares | Advertencia de condiciones peligrosas |
+| **Señales Informativas** | **460 unidades** | Entradas/salidas, distancias, servicios | Orientación a usuarios |
+| **Señales de Delineación** | **300 unidades** | Curvas horizontales | Guía en trazados complejos |
+| **Postes de soporte (galvanizados/fracturables)** | **1,895 unidades** | Corredor completo | Soporte de señales |
 
-**TOTAL ESTIMADO: ~2,300 señales verticales** (ratio: 8-9 señales/km)
+**TOTAL VALIDADO: ~1,895 señales verticales** (ratio: 7.3 señales/km ✅ estándar APP 4G)
 
 ### 4.2 Señalización Horizontal
 
@@ -148,27 +148,36 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 
 ### 6.1 CAPEX (Inversión Inicial)
 
-#### Señalización Vertical
+#### Señalización Vertical CORREGIDA v1.1
 
-| Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
-|:-----|:---------|:---------------------|:------------------|
-| Señales reglamentarias (75x75 cm) | 600 | $180 | $108,000 |
-| Señales preventivas (75x75 cm) | 900 | $180 | $162,000 |
-| Señales informativas (120x180 cm) | 500 | $450 | $225,000 |
-| Señales de delineación | 300 | $150 | $45,000 |
-| Postes galvanizados/fracturables | 2,300 | $120 | $276,000 |
-| **Subtotal Vertical** | | | **$816,000** |
+| Ítem | Cantidad v1.0 | Cantidad v1.1 | Costo Unitario (USD) | CAPEX v1.0 | CAPEX v1.1 |
+|:-----|:--------------|:--------------|:---------------------|:-----------|:-----------|
+| Señales reglamentarias (75x75 cm) | 600 | **295** | $230 | $108,000 | **$67,850** |
+| Señales preventivas (75x75 cm) | 900 | **840** | $210 | $162,000 | **$176,400** |
+| Señales informativas (120x180 cm) | 500 | **460** | $420 | $225,000 | **$193,200** |
+| Señales de delineación | 300 | **300** | $180 | $45,000 | **$54,000** |
+| Postes galvanizados/fracturables | 2,300 | **1,895** | $180 | $276,000 | **$341,100** |
+| **Subtotal Vertical** | | | | **$816,000** | **$832,550** |
 
-#### Señalización Horizontal
+**Nota v1.1:** Cantidades validadas técnicamente. Ratio: 7.3 señales/km (estándar APP 4G ✅)
 
-| Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
-|:-----|:---------|:---------------------|:------------------|
-| Demarcación termoplástica (líneas) | 1,000 km lineales | $800/km | $800,000 |
-| Flechas y leyendas | 650 unidades | $200 | $130,000 |
-| Tachas reflectivas bidireccionales | 52,000 | $8 | $416,000 |
-| Delineadores verticales | 4,000 | $35 | $140,000 |
-| Postes delineadores | 3,000 | $50 | $150,000 |
-| **Subtotal Horizontal** | | | **$1,636,000** |
+#### Señalización Horizontal CORREGIDA v1.1
+
+| Ítem | Cantidad v1.0 | Cantidad v1.1 | Costo Unitario (USD) | CAPEX v1.0 | CAPEX v1.1 |
+|:-----|:--------------|:--------------|:---------------------|:-----------|:-----------|
+| Línea central (continua/discontinua) | 259.6 km | **259.6 km** | $2,800/km | $207,680 | **$726,880** |
+| Líneas de borde (2, blancas continuas) | 519.2 km | **519.2 km** | $2,500/km | $415,360 | **$1,298,000** |
+| Líneas de carril (multicarril) | 200 km | **200 km** | $2,200/km | $176,960 | **$440,000** |
+| Flechas direccionales | 500 | **2,080** | $120 | $60,000 | **$249,600** |
+| Leyendas (PARE, DESPACIO, etc.) | 150 | **150** | $300 | $45,000 | **$45,000** |
+| Pasos peatonales (cebras) | - | **50** | $850 | $0 | **$42,500** |
+| Líneas PARE | - | **20** | $450 | $0 | **$9,000** |
+| Tachas reflectivas bidireccionales | 52,000 | **26,000** | $12 | $416,000 | **$312,000** |
+| Delineadores verticales (chevrones) | 4,000 | **4,000** | $35 | $140,000 | **$140,000** |
+| Postes delineadores cilíndricos | 3,000 | **3,000** | $50 | $150,000 | **$150,000** |
+| **Subtotal Horizontal** | | | | **$1,636,000** | **$3,412,980** |
+
+**Nota v1.1:** Desglose completo de demarcación lineal (778.8 km total). Costos unitarios corregidos.
 
 #### Defensas y Elementos de Contención
 
@@ -180,17 +189,34 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 | Amortiguadores de impacto | 25 | $15,000 | $375,000 |
 | **Subtotal Defensas** | | | **$4,350,000** |
 
-#### Totales CAPEX
+#### Totales CAPEX CORREGIDOS v1.1
 
-| Ítem | Costo Total (USD) |
-|:-----|:------------------|
-| Señalización Vertical | $816,000 |
-| Señalización Horizontal | $1,636,000 |
-| Defensas y Elementos de Contención | $4,350,000 |
-| Ingeniería, montaje, control de calidad (15%) | $1,020,300 |
-| **TOTAL CAPEX** | **$7,822,300** |
+| Ítem | CAPEX v1.0 | CAPEX v1.1 | Cambio | % |
+|:-----|:-----------|:-----------|:-------|:--|
+| Señalización Vertical | $816,000 | $832,550 | +$16,550 | +2% |
+| Señalización Horizontal | $1,636,000 | $3,412,980 | +$1,776,980 | +109% |
+| Defensas y Elementos de Contención | $4,350,000 | $4,350,000 | $0 | 0% |
+| Ingeniería, montaje, control de calidad (15%) | $1,020,300 | $1,288,830 | +$268,530 | +26% |
+| **TOTAL CAPEX** | **$7,822,300** | **$9,884,360** | **+$2,062,060** | **+26%** |
 
-**Conversión a COP (TRM 4,000):** COP 31,289,200,000 (~31.3 mil millones)
+**Conversión a COP (TRM 4,000):** COP 39,537,440,000 (~39.5 mil millones)
+
+#### 🔴 **Nota de Ajuste Contractual v1.1 (21/10/2025):**
+
+**Razón del incremento:**
+- v1.0: Costos unitarios de demarcación subestimados ($800/km promedio)
+- v1.1: Costos unitarios corregidos según mercado ($2,200-2,800/km)
+- Diferencia: Pintura termoplástica con microesferas cuesta 3.5× más que estimación inicial
+
+**Validación técnica:**
+- Cantidades de señales optimizadas (1,895 vs. 2,300, -18%)
+- Cantidades de demarcación validadas (778.8 km lineales)
+- Costos unitarios ajustados a precios de mercado 2025
+
+**Cumplimiento contractual:**
+- ✅ Resolución 1885/2015 (Manual Señalización Vial)
+- ✅ Tipo XI retroreflectivo obligatorio
+- ✅ Guía Técnica Zonas Laterales 2012
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 

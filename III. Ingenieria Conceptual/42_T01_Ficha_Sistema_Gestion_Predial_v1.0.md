@@ -139,9 +139,22 @@ Garantizar la adquisición legal, oportuna y justa de todos los predios necesari
 | Levantamientos Topográficos | $125,000 | $500,000,000 |
 | Honorarios Notariales y Registro | $220,000 | $880,000,000 |
 | Plan de Reasentamientos (incluido en Gestión Social) | $0 | $0 |
-| **TOTAL CAPEX** | **$10,260,000** | **$41,040,000,000** |
+| **TOTAL CAPEX** | **$6,660,000** | **$26,640,000,000** |
 
-**Nota:** El valor de adquisición de predios ($8.5M) es estimado. Depende del valor comercial de los predios según avalúos.
+**Nota:** El valor de adquisición de predios es estimado. Depende del valor comercial según avalúos.
+
+#### 🔴 **Nota de Ajuste Contractual v1.1 (21/10/2025):**
+
+**Corrección por áreas de servicio:**
+- v1.0: Asumía 14 áreas × 10,000 m² = 140,000 m² terreno
+- v1.1: Solo 2 áreas × 10,000 m² = 20,000 m² terreno
+- **Diferencia:** -120,000 m² × $30/m² prom = **-$3,600,000 USD**
+
+**Predios para 2 áreas integradas:**
+- Las áreas están en terrenos de los peajes (adyacentes)
+- Predios ya considerados en adquisiciones para peajes
+- Solo requiere ampliación (~10,000 m² adicionales por peaje)
+- **Costo ajustado:** $6.66M USD (incluye ampliaciones peajes + otras adquisiciones)
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 

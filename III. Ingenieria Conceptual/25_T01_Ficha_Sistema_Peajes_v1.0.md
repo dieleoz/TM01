@@ -199,7 +199,7 @@ El Concesionario deberá:
 | Barreras Automáticas | 15 | $8,000 | $120,000 |
 | Paneles de Señalización LED | 10 | $12,000 | $120,000 |
 | Semáforos | 15 | $2,500 | $37,500 |
-| Básculas de Pesaje Estático | 2 | $80,000 | $160,000 |
+| ~~Básculas de Pesaje Estático~~ | ~~2~~ | ~~$80,000~~ | ~~$160,000~~ **ELIMINADO** |
 | Consolas de Operador | 12 | $5,000 | $60,000 |
 | Casetas de Recaudo (obra civil menor) | 4 | $15,000 | $60,000 |
 | Servidores Locales | 2 | $25,000 | $50,000 |
@@ -209,11 +209,26 @@ El Concesionario deberá:
 | Instalación y Puesta en Marcha | - | - | $150,000 |
 | Integración con CCO y ANI | 1 sistema | $120,000 | $120,000 |
 | Contingencias (10%) | - | - | $225,400 |
-| **TOTAL CAPEX** | | | **$2,479,400** |
+| **TOTAL CAPEX (Equipos)** | | | **$2,319,400** |
 
-**Conversión a COP (TRM: 4,000):** ~$9,918 millones COP
+**Obra Civil (estimada, pendiente T03):** $1,860,000 USD  
+**TOTAL CAPEX COMPLETO:** **$4,179,400 USD**
 
-**REDUCCIÓN vs. Estimación Preliminar:** -$4,499,600 USD (-64.5%)
+**Conversión a COP (TRM: 4,000):** ~COP 16,717,600,000 (~16.7 mil millones)
+
+#### 🔴 **Nota de Corrección v1.1 (21/10/2025):**
+
+**Duplicación eliminada:**
+- ❌ Básculas de pesaje estático en peajes: $160,000 (DUPLICADAS)
+- ✅ Estas básculas ya están en Sistema de Pesaje WIM
+- AT2 Sección 3.3.4.2: "sistema de pesaje dinámico en carriles" (las dinámicas están en Pesaje $675K)
+- Las básculas estáticas están en Estación de Pesaje PR4+0100 (no en peajes)
+- **Ahorro: -$160,000 USD**
+
+**Integración con áreas:**
+- ✅ Accesos, urbanización, seguridad del peaje sirven al complejo peaje+área
+- ✅ Subestación 200kVA y generador 150kW (presupuestados en Energía) alimentan ambos
+- ✅ No hay duplicación de costos
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual) - **ACTUALIZADO CON AT1**
 

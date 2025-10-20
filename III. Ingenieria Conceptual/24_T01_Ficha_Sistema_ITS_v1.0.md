@@ -127,7 +127,7 @@ El Concesionario deberá:
 | **Cámaras Panorámicas** | 10-15 unidades | 1 por Estación de Peaje | Visión global del área de peaje |
 | **WIM** (Pesaje en Movimiento) | 5-10 estaciones | Puntos estratégicos | Control de peso de vehículos sin detenerlos |
 | **Estaciones Meteorológicas** | 8-12 estaciones | Distribuidas en corredor | Precipitación, temperatura, viento, visibilidad |
-| **Teléfonos SOS** | 50-80 unidades | Cada 3-5 km | Comunicación de emergencias |
+| **Teléfonos SOS** | **87 unidades** ✅ | Cada 3 km máx. (AT1) | Comunicación de emergencias |
 | **DAI** (Detectores Automáticos Incidentes) | 30-50 unidades | Zonas críticas | Detección automática de accidentes/congestión |
 | **Estaciones de Aforo** | 10-15 estaciones | Puntos representativos | Conteo y clasificación vehicular |
 | **Radares de Velocidad** | 15-25 unidades | Zonas críticas | Medición velocidad + foto matrícula |
@@ -163,7 +163,7 @@ El Concesionario deberá:
 | Cámaras Panorámicas | 12 | $15,000 | $180,000 |
 | Estaciones WIM (Pesaje) | 8 | $150,000 | $1,200,000 |
 | Estaciones Meteorológicas | 10 | $25,000 | $250,000 |
-| Teléfonos SOS | 65 | $3,500 | $227,500 |
+| Teléfonos SOS | **87** | $3,500 | **$304,500** |
 | Detectores Automáticos Incidentes | 40 | $12,000 | $480,000 |
 | Estaciones de Aforo | 12 | $30,000 | $360,000 |
 | Radares de Velocidad | 20 | $25,000 | $500,000 |
@@ -172,10 +172,17 @@ El Concesionario deberá:
 | Instalación y Puesta en Marcha | - | - | $800,000 |
 | Software SCADA ITS | 1 sistema | $250,000 | $250,000 |
 | Integración con CCO | 1 sistema | $150,000 | $150,000 |
-| Contingencias (10%) | - | - | $668,250 |
-| **TOTAL CAPEX** | | | **$7,350,750** |
+| Contingencias (10%) | - | - | $675,750 |
+| **TOTAL CAPEX** | | | **$7,433,250** |
 
-**Conversión a COP (TRM: 4,000):** ~$29,403 millones COP
+**Conversión a COP (TRM: 4,000):** ~$29,733 millones COP
+
+#### 🔴 **Nota de Ajuste Contractual - Postes SOS:**
+**Versión anterior:** 65 postes SOS ($227,500 USD)  
+**Versión ajustada:** 87 postes SOS ($304,500 USD)  
+**Incremento:** +22 postes (+$77,000 USD)  
+**Fundamento legal:** AT1, Cap. 3 - Requisito explícito: "distancia máxima de 3 km entre sí"  
+**Cálculo obligatorio:** 259.6 km ÷ 3 km = **87 postes mínimos** (no negociable)
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 
@@ -261,7 +268,7 @@ El Concesionario deberá:
   - CCTV: 1 cada 2-3 km + puntos críticos
   - WIM: 1 cada 30-50 km (según estudios de tráfico)
   - Estaciones Meteo: 1 cada 25-30 km
-  - Teléfonos SOS: 1 cada 3-5 km
+  - **Teléfonos SOS: 87 unidades (máx. 3 km entre sí - AT1 obligatorio)** ✅
   
 - **Supuesto 2:** Tecnología IP sobre fibra óptica como estándar de comunicación
 
@@ -332,12 +339,13 @@ El Concesionario deberá:
 | Versión | Fecha | Autor | Descripción |
 |:-------:|:------|:------|:------------|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Ficha de Sistema ITS creada con Template T01 |
+| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** Postes SOS 65→87 unidades según AT1 Cap. 3 (+$77K USD) |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Ficha de Sistema Validada vs Contrato  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero de Sistemas ITS  
 **Próxima actualización:** Tras Estudios de Detalle (cantidades y ubicaciones exactas)
 

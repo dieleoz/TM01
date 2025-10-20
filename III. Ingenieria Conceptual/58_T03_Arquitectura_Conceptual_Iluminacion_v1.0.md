@@ -22,17 +22,17 @@ Este documento define la **arquitectura conceptual** del Sistema de Iluminación
 
 ### 1.2 Alcance
 
-Esta arquitectura cubre **650 luminarias LED** distribuidas en zonas críticas del corredor de 259.6 km:
+Esta arquitectura cubre **410 luminarias LED** distribuidas en zonas críticas del corredor de 259.6 km:
 
 **Zonas iluminadas:**
 - 2 Estaciones de Peaje (Zambito, Aguas Negras)
 - Estaciones de Pesaje
 - Centro de Control Operacional (CCO)
-- 14 Áreas de Servicio
+- **2 Áreas de Servicio** (obligatorias asociadas a peajes - AT1 Cap. 3)
 - Intersecciones a nivel y desnivel
 - Puentes peatonales y paraderos
 
-**Total estimado:** 650 luminarias LED con control centralizado desde CCO
+**Total estimado:** 410 luminarias LED con control centralizado desde CCO
 
 ### 1.3 Referencias
 
@@ -54,7 +54,7 @@ Esta arquitectura cubre **650 luminarias LED** distribuidas en zonas críticas d
 │  ┌────────────────────────────────────────────────┐         │
 │  │  SCADA de Iluminación                          │         │
 │  │  - Dashboard de control                        │         │
-│  │  - Visualización de estado (650 luminarias)    │         │
+│  │  - Visualización de estado (410 luminarias)    │         │
 │  │  - Programación horaria                        │         │
 │  │  - Generación de alarmas                       │         │
 │  └────────────────┬───────────────────────────────┘         │
@@ -66,39 +66,48 @@ Esta arquitectura cubre **650 luminarias LED** distribuidas en zonas críticas d
         │           │           │          │
     ┌───▼────┐  ┌──▼─────┐ ┌──▼─────┐ ┌─▼──────┐
     │Control │  │Control │ │Control │ │Control │
-    │Zona 1  │  │Zona 2  │ │Zona 3  │ │Zona 4  │
-    │(Peajes)│  │(Áreas  │ │(Inters)│ │(CCO)   │
-    │        │  │Servic) │ │        │ │        │
+    │Zona 1  │  │Zona 2  │ │Zona 3  │ │Zona 4-5│
+    │(Peaje  │  │(Peaje  │ │(CCO)   │ │(2 Áreas│
+    │Zambito)│  │Aguas N)│ │        │ │integr) │
     └───┬────┘  └──┬─────┘ └──┬─────┘ └─┬──────┘
         │          │           │         │
     ┌───▼────────────────────────────────▼────┐
-    │    25 Transformadores de Iluminación    │
+    │    13 Transformadores de Iluminación    │
     │    (15-30 kVA cada uno)                 │
     │    Con fotocélula + temporizador        │
     └───┬──────────┬──────────┬───────────────┘
         │          │          │
     ┌───▼───┐  ┌──▼───┐  ┌──▼───┐
-    │Grupo  │  │Grupo │  │Grupo │  ... (25 grupos)
+    │Grupo  │  │Grupo │  │Grupo │  ... (13 grupos)
     │Lum. 1 │  │Lum.2 │  │Lum.3 │
-    │25 LED │  │25 LED│  │30 LED│
+    │30-40  │  │30-40 │  │20-30 │
     └───────┘  └──────┘  └──────┘
 
-TOTAL: 650 luminarias LED organizadas en 25 grupos
+TOTAL: 410 luminarias LED organizadas en 13 zonas/grupos
 ```
 
 ### 2.2 Descripción de Componentes
 
 | Componente | Función | Especificación | Cantidad |
 |:-----------|:--------|:---------------|:---------|
-| **Luminarias LED 150W** | Iluminación alta intensidad | 150W, >15,000 lm, 4000K, IP66/IK10 | 300 |
-| **Luminarias LED 100W** | Iluminación media intensidad | 100W, >10,000 lm, 4000K, IP66/IK10 | 200 |
-| **Luminarias LED 50W** | Iluminación peatonal | 50W, >5,000 lm, 4000K, IP66 | 150 |
-| **Postes metálicos galvanizados** | Soporte de luminarias | 8-12m altura, galvanizado | 650 |
-| **Transformadores 15-30 kVA** | Alimentación eléctrica | Monofásico/Trifásico | 25 |
-| **Tableros de control** | Control, protección | IP54, fotocélula, temporizador | 25 |
-| **Controladores Modbus** | Comunicación con SCADA | Modbus TCP/IP | 25 |
-| **Sistema SCADA Iluminación** | Monitoreo y control central | Integrado con CCO | 1 |
-| **Cableado subterráneo** | Interconexión | Cu 3x10 AWG, ductos | 35 km |
+| **Luminarias LED 150W** | Iluminación alta intensidad (peajes, intersecciones) | 150W, >15,000 lm, 4000K, IP66/IK10 | 220 |
+| **Luminarias LED 100W** | Iluminación media intensidad (CCO, áreas) | 100W, >10,000 lm, 4000K, IP66/IK10 | 140 |
+| **Luminarias LED 50W** | Iluminación peatonal (paraderos) | 50W, >5,000 lm, 4000K, IP66 | 50 |
+| **Postes metálicos galvanizados** | Soporte de luminarias | 8-12m altura, galvanizado en caliente | 410 |
+| **Transformadores 15-30 kVA** | Alimentación eléctrica distribución | Monofásico/Trifásico, poste | 13 |
+| **Tableros de control** | Control local, protección | IP54, fotocélula, temporizador, breakers | 13 |
+| **Controladores Modbus** | Comunicación con SCADA | Modbus TCP/IP, RTU | 13 |
+| **Sistema SCADA Iluminación** | Monitoreo y control centralizado | Software integrado con CCO | 1 |
+| **Cableado subterráneo** | Interconexión eléctrica | Cu 3x10 AWG, ductos PVC | 25 km |
+
+#### 🔴 **CONCEPTO ARQUITECTÓNICO:**
+
+Las **2 áreas de servicio** SÍ tienen iluminación, pero:
+- ✅ Se alimentan desde la subestación del peaje (ya dimensionada para eso)
+- ✅ 40 luminarias LED 100W (20 por área)
+- ✅ Se contabilizan en el total (410 luminarias)
+- ❌ NO requieren transformadores adicionales propios
+- ✅ La iluminación del área es parte del "paquete" del complejo Peaje+Área
 
 ---
 
@@ -119,10 +128,16 @@ TOTAL: 650 luminarias LED organizadas en 25 grupos
 | **Zona 1** | Peaje Zambito (PK 9.2) | 50 x 150W | 30 kVA | SCADA + Local |
 | **Zona 2** | Peaje Aguas Negras (PK 80) | 50 x 150W | 30 kVA | SCADA + Local |
 | **Zona 3** | CCO (PK 130) | 40 x 100W | 20 kVA | SCADA + Local |
-| **Zona 4-17** | 14 Áreas de Servicio | 20-30 x 100W c/u | 15-20 kVA | Local |
-| **Zona 18-25** | Intersecciones críticas (8) | 30-50 x 150W c/u | 20-30 kVA | Local |
+| **Zona 4-5** | **2 Áreas de Servicio** (Zambito, Aguas Negras) | 20 x 100W c/u | 15 kVA c/u | Local |
+| **Zona 6-13** | Intersecciones críticas (8) | 30-50 x 150W c/u | 20-30 kVA | Local |
 
-**Total:** 25 zonas, 650 luminarias, 25 transformadores
+**Total:** 13 zonas, 410 luminarias, 13 transformadores
+
+#### 🔴 **Nota de Ajuste Contractual:**
+**Versión anterior:** 14 áreas de servicio (Zona 4-17) = 280 luminarias  
+**Versión ajustada:** 2 áreas de servicio (Zona 4-5) = 40 luminarias  
+**Reducción:** -240 luminarias (-37% del total)  
+**Fundamento:** AT1 Cap. 3 - Solo 2 áreas obligatorias (1 por peaje)
 
 ---
 
@@ -247,20 +262,52 @@ Proceso inverso al amanecer (~06:00)
 
 ## 10. ESTIMACIÓN DE RECURSOS
 
-### 10.1 CAPEX
+### 10.1 CAPEX CORREGIDO
 
 | Ítem | Cantidad | Costo Unitario | Costo Total (USD) |
 |:-----|:---------|:---------------|:------------------|
-| Luminarias LED (150W, 100W, 50W) | 650 | $300 prom | $195,000 |
-| Postes metálicos | 650 | $800 | $520,000 |
-| Transformadores | 25 | $5,000 | $125,000 |
-| Tableros de control | 25 | $3,500 | $87,500 |
-| Sistema SCADA | 1 | $80,000 | $80,000 |
-| Cableado y canalizaciones | 35 km | $15,000/km | $525,000 |
-| Instalación y pruebas | Global | 20% | $306,500 |
-| **TOTAL CAPEX** | | | **$1,839,000 USD** |
+| **Luminarias LED** |
+| LED 150W (peajes, intersecciones) | 220 | $350 | $77,000 |
+| LED 100W (CCO, áreas) | 140 | $280 | $39,200 |
+| LED 50W (peatonal, paraderos) | 50 | $220 | $11,000 |
+| **Infraestructura** |
+| Postes metálicos galvanizados (8-12m) | 410 | $800 | $328,000 |
+| Transformadores iluminación (15-30 kVA) | 13 | $5,000 | $65,000 |
+| Tableros de control (IP54, fotocélula) | 13 | $3,500 | $45,500 |
+| **Control y Comunicaciones** |
+| Sistema SCADA iluminación (software) | 1 | $80,000 | $80,000 |
+| Controladores Modbus | 13 | $2,000 | $26,000 |
+| **Cableado e Instalación** |
+| Cableado subterráneo (Cu 3x10 AWG) | 25 km | $15,000/km | $375,000 |
+| Canalizaciones y ductos | Global | $80,000 | $80,000 |
+| Instalación, montaje y pruebas | Global | 20% | $212,540 |
+| **TOTAL CAPEX** | | | **$1,339,240 USD** |
 
-**Conversión COP (TRM 4,000):** COP 7,356,000,000 (~7.4 mil millones)
+**Conversión COP (TRM 4,000):** COP 5,356,960,000 (~5.36 mil millones)
+
+---
+
+### 10.2 Comparación vs. Versión Anterior
+
+| Concepto | v1.0 (14 áreas indep.) | v1.1 (2 áreas integradas) | Cambio |
+|:---------|:----------------------|:--------------------------|:-------|
+| Luminarias LED | 650 × $300 = $195K | 410 × $310 prom = $127.2K | **-$67,800** |
+| Postes | 650 × $800 = $520K | 410 × $800 = $328K | **-$192,000** |
+| Transformadores | 25 × $5K = $125K | 13 × $5K = $65K | **-$60,000** |
+| Tableros | 25 × $3.5K = $87.5K | 13 × $3.5K = $45.5K | **-$42,000** |
+| Cableado | 35 km × $15K = $525K | 25 km × $15K = $375K | **-$150,000** |
+| Controladores | 25 × $2K = $50K | 13 × $2K = $26K | **-$24,000** |
+| SCADA | $80K | $80K | $0 |
+| **TOTAL CAMBIOS** | | | **-$535,800 USD** |
+
+**Ahorro neto estimado:** -$535,800 USD (-29% del CAPEX total)
+
+**Razón del ahorro:**
+- Eliminación de 240 luminarias (incluye las 12 áreas "fantasma")
+- Eliminación de 240 postes
+- Reducción de transformadores y tableros
+- Menor longitud de cableado
+- Ahorro significativo en CAPEX de iluminación
 
 ---
 
@@ -279,12 +326,13 @@ Proceso inverso al amanecer (~06:00)
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial del sistema de iluminación |
+| **v1.1** | **20/10/2025** | Administrador Contractual EPC | **Rediseño arquitectónico:** 2 áreas integradas a peajes (iluminación incluida pero sin transformadores propios). 410 luminarias, 13 transformadores. CAPEX -$536K (-29%) |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Arquitectura Conceptual Definida  
-**Fecha:** 18/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Arquitectura Validada Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero de Sistemas Eléctricos  
 **Próximo documento:** T04 - Especificaciones Técnicas de Iluminación  
 

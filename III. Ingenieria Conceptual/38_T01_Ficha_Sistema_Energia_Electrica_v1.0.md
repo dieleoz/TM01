@@ -26,12 +26,12 @@
 
 Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los sistemas del corredor vial, incluyendo:
 - Estaciones de Peaje (2 estaciones)
-- Sistema de Iluminación (650 luminarias)
+- Sistema de Iluminación (410 luminarias LED)
 - Centro de Control Operacional (CCO)
 - Sistemas ITS (CCTV, PMV, WIM, Meteo, SOS, DAI)
 - Sistema de Telecomunicaciones (fibra óptica, switches, routers)
 - Estaciones de Pesaje
-- Áreas de Servicio (14 UFs)
+- **Áreas de Servicio (2 obligatorias)** asociadas a peajes (AT1 Cap. 3)
 - Talleres y edificaciones de la concesión
 
 **El sistema eléctrico es CRÍTICO porque sin energía, NINGÚN otro sistema puede operar.**
@@ -88,8 +88,8 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 | **2 Estaciones de Peaje** | Acometida MT, Transformador, Tablero General, UPS, Generador |
 | **CCO** | Acometida MT, Subestación, UPS redundante, Generador principal |
 | **Estaciones de Pesaje** | Acometida BT/MT, Transformador, UPS |
-| **Áreas de Servicio (14 UFs)** | Acometida BT/MT, Transformador, Tableros de distribución |
-| **Sistema de Iluminación** | 650 luminarias LED, 25 transformadores, SCADA de control |
+| **Áreas de Servicio (2 obligatorias)** | Acometida BT/MT, Transformador (100 kVA c/u), Tableros distribución |
+| **Sistema de Iluminación** | 410 luminarias LED, 13 transformadores, SCADA de control |
 | **Sistema ITS (300+ equipos)** | Alimentación PoE, UPS distribuidos, protecciones |
 
 **AT4 (Indicadores):**
@@ -131,12 +131,18 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 |:-----------|:-----------------|:----------|:--------|
 | **Subestación Principal CCO (500 kVA)** | 1 unidad | CCO (ubicación central) | Alimentación del CCO + Telecomunicaciones |
 | **Subestaciones Peajes (200 kVA c/u)** | 2 unidades | Zambito (PK 9+200), Aguas Negras (PK 80+000) | Alimentación de estaciones de peaje |
-| **Centros de Transformación Áreas de Servicio** | 14 unidades | Distribuidos en 14 UFs | Alimentación de áreas de servicio |
-| **Centros de Transformación Iluminación** | 25 unidades | Zonas de iluminación (peajes, intersecciones, áreas servicio) | Alimentación del sistema de iluminación |
+| **Centros de Transformación Áreas de Servicio** | **2 unidades** | **Zambito (PK 9.2), Aguas Negras (PK 80)** | Alimentación de áreas de servicio |
+| **Centros de Transformación Iluminación** | 13 unidades | Zonas de iluminación (peajes, intersecciones, áreas) | Alimentación del sistema de iluminación |
 | **Transformadores Estaciones de Pesaje** | 3 unidades | Estaciones de pesaje WIM | Alimentación de sistemas WIM |
 | **Transformadores ITS (Distribución)** | 30 unidades | A lo largo del corredor (cada 8-10 km) | Alimentación de CCTV, PMV, Meteo, SOS |
 
-**Total:** ~75 transformadores/centros de transformación
+**Total:** ~51 transformadores/centros de transformación
+
+#### 🔴 **Nota de Ajuste Contractual:**
+**Versión anterior:** 14 centros transformación áreas servicio  
+**Versión ajustada:** 2 centros transformación (1 por peaje - AT1 Cap. 3)  
+**Reducción:** -12 transformadores  
+**Fundamento:** AT1 Cap. 3 - Solo 2 áreas obligatorias
 
 ### 4.2 Sistemas de Respaldo y Continuidad
 
@@ -220,15 +226,15 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 | **Subestaciones y Transformadores** |
 | Subestación CCO (500 kVA) | 1 | $180,000 | $180,000 | $720,000,000 |
 | Subestaciones Peajes (200 kVA) | 2 | $120,000 | $240,000 | $960,000,000 |
-| Transformadores Distribución (15-100 kVA) | 72 | $8,500 | $612,000 | $2,448,000,000 |
+| Transformadores Distribución (15-100 kVA) | 48 | $8,500 | $408,000 | $1,632,000,000 |
 | **Sistemas de Respaldo** |
 | UPS CCO (100 kVA redundante) | 2 | $45,000 | $90,000 | $360,000,000 |
 | UPS Peajes (50 kVA) | 2 | $25,000 | $50,000 | $200,000,000 |
 | UPS Distribuidos ITS (3-5 kVA) | 30 | $2,500 | $75,000 | $300,000,000 |
 | Generador CCO (300 kW Diésel) + Tanque | 1 | $120,000 | $120,000 | $480,000,000 |
 | Generadores Peajes (150 kW) | 2 | $65,000 | $130,000 | $520,000,000 |
-| Generadores Áreas de Servicio (50 kW) | 6 | $30,000 | $180,000 | $720,000,000 |
-| Sistemas ATS (Automatic Transfer Switch) | 11 | $8,000 | $88,000 | $352,000,000 |
+| Generadores Áreas de Servicio (50 kW) | **2** | $30,000 | **$60,000** | **$240,000,000** |
+| Sistemas ATS (Automatic Transfer Switch) | 7 | $8,000 | $56,000 | $224,000,000 |
 | Baterías de Respaldo (12V 100Ah) | 150 | $350 | $52,500 | $210,000,000 |
 | **Tableros y Protecciones** |
 | Tableros Generales de Distribución (TGD) | 40 | $12,000 | $480,000 | $1,920,000,000 |
@@ -254,10 +260,23 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 | Software SCADA (Licencias) | 10 | $8,000 | $80,000 | $320,000,000 |
 | Sensores de Corriente/Voltaje | 150 | $450 | $67,500 | $270,000,000 |
 | **Instalación, Ingeniería y Puesta en Marcha** | - | - | $950,000 | $3,800,000,000 |
-| **Contingencia (10%)** | - | - | $525,000 | $2,100,000,000 |
-| **TOTAL CAPEX** | | | **$5,775,000** | **$23,100,000,000** |
+| **Contingencia (10%)** | - | - | $497,500 | $1,990,000,000 |
+| **TOTAL CAPEX** | | | **$4,832,500** | **$19,330,000,000** |
 
-**CAPEX Total:** USD 5.77 millones | COP 23.1 mil millones
+**CAPEX Total:** USD 4.83 millones | COP 19.33 mil millones
+
+#### 🔴 **Nota v1.1 (20/10/2025):**
+CAPEX actualizado tras rediseño arquitectónico:
+- Áreas integradas a peajes (comparten subestación 200kVA y generador 150kW)
+- Eliminados: 2 transformadores áreas, 2 generadores áreas, 25 SPT
+- 48 transformadores totales (vs. 75 original)
+- **Ahorro: -$968K USD (-17%) vs. estimación inicial**
+
+#### 🔴 **Nota de Ajuste Contractual:**
+**Versión anterior:** 14 transformadores áreas + 6 generadores = $612K transformadores + $180K generadores  
+**Versión ajustada:** 2 transformadores áreas + 2 generadores = $408K transformadores + $60K generadores  
+**Reducción CAPEX:** -$300,000 USD  
+**Fundamento:** AT1 Cap. 3 - Solo 2 áreas de servicio obligatorias (1 por peaje)
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 
@@ -269,7 +288,7 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 | Peajes (2 estaciones, 24/7) | $95,000 | $380,000,000 |
 | ITS (CCTV, PMV, Sensores, 300+ equipos) | $120,000 | $480,000,000 |
 | Telecomunicaciones (Switches, Routers, Fibra) | $75,000 | $300,000,000 |
-| Áreas de Servicio (14 UFs) | $110,000 | $440,000,000 |
+| **Áreas de Servicio (2 obligatorias)** | **$16,000** | **$64,000,000** |
 | Estaciones de Pesaje (WIM) | $25,000 | $100,000,000 |
 | Talleres y Oficinas | $45,000 | $180,000,000 |
 | **Subtotal Consumo Energía** | **$700,000** | **$2,800,000,000** |
@@ -477,7 +496,7 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 | **28_T01_Emergencias** | MEDIA - Alimentación de talleres, oficinas, iluminación perimetral |
 | **34_T01_Iluminación** | CRÍTICA - 650 luminarias LED + 25 transformadores + SCADA de control |
 | **35_T01_Señalización** | BAJA - Señalización pasiva (no requiere energía, excepto PMV que está en ITS) |
-| **36_T01_Áreas_Servicio** | ALTA - Alimentación de 14 áreas de servicio (iluminación, sanitarios, talleres) |
+| **36_T01_Áreas_Servicio** | ALTA - Alimentación de **2 áreas de servicio** obligatorias (iluminación, sanitarios, talleres) |
 | **T01_Pesaje_WIM** (pendiente) | ALTA - Alimentación de estaciones WIM, básculas dinámicas, oficinas |
 | **T01_Gestión_Ambiental** (pendiente) | BAJA - Alimentación de PTAR, puntos ecológicos (bajo consumo) |
 
@@ -499,8 +518,8 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 ## 12. DATOS CLAVE PARA MEMORIZAR
 
 **Resumen de Cantidades Principales:**
-- **75 Transformadores/Centros de Transformación** (1 Subestación CCO 500kVA + 2 Peajes 200kVA + 72 distribución)
-- **9 Generadores de Emergencia** (1 CCO 300kW + 2 Peajes 150kW + 6 Áreas Servicio 50kW)
+- **51 Transformadores/Centros de Transformación** (1 Subestación CCO 500kVA + 2 Peajes 200kVA + 48 distribución)
+- **5 Generadores de Emergencia** (1 CCO 300kW + 2 Peajes 150kW + **2 Áreas Servicio** 50kW)
 - **34 Sistemas UPS** (2 CCO 100kVA + 2 Peajes 50kVA + 30 ITS 3-5kVA)
 - **40 Sistemas de Puesta a Tierra** (< 5 Ω)
 - **15 Pararrayos** (CCO, Peajes, Talleres)
@@ -525,11 +544,19 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 17 de octubre de 2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Ficha Validada Contractualmente  
+**Fecha:** 20 de octubre de 2025  
 **Responsable:** Administrador Contractual EPC  
 **Próximo Documento:** 39_T01_Ficha_Sistema_Pesaje_WIM_v1.0.md
+
+---
+
+**CHANGELOG:**
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 17/10/2025 | Creación inicial de ficha de sistema Energía Eléctrica |
+| **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas. Transformadores 72→48 (-24), Generadores 9→5 (-4). CAPEX -$300K |
 
 ---
 

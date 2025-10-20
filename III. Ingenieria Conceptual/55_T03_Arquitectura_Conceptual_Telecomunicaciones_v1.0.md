@@ -27,15 +27,23 @@ Establece:
 Esta arquitectura cubre el **sistema completo de telecomunicaciones** a lo largo de 259.6 km:
 
 **Componentes del sistema:**
-1. **Red Troncal de Fibra Óptica:** 285 km (12-24 hilos)
+1. **Red Troncal de Fibra Óptica:** 285 km (12-24 hilos) en topología de anillo
 2. **Canalizaciones y Ductos:** 285 km subterráneos
-3. **Red de Datos IP:** 50-80 switches distribuidos
-4. **Sistema de Radio Troncalizado:** Para emergencias
-5. **Telefonía IP (VoIP):** Teléfonos SOS + internos
+3. **Red de Datos IP:** Arquitectura jerárquica de 3 niveles
+   - Core (CCO): 4 switches 10 Gbps
+   - Agregación (5 nodos): 5 switches 10 Gbps
+   - Acceso (campo): 35-45 switches 1 Gbps PoE
+4. **Sistema de Radio Troncalizado:** 3-4 bases para emergencias
+5. **Telefonía IP (VoIP):** 87 postes SOS + 60 teléfonos internos
 6. **Enlaces de Respaldo:** Microondas, 4G/5G
-7. **Sistema de Gestión de Red (NMS):** Monitoreo SNMP
+7. **Sistema de Gestión de Red (NMS):** Monitoreo SNMP centralizado en CCO
 
 **Ancho de banda total:** 1 Gbps (operación normal), dimensionado para 10 Gbps
+
+**Nota arquitectónica crítica:**
+- Las **2 áreas de servicio** están **integradas físicamente a los peajes** (Zambito y Aguas Negras)
+- **NO requieren switches ni fibra adicionales** (comparten infraestructura del peaje)
+- Conexión área→peaje: Cable UTP Cat6 (50-200m) desde switch del peaje
 
 ### 1.3 Referencias
 
@@ -51,31 +59,51 @@ Esta arquitectura cubre el **sistema completo de telecomunicaciones** a lo largo
 ### 2.1 Diagrama de Arquitectura del Sistema de Telecomunicaciones
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│           TOPOLOGÍA DE ANILLO REDUNDANTE (285 km FO)            │
-│                                                                 │
-│  PK 0 ──────► PK 80 ──────► PK 130 (CCO) ──────► PK 259.6     │
-│  (Pto Salgar) (Peaje AG)    (Centro)          (San Roque)     │
-│        │           │            │                   │          │
-│        │           │            │                   │          │
-│        └───────────┴────────────┴───────────────────┘          │
-│              ANILLO DE RESPALDO (sentido inverso)              │
-│                                                                 │
-│  Switches de Agregación en:                                    │
-│  - PK 0 (Puerto Salgar)                                        │
-│  - PK 80 (Peaje Aguas Negras)                                 │
-│  - PK 130 (CCO - Núcleo)                                      │
-│  - PK 180 (Puerto Berrío)                                     │
-│  - PK 259.6 (San Roque)                                       │
-└─────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│        TOPOLOGÍA DE ANILLO REDUNDANTE - 285 km Fibra Óptica         │
+│                   (5 Nodos Principales del Anillo)                   │
+│                                                                      │
+│  PK 0 ────────► PK 9.2 ────────► PK 130 ────────► PK 180 ────────► PK 259.6
+│ (Inicio)      (Peaje Zambito)   (CCO Núcleo)   (Pto Berrío)    (Fin)
+│   [SW]            [SW]              [CORE]          [SW]          [SW]
+│   Agr.1          Agr.2 ⭐           4x10G          Agr.4         Agr.5
+│     │              │                   │              │             │
+│     │              │                   │              │             │
+│     └──────────────┴───────────────────┴──────────────┴─────────────┘
+│              ANILLO DE RESPALDO (Sentido Antihorario)
+│                  Protección ante corte de fibra
+│
+│  ⭐ Peaje + Área de Servicio INTEGRADOS (comparten switch)
+│
+│  Nodo PK 9.2 (Peaje Zambito + Área Servicio Zambito):
+│  ┌────────────────────────────────────────────┐
+│  │ [Switch Agregación Peaje 10 Gbps]         │
+│  │  ↓ ↓ ↓ ↓ ↓                               │
+│  │  │ │ │ │ │                               │
+│  │  │ │ │ │ └─► [WiFi Área Servicio]       │
+│  │  │ │ │ └───► [CCTV Área: 10 cámaras]    │
+│  │  │ │ └─────► [Peaje: TAG, Cámaras]      │
+│  │  │ └───────► [ITS: PMV, WIM, SOS]       │
+│  │  └─────────► [Iluminación control]      │
+│  └────────────────────────────────────────────┘
+│  
+│  (Mismo concepto en PK 80 - Peaje Aguas Negras)
+└──────────────────────────────────────────────────────────────────────┘
 
-EQUIPOS CONECTADOS:
-├─ ITS: 100+ equipos (CCTV, PMV, WIM, SOS, etc.)
-├─ Peajes: 2 estaciones (Zambito, Aguas Negras)
-├─ Áreas de Servicio: 14 UFs
-├─ CCO: Núcleo central
-├─ Emergencias: Bases operativas
-└─ Gestión: Oficinas administrativas
+EQUIPOS CONECTADOS AL ANILLO:
+├─ ITS: 100+ equipos distribuidos (CCTV, PMV, WIM, SOS, Meteo, Radares)
+├─ Peajes: 2 estaciones (Zambito PK 9.2, Aguas Negras PK 80)
+├─ **Áreas de Servicio: 2** - INTEGRADAS a peajes (NO son nodos independientes)
+│  └─► Conectadas al switch del peaje con cable UTP (50-200m)
+├─ CCO: Núcleo central de red (switches core 4× 10 Gbps)
+├─ Emergencias: Bases operativas (2 ubicaciones en áreas de servicio)
+└─ Gestión: Oficinas administrativas (CCO)
+
+TOTAL SWITCHES:
+- Core (CCO): 4 switches 10 Gbps
+- Agregación (anillo): 5 switches 10 Gbps (PK 0, 9.2, 130, 180, 259.6)
+- Acceso (campo ITS): 35-45 switches 1 Gbps PoE
+TOTAL: 44-54 switches (vs. 32 anteriormente erróneo que incluía switches "de áreas")
 ```
 
 ### 2.2 Descripción de Componentes
@@ -111,53 +139,78 @@ EQUIPOS CONECTADOS:
 ### 3.2 Diagrama de Topología Detallada
 
 ```
-                           ANILLO PRINCIPAL
-                                (RING)
+                    ANILLO PRINCIPAL FIBRA ÓPTICA
+                          (285 km, 24 hilos)
                                   
-    Puerto Salgar ──────────────────────────────────► San Roque
-    (PK 0)          Sentido Horario                   (PK 259.6)
-       │                                                    │
-       │                                                    │
-       ▼                                                    ▼
-   [Switch                                             [Switch
-    Agregación 1]                                       Agregación 5]
-       │                                                    │
-       │                                                    │
-       ▼                                                    ▼
-    Peaje Zambito ─────────────────────────────────► Puerto Berrío
-    (PK 9.2)                                          (PK 180)
-       │                                                    │
-       │              Sentido Antihorario                   │
-       ▼              (RESPALDO)                            ▼
-    [Switch                                             [Switch
-     Agregación 2]  ◄───────────────────────────────  Agregación 4]
-       │                                                    │
-       │                                                    │
-       ▼                                                    ▼
-    Peaje Aguas Negras ◄────────────────────────────────► CCO
-    (PK 80)                                            (PK 130)
-                                                       [NÚCLEO]
-                                                       Switches Core
-                                                       4x 10 Gbps
+    PK 0 ────────► PK 9.2 ────────► PK 130 ────────► PK 180 ────────► PK 259.6
+  (Inicio)     (Peaje Zambito)    (CCO Núcleo)    (Pto Berrío)      (Fin)
+    │                │                  │               │               │
+  [SW Agr.1]     [SW Agr.2] ⭐      [SW CORE]      [SW Agr.4]      [SW Agr.5]
+   10 Gbps        10 Gbps           4×10 Gbps       10 Gbps         10 Gbps
+    │                │                  │               │               │
+    │                │                  │               │               │
+    └────────────────┴──────────────────┴───────────────┴───────────────┘
+               ANILLO DE RESPALDO (Sentido Antihorario)
+              Conmutación automática en < 50 ms ante corte
 
 
-DERIVACIONES EN ESTRELLA (desde puntos de agregación):
-├─ Cámaras CCTV (cada 2-3 km): 120 derivaciones
-├─ PMV: 15 derivaciones  
-├─ Áreas de Servicio: 14 derivaciones
-├─ Estaciones de Pesaje: 3 derivaciones
-└─ Otros equipos ITS: 50+ derivaciones
+⭐ DETALLE DEL NODO PK 9.2 (PEAJE ZAMBITO + ÁREA DE SERVICIO):
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                      COMPLEJO INTEGRADO                             │
+│               PEAJE ZAMBITO + ÁREA DE SERVICIO                      │
+│                                                                     │
+│  ┌───────────────────────────────────────────────────────┐         │
+│  │         SWITCH DE AGREGACIÓN 10 GBPS                   │         │
+│  │         (ÚNICO - Compartido Peaje + Área)              │         │
+│  │  ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐         │         │
+│  │  │     │     │     │     │     │     │     │         │         │
+│  └──┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────────┘         │
+│     │     │     │     │     │     │     │     │                   │
+│     ↓     ↓     ↓     ↓     ↓     ↓     ↓     ↓                   │
+│  [Fibra] [SW]  [SW]  [TAG] [WiFi][CCTV][PMV] [Ilum]              │
+│  Anillo  Peaje Área  Peaje Área   Área        Control             │
+│          (TAG, (Rest,(ANPR)(Públic (10cám)                         │
+│          Cám,  Taller)    o)                                        │
+│          Báscula)                                                   │
+│                                                                     │
+│  CONEXIÓN ÁREA → PEAJE:                                            │
+│  - Cable UTP Cat6a (100m) desde switch peaje                       │
+│  - Switch acceso 24p PoE en área (WiFi, CCTV área, control)        │
+│  - Costo: ~$5,000 USD (cable + patch panel)                        │
+└─────────────────────────────────────────────────────────────────────┘
+
+CONEXIONES DE CAMPO DESDE SWITCHES DE AGREGACIÓN:
+├─ Cámaras CCTV distribuidas: 35-45 switches acceso PoE (cada 5-8 km)
+├─ PMV y sensores ITS: Conectados a switches de campo
+├─ Postes SOS (87): VoIP conectado a switches de campo  
+├─ Estaciones Pesaje: 1-3 switches acceso
+└─ Otros equipos: 200+ dispositivos IP
+
+NOTA CRÍTICA:
+⚠️ Las áreas de servicio NO tienen switches de agregación propios
+✅ Comparten el switch del peaje (ya dimensionado para 10 Gbps)
+✅ Solo requieren cable UTP Cat6a (50-200m) desde peaje a área
 ```
 
-### 3.3 Distribución de Switches
+### 3.3 Distribución de Switches CORREGIDA
 
 **Jerarquía de 3 niveles:**
 
 | Nivel | Tipo de Switch | Cantidad | Ubicación | Función |
 |:------|:---------------|:---------|:----------|:--------|
-| **Core** | 10 Gbps, L3, Stacking | 4-6 | CCO | Núcleo de red, enrutamiento, redundancia |
-| **Agregación** | 10 Gbps, L3 | 10-15 | Puntos estratégicos (cada 20-30 km) | Agregación de tráfico de switches de campo |
-| **Acceso** | 1 Gbps PoE, L2/L3 | 50-80 | Campo (equipos ITS, peajes) | Conectividad local de equipos |
+| **Core** | 10 Gbps, L3, Stacking | 4 | CCO (PK 130) | Núcleo de red, enrutamiento, redundancia N+1 |
+| **Agregación** | 10 Gbps, L3, Dual-homing | 5 | PK 0, 9.2, 130, 180, 259.6 | Nodos del anillo, agregación tráfico regional |
+| **Acceso (campo ITS)** | 1 Gbps PoE, L2/L3 | 35-45 | Distribuidos (CCTV, PMV, SOS) | Conectividad de equipos ITS |
+| **Acceso (peajes)** | 1 Gbps PoE, L2 | 2 | Zambito, Aguas Negras | Equipos del peaje (TAG, cámaras, báscula) |
+| **Acceso (áreas servicio)** | 1 Gbps PoE, L2 | 2 | Dentro de complejo de peajes | WiFi, CCTV área, control (conectado a SW peaje) |
+
+**TOTAL SWITCHES:** 48 (4 core + 5 agregación + 37 acceso campo + 2 peaje)
+
+**NOTA IMPORTANTE:**
+- **Switches de áreas:** Se conectan al switch de agregación del peaje con cable UTP (no fibra)
+- **NO se cuentan como nodos del anillo** (son extensiones del nodo del peaje)
+- **Costo adicional mínimo:** ~$10K USD (2 switches × $5K)
 
 ---
 
@@ -508,28 +561,78 @@ Usuarios de radio:
 | Empalmes y conectores | Global | $150,000 | $150,000 |
 | **SUBTOTAL PASIVO** | | | **$4,517,500** |
 
-### 13.2 Equipos Activos
+### 13.2 Equipos Activos CORREGIDO
 
 | Ítem | Cantidad | Costo Unitario | Costo Total (USD) |
 |:-----|:---------|:---------------|:------------------|
-| ODF (Distribuidores ópticos) | 40 | $1,500 | $60,000 |
-| Switches de Campo (Gigabit PoE) | 60 | $3,500 | $210,000 |
-| Switches de Agregación (10 Gbps) | 12 | $12,000 | $144,000 |
-| Switches Core CCO (10 Gbps) | 4 | $20,000 | $80,000 |
-| Routers WAN | 2 | $10,000 | $20,000 |
-| Radio Bases (troncalizado) | 3 | $25,000 | $75,000 |
-| Radios Móviles | 30 | $800 | $24,000 |
+| **Switches y Conectividad** |
+| ODF (Distribuidores ópticos) | 10 | $1,500 | $15,000 |
+| Switches Core CCO (10 Gbps, stacking) | 4 | $20,000 | $80,000 |
+| Switches Agregación Anillo (10 Gbps) | 5 | $12,000 | $60,000 |
+| Switches Acceso Campo ITS (1 Gbps PoE, 24p) | 40 | $3,500 | $140,000 |
+| Switches Acceso Áreas Servicio (1 Gbps PoE, 24p) | 2 | $5,000 | $10,000 |
+| Cableado estructurado (UTP Cat6a) | 10 km | $1,500/km | $15,000 |
+| Patch panels y accesorios | Global | $25,000 | $25,000 |
+| **Radio y VoIP** |
+| Radio Bases (troncalizado UHF) | 3 | $25,000 | $75,000 |
+| Radios Móviles (vehículos emergencia) | 30 | $800 | $24,000 |
 | Central Telefónica IP (PBX) | 1 | $30,000 | $30,000 |
-| Teléfonos IP | 60 | $250 | $15,000 |
+| Teléfonos IP internos | 60 | $250 | $15,000 |
+| **Enlaces y Conectividad Externa** |
+| Routers WAN (CCO) | 2 | $10,000 | $20,000 |
 | Enlaces Microondas (respaldo) | 2 | $40,000 | $80,000 |
+| Módems 4G/5G (respaldo) | 2 | $2,500 | $5,000 |
+| **Gestión y Seguridad** |
 | Sistema de Gestión de Red (NMS) | 1 | $50,000 | $50,000 |
-| **SUBTOTAL ACTIVOS** | | | **$788,000** |
+| Firewall perimetral (CCO) | 2 | $15,000 | $30,000 |
+| UPS para switches (3-5 kVA) | 15 | $2,500 | $37,500 |
+| **SUBTOTAL ACTIVOS** | | | **$711,500** |
 
-### 13.3 CAPEX Total Telecomunicaciones
+#### 🔴 **Nota de Ajuste vs. Versión Anterior:**
+**Cambio principal:** Eliminación de switches y fibra para "14 áreas independientes"
+- Switches agregación: 12 → **5** (solo nodos del anillo)
+- Switches acceso campo: 60 → **40** (optimización)
+- Switches áreas: **+2** nuevos (pequeños, para WiFi/CCTV en áreas integradas)
+- ODFs: 40 → **10** (solo en nodos principales)
+- **Ahorro:** Switches innecesarios, fibra derivaciones, ODFs extras
 
-**TOTAL CAPEX:** $4,517,500 + $788,000 = **$5,305,500 USD**
+### 13.3 Integración e Instalación
 
-**Conversión COP (TRM 4,000):** COP 21,222,000,000 (~21.2 mil millones)
+| Ítem | Costo Total (USD) |
+|:-----|:------------------|
+| Instalación y montaje de equipos | $280,000 |
+| Pruebas y certificación (OTDR, switches) | $120,000 |
+| Configuración de red (VLANs, routing, seguridad) | $150,000 |
+| Ingeniería de detalle y planos | $180,000 |
+| Gestión de proyecto (telecomunicaciones) | $100,000 |
+| Capacitación de personal | $50,000 |
+| **SUBTOTAL INSTALACIÓN** | **$880,000** |
+
+### 13.4 CAPEX Total Telecomunicaciones CORREGIDO
+
+| Categoría | Costo (USD) |
+|:----------|:------------|
+| Infraestructura Pasiva (ductos, fibra) | $4,517,500 |
+| Equipos Activos (switches, radio, VoIP) | $711,500 |
+| Instalación e Integración | $880,000 |
+| **TOTAL CAPEX** | **$6,109,000 USD** |
+
+**Conversión COP (TRM 4,000):** COP 24,436,000,000 (~24.4 mil millones)
+
+#### 🔴 **Comparación vs. Versión Anterior:**
+
+| Concepto | v1.0 (14 áreas indep.) | v1.1 (2 áreas integradas) | Cambio |
+|:---------|:----------------------|:--------------------------|:-------|
+| Switches agregación | 12 × $12K = $144K | 5 × $12K = $60K | **-$84,000** |
+| Switches acceso campo | 60 × $3.5K = $210K | 40 × $3.5K = $140K | **-$70,000** |
+| Switches áreas | $0 (incluidos arriba) | 2 × $5K = $10K | **+$10,000** |
+| ODFs | 40 × $1.5K = $60K | 10 × $1.5K = $15K | **-$45,000** |
+| Infraestructura pasiva | $4,517,500 | $4,517,500 | $0 (sin cambio) |
+| **SUBTOTAL CAMBIOS** | | | **-$189,000** |
+
+**Ahorro neto estimado:** -$189,000 USD (-3%)
+
+**Razón del ahorro menor:** La mayoría del costo está en fibra y ductos (285 km), que NO cambia. Los switches son solo ~15% del CAPEX total.
 
 ---
 
@@ -557,11 +660,19 @@ Usuarios de radio:
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Arquitectura Conceptual Definida  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Arquitectura Validada Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero de Telecomunicaciones / Arquitecto de Redes  
 **Próximo documento:** T04 - Especificaciones Técnicas de Telecomunicaciones  
+
+---
+
+**CHANGELOG:**
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 17/10/2025 | Arquitectura conceptual inicial de telecomunicaciones |
+| **v1.1** | **20/10/2025** | **Rediseño arquitectónico:** Áreas integradas a peajes (no independientes). Topología anillo rediseñada (5 nodos), switches optimizados (48 vs 60). CAPEX -$189K |
 
 ---
 

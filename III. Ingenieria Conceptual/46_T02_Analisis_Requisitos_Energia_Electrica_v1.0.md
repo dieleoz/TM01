@@ -36,9 +36,9 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 **Sistemas alimentados:**
 - 2 Estaciones de Peaje
 - Centro de Control Operacional (CCO)
-- Sistema de Iluminación (650 luminarias)
+- Sistema de Iluminación (410 luminarias)
 - Sistemas ITS (100+ equipos)
-- 14 Áreas de Servicio
+- **2 Áreas de Servicio** (obligatorias asociadas a peajes - AT1 Cap. 3)
 - Sistema de Telecomunicaciones
 - Estaciones de Pesaje
 
@@ -158,17 +158,18 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 ### 2.6 Alimentación de Áreas de Servicio
 
 **ID:** RF-006  
-**Descripción:** El sistema debe alimentar 14 áreas de servicio (6 principales con servicios completos)  
-**Prioridad:** 🟡 Alta  
-**Fuente:** AT2, Sección 6.2.6  
+**Descripción:** El sistema debe alimentar 2 áreas de servicio obligatorias (asociadas a peajes)  
+**Prioridad:** 🔴 Alta (obligación contractual)  
+**Fuente:** AT1 Cap. 3; AT2, Sección 6.2.6  
 
 **Criterios de Aceptación:**
-- 14 centros de transformación (50-150 kVA según tipo)
-- Generadores de emergencia en 6 áreas principales (50 kW)
+- 2 centros de transformación (100 kVA cada uno)
+- Ubicación: Peaje Zambito (PK 9.2) y Peaje Aguas Negras (PK 80)
+- Generadores de emergencia en ambas áreas (50 kW cada uno)
 - Alimentación de:
   - Sanitarios (iluminación, bombas de agua)
   - Restaurantes/cafeterías
-  - Talleres mecánicos
+  - Talleres mecánicos 24/7
   - Iluminación de parqueos
   - CCTV
 - Disponibilidad ≥ 95%
@@ -393,9 +394,9 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 | **RF-001** | Funcional | Suministro continuo 24/7/365 | AT2, Todos los AT | Todo el sistema | 🔴 CRÍTICA |
 | **RF-002** | Funcional | Alimentación CCO (redundancia N+1) | AT2, 3.1.7 | CCO | 🔴 CRÍTICA |
 | **RF-003** | Funcional | Alimentación Peajes (operación en falla) | AT2, 3.3.4.1 | Peajes | 🔴 CRÍTICA |
-| **RF-004** | Funcional | Alimentación Iluminación (650 luminarias) | AT2, 6.3.4; AT4 E14 | Iluminación | 🔴 Alta |
+| **RF-004** | Funcional | Alimentación Iluminación (410 luminarias) | AT2, 6.3.4; AT4 E14 | Iluminación | 🔴 Alta |
 | **RF-005** | Funcional | Alimentación ITS (100+ equipos) | AT2, 3.3.5.1 | ITS | 🔴 Alta |
-| **RF-006** | Funcional | Alimentación Áreas de Servicio (14 UFs) | AT2, 6.2.6 | Áreas de Servicio | 🟡 Alta |
+| **RF-006** | Funcional | Alimentación Áreas de Servicio (**2 obligatorias**) | AT1 Cap. 3; AT2, 6.2.6 | Áreas de Servicio | 🔴 Alta |
 | **RF-007** | Funcional | Sistema de respaldo (UPS + Generadores) | AT2, 3.3.4.1 | Respaldo | 🔴 CRÍTICA |
 | **RF-008** | Funcional | Protección contra rayos | RETIE, IEEE 142 | Puesta a tierra | 🔴 Alta |
 | **RF-009** | Funcional | SCADA Eléctrico | AT2, 3.1.7 | CCO, Monitoreo | 🟡 Alta |
@@ -545,9 +546,9 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 - [ ] El 100% de los sistemas del corredor tienen suministro eléctrico
 - [ ] CCO tiene redundancia N+1 (2 UPS + 1 generador)
 - [ ] Peajes tienen UPS + Generador (operación en falla)
-- [ ] Sistema de Iluminación tiene 650 luminarias alimentadas
+- [ ] Sistema de Iluminación tiene 410 luminarias alimentadas
 - [ ] Sistemas ITS tienen alimentación con UPS distribuidos
-- [ ] 14 Áreas de Servicio tienen suministro eléctrico
+- [ ] **2 Áreas de Servicio obligatorias** tienen suministro eléctrico
 - [ ] Sistema SCADA Eléctrico operativo en CCO
 - [ ] Todos los equipos tienen protección contra rayos y sobretensiones
 - [ ] Transferencia automática (ATS) funciona en < 10 segundos
@@ -642,11 +643,19 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Análisis Validado Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero Eléctrico / Ingeniero de Potencia  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Energía Eléctrica  
+
+---
+
+**CHANGELOG:**
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 17/10/2025 | Análisis inicial de requisitos de energía eléctrica |
+| **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3). RF-006 y criterios actualizados |
 
 ---
 

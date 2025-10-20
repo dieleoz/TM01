@@ -38,18 +38,20 @@ Garantizar el **control efectivo del peso de vehículos de carga** que circulan 
 ### 2.2 Alcance del Sistema
 
 - **Sistemas incluidos:**
-  - **Estaciones de Pesaje Fijas** (2-3 estaciones en el corredor)
-  - **Sistemas WIM (Weigh In Motion)** en básculas dinámicas
-  - **Básculas Estáticas de Precisión** (100 toneladas capacidad)
-  - **Básculas Dinámicas en Peajes** (todos los carriles de cobro)
-  - **Básculas Móviles** (operativos temporales)
+  - **1 Estación de Pesaje Fija Bidireccional** (PR4+0100 RN 4513 - obligatoria AT1 Adenda 4)
+    - 2 Sistemas WIM dinámicos (1 por sentido)
+    - 2 Básculas Estáticas de Precisión 100 ton (1 por sentido)
+  - **Básculas Dinámicas en Peajes** (todos los carriles de cobro - AT2 3.3.4.2)
   - **Software de Gestión de Pesaje** (integrado con CCO)
   - **Sistemas de Detección de Ejes** y clasificación vehicular
   - **Área de Administración** (oficinas, sanitarios, estacionamiento infractores)
   - **Sistema de Impresión Automática** de comprobantes de peso
+  - **Básculas Móviles** (2 unidades para operativos temporales - opcional)
   
-- **Cobertura geográfica:** 259.6 km (Subsectores 1.1 y 1.2), control en ambos sentidos
-- **Integración con:** CCO (transmisión de datos en tiempo real), Peajes (pesaje dinámico en carriles), Policía de Carreteras (sanciones)
+- **Ubicación contractual:** PR4+0100 RN 4513 (AT1 Cap. 3, pág. 46-47, Adenda 4)
+- **Configuración:** Estación bidireccional (ambos sentidos desde 1 punto de control)
+- **Cobertura geográfica:** 259.6 km, control permanente en estación fija + móviles eventuales
+- **Integración con:** CCO (transmisión datos tiempo real), Peajes (pesaje dinámico), Policía (sanciones)
 
 ---
 
@@ -199,44 +201,66 @@ ación de operativos |
 
 ## 6. ESTIMACIÓN PRELIMINAR
 
-### 6.1 CAPEX (Inversión Inicial)
+### 6.1 CAPEX (Inversión Inicial) CORREGIDO v1.1
 
 | Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) | Costo Total (COP) |
 |:-----|:---------|:---------------------|:------------------|:------------------|
-| **Estaciones de Pesaje Fijas (Obra Civil)** |
-| Edificaciones (oficinas, sanitarios, casetas) | 3 estaciones | $80,000 | $240,000 | $960,000,000 |
-| Estacionamiento infractores (pavimento) | 3 áreas | $35,000 | $105,000 | $420,000,000 |
-| Techos/Cubiertas para básculas | 3 cubiertas | $25,000 | $75,000 | $300,000,000 |
-| Cercado perimetral | 2.5 km | $12,000/km | $30,000 | $120,000,000 |
-| **Básculas y Sistemas de Pesaje** |
-| Básculas Dinámicas WIM (pre-selección) | 5 básculas | $120,000 | $600,000 | $2,400,000,000 |
-| Básculas Estáticas de Precisión (100 ton) | 5 básculas | $85,000 | $425,000 | $1,700,000,000 |
-| Básculas Dinámicas en Peajes | 15 básculas | $45,000 | $675,000 | $2,700,000,000 |
-| Básculas Móviles (Portátiles) | 2 básculas | $55,000 | $110,000 | $440,000,000 |
-| Sensores de Ejes (WIM) + Loops Inductivos | 20 sensores | $8,500 | $170,000 | $680,000,000 |
+| **Estación de Pesaje Fija Bidireccional (Obra Civil)** |
+| Edificación (oficinas, sanitarios, casetas, área adm.) | 1 estación | $120,000 | $120,000 | $480,000,000 |
+| Estacionamiento infractores (pavimento, 20 espacios) | 1 área | $45,000 | $45,000 | $180,000,000 |
+| Techos/Cubiertas para básculas (4 plataformas) | 1 conjunto | $60,000 | $60,000 | $240,000,000 |
+| Cercado perimetral | 1.2 km | $12,000/km | $14,400 | $57,600,000 |
+| Señalización vial accesos/salidas | 1 sistema | $25,000 | $25,000 | $100,000,000 |
+| **Básculas y Sistemas de Pesaje Estación Fija** |
+| Básculas Dinámicas WIM Sentido 1 (pre-selección) | 1 báscula | $140,000 | $140,000 | $560,000,000 |
+| Báscula Estática Precisión 100 ton Sentido 1 | 1 báscula | $95,000 | $95,000 | $380,000,000 |
+| Básculas Dinámicas WIM Sentido 2 (pre-selección) | 1 báscula | $140,000 | $140,000 | $560,000,000 |
+| Báscula Estática Precisión 100 ton Sentido 2 | 1 báscula | $95,000 | $95,000 | $380,000,000 |
+| Sensores de Ejes (WIM) + Loops Inductivos (4 carriles) | 8 sensores | $8,500 | $68,000 | $272,000,000 |
+| **Básculas Dinámicas en Peajes (AT2 Sección 3.3.4.2)** |
+| Básculas Dinámicas carriles peaje (todos) | 15 básculas | $45,000 | $675,000 | $2,700,000,000 |
+| **Básculas Móviles (Opcional para operativos)** |
+| Básculas Móviles Portátiles | 2 básculas | $55,000 | $110,000 | $440,000,000 |
 | **Sistemas de Control y Gestión** |
-| Software de Gestión de Pesaje (Licencias) | 1 sistema central | $95,000 | $95,000 | $380,000,000 |
-| Computadores de Operación | 8 equipos | $2,500 | $20,000 | $80,000,000 |
-| Impresoras de Comprobantes | 5 impresoras | $3,500 | $17,500 | $70,000,000 |
-| Cámaras de Reconocimiento de Placas (OCR) | 10 cámaras | $8,000 | $80,000 | $320,000,000 |
-| Cámaras de Ejes | 10 cámaras | $6,000 | $60,000 | $240,000,000 |
-| Cámaras de Vigilancia | 15 cámaras | $2,500 | $37,500 | $150,000,000 |
-| Sistema de Alarma de Sobrepeso | 5 sistemas | $4,000 | $20,000 | $80,000,000 |
+| Software de Gestión de Pesaje (Licencia central) | 1 sistema | $95,000 | $95,000 | $380,000,000 |
+| Computadores de Operación | 4 equipos | $2,500 | $10,000 | $40,000,000 |
+| Impresoras de Comprobantes Automáticas | 2 impresoras | $3,500 | $7,000 | $28,000,000 |
+| Cámaras Reconocimiento Placas OCR (4 carriles) | 4 cámaras | $8,000 | $32,000 | $128,000,000 |
+| Cámaras de Ejes | 4 cámaras | $6,000 | $24,000 | $96,000,000 |
+| Cámaras de Vigilancia (perímetro) | 8 cámaras | $2,500 | $20,000 | $80,000,000 |
+| Sistema de Alarma de Sobrepeso | 1 sistema | $8,000 | $8,000 | $32,000,000 |
 | **Infraestructura Eléctrica y Comunicaciones** |
-| Conexión Fibra Óptica (instalación) | 3 conexiones | $18,000 | $54,000 | $216,000,000 |
-| Red de Datos Local (Switch, Router, Cableado) | 3 sistemas | $12,000 | $36,000 | $144,000,000 |
-| UPS (15-30 kVA) | 5 sistemas | $18,000 | $90,000 | $360,000,000 |
-| Transformadores Eléctricos (50-75 kVA) | 3 transformadores | $25,000 | $75,000 | $300,000,000 |
-| Generadores de Emergencia (30-50 kW) | 2 generadores | $35,000 | $70,000 | $280,000,000 |
+| Conexión Fibra Óptica (instalación desde anillo) | 1 derivación | $25,000 | $25,000 | $100,000,000 |
+| Red de Datos Local (Switch, Router, Cableado) | 1 sistema | $15,000 | $15,000 | $60,000,000 |
+| UPS (30 kVA) | 2 sistemas | $18,000 | $36,000 | $144,000,000 |
+| Transformador Eléctrico (75 kVA) | 1 transf. | $30,000 | $30,000 | $120,000,000 |
+| Generador de Emergencia (50 kW) | 1 generador | $45,000 | $45,000 | $180,000,000 |
 | **Señalización e Iluminación** |
-| Señalización Vertical (informativa) | 35 señales | $850 | $29,750 | $119,000,000 |
-| Demarcación Horizontal | 2.5 km | $3,500/km | $8,750 | $35,000,000 |
-| Iluminación Nocturna LED | 3 sistemas | $22,000 | $66,000 | $264,000,000 |
-| **Instalación, Ingeniería y Puesta en Marcha** | - | - | $280,000 | $1,120,000,000 |
-| **Contingencia (8%)** | - | - | $252,000 | $1,008,000,000 |
-| **TOTAL CAPEX** | | | **$3,401,500** | **$13,606,000,000** |
+| Señalización Vertical (informativa, reglamentaria) | 12 señales | $850 | $10,200 | $40,800,000 |
+| Demarcación Horizontal (accesos, carriles) | 0.8 km | $3,500/km | $2,800 | $11,200,000 |
+| Iluminación Nocturna LED (4 carriles + área) | 1 sistema | $35,000 | $35,000 | $140,000,000 |
+| **Instalación, Ingeniería y Puesta en Marcha** | - | - | $180,000 | $720,000,000 |
+| **Contingencia (8%)** | - | - | $156,000 | $624,000,000 |
+| **TOTAL CAPEX** | | | **$2,286,400** | **$9,145,600,000** |
 
-**CAPEX Total:** USD 3.40 millones | COP 13.6 mil millones
+**CAPEX Total:** USD 2.29 millones | COP 9.15 mil millones
+
+#### 🔴 **Nota de Ajuste Contractual v1.1 (21/10/2025):**
+
+**Corrección aplicada:**
+- v1.0: Asumía 3 estaciones independientes → $3.40M USD
+- v1.1: 1 estación bidireccional (PR4+0100 RN 4513) → $2.29M USD
+- **Ahorro:** -$1.11M USD (-33%)
+
+**Fundamento contractual:**
+- AT1 Cap. 3 (Adenda 4, pág. 46-47): "El Concesionario como mínimo deberá adecuar, operar y mantener **la estación de pesaje existente** en el PR4+0100 de la Ruta Nacional 4513, de modo que funcione para **ambos sentidos** del flujo vehicular."
+
+**Configuración técnica:**
+- 1 estación = 2 sistemas completos (1 por sentido)
+- Por sentido: 1 báscula dinámica WIM + 1 báscula estática 100 ton
+- Total: 4 plataformas de pesaje en 1 ubicación
+
+**Nota:** Básculas dinámicas en peajes (15 unidades, $675K) se mantienen según AT2 Sección 3.3.4.2
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 

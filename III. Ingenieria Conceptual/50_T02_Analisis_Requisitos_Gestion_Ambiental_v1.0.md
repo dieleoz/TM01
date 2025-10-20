@@ -134,12 +134,14 @@ Este análisis cubre el **sistema completo de gestión ambiental** en TODAS las 
 **Fuente:** AT6; Decreto 1077/2015  
 
 **Criterios de Aceptación:**
-- **Puntos de generación:** Peajes (2), CCO (1), Áreas de Servicio (14), Talleres
+- **Puntos de generación:** Peajes (2), CCO (1), **Áreas de Servicio (2)**, Talleres (2 en áreas)
+- **Total:** 5 puntos principales de generación de residuos
 - **Tipos de residuos:**
   - Ordinarios (basura doméstica)
   - Reciclables (papel, plástico, vidrio, metal)
   - Peligrosos (aceites, baterías, lámparas fluorescentes)
   - Especiales (RAEE - equipos electrónicos)
+- **Fundamento:** AT1 Cap. 3 - Solo 2 áreas de servicio obligatorias (asociadas a peajes)
 - **Separación en origen** (código de colores)
 - **Almacenamiento temporal** (centros de acopio)
 - **Recolección y transporte:** Empresas autorizadas
@@ -559,11 +561,19 @@ Este análisis cubre el **sistema completo de gestión ambiental** en TODAS las 
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Análisis Validado Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Gerente Ambiental  
 **Próximo documento:** T03 - Plan de Gestión Ambiental  
+
+---
+
+**CHANGELOG:**
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 17/10/2025 | Análisis inicial de requisitos de gestión ambiental |
+| **v1.1** | **20/10/2025** | **Ajuste contractual:** Puntos generación residuos 17→5 (2 peajes + 1 CCO + 2 áreas según AT1 Cap. 3) |
 
 ---
 

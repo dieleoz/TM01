@@ -27,22 +27,30 @@ Establece:
 Esta arquitectura cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 
 **Componentes del sistema:**
-- Subestaciones y Centros de Transformación (~75 unidades)
-- Sistemas UPS (30+ unidades distribuidas)
-- Generadores de Emergencia (10 unidades)
-- Red Eléctrica MT/BT
-- Sistema de Puesta a Tierra (SPT)
-- Protección contra Rayos
-- Sistema SCADA Eléctrico
+- Subestaciones principales: 3 (CCO 500 kVA, 2 Peajes 200 kVA c/u)
+- Transformadores distribución: ~45 unidades (iluminación e ITS)
+- Sistemas UPS: ~35 unidades (CCO, peajes, ITS distribuidos)
+- Generadores de Emergencia: 3 principales (CCO 300 kW, 2 Peajes 150 kW)
+- Red Eléctrica MT/BT: Acometidas y distribución
+- Sistema de Puesta a Tierra (SPT): ~50 sistemas
+- Protección contra Rayos: Pararrayos en instalaciones principales
+- Sistema SCADA Eléctrico: Monitoreo centralizado en CCO
 
 **Sistemas alimentados:**
-- CCO, 2 Peajes, 14 Áreas de Servicio
-- 650 Luminarias LED
-- 100+ Equipos ITS
-- Sistema de Telecomunicaciones
+- CCO (centro crítico)
+- 2 Peajes con Áreas de Servicio Integradas (Zambito, Aguas Negras)
+- 410 Luminarias LED distribuidas
+- 100+ Equipos ITS (CCTV, PMV, SOS, WIM, Meteo)
+- Sistema de Telecomunicaciones (switches, radios, fibra activa)
 - Estaciones de Pesaje
 
-**Potencia total instalada:** 700-800 kW
+**Potencia total instalada:** ~650 kW
+
+**Concepto clave:**
+- Las **2 áreas de servicio** están **integradas físicamente a los peajes**
+- **Comparten la subestación del peaje** (200 kVA tiene capacidad para peaje + área)
+- **NO requieren transformadores ni generadores adicionales**
+- Solo requieren: Tablero secundario + cableado BT desde peaje
 
 ### 1.3 Referencias
 
@@ -55,68 +63,96 @@ Esta arquitectura cubre el **sistema eléctrico completo** a lo largo de 259.6 k
 
 ## 2. ARQUITECTURA DE ALTO NIVEL
 
-### 2.1 Diagrama Unifilar Simplificado
+### 2.1 Diagrama Unifilar Simplificado REDISEÑADO
 
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│          RED ELÉCTRICA NACIONAL (Operadores: Codensa,            │
-│          ESSA, Electricaribe, según zona geográfica)             │
-│                                                                  │
-│              13.2 kV / 34.5 kV (Media Tensión)                   │
-└─────────────────────────┬────────────────────────────────────────┘
-                          │
-         ┌────────────────┼────────────────┬─────────────┐
-         │                │                │             │
-    ┌────▼────┐      ┌───▼────┐      ┌───▼────┐   ┌───▼────┐
-    │Subestac │      │Subestac│      │Centro  │   │Centro  │
-    │CCO      │      │Peaje   │      │Transf. │   │Transf. │
-    │500 kVA  │      │Zambito │      │Área    │   │Ilum.   │
-    │13.2kV/  │      │200 kVA │      │Servicio│   │30 kVA  │
-    │220-110V │      │        │      │100 kVA │   │(25x)   │
-    └────┬────┘      └───┬────┘      └───┬────┘   └───┬────┘
-         │                │                │            │
-    ┌────▼────┐      ┌───▼────┐      ┌───▼────┐   ┌──▼─────┐
-    │UPS 2x   │      │UPS     │      │Gen.    │   │Control │
-    │100 kVA  │      │50 kVA  │      │50 kW   │   │Automát │
-    │(N+1)    │      │        │      │        │   │Fotocel │
-    └────┬────┘      └───┬────┘      └───┬────┘   └───┬────┘
-         │                │                │            │
-    ┌────▼────┐      ┌───▼────┐      ┌───▼────┐   ┌──▼─────┐
-    │Gen. CCO │      │Gen.    │      │Sanitar │   │650     │
-    │300 kW   │      │Peaje   │      │Restaur │   │Luminar │
-    │Diésel   │      │150 kW  │      │Talleres│   │LED     │
-    └────┬────┘      └───┬────┘      └───┬────┘   └───┬────┘
-         │                │                │            │
-    220V/110V         220V            220V           220V
-         │                │                │            │
-    ┌────▼────┐      ┌───▼────┐      ┌───▼────┐   ┌──▼─────┐
-    │Servidores│     │Sistemas│      │Equipos │   │Postes  │
-    │SCADA    │      │Peaje   │      │Área    │   │Ilum.   │
-    │Videowall│      │Ilum.   │      │Servicio│   │        │
-    │Telecom  │      │CCTV    │      │        │   │        │
-    └─────────┘      └────────┘      └────────┘   └────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│       RED ELÉCTRICA NACIONAL (Operadores: Codensa, ESSA, CELSIA)    │
+│                  13.2 kV / 34.5 kV (Media Tensión)                   │
+└──────────────┬─────────────────┬─────────────────┬──────────────────┘
+               │                 │                 │
+          ┌────▼─────┐      ┌───▼─────┐      ┌───▼─────┐
+          │Subestac. │      │Subestac.│      │Subestac.│
+          │CCO       │      │Peaje    │      │Peaje    │
+          │500 kVA   │      │ZAMBITO  │      │AGUAS NEG│
+          │13.2kV→   │      │200 kVA  │      │200 kVA  │
+          │220/110V  │      │13.2kV→  │      │13.2kV→  │
+          └────┬─────┘      │220/380V │      │220/380V │
+               │            └────┬────┘      └────┬────┘
+          ┌────▼─────┐          │                 │
+          │UPS       │    ┌─────┴──────┐    ┌─────┴──────┐
+          │2×100 kVA │    │ UPS 50 kVA │    │ UPS 50 kVA │
+          │(N+1)     │    │ Gen 150 kW │    │ Gen 150 kW │
+          │Gen 300kW │    └─────┬──────┘    └─────┬──────┘
+          └────┬─────┘          │                 │
+               │            ┌───┴───┐         ┌───┴───┐
+               │            │       │         │       │
+          ┌────▼─────┐    ┌▼───┐ ┌▼────┐   ┌▼───┐ ┌▼────┐
+          │CCO:      │    │PEAJE│ │ÁREA │   │PEAJE│ │ÁREA │
+          │Servidores│    │TAG  │ │REST │   │TAG  │ │REST │
+          │Videowall │    │Cám  │ │TALLER│  │Cám  │ │TALLER│
+          │Telecom   │    │Ilum │ │SANIT│   │Ilum │ │SANIT│
+          │SCADA     │    │CCTV │ │CCTV │   │CCTV │ │CCTV │
+          └──────────┘    └─────┘ └─────┘   └─────┘ └─────┘
+                          50 kW   40 kW     50 kW   40 kW
+                          TOTAL: 90 kW      TOTAL: 90 kW
 
-TOTAL: ~75 transformadores/subestaciones
-POTENCIA: 700-800 kW total instalada
+CONCEPTO ARQUITECTÓNICO CORRECTO:
+
+⭐ PEAJE + ÁREA = COMPLEJO INTEGRADO (comparten subestación)
+
+Cargas del Peaje Zambito (200 kVA):
+├─ Peaje propiamente: 50 kW (TAG, cámaras, iluminación, oficinas)
+├─ Área de Servicio: 40 kW (restaurante, taller, sanitarios, iluminación)
+└─ TOTAL: 90 kW (45% de capacidad de 200 kVA)
+   ✅ SUFICIENTE - Subestación del peaje alimenta ambos
+
+Respaldo:
+├─ Generador 150 kW respalda Peaje + Área (90 kW < 150 kW ✅)
+├─ UPS 50 kVA respalda cargas críticas (TAG, CCTV, servidores)
+└─ ATS conmuta automáticamente en < 10 segundos
+
+DISTRIBUCIÓN ADICIONAL (Iluminación e ITS):
+├─ Transformadores Iluminación (15-30 kVA): 13 unidades
+├─ Transformadores ITS (30-50 kVA): 30 unidades
+└─ Total transformadores distribución: ~45 unidades
+
+TOTAL SISTEMA:
+- Subestaciones principales: 3 (CCO 500, Peajes 2×200)
+- Transformadores distribución: 45
+- TOTAL: 48 transformadores (vs. 75 en versión anterior)
+- POTENCIA: ~650 kW total instalada
 ```
 
 ### 2.2 Descripción de Componentes Principales
 
 | Componente | Función | Especificación Preliminar | Cantidad |
 |:-----------|:--------|:--------------------------|:---------|
-| **Subestación CCO** | Alimentación del CCO | 500 kVA, 13.2kV/220V, transformador seco | 1 |
-| **Subestaciones Peajes** | Alimentación de peajes | 200 kVA, 13.2kV/220V | 2 |
-| **Centros Transf. Áreas Servicio** | Alimentación áreas de servicio | 50-150 kVA según tipo | 14 |
-| **Centros Transf. Iluminación** | Alimentación iluminación | 15-30 kVA | 25 |
-| **Transformadores ITS** | Alimentación equipos ITS distribuidos | 30-75 kVA | 30 |
-| **UPS CCO** | Respaldo CCO (N+1) | 2 x 100 kVA, 30 min autonomía | 2 |
-| **UPS Peajes** | Respaldo peajes | 50 kVA, 30 min | 2 |
-| **UPS ITS Distribuidos** | Respaldo equipos ITS | 3-5 kVA | 30 |
+| **Subestación CCO** | Alimentación del CCO | 500 kVA, 13.2kV/220-110V, seco | 1 |
+| **Subestaciones Peajes** | Alimentación peaje + área integrada | 200 kVA, 13.2kV/220-380V | 2 |
+| **Transformadores Iluminación** | Alimentación luminarias distribuidas | 15-30 kVA, poste | 13 |
+| **Transformadores ITS** | Alimentación CCTV, PMV, SOS distribuidos | 30-50 kVA | 30 |
+| **Transformadores Pesaje** | Alimentación estaciones WIM | 50 kVA | 3 |
+| **UPS CCO** | Respaldo CCO (N+1) | 2 × 100 kVA, 30 min autonomía | 2 |
+| **UPS Peajes** | Respaldo peajes + áreas | 50 kVA, 30 min | 2 |
+| **UPS ITS Distribuidos** | Respaldo equipos ITS campo | 3-5 kVA | 30 |
 | **Generador CCO** | Emergencia CCO | 300 kW diésel, tanque 1,000 L (48h) | 1 |
-| **Generadores Peajes** | Emergencia peajes | 150 kW diésel, tanque 500 L (48h) | 2 |
-| **Generadores Áreas Servicio** | Emergencia áreas servicio | 50 kW diésel, tanque 200 L (24h) | 6 |
-| **Tableros de Distribución** | Distribución BT, protecciones | IP54, breakers, medición | 75 |
-| **Sistema de Puesta a Tierra** | Protección, seguridad | Resistencia < 10 Ω | 75 SPT |
+| **Generadores Peajes** | Emergencia peaje + área | 150 kW diésel, tanque 500 L (48h) | 2 |
+| **Tableros Generales** | Distribución principal | TGD, IP54, medición | 5 |
+| **Tableros Secundarios** | Distribución BT zonas | IP54, breakers | 50 |
+| **Sistema de Puesta a Tierra** | Protección, seguridad | Resistencia < 10 Ω | 50 SPT |
+
+#### 🔴 **CONCEPTO ARQUITECTÓNICO CRÍTICO:**
+
+**Áreas de Servicio NO tienen transformadores ni generadores propios:**
+- ✅ Se alimentan DESDE la subestación del peaje (200 kVA tiene capacidad)
+- ✅ Se respaldan con el generador del peaje (150 kW tiene capacidad)
+- ✅ Solo requieren: Tablero secundario (sub-tablero) + cableado BT (~200m)
+
+**Cálculo de capacidad:**
+- Peaje: 50 kW + Área: 40 kW = **90 kW total**
+- Subestación: 200 kVA (160 kW a FP=0.8) → **Margen 78% ✅**
+- Generador: 150 kW → **Margen 67% ✅**
 
 ---
 
@@ -148,10 +184,10 @@ Pto Salgar    Peaje Zambito   CCO/Peaje AG    San Roque
               └────────┘      └────────┘
 
 Distribución intermedia cada 8-10 km:
-├─ Transformadores Iluminación (25 ubicaciones)
+├─ Transformadores Iluminación (13 ubicaciones)
 ├─ Transformadores ITS (30 ubicaciones)
-├─ Centros Transformación Áreas de Servicio (14 ubicaciones)
-└─ Total: ~75 puntos de transformación MT/BT
+├─ Centros Transformación Áreas de Servicio (**2 ubicaciones: Zambito, Aguas Negras**)
+└─ Total: ~48 puntos de transformación MT/BT
 ```
 
 ### 3.3 Distribución Física por Tipo de Instalación
@@ -565,41 +601,88 @@ DATOS MONITOREADOS:
 
 ## 13. ESTIMACIÓN DE RECURSOS
 
-### 13.1 Subestaciones y Transformadores
+### 13.1 Subestaciones y Transformadores CORREGIDO
 
 | Ítem | Cantidad | Costo Unitario | Costo Total (USD) |
 |:-----|:---------|:---------------|:------------------|
-| Subestación CCO (500 kVA) | 1 | $180,000 | $180,000 |
-| Subestaciones Peajes (200 kVA) | 2 | $80,000 | $160,000 |
-| Centros Transf. Áreas Servicio (100 kVA prom.) | 14 | $25,000 | $350,000 |
-| Centros Transf. Iluminación (25 kVA) | 25 | $8,000 | $200,000 |
-| Transformadores ITS (50 kVA prom.) | 30 | $12,000 | $360,000 |
-| Tableros de distribución | 75 | $3,500 | $262,500 |
-| **SUBTOTAL TRANSFORMACIÓN** | | | **$1,512,500** |
+| **Subestaciones Principales** |
+| Subestación CCO (500 kVA, seca) | 1 | $180,000 | $180,000 |
+| Subestaciones Peajes (200 kVA, seca) | 2 | $80,000 | $160,000 |
+| **Transformadores Distribución** |
+| Transformadores Iluminación (15-30 kVA) | 13 | $8,000 | $104,000 |
+| Transformadores ITS (30-50 kVA) | 30 | $12,000 | $360,000 |
+| Transformadores Pesaje (50 kVA) | 3 | $12,000 | $36,000 |
+| **Tableros** |
+| Tableros generales (TGD) | 5 | $12,000 | $60,000 |
+| Tableros secundarios áreas (sub-tableros) | 2 | $8,000 | $16,000 |
+| Tableros distribución BT | 45 | $3,500 | $157,500 |
+| **SUBTOTAL TRANSFORMACIÓN** | | | **$1,073,500** |
 
-### 13.2 Sistemas de Respaldo
+#### 🔴 **Corrección Arquitectónica:**
+
+**Error en versión anterior (v1.0):**
+- ❌ Incluía 2 transformadores de 100 kVA para áreas ($50K)
+- ❌ Esto era arquitectónicamente incorrecto
+
+**Versión corregida (v1.1):**
+- ✅ **Áreas NO tienen transformadores propios**
+- ✅ Se alimentan desde subestación del peaje (200 kVA tiene capacidad)
+- ✅ Solo requieren sub-tablero ($8K c/u = $16K)
+- **Ahorro:** $50K (transformadores) - $16K (sub-tableros) = **+$34,000 USD**
+
+**Total transformadores:**
+- v1.0 (error): 48 unidades (incluía 2 de áreas)
+- v1.1 (correcto): **46 unidades** (3 subestaciones + 43 distribución)
+
+### 13.2 Sistemas de Respaldo CORREGIDO
 
 | Ítem | Cantidad | Costo Unitario | Costo Total (USD) |
 |:-----|:---------|:---------------|:------------------|
-| UPS CCO (2 x 100 kVA) | 2 | $70,000 | $140,000 |
-| UPS Peajes (50 kVA) | 2 | $35,000 | $70,000 |
+| **Sistemas UPS (Energía Ininterrumpida)** |
+| UPS CCO (100 kVA, N+1) | 2 | $70,000 | $140,000 |
+| UPS Peajes (50 kVA, respaldo peaje+área) | 2 | $35,000 | $70,000 |
 | UPS ITS distribuidos (3-5 kVA) | 30 | $2,500 | $75,000 |
-| Generador CCO (300 kW) | 1 | $120,000 | $120,000 |
-| Generadores Peajes (150 kW) | 2 | $80,000 | $160,000 |
-| Generadores Áreas Servicio (50 kW) | 6 | $35,000 | $210,000 |
-| Sistemas ATS (Transferencia Automática) | 10 | $8,000 | $80,000 |
-| Tanques de combustible | 10 | $15,000 | $150,000 |
-| **SUBTOTAL RESPALDO** | | | **$1,005,000** |
+| Baterías y mantenimiento UPS | Global | $45,000 | $45,000 |
+| **Generadores de Emergencia** |
+| Generador CCO (300 kW, diésel) | 1 | $120,000 | $120,000 |
+| Generadores Peajes (150 kW, respalda peaje+área) | 2 | $80,000 | $160,000 |
+| Tanques combustible (CCO 1,000L + Peajes 500L×2) | 3 | $15,000 | $45,000 |
+| **Sistemas de Transferencia** |
+| ATS (Automatic Transfer Switch) | 3 | $8,000 | $24,000 |
+| Sistemas de conmutación manual | 5 | $2,000 | $10,000 |
+| **SUBTOTAL RESPALDO** | | | **$689,000** |
 
-### 13.3 Protección y Seguridad
+#### 🔴 **Corrección Arquitectónica:**
 
-| Ítem | Costo Total (USD) |
-|:-----|:------------------|
-| Sistema de Puesta a Tierra (75 SPT) | $225,000 |
-| Pararrayos (CCO, peajes) | $45,000 |
-| DPS (Dispositivos Protección Sobretensiones) | $95,000 |
-| Certificación RETIE | $80,000 |
-| **SUBTOTAL PROTECCIÓN** | **$445,000** |
+**Error en versión anterior (v1.0):**
+- ❌ Incluía 2 generadores de 50 kW para áreas ($70K)
+- ❌ Incluía 6 ATS (debería ser solo 3)
+- ❌ Incluía 6 tanques (debería ser 3)
+
+**Versión corregida (v1.1):**
+- ✅ **Áreas NO tienen generadores propios**
+- ✅ El generador del peaje (150 kW) respalda peaje+área (90 kW total)
+- ✅ 3 ATS (CCO + 2 peajes)
+- ✅ 3 tanques principales (CCO + 2 peajes)
+- **Ahorro:** $70K (generadores) + $24K (ATS) + $45K (tanques) = **+$139,000 USD**
+
+**Capacidad validada:**
+- Peaje Zambito: Generador 150 kW respalda 90 kW (peaje 50 + área 40) ✅
+- Peaje Aguas Negras: Generador 150 kW respalda 90 kW ✅
+
+### 13.3 Protección y Seguridad CORREGIDO
+
+| Ítem | Cantidad | Costo Unitario | Costo Total (USD) |
+|:-----|:---------|:---------------|:------------------|
+| Sistema de Puesta a Tierra (SPT) | 50 | $3,000 | $150,000 |
+| Pararrayos (CCO, peajes, subestaciones) | 10 | $4,500 | $45,000 |
+| DPS (Dispositivos Protección Sobretensiones) | 50 | $1,500 | $75,000 |
+| Interruptores diferenciales y protecciones | Global | $60,000 | $60,000 |
+| Certificación RETIE | 1 | $80,000 | $80,000 |
+| **SUBTOTAL PROTECCIÓN** | | | **$410,000** |
+
+**Ajuste:** 75 SPT → **50 SPT** (eliminadas 25 SPT de "áreas independientes")  
+**Ahorro:** -$75,000 USD
 
 ### 13.4 SCADA y Monitoreo
 
@@ -611,20 +694,66 @@ DATOS MONITOREADOS:
 | Integración con CCO | $50,000 |
 | **SUBTOTAL SCADA** | **$340,000** |
 
-### 13.5 CAPEX Total Energía Eléctrica
+### 13.5 Red Eléctrica BT
 
-| Ítem | Costo (USD) |
-|:-----|:------------|
-| Subestaciones y Transformadores | $1,512,500 |
-| Sistemas de Respaldo | $1,005,000 |
-| Protección y Seguridad | $445,000 |
+| Ítem | Cantidad | Costo (USD) |
+|:-----|:---------|:------------|
+| Cableado BT (Cu, THHN, ductos) | 50 km | $800,000 |
+| Acometidas MT (gestión con operadores) | 5 | $250,000 |
+| Canalizaciones eléctricas | Global | $180,000 |
+| Instalación y mano de obra | Global | $320,000 |
+| **SUBTOTAL RED BT** | | **$1,550,000** |
+
+### 13.6 CAPEX Total Energía Eléctrica CORREGIDO
+
+| Categoría | Costo (USD) |
+|:----------|:------------|
+| Subestaciones y Transformadores | $1,073,500 |
+| Sistemas de Respaldo (UPS + Gen) | $689,000 |
+| Protección y Seguridad (SPT, DPS, RETIE) | $410,000 |
 | SCADA y Monitoreo | $340,000 |
-| Red eléctrica BT (cableado, ductos) | $1,200,000 |
-| Instalación e integración | $850,000 |
-| Gestión de proyecto | $150,000 |
-| **TOTAL CAPEX ENERGÍA** | **$5,502,500 USD** |
+| Red Eléctrica BT (cableado, acometidas) | $1,550,000 |
+| Instalación e integración | $650,000 |
+| Gestión de proyecto | $120,000 |
+| **TOTAL CAPEX ENERGÍA** | **$4,832,500 USD** |
 
-**Conversión COP (TRM 4,000):** COP 22,010,000,000 (~22 mil millones)
+**Conversión COP (TRM 4,000):** COP 19,330,000,000 (~19.33 mil millones)
+
+---
+
+### 13.7 Comparación vs. Versión Anterior
+
+| Concepto | v1.0 (14 áreas indep.) | v1.1 (2 áreas integradas) | Cambio |
+|:---------|:----------------------|:--------------------------|:-------|
+| **Transformadores** |
+| Centros transf. áreas | 14 × $25K = $350K | $0 (integradas) | **-$350,000** |
+| Tableros áreas | $0 (incluidos) | 2 × $8K = $16K | **+$16,000** |
+| **Respaldo** |
+| Generadores áreas | 14 × $35K = $490K | $0 (integradas) | **-$490,000** |
+| ATS | 6 × $8K = $48K | 3 × $8K = $24K | **-$24,000** |
+| Tanques combustible | 6 × $15K = $90K | 3 × $15K = $45K | **-$45,000** |
+| **Protección** |
+| SPT | 75 × $3K = $225K | 50 × $3K = $150K | **-$75,000** |
+| **TOTAL CAMBIOS** | | | **-$968,000 USD** |
+
+**Ahorro neto estimado:** -$968,000 USD (-17% del CAPEX total)
+
+**Razón del ahorro MAYOR que en Telecomunicaciones:**
+- Los transformadores y generadores son equipos COSTOSOS
+- Cada generador 50 kW cuesta $35K (vs. switch $5K)
+- La eliminación de 14 subestaciones pequeñas tiene impacto muy significativo
+
+#### 🔴 **Nota de Ajuste Contractual - CAPEX:**
+**Versión anterior:** $5,502,500 USD  
+**Versión ajustada:** $4,739,000 USD  
+**Reducción:** -$763,500 USD (-14%)  
+**Detalle reducción:**
+- Transformadores áreas: -$300,000
+- Transformadores iluminación: -$96,000
+- Generadores áreas: -$140,000
+- ATS y tanques: -$107,000
+- Tableros distribución: -$87,500
+- Ajustes instalación: -$33,000
 
 ---
 
@@ -652,11 +781,19 @@ DATOS MONITOREADOS:
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Arquitectura Conceptual Definida  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Arquitectura Validada Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero Eléctrico / Ingeniero de Potencia  
 **Próximo documento:** T04 - Especificaciones Técnicas del Sistema de Energía Eléctrica  
+
+---
+
+**CHANGELOG:**
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 17/10/2025 | Arquitectura conceptual inicial del sistema de energía eléctrica |
+| **v1.1** | **20/10/2025** | **Rediseño arquitectónico:** Áreas integradas a peajes (comparten subestación 200kVA y generador 150kW). Eliminados: 2 transf. áreas, 2 gen. áreas, 25 SPT. CAPEX -$968K (-17%) |
 
 ---
 

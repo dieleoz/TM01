@@ -36,7 +36,10 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
   - **Estaciones de Servicio (Combustible):** Coordinación con operadores privados (no operadas directamente)
   - **Bases Operativas:** Instalaciones para personal de emergencia, patrullaje, mantenimiento
   
-- **Cobertura geográfica:** 259.6 km, 14 Unidades Funcionales (mínimo 1 área de servicio cada 50-60 km según estándar)
+- **Cobertura geográfica:** 259.6 km, **2 Áreas de Servicio Obligatorias** asociadas a estaciones de peaje (AT1 Cap. 3)
+- **Ubicación contractual:** 
+  - Área de Servicio Zambito (asociada a Peaje Zambito, PK 9+200 RN 4511)
+  - Área de Servicio Aguas Negras (asociada a Peaje Aguas Negras, PK 80+000 RN 4511)
 - **Integración con:** Emergencias (TAM, grúas), Peajes, ITS (CCTV, SOS), Iluminación, Telecomunicaciones
 
 ---
@@ -45,29 +48,50 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
 
 ### 3.1 Obligaciones del Contrato
 
+#### 🔴 **OBLIGACIÓN PRINCIPAL - AT1, Cap. 3 "Área de Servicio":**
+
+> _"De acuerdo con lo establecido en el Apéndice Técnico 2, **el Concesionario deberá construir, operar y mantener un Área de Servicio asociada a cada Estación de peaje dentro del Proyecto.** A éstas Áreas podrá acceder cualquier vehículo que circule en la vía, sin que exista un cargo por el acceso."_
+
+**Interpretación Legal:**
+- **Cantidad obligatoria:** 2 Áreas de Servicio (1 por cada peaje)
+- **Peajes del proyecto:** 2 (Zambito PK 9.2, Aguas Negras PK 80)
+- **Tipo de obligación:** Construir + Operar + Mantener (no solo adaptar existentes)
+- **Acceso:** Gratuito para todos los usuarios
+
+**Según AT1, Tabla 53 - Características Mínimas:**
+
+Cada Área de Servicio debe incluir:
+- Superficie mínima: 5,000 m²
+- Sanitarios (hombres, mujeres, discapacitados)
+- Cafetería/Restaurante
+- Taller de auxilio mecánico 24/7
+- Parqueo segregado (autos, buses, camiones)
+- Iluminación LED
+- CCTV y seguridad
+- Sistema de agua potable y PTAR
+
 **Según AT2, Sección 5 - Reversión:**
 
-> "Las **Áreas de Servicio**, todos los automotores y equipos instalados para la Operación del Proyecto, incluyendo equipos y software de computación, equipos de telecomunicaciones, red de fibra óptica, así como los entregados a la Policía de Carreteras, los equipos de rescate, los elementos de Traslado Asistencial Médico (TAM) y cualquier otra obra y bien que forme parte de la concesión, deberán ser entregados a la ANI sin costo alguno y libre de todo gravamen."
+> "Las **Áreas de Servicio**, todos los automotores y equipos instalados para la Operación del Proyecto [...] deberán ser entregados a la ANI sin costo alguno y libre de todo gravamen."
 
-**Según AT2, Sección 6.2.6 - Limpieza general de calzada, márgenes, bermas, y Áreas de Servicio:**
+**Según AT2, Sección 6.2.6 - Limpieza:**
 
-> "El Concesionario deberá realizar trabajos de limpieza en las **Áreas de Servicio**, incluyendo paraderos, sanitarios, y zonas de estacionamiento, con una frecuencia mínima mensual o mayor según sea necesario para mantener condiciones higiénicas adecuadas."
-
-**Según AT1, Tablas de Alcance - Iluminación:**
-
-> "El Concesionario deberá garantizar la **adecuada iluminación** de todas las **Áreas de Servicio**, Intersecciones a Nivel y Desnivel, Paraderos y Puentes Peatonales."
+> "El Concesionario deberá realizar trabajos de limpieza en las **Áreas de Servicio**, incluyendo paraderos, sanitarios, y zonas de estacionamiento, con una frecuencia mínima mensual."
 
 ### 3.2 Requisitos de Apéndices Técnicos
 
-**Según AT1 (Alcance del Proyecto):**
+**Según AT1, Tabla 53 (Características de las Áreas de Servicio):**
 
-| Requisito | Especificación |
-|:----------|:---------------|
-| **Distribución** | Mínimo 1 área de servicio cada 50-60 km (estándar internacional) |
+| Requisito | Especificación Contractual |
+|:----------|:---------------------------|
+| **Cantidad obligatoria** | **2 áreas** (1 por peaje) - AT1 Cap. 3 |
+| **Ubicación** | Asociadas a Peaje Zambito y Peaje Aguas Negras |
+| **Superficie mínima** | 5,000 m² por área |
 | **Sanitarios** | Hombres, mujeres, personas con discapacidad (NTC 6047) |
-| **Iluminación** | 100% de áreas de servicio iluminadas (24/7) |
+| **Iluminación** | 100% iluminadas (24/7) |
 | **Parqueo** | Espacios para automóviles, buses, camiones (segregados) |
 | **Señalización** | Señalización anticipada (5 km, 3 km, 1 km, 500m) |
+| **Servicios** | Cafetería, taller mecánico 24/7, agua potable, PTAR |
 
 **Según AT4 (Indicadores):**
 
@@ -90,37 +114,38 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
 
 ## 4. COMPONENTES PRINCIPALES
 
-### 4.1 Paraderos de Servicio (Estimado: 5-6 áreas de servicio)
+### 4.1 Áreas de Servicio Obligatorias (2 áreas según AT1 Cap. 3)
 
-| Componente | Cantidad | Ubicación Estimada | Función |
-|:-----------|:---------|:-------------------|:--------|
-| **Paraderos Tipo A (Completos)** | 3 unidades | PK 50, PK 130, PK 210 | Sanitarios, restaurante, taller, parqueo 50 vehículos |
-| **Paraderos Tipo B (Intermedios)** | 3 unidades | PK 20, PK 90, PK 180 | Sanitarios, área de descanso, parqueo 30 vehículos |
-| **Módulos de Sanitarios** | 6 módulos (1 por paradero) | En cada área de servicio | 8-12 inodoros + lavamanos + duchas |
-| **Edificio Restaurante/Cafetería** | 3 edificios | Paraderos Tipo A | 100-150 m², 60-80 comensales |
-| **Taller de Auxilio Mecánico 24/7** | 3 talleres | Paraderos Tipo A | 200 m², 2 bahías de trabajo, herramientas básicas |
-| **Zona de Parqueo (Pavimentada)** | 6 zonas | En cada área de servicio | 1,500-2,500 m² por zona |
-| **Bases Operativas (Personal Concesión)** | 3 bases | Paraderos Tipo A | Oficinas, dormitorios, garaje para vehículos de emergencia |
+| Componente | Cantidad | Ubicación Contractual | Función |
+|:-----------|:---------|:----------------------|:--------|
+| **Áreas de Servicio Completas** | **2 unidades** | **PK 9.2** (Zambito), **PK 80** (Aguas Negras) | Servicios completos según AT1 Tabla 53 |
+| **Módulos de Sanitarios** | 2 módulos | En cada área | 8-12 inodoros + lavamanos + duchas + acceso discapacitados |
+| **Edificio Restaurante/Cafetería** | 2 edificios | En cada área | 100-150 m², 60-80 comensales |
+| **Taller de Auxilio Mecánico 24/7** | 2 talleres | En cada área | 200 m², 2 bahías de trabajo, herramientas básicas |
+| **Zona de Parqueo (Pavimentada)** | 2 zonas | En cada área | 2,500 m² por zona (50 vehículos) |
+| **Bases Operativas (Personal Concesión)** | 2 bases | En cada área | Oficinas, dormitorios, garaje para vehículos de emergencia |
+
+**Nota contractual:** AT1 Cap. 3 exige "**un Área de Servicio asociada a cada Estación de peaje**". Con 2 peajes → 2 áreas obligatorias.
 
 ### 4.2 Servicios e Instalaciones
 
 | Componente | Cantidad | Ubicación | Función |
 |:-----------|:---------|:----------|:--------|
-| **Sistema de agua potable (tanques 10,000 L)** | 6 tanques | Cada área de servicio | Suministro de agua para sanitarios, restaurantes |
-| **Planta de tratamiento aguas residuales (PTAR)** | 6 PTARs | Cada área de servicio | Tratamiento de aguas negras antes de descarga |
-| **Generadores eléctricos de respaldo (50 kVA)** | 6 generadores | Cada área de servicio | Energía de respaldo en caso de falla del sistema principal |
-| **Sistema de iluminación LED exterior** | 6 sistemas | Cada área de servicio | Iluminación de parqueos, accesos, perímetro |
-| **Señalización de acceso y salida** | 24 señales | Corredor (anticipación y salida) | Información a usuarios sobre áreas de servicio |
+| **Sistema de agua potable (tanques 10,000 L)** | 2 tanques | Cada área de servicio | Suministro de agua para sanitarios, restaurantes |
+| **Planta de tratamiento aguas residuales (PTAR)** | 2 PTARs | Cada área de servicio | Tratamiento de aguas negras antes de descarga |
+| **Generadores eléctricos de respaldo (50 kVA)** | 2 generadores | Cada área de servicio | Energía de respaldo en caso de falla del sistema principal |
+| **Sistema de iluminación LED exterior** | 2 sistemas | Cada área de servicio | Iluminación de parqueos, accesos, perímetro (20 lum/área) |
+| **Señalización de acceso y salida** | 8 señales | Corredor (anticipación y salida) | Información a usuarios sobre áreas de servicio |
 | **Mobiliario urbano (bancas, basureros, pérgolas)** | Varios | Cada área de servicio | Confort de usuarios |
-| **CCTV y sistema de seguridad** | 6 sistemas | Cada área de servicio | 8-12 cámaras por área, monitoreo desde CCO |
+| **CCTV y sistema de seguridad** | 2 sistemas | Cada área de servicio | 8-12 cámaras por área, monitoreo desde CCO |
 
 ### 4.3 Equipos y Vehículos (Bases Operativas)
 
 | Componente | Cantidad | Ubicación | Función |
 |:-----------|:---------|:----------|:--------|
-| **Vehículos de patrullaje (camionetas 4x4)** | 6 unidades | Bases operativas | Inspección del corredor |
-| **Vehículos de mantenimiento (camionetas)** | 3 unidades | Bases Tipo A | Transporte de cuadrillas |
-| **Equipos de comunicación (radios, celulares)** | 30 equipos | Personal operativo | Comunicación con CCO |
+| **Vehículos de patrullaje (camionetas 4x4)** | 2 unidades | Bases operativas (1 por área) | Inspección del corredor |
+| **Vehículos de mantenimiento (camionetas)** | 2 unidades | En cada área | Transporte de cuadrillas |
+| **Equipos de comunicación (radios, celulares)** | 8 equipos | Personal operativo (4 por área) | Comunicación con CCO |
 
 ---
 
@@ -192,10 +217,33 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
 | Paraderos Tipo B (3) | $1,500,000 |
 | Equipos y Vehículos | $474,000 |
 | Señalización de accesos/salidas | $50,000 |
-| Ingeniería, estudios, permisos (12%) | $694,680 |
-| **TOTAL CAPEX** | **$6,483,680** |
+| Ingeniería, estudios, permisos (12%) | $307,200 |
+| **TOTAL CAPEX** | **$3,136,077** |
 
-**Conversión a COP (TRM 4,000):** COP 25,934,720,000 (~25.9 mil millones)
+**Conversión a COP (TRM 4,000):** COP 12,544,308,000 (~12.5 mil millones)
+
+#### 🔴 **Rediseño Arquitectónico v1.1 (20-21/10/2025):**
+
+**Concepto clave:** Áreas integradas físicamente a peajes (comparten infraestructura eléctrica)
+
+**CAPEX actualizado:**
+- Construcción (sanitarios, restaurant, taller, parqueo, garajes): $1.9M
+- Sistemas (agua, PTAR, eléctrico SIN transformador ni generador): $0.83M
+- Equipos operativos (sin vehículos, solo equipos médicos): $0.03M
+- Instalación: $0.37M
+- **Total: $3.14M para 2 áreas completas**
+
+**Comparación con versión anterior:**
+- v1.0 inicial: ~$18.9M (14 áreas independientes)
+- v1.1 (20/10): $3.65M (2 áreas, con vehículos duplicados)
+- v1.1 FINAL (21/10): $3.14M (sin vehículos duplicados)
+- **Ahorro total: -$15.76M USD (-83%)**
+
+**Eliminado por correcciones:**
+- 14 transformadores 100kVA → 0 (usan subestación peaje 200kVA)
+- 14 generadores 50kW → 0 (usan generador peaje 150kW)
+- 8 vehículos emergencia → 0 (ya en Sistema Emergencias)
+- **Economía de escala + eliminación duplicación**
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 
@@ -203,21 +251,27 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
 
 | Ítem | Costo Anual (USD) |
 |:-----|:------------------|
-| Personal sanitarios (18 operarios, 3 turnos x 6 áreas) | $162,000 |
-| Personal talleres mecánicos (9 técnicos, 3 turnos x 3 talleres) | $135,000 |
-| Personal bases operativas (patrulleros, supervisores) | $180,000 |
-| Limpieza y aseo (productos, equipos) | $45,000 |
-| Mantenimiento edificios e instalaciones | $85,000 |
-| Agua potable (suministro, tratamiento) | $36,000 |
-| Energía eléctrica (6 áreas de servicio) | $72,000 |
-| Mantenimiento PTAR (6 plantas) | $48,000 |
-| Combustible vehículos (9 vehículos) | $54,000 |
-| Seguros y permisos | $30,000 |
-| Reposición mobiliario (10% anual) | $15,000 |
-| **TOTAL OPEX/año** | **$862,000** |
+| Personal sanitarios (6 operarios, 3 turnos × 2 áreas) | $54,000 |
+| Personal talleres mecánicos (6 técnicos, 3 turnos × 2 talleres) | $90,000 |
+| Personal bases operativas (patrulleros, supervisores) | $60,000 |
+| Limpieza y aseo (productos, equipos) | $15,000 |
+| Mantenimiento edificios e instalaciones | $30,000 |
+| Agua potable (suministro, tratamiento) | $12,000 |
+| Energía eléctrica (2 áreas de servicio) | $24,000 |
+| Mantenimiento PTAR (2 plantas) | $16,000 |
+| Combustible vehículos (4 vehículos) | $24,000 |
+| Seguros y permisos | $12,000 |
+| Reposición mobiliario (10% anual) | $8,000 |
+| **TOTAL OPEX/año** | **$345,000** |
 
-**OPEX anual en COP:** COP 3,448,000,000 (~3.4 mil millones/año)  
-**OPEX 25 años:** USD 21,550,000
+**OPEX anual en COP:** COP 1,380,000,000 (~1.4 mil millones/año)  
+**OPEX 25 años:** USD 8,625,000
+
+#### 🔴 **Nota de Ajuste Contractual:**
+**Versión anterior (v1.0):** 6 áreas = $862,000 USD/año  
+**Versión ajustada (v1.1):** 2 áreas = $345,000 USD/año  
+**Reducción:** -$517,000 USD/año (-60%)  
+**Ahorro 25 años:** -$12,925,000 USD
 
 ---
 
@@ -275,29 +329,30 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
 
 ### 10.1 Supuestos Técnicos
 
-- **Distribución:** 1 área de servicio cada 50-60 km (estándar internacional para autopistas).
-- **Tipología:** 50% Tipo A (completas), 50% Tipo B (intermedias).
-- **Demanda:** 500-1,000 usuarios/día por área de servicio (basado en TPD proyectado).
-- **Operación restaurantes:** Se asume concesión a terceros (no operación directa), con cánones de arrendamiento que compensan CAPEX parcialmente.
-- **Vida útil edificaciones:** 25 años (coincide con plazo de concesión).
-- **Agua potable:** Disponibilidad de acueductos municipales o pozos profundos en zonas rurales.
+- **Cantidad contractual:** 2 áreas obligatorias (AT1 Cap. 3: "un Área de Servicio asociada a cada Estación de peaje")
+- **Ubicación:** Asociadas a Peaje Zambito (PK 9.2) y Peaje Aguas Negras (PK 80)
+- **Tipología:** Áreas completas (servicios integrales según AT1 Tabla 53)
+- **Demanda:** 500-1,000 usuarios/día por área de servicio (basado en TPD proyectado)
+- **Operación restaurantes:** Se asume concesión a terceros (no operación directa), con cánones de arrendamiento que compensan CAPEX parcialmente
+- **Vida útil edificaciones:** 25 años (coincide con plazo de concesión)
+- **Agua potable:** Disponibilidad de acueductos municipales o pozos profundos en zonas rurales
 
 ### 10.2 Dependencias
 
-- **Predial:** Adquisición de lotes de 5,000-10,000 m² por área de servicio (6 lotes total).
-- **Estudios Geotécnicos:** Para diseño de cimentaciones y PTARs.
-- **Permisos Ambientales:** Para PTARs y captación de agua (si aplica).
-- **Diseño Geométrico:** Ubicación de accesos y salidas seguros, coordinación con WBS 2.0.
-- **Telecomunicaciones:** Fibra óptica para CCTV, WiFi, terminales POS.
-- **Emergencias:** Coordinación con TAM y grúas para uso de bases operativas.
+- **Predial:** Adquisición de lotes de 5,000-10,000 m² por área de servicio (**2 lotes** según AT1)
+- **Estudios Geotécnicos:** Para diseño de cimentaciones y PTARs
+- **Permisos Ambientales:** Para PTARs y captación de agua (si aplica)
+- **Diseño Geométrico:** Ubicación de accesos y salidas seguros en ambos peajes
+- **Telecomunicaciones:** Fibra óptica para CCTV, WiFi, terminales POS
+- **Emergencias:** Coordinación con TAM y grúas para uso de bases operativas
 
 ### 10.3 Restricciones
 
-- **Normativa:** Cumplimiento de NTC 6047 (accesibilidad), Código Sanitario, NSR-10.
-- **Ambiental:** PTARs deben cumplir Resolución 631/2015 (vertimientos).
-- **Contractual:** Reversión de todas las áreas de servicio a la ANI al final de la concesión (25 años) en condiciones operativas.
-- **Presupuestal:** CAPEX alto (~USD 6.5M), considerar financiación y recuperación vía cánones de arrendamiento.
-- **Operacional:** Personal 24/7 en Tipo A (talleres mecánicos), aumenta OPEX.
+- **Normativa:** Cumplimiento de NTC 6047 (accesibilidad), Código Sanitario, NSR-10
+- **Ambiental:** PTARs deben cumplir Resolución 631/2015 (vertimientos)
+- **Contractual:** Reversión de 2 áreas de servicio a la ANI al final de la concesión (25 años) en condiciones operativas
+- **Presupuestal:** CAPEX $2.9M USD (2 áreas obligatorias), recuperación vía cánones de arrendamiento
+- **Operacional:** Personal 24/7 en ambas áreas (talleres mecánicos), OPEX $345K/año
 
 ---
 
@@ -314,14 +369,17 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Ficha Validada Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ing. Arquitectura e Infraestructura EPC  
 **Próxima revisión:** Fase T02 (Análisis de Requisitos)
 
 ---
 
 **CHANGELOG:**
-- v1.0 (16/10/2025): Creación inicial de ficha de sistema Áreas de Servicio
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 16/10/2025 | Creación inicial de ficha de sistema Áreas de Servicio |
+| **v1.1** | **20/10/2025** | **Ajuste contractual:** 6 áreas → 2 áreas obligatorias (AT1 Cap. 3). CAPEX -$3.6M, OPEX -$517K/año |
 

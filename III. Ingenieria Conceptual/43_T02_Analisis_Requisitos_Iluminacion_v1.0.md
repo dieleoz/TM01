@@ -25,9 +25,9 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 Este análisis cubre la **iluminación de todas las zonas críticas** del corredor vial de 259.6 km:
 1. Estaciones de Peaje (2 estaciones: Zambito, Aguas Negras)
-2. Estaciones de Pesaje
+2. Estaciones de Pesaje  
 3. Centro de Control de Operaciones (CCO)
-4. Áreas de Servicio (14 UFs)
+4. Áreas de Servicio (**2 áreas obligatorias** asociadas a peajes - AT1 Cap. 3)
 5. Intersecciones a Nivel y Desnivel
 6. Paraderos y Puentes Peatonales
 7. Zonas de acceso y estacionamiento
@@ -109,9 +109,9 @@ Este análisis cubre la **iluminación de todas las zonas críticas** del corred
 ### 2.4 Iluminación de Áreas de Servicio
 
 **ID:** RF-004  
-**Descripción:** El sistema debe iluminar las 14 áreas de servicio (UFs)  
-**Prioridad:** 🟡 Alta  
-**Fuente:** AT2, Sección 6.3.4; AT1  
+**Descripción:** El sistema debe iluminar las 2 áreas de servicio obligatorias (asociadas a peajes)  
+**Prioridad:** 🔴 Alta (obligación contractual)  
+**Fuente:** AT2, Sección 6.3.4; AT1 Cap. 3  
 
 **Criterios de Aceptación:**
 - Zonas de parqueo: 10-15 lux
@@ -381,7 +381,7 @@ Este análisis cubre la **iluminación de todas las zonas críticas** del corred
 | **RF-001** | Funcional | Iluminación de peajes | AT2, 6.3.4 | Peajes (2 estaciones) | 🔴 Alta |
 | **RF-002** | Funcional | Iluminación de pesaje | AT2, 6.3.4 | Estaciones de Pesaje | 🔴 Alta |
 | **RF-003** | Funcional | Iluminación de CCO | AT2, 6.3.4 | CCO | 🔴 Alta |
-| **RF-004** | Funcional | Iluminación de Áreas de Servicio | AT2, 6.3.4; AT1 | 14 UFs | 🟡 Alta |
+| **RF-004** | Funcional | Iluminación de Áreas de Servicio | AT2, 6.3.4; AT1 Cap. 3 | **2 áreas** | 🔴 Alta |
 | **RF-005** | Funcional | Iluminación de intersecciones | AT2, 6.3.4; RETILAP | Intersecciones | 🔴 Alta |
 | **RF-006** | Funcional | Iluminación de puentes peatonales | AT2, 6.3.4 | Puentes peatonales | 🟡 Media |
 | **RF-007** | Funcional | Control desde CCO | AT2, 3.1.7 | CCO, SCADA | 🔴 Alta |
@@ -549,7 +549,7 @@ Este análisis cubre la **iluminación de todas las zonas críticas** del corred
 - [ ] El 100% de las estaciones de peaje (2) tienen iluminación operativa
 - [ ] El 100% de las estaciones de pesaje tienen iluminación operativa
 - [ ] El CCO tiene iluminación perimetral, de accesos y estacionamientos operativa
-- [ ] El 100% de las áreas de servicio (14 UFs) tienen iluminación operativa
+- [ ] El 100% de las áreas de servicio (**2 obligatorias**) tienen iluminación operativa
 - [ ] Las intersecciones críticas tienen iluminación según diseño
 - [ ] Los puentes peatonales tienen iluminación de escaleras y pasos
 - [ ] El sistema SCADA permite control y monitoreo desde CCO
@@ -650,11 +650,19 @@ Este análisis cubre la **iluminación de todas las zonas críticas** del corred
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Estado:** ✅ Análisis Validado Contractualmente  
+**Fecha:** 20/10/2025  
 **Responsable:** Ingeniero de Sistemas Eléctricos  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Iluminación  
+
+---
+
+**CHANGELOG:**
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 17/10/2025 | Análisis inicial de requisitos de iluminación |
+| **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3). Requisitos actualizados |
 
 ---
 
