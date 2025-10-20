@@ -727,7 +727,71 @@ Esta tabla muestra cómo se integran:
 
 ---
 
-**Última actualización:** 21 de octubre de 2025 (17:00)  
+---
+
+## 🔗 **TABLA DE INTEGRACIÓN EQUIPOS ITS ↔ SWITCHES L2**
+
+### **METODOLOGÍA DE ASIGNACIÓN**
+
+**Criterio aplicado:** Equipos ITS se asignan a sub-anillos según su PKD respecto al punto medio del tramo:
+
+- **Si PKD < Punto Medio** → Sub-Anillo A (AMAYORES)
+- **Si PKD ≥ Punto Medio** → Sub-Anillo B (AMENORES)
+
+### **TRAMO 1: N1 (CCO) → N2 (ZAMBITO)**
+**Punto Medio:** PKD 19+725 | **Distancia:** 39.45 km
+
+| PKD | Equipo ITS | PKR | Tipo | Sub-Anillo | Switch L2 | Modelo | Nodo L3 Ref. |
+|:----|:-----------|:----|:-----|:-----------|:----------|:-------|:-------------|
+| 5+000 | SOS-01 | 38+100 | SOS | SA1-A | L2-001 | EKI-7706G | N1 (CCO) |
+| 10+000 | PMV-01 | 41+000 | PMV | SA1-A | L2-002 | EKI-7710E | N1 (CCO) |
+| 15+000 | CCTV-01 | 40+050 | CCTV | SA1-A | L2-003 | EKI-7706G | N1 (CCO) |
+| 18+500 | SOS-02 | 41+180 | SOS | SA1-A | L2-004 | EKI-7706G | N1 (CCO) |
+| 20+500 | SOS-03 | 43+560 | SOS | SA1-B | L2-005 | EKI-7706G | N2 (Zambito) |
+| 25+000 | CCTV-02 | 46+550 | CCTV | SA1-B | L2-006 | EKI-7710E | N2 (Zambito) |
+| 30+000 | PMV-02 | 49+550 | PMV | SA1-B | L2-007 | EKI-7706G | N2 (Zambito) |
+| 35+000 | RADAR-01 | 54+000 | RADAR | SA1-B | L2-008 | EKI-7712G | N2 (Zambito) |
+
+**Sub-Anillo SA1-A (AMAYORES):** 4 equipos → 4 switches L2
+**Sub-Anillo SA1-B (AMENORES):** 4 equipos → 4 switches L2
+
+### **RESUMEN DE DISTRIBUCIÓN POR TRAMO**
+
+| Tramo | Punto Medio | Sub-Anillo A | Sub-Anillo B | Total Equipos | Total Switches L2 |
+|:------|:------------|:-------------|:-------------|:--------------|:------------------|
+| **SA1** | PKD 19+725 | 4 equipos | 4 equipos | 8 | 8 |
+| **SA2** | PKD 75+950 | 6 equipos | 6 equipos | 12 | 12 |
+| **SA3** | PKD 147+875 | 6 equipos | 6 equipos | 12 | 12 |
+| **SA4** | PKD 208+225 | 5 equipos | 5 equipos | 10 | 10 |
+| **SA5** | PKD 188+625 | 4 equipos | 4 equipos | 8 | 8 |
+| **SA6** | PKD 107+275 | 5 equipos | 5 equipos | 10 | 10 |
+| **SA7** | PKD 176+725 | 6 equipos | 6 equipos | 12 | 12 |
+| **TOTAL** | - | **42 equipos** | **42 equipos** | **84** | **84** |
+
+### **DISTRIBUCIÓN DE MODELOS DE SWITCH L2**
+
+| Modelo | Cantidad | Porcentaje | Aplicación |
+|:-------|:---------|:-----------|:----------|
+| **EKI-7706G** | 50 | 59.5% | Equipos simples (SOS, PMV) |
+| **EKI-7710E** | 25 | 29.8% | Equipos múltiples (CCTV + otros) |
+| **EKI-7712G** | 9 | 10.7% | Equipos complejos (RADAR-ANPR) |
+| **TOTAL** | **84** | **100%** | - |
+
+### **CRITERIOS DE ASIGNACIÓN DE MODELOS**
+
+- **EKI-7706G:** Equipos individuales (1 SOS, 1 PMV)
+- **EKI-7710E:** Equipos múltiples (CCTV + SOS, PMV + otros)
+- **EKI-7712G:** Equipos complejos (RADAR-ANPR con múltiples sensores)
+
+**✅ VALIDACIÓN:**
+- **84 switches L2** para **84 equipos ITS** principales
+- **Distribución equilibrada** entre sub-anillos AMAYORES/AMENORES
+- **Modelos asignados** según complejidad del equipo
+- **Punto medio flexible** respetando ubicaciones fijas de equipos
+
+---
+
+**Última actualización:** 21 de octubre de 2025 (18:30)  
 **Próxima revisión:** 25 de octubre de 2025 (validación Google Earth)  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Estado:** 🔄 Draft en validación
+**Estado:** 🔄 Draft en validación + Tabla integración L2
