@@ -18,9 +18,11 @@
 | **Áreas de Servicio y Operación** | $3,136,077 | $12,544,308,000 | 5.5% |
 | **Gestión y Administración** | $13,035,000 | $52,140,000,000 | 22.7% |
 | **Sistemas de Emergencia y Respaldo** | $6,465,629 | $25,862,516,000 | 11.3% |
-| **TOTAL PROYECTO** | **$54,704,455** | **$218,817,820,000** | 100% |
+| **TOTAL PROYECTO** | **$57,408,046** | **$229,632,184,000** | 100% |
 
-**Total:** USD 54.7 millones ≈ COP 218.8 mil millones
+**Total:** USD 57.4 millones ≈ COP 229.6 mil millones
+
+> **Nota:** Esta tabla muestra el desglose por categorías. El total consolidado detallado por sistema se encuentra en la sección "Consolidación Final" más abajo.
 
 ---
 
@@ -89,9 +91,11 @@
 | Áreas de Servicio | $3,136,077 |
 | Gestión y Administración | $13,035,000 |
 | Emergencia y Respaldo | $4,638,569 |
-| **TOTAL CAPEX** | **$57,593,046** |
+| **TOTAL CAPEX** | **$57,408,046** |
 
-**En pesos (TRM 4,000):** COP 230,372,184,000 (~230.4 mil millones)
+**En pesos (TRM 4,000):** COP 229,632,184,000 (~229.6 mil millones)
+
+> **Nota:** Esta es la cifra oficial consolidada del proyecto. Incluye todos los sistemas validados contractualmente.
 
 ---
 
