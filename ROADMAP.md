@@ -1,10 +1,10 @@
 # ROADMAP: PROYECTO FORMATOS PARA IA
 ## Plan de Trabajo y Cronograma
 
-**Versión:** 6.3 - LAYOUT GEORREFERENCIADO CREADO  
+**Versión:** 6.4 - 5 ESPECIFICACIONES T04 COMPLETADAS (SISTEMAS ITS)  
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 21 de octubre de 2025 (18:00)  
+**Última actualización:** 21 de octubre de 2025 (19:30)  
 **Progreso total:** ✅ **FASE 2: INGENIERÍA CONCEPTUAL COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente
@@ -664,7 +664,7 @@ Aplicar **Template T02** a sistemas críticos:
 | **Templates T01 creados** | 13 | 13 | ✅ 100% |
 | **Templates T02 creados** | 13 | 13 | ✅ 100% |
 | **Templates T03 creados** | 13 | 13 | ✅ 100% |
-| **Templates T04 creados** | 13 | 0 | ⏳ 0% ← **PRÓXIMO** |
+| **Templates T04 creados** | 13 | 5 | 🔄 38% ← **EN PROGRESO** |
 | **Validaciones contractuales** | 13 | 13 | ✅ 100% 🎉 |
 | **Presupuesto consolidado** | 1 | 1 | ✅ 100% |
 | **Metodología genérica** | 1 | 1 | ✅ 100% |
@@ -743,7 +743,15 @@ Aplicar **Template T02** a sistemas críticos:
    - [x] ✅ Hitos completados documentados
    - [x] ✅ Próximos pasos actualizados
 
-**Resultado:** Base sólida para Fase 3 (T04) 🎉
+3. [x] ✅ **Especificaciones Técnicas T04 - Sistemas ITS Prioritarios** (COMPLETADO)
+   - [x] ✅ Template T04 genérico creado (468 líneas)
+   - [x] ✅ T04 Postes SOS (847 líneas, $2.26M USD, 87 unidades)
+   - [x] ✅ T04 ETD + Radares (673 líneas, $0.64M USD, 12 RADAR-ANPR)
+   - [x] ✅ T04 CCTV (631 líneas, $1.07M USD, 30 cámaras)
+   - [x] ✅ T04 PMV (596 líneas, $1.01M USD, 28 paneles)
+   - [x] ✅ T04 WIM (547 líneas, $2.29M USD, 1 estación bidireccional)
+
+**Resultado:** 5/13 T04 completados (38%) - Sistemas ITS prioritarios listos para cotización 🎉
 
 ### ✅ **COMPLETADO ANTERIORMENTE (17-20 OCT 2025):**
 

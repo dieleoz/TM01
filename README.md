@@ -1,21 +1,21 @@
 # PROYECTO APP PUERTO SALGAR - BARRANCABERMEJA v2.0
 ## Marco de Gestión de Proyectos (PMI) - EPC VEHICULAR
 
-![Status](https://img.shields.io/badge/Status-Fase%203%20Iniciada-yellow)
-![Progress](https://img.shields.io/badge/Progress-75%25-brightgreen)
+![Status](https://img.shields.io/badge/Status-Fase%203%20En%20Progreso-yellow)
+![Progress](https://img.shields.io/badge/Progress-78%25-brightgreen)
 ![Validations](https://img.shields.io/badge/Validations-13%2F13-success)
 ![Budget](https://img.shields.io/badge/Budget-USD%2057.4M-blue)
-![Docs](https://img.shields.io/badge/Docs-68%20Files-orange)
+![Docs](https://img.shields.io/badge/Docs-73%20Files-orange)
 
 ![T01](https://img.shields.io/badge/T01_Fichas-13%2F13-success)
 ![T02](https://img.shields.io/badge/T02_Requisitos-13%2F13-success)
 ![T03](https://img.shields.io/badge/T03_Arquitecturas-13%2F13-success)
-![T04](https://img.shields.io/badge/T04_Especificaciones-0%2F13-red)
+![T04](https://img.shields.io/badge/T04_Especificaciones-5%2F13-orange)
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 
-**Versión:** 2.2  
-**Fecha de actualización:** 21 de Octubre 2025 (18:00)  
-**Estado:** ✅ **FASE 2 COMPLETADA | FASE 3 INICIADA**  
+**Versión:** 2.3  
+**Fecha de actualización:** 21 de Octubre 2025 (19:30)  
+**Estado:** ✅ **FASE 2 COMPLETADA | FASE 3 EN PROGRESO (38%)**  
 **Responsable:** Administrador Contractual EPC  
 **Metodología:** Punto 42 v1.0  
 **GitHub:** https://github.com/dieleoz/TM01  
@@ -41,16 +41,16 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 Fase 0: Preparación        [████████████] 100% ✅ Completada
 Fase 1: Conversión         [██████░░░░░░]  50% ← Parcial (1/15 docs)
 Fase 2: Ingeniería Concept [████████████] 100% ✅ COMPLETADA
-Fase 3: Especificaciones   [██░░░░░░░░░░]  15% ← AQUÍ ESTAMOS
+Fase 3: Especificaciones   [█████░░░░░░░]  38% ← AQUÍ ESTAMOS (5/13 T04)
 Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0% 
 Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
-**Última actualización:** Hoy (21-oct-2025)  
-**Logro principal:** 13 sistemas validados contractualmente (100%)  
-**Próxima acción:** Especificaciones técnicas T04 (SOS, ETD, CCTV prioritarios)  
+**Última actualización:** Hoy (21-oct-2025 19:30)  
+**Logro principal:** 5/13 especificaciones técnicas T04 completadas (38%)  
+**Próxima acción:** Continuar con T04 restantes (Telecomunicaciones, Energía, Iluminación...)  
 **Bloqueador:** Ninguno  
-**Estado:** ✅ Fase 2 completada - Iniciando Fase 3
+**Estado:** ✅ Fase 3 en progreso - 5 sistemas ITS prioritarios completados
 
 ### 🎯 **ESTADO ACTUAL DEL PROYECTO**
 
@@ -62,9 +62,14 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 - Eliminación de duplicados
 
 **🔄 EN PROGRESO:**
-- Especificaciones técnicas (T04)
-- Pliegos de cotización
-- Justificaciones técnicas
+- Especificaciones técnicas T04 (5/13 completados - 38%)
+  - ✅ Postes SOS
+  - ✅ ETD + Radares
+  - ✅ CCTV
+  - ✅ PMV
+  - ✅ WIM
+- Pliegos de cotización (pendientes)
+- Justificaciones técnicas (parcial)
 
 **⏳ PRÓXIMO:**
 - Validación con Interventoría
