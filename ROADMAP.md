@@ -1,10 +1,10 @@
 # ROADMAP: PROYECTO FORMATOS PARA IA
 ## Plan de Trabajo y Cronograma
 
-**Versión:** 6.2 - TODAS LAS VALIDACIONES COMPLETADAS  
+**Versión:** 6.3 - LAYOUT GEORREFERENCIADO CREADO  
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 21 de octubre de 2025 (15:45)  
+**Última actualización:** 21 de octubre de 2025 (18:00)  
 **Progreso total:** ✅ **FASE 2: INGENIERÍA CONCEPTUAL COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente
@@ -725,9 +725,27 @@ Aplicar **Template T02** a sistemas críticos:
 
 ---
 
-## 🎯 PRÓXIMOS PASOS INMEDIATOS (Semana 17-23 Oct) - ACTUALIZADO
+## 🎯 PRÓXIMOS PASOS INMEDIATOS (Semana 21-27 Oct) - ACTUALIZADO
 
-### ✅ **COMPLETADO EN SESIÓN 17 OCT 2025:**
+### ✅ **COMPLETADO EN SESIÓN 21 OCT 2025:**
+
+1. [x] ✅ **Layout Georreferenciado ITS creado** (COMPLETADO)
+   - [x] ✅ 170 ubicaciones detalladas (PKs exactos)
+   - [x] ✅ Sistema "Tres Bolillos" documentado
+   - [x] ✅ Arquitectura de doble calzada explicada
+   - [x] ✅ Análisis de separaciones SOS
+   - [x] ✅ Identificación de desviaciones contractuales
+   - [x] ✅ Base para validación Google Earth
+
+2. [x] ✅ **Correcciones críticas documentales** (COMPLETADO)
+   - [x] ✅ Presupuesto unificado ($57.4M)
+   - [x] ✅ Control de versiones creado
+   - [x] ✅ Hitos completados documentados
+   - [x] ✅ Próximos pasos actualizados
+
+**Resultado:** Base sólida para Fase 3 (T04) 🎉
+
+### ✅ **COMPLETADO ANTERIORMENTE (17-20 OCT 2025):**
 
 1. [x] ✅ **Aplicar Template T01 a 5 sistemas restantes** (COMPLETADO)
    - [x] ✅ Energía Eléctrica (38_T01_Ficha_Sistema_Energia_Electrica_v1.0.md)
