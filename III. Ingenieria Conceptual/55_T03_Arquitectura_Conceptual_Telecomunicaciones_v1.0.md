@@ -91,12 +91,13 @@ Esta arquitectura cubre el **sistema completo de telecomunicaciones** a lo largo
 └──────────────────────────────────────────────────────────────────────┘
 
 EQUIPOS CONECTADOS AL ANILLO:
-├─ ITS: 100+ equipos distribuidos (CCTV, PMV, WIM, SOS, Meteo, Radares)
+├─ ITS: 10+ equipos distribuidos (CCTV, PMV, WIM, SOS, Meteo, Radares, **Detectores de gálibo: 8 confirmados / 25 estimados**)
 ├─ Peajes: 2 estaciones (Zambito PK 9.2, Aguas Negras PK 80)
 ├─ **Áreas de Servicio: 2** - INTEGRADAS a peajes (NO son nodos independientes)
 │  └─► Conectadas al switch del peaje con cable UTP (50-200m)
 ├─ CCO: Núcleo central de red (switches core 4× 10 Gbps)
 ├─ Emergencias: Bases operativas (2 ubicaciones en áreas de servicio)
+├─ **Radio Comunicaciones: OPCIONAL** - Sujeto a validación de cobertura celular 4G/5G
 └─ Gestión: Oficinas administrativas (CCO)
 
 TOTAL SWITCHES:
@@ -615,9 +616,21 @@ Usuarios de radio:
 | Infraestructura Pasiva (ductos, fibra) | $4,517,500 |
 | Equipos Activos (switches, radio, VoIP) | $711,500 |
 | Instalación e Integración | $880,000 |
-| **TOTAL CAPEX** | **$6,109,000 USD** |
+| **TOTAL CAPEX** | **$5,956,000 USD** |
 
 **Conversión COP (TRM 4,000):** COP 24,436,000,000 (~24.4 mil millones)
+
+#### 🔴 **Nota de Ajuste - Radio Comunicaciones (OPCIONAL):**
+**Versión anterior:** Sistema de radio VHF obligatorio
+**Versión ajustada:** Sistema de radio VHF marcado como OPCIONAL
+**Justificación:** El contrato exige "radiocomunicación" como función, no tecnología específica VHF
+**Alternativa:** Cobertura celular 4G/5G puede cumplir la función contractual de comunicación inmediata y permanente
+**Validación requerida:** Estudio de cobertura celular en todo el corredor (259.6 km)
+**Decisión:** Si cobertura celular es suficiente → Eliminar radio VHF (-$212,500 USD)
+**Si cobertura es insuficiente:** Mantener radio VHF según diseño actual
+
+#### 🔴 **Nota de Ajuste - Equipos ITS:**
+Actualización: Integración de **detectores de gálibo (láser) – estimación 25** al inventario ITS sin impacto en CAPEX de Telecom (uso de switches existentes y puertos disponibles). Se mantiene **TOTAL CAPEX $5,956,000 USD**.
 
 #### 🔴 **Comparación vs. Versión Anterior:**
 

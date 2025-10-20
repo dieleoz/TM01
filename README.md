@@ -1,8 +1,8 @@
 # PROYECTO APP PUERTO SALGAR - BARRANCABERMEJA v2.0
 ## Marco de Gestión de Proyectos (PMI) - EPC VEHICULAR
 
-**Versión:** 2.0  
-**Fecha de actualización:** 21 de Octubre 2025 (01:00)  
+**Versión:** 2.1  
+**Fecha de actualización:** 21 de Octubre 2025 (03:30)  
 **Estado:** ✅ **FASE 2 INGENIERÍA CONCEPTUAL COMPLETADA AL 100%**  
 **Responsable:** Administrador Contractual EPC  
 **Metodología:** Punto 42 v1.0  
@@ -19,8 +19,9 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 1. **Trazabilidad Contractual:** Cada decisión técnica fundamentada en AT1/AT2/AT3
 2. **Optimización Arquitectónica:** Diseños eficientes y constructibles
 3. **Validación Rigurosa:** 100% de sistemas validados contractualmente
-4. **Presupuesto Realista:** USD 57.4M (CAPEX/km $221K, rango APP 4G)
-5. **Documentación Completa:** 65+ documentos técnicos generados
+4. **Metodología Sistemática:** Proceso genérico aplicable a cualquier equipo/sistema
+5. **Presupuesto Realista:** USD 57.4M (CAPEX/km $221K, rango APP 4G)
+6. **Documentación Completa:** 65+ documentos técnicos generados
 
 ---
 
@@ -39,13 +40,69 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 | **T03 - Arquitecturas Conceptuales** | ✅ v1.1 | 100% | 13/13 (9 rediseñados) |
 | **T04 - Especificaciones Técnicas** | ⏳ Siguiente | 0% | 0/13 (próxima fase) |
 | **Validación Contractual** | ✅ Completada | 100% | 13/13 sistemas |
+| **Metodología Genérica** | ✅ Creada | 100% | 1 metodología + plantilla |
 | **Presupuesto Consolidado** | ✅ v2.0 | 100% | USD 57.4M |
 | **Rediseño Arquitectónico** | ✅ Completado | 100% | 4 sistemas |
 | **Eliminación Duplicaciones** | ✅ Completada | 100% | -$2.8M USD |
 
 ---
 
-## 💰 **PRESUPUESTO DEL PROYECTO**
+## 🔍 **METODOLOGÍA DE VALIDACIÓN CONTRACTUAL**
+
+### Proceso Sistemático de 5 Fases
+
+**Metodología genérica aplicable a cualquier equipo/sistema del proyecto:**
+
+1. **Fase 1: Identificación de Obligación**
+   - Búsqueda sistemática en fuentes contractuales
+   - Extracción de texto literal
+   - Identificación de contexto y condiciones
+
+2. **Fase 2: Interpretación Jurídica-Técnica**
+   - Análisis literal del texto contractual
+   - Determinación del tipo de obligación
+   - Evaluación de flexibilidad contractual
+
+3. **Fase 3: Especificaciones Técnicas**
+   - Identificación de variables requeridas
+   - Determinación de especificaciones mínimas
+   - Evaluación de requisitos de integración
+
+4. **Fase 4: Análisis de Cumplimiento**
+   - Propuesta de alternativas técnicas
+   - Evaluación de cumplimiento contractual
+   - Selección de solución óptima
+
+5. **Fase 5: Documentación y Comunicación**
+   - Documento de validación completo
+   - Nota técnica para Interventoría
+   - Plan de implementación
+
+### Equipos/Sistemas Validados (13/13 - 100%)
+
+| # | Equipo/Sistema | Estado | Documento | Conclusión |
+|:--|:---------------|:-------|:----------|:-----------|
+| 1 | **SOS Poles** | ✅ | `06_ANALISIS_JERARQUICO_CONTRACTUAL_POR_EQUIPO_v1.0.md` | 87 unidades obligatorias |
+| 2 | **Áreas de Servicio** | ✅ | `08_ANALISIS_DETALLADO_CORRECCION_AREAS_SERVICIO_v1.0.md` | 2 áreas integradas a peajes |
+| 3 | **PMV** | ✅ | `16_VALIDACION_PMV_v1.0.md` | 28 unidades (2 por peaje + 20km) |
+| 4 | **CCTV** | ✅ | `20_ANALISIS_CCTV_MINIMO_v1.0.md` | 30 cámaras + nota optimización |
+| 5 | **Radares/ETD** | ✅ | `23_VALIDACION_CONTRACTUAL_RADARES_ETD_v1.0.md` | 12 RADAR-ANPR unidades |
+| 6 | **WIM** | ✅ | `24_VALIDACION_CONTRACTUAL_PESAJE_v1.0.md` | 1 estación bidireccional |
+| 7 | **Gálibos** | ✅ | `LECCIONES_APRENDIDAS.md` | 25 unidades (8 confirmadas) |
+| 8 | **Radio Comunicaciones** | ✅ | `25_ANALISIS_COBERTURA_CELULAR_vs_RADIO_VHF_v1.0.md` | Opcional (sujeto a cobertura) |
+| 9 | **Estaciones Meteorológicas** | ✅ | `26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0.md` | 2 Davis Pro2 en peajes |
+| 10 | **Señalización Vial** | ✅ | `29_VALIDACION_CONTRACTUAL_SENALIZACION_VIAL_v1.0.md` | 1,895 señales + 1,000 km demarcación |
+| 11 | **Iluminación** | ✅ | `30_VALIDACION_CONTRACTUAL_ILUMINACION_v1.0.md` | 572 luminarias LED |
+| 12 | **Energía Eléctrica** | ✅ | `31_VALIDACION_CONTRACTUAL_ENERGIA_ELECTRICA_v1.0.md` | 3 subestaciones + respaldos |
+| 13 | **Telecomunicaciones** | ✅ | `32_VALIDACION_CONTRACTUAL_TELECOMUNICACIONES_v1.0.md` | 285 km fibra óptica |
+
+### Documentos de Metodología
+
+- **Metodología Genérica:** `27_METODOLOGIA_VALIDACION_CONTRACTUAL_GENERICA_v1.0.md`
+- **Plantilla Replicable:** Incluida en metodología
+- **Checklist de Validación:** Incluido en metodología
+
+---
 
 ### CAPEX Total
 

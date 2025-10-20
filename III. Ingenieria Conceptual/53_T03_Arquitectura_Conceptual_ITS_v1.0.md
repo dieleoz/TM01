@@ -25,7 +25,7 @@ Este documento define la **arquitectura conceptual** del Sistema ITS (Intelligen
 
 Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 
-1. **CCTV** (100-130 cámaras IP PTZ)
+1. **CCTV** (30 cámaras IP PTZ según diseño inicial)
 2. **PMV** (Paneles de Mensaje Variable)
 3. **WIM** (Estaciones de Pesaje en Movimiento)
 4. **Estaciones Meteorológicas**
@@ -104,8 +104,8 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 
 | Componente | Función | Especificación Preliminar | Cantidad |
 |:-----------|:--------|:--------------------------|:---------|
-| **Cámaras CCTV IP PTZ** | Supervisión visual 24/7 | 1080p, 25 fps, H.265, IP66/IK10, PoE | 100-130 |
-| **PMV (Paneles Mensaje Variable)** | Información dinámica a usuarios | LED full-color, control remoto, Res. 546/2018 | 12-18 |
+| **Cámaras CCTV IP PTZ** | Supervisión visual 24/7 | 1080p, 25 fps, H.265, IP66/IK10, PoE | **30** ✅ |
+| **PMV (Paneles Mensaje Variable)** | Información dinámica a usuarios | LED full-color, control remoto, Res. 546/2018 | **28** ✅ |
 | **Estaciones WIM** | Pesaje dinámico sin detención | Piezoeléctricas, ±5%, 100 ton | 4-6 |
 | **Estaciones Meteorológicas** | Monitoreo climático | Según IDEAM, precipitación, temp, viento | 6-8 |
 | **Teléfonos SOS** | Emergencias de usuarios | VoIP, geolocalización, conexión directa CCO | **87** ✅ |
@@ -375,7 +375,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 | **Cámaras CCTV** | 120 | 140 | 160 | 200 (+67% margen) |
 | **Ancho de banda troncal** | 1 Gbps | 1.5 Gbps | 2 Gbps | 10 Gbps (+400%) |
 | **Almacenamiento video** | 90 TB | 120 TB | 150 TB | 200 TB (+33%) |
-| **PMV** | 15 | 18 | 20 | 25 (+67%) |
+| **PMV** | 28 | 30 | 32 | 35 (+25%) |
 | **Puertos de switch disponibles** | 70% uso | 85% uso | 95% uso | Planificar ampliación año 20 |
 
 ### 9.2 Estrategia de Crecimiento
@@ -495,7 +495,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 | Categoría | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:----------|:---------|:---------------------|:------------------|
 | **CCTV IP PTZ** | 120 | $2,500 | $300,000 |
-| **PMV LED** | 15 | $35,000 | $525,000 |
+| **PMV LED** | 28 | $35,000 | $980,000 |
 | **Estaciones WIM** | 5 | $120,000 | $600,000 |
 | **Estaciones Meteo** | 7 | $25,000 | $175,000 |
 | **Teléfonos SOS** | **87** | $2,000 | **$174,000** |
@@ -531,9 +531,22 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 
 ### 13.4 CAPEX Total Estimado
 
-**TOTAL CAPEX ITS:** $2,850,500 + $380,000 + $1,030,000 = **$4,260,500 USD**
+**TOTAL CAPEX ITS:** $3,035,500 + $380,000 + $1,030,000 = **$4,445,500 USD**
 
-**Conversión COP (TRM 4,000):** COP 17,042,000,000 (~17.0 mil millones)
+**Conversión COP (TRM 4,000):** COP 17,782,000,000 (~17.8 mil millones)
+
+#### 💡 **Nota de Optimización Futura - CCTV:**
+**Opción de reducción:** De 30 a 12 cámaras CCTV (corredor + peatonales)  
+**Ahorro potencial:** -18 cámaras (-$284,166 USD)  
+**Ubicaciones a mantener:** 6 corredor (cada 40 km) + 6 peatonales (puntos críticos)  
+**Ubicaciones a eliminar:** Peajes, CCO, pesaje (8 cámaras operativas)  
+**Consideración:** Evaluar en fase de licitación según competitividad de precios
+
+#### 🔴 **Nota de Ajuste Contractual - PMV:**
+**Versión anterior:** 15 PMV ($525,000 USD)  
+**Versión ajustada:** 28 PMV ($980,000 USD)  
+**Incremento:** +13 PMV (+$455,000 USD)  
+**Justificación:** Diseño detallado requiere 2 PMV por peaje (antes/después) + cobertura general cada 20 km máximo
 
 #### 🔴 **Nota de Ajuste Contractual - Postes SOS:**
 **Versión anterior:** 40 postes SOS ($80,000 USD)  

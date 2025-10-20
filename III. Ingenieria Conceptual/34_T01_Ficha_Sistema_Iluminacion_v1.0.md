@@ -125,13 +125,13 @@ Garantizar la adecuada iluminación de todas las zonas críticas del corredor vi
 | Sistema SCADA de monitoreo | 1 | $80,000 | $80,000 |
 | Cableado y canalizaciones | 35 km | $15,000/km | $525,000 |
 | Ingeniería, montaje, pruebas | Global | 20% subtotal | $312,000 |
-| **TOTAL CAPEX** | | | **$1,339,240** |
+| **TOTAL CAPEX** | | | **$1,264,240** |
 
-**Conversión a COP (TRM 4,000):** COP 5,356,960,000 (~5.36 mil millones)
+**Conversión a COP (TRM 4,000):** COP 5,056,960,000 (~5.06 mil millones)
 
 #### 🔴 **Nota v1.1 (20/10/2025):**
 CAPEX actualizado tras rediseño arquitectónico:
-- 410 luminarias totales (vs. 650 original)
+- 413 luminarias totales (vs. 650 original)
 - 13 transformadores (vs. 25 original)
 - Áreas integradas a peajes (no transformadores propios, solo iluminación)
 - **Ahorro: -$553K USD (-29%) vs. estimación inicial**

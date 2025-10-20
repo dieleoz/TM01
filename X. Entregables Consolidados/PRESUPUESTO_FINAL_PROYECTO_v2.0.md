@@ -13,14 +13,14 @@
 | Categoría | CAPEX (USD) | CAPEX (COP) | % del Total |
 |:----------|:------------|:------------|:------------|
 | **Infraestructura Vial y Seguridad** | $14,223,600 | $56,894,400,000 | 24.8% |
-| **Sistemas ITS y Tecnología** | $14,376,000 | $57,504,000,000 | 25.1% |
-| **Sistemas de Energía y Utilidades** | $6,171,740 | $24,686,960,000 | 10.8% |
+| **Sistemas ITS y Tecnología** | $13,784,309 | $55,137,236,000 | 24.0% |
+| **Sistemas de Energía y Utilidades** | $5,541,740 | $22,166,960,000 | 9.6% |
 | **Áreas de Servicio y Operación** | $3,136,077 | $12,544,308,000 | 5.5% |
 | **Gestión y Administración** | $13,035,000 | $52,140,000,000 | 22.7% |
 | **Sistemas de Emergencia y Respaldo** | $6,465,629 | $25,862,516,000 | 11.3% |
-| **TOTAL PROYECTO** | **$57,408,046** | **$229,632,184,000** | 100% |
+| **TOTAL PROYECTO** | **$54,704,455** | **$218,817,820,000** | 100% |
 
-**Total:** USD 57.4 millones ≈ COP 229.6 mil millones
+**Total:** USD 54.7 millones ≈ COP 218.8 mil millones
 
 ---
 
@@ -39,11 +39,11 @@
 
 | Sistema | CAPEX (USD) | Estado | Observaciones |
 |:--------|:------------|:-------|:--------------|
-| **Telecomunicaciones** | $6,109,000 | ✅ v1.1 | Topología anillo 5 nodos |
-| **Sistema ITS** | $4,260,500 | ✅ v1.1 | 87 postes SOS validados |
+| **Telecomunicaciones** | $6,112,000 | ✅ v1.2 | Topología anillo 5 nodos + 3 PMV |
+| **Sistema ITS** | $4,445,500 | ✅ v1.2 | 28 PMV + 87 postes SOS validados |
 | **CCO** | $3,707,000 | ✅ v1.1 | Redimensionado (-$350K) |
 | **Pesaje WIM** | $2,286,400 | ✅ v1.1 | 1 estación bidireccional |
-| **SUBTOTAL** | **$16,362,900** | | |
+| **SUBTOTAL** | **$16,547,900** | | |
 
 ### GRUPO 3: ENERGÍA Y UTILIDADES ($6.2M)
 
@@ -89,9 +89,9 @@
 | Áreas de Servicio | $3,136,077 |
 | Gestión y Administración | $13,035,000 |
 | Emergencia y Respaldo | $4,638,569 |
-| **TOTAL CAPEX** | **$57,408,046** |
+| **TOTAL CAPEX** | **$57,593,046** |
 
-**En pesos (TRM 4,000):** COP 229,632,184,000 (~229.6 mil millones)
+**En pesos (TRM 4,000):** COP 230,372,184,000 (~230.4 mil millones)
 
 ---
 

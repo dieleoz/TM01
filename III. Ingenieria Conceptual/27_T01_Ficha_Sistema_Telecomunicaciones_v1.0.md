@@ -27,7 +27,7 @@
 El Sistema de Telecomunicaciones es el **backbone crítico** que interconecta todos los sistemas del proyecto, proporcionando:
 
 - **Conectividad de fibra óptica** a lo largo de los 259.6 km del corredor
-- **Transmisión en tiempo real** de datos de ITS, CCTV, Peajes al CCO
+- **Transmisión en tiempo real** de datos de ITS (10+ equipos), CCTV, Peajes al CCO
 - **Comunicaciones de voz** (VoIP) para emergencias y operación
 - **Red de datos** para gestión operacional
 - **Conectividad con ANI** para envío de información
@@ -127,8 +127,8 @@ El Concesionario deberá:
 | **Switches Core** | 4-6 switches | CCO | Núcleo de la red |
 | **Routers** | 2-4 routers | CCO | Conectividad WAN (Internet, ANI) |
 | **Firewalls** | 2-4 firewalls | CCO | Seguridad de red |
-| **Radio Bases** | 2-4 bases | Bases de Emergencia + CCO | Comunicación de voz móvil |
-| **Radios Móviles** | 20-30 radios | Vehículos emergencia, patrullas | Comunicación en campo |
+| **Radio Bases** | **2-4 bases (OPCIONAL)** | Bases de Emergencia + CCO | Comunicación de voz móvil - Sujeto a validación de cobertura celular |
+| **Radios Móviles** | **20-30 radios (OPCIONAL)** | Vehículos emergencia, patrullas | Comunicación en campo - Sujeto a validación de cobertura celular |
 | **Centrales Telefónicas IP (PBX)** | 1-2 centrales | CCO | Gestión de telefonía |
 | **Teléfonos IP** | 50-80 teléfonos | CCO, Peajes, Bases | Comunicación interna |
 | **Enlaces de Respaldo** | 2-4 enlaces | Puntos críticos | Redundancia (microondas, 4G/5G) |
@@ -170,8 +170,8 @@ El Concesionario deberá:
 | Switches Core (redundantes) | 6 | $15,000 | $90,000 |
 | Routers | 4 | $12,000 | $48,000 |
 | Firewalls | 4 | $25,000 | $100,000 |
-| Sistema Radio Troncalizado (bases) | 3 | $50,000 | $150,000 |
-| Radios Móviles | 25 | $2,500 | $62,500 |
+| Sistema Radio Troncalizado (bases) | **3 (OPCIONAL)** | $50,000 | **$150,000** |
+| Radios Móviles | **25 (OPCIONAL)** | $2,500 | **$62,500** |
 | Central Telefónica IP (PBX) | 1 | $40,000 | $40,000 |
 | Teléfonos IP | 70 | $300 | $21,000 |
 | Enlaces de Respaldo (microondas) | 3 | $80,000 | $240,000 |
@@ -182,16 +182,17 @@ El Concesionario deberá:
 | Instalación, Empalmes, Certificación | - | - | $600,000 |
 | Integración y Puesta en Marcha | - | - | $300,000 |
 | Contingencias (10%) | - | - | $628,550 |
-| **TOTAL CAPEX** | | | **$6,109,000** |
+| **TOTAL CAPEX** | | | **$5,956,000** |
 
-**Conversión a COP (TRM: 4,000):** ~$24,436 millones COP
+**Conversión a COP (TRM: 4,000):** ~$23,956 millones COP
 
-#### 🔴 **Nota v1.1 (20/10/2025):**
-CAPEX actualizado tras rediseño arquitectónico:
-- Topología anillo rediseñada (5 nodos vs. 12 original)
-- Switches optimizados (48 vs. 70)
-- Áreas integradas a peajes (no derivaciones independientes)
-- **Ahorro: -$1.8M USD vs. estimación inicial**
+#### 🔴 **Nota v1.2 (21/10/2025):**
+**Sistema de Radio Comunicaciones marcado como OPCIONAL:**
+- **Justificación:** El contrato exige "radiocomunicación" como función, no tecnología específica VHF
+- **Alternativa:** Cobertura celular 4G/5G puede cumplir la función contractual
+- **Validación requerida:** Estudio de cobertura celular en todo el corredor (259.6 km)
+- **Decisión:** Si cobertura celular es suficiente → Eliminar radio VHF (-$212,500 USD)
+- **Si cobertura es insuficiente:** Mantener radio VHF según diseño actual
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 

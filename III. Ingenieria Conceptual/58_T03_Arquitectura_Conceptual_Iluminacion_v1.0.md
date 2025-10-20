@@ -22,7 +22,7 @@ Este documento define la **arquitectura conceptual** del Sistema de Iluminación
 
 ### 1.2 Alcance
 
-Esta arquitectura cubre **410 luminarias LED** distribuidas en zonas críticas del corredor de 259.6 km:
+Esta arquitectura cubre **413 luminarias LED** distribuidas en zonas críticas del corredor de 259.6 km:
 
 **Zonas iluminadas:**
 - 2 Estaciones de Peaje (Zambito, Aguas Negras)
@@ -281,9 +281,15 @@ Proceso inverso al amanecer (~06:00)
 | Cableado subterráneo (Cu 3x10 AWG) | 25 km | $15,000/km | $375,000 |
 | Canalizaciones y ductos | Global | $80,000 | $80,000 |
 | Instalación, montaje y pruebas | Global | 20% | $212,540 |
-| **TOTAL CAPEX** | | | **$1,339,240 USD** |
+| **TOTAL CAPEX** | | | **$1,264,240 USD** |
 
-**Conversión COP (TRM 4,000):** COP 5,356,960,000 (~5.36 mil millones)
+**Conversión COP (TRM 4,000):** COP 5,386,960,000 (~5.39 mil millones)
+
+#### 🔴 **Nota de Ajuste - PMV Complementarios:**
+**Versión anterior:** 410 luminarias LED  
+**Versión ajustada:** 413 luminarias LED  
+**Incremento:** +3 luminarias complementarias (+$7,500 USD)  
+**Justificación:** Iluminación complementaria para 3 PMV adicionales
 
 ---
 

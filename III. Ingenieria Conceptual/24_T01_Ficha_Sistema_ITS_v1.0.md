@@ -122,16 +122,16 @@ El Concesionario deberá:
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:------------------|:----------|:--------|
-| **PMV** (Paneles de Mensaje Variable) | 20-30 unidades | Peajes + puntos críticos | Información variable a usuarios (clima, incidentes, tiempos) |
-| **CCTV** (Cámaras de Vigilancia) | 100-150 cámaras | Cada 2-3 km + peajes + áreas servicio | Vigilancia 24/7, detección incidentes, evidencia |
-| **Cámaras Panorámicas** | 10-15 unidades | 1 por Estación de Peaje | Visión global del área de peaje |
-| **WIM** (Pesaje en Movimiento) | 5-10 estaciones | Puntos estratégicos | Control de peso de vehículos sin detenerlos |
+| **PMV** (Paneles de Mensaje Variable) | **28 unidades FIJAS** | Distribuidos cada 10-20 km + peajes (AT1) | Información variable a usuarios (clima, incidentes, tiempos) |
+| **CCTV** (Cámaras de Vigilancia) | **30 cámaras** | Ubicaciones estratégicas del diseño | Vigilancia 24/7, detección incidentes, evidencia |
+| **Cámaras Panorámicas** | 4 unidades | Puntos críticos del corredor | Visión amplia de zonas estratégicas |
+| **WIM** (Pesaje en Movimiento) | **2 plataformas** | PR4+0100 RN 4513 (ambos sentidos) | Control de peso de vehículos sin detenerlos |
 | **Estaciones Meteorológicas** | 8-12 estaciones | Distribuidas en corredor | Precipitación, temperatura, viento, visibilidad |
 | **Teléfonos SOS** | **87 unidades** ✅ | Cada 3 km máx. (AT1) | Comunicación de emergencias |
-| **DAI** (Detectores Automáticos Incidentes) | 30-50 unidades | Zonas críticas | Detección automática de accidentes/congestión |
+| **DAI** (Detectores Automáticos Incidentes) | **12 unidades** | Ubicaciones estratégicas por UF | Detección automática de accidentes/congestión |
 | **Estaciones de Aforo** | 10-15 estaciones | Puntos representativos | Conteo y clasificación vehicular |
-| **Radares de Velocidad** | 15-25 unidades | Zonas críticas | Medición velocidad + foto matrícula |
-| **Detectores de Altura** | 20-30 unidades | Antes de peajes, puentes, túneles | Detección de vehículos sobredimensionados |
+| **Radares de Velocidad** | **12 unidades** | Ubicaciones estratégicas por UF | Medición velocidad + foto matrícula |
+| **Detectores de Altura** | **25 (estimación preliminar)** | Puntos críticos (peajes/puentes/intersecciones) | Detección de vehículos sobredimensionados |
 | **Sensores de Pista/Carril** | Por definir | Todas las estaciones de peaje | Detección de paso vehicular |
 
 **NOTA:** Cantidades preliminares sujetas a Estudio de Detalle. Se actualizarán con información de AT1 (Alcance).
@@ -158,13 +158,13 @@ El Concesionario deberá:
 
 | Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:-----|:---------|:---------------------|:------------------|
-| PMV (Paneles Mensaje Variable) | 25 | $35,000 | $875,000 |
-| CCTV IP PTZ Exteriores | 120 | $8,000 | $960,000 |
-| Cámaras Panorámicas | 12 | $15,000 | $180,000 |
-| Estaciones WIM (Pesaje) | 8 | $150,000 | $1,200,000 |
+| PMV (Paneles Mensaje Variable) | 28 | $35,000 | $980,000 |
+| CCTV IP PTZ Exteriores | 30 | $15,787 | $473,621 |
+| Cámaras Panorámicas | 4 | $15,000 | $60,000 |
+| Estaciones WIM (Pesaje) | 2 | $150,000 | $300,000 |
 | Estaciones Meteorológicas | 10 | $25,000 | $250,000 |
 | Teléfonos SOS | **87** | $3,500 | **$304,500** |
-| Detectores Automáticos Incidentes | 40 | $12,000 | $480,000 |
+| Detectores Automáticos Incidentes | 12 | $35,732 | $428,788 |
 | Estaciones de Aforo | 12 | $30,000 | $360,000 |
 | Radares de Velocidad | 20 | $25,000 | $500,000 |
 | Detectores de Altura (Láser) | 25 | $8,000 | $200,000 |
@@ -173,9 +173,44 @@ El Concesionario deberá:
 | Software SCADA ITS | 1 sistema | $250,000 | $250,000 |
 | Integración con CCO | 1 sistema | $150,000 | $150,000 |
 | Contingencias (10%) | - | - | $675,750 |
-| **TOTAL CAPEX** | | | **$7,433,250** |
+| **TOTAL CAPEX** | | | **$5,980,659** |
+
+> Nota Gálibo (estado actual):
+> - **Confirmados (8 puntos):** RN 4510 0D Der PR 41+350; RN 4510 0D Izq PR 116+200; RN 4511 0D Der PR 3+600; RN 4511 5,1 Izq PR 16+550; RN 4511 5,1 Der PR 72+890; RN 4511 6 Izq PR 82+800; RN 4511 11 Der PR 127+250; RN 4513 13 Izq PR 5+900.
+> - **Estimación preliminar total:** **25** puntos (incluye intersecciones a desnivel y puentes con restricción por validar con geometría).
 
 **Conversión a COP (TRM: 4,000):** ~$29,733 millones COP
+
+#### 🔴 **Nota de Ajuste Contractual - WIM:**
+**Versión anterior:** WIM 5-10 estaciones ($1,200,000 USD)  
+**Versión corregida:** WIM 2 plataformas ($300,000 USD)  
+**Reducción:** -3 a -8 estaciones (-$900,000 USD)  
+**Justificación:** 1 estación de pesaje bidireccional según AT1 - PR4+0100 RN 4513 con funcionamiento en ambos sentidos
+
+#### 🔴 **Nota de Ajuste Contractual - RADAR-ANPR:**
+**Versión anterior:** DAI 30-50 + Radares 15-25 ($980,000 USD)  
+**Versión corregida:** RADAR-ANPR 12 unidades ($428,788 USD)  
+**Reducción:** -18 a -63 equipos (-$551,212 USD)  
+**Justificación:** RADAR-ANPR según diseño real - 12 ubicaciones estratégicas por UF con costo realista
+
+#### 🔴 **Nota de Ajuste Contractual - CCTV:**
+**Versión anterior:** 120 CCTV + 12 panorámicas ($1,140,000 USD)  
+**Versión corregida:** 30 CCTV + 4 panorámicas ($533,621 USD)  
+**Reducción:** -90 CCTV, -8 panorámicas (-$606,379 USD)  
+**Justificación:** CCTV según diseño inicial - 30 ubicaciones estratégicas con infraestructura completa
+
+#### 💡 **Nota de Optimización Futura - CCTV:**
+**Opción de reducción:** De 30 a 12 cámaras CCTV (corredor + peatonales)  
+**Ahorro potencial:** -18 cámaras (-$284,166 USD)  
+**Ubicaciones a mantener:** 6 corredor (cada 40 km) + 6 peatonales (puntos críticos)  
+**Ubicaciones a eliminar:** Peajes, CCO, pesaje (8 cámaras operativas)  
+**Consideración:** Evaluar en fase de licitación según competitividad de precios
+
+#### 🔴 **Nota de Ajuste Contractual - PMV:**
+**Versión anterior:** 25 PMV ($875,000 USD)  
+**Versión ajustada:** 28 PMV ($980,000 USD)  
+**Incremento:** +3 PMV (+$105,000 USD)  
+**Justificación:** Diseño detallado requiere 2 PMV por peaje (antes/después) + cobertura general cada 20 km máximo
 
 #### 🔴 **Nota de Ajuste Contractual - Postes SOS:**
 **Versión anterior:** 65 postes SOS ($227,500 USD)  
@@ -343,9 +378,9 @@ El Concesionario deberá:
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Versión:** 1.2 ✅ **VALIDADO CON DISEÑO DETALLADO**  
 **Estado:** ✅ Ficha de Sistema Validada vs Contrato  
-**Fecha:** 20/10/2025  
+**Fecha:** 21/10/2025  
 **Responsable:** Ingeniero de Sistemas ITS  
 **Próxima actualización:** Tras Estudios de Detalle (cantidades y ubicaciones exactas)
 

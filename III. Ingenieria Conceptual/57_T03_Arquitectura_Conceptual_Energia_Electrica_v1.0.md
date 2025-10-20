@@ -40,7 +40,7 @@ Esta arquitectura cubre el **sistema eléctrico completo** a lo largo de 259.6 k
 - CCO (centro crítico)
 - 2 Peajes con Áreas de Servicio Integradas (Zambito, Aguas Negras)
 - 410 Luminarias LED distribuidas
-- 100+ Equipos ITS (CCTV, PMV, SOS, WIM, Meteo)
+- 103+ Equipos ITS (CCTV, PMV, SOS, WIM, Meteo)
 - Sistema de Telecomunicaciones (switches, radios, fibra activa)
 - Estaciones de Pesaje
 
@@ -715,9 +715,15 @@ DATOS MONITOREADOS:
 | Red Eléctrica BT (cableado, acometidas) | $1,550,000 |
 | Instalación e integración | $650,000 |
 | Gestión de proyecto | $120,000 |
-| **TOTAL CAPEX ENERGÍA** | **$4,832,500 USD** |
+| **TOTAL CAPEX ENERGÍA** | **$4,847,500 USD** |
 
-**Conversión COP (TRM 4,000):** COP 19,330,000,000 (~19.33 mil millones)
+**Conversión COP (TRM 4,000):** COP 19,390,000,000 (~19.39 mil millones)
+
+#### 🔴 **Nota de Ajuste - Equipos ITS:**
+**Versión anterior:** 100+ equipos ITS  
+**Versión ajustada:** 103+ equipos ITS  
+**Incremento:** +3 PMV adicionales (+$15,000 USD UPS)  
+**Justificación:** Diseño detallado requiere 28 PMV (25 base + 3 por peajes)
 
 ---
 

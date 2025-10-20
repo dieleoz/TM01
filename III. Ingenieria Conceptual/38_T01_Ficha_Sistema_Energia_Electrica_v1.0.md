@@ -28,7 +28,7 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 - Estaciones de Peaje (2 estaciones)
 - Sistema de Iluminación (410 luminarias LED)
 - Centro de Control Operacional (CCO)
-- Sistemas ITS (CCTV, PMV, WIM, Meteo, SOS, DAI)
+- Sistemas ITS (CCTV, PMV, WIM, Meteo, SOS, DAI) - **10+ equipos**
 - Sistema de Telecomunicaciones (fibra óptica, switches, routers)
 - Estaciones de Pesaje
 - **Áreas de Servicio (2 obligatorias)** asociadas a peajes (AT1 Cap. 3)
@@ -261,9 +261,9 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 | Sensores de Corriente/Voltaje | 150 | $450 | $67,500 | $270,000,000 |
 | **Instalación, Ingeniería y Puesta en Marcha** | - | - | $950,000 | $3,800,000,000 |
 | **Contingencia (10%)** | - | - | $497,500 | $1,990,000,000 |
-| **TOTAL CAPEX** | | | **$4,832,500** | **$19,330,000,000** |
+| **TOTAL CAPEX** | | | **$4,277,500** | **$17,110,000,000** |
 
-**CAPEX Total:** USD 4.83 millones | COP 19.33 mil millones
+**CAPEX Total:** USD 4.28 millones | COP 17.11 mil millones
 
 #### 🔴 **Nota v1.1 (20/10/2025):**
 CAPEX actualizado tras rediseño arquitectónico:
