@@ -1,8 +1,14 @@
 # PROYECTO APP PUERTO SALGAR - BARRANCABERMEJA v2.0
 ## Marco de Gestión de Proyectos (PMI) - EPC VEHICULAR
 
+![Status](https://img.shields.io/badge/Status-Fase%202%20Completada-green)
+![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
+![Validations](https://img.shields.io/badge/Validations-13%2F13-success)
+![Budget](https://img.shields.io/badge/Budget-USD%2057.4M-blue)
+![Docs](https://img.shields.io/badge/Docs-65%2B%20Files-orange)
+
 **Versión:** 2.1  
-**Fecha de actualización:** 21 de Octubre 2025 (03:30)  
+**Fecha de actualización:** 21 de Octubre 2025 (15:45)  
 **Estado:** ✅ **FASE 2 INGENIERÍA CONCEPTUAL COMPLETADA AL 100%**  
 **Responsable:** Administrador Contractual EPC  
 **Metodología:** Punto 42 v1.0  
@@ -23,9 +29,40 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 5. **Presupuesto Realista:** USD 57.4M (CAPEX/km $221K, rango APP 4G)
 6. **Documentación Completa:** 65+ documentos técnicos generados
 
----
+## 📍 **DÓNDE ESTAMOS HOY** (21-Oct-2025)
 
-## 📊 **ESTADO ACTUAL DEL PROYECTO**
+```
+Fase 0: Preparación    [████████████] 100% ✅
+Fase 1: Conversión     [██░░░░░░░░░░]  17% ← AQUÍ ESTAMOS
+Fase 2: Estructura     [████████████] 100% ✅ COMPLETADA
+Fase 3: Detalle        [░░░░░░░░░░░░]   0% ← PRÓXIMA
+```
+
+**Última actualización:** Hoy (21-oct-2025)  
+**Próxima acción:** Crear especificaciones técnicas (T04)  
+**Bloqueador:** Ninguno  
+**Estado:** ✅ Sistema documental completamente validado y listo
+
+### 🎯 **ESTADO ACTUAL DEL PROYECTO**
+
+**✅ COMPLETADO:**
+- Validaciones contractuales (13/13 sistemas)
+- Organización por subsistemas
+- Presupuesto consolidado (USD 57.4M)
+- Metodología genérica aplicada
+- Eliminación de duplicados
+
+**🔄 EN PROGRESO:**
+- Especificaciones técnicas (T04)
+- Pliegos de cotización
+- Justificaciones técnicas
+
+**⏳ PRÓXIMO:**
+- Validación con Interventoría
+- Ingeniería de detalle (T05)
+- Cronograma de construcción
+
+---
 
 ### Fase Completada
 
