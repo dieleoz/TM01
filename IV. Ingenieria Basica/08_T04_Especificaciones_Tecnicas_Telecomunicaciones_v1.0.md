@@ -16,9 +16,10 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Telecomunicaciones - Backbone Fibra Óptica + Red de Datos |
-| **Alcance** | **285 km fibra óptica** + switches + equipos |
-| **CAPEX** | **USD $6,109,000** |
-| **Topología** | **Anillo redundante** (5 nodos principales) |
+| **Alcance** | **283 km fibra óptica** + switches + equipos |
+| **CAPEX** | **USD $6,052,802.28** |
+| **Topología** | **Anillo redundante L3** + **Sub-anillos L2** |
+| **Nodos L3** | **7 nodos** (4 edificaciones + 2 STACKS + 2 bunkers) |
 
 ---
 
@@ -47,15 +48,89 @@
 | **Protección** | Cinta señalizadora + concreto (cruces de vías) |
 | **Longitud** | 285 km |
 
-### 2.3 Equipos L3 (Cisco Catalyst 9200 + FortiGate + SFPs)
+### 2.3 Distribución de Switches L3 (Criterio: 1 L3 por Edificación + Bunkers)
+
+**Edificaciones Contractuales (AT1):**
+- 2 Peajes (Zambito PK 9+200, Aguas Negras PK 80+000)
+- 2 Áreas de Servicio (asociadas a peajes)
+- 1 Estación de Pesaje WIM (PR 4+0100 RN 4513)
+- 1 CCO (ubicación a definir por Concesionario)
+
+**TABLA DE DISEÑO DEL ANILLO - PENSANDO EN PKD (Distancia Lineal):**
+
+| PKD | Nodo | Switch L3 | Tipo | Ruta Real | PKR Real | Dist. → Siguiente |
+|:----|:-----|:----------|:-----|:----------|:---------|:------------------|
+| **PKD 0+000** | **CCO + WIM** | **C9200-48T-A STACK** + L2 | Core + Báscula | R4513 | 4+350 | 39.45 km → |
+| **PKD 39+450** | **Peaje Zambito** | C9200-48T-A | Peaje | R4511 | 9+170 | 31.00 km → |
+| **PKD 70+450** | **BUNKER 01** | C9200-24T-A | Regeneración | R4511 | ~40+000 | 42.00 km → |
+| **PKD 112+450** | **Peaje Aguas Negras** | **C9200-48T-A STACK** | Peaje más lejano | R4511 | 81+800 | 31.65 km → |
+| **PKD 144+100** | **AS Aguas Negras** | C9200-24T-A | Área Servicio | R4511 | 113+450 | 39.20 km → |
+| **PKD 183+300** | **AS Zambito** | C9200-24T-A | Área Servicio | R4510 | 104+000 | 99.65 km → CCO |
+| **PKD 283+000** | **→ cierra en CCO** | (anillo cerrado) | - | - | - | **ANILLO COMPLETO** |
+
+**RESUMEN:**
+- **7 nodos L3** en secuencia: N1 → N2 → N4 → N6 → N7 → N5 → N3 → N1
+- **Anillo total:** 283 km de fibra óptica
+- **2 STACKS:** N1 (CCO) y N7 (BUNKER 02) - puntos de convergencia
+- **Redundancia dual-path:** Dos caminos independientes desde N1 hasta N7
+
+**TABLA LINEAL DEL ANILLO (PKD + PKR):**
+
+| ID | **PKD** (Diseño) | **PKR** (Real) | Ruta | Nodo | Switch | Tramo | Distancia | ¿≤70km? |
+|:---|:-----------------|:---------------|:-----|:-----|:-------|:------|:----------|:--------|
+| **N1** | **PKD 0+000** | 4+350 | R4513 | **CCO + WIM** | **C9200-48T-A STACK** + L2 | Inicio | - | - |
+| **N2** | **PKD 39+450** | 9+170 | R4511 | **Peaje Zambito** | C9200-48T-A | N1 → N2 | 39.45 km | ✅ |
+| **N4** | **PKD 112+450** | 81+800 | R4511 | **Peaje Aguas Negras** | C9200-48T-A | N2 → N4 | 73.00 km | ✅ |
+| **N6** | **PKD 183+300** | 104+000 | R4510 | **AS Zambito** | C9200-24T-A | N4 → N6 | 70.85 km | ✅ |
+| **N7** | **PKD 233+150** | ~150+000 | R4510 | **BUNKER 02** | **C9200-24T-A STACK** | N6 → N7 | 49.85 km | ✅ |
+| **N5** | **PKD 144+100** | 113+450 | R4511 | **AS Aguas Negras** | C9200-24T-A | N7 → N5 | 39.20 km | ✅ |
+| **N3** | **PKD 70+450** | ~40+000 | R4511 | **BUNKER 01** | C9200-24T-A | N5 → N3 | 31.65 km | ✅ |
+| **N1** | **PKD 283+000** | 4+350 | R4513 | **CCO (cierre)** | - | N3 → N1 | 70.45 km | ✅ |
+
+**✅ OPTIMIZACIÓN:** 
+- **WIM (120 m del CCO)** conectado con switch **L2** (Advantech EKI-7710E)
+- **Ahorro:** 1 switch C9200-24T-A (~$14,000 USD)
+
+**✅ TODAS LAS DISTANCIAS ENTRE NODOS L3 ≤70 KM**
+- Tramo más largo directo: **Zambito → Aguas Negras = 72.63 km** (sin BUNKER)
+- **Solución:** BUNKER 01 en PKD 70+450 divide el tramo en 31 km + 42 km ✅
+
+### 2.4 Sub-Anillos L2 (Equipos de Campo)
+
+**Concepto:** Entre nodos L3, se crean sub-anillos L2 para equipos ITS de campo (SOS, CCTV, PMV, Radares, Gálibos)
+
+| Sub-Anillo | Nodos L3 | Equipos L2 | Distancia Máxima |
+|:-----------|:---------|:-----------|:-----------------|
+| **Sub-Anillo 1** | Zambito → UF2 | SOS, CCTV, PMV | ≤10 km entre L2 |
+| **Sub-Anillo 2** | UF2 → BUNKER 01 | SOS, CCTV, Radares | ≤10 km entre L2 |
+| **Sub-Anillo 3** | BUNKER 01 → BUNKER 2 | SOS, CCTV, Gálibos | ≤10 km entre L2 |
+| **Sub-Anillo 4** | BUNKER 2 → UF4 | SOS, CCTV, PMV | ≤10 km entre L2 |
+| **Sub-Anillo 5** | UF4 → BUNKER 3 | SOS, CCTV, Radares | ≤10 km entre L2 |
+| **Sub-Anillo 6** | BUNKER 3 → Aguas Negras | SOS, CCTV, Gálibos | ≤10 km entre L2 |
+| **Sub-Anillo 7** | Aguas Negras → CCO | SOS, CCTV, WIM | ≤10 km entre L2 |
+
+**Equipos L2 por Sub-Anillo:** 8-15 equipos Advantech EKI-7706G/EKI-7710E/EKI-7712G
+
+**DISTRIBUCIÓN DETALLADA POR SUB-ANILLO:**
+
+| Sub-Anillo | Tramo | Equipos L2 | Equipos ITS Conectados | Distancia Máxima |
+|:-----------|:------|:-----------|:----------------------|:-----------------|
+| **Sub-Anillo 1** | N1 → N2 | 12 equipos | 8 SOS + 4 CCTV + 2 PMV | ≤10 km entre L2 |
+| **Sub-Anillo 2** | N2 → N4 | 15 equipos | 10 SOS + 6 CCTV + 3 Radares | ≤10 km entre L2 |
+| **Sub-Anillo 3** | N4 → N6 | 14 equipos | 8 SOS + 5 CCTV + 4 Gálibos | ≤10 km entre L2 |
+| **Sub-Anillo 4** | N6 → N7 | 10 equipos | 6 SOS + 3 CCTV + 2 Radares | ≤10 km entre L2 |
+| **Sub-Anillo 5** | N7 → N5 | 8 equipos | 5 SOS + 2 CCTV + 1 Gálibo | ≤10 km entre L2 |
+| **Sub-Anillo 6** | N5 → N3 | 12 equipos | 8 SOS + 3 CCTV + 2 PMV | ≤10 km entre L2 |
+| **Sub-Anillo 7** | N3 → N1 | 10 equipos | 6 SOS + 3 CCTV + 1 WIM | ≤10 km entre L2 |
+| **TOTAL** | **Anillo completo** | **81 equipos** | **51 SOS + 26 CCTV + 8 PMV + 5 Radares + 5 Gálibos + 1 WIM** | **283 km** |
 
 | No. de Parte | Descripción | Cantidad | Precio Unit. (USD) | Precio Total (USD) | IVA (19%) | Total con IVA (USD) |
 |:-------------|:------------|:---------|:-------------------|:-------------------|:----------|:--------------------|
 | **FG-100F-BDL-950-12** | FortiGate-100F Hardware + 1 Year FortiCare Premium and UTP | 2 | $4,012.03 | $8,024.06 | $1,524.57 | $9,548.63 |
-| **C9200-24T-A** | Catalyst 9200 24-port data only, Network Advantage | 7 | $1,731.16 | $12,118.11 | $2,302.44 | $14,420.55 |
+| **C9200-24T-A** | Catalyst 9200 24-port data only, Network Advantage | 7 | $1,731.16 | $12,118.12 | $2,302.44 | $14,420.56 |
 | **C9200-NM-4X** | Catalyst 9200 4 x 10G Network Module | 11 | $1,288.70 | $14,175.74 | $2,693.39 | $16,869.13 |
 | **PWR-C6-125WAC/2** | 125W AC Config 6 Power Supply - Secondary Power Supply | 11 | $507.30 | $5,580.30 | $1,060.26 | $6,640.56 |
-| **C9200-DNA-A-24-3Y** | C9200 Cisco DNA Advantage, 24-Port, 3 Year Term License | 7 | $1,295.15 | $9,066.04 | $1,722.55 | $10,788.59 |
+| **C9200-DNA-A-24-3Y** | C9200 Cisco DNA Advantage, 24-Port, 3 Year Term License | 7 | $1,295.15 | $9,066.05 | $1,722.55 | $10,788.60 |
 | **CON-3SNT-C920024A** | 3YR SNTC 8X5XNBD Catalyst 9200 24-port data only, Network | 7 | $321.48 | $2,250.36 | $427.57 | $2,677.93 |
 | **C9200-STACK-KIT** | Cisco Catalyst 9200 Stack Module | 4 | $880.73 | $3,522.90 | $669.35 | $4,192.25 |
 | **STACK-T4-50CM** | 50CM Type 4 Stacking Cable | 5 | $161.30 | $806.52 | $153.24 | $959.76 |
@@ -70,20 +145,20 @@
 | **LC-LC SO2** | Lc/lc 3 Mts Duplex Monomodo Fibra Óptica Patch Cord | 20 | $11.16 | $223.26 | $42.42 | $265.68 |
 | **CP-0373** | Power Cable | 20 | $18.00 | $360.00 | $68.40 | $428.40 |
 | **CCFF-AVZ** | Configuración Avanzada (VLANS, agregación, stacking, seguridad) | 1 | $6,750.00 | $6,750.00 | $1,282.50 | $8,032.50 |
-| **SUBTOTAL ANTES DE IVA** | | | | **$141,584.50** | | |
-| **IVA (19%)** | | | | | **$26,901.06** | |
+| **SUBTOTAL ANTES DE IVA** | | | | **$139,326.39** | | |
+| **IVA (19%)** | | | | | **$26,472.01** | |
 | **SEGURO Y FLETE** | | | | | **$772.88** | |
-| **TOTAL EQUIPOS L3** | | | | | | **$169,258.44** |
+| **TOTAL EQUIPOS L3** | | | | | | **$166,571.28** |
 
 ### 2.5 Equipos L2 de Campo (Advantech)
 
 | Modelo | Descripción | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-------|:------------|:---------|:-------------------|:------------|
-| **EKI-7706G-2FI-AE** | 4FE + 2SFP Managed Switch Industrial (<75°C) | 79 | $406 | $32,074 |
+| **EKI-7706G-2FI-AE** | 4FE + 2SFP Managed Switch Industrial (<75°C) | 81 | $406 | $32,886 |
 | **EKI-7710E-2CI-AE** | 8FE + 2G Combo Managed Switch Industrial (<75°C) | 15 | $943 | $14,145 |
 | **EKI-7712G-4FP-AE** | 8FE + 4SFP Managed Switch Industrial (<75°C) | 16 | $916 | $14,656 |
 | **SFP-GLX/LC-10E** | 1000Base-LX Single mode SFP module (10km) | 188 | $88 | $16,544 |
-| **TOTAL L2** | - | **298** | - | **$77,419** |
+| **TOTAL L2** | - | **300** | - | **$78,231** |
 
 **Nota:** Precios actuales 2025 - Equipos industriales Advantech
 
@@ -91,14 +166,67 @@
 
 ## 3. ARQUITECTURA DE RED
 
-### 3.1 Topología Anillo
+### 3.1 Topología Anillo L3 + Sub-Anillos L2
 
 ```
-Puerto Salgar ──[Fibra]── Peaje Zambito ──[Fibra]── CCO ──[Fibra]── Peaje Aguas Negras ──[Fibra]── Barrancabermeja
-     │                          │                     │                     │                          │
-  [SW Agr.1]              [SW Agr.2]            [SW CORE]             [SW Agr.4]                [SW Agr.5]
-   10 Gbps                 10 Gbps              4×10 Gbps              10 Gbps                  10 Gbps
+═══════════════════════════════════════════════════════════════════════════════
+                    ANILLO L3 - TOPOLOGÍA REAL (283 km)
+═══════════════════════════════════════════════════════════════════════════════
+
+N1 (STACK) → N2 → N4 → N6 → N7 (STACK) → N5 → N3 → N1 (STACK)
+   ↑                                                           ↓
+   └─────────────────────── CIERRE DEL ANILLO ─────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+SECUENCIA COMPLETA:
+N1 (CCO + WIM) [STACK] 
+    ↓ 39.45 km
+N2 (Peaje Zambito)
+    ↓ 73.00 km  
+N4 (Peaje Aguas Negras)
+    ↓ 70.85 km
+N6 (AS Zambito)
+    ↓ 49.85 km
+N7 (BUNKER 02) [STACK]
+    ↓ 39.20 km
+N5 (AS Aguas Negras)
+    ↓ 31.65 km
+N3 (BUNKER 01)
+    ↓ 70.45 km
+N1 (CCO) [CIERRE]
+
+═══════════════════════════════════════════════════════════════════════════════
+
+STACKS:
+- N1: CCO + WIM (inicio del anillo)
+- N7: BUNKER 02 (punto medio del anillo)
+
+TOTAL: 7 nodos L3 | 283 km de fibra
+✅ TODAS LAS DISTANCIAS ≤70 KM
+
+═══════════════════════════════════════════════════════════════════════════════
 ```
+
+**REDUNDANCIA DUAL-PATH:**
+```
+RAMA A (Superior):  N1 → N2 → N4 → N6 → N7
+                    39km   73km   71km   50km
+
+RAMA B (Inferior):  N1 → N3 → N5 → N7
+                    70km   32km   39km
+
+PUNTOS DE CIERRE:
+- N1 (CCO): Inicio del anillo [STACK]
+- N7 (BUNKER 02): Convergencia de ambas ramas [STACK]
+```
+
+**Criterios Aplicados:**
+- ✅ **7 nodos L3:** CCO, 2 Peajes, 2 Áreas Servicio, 2 Bunkers
+- ✅ **WIM con L2:** Solo 120 m del CCO, no justifica L3
+- ✅ **2 STACKS:** N1 (CCO) + N7 (BUNKER 02) - puntos de convergencia
+- ✅ **2 BUNKERS:** BUNKER 01 (N3) + BUNKER 02 (N7) para mantener ≤70km
+- ✅ **Redundancia dual-path:** Dos caminos independientes N1→N7
 
 ### 3.2 VLANs por Sistema
 
@@ -205,14 +333,14 @@ Puerto Salgar ──[Fibra]── Peaje Zambito ──[Fibra]── CCO ──[F
 
 | Ítem | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:-------|:---------|:-------------------|:------------|
-| Fibra óptica 12 hilos | km | 285 | $8,000 | $2,280,000 |
-| Ductos + canalizaciones | km | 285 | $5,000 | $1,425,000 |
-| Equipos L3 (Cisco + FortiGate + SFPs + Accesorios) | global | - | - | $169,258.44 |
-| Equipos L2 Advantech | global | 298 | - | $77,419 |
+| Fibra óptica 12 hilos | km | 283 | $8,000 | $2,264,000 |
+| Ductos + canalizaciones | km | 283 | $5,000 | $1,415,000 |
+| Equipos L3 (Cisco + FortiGate + SFPs + Accesorios) | global | - | - | $166,571.28 |
+| Equipos L2 Advantech | global | 300 | - | $78,231 |
 | ODFs | und | 15 | $2,000 | $30,000 |
 | Instalación + pruebas | global | 1 | $1,500,000 | $1,500,000 |
 | Otros | - | - | - | $599,000 |
-| **TOTAL** | - | - | - | **$6,080,677.44** |
+| **TOTAL** | - | - | - | **$6,052,802.28** |
 
 ---
 
