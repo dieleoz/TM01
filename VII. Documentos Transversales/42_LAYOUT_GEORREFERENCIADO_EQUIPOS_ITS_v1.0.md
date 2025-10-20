@@ -738,19 +738,28 @@ Esta tabla muestra cómo se integran:
 - **Si PKD < Punto Medio** → Sub-Anillo A (AMAYORES)
 - **Si PKD ≥ Punto Medio** → Sub-Anillo B (AMENORES)
 
+### **📋 NOMENCLATURA DE COLUMNAS**
+
+| Columna | Descripción | Uso |
+|:--------|:------------|:----|
+| **PKD (Diseño)** | Progresivo kilométrico lineal del anillo de fibra óptica (desde CCO) | Para diseño de red y distribución L2 |
+| **PKR (Real)** | Progresivo kilométrico real según planos oficiales de cada ruta | Para ubicación física y validación |
+| **Ruta** | Ruta Nacional según planos oficiales (RN 4510, RN 4511, RN 4513) | Para identificación geográfica |
+| **Sub-Anillo** | Asignación según metodología punto medio (SA1-A, SA1-B, etc.) | Para arquitectura de red |
+
 ### **TRAMO 1: N1 (CCO) → N2 (ZAMBITO)**
 **Punto Medio:** PKD 19+725 | **Distancia:** 39.45 km
 
-| PKD | Equipo ITS | PKR | Tipo | Sub-Anillo | Switch L2 | Modelo | Nodo L3 Ref. |
-|:----|:-----------|:----|:-----|:-----------|:----------|:-------|:-------------|
-| 5+000 | SOS-01 | 38+100 | SOS | SA1-A | L2-001 | EKI-7706G | N1 (CCO) |
-| 10+000 | PMV-01 | 41+000 | PMV | SA1-A | L2-002 | EKI-7710E | N1 (CCO) |
-| 15+000 | CCTV-01 | 40+050 | CCTV | SA1-A | L2-003 | EKI-7706G | N1 (CCO) |
-| 18+500 | SOS-02 | 41+180 | SOS | SA1-A | L2-004 | EKI-7706G | N1 (CCO) |
-| 20+500 | SOS-03 | 43+560 | SOS | SA1-B | L2-005 | EKI-7706G | N2 (Zambito) |
-| 25+000 | CCTV-02 | 46+550 | CCTV | SA1-B | L2-006 | EKI-7710E | N2 (Zambito) |
-| 30+000 | PMV-02 | 49+550 | PMV | SA1-B | L2-007 | EKI-7706G | N2 (Zambito) |
-| 35+000 | RADAR-01 | 54+000 | RADAR | SA1-B | L2-008 | EKI-7712G | N2 (Zambito) |
+| PKD (Diseño) | Equipo ITS | PKR (Real) | Ruta | Tipo | Sub-Anillo | Switch L2 | Modelo | Nodo L3 Ref. |
+|:-------------|:-----------|:-----------|:-----|:-----|:-----------|:----------|:-------|:-------------|
+| 5+000 | SOS-01 | 38+100 | RN 4510 | SOS | SA1-A | L2-001 | EKI-7706G | N1 (CCO) |
+| 10+000 | PMV-01 | 41+000 | RN 4510 | PMV | SA1-A | L2-002 | EKI-7710E | N1 (CCO) |
+| 15+000 | CCTV-01 | 40+050 | RN 4510 | CCTV | SA1-A | L2-003 | EKI-7706G | N1 (CCO) |
+| 18+500 | SOS-02 | 41+180 | RN 4510 | SOS | SA1-A | L2-004 | EKI-7706G | N1 (CCO) |
+| 20+500 | SOS-03 | 43+560 | RN 4510 | SOS | SA1-B | L2-005 | EKI-7706G | N2 (Zambito) |
+| 25+000 | CCTV-02 | 46+550 | RN 4510 | CCTV | SA1-B | L2-006 | EKI-7710E | N2 (Zambito) |
+| 30+000 | PMV-02 | 49+550 | RN 4510 | PMV | SA1-B | L2-007 | EKI-7706G | N2 (Zambito) |
+| 35+000 | RADAR-01 | 54+000 | RN 4510 | RADAR | SA1-B | L2-008 | EKI-7712G | N2 (Zambito) |
 
 **Sub-Anillo SA1-A (AMAYORES):** 4 equipos → 4 switches L2
 **Sub-Anillo SA1-B (AMENORES):** 4 equipos → 4 switches L2
