@@ -1,21 +1,22 @@
 # PROYECTO APP PUERTO SALGAR - BARRANCABERMEJA v2.0
 ## Marco de Gestión de Proyectos (PMI) - EPC VEHICULAR
 
-![Status](https://img.shields.io/badge/Status-Fase%203%20En%20Progreso-yellow)
-![Progress](https://img.shields.io/badge/Progress-78%25-brightgreen)
+![Status](https://img.shields.io/badge/Status-Fase%204%20Completada-success)
+![Progress](https://img.shields.io/badge/Progress-85%25-brightgreen)
 ![Validations](https://img.shields.io/badge/Validations-13%2F13-success)
-![Budget](https://img.shields.io/badge/Budget-USD%2057.2M-blue)
-![Docs](https://img.shields.io/badge/Docs-73%20Files-orange)
+![Budget](https://img.shields.io/badge/Budget-USD%2019.1M%20ITS-blue)
+![Docs](https://img.shields.io/badge/Docs-83%20Files-orange)
 
 ![T01](https://img.shields.io/badge/T01_Fichas-13%2F13-success)
 ![T02](https://img.shields.io/badge/T02_Requisitos-13%2F13-success)
 ![T03](https://img.shields.io/badge/T03_Arquitecturas-13%2F13-success)
 ![T04](https://img.shields.io/badge/T04_Especificaciones-13%2F13-success)
+![T05](https://img.shields.io/badge/T05_Detalle-10%2F10-success)
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 
-**Versión:** 2.5  
-**Fecha de actualización:** 22 de Octubre 2025 (17:30)  
-**Estado:** ✅ FASE 3 COMPLETADA (100%) | **TABLA MAESTRA Y VALIDACIÓN CRUZADA COMPLETADAS**    
+**Versión:** 3.0  
+**Fecha de actualización:** 22 de Octubre 2025 (20:15)  
+**Estado:** ✅ FASE 4 COMPLETADA (100%) | **INGENIERÍA DE DETALLE (T05) COMPLETADA**    
 **Responsable:** Administrador Contractual EPC  
 **Metodología:** Punto 42 v1.0  
 **GitHub:** https://github.com/dieleoz/TM01  
@@ -35,23 +36,23 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 5. **Presupuesto Realista:** USD 57.2M (CAPEX/km $220K, rango APP 4G)
 6. **Documentación Completa:** 65+ documentos técnicos generados
 
-## 📍 **DÓNDE ESTAMOS HOY** (21-Oct-2025)
+## 📍 **DÓNDE ESTAMOS HOY** (22-Oct-2025)
 
 ```
 Fase 0: Preparación        [████████████] 100% ✅ Completada
 Fase 1: Conversión         [██████░░░░░░]  50% ← Parcial (1/15 docs)
 Fase 2: Ingeniería Concept [████████████] 100% ✅ COMPLETADA
 Fase 3: Especificaciones   [████████████] 100% ✅ COMPLETADA
-Fase 3.1: Arquitectura Red [████████████] 100% ✅ COMPLETADA ← AQUÍ ESTAMOS
-Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0% 
+Fase 3.1: Arquitectura Red [████████████] 100% ✅ COMPLETADA
+Fase 4: Ing. Detalle (T05) [████████████] 100% ✅ COMPLETADA ← AQUÍ ESTAMOS
 Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
-**Última actualización:** Hoy (22-oct-2025 17:30) - Tabla Maestra 169 equipos ITS validada vs. documentos oficiales  
-**Logro principal:** Tabla Maestra Layout completada (1,185 elementos) + Validación cruzada 100% - 3 errores corregidos  
-**Próxima acción:** Optimización fibra óptica o inicio Fase 4 (Ingeniería de Detalle T05)  
+**Última actualización:** Hoy (22-oct-2025 20:15) - Ingeniería de Detalle (T05) completada - 10 documentos generados  
+**Logro principal:** 10 documentos T05 con APU, cronogramas, protocolos de pruebas y especificaciones completas  
+**Próxima acción:** Documentos de licitación o inicio Fase 5 (Operación y Mantenimiento)  
 **Bloqueador:** Ninguno  
-**Estado:** ✅ Fase 3 completada + Tabla Maestra validada + Análisis fibra óptica completado
+**Estado:** ✅ Fase 4 completada - WIM actualizado con cotización PAT real ($256K vs $2.3M estimado)
 
 ### 📋 **DOCUMENTOS TRAZABLES CON CAMBIOS ETD/RADAR**
 
@@ -85,9 +86,13 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 **✅ COMPLETADO:**
 - Validaciones contractuales (13/13 sistemas)
 - Organización por subsistemas
-- Presupuesto consolidado (USD 57.2M)
+- Presupuesto ITS Puro ($19.1M USD)
 - Metodología genérica aplicada
 - Eliminación de duplicados
+- **Ingeniería de Detalle T05 (10 documentos)**
+- **APU detallados por subsistema**
+- **WIM con cotización PAT real ($256K)**
+- **Tabla Maestra Layout validada (1,185 elementos)**
 - Especificaciones técnicas T04 (13/13 completados - 100%)
 - **Presupuesto ITS Puro consolidado ($19.7M USD)**
 - **Criterio ITS definido (conectado CCO/fibra/supervisión remota)**

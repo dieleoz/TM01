@@ -1,24 +1,26 @@
 # ROADMAP: PROYECTO FORMATOS PARA IA
 ## Plan de Trabajo y Cronograma
 
-**Versión:** 6.9 - TABLA MAESTRA LAYOUT Y VALIDACIÓN CRUZADA COMPLETADAS  
+**Versión:** 7.0 - INGENIERÍA DE DETALLE (T05) COMPLETADA  
 **Fecha:** 22 de Octubre 2025  
-**Estado:** ✅ **FASE 3 COMPLETADA (100%)** | ✅ **TABLA MAESTRA LAYOUT VALIDADA**    
+**Estado:** ✅ **FASE 4 COMPLETADA (100%)** | ✅ **10 DOCUMENTOS T05 GENERADOS**    
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 22 de octubre de 2025 (17:30) - Tabla Maestra 169 ITS validada (3 errores corregidos)  
-**Progreso total:** ✅ **FASE 3: ESPECIFICACIONES TÉCNICAS COMPLETADA AL 100%**  
+**Última actualización:** 22 de octubre de 2025 (20:15) - T05 completos + WIM cotización PAT real  
+**Progreso total:** ✅ **FASE 4: INGENIERÍA DE DETALLE COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)  
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente  
-**✅ PRESUPUESTO FINAL:** v2.1 consolidado (USD 57.2M)  
+**✅ PRESUPUESTO ITS PURO:** v1.0 consolidado (USD $19.1M)  
 **✅ REDISEÑO ARQUITECTÓNICO:** Completado (ahorros -$21.9M)  
 **✅ DUPLICACIONES ELIMINADAS:** -$2.8M USD  
 **✅ ARQUITECTURA RED:** L2/L3 validada (regla crítica 10 km - 100% cumplimiento)  
-**✅ ANÁLISIS FIBRA ÓPTICA:** 3 opciones evaluadas (Opción A recomendada $8.6M CAPEX)  
+**✅ ANÁLISIS FIBRA ÓPTICA:** 3 opciones evaluadas (Opción A seleccionada $8.6M CAPEX)  
 **✅ TABLA MAESTRA LAYOUT:** 1,185 elementos (169 ITS + 22 peatonales + 7 edificaciones + 987 cajas FO)  
-**✅ VALIDACIÓN CRUZADA:** 100% completada (3 errores encontrados y corregidos)  
-**💰 PRESUPUESTO VALIDADO:** USD 57.2M (CAPEX/km $220K, dentro rango APP 4G)  
-**🎉 COMPLETADO:** Todas las validaciones contractuales + Tabla Maestra Layout validada
+**✅ VALIDACIÓN CRUZADA:** 100% completada (3 errores corregidos)  
+**✅ INGENIERÍA DETALLE T05:** 10 documentos (Fibra, L2, L3, SOS, CCTV, PMV, RADAR, Gálibos, METEO, WIM)  
+**✅ WIM OPTIMIZADO:** $256K (PAT) vs $2.3M (estimado) - Ahorro $2M  
+**💰 PRESUPUESTO ITS:** USD $19.1M (CAPEX optimizado con cotizaciones reales)  
+**🎉 COMPLETADO:** Ingeniería de Detalle + APU + Cronogramas + Protocolos pruebas
 
 ---
 

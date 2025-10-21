@@ -31,13 +31,13 @@
 | Sistema ITS | CAPEX (USD) | % del Total | Estado |
 |:------------|:------------|:-----------|:-------|
 | **Sistema ITS Campo** | $4,430,400 | 23.7% | ✅ Completo |
-| **Telecomunicaciones** | $8,915,374 | 45.2% | ✅ Completo |
-| **Centro de Control (CCO)** | $3,707,000 | 19.9% | ✅ Completo |
-| **Pesaje WIM** | $2,286,400 | 12.3% | ✅ Completo |
-| **Peajes-ITS** | $312,500 | 1.7% | ✅ Definido |
-| **TOTAL ITS** | **$19,726,263** | **100%** | ✅ Completo |
+| **Telecomunicaciones** | $8,915,374 | 46.8% | ✅ Completo |
+| **Centro de Control (CCO)** | $3,707,000 | 19.5% | ✅ Completo |
+| **Pesaje WIM** | $256,353 | 1.3% | ✅ Cotización PAT |
+| **Peajes-ITS** | $312,500 | 1.6% | ✅ Definido |
+| **TOTAL ITS** | **$19,055,216** | **100%** | ✅ Completo |
 
-**En pesos colombianos (TRM 4,000):** COP 78,905,052,000 (~79 mil millones)
+**En pesos colombianos (TRM 4,000):** COP 76,220,864,000 (~76 mil millones)
 
 ---
 
@@ -143,25 +143,37 @@
 | **Mobiliario Operadores** | 4 | $2,000 | $8,000 | Mesas/sillas |
 | **Contingencia CCO** | - | - | $200,000 | 5% contingencia |
 
-### **4. PESAJE WIM ($2,286,400)**
+### **4. PESAJE WIM ($256,353 - COTIZACIÓN PAT OCT 2024)**
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | Observaciones |
 |:-----------|:---------|:-------------------|:------------|:--------------|
-| **Sensores WIM** | 2 | $50,000 | $100,000 | Sensores pesaje |
-| **Controladores WIM** | 2 | $15,000 | $30,000 | Control pesaje |
-| **Cámaras WIM** | 2 | $5,000 | $10,000 | Videovigilancia |
-| **Instalación WIM** | 2 | $25,000 | $50,000 | Instalación sensores |
-| **Instalación Controladores** | 2 | $10,000 | $20,000 | Instalación control |
-| **Instalación Cámaras** | 2 | $5,000 | $10,000 | Instalación cámaras |
-| **Energía Solar WIM** | 2 | $5,000 | $10,000 | Paneles solares |
-| **Baterías WIM** | 2 | $3,000 | $6,000 | Autonomía |
-| **Controladores Solar** | 2 | $1,000 | $2,000 | Control carga |
-| **Cableado Control** | 2 | $2,000 | $4,000 | Cableado control |
-| **Cableado Energía** | 2 | $1,500 | $3,000 | Cableado energía |
-| **Puesta a Tierra** | 2 | $2,000 | $4,000 | Tierra equipos |
-| **Señalización** | 2 | $500 | $1,000 | Señalización |
-| **Pequeño Material** | 2 | $1,000 | $2,000 | Material montaje |
-| **Contingencia WIM** | - | - | $100,000 | 5% contingencia |
+| **MATERIALES Y EQUIPOS** | - | - | **$161,357** | **Equipamiento completo** |
+| Placas de Pesaje 1.55m | 4 | $10,481 | $41,926 | 4 básculas dinámicas |
+| Bastidores para placas | 4 | $4,297 | $17,190 | Instalación en pavimento |
+| Material lazos inductivos | 8 | $409 | $3,270 | Detección vehículos |
+| Electrónica DAW100 | 2 | $4,045 | $8,090 | Controladores |
+| Gabinete antivandalismo | 2 | $4,619 | $9,238 | Protección equipos |
+| Cámaras OCR báscula (22m) | 2 | $5,110 | $10,219 | Reconocimiento placas |
+| Cámaras OCR fuga (22m) | 2 | $4,800 | $9,600 | Control evasión |
+| Señal Doble Aspa-Cruz | 4 | $1,858 | $7,432 | Señalización visual |
+| Computadores + Servidores | 6 | Variable | $40,054 | Procesamiento datos |
+| Equipos red (switches, UPS) | - | - | $14,338 | Conectividad |
+| **INSTALACIÓN Y SERVICIOS** | - | - | **$94,996** | **Mano obra + transporte** |
+| Instalación fibra óptica | 2 | $5,174 | $10,348 | Conexión a CCO |
+| Instalación sistemas | 1 | $32,357 | $32,357 | 2 básculas completas |
+| Asistencia garantía | 2 | $5,148 | $10,296 | Periodo garantía |
+| Flete internacional (CIF) | 1 | $19,474 | $19,474 | Importación |
+| Ingeniería + software PAT | 1 | $3,144 | $3,144 | Soporte técnico |
+| Software BASCAM integración | 2 | $2,970 | $5,940 | Integración sistemas |
+| Pólizas | 1 | $2,970 | $2,970 | Seguros |
+| Otros (puesta tierra, As-Built) | - | - | $10,467 | Varios |
+
+**Notas WIM:**
+- ✅ INCOTERMS DAP (entrega en sitio)
+- ✅ Garantía 1 año fabricante
+- ✅ Precisión COST323 A(5): Error <5% PBT
+- ✅ Velocidad hasta 60 km/h
+- ❌ NO incluye mantenimiento post-garantía
 
 ### **5. PEAJES-ITS ($312,500)**
 
@@ -190,12 +202,12 @@
 
 | Sistema | CAPEX (USD) | % del Total | Observaciones |
 |:--------|:------------|:-----------|:--------------|
-| **Telecomunicaciones** | $7,924,074 | 42.5% | Backbone red ITS |
-| **Sistema ITS Campo** | $4,430,400 | 23.7% | Equipos campo |
-| **Centro de Control** | $3,707,000 | 19.9% | Operación centralizada |
-| **Pesaje WIM** | $2,286,400 | 12.3% | Control pesaje |
-| **Peajes-ITS** | $312,500 | 1.7% | Integración peajes |
-| **TOTAL** | **$19,726,263** | **100%** | Presupuesto ITS puro |
+| **Telecomunicaciones** | $8,915,374 | 46.8% | Backbone red ITS (Fibra+L2+L3) |
+| **Sistema ITS Campo** | $4,430,400 | 23.3% | Equipos campo (SOS, CCTV, PMV, etc.) |
+| **Centro de Control** | $3,707,000 | 19.5% | Operación centralizada |
+| **Peajes-ITS** | $312,500 | 1.6% | Integración peajes |
+| **Pesaje WIM** | $256,353 | 1.3% | Control pesaje (Cotización PAT) |
+| **TOTAL** | **$19,055,216** | **100%** | Presupuesto ITS puro |
 
 ---
 
@@ -255,16 +267,24 @@
 
 ### **✅ Fase 3 - Validación Contractual ITS:**
 - **Alcance ITS definido:** Solo sistemas conectados a CCO/fibra
-- **Presupuesto ITS consolidado:** $19,726,263 USD
+- **Presupuesto ITS consolidado:** $19,055,216 USD
 - **Sistemas NO-ITS identificados:** $8,253,677 USD
 - **Criterio ITS aplicado:** Consistente en todos los documentos
 - **Validación contractual:** 100% sistemas ITS obligatorios
+- **WIM actualizado:** Cotización PAT real ($256,353 vs. $2,286,400 estimado)
+
+### **✅ Fase 4 - Ingeniería de Detalle (T05):**
+- **Documentos T05 completados:** 10 (Fibra, L2, L3, SOS, CCTV, PMV, RADAR, Gálibos, METEO, WIM)
+- **APU detallados:** 100% sistemas con análisis de precios unitarios
+- **Cronogramas instalación:** Definidos por subsistema
+- **Protocolos de pruebas:** Documentados para todos los sistemas
 
 ### **📊 Métricas del Proyecto:**
 - **Total Proyecto:** $59,169,830 USD
-- **Componente ITS:** $19,726,263 USD (33.3%)
-- **Componente NO-ITS:** $39,443,567 USD (66.7%)
-- **Eficiencia ITS:** Presupuesto optimizado según criterio técnico
+- **Componente ITS:** $19,055,216 USD (32.2%)
+- **Componente NO-ITS:** $40,114,614 USD (67.8%)
+- **Ahorro WIM:** $2,030,047 USD vs. estimado inicial
+- **Eficiencia ITS:** Presupuesto optimizado con cotizaciones reales
 
 ---
 
