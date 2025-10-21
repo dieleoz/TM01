@@ -47,11 +47,11 @@ Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0%
 Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
-**Última actualización:** Hoy (21-oct-2025 23:45) - Gálibos ajustados a obligación EPC (8 unidades)  
-**Logro principal:** Posición EPC clara: 8 gálibos obligatorios + contingencia +4 + 25 solo si SPV solicita  
-**Próxima acción:** Continuar con siguiente subsistema ITS  
+**Última actualización:** Hoy (22-oct-2025 00:15) - Criterio ITS definido (conectado CCO/fibra)  
+**Logro principal:** Alcance ITS clarificado - Solo sistemas conectados a CCO/fibra van en presupuesto ITS  
+**Próxima acción:** Completar sistema Peajes-ITS y crear PRESUPUESTO_ITS_PURO_v1.0.md  
 **Bloqueador:** Ninguno  
-**Estado:** ✅ Fase 3 completada + Gálibos validados contractualmente
+**Estado:** ✅ Fase 3 avanzada + Criterio ITS definido (16.45M USD base)
 
 ### 📋 **DOCUMENTOS TRAZABLES CON CAMBIOS ETD/RADAR**
 
