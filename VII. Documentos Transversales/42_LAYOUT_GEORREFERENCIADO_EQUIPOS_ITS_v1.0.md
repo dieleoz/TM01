@@ -190,6 +190,91 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 **Nota:** Total ETD/RADAR = 16 equipos (2 RADAR-ANPR + 14 ETD puras = 2 SAST + 13 UFs + 1 stock)
 
+---
+
+## 🚧 **GÁLIBOS - DETECCIÓN DE ALTURA**
+
+### **📊 RESUMEN EJECUTIVO**
+
+| Concepto | Cantidad | Estado | Observaciones |
+|:---------|:---------|:-------|:--------------|
+| **Gálibos Confirmados** | 8 | ✅ Validados | PKs específicos identificados |
+| **Gálibos Pendientes** | 17 | ⏳ Por validar | Requieren validación Google Earth |
+| **Total Estimado** | 25 | ⚠️ Parcial | Estimación inicial contractual |
+
+### **📍 UBICACIONES CONFIRMADAS (8 GÁLIBOS)**
+
+| # | PKR | Ruta | PKD | Ubicación | Tipo | Altura Mín. | Switch L2 | Observaciones |
+|:--|:----|:----|:----|:----------|:-----|:------------|:----------|:--------------|
+| 1 | 41+350 | RN 4510 | PKD 241+750 | UF-0D | Óptico/Láser | 5.10m | L2-242 | Intersección crítica |
+| 2 | 85+370 | RN 4510 | PKD 197+630 | UF-1 | Óptico/Láser | 5.10m | L2-198 | Separador central |
+| 3 | 120+500 | RN 4511 | PKD 162+500 | UF-3 | Óptico/Láser | 5.10m | L2-163 | Puente vehicular |
+| 4 | 135+200 | RN 4511 | PKD 147+800 | UF-4 | Óptico/Láser | 5.10m | L2-148 | Intersección a desnivel |
+| 5 | 150+800 | RN 4511 | PKD 132+200 | UF-6 | Óptico/Láser | 5.10m | L2-133 | Paso elevado |
+| 6 | 165+300 | RN 4511 | PKD 117+700 | UF-8 | Óptico/Láser | 5.10m | L2-118 | Puente principal |
+| 7 | 180+100 | RN 4511 | PKD 102+900 | UF-10 | Óptico/Láser | 5.10m | L2-103 | Intersección compleja |
+| 8 | 12+500 | RN 4513 | PKD 270+500 | UF-13 | Óptico/Láser | 5.10m | L2-271 | Acceso urbano |
+
+### **⏳ UBICACIONES PENDIENTES (17 GÁLIBOS)**
+
+| # | PKR | Ruta | PKD | Ubicación | Tipo | Altura Mín. | Switch L2 | Estado |
+|:--|:----|:----|:----|:----------|:-----|:------------|:----------|:-------|
+| 9 | TBD | RN 4510 | TBD | UF-2 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 10 | TBD | RN 4510 | TBD | UF-2 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 11 | TBD | RN 4511 | TBD | UF-5 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 12 | TBD | RN 4511 | TBD | UF-5 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 13 | TBD | RN 4511 | TBD | UF-7 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 14 | TBD | RN 4511 | TBD | UF-7 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 15 | TBD | RN 4511 | TBD | UF-9 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 16 | TBD | RN 4511 | TBD | UF-9 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 17 | TBD | RN 4511 | TBD | UF-11 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 18 | TBD | RN 4511 | TBD | UF-11 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 19 | TBD | RN 4511 | TBD | UF-12 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 20 | TBD | RN 4511 | TBD | UF-12 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 21 | TBD | RN 4511 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 22 | TBD | RN 4511 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 23 | TBD | RN 4513 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 24 | TBD | RN 4513 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+| 25 | TBD | RN 4513 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+
+### **💰 COSTOS ACTUALIZADOS GÁLIBOS**
+
+| Concepto | Cantidad | Precio Unit. (USD) | Subtotal (USD) | Observaciones |
+|:---------|:---------|:-------------------|:----------------|:--------------|
+| **Gálibos Confirmados** | 8 | $7,470 | $59,760 | Costo real cotización |
+| **Gálibos Pendientes** | 17 | $7,470 | $126,990 | Estimación basada en confirmados |
+| **Instalación Confirmados** | 8 | $14,000 | $112,000 | Obra civil + estructuras |
+| **Instalación Pendientes** | 17 | $14,000 | $238,000 | Estimación instalación |
+| **TOTAL CONFIRMADOS** | **8** | - | **$171,760** | Listo para compra |
+| **TOTAL PENDIENTES** | **17** | - | **$364,990** | Requiere validación |
+| **TOTAL PROYECTO** | **25** | - | **$536,750** | Estimación completa |
+
+### **📋 CRITERIOS DE VALIDACIÓN**
+
+**Para los 17 gálibos pendientes:**
+
+1. **Altura mínima:** 5.10m (contractual)
+2. **Tecnología:** Óptico/Láser (contractual)
+3. **Ubicaciones críticas:**
+   - Intersecciones a desnivel
+   - Puentes vehiculares
+   - Pasos elevados
+   - Accesos urbanos
+4. **Integración:** PMV local para alertas
+5. **Validación:** Google Earth + planos oficiales
+
+### **⚠️ NOTA IMPORTANTE**
+
+**Los 17 gálibos pendientes requieren validación con Google Earth para:**
+- Confirmar ubicaciones exactas (PKR)
+- Validar alturas de paso
+- Identificar intersecciones críticas
+- Calcular PKD para integración L2
+
+**Sin esta validación, el diseño no puede proceder a Fase 4 (Ingeniería de Detalle).**
+
+---
+
 > **Nota:** La longitud total incluye ambos sentidos. La longitud del corredor es 259.6 km (sentido único).
 
 ---
