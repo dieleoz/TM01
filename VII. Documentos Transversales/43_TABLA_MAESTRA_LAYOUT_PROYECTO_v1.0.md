@@ -78,7 +78,7 @@ Esta tabla es la **BASE DE DATOS CENTRAL** del proyecto que permite:
 | # | RUTA | UF | VÍA | TIPO | SISTEMA | PKR | PKD | SEP_SOS | SEP_PMV_IZQ | SEP_PMV_DER | OBSERVACIÓN | SWITCH_L2 | SUB_ANILLO | NODO_L3 |
 |:--|:-----|:---|:----|:-----|:--------|:----|:----|:--------|:------------|:------------|:------------|:----------|:-----------|:--------|
 | 1 | 4510 | 5.2 | Unidireccional | CCTV | CCTV | 38+100 | 245+100 | - | - | - | Inicio monitoreo | L2-245 | SA7-B | N1-CCO |
-| 2 | 4510 | 0D | Separador | CCTV | CCTV | 40+050 | 243+150 | - | - | - | ~~ELIMINADA sin justificación~~ | ~~L2-243~~ | - | - |
+| 2 | 4510 | 0D | Separador | CCTV | CCTV | 40+050 | 243+150 | - | - | - | Inter Koran - **REACTIVADA** | L2-243 | SA7-B | N1-CCO |
 | 3 | 4510 | 0D | Derecha | PMV | PMV | 41+000 | 242+100 | - | - | 0.00 | Inter Koran 40+450 | L2-242 | SA7-B | N1-CCO |
 | 4 | 4510 | 0D | Izquierda | PMV | PMV | 41+200 | 242+000 | - | 0.00 | - | | L2-242 | SA7-B | N1-CCO |
 | 5 | 4510 | 0D | Derecha | SOS | POSTE SOS | 41+180 | 241+920 | 0.00 | - | - | **SOS #1** | L2-242 | SA7-B | N1-CCO |
@@ -105,13 +105,12 @@ Esta tabla es la **BASE DE DATOS CENTRAL** del proyecto que permite:
 | 26 | 4510 | 0D | Derecha | PMV | PMV | 78+950 | 204+150 | - | - | 20.00 | | L2-204 | SA4-B | N6-AS_ZAMBITO |
 | 27 | 4510 | 0D | Separador | CCTV | CCTV | 81+000 | 202+100 | - | - | - | | L2-202 | SA4-B | N6-AS_ZAMBITO |
 | 28 | 4510 | 0D | Derecha | SOS | POSTE SOS | 81+500 | 201+600 | 2.70 | - | - | **SOS #15** | L2-202 | SA4-B | N6-AS_ZAMBITO |
-| 29 | 4510 | 0D | Separador | METEO | ESTACIÓN METEOROLÓGICA | 83+250 | 199+850 | - | - | - | | L2-200 | SA4-B | N6-AS_ZAMBITO |
-| 30 | 4510 | 0D | Izquierda | SOS | POSTE SOS | 83+950 | 199+150 | 2.45 | - | - | **SOS #16** | L2-199 | SA4-B | N6-AS_ZAMBITO |
-| 31 | 4510 | 1 | Separador | CCTV | CCTV | 85+370 | 197+730 | - | - | - | ETD integrada | L2-198 | SA4-B | N6-AS_ZAMBITO |
-| 32 | 4510 | 1 | Derecha | SOS | POSTE SOS | 86+900 | 196+200 | 2.95 | - | - | **SOS #17** - Peatonal 86+290 | L2-196 | SA4-B | N6-AS_ZAMBITO |
-| 33 | 4510 | 1 | Separador | CCTV | CCTV | 87+100 | 196+000 | - | - | - | | L2-196 | SA4-B | N6-AS_ZAMBITO |
-| 34 | 4510 | 0D | Izquierda | SOS | POSTE SOS | 89+780 | 193+320 | 2.88 | - | - | **SOS #18** | L2-193 | SA4-A | N4-AGUAS_NEGRAS |
-| 35 | 4510 | 5.1 | Separador | CCTV | CCTV | 91+850 | 191+250 | - | - | - | | L2-191 | SA4-A | N4-AGUAS_NEGRAS |
+| 29 | 4510 | 0D | Izquierda | SOS | POSTE SOS | 83+950 | 199+150 | 2.45 | - | - | **SOS #16** | L2-199 | SA4-B | N6-AS_ZAMBITO |
+| 30 | 4510 | 1 | Separador | CCTV | CCTV | 85+370 | 197+730 | - | - | - | ETD integrada | L2-198 | SA4-B | N6-AS_ZAMBITO |
+| 31 | 4510 | 1 | Derecha | SOS | POSTE SOS | 86+900 | 196+200 | 2.95 | - | - | **SOS #17** - Peatonal 86+290 | L2-196 | SA4-B | N6-AS_ZAMBITO |
+| 32 | 4510 | 1 | Separador | CCTV | CCTV | 87+100 | 196+000 | - | - | - | | L2-196 | SA4-B | N6-AS_ZAMBITO |
+| 33 | 4510 | 0D | Izquierda | SOS | POSTE SOS | 89+780 | 193+320 | 2.88 | - | - | **SOS #18** | L2-193 | SA4-A | N4-AGUAS_NEGRAS |
+| 34 | 4510 | 5.1 | Separador | CCTV | CCTV | 91+850 | 191+250 | - | - | - | | L2-191 | SA4-A | N4-AGUAS_NEGRAS |
 | 36 | 4510 | 1 | Derecha | SOS | POSTE SOS | 92+520 | 190+580 | 2.74 | - | - | **SOS #19** | L2-191 | SA4-A | N4-AGUAS_NEGRAS |
 | 37 | 4510 | 1 | Separador | CCTV | CCTV | 93+920 | 189+180 | - | - | - | | L2-189 | SA4-A | N4-AGUAS_NEGRAS |
 | 38 | 4510 | 0D | Izquierda | SOS | POSTE SOS | 95+300 | 187+800 | 2.78 | - | - | **SOS #20** | L2-188 | SA4-A | N4-AGUAS_NEGRAS |
@@ -250,52 +249,52 @@ Esta tabla es la **BASE DE DATOS CENTRAL** del proyecto que permite:
 | 161 | 4513 | 13 | Izquierda | SOS | POSTE SOS | 3+656 | 280+344 | 2.41 | - | - | **SOS #86** | L2-280 | SA7-A | N7-BUNKER02 |
 | 162 | 4513 | 13 | Separador | CCTV | CCTV | 3+875 | 280+125 | - | - | - | Báscula Izquierda 3+900 - WIM | L2-280 | SA7-A | N7-BUNKER02 |
 | 163 | 4513 | 11 | Separador | CCTV | CCTV | 4+150 | 279+850 | - | - | - | | L2-280 | SA7-A | N7-BUNKER02 |
-| 164 | 4513 | 13 | Izquierda | METEO | ESTACIÓN METEOROLÓGICA | 4+235 | 279+765 | - | - | - | Báscula Derecha 4+360 - CCO | L2-280 | SA7-A | N7-BUNKER02 |
-| 165 | 4513 | 11 | Separador | CCTV | CCTV | 4+400 | 279+600 | - | - | - | CCO Izquierda 4+400 - **N1-CCO** | L2-280 | SA7-A | N7-BUNKER02 |
-| 166 | 4513 | 11 | Derecha | PMV | PMV | 5+900 | 278+100 | - | - | 18.14 | | L2-278 | SA7-A | N7-BUNKER02 |
-| 167 | 4513 | 13 | Izquierda | GALIBO | GÁLIBO | 5+900 | 278+100 | - | - | - | Altura mín 5.10m | L2-278 | SA7-A | N7-BUNKER02 |
-| 168 | 4513 | 11 | Derecha | SOS | POSTE SOS | 6+050 | 277+950 | 2.39 | - | - | **SOS #87** | L2-278 | SA7-A | N7-BUNKER02 |
-| 169 | 4513 | 13 | Sur | SOS | POSTE SOS | 9+000 | 275+000 | 2.95 | - | - | **SOS #88** ⚠️ Verificar "Sur" | L2-275 | SA7-A | N7-BUNKER02 |
-| 170 | 4513 | 11 | Sur | CCTV | CCTV | 9+800 | 274+200 | - | - | - | | L2-274 | SA7-A | N7-BUNKER02 |
+| 164 | 4513 | 11 | Separador | CCTV | CCTV | 4+400 | 279+600 | - | - | - | CCO Izquierda 4+400 - **N1-CCO** | L2-280 | SA7-A | N7-BUNKER02 |
+| 165 | 4513 | 11 | Derecha | PMV | PMV | 5+900 | 278+100 | - | - | 18.14 | | L2-278 | SA7-A | N7-BUNKER02 |
+| 166 | 4513 | 13 | Izquierda | GALIBO | GÁLIBO | 5+900 | 278+100 | - | - | - | Altura mín 5.10m | L2-278 | SA7-A | N7-BUNKER02 |
+| 167 | 4513 | 11 | Derecha | SOS | POSTE SOS | 6+050 | 277+950 | 2.39 | - | - | **SOS #87** - Último SOS contractual | L2-278 | SA7-A | N7-BUNKER02 |
+| 168 | 4513 | 11 | Sur | CCTV | CCTV | 9+800 | 274+200 | - | - | - | Zona CCO | L2-274 | SA7-A | N7-BUNKER02 |
+
+---
 
 ### **INFRAESTRUCTURA: PUENTES PEATONALES (22 unidades)**
 
 | # | RUTA | UF | VÍA | TIPO | SISTEMA | PKR | PKD | SEP_SOS | SEP_PMV_IZQ | SEP_PMV_DER | OBSERVACIÓN | SWITCH_L2 | SUB_ANILLO | NODO_L3 |
 |:--|:-----|:---|:----|:-----|:--------|:----|:----|:--------|:------------|:------------|:------------|:----------|:-----------|:--------|
-| 171 | 4513 | 11 | Separador | PEATONAL | PASO PEATONAL | 0+529 | 2+471 | - | - | - | Peatonal Inter Lizama | L2-002 | SA1-A | N1-CCO |
-| 172 | 4511 | 2 | Separador | PEATONAL | PASO PEATONAL | 4+261 | 146+239 | - | - | - | Peatonal UF-2 | L2-146 | SA3-A | N4-AGUAS_NEGRAS |
-| 173 | 4511 | 2 | Separador | PEATONAL | PASO PEATONAL | 14+131 | 136+369 | - | - | - | Peatonal UF-2 | L2-136 | SA3-A | N4-AGUAS_NEGRAS |
-| 174 | 4511 | 2 | Separador | PEATONAL | PASO PEATONAL | 46+143 | 104+357 | - | - | - | Peatonal UF-2 | L2-104 | SA2-B | N4-AGUAS_NEGRAS |
-| 175 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 48+360 | 234+740 | - | - | - | Peatonal UF-0D | L2-235 | SA7-A | N7-BUNKER02 |
-| 176 | 4511 | 5.1 | Separador | PEATONAL | PASO PEATONAL | 61+346 | 89+154 | - | - | - | Peatonal UF-5.1 | L2-089 | SA2-B | N4-AGUAS_NEGRAS |
-| 177 | 4511 | 4 | Separador | PEATONAL | PASO PEATONAL | 68+228 | 82+272 | - | - | - | Peatonal UF-4 | L2-082 | SA2-B | N4-AGUAS_NEGRAS |
-| 178 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 68+434 | 214+666 | - | - | - | Peatonal UF-0D | L2-215 | SA7-A | N7-BUNKER02 |
-| 179 | 4511 | 4 | Separador | PEATONAL | PASO PEATONAL | 73+969 | 76+531 | - | - | - | Peatonal UF-4 | L2-077 | SA2-A | N2-ZAMBITO |
-| 180 | 4510 | 1 | Separador | PEATONAL | PASO PEATONAL | 86+290 | 196+810 | - | - | - | Peatonal UF-1 | L2-197 | SA4-B | N6-AS_ZAMBITO |
-| 181 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 96+890 | 186+210 | - | - | - | Inter Pto Boyacá | L2-186 | SA4-A | N4-AGUAS_NEGRAS |
-| 182 | 4511 | 11 | Separador | PEATONAL | PASO PEATONAL | 97+361 | 53+139 | - | - | - | Peatonal UF-11 | L2-053 | SA2-A | N2-ZAMBITO |
-| 183 | 4511 | 11 | Separador | PEATONAL | PASO PEATONAL | 103+000 | 47+500 | - | - | - | Peatonal UF-11 | L2-048 | SA2-A | N2-ZAMBITO |
-| 184 | 4511 | 9 | Separador | PEATONAL | PASO PEATONAL | 108+411 | 42+089 | - | - | - | Peatonal UF-9 | L2-042 | SA1-B | N2-ZAMBITO |
-| 185 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 109+357 | 173+743 | - | - | - | Peatonal UF-0D | L2-174 | SA3-B | N6-AS_ZAMBITO |
-| 186 | 4511 | 9 | Separador | PEATONAL | PASO PEATONAL | 113+410 | 37+090 | - | - | - | Peatonal UF-9 | L2-037 | SA1-B | N2-ZAMBITO |
-| 187 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 115+673 | 167+427 | - | - | - | Peatonal UF-0D | L2-167 | SA3-B | N6-AS_ZAMBITO |
-| 188 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 123+806 | 159+294 | - | - | - | Peatonal UF-0D | L2-159 | SA3-A | N4-AGUAS_NEGRAS |
-| 189 | 4510 | 2 | Separador | PEATONAL | PASO PEATONAL | 125+514 | 157+586 | - | - | - | Peatonal UF-2 | L2-158 | SA3-A | N4-AGUAS_NEGRAS |
-| 190 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 130+000 | 153+100 | - | - | - | Peatonal UF-0D | L2-153 | SA3-A | N4-AGUAS_NEGRAS |
-| 191 | 4511 | 11 | Separador | PEATONAL | PASO PEATONAL | 135+633 | 14+867 | - | - | - | Peatonal UF-11 | L2-015 | SA1-B | N2-ZAMBITO |
-| 192 | 4511 | 12 | Separador | PEATONAL | PASO PEATONAL | 147+024 | 3+476 | - | - | - | Peatonal UF-12 | L2-003 | SA1-A | N1-CCO |
+| 169 | 4513 | 11 | Separador | PEATONAL | PASO PEATONAL | 0+529 | 2+471 | - | - | - | Peatonal Inter Lizama | L2-002 | SA1-A | N1-CCO |
+| 170 | 4511 | 2 | Separador | PEATONAL | PASO PEATONAL | 4+261 | 146+239 | - | - | - | Peatonal UF-2 | L2-146 | SA3-A | N4-AGUAS_NEGRAS |
+| 171 | 4511 | 2 | Separador | PEATONAL | PASO PEATONAL | 14+131 | 136+369 | - | - | - | Peatonal UF-2 | L2-136 | SA3-A | N4-AGUAS_NEGRAS |
+| 172 | 4511 | 2 | Separador | PEATONAL | PASO PEATONAL | 46+143 | 104+357 | - | - | - | Peatonal UF-2 | L2-104 | SA2-B | N4-AGUAS_NEGRAS |
+| 173 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 48+360 | 234+740 | - | - | - | Peatonal UF-0D | L2-235 | SA7-A | N7-BUNKER02 |
+| 174 | 4511 | 5.1 | Separador | PEATONAL | PASO PEATONAL | 61+346 | 89+154 | - | - | - | Peatonal UF-5.1 | L2-089 | SA2-B | N4-AGUAS_NEGRAS |
+| 175 | 4511 | 4 | Separador | PEATONAL | PASO PEATONAL | 68+228 | 82+272 | - | - | - | Peatonal UF-4 | L2-082 | SA2-B | N4-AGUAS_NEGRAS |
+| 176 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 68+434 | 214+666 | - | - | - | Peatonal UF-0D | L2-215 | SA7-A | N7-BUNKER02 |
+| 177 | 4511 | 4 | Separador | PEATONAL | PASO PEATONAL | 73+969 | 76+531 | - | - | - | Peatonal UF-4 | L2-077 | SA2-A | N2-ZAMBITO |
+| 178 | 4510 | 1 | Separador | PEATONAL | PASO PEATONAL | 86+290 | 196+810 | - | - | - | Peatonal UF-1 | L2-197 | SA4-B | N6-AS_ZAMBITO |
+| 179 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 96+890 | 186+210 | - | - | - | Inter Pto Boyacá | L2-186 | SA4-A | N4-AGUAS_NEGRAS |
+| 180 | 4511 | 11 | Separador | PEATONAL | PASO PEATONAL | 97+361 | 53+139 | - | - | - | Peatonal UF-11 | L2-053 | SA2-A | N2-ZAMBITO |
+| 181 | 4511 | 11 | Separador | PEATONAL | PASO PEATONAL | 103+000 | 47+500 | - | - | - | Peatonal UF-11 | L2-048 | SA2-A | N2-ZAMBITO |
+| 182 | 4511 | 9 | Separador | PEATONAL | PASO PEATONAL | 108+411 | 42+089 | - | - | - | Peatonal UF-9 | L2-042 | SA1-B | N2-ZAMBITO |
+| 183 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 109+357 | 173+743 | - | - | - | Peatonal UF-0D | L2-174 | SA3-B | N6-AS_ZAMBITO |
+| 184 | 4511 | 9 | Separador | PEATONAL | PASO PEATONAL | 113+410 | 37+090 | - | - | - | Peatonal UF-9 | L2-037 | SA1-B | N2-ZAMBITO |
+| 185 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 115+673 | 167+427 | - | - | - | Peatonal UF-0D | L2-167 | SA3-B | N6-AS_ZAMBITO |
+| 186 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 123+806 | 159+294 | - | - | - | Peatonal UF-0D | L2-159 | SA3-A | N4-AGUAS_NEGRAS |
+| 187 | 4510 | 2 | Separador | PEATONAL | PASO PEATONAL | 125+514 | 157+586 | - | - | - | Peatonal UF-2 | L2-158 | SA3-A | N4-AGUAS_NEGRAS |
+| 188 | 4510 | 0D | Separador | PEATONAL | PASO PEATONAL | 130+000 | 153+100 | - | - | - | Peatonal UF-0D | L2-153 | SA3-A | N4-AGUAS_NEGRAS |
+| 189 | 4511 | 11 | Separador | PEATONAL | PASO PEATONAL | 135+633 | 14+867 | - | - | - | Peatonal UF-11 | L2-015 | SA1-B | N2-ZAMBITO |
+| 190 | 4511 | 12 | Separador | PEATONAL | PASO PEATONAL | 147+024 | 3+476 | - | - | - | Peatonal UF-12 | L2-003 | SA1-A | N1-CCO |
 
 ### **EDIFICACIONES PRINCIPALES (7 unidades)**
 
 | # | RUTA | UF | VÍA | TIPO | SISTEMA | PKR | PKD | SEP_SOS | SEP_PMV_IZQ | SEP_PMV_DER | OBSERVACIÓN | SWITCH_L2 | SUB_ANILLO | NODO_L3 |
 |:--|:-----|:---|:----|:-----|:--------|:----|:----|:--------|:------------|:------------|:------------|:----------|:-----------|:--------|
-| 193 | 4513 | 11 | Edificación | CCO | CENTRO DE CONTROL | 4+400 | 0+000 | - | - | - | **N1-CCO** - Nodo L3 Core | **CORE-N1** | - | **N1-CCO** |
-| 194 | 4511 | 5.1 | Edificación | PEAJE | PEAJE + AS | 9+200 | 141+300 | - | - | - | **N2-ZAMBITO** - Nodo L3 + Peaje | **CORE-N2** | - | **N2-ZAMBITO** |
-| 195 | 4510 | 5.1 | Edificación | AS | ÁREA SERVICIO | 104+100 | 178+000 | - | - | - | **N6-AS_ZAMBITO** - Nodo L3 | **CORE-N6** | - | **N6-AS_ZAMBITO** |
-| 196 | 4511 | 6 | Edificación | PEAJE | PEAJE + AS | 81+800 | 68+700 | - | - | - | **N4-AGUAS_NEGRAS** - Nodo L3 + Peaje | **CORE-N4** | - | **N4-AGUAS_NEGRAS** |
-| 197 | 4511 | 9 | Edificación | AS | ÁREA SERVICIO | 113+450 | 37+050 | - | - | - | **N5-AS_AGUAS_NEGRAS** - Nodo L3 | **CORE-N5** | - | **N5-AS_AGUAS_NEGRAS** |
-| 198 | 4511 | TBD | Edificación | BUNKER | BUNKER TELECOM | TBD | 70+450 | - | - | - | **N3-BUNKER01** - Nodo L3 Intermedio | **CORE-N3** | - | **N3-BUNKER01** |
-| 199 | 4510 | TBD | Edificación | BUNKER | BUNKER TELECOM | TBD | 233+150 | - | - | - | **N7-BUNKER02** - Nodo L3 Intermedio | **CORE-N7** | - | **N7-BUNKER02** |
+| 191 | 4513 | 11 | Edificación | CCO | CENTRO DE CONTROL | 4+400 | 0+000 | - | - | - | **N1-CCO** - Nodo L3 Core | **CORE-N1** | - | **N1-CCO** |
+| 192 | 4511 | 5.1 | Edificación | PEAJE | PEAJE + AS | 9+200 | 141+300 | - | - | - | **N2-ZAMBITO** - Nodo L3 + Peaje | **CORE-N2** | - | **N2-ZAMBITO** |
+| 193 | 4510 | 5.1 | Edificación | AS | ÁREA SERVICIO | 104+100 | 178+000 | - | - | - | **N6-AS_ZAMBITO** - Nodo L3 | **CORE-N6** | - | **N6-AS_ZAMBITO** |
+| 194 | 4511 | 6 | Edificación | PEAJE | PEAJE + AS | 81+800 | 68+700 | - | - | - | **N4-AGUAS_NEGRAS** - Nodo L3 + Peaje | **CORE-N4** | - | **N4-AGUAS_NEGRAS** |
+| 195 | 4511 | 9 | Edificación | AS | ÁREA SERVICIO | 113+450 | 37+050 | - | - | - | **N5-AS_AGUAS_NEGRAS** - Nodo L3 | **CORE-N5** | - | **N5-AS_AGUAS_NEGRAS** |
+| 196 | 4511 | TBD | Edificación | BUNKER | BUNKER TELECOM | TBD | 70+450 | - | - | - | **N3-BUNKER01** - Nodo L3 Intermedio | **CORE-N3** | - | **N3-BUNKER01** |
+| 197 | 4510 | TBD | Edificación | BUNKER | BUNKER TELECOM | TBD | 233+150 | - | - | - | **N7-BUNKER02** - Nodo L3 Intermedio | **CORE-N7** | - | **N7-BUNKER02** |
 
 ### **CAJAS DE EMPALME FIBRA ÓPTICA - Cada 300m (943 unidades)**
 
@@ -307,36 +306,36 @@ PKD = 0+300, 0+600, 0+900, ... 282+900 (cada 300m)
 
 | # | RUTA | UF | VÍA | TIPO | SISTEMA | PKR | PKD | SEP_SOS | SEP_PMV_IZQ | SEP_PMV_DER | OBSERVACIÓN | SWITCH_L2 | SUB_ANILLO | NODO_L3 |
 |:--|:-----|:---|:----|:-----|:--------|:----|:----|:--------|:------------|:------------|:------------|:----------|:-----------|:--------|
-| 200 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 0+300 | - | - | - | Caja estándar 80x80x80 | Cercano N1 | SA1-A | N1-CCO |
-| 201 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 0+600 | - | - | - | Caja estándar 80x80x80 | L2-001 | SA1-A | N1-CCO |
-| 202 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 0+900 | - | - | - | Caja estándar 80x80x80 | L2-001 | SA1-A | N1-CCO |
-| 203 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 1+200 | - | - | - | Caja estándar 80x80x80 | L2-001 | SA1-A | N1-CCO |
-| 204 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 1+500 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
-| 205 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 1+800 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
-| 206 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 2+100 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
-| 207 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 2+400 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
-| 208 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 2+700 | - | - | - | Caja estándar 80x80x80 | L2-003 | SA1-A | N1-CCO |
-| 209 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+000 | - | - | - | Caja estándar 80x80x80 | L2-003 | SA1-A | N1-CCO |
-| 210 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+300 | - | - | - | Caja estándar 80x80x80 | L2-003 | SA1-A | N1-CCO |
-| 211 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+600 | - | - | - | Caja estándar 80x80x80 | L2-004 | SA1-A | N1-CCO |
-| 212 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+900 | - | - | - | Caja estándar 80x80x80 | L2-004 | SA1-A | N1-CCO |
-| 213 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 4+200 | - | - | - | Caja estándar 80x80x80 | L2-004 | SA1-A | N1-CCO |
-| 214 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 4+500 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
-| 215 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 4+800 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
-| 216 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 5+100 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
-| 217 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 5+400 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
-| 218 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 5+700 | - | - | - | Caja estándar 80x80x80 | L2-006 | SA1-A | N1-CCO |
-| 219 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+000 | - | - | - | Caja estándar 80x80x80 | L2-006 | SA1-A | N1-CCO |
-| 220 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+300 | - | - | - | Caja estándar 80x80x80 | L2-006 | SA1-A | N1-CCO |
-| 221 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+600 | - | - | - | Caja estándar 80x80x80 | L2-007 | SA1-A | N1-CCO |
-| 222 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+900 | - | - | - | Caja estándar 80x80x80 | L2-007 | SA1-A | N1-CCO |
-| 223 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 7+200 | - | - | - | Caja estándar 80x80x80 | L2-007 | SA1-A | N1-CCO |
-| 224 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 7+500 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
-| 225 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 7+800 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
-| 226 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 8+100 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
-| 227 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 8+400 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
-| 228 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 8+700 | - | - | - | Caja estándar 80x80x80 | L2-009 | SA1-A | N1-CCO |
-| 229 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 9+000 | - | - | - | Caja estándar 80x80x80 | L2-009 | SA1-A | N1-CCO |
+| 198 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 0+300 | - | - | - | Caja estándar 80x80x80 | Cercano N1 | SA1-A | N1-CCO |
+| 199 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 0+600 | - | - | - | Caja estándar 80x80x80 | L2-001 | SA1-A | N1-CCO |
+| 200 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 0+900 | - | - | - | Caja estándar 80x80x80 | L2-001 | SA1-A | N1-CCO |
+| 201 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 1+200 | - | - | - | Caja estándar 80x80x80 | L2-001 | SA1-A | N1-CCO |
+| 202 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 1+500 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
+| 203 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 1+800 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
+| 204 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 2+100 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
+| 205 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 2+400 | - | - | - | Caja estándar 80x80x80 | L2-002 | SA1-A | N1-CCO |
+| 206 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 2+700 | - | - | - | Caja estándar 80x80x80 | L2-003 | SA1-A | N1-CCO |
+| 207 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+000 | - | - | - | Caja estándar 80x80x80 | L2-003 | SA1-A | N1-CCO |
+| 208 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+300 | - | - | - | Caja estándar 80x80x80 | L2-003 | SA1-A | N1-CCO |
+| 209 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+600 | - | - | - | Caja estándar 80x80x80 | L2-004 | SA1-A | N1-CCO |
+| 210 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 3+900 | - | - | - | Caja estándar 80x80x80 | L2-004 | SA1-A | N1-CCO |
+| 211 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 4+200 | - | - | - | Caja estándar 80x80x80 | L2-004 | SA1-A | N1-CCO |
+| 212 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 4+500 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
+| 213 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 4+800 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
+| 214 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 5+100 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
+| 215 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 5+400 | - | - | - | Caja estándar 80x80x80 | L2-005 | SA1-A | N1-CCO |
+| 216 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 5+700 | - | - | - | Caja estándar 80x80x80 | L2-006 | SA1-A | N1-CCO |
+| 217 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+000 | - | - | - | Caja estándar 80x80x80 | L2-006 | SA1-A | N1-CCO |
+| 218 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+300 | - | - | - | Caja estándar 80x80x80 | L2-006 | SA1-A | N1-CCO |
+| 219 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+600 | - | - | - | Caja estándar 80x80x80 | L2-007 | SA1-A | N1-CCO |
+| 220 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 6+900 | - | - | - | Caja estándar 80x80x80 | L2-007 | SA1-A | N1-CCO |
+| 221 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 7+200 | - | - | - | Caja estándar 80x80x80 | L2-007 | SA1-A | N1-CCO |
+| 222 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 7+500 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
+| 223 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 7+800 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
+| 224 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 8+100 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
+| 225 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 8+400 | - | - | - | Caja estándar 80x80x80 | L2-008 | SA1-A | N1-CCO |
+| 226 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 8+700 | - | - | - | Caja estándar 80x80x80 | L2-009 | SA1-A | N1-CCO |
+| 227 | - | - | Separador | CAJA_FO | CAJA EMPALME FO | - | 9+000 | - | - | - | Caja estándar 80x80x80 | L2-009 | SA1-A | N1-CCO |
 
 **... [Continúa hasta PKD 282+900 - Total 943 cajas]**
 
@@ -377,8 +376,8 @@ for i in range(1, 944):
 
 | TIPO | Cantidad | Estado PKD | Estado L2 | Observaciones |
 |:-----|:---------|:-----------|:----------|:--------------|
-| **SOS** | 88 | ✅ 100% | ✅ 100% | 9 separaciones >3km identificadas |
-| **CCTV** | 30 | ✅ 100% | ✅ 100% | 2 ELIMINADAS por falta justificación |
+| **SOS** | 87 | ✅ 100% | ✅ 100% | 9 separaciones >3km identificadas |
+| **CCTV** | 30 | ✅ 100% | ✅ 100% | 1 ELIMINADA (fila 89 - sin justificación) |
 | **PMV** | 28 | ✅ 100% | ✅ 100% | 14 Izq + 14 Der |
 | **RADAR-ANPR** | 12 | ✅ 100% | ✅ 100% | Pares bidireccionales |
 | **ETD** | 3 | ✅ 100% | ✅ 100% | Integradas en CCTV/PMV |
@@ -409,8 +408,8 @@ for i in range(1, 944):
 | **10** | 3 | 0 | 1 | 0 | 1 | 0 | 0 | 5 |
 | **11** | 11 | 5 | 5 | 2 | 0 | 2 | 1 | 26 |
 | **12** | 5 | 0 | 2 | 2 | 0 | 0 | 0 | 9 |
-| **13** | 2 | 1 | 0 | 0 | 0 | 1 | 0 | 4 |
-| **TOTAL** | **88** | **30** | **28** | **12** | **3** | **8** | **2** | **170** |
+| **13** | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 3 |
+| **TOTAL** | **87** | **30** | **28** | **12** | **3** | **8** | **2** | **169** |
 
 ### **Validación de Separaciones SOS**
 
@@ -507,16 +506,21 @@ PKD ≈ 0 km + PKR (anillo cierra en CCO)
 
 ## 📝 **ESTADO ACTUAL**
 
-**Versión:** 1.0 - Tabla maestra completada (229 activos + 943 cajas FO documentadas)  
+**Versión:** 1.0 - Tabla maestra completada y validada (226 activos + 987 cajas FO)  
 **Progreso:** 
-- ✅ 170/170 equipos ITS con PKR y PKD (100%)
-- ✅ 170/170 equipos ITS con Switch L2 (100%)
+- ✅ 169/169 equipos ITS con PKR y PKD (100%)
+- ✅ 169/169 equipos ITS con Switch L2 (100%)
 - ✅ 22/22 peatonales agregados (100%)
 - ✅ 7/7 edificaciones agregadas (100%)
-- ✅ 943/943 cajas FO documentadas (criterio 300m + especiales)
-- ✅ **TOTAL: 199 activos completados + 943 cajas FO = 1,142 elementos**
+- ✅ 987/987 cajas FO documentadas (943 estándar + 44 especiales puentes)
+- ✅ **TOTAL: 198 activos ITS/Infraestructura + 987 cajas FO = 1,185 elementos**
 
-**Estado:** ✅ **TABLA MAESTRA COMPLETA Y LISTA PARA USO**
+**Estado:** ✅ **TABLA MAESTRA VALIDADA Y CORREGIDA (3 errores encontrados y corregidos)**
+
+**Correcciones aplicadas:**
+1. ✅ SOS #88 eliminado (no contractual) → 88 → 87 SOS ✅
+2. ✅ CCTV PKR 40+050 reactivada → 29 → 30 CCTV ✅
+3. ✅ METEO PKR 83+250 eliminada (no contractual) → 3 → 2 METEO ✅
 
 **Próxima acción:** 
 1. ✅ Usar tabla para análisis por UF
