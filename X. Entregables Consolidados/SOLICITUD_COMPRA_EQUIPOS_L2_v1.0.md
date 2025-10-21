@@ -372,13 +372,14 @@
 | **Postes SOS** | 87 | EKI-7706G | 45 | Bermas externas (alternados) |
 | **PMV** | 28 | EKI-7706G / 7710E | 15 | Separador o bermas |
 | **CCTV** | 30 | EKI-7710E | 18 | Separador central (postes altos) |
-| **RADAR-ANPR** | 12 | EKI-7712G | 9 | Pórticos o separador |
+| **RADAR-ANPR** | 2 | Integrado en PMV | 0 | Compartir switch PMV existente |
+| **ETD puras** | 14 | Integrado en CCTV | 0 | Compartir switch CCTV existente |
 | **Gálibos** | 8 | EKI-7706G | 5 | Sobre cada calzada |
 | **Est. Meteo** | 2 | EKI-7710E | 2 | Peajes (integrado) |
 | **Otros** | 3 | EKI-7706G | 2 | WIM, intercambios |
-| **TOTAL** | **170** | - | **96** | - |
+| **TOTAL** | **174** | - | **89** | - |
 
-**Nota:** Algunos switches L2 sirven a múltiples equipos (ej: CCTV + SOS en mismo punto)
+**Nota:** **OPTIMIZACIÓN APLICADA:** RADAR-ANPR integrados en switches PMV existentes, ETD integradas en switches CCTV existentes. Ahorro: 16 switches L2 adicionales evitados.
 
 ---
 

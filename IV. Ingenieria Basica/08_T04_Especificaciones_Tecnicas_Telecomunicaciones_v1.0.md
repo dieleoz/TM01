@@ -17,7 +17,7 @@
 |:------|:------|
 | **Sistema** | Telecomunicaciones - Backbone Fibra Óptica + Red de Datos |
 | **Alcance** | **283 km fibra óptica** + switches + equipos |
-| **CAPEX** | **USD $6,052,802.28** |
+| **CAPEX** | **USD $6,050,511.28** |
 | **Topología** | **Anillo redundante L3** + **Sub-anillos L2** |
 | **Nodos L3** | **7 nodos** (4 edificaciones + 2 STACKS + 2 bunkers) |
 
@@ -169,11 +169,11 @@ Para cada tramo entre dos nodos L3, aplicar el criterio de **PUNTO MEDIO**:
 
 | Modelo | Descripción | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-------|:------------|:---------|:-------------------|:------------|
-| **EKI-7706G-2FI-AE** | 4FE + 2SFP Managed Switch Industrial (<75°C) | 81 | $406 | $32,886 |
-| **EKI-7710E-2CI-AE** | 8FE + 2G Combo Managed Switch Industrial (<75°C) | 15 | $943 | $14,145 |
-| **EKI-7712G-4FP-AE** | 8FE + 4SFP Managed Switch Industrial (<75°C) | 16 | $916 | $14,656 |
+| **EKI-7706G-2FI-AE** | 4FE + 2SFP Managed Switch Industrial (<75°C) | 66 | $406 | $26,796 |
+| **EKI-7710E-2CI-AE** | 8FE + 2G Combo Managed Switch Industrial (<75°C) | 20 | $943 | $18,860 |
+| **EKI-7712G-4FP-AE** | 8FE + 4SFP Managed Switch Industrial (<75°C) | 15 | $916 | $13,740 |
 | **SFP-GLX/LC-10E** | 1000Base-LX Single mode SFP module (10km) | 188 | $88 | $16,544 |
-| **TOTAL L2** | - | **300** | - | **$78,231** |
+| **TOTAL L2** | - | **289** | - | **$75,940** |
 
 **Nota:** Precios actuales 2025 - Equipos industriales Advantech
 
@@ -505,11 +505,11 @@ Validación:
 | Fibra óptica 12 hilos | km | 283 | $8,000 | $2,264,000 |
 | Ductos + canalizaciones | km | 283 | $5,000 | $1,415,000 |
 | Equipos L3 (Cisco + FortiGate + SFPs + Accesorios) | global | - | - | $166,571.28 |
-| Equipos L2 Advantech | global | 300 | - | $78,231 |
+| Equipos L2 Advantech | global | 289 | - | $75,940 |
 | ODFs | und | 15 | $2,000 | $30,000 |
 | Instalación + pruebas | global | 1 | $1,500,000 | $1,500,000 |
 | Otros | - | - | - | $599,000 |
-| **TOTAL** | - | - | - | **$6,052,802.28** |
+| **TOTAL** | - | - | - | **$6,050,511.28** |
 
 ---
 

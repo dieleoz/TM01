@@ -183,12 +183,12 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 | Ruta | Longitud (km) | Postes SOS | PMV | CCTV | RADAR-ANPR | ETD puras | Gálibos |
 |:-----|:--------------|:-----------|:----|:-----|:-----------|:----------|:--------|
-| **RN 4510** | ~134 km | 41 | 10 | 9 | 4 | 1 | 2 |
-| **RN 4511** | ~149 km | 44 | 16 | 17 | 7 | 2 | 5 |
+| **RN 4510** | ~134 km | 41 | 10 | 9 | 1 | 5 | 2 |
+| **RN 4511** | ~149 km | 44 | 16 | 17 | 1 | 8 | 5 |
 | **RN 4513** | ~10 km | 2 | 2 | 4 | 0 | 1 | 1 |
-| **TOTAL** | **~293 km** | **87** | **28** | **30** | **12** | **4** | **8** |
+| **TOTAL** | **~293 km** | **87** | **28** | **30** | **2** | **14** | **8** |
 
-**Nota:** Total ETD/RADAR = 16 equipos (12 RADAR-ANPR + 4 ETD puras = 13 UFs + 1 UF-0D temporal + reserva)
+**Nota:** Total ETD/RADAR = 16 equipos (2 RADAR-ANPR + 14 ETD puras = 2 SAST + 13 UFs + 1 stock)
 
 > **Nota:** La longitud total incluye ambos sentidos. La longitud del corredor es 259.6 km (sentido único).
 
@@ -678,11 +678,23 @@ Agregar **4 ETD puras** (sin cámara) en UFs faltantes, aprovechando infraestruc
 
 **Total final:** 12 RADAR-ANPR + 4 ETD puras = **16 equipos** (14 para UFs + 1 UF-0D temporal + 1 repuesto)
 
+### **💰 COSTOS ACTUALIZADOS ETD/RADAR**
+
+| Concepto | Cantidad | Precio Unit. (USD) | Subtotal (USD) |
+|:---------|:---------|:-------------------|:----------------|
+| **RADAR-ANPR** (2 SAST) | 2 | $32,484 | $64,968 |
+| **ETD puras** (14 unidades) | 14 | $7,470 | $104,580 |
+| **Instalación ETD** (obra civil + estructuras) | 14 | $14,000 | $196,000 |
+| **TOTAL** | **16** | - | **$365,548** |
+
+**Nota:** Costos ETD basados en cotización real SmartSensor HD + instalación completa. **OPTIMIZACIÓN:** RADAR-ANPR integrados en pórticos PMV, ETD integradas en domos CCTV para evitar switches L2 adicionales.
+
 **Criterio de ubicación:**
-- ✅ **Pórticos PMV o domos CCTV** (infraestructura existente)
+- ✅ **RADAR-ANPR:** Integrados en **pórticos PMV** existentes (compartir switch L2)
+- ✅ **ETD puras:** Integradas en **postes CCTV domo** existentes (compartir switch L2)
 - ✅ **Zona con visibilidad de 4 carriles** (2 por calzada en doble calzada)
-- ✅ **Compartir switch L2** (optimizar puertos TCP/IP)
-- ✅ **Alimentación eléctrica garantizada** (infraestructura PMV/CCTV)
+- ✅ **Alimentación eléctrica garantizada** (infraestructura PMV/CCTV existente)
+- ✅ **Optimización:** Evitar infraestructura duplicada y switches L2 adicionales
 
 > **Nota técnica:** ETD requiere visibilidad completa de ambas calzadas (4 carriles totales: 2 por calzada). Instalación en pórtico PMV o domo CCTV garantiza esta condición.
 

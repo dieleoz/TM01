@@ -47,13 +47,29 @@ Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0%
 Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
-**Última actualización:** Hoy (21-oct-2025 21:00)  
-**Logro principal:** Arquitectura de red L2/L3 validada al 100% (regla crítica 10 km)  
+**Última actualización:** Hoy (21-oct-2025 23:00) - Optimización infraestructura ETD/RADAR aplicada  
+**Logro principal:** Optimización infraestructura ETD/RADAR (RADAR en PMV, ETD en CCTV) - Ahorro $3,416 USD  
 **Próxima acción:** Validación con Google Earth + completar datos faltantes  
 **Bloqueador:** Ninguno  
 **Estado:** ✅ Fase 3 completada + Arquitectura de red L2/L3 validada
 
-### 🎯 **ESTADO ACTUAL DEL PROYECTO**
+### 📋 **DOCUMENTOS TRAZABLES CON CAMBIOS ETD/RADAR**
+
+**Documentos actualizados con optimización infraestructura:**
+
+| Documento | Versión | Cambio Principal | Referencia Cruzada |
+|:----------|:--------|:------------------|:-------------------|
+| `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md` | v1.0 | RADAR en PMV, ETD en CCTV | Layout principal |
+| `08_T04_Especificaciones_Tecnicas_Telecomunicaciones_v1.0.md` | v1.0 | Switches L2 optimizados | Arquitectura red |
+| `02_T04_Especificaciones_Tecnicas_ETD_Radares_v1.0.md` | v1.0 | Costos reales aplicados | Especificaciones |
+| `24_T01_Ficha_Sistema_ITS_v1.0.md` | v1.0 | Cantidades corregidas | Sistema ITS |
+| `PRESUPUESTO_FINAL_PROYECTO_v2.0.md` | v2.0 | CAPEX actualizado | Presupuesto maestro |
+| `SOLICITUD_COMPRA_EQUIPOS_L2_v1.0.md` | v1.0 | Switches optimizados | Compra L2 |
+| `LECCIONES_APRENDIDAS.md` | v1.2 | Lección infraestructura | Metodología |
+
+**Trazabilidad completa:** ✅ Todos los documentos relacionados actualizados
+
+---
 
 **✅ COMPLETADO:**
 - Validaciones contractuales (13/13 sistemas)

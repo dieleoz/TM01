@@ -41,11 +41,11 @@
 
 | Sistema | CAPEX (USD) | Estado | Observaciones |
 |:--------|:------------|:-------|:--------------|
-| **Telecomunicaciones** | $6,112,000 | ✅ v1.2 | Topología anillo 5 nodos + 3 PMV |
-| **Sistema ITS** | $4,445,500 | ✅ v1.2 | 28 PMV + 87 postes SOS validados |
+| **Telecomunicaciones** | $6,050,511 | ✅ v1.4 | Topología anillo 7 nodos + switches L2 optimizados |
+| **Sistema ITS** | $4,238,640 | ✅ v1.5 | 28 PMV + 87 postes SOS + 16 ETD/RADAR |
 | **CCO** | $3,707,000 | ✅ v1.1 | Redimensionado (-$350K) |
 | **Pesaje WIM** | $2,286,400 | ✅ v1.1 | 1 estación bidireccional |
-| **SUBTOTAL** | **$16,547,900** | | |
+| **SUBTOTAL** | **$16,282,551** | | |
 
 ### GRUPO 3: ENERGÍA Y UTILIDADES ($6.2M)
 
@@ -86,14 +86,14 @@
 | Grupo | CAPEX (USD) |
 |:------|:------------|
 | Infraestructura Vial y Seguridad | $15,403,000 |
-| Sistemas ITS y Tecnología | $16,362,900 |
+| Sistemas ITS y Tecnología | $16,282,551 |
 | Energía y Utilidades | $4,832,500 |
 | Áreas de Servicio | $3,136,077 |
 | Gestión y Administración | $13,035,000 |
 | Emergencia y Respaldo | $4,638,569 |
-| **TOTAL CAPEX** | **$57,408,046** |
+| **TOTAL CAPEX** | **$56,983,070** |
 
-**En pesos (TRM 4,000):** COP 229,632,184,000 (~229.6 mil millones)
+**En pesos (TRM 4,000):** COP 227,932,280,000 (~227.9 mil millones)
 
 > **Nota:** Esta es la cifra oficial consolidada del proyecto. Incluye todos los sistemas validados contractualmente.
 
@@ -210,9 +210,9 @@
 | Correcciones técnicas | +$12,961,049 |
 | Predios (ajuste) | +$6,360,000 |
 | Otros ajustes | +$4,027,281 |
-| **PRESUPUESTO FINAL** | **$57,408,046** |
+| **PRESUPUESTO FINAL** | **$56,983,070** |
 
-**Incremento neto:** +$1,449,966 USD (+2.6%)
+**Incremento neto:** +$1,028,406 USD (+1.8%)
 
 ---
 
@@ -222,11 +222,11 @@
 |:--|:--------|:------------|:-------|:-------------|
 | 1 | Señalización Vial | $9,884,360 | ✅ v1.1 | 21/10/2025 |
 | 2 | Gestión Predial | $6,660,000 | ✅ v1.1 | 21/10/2025 |
-| 3 | Telecomunicaciones | $6,109,000 | ✅ v1.1 | 20/10/2025 |
+| 3 | Telecomunicaciones | $6,050,511 | ✅ v1.4 | 21/10/2025 |
 | 4 | Energía Eléctrica | $4,832,500 | ✅ v1.1 | 20/10/2025 |
 | 5 | Gestión Ambiental | $4,800,000 | ✅ v1.0 | 21/10/2025 |
 | 6 | Emergencias | $4,638,569 | ✅ v1.1 | 21/10/2025 |
-| 7 | ITS | $4,260,500 | ✅ v1.1 | 20/10/2025 |
+| 7 | ITS | $4,238,640 | ✅ v1.5 | 21/10/2025 |
 | 8 | Peajes | $4,179,400 | ✅ v1.1 | 21/10/2025 |
 | 9 | CCO | $3,707,000 | ✅ v1.1 | 21/10/2025 |
 | 10 | Áreas de Servicio | $3,136,077 | ✅ v1.1 | 21/10/2025 |

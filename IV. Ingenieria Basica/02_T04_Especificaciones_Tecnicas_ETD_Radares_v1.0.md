@@ -685,14 +685,14 @@ Pórtico:
 
 ### 12.2 Desglose por Tipo (Propuesta Ajustada)
 
-**Si se ajusta a contrato (15 equipos: 13 ETD + 2 Radares):**
+**Si se ajusta a contrato (16 equipos: 14 ETD + 2 Radares):**
 
 | Tipo | Cantidad | Precio Unit. (USD) | Total (USD) | Función |
 |:-----|:---------|:-------------------|:------------|:--------|
-| **ETD (sin cámara)** | 13 | $12,000 | $156,000 | Monitoreo estadístico por UF |
-| **RADAR-ANPR** | 2 | $35,732 | $71,464 | Detección infracciones |
-| **Instalación y obras** | 15 | $8,000 | $120,000 | Pórticos, cimentaciones |
-| **TOTAL** | **15** | - | **$347,464** | - |
+| **ETD (sin cámara)** | 14 | $7,470 | $104,580 | Monitoreo estadístico por UF |
+| **RADAR-ANPR** | 2 | $32,484 | $64,968 | Detección infracciones |
+| **Instalación ETD** | 14 | $14,000 | $196,000 | Pórticos, cimentaciones, fibra |
+| **TOTAL** | **16** | - | **$365,548** | - |
 
 ### 12.3 Desglose por Ruta (Proyecto Real - 12 equipos)
 

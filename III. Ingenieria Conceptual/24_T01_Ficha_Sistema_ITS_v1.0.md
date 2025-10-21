@@ -164,7 +164,7 @@ El Concesionario deberá:
 | Estaciones WIM (Pesaje) | 2 | $150,000 | $300,000 |
 | Estaciones Meteorológicas | 10 | $25,000 | $250,000 |
 | Teléfonos SOS | **87** | $3,500 | **$304,500** |
-| Detectores Automáticos Incidentes | 12 | $35,732 | $428,788 |
+| Detectores Automáticos Incidentes | 16 | $22,847 | $365,548 |
 | Estaciones de Aforo | 12 | $30,000 | $360,000 |
 | Radares de Velocidad | 20 | $25,000 | $500,000 |
 | Detectores de Altura (Láser) | 25 | $8,000 | $200,000 |
@@ -173,13 +173,13 @@ El Concesionario deberá:
 | Software SCADA ITS | 1 sistema | $250,000 | $250,000 |
 | Integración con CCO | 1 sistema | $150,000 | $150,000 |
 | Contingencias (10%) | - | - | $675,750 |
-| **TOTAL CAPEX** | | | **$5,980,659** |
+| **TOTAL CAPEX** | | | **$5,917,419** |
 
 > Nota Gálibo (estado actual):
 > - **Confirmados (8 puntos):** RN 4510 0D Der PR 41+350; RN 4510 0D Izq PR 116+200; RN 4511 0D Der PR 3+600; RN 4511 5,1 Izq PR 16+550; RN 4511 5,1 Der PR 72+890; RN 4511 6 Izq PR 82+800; RN 4511 11 Der PR 127+250; RN 4513 13 Izq PR 5+900.
 > - **Estimación preliminar total:** **25** puntos (incluye intersecciones a desnivel y puentes con restricción por validar con geometría).
 
-**Conversión a COP (TRM: 4,000):** ~$29,733 millones COP
+**Conversión a COP (TRM: 4,000):** ~$28,270 millones COP
 
 #### 🔴 **Nota de Ajuste Contractual - WIM:**
 **Versión anterior:** WIM 5-10 estaciones ($1,200,000 USD)  

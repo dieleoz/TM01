@@ -2,7 +2,7 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
 **Fecha:** 21 de octubre de 2025  
-**Versión:** 1.1 - METODOLOGÍA GENÉRICA INCLUIDA  
+**Versión:** 1.2 - OPTIMIZACIÓN INFRAESTRUCTURA INCLUIDA  
 **Estado:** ✅ DOCUMENTADO  
 
 ---
@@ -121,6 +121,29 @@ Documentar los errores sistemáticos identificados durante la validación contra
 - **Antes:** $62,710,058 USD
 - **Después:** $54,704,455 USD
 - **Ahorro Total:** -$6,319,391 USD (-10.1%)
+
+## 📅 **21 OCTUBRE 2025 - OPTIMIZACIÓN INFRAESTRUCTURA ETD/RADAR**
+
+### **Problema Identificado:**
+- Inicialmente se planificaron switches L2 dedicados para RADAR-ANPR y ETD
+- Esto generaba infraestructura duplicada y costos innecesarios
+
+### **Solución Aplicada:**
+- **RADAR-ANPR:** Integrados en switches PMV existentes
+- **ETD puras:** Integradas en switches CCTV existentes
+- **Resultado:** 16 switches L2 adicionales evitados
+
+### **Ahorro Generado:**
+- **Switches L2:** -16 unidades
+- **CAPEX Telecomunicaciones:** -$3,416 USD
+- **CAPEX Total Proyecto:** -$3,416 USD
+
+### **Lección Aprendida:**
+✅ **Siempre evaluar integración con infraestructura existente antes de crear nueva**
+✅ **Compartir switches L2 cuando sea técnicamente viable**
+✅ **Optimizar arquitectura de red para minimizar equipos duplicados**
+
+---
 
 ## 🔧 **METODOLOGÍA GENÉRICA DE VALIDACIÓN CONTRACTUAL**
 
