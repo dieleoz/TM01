@@ -2,7 +2,7 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
 **Fecha:** 21 de octubre de 2025  
-**Versión:** 1.3 - ESTRUCTURACIÓN GÁLIBOS INCLUIDA  
+**Versión:** 1.4 - VALIDACIÓN CONTRACTUAL GÁLIBOS (POSICIÓN EPC)  
 **Estado:** ✅ DOCUMENTADO  
 
 ---
@@ -141,29 +141,35 @@ Documentar los errores sistemáticos identificados durante la validación contra
 ### **Lección Aprendida:**
 ✅ **Siempre evaluar integración con infraestructura existente antes de crear nueva**
 ✅ **Compartir switches L2 cuando sea técnicamente viable**
-## 📅 **21 OCTUBRE 2025 - ESTRUCTURACIÓN GÁLIBOS**
+## 📅 **21 OCTUBRE 2025 - VALIDACIÓN CONTRACTUAL GÁLIBOS (POSICIÓN EPC)**
 
 ### **Problema Identificado:**
-- Gálibos solo tenían estimación inicial (25 unidades)
-- Faltaba estructura detallada con ubicaciones específicas
-- No había validación con Google Earth
+- Estimación inicial asumía 25 gálibos como obligación EPC
+- No se había analizado la obligación contractual real desde rol EPC
+- Riesgo de sobre-dimensionar el presupuesto sin fundamento
+
+### **Análisis Contractual:**
+- **Apéndice Técnico 2:** "Detectores láser en todos los puentes con restricciones de altura y en todas las intersecciones a desnivel"
+- **Parte General 4.2:** "El Concesionario ejecutará las obras de acuerdo con los requerimientos mínimos"
+- **Jerarquía 19.15:** Los apéndices son complementarios, NO ampliatorios
 
 ### **Solución Aplicada:**
-- **8 gálibos confirmados:** PKR, PKD, ubicaciones específicas
-- **17 gálibos pendientes:** Estructura para validación Google Earth
-- **Costos reales:** $7,470 USD/unit + $14,000 USD instalación
-- **Total proyecto:** $536,750 USD (25 unidades)
+- **8 gálibos obligatorios EPC:** Puntos con restricción ≤5.10m validados
+- **+4 contingencia:** Riesgo interno por posibles solicitudes SPV
+- **+17 adicionales:** Solo si SPV solicita formalmente (modificación contractual)
 
 ### **Resultado:**
-- **Estructura completa:** Tablas con PKR, PKD, rutas, switches L2
-- **Presupuesto actualizado:** CAPEX incluido en Sistema ITS
-- **Validación pendiente:** 17 ubicaciones requieren Google Earth
+- **CAPEX base EPC:** $171,760 USD (8 unidades)
+- **Escenario contingencia:** $257,640 USD (12 unidades)
+- **Escenario SPV:** $536,750 USD (25 unidades - no obligatorio)
+- **Ahorro base:** -$364,990 USD vs estimación inicial
 
 ### **Lección Aprendida:**
-✅ **Estructurar equipos en lotes confirmados + pendientes**
-✅ **Incluir PKD para integración arquitectura red**
-✅ **Documentar criterios de validación específicos**
-✅ **Actualizar presupuesto inmediatamente al estructurar**
+✅ **Siempre analizar obligación contractual desde rol EPC (mínimo exigible)**
+✅ **Distinguir entre estimación técnica y obligación contractual**
+✅ **Documentar fundamento legal para defender alcance EPC**
+✅ **Estructurar escenarios: Base + Contingencia + Opcional**
+✅ **No asumir cantidades que el contrato no especifica**
 
 ---
 

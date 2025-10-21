@@ -47,11 +47,11 @@ Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0%
 Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
-**Última actualización:** Hoy (21-oct-2025 23:30) - Gálibos detallados (8 confirmados + 17 pendientes)  
-**Logro principal:** Gálibos estructurados con PKD, costos reales y validación pendiente  
-**Próxima acción:** Validación Google Earth para 17 gálibos pendientes  
-**Bloqueador:** Validación Google Earth requerida para Fase 4  
-**Estado:** ✅ Fase 3 completada + Gálibos estructurados
+**Última actualización:** Hoy (21-oct-2025 23:45) - Gálibos ajustados a obligación EPC (8 unidades)  
+**Logro principal:** Posición EPC clara: 8 gálibos obligatorios + contingencia +4 + 25 solo si SPV solicita  
+**Próxima acción:** Continuar con siguiente subsistema ITS  
+**Bloqueador:** Ninguno  
+**Estado:** ✅ Fase 3 completada + Gálibos validados contractualmente
 
 ### 📋 **DOCUMENTOS TRAZABLES CON CAMBIOS ETD/RADAR**
 
@@ -75,10 +75,10 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 
 | Documento | Versión | Cambio Principal | Referencia Cruzada |
 |:----------|:--------|:------------------|:-------------------|
-| `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md` | v1.0 | Sección gálibos completa con PKD | Layout principal |
-| `PRESUPUESTO_FINAL_PROYECTO_v2.0.md` | v2.0 | CAPEX gálibos incluido | Presupuesto maestro |
+| `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md` | v1.0 | 8 gálibos obligatorios EPC + fundamento contractual | Layout principal |
+| `PRESUPUESTO_FINAL_PROYECTO_v2.0.md` | v2.0 | CAPEX $171,760 (8 gálibos base) | Presupuesto maestro |
 
-**Trazabilidad completa:** ✅ Gálibos estructurados y presupuestados
+**Posición EPC:** ✅ 8 obligatorios | ⚠️ +4 contingencia | 🔸 +17 solo si SPV solicita
 
 ---
 

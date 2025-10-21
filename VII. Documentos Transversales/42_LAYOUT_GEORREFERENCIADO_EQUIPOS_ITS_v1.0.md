@@ -198,9 +198,25 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 | Concepto | Cantidad | Estado | Observaciones |
 |:---------|:---------|:-------|:--------------|
-| **Gálibos Confirmados** | 8 | ✅ Validados | PKs específicos identificados |
-| **Gálibos Pendientes** | 17 | ⏳ Por validar | Requieren validación Google Earth |
-| **Total Estimado** | 25 | ⚠️ Parcial | Estimación inicial contractual |
+| **Gálibos Obligatorios EPC** | 8 | ✅ Validados | PKs específicos con restricción ≤5.10m |
+| **Estimación Preliminar** | 25 | 🔸 No obligatoria | Referencia de diseño, NO exigencia contractual |
+| **Validación Adicional** | Por determinar | ⏳ Pendiente | Solo si Interventoría identifica nuevos puntos críticos |
+
+### **⚖️ FUNDAMENTO CONTRACTUAL**
+
+**Como EPC, la obligación es instalar gálibos SOLO donde exista:**
+1. **Restricción de altura real** ≤ 5.10m (puentes vehiculares, pórticos)
+2. **Intersecciones a desnivel** con riesgo de impacto
+3. **Túneles o pasos deprimidos** (si aplica)
+
+**NO es obligatorio instalar un número fijo.**
+
+📄 **Base legal:**
+- **Apéndice Técnico 2 (O&M):** "Detectores láser en todos los puentes con restricciones de altura y en todas las intersecciones a desnivel"
+- **Parte General - Cláusula 4.2:** "El Concesionario ejecutará las obras de acuerdo con los requerimientos mínimos"
+- **Jerarquía documental (19.15):** Los apéndices son complementarios, no ampliatorios
+
+**Conclusión EPC:** Si los planos validados muestran 8 puntos con restricción ≤5.10m, **8 gálibos cumplen el contrato**.
 
 ### **📍 UBICACIONES CONFIRMADAS (8 GÁLIBOS)**
 
@@ -215,63 +231,69 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 | 7 | 180+100 | RN 4511 | PKD 102+900 | UF-10 | Óptico/Láser | 5.10m | L2-103 | Intersección compleja |
 | 8 | 12+500 | RN 4513 | PKD 270+500 | UF-13 | Óptico/Láser | 5.10m | L2-271 | Acceso urbano |
 
-### **⏳ UBICACIONES PENDIENTES (17 GÁLIBOS)**
+### **🔍 VALIDACIÓN ADICIONAL (SI INTERVENTORÍA LO REQUIERE)**
 
-| # | PKR | Ruta | PKD | Ubicación | Tipo | Altura Mín. | Switch L2 | Estado |
-|:--|:----|:----|:----|:----------|:-----|:------------|:----------|:-------|
-| 9 | TBD | RN 4510 | TBD | UF-2 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 10 | TBD | RN 4510 | TBD | UF-2 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 11 | TBD | RN 4511 | TBD | UF-5 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 12 | TBD | RN 4511 | TBD | UF-5 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 13 | TBD | RN 4511 | TBD | UF-7 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 14 | TBD | RN 4511 | TBD | UF-7 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 15 | TBD | RN 4511 | TBD | UF-9 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 16 | TBD | RN 4511 | TBD | UF-9 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 17 | TBD | RN 4511 | TBD | UF-11 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 18 | TBD | RN 4511 | TBD | UF-11 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 19 | TBD | RN 4511 | TBD | UF-12 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 20 | TBD | RN 4511 | TBD | UF-12 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 21 | TBD | RN 4511 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 22 | TBD | RN 4511 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 23 | TBD | RN 4513 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 24 | TBD | RN 4513 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
-| 25 | TBD | RN 4513 | TBD | UF-13 | Óptico/Láser | 5.10m | TBD | ⏳ Por validar |
+**Criterio:** Solo se instalarán gálibos adicionales si:
+1. La Interventoría identifica nuevos puntos con restricción ≤5.10m
+2. Existe Acta o Modificación Contractual que lo exija
+3. Geometría final aprobada muestra intersecciones no contempladas
+
+**Proceso:**
+- Interventoría notifica por escrito
+- EPC valida restricción real con levantamiento topográfico
+- Se calcula PKR, PKD y se integra a red L2
+- Se actualiza presupuesto como ítem adicional
+
+**Estado actual:** ⏳ Pendiente de validación final de planos aprobados
 
 ### **💰 COSTOS ACTUALIZADOS GÁLIBOS**
 
-| Concepto | Cantidad | Precio Unit. (USD) | Subtotal (USD) | Observaciones |
-|:---------|:---------|:-------------------|:----------------|:--------------|
-| **Gálibos Confirmados** | 8 | $7,470 | $59,760 | Costo real cotización |
-| **Gálibos Pendientes** | 17 | $7,470 | $126,990 | Estimación basada en confirmados |
-| **Instalación Confirmados** | 8 | $14,000 | $112,000 | Obra civil + estructuras |
-| **Instalación Pendientes** | 17 | $14,000 | $238,000 | Estimación instalación |
-| **TOTAL CONFIRMADOS** | **8** | - | **$171,760** | Listo para compra |
-| **TOTAL PENDIENTES** | **17** | - | **$364,990** | Requiere validación |
-| **TOTAL PROYECTO** | **25** | - | **$536,750** | Estimación completa |
+| Concepto | Cantidad | Precio Unit. (USD) | Subtotal (USD) | Status | Observaciones |
+|:---------|:---------|:-------------------|:----------------|:-------|:--------------|
+| **Gálibos Obligatorios EPC** | 8 | $7,470 | $59,760 | ✅ Base | Costo real cotización |
+| **Instalación** | 8 | $14,000 | $112,000 | ✅ Base | Obra civil + estructuras |
+| **TOTAL BASE EPC** | **8** | - | **$171,760** | ✅ Confirmado | Cumple contrato mínimo |
+| **Riesgo +4** | 4 | $7,470 | $29,880 | ⚠️ Revisar | Contingencia si SPV solicita |
+| **Instalación +4** | 4 | $14,000 | $56,000 | ⚠️ Revisar | Contingencia |
+| **Subtotal Riesgo** | **4** | - | **$85,880** | ⚠️ Opcional | Solo si SPV/Interventoría lo exige |
+| **+17 adicionales (SPV)** | 17 | $7,470 | $126,990 | 🔸 No base | Solo si SPV modifica contrato |
+| **Instalación +17** | 17 | $14,000 | $238,000 | 🔸 No base | Ítem adicional |
+| **Subtotal +17 SPV** | **17** | - | **$364,990** | 🔸 Opcional | Requiere modificación contractual |
+| **TOTAL ESCENARIO 1 (EPC)** | **8** | - | **$171,760** | ✅ Presupuesto base | |
+| **TOTAL ESCENARIO 2 (EPC+Riesgo)** | **12** | - | **$257,640** | ⚠️ Contingencia | |
+| **TOTAL ESCENARIO 3 (SPV)** | **25** | - | **$536,750** | 🔸 No obligatorio | Solo si SPV solicita |
 
-### **📋 CRITERIOS DE VALIDACIÓN**
+### **📋 CRITERIOS DE DISEÑO EPC**
 
-**Para los 17 gálibos pendientes:**
+**Gálibos obligatorios (8 confirmados):**
+1. **Altura contractual:** ≤ 5.10m (restricción real)
+2. **Tecnología:** Óptico/Láser con integración CCO
+3. **Ubicaciones:** Puentes vehiculares, intersecciones a desnivel, pórticos
+4. **Integración:** Cada gálibo con PMV local para alertas
+5. **Red:** Integrado a switch L2 del sub-anillo correspondiente
 
-1. **Altura mínima:** 5.10m (contractual)
-2. **Tecnología:** Óptico/Láser (contractual)
-3. **Ubicaciones críticas:**
-   - Intersecciones a desnivel
-   - Puentes vehiculares
-   - Pasos elevados
-   - Accesos urbanos
-4. **Integración:** PMV local para alertas
-5. **Validación:** Google Earth + planos oficiales
+**Riesgo +4 (contingencia):**
+- Puntos identificados por SPV/Interventoría que requieran validación adicional
+- Solo se ejecutan si existe solicitud formal por escrito
+- Se presupuestan como contingencia, NO como base
 
-### **⚠️ NOTA IMPORTANTE**
+**+17 adicionales (solo si SPV solicita):**
+- Requieren modificación contractual o Acta de Interventoría
+- No forman parte de la obligación EPC base
+- Se ejecutan solo si existe orden de cambio aprobada
 
-**Los 17 gálibos pendientes requieren validación con Google Earth para:**
-- Confirmar ubicaciones exactas (PKR)
-- Validar alturas de paso
-- Identificar intersecciones críticas
-- Calcular PKD para integración L2
+### **⚠️ NOTA IMPORTANTE - POSICIÓN EPC**
 
-**Sin esta validación, el diseño no puede proceder a Fase 4 (Ingeniería de Detalle).**
+**Como EPC, nuestra obligación contractual es instalar 8 gálibos** (puntos con restricción ≤5.10m validados).
+
+**Los 25 gálibos solo se instalarán si:**
+1. El SPV (Interventoría/ANI) los solicita formalmente
+2. Existe modificación contractual que lo exija
+3. Planos finales aprobados identifican nuevos puntos críticos
+
+**Riesgo +4:** Contingencia interna para posibles solicitudes SPV (a revisar).
+
+**Sin solicitud formal del SPV, el EPC cumple contrato con 8 unidades.**
 
 ---
 
@@ -887,7 +909,7 @@ Agregar **4 ETD puras** (sin cámara) en UFs faltantes, aprovechando infraestruc
 | ETD (por UF) | 13 | 13 | ✅ 100% |
 | Radares SAST | 2 | 2 | ✅ 100% |
 | RADAR-ANPR (total) | 15 | 15 | ✅ 100% |
-| Gálibos | 25 | 8 | ⏳ 32% |
+| Gálibos (EPC) | 8 | 8 | ✅ 100% |
 | Est. Meteo | 2 | 2 | ✅ 100% |
 
 ---

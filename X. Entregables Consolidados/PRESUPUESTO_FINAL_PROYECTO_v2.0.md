@@ -42,10 +42,10 @@
 | Sistema | CAPEX (USD) | Estado | Observaciones |
 |:--------|:------------|:-------|:--------------|
 | **Telecomunicaciones** | $6,050,511 | ✅ v1.4 | Topología anillo 7 nodos + switches L2 optimizados |
-| **Sistema ITS** | $4,775,390 | ✅ v1.6 | 28 PMV + 87 postes SOS + 16 ETD/RADAR + 25 Gálibos |
+| **Sistema ITS** | $4,410,400 | ✅ v1.7 | 28 PMV + 87 postes SOS + 16 ETD/RADAR + 8 Gálibos |
 | **CCO** | $3,707,000 | ✅ v1.1 | Redimensionado (-$350K) |
 | **Pesaje WIM** | $2,286,400 | ✅ v1.1 | 1 estación bidireccional |
-| **SUBTOTAL** | **$16,819,301** | | |
+| **SUBTOTAL** | **$16,454,311** | | |
 
 ### GRUPO 3: ENERGÍA Y UTILIDADES ($6.2M)
 
@@ -86,14 +86,14 @@
 | Grupo | CAPEX (USD) |
 |:------|:------------|
 | Infraestructura Vial y Seguridad | $15,403,000 |
-| Sistemas ITS y Tecnología | $16,819,301 |
+| Sistemas ITS y Tecnología | $16,454,311 |
 | Energía y Utilidades | $4,832,500 |
 | Áreas de Servicio | $3,136,077 |
 | Gestión y Administración | $13,035,000 |
 | Emergencia y Respaldo | $4,638,569 |
-| **TOTAL CAPEX** | **$57,519,820** |
+| **TOTAL CAPEX** | **$57,154,830** |
 
-**En pesos (TRM 4,000):** COP 230,079,280,000 (~230.1 mil millones)
+**En pesos (TRM 4,000):** COP 228,619,320,000 (~228.6 mil millones)
 
 > **Nota:** Esta es la cifra oficial consolidada del proyecto. Incluye todos los sistemas validados contractualmente.
 
@@ -210,9 +210,9 @@
 | Correcciones técnicas | +$12,961,049 |
 | Predios (ajuste) | +$6,360,000 |
 | Otros ajustes | +$4,027,281 |
-| **PRESUPUESTO FINAL** | **$57,519,820** |
+| **PRESUPUESTO FINAL** | **$57,154,830** |
 
-**Incremento neto:** +$1,565,156 USD (+2.8%)
+**Incremento neto:** +$1,200,166 USD (+2.1%)
 
 ---
 
@@ -226,14 +226,14 @@
 | 4 | Energía Eléctrica | $4,832,500 | ✅ v1.1 | 20/10/2025 |
 | 5 | Gestión Ambiental | $4,800,000 | ✅ v1.0 | 21/10/2025 |
 | 6 | Emergencias | $4,638,569 | ✅ v1.1 | 21/10/2025 |
-| 7 | ITS | $4,775,390 | ✅ v1.6 | 21/10/2025 |
+| 7 | ITS | $4,410,400 | ✅ v1.7 | 21/10/2025 |
 | 8 | Peajes | $4,179,400 | ✅ v1.1 | 21/10/2025 |
 | 9 | CCO | $3,707,000 | ✅ v1.1 | 21/10/2025 |
 | 10 | Áreas de Servicio | $3,136,077 | ✅ v1.1 | 21/10/2025 |
 | 11 | Pesaje WIM | $2,286,400 | ✅ v1.1 | 21/10/2025 |
 | 12 | Gestión Social | $1,575,000 | ✅ v1.0 | 21/10/2025 |
 | 13 | Iluminación | $1,339,240 | ✅ v1.1 | 20/10/2025 |
-| | **TOTAL** | **$57,519,820** | | |
+| | **TOTAL** | **$57,154,830** | | |
 
 ---
 
