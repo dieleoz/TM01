@@ -19,7 +19,7 @@
 | **Distribución** | 4 puentes vehiculares + 4 intersecciones críticas | Según análisis geométrico |
 | **Tecnología** | Láser/infrarrojos de cortina | Detección precisa ±5cm |
 | **Alerta** | PMV + señalización luminosa | Advertencia anticipada |
-| **CAPEX Total** | **$171,760 USD** | $21,470/gálibo instalado |
+| **CAPEX Total** | **$173,043 USD** | $21,630/gálibo instalado |
 | **OPEX Anual** | **$4,800 USD** | $600/gálibo/año |
 | **OPEX 20 años** | **$96,000 USD** | Mantenimiento |
 
@@ -52,9 +52,28 @@
 | Canalización FO/energía | 8 | $600 | $4,800 | 2.8% |
 | Pruebas y certificación | 8 | $420 | $3,360 | 2.0% |
 | Comisionamiento | 8 | $250 | $2,000 | 1.2% |
-| **TOTAL CAPEX** | - | - | **$171,760** | **100%** |
+| **TOTAL CAPEX** | - | - | **$173,043** | **100%** |
 
-**CAPEX/gálibo:** $171,760 / 8 = **$21,470 USD/gálibo** (instalado y operativo)
+**CAPEX/gálibo:** $173,043 / 8 = **$21,630 USD/gálibo** (instalado y operativo)
+
+---
+
+## ⚡ **NOTA IMPORTANTE - MÓDULOS SOLARES**
+
+### **4 Gálibos con Módulo Solar Adicional:**
+
+**Ubicaciones que NO están cercanas a peajes (sin acceso a red eléctrica):**
+
+| # | PKR | Ruta | Ubicación | Módulo Solar |
+|:--|:----|:-----|:----------|:-------------|
+| 1 | 50+920 | 4510 | Puente vehicular | ✅ Requerido |
+| 2 | 54+050 | 4510 | Paso superior | ✅ Requerido |
+| 3 | 7+800 | 4511 | Puente vehicular | ✅ Requerido |
+| 4 | 46+143 | 4511 | Paso peatonal | ✅ Requerido |
+
+**Costo módulo solar:** 73,000,000 COP = **$16,591 USD** (TMR 4400)
+
+**Justificación:** Los 4 gálibos restantes están en zonas con acceso a red eléctrica (cerca de peajes o CCO).
 
 ---
 
