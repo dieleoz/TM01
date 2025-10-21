@@ -1,8 +1,8 @@
 # ÍNDICE MAESTRO DEL PROYECTO
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Última actualización:** 22 de octubre de 2025 (16:00)  
-**Versión:** 2.4  
-**✅ ESTADO:** Fase 3 completada + Análisis fibra óptica completado (3 opciones evaluadas)
+**Última actualización:** 22 de octubre de 2025 (17:30)  
+**Versión:** 2.5  
+**✅ ESTADO:** Fase 3 completada + Tabla Maestra Layout validada (1,185 elementos - 169 ITS)
 
 ---
 
@@ -34,7 +34,7 @@
 | **IV. Ingenieria Basica** | ✅ **COMPLETA** | **13 archivos** (12 T04 + 1 README) | 18-Oct-2025 |
 | **V. Ingenieria de Detalle** | 🔴 Vacía | 0 archivos | - |
 | **VI. Operacion y Reversion** | 🔴 Vacía | 0 archivos | - |
-| **VII. Documentos Transversales** | ✅ Completa | 15 archivos | 22-Oct-2025 |
+| **VII. Documentos Transversales** | ✅ Completa | 19 archivos | 22-Oct-2025 |
 | **VIII. Documentos Maestros y Metodologia**| 🔴 Vacía | 0 archivos | - |
 | **IX. WBS y Planificacion** | 🟡 En progreso | 1 archivo | 16-Oct-2025 |
 | **X. Entregables Consolidados** | ✅ Completa | 2 archivos | 22-Oct-2025 |
