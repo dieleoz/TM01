@@ -4,7 +4,7 @@
 ![Status](https://img.shields.io/badge/Status-Fase%203%20En%20Progreso-yellow)
 ![Progress](https://img.shields.io/badge/Progress-78%25-brightgreen)
 ![Validations](https://img.shields.io/badge/Validations-13%2F13-success)
-![Budget](https://img.shields.io/badge/Budget-USD%2057.4M-blue)
+![Budget](https://img.shields.io/badge/Budget-USD%2057.2M-blue)
 ![Docs](https://img.shields.io/badge/Docs-73%20Files-orange)
 
 ![T01](https://img.shields.io/badge/T01_Fichas-13%2F13-success)
@@ -14,8 +14,8 @@
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 
 **Versión:** 2.5  
-**Fecha de actualización:** 21 de Octubre 2025 (21:00)  
-**Estado:** ✅ FASE 2 COMPLETADA | FASE 3 COMPLETADA (100%) | **ARQUITECTURA RED L2/L3 VALIDADA**  
+**Fecha de actualización:** 22 de Octubre 2025 (15:30)  
+**Estado:** ✅ FASE 3 COMPLETADA (100%) | **CRITERIO ITS PURO DEFINIDO**    
 **Responsable:** Administrador Contractual EPC  
 **Metodología:** Punto 42 v1.0  
 **GitHub:** https://github.com/dieleoz/TM01  
@@ -32,7 +32,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 2. **Optimización Arquitectónica:** Diseños eficientes y constructibles
 3. **Validación Rigurosa:** 100% de sistemas validados contractualmente
 4. **Metodología Sistemática:** Proceso genérico aplicable a cualquier equipo/sistema
-5. **Presupuesto Realista:** USD 57.4M (CAPEX/km $221K, rango APP 4G)
+5. **Presupuesto Realista:** USD 57.2M (CAPEX/km $220K, rango APP 4G)
 6. **Documentación Completa:** 65+ documentos técnicos generados
 
 ## 📍 **DÓNDE ESTAMOS HOY** (21-Oct-2025)
@@ -47,11 +47,11 @@ Fase 4: Ingeniería Básica  [░░░░░░░░░░░░]   0%
 Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 ```
 
-**Última actualización:** Hoy (22-oct-2025 00:15) - Criterio ITS definido (conectado CCO/fibra)  
-**Logro principal:** Alcance ITS clarificado - Solo sistemas conectados a CCO/fibra van en presupuesto ITS  
-**Próxima acción:** Completar sistema Peajes-ITS y crear PRESUPUESTO_ITS_PURO_v1.0.md  
+**Última actualización:** Hoy (22-oct-2025 15:30) - Presupuesto ITS Puro corregido ($16.8M USD)  
+**Logro principal:** Presupuesto ITS Puro consolidado ($16.8M USD) - Solo sistemas conectados a CCO/fibra  
+**Próxima acción:** Actualizar README/ROADMAP final y subir a Git  
 **Bloqueador:** Ninguno  
-**Estado:** ✅ Fase 3 avanzada + Criterio ITS definido (16.45M USD base)
+**Estado:** ✅ Fase 3 completada + Presupuesto ITS Puro corregido
 
 ### 📋 **DOCUMENTOS TRAZABLES CON CAMBIOS ETD/RADAR**
 
@@ -63,7 +63,7 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 | `08_T04_Especificaciones_Tecnicas_Telecomunicaciones_v1.0.md` | v1.0 | Switches L2 optimizados | Arquitectura red |
 | `02_T04_Especificaciones_Tecnicas_ETD_Radares_v1.0.md` | v1.0 | Costos reales aplicados | Especificaciones |
 | `24_T01_Ficha_Sistema_ITS_v1.0.md` | v1.0 | Cantidades corregidas | Sistema ITS |
-| `PRESUPUESTO_FINAL_PROYECTO_v2.0.md` | v2.0 | CAPEX actualizado | Presupuesto maestro |
+| `PRESUPUESTO_FINAL_PROYECTO_v2.1.md` | v2.1 | CAPEX actualizado | Presupuesto maestro |
 | `SOLICITUD_COMPRA_EQUIPOS_L2_v1.0.md` | v1.0 | Switches optimizados | Compra L2 |
 | `LECCIONES_APRENDIDAS.md` | v1.2 | Lección infraestructura | Metodología |
 
@@ -76,7 +76,7 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 | Documento | Versión | Cambio Principal | Referencia Cruzada |
 |:----------|:--------|:------------------|:-------------------|
 | `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md` | v1.0 | 8 gálibos obligatorios EPC + fundamento contractual | Layout principal |
-| `PRESUPUESTO_FINAL_PROYECTO_v2.0.md` | v2.0 | CAPEX $171,760 (8 gálibos base) | Presupuesto maestro |
+| `PRESUPUESTO_FINAL_PROYECTO_v2.1.md` | v2.1 | CAPEX $171,760 (8 gálibos base) | Presupuesto maestro |
 
 **Posición EPC:** ✅ 8 obligatorios | ⚠️ +4 contingencia | 🔸 +17 solo si SPV solicita
 
@@ -85,12 +85,12 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 **✅ COMPLETADO:**
 - Validaciones contractuales (13/13 sistemas)
 - Organización por subsistemas
-- Presupuesto consolidado (USD 57.4M)
+- Presupuesto consolidado (USD 57.2M)
 - Metodología genérica aplicada
 - Eliminación de duplicados
 - Especificaciones técnicas T04 (13/13 completados - 100%)
-- **Arquitectura de red L2/L3 validada (100% cumplimiento regla 10 km)**
-- **Layout georreferenciado de equipos ITS**
+- **Presupuesto ITS Puro consolidado ($16.8M USD)**
+- **Criterio ITS definido (conectado CCO/fibra/supervisión remota)**
 - **Tabla de integración equipos ITS ↔ switches L2**
 
 **🔄 EN PROGRESO:**
@@ -120,7 +120,7 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 | **T04 - Especificaciones Técnicas** | ✅ Completado | 100% | 13/13 completos |
 | **Validación Contractual** | ✅ Completada | 100% | 13/13 sistemas |
 | **Metodología Genérica** | ✅ Creada | 100% | 1 metodología + plantilla |
-| **Presupuesto Consolidado** | ✅ v2.0 | 100% | USD 57.4M |
+| **Presupuesto Consolidado** | ✅ v2.1 | 100% | USD 57.2M |
 | **Rediseño Arquitectónico** | ✅ Completado | 100% | 4 sistemas |
 | **Eliminación Duplicaciones** | ✅ Completada | 100% | -$2.8M USD |
 
@@ -453,10 +453,10 @@ Fase 5: Consolidación      [░░░░░░░░░░░░]   0%
 
 ### Presupuestos y Consolidados
 
-- 📊 **[PRESUPUESTO_FINAL_PROYECTO_v2.0.md](X.%20Entregables%20Consolidados/PRESUPUESTO_FINAL_PROYECTO_v2.0.md)** ⭐
-  - CAPEX: USD 57.4M
-  - 13/13 sistemas validados
-  - CAPEX/km: $221,186/km
+- 📊 **[PRESUPUESTO_ITS_PURO_v1.0.md](X.%20Entregables%20Consolidados/PRESUPUESTO_ITS_PURO_v1.0.md)** ⭐
+  - CAPEX ITS: USD 16.8M
+  - Solo sistemas conectados a CCO/fibra
+  - Criterio ITS aplicado consistentemente
 
 ### Resúmenes Ejecutivos
 
@@ -537,7 +537,7 @@ Los archivos de versiones anteriores se encuentran en la carpeta `old/`:
 
 ### Documentos Esenciales
 
-- [Presupuesto Final v2.0](X.%20Entregables%20Consolidados/PRESUPUESTO_FINAL_PROYECTO_v2.0.md) ⭐
+- [Presupuesto ITS Puro v1.0](X.%20Entregables%20Consolidados/PRESUPUESTO_ITS_PURO_v1.0.md) ⭐
 - [ROADMAP v6.0](ROADMAP.md) ⭐
 - [Resumen Sesión Completa](RESUMEN_SESION_COMPLETA_20-21OCT2025.md) ⭐
 - [Guía de Inicio Rápido](00_INICIO_RAPIDO.md)
@@ -587,8 +587,8 @@ Los archivos de versiones anteriores se encuentran en la carpeta `old/`:
 | **Ubicación** | Subsectores 1.1 y 1.2 (RN 4511, 4513) |
 | **Tipo** | Concesión APP 4G |
 | **Duración** | 25 años (construcción + operación) |
-| **CAPEX** | USD 57.4M ≈ COP 229.6 mil millones |
-| **CAPEX/km** | USD 221,186/km |
+| **CAPEX** | USD 57.2M ≈ COP 228.8 mil millones |
+| **CAPEX/km** | USD 220,000/km |
 
 ### Sistemas Principales
 
@@ -612,7 +612,7 @@ Los archivos de versiones anteriores se encuentran en la carpeta `old/`:
 
 ---
 
-**Última actualización:** 21 de octubre de 2025 - 01:00  
-**Versión:** 2.0  
-**Estado:** ✅ FASE 2 COMPLETADA AL 100% - Listo para Fase 3 (T04)
+**Última actualización:** 22 de octubre de 2025 - 15:30  
+**Versión:** 2.5  
+**Estado:** ✅ FASE 3 COMPLETADA AL 100% - Presupuesto ITS Puro consolidado
 

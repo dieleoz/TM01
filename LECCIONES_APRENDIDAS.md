@@ -1,8 +1,8 @@
 # LECCIONES APRENDIDAS - VALIDACIÓN CONTRACTUAL
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21 de octubre de 2025  
-**Versión:** 1.4 - VALIDACIÓN CONTRACTUAL GÁLIBOS (POSICIÓN EPC)  
+**Fecha:** 22 de octubre de 2025  
+**Versión:** 1.5 - CRITERIO ITS PURO DEFINIDO  
 **Estado:** ✅ DOCUMENTADO  
 
 ---
@@ -141,7 +141,43 @@ Documentar los errores sistemáticos identificados durante la validación contra
 ### **Lección Aprendida:**
 ✅ **Siempre evaluar integración con infraestructura existente antes de crear nueva**
 ✅ **Compartir switches L2 cuando sea técnicamente viable**
-## 📅 **21 OCTUBRE 2025 - VALIDACIÓN CONTRACTUAL GÁLIBOS (POSICIÓN EPC)**
+## 📅 **22 OCTUBRE 2025 - DEFINICIÓN CRITERIO ITS PURO**
+
+### **Problema Identificado:**
+- Presupuesto ITS incluía sistemas que no cumplían criterio técnico ITS
+- No había definición clara de qué constituye un "Sistema ITS" vs infraestructura general
+- Riesgo de sobre-dimensionar presupuesto ITS con sistemas NO-ITS
+
+### **Criterio ITS Definido:**
+Un sistema se considera **"ITS Puro"** si cumple **TODOS** estos requisitos:
+1. **Conectado al CCO** (Centro de Control de Operaciones)
+2. **Usa fibra óptica** para comunicación principal
+3. **Requiere supervisión remota** en tiempo real
+4. **Integrado a red ITS** (L2/L3)
+
+### **Sistemas NO-ITS Identificados:**
+- **Iluminación Vial:** Sistema independiente, control local ("podrá" CCO)
+- **Señalización Vial:** Infraestructura física, no supervisión remota
+- **Gestiones Administrativas:** Responsabilidad SPV/Operador, no EPC
+- **Emergencias Móviles:** O&M, control remoto facultativo ("podrá")
+- **Áreas de Servicio:** Infraestructura física, comunicaciones básicas
+- **Energía Edificaciones:** Infraestructura eléctrica, supervisión facultativa
+- **Peajes NO-ITS:** Componentes físicos/mecánicos, control local
+
+### **Resultado:**
+- **Presupuesto ITS Puro:** $16,781,811 USD (29.4% del proyecto)
+- **Presupuesto NO-ITS:** $8,253,677 USD (sistemas excluidos)
+- **Criterio aplicado:** Consistente en todos los documentos
+- **Validación contractual:** 100% sistemas ITS obligatorios
+
+### **Lección Aprendida:**
+✅ **Definir criterio técnico claro antes de clasificar sistemas**
+✅ **Aplicar criterio "podrá" vs "deberá" para determinar obligatoriedad**
+✅ **Separar sistemas ITS de infraestructura general**
+✅ **Documentar justificación técnica para cada clasificación**
+✅ **Mantener consistencia en aplicación del criterio**
+
+---
 
 ### **Problema Identificado:**
 - Estimación inicial asumía 25 gálibos como obligación EPC

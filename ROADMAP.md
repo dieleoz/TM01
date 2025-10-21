@@ -1,21 +1,21 @@
 # ROADMAP: PROYECTO FORMATOS PARA IA
 ## Plan de Trabajo y Cronograma
 
-**Versión:** 6.6 - FASE 3.1 ARQUITECTURA RED COMPLETADA  
-**Fecha:** 21 de Octubre 2025  
-**Estado:** ✅ **FASE 3 COMPLETADA (100%)** | ✅ **ARQUITECTURA RED L2/L3 VALIDADA (100%)**  
+**Versión:** 6.7 - PRESUPUESTO ITS PURO CONSOLIDADO  
+**Fecha:** 22 de Octubre 2025  
+**Estado:** ✅ **FASE 3 COMPLETADA (100%)** | ✅ **PRESUPUESTO ITS PURO CONSOLIDADO**    
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 22 de octubre de 2025 (00:15) - Criterio ITS definido (CCO/fibra)  
+**Última actualización:** 22 de octubre de 2025 (15:30) - Presupuesto ITS Puro corregido ($16.8M USD)  
 **Progreso total:** ✅ **FASE 3: ESPECIFICACIONES TÉCNICAS COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente
-**✅ PRESUPUESTO FINAL:** v2.0 consolidado (USD 57.4M)
+**✅ PRESUPUESTO FINAL:** v2.1 consolidado (USD 57.2M)
 **✅ REDISEÑO ARQUITECTÓNICO:** Completado (ahorros -$21.9M)
 **✅ DUPLICACIONES ELIMINADAS:** -$2.8M USD
 **✅ ARQUITECTURA RED:** L2/L3 validada (regla crítica 10 km - 100% cumplimiento)
-**💰 PRESUPUESTO VALIDADO:** USD 57.4M (CAPEX/km $221K, dentro rango APP 4G)
-**🎉 COMPLETADO:** Todas las validaciones contractuales + arquitectura de red finalizadas
+**💰 PRESUPUESTO VALIDADO:** USD 57.2M (CAPEX/km $220K, dentro rango APP 4G)
+**🎉 COMPLETADO:** Todas las validaciones contractuales + Presupuesto ITS Puro consolidado
 
 ---
 
@@ -966,9 +966,9 @@ Durante la sesión del 20/10/2025, el usuario identificó que las "correcciones"
 
 **Estado del ROADMAP:** ✅ **FASE 3 COMPLETADA AL 100%** + **ARQUITECTURA RED L2/L3 VALIDADA**  
 **Próximo paso:** Validación Google Earth + Ingeniería de Detalle T05  
-**Versión:** 6.6  
-**Última actualización:** 22 de octubre de 2025 (00:15) - Criterio ITS definido (CCO/fibra)  
+**Versión:** 6.7  
+**Última actualización:** 22 de octubre de 2025 (15:30) - Presupuesto ITS Puro consolidado ($16.8M USD)  
 **Responsable:** Administrador Contractual EPC  
 **GitHub:** https://github.com/dieleoz/TM01  
 **Progreso:** ✅ **76 documentos generados, 13 sistemas validados 100%, arquitectura red validada 100%**  
-**💰 PRESUPUESTO:** USD 57.4M validado y consolidado
+**💰 PRESUPUESTO:** USD 57.2M validado y consolidado
