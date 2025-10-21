@@ -30,14 +30,14 @@
 
 | Sistema ITS | CAPEX (USD) | % del Total | Estado |
 |:------------|:------------|:-----------|:-------|
-| **Sistema ITS Campo** | $4,430,400 | 26.4% | ✅ Completo |
-| **Telecomunicaciones** | $6,050,511 | 36.1% | ✅ Completo |
-| **Centro de Control (CCO)** | $3,707,000 | 22.1% | ✅ Completo |
-| **Pesaje WIM** | $2,286,400 | 13.6% | ✅ Completo |
-| **Peajes-ITS** | $312,500 | 1.9% | ✅ Definido |
-| **TOTAL ITS** | **$16,781,811** | **100%** | ✅ Completo |
+| **Sistema ITS Campo** | $4,430,400 | 23.7% | ✅ Completo |
+| **Telecomunicaciones** | $8,915,374 | 45.2% | ✅ Completo |
+| **Centro de Control (CCO)** | $3,707,000 | 19.9% | ✅ Completo |
+| **Pesaje WIM** | $2,286,400 | 12.3% | ✅ Completo |
+| **Peajes-ITS** | $312,500 | 1.7% | ✅ Definido |
+| **TOTAL ITS** | **$19,726,263** | **100%** | ✅ Completo |
 
-**En pesos colombianos (TRM 4,000):** COP 67,127,244,000 (~67 mil millones)
+**En pesos colombianos (TRM 4,000):** COP 78,905,052,000 (~79 mil millones)
 
 ---
 
@@ -69,31 +69,50 @@
 | **Pequeño Material ITS** | 139 | $500 | $69,500 | Material montaje ITS |
 | **Contingencia ITS** | - | - | $200,000 | 5% contingencia |
 
-### **2. TELECOMUNICACIONES ($6,050,511)**
+### **2. TELECOMUNICACIONES ($7,924,074)**
 
+#### **2.1 EQUIPOS L2 (Sub-anillos)**
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | Observaciones |
 |:-----------|:---------|:-------------------|:------------|:--------------|
-| **Switches L3 Core** | 7 | $45,000 | $315,000 | Núcleo red ITS |
-| **Switches L2 Access** | 14 | $15,000 | $210,000 | Acceso equipos ITS |
-| **Transceivers SFP 1G** | 28 | $200 | $5,600 | Conectividad L2 |
-| **Transceivers SFP 10G** | 14 | $800 | $11,200 | Conectividad L3 |
-| **Fibra Óptica Troncal** | 200 km | $2,000 | $400,000 | Backbone ITS |
-| **Microductos** | 200 km | $500 | $100,000 | Protección fibra |
-| **Cajas Empalme FO** | 50 | $1,000 | $50,000 | Conexiones fibra |
-| **Fusiones FO** | 200 | $100 | $20,000 | Empalmes fibra |
-| **Patch Cords FO** | 100 | $50 | $5,000 | Conexiones equipos |
-| **Racks 19"** | 7 | $3,000 | $21,000 | Alojamiento equipos |
-| **ODF 48 fibras** | 7 | $1,000 | $7,000 | Distribución fibra |
-| **Patch Panels** | 7 | $500 | $3,500 | Conexiones red |
-| **UPS 5KVA** | 7 | $8,000 | $56,000 | Respaldo equipos |
-| **Baterías UPS** | 7 | $2,000 | $14,000 | Autonomía UPS |
-| **Instalación Red** | 200 km | $1,000 | $200,000 | Instalación fibra |
-| **Instalación Equipos** | 21 | $2,000 | $42,000 | Montaje equipos |
-| **Cableado Datos** | 200 km | $500 | $100,000 | Cableado red |
-| **Puesta a Tierra** | 7 | $1,000 | $7,000 | Tierra equipos |
-| **Señalización Red** | 7 | $500 | $3,500 | Señalización equipos |
-| **Pequeño Material** | - | - | $50,000 | Material instalación |
-| **Contingencia Telecom** | - | - | $300,000 | 5% contingencia |
+| **Switches L2** | 84 | $1,135 | $95,361 | 14 sub-anillos, 170 equipos ITS |
+| **SFPs 1G** | 188 | Incluido | $0 | Incluidos en switches |
+| **Accesorios** | - | Incluido | $0 | Incluidos en switches |
+| **Stock Repuestos (25%)** | - | - | $23,504 | Repuestos críticos |
+| **Seguro/Flete (0.5%)** | - | - | $594 | Seguro y transporte |
+| **SUBTOTAL L2** | | | **$119,459** | |
+
+#### **2.2 EQUIPOS L3 (Core)**
+| Componente | Cantidad | Costo Unit. (USD) | Total (USD) | Observaciones |
+|:-----------|:---------|:-------------------|:------------|:--------------|
+| **Switches 24p** | 7 | $19,904 | $139,326 | Bunkers + Áreas de Servicio |
+| **Switches 48p** | 3 | Incluido | $0 | CCO + WIM + Peajes |
+| **Firewalls** | 2 | Incluido | $0 | Seguridad perimetral CCO |
+| **SFPs 10G** | 18 | Incluido | $0 | Enlaces troncales |
+| **Atenuadores** | 19 | Incluido | $0 | Ajuste presupuesto óptico |
+| **Configuración** | 1 | Incluido | $0 | VLANs + Stacking + Seguridad |
+| **Stock Repuestos** | - | - | $30,370 | Repuestos críticos |
+| **IVA + Seguro/Flete** | - | - | $33,196 | Impuestos y transporte |
+| **SUBTOTAL L3** | | | **$202,892** | |
+
+#### **2.3 FIBRA ÓPTICA COMPLETA (CON +10% RESERVA + 5% REPUESTOS)**
+| Componente | Cantidad | Costo Unit. (USD) | Total (USD) | Observaciones |
+|:-----------|:---------|:-------------------|:------------|:--------------|
+| **Fibra 48 hilos** | 314,824 ML | $1.65 | $519,460 | Cable monomodo armado (+10% reserva + 5% repuestos) |
+| **Fibra 12 hilos** | 10,856 ML | $1.65 | $17,912 | Derivaciones ITS (+10% reserva + 5% repuestos) |
+| **Tubería Tritubo** | 298,540 ML | $4.125 | $1,231,478 | Protección cable (+10% reserva + 5% repuestos) |
+| **Instalación Fibra** | 309,680 ML | $1.31 | $405,681 | Tendido y empalmes (ajustado por mayor longitud) |
+| **Excavación Asfalto** | 27,140 ML | $19.98 | $542,257 | Obra civil asfalto (ajustado por mayor longitud) |
+| **Excavación Andén** | 13,570 ML | $19.98 | $271,129 | Obra civil andenes (ajustado por mayor longitud) |
+| **Excavación Blanda** | 238,560 ML | $11.42 | $2,724,355 | Obra civil zona blanda (ajustado por mayor longitud) |
+| **Cruces Especiales** | 13,920 ML | $50.00 | $696,000 | Puentes, alcantarillas (ajustado por mayor longitud) |
+| **Cajas Empalme** | 1,257 UND | $487 | $612,159 | Cámaras de empalme (+10% reserva + 5% repuestos) |
+| **Empalmes/Conectores** | 1 GLB | $320,000 | $320,000 | Fusiones + conectores |
+| **Instalación Switches** | 1 GLB | $37,800 | $37,800 | Montaje equipos |
+| **Administración (8%)** | - | - | $590,179 | Gastos administrativos (ajustado por mayor base) |
+| **Imprevistos (5%)** | - | - | $368,862 | Contingencia (ajustado por mayor base) |
+| **Utilidad (3%)** | - | - | $221,317 | Utilidad (ajustado por mayor base) |
+| **IVA (16%)** | - | - | $35,411 | Impuesto (ajustado por mayor base) |
+| **SUBTOTAL FIBRA** | | | **$8,593,000** | |
 
 ### **3. CENTRO DE CONTROL OPERATIVO ($3,707,000)**
 
@@ -171,12 +190,12 @@
 
 | Sistema | CAPEX (USD) | % del Total | Observaciones |
 |:--------|:------------|:-----------|:--------------|
-| **Telecomunicaciones** | $6,050,511 | 36.1% | Backbone red ITS |
-| **Sistema ITS Campo** | $4,430,400 | 26.4% | Equipos campo |
-| **Centro de Control** | $3,707,000 | 22.1% | Operación centralizada |
-| **Pesaje WIM** | $2,286,400 | 13.6% | Control pesaje |
-| **Peajes-ITS** | $312,500 | 1.9% | Integración peajes |
-| **TOTAL** | **$16,781,811** | **100%** | Presupuesto ITS puro |
+| **Telecomunicaciones** | $7,924,074 | 42.5% | Backbone red ITS |
+| **Sistema ITS Campo** | $4,430,400 | 23.7% | Equipos campo |
+| **Centro de Control** | $3,707,000 | 19.9% | Operación centralizada |
+| **Pesaje WIM** | $2,286,400 | 12.3% | Control pesaje |
+| **Peajes-ITS** | $312,500 | 1.7% | Integración peajes |
+| **TOTAL** | **$19,726,263** | **100%** | Presupuesto ITS puro |
 
 ---
 
@@ -236,15 +255,15 @@
 
 ### **✅ Fase 3 - Validación Contractual ITS:**
 - **Alcance ITS definido:** Solo sistemas conectados a CCO/fibra
-- **Presupuesto ITS consolidado:** $16,781,811 USD
+- **Presupuesto ITS consolidado:** $19,726,263 USD
 - **Sistemas NO-ITS identificados:** $8,253,677 USD
 - **Criterio ITS aplicado:** Consistente en todos los documentos
 - **Validación contractual:** 100% sistemas ITS obligatorios
 
 ### **📊 Métricas del Proyecto:**
-- **Total Proyecto:** $57,169,830 USD
-- **Componente ITS:** $16,781,811 USD (29.4%)
-- **Componente NO-ITS:** $40,388,019 USD (70.6%)
+- **Total Proyecto:** $59,169,830 USD
+- **Componente ITS:** $19,726,263 USD (33.3%)
+- **Componente NO-ITS:** $39,443,567 USD (66.7%)
 - **Eficiencia ITS:** Presupuesto optimizado según criterio técnico
 
 ---

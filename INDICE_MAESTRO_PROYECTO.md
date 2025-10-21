@@ -1,8 +1,8 @@
 # ÍNDICE MAESTRO DEL PROYECTO
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Última actualización:** 22 de octubre de 2025 (15:30)  
-**Versión:** 2.3  
-**✅ ESTADO:** Fase 3 completada + Presupuesto ITS Puro consolidado ($16.8M USD)
+**Última actualización:** 22 de octubre de 2025 (16:00)  
+**Versión:** 2.4  
+**✅ ESTADO:** Fase 3 completada + Análisis fibra óptica completado (3 opciones evaluadas)
 
 ---
 
