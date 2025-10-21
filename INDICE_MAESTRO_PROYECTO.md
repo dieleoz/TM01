@@ -1,8 +1,8 @@
 # ÍNDICE MAESTRO DEL PROYECTO
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Última actualización:** 22 de octubre de 2025 (20:15)  
-**Versión:** 3.0  
-**✅ ESTADO:** Fase 4 completada - Ingeniería de Detalle (T05) - 10 documentos + WIM optimizado
+**Última actualización:** 22 de octubre de 2025 (21:30)  
+**Versión:** 3.1  
+**✅ ESTADO:** PRESUPUESTO ITS PURO v2.0 COMPLETADO - Componentes ITS reales validados ($7.8M USD)
 
 ---
 
@@ -51,7 +51,14 @@
 
 ---
 
-## 📄 INVENTARIO COMPLETO DE DOCUMENTOS (79 archivos)
+### X. Entregables Consolidados (3 archivos) - ✅ PRESUPUESTO ITS PURO v2.0 COMPLETADO
+- **PRESUPUESTO_ITS_PURO_v2.0.md** - Presupuesto ITS con componentes reales validados ($7.8M USD)
+- **52_PRESUPUESTO_DETALLADO_SISTEMA_PESAJE_v1.0.md** - WIM + Básculas Estáticas ($551K USD)
+- **53_PRESUPUESTO_CONSOLIDADO_TELECOMUNICACIONES_v1.0.md** - Telecomunicaciones ($5.7M USD estimado)
+
+---
+
+## 📄 INVENTARIO COMPLETO DE DOCUMENTOS (82 archivos)
 
 ### III. Ingeniería Conceptual (42 archivos)
 - **T01 (Fichas de Sistema):** 13 archivos (24-42)
@@ -75,7 +82,7 @@
   - 58: Ambulancias TAM
 - **README:** 1 archivo (46)
 
-### VII. Documentos Transversales (15 archivos) - ✅ VALIDACIÓN COMPLETADA + ARQUITECTURA RED
+### VII. Documentos Transversales (21 archivos) - ✅ VALIDACIÓN COMPLETADA + PRESUPUESTOS CONSOLIDADOS
 - **00_VALIDACION_CONTRACTUAL_vs_PRESUPUESTO_v1.0.md** - Análisis inicial del problema
 - **01_MATRIZ_JUSTIFICACION_CONTRACTUAL_EQUIPOS_v1.0.md** - Matriz detallada por equipo
 - **42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md** - Ubicaciones exactas equipos ITS (PKR + PKD)
