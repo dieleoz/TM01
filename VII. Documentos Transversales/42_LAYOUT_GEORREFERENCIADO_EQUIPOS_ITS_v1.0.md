@@ -175,8 +175,8 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 | **Postes SOS** | 87 | 87 (≤3 km) | ✅ Cumple | 2.84 km |
 | **PMV** | 28 | 28 (2 por peaje + cada 20 km) | ✅ Cumple | 18.96 km |
 | **CCTV** | 30 | 30 (puntos críticos) | ✅ Cumple (ajustado) | Variable |
-| **RADAR-ANPR** | 12 | 15 (13 ETD + 2 Radares) | ⚠️ Revisar | Variable |
-| **Gálibos** | 8 | 25 (estimación) | ⚠️ Parcial | Variable |
+| **ETD/RADAR** | 16 | 16 (14 ETD + 2 Radares) | ✅ Cumple | Variable |
+| **Gálibos (EPC)** | 8 | 8 (restricción ≤5.10m) | ✅ Cumple | Variable |
 | **Estaciones Meteo** | 2 | 2 (peajes) | ✅ Cumple | En peajes |
 
 ### **Distribución por Ruta**
