@@ -1,8 +1,8 @@
 # ÍNDICE MAESTRO DEL PROYECTO
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Última actualización:** 22 de octubre de 2025 (21:30)  
-**Versión:** 3.1  
-**✅ ESTADO:** PRESUPUESTO ITS PURO v2.0 COMPLETADO - Componentes ITS reales validados ($7.8M USD)
+**Última actualización:** 22 de octubre de 2025 (22:00)  
+**Versión:** 3.2  
+**✅ ESTADO:** WBS COMPLETA v1.0 + RFQ-001 FIBRA ÓPTICA - Listo para licitación ($7.79M USD ITS Puro)
 
 ---
 
@@ -51,14 +51,19 @@
 
 ---
 
-### X. Entregables Consolidados (3 archivos) - ✅ PRESUPUESTO ITS PURO v2.0 COMPLETADO
-- **PRESUPUESTO_ITS_PURO_v2.0.md** - Presupuesto ITS con componentes reales validados ($7.8M USD)
+### IX. WBS y Planificación (2 archivos) - ✅ WBS COMPLETA v1.0 CREADA
+- **WBS_Preliminar_v1.0.md** - WBS preliminar (versión inicial)
+- **WBS_COMPLETA_VEHICULAR_v1.0.md** - WBS completa con presupuestos ITS validados ($53.4M USD total)
+
+### X. Entregables Consolidados (4 archivos) - ✅ PRESUPUESTO + RFQ LISTOS
+- **PRESUPUESTO_ITS_PURO_v2.0.md** - Presupuesto ITS con componentes reales validados ($7.79M USD)
 - **52_PRESUPUESTO_DETALLADO_SISTEMA_PESAJE_v1.0.md** - WIM + Básculas Estáticas ($551K USD)
 - **53_PRESUPUESTO_CONSOLIDADO_TELECOMUNICACIONES_v1.0.md** - Telecomunicaciones ($5.7M USD estimado)
+- **RFQ_001_FIBRA_OPTICA_v1.0.md** - Solicitud de cotización Fibra Óptica (1,480 líneas)
 
 ---
 
-## 📄 INVENTARIO COMPLETO DE DOCUMENTOS (82 archivos)
+## 📄 INVENTARIO COMPLETO DE DOCUMENTOS (85 archivos)
 
 ### III. Ingeniería Conceptual (42 archivos)
 - **T01 (Fichas de Sistema):** 13 archivos (24-42)

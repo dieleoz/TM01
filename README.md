@@ -4,8 +4,8 @@
 ![Status](https://img.shields.io/badge/Status-Fase%204%20Completada-success)
 ![Progress](https://img.shields.io/badge/Progress-85%25-brightgreen)
 ![Validations](https://img.shields.io/badge/Validations-13%2F13-success)
-![Budget](https://img.shields.io/badge/Budget-USD%207.8M%20ITS%20Puro-blue)
-![Docs](https://img.shields.io/badge/Docs-83%20Files-orange)
+![Budget](https://img.shields.io/badge/Budget-USD%207.79M%20ITS%20Puro-blue)
+![Docs](https://img.shields.io/badge/Docs-85%20Files-orange)
 
 ![T01](https://img.shields.io/badge/T01_Fichas-13%2F13-success)
 ![T02](https://img.shields.io/badge/T02_Requisitos-13%2F13-success)
@@ -14,9 +14,9 @@
 ![T05](https://img.shields.io/badge/T05_Detalle-10%2F10-success)
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 
-**Versión:** 3.1  
-**Fecha de actualización:** 22 de Octubre 2025 (21:30)  
-**Estado:** ✅ PRESUPUESTO ITS PURO v2.0 COMPLETADO | **COMPONENTES ITS REALES VALIDADOS**    
+**Versión:** 3.2  
+**Fecha de actualización:** 22 de Octubre 2025 (22:00)  
+**Estado:** ✅ WBS COMPLETA + RFQ FIBRA ÓPTICA | **LISTO PARA LICITACIÓN**    
 **Responsable:** Administrador Contractual EPC  
 **Metodología:** Punto 42 v1.0  
 **GitHub:** https://github.com/dieleoz/TM01  
