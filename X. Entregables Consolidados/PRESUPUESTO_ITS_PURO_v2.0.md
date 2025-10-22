@@ -27,12 +27,12 @@ Consolidar únicamente los componentes que cumplen estrictamente el criterio **"
 | **CCTV** | 30 | $356,394 | 4.6% |
 | **ETD/RADAR** | 15 | $372,078 | 4.8% |
 | **Gálibos** | 8 | $173,043 | 2.2% |
-| **Estaciones Meteorológicas** | 3 | $10,158 | 0.1% |
+| **Estaciones Meteorológicas** | 2 | $6,772 | 0.09% |
 | **Peajes** | 2 | $980,161 | 12.6% |
 | **CCO** | 1 | $1,165,000 | 15.0% |
 | **WIM + Estáticas** | 4 | $551,425 | 7.1% |
 | **Telecomunicaciones ITS** | - | $322,351 | 4.1% |
-| **TOTAL ITS PURO** | - | **$7,791,018** | **100%** |
+| **TOTAL ITS PURO** | - | **$7,787,632** | **100%** |
 
 ---
 
@@ -160,22 +160,27 @@ Consolidar únicamente los componentes que cumplen estrictamente el criterio **"
 ## 🌤️ **6. ESTACIONES METEOROLÓGICAS**
 
 ### **Especificaciones:**
-- **Cantidad:** 3 unidades
+- **Cantidad:** 2 unidades (1 por peaje IP/REV)
 - **Tipo:** Davis Vantage Pro2 Plus con WeatherLink Live
-- **Ubicación:** Peajes y puntos estratégicos
+- **Ubicación:** Peaje Zambito + Peaje Aguas Negras
 - **Integración:** Conectadas a CCO vía fibra óptica
 
 ### **Componentes ITS Puros:**
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
 |:-----------|:---------|:------------------|:------------|
-| Estación meteorológica completa | 3 | $3,386 | $10,158 |
-| **TOTAL METEOROLÓGICAS** | - | - | **$10,158** |
+| Estación meteorológica completa | 2 | $3,386 | $6,772 |
+| **TOTAL METEOROLÓGICAS** | - | - | **$6,772** |
 
 ### **Justificación ITS:**
 ✅ Conectado al CCO para transmisión de datos meteorológicos  
 ✅ Usa fibra óptica para comunicación  
 ✅ Requiere supervisión remota en tiempo real  
-✅ Integrado a red ITS (L2/L3)  
+✅ Integrado a red ITS (L2/L3)
+
+**Validación Contractual:**
+- **Obligación EPC:** AT2 3.3.11.2 + Resolución 546/2018 (IP/REV)
+- **Ubicaciones obligatorias:** 1 por cada peaje IP/REV (Zambito + Aguas Negras)
+- **Documento:** `VII/26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0.md`  
 
 ---
 
@@ -297,8 +302,8 @@ Consolidar únicamente los componentes que cumplen estrictamente el criterio **"
 | **CCTV** | $356,394 | 4.6% |
 | **Telecomunicaciones ITS** | $322,351 | 4.1% |
 | **Gálibos** | $173,043 | 2.2% |
-| **Estaciones Meteorológicas** | $10,158 | 0.1% |
-| **TOTAL** | **$7,791,018** | **100%** |
+| **Estaciones Meteorológicas** | $6,772 | 0.09% |
+| **TOTAL** | **$7,787,632** | **100%** |
 
 ---
 

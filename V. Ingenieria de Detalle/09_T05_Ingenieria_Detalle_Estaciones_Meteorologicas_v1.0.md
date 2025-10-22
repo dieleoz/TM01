@@ -15,8 +15,8 @@
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad** | **2 estaciones** | 1 por cada peaje |
-| **Ubicaciones** | Peaje Zambito + Peaje Aguas Negras | AT2 |
+| **Cantidad** | **2 estaciones** | 1 por cada peaje IP/REV (obligatorio) |
+| **Ubicaciones** | Peaje Zambito + Peaje Aguas Negras | AT2 3.3.11.2 + Res 546/2018 |
 | **Variables medidas** | 8 parámetros climáticos | Lluvia, viento, temp, visibilidad, etc. |
 | **Frecuencia reporte** | 5 minutos | Tiempo real a CCO |
 | **CAPEX Total** | **$58,400 USD** | $29,200/estación instalada |
@@ -147,6 +147,20 @@
 ---
 
 ## 🗺️ **UBICACIONES**
+
+### **📋 VALIDACIÓN CONTRACTUAL:**
+
+**Obligación EPC:** AT2 3.3.11.2 + Resolución 546/2018 (IP/REV)
+- **Ubicaciones obligatorias:** 1 estación por cada peaje IP/REV
+- **Total obligatorio:** 2 estaciones (Zambito + Aguas Negras)
+- **Documento validación:** `VII/26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0.md`
+
+**Interpretación clave:**
+- Contrato exige **"informar"** condiciones meteorológicas (no "instalar")
+- Resolución 546/2018 exige **"equipos de monitoreo ambiental en peajes"**
+- 2 estaciones Davis Pro2 cumplen obligación contractual completamente
+
+---
 
 ### **Estación 1: Peaje Zambito**
 
