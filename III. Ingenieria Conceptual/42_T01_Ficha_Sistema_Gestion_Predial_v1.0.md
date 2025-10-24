@@ -47,7 +47,7 @@ Garantizar la adquisición legal, oportuna y justa de todos los predios necesari
   - **Actas de Entrega de Predios** (formalización de entregas)
   - **Subcuenta Predial** (ANI) - Fondeo para adquisición
   
-- **Cobertura geográfica:** 259.6 km + Predios para Estaciones de Peaje, Áreas de Servicio, CCO, Talleres
+- **Cobertura geográfica:** 259.6 km principales + 33.4 km adicionales + Predios para Estaciones de Peaje, Áreas de Servicio, CCO La Lizama PK 4+300, Talleres
 - **Número estimado de predios:** 150-300 predios (por definir en Censo Predial)
 - **Integración con:** Gestión Social (AT8), Construcción, Alcaldías, ANI, Notarías, Registros Públicos
 
@@ -302,11 +302,19 @@ Garantizar la adquisición legal, oportuna y justa de todos los predios necesari
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 17 de octubre de 2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Ficha de Sistema Completada + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Administrador Contractual EPC  
 **Próximo Documento:** Actualización de README.md y ROADMAP.md con nuevos T01
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Longitudes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

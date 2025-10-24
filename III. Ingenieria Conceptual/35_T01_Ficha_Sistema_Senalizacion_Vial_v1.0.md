@@ -4,7 +4,7 @@
 **Fecha:** 16/10/2025  
 **Sistema:** Señalización Vial (Vertical, Horizontal, Defensas)  
 **Responsable:** Ing. Seguridad Vial  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -34,7 +34,7 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
   - **Dispositivos de Seguridad:** Defensas metálicas, barreras de concreto, tachas reflectivas, delineadores
   - **Señalización Temporal:** Para obras de mantenimiento y emergencias
   
-- **Cobertura geográfica:** 259.6 km (Subsectores 1.1 y 1.2), 14 Unidades Funcionales
+- **Cobertura geográfica:** 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513), 14 Unidades Funcionales
 - **Integración con:** ITS (PMV), Iluminación (reflectividad nocturna), Mantenimiento, SGSV (Sistema de Gestión de Seguridad Vial)
 
 ---
@@ -331,7 +331,7 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 
 ---
 
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Estado:** ✅ Ficha de Sistema Completada  
 **Fecha:** 16/10/2025  
 **Responsable:** Ing. Seguridad Vial EPC  
@@ -341,3 +341,18 @@ Proporcionar **información, regulación y prevención** a los usuarios del corr
 
 **CHANGELOG:**
 - v1.0 (16/10/2025): Creación inicial de ficha de sistema Señalización Vial
+- v1.1 (22/10/2025): ✅ **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, rutas RN 4510, RN 4511, RN 4513
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Cobertura actualizada con información oficial
+- Metodología PKD lineal aplicada
+
+---
+
+**Fin del documento - T01 Sistema Señalización Vial**  
+*Metodología Punto 42 v1.0*  
+*Proyecto APP Puerto Salgar - Barrancabermeja*

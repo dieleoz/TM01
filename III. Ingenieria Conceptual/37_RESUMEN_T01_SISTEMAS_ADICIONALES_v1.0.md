@@ -3,7 +3,7 @@
 
 **Fecha:** 16/10/2025  
 **Sistemas documentados:** 3 nuevos (Iluminación, Señalización Vial, Áreas de Servicio)  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -308,7 +308,7 @@ ADELANTO: 4-5 SEMANAS
 
 ---
 
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Estado:** ✅ Resumen Completado  
 **Fecha:** 16/10/2025  
 **Responsable:** Equipo EPC  
@@ -322,4 +322,27 @@ ADELANTO: 4-5 SEMANAS
 - [T01 Áreas de Servicio](./36_T01_Ficha_Sistema_Areas_Servicio_v1.0.md)
 - [Resumen T01 Sistemas Principales](./29_RESUMEN_T01_SISTEMAS_PRINCIPALES_v1.0.md)
 - [WBS Preliminar](../IX.%20WBS%20y%20Planificacion/WBS_Preliminar_v1.0.md)
+
+---
+
+## 📋 CHANGELOG
+
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 16/10/2025 | Creación inicial del resumen de sistemas adicionales |
+| **v1.1** | **22/10/2025** | **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, CCO La Lizama PK 4+300 |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Metodología PKD lineal aplicada
+
+---
+
+**Fin del documento - Resumen T01 Sistemas Adicionales**  
+*Metodología Punto 42 v1.0*  
+*Proyecto APP Puerto Salgar - Barrancabermeja*
 

@@ -4,7 +4,7 @@
 **Fecha:** 16/10/2025  
 **Sistema:** Áreas de Servicio (Paraderos, Sanitarios, Talleres)  
 **Responsable:** Ing. Arquitectura e Infraestructura  
-**Versión:** 1.0  
+**Versión:** 1.2  
 
 ---
 
@@ -36,11 +36,11 @@ Proporcionar **servicios esenciales** a los usuarios del corredor vial para gara
   - **Estaciones de Servicio (Combustible):** Coordinación con operadores privados (no operadas directamente)
   - **Bases Operativas:** Instalaciones para personal de emergencia, patrullaje, mantenimiento
   
-- **Cobertura geográfica:** 259.6 km, **2 Áreas de Servicio Obligatorias** asociadas a estaciones de peaje (AT1 Cap. 3)
+- **Cobertura geográfica:** 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513), **2 Áreas de Servicio Obligatorias** asociadas a estaciones de peaje (AT1 Cap. 3)
 - **Ubicación contractual:** 
   - Área de Servicio Zambito (asociada a Peaje Zambito, PK 9+200 RN 4511)
   - Área de Servicio Aguas Negras (asociada a Peaje Aguas Negras, PK 80+000 RN 4511)
-- **Integración con:** Emergencias (TAM, grúas), Peajes, ITS (CCTV, SOS), Iluminación, Telecomunicaciones
+- **Integración con:** Emergencias (TAM, grúas), Peajes, ITS (CCTV, SOS), Iluminación, Telecomunicaciones, CCO La Lizama PK 4+300
 
 ---
 
@@ -369,7 +369,7 @@ Cada Área de Servicio debe incluir:
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Versión:** 1.2 ✅ **AJUSTE CONTRACTUAL APLICADO**  
 **Estado:** ✅ Ficha Validada Contractualmente  
 **Fecha:** 20/10/2025  
 **Responsable:** Ing. Arquitectura e Infraestructura EPC  
@@ -382,4 +382,20 @@ Cada Área de Servicio debe incluir:
 |:--------|:------|:------------|
 | v1.0 | 16/10/2025 | Creación inicial de ficha de sistema Áreas de Servicio |
 | **v1.1** | **20/10/2025** | **Ajuste contractual:** 6 áreas → 2 áreas obligatorias (AT1 Cap. 3). CAPEX -$3.6M, OPEX -$517K/año |
+| **v1.2** | **22/10/2025** | **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, CCO La Lizama PK 4+300 |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Integración CCO actualizada con ubicación oficial
+- Metodología PKD lineal aplicada
+
+---
+
+**Fin del documento - T01 Sistema Áreas de Servicio**  
+*Metodología Punto 42 v1.0*  
+*Proyecto APP Puerto Salgar - Barrancabermeja*
 

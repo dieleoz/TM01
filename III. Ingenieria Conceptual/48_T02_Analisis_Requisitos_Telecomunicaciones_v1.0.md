@@ -24,10 +24,12 @@ El análisis cubre:
 
 ### 1.2 Alcance
 
-Este análisis cubre el **sistema completo de telecomunicaciones** a lo largo de 259.6 km:
+Este análisis cubre el **sistema completo de telecomunicaciones** a lo largo de 259.6 km principales + 33.4 km adicionales:
+
+**Ubicación del CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
 
 **Componentes del sistema:**
-1. **Red Troncal de Fibra Óptica:** ~285 km (con reserva técnica)
+1. **Red Troncal de Fibra Óptica:** ~322 km (293 km + 10% reserva técnica)
 2. **Red de Datos Ethernet/IP:** Switches, routers, firewalls
 3. **Sistema de Radio Troncalizado:** Para comunicaciones de emergencia
 4. **Telefonía IP (VoIP):** Teléfonos SOS, comunicaciones internas
@@ -63,10 +65,10 @@ Este análisis cubre el **sistema completo de telecomunicaciones** a lo largo de
 **Fuente:** AT2 (implícito en ITS, Peajes, CCO)  
 
 **Criterios de Aceptación:**
-- Longitud total: ~285 km (259.6 km + 10% reserva técnica)
+- Longitud total: ~322 km (293 km + 10% reserva técnica)
 - Tipo: Fibra monomodo (UIT-T G.652.D)
 - Cantidad de hilos: 12-24 hilos
-- Topología: Anillo redundante en secciones críticas
+- Topología: Anillo redundante con 7 nodos principales
 - Canalización: Ductos subterráneos PVC/HDPE
 - Cámaras de inspección: Cada 300-500 m
 - Atenuación máxima: 0.35 dB/km @ 1550 nm
@@ -82,10 +84,10 @@ Este análisis cubre el **sistema completo de telecomunicaciones** a lo largo de
 **Fuente:** AT2, Secciones 3.3.5.1, 3.3.4, 3.1.7  
 
 **Criterios de Aceptación:**
-- **Switches de Campo:** 50-80 switches (conexión de equipos ITS, peajes)
-- **Switches de Agregación:** 10-15 switches (agregación de tráfico)
-- **Switches Core:** 4-6 switches en CCO (núcleo de red)
-- **Routers:** 2-4 routers (conectividad WAN, Internet, ANI)
+- **Switches de Campo:** 35-45 switches (conexión de equipos ITS, peajes)
+- **Switches de Agregación:** 7 switches (7 nodos principales del anillo)
+- **Switches Core:** 4 switches en CCO La Lizama PK 4+300 (núcleo de red)
+- **Routers:** 2 routers (conectividad WAN, Internet, ANI)
 - Velocidad: 1 Gbps (acceso), 10 Gbps (agregación y core)
 - Redundancia: Enlaces duales en puntos críticos
 - VLANs: Segmentación de tráfico (ITS, Peajes, Gestión, ANI)
@@ -101,9 +103,9 @@ Este análisis cubre el **sistema completo de telecomunicaciones** a lo largo de
 **Fuente:** AT2, Sección 3.3.3 (Emergencias)  
 
 **Criterios de Aceptación:**
-- 2-4 radio bases (CCO + bases de emergencia)
+- 3-4 radio bases (CCO La Lizama PK 4+300 + bases de emergencia)
 - Frecuencia: Banda asignada por MinTIC
-- Cobertura: 100% del corredor (259.6 km)
+- Cobertura: 100% del corredor (293 km total)
 - 20-30 radios móviles (vehículos de emergencia, patrullas)
 - Licencia de operación vigente (MinTIC)
 - Encriptación de comunicaciones
@@ -118,9 +120,9 @@ Este análisis cubre el **sistema completo de telecomunicaciones** a lo largo de
 **Fuente:** AT2, Sección 3.3.5.1 (Teléfonos SOS)  
 
 **Criterios de Aceptación:**
-- Central telefónica IP (PBX) en CCO
-- Teléfonos SOS de emergencia (30-50 unidades en corredor)
-- Teléfonos IP internos (50-80 unidades en CCO, peajes, bases)
+- Central telefónica IP (PBX) en CCO La Lizama PK 4+300
+- Teléfonos SOS de emergencia (88 unidades en corredor)
+- Teléfonos IP internos (60 unidades en CCO, peajes, bases)
 - Conexión directa SOS → CCO en < 30 segundos
 - Grabación de llamadas SOS (evidencia)
 - Geolocalización automática de teléfono SOS
@@ -428,14 +430,25 @@ Este análisis cubre el **sistema completo de telecomunicaciones** a lo largo de
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema de telecomunicaciones |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes, CCO La Lizama, cantidades actualizadas, topología anillo |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis de Requisitos Completado + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Telecomunicaciones  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Telecomunicaciones  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales = 293 km total
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Topología anillo con 7 nodos principales confirmada
+- Cantidades validadas contra información oficial
+- Fibra óptica: 322 km (293 km + 10% reserva técnica)
+- Metodología PKD lineal aplicada  
 
 ---
 

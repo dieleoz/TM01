@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** CCTV - Sistema de Circuito Cerrado de Televisión  
 **Responsable:** Ing. ITS / Ing. Seguridad / Administrador Contractual EPC  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
 **Referencia Validación:** 37_VALIDACION_CONTRACTUAL_CCTV_v1.0  
@@ -17,6 +17,7 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 30 cámaras estratégicas con nota de optimización futura | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada 30 cámaras | Adm. Contractual EPC |
 
 ---
 
@@ -29,7 +30,7 @@
 | **Nombre del sistema** | CCTV - Sistema de Circuito Cerrado de Televisión |
 | **Categoría** | ITS (Intelligent Transportation Systems) - Videovigilancia |
 | **Código interno** | T04-CCTV-003-v1.0 |
-| **Cantidad total** | **30 cámaras** (diseño actual) |
+| **Cantidad total** | **30 cámaras** |
 | **CAPEX estimado** | **USD $1,071,960** (35,732 USD/cámara instalada) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación v1.0, Layout v1.0 |
 
@@ -599,4 +600,12 @@ Separador Central  [====|====]
 
 ---
 
-**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS CCTV v1.0**
+**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS CCTV v1.1**
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 30 cámaras CCTV
+- CAPEX mantenido: $1,071,960 USD
+- Distribución por tipo validada con información oficial
+- Metodología PKD lineal aplicada

@@ -22,17 +22,17 @@ Este documento define la **arquitectura conceptual** del Sistema de Iluminación
 
 ### 1.2 Alcance
 
-Esta arquitectura cubre **413 luminarias LED** distribuidas en zonas críticas del corredor de 259.6 km:
+Esta arquitectura cubre **413 luminarias LED** distribuidas en zonas críticas del corredor de 259.6 km principales + 33.4 km adicionales:
 
 **Zonas iluminadas:**
 - 2 Estaciones de Peaje (Zambito, Aguas Negras)
 - Estaciones de Pesaje
-- Centro de Control Operacional (CCO)
+- Centro de Control Operacional (CCO La Lizama PK 4+300)
 - **2 Áreas de Servicio** (obligatorias asociadas a peajes - AT1 Cap. 3)
 - Intersecciones a nivel y desnivel
 - Puentes peatonales y paraderos
 
-**Total estimado:** 410 luminarias LED con control centralizado desde CCO
+**Total estimado:** 410 luminarias LED con control centralizado desde CCO La Lizama PK 4+300
 
 ### 1.3 Referencias
 
@@ -332,15 +332,24 @@ Proceso inverso al amanecer (~06:00)
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial del sistema de iluminación |
-| **v1.1** | **20/10/2025** | Administrador Contractual EPC | **Rediseño arquitectónico:** 2 áreas integradas a peajes (iluminación incluida pero sin transformadores propios). 410 luminarias, 13 transformadores. CAPEX -$536K (-29%) |
+| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Rediseño arquitectónico:** 2 áreas integradas a peajes (iluminación incluida pero sin transformadores propios). 410 luminarias, 13 transformadores. CAPEX -$536K (-29%) |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes actualizadas |
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
-**Estado:** ✅ Arquitectura Validada Contractualmente  
-**Fecha:** 20/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Validada Contractualmente + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas Eléctricos  
 **Próximo documento:** T04 - Especificaciones Técnicas de Iluminación  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Control centralizado desde ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

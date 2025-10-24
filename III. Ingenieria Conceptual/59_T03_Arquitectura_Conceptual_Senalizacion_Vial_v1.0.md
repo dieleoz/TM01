@@ -21,7 +21,7 @@ Este documento define la **arquitectura conceptual** del Sistema de Señalizaci�
 
 ### 1.2 Alcance
 
-**Componentes en 259.6 km:**
+**Componentes en 259.6 km principales + 33.4 km adicionales:**
 - Señalización Vertical: ~2,300 señales Tipo XI
 - Señalización Horizontal: ~1,000 km lineales termoplástico
 - Defensas Metálicas: ~100 km
@@ -158,6 +158,22 @@ REPOSICIÓN PROGRAMADA:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial de señalización vial |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes actualizadas, cobertura 259.6 km + 33.4 km |
+
+---
+
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Conceptual Definida + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
+**Responsable:** Ingeniero de Seguridad Vial  
+**Próximo documento:** T04 - Especificaciones Técnicas de Señalización Vial  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Cobertura de señalización actualizada
+- Metodología PKD lineal aplicada
 
 ---
 

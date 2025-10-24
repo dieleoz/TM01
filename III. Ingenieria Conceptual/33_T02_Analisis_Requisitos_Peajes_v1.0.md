@@ -31,6 +31,7 @@ Este análisis cubre:
 - Sistema de control de evasión
 - Software de gestión de recaudo
 - Integración con sistema nacional de interoperabilidad TAG
+- Integración con CCO La Lizama PK 4+300 (RN 4513)
 
 ### 1.3 Definiciones y Acrónimos
 
@@ -601,14 +602,22 @@ Este requisito crítico afecta significativamente el proyecto:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del Sistema de Peajes |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Integración CCO La Lizama PK 4+300 |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 16/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis de Requisitos Completado + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas de Peaje  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Peajes  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Integración con CCO La Lizama PK 4+300 (RN 4513) documentada
+- Ubicaciones de peajes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

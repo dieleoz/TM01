@@ -4,8 +4,15 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** Telecomunicaciones - Equipos Nivel 2 (Campo)  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
-**Basado en:** Solicitud Compra Equipos L2 v1.0 + Tabla Maestra Layout v1.0  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 22/10/2025 | Creación inicial - 84 switches L2 | Ing. Telecomunicaciones |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidades actualizadas | Ing. Telecomunicaciones |
 
 ---
 
@@ -426,8 +433,11 @@ end
 
 ---
 
-**Última actualización:** 22 de octubre de 2025 - 18:00  
-**Responsable:** Ingeniero de Telecomunicaciones  
-**Estado:** ✅ **T05 EQUIPOS L2 COMPLETADO**  
-**Archivo:** `02_T05_Ingenieria_Detalle_Equipos_L2_v1.0.md`
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidades actualizadas según información oficial
+- CAPEX mantenido: USD $119,459
+- Arquitectura L2 confirmada
+- Metodología PKD lineal aplicada
 

@@ -23,17 +23,17 @@ Este documento define la **arquitectura conceptual** del Sistema ITS (Intelligen
 
 ### 1.2 Alcance
 
-Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
+Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
 1. **CCTV** (30 cámaras IP PTZ según diseño inicial)
 2. **PMV** (Paneles de Mensaje Variable)
 3. **WIM** (Estaciones de Pesaje en Movimiento)
 4. **Estaciones Meteorológicas**
-5. **Teléfonos SOS** (87 unidades - **Obligatorio contractual AT1**)
-6. **DAI** (Detectores Automáticos de Incidentes)
+5. **Teléfonos SOS** (88 unidades - **Obligatorio contractual AT1 + SOS #88 RN 4513**)
+6. **ETD/RADAR** (Estaciones de Detección de Tráfico/Radares)
 7. **Aforo Vehicular**
 8. **Radares de Velocidad**
-9. **Detectores de Altura**
+9. **Detectores de Altura (Gálibos)**
 10. **Sensores de Pista/Carril**
 
 ### 1.3 Referencias
@@ -52,33 +52,34 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     CAMPO (259.6 km)                            │
+│                     CAMPO (259.6 km principales + 33.4 km adicionales) │
 │                                                                 │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
 │  │ CCTV PTZ │  │   PMV    │  │   WIM    │  │  Meteo   │      │
-│  │100-130 un│  │ 12-18 un │  │  4-6 un  │  │  6-8 un  │      │
+│  │30 cámaras│  │28 unidades│  │1 estación│  │3 estaciones│    │
 │  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘      │
 │       │             │              │              │             │
 │  ┌────┴─────┐  ┌───┴──────┐  ┌───┴──────┐  ┌───┴──────┐      │
-│  │   SOS    │  │   DAI    │  │  Aforo   │  │  Radares │      │
-│  │  87 un   │  │Analítica │  │ 10-15 un │  │ 15-20 un │      │
+│  │   SOS    │  │ETD/RADAR │  │  Aforo   │  │  Radares │      │
+│  │88 unidades│  │16 unidades│  │10-15 un │  │11 unidades│     │
 │  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘      │
 │       │             │              │              │             │
 │       └─────────────┴──────────────┴──────────────┘            │
 │                          │                                      │
 │                    ┌─────▼─────┐                               │
-│                    │  Switches │  30-50 switches de campo      │
+│                    │  Switches │  35-45 switches de campo      │
 │                    │  Acceso   │  (1 Gbps, PoE)               │
 │                    └─────┬─────┘                               │
 └──────────────────────────┼──────────────────────────────────────┘
                            │
                     ┌──────▼──────┐
-                    │ Red Troncal │  Fibra Óptica 285 km
+                    │ Red Troncal │  Fibra Óptica 283 km
                     │Fibra Óptica │  Topología: Anillo redundante
                     └──────┬──────┘
                            │
 ┌──────────────────────────▼──────────────────────────────────────┐
 │                    CCO (Centro de Control)                      │
+│                    Ubicado en La Lizama PK 4+300 (RN 4513)     │
 │                                                                 │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐        │
 │  │  Switches    │  │  Servidores  │  │   Videowall  │        │
@@ -106,15 +107,15 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 |:-----------|:--------|:--------------------------|:---------|
 | **Cámaras CCTV IP PTZ** | Supervisión visual 24/7 | 1080p, 25 fps, H.265, IP66/IK10, PoE | **30** ✅ |
 | **PMV (Paneles Mensaje Variable)** | Información dinámica a usuarios | LED full-color, control remoto, Res. 546/2018 | **28** ✅ |
-| **Estaciones WIM** | Pesaje dinámico sin detención | Piezoeléctricas, ±5%, 100 ton | 4-6 |
-| **Estaciones Meteorológicas** | Monitoreo climático | Según IDEAM, precipitación, temp, viento | 6-8 |
-| **Teléfonos SOS** | Emergencias de usuarios | VoIP, geolocalización, conexión directa CCO | **87** ✅ |
-| **DAI (Detección Incidentes)** | Detección automática | Analítica de video, 90% detección, <10% FP | Integrado CCTV |
+| **Estaciones WIM** | Pesaje dinámico sin detención | Piezoeléctricas, ±5%, 100 ton | **1 estación bidireccional** ✅ |
+| **Estaciones Meteorológicas** | Monitoreo climático | Según IDEAM, precipitación, temp, viento | **3 estaciones** ✅ |
+| **Teléfonos SOS** | Emergencias de usuarios | VoIP, geolocalización, conexión directa CCO | **88** ✅ |
+| **ETD/RADAR** | Detección automática de tráfico | Analítica de video, 90% detección, <10% FP | **16 unidades** ✅ |
 | **Estaciones Aforo** | Conteo y clasificación | Loops/Video, precisión ≥98%, Cat. I-VI | 10-15 |
-| **Radares de Velocidad** | Control de velocidad | Precisión ±2 km/h, foto matrícula | 15-20 |
-| **Detectores de Altura** | Control de altura vehicular | Tecnología láser, ±5 cm | 8-12 |
-| **Switches de Campo** | Conectividad local | Gigabit PoE, IP66, administrables | 30-50 |
-| **Servidores NVR** | Grabación de video | 100-130 cámaras, 30 días, RAID 6 | 4-6 (redundante) |
+| **Radares de Velocidad** | Control de velocidad | Precisión ±2 km/h, foto matrícula | **11 unidades** ✅ |
+| **Detectores de Altura (Gálibos)** | Control de altura vehicular | Tecnología láser, ±5 cm | **8 unidades** ✅ |
+| **Switches de Campo** | Conectividad local | Gigabit PoE, IP66, administrables | 35-45 |
+| **Servidores NVR** | Grabación de video | 30 cámaras, 30 días, RAID 6 | 4-6 (redundante) |
 | **Servidores SCADA** | Gestión del sistema ITS | Alta disponibilidad, VM, N+1 | 2-3 (redundante) |
 | **Videowall** | Visualización en CCO | LED, 16-32 pantallas, 55", control matricial | 1 sistema |
 
@@ -127,7 +128,8 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 - **Tipo de topología:** Árbol jerárquico con redundancia en anillo (backbone)
 - **Protocolo principal:** TCP/IP (Ethernet sobre fibra óptica)
 - **Segmentación:** VLAN dedicada para ITS (aislamiento de tráfico)
-- **Redundancia:** Anillo de fibra óptica en secciones críticas
+- **Redundancia:** Anillo de fibra óptica 283 km con 7 nodos principales
+- **CCO:** Ubicado en La Lizama PK 4+300 (RN 4513)
 
 ### 3.2 Diagrama de Topología
 
@@ -577,14 +579,24 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque)
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial del sistema ITS |
 | **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** Postes SOS 40→87 unidades según AT1 Cap. 3 (+$94K USD) |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes, rutas, CCO La Lizama, cantidades actualizadas |
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
-**Estado:** ✅ Arquitectura Conceptual Validada vs Contrato  
-**Fecha:** 20/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Conceptual Validada vs Contrato + Información Oficial  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas ITS / Arquitecto de Redes  
 **Próximo documento:** T04 - Especificaciones Técnicas de Componentes ITS  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Rutas confirmadas: RN 4510, RN 4511, RN 4513 (conexión CCO)
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Cantidades validadas contra información oficial
+- Metodología PKD lineal aplicada  
 
 ---
 

@@ -24,19 +24,19 @@ Establece:
 
 ### 1.2 Alcance
 
-Esta arquitectura cubre el **sistema completo de telecomunicaciones** a lo largo de 259.6 km:
+Esta arquitectura cubre el **sistema completo de telecomunicaciones** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
 **Componentes del sistema:**
-1. **Red Troncal de Fibra Óptica:** 285 km (12-24 hilos) en topología de anillo
-2. **Canalizaciones y Ductos:** 285 km subterráneos
+1. **Red Troncal de Fibra Óptica:** 283 km (12-24 hilos) en topología de anillo cerrado
+2. **Canalizaciones y Ductos:** 283 km subterráneos
 3. **Red de Datos IP:** Arquitectura jerárquica de 3 niveles
    - Core (CCO): 4 switches 10 Gbps
-   - Agregación (5 nodos): 5 switches 10 Gbps
+   - Agregación (7 nodos): 7 switches 10 Gbps
    - Acceso (campo): 35-45 switches 1 Gbps PoE
 4. **Sistema de Radio Troncalizado:** 3-4 bases para emergencias
-5. **Telefonía IP (VoIP):** 87 postes SOS + 60 teléfonos internos
+5. **Telefonía IP (VoIP):** 88 postes SOS + 60 teléfonos internos
 6. **Enlaces de Respaldo:** Microondas, 4G/5G
-7. **Sistema de Gestión de Red (NMS):** Monitoreo SNMP centralizado en CCO
+7. **Sistema de Gestión de Red (NMS):** Monitoreo SNMP centralizado en CCO La Lizama
 
 **Ancho de banda total:** 1 Gbps (operación normal), dimensionado para 10 Gbps
 
@@ -60,8 +60,8 @@ Esta arquitectura cubre el **sistema completo de telecomunicaciones** a lo largo
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│        TOPOLOGÍA DE ANILLO REDUNDANTE - 285 km Fibra Óptica         │
-│                   (5 Nodos Principales del Anillo)                   │
+│        TOPOLOGÍA DE ANILLO REDUNDANTE - 283 km Fibra Óptica         │
+│                   (7 Nodos Principales del Anillo)                   │
 │                                                                      │
 │  PK 0 ────────► PK 9.2 ────────► PK 130 ────────► PK 180 ────────► PK 259.6
 │ (Inicio)      (Peaje Zambito)   (CCO Núcleo)   (Pto Berrío)    (Fin)
@@ -91,32 +91,32 @@ Esta arquitectura cubre el **sistema completo de telecomunicaciones** a lo largo
 └──────────────────────────────────────────────────────────────────────┘
 
 EQUIPOS CONECTADOS AL ANILLO:
-├─ ITS: 10+ equipos distribuidos (CCTV, PMV, WIM, SOS, Meteo, Radares, **Detectores de gálibo: 8 confirmados / 25 estimados**)
+├─ ITS: 10+ equipos distribuidos (CCTV, PMV, WIM, SOS, Meteo, Radares, **Detectores de gálibo: 8 confirmados**)
 ├─ Peajes: 2 estaciones (Zambito PK 9.2, Aguas Negras PK 80)
 ├─ **Áreas de Servicio: 2** - INTEGRADAS a peajes (NO son nodos independientes)
 │  └─► Conectadas al switch del peaje con cable UTP (50-200m)
-├─ CCO: Núcleo central de red (switches core 4× 10 Gbps)
+├─ CCO: Núcleo central de red (switches core 4× 10 Gbps) - **Ubicado en La Lizama PK 4+300**
 ├─ Emergencias: Bases operativas (2 ubicaciones en áreas de servicio)
 ├─ **Radio Comunicaciones: OPCIONAL** - Sujeto a validación de cobertura celular 4G/5G
 └─ Gestión: Oficinas administrativas (CCO)
 
 TOTAL SWITCHES:
 - Core (CCO): 4 switches 10 Gbps
-- Agregación (anillo): 5 switches 10 Gbps (PK 0, 9.2, 130, 180, 259.6)
+- Agregación (anillo): 7 switches 10 Gbps (PK 0, 9.2, 130, 180, 259.6 + 2 adicionales)
 - Acceso (campo ITS): 35-45 switches 1 Gbps PoE
-TOTAL: 44-54 switches (vs. 32 anteriormente erróneo que incluía switches "de áreas")
+TOTAL: 46-56 switches (vs. 32 anteriormente erróneo que incluía switches "de áreas")
 ```
 
 ### 2.2 Descripción de Componentes
 
 | Componente | Función | Especificación Preliminar | Cantidad |
 |:-----------|:--------|:--------------------------|:---------|
-| **Fibra Óptica Monomodo** | Backbone de comunicaciones | G.652.D, 12-24 hilos, SM 9/125 μm | 285 km |
-| **Ductos PVC/HDPE** | Protección de fibra | 4-6 ductos Ø110mm, subterráneo | 285 km |
+| **Fibra Óptica Monomodo** | Backbone de comunicaciones | G.652.D, 12-24 hilos, SM 9/125 μm | 283 km |
+| **Ductos PVC/HDPE** | Protección de fibra | 4-6 ductos Ø110mm, subterráneo | 283 km |
 | **Cámaras de Inspección** | Acceso a ductos | Concreto prefabricado, 1x1m | 500-800 |
 | **ODF (Optical Distribution Frame)** | Terminación de fibra | 12-48 puertos por ODF | 30-50 |
 | **Switches de Campo (Acceso)** | Conexión de equipos ITS | Gigabit PoE, 24 puertos, L2/L3 | 50-80 |
-| **Switches de Agregación** | Agregación de tráfico | 10 Gbps, L3, redundante | 10-15 |
+| **Switches de Agregación** | Agregación de tráfico | 10 Gbps, L3, redundante | 7-10 |
 | **Switches Core (CCO)** | Núcleo de red | 10 Gbps, stacking, 48 puertos | 4-6 |
 | **Routers WAN** | Conectividad Internet/ANI | Gigabit, redundante | 2-4 |
 | **Radio Bases** | Comunicaciones de voz | UHF/VHF, troncalizado | 2-4 |
@@ -141,7 +141,7 @@ TOTAL: 44-54 switches (vs. 32 anteriormente erróneo que incluía switches "de �
 
 ```
                     ANILLO PRINCIPAL FIBRA ÓPTICA
-                          (285 km, 24 hilos)
+                          (283 km, 24 hilos)
                                   
     PK 0 ────────► PK 9.2 ────────► PK 130 ────────► PK 180 ────────► PK 259.6
   (Inicio)     (Peaje Zambito)    (CCO Núcleo)    (Pto Berrío)      (Fin)
@@ -156,6 +156,8 @@ TOTAL: 44-54 switches (vs. 32 anteriormente erróneo que incluía switches "de �
 
 
 ⭐ DETALLE DEL NODO PK 9.2 (PEAJE ZAMBITO + ÁREA DE SERVICIO):
+
+**NOTA:** CCO ubicado en La Lizama PK 4+300 (RN 4513) - Conexión al anillo principal
 
 ┌─────────────────────────────────────────────────────────────────────┐
 │                      COMPLEJO INTEGRADO                             │
@@ -686,6 +688,17 @@ Actualización: Integración de **detectores de gálibo (láser) – estimación
 |:--------|:------|:------------|
 | v1.0 | 17/10/2025 | Arquitectura conceptual inicial de telecomunicaciones |
 | **v1.1** | **20/10/2025** | **Rediseño arquitectónico:** Áreas integradas a peajes (no independientes). Topología anillo rediseñada (5 nodos), switches optimizados (48 vs 60). CAPEX -$189K |
+| **v1.2** | **22/10/2025** | **Revisión con información oficial:** Longitudes actualizadas (283 km), CCO La Lizama PK 4+300, topología anillo 7 nodos, cantidades validadas |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales = 283 km total
+- Rutas confirmadas: RN 4510, RN 4511, RN 4513 (conexión CCO)
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Topología anillo actualizada: 7 nodos principales
+- Cantidades validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

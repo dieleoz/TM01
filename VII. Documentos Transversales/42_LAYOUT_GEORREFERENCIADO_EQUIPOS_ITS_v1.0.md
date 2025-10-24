@@ -1,10 +1,10 @@
 # LAYOUT GEORREFERENCIADO DE EQUIPOS ITS
 ## APP Puerto Salgar - Barrancabermeja
 
-**Versión:** 1.0 - DRAFT INICIAL  
-**Fecha:** 21 de octubre de 2025  
-**Estado:** 🔄 En Validación con Google Earth  
-**Base:** Diseño preliminar 18/09/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Fecha:** 22 de octubre de 2025  
+**Estado:** ✅ Validado con Información Oficial del Proyecto  
+**Base:** Diseño preliminar 18/09/2025 + Información oficial validada  
 
 ---
 
@@ -172,7 +172,7 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 | Sistema | Cantidad Real | Cantidad Contractual | Estado | Separación Promedio |
 |:--------|:--------------|:---------------------|:-------|:--------------------|
-| **Postes SOS** | 87 | 87 (≤3 km) | ✅ Cumple | 2.84 km |
+| **Postes SOS** | 88 | 88 (≤3 km) | ✅ Cumple | 2.84 km |
 | **PMV** | 28 | 28 (2 por peaje + cada 20 km) | ✅ Cumple | 18.96 km |
 | **CCTV** | 30 | 30 (puntos críticos) | ✅ Cumple (ajustado) | Variable |
 | **ETD/RADAR** | 16 | 16 (14 ETD + 2 Radares) | ✅ Cumple | Variable |
@@ -183,12 +183,12 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 | Ruta | Longitud (km) | Postes SOS | PMV | CCTV | RADAR-ANPR | ETD puras | Gálibos |
 |:-----|:--------------|:-----------|:----|:-----|:-----------|:----------|:--------|
-| **RN 4510** | ~134 km | 41 | 10 | 9 | 1 | 5 | 2 |
-| **RN 4511** | ~149 km | 44 | 16 | 17 | 1 | 8 | 5 |
-| **RN 4513** | ~10 km | 2 | 2 | 4 | 0 | 1 | 1 |
-| **TOTAL** | **~293 km** | **87** | **28** | **30** | **2** | **14** | **8** |
+| **RN 4510** | ~134 km | 33 | 10 | 9 | 1 | 5 | 2 |
+| **RN 4511** | ~149 km | 51 | 16 | 17 | 1 | 8 | 5 |
+| **RN 4513** | ~10 km | 4 | 2 | 4 | 0 | 1 | 1 |
+| **TOTAL** | **~293 km** | **88** | **28** | **30** | **2** | **14** | **8** |
 
-**Nota:** Total ETD/RADAR = 16 equipos (2 RADAR-ANPR + 14 ETD puras = 2 SAST + 13 UFs + 1 stock)
+**Nota:** Total ETD/RADAR = 16 equipos (2 RADAR-ANPR + 14 ETD puras = 2 SAST + 13 UFs + 1 stock). **Total SOS = 88 unidades contractuales** (incluyendo SOS #88 en RN 4513 PKR 9+000).
 
 ---
 
@@ -650,7 +650,7 @@ Esta tabla muestra cómo se integran:
 | 170 | 9+800 | 11 | Sur | CCTV | - | |
 
 **Subtotal RN 4513:**
-- **Postes SOS:** 4 unidades (85-88) - *uno provisional*
+- **Postes SOS:** 4 unidades (85-88) - **TODOS CONTRACTUALES**
 - **PMV:** 2 unidades
 - **CCTV:** 4 unidades
 - **RADAR-ANPR:** 0 unidades
@@ -929,7 +929,7 @@ Agregar **4 ETD puras** (sin cámara) en UFs faltantes, aprovechando infraestruc
 
 | Columna | Descripción | Uso |
 |:--------|:------------|:----|
-| **PKD (Diseño)** | Progresivo kilométrico lineal del anillo de fibra óptica (desde CCO) | Para diseño de red y distribución L2 |
+| **PKD (Diseño)** | Progresivo kilométrico lineal continuo desde PK 0 hasta último PK del proyecto (analogía a vía única) | Para diseño de red y distribución L2 |
 | **PKR (Real)** | Progresivo kilométrico real según planos oficiales de cada ruta | Para ubicación física y validación |
 | **Ruta** | Ruta Nacional según planos oficiales (RN 4510, RN 4511, RN 4513) | Para identificación geográfica |
 | **Sub-Anillo** | Asignación según metodología punto medio (SA1-A, SA1-B, etc.) | Para arquitectura de red |
@@ -1054,7 +1054,16 @@ Agregar **4 ETD puras** (sin cámara) en UFs faltantes, aprovechando infraestruc
 
 ---
 
-**Última actualización:** 21 de octubre de 2025 (19:00)  
-**Próxima revisión:** 25 de octubre de 2025 (validación Google Earth)  
+**Última actualización:** 22 de octubre de 2025 (22:30)  
+**Próxima revisión:** Validación con Interventoría  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Estado:** 🔄 Draft en validación + Tabla integración L2
+**Estado:** ✅ Validado con Información Oficial del Proyecto
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Cantidades de equipos ITS validadas contra información oficial
+- Metodología PKD lineal aplicada
+- Layout georreferenciado actualizado con contexto oficial

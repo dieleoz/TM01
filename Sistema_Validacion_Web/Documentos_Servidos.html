@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos Servidos - TM01 Troncal Magdalena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .serving-process {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 4px solid #6f42c1;
+        }
+        
+        .serving-process h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .process-step {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .process-step .icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .process-step h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .process-step p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .documents-section {
+            margin-bottom: 40px;
+        }
+        
+        .documents-section h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .document-category {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .document-category h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+        
+        .document-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .document-item {
+            background: white;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 3px solid #28a745;
+        }
+        
+        .document-item h4 {
+            color: #1e3c72;
+            margin-bottom: 8px;
+        }
+        
+        .document-item p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .document-status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .document-status.ready {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .document-status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .document-status.in-progress {
+            background: #cce5ff;
+            color: #004085;
+        }
+        
+        .download-section {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .download-section h2 {
+            color: #1976d2;
+            margin-bottom: 20px;
+        }
+        
+        .download-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .download-btn {
+            background: #2196f3;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #1976d2;
+        }
+        
+        .download-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .back-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        
+        .back-button:hover {
+            background: #5a6fd8;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍽️ Documentos Servidos</h1>
+            <p>Del Horno al Plato - TM01 Troncal Magdalena</p>
+        </div>
+        
+        <div class="content">
+            <div class="serving-process">
+                <h2>🔄 Proceso de Servir Documentos</h2>
+                <p style="font-size: 1.1rem; color: #6c757d; margin-bottom: 20px;">
+                    Consolida la COCINA (carpetas I-VI) y sirve documentos finales para cliente. 
+                    Genera Word/HTML con todas las DTs aplicadas.
+                </p>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="icon">📚</div>
+                        <h3>1. Consolidar COCINA</h3>
+                        <p>Recopila todos los documentos de las carpetas I-VI con cambios aplicados</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="icon">📝</div>
+                        <h3>2. Aplicar DTs</h3>
+                        <p>Integra todas las Documentos Técnicos generados durante la validación</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="icon">📄</div>
+                        <h3>3. Generar Word</h3>
+                        <p>Crea documentos .docx para entrega formal al cliente</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="icon">🌐</div>
+                        <h3>4. Generar HTML</h3>
+                        <p>Crea versiones HTML para visualización e impresión</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="icon">📋</div>
+                        <h3>5. Crear Índice</h3>
+                        <p>Genera índice interactivo con todas las DTs aplicadas</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="icon">✅</div>
+                        <h3>6. Listo para Entregar</h3>
+                        <p>Documentos finales listos para stakeholders</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="documents-section">
+                <h2>📋 Documentos por Categoría</h2>
+                
+                <div class="document-category">
+                    <h3>📊 Documentos Técnicos Principales</h3>
+                    <div class="document-list">
+                        <div class="document-item">
+                            <h4>WBS Completa TM01 v4.0</h4>
+                            <p>Estructura de desglose de trabajo completa con 124 ítems</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Layout Maestro Georreferenciado</h4>
+                            <p>Ubicación de 2,182 equipos e infraestructura</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Presupuesto ITS Puro</h4>
+                            <p>Presupuesto detallado de $7.79M USD</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Matriz de Riesgos</h4>
+                            <p>17 riesgos identificados con estrategias de mitigación</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-category">
+                    <h3>🏗️ Especificaciones Técnicas</h3>
+                    <div class="document-list">
+                        <div class="document-item">
+                            <h4>T04 - Especificaciones ITS</h4>
+                            <p>Especificaciones técnicas para sistemas ITS</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>T05 - Ingeniería de Detalle</h4>
+                            <p>Detalles de ingeniería para implementación</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>T03 - Arquitectura Conceptual</h4>
+                            <p>Arquitectura conceptual de sistemas ITS</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>T03 - Arquitectura Telecomunicaciones</h3>
+                            <p>Arquitectura de red de telecomunicaciones</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-category">
+                    <h3>📋 Documentos Contractuales</h3>
+                    <div class="document-list">
+                        <div class="document-item">
+                            <h4>Parte General del Contrato</h4>
+                            <p>Cláusulas generales del contrato EPC</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Parte Especial del Contrato</h4>
+                            <p>Especificaciones particulares del proyecto</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Apéndices Técnicos (AT1-AT4)</h4>
+                            <p>Apéndices técnicos con especificaciones detalladas</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Matriz de Cumplimiento</h4>
+                            <p>Validación contractual vs técnico</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="document-category">
+                    <h3>📊 Documentos de Gestión</h3>
+                    <div class="document-list">
+                        <div class="document-item">
+                            <h4>Cronograma de Trabajo</h4>
+                            <p>Planificación de 60 meses con 12 hitos críticos</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Reporte Gerencial</h4>
+                            <p>Análisis ejecutivo de alto nivel</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Lecciones Aprendidas</h4>
+                            <p>Metodología y errores identificados</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                        <div class="document-item">
+                            <h4>Índice Maestro del Proyecto</h4>
+                            <p>Índice completo de todos los documentos</p>
+                            <span class="document-status ready">✅ Listo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-section">
+                <h2>📥 Descargar Documentos</h2>
+                <p style="color: #6c757d; margin-bottom: 20px;">
+                    Descargue los documentos servidos en formato Word (.docx) o HTML para visualización.
+                </p>
+                
+                <div class="download-buttons">
+                    <button class="download-btn" onclick="downloadDocument('wbs')">
+                        📊 WBS Completa
+                    </button>
+                    <button class="download-btn" onclick="downloadDocument('layout')">
+                        🗺️ Layout Maestro
+                    </button>
+                    <button class="download-btn" onclick="downloadDocument('presupuesto')">
+                        💰 Presupuesto ITS
+                    </button>
+                    <button class="download-btn" onclick="downloadDocument('especificaciones')">
+                        📋 Especificaciones
+                    </button>
+                    <button class="download-btn" onclick="downloadDocument('contractuales')">
+                        📄 Documentos Contractuales
+                    </button>
+                    <button class="download-btn" onclick="downloadDocument('gestion')">
+                        📊 Documentos de Gestión
+                    </button>
+                    <button class="download-btn" onclick="downloadDocument('completo')">
+                        📚 Paquete Completo
+                    </button>
+                    <button class="download-btn" onclick="downloadDocument('indice')">
+                        📋 Índice Interactivo
+                    </button>
+                </div>
+            </div>
+            
+            <button class="back-button" onclick="history.back()">← Volver</button>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 TM01 Troncal Magdalena | Sistema de Validación ITS</p>
+            <p>Proyecto APP Puerto Salgar - Barrancabermeja</p>
+        </div>
+    </div>
+    
+    <script>
+        function downloadDocument(type) {
+            // Simular descarga de documento
+            const messages = {
+                'wbs': 'Descargando WBS Completa TM01 v4.0...',
+                'layout': 'Descargando Layout Maestro Georreferenciado...',
+                'presupuesto': 'Descargando Presupuesto ITS Puro...',
+                'especificaciones': 'Descargando Especificaciones Técnicas...',
+                'contractuales': 'Descargando Documentos Contractuales...',
+                'gestion': 'Descargando Documentos de Gestión...',
+                'completo': 'Descargando Paquete Completo...',
+                'indice': 'Descargando Índice Interactivo...'
+            };
+            
+            alert(messages[type] || 'Descargando documento...');
+            
+            // En una implementación real, aquí se generaría y descargaría el archivo
+            console.log(`Descargando documento: ${type}`);
+        }
+    </script>
+</body>
+</html>

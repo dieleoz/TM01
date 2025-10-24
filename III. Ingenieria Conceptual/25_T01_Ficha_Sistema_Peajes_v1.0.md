@@ -4,7 +4,7 @@
 **Fecha:** 16/10/2025  
 **Sistema:** Sistemas de Peaje y Recaudo  
 **Responsable:** Ingeniero de Sistemas de Peaje  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -48,14 +48,18 @@ El Sistema de Peajes tiene como objetivo **controlar el acceso, cobrar las tarif
 - ✅ Sistema de Información a Usuarios
 
 **Cobertura geográfica:**
+- Longitud Principal: 259.6 km (RN 4510 + RN 4511)
+- Longitud Total: ~293 km (incluyendo RN 4513 conexión CCO)
+- Rutas: RN 4510 (Honda-Río Ermitaño), RN 4511 (Río Ermitaño-La Lizama), RN 4513 (Conexión CCO)
 - Estaciones de Peaje: **2 estaciones existentes** (Zambito + Aguas Negras)
-- Corredor: 259.6 km (Puerto Salgar - San Roque)
 - Ubicaciones:
   - **Peaje Zambito:** PK 9+200 RN 4511 (Bidireccional)
   - **Peaje Aguas Negras:** PK 80+000 RN 4511 (Bidireccional, reubicación desde PK 83+900)
+- Departamentos: Cundinamarca, Boyacá, Santander
+- Instalación en: Estaciones de Peaje + Áreas de Servicio + CCO La Lizama PK 4+300
 
 **Integración con:**
-- **CCO:** Transmisión en tiempo real de recaudos y tráfico
+- **CCO:** Transmisión en tiempo real de recaudos y tráfico al CCO La Lizama PK 4+300
 - **ITS:** Correlación tráfico vs. recaudo
 - **ANI:** Entrega de información financiera y operacional
 - **Sistema Nacional de Peajes:** Interoperabilidad TAG
@@ -391,15 +395,25 @@ El Concesionario deberá:
 |:-------:|:------|:------|:------------|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Ficha de Sistema Peajes creada con Template T01 |
 | **v1.1** | 16/10/2025 | Administrador Contractual EPC | ✅ **ACTUALIZADO con AT1:** 2 estaciones (no 8-12). CAPEX -64.5%, OPEX -68.8% |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | ✅ **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, CCO La Lizama PK 4+300 |
 
 ---
 
-**Versión:** 1.1  
-**Estado:** ✅ Ficha Actualizada con Datos Reales  
-**Fecha:** 16/10/2025  
+**Versión:** 1.2  
+**Estado:** ✅ Ficha Actualizada con Información Oficial  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas de Peaje  
-**Última actualización:** Cantidades reales desde AT1 y Parte Especial 3.6  
+**Última actualización:** Revisión con información oficial del proyecto  
 **Próxima actualización:** Tras estudios de tráfico (TPDA por estación)
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Integración CCO actualizada con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

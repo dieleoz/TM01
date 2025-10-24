@@ -4,9 +4,16 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Gálibos - Sistema de Control de Altura  
 **Responsable:** Ing. Civil / Ing. ITS  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Referencia Validación:** 36_VALIDACION_CONTRACTUAL_GALIBOS_v1.0  
-**Referencia Layout:** 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - 25 unidades estimadas | Ing. Civil |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** 8 unidades confirmadas | Ing. Civil |
 
 ---
 
@@ -15,8 +22,8 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Gálibos - Detección de Altura |
-| **Cantidad** | **25 unidades** (8 confirmadas + 17 estimadas) |
-| **CAPEX** | **USD $875,000** (35,000 USD/unidad) |
+| **Cantidad** | **8 unidades** |
+| **CAPEX** | **USD $280,000** (35,000 USD/unidad) |
 | **Tecnología** | **Óptica/Láser** (NO mecánica) |
 
 ---
@@ -107,12 +114,18 @@
 
 | Ítem | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:---------|:-------------------|:------------|
-| Gálibo óptico completo | 25 | $25,000 | $625,000 |
-| PMV local pequeño | 25 | $5,000 | $125,000 |
-| Instalación | 25 | $3,000 | $75,000 |
-| Otros | - | - | $50,000 |
-| **TOTAL** | - | - | **$875,000** |
+| Gálibo óptico completo | 8 | $25,000 | $200,000 |
+| PMV local pequeño | 8 | $5,000 | $40,000 |
+| Instalación | 8 | $3,000 | $24,000 |
+| Otros | - | - | $16,000 |
+| **TOTAL** | - | - | **$280,000** |
 
 ---
 
-**FIN T04 GÁLIBOS v1.0**
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad actualizada: 8 unidades
+- CAPEX actualizado: USD $280,000
+- Tecnología confirmada: Óptica/Láser
+- Metodología PKD lineal aplicada

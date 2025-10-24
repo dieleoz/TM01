@@ -4,8 +4,15 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Sistema de Peajes Electrónicos  
 **Responsable:** Ing. ITS / Ing. Electrónico  
-**Versión:** 1.0  
-**Referencia T03:** T03_Arquitectura_Conceptual_Peajes_v1.1  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - 2 estaciones de peaje | Ing. ITS |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** PK Aguas Negras corregido | Ing. ITS |
 
 ---
 
@@ -26,7 +33,7 @@
 | Ubicación | PK | Carriles | Tipo |
 |:----------|:---|:---------|:------|
 | **Peaje Zambito** | RN 4511 PK 9+200 | 4 bidireccionales | Principal |
-| **Peaje Aguas Negras** | RN 4511 PK 81+800 | 4 bidireccionales | Principal |
+| **Peaje Aguas Negras** | RN 4511 PK 80+000 | 4 bidireccionales | Principal |
 
 ### 2.2 Equipos por Estación
 
@@ -135,4 +142,10 @@
 
 ---
 
-**FIN T04 PEAJES v1.0**
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 2 estaciones de peaje
+- Ubicaciones: Zambito PK 9+200, Aguas Negras PK 80+000
+- CAPEX mantenido: USD $2,400,000
+- Metodología PKD lineal aplicada

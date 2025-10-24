@@ -4,8 +4,15 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Iluminación Vial LED  
 **Responsable:** Ing. Eléctrico / Ing. Iluminación  
-**Versión:** 1.0  
-**Referencia T03:** T03_Arquitectura_Conceptual_Iluminacion_v1.1  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - 572 luminarias | Ing. Eléctrico |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** 410 luminarias | Ing. Eléctrico |
 
 ---
 
@@ -14,7 +21,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Iluminación Vial LED |
-| **Cantidad** | **572 luminarias** (410 viales + 162 peajes/áreas) |
+| **Cantidad** | **410 luminarias** |
 | **CAPEX** | **USD $1,339,240** |
 
 ---
@@ -26,9 +33,7 @@
 | **Vial 150W** | 220 | 150 W | Intersecciones, curvas |
 | **Vial 100W** | 140 | 100 W | Tramos rectos |
 | **Vial 50W** | 50 | 50 W | Accesos |
-| **Peajes/Áreas 150W** | 122 | 150 W | Peajes, áreas servicio |
-| **Peajes/Áreas 100W** | 40 | 100 W | Estacionamientos |
-| **TOTAL** | **572** | - | - |
+| **TOTAL** | **410** | - | - |
 
 ---
 
@@ -105,4 +110,10 @@
 
 ---
 
-**FIN T04 ILUMINACIÓN v1.0**
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad actualizada: 410 luminarias
+- Distribución simplificada: Solo luminarias viales
+- CAPEX mantenido: USD $1,339,240
+- Metodología PKD lineal aplicada

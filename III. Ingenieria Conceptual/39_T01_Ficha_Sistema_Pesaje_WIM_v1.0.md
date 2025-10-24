@@ -42,7 +42,7 @@ Garantizar el **control efectivo del peso de vehículos de carga** que circulan 
     - 2 Sistemas WIM dinámicos (1 por sentido)
     - 2 Básculas Estáticas de Precisión 100 ton (1 por sentido)
   - **Básculas Dinámicas en Peajes** (todos los carriles de cobro - AT2 3.3.4.2)
-  - **Software de Gestión de Pesaje** (integrado con CCO)
+  - **Software de Gestión de Pesaje** (integrado con CCO La Lizama PK 4+300)
   - **Sistemas de Detección de Ejes** y clasificación vehicular
   - **Área de Administración** (oficinas, sanitarios, estacionamiento infractores)
   - **Sistema de Impresión Automática** de comprobantes de peso
@@ -50,8 +50,8 @@ Garantizar el **control efectivo del peso de vehículos de carga** que circulan 
   
 - **Ubicación contractual:** PR4+0100 RN 4513 (AT1 Cap. 3, pág. 46-47, Adenda 4)
 - **Configuración:** Estación bidireccional (ambos sentidos desde 1 punto de control)
-- **Cobertura geográfica:** 259.6 km, control permanente en estación fija + móviles eventuales
-- **Integración con:** CCO (transmisión datos tiempo real), Peajes (pesaje dinámico), Policía (sanciones)
+- **Cobertura geográfica:** 259.6 km principales + 33.4 km adicionales, control permanente en estación fija + móviles eventuales
+- **Integración con:** CCO La Lizama PK 4+300 (transmisión datos tiempo real), Peajes (pesaje dinámico), Policía (sanciones)
 
 ---
 
@@ -122,22 +122,22 @@ Garantizar el **control efectivo del peso de vehículos de carga** que circulan 
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:-----------------|:----------|:--------|
-| **Estaciones de Pesaje Fijas** | 2-3 estaciones | Distribuidas en el corredor (por definir PKs) | Control de sobrepeso en ambos sentidos |
-| **Carriles de Pesaje por Estación** | 2 carriles (1 por sentido) | Cada estación | Carril exclusivo para pesaje |
-| **Área de Administración** | 1 por estación | Cada estación | Oficinas, sanitarios, control |
-| **Estacionamiento Infractores** | 1 por estación (500-800 m²) | Cada estación | Parqueo para vehículos con sobrepeso |
-| **Zona de Servicio Operacional** | 1 por estación | Cada estación | Área técnica, equipos, almacenamiento |
+| **Estaciones de Pesaje Fijas** | **1 estación bidireccional** | PR4+0100 RN 4513 | Control de sobrepeso en ambos sentidos |
+| **Carriles de Pesaje por Estación** | 2 carriles (1 por sentido) | PR4+0100 RN 4513 | Carril exclusivo para pesaje |
+| **Área de Administración** | 1 por estación | PR4+0100 RN 4513 | Oficinas, sanitarios, control |
+| **Estacionamiento Infractores** | 1 por estación (500-800 m²) | PR4+0100 RN 4513 | Parqueo para vehículos con sobrepeso |
+| **Zona de Servicio Operacional** | 1 por estación | PR4+0100 RN 4513 | Área técnica, equipos, almacenamiento |
 
 ### 4.2 Básculas y Sistemas de Pesaje
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:-----------------|:----------|:--------|
-| **Básculas Dinámicas WIM (Pre-selección)** | 4-6 básculas | Estaciones fijas (1-2 por estación) | Pesaje sin detención, detección de sobrepeso |
-| **Básculas Estáticas de Precisión (100 ton)** | 4-6 básculas | Estaciones fijas (1-2 por estación) | Pesaje de precisión de vehículos sospechosos |
+| **Básculas Dinámicas WIM (Pre-selección)** | **2 básculas** | PR4+0100 RN 4513 (1 por sentido) | Pesaje sin detención, detección de sobrepeso |
+| **Básculas Estáticas de Precisión (100 ton)** | **2 básculas** | PR4+0100 RN 4513 (1 por sentido) | Pesaje de precisión de vehículos sospechosos |
 | **Básculas Dinámicas en Peajes** | 12-18 básculas | Todos los carriles de peaje (Zambito + Aguas Negras) | Pesaje dinámico en plazas de peaje |
 | **Básculas Móviles (Portátiles)** | 2-3 básculas | Operativos móviles en puntos variables | Operativos temporales de control |
-| **Sensores de Ejes (WIM)** | 8-12 sensores | Básculas dinámicas | Detección de ejes y clasificación vehicular |
-| **Sistemas de Detección de Loops Inductivos** | 8-12 loops | Básculas dinámicas y estáticas | Detección de presencia vehicular |
+| **Sensores de Ejes (WIM)** | 4-6 sensores | Básculas dinámicas | Detección de ejes y clasificación vehicular |
+| **Sistemas de Detección de Loops Inductivos** | 4-6 loops | Básculas dinámicas y estáticas | Detección de presencia vehicular |
 
 **Especificaciones técnicas:**
 - **Básculas Estáticas:** Capacidad 100 ton, Error máximo ≤1%, Tipo plataforma
@@ -148,38 +148,38 @@ Garantizar el **control efectivo del peso de vehículos de carga** que circulan 
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:-----------------|:----------|:--------|
-| **Software de Gestión de Pesaje** | 1 licencia central + módulos locales | CCO + Estaciones | Gestión de datos, reportes, estadísticas |
-| **Computadores de Operación** | 6-9 equipos | Estaciones fijas (2-3 por estación) | Registro de pesajes, emisión de comprobantes |
-| **Impresoras de Comprobantes** | 4-6 impresoras | Básculas estáticas | Impresión automática de peso y datos |
-| **Cámaras de Reconocimiento de Placas (OCR)** | 8-12 cámaras | Estaciones fijas + peajes | Identificación de vehículos |
-| **Cámaras de Ejes** | 8-12 cámaras | Básculas dinámicas y estáticas | Verificación de número de ejes |
-| **Cámaras de Vigilancia** | 12-18 cámaras | Estaciones fijas + peajes | Seguridad y evidencia de infracciones |
-| **Sensores de Clasificación Vehicular** | 8-12 sensores | Básculas dinámicas | Clasificación automática por categoría |
-| **Sistema de Alarma de Sobrepeso** | 4-6 sistemas | Estaciones fijas | Alerta visual/sonora ante sobrepeso |
+| **Software de Gestión de Pesaje** | 1 licencia central + módulos locales | CCO La Lizama PK 4+300 + Estación | Gestión de datos, reportes, estadísticas |
+| **Computadores de Operación** | 2-3 equipos | Estación PR4+0100 RN 4513 | Registro de pesajes, emisión de comprobantes |
+| **Impresoras de Comprobantes** | 2 impresoras | Básculas estáticas | Impresión automática de peso y datos |
+| **Cámaras de Reconocimiento de Placas (OCR)** | 4-6 cámaras | Estación + peajes | Identificación de vehículos |
+| **Cámaras de Ejes** | 4-6 cámaras | Básculas dinámicas y estáticas | Verificación de número de ejes |
+| **Cámaras de Vigilancia** | 6-9 cámaras | Estación + peajes | Seguridad y evidencia de infracciones |
+| **Sensores de Clasificación Vehicular** | 4-6 sensores | Básculas dinámicas | Clasificación automática por categoría |
+| **Sistema de Alarma de Sobrepeso** | 2 sistemas | Estación bidireccional | Alerta visual/sonora ante sobrepeso |
 
 ### 4.4 Edificaciones e Infraestructura
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:-----------------|:----------|:--------|
-| **Oficinas de Administración** | 3 edificios (60-80 m² c/u) | Estaciones fijas | Gestión operativa, archivo |
-| **Sanitarios para Personal** | 3 módulos | Estaciones fijas | Servicios higiénicos |
-| **Estacionamiento de Infractores** | 3 áreas (500-800 m² c/u) | Estaciones fijas | Parqueo obligatorio para vehículos con sobrepeso |
-| **Casetas de Control** | 4-6 casetas | Estaciones fijas (1-2 por estación) | Operador de báscula |
-| **Techos/Cubiertas** | 2-3 cubiertas | Estaciones fijas | Protección de básculas y personal |
-| **Señalización Vertical** | 30-40 señales | Accesos a estaciones, vía principal | Información y advertencia de pesaje |
-| **Demarcación Horizontal** | 2-3 km | Estaciones fijas | Carriles de pesaje, estacionamiento |
-| **Iluminación Nocturna** | 3 sistemas LED | Estaciones fijas | Operación 24/7 |
-| **Cercado Perimetral** | 2-3 km | Estaciones fijas | Seguridad perimetral |
+| **Oficinas de Administración** | 1 edificio (60-80 m²) | Estación PR4+0100 RN 4513 | Gestión operativa, archivo |
+| **Sanitarios para Personal** | 1 módulo | Estación PR4+0100 RN 4513 | Servicios higiénicos |
+| **Estacionamiento de Infractores** | 1 área (500-800 m²) | Estación PR4+0100 RN 4513 | Parqueo obligatorio para vehículos con sobrepeso |
+| **Casetas de Control** | 2 casetas | Estación PR4+0100 RN 4513 (1 por sentido) | Operador de báscula |
+| **Techos/Cubiertas** | 1 cubierta | Estación PR4+0100 RN 4513 | Protección de básculas y personal |
+| **Señalización Vertical** | 10-15 señales | Accesos a estación, vía principal | Información y advertencia de pesaje |
+| **Demarcación Horizontal** | 1 km | Estación PR4+0100 RN 4513 | Carriles de pesaje, estacionamiento |
+| **Iluminación Nocturna** | 1 sistema LED | Estación PR4+0100 RN 4513 | Operación 24/7 |
+| **Cercado Perimetral** | 1 km | Estación PR4+0100 RN 4513 | Seguridad perimetral |
 
 ### 4.5 Sistemas de Comunicación y Energía
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:-----------------|:----------|:--------|
-| **Conexión Fibra Óptica** | 3 conexiones | Estaciones fijas | Transmisión de datos a CCO |
-| **Red de Datos Local (Switch, Router)** | 6-9 equipos | Estaciones fijas + peajes | Red LAN local |
-| **UPS (15-30 kVA)** | 4-6 sistemas | Estaciones fijas + peajes | Respaldo energético |
-| **Transformador Eléctrico (50-75 kVA)** | 3 transformadores | Estaciones fijas | Alimentación eléctrica |
-| **Generador de Emergencia (30-50 kW)** | 1-2 generadores | Estaciones principales | Energía de emergencia |
+| **Conexión Fibra Óptica** | 1 conexión | Estación PR4+0100 RN 4513 | Transmisión de datos a CCO La Lizama PK 4+300 |
+| **Red de Datos Local (Switch, Router)** | 2-3 equipos | Estación + peajes | Red LAN local |
+| **UPS (15-30 kVA)** | 2 sistemas | Estación + peajes | Respaldo energético |
+| **Transformador Eléctrico (50-75 kVA)** | 1 transformador | Estación PR4+0100 RN 4513 | Alimentación eléctrica |
+| **Generador de Emergencia (30-50 kW)** | 1 generador | Estación PR4+0100 RN 4513 | Energía de emergencia |
 
 ---
 
@@ -187,7 +187,7 @@ Garantizar el **control efectivo del peso de vehículos de carga** que circulan 
 
 | Sistema Relacionado | Tipo de Interface | Protocolo/Medio | Datos Intercambiados |
 |:--------------------|:------------------|:----------------|:---------------------|
-| **CCO** | Red IP | Ethernet/Fibra Óptica | Datos de pesaje en tiempo real, sobrepesos, estadísticas, alarmas |
+| **CCO La Lizama PK 4+300** | Red IP | Ethernet/Fibra Óptica | Datos de pesaje en tiempo real, sobrepesos, estadísticas, alarmas |
 | **Peajes** | Física / Red IP | Ethernet, instalación física en carriles | Pesaje dinámico en plazas de peaje, clasificación vehicular |
 | **ITS** | Lógica | Base de Datos | Correlación tráfico/peso, clasificación vehicular, aforo de pesados |
 | **Policía de Carreteras** | Lógica / Comunicación | Radio, Teléfono, Web | Notificación de infracciones, acceso a registros, coordin
@@ -527,11 +527,20 @@ ación de operativos |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 17 de octubre de 2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Ficha de Sistema Completada + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Administrador Contractual EPC  
 **Próximo Documento:** 40_T01_Ficha_Sistema_Gestion_Ambiental_v1.0.md
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 1 estación bidireccional en PR4+0100 RN 4513
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Cantidades validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

@@ -4,7 +4,7 @@
 **Fecha:** 17/10/2025  
 **Sistema:** Atención de Emergencias y Auxilio Vial  
 **Responsable:** Gerente de Operaciones y Emergencias  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -23,7 +23,7 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 ### 1.2 Alcance
 
-Este análisis cubre el **sistema completo de emergencias** operando 24/7/365 en 259.6 km:
+Este análisis cubre el **sistema completo de emergencias** operando 24/7/365 en 259.6 km principales + 33.4 km adicionales:
 
 **Servicios incluidos:**
 1. **Atención Médica:** Ambulancias TAM con personal médico
@@ -33,6 +33,7 @@ Este análisis cubre el **sistema completo de emergencias** operando 24/7/365 en
 5. **Remoción de Derrumbes:** Maquinaria pesada
 6. **Patrullas de Inspección:** Vigilancia continua
 7. **Bases de Operación:** Mínimo 2 bases estratégicamente ubicadas
+8. **Despacho centralizado:** Desde CCO La Lizama PK 4+300
 
 ### 1.3 Definiciones y Acrónimos
 
@@ -590,14 +591,23 @@ Este análisis cubre el **sistema completo de emergencias** operando 24/7/365 en
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema de emergencias |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | ✅ **Revisión con información oficial:** Despacho CCO La Lizama PK 4+300, longitudes actualizadas |
 
 ---
 
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Estado:** ✅ Análisis de Requisitos Completado  
 **Fecha:** 17/10/2025  
 **Responsable:** Gerente de Operaciones y Emergencias  
 **Próximo documento:** T03 - Arquitectura Operacional del Sistema de Emergencias  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Despacho centralizado desde CCO La Lizama PK 4+300
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Metodología PKD lineal aplicada
 
 ---
 

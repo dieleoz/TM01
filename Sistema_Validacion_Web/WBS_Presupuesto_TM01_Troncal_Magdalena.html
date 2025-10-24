@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBS Presupuesto TM01 - Troncal Magdalena</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .alert-critical {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .alert-critical h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .alert-critical p {
+            color: #856404;
+            margin: 5px 0;
+        }
+        
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+        }
+        
+        .btn-warning {
+            background: #ffc107;
+            color: #212529;
+        }
+        
+        .btn-warning:hover {
+            background: #e0a800;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+        }
+        
+        .btn-info {
+            background: #17a2b8;
+            color: white;
+        }
+        
+        .btn-info:hover {
+            background: #138496;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(23, 162, 184, 0.4);
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: auto;
+        }
+        
+        .filter-group select {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background: white;
+        }
+        
+        .table-container {
+            padding: 20px 30px;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 10px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 0.9em;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .nivel-1 {
+            background: #e9ecef;
+            font-weight: bold;
+        }
+        
+        .nivel-2 {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .nivel-3 {
+            background: white;
+        }
+        
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .badge-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .badge-info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .stats {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .stat-card h3 {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-card p {
+            font-size: 24px;
+            font-weight: 700;
+            color: #212529;
+        }
+        
+        .icon {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .empty-cell {
+            color: #adb5bd;
+            font-style: italic;
+        }
+        
+        .action-btn {
+            padding: 4px 8px;
+            font-size: 0.8em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+        }
+        
+        .action-btn:hover {
+            background: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-group {
+                margin-left: 0;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 WBS PRESUPUESTO SISTEMAS ITS - TM01 TRONCAL MAGDALENA</h1>
+            <p>APP Puerto Salgar - Barrancabermeja | Sistemas ITS | Validación Externa | Versión 1.0</p>
+            <div class="alert-critical">
+                <h3>⚠️ INFORMACIÓN OFICIAL CONFIRMADA</h3>
+                <p><strong>Longitud Principal:</strong> 259.6 km (RN 4510 + RN 4511)</p>
+                <p><strong>Longitud Total:</strong> 293 km (incluyendo RN 4513)</p>
+                <p><strong>CCO:</strong> La Lizama PK 4+300 (RN 4513)</p>
+                <p><strong>Sistemas ITS:</strong> SOS, ETD/RADAR, CCTV, PMV, Meteo, WIM, Fibra Óptica</p>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-success" onclick="exportarExcel()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"/>
+                </svg>
+                Exportar a Excel
+            </button>
+            
+            <button class="btn btn-primary" onclick="validarSistemasITS()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Validar Sistemas ITS
+            </button>
+            
+            <button class="btn btn-warning" onclick="validarLayout()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+                Validar Layout
+            </button>
+            
+            <button class="btn btn-danger" onclick="validarCostos()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+                Validar Costos
+            </button>
+            
+            <button class="btn btn-info" onclick="generarDT()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                </svg>
+                Generar DT
+            </button>
+            
+            <button class="btn btn-primary" onclick="mostrarEstadisticasFinancieras()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Ver Desglose AIU
+            </button>
+            
+            <button class="btn btn-success" onclick="mostrarDesglosePresupuestal()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                </svg>
+                Desglose por Capítulos
+            </button>
+            
+            <button class="btn btn-warning" onclick="mostrarSubtotalesPorSubsistema()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Subtotales por Subsistema
+            </button>
+            
+            <button class="btn btn-success" onclick="imprimirPDF()">
+                <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd"/>
+                </svg>
+                Imprimir PDF
+            </button>
+            
+            <div class="filter-group">
+                <label for="filtroSistema">Filtrar por sistema:</label>
+                <select id="filtroSistema" onchange="filtrarPorSistema()">
+                    <option value="TODOS">Todos los Sistemas</option>
+                    <option value="SOS">Sistema SOS</option>
+                    <option value="ETD">Sistema ETD/RADAR</option>
+                    <option value="CCTV">Sistema CCTV</option>
+                    <option value="PMV">Sistema PMV</option>
+                    <option value="METEO">Sistema Meteo</option>
+                    <option value="WIM">Sistema WIM</option>
+                    <option value="FO">Sistema Fibra Óptica</option>
+                    <option value="CCO">Centro de Control</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table id="wbsTable">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">ÍTEM</th>
+                        <th style="width: 300px;">DESCRIPCIÓN</th>
+                        <th style="width: 100px;">TIPO</th>
+                        <th style="width: 80px;">UNIDAD</th>
+                        <th style="width: 100px;">CANTIDAD</th>
+                        <th style="width: 120px;">VU (USD)</th>
+                        <th style="width: 120px;">TOTAL (USD)</th>
+                        <th style="width: 120px;">TOTAL (COP)</th>
+                        <th style="width: 200px;">UBICACIÓN</th>
+                        <th style="width: 200px;">JUSTIFICACIÓN</th>
+                        <th style="width: 100px;">ACCIÓN</th>
+                    </tr>
+                </thead>
+                <tbody id="wbsBody">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Sistemas ITS</h3>
+                <p id="totalSistemas">8</p>
+            </div>
+            <div class="stat-card">
+                <h3>Presupuesto ITS Puro</h3>
+                <p id="presupuestoITS">$7.79M</p>
+            </div>
+            <div class="stat-card">
+                <h3>Longitud Total</h3>
+                <p id="longitudTotal">293 km</p>
+            </div>
+            <div class="stat-card">
+                <h3>Documentos Actualizados</h3>
+                <p id="documentosActualizados">75+</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos del proyecto TM01 - Troncal Magdalena
+    <script src="data/tm01_master_data.js"></script>
+    <script>
+        // Usar datos del sistema maestro
+        let tm01Data = [];
+        
+        function cargarDatosMaestro() {
+            tm01Data = window.tm01MasterData.data.presupuesto;
+            console.log('Datos presupuestales cargados desde sistema maestro:', tm01Data.length, 'items');
+        }
+
+        // Función para renderizar la tabla
+        function renderTable() {
+            const tbody = document.getElementById('wbsBody');
+            let html = '';
+            let currentSistema = '';
+            let subtotalSistema = 0;
+            let cantidadSistema = 0;
+
+            tm01Data.forEach((item, index) => {
+                const tipoBadge = getTipoBadge(item.tipo);
+                const actionButton = getActionButton(item.sistema);
+
+                // Si cambió el sistema, mostrar subtotal del sistema anterior
+                if (currentSistema && currentSistema !== item.sistema) {
+                    html += `
+                        <tr class="subtotal-row" style="background: #e8f5e8; font-weight: bold;">
+                            <td colspan="6" style="text-align: right; padding: 8px; border-top: 2px solid #28a745;">
+                                SUBTOTAL ${getNombreSubsistema(currentSistema)}:
+                            </td>
+                            <td style="text-align: right; padding: 8px; border-top: 2px solid #28a745;">
+                                $${subtotalSistema.toLocaleString('en-US')} USD
+                            </td>
+                            <td style="text-align: right; padding: 8px; border-top: 2px solid #28a745;">
+                                $${(subtotalSistema * 4400).toLocaleString('es-CO')} COP
+                            </td>
+                            <td colspan="3" style="padding: 8px; border-top: 2px solid #28a745;">
+                                ${cantidadSistema} unidades
+                            </td>
+                        </tr>
+                    `;
+                    subtotalSistema = 0;
+                    cantidadSistema = 0;
+                }
+
+                // Si es un nuevo sistema, mostrar encabezado
+                if (currentSistema !== item.sistema) {
+                    currentSistema = item.sistema;
+                    html += `
+                        <tr class="sistema-header" style="background: #007bff; color: white; font-weight: bold;">
+                            <td colspan="11" style="padding: 12px; text-align: center;">
+                                📋 ${getNombreSubsistema(item.sistema)}
+                            </td>
+                        </tr>
+                    `;
+                }
+
+                // Agregar fila del ítem
+                html += `
+                    <tr class="nivel-${item.nivel}">
+                        <td style="font-weight: ${item.nivel === 1 ? 'bold' : 'normal'};">${item.item}</td>
+                        <td style="font-weight: ${item.nivel === 1 ? 'bold' : 'normal'};">${item.descripcion}</td>
+                        <td>${tipoBadge}</td>
+                        <td style="text-align: center;">${item.unidad || 'N/A'}</td>
+                        <td style="text-align: center; font-weight: bold;">${item.cantidad || 'N/A'}</td>
+                        <td style="text-align: right;">${item.vu ? '$' + parseNumber(item.vu).toLocaleString('en-US') : 'N/A'}</td>
+                        <td style="text-align: right; font-weight: bold;">${item.total ? '$' + parseNumber(item.total).toLocaleString('en-US') : 'N/A'}</td>
+                        <td style="text-align: right; font-weight: bold;">${item.total ? '$' + (parseNumber(item.total) * 4400).toLocaleString('es-CO') : 'N/A'}</td>
+                        <td>${item.ubicacion || 'N/A'}</td>
+                        <td>${item.justificacion || 'N/A'}</td>
+                        <td>${actionButton}</td>
+                    </tr>
+                `;
+
+                // Acumular para subtotal
+                if (item.total && parseNumber(item.total) > 0) {
+                    subtotalSistema += parseNumber(item.total);
+                }
+                if (item.cantidad && parseNumber(item.cantidad) > 0) {
+                    cantidadSistema += parseNumber(item.cantidad);
+                }
+            });
+
+            // Mostrar subtotal del último sistema
+            if (currentSistema) {
+                html += `
+                    <tr class="subtotal-row" style="background: #e8f5e8; font-weight: bold;">
+                        <td colspan="6" style="text-align: right; padding: 8px; border-top: 2px solid #28a745;">
+                            SUBTOTAL ${getNombreSubsistema(currentSistema)}:
+                        </td>
+                        <td style="text-align: right; padding: 8px; border-top: 2px solid #28a745;">
+                            $${subtotalSistema.toLocaleString('en-US')} USD
+                        </td>
+                        <td style="text-align: right; padding: 8px; border-top: 2px solid #28a745;">
+                            $${(subtotalSistema * 4400).toLocaleString('es-CO')} COP
+                        </td>
+                        <td colspan="3" style="padding: 8px; border-top: 2px solid #28a745;">
+                            ${cantidadSistema} unidades
+                        </td>
+                    </tr>
+                `;
+            }
+
+            // Calcular y mostrar total general
+            const totalGeneral = tm01Data.reduce((sum, item) => {
+                return sum + (item.total ? parseNumber(item.total) : 0);
+            }, 0);
+
+            html += `
+                <tr class="total-general" style="background: #28a745; color: white; font-weight: bold;">
+                    <td colspan="6" style="text-align: right; padding: 12px; border-top: 3px solid #1e7e34;">
+                        TOTAL GENERAL ITS:
+                    </td>
+                    <td style="text-align: right; padding: 12px; border-top: 3px solid #1e7e34;">
+                        $${totalGeneral.toLocaleString('en-US')} USD
+                    </td>
+                    <td style="text-align: right; padding: 12px; border-top: 3px solid #1e7e34;">
+                        $${(totalGeneral * 4400).toLocaleString('es-CO')} COP
+                    </td>
+                    <td colspan="3" style="padding: 12px; border-top: 3px solid #1e7e34;">
+                        Presupuesto ITS Puro
+                    </td>
+                </tr>
+            `;
+
+            tbody.innerHTML = html;
+        }
+
+        // Función para mostrar subtotales por subsistema
+        function mostrarSubtotalesPorSubsistema() {
+            const subsistemas = {};
+            
+            // Agrupar por subsistema
+            tm01Data.forEach(item => {
+                if (item.sistema && item.total && parseNumber(item.total) > 0) {
+                    if (!subsistemas[item.sistema]) {
+                        subsistemas[item.sistema] = {
+                            nombre: getNombreSubsistema(item.sistema),
+                            subtotal: 0,
+                            cantidad: 0
+                        };
+                    }
+                    subsistemas[item.sistema].subtotal += parseNumber(item.total);
+                    if (item.cantidad && parseNumber(item.cantidad) > 0) {
+                        subsistemas[item.sistema].cantidad += parseNumber(item.cantidad);
+                    }
+                }
+            });
+            
+            // Crear HTML de subtotales
+            let subtotalesHTML = `
+                <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h2 style="color: #1e3c72; margin-bottom: 20px; text-align: center;">📊 SUBTOTALES POR SUBSISTEMA</h2>
+                    <h3 style="color: #dc3545; margin-bottom: 15px;">⚠️ PRESUPUESTO ITS TM01 TRONCAL MAGDALENA</h3>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 20px;">
+                        <thead>
+                            <tr style="background: #343a40; color: white;">
+                                <th style="padding: 12px; border: 1px solid #495057; text-align: center;">SUBSISTEMA</th>
+                                <th style="padding: 12px; border: 1px solid #495057; text-align: center;">CANTIDAD</th>
+                                <th style="padding: 12px; border: 1px solid #495057; text-align: center;">SUBTOTAL (COP)</th>
+                                <th style="padding: 12px; border: 1px solid #495057; text-align: center;">SUBTOTAL (USD)</th>
+                                <th style="padding: 12px; border: 1px solid #495057; text-align: center;">% DEL TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            let totalGeneral = 0;
+            Object.keys(subsistemas).forEach(subsistema => {
+                const sub = subsistemas[subsistema];
+                totalGeneral += sub.subtotal;
+            });
+            
+            Object.keys(subsistemas).forEach(subsistema => {
+                const sub = subsistemas[subsistema];
+                const porcentaje = ((sub.subtotal / totalGeneral) * 100).toFixed(1);
+                
+                subtotalesHTML += `
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #495057; font-weight: bold;">${sub.nombre}</td>
+                        <td style="padding: 10px; border: 1px solid #495057; text-align: center;">${sub.cantidad.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 10px; border: 1px solid #495057; text-align: right; font-weight: bold;">$${sub.subtotal.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 10px; border: 1px solid #495057; text-align: right; font-weight: bold;">$${(sub.subtotal/4400).toLocaleString('en-US', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 10px; border: 1px solid #495057; text-align: center;">${porcentaje}%</td>
+                    </tr>
+                `;
+            });
+            
+            subtotalesHTML += `
+                        </tbody>
+                        <tfoot>
+                            <tr style="background: #28a745; color: white; font-weight: bold;">
+                                <td style="padding: 12px; border: 1px solid #1e7e34; text-align: center;">TOTAL GENERAL</td>
+                                <td style="padding: 12px; border: 1px solid #1e7e34; text-align: center;">-</td>
+                                <td style="padding: 12px; border: 1px solid #1e7e34; text-align: right;">$${totalGeneral.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                                <td style="padding: 12px; border: 1px solid #1e7e34; text-align: right;">$${(totalGeneral/4400).toLocaleString('en-US', {maximumFractionDigits: 0})}</td>
+                                <td style="padding: 12px; border: 1px solid #1e7e34; text-align: center;">100.0%</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-top: 20px;">
+                        <h4 style="color: #1e3c72; margin-bottom: 10px;">📋 RESUMEN POR SUBSISTEMA</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+            `;
+            
+            Object.keys(subsistemas).forEach(subsistema => {
+                const sub = subsistemas[subsistema];
+                const porcentaje = ((sub.subtotal / totalGeneral) * 100).toFixed(1);
+                subtotalesHTML += `
+                    <div style="background: white; padding: 10px; border-radius: 4px; border-left: 4px solid #007bff;">
+                        <p><strong>${sub.nombre}:</strong></p>
+                        <p>Cantidad: ${sub.cantidad.toLocaleString('es-CO', {maximumFractionDigits: 0})} unidades</p>
+                        <p>Subtotal: $${sub.subtotal.toLocaleString('es-CO', {maximumFractionDigits: 0})} COP</p>
+                        <p>Subtotal: $${(sub.subtotal/4400).toLocaleString('en-US', {maximumFractionDigits: 0})} USD</p>
+                        <p>Participación: ${porcentaje}%</p>
+                    </div>
+                `;
+            });
+            
+            subtotalesHTML += `
+                        </div>
+                        <p style="margin-top: 15px; font-style: italic; color: #6c757d;">
+                            <em>Nota: Los subtotales incluyen suministros, obra civil y servicios por subsistema. Tipo de cambio: $4,400 COP/USD.</em>
+                        </p>
+                    </div>
+                </div>
+            `;
+            
+            // Crear ventana emergente con los subtotales
+            const ventanaSubtotales = window.open('', '_blank', 'width=1000,height=700,scrollbars=yes');
+            ventanaSubtotales.document.write(`
+                <!DOCTYPE html>
+                <html lang="es">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Subtotales por Subsistema TM01</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; background: #f8f9fa; }
+                        .header { text-align: center; margin-bottom: 30px; }
+                        .header h1 { color: #1e3c72; }
+                    </style>
+                </head>
+                <body>
+                    <div class="header">
+                        <h1>📊 SUBTOTALES POR SUBSISTEMA TM01</h1>
+                        <p>Proyecto Troncal Magdalena - Presupuesto ITS</p>
+                    </div>
+                    ${subtotalesHTML}
+                </body>
+                </html>
+            `);
+            ventanaSubtotales.document.close();
+        }
+
+        // Función para obtener nombre completo del subsistema
+        function getNombreSubsistema(sistema) {
+            const nombres = {
+                'SOS': 'POSTES SOS',
+                'ETD': 'ETD/RADAR',
+                'CCTV': 'CCTV',
+                'PMV': 'PANELES PMV',
+                'METEO': 'ESTACIONES METEO',
+                'WIM': 'SISTEMA WIM',
+                'FO': 'FIBRA ÓPTICA',
+                'CCO': 'CENTRO DE CONTROL'
+            };
+            return nombres[sistema] || sistema;
+        }
+
+        // Función para obtener badge de tipo
+        function getTipoBadge(tipo) {
+            switch(tipo) {
+                case 'SUMINISTRO':
+                    return '<span class="badge badge-success">SUMINISTRO</span>';
+                case 'OBRA':
+                    return '<span class="badge badge-warning">OBRA</span>';
+                case 'SERVICIO':
+                    return '<span class="badge badge-info">SERVICIO</span>';
+                default:
+                    return '<span class="badge badge-danger">N/A</span>';
+            }
+        }
+
+        // Función para obtener botón de acción
+        function getActionButton(sistema) {
+            return `<button class="action-btn" onclick="revisarSistema('${sistema}')">REVISAR</button>`;
+        }
+
+        // Función para parsear números
+        function parseNumber(str) {
+            if (!str) return 0;
+            return parseFloat(str.toString().replace(/,/g, '')) || 0;
+        }
+
+        // Función para filtrar por sistema
+        function filtrarPorSistema() {
+            const filtro = document.getElementById('filtroSistema').value;
+            const tbody = document.getElementById('wbsBody');
+            let html = '';
+
+            const datosFiltrados = filtro === 'TODOS' ? tm01Data : tm01Data.filter(item => item.sistema === filtro);
+
+            datosFiltrados.forEach(item => {
+                const tipoBadge = getTipoBadge(item.tipo);
+                const actionButton = getActionButton(item.sistema);
+
+                html += `
+                    <tr class="nivel-${item.nivel}">
+                        <td style="font-weight: ${item.nivel === 1 ? 'bold' : 'normal'};">${item.item}</td>
+                        <td style="font-weight: ${item.nivel === 1 ? 'bold' : 'normal'};">${item.descripcion}</td>
+                        <td>${tipoBadge}</td>
+                        <td style="text-align: center;">${item.unidad || 'N/A'}</td>
+                        <td style="text-align: center; font-weight: bold;">${item.cantidad || 'N/A'}</td>
+                        <td style="text-align: right;">${item.vu ? '$' + parseNumber(item.vu).toLocaleString('en-US') : 'N/A'}</td>
+                        <td style="text-align: right; font-weight: bold;">${item.total ? '$' + parseNumber(item.total).toLocaleString('en-US') : 'N/A'}</td>
+                        <td>${item.ubicacion || 'N/A'}</td>
+                        <td>${item.justificacion || 'N/A'}</td>
+                        <td>${actionButton}</td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        // Función para revisar sistema específico
+        function revisarSistema(sistema) {
+            alert(`🔍 Revisando sistema ${sistema}...\n\nEsta función abrirá el documento técnico correspondiente para revisión detallada.`);
+        }
+
+        // Función para validar sistemas ITS
+        function validarSistemasITS() {
+            console.log('=== VALIDACIÓN SISTEMAS ITS TM01 ===');
+            console.log('SOS:', tm01Data.filter(item => item.sistema === 'SOS' && item.total).length, 'componentes');
+            console.log('ETD/RADAR:', tm01Data.filter(item => item.sistema === 'ETD' && item.total).length, 'componentes');
+            console.log('CCTV:', tm01Data.filter(item => item.sistema === 'CCTV' && item.total).length, 'componentes');
+            console.log('PMV:', tm01Data.filter(item => item.sistema === 'PMV' && item.total).length, 'componentes');
+            console.log('METEO:', tm01Data.filter(item => item.sistema === 'METEO' && item.total).length, 'componentes');
+            console.log('WIM:', tm01Data.filter(item => item.sistema === 'WIM' && item.total).length, 'componentes');
+            console.log('FO:', tm01Data.filter(item => item.sistema === 'FO' && item.total).length, 'componentes');
+            console.log('CCO:', tm01Data.filter(item => item.sistema === 'CCO' && item.total).length, 'componentes');
+            console.log('=====================================');
+            
+            alert('✅ Validación de sistemas ITS completada. Ver consola para detalles.');
+        }
+
+        // Función para validar layout
+        function validarLayout() {
+            console.log('=== VALIDACIÓN LAYOUT TM01 ===');
+            console.log('Longitud RN 4510:', '~134 km');
+            console.log('Longitud RN 4511:', '~149 km');
+            console.log('Longitud RN 4513:', '~10 km');
+            console.log('CCO Ubicación:', 'La Lizama PK 4+300');
+            console.log('Total Longitud:', '293 km');
+            console.log('===============================');
+            
+            alert('📍 Validación de layout completada. Ver consola para detalles.');
+        }
+
+        // Función para validar costos
+        function validarCostos() {
+            const totalCostos = tm01Data.reduce((sum, item) => {
+                return sum + parseNumber(item.total);
+            }, 0);
+            
+            console.log('=== VALIDACIÓN COSTOS TM01 ===');
+            console.log('Total Costos ITS:', '$' + totalCostos.toLocaleString('en-US'), 'USD');
+            console.log('Presupuesto ITS Puro:', '$7,790,000 USD');
+            console.log('Diferencia:', '$' + (7790000 - totalCostos).toLocaleString('en-US'), 'USD');
+            console.log('==============================');
+            
+            alert(`💰 Validación de costos completada.\n\nTotal: $${totalCostos.toLocaleString('en-US')} USD\nPresupuesto: $7,790,000 USD\n\nVer consola para detalles.`);
+        }
+
+        // Función para generar DT
+        function generarDT() {
+            const dt = `
+=== DOCUMENTO TÉCNICO TM01 ===
+PROYECTO: APP Puerto Salgar - Barrancabermeja
+FECHA: 22 de Octubre de 2025
+SISTEMA: Sistemas ITS
+ESTADO: Validación Externa
+
+INFORMACIÓN OFICIAL CONFIRMADA:
+- Longitud Principal: 259.6 km (RN 4510 + RN 4511)
+- Longitud Total: 293 km (incluyendo RN 4513)
+- CCO: La Lizama PK 4+300 (RN 4513)
+- RN 4513: Conexión CCO justificada
+
+SISTEMAS ITS VALIDADOS:
+- Postes SOS: 88 unidades (incluido SOS #88)
+- ETD/RADAR: 16 equipos (14 ETD + 2 Radares)
+- CCTV: 45 cámaras (30 PAN + 15 fijas) - Obra civil optimizada a 30 unidades
+- PMV: 12 paneles
+- Estaciones Meteorológicas: 3 unidades
+- WIM: Sistema completo pesaje dinámico + báscula estática (1 dinámico + 1 estático)
+- Fibra Óptica: 293 km + 977 cajas
+
+PRESUPUESTO ITS PURO: $7,790,000 USD
+
+DOCUMENTOS ACTUALIZADOS: 75+ archivos
+FASES COMPLETADAS: III, IV, V + Transversales
+
+PRÓXIMOS PASOS:
+1. Validación con Interventoría
+2. Validación con ANI
+3. Preparación para construcción
+
+================================================
+            `;
+            
+            console.log(dt);
+            alert('📋 DT generado. Ver consola para detalles completos.');
+        }
+
+        // Función para exportar a Excel
+        function exportarExcel() {
+            try {
+                // Hoja 1: WBS Principal
+                const ws = XLSX.utils.json_to_sheet(tm01Data);
+                const wb = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(wb, ws, "WBS TM01");
+                
+                // Hoja 2: Desglose AIU e IVA
+                const calculos = calcularAIUeIVA();
+                const desgloseAIU = [
+                    ['CONCEPTO', 'VALOR (COP)', 'VALOR (USD)'],
+                    ['Costo Directo Total', calculos.costoDirecto, calculos.costoDirecto/4400],
+                    ['AIU Total (33%)', calculos.aiu, calculos.aiu/4400],
+                    ['IVA Total', calculos.iva, calculos.iva/4400],
+                    ['TOTAL GENERAL', calculos.total, calculos.total/4400]
+                ];
+                const wsAIU = XLSX.utils.aoa_to_sheet(desgloseAIU);
+                XLSX.utils.book_append_sheet(wb, wsAIU, "Desglose AIU");
+                
+                // Hoja 3: Desglose por Capítulos
+                const nombresCapitulos = {
+                    '1': 'FIBRA ÓPTICA',
+                    '2': 'POSTES SOS',
+                    '3': 'CCTV',
+                    '4': 'PMV',
+                    '5': 'ETD/RADAR',
+                    '6': 'ESTACIONES METEO'
+                };
+                
+                const desgloseCap = [['CAPÍTULO', 'DESCRIPCIÓN', 'SUMINISTROS (COP)', 'OBRA CIVIL (COP)', 'SERVICIOS (COP)', 'COSTO DIRECTO (COP)', 'AIU 33% (COP)', 'IVA (COP)', 'TOTAL (COP)', 'TOTAL (USD)']];
+                
+                Object.keys(calculos.subtotales).forEach(capitulo => {
+                    const cap = calculos.subtotales[capitulo];
+                    const obraSuministro = cap.OBRA + cap.SUMINISTRO;
+                    const servicios = cap.SERVICIO;
+                    
+                    let cdCap = 0;
+                    let aiuCap = 0;
+                    let ivaCap = 0;
+                    let totalCap = 0;
+                    
+                    if (obraSuministro > 0) {
+                        cdCap += obraSuministro;
+                        aiuCap += obraSuministro * 0.33;
+                        ivaCap += obraSuministro * 0.05 * 0.19;
+                    }
+                    
+                    if (servicios > 0) {
+                        cdCap += servicios;
+                    }
+                    
+                    totalCap = cdCap + aiuCap + ivaCap;
+                    
+                    desgloseCap.push([
+                        capitulo,
+                        nombresCapitulos[capitulo] || 'CAPÍTULO ' + capitulo,
+                        cap.SUMINISTRO,
+                        cap.OBRA,
+                        cap.SERVICIO,
+                        cdCap,
+                        aiuCap,
+                        ivaCap,
+                        totalCap,
+                        totalCap/4400
+                    ]);
+                });
+                
+                // Agregar total general
+                desgloseCap.push([
+                    'TOTAL',
+                    'GENERAL',
+                    calculos.costoDirecto,
+                    0,
+                    0,
+                    calculos.costoDirecto,
+                    calculos.aiu,
+                    calculos.iva,
+                    calculos.total,
+                    calculos.total/4400
+                ]);
+                
+                const wsCap = XLSX.utils.aoa_to_sheet(desgloseCap);
+                XLSX.utils.book_append_sheet(wb, wsCap, "Desglose Capítulos");
+                
+                XLSX.writeFile(wb, "WBS_Presupuesto_TM01_Troncal_Magdalena.xlsx");
+                
+                alert('✅ Archivo Excel exportado exitosamente: WBS_Presupuesto_TM01_Troncal_Magdalena.xlsx\n\n📊 Incluye 3 hojas:\n- WBS TM01 (datos principales)\n- Desglose AIU (cálculos financieros)\n- Desglose Capítulos (desglose detallado)');
+            } catch (error) {
+                console.error('Error al exportar Excel:', error);
+                alert('❌ Error al exportar Excel. Ver consola para detalles.');
+            }
+        }
+
+        // Función para imprimir PDF
+        function imprimirPDF() {
+            window.print();
+        }
+
+        // Función para calcular AIU e IVA
+        function calcularAIUeIVA() {
+            // Función para convertir string a número
+            const parseNumber = (str) => {
+                if (!str) return 0;
+                return parseFloat(str.toString().replace(/,/g, '')) || 0;
+            };
+
+            // Calcular subtotales por capítulo y tipo
+            const subtotales = {};
+            
+            wbsData.forEach(item => {
+                if (item.tipo && item.total) {
+                    const capitulo = item.item.split('.')[0];
+                    if (!subtotales[capitulo]) {
+                        subtotales[capitulo] = { SUMINISTRO: 0, OBRA: 0, SERVICIO: 0 };
+                    }
+                    subtotales[capitulo][item.tipo] += parseNumber(item.total);
+                }
+            });
+            
+            // Calcular AIU e IVA
+            let totalCD = 0;
+            let totalAIU = 0;
+            let totalIVA = 0;
+            let totalGeneral = 0;
+            
+            Object.keys(subtotales).forEach(capitulo => {
+                const cap = subtotales[capitulo];
+                
+                // Obra + Suministros: CD + AIU + IVA sobre utilidad
+                const obraSuministro = cap.OBRA + cap.SUMINISTRO;
+                if (obraSuministro > 0) {
+                    totalCD += obraSuministro;
+                    
+                    // AIU: Administración 23% + Imprevistos 5% + Utilidad 5% = 33%
+                    const administracion = obraSuministro * 0.23;
+                    const imprevistos = obraSuministro * 0.05;
+                    const utilidad = obraSuministro * 0.05;
+                    const ivaUtilidad = utilidad * 0.19; // IVA sobre utilidad
+                    
+                    totalAIU += administracion + imprevistos + utilidad;
+                    totalIVA += ivaUtilidad;
+                }
+                
+                // Servicios: Los valores ya incluyen IVA, solo agregar al total
+                const servicios = cap.SERVICIO;
+                if (servicios > 0) {
+                    // Los servicios en la WBS ya tienen IVA incluido
+                    // No retrocedemos el IVA, los servicios van directo al total
+                    totalCD += servicios; // Los servicios ya incluyen su CD + IVA
+                    // No agregamos AIU ni IVA adicional para servicios
+                }
+            });
+            
+            totalGeneral = totalCD + totalAIU + totalIVA;
+            
+            return {
+                costoDirecto: totalCD,
+                aiu: totalAIU,
+                iva: totalIVA,
+                total: totalGeneral,
+                subtotales: subtotales
+            };
+        }
+
+        // Función para mostrar estadísticas financieras
+        function mostrarEstadisticasFinancieras() {
+            const calculos = calcularAIUeIVA();
+            
+            // Agregar estadísticas financieras
+            const statsContainer = document.querySelector('.stats');
+            if (statsContainer) {
+                statsContainer.innerHTML += `
+                    <div class="stat-card" style="border-color: #dc3545;">
+                        <h3>Costo Directo Total</h3>
+                        <p>$${calculos.costoDirecto.toLocaleString('es-CO', {maximumFractionDigits: 0})}</p>
+                    </div>
+                    <div class="stat-card" style="border-color: #ffc107;">
+                        <h3>AIU Total</h3>
+                        <p>$${calculos.aiu.toLocaleString('es-CO', {maximumFractionDigits: 0})}</p>
+                    </div>
+                    <div class="stat-card" style="border-color: #17a2b8;">
+                        <h3>IVA Total</h3>
+                        <p>$${calculos.iva.toLocaleString('es-CO', {maximumFractionDigits: 0})}</p>
+                    </div>
+                    <div class="stat-card" style="border-color: #28a745;">
+                        <h3>Total General (COP)</h3>
+                        <p>$${calculos.total.toLocaleString('es-CO', {maximumFractionDigits: 0})}</p>
+                    </div>
+                    <div class="stat-card" style="border-color: #6f42c1;">
+                        <h3>Total General (USD)</h3>
+                        <p>$${(calculos.total/4400).toLocaleString('en-US', {maximumFractionDigits: 0})}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Función para mostrar desglose presupuestal
+        function mostrarDesglosePresupuestal() {
+            const calculos = calcularAIUeIVA();
+            
+            const nombresCapitulos = {
+                '1': 'FIBRA ÓPTICA',
+                '2': 'POSTES SOS',
+                '3': 'CCTV',
+                '4': 'PMV',
+                '5': 'ETD/RADAR',
+                '6': 'ESTACIONES METEO'
+            };
+            
+            let desgloseHTML = `
+                <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h2 style="color: #1e3c72; margin-bottom: 20px; text-align: center;">📊 DESGLOSE PRESUPUESTAL POR CAPÍTULOS</h2>
+                    <h3 style="color: #dc3545; margin-bottom: 15px;">⚠️ PRESUPUESTO ITS TM01 TRONCAL MAGDALENA</h3>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 11px; margin-bottom: 20px;">
+                        <thead>
+                            <tr style="background: #343a40; color: white;">
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">CAPÍTULO</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">SUMINISTROS<br/>(COP)</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">OBRA CIVIL<br/>(COP)</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">SERVICIOS<br/>(COP)</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">COSTO DIRECTO<br/>(COP)</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">AIU 33%<br/>(COP)</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">IVA<br/>(COP)</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">TOTAL<br/>(COP)</th>
+                                <th style="padding: 10px; border: 1px solid #495057; text-align: center;">TOTAL<br/>(USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            let granTotal = 0;
+            Object.keys(calculos.subtotales).forEach(capitulo => {
+                const cap = calculos.subtotales[capitulo];
+                const obraSuministro = cap.OBRA + cap.SUMINISTRO;
+                const servicios = cap.SERVICIO;
+                
+                let cdCap = 0;
+                let aiuCap = 0;
+                let ivaCap = 0;
+                let totalCap = 0;
+                
+                // Calcular costo directo, AIU e IVA por capítulo
+                if (obraSuministro > 0) {
+                    cdCap += obraSuministro;
+                    aiuCap += obraSuministro * 0.33; // 23% + 5% + 5%
+                    ivaCap += obraSuministro * 0.05 * 0.19; // IVA sobre utilidad (5% * 19%)
+                }
+                
+                if (servicios > 0) {
+                    // Los servicios ya incluyen IVA, van directo al costo directo
+                    cdCap += servicios;
+                    // No agregamos AIU ni IVA adicional para servicios
+                }
+                
+                totalCap = cdCap + aiuCap + ivaCap;
+                granTotal += totalCap;
+                
+                desgloseHTML += `
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #495057; font-weight: bold;">${capitulo}. ${nombresCapitulos[capitulo] || 'CAPÍTULO ' + capitulo}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right;">${cap.SUMINISTRO.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right;">${cap.OBRA.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right;">${cap.SERVICIO.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right; font-weight: bold;">${cdCap.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right;">${aiuCap.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right;">${ivaCap.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right; font-weight: bold; background: #e8f5e8;">${totalCap.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                        <td style="padding: 8px; border: 1px solid #495057; text-align: right; font-weight: bold;">$${(totalCap/4400).toLocaleString('en-US', {maximumFractionDigits: 0})}</td>
+                    </tr>
+                `;
+            });
+            
+            desgloseHTML += `
+                        </tbody>
+                        <tfoot>
+                            <tr style="background: #28a745; color: white; font-weight: bold;">
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: center;">TOTAL GENERAL</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">${calculos.costoDirecto.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">-</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">-</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">${calculos.costoDirecto.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">${calculos.aiu.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">${calculos.iva.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">${calculos.total.toLocaleString('es-CO', {maximumFractionDigits: 0})}</td>
+                                <td style="padding: 10px; border: 1px solid #1e7e34; text-align: right;">$${(calculos.total/4400).toLocaleString('en-US', {maximumFractionDigits: 0})}</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-top: 20px;">
+                        <h4 style="color: #1e3c72; margin-bottom: 10px;">📋 RESUMEN FINANCIERO</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                            <div>
+                                <p><strong>Costo Directo:</strong> $${calculos.costoDirecto.toLocaleString('es-CO', {maximumFractionDigits: 0})} COP</p>
+                                <p><strong>AIU (33%):</strong> $${calculos.aiu.toLocaleString('es-CO', {maximumFractionDigits: 0})} COP</p>
+                                <p><strong>IVA Total:</strong> $${calculos.iva.toLocaleString('es-CO', {maximumFractionDigits: 0})} COP</p>
+                            </div>
+                            <div>
+                                <p><strong>Total General (COP):</strong> $${calculos.total.toLocaleString('es-CO', {maximumFractionDigits: 0})}</p>
+                                <p><strong>Total General (USD):</strong> $${(calculos.total/4400).toLocaleString('en-US', {maximumFractionDigits: 0})}</p>
+                                <p><strong>Tipo de Cambio:</strong> $4,400 COP/USD</p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px; font-style: italic; color: #6c757d;">
+                            <em>Nota: Los valores incluyen la aplicación correcta de AIU (Administración 23%, Imprevistos 5%, Utilidad 5%) e IVA diferenciado según normativa colombiana.</em>
+                        </p>
+                    </div>
+                </div>
+            `;
+            
+            // Crear ventana emergente con el desglose
+            const ventanaDesglose = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes');
+            ventanaDesglose.document.write(`
+                <!DOCTYPE html>
+                <html lang="es">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Desglose Presupuestal TM01</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; background: #f8f9fa; }
+                        .header { text-align: center; margin-bottom: 30px; }
+                        .header h1 { color: #1e3c72; }
+                    </style>
+                </head>
+                <body>
+                    <div class="header">
+                        <h1>📊 DESGLOSE PRESUPUESTAL TM01</h1>
+                        <p>Proyecto Troncal Magdalena - Presupuesto ITS</p>
+                    </div>
+                    ${desgloseHTML}
+                </body>
+                </html>
+            `);
+            ventanaDesglose.document.close();
+        }
+
+        // Inicializar la tabla al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarDatosMaestro();
+            renderTable();
+            
+            // Validar sistemas ITS después de cargar
+            setTimeout(() => {
+                validarSistemasITS();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

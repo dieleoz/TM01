@@ -23,15 +23,15 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 ### 1.2 Alcance
 
-Este análisis cubre el **sistema completo de control de peso vehicular** en el corredor de 259.6 km:
+Este análisis cubre el **sistema completo de control de peso vehicular** en el corredor de 259.6 km principales + 33.4 km adicionales:
 
 **Componentes del sistema:**
-1. **Estaciones de Pesaje Fijas:** 2-3 estaciones con control bidireccional
+1. **Estaciones de Pesaje Fijas:** 1 estación bidireccional en PR4+0100 RN 4513
 2. **Básculas Dinámicas WIM:** Pre-selección de vehículos sin detención
 3. **Básculas Estáticas:** Pesaje de precisión (100 ton, error ≤1%)
 4. **Básculas en Peajes:** Pesaje dinámico en todos los carriles de cobro
 5. **Básculas Móviles:** Para operativos temporales
-6. **Software de Gestión:** Integrado con CCO y Policía de Carreteras
+6. **Software de Gestión:** Integrado con CCO La Lizama PK 4+300 y Policía de Carreteras
 
 ### 1.3 Definiciones y Acrónimos
 
@@ -559,14 +559,24 @@ Este análisis cubre el **sistema completo de control de peso vehicular** en el 
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema de pesaje WIM |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** 1 estación bidireccional PR4+0100 RN 4513, CCO La Lizama PK 4+300 |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis de Requisitos Completado + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero Civil / Ingeniero de Tránsito  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Pesaje WIM  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 1 estación bidireccional en PR4+0100 RN 4513
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Software de gestión integrado con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

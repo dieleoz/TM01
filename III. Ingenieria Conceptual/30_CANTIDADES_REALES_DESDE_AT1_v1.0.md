@@ -2,7 +2,7 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
 **Fecha:** 16/10/2025  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Fuente:** AT1 (Alcance) + Parte Especial (Secciones 3.3, 3.6, 4.1)  
 **Responsable:** Administrador Contractual EPC  
 
@@ -12,7 +12,7 @@
 
 | Parámetro | Valor | Fuente |
 |:----------|:------|:-------|
-| **Longitud Total** | 259.6 km (Puerto Salgar - San Roque) | AT1, Página 8 |
+| **Longitud Total** | 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513) | AT1, Página 8 |
 | **Departamentos** | Cundinamarca, Boyacá, Santander | AT1 |
 | **Unidades Funcionales** | 14 (UF0 a UF13) | Parte Especial, Sección 3.3 |
 | **Estaciones de Peaje Existentes** | 2 (Zambito + Aguas Negras) | Parte Especial, Sección 3.6 |
@@ -261,11 +261,28 @@
 
 ---
 
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Estado:** ✅ Cantidades Principales Extraídas  
 **Fecha:** 16/10/2025  
 **Pendiente:** Leer secciones completas de cada UF en AT1  
 **Responsable:** Administrador Contractual EPC  
+
+---
+
+## 📋 CHANGELOG
+
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 16/10/2025 | Creación inicial de cantidades reales desde AT1 |
+| **v1.1** | **22/10/2025** | **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, rutas RN 4510, RN 4511, RN 4513 |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Cobertura actualizada con información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

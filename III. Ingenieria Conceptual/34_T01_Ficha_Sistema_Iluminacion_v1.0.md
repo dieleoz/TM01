@@ -4,7 +4,7 @@
 **Fecha:** 16/10/2025  
 **Sistema:** Iluminación Vial  
 **Responsable:** Ing. Sistemas Eléctricos  
-**Versión:** 1.0  
+**Versión:** 1.2  
 
 ---
 
@@ -37,8 +37,8 @@ Garantizar la adecuada iluminación de todas las zonas críticas del corredor vi
   - Iluminación de Paraderos y Puentes Peatonales
   - Iluminación de accesos y zonas de estacionamiento
   
-- **Cobertura geográfica:** 259.6 km (Subsectores 1.1 y 1.2)
-- **Integración con:** Sistema Eléctrico Principal, CCO (monitoreo remoto), ITS (cámaras CCTV nocturnas)
+- **Cobertura geográfica:** 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513)
+- **Integración con:** Sistema Eléctrico Principal, CCO La Lizama PK 4+300 (monitoreo remoto), ITS (cámaras CCTV nocturnas)
 
 ---
 
@@ -235,7 +235,7 @@ CAPEX actualizado tras rediseño arquitectónico:
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
+**Versión:** 1.2 ✅ **AJUSTE CONTRACTUAL APLICADO**  
 **Estado:** ✅ Ficha Validada Contractualmente  
 **Fecha:** 20/10/2025  
 **Responsable:** Ing. Sistemas Eléctricos EPC  
@@ -248,4 +248,20 @@ CAPEX actualizado tras rediseño arquitectónico:
 |:--------|:------|:------------|
 | v1.0 | 16/10/2025 | Creación inicial de ficha de sistema Iluminación |
 | **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3). Alcance actualizado |
+| **v1.2** | **22/10/2025** | **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, CCO La Lizama PK 4+300 |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Integración CCO actualizada con ubicación oficial
+- Metodología PKD lineal aplicada
+
+---
+
+**Fin del documento - T01 Sistema Iluminación**  
+*Metodología Punto 42 v1.0*  
+*Proyecto APP Puerto Salgar - Barrancabermeja*
 

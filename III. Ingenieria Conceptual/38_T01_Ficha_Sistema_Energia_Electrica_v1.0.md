@@ -4,7 +4,7 @@
 **Fecha:** 17/10/2025  
 **Sistema:** Energía Eléctrica  
 **Responsable:** Ing. Eléctrico / Ing. de Potencia  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -27,7 +27,7 @@
 Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los sistemas del corredor vial, incluyendo:
 - Estaciones de Peaje (2 estaciones)
 - Sistema de Iluminación (410 luminarias LED)
-- Centro de Control Operacional (CCO)
+- Centro de Control Operacional (CCO La Lizama PK 4+300)
 - Sistemas ITS (CCTV, PMV, WIM, Meteo, SOS, DAI) - **10+ equipos**
 - Sistema de Telecomunicaciones (fibra óptica, switches, routers)
 - Estaciones de Pesaje
@@ -557,6 +557,24 @@ CAPEX actualizado tras rediseño arquitectónico:
 |:--------|:------|:------------|
 | v1.0 | 17/10/2025 | Creación inicial de ficha de sistema Energía Eléctrica |
 | **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas. Transformadores 72→48 (-24), Generadores 9→5 (-4). CAPEX -$300K |
+
+---
+
+## 📋 CHANGELOG
+
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 17/10/2025 | Creación inicial de ficha de sistema Energía Eléctrica |
+| **v1.1** | **22/10/2025** | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes actualizadas |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Integración CCO actualizada con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

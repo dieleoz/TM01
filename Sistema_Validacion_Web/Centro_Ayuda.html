@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ayuda - TM01 Troncal Magdalena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .help-section {
+            margin-bottom: 40px;
+        }
+        
+        .help-section h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .help-item {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .help-item h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .help-item p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+        
+        .back-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        
+        .back-button:hover {
+            background: #5a6fd8;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Centro de Ayuda</h1>
+            <p>Sistema de Validación ITS - TM01 Troncal Magdalena</p>
+        </div>
+        
+        <div class="content">
+            <div class="help-section">
+                <h2>🚀 Guías de Uso</h2>
+                
+                <div class="help-item">
+                    <h3>WBS Interactiva</h3>
+                    <p>La WBS Interactiva permite analizar todos los componentes del proyecto con filtros por capítulo, análisis de riesgos y generación automática de Documentos Técnicos (DTs).</p>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Layout Maestro</h3>
+                    <p>El Layout Maestro muestra la ubicación georreferenciada de todos los equipos ITS a lo largo del corredor de 293 km.</p>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Matriz de Cumplimiento</h3>
+                    <p>Herramienta para validar el cumplimiento contractual vs técnico de cada sistema ITS implementado.</p>
+                </div>
+            </div>
+            
+            <div class="help-section">
+                <h2>📋 Generación de DTs</h2>
+                
+                <div class="help-item">
+                    <h3>¿Qué es un DT?</h3>
+                    <p>Un Documento Técnico (DT) es un documento que justifica cambios técnicos, ajustes de cantidades o modificaciones al diseño original.</p>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Cómo Generar un DT</h3>
+                    <p>1. Seleccione el sistema en la WBS Interactiva<br>
+                    2. Use los filtros para identificar el componente específico<br>
+                    3. Haga clic en "Generar DT"<br>
+                    4. Complete la información requerida<br>
+                    5. Descargue el documento generado</p>
+                </div>
+            </div>
+            
+            <div class="help-section">
+                <h2>⚠️ Análisis de Riesgos</h2>
+                
+                <div class="help-item">
+                    <h3>Riesgos Identificados</h3>
+                    <p>El sistema identifica automáticamente 17 riesgos principales del proyecto, categorizados por probabilidad e impacto.</p>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Estrategias de Mitigación</h3>
+                    <p>Cada riesgo incluye estrategias específicas de mitigación y planes de contingencia detallados.</p>
+                </div>
+            </div>
+            
+            <div class="help-section">
+                <h2>💰 Presupuesto ITS</h2>
+                
+                <div class="help-item">
+                    <h3>Presupuesto Puro ITS</h3>
+                    <p>El presupuesto ITS Puro ($7.79M USD) incluye únicamente sistemas que cumplen los 4 criterios ITS definidos.</p>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Criterios ITS</h3>
+                    <p>Un sistema es ITS si: 1) Está conectado al CCO, 2) Usa fibra óptica, 3) Requiere supervisión remota, 4) Está integrado a red ITS.</p>
+                </div>
+            </div>
+            
+            <div class="help-section">
+                <h2>🔧 Solución de Problemas</h2>
+                
+                <div class="help-item">
+                    <h3>Error de Acceso</h3>
+                    <p>Si no puede acceder al sistema, verifique sus credenciales. Contacte al administrador si persiste el problema.</p>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Archivos No Encontrados</h3>
+                    <p>Si aparece "ERR_FILE_NOT_FOUND", verifique que todos los archivos HTML estén en la carpeta Sistema_Validacion_Web/.</p>
+                </div>
+                
+                <div class="help-item">
+                    <h3>Exportación a Excel</h3>
+                    <p>Para exportar datos a Excel, asegúrese de tener conexión a internet para cargar la librería xlsx.full.min.js.</p>
+                </div>
+            </div>
+            
+            <button class="back-button" onclick="history.back()">← Volver</button>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 TM01 Troncal Magdalena | Sistema de Validación ITS</p>
+            <p>Proyecto APP Puerto Salgar - Barrancabermeja</p>
+        </div>
+    </div>
+</body>
+</html>

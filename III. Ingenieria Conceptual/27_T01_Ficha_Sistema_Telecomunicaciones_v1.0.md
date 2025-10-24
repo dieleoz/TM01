@@ -26,8 +26,8 @@
 
 El Sistema de Telecomunicaciones es el **backbone crítico** que interconecta todos los sistemas del proyecto, proporcionando:
 
-- **Conectividad de fibra óptica** a lo largo de los 259.6 km del corredor
-- **Transmisión en tiempo real** de datos de ITS (10+ equipos), CCTV, Peajes al CCO
+- **Conectividad de fibra óptica** a lo largo de los 259.6 km principales + 33.4 km adicionales del corredor
+- **Transmisión en tiempo real** de datos de ITS (150+ equipos), CCTV, Peajes al CCO
 - **Comunicaciones de voz** (VoIP) para emergencias y operación
 - **Red de datos** para gestión operacional
 - **Conectividad con ANI** para envío de información
@@ -36,7 +36,7 @@ El Sistema de Telecomunicaciones es el **backbone crítico** que interconecta to
 ### 2.2 Alcance del Sistema
 
 **Sistemas incluidos:**
-- ✅ Red Troncal de Fibra Óptica (~260 km + reserva técnica 10%)
+- ✅ Red Troncal de Fibra Óptica (~293 km + reserva técnica 10%)
 - ✅ Radio Troncalizado (Bases de Emergencia, Patrullas, CCO)
 - ✅ Telefonía IP (VoIP)
 - ✅ Red de Datos Ethernet/IP
@@ -46,15 +46,17 @@ El Sistema de Telecomunicaciones es el **backbone crítico** que interconecta to
 - ✅ Canalización y Ductos
 
 **Cobertura geográfica:**
-- Longitud total: 259.6 km (Puerto Salgar - San Roque)
-- Estimación fibra óptica: ~285 km (259.6 km + 10% reserva técnica)
-- Topología: Anillo redundante en secciones críticas
+- Longitud Principal: 259.6 km (RN 4510 + RN 4511)
+- Longitud Total: ~293 km (incluyendo RN 4513 conexión CCO)
+- Estimación fibra óptica: ~322 km (293 km + 10% reserva técnica)
+- Topología: Anillo redundante con 7 nodos principales
 - Departamentos: Cundinamarca, Boyacá, Santander
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
 
 **Integración con:**
-- **ITS:** Conectividad de CCTV, PMV, WIM, Meteo, SOS, DAI, Aforo, Radares (100+ equipos)
-- **Peajes:** Conectividad de 8-12 Estaciones de Peaje (3 niveles de red)
-- **CCO:** Hub central de todas las comunicaciones
+- **ITS:** Conectividad de CCTV (30), PMV (28), WIM (1), Meteo (3), SOS (88), ETD/RADAR (16), Radares (11), Gálibos (8)
+- **Peajes:** Conectividad de 2 Estaciones de Peaje (Zambito, Aguas Negras)
+- **CCO:** Hub central ubicado en La Lizama PK 4+300
 - **Emergencias:** Radio troncalizado, telefonía IP
 - **ANI:** Enlaces de datos para envío de información
 
@@ -120,21 +122,21 @@ El Concesionario deberá:
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:------------------|:----------|:--------|
-| **Fibra Óptica Monomodo** | 285 km (12-24 hilos) | A lo largo del corredor | Backbone de comunicaciones |
-| **Cajas ODF (Optical Distribution Frame)** | 30-50 cajas | Puntos de agregación | Terminación y distribución de fibra |
-| **Switches de Acceso** | 50-80 switches | Campo (peajes, ITS) | Conectividad local de equipos |
-| **Switches de Agregación** | 10-15 switches | Puntos intermedios | Agregación de tráfico |
-| **Switches Core** | 4-6 switches | CCO | Núcleo de la red |
-| **Routers** | 2-4 routers | CCO | Conectividad WAN (Internet, ANI) |
-| **Firewalls** | 2-4 firewalls | CCO | Seguridad de red |
-| **Radio Bases** | **2-4 bases (OPCIONAL)** | Bases de Emergencia + CCO | Comunicación de voz móvil - Sujeto a validación de cobertura celular |
+| **Fibra Óptica Monomodo** | 322 km (12-24 hilos) | A lo largo del corredor | Backbone de comunicaciones |
+| **Cajas ODF (Optical Distribution Frame)** | 35-55 cajas | Puntos de agregación | Terminación y distribución de fibra |
+| **Switches de Acceso** | 35-45 switches | Campo (peajes, ITS) | Conectividad local de equipos |
+| **Switches de Agregación** | 7 switches | 7 nodos principales del anillo | Agregación de tráfico |
+| **Switches Core** | 4 switches | CCO La Lizama | Núcleo de la red |
+| **Routers** | 2 routers | CCO La Lizama | Conectividad WAN (Internet, ANI) |
+| **Firewalls** | 2 firewalls | CCO La Lizama | Seguridad de red |
+| **Radio Bases** | **3-4 bases (OPCIONAL)** | Bases de Emergencia + CCO | Comunicación de voz móvil - Sujeto a validación de cobertura celular |
 | **Radios Móviles** | **20-30 radios (OPCIONAL)** | Vehículos emergencia, patrullas | Comunicación en campo - Sujeto a validación de cobertura celular |
-| **Centrales Telefónicas IP (PBX)** | 1-2 centrales | CCO | Gestión de telefonía |
-| **Teléfonos IP** | 50-80 teléfonos | CCO, Peajes, Bases | Comunicación interna |
+| **Centrales Telefónicas IP (PBX)** | 1 central | CCO La Lizama | Gestión de telefonía |
+| **Teléfonos IP** | 88 teléfonos SOS + 60 internos | CCO, Peajes, Bases | Comunicación interna |
 | **Enlaces de Respaldo** | 2-4 enlaces | Puntos críticos | Redundancia (microondas, 4G/5G) |
-| **Sistema de Gestión de Red** | 1 sistema | CCO | Monitoreo y gestión (SNMP, Syslog) |
-| **Canalizaciones y Ductos** | 285 km | A lo largo del corredor | Protección de fibra |
-| **Cámaras de Inspección** | 500-800 cámaras | Cada 300-500 m | Acceso a ductos |
+| **Sistema de Gestión de Red** | 1 sistema | CCO La Lizama | Monitoreo y gestión (SNMP, Syslog) |
+| **Canalizaciones y Ductos** | 322 km | A lo largo del corredor | Protección de fibra |
+| **Cámaras de Inspección** | 600-900 cámaras | Cada 300-500 m | Acceso a ductos |
 
 **NOTA:** Cantidades preliminares sujetas a Estudios de Detalle y topología de red.
 
@@ -144,9 +146,9 @@ El Concesionario deberá:
 
 | Sistema Relacionado | Tipo de Interface | Protocolo/Medio | Datos Intercambiados |
 |:--------------------|:------------------|:----------------|:---------------------|
-| **ITS (CCTV)** | Física + Red IP | Fibra Óptica + Ethernet | Video H.264/H.265 (100-150 cámaras × 6 Mbps) |
+| **ITS (CCTV)** | Física + Red IP | Fibra Óptica + Ethernet | Video H.264/H.265 (30 cámaras × 6 Mbps) |
 | **ITS (PMV, WIM, Meteo, etc.)** | Física + Red IP | Fibra Óptica + Ethernet | Datos de sensores, comandos de control |
-| **Peajes** | Física + Red IP | Fibra Óptica + Ethernet (3 niveles) | Recaudos, tráfico, video |
+| **Peajes** | Física + Red IP | Fibra Óptica + Ethernet (3 niveles) | Recaudos, tráfico, video (2 estaciones) |
 | **CCO** | Física + Red IP | Fibra Óptica + Ethernet | Todos los datos (hub central) |
 | **Emergencias** | VoIP + Radio | Fibra Óptica + RF | Voz, datos, coordinación |
 | **ANI** | Red IP | Internet/VPN | Información operacional, financiera |
@@ -348,14 +350,25 @@ El Concesionario deberá:
 | Versión | Fecha | Autor | Descripción |
 |:-------:|:------|:------|:------------|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Ficha de Sistema Telecomunicaciones creada con Template T01 |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes, CCO La Lizama, cantidades actualizadas, topología anillo |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Ficha de Sistema Completada + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Telecomunicaciones  
-**Próxima actualización:** Tras estudio de ruta de fibra óptica
+**Próxima actualización:** Tras estudio de ruta de fibra óptica detallado
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales = 293 km total
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Topología anillo con 7 nodos principales confirmada
+- Cantidades validadas contra información oficial
+- Fibra óptica: 322 km (293 km + 10% reserva técnica)
+- Metodología PKD lineal aplicada
 
 ---
 

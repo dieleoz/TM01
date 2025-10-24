@@ -27,7 +27,8 @@ Este análisis cubre:
 - Sala de control con videowall y puestos de operador
 - Sala de servidores con todos los sistemas centrales
 - Operación 24/7/365
-- Supervisión de 259.6 km de corredor
+- Supervisión de 259.6 km principales + 33.4 km adicionales del corredor
+- Ubicación del CCO: La Lizama PK 4+300 (RN 4513)
 - Integración con 12+ sistemas
 
 ### 1.3 Definiciones y Acrónimos
@@ -56,8 +57,8 @@ Este análisis cubre:
 **Fuente:** AT2, Sección 3.3.5.1  
 
 **Criterios de Aceptación:**
-- Supervisión de ITS (100-130 CCTV, 26-30 PMV, 8-10 WIM, 10-12 Meteo, 65-85 SOS, etc.)
-- Supervisión de Peajes (2 estaciones, recaudos en tiempo real)
+- Supervisión de ITS (30 CCTV, 28 PMV, 1 WIM, 3 Meteo, 88 SOS, 16 ETD/RADAR, 11 Radares, 8 Gálibos)
+- Supervisión de Peajes (2 estaciones: Zambito, Aguas Negras - recaudos en tiempo real)
 - Supervisión de Telecomunicaciones (estado de red, equipos activos)
 - Supervisión de Emergencias (ubicación de equipos, estado, disponibilidad)
 - Visualización en videowall y puestos de operador
@@ -110,10 +111,10 @@ Este análisis cubre:
 
 **Criterios de Aceptación:**
 - Registro inmediato de eventos en SICC
-- Despacho de equipos de emergencia desde CCO
+- Despacho de equipos de emergencia desde CCO La Lizama PK 4+300
 - Seguimiento en tiempo real de equipos despachados
 - Coordinación con Policía, Bomberos, Hospitales
-- Activación de PMV con mensajes de advertencia
+- Activación de PMV (28 unidades) con mensajes de advertencia
 - Generación de reportes de incidentes
 - Cumplimiento de tiempos de respuesta (AT4, Indicador O4)
 
@@ -532,14 +533,24 @@ Este análisis cubre:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del CCO |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Ubicación La Lizama PK 4+300, cantidades actualizadas, criterios de aceptación |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis de Requisitos Completado + Ubicación Oficial Confirmada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Centro de Control  
 **Próximo documento:** T03 - Arquitectura Conceptual del CCO  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Ubicación confirmada: La Lizama PK 4+300 (RN 4513)
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Cantidades validadas contra información oficial
+- Criterios de aceptación actualizados con datos reales
+- Metodología PKD lineal aplicada  
 
 ---
 

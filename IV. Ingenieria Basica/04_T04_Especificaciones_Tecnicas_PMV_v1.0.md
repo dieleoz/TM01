@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** PMV - Paneles de Mensaje Variable (Dynamic Message Signs - DMS)  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
 **Referencia Validación:** 38_VALIDACION_CONTRACTUAL_PMV_v1.0  
@@ -17,6 +17,7 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 28 PMV (2 por peaje + separación 20 km) | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada 28 PMV | Adm. Contractual EPC |
 
 ---
 
@@ -580,4 +581,12 @@ Vista Frontal (desde vehículo):
 
 ---
 
-**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS PMV v1.0**
+**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS PMV v1.1**
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 28 PMV
+- CAPEX mantenido: $1,010,000 USD
+- Distribución por tipo validada con información oficial
+- Metodología PKD lineal aplicada

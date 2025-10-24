@@ -3,7 +3,7 @@
 
 **Fecha:** 16/10/2025  
 **Responsable:** Administrador Contractual EPC  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Fuente:** Análisis AT1, AT2, AT3, AT4  
 
 ---
@@ -14,7 +14,7 @@
 |-------|-------|
 | **Proyecto** | APP Puerto Salgar - Barrancabermeja |
 | **Tipo de Proyecto** | Concesión Vehícular/Carretera |
-| **Longitud Estimada** | 259.6 km (Puerto Salgar - San Roque) |
+| **Longitud Estimada** | 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513) |
 | **Departamentos** | Cundinamarca, Boyacá, Santander |
 | **Fuentes Contractuales** | AT1, AT2, AT3, AT4 |
 | **Estado** | ✅ Versión Preliminar v1.0 |
@@ -423,11 +423,26 @@ Este documento consolida TODOS los sistemas vehiculares identificados en los Ap�
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Identificación de sistemas desde AT1-AT4 |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | ✅ **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, rutas RN 4510, RN 4511, RN 4513 |
 
 ---
 
-**Estado del documento:** ✅ Listado Maestro Completado v1.0  
+**Estado del documento:** ✅ Listado Maestro Completado v1.1  
 **Próxima actualización:** Al completar cuantificación detallada (Semana 3-4)  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Responsable:** Administrador Contractual EPC
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Cobertura actualizada con información oficial
+- Metodología PKD lineal aplicada
+
+---
+
+**Fin del documento - Listado Maestro de Sistemas Vehiculares**  
+*Metodología Punto 42 v1.0*  
+*Proyecto APP Puerto Salgar - Barrancabermeja*
 

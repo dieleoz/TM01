@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Flujo Correcto - TM01</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .btn-success {
+            background: #27ae60;
+        }
+        .btn-success:hover {
+            background: #229954;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Flujo Correcto - TM01</h1>
+        <p>Verificando que el flujo de navegación funcione correctamente...</p>
+        
+        <div class="step">
+            <h3>📋 Paso 1: Login</h3>
+            <p>Usuario: <strong>0rt1z</strong> | Contraseña: <strong>0rt1z</strong></p>
+            <a href="index.html" class="btn">🔐 Ir a Login</a>
+        </div>
+        
+        <div class="step">
+            <h3>🏠 Paso 2: Portal Sistema WBS</h3>
+            <p>Después del login, deberías ir al Portal Sistema WBS</p>
+            <a href="Sistema_Validacion_Web/Portal_Sistema_WBS.html" class="btn">🏠 Ir a Portal</a>
+        </div>
+        
+        <div class="step">
+            <h3>📋 Paso 3: Menú Principal WBS</h3>
+            <p>Desde el portal, hacer clic en "Abrir Portal WBS"</p>
+            <a href="Sistema_Validacion_Web/WBS_Menu_Principal.html" class="btn">📋 Ir a Menú Principal</a>
+        </div>
+        
+        <div class="step">
+            <h3>🚀 Paso 4: WBS Interactiva</h3>
+            <p>Desde el menú principal, hacer clic en "ABRIR WBS INTERACTIVA"</p>
+            <a href="Sistema_Validacion_Web/WBS_COMPLETA_TODO_Interactiva_v4.0.html" class="btn btn-success">🚀 Ir a WBS Interactiva</a>
+        </div>
+        
+        <div class="step">
+            <h3>🔄 Modificador Dinámico</h3>
+            <p>Desde el menú principal, hacer clic en "ABRIR MODIFICADOR DINÁMICO"</p>
+            <a href="Sistema_Validacion_Web/Modificador_Dinamico_WBS.html" class="btn btn-success">🔄 Ir a Modificador</a>
+        </div>
+        
+        <div class="step">
+            <h3>💰 Presupuesto</h3>
+            <p>Desde el menú principal, hacer clic en "Abrir WBS Presupuestal"</p>
+            <a href="Sistema_Validacion_Web/WBS_Presupuesto_TM01_Troncal_Magdalena.html" class="btn btn-success">💰 Ir a Presupuesto</a>
+        </div>
+        
+        <div class="step">
+            <h3>🗺️ Layout</h3>
+            <p>Desde el menú principal, hacer clic en "ABRIR LAYOUT MAESTRO"</p>
+            <a href="Sistema_Validacion_Web/WBS_Layout_Maestro.html" class="btn btn-success">🗺️ Ir a Layout</a>
+        </div>
+        
+        <hr style="margin: 30px 0;">
+        
+        <h3>🔍 Diagnóstico del Problema</h3>
+        <p>Si el index te lleva directamente al WBS, puede ser por:</p>
+        <ul>
+            <li>Cache del navegador</li>
+            <li>Redirección automática en algún archivo</li>
+            <li>Configuración del navegador</li>
+        </ul>
+        
+        <h4>💡 Soluciones:</h4>
+        <ol>
+            <li><strong>Limpiar cache:</strong> Ctrl+F5 o Ctrl+Shift+R</li>
+            <li><strong>Modo incógnito:</strong> Abrir en ventana privada</li>
+            <li><strong>Verificar URL:</strong> Asegúrate de ir a <code>index.html</code></li>
+        </ol>
+    </div>
+</body>
+</html>

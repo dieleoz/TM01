@@ -4,7 +4,7 @@
 **Fecha:** 16/10/2025  
 **Sistema:** Atención de Emergencias y Auxilio Vial  
 **Responsable:** Gerente de Operaciones y Emergencias  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -47,13 +47,17 @@ El Sistema de Atención de Emergencias tiene como objetivo **responder de manera
 - ✅ Comunicaciones (Radio troncalizado, VoIP)
 
 **Cobertura geográfica:**
-- Longitud: 259.6 km (Puerto Salgar - San Roque)
+- Longitud Principal: 259.6 km (RN 4510 + RN 4511)
+- Longitud Total: ~293 km (incluyendo RN 4513 conexión CCO)
+- Rutas: RN 4510 (Honda-Río Ermitaño), RN 4511 (Río Ermitaño-La Lizama), RN 4513 (Conexión CCO)
+- Departamentos: Cundinamarca, Boyacá, Santander
+- Despacho centralizado desde CCO La Lizama PK 4+300
 - Bases de Operación: Mínimo 2 (distribución estratégica)
 - Tiempo de respuesta: Según AT4 (Indicadores O4)
 - Departamentos: Cundinamarca, Boyacá, Santander
 
 **Integración con:**
-- **CCO:** Coordinación de despacho de equipos, registro de eventos
+- **CCO:** Coordinación de despacho de equipos desde CCO La Lizama PK 4+300, registro de eventos
 - **ITS (CCTV, SOS):** Detección de incidentes, llamadas de emergencia
 - **Telecomunicaciones:** Radio, VoIP, datos
 - **Policía de Carreteras:** Coordinación de atención
@@ -432,14 +436,25 @@ El Concesionario deberá disponer de:
 | Versión | Fecha | Autor | Descripción |
 |:-------:|:------|:------|:------------|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Ficha de Sistema Emergencias creada con Template T01 |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | ✅ **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, CCO La Lizama PK 4+300 |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1  
+**Estado:** ✅ Ficha Actualizada con Información Oficial  
+**Fecha:** 22/10/2025  
 **Responsable:** Gerente de Operaciones y Emergencias  
+**Última actualización:** Revisión con información oficial del proyecto  
 **Próxima actualización:** Tras definición de Bases de Operación y validación de AT4 (O4)
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Despacho centralizado desde CCO La Lizama PK 4+300
+- Metodología PKD lineal aplicada
 
 ---
 

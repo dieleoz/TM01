@@ -4,8 +4,15 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** Postes SOS - Telefonía de Emergencia  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
-**Basado en:** T04 Postes SOS v1.0 + Tabla Maestra Layout v1.0  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 22/10/2025 | Creación inicial - 87 postes SOS | Ing. ITS |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** 88 postes SOS | Ing. ITS |
 
 ---
 
@@ -15,13 +22,13 @@
 
 | Parámetro | Valor | Referencia Contractual |
 |:----------|:------|:-----------------------|
-| **Cantidad total** | **87 postes** | AT1 Cap. 3: "máximo 3 km entre sí" |
+| **Cantidad total** | **88 postes** | AT1 Cap. 3: "máximo 3 km entre sí" |
 | **Distribución** | Sistema "Tres Bolillos" alternados | Bermas externas Izq/Der |
 | **Separación máxima** | 3.00 km | 9 excepciones >3km (justificadas) |
 | **Longitud cubierta** | 259.6 km | Cobertura 100% del corredor |
-| **CAPEX Total** | **$2,088,000 USD** | $24,000/poste instalado |
-| **OPEX Anual** | **$52,200 USD** | $600/poste/año |
-| **OPEX 20 años** | **$1,044,000 USD** | Mantenimiento preventivo |
+| **CAPEX Total** | **$2,112,000 USD** | $24,000/poste instalado |
+| **OPEX Anual** | **$52,800 USD** | $600/poste/año |
+| **OPEX 20 años** | **$1,056,000 USD** | Mantenimiento preventivo |
 
 ---
 
@@ -31,7 +38,7 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. EQUIPO POSTE SOS COMPLETO** | **87** | **$18,000** | **$1,566,000** | **75.0%** |
+| **1. EQUIPO POSTE SOS COMPLETO** | **88** | **$18,000** | **$1,584,000** | **75.0%** |
 | Poste metálico galvanizado 4m | 87 | $800 | $69,600 | 3.3% |
 | Gabinete control IP65 | 87 | $600 | $52,200 | 2.5% |
 | Teléfono resistente vandalismo | 87 | $1,500 | $130,500 | 6.3% |
@@ -43,19 +50,19 @@
 | Botón pulsador iluminado | 87 | $80 | $6,960 | 0.3% |
 | Sirena 110dB | 87 | $100 | $8,700 | 0.4% |
 | Baliza LED ámbar | 87 | $90 | $7,830 | 0.4% |
-| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **87** | **$4,000** | **$348,000** | **16.7%** |
+| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **88** | **$4,000** | **$352,000** | **16.7%** |
 | Mano de obra instalación | 87 | $2,200 | $191,400 | 9.2% |
 | Equipos y herramientas | 87 | $800 | $69,600 | 3.3% |
 | Pruebas y comisionamiento | 87 | $600 | $52,200 | 2.5% |
 | Capacitación operadores | 87 | $400 | $34,800 | 1.7% |
-| **3. OBRAS CIVILES** | **87** | **$2,000** | **$174,000** | **8.3%** |
+| **3. OBRAS CIVILES** | **88** | **$2,000** | **$176,000** | **8.3%** |
 | Excavación y cimentación | 87 | $800 | $69,600 | 3.3% |
 | Canalización a fibra (30m prom) | 87 | $600 | $52,200 | 2.5% |
 | Puesta a tierra (SPT) | 87 | $400 | $34,800 | 1.7% |
 | Señalización poste | 87 | $200 | $17,400 | 0.8% |
-| **TOTAL CAPEX** | - | - | **$2,088,000** | **100%** |
+| **TOTAL CAPEX** | - | - | **$2,112,000** | **100%** |
 
-**CAPEX/poste:** $2,088,000 / 87 = **$24,000 USD/poste** (todo incluido)
+**CAPEX/poste:** $2,112,000 / 88 = **$24,000 USD/poste** (todo incluido)
 
 ---
 
@@ -433,8 +440,11 @@ Cable UTP Cat6 → Teléfono VoIP
 
 ---
 
-**Última actualización:** 22 de octubre de 2025 - 18:30  
-**Responsable:** Ingeniero de Sistemas ITS / Especialista SOS  
-**Estado:** ✅ **T05 POSTES SOS COMPLETADO**  
-**Archivo:** `04_T05_Ingenieria_Detalle_Postes_SOS_v1.0.md`
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad actualizada: 88 postes SOS
+- CAPEX actualizado: USD $2,112,000
+- OPEX actualizado: USD $52,800/año
+- Metodología PKD lineal aplicada
 

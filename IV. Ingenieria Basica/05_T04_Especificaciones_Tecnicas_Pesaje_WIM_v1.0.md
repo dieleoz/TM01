@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** WIM - Weigh In Motion (Sistema de Pesaje Dinámico y Estático)  
 **Responsable:** Ing. Civil / Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Referencia T01:** T01_Ficha_Sistema_Pesaje_WIM_v1.1  
 **Referencia T03:** T03_Arquitectura_Conceptual_Pesaje_WIM_v1.0  
 **Referencia Validación:** 24_VALIDACION_CONTRACTUAL_PESAJE_v1.0  
@@ -17,6 +17,7 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 1 estación bidireccional (4 plataformas) | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Ubicación PR4+0100 RN 4513 confirmada | Adm. Contractual EPC |
 
 ---
 
@@ -561,4 +562,12 @@ Elementos comunes:
 
 ---
 
-**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS WIM v1.0**
+**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS WIM v1.1**
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Ubicación confirmada: PR4+0100 RN 4513
+- Configuración: 1 estación bidireccional
+- CAPEX mantenido: $2,286,400 USD
+- Metodología PKD lineal aplicada

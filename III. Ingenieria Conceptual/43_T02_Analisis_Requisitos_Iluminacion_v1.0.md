@@ -23,10 +23,10 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 ### 1.2 Alcance
 
-Este análisis cubre la **iluminación de todas las zonas críticas** del corredor vial de 259.6 km:
+Este análisis cubre la **iluminación de todas las zonas críticas** del corredor vial de 259.6 km principales + 33.4 km adicionales:
 1. Estaciones de Peaje (2 estaciones: Zambito, Aguas Negras)
 2. Estaciones de Pesaje  
-3. Centro de Control de Operaciones (CCO)
+3. Centro de Control de Operaciones (CCO La Lizama PK 4+300)
 4. Áreas de Servicio (**2 áreas obligatorias** asociadas a peajes - AT1 Cap. 3)
 5. Intersecciones a Nivel y Desnivel
 6. Paraderos y Puentes Peatonales
@@ -647,12 +647,14 @@ Este análisis cubre la **iluminación de todas las zonas críticas** del corred
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema de iluminación vial |
+| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3) |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes actualizadas |
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
-**Estado:** ✅ Análisis Validado Contractualmente  
-**Fecha:** 20/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis Validado Contractualmente + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas Eléctricos  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Iluminación  
 
@@ -663,6 +665,15 @@ Este análisis cubre la **iluminación de todas las zonas críticas** del corred
 |:--------|:------|:------------|
 | v1.0 | 17/10/2025 | Análisis inicial de requisitos de iluminación |
 | **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3). Requisitos actualizados |
+| **v1.2** | **22/10/2025** | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes 259.6 km + 33.4 km |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Sistemas alimentados actualizados con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

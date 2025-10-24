@@ -24,20 +24,20 @@ Establece:
 
 ### 1.2 Alcance
 
-Esta arquitectura cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
+Esta arquitectura cubre el **sistema eléctrico completo** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
 **Componentes del sistema:**
-- Subestaciones principales: 3 (CCO 500 kVA, 2 Peajes 200 kVA c/u)
+- Subestaciones principales: 3 (CCO La Lizama PK 4+300 500 kVA, 2 Peajes 200 kVA c/u)
 - Transformadores distribución: ~45 unidades (iluminación e ITS)
 - Sistemas UPS: ~35 unidades (CCO, peajes, ITS distribuidos)
-- Generadores de Emergencia: 3 principales (CCO 300 kW, 2 Peajes 150 kW)
+- Generadores de Emergencia: 3 principales (CCO La Lizama PK 4+300 300 kW, 2 Peajes 150 kW)
 - Red Eléctrica MT/BT: Acometidas y distribución
 - Sistema de Puesta a Tierra (SPT): ~50 sistemas
 - Protección contra Rayos: Pararrayos en instalaciones principales
-- Sistema SCADA Eléctrico: Monitoreo centralizado en CCO
+- Sistema SCADA Eléctrico: Monitoreo centralizado en CCO La Lizama PK 4+300
 
 **Sistemas alimentados:**
-- CCO (centro crítico)
+- CCO La Lizama PK 4+300 (centro crítico)
 - 2 Peajes con Áreas de Servicio Integradas (Zambito, Aguas Negras)
 - 410 Luminarias LED distribuidas
 - 103+ Equipos ITS (CCTV, PMV, SOS, WIM, Meteo)
@@ -784,12 +784,14 @@ DATOS MONITOREADOS:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial del sistema de energía eléctrica |
+| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Rediseño arquitectónico:** Áreas integradas a peajes (comparten subestación 200kVA y generador 150kW). Eliminados: 2 transf. áreas, 2 gen. áreas, 25 SPT. CAPEX -$968K (-17%) |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes actualizadas |
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
-**Estado:** ✅ Arquitectura Validada Contractualmente  
-**Fecha:** 20/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Validada Contractualmente + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero Eléctrico / Ingeniero de Potencia  
 **Próximo documento:** T04 - Especificaciones Técnicas del Sistema de Energía Eléctrica  
 
@@ -800,6 +802,15 @@ DATOS MONITOREADOS:
 |:--------|:------|:------------|
 | v1.0 | 17/10/2025 | Arquitectura conceptual inicial del sistema de energía eléctrica |
 | **v1.1** | **20/10/2025** | **Rediseño arquitectónico:** Áreas integradas a peajes (comparten subestación 200kVA y generador 150kW). Eliminados: 2 transf. áreas, 2 gen. áreas, 25 SPT. CAPEX -$968K (-17%) |
+| **v1.2** | **22/10/2025** | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes 259.6 km + 33.4 km |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Sistemas alimentados actualizados con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

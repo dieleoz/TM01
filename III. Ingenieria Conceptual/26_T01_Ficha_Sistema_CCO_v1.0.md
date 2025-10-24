@@ -49,16 +49,22 @@ El Centro de Control Operacional (CCO) es el **corazón operativo del proyecto**
 - ✅ Sistema de Respaldo (UPS, Generadores, Redundancia)
 
 **Cobertura operacional:**
-- Supervisión total: 259.6 km (Puerto Salgar - San Roque)
-- Monitoreo de: 8-12 Estaciones de Peaje
-- Monitoreo de: 100-150 cámaras CCTV
-- Monitoreo de: 20-30 PMV
-- Monitoreo de: 5-10 Estaciones WIM
-- Monitoreo de: 8-12 Estaciones Meteorológicas
+- Supervisión total: 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513)
+- Ubicación del CCO: La Lizama PK 4+300 (RN 4513) - Conexión al proyecto principal
+- Monitoreo de: 2 Estaciones de Peaje (Zambito, Aguas Negras)
+- Monitoreo de: 30 cámaras CCTV
+- Monitoreo de: 28 PMV
+- Monitoreo de: 1 Estación WIM bidireccional
+- Monitoreo de: 3 Estaciones Meteorológicas
+- Monitoreo de: 88 postes SOS
+- Monitoreo de: 16 ETD/RADAR
+- Monitoreo de: 11 Radares de Velocidad
+- Monitoreo de: 8 Detectores de Altura (Gálibos)
 - Monitoreo de: Todos los sistemas ITS, Peajes, Telecomunicaciones
 
 **Integración con:**
 - **Todos los sistemas del proyecto** (ITS, Peajes, Telecomunicaciones, Emergencias, etc.)
+- **CCO ubicado en La Lizama PK 4+300** - Centro de mando del corredor
 - **ANI:** Envío de información operacional y financiera
 - **Interventoría:** Acceso a información en cualquier momento
 - **Policía de Carreteras:** Coordinación de incidentes y emergencias
@@ -137,7 +143,7 @@ El Centro de Control de Operaciones deberá:
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:------------------|:----------|:--------|
-| **Videowall** | 1 sistema (12-20 pantallas) | Sala de Control CCO | Visualización de CCTV, mapas, datos |
+| **Videowall** | 1 sistema (16-32 pantallas) | Sala de Control CCO | Visualización de CCTV, mapas, datos |
 | **Puestos de Operador** | 6-10 puestos | Sala de Control CCO | Operadores 24/7 (turnos) |
 | **Servidores SCADA** | 4-6 servidores (redundantes) | Sala de Servidores | Sistema SCADA Vial |
 | **Servidores NVR (CCTV)** | 4-6 servidores | Sala de Servidores | Grabación de video |
@@ -147,6 +153,10 @@ El Centro de Control de Operaciones deberá:
 | **Routers** | 2-4 routers | Sala de Comunicaciones | Conectividad WAN |
 | **Firewalls** | 2-4 firewalls (redundantes) | Sala de Comunicaciones | Seguridad de red |
 | **UPS** | 2 sistemas (N+1) | Sala de UPS | Energía ininterrumpida (30 min) |
+| **Generador** | 1 sistema (300 kW) | Sala de Generador | Energía de emergencia (48h) |
+| **Sistema HVAC** | 1 sistema | Sala de Servidores | Climatización (Tier II) |
+| **Sistema Contra Incendio** | 1 sistema | Todo el CCO | Protección NFPA 75 |
+| **Sistema de Seguridad** | 1 sistema | Todo el CCO | Control de acceso, CCTV interno |
 | **Generadores Diésel** | 2 unidades (N+1) | Exterior CCO | Energía de respaldo (72 horas) |
 | **HVAC** | 2-3 sistemas (redundantes) | Todo el CCO | Climatización (18-24°C) |
 | **Software SCADA Vial** | 1 licencia | Servidores | Supervisión y control |
@@ -364,14 +374,24 @@ El Centro de Control de Operaciones deberá:
 | Versión | Fecha | Autor | Descripción |
 |:-------:|:------|:------|:------------|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Ficha de Sistema CCO creada con Template T01 |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Ubicación La Lizama PK 4+300, cantidades actualizadas, cobertura completa |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Ficha de Sistema Completada + Ubicación Oficial Confirmada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Centro de Control  
-**Próxima actualización:** Tras definición de ubicación y dimensionamiento
+**Próxima actualización:** Tras Estudios de Detalle (dimensionamiento final)
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Ubicación confirmada: La Lizama PK 4+300 (RN 4513)
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Cantidades validadas contra información oficial
+- Sistemas monitoreados actualizados con datos reales
+- Metodología PKD lineal aplicada
 
 ---
 

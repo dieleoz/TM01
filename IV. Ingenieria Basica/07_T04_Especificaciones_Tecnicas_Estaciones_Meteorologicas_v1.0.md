@@ -4,8 +4,15 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Estaciones Meteorológicas  
 **Responsable:** Ing. Ambiental / Ing. ITS  
-**Versión:** 1.0  
-**Referencia Validación:** 26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - 2 estaciones en peajes | Ing. Ambiental |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** 3 estaciones (2 peajes + 1 CCO) | Ing. Ambiental |
 
 ---
 
@@ -14,8 +21,8 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Estaciones Meteorológicas |
-| **Cantidad** | **2 Davis Pro2** (peajes) |
-| **CAPEX** | **COP $13M** (~USD $3,250) |
+| **Cantidad** | **3 Davis Pro2** (2 peajes + 1 CCO) |
+| **CAPEX** | **COP $19.5M** (~USD $4,875) |
 | **Función** | Informar condiciones meteorológicas al CCO |
 
 ---
@@ -90,11 +97,19 @@
 
 | Ítem | Cantidad | Precio (COP) |
 |:-----|:---------|:-------------|
-| Davis Pro2 Plus | 2 | $10,000,000 |
-| Instalación | 2 | $1,500,000 |
-| Software integración | 1 | $1,500,000 |
-| **TOTAL** | - | **$13,000,000** |
+| Davis Pro2 Plus | 3 | $15,000,000 |
+| Instalación | 3 | $2,250,000 |
+| Software integración | 1 | $2,250,000 |
+| **TOTAL** | - | **$19,500,000** |
 
 ---
 
-**FIN T04 ESTACIONES METEOROLÓGICAS v1.0**
+**FIN T04 ESTACIONES METEOROLÓGICAS v1.1**
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad actualizada: 3 estaciones meteorológicas
+- Ubicaciones: 2 peajes + 1 CCO La Lizama PK 4+300
+- CAPEX actualizado: COP $19.5M (~USD $4,875)
+- Metodología PKD lineal aplicada

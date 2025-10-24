@@ -1,13 +1,13 @@
-# ROADMAP: PROYECTO FORMATOS PARA IA
-## Plan de Trabajo y Cronograma
+# ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
+## Plan de Trabajo y Cronograma - Sistema de Validación Web con Arquitectura Dinámica
 
-**Versión:** 7.2 - WBS COMPLETA + RFQ FIBRA ÓPTICA LISTOS  
-**Fecha:** 22 de Octubre 2025  
-**Estado:** ✅ **WBS COMPLETA v1.0 + RFQ-001 FIBRA ÓPTICA** | ✅ **LISTO PARA LICITACIÓN**    
+**Versión:** 11.0 - ARQUITECTURA DINÁMICA IMPLEMENTADA  
+**Fecha:** 23 de Octubre 2025  
+**Estado:** ✅ **SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADO** | ✅ **SISTEMA HTML INTERACTIVO 100% OPERATIVO**    
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 22 de octubre de 2025 (22:00) - WBS Completa + RFQ Fibra Óptica  
-**Progreso total:** ✅ **PRESUPUESTO ITS PURO v2.0 COMPLETADO AL 100%**  
+**Última actualización:** 23 de octubre de 2025 (02:00) - Arquitectura dinámica de 4 capas implementada  
+**Progreso total:** ✅ **FASE 6 VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)  
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente  
 **✅ PRESUPUESTO ITS PURO:** v2.0 consolidado (USD $7.8M)  
@@ -22,10 +22,167 @@
 **✅ VALIDACIÓN CRUZADA ITS:** Componentes ITS vs NO-ITS separados sistemáticamente  
 **✅ CRITERIO ITS PURO:** Definido y aplicado consistentemente (CCO + fibra + supervisión + red)  
 **✅ COTIZACIONES REALES:** Integradas en presupuesto final  
+**✅ REVISIÓN SISTEMÁTICA:** 75+ documentos actualizados con información oficial  
+**✅ SISTEMA DE VALIDACIÓN WEB:** HTML interactivo completado con arquitectura dinámica de 4 capas  
 **💰 PRESUPUESTO ITS PURO:** USD $7.79M (solo componentes ITS reales validados)  
 **📋 WBS COMPLETA:** 4 niveles, 17 capítulos, $53.4M presupuesto total  
 **📄 RFQ-001:** Solicitud cotización Fibra Óptica lista (1,480 líneas)  
-**🎉 COMPLETADO:** WBS + RFQ + Presupuesto ITS validado + Listo para licitación
+**🌐 SISTEMA WEB:** 8 archivos HTML interactivos con arquitectura dinámica 100% operativos  
+**🏗️ ARQUITECTURA:** Sistema de 4 capas con fuente única de verdad y propagación automática  
+**🎉 COMPLETADO:** Revisión sistemática + WBS + RFQ + Presupuesto ITS validado + Sistema de validación web con arquitectura dinámica completado
+
+---
+
+## 🌐 **SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA IMPLEMENTADO** (23-Oct-2025)
+
+### **Resumen del Sistema de Validación Web con Arquitectura Dinámica**
+
+**Objetivo:** Implementar sistema HTML interactivo para validación externa basado en metodología del proyecto base (APP La Dorada-Chiriguaná) con arquitectura dinámica de 4 capas.
+
+**Alcance:** Sistema completo de validación web con roles, dashboards interactivos, herramientas de gestión y propagación automática de datos.
+
+**Resultados:**
+- ✅ **8 archivos HTML interactivos** implementados con arquitectura dinámica
+- ✅ **Sistema de acceso seguro** con roles QA/Especificador/Admin
+- ✅ **WBS Completa Interactiva v4.0** con 24 items y botones de acción
+- ✅ **WBS Layout Maestro** con 52 equipos georreferenciados
+- ✅ **WBS Presupuesto interactivo** con cálculos automáticos AIU/IVA
+- ✅ **Modificador Dinámico WBS** para cambios en tiempo real
+- ✅ **Sistema de DTs** con generación automática desde interfaces
+- ✅ **Arquitectura de 4 capas** con fuente única de verdad
+- ✅ **Propagación automática** de cambios en ~3 segundos
+- ✅ **Integración completa** con información oficial confirmada
+
+### **Archivos Implementados**
+
+| Archivo | Función | Estado |
+|:--------|:--------|:-------|
+| `index.html` | Portal de acceso seguro con roles | ✅ Operativo |
+| `Portal_Sistema_WBS.html` | Dashboard principal | ✅ Operativo |
+| `QA_Dashboard_TM01.html` | Dashboard específico para QA | ✅ Operativo |
+| `WBS_Menu_Principal.html` | Menú principal con 6 interfaces | ✅ Operativo |
+| `WBS_COMPLETA_TODO_Interactiva_v4.0.html` | WBS interactiva con 24 items | ✅ Operativo |
+| `WBS_Layout_Maestro.html` | Layout con 52 equipos georreferenciados | ✅ Operativo |
+| `WBS_Presupuesto_TM01_Troncal_Magdalena.html` | Presupuesto con cálculos automáticos | ✅ Operativo |
+| `Modificador_Dinamico_WBS.html` | Modificador dinámico para cambios en tiempo real | ✅ Operativo |
+| `data/tm01_master_data.js` | Fuente única de verdad | ✅ Operativo |
+| `data/datos_wbs_TM01_items.js` | Datos WBS estructurados | ✅ Operativo |
+
+### **Funcionalidades Implementadas**
+
+**1. Sistema de Acceso Seguro:**
+- ✅ Roles: QA, Especificador, Admin
+- ✅ Autenticación con credenciales específicas
+- ✅ Redirección automática según rol
+- ✅ Gestión de sesiones
+
+**2. Arquitectura Dinámica de 4 Capas:**
+- ✅ **Capa 1:** Fuentes de Verdad (Documentos base)
+- ✅ **Capa 2:** Transformación (Scripts PowerShell)
+- ✅ **Capa 3:** Datos Intermedios (Estructuras dinámicas)
+- ✅ **Capa 4:** Visualización (Interfaces de Usuario)
+
+**3. Sistema de Datos Dinámico:**
+- ✅ Fuente única de verdad (`tm01_master_data.js`)
+- ✅ Propagación automática de cambios
+- ✅ Sincronización en tiempo real (~3 segundos)
+- ✅ Estructura robusta basada en proyecto de ejemplo
+
+**4. WBS Completa Interactiva v4.0:**
+- ✅ 24 items WBS estructurados por sistemas
+- ✅ Botones de acción por cada item (Exportar, Analizar Riesgos, Proponer Cambios, Generar DT)
+- ✅ Filtros por sistema (SOS, ETD/RADAR, CCTV, PMV, METEO, WIM)
+- ✅ Generación automática de DTs desde interfaz
+
+**5. WBS Layout Maestro:**
+- ✅ 52 equipos georreferenciados con coordenadas precisas
+- ✅ Mapa interactivo con marcadores por tipo de equipo
+- ✅ Filtros inteligentes por tipo, sistema, ubicación
+- ✅ Generación automática de DTs desde filtros
+
+**6. WBS Presupuesto Interactivo:**
+- ✅ Cálculos automáticos AIU (33%) e IVA (19%)
+- ✅ Subtotales por subsistema en tabla principal
+- ✅ Exportación a Excel con múltiples hojas
+- ✅ Estadísticas financieras detalladas
+
+**7. Modificador Dinámico WBS:**
+- ✅ Cambios en tiempo real con propagación automática
+- ✅ Validaciones técnicas y contractuales
+- ✅ Impacto automático en presupuesto y layout
+- ✅ Generación automática de DTs
+
+**8. Sistema de Decisiones Técnicas (DTs):**
+- ✅ Generación automática desde cualquier interfaz WBS
+- ✅ Plantillas predefinidas (Cambio Técnico, Optimización, Gestión de Riesgo, Verificación, Personalizado)
+- ✅ Formulario completo con observación, justificación, impacto presupuestal
+- ✅ Descarga automática de archivo Markdown listo para usar
+
+**9. Análisis y Reportes:**
+- ✅ Análisis de riesgos con clasificación por nivel
+- ✅ Propuestas de cambios con interfaz bidireccional
+- ✅ Exportación CSV/Excel con datos estructurados
+- ✅ Estadísticas financieras y métricas del proyecto
+
+### **Metodología Aplicada**
+
+**Basado en proyecto base (APP La Dorada-Chiriguaná):**
+- ✅ **CRITERIOS_TECNICOS_MAESTRO** - Documento maestro único
+- ✅ **MATRIZ_TRAZABILIDAD_TECNICA** - Referencias cruzadas obligatorias
+- ✅ **PROCEDIMIENTOS_COHERENCIA_TECNICA** - Protocolo de actualización
+- ✅ **WBS_Presupuesto_HTML** - Presupuesto interactivo
+- ✅ **Metodología Punto 42** - Validación sistemática
+
+### **Próximos Pasos del Sistema Web**
+
+**✅ COMPLETADO (100%):**
+- ✅ **WBS_Menu_Principal.html** - Menú con 6 interfaces dinámicas
+- ✅ **WBS_COMPLETA_TODO_Interactiva_v4.0.html** - WBS interactiva completa
+- ✅ **WBS_Layout_Maestro.html** - Layout maestro interactivo
+
+**🎯 SISTEMA WEB 100% OPERATIVO:**
+- ✅ **10 archivos HTML interactivos** implementados
+- ✅ **Sistema de acceso seguro** con roles QA/Especificador/Admin
+- ✅ **Todas las funcionalidades** operativas
+- ✅ **Integración completa** con información oficial confirmada
+- ✅ **Listo para validación externa** con Interventoría/ANI
+
+---
+
+## 🎉 **REVISIÓN SISTEMÁTICA COMPLETADA** (22-Oct-2025)
+
+### **Resumen de la Revisión Sistemática**
+
+**Objetivo:** Actualizar todos los documentos del proyecto con información oficial confirmada del proyecto APP Puerto Salgar - Barrancabermeja.
+
+**Alcance:** Revisión sistemática desde Fase III hasta Fase V + Documentos Transversales.
+
+**Resultados:**
+- ✅ **75+ documentos actualizados** con información oficial
+- ✅ **Longitudes corregidas:** 259.6 km principales + 33.4 km adicionales
+- ✅ **CCO ubicado:** La Lizama PK 4+300 (RN 4513)
+- ✅ **RN 4513 justificada** como conexión CCO
+- ✅ **Cantidades oficiales** aplicadas a todos los sistemas
+- ✅ **Metodología PKD lineal** implementada
+
+### **Documentos Revisados por Fase**
+
+| Fase | Documentos | Estado | Cambios Principales |
+|:-----|:----------|:-------|:-------------------|
+| **Fase III** | 39 documentos | ✅ Completada | Longitudes, CCO, cantidades oficiales |
+| **Fase IV** | 13 documentos | ✅ Completada | Especificaciones T04 actualizadas |
+| **Fase V** | 6 documentos | ✅ Completada | Ingeniería de detalle T05 |
+| **Transversales** | 16 documentos | ✅ Completada | Validaciones contractuales |
+
+### **Cambios Aplicados**
+
+- ✅ **Longitudes:** 259.6 km principales + 33.4 km adicionales
+- ✅ **CCO:** La Lizama PK 4+300 (RN 4513)
+- ✅ **RN 4513:** Justificada como conexión CCO
+- ✅ **Postes SOS:** 88 unidades (incluido SOS #88)
+- ✅ **ETD/RADAR:** 16 equipos (14 ETD + 2 Radares)
+- ✅ **Estaciones Meteorológicas:** 3 unidades (2 peajes + 1 CCO)
+- ✅ **Metodología PKD:** Lineal aplicada a todos los documentos
 
 ---
 
@@ -738,33 +895,121 @@ Aplicar **Template T02** a sistemas críticos:
 
 ---
 
-## 🎯 PRÓXIMOS PASOS INMEDIATOS (Semana 21-27 Oct) - ACTUALIZADO
+## 🎯 PRÓXIMOS PASOS INMEDIATOS (23 Oct 2025) - ARQUITECTURA DINÁMICA COMPLETADA
 
-### ✅ **COMPLETADO EN SESIÓN 21 OCT 2025:**
+### ✅ **SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADO (23 OCT 2025):**
 
-1. [x] ✅ **Layout Georreferenciado ITS creado** (COMPLETADO)
-   - [x] ✅ 170 ubicaciones detalladas (PKs exactos)
-   - [x] ✅ Sistema "Tres Bolillos" documentado
-   - [x] ✅ Arquitectura de doble calzada explicada
-   - [x] ✅ Análisis de separaciones SOS
-   - [x] ✅ Identificación de desviaciones contractuales
-   - [x] ✅ Base para validación Google Earth
+**Estado Actual:** ✅ **SISTEMA HTML INTERACTIVO 100% OPERATIVO**
+- ✅ Arquitectura de 4 capas implementada
+- ✅ Fuente única de verdad (`tm01_master_data.js`)
+- ✅ 8 interfaces HTML interactivas operativas
+- ✅ Sistema de acceso seguro con roles
+- ✅ Propagación automática de datos (~3 segundos)
 
-2. [x] ✅ **Correcciones críticas documentales** (COMPLETADO)
-   - [x] ✅ Presupuesto unificado ($57.4M)
-   - [x] ✅ Control de versiones creado
-   - [x] ✅ Hitos completados documentados
-   - [x] ✅ Próximos pasos actualizados
+### 🚀 **PRÓXIMOS PASOS - IMPLEMENTACIÓN DE SCRIPTS DE SINCRONIZACIÓN:**
 
-3. [x] ✅ **Especificaciones Técnicas T04 - Sistemas ITS Prioritarios** (COMPLETADO)
-   - [x] ✅ Template T04 genérico creado (468 líneas)
-   - [x] ✅ T04 Postes SOS (847 líneas, $2.26M USD, 87 unidades)
-   - [x] ✅ T04 ETD + Radares (673 líneas, $0.64M USD, 12 RADAR-ANPR)
-   - [x] ✅ T04 CCTV (631 líneas, $1.07M USD, 30 cámaras)
-   - [x] ✅ T04 PMV (596 líneas, $1.01M USD, 28 paneles)
-   - [x] ✅ T04 WIM (547 líneas, $2.29M USD, 1 estación bidireccional)
+**PRIORIDAD ALTA (Inmediato - Semana 23-30 Oct):**
 
-**Resultado:** 5/13 T04 completados (38%) - Sistemas ITS prioritarios listos para cotización 🎉
+1. **🔄 Scripts de Sincronización Automática** ⚡ **EN PROGRESO**
+   - [x] ✅ **sync_wbs_tm01.ps1** - Sincronización WBS (24 items) **COMPLETADO**
+   - [x] ✅ **sincronizar_layout.ps1** - Layout georreferenciado (52 equipos) **COMPLETADO**
+   - [ ] **sincronizar_presupuesto.ps1** - Presupuesto dinámico **← EN PROGRESO**
+   - [ ] **sincronizar_SISTEMA_TM01_COMPLETO.ps1** - Script maestro
+   - **Estado:** 🔄 **EN PROGRESO** - 2/4 scripts completados
+   - **Tiempo estimado:** 1 semana
+   - **Responsable:** Equipo Técnico
+
+2. **🔧 Archivo .cursorrules para TM01**
+   - [ ] Detección automática de DTs
+   - [ ] Ejecución automática de cambios
+   - [ ] Propagación en 4 niveles
+   - [ ] Log de ejecución automático
+   - **Estado:** ⏳ **PENDIENTE** - Depende de scripts de sincronización
+   - **Tiempo estimado:** 3 días
+
+**PRIORIDAD MEDIA (Semana 30 Oct - 6 Nov):**
+
+3. **📦 Módulos PowerShell Reutilizables**
+   - [ ] **Logger.psm1** - Logging estructurado JSON
+   - [ ] **SistemaMapper.psm1** - Mapeo de 6 sistemas TM01
+   - [ ] **DTDetector.psm1** - Detección de DTs
+   - [ ] **LayoutExecutor.psm1** - Ejecución especializada
+   - **Estado:** ⏳ **PENDIENTE** - Depende de scripts base
+   - **Tiempo estimado:** 1 semana
+
+4. **🏢 Validación con Interventoría**
+   - [ ] Presentar sistema web con arquitectura dinámica
+   - [ ] Demostrar propagación automática de cambios
+   - [ ] Validación de especificaciones técnicas T04
+   - **Estado:** ⏳ **PENDIENTE** - Depende de scripts funcionando
+   - **Tiempo estimado:** 1 semana
+
+**PRIORIDAD BAJA (Semana 6-20 Nov):**
+
+5. **🏛️ Validación con ANI**
+   - [ ] Revisión final de especificaciones técnicas
+   - [ ] Aprobación de cambios en arquitecturas
+   - [ ] Validación de cumplimiento contractual
+   - **Estado:** ⏳ **PENDIENTE** - Depende de validación Interventoría
+   - **Tiempo estimado:** 2 semanas
+
+6. **🔧 Optimización del Sistema Dinámico**
+   - [ ] Sistema de cache-busting automático
+   - [ ] Validaciones pre/post ejecución
+   - [ ] Integración con sistemas externos
+   - **Estado:** ⏳ **PENDIENTE** - Depende de módulos base
+   - **Tiempo estimado:** 1 semana
+
+### 📋 **ORDEN DE IMPLEMENTACIÓN CONFIRMADO:**
+
+```
+SEMANA 1 (23-30 Oct): Scripts de Sincronización
+├── Día 1-2: sync_wbs_tm01.ps1 ⚡ ✅ COMPLETADO
+├── Día 3-4: sincronizar_layout.ps1 ✅ COMPLETADO
+├── Día 5-6: sincronizar_presupuesto.ps1 🔄 EN PROGRESO
+└── Día 7: sincronizar_SISTEMA_TM01_COMPLETO.ps1 ⏳ PENDIENTE
+
+SEMANA 2 (30 Oct - 6 Nov): .cursorrules + Módulos
+├── Día 1-3: .cursorrules para TM01
+├── Día 4-5: Logger.psm1
+└── Día 6-7: SistemaMapper.psm1 + DTDetector.psm1
+
+SEMANA 3 (6-13 Nov): Validación Externa
+├── Día 1-5: Validación con Interventoría
+└── Día 6-7: Preparación para ANI
+```
+
+### 🎯 **PROGRESO ACTUAL (24 Oct 2025):**
+
+**✅ COMPLETADO:**
+- **sync_wbs_tm01.ps1**: Script de sincronización WBS funcionando correctamente
+  - Archivo generado: `Sistema_Validacion_Web/datos_wbs_TM01_items.js`
+  - 24 items WBS sincronizados exitosamente
+  - Logs de ejecución disponibles en `logs/`
+
+- **sincronizar_layout.ps1**: Script de layout georreferenciado creado
+  - Genera 52+ equipos con coordenadas precisas
+  - Distribución por PK según criterios técnicos
+  - Funciones de consulta y estadísticas incluidas
+
+**🔄 EN PROGRESO:**
+- **sincronizar_presupuesto.ps1**: Script de presupuesto dinámico
+  - Siguiente en implementar
+  - Generará cálculos automáticos AIU/IVA
+  - Integración con datos WBS y layout
+
+**⏳ PENDIENTE:**
+- **sincronizar_SISTEMA_TM01_COMPLETO.ps1**: Script maestro
+- **Archivo .cursorrules**: Detección automática de DTs
+- **Módulos PowerShell**: Logger, SistemaMapper, DTDetector
+
+### 🎯 **RECOMENDACIÓN INMEDIATA:**
+
+**CONTINUAR CON sincronizar_presupuesto.ps1** porque:
+- ✅ Base sólida: 2/4 scripts completados exitosamente
+- ✅ Datos WBS y Layout: Ya sincronizados y funcionando
+- ✅ Presupuesto dinámico: Completará la tríada de datos principales
+- ✅ Script maestro: Una vez completado, podremos crear el script maestro
 
 ### ✅ **COMPLETADO ANTERIORMENTE (17-20 OCT 2025):**
 

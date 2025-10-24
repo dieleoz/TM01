@@ -28,7 +28,7 @@ Define la **arquitectura del Plan de Gestión Social** del proyecto, establecien
 - O&M: Atención a usuarios, educación vial
 - Reversión: Gestión de impactos sociales
 
-**Cobertura:** 4 municipios (Puerto Salgar, Puerto Boyacá, Puerto Berrío, Barrancabermeja)
+**Cobertura:** 4 municipios (Puerto Salgar, Puerto Boyacá, Puerto Berrío, Barrancabermeja) + 259.6 km principales + 33.4 km adicionales
 
 ### 1.3 Referencias
 
@@ -184,6 +184,22 @@ PLAN DE GESTIÓN SOCIAL (PGS)
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Plan de gestión social conceptual |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Cobertura actualizada, longitudes 259.6 km + 33.4 km |
+
+---
+
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Plan de Gestión Social Definido + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
+**Responsable:** Gerente Social / Especialista Social  
+**Próximo documento:** T04 - Plan de Gestión Social Detallado  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Longitudes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

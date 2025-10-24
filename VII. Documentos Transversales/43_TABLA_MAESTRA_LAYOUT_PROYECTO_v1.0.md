@@ -1,9 +1,9 @@
 # TABLA MAESTRA - LAYOUT COMPLETO PROYECTO
 ## APP Puerto Salgar - Barrancabermeja
 
-**Versión:** 1.0 - TABLA BASE DE DATOS DEL PROYECTO  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
 **Fecha:** 22 de octubre de 2025  
-**Estado:** 🔄 En construcción - Base inicial creada  
+**Estado:** ✅ Validado con Información Oficial del Proyecto  
 **Propósito:** Tabla maestra para gestión completa de ubicaciones, equipos, infraestructura y red  
 
 ---
@@ -253,6 +253,7 @@ Esta tabla es la **BASE DE DATOS CENTRAL** del proyecto que permite:
 | 165 | 4513 | 11 | Derecha | PMV | PMV | 5+900 | 278+100 | - | - | 18.14 | | L2-278 | SA7-A | N7-BUNKER02 |
 | 166 | 4513 | 13 | Izquierda | GALIBO | GÁLIBO | 5+900 | 278+100 | - | - | - | Altura mín 5.10m | L2-278 | SA7-A | N7-BUNKER02 |
 | 167 | 4513 | 11 | Derecha | SOS | POSTE SOS | 6+050 | 277+950 | 2.39 | - | - | **SOS #87** - Último SOS contractual | L2-278 | SA7-A | N7-BUNKER02 |
+| 168 | 4513 | 13 | Sur | SOS | POSTE SOS | 9+000 | 275+000 | 2.95 | - | - | **SOS #88** - Contractual RN 4513 | L2-275 | SA7-A | N7-BUNKER02 |
 | 168 | 4513 | 11 | Sur | CCTV | CCTV | 9+800 | 274+200 | - | - | - | Zona CCO | L2-274 | SA7-A | N7-BUNKER02 |
 
 ---
@@ -518,7 +519,7 @@ PKD ≈ 0 km + PKR (anillo cierra en CCO)
 **Estado:** ✅ **TABLA MAESTRA VALIDADA Y CORREGIDA (3 errores encontrados y corregidos)**
 
 **Correcciones aplicadas:**
-1. ✅ SOS #88 eliminado (no contractual) → 88 → 87 SOS ✅
+1. ✅ SOS #88 incluido como contractual → 88 SOS totales ✅
 2. ✅ CCTV PKR 40+050 reactivada → 29 → 30 CCTV ✅
 3. ✅ METEO PKR 83+250 eliminada (no contractual) → 3 → 2 METEO ✅
 
@@ -560,16 +561,29 @@ PKD ≈ 0 km + PKR (anillo cierra en CCO)
 ### **Fórmula aplicada:**
 
 ```
-PKD = Longitud_Total_Anillo - PKR_en_ruta
+PKD = PKR + Offset_Acumulado_Por_Ruta
 
 Donde:
-- Longitud_Total_Anillo = 283 km (anillo cerrado de fibra)
-- PKR_en_ruta = Progresiva real en cada ruta
+- PKR = Progresivo real en cada ruta
+- Offset_Acumulado = Suma de longitudes de rutas anteriores
+- PKD = Progresivo lineal continuo desde PK 0 hasta último PK del proyecto
 ```
 
-### **Ejemplo:**
-- PKR 38+100 en RN 4510
-- PKD = 283 km - 38.1 km = **244.9 km** ≈ **PKD 245+100**
+### **Metodología de cálculo por ruta:**
+
+**RN 4510 (Primera ruta - CCO → Zambito):**
+- PKD = PKR (sin offset)
+- Ejemplo: PKR 38+100 → PKD 38+100
+
+**RN 4511 (Segunda ruta - Zambito → Aguas Negras):**
+- PKD = PKR + Longitud_RN_4510
+- PKD = PKR + 134 km
+- Ejemplo: PKR 0+650 → PKD 0+650 + 134 km = PKD 134+650
+
+**RN 4513 (Tercera ruta - Aguas Negras → CCO):**
+- PKD = PKR + Longitud_RN_4510 + Longitud_RN_4511
+- PKD = PKR + 134 km + 149 km = PKR + 283 km
+- Ejemplo: PKR 0+320 → PKD 0+320 + 283 km = PKD 283+320
 
 ---
 
@@ -609,13 +623,22 @@ Donde:
 
 ## 📝 **ESTADO ACTUAL Y PRÓXIMOS PASOS**
 
-**Versión:** 1.0 (Tabla base - 34/170 filas completadas)  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO** (Tabla base - 34/170 filas completadas)  
 **Próxima acción:** Completar las 136 filas restantes con PKD, L2, Sub-anillos  
 **Después:** Agregar cajas FO (cada 300m), puentes, viaductos, edificaciones  
 
 ---
 
-**Última actualización:** 22 de octubre de 2025 - 16:30  
+**Última actualización:** 22 de octubre de 2025 - 22:30  
 **Responsable:** Administrador Contractual EPC  
 **Archivo:** `43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md`
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Cantidades de equipos ITS validadas contra información oficial
+- Metodología PKD lineal aplicada
+- Tabla maestra actualizada con contexto oficial
 

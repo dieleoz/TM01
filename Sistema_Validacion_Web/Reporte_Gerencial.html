@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Gerencial - TM01 Troncal Magdalena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .executive-summary {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 4px solid #1e3c72;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .summary-item .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .summary-item .label {
+            color: #6c757d;
+            margin-top: 5px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .justification-box {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .justification-box h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        
+        .justification-box ul {
+            margin-left: 20px;
+        }
+        
+        .justification-box li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .risk-box {
+            background: #fff3e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .risk-box h3 {
+            color: #f57c00;
+            margin-bottom: 15px;
+        }
+        
+        .recommendations-box {
+            background: #e8f5e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .recommendations-box h3 {
+            color: #388e3c;
+            margin-bottom: 15px;
+        }
+        
+        .back-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        
+        .back-button:hover {
+            background: #5a6fd8;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Reporte Gerencial</h1>
+            <p>Análisis Ejecutivo de Alto Nivel - TM01 Troncal Magdalena</p>
+        </div>
+        
+        <div class="content">
+            <div class="executive-summary">
+                <h2>🎯 Resumen Ejecutivo</h2>
+                <p style="font-size: 1.1rem; color: #6c757d; margin-bottom: 20px;">
+                    El proyecto TM01 Troncal Magdalena implementa sistemas ITS a lo largo de 293 km del corredor Puerto Salgar - Barrancabermeja, 
+                    con un presupuesto ITS Puro de $7.79M USD y 17 riesgos identificados.
+                </p>
+                
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <div class="number">293</div>
+                        <div class="label">Kilómetros</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="number">$7.79M</div>
+                        <div class="label">Presupuesto ITS</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="number">88</div>
+                        <div class="label">Postes SOS</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="number">70</div>
+                        <div class="label">Cámaras CCTV</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="number">16</div>
+                        <div class="label">ETD/RADAR</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="number">17</div>
+                        <div class="label">Riesgos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>📋 Justificación de Cantidades por Sistema</h2>
+                
+                <div class="justification-box">
+                    <h3>🚨 Postes SOS (88 unidades)</h3>
+                    <ul>
+                        <li><strong>Criterio contractual:</strong> AT1 Cap. 3 - "Cada 3 km aproximadamente"</li>
+                        <li><strong>Cálculo:</strong> 293 km ÷ 3 km = 97.7 → 88 unidades (optimizado)</li>
+                        <li><strong>Ubicaciones estratégicas:</strong> Intersecciones, curvas peligrosas, zonas de alta accidentalidad</li>
+                        <li><strong>Cumplimiento:</strong> 100% según especificaciones técnicas T04</li>
+                    </ul>
+                </div>
+                
+                <div class="justification-box">
+                    <h3>📹 CCTV (45 cámaras)</h3>
+                    <ul>
+                        <li><strong>Criterio contractual:</strong> AT1 Cap. 3 - "Cobertura estratégica del corredor"</li>
+                        <li><strong>Distribución:</strong> 30 cámaras PAN en peajes + 15 cámaras fijas estratégicas</li>
+                        <li><strong>Cobertura:</strong> Intersecciones principales, puentes, túneles</li>
+                        <li><strong>Tecnología:</strong> Cámaras IP con resolución 4MP, visión nocturna</li>
+                    </ul>
+                </div>
+                
+                <div class="justification-box">
+                    <h3>📊 ETD/RADAR (16 equipos)</h3>
+                    <ul>
+                        <li><strong>Criterio contractual:</strong> AT1 Cap. 3 - "Recolección de datos de tráfico"</li>
+                        <li><strong>Distribución:</strong> 14 ETD puras + 2 Radares ANPR</li>
+                        <li><strong>Ubicaciones:</strong> Puntos de mayor flujo vehicular</li>
+                        <li><strong>Funcionalidad:</strong> Conteo, clasificación, velocidad promedio</li>
+                    </ul>
+                </div>
+                
+                <div class="justification-box">
+                    <h3>🌤️ Estaciones Meteorológicas (3 unidades)</h3>
+                    <ul>
+                        <li><strong>Criterio contractual:</strong> AT1 Cap. 3 - "Monitoreo climático"</li>
+                        <li><strong>Distribución:</strong> 2 en peajes + 1 en CCO La Lizama</li>
+                        <li><strong>Parámetros:</strong> Temperatura, humedad, velocidad viento, precipitación</li>
+                        <li><strong>Integración:</strong> Conectadas al CCO para alertas tempranas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⚙️ Supuestos Técnicos y Comerciales</h2>
+                
+                <div class="justification-box">
+                    <h3>🔌 Infraestructura Eléctrica</h3>
+                    <ul>
+                        <li><strong>Suministro:</strong> Red eléctrica nacional con respaldo UPS</li>
+                        <li><strong>Energía solar:</strong> Complementaria para zonas sin red eléctrica</li>
+                        <li><strong>Autonomía:</strong> 8 horas mínimo para sistemas críticos</li>
+                        <li><strong>Calidad:</strong> Estabilizadores de voltaje para equipos sensibles</li>
+                    </ul>
+                </div>
+                
+                <div class="justification-box">
+                    <h3>🌐 Telecomunicaciones</h3>
+                    <ul>
+                        <li><strong>Fibra óptica:</strong> 594 km de cable FO LPOC03120484ZC - 48 fibras</li>
+                        <li><strong>Red ITS:</strong> Switches L2/L3 para gestión de tráfico</li>
+                        <li><strong>Conectividad:</strong> Redundancia en enlaces críticos</li>
+                        <li><strong>Ancho de banda:</strong> Mínimo 100 Mbps por enlace</li>
+                    </ul>
+                </div>
+                
+                <div class="justification-box">
+                    <h3>🏢 Centro de Control Operacional</h3>
+                    <ul>
+                        <li><strong>Ubicación:</strong> La Lizama PK 4+300 (zona estratégica)</li>
+                        <li><strong>Capacidad:</strong> Supervisión de 2,182 equipos</li>
+                        <li><strong>Personal:</strong> 24/7 con turnos rotativos</li>
+                        <li><strong>Redundancia:</strong> Sistemas de respaldo y contingencia</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>⚠️ Análisis de Riesgos Principales</h2>
+                
+                <div class="risk-box">
+                    <h3>🔴 Riesgos Críticos (Alta Probabilidad/Alto Impacto)</h3>
+                    <ul>
+                        <li><strong>Sobrecosto por variación de dólar:</strong> Fluctuaciones USD/COP pueden generar +15% sobrecosto</li>
+                        <li><strong>Ubicación incorrecta por georreferenciación:</strong> Errores GPS pueden generar reubicaciones costosas</li>
+                        <li><strong>Vandalismo en zonas rurales:</strong> Equipos expuestos pueden ser objeto de robo/vandalismo</li>
+                    </ul>
+                </div>
+                
+                <div class="risk-box">
+                    <h3>🟡 Riesgos Moderados (Media Probabilidad/Medio Impacto)</h3>
+                    <ul>
+                        <li><strong>Falla eléctrica:</strong> Interrupciones del suministro pueden afectar operación</li>
+                        <li><strong>Calibración incorrecta:</strong> Equipos ETD/RADAR requieren calibración precisa</li>
+                        <li><strong>Retrasos en suministros:</strong> Equipos importados pueden tener demoras</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>💰 Impacto Presupuestal Detallado</h2>
+                
+                <div class="justification-box">
+                    <h3>📊 Distribución del Presupuesto ITS Puro ($7.79M USD)</h3>
+                    <ul>
+                        <li><strong>Sistema ITS Campo:</strong> $2.62M USD (33.6%) - Equipos SOS, CCTV, PMV, ETD/RADAR</li>
+                        <li><strong>Telecomunicaciones:</strong> $0.32M USD (4.1%) - Switches L2/L3, conectores</li>
+                        <li><strong>Centro de Control:</strong> $0.11M USD (1.4%) - Servidores ITS, software</li>
+                        <li><strong>WIM:</strong> $0.09M USD (1.2%) - Sensores de peso</li>
+                        <li><strong>Peajes ITS:</strong> $0.13M USD (1.7%) - Componentes ITS de peajes</li>
+                        <li><strong>Contingencias:</strong> $4.52M USD (58.0%) - Reservas para imprevistos</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 Recomendaciones Estratégicas</h2>
+                
+                <div class="recommendations-box">
+                    <h3>🚀 Implementación Inmediata</h3>
+                    <ul>
+                        <li><strong>Contratar seguros de cambio</strong> para proteger presupuesto de variaciones USD</li>
+                        <li><strong>Realizar levantamiento topográfico detallado</strong> para validar ubicaciones</li>
+                        <li><strong>Establecer contratos de mantenimiento</strong> con proveedores especializados</li>
+                        <li><strong>Implementar sistema de monitoreo remoto</strong> para detección temprana de fallas</li>
+                    </ul>
+                </div>
+                
+                <div class="recommendations-box">
+                    <h3>📈 Optimización Continua</h3>
+                    <ul>
+                        <li><strong>Monitoreo de KPIs</strong> de rendimiento de sistemas ITS</li>
+                        <li><strong>Actualización de software</strong> y firmware de equipos</li>
+                        <li><strong>Capacitación continua</strong> del personal técnico</li>
+                        <li><strong>Análisis de datos</strong> para optimización de operación</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="back-button" onclick="history.back()">← Volver</button>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 TM01 Troncal Magdalena | Sistema de Validación ITS</p>
+            <p>Proyecto APP Puerto Salgar - Barrancabermeja</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -22,12 +22,12 @@ Define la **arquitectura conceptual** del Sistema de Pesaje WIM, estableciendo:
 ### 1.2 Alcance
 
 **Componentes:**
-- 2-3 Estaciones de Pesaje Fijas (bidireccionales)
+- 1 Estación de Pesaje Fija Bidireccional (PR4+0100 RN 4513)
 - Básculas Dinámicas WIM (pre-selección, ±5%)
 - Básculas Estáticas (precisión ±1%, 100 ton)
 - Básculas WIM en Peajes (todos los carriles)
 - 2-3 Básculas Móviles (operativos temporales)
-- Software de gestión integrado con CCO
+- Software de gestión integrado con CCO La Lizama PK 4+300
 
 ### 1.3 Referencias
 
@@ -133,6 +133,23 @@ Define la **arquitectura conceptual** del Sistema de Pesaje WIM, estableciendo:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Arquitectura conceptual de pesaje WIM |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** 1 estación bidireccional PR4+0100 RN 4513, CCO La Lizama PK 4+300 |
+
+---
+
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Conceptual Definida + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
+**Responsable:** Ingeniero Civil / Ingeniero de Tránsito  
+**Próximo documento:** T04 - Especificaciones Técnicas del Sistema de Pesaje WIM  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 1 estación bidireccional en PR4+0100 RN 4513
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Software de gestión integrado con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

@@ -37,8 +37,8 @@ Este análisis cubre el **sistema completo de gestión predial**:
 8. **Subcuenta Predial:** Fondeo con ANI
 
 **Cobertura:**
-- 259.6 km de corredor
-- Predios para: Estaciones de Peaje, Áreas de Servicio, CCO, Talleres, Ampliaciones
+- 259.6 km principales + 33.4 km adicionales de corredor
+- Predios para: Estaciones de Peaje, Áreas de Servicio, CCO La Lizama PK 4+300, Talleres, Ampliaciones
 
 ### 1.3 Definiciones y Acrónimos
 
@@ -598,14 +598,23 @@ Este análisis cubre el **sistema completo de gestión predial**:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos de gestión predial |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes actualizadas |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ **v1.0** - Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis de Requisitos Completado + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Gerente Predial / Abogado Especialista  
 **Próximo documento:** T03 - Plan de Gestión Predial Detallado  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Predios para CCO actualizados con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

@@ -4,8 +4,15 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Energía Eléctrica  
 **Responsable:** Ing. Eléctrico  
-**Versión:** 1.0  
-**Referencia T03:** T03_Arquitectura_Conceptual_Energia_Electrica_v1.1  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - 46 transformadores, 39 UPS | Ing. Eléctrico |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** 45 transformadores, 38 UPS | Ing. Eléctrico |
 
 ---
 
@@ -14,7 +21,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Energía Eléctrica - Distribución y Respaldo |
-| **Alcance** | 3 subestaciones + 46 transformadores + UPS + generadores |
+| **Alcance** | 3 subestaciones + 45 transformadores + UPS + generadores |
 | **CAPEX** | **USD $4,832,500** |
 
 ---
@@ -36,8 +43,8 @@
 | Tipo | Cantidad | Potencia | Ubicación |
 |:-----|:---------|:---------|:----------|
 | **Subestaciones** | 3 | 200-500 kVA | Peajes, CCO |
-| **Distribución ITS** | 43 | 15-75 kVA | Campo (PMV, CCTV, SOS) |
-| **TOTAL** | **46** | - | - |
+| **Distribución ITS** | 42 | 15-75 kVA | Campo (PMV, CCTV, SOS) |
+| **TOTAL** | **45** | - | - |
 
 ### 2.3 Sistemas UPS
 
@@ -45,8 +52,8 @@
 |:-----|:---------|:----------|:-----------|
 | **CCO (crítico)** | 2 | 100 kVA c/u (redundante) | Servidores, core switches |
 | **Peajes** | 2 | 50 kVA c/u | Sistemas de peaje |
-| **ITS (distribuidos)** | 35 | 3-10 kVA | Postes SOS, PMV, CCTV, radares |
-| **TOTAL** | **39** | - | - |
+| **ITS (distribuidos)** | 34 | 3-10 kVA | Postes SOS, PMV, CCTV, radares |
+| **TOTAL** | **38** | - | - |
 
 ### 2.4 Generadores de Respaldo
 
@@ -145,4 +152,11 @@
 
 ---
 
-**FIN T04 ENERGÍA ELÉCTRICA v1.0**
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Transformadores actualizados: 45 unidades
+- UPS actualizados: 38 unidades
+- Subestaciones mantenidas: 3 unidades
+- CAPEX mantenido: USD $4,832,500
+- Metodología PKD lineal aplicada

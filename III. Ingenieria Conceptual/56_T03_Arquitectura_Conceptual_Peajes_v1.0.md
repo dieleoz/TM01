@@ -38,6 +38,7 @@ Esta arquitectura cubre las **2 estaciones de peaje** del corredor:
 - Red de datos de 3 niveles
 - Edificio administrativo
 - Iluminación LED
+- Integración con CCO La Lizama PK 4+300
 
 **Operación:** 24/7/365 durante 25 años
 
@@ -562,14 +563,22 @@ Centro de Plaza ──[Fibra Óptica]──► CCO
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial del sistema de peajes |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Integración CCO La Lizama PK 4+300 |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Arquitectura Conceptual Definida  
-**Fecha:** 17/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Conceptual Definida + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas de Peaje  
 **Próximo documento:** T04 - Especificaciones Técnicas del Sistema de Peajes  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Integración con CCO La Lizama PK 4+300 (RN 4513) documentada
+- Ubicaciones de peajes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

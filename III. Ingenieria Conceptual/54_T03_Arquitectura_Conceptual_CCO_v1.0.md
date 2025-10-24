@@ -23,13 +23,15 @@ Establece:
 
 ### 1.2 Alcance
 
-Esta arquitectura cubre el **CCO completo** como centro de mando del corredor de 259.6 km:
+Esta arquitectura cubre el **CCO completo** como centro de mando del corredor de 259.6 km principales + 33.4 km adicionales:
+
+**Ubicación del CCO:** La Lizama PK 4+300 (RN 4513) - Conexión al proyecto principal
 
 **Sistemas integrados en el CCO:**
-- ITS (CCTV, PMV, WIM, Meteo, SOS, DAI, etc.)
-- Peajes (2 estaciones)
+- ITS (CCTV, PMV, WIM, Meteo, SOS, ETD/RADAR, Gálibos, etc.)
+- Peajes (2 estaciones: Zambito, Aguas Negras)
 - Sistema de Emergencias (despacho de TAM, grúas)
-- Telecomunicaciones (núcleo de red)
+- Telecomunicaciones (núcleo de red - anillo 283 km)
 - Energía (SCADA eléctrico)
 - Iluminación (SCADA de iluminación)
 - Pesaje (gestión de WIM)
@@ -54,6 +56,7 @@ Esta arquitectura cubre el **CCO completo** como centro de mando del corredor de
 ┌──────────────────────────────────────────────────────────────────┐
 │                    CENTRO DE CONTROL OPERACIONAL                 │
 │                         (CCO - 500 m²)                           │
+│                    Ubicado en La Lizama PK 4+300 (RN 4513)       │
 │                                                                  │
 │  ┌────────────────────────────────────────────────────────────┐ │
 │  │              SALA DE CONTROL (200 m²)                      │ │
@@ -102,6 +105,7 @@ Esta arquitectura cubre el **CCO completo** como centro de mando del corredor de
 └──────────────────────────────────────────────────────────────────┘
 
 Área total construida: 500 m² (1 piso)
+Conexión al proyecto: RN 4513 PK 4+300 (La Lizama)
 ```
 
 ### 2.2 Descripción de Componentes
@@ -611,14 +615,24 @@ Ubicación sugerida: PK 130±5 (punto medio del corredor)
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Arquitectura conceptual inicial del CCO |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Ubicación La Lizama PK 4+300, conexión RN 4513, sistemas actualizados |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Arquitectura Conceptual Definida  
-**Fecha:** 17/10/2025  
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Conceptual Definida + Ubicación Oficial  
+**Fecha:** 22/10/2025  
 **Responsable:** Arquitecto de Sistemas / Ingeniero de Sistemas  
 **Próximo documento:** T04 - Especificaciones Técnicas del CCO  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Ubicación confirmada: La Lizama PK 4+300 (RN 4513)
+- Conexión al proyecto principal documentada
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Sistemas integrados actualizados con información oficial
+- Metodología PKD lineal aplicada  
 
 ---
 

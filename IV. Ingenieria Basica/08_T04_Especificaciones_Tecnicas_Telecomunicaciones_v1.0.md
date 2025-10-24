@@ -4,10 +4,17 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Telecomunicaciones - Backbone de Comunicaciones  
 **Responsable:** Ing. Telecomunicaciones / Arquitecto de Redes  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Referencia T01:** 27_T01_Ficha_Sistema_Telecomunicaciones_v1.0  
 **Referencia T03:** 55_T03_Arquitectura_Conceptual_Telecomunicaciones_v1.0  
-**Referencia Validación:** 32_VALIDACION_CONTRACTUAL_TELECOMUNICACIONES_v1.0  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - 283 km fibra óptica | Ing. Telecomunicaciones |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** ~322 km fibra óptica | Ing. Telecomunicaciones |
 
 ---
 
@@ -16,7 +23,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Telecomunicaciones - Backbone Fibra Óptica + Red de Datos |
-| **Alcance** | **283 km fibra óptica** + switches + equipos |
+| **Alcance** | **~322 km fibra óptica** + switches + equipos |
 | **CAPEX** | **USD $6,050,511.28** |
 | **Topología** | **Anillo redundante L3** + **Sub-anillos L2** |
 | **Nodos L3** | **7 nodos** (4 edificaciones + 2 STACKS + 2 bunkers) |
@@ -32,7 +39,7 @@
 | **Tipo** | **Monomodo SM 9/125 μm, OS2** |
 | **Norma** | **ITU-T G.652.D** |
 | **Configuración** | 12-24 hilos |
-| **Longitud total** | **285 km** (anillo + derivaciones) |
+| **Longitud total** | **~322 km** (anillo + derivaciones) |
 | **Atenuación** | ≤0.35 dB/km @ 1310 nm, ≤0.22 dB/km @ 1550 nm |
 | **Dispersión** | ≤18 ps/(nm·km) |
 | **Cable** | ADSS (all-dielectric self-supporting) o ducto |
@@ -46,7 +53,7 @@
 | **Configuración** | 4-6 ductos por zanja |
 | **Profundidad** | 0.80-1.0 m |
 | **Protección** | Cinta señalizadora + concreto (cruces de vías) |
-| **Longitud** | 285 km |
+| **Longitud** | ~322 km |
 
 ### 2.3 Distribución de Switches L3 (Criterio: 1 L3 por Edificación + Bunkers)
 
@@ -534,4 +541,11 @@ Validación:
 
 ---
 
-**FIN T04 TELECOMUNICACIONES v1.0**
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitud fibra óptica actualizada: ~322 km
+- Topología mantenida: Anillo redundante L3 + Sub-anillos L2
+- Nodos L3 confirmados: 7 nodos
+- CAPEX mantenido: USD $6,050,511.28
+- Metodología PKD lineal aplicada

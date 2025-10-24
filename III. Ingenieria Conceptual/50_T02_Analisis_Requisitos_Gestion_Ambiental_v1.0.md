@@ -41,6 +41,7 @@ Este análisis cubre el **sistema completo de gestión ambiental** en TODAS las 
 - Manejo de Fauna
 - Monitoreo Ambiental
 - Gestión del Riesgo de Desastres
+- Cobertura: 259.6 km principales + 33.4 km adicionales
 
 ### 1.3 Definiciones y Acrónimos
 
@@ -558,12 +559,14 @@ Este análisis cubre el **sistema completo de gestión ambiental** en TODAS las 
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos de gestión ambiental |
+| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** Puntos generación residuos 17→5 (2 peajes + 1 CCO + 2 áreas según AT1 Cap. 3) |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes actualizadas, cobertura 259.6 km + 33.4 km |
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
-**Estado:** ✅ Análisis Validado Contractualmente  
-**Fecha:** 20/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis Validado Contractualmente + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Gerente Ambiental  
 **Próximo documento:** T03 - Plan de Gestión Ambiental  
 
@@ -574,6 +577,14 @@ Este análisis cubre el **sistema completo de gestión ambiental** en TODAS las 
 |:--------|:------|:------------|
 | v1.0 | 17/10/2025 | Análisis inicial de requisitos de gestión ambiental |
 | **v1.1** | **20/10/2025** | **Ajuste contractual:** Puntos generación residuos 17→5 (2 peajes + 1 CCO + 2 áreas según AT1 Cap. 3) |
+| **v1.2** | **22/10/2025** | **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, cobertura actualizada |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Longitudes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

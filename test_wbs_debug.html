@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test WBS Debug</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .wbs-tree {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .wbs-item {
+            margin: 5px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .wbs-level-1 {
+            background: #e3f2fd;
+            font-weight: bold;
+        }
+        .wbs-level-2 {
+            background: #f3e5f5;
+            margin-left: 20px;
+        }
+        .wbs-level-3 {
+            background: #e8f5e8;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test WBS Debug</h1>
+    
+    <div id="debug-info">
+        <p>Debug info will appear here</p>
+    </div>
+    
+    <div class="wbs-tree" id="wbsTree">
+        <!-- WBS será generada dinámicamente -->
+    </div>
+
+    <script>
+        // Datos de prueba simplificados
+        const wbsData = [
+            {nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo"},
+            {nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo"},
+            {nivel: 3, item: "1.1.1", descripcion: "Poste SOS", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item"},
+            {nivel: 3, item: "1.1.2", descripcion: "Botón SOS", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item"},
+        ];
+
+        function renderWBS() {
+            console.log('renderWBS called');
+            const wbsTree = document.getElementById('wbsTree');
+            console.log('wbsTree element:', wbsTree);
+            console.log('wbsData length:', wbsData.length);
+            
+            wbsTree.innerHTML = '';
+
+            wbsData.forEach((item, index) => {
+                console.log(`Processing item ${index}:`, item);
+                
+                const div = document.createElement('div');
+                div.className = `wbs-item wbs-level-${item.nivel} ${item.tipo}`;
+                
+                let itemHTML = `<strong>${item.item}</strong> - ${item.descripcion}`;
+                
+                if (item.cantidad) {
+                    itemHTML += ` (${item.cantidad} ${item.unidad})`;
+                }
+                
+                div.innerHTML = itemHTML;
+                wbsTree.appendChild(div);
+            });
+            
+            console.log('WBS rendered successfully');
+        }
+
+        // Debug info
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            const debugInfo = document.getElementById('debug-info');
+            debugInfo.innerHTML = `
+                <p>DOM loaded successfully</p>
+                <p>wbsData length: ${wbsData.length}</p>
+                <p>wbsTree element exists: ${document.getElementById('wbsTree') ? 'Yes' : 'No'}</p>
+            `;
+            
+            renderWBS();
+        });
+    </script>
+</body>
+</html>

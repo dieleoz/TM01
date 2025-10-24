@@ -37,7 +37,7 @@ Este análisis cubre el **sistema completo de gestión social** en TODAS las fas
 8. **Oficinas de Atención al Usuario (OAU)**
 
 **Cobertura:**
-- 259.6 km + Área de Influencia Directa e Indirecta
+- 259.6 km principales + 33.4 km adicionales + Área de Influencia Directa e Indirecta
 - 4 municipios: Puerto Salgar, Puerto Boyacá, Puerto Berrío, Barrancabermeja
 
 ### 1.3 Definiciones y Acrónimos
@@ -533,14 +533,22 @@ Este análisis cubre el **sistema completo de gestión social** en TODAS las fas
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos de gestión social |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes actualizadas, cobertura 259.6 km + 33.4 km |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 17/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis de Requisitos Completado + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Gerente Social  
 **Próximo documento:** T03 - Plan de Gestión Social Detallado  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Longitudes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

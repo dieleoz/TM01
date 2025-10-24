@@ -4,8 +4,15 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** Telecomunicaciones - Equipos Nivel 3 (Core/Troncal)  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
-**Basado en:** Solicitud Compra Equipos L3 v1.0 + Arquitectura Red L2/L3 v1.0  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 22/10/2025 | Creación inicial - 11 switches L3 | Ing. Telecomunicaciones |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Ubicaciones actualizadas | Ing. Telecomunicaciones |
 
 ---
 
@@ -33,10 +40,10 @@
 
 | Nodo | Nombre | Ubicación | PKR | PKD | Tipo Edificación | Switch L3 |
 |:-----|:-------|:----------|:----|:----|:-----------------|:----------|
-| **N1** | CCO | RN 4513 | 4+400 | 0+000 | Centro de Control | STACK 48p×2 |
+| **N1** | CCO | La Lizama PK 4+300 | RN 4513 | 0+000 | Centro de Control | STACK 48p×2 |
 | **N2** | ZAMBITO | RN 4511 | 9+200 | 141+300 | Peaje + AS | 48p |
 | **N3** | BUNKER 01 | TBD | TBD | 70+450 | Bunker Telecom | 24p |
-| **N4** | AGUAS NEGRAS | RN 4511 | 81+800 | 68+700 | Peaje + AS | 48p |
+| **N4** | AGUAS NEGRAS | RN 4511 | 80+000 | 68+700 | Peaje + AS | 48p |
 | **N5** | AS AGUAS NEGRAS | RN 4511 | 113+450 | 37+050 | Área Servicio | 24p |
 | **N6** | AS ZAMBITO | RN 4510 | 104+100 | 178+000 | Área Servicio | 24p |
 | **N7** | BUNKER 02 | TBD | TBD | 233+150 | Bunker Telecom | STACK 24p×2 |
@@ -575,8 +582,11 @@ interface TenGigabitEthernet1/1/2
 
 ---
 
-**Última actualización:** 22 de octubre de 2025 - 18:15  
-**Responsable:** Ingeniero de Telecomunicaciones  
-**Estado:** ✅ **T05 EQUIPOS L3 COMPLETADO**  
-**Archivo:** `03_T05_Ingenieria_Detalle_Equipos_L3_v1.0.md`
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Ubicaciones actualizadas: CCO La Lizama PK 4+300, Aguas Negras PK 80+000
+- CAPEX mantenido: USD $202,892
+- Arquitectura L3 confirmada
+- Metodología PKD lineal aplicada
 

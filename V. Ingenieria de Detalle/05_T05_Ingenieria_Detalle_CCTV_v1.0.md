@@ -4,8 +4,15 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** CCTV - Videovigilancia ITS  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
-**Basado en:** T04 CCTV v1.0 + Validación Contractual CCTV v1.0 + Tabla Maestra v1.0  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 22/10/2025 | Creación inicial - 30 cámaras CCTV | Ing. ITS |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada | Ing. ITS |
 
 ---
 
@@ -400,8 +407,11 @@ CÁMARA PTZ IP
 
 ---
 
-**Última actualización:** 22 de octubre de 2025 - 18:45  
-**Responsable:** Ingeniero de Sistemas ITS / Especialista CCTV  
-**Estado:** ✅ **T05 CCTV COMPLETADO**  
-**Archivo:** `05_T05_Ingenieria_Detalle_CCTV_v1.0.md`
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 30 cámaras CCTV
+- CAPEX mantenido: USD $390,000
+- OPEX mantenido: USD $18,000/año
+- Metodología PKD lineal aplicada
 

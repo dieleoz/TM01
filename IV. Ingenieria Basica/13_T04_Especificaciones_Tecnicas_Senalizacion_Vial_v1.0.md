@@ -4,8 +4,15 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Señalización Vial (Vertical, Horizontal, Defensas)  
 **Responsable:** Ing. Vial / Ing. Tránsito  
-**Versión:** 1.0  
-**Referencia T03:** T03_Arquitectura_Conceptual_Senalizacion_Vial_v1.1  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - 259.6 km | Ing. Vial |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** 259.6 km + 33.4 km | Ing. Vial |
 
 ---
 
@@ -14,7 +21,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Señalización Vial Integral |
-| **Alcance** | **259.6 km** corredor completo |
+| **Alcance** | **259.6 km principales + 33.4 km adicionales** |
 | **CAPEX** | **USD $2,800,000** |
 
 ---
@@ -138,4 +145,10 @@
 
 ---
 
-**FIN T04 SEÑALIZACIÓN VIAL v1.0**
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Alcance actualizado: 259.6 km principales + 33.4 km adicionales
+- CAPEX mantenido: USD $2,800,000
+- Componentes confirmados según información oficial
+- Metodología PKD lineal aplicada

@@ -46,7 +46,7 @@ Garantizar la gestión adecuada de las relaciones con las comunidades del área 
   - **Gestión de Compensaciones Sociales**
   - **Monitoreo del Componente Social**
   
-- **Cobertura geográfica:** 259.6 km + Área de influencia directa (AI-D) + Área de influencia indirecta (AI-I)
+- **Cobertura geográfica:** 259.6 km principales + 33.4 km adicionales + Área de influencia directa (AI-D) + Área de influencia indirecta (AI-I)
 - **Municipios:** Puerto Salgar (Cundinamarca), Puerto Boyacá (Boyacá), Puerto Berrío, Barrancabermeja (Santander)
 - **Integración con:** Gestión Predial (AT7), Gestión Ambiental (AT6), Construcción, O&M, Comunidades, Alcaldías, JAC
 
@@ -215,11 +215,18 @@ ificada |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 17 de octubre de 2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Ficha de Sistema Completada + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Administrador Contractual EPC  
 **Próximo Documento:** 42_T01_Ficha_Sistema_Gestion_Predial_v1.0.md
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Longitudes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

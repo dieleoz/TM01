@@ -4,8 +4,15 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Centro de Control Operacional  
 **Responsable:** Ing. ITS / Ing. Sistemas  
-**Versión:** 1.0  
-**Referencia T03:** T03_Arquitectura_Conceptual_CCO_v1.1  
+**Versión:** 1.1  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 21/10/2025 | Creación inicial - PK 130 | Ing. ITS |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** La Lizama PK 4+300 | Ing. ITS |
 
 ---
 
@@ -14,7 +21,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Centro de Control Operacional (CCO) |
-| **Ubicación** | PK 130 (Núcleo central) |
+| **Ubicación** | La Lizama PK 4+300 (RN 4513) |
 | **CAPEX** | **USD $1,286,050** (COP $5,144,199,115) |
 
 ---
@@ -183,4 +190,10 @@
 
 ---
 
-**FIN T04 CCO v1.0**
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Ubicación actualizada: La Lizama PK 4+300 (RN 4513)
+- CAPEX mantenido: USD $1,286,050
+- Componentes confirmados según información oficial
+- Metodología PKD lineal aplicada

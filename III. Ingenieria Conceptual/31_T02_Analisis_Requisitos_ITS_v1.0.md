@@ -23,17 +23,20 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema ITS
 
 ### 1.2 Alcance
 
-Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
-1. Paneles de Mensaje Variable (PMV)
-2. CCTV (Circuito Cerrado de TV)
-3. Estaciones de Pesaje en Movimiento (WIM)
-4. Estaciones Meteorológicas
-5. Teléfonos de Emergencia (SOS)
-6. Detectores Automáticos de Incidentes (DAI)
-7. Estaciones de Aforo Vehicular
-8. Radares de Velocidad
-9. Detectores de Altura
-10. Sensores de Pista/Carril
+Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km principales + 33.4 km adicionales:
+
+**Ubicación del CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
+
+1. Paneles de Mensaje Variable (PMV) - 28 unidades
+2. CCTV (Circuito Cerrado de TV) - 30 cámaras
+3. Estaciones de Pesaje en Movimiento (WIM) - 1 estación bidireccional
+4. Estaciones Meteorológicas - 3 estaciones
+5. Teléfonos de Emergencia (SOS) - 88 postes
+6. ETD/RADAR (Estaciones de Detección de Tráfico/Radares) - 16 unidades
+7. Estaciones de Aforo Vehicular - 10-15 estaciones
+8. Radares de Velocidad - 11 unidades
+9. Detectores de Altura (Gálibos) - 8 unidades
+10. Sensores de Pista/Carril - Por definir
 
 ### 1.3 Definiciones y Acrónimos
 
@@ -61,14 +64,14 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 ### 2.1 Supervisión y Monitoreo de Tráfico
 
 **ID:** RF-001  
-**Descripción:** El sistema ITS debe permitir la supervisión en tiempo real del flujo vehicular en todo el corredor (259.6 km)  
+**Descripción:** El sistema ITS debe permitir la supervisión en tiempo real del flujo vehicular en todo el corredor (259.6 km principales + 33.4 km adicionales)  
 **Prioridad:** 🔴 Alta  
 **Fuente:** AT2, Sección 3.3.5.1  
 
 **Criterios de Aceptación:**
-- Video en vivo de 100-130 cámaras CCTV disponible en CCO
+- Video en vivo de 30 cámaras CCTV disponible en CCO La Lizama PK 4+300
 - Latencia de video < 500 ms
-- Visualización simultánea de al menos 32 cámaras en videowall
+- Visualización simultánea de al menos 16-32 cámaras en videowall
 - Grabación continua 24/7/365
 - Retención de video: 30 días mínimo
 
@@ -83,9 +86,8 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 
 **Criterios de Aceptación:**
 - PMV alfanuméricos y gráficos
-- Mínimo 2 PMV por área de peaje bidireccional
-- Mínimo 1 PMV por área de peaje unidireccional
-- Control remoto desde CCO
+- 28 PMV distribuidos cada 10-20 km + peajes (AT1)
+- Control remoto desde CCO La Lizama PK 4+300
 - Tiempo de actualización de mensaje < 5 segundos
 - Visibilidad de mensajes: >300 metros
 - Disponibilidad: 99% anual
@@ -108,11 +110,11 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 **Fuente:** AT2, Sección 3.3.5.1  
 
 **Criterios de Aceptación:**
-- Detección automática mediante DAI (analítica de video)
+- Detección automática mediante ETD/RADAR (16 unidades)
 - Detección de vehículos detenidos
 - Detección de tráfico en contraflujo
 - Detección de objetos en la vía
-- Alarma automática al CCO
+- Alarma automática al CCO La Lizama PK 4+300
 - Registro inmediato en SICC
 - Tasa de detección efectiva ≥ 90%
 - Falsos positivos < 10%
@@ -127,11 +129,11 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 **Fuente:** AT2, Sección 3.3.5.1  
 
 **Criterios de Aceptación:**
-- Medición de velocidad mediante radar
+- Medición de velocidad mediante radar (11 unidades)
 - Captura fotográfica de matrícula
 - Precisión de medición: ±2 km/h
 - Registro de fecha, hora, velocidad, foto
-- Transmisión a CCO en tiempo real
+- Transmisión a CCO La Lizama PK 4+300 en tiempo real
 - Información disponible para Policía y ANI
 - Generación de reportes de velocidades promedio
 
@@ -735,14 +737,24 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema ITS |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes, CCO La Lizama, cantidades actualizadas, criterios de aceptación |
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ **v1.0** - Análisis de Requisitos Completado  
-**Fecha:** 16/10/2025  
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis de Requisitos Completado + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas ITS  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema ITS  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Cantidades validadas contra información oficial
+- Criterios de aceptación actualizados con datos reales
+- Metodología PKD lineal aplicada  
 
 ---
 

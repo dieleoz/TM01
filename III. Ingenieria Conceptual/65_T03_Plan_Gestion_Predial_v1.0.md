@@ -28,6 +28,7 @@ Define la **arquitectura del Plan de Gestión Predial** del proyecto (RUTA CRÍT
 - Expropiación (15-20%)
 - Servidumbres (50-100)
 - Subcuenta Predial (ANI)
+- Predios para CCO La Lizama PK 4+300
 
 **Fases críticas:** Principalmente Preconstrucción y primeros 2 años de Construcción
 
@@ -184,6 +185,22 @@ Total: 150-300 expedientes completos
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Plan de gestión predial conceptual |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Predios para CCO La Lizama PK 4+300 |
+
+---
+
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Plan de Gestión Predial Definido + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
+**Responsable:** Gerente Predial / Abogado Especialista Predial  
+**Próximo documento:** T04 - Plan de Gestión Predial Detallado  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Predios para CCO La Lizama PK 4+300 (RN 4513) incluidos
+- Ubicación oficial del CCO documentada
+- Metodología PKD lineal aplicada
 
 ---
 

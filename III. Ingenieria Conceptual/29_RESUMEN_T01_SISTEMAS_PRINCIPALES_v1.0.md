@@ -2,7 +2,7 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
 **Fecha:** 16/10/2025  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Responsable:** Administrador Contractual EPC  
 **Estado:** ✅ 5/5 Sistemas Principales Documentados  
 
@@ -360,12 +360,29 @@ Progreso Total: ~40%
 
 ---
 
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Estado:** ✅ Resumen Completado  
 **Fecha:** 16/10/2025  
 **Responsable:** Administrador Contractual EPC  
 **GitHub:** https://github.com/dieleoz/TM01  
 **Commits:** 6 (último: 5 T01 completados)
+
+---
+
+## 📋 CHANGELOG
+
+| Versión | Fecha | Descripción |
+|:--------|:------|:------------|
+| v1.0 | 16/10/2025 | Creación inicial del resumen de sistemas principales |
+| **v1.1** | **22/10/2025** | **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, CCO La Lizama PK 4+300 |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Metodología PKD lineal aplicada
 
 ---
 

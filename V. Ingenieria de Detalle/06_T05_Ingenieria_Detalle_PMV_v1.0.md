@@ -4,8 +4,16 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** PMV - Paneles de Mensaje Variable  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Basado en:** T04 PMV v1.0 + Tabla Maestra Layout v1.0  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 22/10/2025 | Creación inicial - 28 PMV | Ing. ITS |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada | Ing. ITS |
 
 ---
 

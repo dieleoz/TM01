@@ -24,7 +24,7 @@ El análisis cubre:
 
 ### 1.2 Alcance
 
-Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
+Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
 **Componentes principales:**
 - Subestaciones y Centros de Transformación (~75 unidades)
@@ -35,7 +35,7 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 
 **Sistemas alimentados:**
 - 2 Estaciones de Peaje
-- Centro de Control Operacional (CCO)
+- Centro de Control Operacional (CCO La Lizama PK 4+300)
 - Sistema de Iluminación (410 luminarias)
 - Sistemas ITS (100+ equipos)
 - **2 Áreas de Servicio** (obligatorias asociadas a peajes - AT1 Cap. 3)
@@ -640,12 +640,14 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema de energía eléctrica |
+| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3) |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes actualizadas |
 
 ---
 
-**Versión:** 1.1 ✅ **AJUSTE CONTRACTUAL APLICADO**  
-**Estado:** ✅ Análisis Validado Contractualmente  
-**Fecha:** 20/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis Validado Contractualmente + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero Eléctrico / Ingeniero de Potencia  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Energía Eléctrica  
 
@@ -656,6 +658,15 @@ Este análisis cubre el **sistema eléctrico completo** a lo largo de 259.6 km:
 |:--------|:------|:------------|
 | v1.0 | 17/10/2025 | Análisis inicial de requisitos de energía eléctrica |
 | **v1.1** | **20/10/2025** | **Ajuste contractual:** 14 áreas → 2 áreas obligatorias (AT1 Cap. 3). RF-006 y criterios actualizados |
+| **v1.2** | **22/10/2025** | **Revisión con información oficial:** CCO La Lizama PK 4+300, longitudes 259.6 km + 33.4 km |
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Sistemas alimentados actualizados con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

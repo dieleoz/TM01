@@ -15,10 +15,12 @@ Aplicar la **Metodología Genérica de Validación Contractual** al sistema de E
 
 ### 1.2 Conclusión Principal
 **El contrato NO obliga a "instalar" estaciones meteorológicas**, sino a **"informar" condiciones meteorológicas**. La obligación se cumple con:
-- **2 estaciones Davis Pro2** (una por peaje IP/REV)
-- **Integración vía API** al SCADA/CCO
+- **3 estaciones meteorológicas** (2 en peajes + 1 en CCO según información oficial)
+- **Integración vía API** al SCADA/CCO La Lizama PK 4+300
 - **Reportes automáticos** por UF y consolidados
 - **Costo optimizado:** $13 millones COP
+
+**Ubicación CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
 
 ---
 
@@ -136,17 +138,18 @@ El contrato exige **"información sobre condiciones meteorológicas"** pero NO e
 | Ubicación | Obligación | Justificación |
 |:----------|:-----------|:---------------|
 | **Peajes IP/REV** | ✅ OBLIGATORIO | Resolución 546/2018 (IP/REV) |
-| **CCO** | ⚠️ OPCIONAL | Solo si no integra datos externos |
+| **CCO La Lizama PK 4+300** | ✅ OBLIGATORIO | Información oficial del proyecto |
 | **Otras UF** | ❌ NO OBLIGATORIO | Se cumple por consolidación |
 
 ### 5.3 Solución Propuesta
 
-**2 Estaciones Davis Pro2:**
-- **Peaje 1:** Puerto Salgar (PK ~9.2)
+**3 Estaciones Meteorológicas:**
+- **Peaje 1:** Zambito (PK ~9.2)
 - **Peaje 2:** Aguas Negras (PK ~80)
+- **CCO:** La Lizama PK 4+300 (RN 4513)
 
 **Integración CCO:**
-- WeatherLink API → SCADA
+- WeatherLink API → SCADA La Lizama PK 4+300
 - Consolidación por UF
 - Reportes automáticos
 
@@ -328,15 +331,24 @@ La solución propuesta cumple:
 
 ### 11.3 Recomendación Final
 
-**Proceder con la implementación de 2 estaciones Davis Vantage Pro2** como solución contractualmente válida, técnicamente robusta y económicamente eficiente para cumplir con todas las obligaciones meteorológicas del proyecto.
+**Proceder con la implementación de 3 estaciones meteorológicas** (2 en peajes + 1 en CCO La Lizama PK 4+300) como solución contractualmente válida, técnicamente robusta y económicamente eficiente para cumplir con todas las obligaciones meteorológicas del proyecto.
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis Completado  
-**Fecha:** 21/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis Completado + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Telecomunicaciones  
 **Próxima actualización:** Tras validación con Interventoría
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 3 estaciones meteorológicas
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Peajes específicos: Zambito, Aguas Negras
+- Integración SCADA actualizada con ubicación oficial
+- Metodología PKD lineal aplicada
 
 ---
 

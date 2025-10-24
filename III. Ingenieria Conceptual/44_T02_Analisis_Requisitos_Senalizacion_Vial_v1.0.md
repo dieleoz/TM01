@@ -4,7 +4,7 @@
 **Fecha:** 17/10/2025  
 **Sistema:** Señalización Vial (Vertical, Horizontal, Defensas)  
 **Responsable:** Ingeniero de Seguridad Vial  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -23,7 +23,7 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 ### 1.2 Alcance
 
-Este análisis cubre el **sistema integral de señalización vial** a lo largo de 259.6 km:
+Este análisis cubre el **sistema integral de señalización vial** a lo largo de 259.6 km principales + 33.4 km adicionales:
 1. **Señalización Vertical:** ~2,300 señales (reglamentarias, preventivas, informativas)
 2. **Señalización Horizontal:** ~1,000 km lineales de demarcación
 3. **Defensas y Contención:** ~115 km de defensas metálicas y barreras
@@ -687,14 +687,23 @@ Este análisis cubre el **sistema integral de señalización vial** a lo largo d
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 17/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema de señalización vial |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | ✅ **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km |
 
 ---
 
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Estado:** ✅ **v1.0** - Análisis de Requisitos Completado  
 **Fecha:** 17/10/2025  
 **Responsable:** Ingeniero de Seguridad Vial  
 **Próximo documento:** T03 - Arquitectura Conceptual del Sistema de Señalización Vial  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes validadas: 259.6 km principal + 33.4 km adicionales
+- Rutas específicas: RN 4510, RN 4511, RN 4513
+- Cobertura actualizada con información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

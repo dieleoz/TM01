@@ -48,14 +48,16 @@ El Sistema ITS tiene como objetivo **controlar y monitorear el tránsito de veh�
 - ✅ Sensores de Pista/Carril
 
 **Cobertura geográfica:**
-- Longitud: 259.6 km (Puerto Salgar - San Roque)
+- Longitud Principal: 259.6 km (RN 4510 + RN 4511)
+- Longitud Total: ~293 km (incluyendo RN 4513 conexión CCO)
+- Rutas: RN 4510 (Honda-Río Ermitaño), RN 4511 (Río Ermitaño-La Lizama), RN 4513 (Conexión CCO)
 - Departamentos: Cundinamarca, Boyacá, Santander
-- Instalación en: Todas las Estaciones de Peaje + Áreas de Servicio + Puntos críticos
+- Instalación en: Todas las Estaciones de Peaje + Áreas de Servicio + Puntos críticos + CCO La Lizama
 
 **Integración con:**
-- **CCO (Centro de Control Operacional):** Transmisión de datos en tiempo real
-- **Telecomunicaciones:** Fibra óptica como backbone
-- **Peajes:** Información de flujo vehicular
+- **CCO (Centro de Control Operacional):** Ubicado en La Lizama PK 4+300 - Transmisión de datos en tiempo real
+- **Telecomunicaciones:** Fibra óptica como backbone (283 km anillo cerrado)
+- **Peajes:** Información de flujo vehicular (Zambito, Aguas Negras)
 - **Sistemas de Emergencia:** Activación de protocolos de atención
 - **ANI:** Entrega de información (SIINCO, ANIscopio)
 
@@ -122,16 +124,16 @@ El Concesionario deberá:
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:------------------|:----------|:--------|
-| **PMV** (Paneles de Mensaje Variable) | **28 unidades FIJAS** | Distribuidos cada 10-20 km + peajes (AT1) | Información variable a usuarios (clima, incidentes, tiempos) |
+| **PMV** (Paneles de Mensaje Variable) | **28 unidades** | Distribuidos cada 10-20 km + peajes (AT1) | Información variable a usuarios (clima, incidentes, tiempos) |
 | **CCTV** (Cámaras de Vigilancia) | **30 cámaras** | Ubicaciones estratégicas del diseño | Vigilancia 24/7, detección incidentes, evidencia |
 | **Cámaras Panorámicas** | 4 unidades | Puntos críticos del corredor | Visión amplia de zonas estratégicas |
-| **WIM** (Pesaje en Movimiento) | **2 plataformas** | PR4+0100 RN 4513 (ambos sentidos) | Control de peso de vehículos sin detenerlos |
-| **Estaciones Meteorológicas** | 8-12 estaciones | Distribuidas en corredor | Precipitación, temperatura, viento, visibilidad |
-| **Teléfonos SOS** | **87 unidades** ✅ | Cada 3 km máx. (AT1) | Comunicación de emergencias |
-| **DAI** (Detectores Automáticos Incidentes) | **12 unidades** | Ubicaciones estratégicas por UF | Detección automática de accidentes/congestión |
+| **WIM** (Pesaje en Movimiento) | **1 estación bidireccional** | PR4+0100 RN 4513 (ambos sentidos) | Control de peso de vehículos sin detenerlos |
+| **Estaciones Meteorológicas** | **3 estaciones** | 2 en peajes + 1 en CCO | Precipitación, temperatura, viento, visibilidad |
+| **Teléfonos SOS** | **88 unidades** ✅ | Cada 3 km máx. (AT1) + SOS #88 RN 4513 | Comunicación de emergencias |
+| **ETD/RADAR** | **16 unidades** | 2 RADAR-ANPR + 14 ETD puras | Detección automática de accidentes/congestión |
 | **Estaciones de Aforo** | 10-15 estaciones | Puntos representativos | Conteo y clasificación vehicular |
-| **Radares de Velocidad** | **12 unidades** | Ubicaciones estratégicas por UF | Medición velocidad + foto matrícula |
-| **Detectores de Altura** | **25 (estimación preliminar)** | Puntos críticos (peajes/puentes/intersecciones) | Detección de vehículos sobredimensionados |
+| **Radares de Velocidad** | **11 unidades** | Ubicaciones estratégicas por UF | Medición velocidad + foto matrícula |
+| **Detectores de Altura** | **8 unidades** | Puntos críticos (peajes/puentes/intersecciones) | Detección de vehículos sobredimensionados |
 | **Sensores de Pista/Carril** | Por definir | Todas las estaciones de peaje | Detección de paso vehicular |
 
 **NOTA:** Cantidades preliminares sujetas a Estudio de Detalle. Se actualizarán con información de AT1 (Alcance).
@@ -375,14 +377,24 @@ El Concesionario deberá:
 |:-------:|:------|:------|:------------|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Ficha de Sistema ITS creada con Template T01 |
 | **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** Postes SOS 65→87 unidades según AT1 Cap. 3 (+$77K USD) |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes, rutas, CCO La Lizama, cantidades actualizadas |
 
 ---
 
-**Versión:** 1.2 ✅ **VALIDADO CON DISEÑO DETALLADO**  
-**Estado:** ✅ Ficha de Sistema Validada vs Contrato  
-**Fecha:** 21/10/2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Ficha de Sistema Validada vs Contrato + Información Oficial  
+**Fecha:** 22/10/2025  
 **Responsable:** Ingeniero de Sistemas ITS  
 **Próxima actualización:** Tras Estudios de Detalle (cantidades y ubicaciones exactas)
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Rutas confirmadas: RN 4510, RN 4511, RN 4513 (conexión CCO)
+- CCO ubicado en La Lizama PK 4+300
+- Cantidades validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

@@ -21,7 +21,7 @@ Define la **arquitectura conceptual** del Sistema de Emergencias 24/7/365, estab
 
 ### 1.2 Alcance
 
-**Servicios 24/7 en 259.6 km:**
+**Servicios 24/7 en 259.6 km principales + 33.4 km adicionales:**
 - 2-3 Ambulancias TAM (médico, auxiliar, conductor)
 - 2-3 Grúas livianas, 1-2 grúas pesadas
 - 2-3 Carrotalleres equipados
@@ -29,6 +29,7 @@ Define la **arquitectura conceptual** del Sistema de Emergencias 24/7/365, estab
 - 2 Bases de Operación estratégicas
 - Equipos de rescate (NFPA 1936)
 - Maquinaria para derrumbes
+- Despacho centralizado desde CCO La Lizama PK 4+300
 
 ### 1.3 Referencias
 
@@ -158,6 +159,23 @@ Define la **arquitectura conceptual** del Sistema de Emergencias 24/7/365, estab
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Arquitectura conceptual de emergencias |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Despacho CCO La Lizama PK 4+300, longitudes actualizadas |
+
+---
+
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Arquitectura Conceptual Definida + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
+**Responsable:** Gerente de Operaciones y Emergencias  
+**Próximo documento:** T04 - Especificaciones Técnicas del Sistema de Emergencias  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Despacho centralizado desde CCO La Lizama PK 4+300 (RN 4513)
+- Longitudes actualizadas: 259.6 km principal + 33.4 km adicionales
+- Cobertura de servicios actualizada
+- Metodología PKD lineal aplicada
 
 ---
 

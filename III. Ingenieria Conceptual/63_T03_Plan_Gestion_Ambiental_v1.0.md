@@ -26,6 +26,7 @@ Define la **arquitectura del Plan de Gestión Ambiental** del proyecto, establec
 - Construcción: PAGA (14 UFs)
 - O&M: PMAR (25 años)
 - Reversión: Entrega de compensaciones
+- Cobertura: 259.6 km principales + 33.4 km adicionales
 
 ### 1.3 Referencias
 
@@ -152,6 +153,22 @@ Reportes: Semestrales + eventos
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
 | **v1.0** | 18/10/2025 | Administrador Contractual EPC | Plan de gestión ambiental conceptual |
+| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Cobertura actualizada, longitudes 259.6 km + 33.4 km |
+
+---
+
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Plan de Gestión Ambiental Definido + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
+**Responsable:** Gerente Ambiental / Especialista Ambiental  
+**Próximo documento:** T04 - Plan de Gestión Ambiental Detallado  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Longitudes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

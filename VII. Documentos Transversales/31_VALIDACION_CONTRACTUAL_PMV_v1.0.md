@@ -16,6 +16,9 @@ Validar la obligación contractual de **Paneles de Mensaje Variable (PMV)** en e
 ### 1.2 Conclusión Principal
 **Los PMV son OBLIGATORIOS para el EPC y SÍ forman parte del presupuesto ITS** porque son sistemas conectados al CCO con supervisión remota, según análisis contractual previo.
 
+**Cantidad Oficial:** 28 PMV distribuidos cada 10-20 km + peajes (AT1)
+**Ubicación CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
+
 ---
 
 ## 2. ANÁLISIS CONTRACTUAL DETALLADO
@@ -51,8 +54,8 @@ Validar la obligación contractual de **Paneles de Mensaje Variable (PMV)** en e
 
 | Variable | Especificación Contractual | Norma Técnica | Cumplimiento Propuesto |
 |:---------|:---------------------------|:--------------|:----------------------|
-| **Cantidad PMV** | "paneles de mensaje variable" | Res. 718/2018 | 28 unidades (2 por peaje + 20km) |
-| **Conectividad** | "interoperabilidad... incluyendo PMV" | Normas ITS | Conectado a CCO |
+| **Cantidad PMV** | "paneles de mensaje variable" | Res. 718/2018 | 28 unidades (distribuidos cada 10-20 km + peajes) |
+| **Conectividad** | "interoperabilidad... incluyendo PMV" | Normas ITS | Conectado a CCO La Lizama PK 4+300 |
 | **Supervisión** | "supervisar y controlar" | Normas ITS | Control remoto obligatorio |
 | **Información usuario** | "información al usuario" | Manual ITS | Mensajes dinámicos |
 
@@ -60,9 +63,9 @@ Validar la obligación contractual de **Paneles de Mensaje Variable (PMV)** en e
 
 | Ubicación | Obligación | Justificación |
 |:----------|:-----------|:---------------|
-| **Peajes** | ✅ OBLIGATORIO | "2 por peaje" |
-| **Tramos cada 20km** | ✅ OBLIGATORIO | "información al usuario" |
-| **Conexión CCO** | ✅ OBLIGATORIO | "supervisar y controlar" |
+| **Peajes** | ✅ OBLIGATORIO | 2 estaciones (Zambito, Aguas Negras) |
+| **Tramos cada 10-20km** | ✅ OBLIGATORIO | "información al usuario" |
+| **Conexión CCO** | ✅ OBLIGATORIO | "supervisar y controlar" desde CCO La Lizama PK 4+300 |
 
 ---
 
@@ -72,8 +75,8 @@ Validar la obligación contractual de **Paneles de Mensaje Variable (PMV)** en e
 
 | Obligación | Fuente | Cumplimiento |
 |:-----------|:-------|:-------------|
-| **Implementar PMV** | AT1 §3.2 | ✅ Sistema ITS |
-| **Conectar a CCO** | AT2 §6.2.1 | ✅ Supervisión remota |
+| **Implementar PMV** | AT1 §3.2 | ✅ Sistema ITS (28 unidades) |
+| **Conectar a CCO** | AT2 §6.2.1 | ✅ Supervisión remota desde CCO La Lizama PK 4+300 |
 | **Interoperabilidad** | AT3 §4.2 | ✅ Sistema integrado |
 | **Información usuario** | AT1 §3.2 | ✅ Mensajes dinámicos |
 
@@ -109,7 +112,7 @@ Validar la obligación contractual de **Paneles de Mensaje Variable (PMV)** en e
 ## 7. RECOMENDACIONES FINALES
 
 ### 7.1 Solución Recomendada
-**Implementar 28 PMV conectados al CCO con supervisión remota** porque son obligatorios según "deberá implementar" y "supervisar y controlar".
+**Implementar 28 PMV conectados al CCO La Lizama PK 4+300 con supervisión remota** porque son obligatorios según "deberá implementar" y "supervisar y controlar".
 
 ### 7.2 Próximos Pasos
 1. Diseñar PMV conforme Res. 718/2018
@@ -126,15 +129,29 @@ Validar la obligación contractual de **Paneles de Mensaje Variable (PMV)** en e
 ✅ **Los PMV son OBLIGATORIOS y SÍ forman parte del presupuesto ITS**
 
 ### 8.2 Justificación Técnica
-El contrato establece "deberá implementar" y "supervisar y controlar" = obligatorio. Por tanto, los PMV son sistema ITS con supervisión remota.
+El contrato establece "deberá implementar" y "supervisar y controlar" = obligatorio. Por tanto, los PMV son sistema ITS con supervisión remota desde CCO La Lizama PK 4+300.
+
+### 8.3 Información Oficial Confirmada
+- **Cantidad:** 28 PMV distribuidos cada 10-20 km + peajes
+- **Ubicación CCO:** La Lizama PK 4+300 (RN 4513)
+- **Cobertura:** Corredor completo (293 km total)
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Análisis Completado  
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Análisis Completado + Información Oficial Integrada  
 **Fecha:** 22 de octubre de 2025  
 **Responsable:** Administrador Contractual EPC  
 **Próxima actualización:** Tras validación Interventoría
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 28 PMV distribuidos cada 10-20 km + peajes
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Cobertura completa del corredor (293 km total)
+- Peajes específicos: Zambito, Aguas Negras
+- Metodología PKD lineal aplicada
 
 ---
 

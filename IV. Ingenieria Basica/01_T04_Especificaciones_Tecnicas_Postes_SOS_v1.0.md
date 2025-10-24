@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Postes SOS - Sistema de Telefonía de Emergencia  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
 **Referencia Validación:** 34_VALIDACION_CONTRACTUAL_POSTES_SOS_v1.0  
@@ -17,6 +17,7 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial basada en validación contractual | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** SOS #88 RN 4513, cantidad total 88 unidades | Adm. Contractual EPC |
 
 ---
 
@@ -29,8 +30,8 @@
 | **Nombre del sistema** | Postes SOS - Sistema de Telefonía de Emergencia |
 | **Categoría** | ITS (Intelligent Transportation Systems) |
 | **Código interno** | T04-SOS-001-v1.0 |
-| **Cantidad total** | **87 unidades** |
-| **CAPEX estimado** | **USD $2,262,500** (26,000 USD/unidad) |
+| **Cantidad total** | **88 unidades** |
+| **CAPEX estimado** | **USD $2,288,000** (26,000 USD/unidad) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación Contractual v1.0, Layout v1.0 |
 
 ### 1.2 Alcance de las Especificaciones
@@ -343,8 +344,8 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 |:-----|:---------|:-----------|:---------|:--------------|
 | **RN 4510** | 33 | PK 41+180 | PK 131+700 | Sistema tres bolillos |
 | **RN 4511** | 51 | PK 0+650 | PK 147+385 | Sistema tres bolillos |
-| **RN 4513** | 3 | PK 1+240 | PK 9+000 | Acceso CCO/Báscula |
-| **TOTAL** | **87** | - | - | 259.6 km cubiertos |
+| **RN 4513** | 4 | PK 1+240 | PK 9+000 | Acceso CCO/Báscula + SOS #88 |
+| **TOTAL** | **88** | - | - | 259.6 km cubiertos |
 
 **Criterio de separación:**
 - ✅ Máximo 3 km entre postes consecutivos
@@ -562,13 +563,13 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:------------|:-------|:---------|:-------------------|:------------|
-| 1 | Poste SOS completo (equipo) | und | 87 | $18,000 | $1,566,000 |
-| 2 | Instalación y puesta en servicio | und | 87 | $4,000 | $348,000 |
-| 3 | Obras civiles (cimentación, canalizaciones) | und | 87 | $2,000 | $174,000 |
-| 4 | Fibra óptica y conectividad | und | 87 | $1,500 | $130,500 |
+| 1 | Poste SOS completo (equipo) | und | 88 | $18,000 | $1,584,000 |
+| 2 | Instalación y puesta en servicio | und | 88 | $4,000 | $352,000 |
+| 3 | Obras civiles (cimentación, canalizaciones) | und | 88 | $2,000 | $176,000 |
+| 4 | Fibra óptica y conectividad | und | 88 | $1,500 | $132,000 |
 | 5 | Capacitación y documentación | global | 1 | $24,000 | $24,000 |
 | 6 | Repuestos iniciales (2 años) | global | 1 | $20,000 | $20,000 |
-| | | | | **TOTAL** | **$2,262,500** |
+| | | | | **TOTAL** | **$2,288,000** |
 
 **Precio unitario promedio:** $26,000 USD/poste (instalado y operativo)
 
@@ -580,8 +581,8 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 |:-----|:------|:---------|:------------|:--------------|
 | **RN 4510** | PK 41+180 → PK 131+700 | 33 | $858,000 | Sistema tres bolillos |
 | **RN 4511** | PK 0+650 → PK 147+385 | 51 | $1,326,000 | Sistema tres bolillos |
-| **RN 4513** | PK 1+240 → PK 9+000 | 3 | $78,000 | Acceso CCO/Báscula |
-| **TOTAL** | - | **87** | **$2,262,000** | - |
+| **RN 4513** | PK 1+240 → PK 9+000 | 4 | $104,000 | Acceso CCO/Báscula + SOS #88 |
+| **TOTAL** | - | **88** | **$2,288,000** | - |
 
 ---
 
@@ -599,7 +600,7 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 | **Transporte y entrega en sitio** | T+105 a T+120 días | 2 semanas | Logística |
 | **Instalación (lote 1: 30 und)** | T+120 a T+160 días | 6 semanas | Contratista |
 | **Instalación (lote 2: 30 und)** | T+140 a T+180 días | 6 semanas | Contratista |
-| **Instalación (lote 3: 27 und)** | T+160 a T+195 días | 5 semanas | Contratista |
+| **Instalación (lote 3: 28 und)** | T+160 a T+195 días | 5 semanas | Contratista |
 | **SAT (Site Acceptance Test)** | T+195 a T+210 días | 2 semanas | Contratista/Interventoría |
 | **Puesta en servicio total** | T+210 días | - | Contratista/ANI |
 
@@ -677,4 +678,12 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 ---
 
-**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS POSTES SOS v1.0**
+**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS POSTES SOS v1.1**
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad total actualizada: 88 unidades (incluye SOS #88 RN 4513)
+- CAPEX actualizado: $2,288,000 USD
+- Distribución por ruta actualizada con información oficial
+- Metodología PKD lineal aplicada

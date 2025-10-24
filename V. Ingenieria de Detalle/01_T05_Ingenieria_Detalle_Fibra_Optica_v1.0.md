@@ -4,9 +4,16 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** Telecomunicaciones - Red de Fibra Óptica  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Tecnología Seleccionada:** **OPCIÓN A - FIBRA CONVENCIONAL + TRITUBO**  
-**Basado en:** Análisis Gerencial Fibra Óptica v1.0 (documento 39)  
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 22/10/2025 | Creación inicial - Opción A Fibra Convencional | Ing. Telecomunicaciones |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** Longitudes actualizadas | Ing. Telecomunicaciones |
 
 ---
 
@@ -575,8 +582,11 @@
 
 ---
 
-**Última actualización:** 22 de octubre de 2025 - 17:45  
-**Responsable:** Administrador Contractual EPC / Ingeniero de Telecomunicaciones  
-**Estado:** ✅ **T05 FIBRA ÓPTICA COMPLETADO - OPCIÓN A SELECCIONADA**  
-**Archivo:** `01_T05_Ingenieria_Detalle_Fibra_Optica_v1.0.md`
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Longitudes actualizadas según información oficial
+- CAPEX mantenido: USD $8,593,000
+- Tecnología confirmada: Fibra Convencional + Tritubo
+- Metodología PKD lineal aplicada
 

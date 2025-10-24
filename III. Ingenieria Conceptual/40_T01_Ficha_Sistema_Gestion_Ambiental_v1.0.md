@@ -4,7 +4,7 @@
 **Fecha:** 17/10/2025  
 **Sistema:** Gestión Ambiental  
 **Responsable:** Gerente Ambiental / Especialista Ambiental  
-**Versión:** 1.0  
+**Versión:** 1.1  
 
 ---
 
@@ -46,7 +46,7 @@ Garantizar el cumplimiento de todas las obligaciones ambientales del proyecto du
   - **Sistema de Monitoreo Ambiental** (agua, aire, ruido, fauna, flora)
   - **Subcuenta de Compensaciones Socioambientales** (ANI)
   
-- **Cobertura geográfica:** 259.6 km + Corredor del Proyecto + Áreas de influencia directa e indirecta
+- **Cobertura geográfica:** 259.6 km principales + 33.4 km adicionales + Corredor del Proyecto + Áreas de influencia directa e indirecta
 - **Integración con:** Gestión Social (AT8), Gestión Predial (AT7), Construcción, O&M, Interventoría, Autoridades Ambientales
 
 ---
@@ -211,11 +211,18 @@ Garantizar el cumplimiento de todas las obligaciones ambientales del proyecto du
 
 ---
 
-**Versión:** 1.0  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 17 de octubre de 2025  
+**Versión:** 1.2 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Ficha de Sistema Completada + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
 **Responsable:** Administrador Contractual EPC  
 **Próximo Documento:** 41_T01_Ficha_Sistema_Gestion_Social_v1.0.md
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cobertura actualizada: 259.6 km principal + 33.4 km adicionales
+- Longitudes validadas contra información oficial
+- Metodología PKD lineal aplicada
 
 ---
 

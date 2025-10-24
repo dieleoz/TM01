@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test WBS Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .wbs-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+        }
+        .wbs-level-1 {
+            font-weight: bold;
+            background: #e3f2fd;
+        }
+        .wbs-level-2 {
+            margin-left: 20px;
+            background: #f3e5f5;
+        }
+        .wbs-level-3 {
+            margin-left: 40px;
+            background: #e8f5e8;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test WBS Simple</h1>
+        <p>Verificando que la función renderWBS funciona correctamente...</p>
+        
+        <button class="btn" onclick="renderWBS()">🔄 Renderizar WBS</button>
+        <button class="btn" onclick="testData()">📊 Ver Datos</button>
+        <button class="btn" onclick="testElement()">🎯 Ver Elemento</button>
+        
+        <div id="wbsTree" style="margin-top: 20px; padding: 20px; border: 2px dashed #ccc; min-height: 200px;">
+            <!-- WBS será generada aquí -->
+        </div>
+        
+        <div id="debug" style="margin-top: 20px; padding: 10px; background: #f8f9fa; border-radius: 4px;">
+            <h3>🔍 Debug Info:</h3>
+            <div id="debugContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Datos WBS simplificados para test
+        const wbsData = [
+            {nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo"},
+            {nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo"},
+            {nivel: 3, item: "1.1.1", descripcion: "Poste SOS", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item"},
+            {nivel: 3, item: "1.1.2", descripcion: "Panel solar", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item"},
+            {nivel: 1, item: "2", descripcion: "SISTEMA CCTV", sistema: "CCTV", tipo: "capitulo"},
+            {nivel: 2, item: "2.1", descripcion: "SUMINISTROS CCTV", sistema: "CCTV", tipo: "subcapitulo"},
+            {nivel: 3, item: "2.1.1", descripcion: "Cámaras PAN", sistema: "CCTV", cantidad: "30", unidad: "UND", tipo: "item"},
+            {nivel: 3, item: "2.1.2", descripcion: "Cámaras fijas", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item"},
+        ];
+
+        let filteredData = [...wbsData];
+
+        function renderWBS() {
+            console.log('🚀 Iniciando renderWBS...');
+            console.log('📊 wbsData length:', wbsData.length);
+            console.log('📊 filteredData length:', filteredData.length);
+            
+            const wbsTree = document.getElementById('wbsTree');
+            if (!wbsTree) {
+                console.error('❌ Elemento wbsTree no encontrado');
+                document.getElementById('debugContent').innerHTML = '❌ Elemento wbsTree no encontrado';
+                return;
+            }
+            
+            wbsTree.innerHTML = '';
+
+            if (filteredData.length === 0) {
+                console.log('⚠️ filteredData está vacío, usando wbsData');
+                filteredData = [...wbsData];
+            }
+
+            console.log('🎯 Renderizando', filteredData.length, 'items');
+
+            filteredData.forEach((item, index) => {
+                console.log(`Renderizando item ${index}:`, item.item, item.descripcion);
+                
+                const div = document.createElement('div');
+                div.className = `wbs-item wbs-level-${item.nivel}`;
+                
+                let itemHTML = `<strong>${item.item}</strong> - ${item.descripcion}`;
+                
+                if (item.cantidad) {
+                    itemHTML += ` (${item.cantidad} ${item.unidad})`;
+                }
+                
+                div.innerHTML = itemHTML;
+                wbsTree.appendChild(div);
+            });
+            
+            console.log('✅ WBS renderizada exitosamente');
+            document.getElementById('debugContent').innerHTML = `✅ WBS renderizada exitosamente - ${filteredData.length} items`;
+        }
+
+        function testData() {
+            console.log('📊 Datos WBS:', wbsData);
+            document.getElementById('debugContent').innerHTML = `📊 Datos WBS: ${wbsData.length} items<br>${JSON.stringify(wbsData, null, 2)}`;
+        }
+
+        function testElement() {
+            const wbsTree = document.getElementById('wbsTree');
+            console.log('🎯 Elemento wbsTree:', wbsTree);
+            document.getElementById('debugContent').innerHTML = `🎯 Elemento wbsTree: ${wbsTree ? 'Encontrado' : 'No encontrado'}`;
+        }
+
+        // Inicializar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Página cargada, inicializando test...');
+            renderWBS();
+        });
+    </script>
+</body>
+</html>

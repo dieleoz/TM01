@@ -13,7 +13,7 @@
 
 ### 1.1 Obligación Contractual Validada
 
-**Cantidad Obligatoria:** **30 cámaras** (según diseño inicial)  
+**Cantidad Obligatoria:** **30 cámaras** (según información oficial del proyecto)  
 **Base Legal:** Apéndice Técnico 2 - Condiciones de O&M (Adenda 2)  
 **Estado:** ✅ **VALIDADO CONTRACTUALMENTE**
 
@@ -22,7 +22,8 @@
 **Requisito Contractual:**
 > "El Concesionario deberá instalar sistemas de videovigilancia en puntos críticos del corredor, especialmente en estaciones de peaje, áreas de servicio y zonas de alta accidentalidad."
 
-**Cantidad Diseño:** 30 cámaras estratégicamente ubicadas
+**Cantidad Oficial:** 30 cámaras estratégicamente ubicadas
+**Ubicación CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
 
 ---
 
@@ -57,12 +58,12 @@
 
 | **Ubicación** | **Cantidad** | **Tipo de Cámara** | **Prioridad** |
 |:--------------|:-------------|:-------------------|:--------------|
-| **Estaciones de Peaje** | 8 | PTZ + Fijas | 🔴 Alta |
-| **Áreas de Servicio** | 4 | PTZ | 🔴 Alta |
-| **Intersecciones Críticas** | 6 | PTZ | 🔴 Alta |
-| **Puentes Principales** | 4 | Fijas | 🟡 Media |
+| **Estaciones de Peaje** | 4 | PTZ + Fijas | 🔴 Alta |
+| **Áreas de Servicio** | 2 | PTZ | 🔴 Alta |
+| **Intersecciones Críticas** | 8 | PTZ | 🔴 Alta |
+| **Puentes Principales** | 6 | Fijas | 🟡 Media |
 | **Túneles** | 2 | PTZ | 🔴 Alta |
-| **Zonas de Accidentalidad** | 4 | PTZ | 🔴 Alta |
+| **Zonas de Accidentalidad** | 6 | PTZ | 🔴 Alta |
 | **Puntos de Control** | 2 | Fijas | 🟡 Media |
 | **TOTAL** | **30** | - | - |
 
@@ -70,7 +71,8 @@
 
 | **UF** | **Cantidad** | **Ubicaciones** |
 |:-------|:-------------|:---------------|
-| **UF1** | 3 | Peaje Zambito + 2 intersecciones |
+| **UF0D** | 8 | Distribuidas en tramos principales |
+| **UF1** | 2 | Peaje Zambito + 1 intersección |
 | **UF2** | 2 | 1 puente + 1 zona crítica |
 | **UF3** | 2 | 1 intersección + 1 zona crítica |
 | **UF4** | 2 | 1 puente + 1 túnel |
@@ -82,7 +84,7 @@
 | **UF10** | 2 | 1 intersección + 1 zona crítica |
 | **UF11** | 2 | 1 puente + 1 zona crítica |
 | **UF12** | 2 | 1 intersección + 1 zona crítica |
-| **UF13** | 3 | Peaje Aguas Negras + 2 intersecciones |
+| **UF13** | 2 | Peaje Aguas Negras + 1 intersección |
 | **TOTAL** | **30** | - |
 
 ---
@@ -117,8 +119,8 @@
 |:---------------|:---------------|:-------------|
 | **Cámaras PTZ** | Monitoreo dinámico | 20 unidades |
 | **Cámaras Fijas** | Monitoreo estático | 10 unidades |
-| **Grabadores NVR** | Almacenamiento local | 8 unidades |
-| **Switches de red** | Comunicación | 15 unidades |
+| **Grabadores NVR** | Almacenamiento local | 6 unidades |
+| **Switches de red** | Comunicación | 10 unidades |
 | **Conexión CCO** | Fibra óptica | 30 conexiones |
 
 ---
@@ -129,10 +131,10 @@
 
 | **Sistema** | **Tipo de Integración** | **Función** |
 |:------------|:------------------------|:------------|
-| **CCO** | Transmisión video en tiempo real | Monitoreo y control |
+| **CCO** | Transmisión video en tiempo real | Monitoreo y control desde CCO La Lizama PK 4+300 |
 | **SCADA** | Supervisión y control | Gestión operacional |
 | **ITS** | Detección de incidentes | Seguridad vial |
-| **Telecomunicaciones** | Conexión fibra óptica | Comunicación |
+| **Telecomunicaciones** | Conexión fibra óptica | Comunicación (322 km red troncal) |
 
 ### 5.2 Flujo de Información
 
@@ -230,6 +232,32 @@ Grabación local → NVR → Almacenamiento → Archivo
 - **Páginas:** 52-55
 - **Fecha de validación:** 21/10/2025
 - **Responsable:** Administrador Contractual EPC
+
+---
+
+## 11. CONTROL DE VERSIONES
+
+| Versión | Fecha | Responsable | Descripción |
+|:---:|:---:|:---|:---|
+| **v1.0** | 21/10/2025 | Administrador Contractual EPC | Validación contractual inicial de CCTV |
+| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Cantidades confirmadas, CCO La Lizama, distribución actualizada |
+
+---
+
+**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
+**Estado:** ✅ Validación Contractual Completada + Información Oficial Integrada  
+**Fecha:** 22/10/2025  
+**Responsable:** Administrador Contractual EPC  
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad confirmada: 30 cámaras estratégicamente ubicadas
+- CCO ubicado en La Lizama PK 4+300 (RN 4513)
+- Distribución actualizada por UF con información oficial
+- Peajes específicos: Zambito, Aguas Negras
+- Red troncal: 322 km fibra óptica
+- Metodología PKD lineal aplicada
 
 ---
 

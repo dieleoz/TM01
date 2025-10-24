@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** ETD (Estaciones de Toma de Datos) + Radares Sancionatorios  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
 **Referencia Validación:** 35_VALIDACION_CONTRACTUAL_ETD_RADARES_v1.0  
@@ -17,6 +17,7 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - Separación ETD vs Radares según función | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | **Revisión con información oficial:** 16 equipos (14 ETD + 2 Radares), CAPEX actualizado | Adm. Contractual EPC |
 
 ---
 
@@ -29,19 +30,19 @@
 | **Nombre del sistema** | ETD (Estaciones de Toma de Datos) + Radares Sancionatorios |
 | **Categoría** | ITS (Intelligent Transportation Systems) - Control de Tráfico |
 | **Código interno** | T04-ETD-RAD-002-v1.0 |
-| **Cantidad total** | **12 RADAR-ANPR** (según proyecto real) |
-| **CAPEX estimado** | **USD $428,784** (35,732 USD/unidad) |
+| **Cantidad total** | **16 unidades** |
+| **CAPEX estimado** | **USD $436,548** (27,284 USD/unidad) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación v1.0, Layout v1.0 |
 
 ### 1.2 Distinción Funcional
 
 | Tipo | Cantidad | Función Principal | Certificación |
 |:-----|:---------|:------------------|:--------------|
-| **ETD (Monitoreo)** | 10 | Velocidad promedio, flujo, clasificación | ISO TC-204 |
+| **ETD (Monitoreo)** | 14 | Velocidad promedio, flujo, clasificación | ISO TC-204 |
 | **Radares (Sancionatorios)** | 2 | Detección infracciones, registro fotográfico | Res. 718/2018 + ONAC |
-| **TOTAL** | **12** | - | - |
+| **TOTAL** | **16** | - | - |
 
-> **Nota Crítica:** El proyecto real contempla **12 RADAR-ANPR** que combinan ambas funciones (monitoreo + capacidad sancionatoria), pero solo 2 se habilitarán como sancionatorios con el Ministerio de Transporte.
+> **Nota Crítica:** El proyecto contempla **16 equipos** (14 ETD + 2 Radares) que cubren todas las Unidades Funcionales del corredor. Los ETD proporcionan monitoreo estadístico y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
 
 ### 1.3 Alcance de las Especificaciones
 
@@ -379,7 +380,7 @@ Equipo de detección automática de infracciones de tránsito (exceso de velocid
 
 ### 6.1 Componentes MÍNIMOS por Tipo
 
-#### **ETD (Monitoreo) - 10 unidades**
+#### **ETD (Monitoreo) - 14 unidades**
 
 | Componente | Obligatorio | Observaciones |
 |:-----------|:------------|:--------------|
@@ -669,19 +670,20 @@ Pórtico:
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:------------|:-------|:---------|:-------------------|:------------|
-| 1 | RADAR-ANPR completo (sensor + cámara + procesador) | und | 12 | $35,732 | $428,784 |
-| 2 | Pórtico metálico galvanizado (típico 16 m) | und | 6 | $8,000 | $48,000 |
-| 3 | Instalación y puesta en servicio | und | 12 | $5,000 | $60,000 |
-| 4 | Obras civiles (cimentaciones, canalizaciones) | und | 6 | $6,000 | $36,000 |
-| 5 | Fibra óptica y conectividad | und | 6 | $3,000 | $18,000 |
-| 6 | Capacitación y documentación | global | 1 | $15,000 | $15,000 |
-| 7 | Repuestos iniciales (2 años) | global | 1 | $30,000 | $30,000 |
-| 8 | Calibración ONAC (2 radares, primer año) | und | 2 | $3,000 | $6,000 |
-| | | | | **TOTAL** | **$641,784** |
+| 1 | ETD completo (sensor + procesador) | und | 14 | $7,470 | $104,580 |
+| 2 | RADAR-ANPR completo (sensor + cámara + procesador) | und | 2 | $32,484 | $64,968 |
+| 3 | Pórtico metálico galvanizado (típico 16 m) | und | 8 | $8,000 | $64,000 |
+| 4 | Instalación y puesta en servicio | und | 16 | $5,000 | $80,000 |
+| 5 | Obras civiles (cimentaciones, canalizaciones) | und | 8 | $6,000 | $48,000 |
+| 6 | Fibra óptica y conectividad | und | 8 | $3,000 | $24,000 |
+| 7 | Capacitación y documentación | global | 1 | $15,000 | $15,000 |
+| 8 | Repuestos iniciales (2 años) | global | 1 | $30,000 | $30,000 |
+| 9 | Calibración ONAC (2 radares, primer año) | und | 2 | $3,000 | $6,000 |
+| | | | | **TOTAL** | **$436,548** |
 
-**Precio unitario promedio:** $53,482 USD/equipo RADAR-ANPR instalado
+**Precio unitario promedio:** $27,284 USD/equipo instalado
 
-> **Nota:** El presupuesto actual del proyecto contempla **12 RADAR-ANPR** a $35,732 USD/unidad = $428,784 USD. El desglose completo con instalación suma $641,784 USD.
+> **Nota:** El presupuesto actualizado contempla **16 equipos** (14 ETD + 2 RADAR-ANPR) con un total de $436,548 USD. Los ETD proporcionan monitoreo estadístico y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
 
 ### 12.2 Desglose por Tipo (Propuesta Ajustada)
 
@@ -873,4 +875,12 @@ Pórtico:
 
 ---
 
-**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS ETD Y RADARES v1.0**
+**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS ETD Y RADARES v1.1**
+
+---
+
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
+- Cantidad total actualizada: 16 unidades (14 ETD + 2 Radares)
+- CAPEX actualizado: $436,548 USD
+- Distribución funcional actualizada según información oficial
+- Metodología PKD lineal aplicada
