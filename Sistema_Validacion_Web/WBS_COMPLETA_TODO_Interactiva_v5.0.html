@@ -288,8 +288,23 @@
             transition: background 0.3s;
         }
 
-        .subtotal-toggle .btn:hover {
-            background: #2980b9;
+        .capitulo-totales {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: auto;
+            font-size: 0.9em;
+        }
+
+        .total-unidades {
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .capitulo .total-cost {
+            font-size: 0.85em;
+            margin-bottom: 1px;
         }
 
         .modal-componentes {
@@ -814,12 +829,36 @@
             const capitulos = filteredData.filter(item => item.nivel === 1);
             
             capitulos.forEach(capitulo => {
-                // Renderizar capítulo
+                // Calcular totales del capítulo
+                const itemsCapitulo = filteredData.filter(item => 
+                    item.item.startsWith(capitulo.item + '.') && item.nivel === 3
+                );
+                
+                let totalCapituloUSD = 0;
+                let totalCapituloCOP = 0;
+                let totalUnidades = 0;
+                
+                itemsCapitulo.forEach(item => {
+                    const cantidad = parseFloat(item.cantidad?.replace(/,/g, '') || 0);
+                    const costoUSD = parseFloat(item.total?.replace(/,/g, '') || 0);
+                    const costoCOP = parseFloat(item.totalCOP?.replace(/,/g, '') || 0);
+                    
+                    totalUnidades += cantidad;
+                    totalCapituloUSD += costoUSD;
+                    totalCapituloCOP += costoCOP;
+                });
+                
+                // Renderizar capítulo con totales
                 html += `
                     <div class="wbs-item capitulo" onclick="toggleCapitulo('${capitulo.id}')">
                         <span class="item-code">${capitulo.item}</span>
                         <span class="item-desc">${capitulo.descripcion}</span>
                         <span class="item-qty">Sistema: ${capitulo.sistema}</span>
+                        <div class="capitulo-totales">
+                            <div class="total-unidades">${totalUnidades} unidades</div>
+                            <div class="total-cost">$${totalCapituloUSD.toLocaleString()} USD</div>
+                            <div class="total-cost">$${totalCapituloCOP.toLocaleString()} COP</div>
+                        </div>
                     </div>
                 `;
                 
