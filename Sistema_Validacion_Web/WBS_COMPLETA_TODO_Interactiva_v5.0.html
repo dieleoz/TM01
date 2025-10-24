@@ -836,14 +836,23 @@
                 
                 let totalCapituloUSD = 0;
                 let totalCapituloCOP = 0;
-                let totalUnidades = 0;
+                let cantidadPrincipal = 0;
+                
+                // Buscar el item principal del sistema (el primero o el más representativo)
+                const itemPrincipal = itemsCapitulo.find(item => 
+                    item.descripcion.toLowerCase().includes('panel') || 
+                    item.descripcion.toLowerCase().includes('principal') ||
+                    item.descripcion.toLowerCase().includes('completo')
+                ) || itemsCapitulo[0];
+                
+                if (itemPrincipal) {
+                    cantidadPrincipal = parseFloat(itemPrincipal.cantidad?.replace(/,/g, '') || 0);
+                }
                 
                 itemsCapitulo.forEach(item => {
-                    const cantidad = parseFloat(item.cantidad?.replace(/,/g, '') || 0);
                     const costoUSD = parseFloat(item.total?.replace(/,/g, '') || 0);
                     const costoCOP = parseFloat(item.totalCOP?.replace(/,/g, '') || 0);
                     
-                    totalUnidades += cantidad;
                     totalCapituloUSD += costoUSD;
                     totalCapituloCOP += costoCOP;
                 });
@@ -855,7 +864,7 @@
                         <span class="item-desc">${capitulo.descripcion}</span>
                         <span class="item-qty">Sistema: ${capitulo.sistema}</span>
                         <div class="capitulo-totales">
-                            <div class="total-unidades">${totalUnidades} unidades</div>
+                            <div class="total-unidades">${cantidadPrincipal} unidades</div>
                             <div class="total-cost">$${totalCapituloUSD.toLocaleString()} USD</div>
                             <div class="total-cost">$${totalCapituloCOP.toLocaleString()} COP</div>
                         </div>
