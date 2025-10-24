@@ -16,43 +16,57 @@ class TM01MasterData {
     }
     
     initializeData() {
-        // Datos WBS
+        // Datos WBS - Fuente: PRESUPUESTO_ITS_PURO_v2.0.md (21/10/2025)
         this.data.wbs = [
             // CAPÍTULO 1: SISTEMA SOS
             {id: '1', nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo"},
             {id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo"},
-            {id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste SOS con panel solar", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 1km", vu: "15,000", total: "1,320,000", totalCOP: "5,808,000,000"},
-            {id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Botón de emergencia SOS", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Funcionalidad SOS", vu: "500", total: "44,000", totalCOP: "193,600,000"},
-            {id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Panel solar 100W", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Alimentación autónoma", vu: "2,000", total: "176,000", totalCOP: "774,400,000"},
-            {id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Batería gel 12V 100Ah", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Respaldo energético", vu: "1,500", total: "132,000", totalCOP: "580,800,000"},
+            {id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste SOS completo", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 3km", vu: "12,000", total: "1,044,000", totalCOP: "4,593,600,000"},
             
             // CAPÍTULO 2: SISTEMA ETD/RADAR
             {id: '2', nivel: 1, item: "2", descripcion: "SISTEMA ETD/RADAR", sistema: "ETD/RADAR", tipo: "capitulo"},
-            {id: '2.1', nivel: 2, item: "2.1", descripcion: "SUMINISTROS ETD", sistema: "ETD/RADAR", tipo: "subcapitulo"},
-            {id: '2.1.1', nivel: 3, item: "2.1.1", descripcion: "Estación de Tratamiento de Datos", sistema: "ETD/RADAR", cantidad: "14", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 15km", vu: "200,000", total: "2,800,000", totalCOP: "12,320,000,000"},
-            {id: '2.1.2', nivel: 3, item: "2.1.2", descripcion: "Radares de velocidad", sistema: "ETD/RADAR", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Control vehicular", vu: "200,000", total: "400,000", totalCOP: "1,760,000,000"},
+            {id: '2.1', nivel: 2, item: "2.1", descripcion: "SUMINISTROS ETD/RADAR", sistema: "ETD/RADAR", tipo: "subcapitulo"},
+            {id: '2.1.1', nivel: 3, item: "2.1.1", descripcion: "ETD + Radares completos", sistema: "ETD/RADAR", cantidad: "15", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 15km", vu: "24,805", total: "372,078", totalCOP: "1,637,143,200"},
             
             // CAPÍTULO 3: SISTEMA CCTV
             {id: '3', nivel: 1, item: "3", descripcion: "SISTEMA CCTV", sistema: "CCTV", tipo: "capitulo"},
             {id: '3.1', nivel: 2, item: "3.1", descripcion: "SUMINISTROS CCTV", sistema: "CCTV", tipo: "subcapitulo"},
-            {id: '3.1.1', nivel: 3, item: "3.1.1", descripcion: "Cámaras PAN", sistema: "CCTV", cantidad: "30", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Solo en peajes", vu: "30,000", total: "900,000", totalCOP: "3,960,000,000"},
-            {id: '3.1.2', nivel: 3, item: "3.1.2", descripcion: "Cámaras fijas", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Supervisión CCO y estaciones", vu: "30,000", total: "450,000", totalCOP: "1,980,000,000"},
+            {id: '3.1.1', nivel: 3, item: "3.1.1", descripcion: "Cámaras IP PTZ completas", sistema: "CCTV", cantidad: "30", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Solo en peajes", vu: "11,880", total: "356,394", totalCOP: "1,568,133,600"},
             
             // CAPÍTULO 4: SISTEMA PMV
             {id: '4', nivel: 1, item: "4", descripcion: "SISTEMA PMV", sistema: "PMV", tipo: "capitulo"},
             {id: '4.1', nivel: 2, item: "4.1", descripcion: "SUMINISTROS PMV", sistema: "PMV", tipo: "subcapitulo"},
-            {id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Paneles de mensaje variable", sistema: "PMV", cantidad: "12", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 20km", vu: "50,000", total: "600,000", totalCOP: "2,640,000,000"},
+            {id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Paneles LED completos", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 20km", vu: "100,586", total: "2,816,408", totalCOP: "12,392,195,200"},
             
-            // CAPÍTULO 5: SISTEMA METEO
-            {id: '5', nivel: 1, item: "5", descripcion: "SISTEMA METEO", sistema: "METEO", tipo: "capitulo"},
-            {id: '5.1', nivel: 2, item: "5.1", descripcion: "SUMINISTROS METEO", sistema: "METEO", tipo: "subcapitulo"},
-            {id: '5.1.1', nivel: 3, item: "5.1.1", descripcion: "Estaciones meteorológicas", sistema: "METEO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "NTC 5660 + Supervisión CCO", vu: "50,000", total: "150,000", totalCOP: "660,000,000"},
+            // CAPÍTULO 5: SISTEMA GÁLIBOS
+            {id: '5', nivel: 1, item: "5", descripcion: "SISTEMA GÁLIBOS", sistema: "GALIBOS", tipo: "capitulo"},
+            {id: '5.1', nivel: 2, item: "5.1", descripcion: "SUMINISTROS GÁLIBOS", sistema: "GALIBOS", tipo: "subcapitulo"},
+            {id: '5.1.1', nivel: 3, item: "5.1.1", descripcion: "Gálibos completos", sistema: "GALIBOS", cantidad: "8", unidad: "UND", tipo: "item", criterio: "Control altura vehicular", vu: "21,630", total: "173,043", totalCOP: "761,389,200"},
             
-            // CAPÍTULO 6: SISTEMA WIM
-            {id: '6', nivel: 1, item: "6", descripcion: "SISTEMA WIM", sistema: "WIM", tipo: "capitulo"},
-            {id: '6.1', nivel: 2, item: "6.1", descripcion: "SUMINISTROS WIM", sistema: "WIM", tipo: "subcapitulo"},
-            {id: '6.1.1', nivel: 3, item: "6.1.1", descripcion: "Sistema WIM dinámico", sistema: "WIM", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Pesaje en movimiento", vu: "150,000", total: "150,000", totalCOP: "660,000,000"},
-            {id: '6.1.2', nivel: 3, item: "6.1.2", descripcion: "Báscula estática", sistema: "WIM", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Pesaje estático verificación", vu: "100,000", total: "100,000", totalCOP: "440,000,000"}
+            // CAPÍTULO 6: SISTEMA METEO
+            {id: '6', nivel: 1, item: "6", descripcion: "SISTEMA METEO", sistema: "METEO", tipo: "capitulo"},
+            {id: '6.1', nivel: 2, item: "6.1", descripcion: "SUMINISTROS METEO", sistema: "METEO", tipo: "subcapitulo"},
+            {id: '6.1.1', nivel: 3, item: "6.1.1", descripcion: "Estaciones meteorológicas", sistema: "METEO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "NTC 5660 + Supervisión CCO", vu: "3,386", total: "6,772", totalCOP: "29,796,800"},
+            
+            // CAPÍTULO 7: SISTEMA PEAJES
+            {id: '7', nivel: 1, item: "7", descripcion: "SISTEMA PEAJES", sistema: "PEAJES", tipo: "capitulo"},
+            {id: '7.1', nivel: 2, item: "7.1", descripcion: "SUMINISTROS PEAJES", sistema: "PEAJES", tipo: "subcapitulo"},
+            {id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Peajes completos", sistema: "PEAJES", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Recaudo vehicular", vu: "490,081", total: "980,161", totalCOP: "4,312,708,400"},
+            
+            // CAPÍTULO 8: SISTEMA CCO
+            {id: '8', nivel: 1, item: "8", descripcion: "SISTEMA CCO", sistema: "CCO", tipo: "capitulo"},
+            {id: '8.1', nivel: 2, item: "8.1", descripcion: "SUMINISTROS CCO", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.1.1', nivel: 3, item: "8.1.1", descripcion: "Centro de Control completo", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Control centralizado", vu: "1,165,000", total: "1,165,000", totalCOP: "5,126,000,000"},
+            
+            // CAPÍTULO 9: SISTEMA WIM
+            {id: '9', nivel: 1, item: "9", descripcion: "SISTEMA WIM", sistema: "WIM", tipo: "capitulo"},
+            {id: '9.1', nivel: 2, item: "9.1", descripcion: "SUMINISTROS WIM", sistema: "WIM", tipo: "subcapitulo"},
+            {id: '9.1.1', nivel: 3, item: "9.1.1", descripcion: "WIM + Estáticas completas", sistema: "WIM", cantidad: "4", unidad: "UND", tipo: "item", criterio: "Pesaje dinámico y estático", vu: "137,856", total: "551,425", totalCOP: "2,426,270,000"},
+            
+            // CAPÍTULO 10: TELECOMUNICACIONES ITS
+            {id: '10', nivel: 1, item: "10", descripcion: "TELECOMUNICACIONES ITS", sistema: "TELECOM", tipo: "capitulo"},
+            {id: '10.1', nivel: 2, item: "10.1", descripcion: "SUMINISTROS TELECOM", sistema: "TELECOM", tipo: "subcapitulo"},
+            {id: '10.1.1', nivel: 3, item: "10.1.1", descripcion: "Red fibra óptica ITS", sistema: "TELECOM", cantidad: "1", unidad: "SISTEMA", tipo: "item", criterio: "Comunicación ITS", vu: "322,351", total: "322,351", totalCOP: "1,418,344,400"}
         ];
         
         // Datos Presupuesto (sincronizados con WBS)
@@ -76,8 +90,12 @@ class TM01MasterData {
             'ETD/RADAR': 'RN 4510 + RN 4511 + Peajes',
             'CCTV': 'Peajes + CCO + Estaciones',
             'PMV': 'RN 4510 + RN 4511',
+            'GALIBOS': 'RN 4510 + RN 4511',
             'METEO': '2 peajes + 1 CCO',
-            'WIM': 'Peaje principal'
+            'PEAJES': 'RN 4510 + RN 4511',
+            'CCO': 'RN 4513 PK 4+300',
+            'WIM': 'Peaje principal',
+            'TELECOM': 'Todo el corredor'
         };
         return ubicaciones[sistema] || 'Por definir';
     }

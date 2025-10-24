@@ -1,9 +1,9 @@
 # WBS COMPLETA CON ESPECIALIDADES ITS - TM01 TRONCAL MAGDALENA
 
-**Fecha de actualización:** 22 de octubre de 2025  
+**Fecha de actualización:** 24 de octubre de 2025  
 **Proyecto:** TM01 - Troncal Magdalena (APP Puerto Salgar - Barrancabermeja)  
 **Contrato:** APP Puerto Salgar - Barrancabermeja  
-**Versión:** 1.0
+**Versión:** 1.1 - **ACTUALIZADO CON PRESUPUESTO_ITS_PURO_v2.0**
 
 ---
 
@@ -28,21 +28,17 @@ Establecer una WBS integral que permita la planificación completa del proyecto 
 **Responsable:** EPC Sistemas ITS  
 **Código:** ITS
 
-#### **1.1 Sistema de Auxilio SOS (88 unidades)**
+#### **1.1 Sistema de Auxilio SOS (87 unidades)**
 - 1.1.1 Postes SOS principales (87 unidades)
   - Ubicación: RN 4510 + RN 4511
-  - Criterio: 1 km entre postes
+  - Criterio: 3 km entre postes (optimizado)
   - Especificación: T04_Especificaciones_Tecnicas_SOS_v1.0.md
-- 1.1.2 SOS #88 CCO (1 unidad)
-  - Ubicación: RN 4513 PK 4+300
-  - Justificación: Conexión CCO
-  - Especificación: T04_Especificaciones_Tecnicas_SOS_v1.0.md
-- 1.1.3 Sistemas de comunicación SOS
-- 1.1.4 Alimentación eléctrica SOS
-- 1.1.5 Cimentaciones y estructuras SOS
+- 1.1.2 Sistemas de comunicación SOS
+- 1.1.3 Alimentación eléctrica SOS
+- 1.1.4 Cimentaciones y estructuras SOS
 
-#### **1.2 Sistema ETD/RADAR (16 unidades)**
-- 1.2.1 ETD principales (14 unidades)
+#### **1.2 Sistema ETD/RADAR (15 unidades)**
+- 1.2.1 ETD principales (13 unidades)
   - Ubicación: RN 4510 + RN 4511
   - Criterio: 15 km entre equipos
   - Especificación: T04_Especificaciones_Tecnicas_ETD_v1.0.md
@@ -54,21 +50,17 @@ Establecer una WBS integral que permita la planificación completa del proyecto 
 - 1.2.4 Alimentación eléctrica ETD/RADAR
 - 1.2.5 Cimentaciones y estructuras ETD/RADAR
 
-#### **1.3 Sistema CCTV (45 unidades)**
-- 1.3.1 Cámaras PAN (30 unidades)
+#### **1.3 Sistema CCTV (30 unidades)**
+- 1.3.1 Cámaras IP PTZ (30 unidades)
   - Ubicación: Peajes + CCO
-  - Justificación: Solo en peajes
+  - Justificación: Solo en peajes (optimizado)
   - Especificación: T04_Especificaciones_Tecnicas_CCTV_v1.0.md
-- 1.3.2 Cámaras fijas (15 unidades)
-  - Ubicación: CCO + Estaciones
-  - Justificación: Supervisión
-  - Especificación: T04_Especificaciones_Tecnicas_CCTV_v1.0.md
-- 1.3.3 Sistemas de transmisión CCTV
-- 1.3.4 Alimentación eléctrica CCTV
-- 1.3.5 Cimentaciones y estructuras CCTV
+- 1.3.2 Sistemas de transmisión CCTV
+- 1.3.3 Alimentación eléctrica CCTV
+- 1.3.4 Cimentaciones y estructuras CCTV
 
-#### **1.4 Sistema PMV (12 unidades)**
-- 1.4.1 Paneles de mensaje variable (12 unidades)
+#### **1.4 Sistema PMV (28 unidades)**
+- 1.4.1 Paneles de mensaje variable (28 unidades)
   - Ubicación: RN 4510 + RN 4511
   - Criterio: 20 km entre paneles
   - Especificación: T04_Especificaciones_Tecnicas_PMV_v1.0.md
@@ -76,7 +68,7 @@ Establecer una WBS integral que permita la planificación completa del proyecto 
 - 1.4.3 Alimentación eléctrica PMV
 - 1.4.4 Cimentaciones y estructuras PMV
 
-#### **1.5 Sistema Meteorológico (3 unidades)**
+#### **1.5 Sistema Meteorológico (2 unidades)**
 - 1.5.1 Estación Peaje 1 (1 unidad)
   - Ubicación: Peaje RN 4510
   - Justificación: NTC 5660
@@ -85,19 +77,19 @@ Establecer una WBS integral que permita la planificación completa del proyecto 
   - Ubicación: Peaje RN 4511
   - Justificación: NTC 5660
   - Especificación: T04_Especificaciones_Tecnicas_METEO_v1.0.md
-- 1.5.3 Estación CCO (1 unidad)
-  - Ubicación: CCO La Lizama
-  - Justificación: Supervisión
-  - Especificación: T04_Especificaciones_Tecnicas_METEO_v1.0.md
-- 1.5.4 Sistemas de comunicación Meteo
-- 1.5.5 Alimentación eléctrica Meteo
+- 1.5.3 Sistemas de comunicación Meteo
+- 1.5.4 Alimentación eléctrica Meteo
 
-#### **1.6 Sistema WIM (1 unidad)**
-- 1.6.1 Sistema WIM optimizado (1 unidad)
+#### **1.6 Sistema WIM (4 plataformas)**
+- 1.6.1 Sistema WIM dinámico (2 plataformas)
   - Ubicación: Peaje principal
-  - Justificación: PAT optimizado
+  - Justificación: Pesaje en movimiento
   - Especificación: T04_Especificaciones_Tecnicas_WIM_v1.0.md
-- 1.6.2 Sistemas de comunicación WIM
+- 1.6.2 Sistema estático (2 plataformas)
+  - Ubicación: Peaje principal
+  - Justificación: Verificación estática
+  - Especificación: T04_Especificaciones_Tecnicas_WIM_v1.0.md
+- 1.6.3 Sistemas de comunicación WIM
 - 1.6.3 Alimentación eléctrica WIM
 - 1.6.4 Cimentaciones y estructuras WIM
 
