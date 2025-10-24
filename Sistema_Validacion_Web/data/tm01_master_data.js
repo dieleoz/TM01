@@ -57,8 +57,18 @@ class TM01MasterData {
             // CAPÍTULO 4: SISTEMA PMV
             {id: '4', nivel: 1, item: "4", descripcion: "SISTEMA PMV", sistema: "PMV", tipo: "capitulo"},
             {id: '4.1', nivel: 2, item: "4.1", descripcion: "SUMINISTROS PMV", sistema: "PMV", tipo: "subcapitulo"},
-            {id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Paneles LED tipo PASA-VÍAS", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 20km", vu: "100,586", total: "2,816,408", totalCOP: "12,392,195,200"},
-            {id: '4.1.2', nivel: 3, item: "4.1.2", descripcion: "Sistema de gestión de contenido", sistema: "PMV", cantidad: "1", unidad: "SISTEMA", tipo: "item", criterio: "Control centralizado", vu: "25,000", total: "25,000", totalCOP: "110,000,000"},
+            {id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Panel LED matriz 3×1.5m", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 20km", vu: "10,000", vuCOP: "44,000,000", total: "280,000", totalCOP: "1,232,000,000"},
+            {id: '4.1.2', nivel: 3, item: "4.1.2", descripcion: "Controlador PMV", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Control de mensajes", vu: "2,500", vuCOP: "11,000,000", total: "70,000", totalCOP: "308,000,000"},
+            {id: '4.1.3', nivel: 3, item: "4.1.3", descripcion: "Gabinete control IP65", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Protección equipos", vu: "800", vuCOP: "3,520,000", total: "22,400", totalCOP: "98,560,000"},
+            {id: '4.1.4', nivel: 3, item: "4.1.4", descripcion: "Conversor FO/Ethernet", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Comunicación fibra", vu: "150", vuCOP: "660,000", total: "4,200", totalCOP: "18,480,000"},
+            {id: '4.1.5', nivel: 3, item: "4.1.5", descripcion: "Fuente alimentación 24VDC 15A", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Alimentación eléctrica", vu: "350", vuCOP: "1,540,000", total: "9,800", totalCOP: "43,120,000"},
+            {id: '4.1.6', nivel: 3, item: "4.1.6", descripcion: "DPS (datos + energía)", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Protección eléctrica", vu: "150", vuCOP: "660,000", total: "4,200", totalCOP: "18,480,000"},
+            {id: '4.1.7', nivel: 3, item: "4.1.7", descripcion: "Cable UTP Cat6 ext 50m", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Conexión datos", vu: "60", vuCOP: "264,000", total: "1,680", totalCOP: "7,392,000"},
+            {id: '4.1.8', nivel: 3, item: "4.1.8", descripcion: "Accesorios y conectores", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Instalación completa", vu: "200", vuCOP: "880,000", total: "5,600", totalCOP: "24,640,000"},
+            {id: '4.1.9', nivel: 3, item: "4.1.9", descripcion: "Instalación y comisionamiento", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Servicios especializados", vu: "8,000", vuCOP: "35,200,000", total: "224,000", totalCOP: "985,600,000"},
+            {id: '4.1.10', nivel: 3, item: "4.1.10", descripcion: "Pruebas FAT/SAT", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Validación funcional", vu: "500", vuCOP: "2,200,000", total: "14,000", totalCOP: "61,600,000"},
+            {id: '4.1.11', nivel: 3, item: "4.1.11", descripcion: "Sistema de gestión de contenido", sistema: "PMV", cantidad: "1", unidad: "SISTEMA", tipo: "item", criterio: "Control centralizado", vu: "25,000", vuCOP: "110,000,000", total: "25,000", totalCOP: "110,000,000"},
+            {id: '4.1.12', nivel: 3, item: "4.1.12", descripcion: "Documentación técnica", sistema: "PMV", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Manuales y planos", vu: "3,000", vuCOP: "13,200,000", total: "3,000", totalCOP: "13,200,000"},
             
             // CAPÍTULO 5: SISTEMA GÁLIBOS
             {id: '5', nivel: 1, item: "5", descripcion: "SISTEMA GÁLIBOS", sistema: "GALIBOS", tipo: "capitulo"},
