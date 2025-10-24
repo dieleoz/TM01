@@ -627,12 +627,142 @@ Longitud Total Corredor: 259,600 ML
 
 ---
 
+## 📅 **24 OCTUBRE 2025 - ERROR CRÍTICO: CONFUSIÓN DE MONEDAS USD/COP**
+
+### **Problema Identificado:**
+- Precios unitarios en Telecomunicaciones estaban incorrectamente mezclando USD y COP
+- Campo `vu` mostraba valores en COP como si fueran USD
+- Campo `vuCOP` tenía valores incorrectos por conversión errónea
+- Confusión sistemática en conversión de monedas en presupuestos
+
+### **Ejemplo del Error:**
+**ANTES (Incorrecto):**
+- Halado FO 48h: `vu: "73,421"` (mostrado como USD, pero era COP)
+- Halado FO 48h: `vuCOP: "323,052,400"` (valor incorrecto)
+
+**DESPUÉS (Correcto):**
+- Halado FO 48h: `vu: "16.7"` (USD real: 73,421 ÷ 4,400)
+- Halado FO 48h: `vuCOP: "73,421"` (COP correcto)
+
+### **Metodología de Corrección Aplicada:**
+
+#### **1. Identificación del Problema:**
+- Revisión sistemática de todos los precios unitarios
+- Comparación con documento fuente (PRESUPUESTO_CONSOLIDADO_TELECOMUNICACIONES_v1.0.md)
+- Identificación de tasa de cambio: 4,400 COP = 1 USD
+
+#### **2. Corrección Sistemática:**
+- **Campo `vu`**: Precios en USD (dividir COP entre 4,400)
+- **Campo `vuCOP`**: Precios en COP (valor original del documento)
+- **Campo `total`**: Totales en USD (calculados correctamente)
+- **Campo `totalCOP`**: Totales en COP (del documento fuente)
+
+#### **3. Validación Cruzada:**
+- Verificación de totales USD vs COP
+- Consistencia con documento fuente
+- Validación de cálculos matemáticos
+
+### **Impacto de la Corrección:**
+- **Claridad**: Separación correcta USD vs COP
+- **Consistencia**: Precios realistas en ambas monedas
+- **Trazabilidad**: Coherencia con documento fuente
+- **Profesionalismo**: Eliminación de confusión de monedas
+
+### **Lección Aprendida:**
+✅ **SIEMPRE verificar conversión de monedas en presupuestos**
+✅ **SIEMPRE separar claramente precios USD vs COP**
+✅ **SIEMPRE validar con documento fuente antes de aplicar precios**
+✅ **SIEMPRE documentar tasa de cambio utilizada**
+✅ **SIEMPRE revisar sistemáticamente todos los campos de precio**
+✅ **SIEMPRE crear DT para documentar correcciones de precios**
+
+### **Metodología de Validación de Precios:**
+1. **Identificar fuente de precios** (documento base)
+2. **Verificar tasa de cambio** aplicada
+3. **Separar precios USD vs COP** correctamente
+4. **Validar cálculos** matemáticos
+5. **Documentar correcciones** en DT
+6. **Regenerar archivos** intermedios
+7. **Verificar consistencia** final
+
+### **Checklist de Validación de Precios:**
+- [ ] ¿He identificado la fuente de precios?
+- [ ] ¿He verificado la tasa de cambio?
+- [ ] ¿He separado correctamente USD vs COP?
+- [ ] ¿He validado los cálculos matemáticos?
+- [ ] ¿He documentado la corrección en DT?
+- [ ] ¿He regenerado los archivos intermedios?
+- [ ] ¿He verificado la consistencia final?
+
+---
+
+## 📅 **24 OCTUBRE 2025 - IMPLEMENTACIÓN DE DTs AUTOMÁTICAS**
+
+### **Problema Identificado:**
+- Necesidad de documentar sistemáticamente todos los cambios técnicos
+- Falta de trazabilidad entre cambios y documentos afectados
+- Necesidad de propagación automática de cambios a través de la arquitectura de 4 capas
+
+### **Solución Implementada:**
+**Sistema de Decisiones Técnicas (DTs) con propagación automática:**
+
+#### **1. DTs Creadas y Aplicadas:**
+- **DT-TM01-SOS-001**: Ajuste SOS 87→88 unidades (+1)
+- **DT-TM01-CCTV-002**: Ajuste CCTV 45→30 unidades (-15)
+- **DT-TM01-PMV-003**: Ajuste PMV 12→28 unidades (+16)
+- **DT-TM01-TELECOM-004**: Separación componentes Telecomunicaciones
+- **DT-TM01-TELECOM-005**: Eliminación subcapítulo AIU+IVA de Telecomunicaciones
+- **DT-TM01-TELECOM-006**: Corrección precio Halado fibra óptica 48h
+- **DT-TM01-TELECOM-007**: Corrección masiva precios USD/COP
+
+#### **2. Estructura de DT Implementada:**
+```markdown
+# DT-TM01-[SISTEMA]-[NUM]-[FECHA]
+
+## § 1. INFORMACIÓN GENERAL
+## § 2. DESCRIPCIÓN DEL CAMBIO
+## § 3. JUSTIFICACIÓN TÉCNICA
+## § 4. CRITERIOS DE DISEÑO
+## § 5. ALTERNATIVAS EVALUADAS
+## § 6. IMPACTO PRESUPUESTAL
+## § 7. RIESGOS IDENTIFICADOS
+## § 8. DOCUMENTOS AFECTADOS
+## § 9. PLAN DE IMPLEMENTACIÓN
+## § 10. YAML DE INSTRUCCIONES
+## § 11. CHECKBOX DE EJECUCIÓN
+## § 12. LOG DE EJECUCIÓN
+```
+
+#### **3. Propagación Automática:**
+- **Capa 1**: Fuentes de Verdad (Documentos base)
+- **Capa 2**: Transformación (`tm01_master_data.js`)
+- **Capa 3**: Datos Intermedios (archivos generados)
+- **Capa 4**: Visualización (interfaces HTML)
+
+### **Resultado:**
+- ✅ **7 DTs creadas** y aplicadas exitosamente
+- ✅ **Propagación automática** a través de 4 capas
+- ✅ **Trazabilidad completa** de cambios
+- ✅ **Documentación sistemática** de decisiones técnicas
+- ✅ **Regeneración automática** de archivos intermedios
+
+### **Lección Aprendida:**
+✅ **SIEMPRE crear DT para documentar cambios técnicos**
+✅ **SIEMPRE incluir YAML de instrucciones para propagación automática**
+✅ **SIEMPRE ejecutar scripts de regeneración después de cambios**
+✅ **SIEMPRE documentar impacto presupuestal de cada cambio**
+✅ **SIEMPRE mantener trazabilidad entre DT y documentos afectados**
+✅ **SIEMPRE verificar que la propagación automática funcione correctamente**
+
+---
+
 **Fin del documento - Lecciones Aprendidas**  
-**Versión:** 1.8  
-**Fecha:** 23 de octubre de 2025  
+**Versión:** 1.9  
+**Fecha:** 24 de octubre de 2025  
 **Ahorro Total:** $6,319,391 USD  
 **Sobre-dimensionamiento ITS:** $17,873,276 USD identificado  
-**Errores Corregidos:** 6 errores críticos  
+**Errores Corregidos:** 8 errores críticos  
+**DTs Creadas:** 7 Decisiones Técnicas implementadas  
 **Sistema Web:** 10 archivos HTML interactivos implementados  
 **Metodología:** Punto 42 v1.0  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja

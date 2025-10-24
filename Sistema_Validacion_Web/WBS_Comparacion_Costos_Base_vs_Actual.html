@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparación Costos Base vs Actual - TM01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .summary-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .summary-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .summary-card .label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .comparison-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .table-header {
+            background: linear-gradient(135deg, #495057 0%, #6c757d 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .table-header h2 {
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+            position: sticky;
+            top: 0;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .system-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .cost-base {
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        .cost-actual {
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .difference {
+            font-weight: 600;
+        }
+
+        .difference.positive {
+            color: #dc3545;
+        }
+
+        .difference.negative {
+            color: #28a745;
+        }
+
+        .difference.neutral {
+            color: #6c757d;
+        }
+
+        .percentage {
+            font-size: 0.9em;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-weight: 600;
+        }
+
+        .percentage.positive {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .percentage.negative {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .percentage.neutral {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .chart-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 1.5em;
+        }
+
+        .chart-placeholder {
+            height: 400px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #6c757d;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Comparación Costos Base vs Actual</h1>
+            <p>Proyecto TM01 - Troncal Magdalena | Análisis de Desviaciones Presupuestales</p>
+        </div>
+
+        <div class="content">
+            <div id="loading" class="loading">
+                <h3>🔄 Cargando datos de comparación...</h3>
+                <p>Analizando costos base vs actuales del proyecto</p>
+            </div>
+
+            <div id="error" class="error" style="display: none;">
+                <h3>❌ Error al cargar datos</h3>
+                <p id="error-message"></p>
+            </div>
+
+            <div id="content" style="display: none;">
+                <!-- Resumen Ejecutivo -->
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <h3>💰 Costo Total Base</h3>
+                        <div class="value" id="total-base-usd">$0 USD</div>
+                        <div class="label" id="total-base-cop">$0 COP</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>💵 Costo Total Actual</h3>
+                        <div class="value" id="total-actual-usd">$0 USD</div>
+                        <div class="label" id="total-actual-cop">$0 COP</div>
+                    </div>
+                    <div class="summary-card">
+                        <h3>📈 Diferencia Total</h3>
+                        <div class="value" id="total-diff-usd">$0 USD</div>
+                        <div class="label" id="total-diff-percent">0%</div>
+                    </div>
+                </div>
+
+                <!-- Tabla de Comparación -->
+                <div class="comparison-table">
+                    <div class="table-header">
+                        <h2>📋 Comparación Detallada por Sistema</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sistema</th>
+                                <th>Costo Base (USD)</th>
+                                <th>Costo Actual (USD)</th>
+                                <th>Diferencia (USD)</th>
+                                <th>% Variación</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparison-table-body">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Gráfico de Comparación -->
+                <div class="chart-container">
+                    <div class="chart-title">📊 Comparación Visual de Costos</div>
+                    <div class="chart-placeholder">
+                        📈 Gráfico de barras comparativo<br>
+                        <small>(Implementar con Chart.js en futuras versiones)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📅 Última actualización: <span id="last-update"></span></p>
+            <p>🔗 Sistema de Validación TM01 - Arquitectura de 4 Capas</p>
+        </div>
+    </div>
+
+    <script>
+        // Datos de línea base (basados en la imagen proporcionada)
+        const baselineCosts = {
+            "SOS": 2312860000,
+            "ETD/RADAR": 1637143200,
+            "CCTV": 1638560000,
+            "PMV": 2921072000,
+            "GALIBOS": 826408000,
+            "METEO": 29796800,
+            "PEAJES": 4312708400,
+            "CCO": 5126000000,
+            "WIM": 3089020200,
+            "TELECOM": 31497848805
+        };
+
+        // Función para formatear números
+        function formatNumber(num) {
+            return new Intl.NumberFormat('es-CO').format(num);
+        }
+
+        // Función para formatear moneda
+        function formatCurrency(num) {
+            return new Intl.NumberFormat('es-CO', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(num);
+        }
+
+        // Función para calcular diferencia porcentual
+        function calculatePercentageChange(base, actual) {
+            if (base === 0) return 0;
+            return ((actual - base) / base) * 100;
+        }
+
+        // Función para obtener clase CSS según la diferencia
+        function getDifferenceClass(diff) {
+            if (diff > 0) return 'positive';
+            if (diff < 0) return 'negative';
+            return 'neutral';
+        }
+
+        // Función para cargar datos actuales
+        async function loadCurrentData() {
+            try {
+                // Intentar cargar desde servidor local primero
+                let response;
+                try {
+                    response = await fetch('data/tm01_master_data.js');
+                } catch (fetchError) {
+                    // Si falla el fetch, usar datos hardcodeados como fallback
+                    console.warn('No se pudo cargar desde servidor, usando datos de ejemplo');
+                    return getHardcodedData();
+                }
+                
+                const text = await response.text();
+                
+                // Extraer datos del archivo JavaScript
+                const dataMatch = text.match(/this\.data\.wbs\s*=\s*\[([\s\S]*?)\];/);
+                if (!dataMatch) {
+                    throw new Error('No se pudieron extraer los datos WBS');
+                }
+
+                // Parsear datos WBS
+                const wbsData = eval('[' + dataMatch[1] + ']');
+                
+                // Calcular totales por sistema
+                const systemTotals = {};
+                wbsData.forEach(item => {
+                    if (item.sistema && item.totalCOP) {
+                        const sistema = item.sistema;
+                        if (!systemTotals[sistema]) {
+                            systemTotals[sistema] = 0;
+                        }
+                        systemTotals[sistema] += parseFloat(item.totalCOP.replace(/,/g, ''));
+                    }
+                });
+
+                return systemTotals;
+            } catch (error) {
+                console.error('Error cargando datos:', error);
+                // Usar datos hardcodeados como fallback
+                return getHardcodedData();
+            }
+        }
+
+        // Función de fallback con datos hardcodeados
+        function getHardcodedData() {
+            // Datos actuales basados en la última sincronización (con básculas estáticas corregidas)
+            return {
+                'SOS': 2312860000,
+                'ETD': 1637143200,
+                'RADAR': 0, // ETD y RADAR están agrupados
+                'CCTV': 1638560000,
+                'PMV': 2921072000,
+                'GALIBOS': 826408000,
+                'METEO': 29796800,
+                'PEAJES': 4312708400,
+                'CCO': 5126000000,
+                'WIM': 3405336200, // Corregido: incluye básculas estáticas $261,890 USD
+                'TELECOM': 31497848805
+            };
+        }
+
+        // Función para generar la tabla de comparación
+        function generateComparisonTable(currentCosts) {
+            const tbody = document.getElementById('comparison-table-body');
+            tbody.innerHTML = '';
+
+            let totalBaseUSD = 0;
+            let totalActualUSD = 0;
+
+            // Mapeo de sistemas
+            const systemMapping = {
+                'SOS': 'SOS',
+                'ETD': 'ETD/RADAR',
+                'RADAR': 'ETD/RADAR',
+                'CCTV': 'CCTV',
+                'PMV': 'PMV',
+                'GALIBOS': 'GALIBOS',
+                'METEO': 'METEO',
+                'PEAJES': 'PEAJES',
+                'CCO': 'CCO',
+                'WIM': 'WIM',
+                'TELECOM': 'TELECOM'
+            };
+
+            // Agrupar costos actuales por sistema base
+            const groupedCurrentCosts = {};
+            Object.keys(currentCosts).forEach(sistema => {
+                const baseSystem = systemMapping[sistema] || sistema;
+                if (!groupedCurrentCosts[baseSystem]) {
+                    groupedCurrentCosts[baseSystem] = 0;
+                }
+                groupedCurrentCosts[baseSystem] += currentCosts[sistema];
+            });
+
+            // Generar filas de comparación
+            Object.keys(baselineCosts).forEach(sistema => {
+                const baseCostCOP = baselineCosts[sistema];
+                const baseCostUSD = baseCostCOP / 4400; // TMR 4,400 COP/USD
+                const actualCostCOP = groupedCurrentCosts[sistema] || 0;
+                const actualCostUSD = actualCostCOP / 4400;
+                const differenceUSD = actualCostUSD - baseCostUSD;
+                const percentageChange = calculatePercentageChange(baseCostUSD, actualCostUSD);
+
+                totalBaseUSD += baseCostUSD;
+                totalActualUSD += actualCostUSD;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="system-name">${sistema}</td>
+                    <td class="cost-base">${formatCurrency(baseCostUSD)}</td>
+                    <td class="cost-actual">${formatCurrency(actualCostUSD)}</td>
+                    <td class="difference ${getDifferenceClass(differenceUSD)}">${formatCurrency(differenceUSD)}</td>
+                    <td><span class="percentage ${getDifferenceClass(percentageChange)}">${percentageChange.toFixed(1)}%</span></td>
+                    <td>
+                        ${differenceUSD > 0 ? '📈 Incremento' : differenceUSD < 0 ? '📉 Reducción' : '➡️ Sin cambio'}
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            // Actualizar totales
+            const totalDifferenceUSD = totalActualUSD - totalBaseUSD;
+            const totalPercentageChange = calculatePercentageChange(totalBaseUSD, totalActualUSD);
+
+            document.getElementById('total-base-usd').textContent = formatCurrency(totalBaseUSD);
+            document.getElementById('total-base-cop').textContent = formatNumber(totalBaseUSD * 4400) + ' COP';
+            
+            document.getElementById('total-actual-usd').textContent = formatCurrency(totalActualUSD);
+            document.getElementById('total-actual-cop').textContent = formatNumber(totalActualUSD * 4400) + ' COP';
+            
+            document.getElementById('total-diff-usd').textContent = formatCurrency(totalDifferenceUSD);
+            document.getElementById('total-diff-usd').className = `value ${getDifferenceClass(totalDifferenceUSD)}`;
+            document.getElementById('total-diff-percent').textContent = totalPercentageChange.toFixed(1) + '%';
+        }
+
+        // Función principal
+        async function init() {
+            try {
+                const currentCosts = await loadCurrentData();
+                
+                generateComparisonTable(currentCosts);
+                
+                // Ocultar loading y mostrar contenido
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                
+                // Actualizar fecha
+                document.getElementById('last-update').textContent = new Date().toLocaleString('es-CO');
+                
+                // Mostrar mensaje si se usaron datos de ejemplo
+                if (Object.keys(currentCosts).length > 0 && currentCosts['SOS'] === 2312860000 && currentCosts['WIM'] === 3405336200) {
+                    const infoDiv = document.createElement('div');
+                    infoDiv.style.cssText = `
+                        background: #d1ecf1;
+                        color: #0c5460;
+                        padding: 15px;
+                        border-radius: 8px;
+                        margin: 20px 0;
+                        border: 1px solid #bee5eb;
+                    `;
+                    infoDiv.innerHTML = `
+                        <strong>ℹ️ Información:</strong> 
+                        Se están mostrando datos de ejemplo porque no se pudo conectar al servidor local. 
+                        Para ver datos en tiempo real, ejecuta un servidor HTTP local o usa Live Server en VS Code.
+                    `;
+                    document.querySelector('.content').insertBefore(infoDiv, document.getElementById('content'));
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error-message').textContent = error.message;
+            }
+        }
+
+        // Inicializar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
