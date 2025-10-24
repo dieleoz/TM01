@@ -1,0 +1,223 @@
+# CURSOR RULES PARA PROYECTO TM01 TRONCAL MAGDALENA
+# Archivo: .cursorrules
+# Propósito: Detección automática de DTs y propagación en 4 niveles
+# Fecha: 24 de octubre de 2025
+# Versión: 1.0
+
+## CONTEXTO DEL PROYECTO
+Este es un proyecto de ingeniería EPC para TM01 Troncal Magdalena (293 km) con Sistema de Validación Web con Arquitectura Dinámica de 4 Capas implementado.
+
+## ARQUITECTURA DEL SISTEMA
+- **Capa 1**: Fuentes de Verdad (Documentos base inmutables)
+- **Capa 2**: Transformación (Scripts PowerShell de sincronización)
+- **Capa 3**: Datos Intermedios (Estructuras dinámicas generadas)
+- **Capa 4**: Visualización (Interfaces HTML interactivas)
+
+## DETECCIÓN AUTOMÁTICA DE DECISIONES TÉCNICAS (DTs)
+
+### Patrones de Detección
+Cuando detectes cualquiera de estos patrones, genera automáticamente una DT:
+
+1. **Cambios en cantidades de equipos**:
+   - "cambiar de X a Y unidades"
+   - "ajustar cantidad de [equipo]"
+   - "modificar número de [sistema]"
+
+2. **Cambios en especificaciones técnicas**:
+   - "actualizar especificación de [equipo]"
+   - "cambiar modelo de [sistema]"
+   - "modificar criterio técnico"
+
+3. **Cambios en ubicaciones/coordenadas**:
+   - "mover [equipo] a PK X"
+   - "cambiar ubicación de [sistema]"
+   - "ajustar coordenadas"
+
+4. **Cambios en presupuesto**:
+   - "actualizar costo de [item]"
+   - "modificar presupuesto de [sistema]"
+   - "ajustar valores unitarios"
+
+### Formato de DT Automática
+Cuando generes una DT, usa este formato:
+
+```markdown
+# DT-TM01-[SISTEMA]-[NUM]-[FECHA]
+
+## § 1. INFORMACIÓN GENERAL
+- **Fecha**: [fecha actual]
+- **Tipo**: [Cambio Técnico/Optimización/Gestión de Riesgo/Verificación]
+- **Sistema**: [SOS/ETD/RADAR/CCTV/PMV/METEO/WIM]
+- **Item WBS**: [código del item afectado]
+- **Responsable**: [rol técnico correspondiente]
+
+## § 2. DESCRIPCIÓN DEL CAMBIO
+[Descripción detallada del cambio solicitado]
+
+## § 3. JUSTIFICACIÓN TÉCNICA
+[Justificación técnica del cambio]
+
+## § 4. CRITERIOS DE DISEÑO
+[Criterios técnicos aplicables]
+
+## § 5. ALTERNATIVAS EVALUADAS
+[Alternativas consideradas y descartadas]
+
+## § 6. IMPACTO PRESUPUESTAL
+- **Diferencia USD**: $[valor]
+- **Diferencia COP**: $[valor]
+- **Impacto %**: [porcentaje]
+
+## § 7. RIESGOS IDENTIFICADOS
+[Riesgos asociados al cambio]
+
+## § 8. DOCUMENTOS AFECTADOS
+- WBS
+- Presupuesto
+- Layout
+- Especificaciones Técnicas
+
+## § 9. PLAN DE IMPLEMENTACIÓN
+[Pasos para implementar el cambio]
+
+## § 10. YAML DE INSTRUCCIONES
+```yaml
+dt_metadata:
+  dt_id: "DT-TM01-[SISTEMA]-[NUM]"
+  sistema: "[SISTEMA]"
+  impacto_presupuesto: true
+  impacto_layout: true
+  impacto_wbs: true
+
+archivos_actualizar:
+  - file: "Sistema_Validacion_Web/data/tm01_master_data.js"
+    cambios:
+      - campo: "[campo_a_cambiar]"
+        buscar: "[valor_actual]"
+        reemplazar: "[valor_nuevo]"
+  
+  - file: "Sistema_Validacion_Web/datos_wbs_TM01_items.js"
+    regenerar: true
+    
+  - file: "Sistema_Validacion_Web/layout_datos.js"
+    regenerar: true
+    
+  - file: "Sistema_Validacion_Web/presupuesto_datos.js"
+    regenerar: true
+
+scripts_ejecutar:
+  - script: "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1"
+    parametros: ["-Force"]
+```
+
+## § 11. CHECKBOX DE EJECUCIÓN
+- [ ] Ejecutado por Cursor
+- [ ] Validado por QA
+- [ ] Aprobado por Especificador
+- [ ] Implementado en producción
+
+## § 12. LOG DE EJECUCIÓN
+[Se completa automáticamente al ejecutar]
+```
+
+## REGLAS DE PROPAGACIÓN AUTOMÁTICA
+
+### Cuando detectes una DT:
+1. **Genera la DT** con el formato especificado
+2. **Ejecuta automáticamente** el script maestro:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1" -Force
+   ```
+3. **Actualiza el log** en la sección § 12 con:
+   - Fecha y hora de ejecución
+   - Archivos modificados
+   - Resultado de la ejecución
+   - Errores encontrados (si los hay)
+
+### Archivos que se regeneran automáticamente:
+- `Sistema_Validacion_Web/datos_wbs_TM01_items.js`
+- `Sistema_Validacion_Web/layout_datos.js`
+- `Sistema_Validacion_Web/presupuesto_datos.js`
+
+## SISTEMAS Y RESPONSABLES
+
+### SOS (Postes de Auxilio)
+- **Responsable**: Ing. Civil
+- **Criterio**: AT1 Cap. 3 - Criterio 1km
+- **Cantidad**: 88 unidades
+
+### ETD/RADAR (Estaciones de Tratamiento de Datos)
+- **Responsable**: Ing. Sistemas
+- **Criterio**: AT1 Cap. 3 - Criterio 15km
+- **Cantidad**: 14 ETD + 2 Radares
+
+### CCTV (Cámaras de Vigilancia)
+- **Responsable**: Ing. Sistemas
+- **Criterio**: AT1 Cap. 3 - Solo en peajes
+- **Cantidad**: 30 PAN + 15 fijas
+
+### PMV (Paneles de Mensaje Variable)
+- **Responsable**: Ing. Civil
+- **Criterio**: AT1 Cap. 3 - Criterio 20km
+- **Cantidad**: 12 unidades
+
+### METEO (Estaciones Meteorológicas)
+- **Responsable**: Ing. Ambiental
+- **Criterio**: NTC 5660 + Supervisión CCO
+- **Cantidad**: 3 unidades
+
+### WIM (Sistema de Pesaje)
+- **Responsable**: Ing. Civil
+- **Criterio**: Control de peso vehicular
+- **Cantidad**: 1 unidad
+
+## VALIDACIONES AUTOMÁTICAS
+
+### Antes de ejecutar cambios:
+1. Verificar que el archivo fuente existe
+2. Validar formato de la DT
+3. Confirmar que los cambios son técnicamente viables
+
+### Después de ejecutar cambios:
+1. Verificar que los archivos se regeneraron correctamente
+2. Validar que no hay errores de sintaxis
+3. Confirmar que los totales presupuestales son coherentes
+
+## COMANDOS ÚTILES
+
+### Ejecutar sincronización completa:
+```powershell
+powershell -ExecutionPolicy Bypass -File "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1" -Verbose
+```
+
+### Verificar archivos generados:
+```powershell
+Test-Path "Sistema_Validacion_Web/datos_wbs_TM01_items.js"
+Test-Path "Sistema_Validacion_Web/layout_datos.js"
+Test-Path "Sistema_Validacion_Web/presupuesto_datos.js"
+```
+
+### Ver logs de ejecución:
+```powershell
+Get-Content "logs/sync_completo_*.log" | Select-Object -Last 20
+```
+
+## NOTAS IMPORTANTES
+
+1. **NUNCA editar manualmente** los archivos en `Sistema_Validacion_Web/` que terminan en `_datos.js`
+2. **SIEMPRE usar** el script maestro para regenerar datos
+3. **VALIDAR** que los cambios son contractualmente viables antes de implementar
+4. **DOCUMENTAR** todos los cambios en DTs con justificación técnica
+5. **MANTENER** trazabilidad entre cambios y documentos afectados
+
+## ESTADO ACTUAL DEL SISTEMA
+
+- ✅ **Scripts de Sincronización**: 4/4 completados (100%)
+- ✅ **Arquitectura de 4 Capas**: Operativa
+- ✅ **Sistema de Validación Web**: Funcionando
+- ✅ **Propagación Automática**: Implementada
+- 🔄 **Detección Automática de DTs**: En implementación
+
+---
+
+*Este archivo .cursorrules permite la detección automática de Decisiones Técnicas y la propagación automática de cambios a través de toda la arquitectura del sistema TM01.*
