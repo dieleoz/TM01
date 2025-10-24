@@ -39,7 +39,7 @@ Cuando detectes cualquiera de estos patrones, genera automáticamente una DT:
    - "ajustar valores unitarios"
 
 ### Formato de DT Automática
-Cuando generes una DT, usa este formato:
+Cuando generes una DT, usa este formato y guárdala en la carpeta `VII. Documentos Transversales/DTs/`:
 
 ```markdown
 # DT-TM01-[SISTEMA]-[NUM]-[FECHA]
@@ -120,10 +120,32 @@ scripts_ejecutar:
 [Se completa automáticamente al ejecutar]
 ```
 
+## ORGANIZACIÓN DE DECISIONES TÉCNICAS (DTs)
+
+### Estructura de carpetas:
+```
+VII. Documentos Transversales/
+├── DTs/
+│   ├── DT-TM01-SOS-001-20251024.md
+│   ├── DT-TM01-ETD-002-20251024.md
+│   ├── DT-TM01-CCTV-003-20251024.md
+│   └── ...
+├── Validaciones/
+├── Reportes/
+└── ...
+```
+
+### Convención de nombres:
+- **Formato**: `DT-TM01-[SISTEMA]-[NUM]-[FECHA].md`
+- **Ejemplos**:
+  - `DT-TM01-SOS-001-20251024.md`
+  - `DT-TM01-ETD-002-20251024.md`
+  - `DT-TM01-CCTV-003-20251024.md`
+
 ## REGLAS DE PROPAGACIÓN AUTOMÁTICA
 
 ### Cuando detectes una DT:
-1. **Genera la DT** con el formato especificado
+1. **Genera la DT** con el formato especificado en `VII. Documentos Transversales/DTs/`
 2. **Ejecuta automáticamente** el script maestro:
    ```powershell
    powershell -ExecutionPolicy Bypass -File "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1" -Force
