@@ -723,13 +723,19 @@
         
         // Toggle subtotales
         function toggleSubtotales() {
+            console.log('toggleSubtotales() llamada');
             const subtotalesSection = document.getElementById('subtotalesSection');
             const button = event.target;
             
+            console.log('subtotalesSection encontrado:', subtotalesSection);
+            console.log('button encontrado:', button);
+            
             if (subtotalesSection.style.display === 'none' || subtotalesSection.style.display === '') {
+                console.log('Mostrando subtotales...');
                 mostrarSubtotales();
                 button.textContent = '📊 Ocultar Subtotales';
             } else {
+                console.log('Ocultando subtotales...');
                 subtotalesSection.style.display = 'none';
                 button.textContent = '📊 Mostrar Subtotales por Sistema';
             }
@@ -737,8 +743,13 @@
         
         // Mostrar subtotales por sistema
         function mostrarSubtotales() {
+            console.log('mostrarSubtotales() llamada');
             const subtotalesSection = document.getElementById('subtotalesSection');
             const subtotalesGrid = document.getElementById('subtotalesGrid');
+            
+            console.log('subtotalesSection:', subtotalesSection);
+            console.log('subtotalesGrid:', subtotalesGrid);
+            console.log('filteredData:', filteredData);
             
             // Calcular subtotales por sistema
             const subtotales = {};
@@ -764,6 +775,8 @@
                 }
             });
             
+            console.log('subtotales calculados:', subtotales);
+            
             // Generar HTML de subtotales
             let html = '';
             Object.keys(subtotales).forEach(sistema => {
@@ -780,8 +793,10 @@
                 `;
             });
             
+            console.log('HTML generado:', html);
             subtotalesGrid.innerHTML = html;
             subtotalesSection.style.display = 'block';
+            console.log('Subtotales mostrados');
         }
         
         // Renderizar WBS
