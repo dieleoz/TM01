@@ -803,6 +803,19 @@
             
             console.log('subtotales calculados:', subtotales);
             
+            // Calcular totales generales
+            let totalGeneralUSD = 0;
+            let totalGeneralCOP = 0;
+            let totalItems = 0;
+            let totalUnidades = 0;
+            
+            Object.values(subtotales).forEach(subtotal => {
+                totalGeneralUSD += subtotal.costoTotalUSD;
+                totalGeneralCOP += subtotal.costoTotalCOP;
+                totalItems += subtotal.items;
+                totalUnidades += subtotal.cantidad;
+            });
+            
             // Generar HTML de subtotales
             let html = '';
             Object.keys(subtotales).forEach(sistema => {
@@ -818,6 +831,18 @@
                     </div>
                 `;
             });
+            
+            // Agregar total general
+            html += `
+                <div class="subtotal-item" style="border: 3px solid #e74c3c; background: #fff5f5;">
+                    <div class="subtotal-label" style="color: #e74c3c; font-size: 1.2em;">🎯 TOTAL GENERAL</div>
+                    <div class="subtotal-value" style="color: #e74c3c; font-size: 1.1em;">
+                        ${totalItems} items | ${totalUnidades} unidades<br>
+                        <strong>USD: $${totalGeneralUSD.toLocaleString()}</strong><br>
+                        <strong>COP: $${totalGeneralCOP.toLocaleString()}</strong>
+                    </div>
+                </div>
+            `;
             
             console.log('HTML generado:', html);
             subtotalesGrid.innerHTML = html;
