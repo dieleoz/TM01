@@ -1,32 +1,25 @@
-# SCRIPT MAESTRO DE SINCRONIZACIÓN TM01 COMPLETO
-# Proyecto: TM01 Troncal Magdalena
-# Versión: 1.0 | Fecha: 23 de Octubre de 2025
-# Descripción: Ejecuta todos los scripts de sincronización del sistema TM01
+# SCRIPT MAESTRO DE SINCRONIZACION TM01 - TRONCAL MAGDALENA
+# Archivo: scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1
+# Proposito: Ejecutar todos los scripts de sincronizacion en secuencia
+# Fecha: 24 de octubre de 2025
+# Version: 1.0
 
 param(
-    [switch]$Verbose,
-    [switch]$DryRun,
-    [switch]$WBSOnly,
-    [switch]$LayoutOnly,
-    [switch]$PresupuestoOnly,
-    [string]$LogFile = "logs\sync_completo_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
+    [string]$SourcePath = "Sistema_Validacion_Web/data/tm01_master_data.js",
+    [switch]$Verbose = $false,
+    [switch]$DryRun = $false,
+    [switch]$Force = $false
 )
 
-# Configuración
-$ErrorActionPreference = "Continue"
-$ProgressPreference = "SilentlyContinue"
-
-# Rutas del proyecto
-$ProjectRoot = Split-Path -Parent $PSScriptRoot
-$ScriptsDir = Join-Path $ProjectRoot "scripts"
-$LogsDir = Join-Path $ProjectRoot "logs"
+# Configuracion de logging
+$LogFile = "logs/sync_completo_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
 
 # Crear directorio de logs si no existe
-if (-not (Test-Path $LogsDir)) {
-    New-Item -ItemType Directory -Path $LogsDir -Force | Out-Null
+if (!(Test-Path "logs")) {
+    New-Item -ItemType Directory -Path "logs" -Force | Out-Null
 }
 
-# Función de logging
+# Funcion de logging
 function Write-Log {
     param(
         [string]$Message,
@@ -36,198 +29,145 @@ function Write-Log {
     $Timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     $LogEntry = "[$Timestamp] [$Level] $Message"
     
-    # Escribir a consola
-    Write-Host $LogEntry
+    if ($Verbose) {
+        Write-Host $LogEntry
+    }
     
-    # Escribir a archivo de log
     Add-Content -Path $LogFile -Value $LogEntry -Encoding UTF8
 }
 
-# Función para ejecutar script
+# Funcion para ejecutar script de sincronizacion
 function Invoke-SyncScript {
     param(
-        [string]$ScriptName,
         [string]$ScriptPath,
-        [string]$Description
+        [string]$ScriptName
     )
     
-    Write-Log "=== EJECUTANDO: $Description ===" "INFO"
-    Write-Log "Script: $ScriptName"
-    Write-Log "Ruta: $ScriptPath"
-    
     try {
-        # Verificar que el script existe
-        if (-not (Test-Path $ScriptPath)) {
-            throw "Script no encontrado: $ScriptPath"
+        Write-Log "=== EJECUTANDO $ScriptName ===" "INFO"
+        
+        $Command = "powershell -ExecutionPolicy Bypass -File `"$ScriptPath`""
+        
+        if ($Verbose) {
+            $Command += " -Verbose"
         }
         
-        # Preparar parámetros
-        $Params = @()
-        if ($Verbose) { $Params += "-Verbose" }
-        if ($DryRun) { $Params += "-DryRun" }
+        if ($DryRun) {
+            $Command += " -DryRun"
+        }
         
-        # Ejecutar script
-        $Result = & $ScriptPath @Params
+        Write-Log "Comando: $Command" "INFO"
+        
+        $Result = Invoke-Expression $Command
         
         if ($LASTEXITCODE -eq 0) {
-            Write-Log "✅ $Description completado exitosamente" "SUCCESS"
+            Write-Log "$ScriptName ejecutado exitosamente" "INFO"
             return $true
         } else {
-            Write-Log "❌ Error en $Description (Exit Code: $LASTEXITCODE)" "ERROR"
+            Write-Log "$ScriptName fallo con codigo: $LASTEXITCODE" "ERROR"
             return $false
         }
-    }
-    catch {
-        Write-Log "❌ Excepción en $Description`: $($_.Exception.Message)" "ERROR"
+        
+    } catch {
+        Write-Log "Error al ejecutar $ScriptName`: $($_.Exception.Message)" "ERROR"
         return $false
     }
 }
 
-# Función principal
+# Funcion principal
 function Start-CompleteSync {
-    Write-Log "=== INICIANDO SINCRONIZACIÓN COMPLETA TM01 ===" "INFO"
-    Write-Log "Proyecto: TM01 Troncal Magdalena"
-    Write-Log "Script: sincronizar_SISTEMA_TM01_COMPLETO.ps1 v1.0"
-    Write-Log "Fecha: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
-    Write-Log "Modo Dry-Run: $DryRun"
-    Write-Log "Modo Verbose: $Verbose"
+    Write-Log "=== INICIANDO SINCRONIZACION COMPLETA TM01 ===" "INFO"
+    Write-Log "Archivo fuente: $SourcePath"
+    Write-Log "Modo Dry Run: $DryRun"
     
+    # Validar archivo fuente
+    if (!(Test-Path $SourcePath)) {
+        Write-Log "No se puede continuar sin el archivo fuente" "ERROR"
+        return $false
+    }
+    
+    # Definir scripts a ejecutar
+    $Scripts = @(
+        @{ Name = "Sync WBS"; Path = "scripts/sync_wbs_tm01.ps1" },
+        @{ Name = "Sync Layout"; Path = "scripts/sincronizar_layout.ps1" },
+        @{ Name = "Sync Presupuesto"; Path = "scripts/sincronizar_presupuesto.ps1" }
+    )
+    
+    # Ejecutar scripts en secuencia
     $Results = @{}
     $StartTime = Get-Date
     
-    try {
-        # Determinar qué scripts ejecutar
-        $ScriptsToRun = @()
+    foreach ($Script in $Scripts) {
+        $ScriptName = $Script.Name
+        $ScriptPath = $Script.Path
         
-        if ($WBSOnly) {
-            $ScriptsToRun += @{
-                Name = "sync_wbs_tm01.ps1"
-                Path = Join-Path $ScriptsDir "sync_wbs_tm01.ps1"
-                Description = "Sincronización WBS"
-            }
-        }
-        elseif ($LayoutOnly) {
-            $ScriptsToRun += @{
-                Name = "sincronizar_layout.ps1"
-                Path = Join-Path $ScriptsDir "sincronizar_layout.ps1"
-                Description = "Sincronización Layout"
-            }
-        }
-        elseif ($PresupuestoOnly) {
-            $ScriptsToRun += @{
-                Name = "sincronizar_presupuesto.ps1"
-                Path = Join-Path $ScriptsDir "sincronizar_presupuesto.ps1"
-                Description = "Sincronización Presupuesto"
-            }
-        }
-        else {
-            # Ejecutar todos los scripts
-            $ScriptsToRun = @(
-                @{
-                    Name = "sync_wbs_tm01.ps1"
-                    Path = Join-Path $ScriptsDir "sync_wbs_tm01.ps1"
-                    Description = "Sincronización WBS"
-                },
-                @{
-                    Name = "sincronizar_layout.ps1"
-                    Path = Join-Path $ScriptsDir "sincronizar_layout.ps1"
-                    Description = "Sincronización Layout"
-                },
-                @{
-                    Name = "sincronizar_presupuesto.ps1"
-                    Path = Join-Path $ScriptsDir "sincronizar_presupuesto.ps1"
-                    Description = "Sincronización Presupuesto"
-                }
-            )
+        Write-Log "Iniciando ejecucion de $ScriptName" "INFO"
+        
+        # Ejecutar script
+        $Success = Invoke-SyncScript -ScriptPath $ScriptPath -ScriptName $ScriptName
+        
+        $Results[$ScriptName] = $Success
+        
+        if (!$Success) {
+            Write-Log "Error en $ScriptName. Continuando con siguiente script..." "WARNING"
         }
         
-        # Ejecutar scripts
-        foreach ($Script in $ScriptsToRun) {
-            $Success = Invoke-SyncScript -ScriptName $Script.Name -ScriptPath $Script.Path -Description $Script.Description
-            $Results[$Script.Name] = $Success
-            
-            if (-not $Success) {
-                Write-Log "⚠️ Script $($Script.Name) falló, continuando con siguiente..." "WARN"
-            }
-        }
-        
-        # Calcular tiempo total
-        $EndTime = Get-Date
-        $Duration = $EndTime - $StartTime
-        
-        # Generar reporte final
-        Write-Log "=== REPORTE FINAL DE SINCRONIZACIÓN ===" "INFO"
-        Write-Log "Tiempo total: $($Duration.TotalSeconds.ToString('F2')) segundos"
-        Write-Log "Scripts ejecutados: $($ScriptsToRun.Count)"
-        
-        $SuccessCount = ($Results.Values | Where-Object { $_ -eq $true }).Count
-        $FailureCount = ($Results.Values | Where-Object { $_ -eq $false }).Count
-        
-        Write-Log "Scripts exitosos: $SuccessCount"
-        Write-Log "Scripts fallidos: $FailureCount"
-        
-        Write-Log "Detalle por script:" "INFO"
-        foreach ($Script in $ScriptsToRun) {
-            $Status = if ($Results[$Script.Name]) { "✅ EXITOSO" } else { "❌ FALLIDO" }
-            Write-Log "  $($Script.Name): $Status"
-        }
-        
-        if ($FailureCount -eq 0) {
-            Write-Log "=== SINCRONIZACIÓN COMPLETA EXITOSA ===" "SUCCESS"
-            Write-Host "`n🎉 ¡SINCRONIZACIÓN COMPLETA EXITOSA!" -ForegroundColor Green
-            Write-Host "Todos los scripts se ejecutaron correctamente" -ForegroundColor Green
-            Write-Host "Tiempo total: $($Duration.TotalSeconds.ToString('F2')) segundos" -ForegroundColor Green
-            Write-Host "Log guardado en: $LogFile" -ForegroundColor Cyan
-            return $true
+        # Pausa entre scripts
+        Start-Sleep -Seconds 1
+    }
+    
+    $EndTime = Get-Date
+    $Duration = $EndTime - $StartTime
+    
+    Write-Log "Sincronizacion completada en $($Duration.TotalSeconds) segundos" "INFO"
+    
+    # Validar archivos generados
+    $GeneratedFiles = @(
+        "Sistema_Validacion_Web/datos_wbs_TM01_items.js",
+        "Sistema_Validacion_Web/layout_datos.js",
+        "Sistema_Validacion_Web/presupuesto_datos.js"
+    )
+    
+    $FilesValid = $true
+    foreach ($File in $GeneratedFiles) {
+        if (Test-Path $File) {
+            $Size = (Get-Item $File).Length
+            Write-Log "Archivo generado: $File ($Size bytes)" "INFO"
         } else {
-            Write-Log "=== SINCRONIZACIÓN COMPLETA CON ERRORES ===" "WARN"
-            Write-Host "`n⚠️ SINCRONIZACIÓN COMPLETADA CON ERRORES" -ForegroundColor Yellow
-            Write-Host "Scripts exitosos: $SuccessCount" -ForegroundColor Green
-            Write-Host "Scripts fallidos: $FailureCount" -ForegroundColor Red
-            Write-Host "Tiempo total: $($Duration.TotalSeconds.ToString('F2')) segundos" -ForegroundColor Yellow
-            Write-Host "Log guardado en: $LogFile" -ForegroundColor Cyan
-            return $false
+            Write-Log "Archivo no encontrado: $File" "ERROR"
+            $FilesValid = $false
         }
     }
-    catch {
-        Write-Log "=== ERROR CRÍTICO EN SINCRONIZACIÓN COMPLETA ===" "ERROR"
-        Write-Log "Error: $($_.Exception.Message)" "ERROR"
-        Write-Host "`n❌ ERROR CRÍTICO EN SINCRONIZACIÓN" -ForegroundColor Red
-        Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
-        Write-Host "Log guardado en: $LogFile" -ForegroundColor Cyan
+    
+    # Determinar estado final
+    $AllSuccessful = ($Results.Values | Where-Object { $_ -eq $false }).Count -eq 0
+    
+    if ($AllSuccessful -and $FilesValid) {
+        Write-Log "=== SINCRONIZACION COMPLETA TM01 COMPLETADA EXITOSAMENTE ===" "INFO"
+        return $true
+    } else {
+        Write-Log "=== SINCRONIZACION COMPLETA TM01 COMPLETADA CON ERRORES ===" "ERROR"
         return $false
     }
 }
 
-# Mostrar ayuda si no se especifican parámetros
-if ($args.Count -eq 0 -and -not $WBSOnly -and -not $LayoutOnly -and -not $PresupuestoOnly) {
-    Write-Host "`n🚀 SCRIPT MAESTRO DE SINCRONIZACIÓN TM01" -ForegroundColor Cyan
-    Write-Host "=========================================" -ForegroundColor Cyan
-    Write-Host ""
-    Write-Host "Uso:" -ForegroundColor Yellow
-    Write-Host "  .\sincronizar_SISTEMA_TM01_COMPLETO.ps1 [opciones]"
-    Write-Host ""
-    Write-Host "Opciones:" -ForegroundColor Yellow
-    Write-Host "  -Verbose          Mostrar información detallada"
-    Write-Host "  -DryRun           Simular ejecución sin modificar archivos"
-    Write-Host "  -WBSOnly          Ejecutar solo sincronización WBS"
-    Write-Host "  -LayoutOnly       Ejecutar solo sincronización Layout"
-    Write-Host "  -PresupuestoOnly  Ejecutar solo sincronización Presupuesto"
-    Write-Host ""
-    Write-Host "Ejemplos:" -ForegroundColor Yellow
-    Write-Host "  .\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -Verbose"
-    Write-Host "  .\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -DryRun"
-    Write-Host "  .\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -WBSOnly -Verbose"
-    Write-Host ""
-    Write-Host "Sin parámetros ejecuta todos los scripts de sincronización" -ForegroundColor Green
-    Write-Host ""
-}
-
-# Ejecutar sincronización completa
-$Success = Start-CompleteSync
-
-if ($Success) {
-    exit 0
-} else {
+# Ejecutar sincronizacion completa
+try {
+    $Result = Start-CompleteSync
+    
+    if ($Result) {
+        Write-Host "Sincronizacion Completa TM01 completada exitosamente" -ForegroundColor Green
+        Write-Host "Archivos generados en Sistema_Validacion_Web/" -ForegroundColor Cyan
+        Write-Host "Log: $LogFile" -ForegroundColor Yellow
+        Write-Host "Proximo paso: Implementar archivo .cursorrules" -ForegroundColor Blue
+    } else {
+        Write-Host "Error en la sincronizacion completa TM01" -ForegroundColor Red
+        Write-Host "Revisar logs para detalles: $LogFile" -ForegroundColor Yellow
+        exit 1
+    }
+    
+} catch {
+    Write-Host "Error critico: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Log "Error critico en sincronizacion completa: $($_.Exception.Message)" "ERROR"
     exit 1
 }
