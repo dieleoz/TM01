@@ -321,24 +321,27 @@
         </div>
     </div>
 
+    <!-- Cargar datos maestros -->
+    <script src="data/tm01_master_data.js"></script>
+    
     <script>
+        // Instancia de datos maestros
+        const tm01Data = new TM01MasterData();
+        
         // Cargar datos del sistema
         document.addEventListener('DOMContentLoaded', function() {
             // Cargar datos WBS
-            if (typeof window.wbsDataGlobal !== 'undefined') {
-                document.getElementById('totalWBS').textContent = window.wbsDataGlobal.items.length;
-            }
+            const wbsData = tm01Data.data.wbs;
+            document.getElementById('totalWBS').textContent = wbsData.length;
             
             // Cargar datos de layout
-            if (typeof layoutDatos !== 'undefined') {
-                document.getElementById('totalEquipos').textContent = layoutDatos.length;
-            }
+            const layoutData = tm01Data.data.layout;
+            document.getElementById('totalEquipos').textContent = layoutData.length;
             
             // Cargar datos de presupuesto
-            if (typeof presupuestoDatos !== 'undefined') {
-                const total = presupuestoDatos.totales.total;
-                document.getElementById('presupuestoTotal').textContent = `USD ${(total / 1000000).toFixed(2)}M`;
-            }
+            const presupuestoData = tm01Data.data.presupuesto;
+            const total = presupuestoData.reduce((sum, item) => sum + (item.total || 0), 0);
+            document.getElementById('presupuestoTotal').textContent = `USD ${(total / 1000000).toFixed(2)}M`;
             
             // Actualizar timestamp
             document.getElementById('ultimaActualizacion').textContent = new Date().toLocaleString('es-CO');
@@ -347,9 +350,7 @@
         // Función para verificar estado del sistema
         function verificarEstadoSistema() {
             const archivos = [
-                'datos_wbs_TM01_items.js',
-                'layout_datos.js',
-                'presupuesto_datos.js'
+                'data/tm01_master_data.js'
             ];
             
             let todosOperativos = true;

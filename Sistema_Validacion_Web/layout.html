@@ -340,11 +340,13 @@
     </div>
 
     <!-- Cargar datos de layout -->
-    <script src="layout_datos.js"></script>
+    <!-- Cargar datos maestros -->
+    <script src="data/tm01_master_data.js"></script>
     
     <script>
-        let map;
-        let equiposData = [];
+        // Instancia de datos maestros
+        const tm01Data = new TM01MasterData();
+        let equiposData = tm01Data.data.layout;
         let filteredEquipos = [];
         let markers = [];
         let currentSystem = '';
@@ -380,16 +382,11 @@
                 attribution: '© OpenStreetMap contributors'
             }).addTo(map);
             
-            // Cargar datos cuando esté disponible
-            if (typeof layoutDatos !== 'undefined') {
-                equiposData = layoutDatos;
-                filteredEquipos = [...equiposData];
-                actualizarEstadisticas();
-                actualizarListaSistemas();
-                renderizarMapa();
-            } else {
-                document.getElementById('map').innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#6c757d;">❌ No se pudieron cargar los datos de layout</div>';
-            }
+            // Inicializar datos
+            filteredEquipos = [...equiposData];
+            actualizarEstadisticas();
+            actualizarListaSistemas();
+            renderizarMapa();
         }
         
         // Actualizar estadísticas

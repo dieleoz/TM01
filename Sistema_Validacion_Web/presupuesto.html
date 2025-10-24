@@ -366,25 +366,23 @@
     </div>
 
     <!-- Cargar datos de presupuesto -->
-    <script src="presupuesto_datos.js"></script>
+    <!-- Cargar datos maestros -->
+    <script src="data/tm01_master_data.js"></script>
     
     <script>
-        let presupuestoData = [];
+        // Instancia de datos maestros
+        const tm01Data = new TM01MasterData();
+        let presupuestoData = tm01Data.data.presupuesto;
         let filteredData = [];
         let systemChart = null;
         let compositionChart = null;
         
-        // Cargar datos cuando esté disponible
+        // Inicializar datos
         document.addEventListener('DOMContentLoaded', function() {
-            if (typeof presupuestoDatos !== 'undefined') {
-                presupuestoData = presupuestoDatos.items;
-                filteredData = [...presupuestoData];
-                actualizarResumen();
-                renderizarTabla();
-                crearGraficos();
-            } else {
-                document.getElementById('budgetTableBody').innerHTML = '<tr><td colspan="8" class="no-data">❌ No se pudieron cargar los datos de presupuesto</td></tr>';
-            }
+            filteredData = [...presupuestoData];
+            actualizarResumen();
+            renderizarTabla();
+            crearGraficos();
         });
         
         // Actualizar resumen financiero

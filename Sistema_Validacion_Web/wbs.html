@@ -323,22 +323,20 @@
     </div>
 
     <!-- Cargar datos WBS -->
-    <script src="datos_wbs_TM01_items.js"></script>
+    <!-- Cargar datos maestros -->
+    <script src="data/tm01_master_data.js"></script>
     
     <script>
-        let wbsData = [];
+        // Instancia de datos maestros
+        const tm01Data = new TM01MasterData();
+        let wbsData = tm01Data.data.wbs;
         let filteredData = [];
         
-        // Cargar datos cuando esté disponible
+        // Inicializar datos
         document.addEventListener('DOMContentLoaded', function() {
-            if (typeof window.wbsDataGlobal !== 'undefined') {
-                wbsData = window.wbsDataGlobal.items;
-                filteredData = [...wbsData];
-                actualizarEstadisticas();
-                renderizarWBS();
-            } else {
-                document.getElementById('wbsTree').innerHTML = '<div class="no-data">❌ No se pudieron cargar los datos WBS</div>';
-            }
+            filteredData = [...wbsData];
+            actualizarEstadisticas();
+            renderizarWBS();
         });
         
         // Actualizar estadísticas
