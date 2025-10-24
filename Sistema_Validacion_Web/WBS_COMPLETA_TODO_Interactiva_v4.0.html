@@ -191,13 +191,165 @@
             border-left: 4px solid #27ae60;
             margin-left: 40px;
             display: grid;
-            grid-template-columns: 1fr auto auto auto;
+            grid-template-columns: 1fr auto auto auto auto;
             gap: 15px;
             align-items: center;
         }
 
         .wbs-item.item:hover {
             background: #f1f2f6;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .btn-dt {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-dt:hover {
+            background: #c0392b;
+        }
+
+        .btn-details {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-details:hover {
+            background: #2980b9;
+        }
+
+        .subtotal-section {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .subtotal-header {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .subtotal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .subtotal-item {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+
+        .subtotal-label {
+            font-weight: bold;
+            color: #495057;
+            font-size: 0.9em;
+        }
+
+        .subtotal-value {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .modal-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .modal-actions {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .modal-actions .btn {
+            margin-left: 10px;
         }
 
         .item-code {
@@ -336,6 +488,14 @@
             </div>
         </div>
 
+        <!-- Subtotales por Sistema -->
+        <div id="subtotalesSection" class="subtotal-section" style="display: none;">
+            <div class="subtotal-header">💰 Subtotales por Sistema</div>
+            <div id="subtotalesGrid" class="subtotal-grid">
+                <!-- Los subtotales se generarán dinámicamente -->
+            </div>
+        </div>
+
         <!-- Contenedor WBS -->
         <div class="wbs-container">
             <div id="wbsTree" class="wbs-tree">
@@ -352,6 +512,69 @@
                     📈 Exportar Excel
                 </button>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal para crear DT -->
+    <div id="dtModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">📋 Crear Decisión Técnica (DT)</div>
+                <span class="close" onclick="cerrarModal()">&times;</span>
+            </div>
+            
+            <form id="dtForm">
+                <div class="form-group">
+                    <label for="dtItem">Item WBS:</label>
+                    <input type="text" id="dtItem" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dtDescripcion">Descripción:</label>
+                    <input type="text" id="dtDescripcion" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dtSistema">Sistema:</label>
+                    <input type="text" id="dtSistema" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dtTipo">Tipo de DT:</label>
+                    <select id="dtTipo" required>
+                        <option value="">Seleccionar tipo...</option>
+                        <option value="Cambio Técnico">Cambio Técnico</option>
+                        <option value="Optimización">Optimización</option>
+                        <option value="Gestión de Riesgo">Gestión de Riesgo</option>
+                        <option value="Verificación">Verificación</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dtJustificacion">Justificación Técnica:</label>
+                    <textarea id="dtJustificacion" placeholder="Describir la justificación técnica del cambio..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dtCriterios">Criterios de Diseño:</label>
+                    <textarea id="dtCriterios" placeholder="Criterios técnicos aplicables..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dtAlternativas">Alternativas Evaluadas:</label>
+                    <textarea id="dtAlternativas" placeholder="Alternativas consideradas y descartadas..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dtRiesgos">Riesgos Identificados:</label>
+                    <textarea id="dtRiesgos" placeholder="Riesgos asociados al cambio..."></textarea>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-warning" onclick="cerrarModal()">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Crear DT</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -410,6 +633,53 @@
             document.getElementById('totalCapitulos').textContent = totalCapitulos;
             document.getElementById('totalSistemas').textContent = sistemas;
             document.getElementById('costoTotal').textContent = `$${(costoTotal / 1000000).toFixed(2)}M`;
+            
+            // Mostrar subtotales por sistema
+            mostrarSubtotales();
+        }
+        
+        // Mostrar subtotales por sistema
+        function mostrarSubtotales() {
+            const subtotalesSection = document.getElementById('subtotalesSection');
+            const subtotalesGrid = document.getElementById('subtotalesGrid');
+            
+            // Calcular subtotales por sistema
+            const subtotales = {};
+            filteredData.forEach(item => {
+                if (item.nivel === 3 && item.sistema) { // Solo items con sistema
+                    if (!subtotales[item.sistema]) {
+                        subtotales[item.sistema] = {
+                            cantidad: 0,
+                            costoTotal: 0,
+                            items: 0
+                        };
+                    }
+                    
+                    const cantidad = parseFloat(item.cantidad?.replace(/,/g, '') || 0);
+                    const costo = parseFloat(item.total?.replace(/,/g, '') || 0);
+                    
+                    subtotales[item.sistema].cantidad += cantidad;
+                    subtotales[item.sistema].costoTotal += costo;
+                    subtotales[item.sistema].items += 1;
+                }
+            });
+            
+            // Generar HTML de subtotales
+            let html = '';
+            Object.keys(subtotales).forEach(sistema => {
+                const subtotal = subtotales[sistema];
+                html += `
+                    <div class="subtotal-item">
+                        <div class="subtotal-label">${sistema}</div>
+                        <div class="subtotal-value">${subtotal.items} items</div>
+                        <div class="subtotal-value">${subtotal.cantidad} unidades</div>
+                        <div class="subtotal-value">$${(subtotal.costoTotal / 1000000).toFixed(2)}M</div>
+                    </div>
+                `;
+            });
+            
+            subtotalesGrid.innerHTML = html;
+            subtotalesSection.style.display = 'block';
         }
         
         // Renderizar WBS
@@ -464,6 +734,14 @@
                                 <div class="item-qty">${item.cantidad || '-'} ${item.unidad || ''}</div>
                                 <div class="item-cost">$${item.vu || '0'}</div>
                                 <div class="item-cost">$${item.total || '0'}</div>
+                                <div class="item-actions">
+                                    <button class="btn btn-small btn-dt" onclick="crearDT('${item.id}', '${item.item}', '${item.descripcion}', '${item.sistema}')">
+                                        📋 DT
+                                    </button>
+                                    <button class="btn btn-small btn-details" onclick="verDetalles('${item.id}')">
+                                        👁️ Ver
+                                    </button>
+                                </div>
                             </div>
                         `;
                     });
@@ -573,6 +851,153 @@
         function mostrarError(mensaje) {
             const wbsTree = document.getElementById('wbsTree');
             wbsTree.innerHTML = `<div class="error">❌ ${mensaje}</div>`;
+        }
+        
+        // Crear DT
+        function crearDT(itemId, itemCode, descripcion, sistema) {
+            document.getElementById('dtItem').value = itemCode;
+            document.getElementById('dtDescripcion').value = descripcion;
+            document.getElementById('dtSistema').value = sistema;
+            document.getElementById('dtModal').style.display = 'block';
+        }
+        
+        // Cerrar modal
+        function cerrarModal() {
+            document.getElementById('dtModal').style.display = 'none';
+            document.getElementById('dtForm').reset();
+        }
+        
+        // Ver detalles
+        function verDetalles(itemId) {
+            const item = wbsData.find(i => i.id === itemId);
+            if (item) {
+                alert(`Detalles del Item:\n\n` +
+                      `Código: ${item.item}\n` +
+                      `Descripción: ${item.descripcion}\n` +
+                      `Sistema: ${item.sistema}\n` +
+                      `Cantidad: ${item.cantidad || 'N/A'} ${item.unidad || ''}\n` +
+                      `Valor Unitario: $${item.vu || '0'}\n` +
+                      `Total: $${item.total || '0'}\n` +
+                      `Criterio: ${item.criterio || 'N/A'}`);
+            }
+        }
+        
+        // Manejar formulario DT
+        document.getElementById('dtForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                item: document.getElementById('dtItem').value,
+                descripcion: document.getElementById('dtDescripcion').value,
+                sistema: document.getElementById('dtSistema').value,
+                tipo: document.getElementById('dtTipo').value,
+                justificacion: document.getElementById('dtJustificacion').value,
+                criterios: document.getElementById('dtCriterios').value,
+                alternativas: document.getElementById('dtAlternativas').value,
+                riesgos: document.getElementById('dtRiesgos').value,
+                fecha: new Date().toISOString().split('T')[0]
+            };
+            
+            // Generar DT
+            generarDT(formData);
+            
+            // Cerrar modal
+            cerrarModal();
+        });
+        
+        // Generar DT
+        function generarDT(formData) {
+            const dtId = `DT-TM01-${formData.sistema}-${Date.now()}`;
+            
+            const dtContent = `# ${dtId}
+
+## § 1. INFORMACIÓN GENERAL
+- **Fecha**: ${formData.fecha}
+- **Tipo**: ${formData.tipo}
+- **Sistema**: ${formData.sistema}
+- **Item WBS**: ${formData.item}
+- **Responsable**: Ing. Sistemas
+
+## § 2. DESCRIPCIÓN DEL CAMBIO
+${formData.descripcion}
+
+## § 3. JUSTIFICACIÓN TÉCNICA
+${formData.justificacion}
+
+## § 4. CRITERIOS DE DISEÑO
+${formData.criterios}
+
+## § 5. ALTERNATIVAS EVALUADAS
+${formData.alternativas}
+
+## § 6. IMPACTO PRESUPUESTAL
+- **Diferencia USD**: $0
+- **Diferencia COP**: $0
+- **Impacto %**: 0%
+
+## § 7. RIESGOS IDENTIFICADOS
+${formData.riesgos}
+
+## § 8. DOCUMENTOS AFECTADOS
+- WBS
+- Presupuesto
+- Layout
+- Especificaciones Técnicas
+
+## § 9. PLAN DE IMPLEMENTACIÓN
+1. Revisar impacto técnico
+2. Actualizar documentación
+3. Implementar cambios
+4. Validar funcionamiento
+
+## § 10. YAML DE INSTRUCCIONES
+\`\`\`yaml
+dt_metadata:
+  dt_id: "${dtId}"
+  sistema: "${formData.sistema}"
+  impacto_presupuesto: false
+  impacto_layout: false
+  impacto_wbs: true
+
+archivos_actualizar:
+  - file: "Sistema_Validacion_Web/data/tm01_master_data.js"
+    cambios:
+      - campo: "descripcion"
+        buscar: "${formData.descripcion}"
+        reemplazar: "${formData.descripcion} (Modificado por ${dtId})"
+
+scripts_ejecutar:
+  - script: "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1"
+    parametros: ["-Force"]
+\`\`\`
+
+## § 11. CHECKBOX DE EJECUCIÓN
+- [ ] Ejecutado por Cursor
+- [ ] Validado por QA
+- [ ] Aprobado por Especificador
+- [ ] Implementado en producción
+
+## § 12. LOG DE EJECUCIÓN
+[Se completa automáticamente al ejecutar]`;
+
+            // Crear archivo DT
+            const blob = new Blob([dtContent], { type: 'text/markdown' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${dtId}.md`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+            
+            alert(`✅ DT generada exitosamente: ${dtId}`);
+        }
+        
+        // Cerrar modal al hacer clic fuera
+        window.onclick = function(event) {
+            const modal = document.getElementById('dtModal');
+            if (event.target === modal) {
+                cerrarModal();
+            }
         }
         
         // Búsqueda en tiempo real
