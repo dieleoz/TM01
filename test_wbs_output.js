@@ -1,34 +1,22 @@
-// SISTEMA DE DATOS MAESTRO TM01 - FUENTE ÚNICA DE VERDAD
-// Archivo: Sistema_Validacion_Web/data/tm01_master_data.js
+﻿// DATOS WBS TM01 - GENERADOS AUTOMÃTICAMENTE
+// Archivo: test_wbs_output.js
+// Generado: 2025-10-24 15:16:21
+// Script: test_wbs_generation.ps1
 
-class TM01MasterData {
-    constructor() {
-        this.data = {
-            wbs: [],
-            presupuesto: [],
-            layout: [],
-            contratos: [],
-            dts: [],
-            cambios: []
-        };
-        
-        this.initializeData();
-    }
-    
-    initializeData() {
-        // Datos WBS - Fuente: PRESUPUESTO_ITS_PURO_v2.0.md + Especificaciones Técnicas Detalladas
-        this.data.wbs = [
+// Datos WBS extraÃ­dos desde tm01_master_data.js
+const datosWBS = [
+
             // CAPÍTULO 1: SISTEMA SOS
             {id: '1', nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo"},
             {id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo"},
             {id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste metálico galvanizado 4m", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Estructura principal", vu: "800", vuCOP: "3,520,000", total: "70,400", totalCOP: "309,760,000"},
             {id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Gabinete control IP65", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Protección equipos", vu: "600", vuCOP: "2,640,000", total: "52,800", totalCOP: "232,320,000"},
             {id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Teléfono resistente vandalismo", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Comunicación VoIP", vu: "1,500", total: "132,000", totalCOP: "580,800,000"},
-            {id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Panel solar 150W", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Alimentación autónoma", vu: "450", total: "39,600", totalCOP: "174,240,000"},
-            {id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Batería 12V 100Ah (×2)", sistema: "SOS", cantidad: "176", unidad: "UND", tipo: "item", criterio: "Respaldo energético", vu: "180", total: "31,680", totalCOP: "139,392,000"},
-            {id: '1.1.6', nivel: 3, item: "1.1.6", descripcion: "Controlador solar MPPT", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Gestión energía", vu: "200", total: "17,600", totalCOP: "77,440,000"},
-            {id: '1.1.7', nivel: 3, item: "1.1.7", descripcion: "Conversor FO/Ethernet", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Comunicación fibra", vu: "150", total: "13,200", totalCOP: "58,080,000"},
-            {id: '1.1.8', nivel: 3, item: "1.1.8", descripcion: "Cableado control y energía", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Conexiones internas", vu: "120", total: "10,560", totalCOP: "46,464,000"},
+            {id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Panel solar 150W", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Alimentación autónoma", vu: "450", vuCOP: "1,980,000", total: "39,600", totalCOP: "174,240,000"},
+            {id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Batería 12V 100Ah (×2)", sistema: "SOS", cantidad: "176", unidad: "UND", tipo: "item", criterio: "Respaldo energético", vu: "180", vuCOP: "792,000", total: "31,680", totalCOP: "139,392,000"},
+            {id: '1.1.6', nivel: 3, item: "1.1.6", descripcion: "Controlador solar MPPT", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Gestión energía", vu: "200", vuCOP: "880,000", total: "17,600", totalCOP: "77,440,000"},
+            {id: '1.1.7', nivel: 3, item: "1.1.7", descripcion: "Conversor FO/Ethernet", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Comunicación fibra", vu: "150", vuCOP: "660,000", total: "13,200", totalCOP: "58,080,000"},
+            {id: '1.1.8', nivel: 3, item: "1.1.8", descripcion: "Cableado control y energía", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Conexiones internas", vu: "120", vuCOP: "528,000", total: "10,560", totalCOP: "46,464,000"},
             {id: '1.1.9', nivel: 3, item: "1.1.9", descripcion: "Baliza LED ámbar 12-24V", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Señalización visual", vu: "80", total: "7,040", totalCOP: "30,976,000"},
             {id: '1.1.10', nivel: 3, item: "1.1.10", descripcion: "Sirena piezo 110dB", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Señalización sonora", vu: "60", total: "5,280", totalCOP: "23,232,000"},
             {id: '1.1.11', nivel: 3, item: "1.1.11", descripcion: "Botón pulsador iluminado", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Activación emergencia", vu: "40", total: "3,520", totalCOP: "15,488,000"},
@@ -115,8 +103,74 @@ class TM01MasterData {
             
             // CAPÍTULO 8: SISTEMA CCO
             {id: '8', nivel: 1, item: "8", descripcion: "SISTEMA CCO", sistema: "CCO", tipo: "capitulo"},
-            {id: '8.1', nivel: 2, item: "8.1", descripcion: "SUMINISTROS CCO", sistema: "CCO", tipo: "subcapitulo"},
-            {id: '8.1.1', nivel: 3, item: "8.1.1", descripcion: "Centro de Control completo", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Control centralizado", vu: "1,165,000", total: "1,165,000", totalCOP: "5,126,000,000"},
+            // 8.1 SERVIDORES Y ALMACENAMIENTO
+            {id: '8.1', nivel: 2, item: "8.1", descripcion: "SERVIDORES Y ALMACENAMIENTO", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.1.1', nivel: 3, item: "8.1.1", descripcion: "Servidores", sistema: "CCO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "Servidores principales", vu: "62,835", vuCOP: "276,476,873", total: "204,951", totalCOP: "901,784,610"},
+            {id: '8.1.2', nivel: 3, item: "8.1.2", descripcion: "Cabina de almacenamiento", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "SAN 10TB", vu: "25,112", vuCOP: "110,495,546", total: "25,112", totalCOP: "110,495,546"},
+            {id: '8.1.3', nivel: 3, item: "8.1.3", descripcion: "Servidor de Backups ITS", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Respaldo datos", vu: "14,772", vuCOP: "64,997,379", total: "14,772", totalCOP: "64,997,379"},
+            {id: '8.1.4', nivel: 3, item: "8.1.4", descripcion: "Servidor de cronometría", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Sincronización tiempo", vu: "9,058", vuCOP: "39,852,668", total: "14,539", totalCOP: "63,970,665"},
+            {id: '8.1.5', nivel: 3, item: "8.1.5", descripcion: "KVM", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Gestión servidores", vu: "4,255", vuCOP: "18,722,734", total: "4,957", totalCOP: "21,815,065"},
+            // 8.2 LICENCIAMIENTO
+            {id: '8.2', nivel: 2, item: "8.2", descripcion: "LICENCIAMIENTO", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.2.1', nivel: 3, item: "8.2.1", descripcion: "Licenciamiento general", sistema: "CCO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Licencias por Tags", vu: "154,018", vuCOP: "677,679,315", total: "154,018", totalCOP: "677,679,315"},
+            {id: '8.2.2', nivel: 3, item: "8.2.2", descripcion: "Servidor grabación video PTZ", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "50TB capacidad", vu: "19,172", vuCOP: "84,358,292", total: "19,172", totalCOP: "84,358,292"},
+            {id: '8.2.3', nivel: 3, item: "8.2.3", descripcion: "Software VMS para 70 cámaras PTZ", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Gestión video", vu: "12,831", vuCOP: "56,458,000", total: "12,831", totalCOP: "56,458,000"},
+            // 8.3 PUESTOS DE TRABAJO
+            {id: '8.3', nivel: 2, item: "8.3", descripcion: "PUESTOS DE TRABAJO", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.3.1', nivel: 3, item: "8.3.1", descripcion: "Puesto de trabajo VMS", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Estación VMS", vu: "6,456", vuCOP: "28,405,693", total: "6,608", totalCOP: "29,077,834"},
+            {id: '8.3.2', nivel: 3, item: "8.3.2", descripcion: "Joystick", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Control PTZ", vu: "1,571", vuCOP: "6,916,220", total: "1,571", totalCOP: "6,916,220"},
+            {id: '8.3.3', nivel: 3, item: "8.3.3", descripcion: "VideoWall 4x2 pantallas 70\"", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "VideoWall LCD", vu: "21,694", vuCOP: "95,452,998", total: "22,239", totalCOP: "97,851,196"},
+            {id: '8.3.4', nivel: 3, item: "8.3.4", descripcion: "Controlador Video Wall", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Control VideoWall", vu: "17,828", vuCOP: "78,445,981", total: "18,131", totalCOP: "79,774,839"},
+            {id: '8.3.5', nivel: 3, item: "8.3.5", descripcion: "Monitor 55\" sala de crisis", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Monitor crisis", vu: "6,329", vuCOP: "27,850,000", total: "6,329", totalCOP: "27,850,000"},
+            {id: '8.3.6', nivel: 3, item: "8.3.6", descripcion: "Puestos operador + Jefe ITS", sistema: "CCO", cantidad: "4", unidad: "UND", tipo: "item", criterio: "Estaciones operación", vu: "6,456", vuCOP: "28,405,693", total: "26,434", totalCOP: "116,311,335"},
+            {id: '8.3.7', nivel: 3, item: "8.3.7", descripcion: "Pantallas 21\" operadores + KVM", sistema: "CCO", cantidad: "9", unidad: "UND", tipo: "item", criterio: "Monitores operación", vu: "2,770", vuCOP: "12,189,721", total: "25,483", totalCOP: "112,127,574"},
+            {id: '8.3.8', nivel: 3, item: "8.3.8", descripcion: "Mobiliario puestos operador", sistema: "CCO", cantidad: "6", unidad: "UND", tipo: "item", criterio: "Mesa + Silla", vu: "1,123", vuCOP: "4,942,577", total: "24,340", totalCOP: "107,098,186"},
+            {id: '8.3.9', nivel: 3, item: "8.3.9", descripcion: "Impresora a color", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Impresión color", vu: "1,129", vuCOP: "4,968,343", total: "1,304", totalCOP: "5,736,624"},
+            {id: '8.3.10', nivel: 3, item: "8.3.10", descripcion: "Mobiliario impresora", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Mobiliario impresora", vu: "666", vuCOP: "2,931,900", total: "911", totalCOP: "4,007,493"},
+            // 8.4 EQUIPOS DE COMPUTO
+            {id: '8.4', nivel: 2, item: "8.4", descripcion: "EQUIPOS DE COMPUTO", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.4.1', nivel: 3, item: "8.4.1", descripcion: "PC Portátil trabajo pesado", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Escritorio remoto", vu: "6,175", vuCOP: "27,170,625", total: "6,175", totalCOP: "27,170,625"},
+            {id: '8.4.2', nivel: 3, item: "8.4.2", descripcion: "Software y licencia SCADA portátil", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "SCADA móvil", vu: "39,521", vuCOP: "173,892,000", total: "39,521", totalCOP: "173,892,000"},
+            // 8.5 RED Y COMUNICACIONES
+            {id: '8.5', nivel: 2, item: "8.5", descripcion: "RED Y COMUNICACIONES", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.5.1', nivel: 3, item: "8.5.1", descripcion: "Firewall", sistema: "CCO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Seguridad red", vu: "8,039", vuCOP: "35,374,700", total: "16,079", totalCOP: "70,749,400"},
+            {id: '8.5.2', nivel: 3, item: "8.5.2", descripcion: "Servidor SOS", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Servidor SOS", vu: "23,909", vuCOP: "105,202,391", total: "23,909", totalCOP: "105,202,391"},
+            {id: '8.5.3', nivel: 3, item: "8.5.3", descripcion: "Estación operador SOS", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Estación SOS", vu: "3,972", vuCOP: "17,478,301", total: "3,972", totalCOP: "17,478,301"},
+            {id: '8.5.4', nivel: 3, item: "8.5.4", descripcion: "Central IP", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Telefonía IP", vu: "3,096", vuCOP: "13,624,846", total: "3,402", totalCOP: "14,969,337"},
+            {id: '8.5.5', nivel: 3, item: "8.5.5", descripcion: "Consola central IP", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Consola telefonía", vu: "366", vuCOP: "1,611,415", total: "2,841", totalCOP: "12,502,248"},
+            {id: '8.5.6', nivel: 3, item: "8.5.6", descripcion: "Teléfonos IP", sistema: "CCO", cantidad: "20", unidad: "UND", tipo: "item", criterio: "Teléfonos VoIP", vu: "126", vuCOP: "555,938", total: "2,527", totalCOP: "11,118,755"},
+            // 8.6 CABLEADO Y RACKS
+            {id: '8.6', nivel: 2, item: "8.6", descripcion: "CABLEADO Y RACKS", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.6.1', nivel: 3, item: "8.6.1", descripcion: "Cable UTP Cat 6", sistema: "CCO", cantidad: "800", unidad: "ML", tipo: "item", criterio: "Cableado datos", vu: "1.59", vuCOP: "7,003", total: "4,142", totalCOP: "18,226,639"},
+            {id: '8.6.2', nivel: 3, item: "8.6.2", descripcion: "Gateway GSM 4 vías", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Comunicación GSM", vu: "1,423", vuCOP: "6,261,297", total: "1,640", totalCOP: "7,218,200"},
+            {id: '8.6.3', nivel: 3, item: "8.6.3", descripcion: "Rack 19\" 42U", sistema: "CCO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "Infraestructura TI", vu: "1,277", vuCOP: "5,618,377", total: "4,121", totalCOP: "18,136,037"},
+            {id: '8.6.4', nivel: 3, item: "8.6.4", descripcion: "ODF para 48 fibras", sistema: "CCO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "Distribución fibra", vu: "110", vuCOP: "485,000", total: "330", totalCOP: "1,455,000"},
+            {id: '8.6.5', nivel: 3, item: "8.6.5", descripcion: "Patch Panel", sistema: "CCO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "Distribución datos", vu: "203", vuCOP: "893,000", total: "608", totalCOP: "2,679,000"},
+            {id: '8.6.6', nivel: 3, item: "8.6.6", descripcion: "Patch Cord fibra óptica", sistema: "CCO", cantidad: "48", unidad: "UND", tipo: "item", criterio: "Conexión fibra", vu: "7", vuCOP: "31,385", total: "687", totalCOP: "3,023,467"},
+            {id: '8.6.7', nivel: 3, item: "8.6.7", descripcion: "Tubería IMC 3/4\"", sistema: "CCO", cantidad: "18", unidad: "ML", tipo: "item", criterio: "Canalización", vu: "17.41", vuCOP: "76,579", total: "313", totalCOP: "1,378,424"},
+            {id: '8.6.8', nivel: 3, item: "8.6.8", descripcion: "Cableado 3x10 Energía", sistema: "CCO", cantidad: "20", unidad: "ML", tipo: "item", criterio: "Cableado energía", vu: "2,900", vuCOP: "12,759,480", total: "82,443", totalCOP: "362,748,940"},
+            // 8.7 SISTEMAS DE ENERGÍA
+            {id: '8.7', nivel: 2, item: "8.7", descripcion: "SISTEMAS DE ENERGÍA", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.7.1', nivel: 3, item: "8.7.1", descripcion: "Tablero de energía", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Interruptores monopolares", vu: "1,923", vuCOP: "8,461,488", total: "2,387", totalCOP: "10,505,116"},
+            {id: '8.7.2', nivel: 3, item: "8.7.2", descripcion: "UPS 30 KVA bifásica", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Respaldo energético", vu: "16,011", vuCOP: "70,450,000", total: "16,866", totalCOP: "74,210,000"},
+            {id: '8.7.3', nivel: 3, item: "8.7.3", descripcion: "Aire acondicionado", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Climatización", vu: "7,238", vuCOP: "31,845,800", total: "8,460", totalCOP: "37,223,767"},
+            {id: '8.7.4', nivel: 3, item: "8.7.4", descripcion: "Cableado energía aire acondicionado", sistema: "CCO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Cableado climatización", vu: "1,420", vuCOP: "6,250,000", total: "2,011", totalCOP: "8,850,000"},
+            // 8.8 INSTALACIÓN E INTEGRACIÓN
+            {id: '8.8', nivel: 2, item: "8.8", descripcion: "INSTALACIÓN E INTEGRACIÓN", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.8.1', nivel: 3, item: "8.8.1", descripcion: "Material de instalación", sistema: "CCO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Canaletas y accesorios", vu: "4,630", vuCOP: "20,370,891", total: "5,793", totalCOP: "25,487,892"},
+            {id: '8.8.2', nivel: 3, item: "8.8.2", descripcion: "Control de Accesos", sistema: "CCO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Integración peajes-SCADA", vu: "17,233", vuCOP: "75,825,701", total: "25,103", totalCOP: "110,452,596"},
+            {id: '8.8.3', nivel: 3, item: "8.8.3", descripcion: "Integración subsistemas SCADA", sistema: "CCO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Integración completa", vu: "52,273", vuCOP: "230,000,000", total: "52,273", totalCOP: "230,000,000"},
+            // 8.9 INFRAESTRUCTURA FIBRA ÓPTICA
+            {id: '8.9', nivel: 2, item: "8.9", descripcion: "INFRAESTRUCTURA FIBRA ÓPTICA", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.9.1', nivel: 3, item: "8.9.1", descripcion: "Caja empalme tipo botella", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Empalme 48 hilos", vu: "44", vuCOP: "192,904", total: "83", totalCOP: "363,167"},
+            {id: '8.9.2', nivel: 3, item: "8.9.2", descripcion: "Cajas Red Troncal 80x80x80", sistema: "CCO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Distribución troncal", vu: "219", vuCOP: "962,106", total: "809", totalCOP: "3,559,556"},
+            {id: '8.9.3', nivel: 3, item: "8.9.3", descripcion: "Caja reserva micro cable FO", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Reserva fibra", vu: "104", vuCOP: "455,761", total: "126", totalCOP: "553,216"},
+            {id: '8.9.4', nivel: 3, item: "8.9.4", descripcion: "Canalización ducto Conduit 1.5\"", sistema: "CCO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Canalización FO", vu: "60", vuCOP: "263,833", total: "575", totalCOP: "2,529,096"},
+            {id: '8.9.5', nivel: 3, item: "8.9.5", descripcion: "Fusiones", sistema: "CCO", cantidad: "96", unidad: "UND", tipo: "item", criterio: "Empalme fibra", vu: "2", vuCOP: "7,441", total: "1,155", totalCOP: "5,083,680"},
+            // 8.10 CAPACITACIÓN
+            {id: '8.10', nivel: 2, item: "8.10", descripcion: "CAPACITACIÓN", sistema: "CCO", tipo: "subcapitulo"},
+            {id: '8.10.1', nivel: 3, item: "8.10.1", descripcion: "Material de montaje", sistema: "CCO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Material montaje", vu: "677", vuCOP: "2,977,794", total: "677", totalCOP: "2,977,794"},
+            {id: '8.10.2', nivel: 3, item: "8.10.2", descripcion: "Capacitación", sistema: "CCO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Transferencia conocimiento", vu: "2,045", vuCOP: "9,000,000", total: "2,045", totalCOP: "9,000,000"},
             
             // CAPÍTULO 9: SISTEMA WIM
             {id: '9', nivel: 1, item: "9", descripcion: "SISTEMA WIM", sistema: "WIM", tipo: "capitulo"},
@@ -192,14 +246,14 @@ class TM01MasterData {
             // CAPÍTULO 10: TELECOMUNICACIONES ITS
             {id: '10', nivel: 1, item: "10", descripcion: "TELECOMUNICACIONES ITS", sistema: "TELECOM", tipo: "capitulo"},
             {id: '10.1', nivel: 2, item: "10.1", descripcion: "EQUIPOS ACTIVOS L2/L3", sistema: "TELECOM", tipo: "subcapitulo"},
-            {id: '10.1.1', nivel: 3, item: "10.1.1", descripcion: "Switches L2 Advantech EKI-7706G", sistema: "TELECOM", cantidad: "84", unidad: "UND", tipo: "item", criterio: "Sub-anillos ITS", vu: "258", vuCOP: "1,135", total: "21,672", totalCOP: "95,340"},
-            {id: '10.1.2', nivel: 3, item: "10.1.2", descripcion: "Switches L3 Cisco C9300-24P-E", sistema: "TELECOM", cantidad: "7", unidad: "UND", tipo: "item", criterio: "Nodos core", vu: "4,525", vuCOP: "19,904", total: "31,675", totalCOP: "139,328"},
-            {id: '10.1.3', nivel: 3, item: "10.1.3", descripcion: "Stock repuestos L2 (25%)", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Repuestos", vu: "5,418", vuCOP: "23,840", total: "5,418", totalCOP: "23,840"},
-            {id: '10.1.4', nivel: 3, item: "10.1.4", descripcion: "Stock repuestos L3 (25%)", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Repuestos", vu: "6,902", vuCOP: "30,370", total: "6,902", totalCOP: "30,370"},
+            {id: '10.1.1', nivel: 3, item: "10.1.1", descripcion: "Switches L2 Advantech EKI-7706G", sistema: "TELECOM", cantidad: "84", unidad: "UND", tipo: "item", criterio: "Sub-anillos ITS", vu: "1,135", vuCOP: "4,994,000", total: "95,340", totalCOP: "419,496,000"},
+            {id: '10.1.2', nivel: 3, item: "10.1.2", descripcion: "Switches L3 Cisco C9300-24P-E", sistema: "TELECOM", cantidad: "7", unidad: "UND", tipo: "item", criterio: "Nodos core", vu: "19,904", vuCOP: "87,577,600", total: "139,328", totalCOP: "613,043,200"},
+            {id: '10.1.3', nivel: 3, item: "10.1.3", descripcion: "Stock repuestos L2 (25%)", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Repuestos", vu: "23,840", vuCOP: "104,896,000", total: "23,840", totalCOP: "104,896,000"},
+            {id: '10.1.4', nivel: 3, item: "10.1.4", descripcion: "Stock repuestos L3 (25%)", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Repuestos", vu: "30,370", vuCOP: "133,628,000", total: "30,370", totalCOP: "133,628,000"},
             
             {id: '10.2', nivel: 2, item: "10.2", descripcion: "FIBRA ÓPTICA - MATERIALES", sistema: "TELECOM", tipo: "subcapitulo"},
-            {id: '10.2.1', nivel: 3, item: "10.2.1", descripcion: "Cable fibra óptica 48h Lanpro", sistema: "TELECOM", cantidad: "314824", unidad: "ML", tipo: "item", criterio: "Backbone principal", vu: "1.5", vuCOP: "6,600", total: "472,236", totalCOP: "2,077,838,400"},
-            {id: '10.2.2', nivel: 3, item: "10.2.2", descripcion: "Cable fibra óptica 12h Lanpro", sistema: "TELECOM", cantidad: "10856", unidad: "ML", tipo: "item", criterio: "Ramales secundarios", vu: "1.5", vuCOP: "6,600", total: "16,284", totalCOP: "71,649,600"},
+            {id: '10.2.1', nivel: 3, item: "10.2.1", descripcion: "Cable fibra óptica 48h Lanpro", sistema: "TELECOM", cantidad: "314824", unidad: "ML", tipo: "item", criterio: "Backbone principal", vu: "6,600", vuCOP: "29,040,000", total: "2,077,838,400", totalCOP: "9,142,488,960"},
+            {id: '10.2.2', nivel: 3, item: "10.2.2", descripcion: "Cable fibra óptica 12h Lanpro", sistema: "TELECOM", cantidad: "10856", unidad: "ML", tipo: "item", criterio: "Ramales secundarios", vu: "6,600", vuCOP: "29,040,000", total: "71,649,600", totalCOP: "315,258,240"},
             {id: '10.2.3', nivel: 3, item: "10.2.3", descripcion: "Cajas empalme 120×120", sistema: "TELECOM", cantidad: "185", unidad: "UND", tipo: "item", criterio: "Empalmes principales", vu: "375", vuCOP: "1,650,000", total: "69,375", totalCOP: "305,250,000"},
             {id: '10.2.4', nivel: 3, item: "10.2.4", descripcion: "Cajas empalme 80×80", sistema: "TELECOM", cantidad: "65", unidad: "UND", tipo: "item", criterio: "Empalmes secundarios", vu: "344.1", vuCOP: "1,513,930", total: "22,366.5", totalCOP: "98,405,450"},
             {id: '10.2.5', nivel: 3, item: "10.2.5", descripcion: "Cajas empalme 60×60", sistema: "TELECOM", cantidad: "843", unidad: "UND", tipo: "item", criterio: "Empalmes terciarios", vu: "253.6", vuCOP: "1,115,800", total: "213,784.8", totalCOP: "940,619,400"},
@@ -210,333 +264,21 @@ class TM01MasterData {
             {id: '10.2.10', nivel: 3, item: "10.2.10", descripcion: "Empalmes y conectores globales", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Empalmes fibra", vu: "39.7", vuCOP: "174,801", total: "39.7", totalCOP: "174,801"},
             
             {id: '10.3', nivel: 2, item: "10.3", descripcion: "OBRA CIVIL", sistema: "TELECOM", tipo: "subcapitulo"},
-            {id: '10.3.1', nivel: 3, item: "10.3.1", descripcion: "Excavación asfalto + tritubo", sistema: "TELECOM", cantidad: "32028", unidad: "ML", tipo: "item", criterio: "Excavación vial", vu: "18.17", vuCOP: "79,934", total: "581,909", totalCOP: "2,559,879,352"},
-            {id: '10.3.2', nivel: 3, item: "10.3.2", descripcion: "Excavación andén + tritubo", sistema: "TELECOM", cantidad: "16014", unidad: "ML", tipo: "item", criterio: "Excavación peatonal", vu: "18.17", vuCOP: "79,934", total: "290,954", totalCOP: "1,279,939,676"},
-            {id: '10.3.3', nivel: 3, item: "10.3.3", descripcion: "Excavación blanda + tritubo", sistema: "TELECOM", cantidad: "281520", unidad: "ML", tipo: "item", criterio: "Excavación terreno", vu: "5.19", vuCOP: "22,839", total: "1,461,089", totalCOP: "6,429,469,680"},
-            {id: '10.3.4', nivel: 3, item: "10.3.4", descripcion: "Instalación cruces especiales", sistema: "TELECOM", cantidad: "13106", unidad: "ML", tipo: "item", criterio: "Instalación estructuras", vu: "11.7", vuCOP: "51,500", total: "153,340", totalCOP: "674,790,000"},
-            {id: '10.3.5', nivel: 3, item: "10.3.5", descripcion: "Instalación cajas empalme", sistema: "TELECOM", cantidad: "1257", unidad: "UND", tipo: "item", criterio: "Instalación cajas", vu: "111.18", vuCOP: "489,200", total: "139,754", totalCOP: "615,025,000"},
+            {id: '10.3.1', nivel: 3, item: "10.3.1", descripcion: "Excavación asfalto + tritubo", sistema: "TELECOM", cantidad: "32028", unidad: "ML", tipo: "item", criterio: "Excavación vial", vu: "79,934", vuCOP: "351,709,600", total: "2,559,879,352", totalCOP: "11,263,469,149"},
+            {id: '10.3.2', nivel: 3, item: "10.3.2", descripcion: "Excavación andén + tritubo", sistema: "TELECOM", cantidad: "16014", unidad: "ML", tipo: "item", criterio: "Excavación peatonal", vu: "79,934", vuCOP: "351,709,600", total: "1,279,939,676", totalCOP: "5,631,734,574"},
+            {id: '10.3.3', nivel: 3, item: "10.3.3", descripcion: "Excavación blanda + tritubo", sistema: "TELECOM", cantidad: "281520", unidad: "ML", tipo: "item", criterio: "Excavación terreno", vu: "22,839", vuCOP: "100,491,600", total: "6,429,469,680", totalCOP: "28,289,666,592"},
+            {id: '10.3.4', nivel: 3, item: "10.3.4", descripcion: "Instalación cruces especiales", sistema: "TELECOM", cantidad: "13106", unidad: "ML", tipo: "item", criterio: "Instalación estructuras", vu: "51,500", vuCOP: "226,600,000", total: "674,790,000", totalCOP: "2,969,076,000"},
+            {id: '10.3.5', nivel: 3, item: "10.3.5", descripcion: "Instalación cajas empalme", sistema: "TELECOM", cantidad: "1257", unidad: "UND", tipo: "item", criterio: "Instalación cajas", vu: "489,200", vuCOP: "2,152,480,000", total: "615,025,000", totalCOP: "2,706,110,000"},
             
             {id: '10.4', nivel: 2, item: "10.4", descripcion: "HALADO E INSTALACIÓN", sistema: "TELECOM", tipo: "subcapitulo"},
             {id: '10.4.1', nivel: 3, item: "10.4.1", descripcion: "Halado fibra óptica 48h", sistema: "TELECOM", cantidad: "314824", unidad: "ML", tipo: "item", criterio: "Halado principal", vu: "16.7", vuCOP: "73,421", total: "5,253,337", totalCOP: "23,114,684,000"},
             {id: '10.4.2', nivel: 3, item: "10.4.2", descripcion: "Halado fibra óptica 12h", sistema: "TELECOM", cantidad: "10856", unidad: "ML", tipo: "item", criterio: "Halado secundario", vu: "61.2", vuCOP: "269,280", total: "664,335", totalCOP: "2,923,074,000"},
             {id: '10.4.3', nivel: 3, item: "10.4.3", descripcion: "Trabajos instalación especializada", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación completa", vu: "151,554", vuCOP: "666,837,600", total: "151,554", totalCOP: "666,837,600"},
             
-        ];
         
-        // Datos Presupuesto (sincronizados con WBS)
-        this.data.presupuesto = this.data.wbs.map(item => ({
-            ...item,
-            tipo: item.tipo === 'item' ? 'SUMINISTRO' : '',
-            ubicacion: this.getUbicacionDefault(item.sistema),
-            justificacion: item.criterio || ''
-        }));
-        
-        // Datos Layout
-        this.data.layout = this.generateLayoutData();
-        
-        // Datos Contractuales
-        this.data.contratos = this.generateContractualData();
-    }
-    
-    getUbicacionDefault(sistema) {
-        const ubicaciones = {
-            'SOS': 'RN 4510 + RN 4511 + RN 4513',
-            'ETD/RADAR': 'RN 4510 + RN 4511 + Peajes',
-            'CCTV': 'Peajes + CCO + Estaciones',
-            'PMV': 'RN 4510 + RN 4511',
-            'GALIBOS': 'RN 4510 + RN 4511',
-            'METEO': '2 peajes + 1 CCO',
-            'PEAJES': 'RN 4510 + RN 4511',
-            'CCO': 'RN 4513 PK 4+300',
-            'WIM': 'Peaje principal',
-            'TELECOM': 'Todo el corredor'
-        };
-        return ubicaciones[sistema] || 'Por definir';
-    }
-    
-    generateLayoutData() {
-        // Generar datos de layout basados en WBS
-        return this.data.wbs
-            .filter(item => item.tipo === 'item' && item.cantidad)
-            .map(item => ({
-                id: item.id,
-                nombre: item.descripcion,
-                cantidad: parseInt(item.cantidad),
-                ubicacion: this.getUbicacionDefault(item.sistema),
-                coordenadas: this.generateCoordinates(item.sistema),
-                sistema: item.sistema
-            }));
-    }
-    
-    generateCoordinates(sistema) {
-        // Coordenadas aproximadas por sistema
-        const coordenadas = {
-            'SOS': { lat: 7.5, lng: -73.2 },
-            'ETD/RADAR': { lat: 7.6, lng: -73.1 },
-            'CCTV': { lat: 7.4, lng: -73.3 },
-            'PMV': { lat: 7.5, lng: -73.2 },
-            'METEO': { lat: 7.5, lng: -73.2 },
-            'WIM': { lat: 7.4, lng: -73.3 }
-        };
-        return coordenadas[sistema] || { lat: 7.5, lng: -73.2 };
-    }
-    
-    generateContractualData() {
-        // Generar datos contractuales basados en WBS
-        return this.data.wbs
-            .filter(item => item.tipo === 'item')
-            .map(item => ({
-                item: item.id,
-                sistema: item.sistema,
-                especificacion: item.descripcion,
-                obligacion: this.getObligacionDefault(item.sistema),
-                cantidadTecnica: item.cantidad || '0',
-                cantidadContractual: item.cantidad || '0',
-                cumplimiento: 'CUMPLE',
-                justificacion: item.criterio || 'Criterio técnico aplicado',
-                accionRequerida: 'Ninguna',
-                responsable: this.getResponsableDefault(item.sistema),
-                accion: 'VALIDAR'
-            }));
-    }
-    
-    getObligacionDefault(sistema) {
-        const obligaciones = {
-            'SOS': 'Postes de auxilio cada 1km',
-            'ETD/RADAR': 'Estaciones cada 15km',
-            'CCTV': 'Cobertura estratégica del corredor',
-            'PMV': 'Paneles cada 20km',
-            'METEO': 'Estaciones meteorológicas',
-            'WIM': 'Sistema de pesaje'
-        };
-        return obligaciones[sistema] || 'Obligación contractual';
-    }
-    
-    getResponsableDefault(sistema) {
-        const responsables = {
-            'SOS': 'Ing. Civil',
-            'ETD/RADAR': 'Ing. Sistemas',
-            'CCTV': 'Ing. Sistemas',
-            'PMV': 'Ing. Civil',
-            'METEO': 'Ing. Ambiental',
-            'WIM': 'Ing. Civil'
-        };
-        return responsables[sistema] || 'Ing. Responsable';
-    }
-    
-    // MÉTODOS DE GESTIÓN DE CAMBIOS
-    
-    modificarItem(itemId, nuevosDatos) {
-        const itemIndex = this.data.wbs.findIndex(item => item.id === itemId);
-        if (itemIndex === -1) {
-            throw new Error(`Item ${itemId} no encontrado`);
-        }
-        
-        const itemOriginal = { ...this.data.wbs[itemIndex] };
-        const itemModificado = { ...this.data.wbs[itemIndex], ...nuevosDatos };
-        
-        // Recalcular total si cambió cantidad o VU
-        if (nuevosDatos.cantidad || nuevosDatos.vu) {
-            const cantidad = nuevosDatos.cantidad || itemModificado.cantidad;
-            const vu = nuevosDatos.vu || itemModificado.vu;
-            itemModificado.total = (parseInt(cantidad) * parseFloat(vu)).toString();
-            itemModificado.totalCOP = (parseInt(itemModificado.total) * 4400).toString();
-        }
-        
-        // Actualizar WBS
-        this.data.wbs[itemIndex] = itemModificado;
-        
-        // Actualizar Presupuesto
-        const presupuestoIndex = this.data.presupuesto.findIndex(p => p.id === itemId);
-        if (presupuestoIndex !== -1) {
-            this.data.presupuesto[presupuestoIndex] = { ...itemModificado };
-        }
-        
-        // Actualizar Layout si aplica
-        const layoutIndex = this.data.layout.findIndex(l => l.id === itemId);
-        if (layoutIndex !== -1) {
-            this.data.layout[layoutIndex] = {
-                ...this.data.layout[layoutIndex],
-                cantidad: parseInt(itemModificado.cantidad),
-                nombre: itemModificado.descripcion
-            };
-        }
-        
-        // Actualizar Contratos
-        const contratoIndex = this.data.contratos.findIndex(c => c.item === itemId);
-        if (contratoIndex !== -1) {
-            this.data.contratos[contratoIndex] = {
-                ...this.data.contratos[contratoIndex],
-                cantidadTecnica: itemModificado.cantidad,
-                cantidadContractual: itemModificado.cantidad
-            };
-        }
-        
-        // Registrar cambio
-        this.registrarCambio(itemId, itemOriginal, itemModificado);
-        
-        return {
-            exito: true,
-            item: itemModificado,
-            impacto: this.calcularImpacto(itemOriginal, itemModificado)
-        };
-    }
-    
-    calcularImpacto(original, modificado) {
-        const totalOriginal = parseFloat(original.total || 0);
-        const totalModificado = parseFloat(modificado.total || 0);
-        const diferencia = totalModificado - totalOriginal;
-        
-        return {
-            diferencia: diferencia,
-            diferenciaCOP: diferencia * 4400,
-            impactoPorcentual: totalOriginal > 0 ? (diferencia / totalOriginal) * 100 : 0,
-            nuevoTotal: totalModificado,
-            nuevoTotalCOP: totalModificado * 4400
-        };
-    }
-    
-    registrarCambio(itemId, original, modificado) {
-        const cambio = {
-            id: `CAMBIO-${Date.now()}`,
-            fecha: new Date().toISOString(),
-            itemId: itemId,
-            original: original,
-            modificado: modificado,
-            impacto: this.calcularImpacto(original, modificado),
-            usuario: 'Sistema',
-            tipo: 'MODIFICACION'
-        };
-        
-        this.data.cambios.push(cambio);
-        
-        // Generar DT automático
-        this.generarDTAutomatico(cambio);
-    }
-    
-    generarDTAutomatico(cambio) {
-        const dt = {
-            numero: `DT-${String(Date.now()).slice(-6)}`,
-            fecha: new Date().toISOString().split('T')[0],
-            tipo: 'Cambio Técnico',
-            item: cambio.itemId,
-            descripcion: `Modificación de ${cambio.original.descripcion}`,
-            justificacion: cambio.modificado.criterio || 'Criterio técnico aplicado',
-            impacto: cambio.impacto,
-            documentosAfectados: ['WBS', 'Presupuesto', 'Layout', 'Contratos'],
-            responsable: 'Sistema Automático',
-            contenido: this.generarContenidoDT(cambio)
-        };
-        
-        this.data.dts.push(dt);
-        return dt;
-    }
-    
-    generarContenidoDT(cambio) {
-        return `# DT-${dt.numero} - ${dt.descripcion}
+];
 
-## Información General
-- **Fecha:** ${dt.fecha}
-- **Tipo:** ${dt.tipo}
-- **Item:** ${dt.item}
-- **Responsable:** ${dt.responsable}
-
-## Descripción del Cambio
-${dt.descripcion}
-
-## Justificación Técnica
-${dt.justificacion}
-
-## Impacto Presupuestal
-- **Diferencia:** $${dt.impacto.diferencia.toLocaleString('en-US')} USD
-- **Diferencia COP:** $${dt.impacto.diferenciaCOP.toLocaleString('es-CO')} COP
-- **Impacto %:** ${dt.impacto.impactoPorcentual.toFixed(2)}%
-- **Nuevo Total:** $${dt.impacto.nuevoTotal.toLocaleString('en-US')} USD
-
-## Documentos Afectados
-${dt.documentosAfectados.map(doc => `- ${doc}`).join('\n')}
-
-## Estado
-- [ ] Aprobado por QA
-- [ ] Aprobado por Especificador
-- [ ] Aprobado por Admin
-- [ ] Implementado
-`;
-    }
-    
-    // MÉTODOS DE CONSULTA
-    
-    getItem(itemId) {
-        return this.data.wbs.find(item => item.id === itemId);
-    }
-    
-    getItemsBySistema(sistema) {
-        return this.data.wbs.filter(item => item.sistema === sistema);
-    }
-    
-    getTotalPorSistema(sistema) {
-        const items = this.getItemsBySistema(sistema);
-        return items.reduce((sum, item) => sum + parseFloat(item.total || 0), 0);
-    }
-    
-    getTotalGeneral() {
-        return this.data.wbs.reduce((sum, item) => sum + parseFloat(item.total || 0), 0);
-    }
-    
-    getEstadisticas() {
-        const sistemas = [...new Set(this.data.wbs.map(item => item.sistema))];
-        const estadisticas = {};
-        
-        sistemas.forEach(sistema => {
-            const items = this.getItemsBySistema(sistema);
-            estadisticas[sistema] = {
-                cantidadItems: items.length,
-                totalUSD: this.getTotalPorSistema(sistema),
-                totalCOP: this.getTotalPorSistema(sistema) * 4400,
-                porcentaje: (this.getTotalPorSistema(sistema) / this.getTotalGeneral()) * 100
-            };
-        });
-        
-        return estadisticas;
-    }
-    
-    // MÉTODOS DE EXPORTACIÓN
-    
-    exportarDatos() {
-        return {
-            wbs: this.data.wbs,
-            presupuesto: this.data.presupuesto,
-            layout: this.data.layout,
-            contratos: this.data.contratos,
-            dts: this.data.dts,
-            cambios: this.data.cambios,
-            estadisticas: this.getEstadisticas(),
-            fechaExportacion: new Date().toISOString()
-        };
-    }
-    
-    importarDatos(datos) {
-        this.data = { ...this.data, ...datos };
-        return true;
-    }
+// FunciÃ³n para obtener todos los items WBS
+function obtenerItemsWBS() {
+    return datosWBS;
 }
-
-// Instancia global
-window.tm01MasterData = new TM01MasterData();
-
-// Funciones de utilidad globales
-window.modificarItemWBS = function(itemId, nuevosDatos) {
-    return window.tm01MasterData.modificarItem(itemId, nuevosDatos);
-};
-
-window.obtenerItemWBS = function(itemId) {
-    return window.tm01MasterData.getItem(itemId);
-};
-
-window.obtenerEstadisticas = function() {
-    return window.tm01MasterData.getEstadisticas();
-};
-
-window.exportarDatosCompletos = function() {
-    return window.tm01MasterData.exportarDatos();
-};

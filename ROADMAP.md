@@ -1,12 +1,12 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo y Cronograma - Sistema de Validación Web con Arquitectura Dinámica
 
-**Versión:** 11.0 - ARQUITECTURA DINÁMICA IMPLEMENTADA  
-**Fecha:** 23 de Octubre 2025  
-**Estado:** ✅ **SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADO** | ✅ **SISTEMA HTML INTERACTIVO 100% OPERATIVO**    
+**Versión:** 12.0 - CORRECCIÓN CRÍTICA VALORES USD/COP  
+**Fecha:** 24 de Octubre 2025  
+**Estado:** ✅ **SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADO** | ✅ **VALORES USD/COP CORREGIDOS Y ESTABILIZADOS**    
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 23 de octubre de 2025 (02:00) - Arquitectura dinámica de 4 capas implementada  
+**Última actualización:** 24 de octubre de 2025 (15:30) - Corrección crítica valores astronómicos USD/COP  
 **Progreso total:** ✅ **FASE 6 VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)  
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente  
@@ -24,12 +24,43 @@
 **✅ COTIZACIONES REALES:** Integradas en presupuesto final  
 **✅ REVISIÓN SISTEMÁTICA:** 75+ documentos actualizados con información oficial  
 **✅ SISTEMA DE VALIDACIÓN WEB:** HTML interactivo completado con arquitectura dinámica de 4 capas  
+**✅ CORRECCIÓN CRÍTICA:** Valores astronómicos USD/COP identificados y corregidos  
+**✅ SCRIPT PROBLEMÁTICO:** `integrar_t05_limpio.ps1` identificado y deshabilitado  
 **💰 PRESUPUESTO ITS PURO:** USD $7.79M (solo componentes ITS reales validados)  
-**📋 WBS COMPLETA:** 4 niveles, 17 capítulos, $53.4M presupuesto total  
+**📋 WBS COMPLETA:** 4 niveles, 17 capítulos, valores realistas corregidos  
 **📄 RFQ-001:** Solicitud cotización Fibra Óptica lista (1,480 líneas)  
 **🌐 SISTEMA WEB:** 8 archivos HTML interactivos con arquitectura dinámica 100% operativos  
 **🏗️ ARQUITECTURA:** Sistema de 4 capas con fuente única de verdad y propagación automática  
-**🎉 COMPLETADO:** Revisión sistemática + WBS + RFQ + Presupuesto ITS validado + Sistema de validación web con arquitectura dinámica completado
+**🎉 COMPLETADO:** Revisión sistemática + WBS + RFQ + Presupuesto ITS validado + Sistema de validación web con arquitectura dinámica completado + Corrección crítica valores USD/COP
+
+---
+
+## 🔧 **CORRECCIÓN CRÍTICA VALORES USD/COP** (24-Oct-2025)
+
+### **Problema Identificado:**
+- **Valores astronómicos**: TELECOM $13.7 BILLONES USD (imposible)
+- **Causa raíz**: Script `integrar_t05_limpio.ps1` regeneraba valores COP como USD
+- **Impacto**: Presupuesto irreal y no ejecutable
+
+### **Solución Aplicada:**
+1. **Identificado script problemático**: `integrar_t05_limpio.ps1`
+2. **Deshabilitado temporalmente**: Movido a `scripts/temp/`
+3. **Creado respaldo**: `tm01_master_data_CORRECTO.js`
+4. **Corregidos valores críticos**: 9 items TELECOM con valores realistas
+5. **Regenerados archivos**: Solo con scripts seguros
+
+### **Valores Corregidos:**
+- **Switches L2**: `vu: "1,135"` → `vu: "258"` USD
+- **Switches L3**: `vu: "19,904"` → `vu: "4,525"` USD
+- **Excavación asfalto**: `vu: "79,934"` → `vu: "18.17"` USD
+- **Excavación blanda**: `vu: "22,839"` → `vu: "5.19"` USD
+- **Instalación cajas**: `vu: "489,200"` → `vu: "111.18"` USD
+
+### **Resultado:**
+- ✅ **Presupuesto realista**: Valores ejecutables
+- ✅ **Sistema estable**: Sin regeneración automática problemática
+- ✅ **Credibilidad**: Eliminación de valores imposibles
+- ✅ **Documentación**: DT crítica creada y aplicada
 
 ---
 

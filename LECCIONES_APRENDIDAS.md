@@ -714,6 +714,11 @@ Longitud Total Corredor: 259,600 ML
 - **DT-TM01-TELECOM-005**: Eliminación subcapítulo AIU+IVA de Telecomunicaciones
 - **DT-TM01-TELECOM-006**: Corrección precio Halado fibra óptica 48h
 - **DT-TM01-TELECOM-007**: Corrección masiva precios USD/COP
+- **DT-TM01-TELECOM-008**: Corrección precio Cable fibra óptica 48h Lanpro
+- **DT-TM01-TELECOM-009**: Corrección masiva USD/COP - FIBRA ÓPTICA MATERIALES
+- **DT-TM01-TELECOM-010**: Corrección masiva USD/COP - OBRA CIVIL
+- **DT-TM01-TELECOM-011**: Corrección masiva USD/COP - HALADO E INSTALACIÓN
+- **DT-TM01-TELECOM-012**: Reestructuración detalle instalación fibra óptica
 
 #### **2. Estructura de DT Implementada:**
 ```markdown
@@ -756,13 +761,105 @@ Longitud Total Corredor: 259,600 ML
 
 ---
 
+## 📅 **24 OCTUBRE 2025 - ERROR CRÍTICO: VALORES ASTRONÓMICOS USD/COP**
+
+### **Problema Identificado:**
+- **Valores absurdos detectados**: TELECOM $13.7 BILLONES USD (imposible)
+- **Causa raíz**: Valores `vu` en COP tratados como USD, causando cálculos astronómicos
+- **Ejemplo crítico**: Item 10.2.1 con total de $2,077,838,400 USD (¡2 billones!)
+
+### **Análisis del Error:**
+**ANTES (Incorrecto):**
+- Cable FO 48h: `vu: "6,600"` (COP tratado como USD)
+- Cable FO 48h: `total: "2,077,838,400"` USD (314,824 × 6,600 = ¡2 billones!)
+
+**DESPUÉS (Correcto):**
+- Cable FO 48h: `vu: "1.5"` USD (6,600 ÷ 4,400)
+- Cable FO 48h: `total: "472,236"` USD (314,824 × 1.5 = realista)
+
+### **Impacto de la Corrección:**
+- **TELECOM**: De $13.7 billones → valores realistas
+- **Total General**: De $13.7 billones → valores ejecutables
+- **Presupuesto**: Ahora coherente y realista
+- **Credibilidad**: Eliminación de valores imposibles
+
+### **Lección Aprendida:**
+✅ **SIEMPRE verificar que valores USD sean realistas (no billones)**
+✅ **SIEMPRE aplicar tasa de cambio correcta en cálculos**
+✅ **SIEMPRE validar totales antes de presentar presupuestos**
+✅ **SIEMPRE crear DT para documentar correcciones críticas**
+✅ **SIEMPRE regenerar archivos después de correcciones masivas**
+
+### **Metodología de Validación de Valores:**
+1. **Identificar valores anómalos** (billones, millones excesivos)
+2. **Verificar conversión USD/COP** en cálculos
+3. **Aplicar tasa de cambio** correcta (4,400 COP = 1 USD)
+4. **Recalcular totales** con valores realistas
+5. **Documentar corrección** en DT crítica
+6. **Regenerar archivos** intermedios
+7. **Validar consistencia** final
+
+### **Checklist de Validación de Valores:**
+- [ ] ¿Los valores USD son realistas (no billones)?
+- [ ] ¿La conversión USD/COP es correcta?
+- [ ] ¿Los totales son coherentes?
+- [ ] ¿He documentado la corrección crítica?
+- [ ] ¿He regenerado los archivos intermedios?
+- [ ] ¿He validado la consistencia final?
+
+---
+
+## 📅 **24 OCTUBRE 2025 - SOLUCIÓN DEFINITIVA: SCRIPT PROBLEMÁTICO IDENTIFICADO**
+
+### **Problema Identificado:**
+- **Script problemático**: `integrar_t05_limpio.ps1` regeneraba `tm01_master_data.js` desde documentación base
+- **Causa**: El script lee documentos T05 con valores COP tratados como USD
+- **Resultado**: Valores astronómicos se regeneraban automáticamente después de cada corrección
+
+### **Solución Aplicada:**
+1. **Identificado el culpable**: `scripts/integrar_t05_limpio.ps1`
+2. **Deshabilitado temporalmente**: Movido a `scripts/temp/`
+3. **Creado respaldo**: `tm01_master_data_CORRECTO.js` con valores corregidos
+4. **Restaurado valores**: Desde respaldo con valores realistas
+5. **Regenerado archivos**: Solo con scripts seguros
+
+### **Valores Corregidos Definitivamente:**
+- **10.1.1**: `vu: "1,135"` → `vu: "258"` USD (Switches L2)
+- **10.1.2**: `vu: "19,904"` → `vu: "4,525"` USD (Switches L3)
+- **10.1.3**: `vu: "23,840"` → `vu: "5,418"` USD (Repuestos L2)
+- **10.1.4**: `vu: "30,370"` → `vu: "6,902"` USD (Repuestos L3)
+- **10.3.1**: `vu: "79,934"` → `vu: "18.17"` USD (Excavación asfalto)
+- **10.3.2**: `vu: "79,934"` → `vu: "18.17"` USD (Excavación andén)
+- **10.3.3**: `vu: "22,839"` → `vu: "5.19"` USD (Excavación blanda)
+- **10.3.4**: `vu: "51,500"` → `vu: "11.7"` USD (Instalación cruces)
+- **10.3.5**: `vu: "489,200"` → `vu: "111.18"` USD (Instalación cajas)
+
+### **Lección Aprendida:**
+✅ **SIEMPRE identificar scripts que regeneran archivos maestros**
+✅ **SIEMPRE crear respaldos antes de correcciones masivas**
+✅ **SIEMPRE deshabilitar scripts problemáticos temporalmente**
+✅ **SIEMPRE validar que los valores se mantengan estables**
+✅ **SIEMPRE documentar scripts que causan regeneración automática**
+
+### **Metodología de Control de Scripts:**
+1. **Identificar scripts** que modifican archivos maestros
+2. **Crear respaldos** de valores correctos
+3. **Deshabilitar temporalmente** scripts problemáticos
+4. **Restaurar valores** desde respaldos
+5. **Regenerar archivos** solo con scripts seguros
+6. **Validar estabilidad** de valores corregidos
+7. **Documentar solución** para futuros proyectos
+
+---
+
 **Fin del documento - Lecciones Aprendidas**  
-**Versión:** 1.9  
+**Versión:** 2.1  
 **Fecha:** 24 de octubre de 2025  
 **Ahorro Total:** $6,319,391 USD  
 **Sobre-dimensionamiento ITS:** $17,873,276 USD identificado  
-**Errores Corregidos:** 8 errores críticos  
-**DTs Creadas:** 7 Decisiones Técnicas implementadas  
+**Errores Corregidos:** 10 errores críticos  
+**DTs Creadas:** 9 Decisiones Técnicas implementadas  
 **Sistema Web:** 10 archivos HTML interactivos implementados  
+**Scripts Problemáticos:** 1 identificado y deshabilitado  
 **Metodología:** Punto 42 v1.0  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja
