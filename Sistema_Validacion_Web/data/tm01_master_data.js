@@ -21,7 +21,7 @@ class TM01MasterData {
             // CAPÍTULO 1: SISTEMA SOS
             {id: '1', nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo"},
             {id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo"},
-            {id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste metálico galvanizado 4m", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Estructura principal", vu: "800", total: "69,600", totalCOP: "306,240,000"},
+            {id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste metálico galvanizado 4m", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Estructura principal", vu: "800", vuCOP: "3,520,000", total: "69,600", totalCOP: "306,240,000"},
             {id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Gabinete control IP65", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Protección equipos", vu: "600", total: "52,200", totalCOP: "229,680,000"},
             {id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Teléfono resistente vandalismo", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Comunicación VoIP", vu: "1,500", total: "130,500", totalCOP: "574,200,000"},
             {id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Panel solar 150W", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Alimentación autónoma", vu: "450", total: "39,150", totalCOP: "172,260,000"},
@@ -34,7 +34,7 @@ class TM01MasterData {
             {id: '1.1.11', nivel: 3, item: "1.1.11", descripcion: "Botón pulsador iluminado", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Activación emergencia", vu: "40", total: "3,480", totalCOP: "15,312,000"},
             {id: '1.1.12', nivel: 3, item: "1.1.12", descripcion: "DPS protección sobretensión", sistema: "SOS", cantidad: "261", unidad: "UND", tipo: "item", criterio: "Protección eléctrica", vu: "25", total: "6,525", totalCOP: "28,710,000"},
             {id: '1.1.13', nivel: 3, item: "1.1.13", descripcion: "Corona antiescalatoria", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Seguridad física", vu: "50", total: "4,350", totalCOP: "19,140,000"},
-            {id: '1.1.14', nivel: 3, item: "1.1.14", descripcion: "Varilla puesta a tierra", sistema: "SOS", cantidad: "174", unidad: "UND", tipo: "item", criterio: "Protección eléctrica", vu: "15", total: "2,610", totalCOP: "11,484,000"},
+            {id: '1.1.14', nivel: 3, item: "1.1.14", descripcion: "Varilla puesta a tierra", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Protección eléctrica", vu: "15", total: "1,305", totalCOP: "5,742,000"},
             {id: '1.1.15', nivel: 3, item: "1.1.15", descripcion: "Cable UTP Cat6 ext 50m", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Conexión datos", vu: "30", total: "2,610", totalCOP: "11,484,000"},
             {id: '1.1.16', nivel: 3, item: "1.1.16", descripcion: "Ducto HDPE 2\" × 30m", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Protección cableado", vu: "20", total: "1,740", totalCOP: "7,656,000"},
             {id: '1.1.17', nivel: 3, item: "1.1.17", descripcion: "Instalación y comisionamiento", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Servicios especializados", vu: "1,200", total: "104,400", totalCOP: "459,360,000"},

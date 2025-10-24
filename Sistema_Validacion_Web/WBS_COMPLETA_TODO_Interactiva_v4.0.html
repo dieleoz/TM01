@@ -712,16 +712,19 @@
                     if (!subtotales[item.sistema]) {
                         subtotales[item.sistema] = {
                             cantidad: 0,
-                            costoTotal: 0,
+                            costoTotalUSD: 0,
+                            costoTotalCOP: 0,
                             items: 0
                         };
                     }
                     
                     const cantidad = parseFloat(item.cantidad?.replace(/,/g, '') || 0);
-                    const costo = parseFloat(item.total?.replace(/,/g, '') || 0);
+                    const costoUSD = parseFloat(item.total?.replace(/,/g, '') || 0);
+                    const costoCOP = parseFloat(item.totalCOP?.replace(/,/g, '') || 0);
                     
                     subtotales[item.sistema].cantidad += cantidad;
-                    subtotales[item.sistema].costoTotal += costo;
+                    subtotales[item.sistema].costoTotalUSD += costoUSD;
+                    subtotales[item.sistema].costoTotalCOP += costoCOP;
                     subtotales[item.sistema].items += 1;
                 }
             });
@@ -733,9 +736,11 @@
                 html += `
                     <div class="subtotal-item">
                         <div class="subtotal-label">${sistema}</div>
-                        <div class="subtotal-value">${subtotal.items} items</div>
-                        <div class="subtotal-value">${subtotal.cantidad} unidades</div>
-                        <div class="subtotal-value">$${(subtotal.costoTotal / 1000000).toFixed(2)}M</div>
+                        <div class="subtotal-value">
+                            ${subtotal.items} items | ${subtotal.cantidad} unidades<br>
+                            <strong>USD: $${subtotal.costoTotalUSD.toLocaleString()}</strong><br>
+                            <strong>COP: $${subtotal.costoTotalCOP.toLocaleString()}</strong>
+                        </div>
                     </div>
                 `;
             });
@@ -794,8 +799,8 @@
                                     <span class="item-desc">${item.descripcion}</span>
                                 </div>
                                 <div class="item-qty">${item.cantidad || '-'} ${item.unidad || ''}</div>
-                                <div class="item-cost">$${item.vu || '0'}</div>
-                                <div class="item-cost">$${item.total || '0'}</div>
+                                <div class="item-cost">$${item.vu || '0'} USD<br><small>$${item.vuCOP || '0'} COP</small></div>
+                                <div class="item-cost">$${item.total || '0'} USD<br><small>$${item.totalCOP || '0'} COP</small></div>
                                 <div class="item-actions">
                                     <button class="btn btn-small btn-dt" onclick="crearDT('${item.id}', '${item.item}', '${item.descripcion}', '${item.sistema}')">
                                         📋 DT
@@ -972,10 +977,17 @@
         
         // Crear DT
         function crearDT(itemId, itemCode, descripcion, sistema) {
+            console.log('Creando DT para:', itemCode, descripcion, sistema);
             document.getElementById('dtItem').value = itemCode;
             document.getElementById('dtDescripcion').value = descripcion;
             document.getElementById('dtSistema').value = sistema;
-            document.getElementById('dtModal').style.display = 'block';
+            const modal = document.getElementById('dtModal');
+            if (modal) {
+                modal.style.display = 'block';
+                console.log('Modal DT abierto');
+            } else {
+                console.error('Modal DT no encontrado');
+            }
         }
         
         // Cerrar modal
