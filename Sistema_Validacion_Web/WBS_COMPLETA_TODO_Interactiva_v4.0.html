@@ -229,6 +229,15 @@
             background: #2980b9;
         }
 
+        .btn-t05 {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-t05:hover {
+            background: #ee5a24;
+        }
+
         .subtotal-section {
             background: #f8f9fa;
             border: 2px solid #dee2e6;
@@ -269,7 +278,7 @@
             font-size: 1.1em;
         }
 
-        .modal {
+        .modal-componentes {
             display: none;
             position: fixed;
             z-index: 1000;
@@ -278,6 +287,59 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-componentes .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-componentes .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+
+        .modal-componentes .close:hover {
+            color: #000;
+        }
+
+        .componentes-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .componentes-table th,
+        .componentes-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .componentes-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .componentes-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .componentes-table tr:hover {
+            background-color: #f5f5f5;
         }
 
         .modal-content {
@@ -741,6 +803,9 @@
                                     <button class="btn btn-small btn-details" onclick="verDetalles('${item.id}')">
                                         👁️ Ver
                                     </button>
+                                    <button class="btn btn-small btn-t05" onclick="mostrarComponentesT05('${item.sistema}')">
+                                        🔧 T05
+                                    </button>
                                 </div>
                             </div>
                         `;
@@ -749,6 +814,58 @@
             });
             
             wbsTree.innerHTML = html;
+        }
+        
+        // Mostrar componentes T05 detallados
+        function mostrarComponentesT05(sistema) {
+            if (!window.datos_wbs || !window.datos_wbs.componentes_t05) {
+                alert('Componentes T05 no disponibles');
+                return;
+            }
+            
+            const componentes = window.datos_wbs.componentes_t05.filter(comp => comp.Sistema === sistema);
+            
+            if (componentes.length === 0) {
+                alert(`No hay componentes T05 detallados para ${sistema}`);
+                return;
+            }
+            
+            let html = `<h3>Componentes T05 Detallados - ${sistema}</h3><table class="componentes-table">`;
+            html += '<tr><th>Componente</th><th>Cantidad</th><th>Costo Unit. (USD)</th><th>Total (USD)</th></tr>';
+            
+            componentes.forEach(comp => {
+                html += `<tr>
+                    <td>${comp.Componente}</td>
+                    <td>${comp.Cantidad}</td>
+                    <td>$${comp.CostoUnit}</td>
+                    <td>$${comp.Total}</td>
+                </tr>`;
+            });
+            
+            html += '</table>';
+            
+            // Crear modal para mostrar componentes
+            const modal = document.createElement('div');
+            modal.className = 'modal-componentes';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    ${html}
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Cerrar modal
+            modal.querySelector('.close').onclick = () => {
+                document.body.removeChild(modal);
+            };
+            
+            modal.onclick = (e) => {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                }
+            };
         }
         
         // Filtrar WBS
