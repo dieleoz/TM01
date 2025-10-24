@@ -16,12 +16,13 @@
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 ![Web_System](https://img.shields.io/badge/Web_System-Operativo-success)
 
-**Versión:** 3.0  
-**Fecha de actualización:** 23 de Octubre 2025 (02:00)  
+**Versión:** 3.1  
+**Fecha de actualización:** 24 de Octubre 2025 (10:00)  
 **Estado:** ✅ SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA | **OPERATIVO Y LISTO**    
 **Responsable:** Equipo Técnico TM01  
 **Metodología:** Punto 42 v1.0 + Arquitectura Dinámica 4 Capas  
 **GitHub:** https://github.com/dieleoz/TM01  
+**Último Commit:** Scripts de Sincronización Automática implementados (2/4 completados)  
 
 ---
 
@@ -41,13 +42,30 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 6. **Documentación Completa:** 85+ documentos técnicos generados
 7. **Sistema Web Dinámico:** Arquitectura de 4 capas con propagación automática
 
-## 📍 **DÓNDE ESTAMOS HOY** (23-Oct-2025)
+## 📍 **DÓNDE ESTAMOS HOY** (24-Oct-2025)
 
 ```
 Fase 0: Preparación        [████████████] 100% ✅ Completada
 Fase 1: Conversión         [████████████] 100% ✅ Completada
 Fase 2: Ingeniería Concept [████████████] 100% ✅ COMPLETADA
 Fase 3: Especificaciones   [████████████] 100% ✅ COMPLETADA
+Fase 4: Scripts Sincronización [████████░░░░] 50% 🔄 EN PROGRESO
+```
+
+### 🚀 **SCRIPTS DE SINCRONIZACIÓN AUTOMÁTICA** (NUEVO)
+
+**Estado:** 🔄 **EN PROGRESO** - 2/4 scripts completados
+
+✅ **COMPLETADO:**
+- **sync_wbs_tm01.ps1**: Sincronización WBS (24 items) - ✅ FUNCIONANDO
+- **sincronizar_layout.ps1**: Layout georreferenciado (52+ equipos) - ✅ CREADO
+
+🔄 **EN PROGRESO:**
+- **sincronizar_presupuesto.ps1**: Presupuesto dinámico con cálculos AIU/IVA
+
+⏳ **PENDIENTE:**
+- **sincronizar_SISTEMA_TM01_COMPLETO.ps1**: Script maestro
+- **Archivo .cursorrules**: Detección automática de DTs
 Fase 3.1: Arquitectura Red [████████████] 100% ✅ COMPLETADA
 Fase 4: Ing. Detalle (T05) [████████████] 100% ✅ COMPLETADA
 Fase 5: Consolidación      [████████████] 100% ✅ COMPLETADA

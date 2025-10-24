@@ -34,7 +34,10 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │  TRANSFORMACIÓN - PROCESAMIENTO DE DATOS                        │
 ├─────────────────────────────────────────────────────────────────┤
 │  • tm01_master_data.js (Fuente única de datos)                 │
-│  • Scripts de sincronización automática                         │
+│  • sync_wbs_tm01.ps1 ✅ COMPLETADO (24 items WBS)             │
+│  • sincronizar_layout.ps1 ✅ COMPLETADO (52+ equipos)         │
+│  • sincronizar_presupuesto.ps1 🔄 EN PROGRESO                 │
+│  • sincronizar_SISTEMA_TM01_COMPLETO.ps1 ⏳ PENDIENTE         │
 │  • Generadores de DTs                                           │
 │  • Módulos reutilizables                                        │
 │  • Validadores de coherencia técnica                            │
@@ -46,11 +49,11 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 ┌─────────────────────────────────────────────────────────────────┐
 │  DATOS INTERMEDIOS - ESTRUCTURAS DINÁMICAS                     │
 ├─────────────────────────────────────────────────────────────────┤
-│  • datos_wbs_TM01_items.js (24 items WBS)                     │
-│  • layout_datos.js (52 equipos georreferenciados)              │
+│  • datos_wbs_TM01_items.js ✅ GENERADO (24 items WBS)         │
+│  • layout_datos.js ⏳ PENDIENTE (52+ equipos georreferenciados)│
 │  • criterios_tecnicos_base.js (UTF-8)                          │
 │  • riesgos_wbs.js (Riesgos dinámicos)                          │
-│  • presupuesto_datos.js (Cálculos financieros)                 │
+│  • presupuesto_datos.js ⏳ PENDIENTE (Cálculos financieros)    │
 │                                                                 │
 │  ⚠️ NUNCA editar manualmente - regenerar con scripts            │
 └─────────────────────────────────────────────────────────────────┘
