@@ -272,10 +272,24 @@
             font-size: 0.9em;
         }
 
-        .subtotal-value {
-            color: #28a745;
-            font-weight: bold;
-            font-size: 1.1em;
+        .subtotal-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .subtotal-toggle .btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .subtotal-toggle .btn:hover {
+            background: #2980b9;
         }
 
         .modal-componentes {
@@ -558,6 +572,13 @@
             </div>
         </div>
 
+        <!-- Botón para mostrar subtotales -->
+        <div class="subtotal-toggle">
+            <button class="btn btn-primary" onclick="toggleSubtotales()">
+                📊 Mostrar Subtotales por Sistema
+            </button>
+        </div>
+
         <!-- Contenedor WBS -->
         <div class="wbs-container">
             <div id="wbsTree" class="wbs-tree">
@@ -698,6 +719,20 @@
             
             // Mostrar subtotales por sistema
             mostrarSubtotales();
+        }
+        
+        // Toggle subtotales
+        function toggleSubtotales() {
+            const subtotalesSection = document.getElementById('subtotalesSection');
+            const button = event.target;
+            
+            if (subtotalesSection.style.display === 'none' || subtotalesSection.style.display === '') {
+                mostrarSubtotales();
+                button.textContent = '📊 Ocultar Subtotales';
+            } else {
+                subtotalesSection.style.display = 'none';
+                button.textContent = '📊 Mostrar Subtotales por Sistema';
+            }
         }
         
         // Mostrar subtotales por sistema

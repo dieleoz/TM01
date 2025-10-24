@@ -22,7 +22,7 @@ class TM01MasterData {
             {id: '1', nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo"},
             {id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo"},
             {id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste metálico galvanizado 4m", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Estructura principal", vu: "800", vuCOP: "3,520,000", total: "69,600", totalCOP: "306,240,000"},
-            {id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Gabinete control IP65", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Protección equipos", vu: "600", total: "52,200", totalCOP: "229,680,000"},
+            {id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Gabinete control IP65", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Protección equipos", vu: "600", vuCOP: "2,640,000", total: "52,200", totalCOP: "229,680,000"},
             {id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Teléfono resistente vandalismo", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Comunicación VoIP", vu: "1,500", total: "130,500", totalCOP: "574,200,000"},
             {id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Panel solar 150W", sistema: "SOS", cantidad: "87", unidad: "UND", tipo: "item", criterio: "Alimentación autónoma", vu: "450", total: "39,150", totalCOP: "172,260,000"},
             {id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Batería 12V 100Ah (×2)", sistema: "SOS", cantidad: "174", unidad: "UND", tipo: "item", criterio: "Respaldo energético", vu: "180", total: "31,320", totalCOP: "137,808,000"},
@@ -45,8 +45,8 @@ class TM01MasterData {
             // CAPÍTULO 2: SISTEMA ETD/RADAR
             {id: '2', nivel: 1, item: "2", descripcion: "SISTEMA ETD/RADAR", sistema: "ETD/RADAR", tipo: "capitulo"},
             {id: '2.1', nivel: 2, item: "2.1", descripcion: "SUMINISTROS ETD/RADAR", sistema: "ETD/RADAR", tipo: "subcapitulo"},
-            {id: '2.1.1', nivel: 3, item: "2.1.1", descripcion: "ETD con sensores piezoeléctricos", sistema: "ETD/RADAR", cantidad: "13", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 15km", vu: "20,000", total: "260,000", totalCOP: "1,144,000,000"},
-            {id: '2.1.2', nivel: 3, item: "2.1.2", descripcion: "Radares sancionatorios ANPR", sistema: "ETD/RADAR", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Control vehicular peajes", vu: "56,039", total: "112,078", totalCOP: "493,143,200"},
+            {id: '2.1.1', nivel: 3, item: "2.1.1", descripcion: "ETD con sensores piezoeléctricos", sistema: "ETD/RADAR", cantidad: "13", unidad: "UND", tipo: "item", criterio: "AT1 Cap. 3 - Criterio 15km", vu: "20,000", vuCOP: "88,000,000", total: "260,000", totalCOP: "1,144,000,000"},
+            {id: '2.1.2', nivel: 3, item: "2.1.2", descripcion: "Radares sancionatorios ANPR", sistema: "ETD/RADAR", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Control vehicular peajes", vu: "56,039", vuCOP: "246,571,600", total: "112,078", totalCOP: "493,143,200"},
             
             // CAPÍTULO 3: SISTEMA CCTV
             {id: '3', nivel: 1, item: "3", descripcion: "SISTEMA CCTV", sistema: "CCTV", tipo: "capitulo"},
