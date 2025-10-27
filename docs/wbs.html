@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura WBS - Sistema TM01 Troncal Magdalena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .controls {
+            background: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .controls-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .filter-select {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        
+        .main-content {
+            padding: 30px;
+        }
+        
+        .stats-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 3px solid #007bff;
+        }
+        
+        .stat-item .value {
+            font-size: 24px;
+            font-weight: 600;
+            color: #007bff;
+        }
+        
+        .stat-item .label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 4px;
+        }
+        
+        .wbs-tree {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .wbs-item {
+            border-bottom: 1px solid #f1f3f4;
+            transition: all 0.3s ease;
+        }
+        
+        .wbs-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .wbs-item:last-child {
+            border-bottom: none;
+        }
+        
+        .wbs-header {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .wbs-content {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .wbs-level {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 12px;
+            color: white;
+        }
+        
+        .level-1 { background: #dc3545; }
+        .level-2 { background: #fd7e14; }
+        .level-3 { background: #ffc107; color: #212529; }
+        .level-4 { background: #28a745; }
+        .level-5 { background: #17a2b8; }
+        
+        .wbs-info {
+            flex: 1;
+        }
+        
+        .wbs-title {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 4px;
+        }
+        
+        .wbs-description {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        
+        .wbs-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .wbs-cost {
+            text-align: right;
+            min-width: 120px;
+        }
+        
+        .cost-value {
+            font-weight: 600;
+            color: #28a745;
+        }
+        
+        .cost-label {
+            font-size: 11px;
+            color: #6c757d;
+        }
+        
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-btn" onclick="window.location.href='index.html'">← Volver al Dashboard</button>
+            <h1>📋 Estructura WBS</h1>
+            <p>Sistema TM01 Troncal Magdalena - Estructura de Desglose del Trabajo</p>
+        </div>
+        
+        <div class="controls">
+            <div class="controls-row">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar por código, descripción o sistema...">
+                </div>
+                <select class="filter-select" id="systemFilter">
+                    <option value="">Todos los Sistemas</option>
+                    <option value="SOS">SOS</option>
+                    <option value="ETD">ETD</option>
+                    <option value="RADAR">RADAR</option>
+                    <option value="CCTV">CCTV</option>
+                    <option value="PMV">PMV</option>
+                    <option value="METEO">METEO</option>
+                    <option value="WIM">WIM</option>
+                </select>
+                <select class="filter-select" id="levelFilter">
+                    <option value="">Todos los Niveles</option>
+                    <option value="1">Nivel 1 - Capítulos</option>
+                    <option value="2">Nivel 2 - Subcapítulos</option>
+                    <option value="3">Nivel 3 - Items</option>
+                    <option value="4">Nivel 4 - Subitems</option>
+                    <option value="5">Nivel 5 - Actividades</option>
+                </select>
+                <button class="btn btn-primary" onclick="exportarWBS()">📊 Exportar</button>
+                <button class="btn btn-secondary" onclick="actualizarDatos()">🔄 Actualizar</button>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <!-- Resumen Estadístico -->
+            <div class="stats-summary" id="statsSummary">
+                <div class="stat-item">
+                    <div class="value" id="totalItems">-</div>
+                    <div class="label">Total Items</div>
+                </div>
+                <div class="stat-item">
+                    <div class="value" id="totalCapitulos">-</div>
+                    <div class="label">Capítulos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="value" id="totalSistemas">-</div>
+                    <div class="label">Sistemas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="value" id="costoTotal">-</div>
+                    <div class="label">Costo Total</div>
+                </div>
+            </div>
+            
+            <!-- Árbol WBS -->
+            <div class="wbs-tree" id="wbsTree">
+                <div class="loading">Cargando estructura WBS...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargar datos WBS -->
+    <!-- Cargar datos maestros -->
+    <script src="data/tm01_master_data.js"></script>
+    
+    <script>
+        // Instancia de datos maestros
+        const tm01Data = new TM01MasterData();
+        let wbsData = tm01Data.data.wbs;
+        let filteredData = [];
+        
+        // Inicializar datos
+        document.addEventListener('DOMContentLoaded', function() {
+            filteredData = [...wbsData];
+            actualizarEstadisticas();
+            renderizarWBS();
+        });
+        
+        // Actualizar estadísticas
+        function actualizarEstadisticas() {
+            const totalItems = wbsData.length;
+            const totalCapitulos = wbsData.filter(item => item.nivel === 1).length;
+            const sistemas = [...new Set(wbsData.map(item => item.sistema).filter(s => s))].length;
+            const costoTotal = wbsData.reduce((sum, item) => sum + (item.costo_total || 0), 0);
+            
+            document.getElementById('totalItems').textContent = totalItems;
+            document.getElementById('totalCapitulos').textContent = totalCapitulos;
+            document.getElementById('totalSistemas').textContent = sistemas;
+            document.getElementById('costoTotal').textContent = `USD ${(costoTotal / 1000000).toFixed(2)}M`;
+        }
+        
+        // Renderizar WBS
+        function renderizarWBS() {
+            const container = document.getElementById('wbsTree');
+            
+            if (filteredData.length === 0) {
+                container.innerHTML = '<div class="no-data">🔍 No se encontraron items que coincidan con los filtros</div>';
+                return;
+            }
+            
+            let html = '';
+            let currentCapitulo = '';
+            
+            filteredData.forEach(item => {
+                // Agregar header de capítulo si cambia
+                if (item.nivel === 1 && item.capitulo !== currentCapitulo) {
+                    html += `<div class="wbs-header">CAPÍTULO ${item.capitulo}: ${item.descripcion}</div>`;
+                    currentCapitulo = item.capitulo;
+                }
+                
+                // Crear item WBS
+                html += `
+                    <div class="wbs-item">
+                        <div class="wbs-content">
+                            <div class="wbs-level level-${item.nivel}">${item.nivel}</div>
+                            <div class="wbs-info">
+                                <div class="wbs-title">${item.codigo} - ${item.descripcion}</div>
+                                <div class="wbs-description">${item.sistema || 'Sistema General'}</div>
+                                <div class="wbs-meta">
+                                    <span>Responsable: ${item.responsable || 'N/A'}</span>
+                                    <span>Estado: ${item.estado || 'Activo'}</span>
+                                    ${item.cantidad ? `<span>Cantidad: ${item.cantidad}</span>` : ''}
+                                </div>
+                            </div>
+                            <div class="wbs-cost">
+                                <div class="cost-value">USD ${(item.costo_total || 0).toLocaleString()}</div>
+                                <div class="cost-label">Costo Total</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // Filtros
+        document.getElementById('searchInput').addEventListener('input', function() {
+            aplicarFiltros();
+        });
+        
+        document.getElementById('systemFilter').addEventListener('change', function() {
+            aplicarFiltros();
+        });
+        
+        document.getElementById('levelFilter').addEventListener('change', function() {
+            aplicarFiltros();
+        });
+        
+        function aplicarFiltros() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const systemFilter = document.getElementById('systemFilter').value;
+            const levelFilter = document.getElementById('levelFilter').value;
+            
+            filteredData = wbsData.filter(item => {
+                const matchesSearch = !searchTerm || 
+                    item.codigo.toLowerCase().includes(searchTerm) ||
+                    item.descripcion.toLowerCase().includes(searchTerm) ||
+                    (item.sistema && item.sistema.toLowerCase().includes(searchTerm));
+                
+                const matchesSystem = !systemFilter || item.sistema === systemFilter;
+                const matchesLevel = !levelFilter || item.nivel.toString() === levelFilter;
+                
+                return matchesSearch && matchesSystem && matchesLevel;
+            });
+            
+            renderizarWBS();
+        }
+        
+        // Exportar WBS
+        function exportarWBS() {
+            const data = filteredData.map(item => ({
+                'Código': item.codigo,
+                'Descripción': item.descripcion,
+                'Nivel': item.nivel,
+                'Sistema': item.sistema || '',
+                'Responsable': item.responsable || '',
+                'Cantidad': item.cantidad || 0,
+                'Costo Unitario': item.costo_unitario || 0,
+                'Costo Total': item.costo_total || 0,
+                'Estado': item.estado || 'Activo'
+            }));
+            
+            const csv = convertToCSV(data);
+            downloadCSV(csv, 'wbs_tm01.csv');
+        }
+        
+        function convertToCSV(data) {
+            const headers = Object.keys(data[0]);
+            const csvContent = [
+                headers.join(','),
+                ...data.map(row => headers.map(header => `"${row[header]}"`).join(','))
+            ].join('\n');
+            return csvContent;
+        }
+        
+        function downloadCSV(csv, filename) {
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+        
+        // Actualizar datos
+        function actualizarDatos() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
