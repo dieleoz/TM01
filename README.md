@@ -16,13 +16,14 @@
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 ![Web_System](https://img.shields.io/badge/Web_System-Operativo-success)
 
-**Versión:** 3.2  
-**Fecha de actualización:** 24 de Octubre 2025 (15:30)  
-**Estado:** ✅ SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA | **OPERATIVO Y ESTABLE**    
+**Versión:** 3.3  
+**Fecha de actualización:** 27 de Octubre 2025  
+**Estado:** ✅ SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA + GITHUB PAGES | **OPERATIVO Y ESTABLE**    
 **Responsable:** Equipo Técnico TM01  
 **Metodología:** Punto 42 v1.0 + Arquitectura Dinámica 4 Capas  
 **GitHub:** https://github.com/dieleoz/TM01  
-**Último Commit:** Corrección crítica valores USD/COP + Script problemático deshabilitado  
+**GitHub Pages:** https://dieleoz.github.io/TM01/  
+**Último Commit:** Corregido script presupuesto + GitHub Pages configurado  
 
 ---
 
@@ -42,7 +43,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 6. **Documentación Completa:** 85+ documentos técnicos generados
 7. **Sistema Web Dinámico:** Arquitectura de 4 capas con propagación automática
 
-## 📍 **DÓNDE ESTAMOS HOY** (24-Oct-2025)
+## 📍 **DÓNDE ESTAMOS HOY** (27-Oct-2025)
 
 ```
 Fase 0: Preparación        [████████████] 100% ✅ Completada
@@ -250,6 +251,27 @@ Fase 6: Validación Web     [████████████] 100% ✅ COMP
 - ✅ **WBS_Presupuesto_HTML** - Presupuesto interactivo
 - ✅ **Metodología Punto 42** - Validación sistemática
 - ✅ **Sistema dinámico de datos** - Propagación automática de cambios
+
+### 🚀 **GITHUB PAGES Y PUBLICACIÓN** (27-Oct-2025)
+
+**Sistema publicado en:** https://dieleoz.github.io/TM01/
+
+**Estado:** ✅ Publicado y operativo
+- ✅ Carpeta `docs/` con archivos HTML interactivos
+- ✅ Script de sincronización presupuesto corregido
+- ✅ GitHub Pages configurado con deployment automático
+- ✅ Sistema de DTs automático operativo
+- ✅ Primera DT generada: DT-SAI-610-2025-10-25
+
+**Credenciales de acceso:**
+- Usuario: `QA` / Contraseña: `qa2025`
+- Usuario: `Especificador` / Contraseña: `spec2025`
+- Usuario: `Admin` / Contraseña: `admin2025`
+
+**Problema identificado y resuelto:**
+- ❌ **Script sincronizar_presupuesto.ps1** generaba valores hardcodeados en lugar de leer desde `tm01_master_data.js`
+- ✅ **Solución:** Script corregido para leer valores reales desde el archivo fuente
+- ✅ **Resultado:** Presupuesto ya no se duplica ni modifica incorrectamente
 
 ### 📊 **REVISIÓN SISTEMÁTICA COMPLETADA** (22-Oct-2025)
 
