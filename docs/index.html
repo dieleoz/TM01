@@ -326,6 +326,11 @@
     <script src="data/tm01_master_data.js"></script>
     
     <script>
+        // Verificar sesión
+        if (!sessionStorage.getItem('tm01_login')) {
+            window.location.href = '../index.html';
+        }
+        
         // Instancia de datos maestros
         const tm01Data = new TM01MasterData();
         
