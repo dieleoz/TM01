@@ -1,0 +1,324 @@
+═══════════════════════════════════════════════════════════════════════════════
+    DETALLE COMPLETO - SISTEMA TELECOMUNICACIONES TM01
+    Proyecto: TM01 Troncal Magdalena (293 km)
+    Fecha: 27 de Octubre 2025
+═══════════════════════════════════════════════════════════════════════════════
+
+10.1 - EQUIPOS ACTIVOS L2/L3
+═══════════════════════════════════════════════════════════════════════════════
+
+Item: 10.1.1
+Descripción: Switches L2 Advantech EKI-7706G
+Sistema: TELECOM
+Cantidad: 84 UND
+Unidad: UND
+VU (USD): $258
+Total (USD): $21,672
+Criterio: Sub-anillos ITS
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.1.2
+Descripción: Switches L3 Cisco C9300-24P-E
+Sistema: TELECOM
+Cantidad: 7 UND
+Unidad: UND
+VU (USD): $4,525
+Total (USD): $31,675
+Criterio: Nodos core
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.1.3
+Descripción: Stock repuestos L2 (25%)
+Sistema: TELECOM
+Cantidad: 1 GLB
+Unidad: GLB
+VU (USD): $5,418
+Total (USD): $5,418
+Criterio: Repuestos
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.1.4
+Descripción: Stock repuestos L3 (25%)
+Sistema: TELECOM
+Cantidad: 1 GLB
+Unidad: GLB
+VU (USD): $6,902
+Total (USD): $6,902
+Criterio: Repuestos
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+SUBTOTAL 10.1: $65,667 USD
+
+
+═══════════════════════════════════════════════════════════════════════════════
+10.2 - FIBRA ÓPTICA - MATERIALES
+═══════════════════════════════════════════════════════════════════════════════
+
+Item: 10.2.1
+Descripción: Cable fibra óptica 48h Lanpro
+Sistema: TELECOM
+Cantidad: 314,824 ML
+Unidad: ML
+VU (USD): $1.5
+Total (USD): $472,236
+Criterio: Backbone principal
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.2
+Descripción: Cable fibra óptica 12h Lanpro
+Sistema: TELECOM
+Cantidad: 10,856 ML
+Unidad: ML
+VU (USD): $1.5
+Total (USD): $16,284
+Criterio: Ramales secundarios
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.3
+Descripción: Cajas empalme 120×120
+Sistema: TELECOM
+Cantidad: 185 UND
+Unidad: UND
+VU (USD): $375
+Total (USD): $69,375
+Criterio: Empalmes principales
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.4
+Descripción: Cajas empalme 80×80
+Sistema: TELECOM
+Cantidad: 65 UND
+Unidad: UND
+VU (USD): $344.1
+Total (USD): $22,366.5
+Criterio: Empalmes secundarios
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.5
+Descripción: Cajas empalme 60×60
+Sistema: TELECOM
+Cantidad: 843 UND
+Unidad: UND
+VU (USD): $253.6
+Total (USD): $213,784.8
+Criterio: Empalmes terciarios
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.6
+Descripción: Cruces especiales puentes
+Sistema: TELECOM
+Cantidad: 4,132 ML
+Unidad: ML
+VU (USD): $34.5
+Total (USD): $142,554
+Criterio: Cruces estructuras
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.7
+Descripción: Cruces especiales muros
+Sistema: TELECOM
+Cantidad: 236 ML
+Unidad: ML
+VU (USD): $34.5
+Total (USD): $8,142
+Criterio: Cruces estructuras
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.8
+Descripción: Cruces especiales box culvert
+Sistema: TELECOM
+Cantidad: 6,732 ML
+Unidad: ML
+VU (USD): $34.5
+Total (USD): $232,254
+Criterio: Cruces estructuras
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.9
+Descripción: Cruces especiales alcantarillas
+Sistema: TELECOM
+Cantidad: 2,006 ML
+Unidad: ML
+VU (USD): $34.5
+Total (USD): $69,207
+Criterio: Cruces estructuras
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.2.10
+Descripción: Empalmes y conectores globales
+Sistema: TELECOM
+Cantidad: 1 GLB
+Unidad: GLB
+VU (USD): $39.7
+Total (USD): $39.7
+Criterio: Empalmes fibra
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+SUBTOTAL 10.2: $1,174,246 USD
+
+
+═══════════════════════════════════════════════════════════════════════════════
+10.3 - OBRA CIVIL
+═══════════════════════════════════════════════════════════════════════════════
+
+Item: 10.3.1
+Descripción: Excavación asfalto + tritubo
+Sistema: TELECOM
+Cantidad: 32,028 ML
+Unidad: ML
+VU (USD): $18.17
+Total (USD): $581,909
+Criterio: Excavación vial
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.3.2
+Descripción: Excavación andén + tritubo
+Sistema: TELECOM
+Cantidad: 16,014 ML
+Unidad: ML
+VU (USD): $18.17
+Total (USD): $290,954
+Criterio: Excavación peatonal
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.3.3
+Descripción: Excavación blanda + tritubo
+Sistema: TELECOM
+Cantidad: 281,520 ML
+Unidad: ML
+VU (USD): $5.19
+Total (USD): $1,461,089
+Criterio: Excavación terreno
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.3.4
+Descripción: Instalación cruces especiales
+Sistema: TELECOM
+Cantidad: 13,106 ML
+Unidad: ML
+VU (USD): $11.7
+Total (USD): $153,340
+Criterio: Instalación estructuras
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.3.5
+Descripción: Instalación cajas empalme
+Sistema: TELECOM
+Cantidad: 1,257 UND
+Unidad: UND
+VU (USD): $111.18
+Total (USD): $139,754
+Criterio: Instalación cajas
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+SUBTOTAL 10.3: $2,627,046 USD
+
+
+═══════════════════════════════════════════════════════════════════════════════
+10.4 - HALADO E INSTALACIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+Item: 10.4.1
+Descripción: Halado fibra óptica 48h
+Sistema: TELECOM
+Cantidad: 314,824 ML
+Unidad: ML
+VU (USD): $16.7
+Total (USD): $5,253,337
+Criterio: Halado principal
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.4.2
+Descripción: Halado fibra óptica 12h
+Sistema: TELECOM
+Cantidad: 10,856 ML
+Unidad: ML
+VU (USD): $61.2
+Total (USD): $664,335
+Criterio: Halado secundario
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+Item: 10.4.3
+Descripción: Trabajos instalación especializada
+Sistema: TELECOM
+Cantidad: 1 GLB
+Unidad: GLB
+VU (USD): $151,554
+Total (USD): $151,554
+Criterio: Instalación completa
+Tipo: item
+Categoría: ITS
+───────────────────────────────────────────────────────────────────────────────
+
+SUBTOTAL 10.4: $6,069,226 USD
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                              RESUMEN FINAL
+═══════════════════════════════════════════════════════════════════════════════
+
+Capítulo 10.1 - Equipos Activos L2/L3:       $65,667 USD
+Capítulo 10.2 - Fibra Óptica - Materiales:  $1,174,246 USD
+Capítulo 10.3 - Obra Civil:                  $2,627,046 USD
+Capítulo 10.4 - Halado e Instalación:        $6,069,226 USD
+───────────────────────────────────────────────────────────────────────────────
+TOTAL SISTEMA TELECOMUNICACIONES:            $9,936,185 USD
+───────────────────────────────────────────────────────────────────────────────
+
+En pesos colombianos (TRM 4,400):           $43,719,214,000 COP
+                                              (43,719 millones de pesos)
+
+═══════════════════════════════════════════════════════════════════════════════
+NOTAS IMPORTANTES:
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Los valores son en USD sin incluir AIU, IVA ni descuentos
+2. El 61% del presupuesto corresponde a halado e instalación
+3. Los valores de vuCOP en 10.1.1 y 10.1.2 parecen incorrectos (muy bajos)
+4. Total de fibra óptica: 314,824 ML (48h) + 10,856 ML (12h) = 325,680 ML
+5. Total de excavación: 32,028 + 16,014 + 281,520 = 329,562 ML
+
+═══════════════════════════════════════════════════════════════════════════════
+
