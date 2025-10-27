@@ -76,7 +76,36 @@ function Extract-PresupuestoData {
         $WBSArrayContent = $WBSMatch.Groups[1].Value
         Write-Log "Datos WBS extraídos para generar presupuesto. Tamaño: $($WBSArrayContent.Length) caracteres"
         
-        return $WBSArrayContent
+        # Buscar items específicos con sus valores reales usando regex simple
+        $Items = @()
+        
+        # Patrón para buscar items del archivo (usando comillas simples)
+        $ItemPattern = "id:\s*'(?<codigo>[\d.]+)'.*?descripcion:\s*['\`"](?<descripcion>[^'\`"]+).*?sistema:\s*['\`"](?<sistema>[^'\`"]+).*?cantidad:\s*['\`"](?<cantidad>[^'\`"]+).*?unidad:\s*['\`"](?<unidad>[^'\`"]+).*?vu:\s*['\`"](?<vu>[^'\`"]+).*?total:\s*['\`"](?<total>[^'\`"]+).*?totalCOP:\s*['\`"](?<totalCOP>[^'\`"]+).*?criterio:\s*['\`"](?<criterio>[^'\`"]+)"
+        
+        $Matches = [regex]::Matches($SourceContent, $ItemPattern, [System.Text.RegularExpressions.RegexOptions]::Singleline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        
+        Write-Log "Matches encontrados: $($Matches.Count)"
+        
+        foreach ($Match in $Matches) {
+            try {
+                $Items += @{
+                    codigo = $Match.Groups["codigo"].Value
+                    descripcion = $Match.Groups["descripcion"].Value
+                    sistema = $Match.Groups["sistema"].Value
+                    cantidad = $Match.Groups["cantidad"].Value
+                    unidad = $Match.Groups["unidad"].Value
+                    vu_usd = $Match.Groups["vu"].Value
+                    total_usd = $Match.Groups["total"].Value
+                    total_cop = $Match.Groups["totalCOP"].Value
+                    criterio = $Match.Groups["criterio"].Value
+                }
+            } catch {
+                Write-Log "Error procesando item: $($_.Exception.Message)"
+            }
+        }
+        
+        Write-Log "Items extraídos con valores reales: $($Items.Count)"
+        return $Items
         
     } catch {
         Write-Log "Error al extraer datos de presupuesto: $($_.Exception.Message)" "ERROR"
@@ -86,10 +115,10 @@ function Extract-PresupuestoData {
 
 # Función para generar datos de presupuesto dinámico
 function Generate-PresupuestoData {
-    param([string]$WBSData)
+    param($ItemsData)
     
     try {
-        Write-Log "Generando datos de presupuesto dinámico"
+        Write-Log "Generando datos de presupuesto dinámico desde datos reales"
         
         # Configuración de presupuesto
         $ConfiguracionPresupuesto = @{
@@ -97,6 +126,11 @@ function Generate-PresupuestoData {
             AIU = 0.33  # Administración, Imprevistos, Utilidad (33%)
             IVA = 0.19  # IVA (19%)
             Descuento = 0.05  # Descuento por volumen (5%)
+        }
+        
+        # Si no hay items, crear items vacíos
+        if (!$ItemsData) {
+            $ItemsData = @()
         }
         
         # Generar estructura de presupuesto
@@ -128,188 +162,51 @@ function Generate-PresupuestoData {
             items = @()
         }
         
-        # Procesar cada sistema
-        $Sistemas = @('SOS', 'ETD/RADAR', 'CCTV', 'PMV', 'METEO', 'WIM')
+        # Procesar items reales extraídos
+        $ItemsProcessed = @()
+        $SistemasProcessed = @{}
         
-        foreach ($Sistema in $Sistemas) {
-            Write-Log "Procesando sistema: $Sistema"
+        foreach ($Item in $ItemsData) {
+            Write-Log "Procesando item: $($Item.descripcion)"
             
-            # Generar items según el sistema
-            $ItemsSistema = @()
-            $SubtotalSistema = 0
+            # Convertir valores a números
+            $vuUsd = [double]$Item.vu_usd
+            $totalUsd = [double]$Item.total_usd
+            $totalCop = [double]$Item.total_cop -replace ',', ''
+            $cantidad = [double]$Item.cantidad
             
-            switch ($Sistema) {
-                'SOS' {
-                    # 88 postes SOS
-                    $Cantidad = 88
-                    $VU = 15000
-                    $Total = $Cantidad * $VU
-                    
-                    $ItemsSistema += @{
-                        codigo = "1.1.1"
-                        descripcion = "Poste SOS con panel solar"
-                        sistema = "SOS"
-                        cantidad = $Cantidad
-                        unidad = "UND"
-                        vu_usd = $VU
-                        total_usd = $Total
-                        total_cop = $Total * $ConfiguracionPresupuesto.TRM
-                        criterio = "AT1 Cap. 3 - Criterio 1km"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $SubtotalSistema += $Total
-                }
-                'ETD/RADAR' {
-                    # 14 ETD + 2 Radares
-                    $CantidadETD = 14
-                    $VUETD = 200000
-                    $TotalETD = $CantidadETD * $VUETD
-                    
-                    $ItemsSistema += @{
-                        codigo = "2.1.1"
-                        descripcion = "Estación de Tratamiento de Datos"
-                        sistema = "ETD/RADAR"
-                        cantidad = $CantidadETD
-                        unidad = "UND"
-                        vu_usd = $VUETD
-                        total_usd = $TotalETD
-                        total_cop = $TotalETD * $ConfiguracionPresupuesto.TRM
-                        criterio = "AT1 Cap. 3 - Criterio 15km"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $CantidadRadar = 2
-                    $VURadar = 200000
-                    $TotalRadar = $CantidadRadar * $VURadar
-                    
-                    $ItemsSistema += @{
-                        codigo = "2.1.2"
-                        descripcion = "Radares de velocidad"
-                        sistema = "ETD/RADAR"
-                        cantidad = $CantidadRadar
-                        unidad = "UND"
-                        vu_usd = $VURadar
-                        total_usd = $TotalRadar
-                        total_cop = $TotalRadar * $ConfiguracionPresupuesto.TRM
-                        criterio = "Control vehicular"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $SubtotalSistema += $TotalETD + $TotalRadar
-                }
-                'CCTV' {
-                    # 30 cámaras PAN + 15 fijas
-                    $CantidadPAN = 30
-                    $VUPAN = 30000
-                    $TotalPAN = $CantidadPAN * $VUPAN
-                    
-                    $ItemsSistema += @{
-                        codigo = "3.1.1"
-                        descripcion = "Cámaras PAN"
-                        sistema = "CCTV"
-                        cantidad = $CantidadPAN
-                        unidad = "UND"
-                        vu_usd = $VUPAN
-                        total_usd = $TotalPAN
-                        total_cop = $TotalPAN * $ConfiguracionPresupuesto.TRM
-                        criterio = "AT1 Cap. 3 - Solo en peajes"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $CantidadFija = 15
-                    $VUFija = 30000
-                    $TotalFija = $CantidadFija * $VUFija
-                    
-                    $ItemsSistema += @{
-                        codigo = "3.1.2"
-                        descripcion = "Cámaras fijas"
-                        sistema = "CCTV"
-                        cantidad = $CantidadFija
-                        unidad = "UND"
-                        vu_usd = $VUFija
-                        total_usd = $TotalFija
-                        total_cop = $TotalFija * $ConfiguracionPresupuesto.TRM
-                        criterio = "Supervisión CCO y estaciones"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $SubtotalSistema += $TotalPAN + $TotalFija
-                }
-                'PMV' {
-                    # 12 paneles de mensaje variable
-                    $Cantidad = 12
-                    $VU = 50000
-                    $Total = $Cantidad * $VU
-                    
-                    $ItemsSistema += @{
-                        codigo = "4.1.1"
-                        descripcion = "Paneles de mensaje variable"
-                        sistema = "PMV"
-                        cantidad = $Cantidad
-                        unidad = "UND"
-                        vu_usd = $VU
-                        total_usd = $Total
-                        total_cop = $Total * $ConfiguracionPresupuesto.TRM
-                        criterio = "AT1 Cap. 3 - Criterio 20km"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $SubtotalSistema += $Total
-                }
-                'METEO' {
-                    # 3 estaciones meteorológicas
-                    $Cantidad = 3
-                    $VU = 50000
-                    $Total = $Cantidad * $VU
-                    
-                    $ItemsSistema += @{
-                        codigo = "5.1.1"
-                        descripcion = "Estaciones meteorológicas"
-                        sistema = "METEO"
-                        cantidad = $Cantidad
-                        unidad = "UND"
-                        vu_usd = $VU
-                        total_usd = $Total
-                        total_cop = $Total * $ConfiguracionPresupuesto.TRM
-                        criterio = "NTC 5660 + Supervisión CCO"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $SubtotalSistema += $Total
-                }
-                'WIM' {
-                    # 1 estación de pesaje
-                    $Cantidad = 1
-                    $VU = 300000
-                    $Total = $Cantidad * $VU
-                    
-                    $ItemsSistema += @{
-                        codigo = "6.1.1"
-                        descripcion = "Sistema de pesaje WIM"
-                        sistema = "WIM"
-                        cantidad = $Cantidad
-                        unidad = "UND"
-                        vu_usd = $VU
-                        total_usd = $Total
-                        total_cop = $Total * $ConfiguracionPresupuesto.TRM
-                        criterio = "Control de peso vehicular"
-                        tipo = "suministro"
-                        categoria = "ITS"
-                    }
-                    
-                    $SubtotalSistema += $Total
+            # Crear item procesado
+            $ItemProcessed = @{
+                codigo = $Item.codigo
+                descripcion = $Item.descripcion
+                sistema = $Item.sistema
+                cantidad = $cantidad
+                unidad = $Item.unidad
+                vu_usd = $vuUsd
+                total_usd = $totalUsd
+                total_cop = $totalCop
+                criterio = $Item.criterio
+                tipo = "item"
+                categoria = "ITS"
+            }
+            
+            $ItemsProcessed += $ItemProcessed
+            
+            # Agrupar por sistema
+            if (!$SistemasProcessed.ContainsKey($Item.sistema)) {
+                $SistemasProcessed[$Item.sistema] = @{
+                    subtotal_usd = 0
+                    items = @()
                 }
             }
             
-            # Calcular totales del sistema
+            $SistemasProcessed[$Item.sistema].subtotal_usd += $totalUsd
+            $SistemasProcessed[$Item.sistema].items += $ItemProcessed
+        }
+        
+        # Calcular totales por sistema
+        foreach ($Sistema in $SistemasProcessed.Keys) {
+            $SubtotalSistema = $SistemasProcessed[$Sistema].subtotal_usd
             $AIUSistema = $SubtotalSistema * $ConfiguracionPresupuesto.AIU
             $TotalAntesIVASistema = $SubtotalSistema + $AIUSistema
             $IVASistema = $TotalAntesIVASistema * $ConfiguracionPresupuesto.IVA
@@ -329,11 +226,11 @@ function Generate-PresupuestoData {
                 total_final_cop = $TotalFinalSistema * $ConfiguracionPresupuesto.TRM
                 descuento_usd = $DescuentoSistema
                 descuento_cop = $DescuentoSistema * $ConfiguracionPresupuesto.TRM
-                items = $ItemsSistema
+                items = $SistemasProcessed[$Sistema].items
             }
             
             # Agregar items al total
-            $PresupuestoData.items += $ItemsSistema
+            $PresupuestoData.items += $SistemasProcessed[$Sistema].items
             
             # Acumular totales generales
             $PresupuestoData.totales.subtotal_usd += $SubtotalSistema
@@ -352,7 +249,7 @@ function Generate-PresupuestoData {
         $PresupuestoData.totales.total_final_cop = $PresupuestoData.totales.total_final_usd * $ConfiguracionPresupuesto.TRM
         $PresupuestoData.totales.descuento_cop = $PresupuestoData.totales.descuento_usd * $ConfiguracionPresupuesto.TRM
         
-        Write-Log "Presupuesto generado: $($PresupuestoData.items.Count) items, Total: $($PresupuestoData.totales.total_final_usd) USD"
+        Write-Log "Presupuesto generado desde datos reales: $($PresupuestoData.items.Count) items, Total: $($PresupuestoData.totales.total_final_usd) USD"
         return $PresupuestoData
         
     } catch {
@@ -533,7 +430,7 @@ function Start-PresupuestoSync {
     }
     
     # Generar datos de presupuesto
-    $PresupuestoData = Generate-PresupuestoData -WBSData $WBSData
+    $PresupuestoData = Generate-PresupuestoData -ItemsData $WBSData
     if (!$PresupuestoData) {
         Write-Log "No se pudieron generar los datos de presupuesto" "ERROR"
         return $false
