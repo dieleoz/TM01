@@ -222,17 +222,32 @@ Copy-Item "Sistema_Validacion_Web/*.js" "docs/" -Force
 
 ---
 
-## 📝 PRÓXIMOS PASOS
+## 📝 HISTORIAL DE IMPLEMENTACIÓN
 
-1. ✅ Crear index.html en raíz con login
-2. ✅ Crear docs/index.html con portal
-3. ✅ Crear docs/WBS_Menu_Principal.html
+1. ✅ Crear index.html en raíz (landing standalone)
+2. ✅ Crear docs/index.html con portal y métricas dinámicas
+3. ✅ Crear docs/WBS_Menu_Principal.html con estadísticas
 4. ✅ Crear vistas wbs.html, layout.html, presupuesto.html
 5. ✅ Publicar datos JS a docs/
+6. ✅ Implementar filtros dinámicos en WBS y Layout
+7. ✅ Sistema de autenticación opcional (implementado pero no requerido)
+8. ✅ GitHub Pages publicado y operativo
 
 ---
 
-**Estado**: 🟡 En implementación  
-**Última actualización**: 28 Oct 2025  
+## ✨ CARACTERÍSTICAS IMPLEMENTADAS
+
+- ✅ **Filtros dinámicos**: Sistemas poblados desde datos en tiempo real
+- ✅ **Búsqueda de texto**: Filtrado en tiempo real en WBS y Layout
+- ✅ **Métricas dinámicas**: Totales calculados desde master data
+- ✅ **Arquitectura de 4 capas**: Completamente operativa
+- ✅ **DT-PEAJES-018**: Integrada con valores reales
+- ✅ **GitHub Pages**: Publicado en https://dieleoz.github.io/TM01/
+- ✅ **Commits**: 10+ commits sincronizados
+
+---
+
+**Estado**: ✅ **COMPLETADO Y OPERATIVO**  
+**Última actualización**: 28 Oct 2025 (PM)  
 **Versión**: 1.0
 
