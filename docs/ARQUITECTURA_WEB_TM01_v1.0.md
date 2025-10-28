@@ -21,7 +21,7 @@ Sistema de validación web para proyecto TM01 Troncal Magdalena (293 km) que per
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ CAPA 4: VISUALIZACIÓN (HTML)                           │
-│ 📍 Raíz: index.html                                    │
+│ 📍 Raíz: index.html (landing standalone, sin login)     │
 │ 📁 docs/: wbs.html, layout.html, presupuesto.html     │
 │ 📁 docs/: WBS_Menu_Principal.html (navegación)        │
 └─────────────────────────────────────────────────────────┘
@@ -56,10 +56,9 @@ Sistema de validación web para proyecto TM01 Troncal Magdalena (293 km) que per
 ```
 0.0 FORMATOS PARA IA/
 │
-├── index.html                           ← Login GitHub Pages
+├── index.html                           ← Landing GitHub Pages (standalone)
 ├── assets/
-│   ├── css/portal-login.css             ← Estilos login
-│   └── js/login.js                      ← Lógica autenticación
+│   └── js/login.js                      ← (Opcional) Lógica de login para portales internos
 │
 ├── docs/                                ← GitHub Pages (publicado)
 │   ├── index.html                       ← Portal post-login
@@ -73,7 +72,7 @@ Sistema de validación web para proyecto TM01 Troncal Magdalena (293 km) que per
 │   │
 │   ├── datos_wbs_TM01_items.js          ← Datos WBS
 │   ├── layout_datos.js                  ← Datos layout
-│   └── presupuesto_datos.js             ← Datos presupuesto
+│   └── presupuesto_datos.js             ← (Opcional) Datos presupuesto
 │
 └── Sistema_Validacion_Web/
     ├── data/
@@ -123,7 +122,7 @@ Copy-Item "Sistema_Validacion_Web/presupuesto_datos.js" "docs/"
 ## 🎯 PÁGINAS WEB REQUERIDAS
 
 ### **Raíz** (GitHub Pages)
-1. **index.html** - Login con credenciales 0rt1z/0rt1z
+1. **index.html** - Landing estática (enlaces a `docs/*`)
 
 ### **docs/** (Contenido)
 2. **index.html** - Portal post-login
@@ -134,9 +133,9 @@ Copy-Item "Sistema_Validacion_Web/presupuesto_datos.js" "docs/"
 
 ---
 
-## 🔐 SISTEMA DE AUTENTICACIÓN
+## 🔐 SISTEMA DE AUTENTICACIÓN (Opcional)
 
-### Usuarios
+### Usuarios (si se habilita login en un portal interno)
 ```javascript
 const VALID_CREDENTIALS = {
     '0rt1z': '0rt1z',
@@ -146,7 +145,7 @@ const VALID_CREDENTIALS = {
 };
 ```
 
-### Seguridad
+### Seguridad (si aplica)
 - ✅ Límite 5 intentos (bloqueo 5 min)
 - ✅ Timeout 30 min por inactividad
 - ✅ Credenciales en archivo externo (no en git)
