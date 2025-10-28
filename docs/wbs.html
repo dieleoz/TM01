@@ -263,11 +263,12 @@
         </div>
     </div>
 
-    <script src="data/tm01_master_data.js"></script>
+    <!-- CARGA DINÁMICA: Cambiar a datos_wbs_TM01_items.js cuando esté en producción -->
+    <script src="datos_wbs_TM01_items.js"></script>
     
     <script>
-        const tm01Data = new TM01MasterData();
-        let wbsData = tm01Data.data.wbs;
+        // Extraer items de datos_wbs_TM01_items.js
+        let wbsData = (typeof window.wbsDataGlobal !== 'undefined' && window.wbsDataGlobal.items) ? window.wbsDataGlobal.items : [];
         let filteredData = [];
         
         document.addEventListener('DOMContentLoaded', function() {
