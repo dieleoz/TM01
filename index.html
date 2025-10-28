@@ -43,7 +43,18 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="loginBox" style="max-width:420px;margin:40px auto 20px;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.25);padding:24px 24px 18px;display:none;">
+        <h2 style="margin-bottom:6px;color:#667eea;">🔐 Acceso</h2>
+        <p style="margin:0 0 14px;color:#666;font-size:14px;">Ingrese sus credenciales para continuar</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+            <input id="u" placeholder="Usuario" autocomplete="username" style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;" />
+            <input id="p" type="password" placeholder="Contraseña" autocomplete="current-password" style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;" />
+            <button id="btnLogin" style="padding:10px 14px;border:none;border-radius:8px;background:#667eea;color:#fff;font-weight:600;cursor:pointer;">Acceder</button>
+            <div id="err" style="display:none;color:#c0392b;font-size:13px;">Credenciales inválidas</div>
+        </div>
+    </div>
+
+    <div class="container" id="contentContainer" style="display:none;">
         <div class="header">
             <h1>🚀 Proyecto TM01</h1>
             <p class="subtitle">Asociación Público-Privada (APP)<br>Puerto Salgar - Barrancabermeja</p>
@@ -80,5 +91,49 @@
             <p>Última actualización: <script>document.write(new Date().toLocaleString('es-CO'))</script></p>
         </div>
     </div>
+
+    <script>
+        (function(){
+            const AUTH_KEY = 'tm01_auth';
+            const VALID = { '0rt1z':'0rt1z' };
+            const loginBox = document.getElementById('loginBox');
+            const content = document.getElementById('contentContainer');
+
+            function isAuth(){ return sessionStorage.getItem(AUTH_KEY)==='true'; }
+            function showLogin(){ loginBox.style.display='block'; }
+            function showContent(){ content.style.display='block'; }
+
+            function tryAuto(){
+                if(isAuth()) { window.location.href = 'docs/index.html'; return; }
+                showLogin();
+            }
+
+            document.getElementById('btnLogin').addEventListener('click', function(){
+                const u = (document.getElementById('u').value||'').trim();
+                const p = (document.getElementById('p').value||'').trim();
+                if(VALID[u] && VALID[u]===p){
+                    sessionStorage.setItem(AUTH_KEY,'true');
+                    sessionStorage.setItem('username', u);
+                    window.location.href = 'docs/index.html';
+                } else {
+                    const err = document.getElementById('err');
+                    err.style.display = 'block';
+                    setTimeout(()=>{err.style.display='none';}, 2500);
+                }
+            });
+
+            // Enter submits
+            ['u','p'].forEach(id=>{
+                document.getElementById(id).addEventListener('keypress', (e)=>{
+                    if(e.key==='Enter') document.getElementById('btnLogin').click();
+                });
+            });
+
+            // Init
+            tryAuto();
+            // Mostrar contenido no autenticado (landing) detrás del login (opcional)
+            showContent();
+        })();
+    </script>
 </body>
 </html>
