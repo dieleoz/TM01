@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema TM01 - Troncal Magdalena | Acceso Seguro</title>
-    
-    <!-- Estilos externos (Mejora de mantenibilidad - 27-Oct-2025) -->
-    <link rel="stylesheet" href="../assets/css/portal-login.css?v=20251027">
+    <title>Dashboard TM01 - Troncal Magdalena</title>
 </head>
 <body>
-    <!-- LOGIN FORM -->
+    <!-- LOGIN FORM (opcional) -->
     <div class="login-container" id="loginContainer">
         <div class="logo">
             <h1>🏗️ Sistema TM01</h1>
@@ -75,7 +72,7 @@
 
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-value">24</div>
+                <div class="stat-value" id="statWbs">-</div>
                 <div class="stat-label">📋 Items WBS</div>
             </div>
             <div class="stat-card">
@@ -83,17 +80,17 @@
                 <div class="stat-label">🎯 Sistemas ITS</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">200+</div>
+                <div class="stat-value" id="statEquipos">-</div>
                 <div class="stat-label">⚙️ Equipos</div>
             </div>
             <div class="stat-card">
-                <div class="stat-value">$13M</div>
+                <div class="stat-value" id="statBudget">Calculando...</div>
                 <div class="stat-label">💰 Presupuesto</div>
             </div>
         </div>
 
         <div class="portal-grid">
-            <a href="../Sistema_Validacion_Web/WBS_Menu_Principal.html" class="portal-card">
+            <a href="WBS_Menu_Principal.html" class="portal-card">
                 <span class="icon">📋</span>
                 <h3>WBS Menu Principal</h3>
                 <p>Acceso a todas las interfaces del sistema</p>
@@ -139,7 +136,22 @@
         </div>
     </div>
 
+    <script src="data/tm01_master_data.js"></script>
     <script>
+        // Cargar datos para estadísticas básicas
+        try {
+            const tm01Data = new TM01MasterData();
+            const wbs = tm01Data.data.wbs || [];
+            const layout = tm01Data.data.layout || [];
+            const presupuesto = tm01Data.data.presupuesto || [];
+
+            const totalUSD = presupuesto.reduce((s, i) => s + (parseFloat(i.total) || 0), 0);
+            document.getElementById('statWbs').textContent = wbs.length.toString();
+            document.getElementById('statEquipos').textContent = layout.length.toString();
+            document.getElementById('statBudget').textContent = `$${(totalUSD/1_000_000).toFixed(2)}M`;
+        } catch (e) {
+            // No bloquear si aún no carga la clase/archivo
+        }
         // ================================================================
         // CONFIGURACIÓN DE AUTENTICACIÓN
         // ================================================================
