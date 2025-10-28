@@ -254,12 +254,32 @@
             });
         }
         
+        function toNumber(v) {
+            if (v === undefined || v === null) return 0;
+            if (typeof v === 'number') return v;
+            // normalizar: quitar comas y espacios
+            const s = String(v).replace(/[,\s]/g, '');
+            const n = parseFloat(s);
+            return isNaN(n) ? 0 : n;
+        }
+
+        function computeTotal(item) {
+            // 1) usar total si existe
+            const total = toNumber(item.total) || toNumber(item.totalUSD) || toNumber(item.totalCop) || toNumber(item.totalCOP);
+            if (total > 0) return total;
+            // 2) fallback: cantidad * vu
+            const cantidad = toNumber(item.cantidad);
+            const vu = toNumber(item.vu) || toNumber(item.vuUSD);
+            if (cantidad > 0 && vu > 0) return cantidad * vu;
+            return 0;
+        }
+
         function actualizarEstadisticas() {
             const totalItems = wbsData.length;
             const totalCapitulos = wbsData.filter(item => item.nivel === 1).length;
             const sistemas = [...new Set(wbsData.map(item => item.sistema).filter(s => s))].length;
-            const costoTotal = wbsData.reduce((sum, item) => sum + (parseFloat(item.total) || 0), 0);
-            
+            const costoTotal = wbsData.reduce((sum, item) => sum + computeTotal(item), 0);
+
             document.getElementById('totalItems').textContent = totalItems;
             document.getElementById('totalCapitulos').textContent = totalCapitulos;
             document.getElementById('totalSistemas').textContent = sistemas;
@@ -283,7 +303,7 @@
                     currentItem = item.item;
                 }
                 
-                const total = parseFloat(item.total || item.totalCOP || 0);
+                const total = computeTotal(item);
                 
                 html += `
                     <div class="wbs-item">
