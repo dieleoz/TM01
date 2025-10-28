@@ -66,8 +66,16 @@
         <div class="content">
             <p>📊 Resumen de equipos distribuidos en los 293 km de la troncal.</p>
             <p style="margin-top: 20px;">Datos desde <code>tm01_master_data.js</code>.</p>
-            <div id="layoutStats" style="margin-top: 30px; font-size: 14px;"></div>
+            <div style="margin: 20px 0;">
+                <label for="filtroSistema" style="margin-right:8px;">Sistema:</label>
+                <select id="filtroSistema" style="padding:6px 10px;">
+                    <option value="">Todos</option>
+                </select>
+                <input id="buscarNombre" placeholder="Buscar por nombre..." style="padding:6px 10px; margin-left:8px; width:240px;"/>
+            </div>
+            <div id="layoutStats" style="margin-top: 10px; font-size: 14px;"></div>
             <div id="tablaSistemas" style="margin-top: 20px; text-align:left;"></div>
+            <div id="listaEquipos" style="margin-top: 10px; text-align:left;"></div>
         </div>
     </div>
 
@@ -88,6 +96,12 @@
                     <p>✅ Longitud: 293 km</p>
                 `;
 
+                // Filtros
+                const selectSis = document.getElementById('filtroSistema');
+                ;[...sistemasSet].sort().forEach(s => { const o=document.createElement('option'); o.value=s; o.textContent=s; selectSis.appendChild(o); });
+                document.getElementById('buscarNombre').addEventListener('input', renderListado);
+                selectSis.addEventListener('change', renderListado);
+
                 // Conteo por sistema
                 const conteo = {};
                 layoutData.forEach(i => { conteo[i.sistema] = (conteo[i.sistema]||0)+1; });
@@ -106,6 +120,15 @@
                         </thead>
                         <tbody>${rows}</tbody>
                     </table>`;
+
+                function renderListado(){
+                    const filtro = (document.getElementById('filtroSistema').value)||'';
+                    const q = (document.getElementById('buscarNombre').value||'').toLowerCase();
+                    const filtrados = layoutData.filter(i => (!filtro || i.sistema===filtro) && (!q || (i.nombre||'').toLowerCase().includes(q)));
+                    const items = filtrados.slice(0,200).map(i=>`<li style=\"padding:4px 0;\">${i.sistema} — ${i.nombre} (${i.cantidad})</li>`).join('');
+                    document.getElementById('listaEquipos').innerHTML = `<h3 style=\"margin:20px 0 10px; color:#444;\">Listado (máx 200)</h3><ul style=\"margin-left:18px;\">${items}</ul>`;
+                }
+                renderListado();
             } catch(e) {
                 // Evitar bloqueo si faltan datos
             }

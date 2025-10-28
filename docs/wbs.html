@@ -196,14 +196,6 @@
                 </div>
                 <select class="filter-select" id="systemFilter">
                     <option value="">Todos los Sistemas</option>
-                    <option value="SOS">SOS</option>
-                    <option value="ETD">ETD</option>
-                    <option value="RADAR">RADAR</option>
-                    <option value="CCTV">CCTV</option>
-                    <option value="PMV">PMV</option>
-                    <option value="METEO">METEO</option>
-                    <option value="WIM">WIM</option>
-                    <option value="PEAJES">PEAJES</option>
                 </select>
                 <select class="filter-select" id="levelFilter">
                     <option value="">Todos los Niveles</option>
@@ -248,9 +240,19 @@
         
         document.addEventListener('DOMContentLoaded', function() {
             filteredData = [...wbsData];
+            poblarSistemas();
             actualizarEstadisticas();
             renderizarWBS();
         });
+
+        function poblarSistemas() {
+            const select = document.getElementById('systemFilter');
+            const sistemas = [...new Set(wbsData.map(i => i.sistema).filter(Boolean))].sort();
+            sistemas.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s; opt.textContent = s; select.appendChild(opt);
+            });
+        }
         
         function actualizarEstadisticas() {
             const totalItems = wbsData.length;
