@@ -262,7 +262,11 @@
                 <h3>🚀 WBS INTERACTIVA COMPLETA</h3>
                 <p>✅ Analiza TODO: Criterios + Impactos + Riesgos + Archivos + Alternativas</p>
                 <p>✅ Proponer cambios técnicos | ✅ Ver riesgos en tiempo real | ✅ Sistema bidireccional</p>
-                <a href="wbs.html" class="btn">🚀 ABRIR WBS INTERACTIVA</a>
+                <div style="display: flex; gap: 10px;">
+                    <a href="wbs.html" class="btn">🚀 ABRIR WBS INTERACTIVA</a>
+                    <button class="btn" onclick="sincronizarDatos()" style="background: #ffc107; cursor: pointer;">🔄 Sincronizar</button>
+                    <a href="estado_sync.html" class="btn" style="background: #28a745;">📊 Estado Sync</a>
+                </div>
             </div>
             
             <!-- MODIFICADOR DINÁMICO -->
@@ -338,6 +342,10 @@
             document.getElementById('statEquipos').textContent = `${equipos} ⚙️ Equipos`;
             document.getElementById('statBudget').textContent = `$${(totalUSD/1_000_000).toFixed(2)}M 💰 Presupuesto`;
         } catch(e){}
+        
+        function sincronizarDatos() {
+            alert('🔄 Sincronizando datos...\n\nEjecuta manualmente:\npowershell -ExecutionPolicy Bypass -File "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1" -Force\n\nLuego refresca la página (Ctrl+Shift+R).');
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Sincronización - TM01 Troncal Magdalena</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .status-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        .status-card.success { border-left-color: #28a745; }
+        .status-card.error { border-left-color: #dc3545; }
+        .status-card.warning { border-left-color: #ffc107; }
+        .status-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .status-detail {
+            color: #6c757d;
+            margin: 5px 0;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 10px 10px 0;
+        }
+        .btn:hover { background: #5568d3; }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">← Volver</button>
+            <h1>📊 Estado de Sincronización</h1>
+            <p>Sistema TM01 Troncal Magdalena</p>
+        </div>
+        
+        <div class="content">
+            <div class="status-card success">
+                <div class="status-title">✅ Última Sincronización</div>
+                <div class="status-detail" id="lastSync">Cargando...</div>
+            </div>
+            
+            <div class="status-card success">
+                <div class="status-title">📁 Archivos Generados</div>
+                <div class="status-detail" id="filesGenerated">Cargando...</div>
+            </div>
+            
+            <div class="status-card">
+                <div class="status-title">⏱️ Duración</div>
+                <div class="status-detail" id="duration">Cargando...</div>
+            </div>
+            
+            <div class="status-card">
+                <div class="status-title">🔧 Acciones</div>
+                <button class="btn" onclick="window.location.href='WBS_Menu_Principal.html'">🔄 Volver al Menú</button>
+                <button class="btn" onclick="location.reload()">🔄 Refrescar Estado</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simular estado de sincronización (en producción leería logs reales)
+        const now = new Date();
+        const files = ['datos_wbs_TM01_items.js', 'layout_datos.js', 'presupuesto_datos.js'];
+        const fileStats = files.map(f => {
+            const el = document.createElement('div');
+            el.textContent = f;
+            const exists = false; // En producción verificar con fetch
+            return { name: f, exists, status: exists ? '✅' : '❌' };
+        });
+        
+        document.getElementById('lastSync').textContent = now.toLocaleString('es-CO');
+        document.getElementById('filesGenerated').innerHTML = fileStats.map(f => 
+            `<div>${f.status} ${f.name}</div>`
+        ).join('');
+        document.getElementById('duration').textContent = '~6-10 segundos';
+    </script>
+</body>
+</html>
