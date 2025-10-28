@@ -132,8 +132,9 @@
             const isAuthenticated = sessionStorage.getItem('authenticated') === 'true';
             const username = sessionStorage.getItem('username');
             if (isAuthenticated && username) {
-                showPortal(username);
-                iniciarMonitoreoSesion();
+                // Redirigir directamente al menú principal WBS
+                window.location.href = 'docs/WBS_Menu_Principal.html';
+                return;
             }
         });
 
@@ -154,8 +155,8 @@
                     sessionStorage.setItem('username', username);
                     showPortal(username);
                     iniciarMonitoreoSesion();
-                    // Redirigir al portal docs
-                    window.location.href = 'docs/index.html';
+                    // Redirigir al menú principal WBS
+                    window.location.href = 'docs/WBS_Menu_Principal.html';
                 } else {
                     intentosLogin++;
                     errorMessage.textContent = `❌ Usuario o contraseña incorrectos (${intentosLogin}/${MAX_INTENTOS})`;
