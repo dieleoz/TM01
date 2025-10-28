@@ -248,11 +248,11 @@
         <div class="header">
             <h1>🚀 WBS MENU PRINCIPAL v4.0</h1>
             <p>Proyecto TM01 Troncal Magdalena - Sistema de Validación ITS</p>
-            <div class="stats-bar">
-                <div class="stat-item">181 📄 Documentos</div>
+            <div class="stats-bar" id="statsBar">
+                <div class="stat-item" id="statDocs">- 📄 Documentos</div>
                 <div class="stat-item">7 🎯 Interfaces</div>
-                <div class="stat-item">17 ⚠️ Riesgos</div>
-                <div class="stat-item">$7.79M 💰 Presupuesto ITS</div>
+                <div class="stat-item" id="statEquipos">- ⚙️ Equipos</div>
+                <div class="stat-item" id="statBudget">$- 💰 Presupuesto</div>
             </div>
         </div>
         
@@ -262,7 +262,7 @@
                 <h3>🚀 WBS INTERACTIVA COMPLETA</h3>
                 <p>✅ Analiza TODO: Criterios + Impactos + Riesgos + Archivos + Alternativas</p>
                 <p>✅ Proponer cambios técnicos | ✅ Ver riesgos en tiempo real | ✅ Sistema bidireccional</p>
-                <a href="WBS_COMPLETA_TODO_Interactiva_v5.0.html" class="btn">🚀 ABRIR WBS INTERACTIVA</a>
+                <a href="wbs.html" class="btn">🚀 ABRIR WBS INTERACTIVA</a>
             </div>
             
             <!-- MODIFICADOR DINÁMICO -->
@@ -327,5 +327,17 @@
             <a href="../index.html" class="back-button">🚪 Cerrar Sesión</a>
         </div>
     </div>
+    <script src="data/tm01_master_data.js"></script>
+    <script>
+        try {
+            const tm01Data = new TM01MasterData();
+            const docsAprox = 85; // aproximado por ahora
+            const equipos = tm01Data.data.layout?.length || 0;
+            const totalUSD = (tm01Data.data.presupuesto||[]).reduce((s,i)=>s+(parseFloat(i.total)||0),0);
+            document.getElementById('statDocs').textContent = `${docsAprox} 📄 Documentos`;
+            document.getElementById('statEquipos').textContent = `${equipos} ⚙️ Equipos`;
+            document.getElementById('statBudget').textContent = `$${(totalUSD/1_000_000).toFixed(2)}M 💰 Presupuesto`;
+        } catch(e){}
+    </script>
 </body>
 </html>
