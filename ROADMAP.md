@@ -141,7 +141,12 @@ Implementar DT-PEAJES-018 con valores reales de cotización y reconstruir sistem
 - ✅ **docs/data/tm01_master_data.js** - Fuente única de verdad
 - ✅ **docs/ARQUITECTURA_WEB_TM01_v1.0.md** - Documentación arquitectura
 
-**4. Arquitectura de 4 Capas Implementada:**
+**4. Publicación GitHub Pages (28-Oct-2025 PM):**
+- ✅ `index.html` reemplazado por landing standalone (sin dependencias externas)
+- ✅ `docs/index.html` actualiza métricas dinámicas (WBS, equipos, presupuesto)
+- ✅ Enlaces corregidos a `docs/*` (compatibles con Pages)
+
+**5. Arquitectura de 4 Capas Implementada:**
 - ✅ **Capa 1**: `Sistema_Validacion_Web/data/tm01_master_data.js` (fuente)
 - ✅ **Capa 2**: Scripts PowerShell de sincronización
 - ✅ **Capa 3**: `.js` intermediarios generados
