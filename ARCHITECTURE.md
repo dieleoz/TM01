@@ -1,7 +1,7 @@
 # ARQUITECTURA DEL SISTEMA TM01 TRONCAL MAGDALENA
 # Proyecto: TM01 Troncal Magdalena - Sistema de Validación Web
-# Versión: 1.0 | Fecha: 23 de Octubre de 2025
-# Estado: ✅ IMPLEMENTADO Y OPERATIVO
+# Versión: 1.1 | Fecha: 28 de Octubre de 2025
+# Estado: ✅ IMPLEMENTADO Y OPERATIVO (Arquitectura 4 capas consolidada + UI clon ejemplo)
 
 ---
 
@@ -34,10 +34,10 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │  TRANSFORMACIÓN - PROCESAMIENTO DE DATOS                        │
 ├─────────────────────────────────────────────────────────────────┤
 │  • tm01_master_data.js (Fuente única de datos)                 │
-│  • sync_wbs_tm01.ps1 ✅ COMPLETADO (24 items WBS)             │
-│  • sincronizar_layout.ps1 ✅ COMPLETADO (52+ equipos)         │
-│  • sincronizar_presupuesto.ps1 🔄 EN PROGRESO                 │
-│  • sincronizar_SISTEMA_TM01_COMPLETO.ps1 ⏳ PENDIENTE         │
+│  • sync_wbs_tm01.ps1 ✅ COMPLETADO (WBS)                      │
+│  • sincronizar_layout.ps1 ✅ COMPLETADO (Layout)              │
+│  • sincronizar_presupuesto.ps1 ✅ COMPLETADO (Presupuesto)    │
+│  • sincronizar_SISTEMA_TM01_COMPLETO.ps1 ✅ MAESTRO           │
 │  • Generadores de DTs                                           │
 │  • Módulos reutilizables                                        │
 │  • Validadores de coherencia técnica                            │
@@ -49,11 +49,11 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 ┌─────────────────────────────────────────────────────────────────┐
 │  DATOS INTERMEDIOS - ESTRUCTURAS DINÁMICAS                     │
 ├─────────────────────────────────────────────────────────────────┤
-│  • datos_wbs_TM01_items.js ✅ GENERADO (24 items WBS)         │
-│  • layout_datos.js ⏳ PENDIENTE (52+ equipos georreferenciados)│
+│  • datos_wbs_TM01_items.js ✅ GENERADO                         │
+│  • layout_datos.js ✅ GENERADO                                 │
 │  • criterios_tecnicos_base.js (UTF-8)                          │
 │  • riesgos_wbs.js (Riesgos dinámicos)                          │
-│  • presupuesto_datos.js ⏳ PENDIENTE (Cálculos financieros)    │
+│  • presupuesto_datos.js ✅ GENERADO                            │
 │                                                                 │
 │  ⚠️ NUNCA editar manualmente - regenerar con scripts            │
 └─────────────────────────────────────────────────────────────────┘
@@ -64,14 +64,11 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 ┌─────────────────────────────────────────────────────────────────┐
 │  VISUALIZACIÓN - INTERFACES INTERACTIVAS                       │
 ├─────────────────────────────────────────────────────────────────┤
-│  • index.html (Portal de acceso seguro)                       │
-│  • Portal_Sistema_WBS.html (Dashboard principal)               │
-│  • WBS_Menu_Principal.html (6 interfaces dinámicas)            │
-│  • WBS_COMPLETA_TODO_Interactiva_v4.0.html (24 items)        │
-│  • WBS_Layout_Maestro.html (52 equipos georreferenciados)      │
-│  • WBS_Presupuesto_TM01_Troncal_Magdalena.html (Presupuesto)  │
-│  • QA_Dashboard_TM01.html (Dashboard QA)                      │
-│  • Modificador_Dinamico_WBS.html (Cambios en tiempo real)      │
+│  • index.html (login → redirige a docs/WBS_Menu_Principal.html) │
+│  • docs/WBS_Menu_Principal.html (entrada principal)            │
+│  • docs/wbs.html (WBS interactiva)                             │
+│  • docs/layout.html (layout filtrable)                         │
+│  • docs/presupuesto.html (dashboard presupuestal)              │
 │                                                                 │
 │  ✅ Sistema operativo con propagación automática de cambios     │
 └─────────────────────────────────────────────────────────────────┘

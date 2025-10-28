@@ -1,9 +1,9 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo y Cronograma - Sistema de Validación Web con Arquitectura Dinámica
 
-**Versión:** 14.0 - SISTEMA WEB TM01 RECONSTRUIDO  
-**Fecha:** 28 de Octubre 2025  
-**Estado:** ✅ **ARQUITECTURA WEB COMPLETA** | ✅ **DT-PEAJES-018 APLICADA**    
+**Versión:** 14.1 - ARQUITECTURA 4 CAPAS CONSOLIDADA  
+**Fecha:** 28 de Octubre 2025 (PM)  
+**Estado:** ✅ **UI clon del ejemplo + PS1 TM01** | ✅ **DT-PEAJES-018 APLICADA**    
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
 **Última actualización:** 28 de octubre de 2025 - Sistema web completo con peajes actualizados  
@@ -160,6 +160,23 @@ Implementar DT-PEAJES-018 con valores reales de cotización y reconstruir sistem
 - ✅ **Documentación**: Miniarquitectura completa creada
 
 ### **Valores Actualizados:**
+## 📅 Bitácora día a día (28-Oct-2025)
+
+AM:
+- Alineación de `index.html` a login + redirección a WBS.
+- `docs/wbs.html`, `layout.html`, `presupuesto.html` (datos dinámicos) creados.
+- Copia de datos a `docs/` y verificación.
+
+PM:
+- `WBS_Menu_Principal.html` (métricas + enlaces) actualizado.
+- Cálculo robusto de totales en `wbs.html` (total/totalCOP/cant×VU).
+- Eliminación `docs/index.html` y flujo simplificado a WBS.
+- Actualización arquitectura y README.
+
+Próximos (29-Oct):
+- Botón “📋 Crear DT” (modal + YAML + descarga) en WBS.
+- Botón “🔄 Sincronizar” (PS1 maestro + log + cache-busting).
+- `docs/estado_sync.html` (último sync, archivos, errores).
 - **Total peajes**: ~$8.1M USD (2 estaciones completas)
 - **Presupuesto total TM01**: USD 13M (incluye todos los sistemas)
 - **Equipos en sistema**: 200+ distribuidos en 293 km

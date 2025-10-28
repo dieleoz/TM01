@@ -1,8 +1,8 @@
 # ÍNDICE MAESTRO DEL PROYECTO
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Última actualización:** 22 de octubre de 2025 (22:00)  
-**Versión:** 3.2  
-**✅ ESTADO:** WBS COMPLETA v1.0 + RFQ-001 FIBRA ÓPTICA - Listo para licitación ($7.79M USD ITS Puro)
+**Última actualización:** 28 de octubre de 2025 (PM)  
+**Versión:** 3.3  
+**✅ ESTADO:** Arquitectura 4 capas consolidada + UI clon del ejemplo (operativa)
 
 ---
 
@@ -10,8 +10,8 @@
 
 | # | Archivo | Propósito | Última Modificación |
 |:--|:--------|:----------|:-------------------|
-| 1 | [README.md](README.md) | Visión general del proyecto | 22-Oct-2025 |
-| 2 | [ROADMAP.md](ROADMAP.md) | Plan de trabajo y cronograma | 22-Oct-2025 |
+| 1 | [README.md](README.md) | Visión general del proyecto | 28-Oct-2025 |
+| 2 | [ROADMAP.md](ROADMAP.md) | Plan de trabajo y cronograma | 28-Oct-2025 |
 | 3 | [00_INICIO_RAPIDO.md](00_INICIO_RAPIDO.md) | Guía de inicio rápido | 16-Oct-2025 |
 | 4 | [GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md](GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md) | Metodología de replicación | 16-Oct-2025 |
 | 5 | [.gitignore](.gitignore) | Configuración de control de versiones | 16-Oct-2025 |
@@ -36,7 +36,7 @@
 | **VI. Operacion y Reversion** | 🔴 Vacía | 0 archivos | - |
 | **VII. Documentos Transversales** | ✅ Completa | 19 archivos | 22-Oct-2025 |
 | **VIII. Documentos Maestros y Metodologia**| 🔴 Vacía | 0 archivos | - |
-| **IX. WBS y Planificacion** | 🟡 En progreso | 1 archivo | 16-Oct-2025 |
+| **IX. WBS y Planificacion** | ✅ Publicado | 4 archivos (docs/*) | 28-Oct-2025 |
 | **X. Entregables Consolidados** | ✅ Completa | 2 archivos | 22-Oct-2025 |
 
 ### Carpetas de Soporte
@@ -51,9 +51,11 @@
 
 ---
 
-### IX. WBS y Planificación (2 archivos) - ✅ WBS COMPLETA v1.0 CREADA
-- **WBS_Preliminar_v1.0.md** - WBS preliminar (versión inicial)
-- **WBS_COMPLETA_VEHICULAR_v1.0.md** - WBS completa con presupuestos ITS validados ($53.4M USD total)
+### IX. WBS y Planificación (docs/ publicados)
+- **docs/WBS_Menu_Principal.html** - Menú principal (entrada)
+- **docs/wbs.html** - WBS interactiva
+- **docs/layout.html** - Layout filtrable
+- **docs/presupuesto.html** - Dashboard presupuestal
 
 ### X. Entregables Consolidados (4 archivos) - ✅ PRESUPUESTO + RFQ LISTOS
 - **PRESUPUESTO_ITS_PURO_v2.0.md** - Presupuesto ITS con componentes reales validados ($7.79M USD)

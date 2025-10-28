@@ -16,9 +16,9 @@
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 ![Web_System](https://img.shields.io/badge/Web_System-Operativo-success)
 
-**Versión:** 3.5  
-**Fecha de actualización:** 28 de Octubre 2025  
-**Estado:** ✅ DT-PEAJES-018 APLICADA + SISTEMA WEB RECONSTRUIDO | **OPERATIVO**    
+**Versión:** 3.6  
+**Fecha de actualización:** 28 de Octubre 2025 (PM)  
+**Estado:** ✅ Arquitectura 4 capas consolidada + UI clon del ejemplo | **OPERATIVO**    
 **Responsable:** Equipo Técnico TM01  
 **Metodología:** Punto 42 v1.0 + Arquitectura Dinámica 4 Capas  
 **GitHub:** https://github.com/dieleoz/TM01  
@@ -39,15 +39,15 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 2. **Optimización Arquitectónica:** Diseños eficientes y constructibles
 3. **Validación Rigurosa:** 100% de sistemas validados contractualmente
 4. **Metodología Sistemática:** Proceso genérico aplicable a cualquier equipo/sistema
-5. **Presupuesto Realista:** USD 7.79M (ITS Puro)
-6. **Documentación Completa:** 85+ documentos técnicos generados
-7. **Sistema Web Dinámico:** Arquitectura de 4 capas con propagación automática
+5. **Arquitectura unificada:** 4 capas (Master → PS1 → JS → HTML)
+6. **UI clon del ejemplo:** Funcionalidad equivalente, datos desde master TM01
+7. **DTs ejecutables:** Botón “Crear DT” (próximo paso) + sincronización PS1
 
-## 📍 **DÓNDE ESTAMOS HOY** (27-Oct-2025)
+## 📍 **DÓNDE ESTAMOS HOY** (28-Oct-2025)
 
 ```
-Fase 0: Preparación        [████████████] 100% ✅ Completada
-Fase 1: Conversión         [████████████] 100% ✅ Completada
+Fase 0: Preparación        [████████████] 100% ✅
+Fase 1: Conversión         [████████████] 100% ✅
 Fase 2: Ingeniería Concept [████████████] 100% ✅ COMPLETADA
 Fase 3: Especificaciones   [████████████] 100% ✅ COMPLETADA
 Fase 4: Scripts Sincronización [████████░░░░] 50% 🔄 EN PROGRESO

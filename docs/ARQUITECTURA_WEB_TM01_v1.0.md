@@ -21,9 +21,9 @@ Sistema de validación web para proyecto TM01 Troncal Magdalena (293 km) que per
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ CAPA 4: VISUALIZACIÓN (HTML)                           │
-│ 📍 Raíz: index.html (landing standalone, sin login)     │
+│ 📍 Raíz: index.html (login → redirige a WBS_Menu_*)     │
+│ 📁 docs/: WBS_Menu_Principal.html (entrada principal) │
 │ 📁 docs/: wbs.html, layout.html, presupuesto.html     │
-│ 📁 docs/: WBS_Menu_Principal.html (navegación)        │
 └─────────────────────────────────────────────────────────┘
                           ↕️ Carga JS dinámicamente
 ┌─────────────────────────────────────────────────────────┐
@@ -61,8 +61,7 @@ Sistema de validación web para proyecto TM01 Troncal Magdalena (293 km) que per
 │   └── js/login.js                      ← (Opcional) Lógica de login para portales internos
 │
 ├── docs/                                ← GitHub Pages (publicado)
-│   ├── index.html                       ← Portal post-login
-│   ├── WBS_Menu_Principal.html          ← Menú navegación
+│   ├── WBS_Menu_Principal.html          ← Menú navegación (entrada)
 │   ├── wbs.html                         ← Vista WBS
 │   ├── layout.html                      ← Vista layout
 │   ├── presupuesto.html                 ← Vista presupuesto
@@ -125,11 +124,10 @@ Copy-Item "Sistema_Validacion_Web/presupuesto_datos.js" "docs/"
 1. **index.html** - Landing estática (enlaces a `docs/*`)
 
 ### **docs/** (Contenido)
-2. **index.html** - Portal post-login
-3. **WBS_Menu_Principal.html** - Menú navegación
-4. **wbs.html** - Estructura WBS interactiva
-5. **layout.html** - Mapa georreferenciado
-6. **presupuesto.html** - Dashboard presupuestal
+2. **WBS_Menu_Principal.html** - Menú navegación (punto de entrada)
+3. **wbs.html** - Estructura WBS interactiva
+4. **layout.html** - Mapa y tabla filtrable
+5. **presupuesto.html** - Dashboard presupuestal
 
 ---
 
@@ -183,9 +181,8 @@ class TM01MasterData {
 - ✅ Usuario/Contraseña
 - ✅ Redirect a docs/index.html post-login
 
-### PASO 2: Crear página portal (docs/index.html)
-- ✅ Dashboard con métricas
-- ✅ Enlaces a módulos
+### PASO 2: Redirección post-login
+- ✅ index.html → `docs/WBS_Menu_Principal.html`
 
 ### PASO 3: Crear menú principal (docs/WBS_Menu_Principal.html)
 - ✅ Navegación a todas las vistas

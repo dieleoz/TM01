@@ -286,6 +286,11 @@
             document.getElementById('costoTotal').textContent = `$${(costoTotal / 1000000).toFixed(2)}M USD`;
         }
         
+        function formatCOP(n){
+            const v = toNumber(n);
+            return v.toLocaleString('es-CO', {style:'currency', currency:'COP', maximumFractionDigits:0});
+        }
+
         function renderizarWBS() {
             const container = document.getElementById('wbsTree');
             
@@ -305,25 +310,52 @@
                 
                 const total = computeTotal(item);
                 
-                html += `
-                    <div class="wbs-item">
-                        <div class="wbs-content">
-                            <div class="wbs-level level-${item.nivel}">${item.nivel}</div>
+                if (item.nivel === 3) {
+                    // Tarjeta detallada estilo ejemplo (with MODIFICABLE badge)
+                    const totalCOP = toNumber(item.totalCOP);
+                    const vuCOP = toNumber(item.vuCOP || item.vu_cop || 0);
+                    html += `
+                        <div class="wbs-item">
+                          <div class="wbs-content">
+                            <div class="wbs-level level-3">3</div>
                             <div class="wbs-info">
-                                <div class="wbs-title">${item.item} - ${item.descripcion}</div>
-                                <div class="wbs-description">${item.sistema || 'Sistema General'}</div>
-                                <div class="wbs-meta">
-                                    ${item.cantidad ? `<span>Cantidad: ${item.cantidad} ${item.unidad || ''}</span>` : ''}
-                                    ${item.criterio ? `<span>Criterio: ${item.criterio}</span>` : ''}
-                                </div>
+                              <div class="wbs-title">${item.item} - ${item.descripcion}</div>
+                              <div class="wbs-description">${item.sistema || 'Sistema General'}</div>
+                              <div class="wbs-meta" style="gap:12px;flex-wrap:wrap;">
+                                <span>✅ MODIFICABLE</span>
+                                ${item.cantidad ? `<span>Cantidad: <strong>${item.cantidad}</strong></span>` : ''}
+                                ${item.unidad ? `<span>Unidad: <strong>${item.unidad}</strong></span>` : ''}
+                                ${item.tipo ? `<span>Tipo: <strong>${item.tipo}</strong></span>` : ''}
+                                ${vuCOP ? `<span>V/U (COP): <strong>${formatCOP(vuCOP)}</strong></span>` : ''}
+                                ${totalCOP ? `<span>Total (COP): <strong>${formatCOP(totalCOP)}</strong></span>` : ''}
+                              </div>
                             </div>
                             <div class="wbs-cost">
-                                <div class="cost-value">$${(total / 1000).toFixed(0)}K</div>
-                                <div class="cost-label">Total USD</div>
+                              <div class="cost-value">$${(total / 1000).toFixed(0)}K</div>
+                              <div class="cost-label">Total USD</div>
                             </div>
-                        </div>
-                    </div>
-                `;
+                          </div>
+                        </div>`;
+                } else {
+                    html += `
+                        <div class="wbs-item">
+                            <div class="wbs-content">
+                                <div class="wbs-level level-${item.nivel}">${item.nivel}</div>
+                                <div class="wbs-info">
+                                    <div class="wbs-title">${item.item} - ${item.descripcion}</div>
+                                    <div class="wbs-description">${item.sistema || 'Sistema General'}</div>
+                                    <div class="wbs-meta">
+                                        ${item.cantidad ? `<span>Cantidad: ${item.cantidad} ${item.unidad || ''}</span>` : ''}
+                                        ${item.criterio ? `<span>Criterio: ${item.criterio}</span>` : ''}
+                                    </div>
+                                </div>
+                                <div class="wbs-cost">
+                                    <div class="cost-value">$${(total / 1000).toFixed(0)}K</div>
+                                    <div class="cost-label">Total USD</div>
+                                </div>
+                            </div>
+                        </div>`;
+                }
             });
             
             container.innerHTML = html;

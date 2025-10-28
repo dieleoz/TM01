@@ -405,6 +405,26 @@ Un sistema se considera **"ITS Puro"** si cumple **TODOS** estos requisitos:
 - ✅ **SIEMPRE** validar costos con fuentes reales
 - ✅ **SIEMPRE** preparar defensa ante Interventoría
 
+---
+
+## 🆕 28 OCT 2025 – LECCIONES DE ARQUITECTURA WEB (4 CAPAS + UI CLON)
+
+### Lo que funcionó
+- **UI clon del ejemplo**, pero datos desde `tm01_master_data.js` (SSOT): evita romper flujos y mantiene compatibilidad.
+- **Cache-busting** (`?v=timestamp`) para forzar actualización de `.js` sin regenerar `.html`.
+- **PS1 maestro único** para regenerar datos intermedios y publicar a `docs/`.
+
+### Lo que no hacer
+- No duplicar carpetas ni mezclar estructuras del ejemplo con TM01.
+- No editar manualmente archivos generados (`docs/*_datos.js`).
+- No depender de `file://` para pruebas: usar servidor HTTP local.
+
+### Checklist operativo
+- [ ] Ejecutar `scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1 -Force`.
+- [ ] Copiar `Sistema_Validacion_Web/*_datos.js` → `docs/` y `data/`.
+- [ ] Verificar fechas/horas de archivos en `docs/`.
+- [ ] Refrescar con Ctrl+Shift+R (cache-busting activo).
+
 ### **4. COMUNICACIÓN:**
 - ✅ **SIEMPRE** comunicar cambios a equipo completo
 - ✅ **SIEMPRE** coordinar actualizaciones simultáneas
