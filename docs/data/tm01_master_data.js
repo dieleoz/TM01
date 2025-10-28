@@ -111,7 +111,12 @@ class TM01MasterData {
             // CAPÍTULO 7: SISTEMA PEAJES
             {id: '7', nivel: 1, item: "7", descripcion: "SISTEMA PEAJES", sistema: "PEAJES", tipo: "capitulo"},
             {id: '7.1', nivel: 2, item: "7.1", descripcion: "SUMINISTROS PEAJES", sistema: "PEAJES", tipo: "subcapitulo"},
-            {id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Sistemas de recaudo automático", sistema: "PEAJES", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Recaudo vehicular", vu: "490,081", total: "980,161", totalCOP: "4,312,708,400"},
+            {id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Carril automático (telepeaje)", sistema: "PEAJES", cantidad: "4", unidad: "GLB", tipo: "item", criterio: "Telepeaje", vu: "72301.56", vuCOP: "318126889", total: "289206.24", totalCOP: "1272507555"},
+            {id: '7.1.2', nivel: 3, item: "7.1.2", descripcion: "Carril mixto (manual + telepeaje)", sistema: "PEAJES", cantidad: "4", unidad: "GLB", tipo: "item", criterio: "Mixto", vu: "71804.12", vuCOP: "315942105", total: "287216.46", totalCOP: "1263768420"},
+            {id: '7.1.3', nivel: 3, item: "7.1.3", descripcion: "Carril manual semiautomático (tarjetas crédito/débito)", sistema: "PEAJES", cantidad: "4", unidad: "GLB", tipo: "item", criterio: "Manual semiautomático", vu: "61692.34", vuCOP: "271446292", total: "246769.36", totalCOP: "1085785166"},
+            {id: '7.1.4', nivel: 3, item: "7.1.4", descripcion: "Carril manual reversible (doble operador + sensores)", sistema: "PEAJES", cantidad: "2", unidad: "GLB", tipo: "item", criterio: "Manual reversible", vu: "111777.53", vuCOP: "491821141", total: "223555.06", totalCOP: "983642282"},
+            {id: '7.1.5', nivel: 3, item: "7.1.5", descripcion: "Equipos estación de recaudo (servidores redundantes)", sistema: "PEAJES", cantidad: "2", unidad: "GLB", tipo: "item", criterio: "Equipamiento estación", vu: "105684.82", vuCOP: "465013188", total: "211369.64", totalCOP: "930026375"},
+            {id: '7.1.6', nivel: 3, item: "7.1.6", descripcion: "Equipos CCO central para 2 estaciones (opcional)", sistema: "PEAJES", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Servidores redundantes CCO", vu: "110227.27", vuCOP: "485000000", total: "110227.27", totalCOP: "485000000"},
             
             // CAPÍTULO 8: SISTEMA CCO
             {id: '8', nivel: 1, item: "8", descripcion: "SISTEMA CCO", sistema: "CCO", tipo: "capitulo"},
@@ -210,15 +215,15 @@ class TM01MasterData {
             {id: '10.2.10', nivel: 3, item: "10.2.10", descripcion: "Empalmes y conectores globales", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Empalmes fibra", vu: "39.7", vuCOP: "174,801", total: "39.7", totalCOP: "174,801"},
             
             {id: '10.3', nivel: 2, item: "10.3", descripcion: "OBRA CIVIL", sistema: "TELECOM", tipo: "subcapitulo"},
-            {id: '10.3.1', nivel: 3, item: "10.3.1", descripcion: "Excavación asfalto + tritubo", sistema: "TELECOM", cantidad: "32028", unidad: "ML", tipo: "item", criterio: "Excavación vial", vu: "18.17", vuCOP: "79,934", total: "581,909", totalCOP: "2,559,879,352"},
-            {id: '10.3.2', nivel: 3, item: "10.3.2", descripcion: "Excavación andén + tritubo", sistema: "TELECOM", cantidad: "16014", unidad: "ML", tipo: "item", criterio: "Excavación peatonal", vu: "18.17", vuCOP: "79,934", total: "290,954", totalCOP: "1,279,939,676"},
-            {id: '10.3.3', nivel: 3, item: "10.3.3", descripcion: "Excavación blanda + tritubo", sistema: "TELECOM", cantidad: "281520", unidad: "ML", tipo: "item", criterio: "Excavación terreno", vu: "5.19", vuCOP: "22,839", total: "1,461,089", totalCOP: "6,429,469,680"},
-            {id: '10.3.4', nivel: 3, item: "10.3.4", descripcion: "Instalación cruces especiales", sistema: "TELECOM", cantidad: "13106", unidad: "ML", tipo: "item", criterio: "Instalación estructuras", vu: "11.7", vuCOP: "51,500", total: "153,340", totalCOP: "674,790,000"},
+            {id: '10.3.1', nivel: 3, item: "10.3.1", descripcion: "Excavación asfalto + tritubo", sistema: "TELECOM", cantidad: "27140", unidad: "ML", tipo: "item", criterio: "Excavación vial", vu: "18.17", vuCOP: "79,934", total: "493,134", totalCOP: "2,169,270,960"},
+            {id: '10.3.2', nivel: 3, item: "10.3.2", descripcion: "Excavación andén + tritubo", sistema: "TELECOM", cantidad: "13570", unidad: "ML", tipo: "item", criterio: "Excavación peatonal", vu: "18.17", vuCOP: "79,934", total: "246,567", totalCOP: "1,084,635,480"},
+            {id: '10.3.3', nivel: 3, item: "10.3.3", descripcion: "Excavación blanda + tritubo", sistema: "TELECOM", cantidad: "238560", unidad: "ML", tipo: "item", criterio: "Excavación terreno", vu: "5.19", vuCOP: "22,839", total: "1,238,126", totalCOP: "5,448,339,840"},
+            {id: '10.3.4', nivel: 3, item: "10.3.4", descripcion: "Instalación cruces especiales", sistema: "TELECOM", cantidad: "13920", unidad: "ML", tipo: "item", criterio: "Instalación estructuras", vu: "11.7", vuCOP: "51,500", total: "162,864", totalCOP: "716,880,000"},
             {id: '10.3.5', nivel: 3, item: "10.3.5", descripcion: "Instalación cajas empalme", sistema: "TELECOM", cantidad: "1257", unidad: "UND", tipo: "item", criterio: "Instalación cajas", vu: "111.18", vuCOP: "489,200", total: "139,754", totalCOP: "615,025,000"},
             
             {id: '10.4', nivel: 2, item: "10.4", descripcion: "HALADO E INSTALACIÓN", sistema: "TELECOM", tipo: "subcapitulo"},
-            {id: '10.4.1', nivel: 3, item: "10.4.1", descripcion: "Halado fibra óptica 48h", sistema: "TELECOM", cantidad: "314824", unidad: "ML", tipo: "item", criterio: "Halado principal", vu: "8.35", vuCOP: "36,740", total: "2,626,830", totalCOP: "11,557,332,000"},
-            {id: '10.4.2', nivel: 3, item: "10.4.2", descripcion: "Halado fibra óptica 12h", sistema: "TELECOM", cantidad: "10856", unidad: "ML", tipo: "item", criterio: "Halado secundario", vu: "30.6", vuCOP: "134,640", total: "332,153", totalCOP: "1,461,537,600"},
+            {id: '10.4.1', nivel: 3, item: "10.4.1", descripcion: "Halado fibra óptica 48h", sistema: "TELECOM", cantidad: "293190", unidad: "ML", tipo: "item", criterio: "Halado principal (longitud ducto instalado)", vu: "8.35", vuCOP: "36,740", total: "2,448,137", totalCOP: "10,772,065,600"},
+            {id: '10.4.2', nivel: 3, item: "10.4.2", descripcion: "Halado fibra óptica 12h", sistema: "TELECOM", cantidad: "9440", unidad: "ML", tipo: "item", criterio: "Halado secundario (longitud instalada)", vu: "30.6", vuCOP: "134,640", total: "288,864", totalCOP: "1,271,078,400"},
             {id: '10.4.3', nivel: 3, item: "10.4.3", descripcion: "Trabajos instalación especializada", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación completa", vu: "151,554", vuCOP: "666,837,600", total: "151,554", totalCOP: "666,837,600"},
             
         ];

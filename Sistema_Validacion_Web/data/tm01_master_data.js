@@ -111,7 +111,12 @@ class TM01MasterData {
             // CAPÍTULO 7: SISTEMA PEAJES
             {id: '7', nivel: 1, item: "7", descripcion: "SISTEMA PEAJES", sistema: "PEAJES", tipo: "capitulo"},
             {id: '7.1', nivel: 2, item: "7.1", descripcion: "SUMINISTROS PEAJES", sistema: "PEAJES", tipo: "subcapitulo"},
-            {id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Sistemas de recaudo automático", sistema: "PEAJES", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Recaudo vehicular", vu: "490,081", total: "980,161", totalCOP: "4,312,708,400"},
+            {id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Carril automático (telepeaje)", sistema: "PEAJES", cantidad: "4", unidad: "GLB", tipo: "item", criterio: "Telepeaje", vu: "72301.56", vuCOP: "318126889", total: "289206.24", totalCOP: "1272507555"},
+            {id: '7.1.2', nivel: 3, item: "7.1.2", descripcion: "Carril mixto (manual + telepeaje)", sistema: "PEAJES", cantidad: "4", unidad: "GLB", tipo: "item", criterio: "Mixto", vu: "71804.12", vuCOP: "315942105", total: "287216.46", totalCOP: "1263768420"},
+            {id: '7.1.3', nivel: 3, item: "7.1.3", descripcion: "Carril manual semiautomático (tarjetas crédito/débito)", sistema: "PEAJES", cantidad: "4", unidad: "GLB", tipo: "item", criterio: "Manual semiautomático", vu: "61692.34", vuCOP: "271446292", total: "246769.36", totalCOP: "1085785166"},
+            {id: '7.1.4', nivel: 3, item: "7.1.4", descripcion: "Carril manual reversible (doble operador + sensores)", sistema: "PEAJES", cantidad: "2", unidad: "GLB", tipo: "item", criterio: "Manual reversible", vu: "111777.53", vuCOP: "491821141", total: "223555.06", totalCOP: "983642282"},
+            {id: '7.1.5', nivel: 3, item: "7.1.5", descripcion: "Equipos estación de recaudo (servidores redundantes)", sistema: "PEAJES", cantidad: "2", unidad: "GLB", tipo: "item", criterio: "Equipamiento estación", vu: "105684.82", vuCOP: "465013188", total: "211369.64", totalCOP: "930026375"},
+            {id: '7.1.6', nivel: 3, item: "7.1.6", descripcion: "Equipos CCO central para 2 estaciones (opcional)", sistema: "PEAJES", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Servidores redundantes CCO", vu: "110227.27", vuCOP: "485000000", total: "110227.27", totalCOP: "485000000"},
             
             // CAPÍTULO 8: SISTEMA CCO
             {id: '8', nivel: 1, item: "8", descripcion: "SISTEMA CCO", sistema: "CCO", tipo: "capitulo"},

@@ -1,12 +1,12 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo y Cronograma - Sistema de Validación Web con Arquitectura Dinámica
 
-**Versión:** 13.0 - GITHUB PAGES Y PUBLICACIÓN  
-**Fecha:** 25 de Octubre 2025  
-**Estado:** ✅ **GITHUB PAGES CONFIGURADO** | ✅ **SISTEMA DE DTs AUTOMÁTICO OPERATIVO**    
+**Versión:** 14.0 - SISTEMA WEB TM01 RECONSTRUIDO  
+**Fecha:** 28 de Octubre 2025  
+**Estado:** ✅ **ARQUITECTURA WEB COMPLETA** | ✅ **DT-PEAJES-018 APLICADA**    
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 25 de octubre de 2025 - GitHub Pages y sistema de DTs automático  
+**Última actualización:** 28 de octubre de 2025 - Sistema web completo con peajes actualizados  
 **Progreso total:** ✅ **FASE 6 VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)  
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente  
@@ -107,6 +107,57 @@ Publicar el sistema de validación web en GitHub Pages para acceso público y va
 - ⏳ Implementar DTs pendientes
 - ⏳ Validación externa con Interventoría
 - ⏳ Integración con otros sistemas
+
+---
+
+## 🏗️ **DT-PEAJES-018 Y RECONSTRUCCIÓN SISTEMA WEB** (28-Oct-2025)
+
+### **Objetivo:**
+Implementar DT-PEAJES-018 con valores reales de cotización y reconstruir sistema web completo con arquitectura de 4 capas.
+
+### **Trabajo Realizado:**
+
+**1. DT-PEAJES-018 Creada:**
+- ✅ **Fecha**: 28-Oct-2025
+- ✅ **Tipo**: Cambio Técnico
+- ✅ **Sistema**: PEAJES (2 estaciones)
+- ✅ **Item WBS**: 7.1.1 actualizado con 6 items desglosados
+
+**2. Valores Integrados (COP convertidos a USD):**
+- ✅ **Carril automático (telepeaje)**: 4 carriles × $723.01K USD
+- ✅ **Carril mixto (manual+telepeaje)**: 4 carriles × $718.04K USD
+- ✅ **Carril manual semiautomático**: 4 carriles × $616.92K USD
+- ✅ **Carril manual reversible**: 2 carriles × $1.11M USD
+- ✅ **Equipos estación recaudo**: 2 estaciones × $1.05M USD
+- ✅ **Equipos CCO central**: 1 sistema × $1.10M USD
+
+**3. Sistema Web Reconstruido:**
+- ✅ **index.html** (raíz) con login GitHub Pages
+- ✅ **docs/index.html** - Portal post-login
+- ✅ **docs/WBS_Menu_Principal.html** - Menú navegación
+- ✅ **docs/wbs.html** - Vista WBS interactiva
+- ✅ **docs/layout.html** - Vista layout
+- ✅ **docs/presupuesto.html** - Dashboard presupuestal
+- ✅ **docs/data/tm01_master_data.js** - Fuente única de verdad
+- ✅ **docs/ARQUITECTURA_WEB_TM01_v1.0.md** - Documentación arquitectura
+
+**4. Arquitectura de 4 Capas Implementada:**
+- ✅ **Capa 1**: `Sistema_Validacion_Web/data/tm01_master_data.js` (fuente)
+- ✅ **Capa 2**: Scripts PowerShell de sincronización
+- ✅ **Capa 3**: `.js` intermediarios generados
+- ✅ **Capa 4**: HTML que carga datos dinámicamente
+
+### **Resultado:**
+- ✅ **Peajes actualizados**: 6 items con valores reales de cotización
+- ✅ **Sistema web operativo**: Toda la arquitectura funcionando
+- ✅ **GitHub Pages ready**: Listo para publicar en https://dieleoz.github.io/TM01/
+- ✅ **Credenciales**: 0rt1z/0rt1z para acceso seguro
+- ✅ **Documentación**: Miniarquitectura completa creada
+
+### **Valores Actualizados:**
+- **Total peajes**: ~$8.1M USD (2 estaciones completas)
+- **Presupuesto total TM01**: USD 13M (incluye todos los sistemas)
+- **Equipos en sistema**: 200+ distribuidos en 293 km
 
 ---
 
@@ -1332,11 +1383,12 @@ Durante la sesión del 20/10/2025, el usuario identificó que las "correcciones"
 
 ---
 
-**Estado del ROADMAP:** ✅ **FASE 3 COMPLETADA AL 100%** + **TABLA MAESTRA LAYOUT VALIDADA**  
-**Próximo paso:** Optimización fibra óptica (-20% CAPEX) o Fase 4 (T05 Ingeniería Detalle)  
-**Versión:** 6.9  
-**Última actualización:** 22 de octubre de 2025 (17:30) - Tabla Maestra validada (169 ITS)  
+**Estado del ROADMAP:** ✅ **FASE 6 VALIDACIÓN WEB COMPLETADA AL 100%** + **DT-PEAJES-018 APLICADA**  
+**Próximo paso:** Validación externa y refinamiento de interfaces web  
+**Versión:** 14.0  
+**Última actualización:** 28 de octubre de 2025 - Sistema web TM01 reconstruido con peajes actualizados  
 **Responsable:** Administrador Contractual EPC  
 **GitHub:** https://github.com/dieleoz/TM01  
-**Progreso:** ✅ **80 documentos generados, Tabla Maestra 1,185 elementos, validación cruzada 100%**  
-**💰 PRESUPUESTO:** USD 57.2M validado y consolidado
+**GitHub Pages:** https://dieleoz.github.io/TM01/  
+**Progreso:** ✅ **85+ documentos generados, Sistema web 100% operativo, Peajes con valores reales**  
+**💰 PRESUPUESTO:** USD 13M validado (incluye peajes con 6 items detallados)

@@ -16,14 +16,14 @@
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 ![Web_System](https://img.shields.io/badge/Web_System-Operativo-success)
 
-**Versión:** 3.4  
+**Versión:** 3.5  
 **Fecha de actualización:** 28 de Octubre 2025  
-**Estado:** ✅ SISTEMA DE VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA + GITHUB PAGES | **OPERATIVO Y ESTABLE**    
+**Estado:** ✅ DT-PEAJES-018 APLICADA + SISTEMA WEB RECONSTRUIDO | **OPERATIVO**    
 **Responsable:** Equipo Técnico TM01  
 **Metodología:** Punto 42 v1.0 + Arquitectura Dinámica 4 Capas  
 **GitHub:** https://github.com/dieleoz/TM01  
 **GitHub Pages:** https://dieleoz.github.io/TM01/  
-**Último Commit:** DT TELECOM-002 (tritubo 252.48km, halado 293.19km) + limpieza submódulo + sincronización completa  
+**Último Commit:** DT-PEAJES-018 (peajes actualizados con 6 items, sistema web reconstruido)  
 
 ---
 

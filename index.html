@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema TM01 - Troncal Magdalena | Acceso Seguro</title>
     
-    <!-- Estilos externos (Mejora de mantenibilidad - 27-Oct-2025) -->
+    <!-- Estilos externos -->
     <link rel="stylesheet" href="assets/css/portal-login.css?v=20251027">
 </head>
 <body>
@@ -75,8 +75,8 @@
 
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-value">85</div>
-                <div class="stat-label">📄 Documentos</div>
+                <div class="stat-value">24</div>
+                <div class="stat-label">📋 Items WBS</div>
             </div>
             <div class="stat-card">
                 <div class="stat-value">7</div>
@@ -93,34 +93,34 @@
         </div>
 
         <div class="portal-grid">
-            <a href="docs/WBS_COMPLETA_TODO_Interactiva_v5.0.html" class="portal-card">
+            <a href="docs/WBS_Menu_Principal.html" class="portal-card">
                 <span class="icon">📋</span>
-                <h3>WBS Completa Interactiva</h3>
-                <p>Estructura WBS con 22 items y valores optimizados</p>
+                <h3>WBS Menu Principal</h3>
+                <p>Acceso a todas las interfaces del sistema</p>
             </a>
 
             <a href="docs/wbs.html" class="portal-card">
                 <span class="icon">🎛️</span>
-                <h3>Portal WBS</h3>
-                <p>WBS simplificada con 24 items organizados</p>
+                <h3>Estructura WBS</h3>
+                <p>WBS interactiva con 24 items</p>
             </a>
 
             <a href="docs/layout.html" class="portal-card">
                 <span class="icon">🗺️</span>
                 <h3>Layout Georreferenciado</h3>
-                <p>200+ equipos distribuidos en 293 km</p>
+                <p>200+ equipos en 293 km</p>
             </a>
 
             <a href="docs/presupuesto.html" class="portal-card">
                 <span class="icon">💰</span>
                 <h3>Presupuesto Dinámico</h3>
-                <p>Dashboard presupuestal con cálculos AIU/IVA</p>
+                <p>Dashboard con cálculos AIU/IVA</p>
             </a>
 
             <a href="VII. Documentos Transversales/DTs/" class="portal-card">
                 <span class="icon">📄</span>
                 <h3>Decisiones Técnicas</h3>
-                <p>DTs con propagación automática 4 niveles</p>
+                <p>DTs con propagación automática</p>
             </a>
 
             <a href="docs/index.html" class="portal-card">
@@ -139,142 +139,6 @@
         </div>
     </div>
 
-    <script>
-        // ================================================================
-        // CONFIGURACIÓN DE AUTENTICACIÓN
-        // ================================================================
-        
-        // Credenciales del sistema
-        const VALID_CREDENTIALS = {
-            '0rt1z': '0rt1z',
-            'QA': 'qa2025',
-            'Especificador': 'spec2025',
-            'Admin': 'admin2025'
-        };
-
-        // Límite de intentos de login (Mejora de seguridad - 27-Oct-2025)
-        let intentosLogin = 0;
-        const MAX_INTENTOS = 5;
-        const TIMEOUT_BLOQUEO = 300000; // 5 minutos
-
-        // Timeout de sesión (Mejora de seguridad - 27-Oct-2025)
-        const TIMEOUT_SESION = 1800000; // 30 minutos
-        let ultimaActividad = Date.now();
-
-        // ================================================================
-        // VERIFICAR SESIÓN EXISTENTE
-        // ================================================================
-        window.addEventListener('DOMContentLoaded', function() {
-            const isAuthenticated = sessionStorage.getItem('authenticated') === 'true';
-            const username = sessionStorage.getItem('username');
-            
-            if (isAuthenticated && username) {
-                showPortal(username);
-                iniciarMonitoreoSesion();
-            }
-        });
-
-        // ================================================================
-        // MANEJO DE LOGIN
-        // ================================================================
-        function handleLogin(event) {
-            event.preventDefault();
-            
-            // Verificar límite de intentos
-            if (intentosLogin >= MAX_INTENTOS) {
-                alert('⚠️ Demasiados intentos fallidos. Por favor, espera 5 minutos.');
-                return false;
-            }
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('errorMessage');
-            const spinner = document.getElementById('spinner');
-            
-            // Ocultar error previo
-            errorMessage.classList.remove('show');
-            
-            // Mostrar spinner
-            spinner.classList.add('show');
-            
-            // Simular validación (300ms delay para UX)
-            setTimeout(() => {
-                spinner.classList.remove('show');
-                
-                if (VALID_CREDENTIALS[username] && VALID_CREDENTIALS[username] === password) {
-                    // Login exitoso
-                    intentosLogin = 0; // Resetear contador
-                    sessionStorage.setItem('authenticated', 'true');
-                    sessionStorage.setItem('username', username);
-                    showPortal(username);
-                    iniciarMonitoreoSesion();
-                } else {
-                    // Login fallido
-                    intentosLogin++;
-                    errorMessage.textContent = `❌ Usuario o contraseña incorrectos (${intentosLogin}/${MAX_INTENTOS})`;
-                    errorMessage.classList.add('show');
-                    document.getElementById('password').value = '';
-                    document.getElementById('password').focus();
-                    
-                    // Bloquear tras MAX_INTENTOS
-                    if (intentosLogin >= MAX_INTENTOS) {
-                        errorMessage.textContent = '🔒 Demasiados intentos. Bloqueado por 5 minutos.';
-                        setTimeout(() => {
-                            intentosLogin = 0;
-                            errorMessage.classList.remove('show');
-                        }, TIMEOUT_BLOQUEO);
-                    }
-                }
-            }, 300);
-            
-            return false;
-        }
-
-        // ================================================================
-        // MOSTRAR PORTAL
-        // ================================================================
-        function showPortal(username) {
-            document.getElementById('loginContainer').style.display = 'none';
-            document.getElementById('portalContainer').classList.add('show');
-            document.getElementById('userDisplay').textContent = username;
-        }
-
-        // ================================================================
-        // MANEJO DE LOGOUT
-        // ================================================================
-        function handleLogout() {
-            if (confirm('¿Está seguro de que desea cerrar sesión?')) {
-                sessionStorage.removeItem('authenticated');
-                sessionStorage.removeItem('username');
-                window.location.reload();
-            }
-        }
-
-        // ================================================================
-        // MONITOREO DE SESIÓN
-        // ================================================================
-        function iniciarMonitoreoSesion() {
-            // Actualizar actividad
-            document.addEventListener('mousemove', () => {
-                ultimaActividad = Date.now();
-            });
-            
-            document.addEventListener('keypress', () => {
-                ultimaActividad = Date.now();
-            });
-            
-            // Verificar timeout cada minuto
-            setInterval(() => {
-                const tiempoInactivo = Date.now() - ultimaActividad;
-                
-                if (tiempoInactivo > TIMEOUT_SESION) {
-                    alert('⚠️ Tu sesión ha expirado por inactividad. Serás redirigido al login.');
-                    sessionStorage.removeItem('authenticated');
-                    sessionStorage.removeItem('username');
-                    window.location.reload();
-                }
-            }, 60000); // Verificar cada minuto
-        }
-    </script>
+    <script src="assets/js/login.js?v=20251027"></script>
 </body>
 </html>
