@@ -111,30 +111,26 @@
                 </div>
             </div>
             
-            <p style="margin-top: 30px; color: #999;">📊 Los datos se cargan dinámicamente desde presupuesto_datos.js</p>
+            <p style="margin-top: 30px; color: #999;">📊 Los datos se cargan dinámicamente desde tm01_master_data.js</p>
             <p style="margin-top: 10px; color: #999;">Última actualización: <span id="lastUpdate"></span></p>
         </div>
     </div>
 
     <script src="data/tm01_master_data.js"></script>
-    
     <script>
-        const tm01Data = new TM01MasterData();
-        const presupuestoData = tm01Data.data.presupuesto;
-        
         document.addEventListener('DOMContentLoaded', function() {
-            const totalUSD = presupuestoData.reduce((sum, item) => {
-                return sum + (parseFloat(item.total) || 0);
-            }, 0);
-            const totalCOP = presupuestoData.reduce((sum, item) => {
-                return sum + (parseFloat(item.totalCOP || 0));
-            }, 0);
-            const totalItems = presupuestoData.length;
-            
-            document.getElementById('totalPresupuesto').textContent = `$${(totalUSD / 1000000).toFixed(2)}M`;
-            document.getElementById('totalPresupuestoCOP').textContent = `$${(totalCOP / 1000000000).toFixed(2)}B`;
-            document.getElementById('totalItems').textContent = totalItems;
-            document.getElementById('lastUpdate').textContent = new Date().toLocaleString('es-CO');
+            try {
+                const tm01Data = new TM01MasterData();
+                const presupuestoData = tm01Data.data.presupuesto || [];
+                const totalUSD = presupuestoData.reduce((sum, item) => sum + (parseFloat(item.total) || 0), 0);
+                const totalCOP = presupuestoData.reduce((sum, item) => sum + (parseFloat(item.totalCOP || 0)), 0);
+                const totalItems = presupuestoData.length;
+                
+                document.getElementById('totalPresupuesto').textContent = `$${(totalUSD / 1_000_000).toFixed(2)}M`;
+                document.getElementById('totalPresupuestoCOP').textContent = `$${(totalCOP / 1_000_000_000).toFixed(2)}B`;
+                document.getElementById('totalItems').textContent = totalItems.toString();
+                document.getElementById('lastUpdate').textContent = new Date().toLocaleString('es-CO');
+            } catch(e) { }
         });
     </script>
 </body>

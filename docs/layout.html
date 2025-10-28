@@ -64,28 +64,51 @@
         </div>
         
         <div class="content">
-            <p>📊 Esta vista cargará el mapa interactivo con los equipos distribuidos en los 293 km de la troncal.</p>
-            <p style="margin-top: 20px;">Cargando datos desde layout_datos.js...</p>
+            <p>📊 Resumen de equipos distribuidos en los 293 km de la troncal.</p>
+            <p style="margin-top: 20px;">Datos desde <code>tm01_master_data.js</code>.</p>
             <div id="layoutStats" style="margin-top: 30px; font-size: 14px;"></div>
+            <div id="tablaSistemas" style="margin-top: 20px; text-align:left;"></div>
         </div>
     </div>
 
     <script src="data/tm01_master_data.js"></script>
-    
     <script>
-        const tm01Data = new TM01MasterData();
-        const layoutData = tm01Data.data.layout;
-        
         document.addEventListener('DOMContentLoaded', function() {
-            const statsDiv = document.getElementById('layoutStats');
-            const totalEquipos = layoutData.length;
-            const sistemas = [...new Set(layoutData.map(item => item.sistema))].length;
-            
-            statsDiv.innerHTML = `
-                <p>✅ Total equipos: ${totalEquipos}</p>
-                <p>✅ Sistemas: ${sistemas}</p>
-                <p>✅ Longitud: 293 km</p>
-            `;
+            try {
+                const tm01Data = new TM01MasterData();
+                const layoutData = tm01Data.data.layout || [];
+
+                const statsDiv = document.getElementById('layoutStats');
+                const totalEquipos = layoutData.length;
+                const sistemasSet = new Set(layoutData.map(i => i.sistema));
+
+                statsDiv.innerHTML = `
+                    <p>✅ Total equipos: ${totalEquipos}</p>
+                    <p>✅ Sistemas: ${sistemasSet.size}</p>
+                    <p>✅ Longitud: 293 km</p>
+                `;
+
+                // Conteo por sistema
+                const conteo = {};
+                layoutData.forEach(i => { conteo[i.sistema] = (conteo[i.sistema]||0)+1; });
+                const rows = Object.entries(conteo)
+                    .sort((a,b)=>b[1]-a[1])
+                    .map(([s,c])=>`<tr><td style="padding:6px 10px;">${s}</td><td style="padding:6px 10px; text-align:right;">${c}</td></tr>`)
+                    .join('');
+                document.getElementById('tablaSistemas').innerHTML = `
+                    <h3 style="margin:20px 0 10px; color:#444;">Equipos por sistema</h3>
+                    <table style="width:100%; border-collapse:collapse;">
+                        <thead>
+                            <tr style="background:#f1f3f5; text-align:left;">
+                                <th style="padding:8px 10px;">Sistema</th>
+                                <th style="padding:8px 10px; text-align:right;">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>${rows}</tbody>
+                    </table>`;
+            } catch(e) {
+                // Evitar bloqueo si faltan datos
+            }
         });
     </script>
 </body>
