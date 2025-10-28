@@ -43,18 +43,42 @@
     </style>
 </head>
 <body>
-    <div id="loginBox" style="max-width:420px;margin:40px auto 20px;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.25);padding:24px 24px 18px;display:none;">
-        <h2 style="margin-bottom:6px;color:#667eea;">🔐 Acceso</h2>
-        <p style="margin:0 0 14px;color:#666;font-size:14px;">Ingrese sus credenciales para continuar</p>
-        <div style="display:flex;flex-direction:column;gap:10px;">
-            <input id="u" placeholder="Usuario" autocomplete="username" style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;" />
-            <input id="p" type="password" placeholder="Contraseña" autocomplete="current-password" style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;" />
-            <button id="btnLogin" style="padding:10px 14px;border:none;border-radius:8px;background:#667eea;color:#fff;font-weight:600;cursor:pointer;">Acceder</button>
-            <div id="err" style="display:none;color:#c0392b;font-size:13px;">Credenciales inválidas</div>
+    <!-- LOGIN FORM (copiado del ejemplo, adaptado a TM01) -->
+    <div class="login-container" id="loginContainer" style="max-width:520px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.25);padding:24px;">
+        <div class="logo" style="text-align:center;margin-bottom:12px;">
+            <h1 style="margin:0 0 6px;">🏗️ Sistema TM01</h1>
+            <p style="margin:0;color:#666;">Troncal Magdalena</p>
+            <span class="project-badge" style="display:inline-block;margin-top:6px;color:#667eea;">v3.3 | Acceso Seguro</span>
         </div>
+
+        <form id="loginForm" onsubmit="return handleLogin(event)" style="display:flex;flex-direction:column;gap:12px;">
+            <div class="form-group">
+                <label for="username">👤 Usuario</label>
+                <input type="text" id="username" placeholder="Ingrese su usuario" autocomplete="username" required style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;">
+            </div>
+
+            <div class="form-group">
+                <label for="password">🔒 Contraseña</label>
+                <input type="password" id="password" placeholder="Ingrese su contraseña" autocomplete="current-password" required style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;">
+            </div>
+
+            <button type="submit" class="btn-login" style="padding:10px 14px;border:none;border-radius:8px;background:#667eea;color:#fff;font-weight:600;cursor:pointer;">Acceder al Sistema</button>
+
+            <div class="spinner" id="spinner" style="display:none;height:18px;"></div>
+            <div class="error-message" id="errorMessage" style="display:none;color:#c0392b;font-size:13px;">❌ Usuario o contraseña incorrectos</div>
+        </form>
+
+        <div class="info-box" style="margin-top:12px;color:#666;font-size:13px;">
+            <h3 style="margin:0 0 6px;">📋 Información del Sistema</h3>
+            <p style="margin:0 0 8px;">Sistema de Validación Web TM01 con arquitectura dinámica de 4 capas, gestión de DTs y sincronización automática.</p>
+            <p style="margin:0;color:#999;">ℹ️ Solicitar credenciales a PMO</p>
+        </div>
+
+        <div class="version" style="margin-top:10px;text-align:center;color:#999;">Sistema v3.3 | Octubre 2025 | TM01 Troncal Magdalena</div>
     </div>
 
-    <div class="container" id="contentContainer" style="display:none;">
+    <!-- PORTAL PRINCIPAL (después del login) -->
+    <div class="container" id="portalContainer" style="display:none;">
         <div class="header">
             <h1>🚀 Proyecto TM01</h1>
             <p class="subtitle">Asociación Público-Privada (APP)<br>Puerto Salgar - Barrancabermeja</p>
@@ -93,47 +117,83 @@
     </div>
 
     <script>
-        (function(){
-            const AUTH_KEY = 'tm01_auth';
-            const VALID = { '0rt1z':'0rt1z' };
-            const loginBox = document.getElementById('loginBox');
-            const content = document.getElementById('contentContainer');
+        // ================================================================
+        // CONFIGURACIÓN DE AUTENTICACIÓN (alineada al ejemplo)
+        // ================================================================
+        const VALID_USER = '0rt1z';
+        const VALID_PASSWORD = '0rt1z';
+        let intentosLogin = 0;
+        const MAX_INTENTOS = 5;
+        const TIMEOUT_BLOQUEO = 300000; // 5 minutos
+        const TIMEOUT_SESION = 1800000; // 30 minutos
+        let ultimaActividad = Date.now();
 
-            function isAuth(){ return sessionStorage.getItem(AUTH_KEY)==='true'; }
-            function showLogin(){ loginBox.style.display='block'; }
-            function showContent(){ content.style.display='block'; }
-
-            function tryAuto(){
-                if(isAuth()) { window.location.href = 'docs/index.html'; return; }
-                showLogin();
+        window.addEventListener('DOMContentLoaded', function() {
+            const isAuthenticated = sessionStorage.getItem('authenticated') === 'true';
+            const username = sessionStorage.getItem('username');
+            if (isAuthenticated && username) {
+                showPortal(username);
+                iniciarMonitoreoSesion();
             }
+        });
 
-            document.getElementById('btnLogin').addEventListener('click', function(){
-                const u = (document.getElementById('u').value||'').trim();
-                const p = (document.getElementById('p').value||'').trim();
-                if(VALID[u] && VALID[u]===p){
-                    sessionStorage.setItem(AUTH_KEY,'true');
-                    sessionStorage.setItem('username', u);
+        function handleLogin(event) {
+            event.preventDefault();
+            if (intentosLogin >= MAX_INTENTOS) { alert('⚠️ Demasiados intentos fallidos. Espera 5 minutos.'); return false; }
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+            const spinner = document.getElementById('spinner');
+            errorMessage.style.display = 'none';
+            spinner.style.display = 'block';
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                if (username === VALID_USER && password === VALID_PASSWORD) {
+                    intentosLogin = 0;
+                    sessionStorage.setItem('authenticated', 'true');
+                    sessionStorage.setItem('username', username);
+                    showPortal(username);
+                    iniciarMonitoreoSesion();
+                    // Redirigir al portal docs
                     window.location.href = 'docs/index.html';
                 } else {
-                    const err = document.getElementById('err');
-                    err.style.display = 'block';
-                    setTimeout(()=>{err.style.display='none';}, 2500);
+                    intentosLogin++;
+                    errorMessage.textContent = `❌ Usuario o contraseña incorrectos (${intentosLogin}/${MAX_INTENTOS})`;
+                    errorMessage.style.display = 'block';
+                    document.getElementById('password').value = '';
+                    document.getElementById('password').focus();
+                    if (intentosLogin >= MAX_INTENTOS) {
+                        errorMessage.textContent = '🔒 Demasiados intentos. Bloqueado por 5 minutos.';
+                        setTimeout(() => { intentosLogin = 0; errorMessage.style.display = 'none'; }, TIMEOUT_BLOQUEO);
+                    }
                 }
-            });
+            }, 300);
+            return false;
+        }
 
-            // Enter submits
-            ['u','p'].forEach(id=>{
-                document.getElementById(id).addEventListener('keypress', (e)=>{
-                    if(e.key==='Enter') document.getElementById('btnLogin').click();
-                });
-            });
+        function showPortal(username) {
+            document.getElementById('loginContainer').style.display = 'none';
+            document.getElementById('portalContainer').style.display = 'block';
+            const badge = document.createElement('div');
+            badge.style.display = 'none'; // no mostramos user en landing
+        }
 
-            // Init
-            tryAuto();
-            // Mostrar contenido no autenticado (landing) detrás del login (opcional)
-            showContent();
-        })();
+        function handleLogout() {
+            sessionStorage.removeItem('authenticated');
+            sessionStorage.removeItem('username');
+            window.location.reload();
+        }
+
+        function iniciarMonitoreoSesion() {
+            document.addEventListener('mousemove', () => { ultimaActividad = Date.now(); });
+            document.addEventListener('keypress', () => { ultimaActividad = Date.now(); });
+            setInterval(() => {
+                if (Date.now() - ultimaActividad > TIMEOUT_SESION) {
+                    alert('⚠️ Tu sesión ha expirado por inactividad. Serás redirigido al login.');
+                    handleLogout();
+                }
+            }, 60000);
+        }
     </script>
 </body>
 </html>
