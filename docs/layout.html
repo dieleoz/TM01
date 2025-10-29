@@ -3,137 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Georreferenciado - TM01 Troncal Magdalena</title>
+    <title>LAYOUT MAESTRO - TM01 Troncal Magdalena</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        .content {
-            padding: 30px;
-            text-align: center;
-            color: #666;
-            font-size: 16px;
-        }
-        .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-        .back-btn:hover {
-            background: rgba(255,255,255,0.3);
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; }
+        
+        .container { max-width: 1800px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        
+        .header { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 30px; text-align: center; border-radius: 12px 12px 0 0; position: relative; }
+        .header h1 { font-size: 32px; margin-bottom: 10px; }
+        .header p { font-size: 16px; opacity: 0.95; }
+        .back-btn { position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.2); color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+        .back-btn:hover { background: rgba(255,255,255,0.3); }
+        
+        .filters { padding: 20px; background: #f8f9fa; border-bottom: 2px solid #11998e; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .filter-group { display: flex; flex-direction: column; }
+        .filter-group label { font-size: 12px; font-weight: 600; color: #495057; margin-bottom: 5px; }
+        .filter-group select, .filter-group input { padding: 10px; border: 2px solid #dee2e6; border-radius: 6px; font-size: 14px; }
+        
+        .filter-actions { padding: 15px 20px; background: #e9ecef; display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn { padding: 10px 20px; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .btn-primary { background: #11998e; color: white; }
+        .btn-primary:hover { background: #0d7a6e; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(17,153,142,0.4); }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        
+        .stats { padding: 15px 20px; background: #d1ecf1; border-bottom: 2px solid #0c5460; text-align: center; }
+        .stats-content { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 28px; font-weight: 700; color: #11998e; }
+        .stat-label { font-size: 12px; color: #666; margin-top: 5px; }
+        
+        .table-container { padding: 20px; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        thead { background: #11998e; color: white; position: sticky; top: 0; z-index: 10; }
+        th { padding: 12px; text-align: left; font-size: 13px; font-weight: 600; }
+        tbody tr { border-bottom: 1px solid #dee2e6; transition: background 0.2s; }
+        tbody tr:hover { background: #f8f9fa; }
+        td { padding: 10px 12px; font-size: 13px; }
+        
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+        .badge-sos { background: #e3f2fd; color: #1976d2; }
+        .badge-etd { background: #fff3e0; color: #f57c00; }
+        .badge-cctv { background: #e8f5e9; color: #388e3c; }
+        .badge-pmv { background: #fff8e1; color: #fbc02d; }
+        .badge-meteo { background: #f3e5f5; color: #7b1fa2; }
+        .badge-wim { background: #ffe0b2; color: #e65100; }
+        
+        .empty-state { padding: 60px 20px; text-align: center; color: #6c757d; }
+        .empty-state-icon { font-size: 64px; margin-bottom: 20px; }
+        
+        .alert { padding: 15px 20px; margin: 20px; border-radius: 6px; font-size: 14px; }
+        .alert-info { background: #d1ecf1; border-left: 4px solid #0c5460; color: #0c5460; }
+        .alert-warning { background: #fff3cd; border-left: 4px solid #856404; color: #856404; }
+        
+        .footer { background: #343a40; color: white; padding: 20px; text-align: center; font-size: 14px; border-radius: 0 0 12px 12px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <button class="back-btn" onclick="window.location.href='index.html'">← Volver al Dashboard</button>
-            <h1>🗺️ Layout Georreferenciado</h1>
-            <p>Sistema TM01 Troncal Magdalena - Distribución de Equipos</p>
+            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">← Volver al Menú</button>
+            <h1>🗺️ LAYOUT MAESTRO INTERACTIVO</h1>
+            <p>TM01 Troncal Magdalena | Sistema Integrado de Equipamiento e Infraestructura</p>
         </div>
         
-        <div class="content">
-            <p>📊 Resumen de equipos distribuidos en los 293 km de la troncal.</p>
-            <p style="margin-top: 20px;">Datos desde <code>tm01_master_data.js</code>.</p>
-            <div style="margin: 20px 0;">
-                <label for="filtroSistema" style="margin-right:8px;">Sistema:</label>
-                <select id="filtroSistema" style="padding:6px 10px;">
-                    <option value="">Todos</option>
+        <div class="alert alert-info" id="alertInfo">
+            ⏳ Cargando datos del layout desde tm01_master_data.js...
+        </div>
+        
+        <!-- Filtros -->
+        <div class="filters">
+            <div class="filter-group">
+                <label>🔧 Sistema:</label>
+                <select id="filter-sistema" onchange="applyFilters();">
+                    <option value="">Todos los sistemas</option>
                 </select>
-                <input id="buscarNombre" placeholder="Buscar por nombre..." style="padding:6px 10px; margin-left:8px; width:240px;"/>
             </div>
-            <div id="layoutStats" style="margin-top: 10px; font-size: 14px;"></div>
-            <div id="tablaSistemas" style="margin-top: 20px; text-align:left;"></div>
-            <div id="listaEquipos" style="margin-top: 10px; text-align:left;"></div>
+            <div class="filter-group">
+                <label>🔍 Buscar:</label>
+                <input type="text" id="filter-buscar" placeholder="Buscar por nombre..." oninput="applyFilters();">
+            </div>
+        </div>
+        
+        <!-- Acciones -->
+        <div class="filter-actions">
+            <button class="btn btn-primary" onclick="applyFilters();">🔍 Aplicar Filtros</button>
+            <button class="btn btn-secondary" onclick="clearFilters();">🔄 Limpiar</button>
+            <button class="btn btn-success" onclick="exportarCSV();">📊 Exportar CSV</button>
+        </div>
+        
+        <!-- Estadísticas -->
+        <div class="stats">
+            <div class="stats-content" id="stats-content">
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-total">0</div>
+                    <div class="stat-label">Total Elementos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-filtered">0</div>
+                    <div class="stat-label">Filtrados</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tabla -->
+        <div class="table-container">
+            <table id="layout-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Sistema</th>
+                        <th>Cantidad</th>
+                        <th>Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody id="layout-tbody">
+                    <tr>
+                        <td colspan="5" class="empty-state">
+                            <div class="empty-state-icon">⏳</div>
+                            <div>Cargando datos del layout...</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 TM01 Troncal Magdalena | Sistema WBS Interactivo v1.0</p>
+            <p style="margin-top: 5px; font-size: 12px; opacity: 0.8;">Layout generado desde tm01_master_data.js</p>
         </div>
     </div>
 
     <script src="data/tm01_master_data.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            try {
-                const tm01Data = new TM01MasterData();
-                const layoutData = tm01Data.data.layout || [];
-
-                const statsDiv = document.getElementById('layoutStats');
-                const totalEquipos = layoutData.length;
-                const sistemasSet = new Set(layoutData.map(i => i.sistema));
-
-                statsDiv.innerHTML = `
-                    <p>✅ Total equipos: ${totalEquipos}</p>
-                    <p>✅ Sistemas: ${sistemasSet.size}</p>
-                    <p>✅ Longitud: 293 km</p>
-                `;
-
-                // Filtros
-                const selectSis = document.getElementById('filtroSistema');
-                ;[...sistemasSet].sort().forEach(s => { const o=document.createElement('option'); o.value=s; o.textContent=s; selectSis.appendChild(o); });
-                document.getElementById('buscarNombre').addEventListener('input', renderListado);
-                selectSis.addEventListener('change', renderListado);
-
-                // Conteo por sistema
-                const conteo = {};
-                layoutData.forEach(i => { conteo[i.sistema] = (conteo[i.sistema]||0)+1; });
-                const rows = Object.entries(conteo)
-                    .sort((a,b)=>b[1]-a[1])
-                    .map(([s,c])=>`<tr><td style="padding:6px 10px;">${s}</td><td style="padding:6px 10px; text-align:right;">${c}</td></tr>`)
-                    .join('');
-                document.getElementById('tablaSistemas').innerHTML = `
-                    <h3 style="margin:20px 0 10px; color:#444;">Equipos por sistema</h3>
-                    <table style="width:100%; border-collapse:collapse;">
-                        <thead>
-                            <tr style="background:#f1f3f5; text-align:left;">
-                                <th style="padding:8px 10px;">Sistema</th>
-                                <th style="padding:8px 10px; text-align:right;">Cantidad</th>
-                            </tr>
-                        </thead>
-                        <tbody>${rows}</tbody>
-                    </table>`;
-
-                function renderListado(){
-                    const filtro = (document.getElementById('filtroSistema').value)||'';
-                    const q = (document.getElementById('buscarNombre').value||'').toLowerCase();
-                    const filtrados = layoutData.filter(i => (!filtro || i.sistema===filtro) && (!q || (i.nombre||'').toLowerCase().includes(q)));
-                    const items = filtrados.slice(0,200).map(i=>`<li style=\"padding:4px 0;\">${i.sistema} — ${i.nombre} (${i.cantidad})</li>`).join('');
-                    document.getElementById('listaEquipos').innerHTML = `<h3 style=\"margin:20px 0 10px; color:#444;\">Listado (máx 200)</h3><ul style=\"margin-left:18px;\">${items}</ul>`;
-                }
-                renderListado();
-            } catch(e) {
-                // Evitar bloqueo si faltan datos
-            }
+        let allData = [];
+        let filteredData = [];
+        
+        // Inicializar cuando el DOM esté listo
+        window.addEventListener('DOMContentLoaded', function() {
+            initLayout();
         });
+        
+        function initLayout() {
+            try {
+                console.log('🔄 Iniciando carga de layout...');
+                
+                // Esperar a que TM01MasterData esté disponible
+                if (typeof TM01MasterData === 'undefined') {
+                    console.warn('⚠️ TM01MasterData no disponible, reintentando...');
+                    setTimeout(initLayout, 100);
+                    return;
+                }
+                
+                // Obtener o crear instancia
+                let tm01Data;
+                if (typeof window.tm01MasterData !== 'undefined' && window.tm01MasterData instanceof TM01MasterData) {
+                    tm01Data = window.tm01MasterData;
+                    console.log('✅ Usando instancia global tm01MasterData');
+                } else {
+                    tm01Data = new TM01MasterData();
+                    console.log('✅ Creando nueva instancia TM01MasterData');
+                }
+                
+                // Obtener datos de layout
+                const layoutData = tm01Data.data.layout || [];
+                console.log('📊 Datos de layout obtenidos:', layoutData.length, 'elementos');
+                
+                if (layoutData.length === 0) {
+                    console.warn('⚠️ No hay datos de layout disponibles');
+                    mostrarError('No hay datos de layout disponibles. Verifica que los datos WBS estén cargados correctamente.');
+                    return;
+                }
+                
+                // Preparar datos para mostrar
+                allData = layoutData.map((item, index) => ({
+                    id: item.id || `ITEM-${index}`,
+                    nombre: item.nombre || item.descripcion || 'Sin nombre',
+                    sistema: item.sistema || 'N/A',
+                    cantidad: item.cantidad || 1,
+                    ubicacion: item.ubicacion || 'Por definir',
+                    coordenadas: item.coordenadas || null
+                }));
+                
+                console.log('✅ Datos procesados:', allData.length, 'elementos');
+                
+                // Ocultar alerta de carga
+                document.getElementById('alertInfo').style.display = 'none';
+                
+                // Poblar filtros y renderizar
+                poblarFiltros();
+                applyFilters();
+                actualizarEstadisticas();
+                
+            } catch (error) {
+                console.error('❌ Error cargando layout:', error);
+                mostrarErrorMX('Error al cargar datos: ' + error.message);
+            }
+        }
+        
+        function mostrarError(mensaje) {
+            document.getElementById('alertInfo').className = 'alert alert-warning';
+            document.getElementById('alertInfo').innerHTML = '⚠️ <strong>Error:</strong> ' + mensaje;
+            document.getElementById('layout-tbody').innerHTML = 
+                '<tr><td colspan="5" class="empty-state"><div class="empty-state-icon">❌</div><div>' + mensaje + '</div></td></tr>';
+        }
+        
+        function poblarFiltros() {
+            const sistemasSet = new Set();
+            allData.forEach(item => {
+                if (item.sistema) sistemasSet.add(item.sistema);
+            });
+            
+            const sistemaSelect = document.getElementById('filter-sistema');
+            sistemaSelect.innerHTML = '<option value="">Todos los sistemas</option>';
+            
+            Array.from(sistemasSet).sort().forEach(sistema => {
+                const option = document.createElement('option');
+                option.value = sistema;
+                option.textContent = sistema;
+                sistemaSelect.appendChild(option);
+            });
+        }
+        
+        function applyFilters() {
+            const sistemaFilter = document.getElementById('filter-sistema').value;
+            const buscarFilter = (document.getElementById('filter-buscar').value || '').toLowerCase();
+            
+            filteredData = allData.filter(item => {
+                if (sistemaFilter && item.sistema !== sistemaFilter) return false;
+                if (buscarFilter && !item.nombre.toLowerCase().includes(buscarFilter)) return false;
+                return true;
+            });
+            
+            renderTable();
+            actualizarEstadisticas();
+        }
+        
+        function clearFilters() {
+            document.getElementById('filter-sistema').value = '';
+            document.getElementById('filter-buscar').value = '';
+            applyFilters();
+        }
+        
+        function renderTable() {
+            const tbody = document.getElementById('layout-tbody');
+            
+            if (filteredData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="empty-state"><div class="empty-state-icon">🔍</div><div>No se encontraron resultados con los filtros aplicados</div></td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = filteredData.map(item => {
+                const badgeClass = `badge badge-${(item.sistema || '').toLowerCase().replace(/[\/\s]+/g, '-')}`;
+                return `
+                    <tr>
+                        <td><strong>${item.id}</strong></td>
+                        <td>${item.nombre}</td>
+                        <td><span class="${badgeClass}">${item.sistema}</span></td>
+                        <td style="text-align: center;">${item.cantidad}</td>
+                        <td>${item.ubicacion}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        function actualizarEstadisticas() {
+            document.getElementById('stat-total').textContent = allData.length;
+            document.getElementById('stat-filtered').textContent = filteredData.length;
+        }
+        
+        function exportarCSV() {
+            if (filteredData.length === 0) {
+                alert('No hay datos para exportar');
+                return;
+            }
+            
+            const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'Ubicación'];
+            const rows = filteredData.map(item => [
+                item.id,
+                item.nombre,
+                item.sistema,
+                item.cantidad,
+                item.ubicacion
+            ]);
+            
+            const csv = [headers.join(','), ...rows.map(r => r.map(c => `"${c}"`).join(','))].join('\n');
+            
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `layout_tm01_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
     </script>
 </body>
 </html>
-
