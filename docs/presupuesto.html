@@ -549,7 +549,7 @@
                         ws['!cols'] = [ {wch:40},{wch:24},{wch:20},{wch:20},{wch:22},{wch:18},{wch:16},{wch:20},{wch:16} ];
                         const wb = XLSX.utils.book_new();
                         XLSX.utils.book_append_sheet(wb, ws, 'Desglose AIU');
-                        const fname = `Desglose_AIU_TM01_${new Date().toISOString().split('T')[0]}.xlsx`;
+                        const fname = 'Desglose_AIU_TM01_' + new Date().toISOString().split('T')[0] + '.xlsx';
                         XLSX.writeFile(wb, fname);
                     }
                 <\/script>
