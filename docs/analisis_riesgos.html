@@ -3,29 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TM01 | Análisis de Riesgos</title>
+  <title>Análisis de Riesgos - TM01 Troncal Magdalena</title>
   <style>
-    body { font-family: Segoe UI, Tahoma, sans-serif; margin:0; background:#0f172a; color:#e2e8f0; }
-    .top { display:flex; align-items:center; justify-content:space-between; padding:14px 16px; background:#111827; border-bottom:1px solid #1f2937; }
-    .top h1 { font-size:16px; margin:0; }
-    .btn { padding:8px 12px; border-radius:6px; border:1px solid #334155; background:#0b1220; color:#e5e7eb; cursor:pointer; text-decoration:none; }
-    .content { padding:16px; }
-    .placeholder { background:#0b1220; border:1px dashed #334155; border-radius:10px; padding:18px; color:#94a3b8; }
+    body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;margin:0;background:#0f172a;color:#e2e8f0}
+    .top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#111827;border-bottom:1px solid #1f2937}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid #334155;background:#0b1220;color:#e5e7eb;cursor:pointer}
+    .btn-primary{background:#2563eb;border-color:#2563eb}
+    .btn-success{background:#16a34a;border-color:#16a34a}
+    .wrap{max-width:1300px;margin:0 auto;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .metric{background:#111827;border:1px solid #1f2937;padding:14px;border-radius:10px}
+    .metric .val{font-size:22px;font-weight:800;color:#93c5fd}
+    .metric .lab{font-size:12px;color:#94a3b8;margin-top:6px}
+    .panel{background:#0b1220;border:1px solid #1f2937;border-radius:12px;margin-top:16px}
+    .panel h2{margin:0;padding:12px 14px;border-bottom:1px solid #1f2937;color:#c7d2fe;font-size:18px}
+    .panel .content{padding:14px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    select,input{padding:8px 10px;border-radius:6px;border:1px solid #334155;background:#0b1220;color:#e5e7eb}
+    .matrix{display:grid;grid-template-columns:80px repeat(5,1fr);gap:6px;margin-top:8px}
+    .cell{background:#0b1220;border:1px solid #1f2937;border-radius:8px;min-height:64px;padding:6px}
+    .cell.h{background:#172554;color:#93c5fd;text-align:center;font-weight:700}
+    .risk{background:#111827;border:1px solid #1f2937;border-radius:6px;padding:6px;margin:4px 0;font-size:12px}
+    .R{background:#7f1d1d;border-color:#ef4444}.M{background:#78350f;border-color:#f59e0b}.B{background:#064e3b;border-color:#34d399}
+    table{width:100%;border-collapse:collapse;background:#0b1220;border:1px solid #1f2937}
+    th{background:#0f172a;color:#e2e8f0;padding:10px;text-align:left;font-size:13px}
+    td{padding:10px;border-top:1px solid #1f2937;font-size:13px;color:#cbd5e1}
+    .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700}
+    .tR{background:#fecaca;color:#7f1d1d}.tM{background:#fde68a;color:#78350f}.tB{background:#bbf7d0;color:#064e3b}
+    @media print{.top{display:none} body{background:#fff;color:#000} .panel,.metric{border-color:#ddd}}
   </style>
 </head>
 <body>
   <div class="top">
-    <h1>⚠️ Análisis de Riesgos</h1>
-    <div>
-      <a class="btn" href="WBS_Menu_Principal.html">Volver al Menú</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">← Menú</button>
+      <strong>⚠️ Análisis de Riesgos</strong>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
+      <button class="btn btn-success" onclick="exportarExcel()">📤 Exportar Excel</button>
     </div>
   </div>
-  <div class="content">
-    <div class="placeholder">
-      Vista stub. Próximo paso: importar `riesgos_proyecto.js` / `riesgos_wbs.js` y pintar matriz y detalle desde `tm01_master_data`.
+
+  <div class="wrap">
+    <div class="grid">
+      <div class="metric"><div class="val" id="mTotal">-</div><div class="lab">Riesgos</div></div>
+      <div class="metric"><div class="val" id="mAltos">-</div><div class="lab">Riesgos Altos</div></div>
+      <div class="metric"><div class="val" id="mMedios">-</div><div class="lab">Riesgos Medios</div></div>
+      <div class="metric"><div class="val" id="mBajos">-</div><div class="lab">Riesgos Bajos</div></div>
+    </div>
+
+    <div class="panel">
+      <h2>🎛️ Filtros</h2>
+      <div class="content filters">
+        <select id="fSeveridad" onchange="aplicarFiltros()"><option value="">Todas las severidades</option><option>ALTO</option><option>MEDIO</option><option>BAJO</option></select>
+        <select id="fCategoria" onchange="aplicarFiltros()"><option value="">Todas las categorías</option></select>
+        <input id="fBuscar" placeholder="Buscar riesgo" oninput="aplicarFiltros()"/>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>🧭 Matriz Probabilidad vs Impacto</h2>
+      <div class="content" id="matrix"></div>
+    </div>
+
+    <div class="panel">
+      <h2>📋 Listado de Riesgos</h2>
+      <div class="content">
+        <table id="tabla">
+          <thead><tr><th>Riesgo</th><th>Categoría</th><th>Severidad</th><th>Probabilidad</th><th>Impacto</th><th>Mitigación</th></tr></thead>
+          <tbody><tr><td colspan="6" style="color:#94a3b8">Cargando...</td></tr></tbody>
+        </table>
+      </div>
     </div>
   </div>
+
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
   <script src="data/tm01_master_data.js"></script>
+  <script>
+    let all=[], filtered=[];
+
+    const seed = [
+      { titulo:'Interoperabilidad con terceros', categoria:'Integración', prob:4, imp:5, mitigacion:'Pruebas conjuntas y protocolos estándar' },
+      { titulo:'Disponibilidad fibra óptica', categoria:'Suministro', prob:3, imp:4, mitigacion:'Contratos marco y inventario 10% repuesto' },
+      { titulo:'Retrasos obra civil', categoria:'Ejecución', prob:3, imp:3, mitigacion:'Plan de contingencia y frente paralelo' },
+      { titulo:'Permisos ambientales', categoria:'Permisos', prob:2, imp:4, mitigacion:'Gestión temprana con autoridades' },
+      { titulo:'Seguridad física equipos', categoria:'Operación', prob:2, imp:3, mitigacion:'Diseño anti-vandálico y monitoreo' }
+    ];
+
+    function severidad(prob, imp){ const s=prob*imp; if (s>=16) return 'ALTO'; if (s>=9) return 'MEDIO'; return 'BAJO'; }
+
+    function load(){
+      // En el futuro podríamos leer dm.data.riesgos; por ahora semilla
+      all = seed.map(r=> ({...r, sev: severidad(r.prob,r.imp)}));
+      filtered = [...all];
+      poblarFiltros();
+      renderMatriz();
+      renderTabla();
+      actualizarMetricas();
+    }
+
+    function poblarFiltros(){
+      const cat=[...new Set(all.map(r=>r.categoria))];
+      const s=document.getElementById('fCategoria');
+      cat.forEach(c=>{ const o=document.createElement('option'); o.value=c; o.textContent=c; s.appendChild(o); });
+    }
+
+    function aplicarFiltros(){
+      const sev=document.getElementById('fSeveridad').value;
+      const cat=document.getElementById('fCategoria').value;
+      const q=(document.getElementById('fBuscar').value||'').toLowerCase();
+      filtered = all.filter(r=>{
+        if (sev && r.sev!==sev) return false;
+        if (cat && r.categoria!==cat) return false;
+        if (q && !(r.titulo||'').toLowerCase().includes(q)) return false;
+        return true;
+      });
+      renderMatriz();
+      renderTabla();
+      actualizarMetricas();
+    }
+
+    function renderMatriz(){
+      const cont=document.getElementById('matrix');
+      const labels=['Bajo','Medio','Alto','Muy Alto','Crítico'];
+      const grid=[];
+      for(let i=0;i<5;i++){ grid[i]=[]; for(let j=0;j<5;j++){ grid[i][j]=[]; } }
+      filtered.forEach(r=>{ const p=Math.max(1,Math.min(5,r.prob))-1; const im=Math.max(1,Math.min(5,r.imp))-1; grid[p][im].push(r); });
+      let html='<div class="matrix">';
+      html+='<div class="cell h">Prob/Imp</div>'; labels.forEach(l=> html+=`<div class="cell h">${l}</div>`);
+      for(let p=4;p>=0;p--){
+        html+=`<div class="cell h">${p+1}</div>`;
+        for(let im=0;im<5;im++){
+          const cel=grid[p][im];
+          const cls = cel.some(x=>x.sev==='ALTO')?'R':cel.some(x=>x.sev==='MEDIO')?'M':'B';
+          html+=`<div class="cell ${cls}">` + cel.map(x=>`<div class="risk">${x.titulo}</div>`).join('') + `</div>`;
+        }
+      }
+      html+='</div>';
+      cont.innerHTML=html;
+    }
+
+    function renderTabla(){
+      const tb=document.querySelector('#tabla tbody');
+      if (filtered.length===0){ tb.innerHTML='<tr><td colspan="6" style="color:#94a3b8">Sin resultados</td></tr>'; return; }
+      tb.innerHTML = filtered.map(r=>{
+        const tag = r.sev==='ALTO'? 'tR' : r.sev==='MEDIO'? 'tM' : 'tB';
+        return `<tr>
+          <td>${r.titulo}</td>
+          <td>${r.categoria}</td>
+          <td><span class="tag ${tag}">${r.sev}</span></td>
+          <td>${r.prob}</td>
+          <td>${r.imp}</td>
+          <td>${r.mitigacion}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function actualizarMetricas(){
+      document.getElementById('mTotal').textContent = all.length;
+      document.getElementById('mAltos').textContent = all.filter(r=>r.sev==='ALTO').length;
+      document.getElementById('mMedios').textContent = all.filter(r=>r.sev==='MEDIO').length;
+      document.getElementById('mBajos').textContent = all.filter(r=>r.sev==='BAJO').length;
+    }
+
+    function exportarExcel(){
+      const rows = filtered.map(r=>({ Riesgo:r.titulo, Categoria:r.categoria, Severidad:r.sev, Prob:r.prob, Impacto:r.imp, Mitigacion:r.mitigacion }));
+      const ws = XLSX.utils.json_to_sheet(rows); const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Riesgos');
+      XLSX.writeFile(wb, 'Analisis_Riesgos_TM01.xlsx');
+    }
+
+    window.addEventListener('DOMContentLoaded', load);
+  </script>
 </body>
 </html>
 
