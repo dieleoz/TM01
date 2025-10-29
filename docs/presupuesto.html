@@ -223,7 +223,9 @@
 
         function getChapterNamesFromWBS(all) {
             const names = {};
-            // Mapeo legible por defecto (se usa si no encontramos nivel 1 en WBS)
+            // Permitir overrides externos opcionales
+            const overrides = (window && window.TM01_CAPITULO_NOMBRES) ? window.TM01_CAPITULO_NOMBRES : {};
+            // Mapeo legible por defecto (fallback)
             const defaults = {
                 '1': '1. CONTROL Y SEÑALIZACIÓN VIRTUAL',
                 '2': '2. TELECOMUNICACIONES COLOCALIZADAS',
@@ -232,6 +234,7 @@
                 '5': '5. CENTRO DE CONTROL OPERACIONAL',
                 '6': '6. MATERIAL RODANTE'
             };
+            // Inicializar capítulos presentes
             all.forEach(i => {
                 const cap = String((i.item || '').split('.')[0] || '').trim();
                 if (!cap) return;
@@ -243,9 +246,20 @@
                 const cap = String(i.item || '').split('.')[0];
                 if (cap) names[cap] = `${cap}. ${i.descripcion}`;
             });
-            // Aplicar mapeo por defecto donde aún sea solo el número
+            // Si no hay nivel 1, derivar por sistema predominante dentro del capítulo
             Object.keys(names).forEach(cap => {
-                if (names[cap] === cap) names[cap] = defaults[cap] || `Capítulo ${cap}`;
+                if (overrides[cap]) { names[cap] = `${cap}. ${overrides[cap]}`; return; }
+                if (names[cap] !== cap) return; // ya definido por nivel 1
+                // Buscar items del capítulo y contar sistemas
+                const itemsCap = all.filter(i => String((i.item || '').split('.')[0]) === cap);
+                const freq = {};
+                itemsCap.forEach(i => { const s = (i.sistema || '').trim(); if (!s) return; freq[s] = (freq[s] || 0) + 1; });
+                const dominante = Object.keys(freq).sort((a,b)=>freq[b]-freq[a])[0];
+                if (dominante) {
+                    names[cap] = `${cap}. ${dominante}`;
+                } else {
+                    names[cap] = defaults[cap] || `Capítulo ${cap}`;
+                }
             });
             return names;
         }
