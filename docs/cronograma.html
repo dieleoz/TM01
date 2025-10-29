@@ -3,29 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TM01 | Cronograma</title>
+  <title>Cronograma Maestro - TM01 Troncal Magdalena</title>
   <style>
-    body { font-family: Segoe UI, Tahoma, sans-serif; margin:0; background:#0f172a; color:#e2e8f0; }
-    .top { display:flex; align-items:center; justify-content:space-between; padding:14px 16px; background:#111827; border-bottom:1px solid #1f2937; }
-    .top h1 { font-size:16px; margin:0; }
-    .btn { padding:8px 12px; border-radius:6px; border:1px solid #334155; background:#0b1220; color:#e5e7eb; cursor:pointer; text-decoration:none; }
-    .content { padding:16px; }
-    .placeholder { background:#0b1220; border:1px dashed #334155; border-radius:10px; padding:18px; color:#94a3b8; }
+    *{box-sizing:border-box}
+    body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;margin:0;background:#0f172a;color:#e2e8f0}
+    .top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#111827;border-bottom:1px solid #1f2937}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid #334155;background:#0b1220;color:#e5e7eb;cursor:pointer}
+    .btn-primary{background:#2563eb;border-color:#2563eb}
+    .btn-success{background:#16a34a;border-color:#16a34a}
+    .wrap{max-width:1400px;margin:0 auto;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .metric{background:#111827;border:1px solid #1f2937;padding:14px;border-radius:10px}
+    .metric .val{font-size:22px;font-weight:800;color:#93c5fd}
+    .metric .lab{font-size:12px;color:#94a3b8;margin-top:6px}
+    .panel{background:#0b1220;border:1px solid #1f2937;border-radius:12px;margin-top:16px}
+    .panel h2{margin:0;padding:12px 14px;border-bottom:1px solid #1f2937;color:#c7d2fe;font-size:18px}
+    .panel .content{padding:14px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    select,input{padding:8px 10px;border-radius:6px;border:1px solid #334155;background:#0b1220;color:#e5e7eb}
+    table{width:100%;border-collapse:collapse;background:#0b1220;border:1px solid #1f2937}
+    th{background:#0f172a;color:#e2e8f0;padding:10px;text-align:left;font-size:13px;position:sticky;top:54px}
+    td{padding:10px;border-top:1px solid #1f2937;font-size:13px;color:#cbd5e1}
+    .right{text-align:right}
+    .gantt{display:flex;gap:2px}
+    .bar{height:18px;border-radius:4px;background:#60a5fa}
+    .bar.milestone{background:#fbbf24}
+    .legend{display:flex;gap:10px;align-items:center;font-size:12px;color:#94a3b8;margin-top:8px}
+    .lg{width:18px;height:10px;border-radius:2px;display:inline-block}
+    .lg1{background:#60a5fa}.lg2{background:#fbbf24}
+    @media print{.top{display:none} body{background:#fff;color:#000} .panel,.metric{border-color:#ddd}}
   </style>
 </head>
 <body>
   <div class="top">
-    <h1>📅 Cronograma de Trabajo</h1>
-    <div>
-      <a class="btn" href="WBS_Menu_Principal.html">Volver al Menú</a>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">← Menú</button>
+      <strong>📅 Cronograma Maestro</strong>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
+      <button class="btn btn-success" onclick="exportarExcel()">📤 Exportar Excel</button>
     </div>
   </div>
-  <div class="content">
-    <div class="placeholder">
-      Vista stub. Próximo paso: render Gantt/tabla desde `data/tm01_master_data.js` o `cronograma_datos.js` si aplica.
+
+  <div class="wrap">
+    <div class="grid">
+      <div class="metric"><div class="val" id="mDuracion">-</div><div class="lab">Duración total (meses)</div></div>
+      <div class="metric"><div class="val" id="mHitos">-</div><div class="lab">Hitos</div></div>
+      <div class="metric"><div class="val" id="mFases">-</div><div class="lab">Fases</div></div>
+      <div class="metric"><div class="val" id="mInicioFin">-</div><div class="lab">Rango de fechas</div></div>
+    </div>
+
+    <div class="panel">
+      <h2>🎛️ Filtros</h2>
+      <div class="content filters">
+        <select id="fFase" onchange="aplicarFiltros()"><option value="">Todas las fases</option></select>
+        <select id="fSistema" onchange="aplicarFiltros()"><option value="">Todos los sistemas</option></select>
+        <input id="fBuscar" placeholder="Buscar tarea/hito" oninput="aplicarFiltros()"/>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>🗂️ Plan Maestro (Tabla tipo Gantt)</h2>
+      <div class="content">
+        <table id="tabla">
+          <thead>
+            <tr>
+              <th>Fase</th><th>Tarea / Hito</th><th>Sistema</th><th>Inicio</th><th>Fin</th><th class="right">Dur. (meses)</th><th>Gantt</th>
+            </tr>
+          </thead>
+          <tbody><tr><td colspan="7" style="color:#94a3b8">Cargando...</td></tr></tbody>
+        </table>
+        <div class="legend"><span class="lg lg1"></span>Actividad <span class="lg lg2"></span>Hito</div>
+      </div>
     </div>
   </div>
+
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
   <script src="data/tm01_master_data.js"></script>
+  <script>
+    const MS_IN_DAY = 24*60*60*1000;
+    function parseDate(s){ const d=new Date(s); return isNaN(d)?null:d; }
+    function diffMonths(a,b){ return Math.max(1, Math.round((b-a)/(30*MS_IN_DAY))); }
+    function fmt(date){ return new Intl.DateTimeFormat('es-CO',{year:'numeric',month:'2-digit',day:'2-digit'}).format(date); }
+
+    let all=[], filtered=[];
+
+    const defaultPlan = [
+      { fase:'0. Preparación', nombre:'Plan de trabajo aprobado', sistema:'PMO', inicio:'2025-11-01', fin:'2025-11-15', hito:true },
+      { fase:'1. Ingeniería', nombre:'WBS completa y validada', sistema:'PMO', inicio:'2025-11-10', fin:'2025-12-10' },
+      { fase:'1. Ingeniería', nombre:'Especificaciones técnicas', sistema:'PMO', inicio:'2025-11-15', fin:'2026-01-15' },
+      { fase:'2. Telecom', nombre:'Torres TETRA (37) - Suministro', sistema:'TETRA', inicio:'2026-01-01', fin:'2026-04-30' },
+      { fase:'2. Telecom', nombre:'Torres TETRA (37) - Obra Civil', sistema:'TETRA', inicio:'2026-02-01', fin:'2026-08-31' },
+      { fase:'3. Fibra', nombre:'Tendido FO 48F (594 km)', sistema:'FO', inicio:'2026-01-15', fin:'2029-02-28' },
+      { fase:'4. Puesta en Marcha', nombre:'Pruebas integrales (FAT/SAT)', sistema:'QA', inicio:'2029-03-01', fin:'2029-06-30' },
+      { fase:'4. Puesta en Marcha', nombre:'Acta de recibo', sistema:'PMO', inicio:'2029-07-15', fin:'2029-07-15', hito:true }
+    ];
+
+    function loadData(){
+      // Si en el futuro dm.data.cronograma existe, combinarlo; por ahora usar defaultPlan
+      all = defaultPlan.map(t=>({
+        ...t,
+        ini: parseDate(t.inicio),
+        fin: parseDate(t.fin),
+        dur: (parseDate(t.fin) && parseDate(t.inicio)) ? diffMonths(parseDate(t.inicio), parseDate(t.fin)) : 0
+      }));
+      filtered = [...all];
+      poblarFiltros();
+      renderTabla();
+      actualizarMetricas();
+    }
+
+    function poblarFiltros(){
+      const fases=[...new Set(all.map(t=>t.fase))];
+      const sistemas=[...new Set(all.map(t=>t.sistema))];
+      const fF=document.getElementById('fFase'); const fS=document.getElementById('fSistema');
+      fases.forEach(f=>{ const o=document.createElement('option'); o.value=f; o.textContent=f; fF.appendChild(o); });
+      sistemas.forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=s; fS.appendChild(o); });
+    }
+
+    function aplicarFiltros(){
+      const fase=document.getElementById('fFase').value;
+      const sist=document.getElementById('fSistema').value;
+      const q=(document.getElementById('fBuscar').value||'').toLowerCase();
+      filtered = all.filter(t=>{
+        if (fase && t.fase!==fase) return false;
+        if (sist && t.sistema!==sist) return false;
+        if (q && !(t.nombre||'').toLowerCase().includes(q)) return false;
+        return true;
+      });
+      renderTabla();
+      actualizarMetricas();
+    }
+
+    function renderTabla(){
+      const tb=document.querySelector('#tabla tbody');
+      if (filtered.length===0){ tb.innerHTML='<tr><td colspan="7" style="color:#94a3b8">Sin resultados</td></tr>'; return; }
+      const minIni = filtered.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null);
+      const maxFin = filtered.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null);
+      const meses = Math.max(1, diffMonths(minIni,maxFin));
+      tb.innerHTML = filtered.map(t=>{
+        const offset = Math.round((t.ini - minIni)/(30*MS_IN_DAY));
+        const span = Math.max(1, Math.round((t.fin - t.ini)/(30*MS_IN_DAY)));
+        const bars = `<div class="gantt">${'<span style="flex:'+offset+' 0 0"></span>'}<span class="bar ${t.hito?'milestone':''}" style="flex:${t.hito?1:span}"></span></div>`;
+        return `<tr>
+          <td>${t.fase}</td>
+          <td>${t.nombre}</td>
+          <td>${t.sistema||''}</td>
+          <td>${fmt(t.ini)}</td>
+          <td>${fmt(t.fin)}</td>
+          <td class="right">${t.dur}</td>
+          <td>${bars}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function actualizarMetricas(){
+      const minIni = all.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null);
+      const maxFin = all.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null);
+      const meses = minIni && maxFin ? diffMonths(minIni,maxFin) : 0;
+      document.getElementById('mDuracion').textContent = meses;
+      document.getElementById('mHitos').textContent = all.filter(t=>t.hito).length;
+      document.getElementById('mFases').textContent = new Set(all.map(t=>t.fase)).size;
+      document.getElementById('mInicioFin').textContent = (minIni&&maxFin)? (fmt(minIni)+' → '+fmt(maxFin)) : '-';
+    }
+
+    function exportarExcel(){
+      const rows = filtered.map(t=>({
+        Fase:t.fase, Tarea:t.nombre, Sistema:t.sistema, Inicio:fmt(t.ini), Fin:fmt(t.fin), DuracionMeses:t.dur
+      }));
+      const ws = XLSX.utils.json_to_sheet(rows);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'Cronograma');
+      XLSX.writeFile(wb, 'Cronograma_TM01.xlsx');
+    }
+
+    window.addEventListener('DOMContentLoaded', ()=>{
+      if (typeof TM01MasterData==='undefined') { loadData(); return; }
+      loadData();
+    });
+  </script>
 </body>
 </html>
 
