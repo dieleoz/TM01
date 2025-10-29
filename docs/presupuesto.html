@@ -45,7 +45,7 @@
             <h1>💰 WBS PRESUPUESTAL</h1>
             <p>TM01 Troncal Magdalena | Cálculos AIU/IVA y Exportación</p>
         </div>
-
+        
         <div class="controls">
             <button class="btn btn-primary" onclick="aplicarFiltros()">🔍 Aplicar</button>
             <button class="btn" onclick="limpiarFiltros()">🔄 Limpiar</button>
@@ -58,7 +58,7 @@
                 <label for="fBuscar">Buscar:</label>
                 <input id="fBuscar" type="text" placeholder="Código o descripción" oninput="aplicarFiltros()" />
             </div>
-        </div>
+                </div>
 
         <div class="stats">
             <div class="stat"><div class="label">Total USD</div><div class="value" id="statUSD">-</div></div>
@@ -69,7 +69,7 @@
             <div class="stat"><div class="label"># SUM</div><div class="value" id="statSum">-</div></div>
             <div class="stat"><div class="label"># OBRA</div><div class="value" id="statObra">-</div></div>
             <div class="stat"><div class="label"># SERV</div><div class="value" id="statServ">-</div></div>
-        </div>
+                </div>
 
         <div class="table-container">
             <table id="tablaPresupuesto">
@@ -80,6 +80,7 @@
                         <th>Sistema</th>
                         <th class="right">Cant.</th>
                         <th>Und</th>
+                        <th>Tipo</th>
                         <th class="right">VU USD</th>
                         <th class="right">Total USD</th>
                         <th class="right">VU COP</th>
@@ -87,11 +88,31 @@
                     </tr>
                 </thead>
                 <tbody id="tbodyPresupuesto">
-                    <tr><td colspan="9" style="text-align:center;color:#6c757d; padding: 18px;">⏳ Cargando datos presupuestales...</td></tr>
+                    <tr><td colspan="10" style="text-align:center;color:#6c757d; padding: 18px;">⏳ Cargando datos presupuestales...</td></tr>
                 </tbody>
             </table>
-        </div>
+                </div>
 
+        <div class="table-container" id="desgloseContainer">
+            <h3 style="margin:6px 0 10px;color:#1e3c72;">📊 Desglose Presupuestal por Capítulos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Capítulo</th>
+                        <th class="right">Suministros (COP)</th>
+                        <th class="right">Obra Civil (COP)</th>
+                        <th class="right">Servicios (COP)</th>
+                        <th class="right">Costo Directo (COP)</th>
+                        <th class="right">AIU 33% (COP)</th>
+                        <th class="right">IVA (COP)</th>
+                        <th class="right">Total (COP)</th>
+                        <th class="right">Total (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyDesglose"></tbody>
+            </table>
+            </div>
+            
         <div class="footer">
             Última actualización: <span id="fechaActual"></span>
         </div>
@@ -131,6 +152,7 @@
                 filteredItems = [...allItems];
                 renderTabla();
                 actualizarEstadisticas();
+                renderDesglose();
                 document.getElementById('fechaActual').textContent = new Date().toLocaleString('es-CO');
             } catch (e) {
                 const tb = document.getElementById('tbodyPresupuesto');
@@ -158,6 +180,7 @@
             });
             renderTabla();
             actualizarEstadisticas();
+            renderDesglose();
         }
 
         function limpiarFiltros() {
@@ -174,7 +197,7 @@
 
         function renderTabla() {
             const tbody = document.getElementById('tbodyPresupuesto');
-            if (filteredItems.length === 0) { tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;color:#6c757d; padding: 14px;">Sin resultados</td></tr>'; return; }
+            if (filteredItems.length === 0) { tbody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#6c757d; padding: 14px;">Sin resultados</td></tr>'; return; }
             tbody.innerHTML = filteredItems.map(i => {
                 const cantidad = num(i.cantidad);
                 const vuUSD = num(i.vu);
@@ -188,6 +211,7 @@
                         <td><span class="badge badge-sistema">${i.sistema || ''}</span></td>
                         <td class="right">${cantidad || 0}</td>
                         <td>${i.unidad || ''}</td>
+                        <td>${i._tipoCalc || ''}</td>
                         <td class="right">${vuUSD ? fm(vuUSD, 'USD') : '-'}</td>
                         <td class="right">${totalUSD ? fm(totalUSD, 'USD') : '-'}</td>
                         <td class="right">${vuCOP ? fm(vuCOP, 'COP') : '-'}</td>
@@ -195,6 +219,89 @@
                     </tr>
                 `;
             }).join('');
+        }
+
+        function getChapterNamesFromWBS(all) {
+            const names = {};
+            all.forEach(i => {
+                const cap = String((i.item || '').split('.')[0] || '').trim();
+                if (!cap) return;
+                // Buscar el primer capitulo tipo capitulo que aporte nombre
+                if (!names[cap]) names[cap] = cap;
+            });
+            // Intentar enriquecer con items nivel 1 si existen
+            const byLevel1 = all.filter(i => (i.nivel === 1 || (i.item && i.item.indexOf('.') === -1)) && i.descripcion);
+            byLevel1.forEach(i => {
+                const cap = String(i.item || '').split('.')[0];
+                if (cap) names[cap] = `${cap}. ${i.descripcion.toUpperCase()}`;
+            });
+            return names;
+        }
+
+        function renderDesglose() {
+            const tbody = document.getElementById('tbodyDesglose');
+            const calc = calcularAIUIVA(filteredItems);
+            const names = getChapterNamesFromWBS(allItems);
+            const rows = [];
+            Object.keys(calc.subtotales).sort().forEach(cap => {
+                const c = calc.subtotales[cap];
+                const cd = c.SUMINISTRO + c.OBRA + c.SERVICIO;
+                const aiu = c.OBRA * 0.33;
+                const ivaSum = c.SUMINISTRO * 0.19;
+                const ivaServ = c.SERVICIO * 0.19;
+                const ivaUtil = c.OBRA * 0.05 * 0.19;
+                const iva = ivaSum + ivaServ + ivaUtil;
+                const total = cd + aiu + iva;
+                rows.push(`
+                    <tr>
+                        <td>${names[cap] || cap}</td>
+                        <td class="right">${fm(c.SUMINISTRO, 'COP')}</td>
+                        <td class="right">${fm(c.OBRA, 'COP')}</td>
+                        <td class="right">${fm(c.SERVICIO, 'COP')}</td>
+                        <td class="right">${fm(cd, 'COP')}</td>
+                        <td class="right">${fm(aiu, 'COP')}</td>
+                        <td class="right">${fm(iva, 'COP')}</td>
+                        <td class="right">${fm(total, 'COP')}</td>
+                        <td class="right">${fm(total/4400, 'USD')}</td>
+                    </tr>
+                `);
+                // Subfilas como en el ejemplo
+                rows.push(`
+                    <tr><td style="padding-left:30px;color:#004085;">↳ IVA Suministros (19%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaSum,'COP')}</td><td></td><td class="right">${fm(ivaSum/4400,'USD')}</td></tr>
+                `);
+                rows.push(`
+                    <tr><td style="padding-left:30px;color:#004085;">↳ IVA Servicios (19%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaServ,'COP')}</td><td></td><td class="right">${fm(ivaServ/4400,'USD')}</td></tr>
+                `);
+                rows.push(`
+                    <tr><td style="padding-left:30px;color:#004085;">↳ IVA/Utilidad Obra (19% × 5%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaUtil,'COP')}</td><td></td><td class="right">${fm(ivaUtil/4400,'USD')}</td></tr>
+                `);
+                if (c.OBRA > 0) {
+                    rows.push(`
+                        <tr><td style="padding-left:30px;color:#6c757d;">↳ Administración (23%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.23,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.23)/4400,'USD')}</td></tr>
+                    `);
+                    rows.push(`
+                        <tr><td style="padding-left:30px;color:#6c757d;">↳ Imprevistos (5%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.05)/4400,'USD')}</td></tr>
+                    `);
+                    rows.push(`
+                        <tr><td style="padding-left:30px;color:#6c757d;">↳ Utilidad (5%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.05)/4400,'USD')}</td></tr>
+                    `);
+                }
+            });
+            // Totales
+            rows.push(`
+                <tr style="font-weight:700;background:#f8f9fa;">
+                    <td>TOTAL GENERAL</td>
+                    <td class="right">${fm(calc.totalSuministros,'COP')}</td>
+                    <td class="right">${fm(calc.totalObraCivil,'COP')}</td>
+                    <td class="right">${fm(calc.totalServicios,'COP')}</td>
+                    <td class="right">${fm(calc.costoDirecto,'COP')}</td>
+                    <td class="right">${fm(calc.aiu,'COP')}</td>
+                    <td class="right">${fm(calc.iva,'COP')}</td>
+                    <td class="right">${fm(calc.total,'COP')}</td>
+                    <td class="right">${fm(calc.total/4400,'USD')}</td>
+                </tr>
+            `);
+            tbody.innerHTML = rows.join('');
         }
 
         function calcularAIUIVA(data) {
@@ -271,76 +378,340 @@
         function exportarDesgloseAIU() {
             if (filteredItems.length === 0) { alert('No hay datos para exportar'); return; }
             const calc = calcularAIUIVA(filteredItems);
-            const data = [
-                ['DESGLOSE PRESUPUESTAL POR CAPÍTULOS - TM01'],
-                ['Fecha', new Date().toLocaleDateString('es-CO')],
-                [],
-                ['CAPÍTULO', 'SUMINISTROS (COP)', 'OBRA (COP)', 'SERVICIOS (COP)', 'COSTO DIRECTO (COP)', 'AIU 33% (COP)', 'IVA (COP)', 'TOTAL (COP)', 'TOTAL (USD)']
-            ];
-            Object.keys(calc.subtotales).sort().forEach(cap => {
+            const names = getChapterNamesFromWBS(allItems);
+
+            // Preparar datos estructurados por capítulo para usar en la vista previa y en la exportación
+            const caps = Object.keys(calc.subtotales).sort().map(cap => {
                 const c = calc.subtotales[cap];
                 const cd = c.SUMINISTRO + c.OBRA + c.SERVICIO;
                 const aiu = c.OBRA * 0.33;
-                const iva = (c.SUMINISTRO * 0.19) + (c.SERVICIO * 0.19) + (c.OBRA * 0.05 * 0.19);
+                const ivaSum = c.SUMINISTRO * 0.19;
+                const ivaServ = c.SERVICIO * 0.19;
+                const ivaUtil = c.OBRA * 0.05 * 0.19;
+                const iva = ivaSum + ivaServ + ivaUtil;
                 const total = cd + aiu + iva;
-                data.push([cap, c.SUMINISTRO, c.OBRA, c.SERVICIO, cd, aiu, iva, total, total / 4400]);
-                if (c.OBRA > 0) {
-                    data.push(['', '  ↳ Administración 23%', '', '', '', c.OBRA * 0.23, '', '', (c.OBRA * 0.23) / 4400]);
-                    data.push(['', '  ↳ Imprevistos 5%', '', '', '', c.OBRA * 0.05, '', '', (c.OBRA * 0.05) / 4400]);
-                    data.push(['', '  ↳ Utilidad 5%', '', '', '', c.OBRA * 0.05, '', '', (c.OBRA * 0.05) / 4400]);
-                    data.push(['', '  ↳ IVA/Utilidad Obra (19%×5%)', '', '', '', c.OBRA * 0.05 * 0.19, '', '', (c.OBRA * 0.05 * 0.19) / 4400]);
-                }
-                if (c.SERVICIO > 0) {
-                    data.push(['', '  ↳ IVA Servicios (19%)', '', '', '', c.SERVICIO * 0.19, '', '', (c.SERVICIO * 0.19) / 4400]);
-                }
+                return {
+                    cap,
+                    capName: names[cap] || cap,
+                    SUMINISTRO: c.SUMINISTRO,
+                    OBRA: c.OBRA,
+                    SERVICIO: c.SERVICIO,
+                    cd, aiu, iva, total,
+                    ivaSum, ivaServ, ivaUtil
+                };
             });
-            data.push([]);
-            data.push(['TOTAL', calc.totalSuministros, calc.totalObraCivil, calc.totalServicios, calc.costoDirecto, calc.aiu, calc.iva, calc.total, calc.total / 4400]);
-            const ws = XLSX.utils.aoa_to_sheet(data);
-            const wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, 'Desglose AIU');
-            const fname = `Desglose_AIU_TM01_${new Date().toISOString().split('T')[0]}.xlsx`;
-            XLSX.writeFile(wb, fname);
+
+            // Abrir vista previa
+            const w = window.open('', '_blank');
+            const style = `body{font-family:Segoe UI,Tahoma,Verdana,sans-serif;background:#f7f9fc;color:#111;margin:0;padding:16px}
+            .wrap{max-width:1200px;margin:0 auto;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden}
+            .hdr{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;background:#0ea5e9;color:#fff}
+            .hdr h1{margin:0;font-size:18px}
+            .sub{padding:10px 18px;background:#ecfeff;color:#0369a1;font-size:13px}
+            .tools{display:flex;gap:8px}
+            .btn{padding:8px 12px;border:none;border-radius:6px;font-weight:600;cursor:pointer}
+            .btn-print{background:#1f2937;color:#fff}
+            .btn-xlsx{background:#22c55e;color:#fff}
+            table{border-collapse:collapse;width:100%;font-size:13px}
+            thead th{position:sticky;top:0;background:#0f172a;color:#fff}
+            th,td{border:1px solid #e5e7eb;padding:10px;text-align:right}
+            th:first-child,td:first-child{text-align:left}
+            .row-sub td{color:#0369a1;background:#f0f9ff}
+            .row-sub-obra td{color:#6b7280;background:#fff7ed}
+            .row-total td{font-weight:700;background:#f8fafc}
+            `;
+
+            const header = `
+                <div class="hdr">
+                    <h1>📊 DESGLOSE PRESUPUESTAL POR CAPÍTULOS</h1>
+                    <div class="tools">
+                        <button class="btn btn-print" onclick="window.print()">🖨️ Imprimir</button>
+                        <button class="btn btn-xlsx" onclick="exportarDesdePreview()">📤 Exportar Desglose a Excel</button>
+                    </div>
+                </div>
+                <div class="sub">✅ WBS Actualizada - Cálculo: AIU 33% solo OBRA; IVA 19% a SUM+SERV + 19% a Utilidad de OBRA (5%).</div>
+            `;
+
+            const tableHead = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CAPÍTULO</th>
+                            <th>SUMINISTROS (COP)</th>
+                            <th>OBRA CIVIL (COP)</th>
+                            <th>SERVICIOS (COP)</th>
+                            <th>COSTO DIRECTO (COP)</th>
+                            <th>AIU 33% (COP)</th>
+                            <th>IVA (COP)</th>
+                            <th>TOTAL (COP)</th>
+                            <th>TOTAL (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            const rows = caps.map(c => {
+                const usd = c.total / 4400;
+                return `
+                    <tr>
+                        <td>${c.capName}</td>
+                        <td>${fm(c.SUMINISTRO,'COP')}</td>
+                        <td>${fm(c.OBRA,'COP')}</td>
+                        <td>${fm(c.SERVICIO,'COP')}</td>
+                        <td>${fm(c.cd,'COP')}</td>
+                        <td>${fm(c.aiu,'COP')}</td>
+                        <td>${fm(c.iva,'COP')}</td>
+                        <td>${fm(c.total,'COP')}</td>
+                        <td>${fm(usd,'USD')}</td>
+                    </tr>
+                    <tr class="row-sub">
+                        <td>↳ IVA Suministros (19%)</td>
+                        <td></td><td></td><td></td><td></td><td></td>
+                        <td>${fm(c.ivaSum,'COP')}</td>
+                        <td></td>
+                        <td>${fm(c.ivaSum/4400,'USD')}</td>
+                    </tr>
+                    <tr class="row-sub">
+                        <td>↳ IVA Servicios (19%)</td>
+                        <td></td><td></td><td></td><td></td><td></td>
+                        <td>${fm(c.ivaServ,'COP')}</td>
+                        <td></td>
+                        <td>${fm(c.ivaServ/4400,'USD')}</td>
+                    </tr>
+                    <tr class="row-sub">
+                        <td>↳ IVA/Utilidad Obra (19% × 5%)</td>
+                        <td></td><td></td><td></td><td></td><td></td>
+                        <td>${fm(c.ivaUtil,'COP')}</td>
+                        <td></td>
+                        <td>${fm(c.ivaUtil/4400,'USD')}</td>
+                    </tr>
+                    ${c.OBRA>0 ? `
+                    <tr class="row-sub-obra"><td>↳ Administración (23%)</td><td></td><td>${fm(c.OBRA*0.23,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr class="row-sub-obra"><td>↳ Imprevistos (5%)</td><td></td><td>${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr class="row-sub-obra"><td>↳ Utilidad (5%)</td><td></td><td>${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    `: ''}
+                `;
+            }).join('');
+
+            const totalRow = `
+                <tr class="row-total">
+                    <td>TOTAL GENERAL</td>
+                    <td>${fm(calc.totalSuministros,'COP')}</td>
+                    <td>${fm(calc.totalObraCivil,'COP')}</td>
+                    <td>${fm(calc.totalServicios,'COP')}</td>
+                    <td>${fm(calc.costoDirecto,'COP')}</td>
+                    <td>${fm(calc.aiu,'COP')}</td>
+                    <td>${fm(calc.iva,'COP')}</td>
+                    <td>${fm(calc.total,'COP')}</td>
+                    <td>${fm(calc.total/4400,'USD')}</td>
+                </tr>
+            `;
+
+            const end = `</tbody></table>`;
+
+            const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Desglose AIU - TM01</title>
+                <style>${style}</style>
+                <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"><\/script>
+            </head><body>
+                <div class="wrap">${header}
+                    <div style="padding:16px 18px;">${tableHead}${rows}${totalRow}${end}</div>
+                </div>
+                <script>
+                    const capsData = ${JSON.stringify(caps)};
+                    const totales = ${JSON.stringify({
+                        totalSuministros: calc.totalSuministros,
+                        totalObraCivil: calc.totalObraCivil,
+                        totalServicios: calc.totalServicios,
+                        costoDirecto: calc.costoDirecto,
+                        aiu: calc.aiu,
+                        iva: calc.iva,
+                        total: calc.total
+                    })};
+                    function exportarDesdePreview(){
+                        const data = [
+                            ['DESGLOSE PRESUPUESTAL POR CAPÍTULOS - TM01'],
+                            ['Fecha', new Date().toLocaleDateString('es-CO')],
+                            [],
+                            ['CAPÍTULO','SUMINISTROS (COP)','OBRA CIVIL (COP)','SERVICIOS (COP)','COSTO DIRECTO (COP)','AIU 33% (COP)','IVA (COP)','TOTAL (COP)','TOTAL (USD)']
+                        ];
+                        capsData.forEach(c=>{
+                            data.push([c.capName,c.SUMINISTRO,c.OBRA,c.SERVICIO,c.cd,c.aiu,c.iva,c.total,c.total/4400]);
+                            data.push(['', '↳ Administración (23%)', '', '', '', c.OBRA*0.23, '', '', (c.OBRA*0.23)/4400]);
+                            data.push(['', '↳ Imprevistos (5%)', '', '', '', c.OBRA*0.05, '', '', (c.OBRA*0.05)/4400]);
+                            data.push(['', '↳ Utilidad (5%)', '', '', '', c.OBRA*0.05, '', '', (c.OBRA*0.05)/4400]);
+                            data.push(['', '↳ IVA Suministros (19%)', '', '', '', c.ivaSum, '', '', (c.ivaSum)/4400]);
+                            data.push(['', '↳ IVA Servicios (19%)', '', '', '', c.ivaServ, '', '', (c.ivaServ)/4400]);
+                            data.push(['', '↳ IVA/Utilidad Obra (19%×5%)', '', '', '', c.ivaUtil, '', '', (c.ivaUtil)/4400]);
+                        });
+                        data.push([]);
+                        data.push(['TOTAL GENERAL', totales.totalSuministros, totales.totalObraCivil, totales.totalServicios, totales.costoDirecto, totales.aiu, totales.iva, totales.total, totales.total/4400]);
+                        const ws = XLSX.utils.aoa_to_sheet(data);
+                        ws['!cols'] = [ {wch:40},{wch:24},{wch:20},{wch:20},{wch:22},{wch:18},{wch:16},{wch:20},{wch:16} ];
+                        const wb = XLSX.utils.book_new();
+                        XLSX.utils.book_append_sheet(wb, ws, 'Desglose AIU');
+                        const fname = `Desglose_AIU_TM01_${new Date().toISOString().split('T')[0]}.xlsx`;
+                        XLSX.writeFile(wb, fname);
+                    }
+                <\/script>
+            </body></html>`;
+            w.document.write(html);
+            w.document.close();
         }
 
         function generarActaObra() {
             const calc = calcularAIUIVA(filteredItems);
+            const names = getChapterNamesFromWBS(allItems);
             const w = window.open('', '_blank');
-            const rows = Object.keys(calc.subtotales).sort().map(cap => {
-                const c = calc.subtotales[cap];
-                const cd = c.SUMINISTRO + c.OBRA + c.SERVICIO;
-                const aiu = c.OBRA * 0.33;
-                const iva = (c.SUMINISTRO * 0.19) + (c.SERVICIO * 0.19) + (c.OBRA * 0.05 * 0.19);
-                const total = cd + aiu + iva;
-                return `<tr>
-                    <td style="padding:8px;border:1px solid #dee2e6;">${cap}</td>
-                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${cd.toLocaleString('es-CO')}</td>
-                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${aiu.toLocaleString('es-CO')}</td>
-                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${iva.toLocaleString('es-CO')}</td>
-                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${total.toLocaleString('es-CO')}</td>
-                </tr>`;
-            }).join('');
-            const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Acta de Obra - TM01</title>
-            <style>body{font-family:Segoe UI,Tahoma,Verdana,sans-serif;padding:20px;background:#fff;}h1{margin:0 0 6px}table{border-collapse:collapse;width:100%;font-size:13px} th{background:#1e3c72;color:#fff;text-align:left;padding:10px;border:1px solid #dee2e6} td{padding:8px;border:1px solid #dee2e6} .muted{color:#6c757d;font-size:12px}</style></head>
-            <body>
-              <h1>Acta de Obra</h1>
-              <div class="muted">Fecha: ${new Date().toLocaleString('es-CO')}</div>
-              <p class="muted">Resumen de costos por capítulo con AIU e IVA conforme a lineamientos (AIU solo OBRA; IVA a SUM+SERV+Utilidad de OBRA).</p>
-              <table>
-                <thead><tr><th>Capítulo</th><th>Costo Directo (COP)</th><th>AIU 33% (COP)</th><th>IVA (COP)</th><th>Total (COP)</th></tr></thead>
-                <tbody>${rows}</tbody>
-                <tfoot>
+            const fmtCOP = (n) => fm(n, 'COP');
+            const fmtUSD = (n) => fm(n, 'USD');
+            const toUSD = (n) => (n / 4400);
+
+            const capítulos = {};
+            filteredItems.forEach(i => {
+                const cap = String((i.item || '').split('.')[0] || '').trim() || 'OTROS';
+                if (!capítulos[cap]) capítulos[cap] = { SUMINISTRO: [], OBRA: [], SERVICIO: [] };
+                const cantidad = num(i.cantidad);
+                const vuCOP = num(i.vuCOP);
+                const totalCOP = num(i.totalCOP) || (cantidad * vuCOP);
+                const vuCOPDisp = vuCOP;
+                const tipo = i._tipoCalc || 'SUMINISTRO';
+                capítulos[cap][tipo].push({
+                    codigo: i.item || '',
+                    descripcion: i.descripcion || '',
+                    tipo: tipo,
+                    unidad: i.unidad || '',
+                    cantidad: cantidad,
+                    vuCOP: vuCOPDisp,
+                    totalCOP: totalCOP,
+                    totalUSD: toUSD(totalCOP)
+                });
+            });
+
+            const seccionTabla = (titulo, lista) => {
+                if (!lista || lista.length === 0) return '';
+                const filas = lista.map(it => `
                     <tr>
-                        <th>TOTALES</th>
-                        <th style="text-align:right;">${calc.costoDirecto.toLocaleString('es-CO')}</th>
-                        <th style="text-align:right;">${calc.aiu.toLocaleString('es-CO')}</th>
-                        <th style="text-align:right;">${calc.iva.toLocaleString('es-CO')}</th>
-                        <th style="text-align:right;">${calc.total.toLocaleString('es-CO')}</th>
+                        <td>${it.codigo}</td>
+                        <td>${it.descripcion}</td>
+                        <td>${it.tipo}</td>
+                        <td>${it.unidad}</td>
+                        <td style="text-align:right;">${it.cantidad}</td>
+                        <td style="text-align:right;">${fmtCOP(it.vuCOP)}</td>
+                        <td style="text-align:right;">${fmtCOP(it.totalCOP)}</td>
+                        <td style="text-align:right;">${fmtUSD(it.totalUSD)}</td>
                     </tr>
-                </tfoot>
-              </table>
-              <p class="muted">TRM de referencia: 4,400 COP/USD.</p>
-              <script>window.addEventListener('load',()=>setTimeout(()=>window.print(),300));<\/script>
+                `).join('');
+                const subtotalCOP = lista.reduce((s, it) => s + it.totalCOP, 0);
+                const subtotalUSD = toUSD(subtotalCOP);
+                return `
+                    <h3 style="margin:14px 0 8px;">${titulo}</h3>
+                    <table class="t">
+                        <thead>
+                            <tr>
+                                <th>ÍTEM</th><th>DESCRIPCIÓN</th><th>TIPO</th><th>UNIDAD</th><th>CANTIDAD</th><th>VU (COP)</th><th>TOTAL (COP)</th><th>TOTAL (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>${filas}</tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="6" style="text-align:right;">SUBTOTAL ${titulo.toUpperCase()}:</th>
+                                <th style="text-align:right;">${fmtCOP(subtotalCOP)}</th>
+                                <th style="text-align:right;">${fmtUSD(subtotalUSD)}</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                `;
+            };
+
+            const seccionesCap = Object.keys(capítulos).sort().map(cap => {
+                const listas = capítulos[cap];
+                const sumCOP = listas.SUMINISTRO.reduce((s, it) => s + it.totalCOP, 0);
+                const obraCOP = listas.OBRA.reduce((s, it) => s + it.totalCOP, 0);
+                const servCOP = listas.SERVICIO.reduce((s, it) => s + it.totalCOP, 0);
+                const cd = sumCOP + obraCOP + servCOP;
+                const adm = obraCOP * 0.23;
+                const imp = obraCOP * 0.05;
+                const uti = obraCOP * 0.05;
+                const aiu = adm + imp + uti; // 33% obra
+                const ivaSum = sumCOP * 0.19;
+                const ivaServ = servCOP * 0.19;
+                const ivaUtil = obraCOP * 0.05 * 0.19;
+                const iva = ivaSum + ivaServ + ivaUtil;
+                const total = cd + aiu + iva;
+                const ttlUSD = toUSD(total);
+
+                return `
+                    <section class="cap">
+                        <h2>${names[cap] || cap}</h2>
+                        ${seccionTabla('SUMINISTROS', listas.SUMINISTRO)}
+                        ${seccionTabla('OBRA CIVIL', listas.OBRA)}
+                        ${seccionTabla('SERVICIOS', listas.SERVICIO)}
+
+                        <h3 style="margin:16px 0 8px;">📊 RESUMEN CAPÍTULO</h3>
+                        <table class="t mini">
+                            <thead><tr><th>CONCEPTO</th><th style="text-align:right;">COP</th><th style="text-align:right;">USD</th></tr></thead>
+                            <tbody>
+                                <tr><td>SUMINISTROS</td><td style="text-align:right;">${fmtCOP(sumCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(sumCOP))}</td></tr>
+                                <tr><td>OBRA CIVIL</td><td style="text-align:right;">${fmtCOP(obraCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(obraCOP))}</td></tr>
+                                <tr><td>SERVICIOS</td><td style="text-align:right;">${fmtCOP(servCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(servCOP))}</td></tr>
+                                <tr><td><strong>COSTO DIRECTO</strong></td><td style="text-align:right;"><strong>${fmtCOP(cd)}</strong></td><td style="text-align:right;"><strong>${fmtUSD(toUSD(cd))}</strong></td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 style="margin:14px 0 6px;">DESGLOSE AIU (solo OBRA)</h4>
+                        <table class="t mini">
+                            <tbody>
+                                <tr><td>Administración (23%)</td><td style="text-align:right;">${fmtCOP(adm)}</td><td style="text-align:right;">${fmtUSD(toUSD(adm))}</td></tr>
+                                <tr><td>Imprevistos (5%)</td><td style="text-align:right;">${fmtCOP(imp)}</td><td style="text-align:right;">${fmtUSD(toUSD(imp))}</td></tr>
+                                <tr><td>Utilidad (5%)</td><td style="text-align:right;">${fmtCOP(uti)}</td><td style="text-align:right;">${fmtUSD(toUSD(uti))}</td></tr>
+                                <tr><td><strong>AIU TOTAL (33%)</strong></td><td style="text-align:right;"><strong>${fmtCOP(aiu)}</strong></td><td style="text-align:right;"><strong>${fmtUSD(toUSD(aiu))}</strong></td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 style="margin:14px 0 6px;">DESGLOSE IVA</h4>
+                        <table class="t mini">
+                            <tbody>
+                                <tr><td>IVA Suministros (19%)</td><td style="text-align:right;">${fmtCOP(ivaSum)}</td><td style="text-align:right;">${fmtUSD(toUSD(ivaSum))}</td></tr>
+                                <tr><td>IVA Servicios (19%)</td><td style="text-align:right;">${fmtCOP(ivaServ)}</td><td style="text-align:right;">${fmtUSD(toUSD(ivaServ))}</td></tr>
+                                <tr><td>IVA/Utilidad Obra (19% × 5%)</td><td style="text-align:right;">${fmtCOP(ivaUtil)}</td><td style="text-align:right;">${fmtUSD(toUSD(ivaUtil))}</td></tr>
+                                <tr><td><strong>IVA TOTAL</strong></td><td style="text-align:right;"><strong>${fmtCOP(iva)}</strong></td><td style="text-align:right;"><strong>${fmtUSD(toUSD(iva))}</strong></td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="tot">
+                            <strong>TOTAL ${names[cap] || cap}:</strong> ${fmtCOP(total)} (${fmtUSD(ttlUSD)})
+                        </div>
+                    </section>
+                `;
+            }).join('');
+
+            const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>ACTA DE OBRA - TM01</title>
+            <style>
+                body{font-family:Segoe UI,Tahoma,Verdana,sans-serif;background:#fff;color:#111;padding:24px;}
+                h1{margin:0 0 4px;font-size:22px}
+                h2{margin:18px 0 6px;font-size:18px;color:#1e3c72}
+                h3{margin:14px 0 6px;font-size:15px;color:#2a5298}
+                h4{margin:12px 0 6px;font-size:14px;color:#2a5298}
+                .muted{color:#6c757d;font-size:12px;margin-bottom:10px}
+                .t{border-collapse:collapse;width:100%;margin:6px 0 12px}
+                .t th,.t td{border:1px solid #dee2e6;padding:8px;font-size:12px}
+                .t thead th{background:#f1f3f5}
+                .t.mini td{font-size:12px}
+                .cap{margin:10px 0 24px;padding-bottom:8px;border-bottom:2px solid #f1f3f5}
+                .tot{margin-top:8px;font-size:14px;color:#1b5e20}
+                .hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px}
+            </style></head>
+            <body>
+                <div class="hdr">
+                    <div>
+                        <h1>📋 ACTA DE OBRA</h1>
+                        <div>WBS - Sistema de Comunicaciones e ITS</div>
+                        <div class="muted">TM01 Troncal Magdalena | v1.0</div>
+                    </div>
+                    <div class="muted">Fecha: ${new Date().toLocaleDateString('es-CO')}</div>
+                </div>
+                ${seccionesCap}
+                <script>window.addEventListener('load',()=>setTimeout(()=>window.print(),400));<\/script>
             </body></html>`;
             w.document.write(html);
             w.document.close();
