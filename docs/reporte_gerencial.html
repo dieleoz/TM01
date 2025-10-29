@@ -1,32 +1,393 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TM01 | Reporte Gerencial</title>
-  <style>
-    body { font-family: Segoe UI, Tahoma, sans-serif; margin:0; background:#0f172a; color:#e2e8f0; }
-    .top { display:flex; align-items:center; justify-content:space-between; padding:14px 16px; background:#111827; border-bottom:1px solid #1f2937; }
-    .top h1 { font-size:16px; margin:0; }
-    .btn { padding:8px 12px; border-radius:6px; border:1px solid #334155; background:#0b1220; color:#e5e7eb; cursor:pointer; text-decoration:none; }
-    .content { padding:16px; }
-    .placeholder { background:#0b1220; border:1px dashed #334155; border-radius:10px; padding:18px; color:#94a3b8; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Gerencial - TM01 Troncal Magdalena</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            padding: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 5px; }
+            .container { border-radius: 8px; }
+            .header { padding: 20px; }
+            .header h1 { font-size: 22px; word-wrap: break-word; }
+            .content { padding: 20px; }
+            .section { padding: 20px; margin-bottom: 20px; }
+            .metrics-grid { grid-template-columns: 1fr; gap: 15px; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section h2 {
+            color: #1e3c72;
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h3 {
+            color: #2a5298;
+            font-size: 20px;
+            margin: 25px 0 15px 0;
+        }
+        
+        .highlight-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #343a40;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 10px;
+            text-align: center;
+            border-top: 4px solid #667eea;
+        }
+        
+        .metric-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .risk-item {
+            background: white;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #dc3545;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .risk-high { border-left-color: #dc3545; }
+        .risk-medium { border-left-color: #ffc107; }
+        .risk-low { border-left-color: #28a745; }
+        
+        .back-btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .back-btn:hover {
+            background: #5568d3;
+        }
+        
+        .btn-print {
+            float: right;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media print {
+            .back-btn, .btn-print { display: none !important; }
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; }
+        }
+    </style>
 </head>
 <body>
-  <div class="top">
-    <h1>📋 Reporte Gerencial</h1>
-    <div>
-      <a class="btn" href="WBS_Menu_Principal.html">Volver al Menú</a>
+    <div class="container">
+        <div class="header">
+            <h1>📋 REPORTE GERENCIAL EJECUTIVO</h1>
+            <p>TM01 Troncal Magdalena | Sistema de Validación ITS | Presupuesto v1.0</p>
+        </div>
+        
+        <div class="content">
+            <a href="WBS_Menu_Principal.html" class="back-btn">← Volver al Menú Principal</a>
+            <button onclick="window.print()" class="btn-print">📄 Imprimir PDF</button>
+            <div style="clear: both;"></div>
+            
+            <!-- Resumen Ejecutivo -->
+            <div class="section">
+                <h2>✅ RESUMEN EJECUTIVO</h2>
+                
+                <div class="metrics-grid" id="metricasGrid">
+                    <div class="metric-card">
+                        <div class="metric-value" id="statPresupuestoCOP">-</div>
+                        <div class="metric-label">Presupuesto Total (COP)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="statPresupuestoUSD">-</div>
+                        <div class="metric-label">Presupuesto Total (USD)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="statItems">-</div>
+                        <div class="metric-label">Items WBS</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="statSistemas">-</div>
+                        <div class="metric-label">Sistemas</div>
+                    </div>
+                </div>
+                
+                <div class="success-box">
+                    <h3>✅ SISTEMA DE VALIDACIÓN WEB OPERATIVO</h3>
+                    <p>Sistema de Validación Web TM01 con arquitectura dinámica de 4 capas, gestión automática de DTs y sincronización de datos en tiempo real desde fuente única de verdad.</p>
+                </div>
+            </div>
+            
+            <!-- Justificación de Cantidades -->
+            <div class="section">
+                <h2>📊 JUSTIFICACIÓN DE CANTIDADES POR SISTEMA</h2>
+                
+                <div class="table-container">
+                    <table id="tablaJustificaciones">
+                        <thead>
+                            <tr>
+                                <th>Sistema</th>
+                                <th>Cantidad</th>
+                                <th>Justificación Técnica</th>
+                                <th>Item WBS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyJustificaciones">
+                            <tr><td colspan="4" style="text-align:center; padding:20px;">Cargando datos...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Supuestos Técnicos -->
+            <div class="section">
+                <h2>🔧 SUPUESTOS TÉCNICOS Y COMERCIALES</h2>
+                
+                <h3>🔧 Supuestos Técnicos</h3>
+                <ul>
+                    <li><strong>Arquitectura de 4 Capas:</strong> Fuentes de verdad → Transformación → Datos intermedios → Visualización</li>
+                    <li><strong>Señalización ITS:</strong> Sistemas SOS, ETD/RADAR, CCTV, PMV distribuidos a lo largo de 293 km</li>
+                    <li><strong>Fibra Óptica:</strong> Red de comunicaciones principal para todos los sistemas</li>
+                    <li><strong>Energía:</strong> Sistemas autónomos con paneles solares y baterías para equipos remotos</li>
+                    <li><strong>Control Centralizado:</strong> Centro de Control Operaciones (CCO) para monitoreo y gestión</li>
+                </ul>
+                
+                <h3>💰 Supuestos Comerciales</h3>
+                <ul>
+                    <li><strong>AIU:</strong> 33% (Administración 23% + Imprevistos 5% + Utilidad 5%)</li>
+                    <li><strong>IVA:</strong> 19% sobre servicios + 2.28% sobre utilidad</li>
+                    <li><strong>TRM:</strong> 4,400 COP/USD</li>
+                    <li><strong>Escalación:</strong> Incluida en valores unitarios</li>
+                </ul>
+            </div>
+            
+            <!-- Análisis de Riesgos -->
+            <div class="section">
+                <h2>⚠️ ANÁLISIS DE RIESGOS PRINCIPALES</h2>
+                <div id="riesgosContainer">
+                    <div class="risk-item risk-medium">
+                        <h3>🟡 RIESGO MEDIO: Disponibilidad de Datos</h3>
+                        <p><strong>Descripción:</strong> Dependencia de sincronización correcta de datos desde fuente única de verdad.</p>
+                        <p><strong>Mitigación:</strong> Scripts de sincronización automática, validación de integridad de datos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recomendaciones -->
+            <div class="section">
+                <h2>🎯 RECOMENDACIONES ESTRATÉGICAS</h2>
+                
+                <div class="highlight-box">
+                    <h3>🎯 Próximos Pasos Críticos</h3>
+                    <ol>
+                        <li><strong>Validación de Datos:</strong> Verificar coherencia entre WBS, Presupuesto y Layout</li>
+                        <li><strong>Actualización Continua:</strong> Mantener sincronización automática de datos</li>
+                        <li><strong>Gestión de DTs:</strong> Registrar todas las decisiones técnicas con impacto en el proyecto</li>
+                        <li><strong>Documentación:</strong> Mantener trazabilidad completa de cambios</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="content">
-    <div class="placeholder">
-      Vista stub. Próximo paso: cargar justificaciones y KPIs desde `data/tm01_master_data.js` y `IX. WBS y Planificacion/reporte_gerencial_data.js` si existe.
-    </div>
-  </div>
-  <script src="data/tm01_master_data.js"></script>
+
+    <script src="data/tm01_master_data.js"></script>
+    <script>
+        function initReporteGerencial() {
+            try {
+                if (typeof TM01MasterData === 'undefined') {
+                    setTimeout(initReporteGerencial, 100);
+                    return;
+                }
+                
+                const tm01Data = typeof window.tm01MasterData !== 'undefined' ? window.tm01MasterData : new TM01MasterData();
+                
+                // Calcular métricas
+                const presupuesto = tm01Data.data.presupuesto || [];
+                const wbs = tm01Data.data.wbs || [];
+                const totalUSD = presupuesto.reduce((sum, item) => sum + (parseFloat(item.total) || 0), 0);
+                const totalCOP = totalUSD * 4400;
+                const sistemas = new Set(wbs.filter(item => item.sistema).map(item => item.sistema));
+                
+                // Actualizar métricas
+                document.getElementById('statPresupuestoUSD').textContent = `$${(totalUSD/1_000_000).toFixed(2)}M`;
+                document.getElementById('statPresupuestoCOP').textContent = `$${(totalCOP/1_000_000_000).toFixed(2)}B`;
+                document.getElementById('statItems').textContent = wbs.filter(item => item.tipo === 'item').length;
+                document.getElementById('statSistemas').textContent = sistemas.size;
+                
+                // Generar justificaciones por sistema
+                const justificaciones = {};
+                wbs.filter(item => item.tipo === 'item' && item.sistema).forEach(item => {
+                    if (!justificaciones[item.sistema]) {
+                        justificaciones[item.sistema] = {
+                            sistema: item.sistema,
+                            items: [],
+                            cantidadTotal: 0,
+                            criterio: item.criterio || 'Criterio técnico aplicado'
+                        };
+                    }
+                    justificaciones[item.sistema].items.push(item);
+                    justificaciones[item.sistema].cantidadTotal += parseInt(item.cantidad) || 0;
+                });
+                
+                // Renderizar tabla de justificaciones
+                const tbody = document.getElementById('tbodyJustificaciones');
+                tbody.innerHTML = Object.values(justificaciones).map(j => `
+                    <tr>
+                        <td><strong>${j.sistema}</strong></td>
+                        <td>${j.cantidadTotal} unidades</td>
+                        <td>${j.criterio}</td>
+                        <td>${j.items.map(i => i.item).join(', ')}</td>
+                    </tr>
+                `).join('');
+                
+            } catch (error) {
+                console.error('❌ Error cargando reporte gerencial:', error);
+                document.getElementById('tbodyJustificaciones').innerHTML = 
+                    '<tr><td colspan="4" style="text-align:center; padding:20px; color:#dc3545;">Error al cargar datos: ' + error.message + '</td></tr>';
+            }
+        }
+        
+        window.addEventListener('DOMContentLoaded', initReporteGerencial);
+    </script>
 </body>
 </html>
-
-
