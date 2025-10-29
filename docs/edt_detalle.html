@@ -87,7 +87,7 @@
             let html = '<h3 style="margin-bottom:20px;color:#1e3c72;">🌳 Estructura EDT</h3>';
             Object.keys(porCapitulo).sort().forEach(cap => {
                 const capId = 'cap-' + cap;
-                html += `<div class="tree-level-1" onclick～="toggleCapitulo('${capId}')"><span id="${capId}-icon">▶</span> Capítulo ${cap} <span style="opacity:0.7;font-size:12px;">(${porCapitulo[cap].length} items)</span></div><div id="${capId}" style="display:none;">`;
+                html += `<div class="tree-level-1" onclick="toggleCapitulo('${capId}')"><span id="${capId}-icon">▶</span> Capítulo ${cap} <span style="opacity:0.7;font-size:12px;">(${porCapitulo[cap].length} items)</span></div><div id="${capId}" style="display:none;">`;
                 porCapitulo[cap].forEach(item => {
                     html += `<div class="tree-item" onclick="showDetails('${item.id}')"><strong>${item.item}</strong> - ${item.descripcion}</div>`;
                 });
