@@ -131,10 +131,13 @@
 
         function inferTipoPresupuestal(item) {
             const desc = (item.descripcion || '').toLowerCase();
-            // Heurística básica si no viene definido
-            if (item.tipo_presupuesto) return item.tipo_presupuesto; // preferente si existe
-            if (/mano de obra|zanja|obra|canaliz|hormig|fundaci|poste|concreto/.test(desc)) return 'OBRA';
-            if (/instalaci|comisionamiento|pruebas|documentaci|capacitaci|servicio/.test(desc)) return 'SERVICIO';
+            if (item.tipo_presupuesto) return item.tipo_presupuesto; // prioridad si viene desde datos
+            // Palabras clave de OBRA CIVIL (instalaciones y obras)
+            const obraRe = /(instalaci|tendido|tendido de|tendido\s|tender|hincado|zanja|excavaci|canaliz|ducto|obra civil|obra\b|poste|postes|torre|torres|cimentaci|fundaci|concreto|anclaje|anclajes|soporte de montaje|montaje|tuber[ií]a|canaleta|bandeja|tierra|puesta a tierra|adecuaci[oó]n)/;
+            // Palabras clave de SERVICIOS (no incluyen instalación física)
+            const servRe = /(capacitaci|documentaci|pruebas|fat|sat|comisionamiento|mantenimiento|soporte|dise[nñ]o|ingenier[ií]a|configuraci[oó]n|licencia|servicio\b|servicios\b|consultor[ií]a)/;
+            if (obraRe.test(desc)) return 'OBRA';
+            if (servRe.test(desc)) return 'SERVICIO';
             return 'SUMINISTRO';
         }
 
