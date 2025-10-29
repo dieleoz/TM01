@@ -131,13 +131,32 @@
 
         function inferTipoPresupuestal(item) {
             const desc = (item.descripcion || '').toLowerCase();
+            // Override por item si existe (el consultor puede definirlo antes de cargar la página)
+            if (window && window.TM01_TIPO_ITEM && window.TM01_TIPO_ITEM[item.item]) {
+                return window.TM01_TIPO_ITEM[item.item];
+            }
             if (item.tipo_presupuesto) return item.tipo_presupuesto; // prioridad si viene desde datos
-            // Palabras clave de OBRA CIVIL (instalaciones y obras)
-            const obraRe = /(instalaci|tendido|tendido de|tendido\s|tender|hincado|zanja|excavaci|canaliz|ducto|obra civil|obra\b|poste|postes|torre|torres|cimentaci|fundaci|concreto|anclaje|anclajes|soporte de montaje|montaje|tuber[ií]a|canaleta|bandeja|tierra|puesta a tierra|adecuaci[oó]n)/;
-            // Palabras clave de SERVICIOS (no incluyen instalación física)
-            const servRe = /(capacitaci|documentaci|pruebas|fat|sat|comisionamiento|mantenimiento|soporte|dise[nñ]o|ingenier[ií]a|configuraci[oó]n|licencia|servicio\b|servicios\b|consultor[ií]a)/;
-            if (obraRe.test(desc)) return 'OBRA';
+            // Señales claras de suministro
+            const esSuministroExplicito = /(\bsuministro\b|\bsuministros\b)/.test(desc);
+            // Palabras clave de OBRA CIVIL (instalaciones, obra física, civil y montaje)
+            const obraRe = /(instalaci[oó]n|tendido|hincado|zanja|excavaci[oó]n|canalizaci[oó]n|ducto|obra civil|\bobra\b|poste|postes|torre|torres|cimentaci[oó]n|fundaci[oó]n|concreto|anclaje|anclajes|soporte de montaje|montaje|tuber[ií]a|canaleta|bandeja|puesta a tierra|adecuaci[oó]n|soldadur|levante|elevaci[oó]n|demolici[oó]n|vaciado|zapata|plataforma|pavimento|relleno|corte|trinchera|estructura)/;
+            // Palabras clave de SERVICIOS (sin obra física)
+            const servRe = /(capacitaci[oó]n|documentaci[oó]n|pruebas|\bfat\b|\bsat\b|comisionamiento|mantenimiento|soporte|dise[nñ]o|ingenier[ií]a|configuraci[oó]n|licencia|servicio\b|servicios\b|asesor[ií]a|interventor[ií]a)/;
+            // Unidades típicas de obra (indicador adicional)
+            const unidad = (item.unidad || '').toLowerCase();
+            const unidadObra = /(km|\bml\b|\bm\b|m2|m3|m\^2|m\^3|glb\b)/.test(unidad);
+
+            // Si menciona instalación/obra física, clasificar como OBRA
+            if (obraRe.test(desc) || unidadObra) {
+                // Evitar falsos positivos donde solo dice "suministro" sin instalación
+                if (esSuministroExplicito && !/instalaci[oó]n|montaje|obra/.test(desc)) {
+                    return 'SUMINISTRO';
+                }
+                return 'OBRA';
+            }
+            // Si son servicios profesionales / pruebas / comisionamiento
             if (servRe.test(desc)) return 'SERVICIO';
+            // Caso por defecto
             return 'SUMINISTRO';
         }
 
