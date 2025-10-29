@@ -5,30 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cronograma Maestro - TM01 Troncal Magdalena</title>
   <style>
+    :root{--g1:#667eea;--g2:#764ba2;--bg:#f8f9fa;--card:#ffffff;--line:#dee2e6;--text:#212529;--muted:#6c757d;--h1:#1e3c72}
     *{box-sizing:border-box}
-    body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;margin:0;background:#0f172a;color:#e2e8f0}
-    .top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#111827;border-bottom:1px solid #1f2937}
-    .btn{padding:10px 14px;border-radius:8px;border:1px solid #334155;background:#0b1220;color:#e5e7eb;cursor:pointer}
-    .btn-primary{background:#2563eb;border-color:#2563eb}
-    .btn-success{background:#16a34a;border-color:#16a34a}
+    body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;margin:0;background:var(--bg);color:var(--text)}
+    .top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
+    .btn{padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.15);color:#fff;cursor:pointer}
+    .btn-primary{background:rgba(255,255,255,.2)}
+    .btn-success{background:#28a745;border-color:#28a745}
     .wrap{max-width:1400px;margin:0 auto;padding:18px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .metric{background:#111827;border:1px solid #1f2937;padding:14px;border-radius:10px}
-    .metric .val{font-size:22px;font-weight:800;color:#93c5fd}
-    .metric .lab{font-size:12px;color:#94a3b8;margin-top:6px}
-    .panel{background:#0b1220;border:1px solid #1f2937;border-radius:12px;margin-top:16px}
-    .panel h2{margin:0;padding:12px 14px;border-bottom:1px solid #1f2937;color:#c7d2fe;font-size:18px}
+    .metric{background:var(--card);border:1px solid var(--line);padding:14px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+    .metric .val{font-size:22px;font-weight:800;color:#667eea}
+    .metric .lab{font-size:12px;color:var(--muted);margin-top:6px}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:16px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .panel h2{margin:0;padding:12px 14px;border-bottom:1px solid var(--line);color:var(--h1);font-size:18px}
     .panel .content{padding:14px}
     .filters{display:flex;gap:8px;flex-wrap:wrap}
-    select,input{padding:8px 10px;border-radius:6px;border:1px solid #334155;background:#0b1220;color:#e5e7eb}
-    table{width:100%;border-collapse:collapse;background:#0b1220;border:1px solid #1f2937}
-    th{background:#0f172a;color:#e2e8f0;padding:10px;text-align:left;font-size:13px;position:sticky;top:54px}
-    td{padding:10px;border-top:1px solid #1f2937;font-size:13px;color:#cbd5e1}
+    select,input{padding:8px 10px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--text)}
+    table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}
+    th{background:var(--h1);color:#fff;padding:10px;text-align:left;font-size:13px;position:sticky;top:54px}
+    td{padding:10px;border-top:1px solid var(--line);font-size:13px;color:var(--text)}
     .right{text-align:right}
     .gantt{display:flex;gap:2px}
     .bar{height:18px;border-radius:4px;background:#60a5fa}
     .bar.milestone{background:#fbbf24}
-    .legend{display:flex;gap:10px;align-items:center;font-size:12px;color:#94a3b8;margin-top:8px}
+    .legend{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted);margin-top:8px}
     .lg{width:18px;height:10px;border-radius:2px;display:inline-block}
     .lg1{background:#60a5fa}.lg2{background:#fbbf24}
     @media print{.top{display:none} body{background:#fff;color:#000} .panel,.metric{border-color:#ddd}}
@@ -72,7 +73,7 @@
               <th>Fase</th><th>Tarea / Hito</th><th>Sistema</th><th>Inicio</th><th>Fin</th><th class="right">Dur. (meses)</th><th>Gantt</th>
             </tr>
           </thead>
-          <tbody><tr><td colspan="7" style="color:#94a3b8">Cargando...</td></tr></tbody>
+          <tbody><tr><td colspan="7" style="color:var(--muted)">Cargando...</td></tr></tbody>
         </table>
         <div class="legend"><span class="lg lg1"></span>Actividad <span class="lg lg2"></span>Hito</div>
       </div>
@@ -90,98 +91,49 @@
     let all=[], filtered=[];
 
     const defaultPlan = [
-      { fase:'0. Preparación', nombre:'Plan de trabajo aprobado', sistema:'PMO', inicio:'2025-11-01', fin:'2025-11-15', hito:true },
-      { fase:'1. Ingeniería', nombre:'WBS completa y validada', sistema:'PMO', inicio:'2025-11-10', fin:'2025-12-10' },
-      { fase:'1. Ingeniería', nombre:'Especificaciones técnicas', sistema:'PMO', inicio:'2025-11-15', fin:'2026-01-15' },
-      { fase:'2. Telecom', nombre:'Torres TETRA (37) - Suministro', sistema:'TETRA', inicio:'2026-01-01', fin:'2026-04-30' },
-      { fase:'2. Telecom', nombre:'Torres TETRA (37) - Obra Civil', sistema:'TETRA', inicio:'2026-02-01', fin:'2026-08-31' },
-      { fase:'3. Fibra', nombre:'Tendido FO 48F (594 km)', sistema:'FO', inicio:'2026-01-15', fin:'2029-02-28' },
-      { fase:'4. Puesta en Marcha', nombre:'Pruebas integrales (FAT/SAT)', sistema:'QA', inicio:'2029-03-01', fin:'2029-06-30' },
-      { fase:'4. Puesta en Marcha', nombre:'Acta de recibo', sistema:'PMO', inicio:'2029-07-15', fin:'2029-07-15', hito:true }
+      { fase:'0. Preparación', nombre:'Acta de inicio firmada', sistema:'PMO', inicio:'2024-11-26', fin:'2024-11-26', hito:true },
+      { fase:'0. Preparación', nombre:'Plan de trabajo aprobado', sistema:'PMO', inicio:'2024-11-27', fin:'2024-12-15', hito:false },
+      { fase:'1. Ingeniería', nombre:'WBS completa y validada', sistema:'PMO', inicio:'2024-12-01', fin:'2025-06-30' },
+      { fase:'1. Ingeniería', nombre:'Especificaciones técnicas', sistema:'PMO', inicio:'2024-12-10', fin:'2025-03-31' },
+      { fase:'2. Telecom', nombre:'Torres TETRA (37) - Suministro', sistema:'TETRA', inicio:'2025-07-01', fin:'2025-10-31' },
+      { fase:'2. Telecom', nombre:'Torres TETRA (37) - Obra Civil', sistema:'TETRA', inicio:'2025-08-01', fin:'2026-02-28' },
+      { fase:'3. Fibra', nombre:'Tendido FO 48F (594 km)', sistema:'FO', inicio:'2025-07-15', fin:'2028-08-31' },
+      { fase:'4. Puesta en Marcha', nombre:'Pruebas integrales (FAT/SAT)', sistema:'QA', inicio:'2028-09-01', fin:'2028-12-31' },
+      { fase:'4. Puesta en Marcha', nombre:'Acta de recibo', sistema:'PMO', inicio:'2029-01-31', fin:'2029-01-31', hito:true }
     ];
 
     function loadData(){
-      // Si en el futuro dm.data.cronograma existe, combinarlo; por ahora usar defaultPlan
-      all = defaultPlan.map(t=>({
-        ...t,
-        ini: parseDate(t.inicio),
-        fin: parseDate(t.fin),
-        dur: (parseDate(t.fin) && parseDate(t.inicio)) ? diffMonths(parseDate(t.inicio), parseDate(t.fin)) : 0
-      }));
+      all = defaultPlan.map(t=>({ ...t, ini: parseDate(t.inicio), fin: parseDate(t.fin), dur: (parseDate(t.fin) && parseDate(t.inicio)) ? diffMonths(parseDate(t.inicio), parseDate(t.fin)) : 0 }));
       filtered = [...all];
-      poblarFiltros();
-      renderTabla();
-      actualizarMetricas();
+      poblarFiltros(); renderTabla(); actualizarMetricas();
     }
 
     function poblarFiltros(){
-      const fases=[...new Set(all.map(t=>t.fase))];
-      const sistemas=[...new Set(all.map(t=>t.sistema))];
+      const fases=[...new Set(all.map(t=>t.fase))]; const sistemas=[...new Set(all.map(t=>t.sistema))];
       const fF=document.getElementById('fFase'); const fS=document.getElementById('fSistema');
       fases.forEach(f=>{ const o=document.createElement('option'); o.value=f; o.textContent=f; fF.appendChild(o); });
       sistemas.forEach(s=>{ const o=document.createElement('option'); o.value=s; o.textContent=s; fS.appendChild(o); });
     }
 
     function aplicarFiltros(){
-      const fase=document.getElementById('fFase').value;
-      const sist=document.getElementById('fSistema').value;
-      const q=(document.getElementById('fBuscar').value||'').toLowerCase();
-      filtered = all.filter(t=>{
-        if (fase && t.fase!==fase) return false;
-        if (sist && t.sistema!==sist) return false;
-        if (q && !(t.nombre||'').toLowerCase().includes(q)) return false;
-        return true;
-      });
-      renderTabla();
-      actualizarMetricas();
+      const fase=document.getElementById('fFase').value; const sist=document.getElementById('fSistema').value; const q=(document.getElementById('fBuscar').value||'').toLowerCase();
+      filtered = all.filter(t=>{ if (fase && t.fase!==fase) return false; if (sist && t.sistema!==sist) return false; if (q && !(t.nombre||'').toLowerCase().includes(q)) return false; return true; });
+      renderTabla(); actualizarMetricas();
     }
 
     function renderTabla(){
-      const tb=document.querySelector('#tabla tbody');
-      if (filtered.length===0){ tb.innerHTML='<tr><td colspan="7" style="color:#94a3b8">Sin resultados</td></tr>'; return; }
-      const minIni = filtered.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null);
-      const maxFin = filtered.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null);
-      const meses = Math.max(1, diffMonths(minIni,maxFin));
-      tb.innerHTML = filtered.map(t=>{
-        const offset = Math.round((t.ini - minIni)/(30*MS_IN_DAY));
-        const span = Math.max(1, Math.round((t.fin - t.ini)/(30*MS_IN_DAY)));
-        const bars = `<div class="gantt">${'<span style="flex:'+offset+' 0 0"></span>'}<span class="bar ${t.hito?'milestone':''}" style="flex:${t.hito?1:span}"></span></div>`;
-        return `<tr>
-          <td>${t.fase}</td>
-          <td>${t.nombre}</td>
-          <td>${t.sistema||''}</td>
-          <td>${fmt(t.ini)}</td>
-          <td>${fmt(t.fin)}</td>
-          <td class="right">${t.dur}</td>
-          <td>${bars}</td>
-        </tr>`;
-      }).join('');
+      const tb=document.querySelector('#tabla tbody'); if (filtered.length===0){ tb.innerHTML='<tr><td colspan="7" style="color:var(--muted)">Sin resultados</td></tr>'; return; }
+      const minIni = filtered.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null); const maxFin = filtered.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null);
+      tb.innerHTML = filtered.map(t=>{ const offset = Math.round((t.ini - minIni)/(30*MS_IN_DAY)); const span = Math.max(1, Math.round((t.fin - t.ini)/(30*MS_IN_DAY))); const bars = `<div class="gantt">${'<span style="flex:'+offset+' 0 0"></span>'}<span class="bar ${t.hito?'milestone':''}" style="flex:${t.hito?1:span}"></span></div>`; return `<tr><td>${t.fase}</td><td>${t.nombre}</td><td>${t.sistema||''}</td><td>${fmt(t.ini)}</td><td>${fmt(t.fin)}</td><td class="right">${t.dur}</td><td>${bars}</td></tr>`; }).join('');
     }
 
     function actualizarMetricas(){
-      const minIni = all.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null);
-      const maxFin = all.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null);
-      const meses = minIni && maxFin ? diffMonths(minIni,maxFin) : 0;
-      document.getElementById('mDuracion').textContent = meses;
-      document.getElementById('mHitos').textContent = all.filter(t=>t.hito).length;
-      document.getElementById('mFases').textContent = new Set(all.map(t=>t.fase)).size;
-      document.getElementById('mInicioFin').textContent = (minIni&&maxFin)? (fmt(minIni)+' → '+fmt(maxFin)) : '-';
+      const minIni = all.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null); const maxFin = all.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null); const meses = minIni && maxFin ? Math.max(1, Math.round((maxFin-minIni)/(30*MS_IN_DAY))) : 0; document.getElementById('mDuracion').textContent = meses; document.getElementById('mHitos').textContent = all.filter(t=>t.hito).length; document.getElementById('mFases').textContent = new Set(all.map(t=>t.fase)).size; document.getElementById('mInicioFin').textContent = (minIni&&maxFin)? (fmt(minIni)+' → '+fmt(maxFin)) : '-';
     }
 
-    function exportarExcel(){
-      const rows = filtered.map(t=>({
-        Fase:t.fase, Tarea:t.nombre, Sistema:t.sistema, Inicio:fmt(t.ini), Fin:fmt(t.fin), DuracionMeses:t.dur
-      }));
-      const ws = XLSX.utils.json_to_sheet(rows);
-      const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, 'Cronograma');
-      XLSX.writeFile(wb, 'Cronograma_TM01.xlsx');
-    }
+    function exportarExcel(){ const rows = filtered.map(t=>({ Fase:t.fase, Tarea:t.nombre, Sistema:t.sistema, Inicio:fmt(t.ini), Fin:fmt(t.fin), DuracionMeses:t.dur })); const ws = XLSX.utils.json_to_sheet(rows); const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Cronograma'); XLSX.writeFile(wb, 'Cronograma_TM01.xlsx'); }
 
-    window.addEventListener('DOMContentLoaded', ()=>{
-      if (typeof TM01MasterData==='undefined') { loadData(); return; }
-      loadData();
-    });
+    window.addEventListener('DOMContentLoaded', ()=>{ loadData(); });
   </script>
 </body>
 </html>
