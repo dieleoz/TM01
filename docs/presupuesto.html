@@ -614,165 +614,129 @@
             const fmtUSD = (n) => fm(n, 'USD');
             const toUSD = (n) => (n / 4400);
 
-            const capítulos = {};
+            const capitulos = {};
             filteredItems.forEach(i => {
                 const cap = String((i.item || '').split('.')[0] || '').trim() || 'OTROS';
-                if (!capítulos[cap]) capítulos[cap] = { SUMINISTRO: [], OBRA: [], SERVICIO: [] };
+                if (!capitulos[cap]) capitulos[cap] = { SUMINISTRO: [], OBRA: [], SERVICIO: [] };
                 const cantidad = num(i.cantidad);
                 const vuCOP = num(i.vuCOP);
                 const totalCOP = num(i.totalCOP) || (cantidad * vuCOP);
-                const vuCOPDisp = vuCOP;
                 const tipo = i._tipoCalc || 'SUMINISTRO';
-                capítulos[cap][tipo].push({
-                    codigo: i.item || '',
-                    descripcion: i.descripcion || '',
-                    tipo: tipo,
-                    unidad: i.unidad || '',
-                    cantidad: cantidad,
-                    vuCOP: vuCOPDisp,
-                    totalCOP: totalCOP,
-                    totalUSD: toUSD(totalCOP)
+                capitulos[cap][tipo].push({
+                    codigo: i.item || '', descripcion: i.descripcion || '', tipo,
+                    unidad: i.unidad || '', cantidad, vuCOP, totalCOP, totalUSD: toUSD(totalCOP)
                 });
             });
 
-            const seccionTabla = (titulo, lista) => {
+            const estilo = `
+                body{font-family:Segoe UI,Tahoma,Verdana,sans-serif;background:#f2f5fb;color:#0f172a;margin:0}
+                .wrap{max-width:1280px;margin:0 auto}
+                .hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:40px 24px;border-radius:12px;margin:16px}
+                .toolbar{position:sticky;top:0;z-index:10;display:flex;gap:10px;justify-content:flex-end;margin:0 16px}
+                .btn{padding:10px 16px;border:none;border-radius:8px;font-weight:700;cursor:pointer}
+                .btn-print{background:#1d4ed8;color:#fff}
+                .btn-excel{background:#22c55e;color:#fff}
+                h1{margin:0 0 8px;font-size:36px}
+                h2{background:#183a66;color:#fff;padding:14px 18px;border-radius:10px;margin:24px 16px 12px}
+                h3{margin:16px 16px 8px;color:#0f172a}
+                table{border-collapse:collapse;width:calc(100% - 32px);margin:0 16px 14px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+                thead th{background:#0f172a;color:#fff}
+                th,td{border:1px solid #e5e7eb;padding:10px;font-size:13px;text-align:right}
+                th:first-child,td:first-child{text-align:left}
+                tfoot th{background:#f8fafc}
+                .row-subtotal th{background:#eef2ff;font-weight:700}
+                .row-highlight td{background:#fff3cd}
+                .row-iva td{background:#e6f4ff;color:#0b5394}
+                .row-aiu td{background:#fff8e1}
+                .row-total td{background:#e6ffed;font-weight:800}
+                .mini td{font-size:12px}
+                .pill{display:inline-block;background:#0ea5e9;color:#fff;padding:2px 8px;border-radius:999px;font-size:12px;margin-left:8px}
+            `;
+
+            const tablaItems = (titulo, lista, estiloExtra='') => {
                 if (!lista || lista.length === 0) return '';
                 const filas = lista.map(it => `
                     <tr>
-                        <td>${it.codigo}</td>
-                        <td>${it.descripcion}</td>
-                        <td>${it.tipo}</td>
-                        <td>${it.unidad}</td>
-                        <td style="text-align:right;">${it.cantidad}</td>
-                        <td style="text-align:right;">${fmtCOP(it.vuCOP)}</td>
-                        <td style="text-align:right;">${fmtCOP(it.totalCOP)}</td>
-                        <td style="text-align:right;">${fmtUSD(it.totalUSD)}</td>
-                    </tr>
-                `).join('');
+                        <td>${it.codigo}</td><td>${it.descripcion}</td><td>${it.tipo}</td><td>${it.unidad}</td>
+                        <td style=\"text-align:right;\">${it.cantidad}</td>
+                        <td style=\"text-align:right;\">${fmtCOP(it.vuCOP)}</td>
+                        <td style=\"text-align:right;\">${fmtCOP(it.totalCOP)}</td>
+                        <td style=\"text-align:right;\">${fmtUSD(it.totalUSD)}</td>
+                    </tr>`).join('');
                 const subtotalCOP = lista.reduce((s, it) => s + it.totalCOP, 0);
                 const subtotalUSD = toUSD(subtotalCOP);
                 return `
-                    <h3 style="margin:14px 0 8px;">${titulo}</h3>
-                    <table class="t">
-                        <thead>
-                            <tr>
-                                <th>ÍTEM</th><th>DESCRIPCIÓN</th><th>TIPO</th><th>UNIDAD</th><th>CANTIDAD</th><th>VU (COP)</th><th>TOTAL (COP)</th><th>TOTAL (USD)</th>
-                            </tr>
-                        </thead>
-                        <tbody>${filas}</tbody>
-                        <tfoot>
-                            <tr>
-                                <th colspan="6" style="text-align:right;">SUBTOTAL ${titulo.toUpperCase()}:</th>
-                                <th style="text-align:right;">${fmtCOP(subtotalCOP)}</th>
-                                <th style="text-align:right;">${fmtUSD(subtotalUSD)}</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                `;
+                    <h3>${titulo}</h3>
+                    <table class=\"t ${estiloExtra}\"><thead><tr>
+                        <th>ÍTEM</th><th>DESCRIPCIÓN</th><th>TIPO</th><th>UNIDAD</th><th>CANTIDAD</th><th>VU (COP)</th><th>TOTAL (COP)</th><th>TOTAL (USD)</th>
+                    </tr></thead><tbody>${filas}</tbody>
+                    <tfoot><tr class=\"row-subtotal\"><th colspan=\"6\" style=\"text-align:right;\">SUBTOTAL ${titulo.toUpperCase()}:</th><th>${fmtCOP(subtotalCOP)}</th><th>${fmtUSD(subtotalUSD)}</th></tr></tfoot></table>`;
             };
 
-            const seccionesCap = Object.keys(capítulos).sort().map(cap => {
-                const listas = capítulos[cap];
+            const secciones = Object.keys(capitulos).sort().map(cap => {
+                const listas = capitulos[cap];
                 const sumCOP = listas.SUMINISTRO.reduce((s, it) => s + it.totalCOP, 0);
                 const obraCOP = listas.OBRA.reduce((s, it) => s + it.totalCOP, 0);
                 const servCOP = listas.SERVICIO.reduce((s, it) => s + it.totalCOP, 0);
                 const cd = sumCOP + obraCOP + servCOP;
-                const adm = obraCOP * 0.23;
-                const imp = obraCOP * 0.05;
-                const uti = obraCOP * 0.05;
-                const aiu = adm + imp + uti; // 33% obra
-                const ivaSum = sumCOP * 0.19;
-                const ivaServ = servCOP * 0.19;
-                const ivaUtil = obraCOP * 0.05 * 0.19;
-                const iva = ivaSum + ivaServ + ivaUtil;
+                const adm = obraCOP * 0.23, imp = obraCOP * 0.05, uti = obraCOP * 0.05, aiu = adm + imp + uti;
+                const ivaSum = sumCOP * 0.19, ivaServ = servCOP * 0.19, ivaUtil = obraCOP * 0.05 * 0.19, iva = ivaSum + ivaServ + ivaUtil;
                 const total = cd + aiu + iva;
-                const ttlUSD = toUSD(total);
-
-                // Bloques de totales específicos por tipo
-                const bloqueTotalesSuministros = sumCOP > 0 ? `
-                    <div style="margin:6px 0 12px;">
-                        <div><strong>SUBTOTAL SUMINISTROS:</strong> ${fmtCOP(sumCOP)} (${fmtUSD(toUSD(sumCOP))})</div>
-                        <div><strong>IVA 19% (Solo aplica a SUMINISTROS):</strong> ${fmtCOP(ivaSum)} (${fmtUSD(toUSD(ivaSum))})</div>
-                        <div><strong>TOTAL SUMINISTROS (con IVA):</strong> ${fmtCOP(sumCOP + ivaSum)} (${fmtUSD(toUSD(sumCOP + ivaSum))})</div>
-                    </div>
-                ` : '';
-
-                const bloqueTotalesObra = obraCOP > 0 ? `
-                    <div style="margin:6px 0 12px;">
-                        <div><strong>SUBTOTAL OBRA CIVIL:</strong> ${fmtCOP(obraCOP)} (${fmtUSD(toUSD(obraCOP))})</div>
-                        <div>Administración (23%): ${fmtCOP(adm)} (${fmtUSD(toUSD(adm))})</div>
-                        <div>Imprevistos (5%): ${fmtCOP(imp)} (${fmtUSD(toUSD(imp))})</div>
-                        <div>Utilidad (5%): ${fmtCOP(uti)} (${fmtUSD(toUSD(uti))})</div>
-                        <div><strong>AIU Total (33%):</strong> ${fmtCOP(aiu)} (${fmtUSD(toUSD(aiu))})</div>
-                        <div>IVA/Utilidad (19% × 5%): ${fmtCOP(ivaUtil)} (${fmtUSD(toUSD(ivaUtil))})</div>
-                        <div><strong>TOTAL OBRA CIVIL (con AIU + IVA):</strong> ${fmtCOP(obraCOP + aiu + ivaUtil)} (${fmtUSD(toUSD(obraCOP + aiu + ivaUtil))})</div>
-                    </div>
-                ` : '';
-
                 return `
-                    <section class="cap">
-                        <h2>${names[cap] || cap}</h2>
-                        ${seccionTabla('SUMINISTROS', listas.SUMINISTRO)}
-                        ${bloqueTotalesSuministros}
-                        ${seccionTabla('OBRA CIVIL', listas.OBRA)}
-                        ${bloqueTotalesObra}
-                        ${seccionTabla('SERVICIOS', listas.SERVICIO)}
-
-                        <h3 style="margin:16px 0 8px;">📊 RESUMEN CAPÍTULO</h3>
-                        <table class="t mini">
-                            <thead><tr><th>CONCEPTO</th><th style="text-align:right;">COP</th><th style="text-align:right;">USD</th></tr></thead>
-                            <tbody>
-                                <tr><td>SUMINISTROS</td><td style="text-align:right;">${fmtCOP(sumCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(sumCOP))}</td></tr>
-                                <tr><td>OBRA CIVIL</td><td style="text-align:right;">${fmtCOP(obraCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(obraCOP))}</td></tr>
-                                <tr><td>SERVICIOS</td><td style="text-align:right;">${fmtCOP(servCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(servCOP))}</td></tr>
-                                <tr><td><strong>COSTO DIRECTO</strong></td><td style="text-align:right;"><strong>${fmtCOP(cd)}</strong></td><td style="text-align:right;"><strong>${fmtUSD(toUSD(cd))}</strong></td></tr>
-                            </tbody>
-                        </table>
-
-                        <h4 style="margin:14px 0 6px;">DESGLOSE IVA</h4>
-                        <table class="t mini">
-                            <tbody>
-                                <tr><td>IVA Suministros (19%)</td><td style="text-align:right;">${fmtCOP(ivaSum)}</td><td style="text-align:right;">${fmtUSD(toUSD(ivaSum))}</td></tr>
-                                <tr><td>IVA Servicios (19%)</td><td style="text-align:right;">${fmtCOP(ivaServ)}</td><td style="text-align:right;">${fmtUSD(toUSD(ivaServ))}</td></tr>
-                                <tr><td>IVA/Utilidad Obra (19% × 5%)</td><td style="text-align:right;">${fmtCOP(ivaUtil)}</td><td style="text-align:right;">${fmtUSD(toUSD(ivaUtil))}</td></tr>
-                                <tr><td><strong>IVA TOTAL</strong></td><td style="text-align:right;"><strong>${fmtCOP(iva)}</strong></td><td style="text-align:right;"><strong>${fmtUSD(toUSD(iva))}</strong></td></tr>
-                            </tbody>
-                        </table>
-
-                        <div class="tot">
-                            <strong>TOTAL ${names[cap] || cap}:</strong> ${fmtCOP(total)} (${fmtUSD(ttlUSD)})
-                        </div>
-                    </section>
+                    <h2>${names[cap] || ('Capítulo '+cap)}</h2>
+                    ${tablaItems('1.1 SUMINISTROS', listas.SUMINISTRO)}
+                    ${sumCOP>0?`<table class=\"t mini\"><tbody>
+                        <tr class=\"row-iva\"><td>IVA 19% (Solo aplica a SUMINISTROS)</td><td style=\"text-align:right;\">${fmtCOP(ivaSum)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaSum))}</td></tr>
+                        <tr class=\"row-total\"><td>TOTAL SUMINISTROS (con IVA)</td><td style=\"text-align:right;\">${fmtCOP(sumCOP+ivaSum)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(sumCOP+ivaSum))}</td></tr>
+                    </tbody></table>`:''}
+                    ${tablaItems('2.2 OBRA CIVIL', listas.OBRA, 'mini')}
+                    ${obraCOP>0?`<table class=\"t mini\"><tbody>
+                        <tr class=\"row-aiu\"><td>Administración (23%)</td><td style=\"text-align:right;\">${fmtCOP(adm)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(adm))}</td></tr>
+                        <tr class=\"row-aiu\"><td>Imprevistos (5%)</td><td style=\"text-align:right;\">${fmtCOP(imp)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(imp))}</td></tr>
+                        <tr class=\"row-aiu\"><td>Utilidad (5%)</td><td style=\"text-align:right;\">${fmtCOP(uti)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(uti))}</td></tr>
+                        <tr class=\"row-highlight\"><td><strong>AIU Total (33%)</strong></td><td style=\"text-align:right;\"><strong>${fmtCOP(aiu)}</strong></td><td style=\"text-align:right;\"><strong>${fmtUSD(toUSD(aiu))}</strong></td></tr>
+                        <tr class=\"row-iva\"><td>IVA/Utilidad (19% × 5%)</td><td style=\"text-align:right;\">${fmtCOP(ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaUtil))}</td></tr>
+                        <tr class=\"row-total\"><td>TOTAL OBRA CIVIL (con AIU + IVA)</td><td style=\"text-align:right;\">${fmtCOP(obraCOP+aiu+ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(obraCOP+aiu+ivaUtil))}</td></tr>
+                    </tbody></table>`:''}
+                    ${tablaItems('3.3 SERVICIOS', listas.SERVICIO)}
+                    <table class=\"t mini\"><tbody>
+                        <tr class=\"row-iva\"><td>IVA Suministros (19%)</td><td style=\"text-align:right;\">${fmtCOP(ivaSum)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaSum))}</td></tr>
+                        <tr class=\"row-iva\"><td>IVA Servicios (19%)</td><td style=\"text-align:right;\">${fmtCOP(ivaServ)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaServ))}</td></tr>
+                        <tr class=\"row-iva\"><td>IVA/Utilidad Obra (19% × 5%)</td><td style=\"text-align:right;\">${fmtCOP(ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaUtil))}</td></tr>
+                        <tr class=\"row-total\"><td><strong>TOTAL ${names[cap] || ('Capítulo '+cap)}</strong></td><td style=\"text-align:right;\"><strong>${fmtCOP(total)}</strong></td><td style=\"text-align:right;\"><strong>${fmtUSD(toUSD(total))}</strong></td></tr>
+                    </tbody></table>
                 `;
             }).join('');
 
-            const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>ACTA DE OBRA - TM01</title>
-            <style>
-                body{font-family:Segoe UI,Tahoma,Verdana,sans-serif;background:#fff;color:#111;padding:24px;}
-                h1{margin:0 0 4px;font-size:22px}
-                h2{margin:18px 0 6px;font-size:18px;color:#1e3c72}
-                h3{margin:14px 0 6px;font-size:15px;color:#2a5298}
-                h4{margin:12px 0 6px;font-size:14px;color:#2a5298}
-                .muted{color:#6c757d;font-size:12px;margin-bottom:10px}
-                .t{border-collapse:collapse;width:100%;margin:6px 0 12px}
-                .t th,.t td{border:1px solid #dee2e6;padding:8px;font-size:12px}
-                .t thead th{background:#f1f3f5}
-                .t.mini td{font-size:12px}
-                .cap{margin:10px 0 24px;padding-bottom:8px;border-bottom:2px solid #f1f3f5}
-                .tot{margin-top:8px;font-size:14px;color:#1b5e20}
-                .hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px}
-            </style></head>
-            <body>
-                <div class="hdr">
-                    <div>
-                        <h1>📋 ACTA DE OBRA</h1>
-                        <div>WBS - Sistema de Comunicaciones e ITS</div>
-                        <div class="muted">TM01 Troncal Magdalena | v1.0</div>
-                    </div>
-                    <div class="muted">Fecha: ${new Date().toLocaleDateString('es-CO')}</div>
-                </div>
-                ${seccionesCap}
-                <script>window.addEventListener('load',()=>setTimeout(()=>window.print(),400));<\/script>
+            const html = `<!DOCTYPE html><html><head><meta=\"UTF-8\"><title>ACTA DE OBRA - TM01</title>
+                <style>${estilo}</style>
+                <script src=\"https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js\"><\/script>
+            </head><body>
+                <div class=\"toolbar\"><button class=\"btn btn-print\" onclick=\"window.print()\">🖨️ Imprimir</button><button class=\"btn btn-excel\" onclick=\"exportarActaExcel()\">📤 Exportar Excel</button></div>
+                <div class=\"hero\"><div class=\"wrap\">
+                    <h1>📝 ACTA DE OBRA</h1>
+                    <div style=\"font-size:22px;margin-top:6px;\">WBS - Sistema de Comunicaciones y Control<span class=\"pill\">UF-2.2 | v3.0</span></div>
+                    <div style=\"margin-top:12px;opacity:.95\">Fecha: ${new Date().toLocaleDateString('es-CO')}</div>
+                </div></div>
+                <div class=\"wrap\">${secciones}</div>
+                <script>
+                    const capsResumen = ${JSON.stringify(Object.keys(capitulos).sort().map(cap=>{
+                        const listas = capitulos[cap];
+                        const sum = listas.SUMINISTRO.reduce((s,it)=>s+it.totalCOP,0);
+                        const obra = listas.OBRA.reduce((s,it)=>s+it.totalCOP,0);
+                        const serv = listas.SERVICIO.reduce((s,it)=>s+it.totalCOP,0);
+                        const cd = sum+obra+serv; const aiu = obra*0.33; const iva = (sum*0.19)+(serv*0.19)+(obra*0.05*0.19);
+                        return { cap: cap, name: (names && names[cap]) || ('Capítulo '+cap), sum, obra, serv, cd, aiu, iva, total: cd+aiu+iva };
+                    }))};
+                    function exportarActaExcel(){
+                        const data = [['ACTA DE OBRA - TM01'],['Fecha', new Date().toLocaleDateString('es-CO')],[],['CAPÍTULO','SUM (COP)','OBRA (COP)','SERV (COP)','CD (COP)','AIU 33% (COP)','IVA (COP)','TOTAL (COP)','TOTAL (USD)']];
+                        capsResumen.forEach(c=>{ data.push([c.name,c.sum,c.obra,c.serv,c.cd,c.aiu,c.iva,c.total,c.total/4400]); });
+                        const ws = XLSX.utils.aoa_to_sheet(data); ws['!cols']=[{wch:40},{wch:18},{wch:18},{wch:18},{wch:18},{wch:16},{wch:16},{wch:18},{wch:16}];
+                        const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Acta de Obra');
+                        const fname = 'Acta_Obra_TM01_' + new Date().toISOString().split('T')[0] + '.xlsx';
+                        XLSX.writeFile(wb, fname);
+                    }
+                <\/script>
             </body></html>`;
             w.document.write(html);
             w.document.close();
