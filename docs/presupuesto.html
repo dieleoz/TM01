@@ -223,17 +223,29 @@
 
         function getChapterNamesFromWBS(all) {
             const names = {};
+            // Mapeo legible por defecto (se usa si no encontramos nivel 1 en WBS)
+            const defaults = {
+                '1': '1. CONTROL Y SEÑALIZACIÓN VIRTUAL',
+                '2': '2. TELECOMUNICACIONES COLOCALIZADAS',
+                '3': '3. SISTEMAS ITS Y SEGURIDAD',
+                '4': '4. PASOS A NIVEL',
+                '5': '5. CENTRO DE CONTROL OPERACIONAL',
+                '6': '6. MATERIAL RODANTE'
+            };
             all.forEach(i => {
                 const cap = String((i.item || '').split('.')[0] || '').trim();
                 if (!cap) return;
-                // Buscar el primer capitulo tipo capitulo que aporte nombre
-                if (!names[cap]) names[cap] = cap;
+                if (!names[cap]) names[cap] = cap; // placeholder
             });
-            // Intentar enriquecer con items nivel 1 si existen
-            const byLevel1 = all.filter(i => (i.nivel === 1 || (i.item && i.item.indexOf('.') === -1)) && i.descripcion);
-            byLevel1.forEach(i => {
+            // Enriquecer con ítems de nivel 1 (capítulos) cuando existan
+            const level1 = all.filter(i => (i.nivel === 1 || (i.item && i.item.indexOf('.') === -1)) && i.descripcion);
+            level1.forEach(i => {
                 const cap = String(i.item || '').split('.')[0];
-                if (cap) names[cap] = `${cap}. ${i.descripcion.toUpperCase()}`;
+                if (cap) names[cap] = `${cap}. ${i.descripcion}`;
+            });
+            // Aplicar mapeo por defecto donde aún sea solo el número
+            Object.keys(names).forEach(cap => {
+                if (names[cap] === cap) names[cap] = defaults[cap] || `Capítulo ${cap}`;
             });
             return names;
         }
