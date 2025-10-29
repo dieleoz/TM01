@@ -688,11 +688,34 @@
                 const total = cd + aiu + iva;
                 const ttlUSD = toUSD(total);
 
+                // Bloques de totales específicos por tipo
+                const bloqueTotalesSuministros = sumCOP > 0 ? `
+                    <div style="margin:6px 0 12px;">
+                        <div><strong>SUBTOTAL SUMINISTROS:</strong> ${fmtCOP(sumCOP)} (${fmtUSD(toUSD(sumCOP))})</div>
+                        <div><strong>IVA 19% (Solo aplica a SUMINISTROS):</strong> ${fmtCOP(ivaSum)} (${fmtUSD(toUSD(ivaSum))})</div>
+                        <div><strong>TOTAL SUMINISTROS (con IVA):</strong> ${fmtCOP(sumCOP + ivaSum)} (${fmtUSD(toUSD(sumCOP + ivaSum))})</div>
+                    </div>
+                ` : '';
+
+                const bloqueTotalesObra = obraCOP > 0 ? `
+                    <div style="margin:6px 0 12px;">
+                        <div><strong>SUBTOTAL OBRA CIVIL:</strong> ${fmtCOP(obraCOP)} (${fmtUSD(toUSD(obraCOP))})</div>
+                        <div>Administración (23%): ${fmtCOP(adm)} (${fmtUSD(toUSD(adm))})</div>
+                        <div>Imprevistos (5%): ${fmtCOP(imp)} (${fmtUSD(toUSD(imp))})</div>
+                        <div>Utilidad (5%): ${fmtCOP(uti)} (${fmtUSD(toUSD(uti))})</div>
+                        <div><strong>AIU Total (33%):</strong> ${fmtCOP(aiu)} (${fmtUSD(toUSD(aiu))})</div>
+                        <div>IVA/Utilidad (19% × 5%): ${fmtCOP(ivaUtil)} (${fmtUSD(toUSD(ivaUtil))})</div>
+                        <div><strong>TOTAL OBRA CIVIL (con AIU + IVA):</strong> ${fmtCOP(obraCOP + aiu + ivaUtil)} (${fmtUSD(toUSD(obraCOP + aiu + ivaUtil))})</div>
+                    </div>
+                ` : '';
+
                 return `
                     <section class="cap">
                         <h2>${names[cap] || cap}</h2>
                         ${seccionTabla('SUMINISTROS', listas.SUMINISTRO)}
+                        ${bloqueTotalesSuministros}
                         ${seccionTabla('OBRA CIVIL', listas.OBRA)}
+                        ${bloqueTotalesObra}
                         ${seccionTabla('SERVICIOS', listas.SERVICIO)}
 
                         <h3 style="margin:16px 0 8px;">📊 RESUMEN CAPÍTULO</h3>
@@ -703,16 +726,6 @@
                                 <tr><td>OBRA CIVIL</td><td style="text-align:right;">${fmtCOP(obraCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(obraCOP))}</td></tr>
                                 <tr><td>SERVICIOS</td><td style="text-align:right;">${fmtCOP(servCOP)}</td><td style="text-align:right;">${fmtUSD(toUSD(servCOP))}</td></tr>
                                 <tr><td><strong>COSTO DIRECTO</strong></td><td style="text-align:right;"><strong>${fmtCOP(cd)}</strong></td><td style="text-align:right;"><strong>${fmtUSD(toUSD(cd))}</strong></td></tr>
-                            </tbody>
-                        </table>
-
-                        <h4 style="margin:14px 0 6px;">DESGLOSE AIU (solo OBRA)</h4>
-                        <table class="t mini">
-                            <tbody>
-                                <tr><td>Administración (23%)</td><td style="text-align:right;">${fmtCOP(adm)}</td><td style="text-align:right;">${fmtUSD(toUSD(adm))}</td></tr>
-                                <tr><td>Imprevistos (5%)</td><td style="text-align:right;">${fmtCOP(imp)}</td><td style="text-align:right;">${fmtUSD(toUSD(imp))}</td></tr>
-                                <tr><td>Utilidad (5%)</td><td style="text-align:right;">${fmtCOP(uti)}</td><td style="text-align:right;">${fmtUSD(toUSD(uti))}</td></tr>
-                                <tr><td><strong>AIU TOTAL (33%)</strong></td><td style="text-align:right;"><strong>${fmtCOP(aiu)}</strong></td><td style="text-align:right;"><strong>${fmtUSD(toUSD(aiu))}</strong></td></tr>
                             </tbody>
                         </table>
 
