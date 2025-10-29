@@ -50,6 +50,8 @@
             <button class="btn btn-primary" onclick="aplicarFiltros()">🔍 Aplicar</button>
             <button class="btn" onclick="limpiarFiltros()">🔄 Limpiar</button>
             <button class="btn btn-success" onclick="exportarExcel()">📊 Exportar Excel</button>
+            <button class="btn" style="background:#17a2b8;color:#fff;" onclick="exportarDesgloseAIU()">📄 Ver Desglose AIU</button>
+            <button class="btn" style="background:#ffc107;color:#212529;" onclick="generarActaObra()">🧾 Ver Acta de Obra</button>
             <div class="filter-group">
                 <label for="fSistema">Sistema:</label>
                 <select id="fSistema"></select>
@@ -61,9 +63,12 @@
         <div class="stats">
             <div class="stat"><div class="label">Total USD</div><div class="value" id="statUSD">-</div></div>
             <div class="stat"><div class="label">Total COP</div><div class="value" id="statCOP">-</div></div>
-            <div class="stat"><div class="label">AIU (33%)</div><div class="value" id="statAIU">-</div></div>
-            <div class="stat"><div class="label">IVA Servicios (19%)</div><div class="value" id="statIVA">-</div></div>
+            <div class="stat"><div class="label">AIU (33% solo OBRA)</div><div class="value" id="statAIU">-</div></div>
+            <div class="stat"><div class="label">IVA (SUM+SERV+Util OBRA)</div><div class="value" id="statIVA">-</div></div>
             <div class="stat"><div class="label">Items</div><div class="value" id="statItems">-</div></div>
+            <div class="stat"><div class="label"># SUM</div><div class="value" id="statSum">-</div></div>
+            <div class="stat"><div class="label"># OBRA</div><div class="value" id="statObra">-</div></div>
+            <div class="stat"><div class="label"># SERV</div><div class="value" id="statServ">-</div></div>
         </div>
 
         <div class="table-container">
@@ -103,12 +108,24 @@
             initPresupuesto();
         }
 
+        function inferTipoPresupuestal(item) {
+            const desc = (item.descripcion || '').toLowerCase();
+            // Heurística básica si no viene definido
+            if (item.tipo_presupuesto) return item.tipo_presupuesto; // preferente si existe
+            if (/mano de obra|zanja|obra|canaliz|hormig|fundaci|poste|concreto/.test(desc)) return 'OBRA';
+            if (/instalaci|comisionamiento|pruebas|documentaci|capacitaci|servicio/.test(desc)) return 'SERVICIO';
+            return 'SUMINISTRO';
+        }
+
         function initPresupuesto() {
             try {
                 const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
                 const wbs = Array.isArray(dm.data?.wbs) ? dm.data.wbs : [];
-                // Tomamos sólo items presupuestales (tipo 'item')
-                allItems = wbs.filter(i => i && i.tipo === 'item');
+                // Tomamos sólo items presupuestales (tipo 'item') y proyectamos campos de precio/costo
+                allItems = wbs.filter(i => i && i.tipo === 'item').map(i => ({
+                    ...i,
+                    _tipoCalc: inferTipoPresupuestal(i)
+                }));
                 if (allItems.length === 0) throw new Error('No hay items WBS para presupuesto');
                 poblarFiltros();
                 filteredItems = [...allItems];
@@ -149,7 +166,7 @@
             aplicarFiltros();
         }
 
-        function num(val) { const n = parseFloat(String(val).replace(/[^0-9.\-]/g, '')); return isNaN(n) ? 0 : n; }
+        function num(val) { const n = parseFloat(String(val ?? '').toString().replace(/[^0-9.\-]/g, '')); return isNaN(n) ? 0 : n; }
         function fm(n, curr) {
             if (curr === 'USD') return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
             return new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(n);
@@ -180,16 +197,55 @@
             }).join('');
         }
 
+        function calcularAIUIVA(data) {
+            // Suma por capítulo y por tipo SUM/OBRA/SERV
+            const subtotales = {}; // { cap: { SUMINISTRO, OBRA, SERVICIO, ... } }
+            let totalSuministros = 0, totalObraCivil = 0, totalServicios = 0;
+            data.forEach(i => {
+                const cap = String((i.item || '').split('.')[0] || '').trim() || 'OTROS';
+                if (!subtotales[cap]) subtotales[cap] = { SUMINISTRO: 0, OBRA: 0, SERVICIO: 0 };
+                const cantidad = num(i.cantidad);
+                const totalCOP = num(i.totalCOP) || (cantidad * num(i.vuCOP));
+                const tipo = i._tipoCalc || 'SUMINISTRO';
+                subtotales[cap][tipo] += totalCOP;
+                if (tipo === 'SUMINISTRO') totalSuministros += totalCOP;
+                if (tipo === 'OBRA') totalObraCivil += totalCOP;
+                if (tipo === 'SERVICIO') totalServicios += totalCOP;
+            });
+            // CD = SUM + OBRA + SERV
+            const costoDirecto = totalSuministros + totalObraCivil + totalServicios;
+            // AIU = 33% de OBRA (Adm 23% + Imp 5% + Util 5%)
+            const aiu = totalObraCivil * 0.33;
+            // IVA = 19% SUM + 19% SERV + 19% (5% de OBRA)
+            const iva = (totalSuministros * 0.19) + (totalServicios * 0.19) + (totalObraCivil * 0.05 * 0.19);
+            const total = costoDirecto + aiu + iva;
+            return {
+                costoDirecto,
+                aiu,
+                iva,
+                total,
+                totalSuministros,
+                totalObraCivil,
+                totalServicios,
+                subtotales
+            };
+        }
+
         function actualizarEstadisticas() {
             const totUSD = filteredItems.reduce((s, i) => s + (num(i.cantidad) * num(i.vu)), 0);
             const totCOP = filteredItems.reduce((s, i) => s + (num(i.totalCOP) || (num(i.cantidad) * num(i.vuCOP))), 0);
-            const aiu = totCOP * 0.33;
-            const iva = (totCOP + aiu) * 0.19; // aproximación con IVA servicios
+            const calc = calcularAIUIVA(filteredItems);
+            const nSum = filteredItems.filter(i => (i._tipoCalc === 'SUMINISTRO')).length;
+            const nObra = filteredItems.filter(i => (i._tipoCalc === 'OBRA')).length;
+            const nServ = filteredItems.filter(i => (i._tipoCalc === 'SERVICIO')).length;
             document.getElementById('statUSD').textContent = fm(totUSD, 'USD');
             document.getElementById('statCOP').textContent = fm(totCOP, 'COP');
-            document.getElementById('statAIU').textContent = fm(aiu, 'COP');
-            document.getElementById('statIVA').textContent = fm(iva, 'COP');
+            document.getElementById('statAIU').textContent = fm(calc.aiu, 'COP');
+            document.getElementById('statIVA').textContent = fm(calc.iva, 'COP');
             document.getElementById('statItems').textContent = String(filteredItems.length);
+            document.getElementById('statSum').textContent = String(nSum);
+            document.getElementById('statObra').textContent = String(nObra);
+            document.getElementById('statServ').textContent = String(nServ);
         }
 
         function exportarExcel() {
@@ -198,6 +254,7 @@
                 Item: i.item || '',
                 Descripción: i.descripcion || '',
                 Sistema: i.sistema || '',
+                Tipo: i._tipoCalc || '',
                 Cantidad: num(i.cantidad),
                 Unidad: i.unidad || '',
                 'VU USD': num(i.vu),
@@ -209,6 +266,84 @@
             const wb = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(wb, ws, 'WBS Presupuesto');
             XLSX.writeFile(wb, 'WBS_Presupuesto_TM01.xlsx');
+        }
+
+        function exportarDesgloseAIU() {
+            if (filteredItems.length === 0) { alert('No hay datos para exportar'); return; }
+            const calc = calcularAIUIVA(filteredItems);
+            const data = [
+                ['DESGLOSE PRESUPUESTAL POR CAPÍTULOS - TM01'],
+                ['Fecha', new Date().toLocaleDateString('es-CO')],
+                [],
+                ['CAPÍTULO', 'SUMINISTROS (COP)', 'OBRA (COP)', 'SERVICIOS (COP)', 'COSTO DIRECTO (COP)', 'AIU 33% (COP)', 'IVA (COP)', 'TOTAL (COP)', 'TOTAL (USD)']
+            ];
+            Object.keys(calc.subtotales).sort().forEach(cap => {
+                const c = calc.subtotales[cap];
+                const cd = c.SUMINISTRO + c.OBRA + c.SERVICIO;
+                const aiu = c.OBRA * 0.33;
+                const iva = (c.SUMINISTRO * 0.19) + (c.SERVICIO * 0.19) + (c.OBRA * 0.05 * 0.19);
+                const total = cd + aiu + iva;
+                data.push([cap, c.SUMINISTRO, c.OBRA, c.SERVICIO, cd, aiu, iva, total, total / 4400]);
+                if (c.OBRA > 0) {
+                    data.push(['', '  ↳ Administración 23%', '', '', '', c.OBRA * 0.23, '', '', (c.OBRA * 0.23) / 4400]);
+                    data.push(['', '  ↳ Imprevistos 5%', '', '', '', c.OBRA * 0.05, '', '', (c.OBRA * 0.05) / 4400]);
+                    data.push(['', '  ↳ Utilidad 5%', '', '', '', c.OBRA * 0.05, '', '', (c.OBRA * 0.05) / 4400]);
+                    data.push(['', '  ↳ IVA/Utilidad Obra (19%×5%)', '', '', '', c.OBRA * 0.05 * 0.19, '', '', (c.OBRA * 0.05 * 0.19) / 4400]);
+                }
+                if (c.SERVICIO > 0) {
+                    data.push(['', '  ↳ IVA Servicios (19%)', '', '', '', c.SERVICIO * 0.19, '', '', (c.SERVICIO * 0.19) / 4400]);
+                }
+            });
+            data.push([]);
+            data.push(['TOTAL', calc.totalSuministros, calc.totalObraCivil, calc.totalServicios, calc.costoDirecto, calc.aiu, calc.iva, calc.total, calc.total / 4400]);
+            const ws = XLSX.utils.aoa_to_sheet(data);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, 'Desglose AIU');
+            const fname = `Desglose_AIU_TM01_${new Date().toISOString().split('T')[0]}.xlsx`;
+            XLSX.writeFile(wb, fname);
+        }
+
+        function generarActaObra() {
+            const calc = calcularAIUIVA(filteredItems);
+            const w = window.open('', '_blank');
+            const rows = Object.keys(calc.subtotales).sort().map(cap => {
+                const c = calc.subtotales[cap];
+                const cd = c.SUMINISTRO + c.OBRA + c.SERVICIO;
+                const aiu = c.OBRA * 0.33;
+                const iva = (c.SUMINISTRO * 0.19) + (c.SERVICIO * 0.19) + (c.OBRA * 0.05 * 0.19);
+                const total = cd + aiu + iva;
+                return `<tr>
+                    <td style="padding:8px;border:1px solid #dee2e6;">${cap}</td>
+                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${cd.toLocaleString('es-CO')}</td>
+                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${aiu.toLocaleString('es-CO')}</td>
+                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${iva.toLocaleString('es-CO')}</td>
+                    <td style="padding:8px;border:1px solid #dee2e6;text-align:right;">${total.toLocaleString('es-CO')}</td>
+                </tr>`;
+            }).join('');
+            const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Acta de Obra - TM01</title>
+            <style>body{font-family:Segoe UI,Tahoma,Verdana,sans-serif;padding:20px;background:#fff;}h1{margin:0 0 6px}table{border-collapse:collapse;width:100%;font-size:13px} th{background:#1e3c72;color:#fff;text-align:left;padding:10px;border:1px solid #dee2e6} td{padding:8px;border:1px solid #dee2e6} .muted{color:#6c757d;font-size:12px}</style></head>
+            <body>
+              <h1>Acta de Obra</h1>
+              <div class="muted">Fecha: ${new Date().toLocaleString('es-CO')}</div>
+              <p class="muted">Resumen de costos por capítulo con AIU e IVA conforme a lineamientos (AIU solo OBRA; IVA a SUM+SERV+Utilidad de OBRA).</p>
+              <table>
+                <thead><tr><th>Capítulo</th><th>Costo Directo (COP)</th><th>AIU 33% (COP)</th><th>IVA (COP)</th><th>Total (COP)</th></tr></thead>
+                <tbody>${rows}</tbody>
+                <tfoot>
+                    <tr>
+                        <th>TOTALES</th>
+                        <th style="text-align:right;">${calc.costoDirecto.toLocaleString('es-CO')}</th>
+                        <th style="text-align:right;">${calc.aiu.toLocaleString('es-CO')}</th>
+                        <th style="text-align:right;">${calc.iva.toLocaleString('es-CO')}</th>
+                        <th style="text-align:right;">${calc.total.toLocaleString('es-CO')}</th>
+                    </tr>
+                </tfoot>
+              </table>
+              <p class="muted">TRM de referencia: 4,400 COP/USD.</p>
+              <script>window.addEventListener('load',()=>setTimeout(()=>window.print(),300));<\/script>
+            </body></html>`;
+            w.document.write(html);
+            w.document.close();
         }
 
         if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', waitForDataAndInit); } else { waitForDataAndInit(); }
