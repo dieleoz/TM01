@@ -439,6 +439,7 @@ Longitudes:
 ### **PRESUPUESTO REFERENCIAL (NO VINCULANTE):**
 
 **NOTA:** Esta tabla presenta un **presupuesto referencial estimado** basado en cotizaciones previas de proyectos similares. **NO es vinculante** para el oferente.
+El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para cada ítem listado, sobre las cantidades estimadas aquí. Si el oferente propone ajustes de cantidades, deberá anexar su **cómputo métrico** y **memoria de cálculo**; la evaluación se realizará principalmente con base en los **precios unitarios** presentados.
 
 | Ítem | Descripción | Cantidad | Unidad | Precio Ref. Unit. (USD) | Total Ref. (USD) |
 |:-----|:------------|:---------|:-------|:------------------------|:-----------------|
@@ -741,6 +742,8 @@ La oferta debe presentarse en **2 sobres cerrados:**
 | **6. Pruebas** | 6.1 - 6.4 | ✅ Completar precio unitario |
 | **AIU** | - | ✅ Desglosar % Administración, Imprevistos, Utilidad |
 | **Plazo** | - | ✅ Cronograma en meses |
+
+> Nota: Las cantidades incluidas se sincronizan con el presupuesto vigente del sistema web (`docs/presupuesto.html`). En caso de discrepancias menores, prevalecerán las cantidades de esta RFQ para la evaluación económica, sin perjuicio de ajustes en negociación.
 
 ---
 
@@ -1279,6 +1282,7 @@ La oferta debe presentarse en **2 sobres cerrados:**
 | **Anexo G** | Extracto AT2 del Contrato | .pdf |
 | **Anexo H** | Extracto AT3 del Contrato | .pdf |
 | **Anexo I** | Minuta de Contrato (borrador) | .pdf |
+| **Anexo J** | Export de cantidades desde `docs/presupuesto.html` | .csv |
 
 **Descarga de anexos:**
 - **Link:** [URL del proyecto o email de contacto]
