@@ -223,9 +223,9 @@ class TM01MasterData {
             {id: '10.3.5', nivel: 3, item: "10.3.5", descripcion: "Instalación cajas empalme", sistema: "TELECOM", cantidad: "1257", unidad: "UND", tipo: "item", criterio: "Instalación cajas", vu: "111.18", vuCOP: "489,200", total: "139,754", totalCOP: "615,025,000"},
             
             {id: '10.4', nivel: 2, item: "10.4", descripcion: "HALADO E INSTALACIÓN", sistema: "TELECOM", tipo: "subcapitulo"},
-            {id: '10.4.1', nivel: 3, item: "10.4.1", descripcion: "Halado fibra óptica 48h", sistema: "TELECOM", cantidad: "293190", unidad: "ML", tipo: "item", criterio: "Halado principal (longitud ducto instalado)", vu: "8.35", vuCOP: "36,740", total: "2,448,137", totalCOP: "10,772,065,600"},
-            {id: '10.4.2', nivel: 3, item: "10.4.2", descripcion: "Halado fibra óptica 12h", sistema: "TELECOM", cantidad: "9440", unidad: "ML", tipo: "item", criterio: "Halado secundario (longitud instalada)", vu: "30.6", vuCOP: "134,640", total: "288,864", totalCOP: "1,271,078,400"},
-            {id: '10.4.3', nivel: 3, item: "10.4.3", descripcion: "Trabajos instalación especializada", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación completa", vu: "151,554", vuCOP: "666,837,600", total: "151,554", totalCOP: "666,837,600"},
+            {id: '10.4.1', nivel: 3, item: "10.4.1", descripcion: "Halado fibra óptica 48h", sistema: "TELECOM", cantidad: "293190", unidad: "ML", tipo: "item", criterio: "Halado principal (longitud ducto instalado)", vu: "1.2", vuCOP: "5,280", total: "351,828", totalCOP: "1,547,043,200"},
+            {id: '10.4.2', nivel: 3, item: "10.4.2", descripcion: "Halado fibra óptica 12h", sistema: "TELECOM", cantidad: "9440", unidad: "ML", tipo: "item", criterio: "Halado secundario (longitud instalada)", vu: "1.4", vuCOP: "6,160", total: "13,216", totalCOP: "58,150,400"},
+            {id: '10.4.3', nivel: 3, item: "10.4.3", descripcion: "Trabajos instalación especializada", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación especializada y contingencias", vu: "50,000", vuCOP: "220,000,000", total: "50,000", totalCOP: "220,000,000"},
             
         ];
         
