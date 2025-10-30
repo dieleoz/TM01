@@ -327,15 +327,15 @@
                 const total = cd + aiu + iva;
                 rows.push(`
                     <tr>
-                        <td>${names[cap] || cap}</td>
+                        <td><strong>${names[cap] || cap}</strong></td>
                         <td class="right">${fm(c.SUMINISTRO, 'COP')}</td>
                         <td class="right">${fm(c.OBRA, 'COP')}</td>
                         <td class="right">${fm(c.SERVICIO, 'COP')}</td>
-                        <td class="right">${fm(cd, 'COP')}</td>
+                        <td class="right"><strong>${fm(cd, 'COP')}</strong></td>
                         <td class="right">${fm(aiu, 'COP')}</td>
                         <td class="right">${fm(iva, 'COP')}</td>
-                        <td class="right">${fm(total, 'COP')}</td>
-                        <td class="right">${fm(total/4400, 'USD')}</td>
+                        <td class="right"><strong style="color:#1976d2;">${fm(total, 'COP')}</strong></td>
+                        <td class="right"><strong>${fm(total/4400, 'USD')}</strong></td>
                     </tr>
                 `);
                 // Subfilas como en el ejemplo
@@ -362,16 +362,16 @@
             });
             // Totales
             rows.push(`
-                <tr style="font-weight:700;background:#f8f9fa;">
-                    <td>TOTAL GENERAL</td>
+                <tr style="font-weight:700;background:#e3f2fd;border-top:2px solid #1976d2;">
+                    <td><strong>TOTAL GENERAL</strong></td>
                     <td class="right">${fm(calc.totalSuministros,'COP')}</td>
                     <td class="right">${fm(calc.totalObraCivil,'COP')}</td>
                     <td class="right">${fm(calc.totalServicios,'COP')}</td>
                     <td class="right">${fm(calc.costoDirecto,'COP')}</td>
                     <td class="right">${fm(calc.aiu,'COP')}</td>
                     <td class="right">${fm(calc.iva,'COP')}</td>
-                    <td class="right">${fm(calc.total,'COP')}</td>
-                    <td class="right">${fm(calc.total/4400,'USD')}</td>
+                    <td class="right" style="background:#d4edda;color:#155724;">${fm(calc.total,'COP')}</td>
+                    <td class="right" style="background:#d4edda;color:#155724;">${fm(calc.total/4400,'USD')}</td>
                 </tr>
             `);
             tbody.innerHTML = rows.join('');
