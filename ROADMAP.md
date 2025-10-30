@@ -1,12 +1,12 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo y Cronograma - Sistema de Validación Web con Arquitectura Dinámica
 
-**Versión:** 14.1 - ARQUITECTURA 4 CAPAS CONSOLIDADA  
-**Fecha:** 28 de Octubre 2025 (PM)  
-**Estado:** ✅ **UI clon del ejemplo + PS1 TM01** | ✅ **DT-PEAJES-018 APLICADA**    
+**Versión:** 14.3 - AF1 ACTUALIZADO + SIGUIENTES 24-48H  
+**Fecha:** 30 de Octubre 2025  
+**Estado:** ✅ **Integración UF completa + Cronograma mejorado + Fix desglose presupuestal + AF1 v1.1**    
 **Fecha de inicio:** 16 de octubre de 2025  
 **Duración estimada:** 12-16 semanas  
-**Última actualización:** 28 de octubre de 2025 - Sistema web completo con peajes actualizados  
+**Última actualización:** 30 de octubre de 2025 - AF1 v1.1 (mapeo PK→UF + cronograma UF), integración UF, mejoras cronograma, fix presupuesto  
 **Progreso total:** ✅ **FASE 6 VALIDACIÓN WEB CON ARQUITECTURA DINÁMICA COMPLETADA AL 100%**  
 **✅ VALIDACIONES:** 13/13 sistemas validados (100%)  
 **✅ METODOLOGÍA GENÉRICA:** Creada, aplicada y refinada exitosamente  
@@ -160,26 +160,50 @@ Implementar DT-PEAJES-018 con valores reales de cotización y reconstruir sistem
 - ✅ **Documentación**: Miniarquitectura completa creada
 
 ### **Valores Actualizados:**
-## 📅 Bitácora día a día (28-Oct-2025)
+## 📅 Bitácora día a día
 
-AM:
+### 📅 **29-Oct-2025** - Integración UF + Mejoras Cronograma + Fix Presupuesto
+
+**Trabajo Realizado:**
+- ✅ **Integración completa de Unidades Funcionales (UF):**
+  - Creado `docs/data/uf_pk_map.js` con rangos PK→UF del AT1 (UF0-UF13)
+  - Actualizado `tm01_master_data.js` para asignar UF automáticamente
+  - Añadido filtro por UF y columna UF en `layout.html`
+  - Añadido filtro por UF y columna UF en `presupuesto.html`
+  - Resumen "Equipos por UF" en layout con conteos (items y unidades)
+  
+- ✅ **Mejoras en `cronograma.html`:**
+  - Columna "Estado" con indicadores de urgencia (🟢 OK / 🟡 En plazo / 🔴 Urgente / ❌ Vencida / ⚠️ CRÍTICA)
+  - Formato de fechas mejorado (DD/MM/YYYY)
+  - Días restantes/vencidos mostrados
+  - Incluye UF0-D (D+180) y UF0-M36 (mes 36)
+  - Resaltado UF5 y UF0-M36 como críticas
+  
+- ✅ **Fix `presupuesto.html`:**
+  - Eliminadas sub-entradas confusas (↳) de la tabla principal
+  - Desglose por capítulos simplificado (solo fila principal por capítulo)
+  - Los detalles AIU/IVA permanecen en "Ver Desglose AIU"
+
+**Commits:**
+- `feat(UF): Integración completa de Unidades Funcionales en layout y presupuesto`
+- `feat(cronograma): Mejora visualización de plazos por UF`
+- `fix(presupuesto): Simplificar desglose por capítulos`
+ - `docs(AF1): v1.1 Actualizar apéndice financiero con mapeo PK→UF y cronograma UF`
+
+---
+
+### 📅 **28-Oct-2025** - Sistema Web Reconstruido
+
+**AM:**
 - Alineación de `index.html` a login + redirección a WBS.
 - `docs/wbs.html`, `layout.html`, `presupuesto.html` (datos dinámicos) creados.
 - Copia de datos a `docs/` y verificación.
 
-PM:
+**PM:**
 - `WBS_Menu_Principal.html` (métricas + enlaces) actualizado.
 - Cálculo robusto de totales en `wbs.html` (total/totalCOP/cant×VU).
 - Eliminación `docs/index.html` y flujo simplificado a WBS.
 - Actualización arquitectura y README.
-
-Próximos (29-Oct):
-- Botón “📋 Crear DT” (modal + YAML + descarga) en WBS.
-- Botón “🔄 Sincronizar” (PS1 maestro + log + cache-busting).
-- `docs/estado_sync.html` (último sync, archivos, errores).
-- **Total peajes**: ~$8.1M USD (2 estaciones completas)
-- **Presupuesto total TM01**: USD 13M (incluye todos los sistemas)
-- **Equipos en sistema**: 200+ distribuidos en 293 km
 
 ---
 
@@ -1405,12 +1429,72 @@ Durante la sesión del 20/10/2025, el usuario identificó que las "correcciones"
 
 ---
 
-**Estado del ROADMAP:** ✅ **FASE 6 VALIDACIÓN WEB COMPLETADA AL 100%** + **DT-PEAJES-018 APLICADA**  
-**Próximo paso:** Validación externa y refinamiento de interfaces web  
-**Versión:** 14.0  
-**Última actualización:** 28 de octubre de 2025 - Sistema web TM01 reconstruido con peajes actualizados  
+## 🎯 **ESTADO ACTUAL Y PRÓXIMOS PASOS** (29-Oct-2025)
+
+### ✅ **EN QUÉ ESTAMOS HOY:**
+
+**Completado esta sesión (29-Oct):**
+- ✅ **Integración UF completa**: Mapeo PK→UF, filtros y columnas UF en layout/presupuesto
+- ✅ **Cronograma mejorado**: Plazos por UF con estados, días restantes, UF0 incluida
+- ✅ **Fix desglose presupuestal**: Tabla simplificada, sin sub-entradas confusas
+
+**Sistema Web - Estado Actual:**
+- ✅ **8 interfaces HTML** operativas: wbs.html, layout.html, presupuesto.html, reporte_gerencial.html, cronograma.html, analisis_riesgos.html, edt_detalle.html, WBS_Menu_Principal.html
+- ✅ **Fuente única de verdad**: `tm01_master_data.js` con datos WBS, presupuesto, layout, cronogramaUF
+- ✅ **Integración UF**: Filtros y columnas por UF en layout y presupuesto
+- ✅ **Cronograma UF**: Plazos contractuales por UF con indicadores de estado
+
+**Arquitectura:**
+- ✅ **Capa 1**: Fuentes de verdad (Documentos base)
+- ✅ **Capa 2**: Transformación (`uf_pk_map.js`, `tm01_master_data.js`)
+- ✅ **Capa 3**: Datos intermedios (layout con UF, presupuesto con UF)
+- ✅ **Capa 4**: Visualización (interfaces HTML con filtros UF)
+
+---
+
+### 🚀 **QUÉ SIGUE (Próximas 24-48h):**
+
+**PRIORIDAD ALTA:**
+1. **📊 Completar datos UF faltantes:**
+   - Verificar que todos los equipos en layout/presupuesto tengan UF asignada
+   - Completar y depurar rangos UF11–UF13 según AT1 (Tablas 4–7)
+   - Cargar/normalizar PK reales en layout para mejorar mapeo PK→UF
+
+2. **🔍 Presupuesto (UI + cálculos):**
+   - Verificar UI de "Ver Desglose AIU" (preview claro + export Excel)
+   - Mejorar "Acta de Obra": encabezados, totales resaltados y capítulos claros
+   - Validar clasificación SUMINISTRO/OBRA/SERVICIO y cálculos AIU/IVA por capítulo
+
+3. **📅 Cronograma UF:**
+   - Confirmar fechas máximas y con cura por UF (C1 §5.2)
+   - Verificar días restantes/vencidos y estados
+   - Resaltar ruta crítica condicionada por FO y UF5
+
+**PRIORIDAD MEDIA:**
+4. **🗺️ Layout y navegación:**
+   - Reducir "N/A"/"UF0" mejorando datos de PK y reglas de asignación
+   - Mantener consistencia de colores UI/UX con estándar del proyecto
+   - Verificar enlaces desde `WBS_Menu_Principal.html`
+
+5. **📋 DTs y otras interfaces:**
+   - Generador de DT desde presupuesto/layout con YAML conforme `.cursorrules`
+   - `docs/edt_detalle.html` y `docs/analisis_riesgos.html`: validar datos dinámicos
+   - `docs/reporte_gerencial.html`: métricas finales y riesgos actualizados
+
+**PRIORIDAD BAJA:**
+6. **🔧 Optimizaciones:**
+   - Mejorar rendimiento de carga de datos
+   - Añadir cache para búsquedas frecuentes
+   - Optimizar exportación a Excel
+
+---
+
+**Estado del ROADMAP:** ✅ **FASE 6 VALIDACIÓN WEB COMPLETADA + INTEGRACIÓN UF + CRONOGRAMA MEJORADO**  
+**Próximo paso:** Validar datos UF completos y mejorar asignación PK→UF  
+**Versión:** 14.2  
+**Última actualización:** 29 de octubre de 2025 - Integración UF completa, mejoras cronograma, fix desglose presupuesto  
 **Responsable:** Administrador Contractual EPC  
 **GitHub:** https://github.com/dieleoz/TM01  
 **GitHub Pages:** https://dieleoz.github.io/TM01/  
-**Progreso:** ✅ **85+ documentos generados, Sistema web 100% operativo, Peajes con valores reales**  
+**Progreso:** ✅ **85+ documentos generados, Sistema web 100% operativo, Integración UF completa, Cronograma mejorado**  
 **💰 PRESUPUESTO:** USD 13M validado (incluye peajes con 6 items detallados)
