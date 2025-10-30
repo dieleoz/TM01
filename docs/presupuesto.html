@@ -55,6 +55,8 @@
             <div class="filter-group">
                 <label for="fSistema">Sistema:</label>
                 <select id="fSistema"></select>
+                <label for="fUF">UF:</label>
+                <select id="fUF"></select>
                 <label for="fBuscar">Buscar:</label>
                 <input id="fBuscar" type="text" placeholder="Código o descripción" oninput="aplicarFiltros()" />
             </div>
@@ -81,6 +83,7 @@
                         <th class="right">Cant.</th>
                         <th>Und</th>
                         <th>Tipo</th>
+                        <th>UF</th>
                         <th class="right">VU USD</th>
                         <th class="right">Total USD</th>
                         <th class="right">VU COP</th>
@@ -88,7 +91,7 @@
                     </tr>
                 </thead>
                 <tbody id="tbodyPresupuesto">
-                    <tr><td colspan="10" style="text-align:center;color:#6c757d; padding: 18px;">⏳ Cargando datos presupuestales...</td></tr>
+                    <tr><td colspan="11" style="text-align:center;color:#6c757d; padding: 18px;">⏳ Cargando datos presupuestales...</td></tr>
                 </tbody>
             </table>
                 </div>
@@ -119,6 +122,7 @@
     </div>
 
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <script src="data/uf_pk_map.js"></script>
     <script src="data/tm01_master_data.js"></script>
     <script>
         let allItems = [];
@@ -165,9 +169,14 @@
                 const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
                 const wbs = Array.isArray(dm.data?.wbs) ? dm.data.wbs : [];
                 // Tomamos sólo items presupuestales (tipo 'item') y proyectamos campos de precio/costo
+                // Obtener layout para mapear UF
+                const layout = Array.isArray(dm.data?.layout) ? dm.data.layout : [];
+                const layoutMap = new Map(layout.map(l => [l.id, l.uf]));
+                
                 allItems = wbs.filter(i => i && i.tipo === 'item').map(i => ({
                     ...i,
-                    _tipoCalc: inferTipoPresupuestal(i)
+                    _tipoCalc: inferTipoPresupuestal(i),
+                    _uf: layoutMap.get(i.id) || 'N/A'
                 }));
                 if (allItems.length === 0) throw new Error('No hay items WBS para presupuesto');
                 poblarFiltros();
@@ -178,7 +187,7 @@
                 document.getElementById('fechaActual').textContent = new Date().toLocaleString('es-CO');
             } catch (e) {
                 const tb = document.getElementById('tbodyPresupuesto');
-                tb.innerHTML = `<tr><td colspan="9" style="padding:18px;color:#dc3545;">❌ ${e.message}</td></tr>`;
+                tb.innerHTML = `<tr><td colspan="11" style="padding:18px;color:#dc3545;">❌ ${e.message}</td></tr>`;
                 console.error('Presupuesto - error de carga:', e);
             }
         }
@@ -189,13 +198,26 @@
             const sistemas = Array.from(new Set(allItems.map(i => i.sistema).filter(Boolean))).sort();
             sistemas.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sel.appendChild(o); });
             sel.onchange = aplicarFiltros;
+            
+            // Poblar filtro de UF
+            const ufSel = document.getElementById('fUF');
+            ufSel.innerHTML = '<option value="">Todas</option>';
+            const ufs = Array.from(new Set(allItems.map(i => i._uf || 'N/A').filter(uf => uf && uf !== 'N/A'))).sort((a, b) => {
+                const aNum = parseInt(a.replace('UF', '')) || 999;
+                const bNum = parseInt(b.replace('UF', '')) || 999;
+                return aNum - bNum;
+            });
+            ufs.forEach(uf => { const o = document.createElement('option'); o.value = uf; o.textContent = uf; ufSel.appendChild(o); });
+            ufSel.onchange = aplicarFiltros;
         }
 
         function aplicarFiltros() {
             const sistema = document.getElementById('fSistema').value;
+            const uf = document.getElementById('fUF').value;
             const q = document.getElementById('fBuscar').value.toLowerCase();
             filteredItems = allItems.filter(i => {
                 if (sistema && i.sistema !== sistema) return false;
+                if (uf && i._uf !== uf) return false;
                 const texto = `${i.item || ''} ${i.descripcion || ''}`.toLowerCase();
                 if (q && !texto.includes(q)) return false;
                 return true;
@@ -207,6 +229,7 @@
 
         function limpiarFiltros() {
             document.getElementById('fSistema').value = '';
+            document.getElementById('fUF').value = '';
             document.getElementById('fBuscar').value = '';
             aplicarFiltros();
         }
@@ -219,13 +242,14 @@
 
         function renderTabla() {
             const tbody = document.getElementById('tbodyPresupuesto');
-            if (filteredItems.length === 0) { tbody.innerHTML = '<tr><td colspan="10" style="text-align:center;color:#6c757d; padding: 14px;">Sin resultados</td></tr>'; return; }
+            if (filteredItems.length === 0) { tbody.innerHTML = '<tr><td colspan="11" style="text-align:center;color:#6c757d; padding: 14px;">Sin resultados</td></tr>'; return; }
             tbody.innerHTML = filteredItems.map(i => {
                 const cantidad = num(i.cantidad);
                 const vuUSD = num(i.vu);
                 const totalUSD = cantidad * vuUSD;
                 const vuCOP = num(i.vuCOP);
                 const totalCOP = num(i.totalCOP) || (cantidad * vuCOP);
+                const ufBadge = i._uf && i._uf !== 'N/A' ? `<span class="badge" style="background: #e3f2fd; color: #1976d2;">${i._uf}</span>` : '<span style="color: #999;">N/A</span>';
                 return `
                     <tr>
                         <td>${i.item || ''}</td>
@@ -234,6 +258,7 @@
                         <td class="right">${cantidad || 0}</td>
                         <td>${i.unidad || ''}</td>
                         <td>${i._tipoCalc || ''}</td>
+                        <td style="text-align: center;">${ufBadge}</td>
                         <td class="right">${vuUSD ? fm(vuUSD, 'USD') : '-'}</td>
                         <td class="right">${totalUSD ? fm(totalUSD, 'USD') : '-'}</td>
                         <td class="right">${vuCOP ? fm(vuCOP, 'COP') : '-'}</td>

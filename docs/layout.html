@@ -81,6 +81,12 @@
                 </select>
             </div>
             <div class="filter-group">
+                <label>📍 Unidad Funcional (UF):</label>
+                <select id="filter-uf" onchange="applyFilters();">
+                    <option value="">Todas las UFs</option>
+                </select>
+            </div>
+            <div class="filter-group">
                 <label>🔍 Buscar:</label>
                 <input type="text" id="filter-buscar" placeholder="Buscar por nombre..." oninput="applyFilters();">
             </div>
@@ -104,7 +110,17 @@
                     <div class="stat-number" id="stat-filtered">0</div>
                     <div class="stat-label">Filtrados</div>
                 </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="stat-ufs">0</div>
+                    <div class="stat-label">UFs con Equipos</div>
+                </div>
             </div>
+        </div>
+        
+        <!-- Resumen por UF -->
+        <div class="stats" id="stats-uf-container" style="display: none; padding: 15px 20px; background: #e9ecef; border-top: 2px solid #11998e;">
+            <h3 style="margin-bottom: 15px; font-size: 16px; color: #495057;">📊 Equipos por Unidad Funcional (UF)</h3>
+            <div id="stats-uf-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;"></div>
         </div>
         
         <!-- Tabla -->
@@ -116,12 +132,13 @@
                         <th>Nombre</th>
                         <th>Sistema</th>
                         <th>Cantidad</th>
+                        <th>UF</th>
                         <th>Ubicación</th>
                     </tr>
                 </thead>
                 <tbody id="layout-tbody">
                     <tr>
-                        <td colspan="5" class="empty-state">
+                        <td colspan="6" class="empty-state">
                             <div class="empty-state-icon">⏳</div>
                             <div>Cargando datos del layout...</div>
                         </td>
@@ -136,6 +153,7 @@
         </div>
     </div>
 
+    <script src="data/uf_pk_map.js"></script>
     <script src="data/tm01_master_data.js"></script>
     <script>
         let allData = [];
@@ -183,6 +201,7 @@
                     nombre: item.nombre || item.descripcion || 'Sin nombre',
                     sistema: item.sistema || 'N/A',
                     cantidad: item.cantidad || 1,
+                    uf: item.uf || 'N/A',
                     ubicacion: item.ubicacion || 'Por definir',
                     coordenadas: item.coordenadas || null
                 }));
@@ -207,32 +226,52 @@
             document.getElementById('alertInfo').className = 'alert alert-warning';
             document.getElementById('alertInfo').innerHTML = '⚠️ <strong>Error:</strong> ' + mensaje;
             document.getElementById('layout-tbody').innerHTML = 
-                '<tr><td colspan="5" class="empty-state"><div class="empty-state-icon">❌</div><div>' + mensaje + '</div></td></tr>';
+                '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">❌</div><div>' + mensaje + '</div></td></tr>';
         }
         
         function poblarFiltros() {
             const sistemasSet = new Set();
+            const ufsSet = new Set();
+            
             allData.forEach(item => {
                 if (item.sistema) sistemasSet.add(item.sistema);
+                if (item.uf && item.uf !== 'N/A') ufsSet.add(item.uf);
             });
             
+            // Poblar filtro de sistemas
             const sistemaSelect = document.getElementById('filter-sistema');
             sistemaSelect.innerHTML = '<option value="">Todos los sistemas</option>';
-            
             Array.from(sistemasSet).sort().forEach(sistema => {
                 const option = document.createElement('option');
                 option.value = sistema;
                 option.textContent = sistema;
                 sistemaSelect.appendChild(option);
             });
+            
+            // Poblar filtro de UFs
+            const ufSelect = document.getElementById('filter-uf');
+            ufSelect.innerHTML = '<option value="">Todas las UFs</option>';
+            Array.from(ufsSet).sort((a, b) => {
+                // Ordenar UFs: UF0, UF1, UF2, ... UF10, UF11, UF12, UF13
+                const aNum = parseInt(a.replace('UF', '')) || 999;
+                const bNum = parseInt(b.replace('UF', '')) || 999;
+                return aNum - bNum;
+            }).forEach(uf => {
+                const option = document.createElement('option');
+                option.value = uf;
+                option.textContent = uf;
+                ufSelect.appendChild(option);
+            });
         }
         
         function applyFilters() {
             const sistemaFilter = document.getElementById('filter-sistema').value;
+            const ufFilter = document.getElementById('filter-uf').value;
             const buscarFilter = (document.getElementById('filter-buscar').value || '').toLowerCase();
             
             filteredData = allData.filter(item => {
                 if (sistemaFilter && item.sistema !== sistemaFilter) return false;
+                if (ufFilter && item.uf !== ufFilter) return false;
                 if (buscarFilter && !item.nombre.toLowerCase().includes(buscarFilter)) return false;
                 return true;
             });
@@ -243,6 +282,7 @@
         
         function clearFilters() {
             document.getElementById('filter-sistema').value = '';
+            document.getElementById('filter-uf').value = '';
             document.getElementById('filter-buscar').value = '';
             applyFilters();
         }
@@ -251,18 +291,20 @@
             const tbody = document.getElementById('layout-tbody');
             
             if (filteredData.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="5" class="empty-state"><div class="empty-state-icon">🔍</div><div>No se encontraron resultados con los filtros aplicados</div></td></tr>';
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">🔍</div><div>No se encontraron resultados con los filtros aplicados</div></td></tr>';
                 return;
             }
             
             tbody.innerHTML = filteredData.map(item => {
                 const badgeClass = `badge badge-${(item.sistema || '').toLowerCase().replace(/[\/\s]+/g, '-')}`;
+                const ufBadge = item.uf && item.uf !== 'N/A' ? `<span class="badge" style="background: #e3f2fd; color: #1976d2;">${item.uf}</span>` : '<span style="color: #999;">N/A</span>';
                 return `
                     <tr>
                         <td><strong>${item.id}</strong></td>
                         <td>${item.nombre}</td>
                         <td><span class="${badgeClass}">${item.sistema}</span></td>
                         <td style="text-align: center;">${item.cantidad}</td>
+                        <td style="text-align: center;">${ufBadge}</td>
                         <td>${item.ubicacion}</td>
                     </tr>
                 `;
@@ -272,6 +314,55 @@
         function actualizarEstadisticas() {
             document.getElementById('stat-total').textContent = allData.length;
             document.getElementById('stat-filtered').textContent = filteredData.length;
+            
+            // Contar UFs con equipos
+            const ufsConEquipos = new Set(allData.filter(item => item.uf && item.uf !== 'N/A').map(item => item.uf));
+            document.getElementById('stat-ufs').textContent = ufsConEquipos.size;
+            
+            // Resumen por UF
+            actualizarResumenUF();
+        }
+        
+        function actualizarResumenUF() {
+            const ufStats = {};
+            
+            filteredData.forEach(item => {
+                const uf = item.uf || 'N/A';
+                if (!ufStats[uf]) {
+                    ufStats[uf] = { count: 0, cantidad: 0 };
+                }
+                ufStats[uf].count++;
+                ufStats[uf].cantidad += parseInt(item.cantidad || 0);
+            });
+            
+            const container = document.getElementById('stats-uf-container');
+            const content = document.getElementById('stats-uf-content');
+            
+            if (Object.keys(ufStats).length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            container.style.display = 'block';
+            
+            const ufsSorted = Object.keys(ufStats).sort((a, b) => {
+                if (a === 'N/A') return 1;
+                if (b === 'N/A') return -1;
+                const aNum = parseInt(a.replace('UF', '')) || 999;
+                const bNum = parseInt(b.replace('UF', '')) || 999;
+                return aNum - bNum;
+            });
+            
+            content.innerHTML = ufsSorted.map(uf => {
+                const stat = ufStats[uf];
+                const ufClass = uf === 'N/A' ? 'color: #999;' : 'background: #e3f2fd; color: #1976d2;';
+                return `
+                    <div style="padding: 10px; background: white; border-radius: 6px; border-left: 4px solid #11998e;">
+                        <div style="font-weight: 600; font-size: 14px; ${ufClass} margin-bottom: 5px;">${uf}</div>
+                        <div style="font-size: 12px; color: #666;">${stat.count} items | ${stat.cantidad} unidades</div>
+                    </div>
+                `;
+            }).join('');
         }
         
         function exportarCSV() {
@@ -280,12 +371,13 @@
                 return;
             }
             
-            const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'Ubicación'];
+            const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'UF', 'Ubicación'];
             const rows = filteredData.map(item => [
                 item.id,
                 item.nombre,
                 item.sistema,
                 item.cantidad,
+                item.uf || 'N/A',
                 item.ubicacion
             ]);
             

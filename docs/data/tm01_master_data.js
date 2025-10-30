@@ -9,7 +9,8 @@ class TM01MasterData {
             layout: [],
             contratos: [],
             dts: [],
-            cambios: []
+            cambios: [],
+            cronogramaUF: []
         };
         
         this.initializeData();
@@ -236,11 +237,37 @@ class TM01MasterData {
             justificacion: item.criterio || ''
         }));
         
-        // Datos Layout
-        this.data.layout = this.generateLayoutData();
+        // Layout y etiquetado por UF (si existe mapa PK→UF)
+        this.data.layout = this.generateLayoutData().map((el, idx) => {
+            // Si el elemento trae ruta/pk, intentar mapear a UF usando getUFByPK
+            const ruta = el.ruta || el.ubicacionRuta || 'RN4510';
+            const pk = el.pk || (typeof el.pkStr === 'string' ? el.pkStr : null);
+            let uf = null;
+            
+            // Intentar usar getUFByPK si está disponible
+            if (window && typeof window.getUFByPK === 'function' && pk !== null && pk !== undefined) {
+                uf = window.getUFByPK(ruta, pk);
+            }
+            
+            // Si no se encontró UF pero tenemos información de ubicación, asignar UF0 por defecto
+            if (!uf && el.ubicacion) {
+                // Para equipos distribuidos a lo largo del corredor, asignar UF0 (O&M)
+                if (el.sistema === 'SOS' || el.sistema === 'PMV') {
+                    uf = 'UF0'; // Distribuidos en todo el corredor
+                }
+            }
+            
+            return { ...el, uf: uf || 'N/A' };
+        });
         
         // Datos Contractuales
         this.data.contratos = this.generateContractualData();
+        
+        // Cronograma por UF (fechas C1 Sección 5.2)
+        const T0 = new Date('2024-11-26T00:00:00');
+        const addMonths = (d,m)=>{ const r=new Date(d); r.setMonth(r.getMonth()+m); return r; };
+        const plazos = { UF6:9, UF1:11, UF8:12, UF2:19, UF7:19, UF12:20, UF9:21, UF10:24, UF3:26, UF13:26, UF4:30, UF11:38, UF5:47};
+        this.data.cronogramaUF = Object.entries(plazos).map(([uf,mes])=>({ uf, plazoMeses: mes, fechaMax: addMonths(T0, mes).toISOString().slice(0,10), fechaCura: addMonths(T0, Math.round(mes*1.2)).toISOString().slice(0,10) }));
     }
     
     getUbicacionDefault(sistema) {
