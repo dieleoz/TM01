@@ -441,6 +441,34 @@ Longitudes:
 **NOTA:** Esta tabla presenta un **presupuesto referencial estimado** basado en cotizaciones previas de proyectos similares. **NO es vinculante** para el oferente.
 El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para cada ítem listado, sobre las cantidades estimadas aquí. Si el oferente propone ajustes de cantidades, deberá anexar su **cómputo métrico** y **memoria de cálculo**; la evaluación se realizará principalmente con base en los **precios unitarios** presentados.
 
+### Tabla de cantidades para cotizar (auto-generada)
+
+<!-- AUTOGEN:FO_TABLE_START -->
+> Esta tabla se auto‑regenera desde la fuente maestra (`tm01_master_data.js`) al ejecutar:  
+> `powershell -ExecutionPolicy Bypass -File "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1" -Force`
+
+| ID   | Nombre                                       | Und | Cantidad | Precio Unit. USD | Precio Unit. COP | Total USD | Total COP |
+|------|----------------------------------------------|-----|----------|------------------|------------------|-----------|-----------|
+| 1021 | Cable fibra óptica 48h                       | m   | 314824   |                  |                  |           |           |
+| 1022 | Cable fibra óptica 12h                       | m   | 10856    |                  |                  |           |           |
+| 1024 | Cajas empalme 80×80                          | und | 65       |                  |                  |           |           |
+| 1025 | Cajas empalme 60×60                          | und | 1192     |                  |                  |           |           |
+| 1026 | Cruces especiales puentes                    | m   | 4132     |                  |                  |           |           |
+| 1027 | Cruces especiales muros                      | m   | 236      |                  |                  |           |           |
+| 1028 | Cruces especiales box culvert                | m   | 6732     |                  |                  |           |           |
+| 1029 | Cruces especiales alcantarillas              | m   | 2006     |                  |                  |           |           |
+| 10210| Empalmes y conectores globales               | glb | 1        |                  |                  |           |           |
+| 1031 | Excavación asfalto + tritubo                 | m   | 27140    |                  |                  |           |           |
+| 1032 | Excavación andén + tritubo                   | m   | 13570    |                  |                  |           |           |
+| 1033 | Excavación blanda + tritubo                  | m   | 238560   |                  |                  |           |           |
+| 1034 | Instalación cruces especiales                | m   | 13920    |                  |                  |           |           |
+| 1035 | Instalación cajas empalme                    | und | 1257     |                  |                  |           |           |
+| 1041 | Halado fibra óptica 48h                      | m   | 293190   |                  |                  |           |           |
+| 1042 | Instalación fibra óptica 12h (altura/piso)   | m   | 9440     |                  |                  |           |           |
+| 1043 | Trabajos instalación especializada           | glb | 1        |                  |                  |           |           |
+
+<!-- AUTOGEN:FO_TABLE_END -->
+
 | Ítem | Descripción | Cantidad | Unidad | Precio Ref. Unit. (USD) | Total Ref. (USD) |
 |:-----|:------------|:---------|:-------|:------------------------|:-----------------|
 | **1. MATERIALES FIBRA ÓPTICA** | | | | | **$2,051,648** |
