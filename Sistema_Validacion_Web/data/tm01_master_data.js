@@ -430,14 +430,14 @@ class TM01MasterData {
             impacto: cambio.impacto,
             documentosAfectados: ['WBS', 'Presupuesto', 'Layout', 'Contratos'],
             responsable: 'Sistema Automático',
-            contenido: this.generarContenidoDT(cambio)
+            contenido: ''
         };
-        
+        dt.contenido = this.generarContenidoDT(dt);
         this.data.dts.push(dt);
         return dt;
     }
     
-    generarContenidoDT(cambio) {
+    generarContenidoDT(dt) {
         return `# DT-${dt.numero} - ${dt.descripcion}
 
 ## Información General
@@ -453,13 +453,13 @@ ${dt.descripcion}
 ${dt.justificacion}
 
 ## Impacto Presupuestal
-- **Diferencia:** $${dt.impacto.diferencia.toLocaleString('en-US')} USD
-- **Diferencia COP:** $${dt.impacto.diferenciaCOP.toLocaleString('es-CO')} COP
-- **Impacto %:** ${dt.impacto.impactoPorcentual.toFixed(2)}%
-- **Nuevo Total:** $${dt.impacto.nuevoTotal.toLocaleString('en-US')} USD
+- **Diferencia:** $${(dt.impacto?.diferencia || 0).toLocaleString('en-US')} USD
+- **Diferencia COP:** $${(dt.impacto?.diferenciaCOP || 0).toLocaleString('es-CO')} COP
+- **Impacto %:** ${((dt.impacto?.impactoPorcentual || 0)).toFixed(2)}%
+- **Nuevo Total:** $${(dt.impacto?.nuevoTotal || 0).toLocaleString('en-US')} USD
 
 ## Documentos Afectados
-${dt.documentosAfectados.map(doc => `- ${doc}`).join('\n')}
+${(dt.documentosAfectados || []).map(doc => `- ${doc}`).join('\n')}
 
 ## Estado
 - [ ] Aprobado por QA

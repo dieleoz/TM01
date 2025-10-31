@@ -9,10 +9,12 @@ $ErrorActionPreference = 'Stop'
 # Importar módulos
 $modulesPath = Join-Path -Path (Split-Path -Parent $PSCommandPath) -ChildPath 'modules'
 $logger     = Join-Path $modulesPath 'Logger.psm1'
+$snapshotter= Join-Path $modulesPath 'Snapshotter.psm1'
 $validator  = Join-Path $modulesPath 'ValidadorContractual.psm1'
 $t05parser  = Join-Path $modulesPath 'T05Parser.psm1'
 $rfqUpdater = Join-Path $modulesPath 'RFQUpdater.psm1'
-if (Test-Path $logger)     { Import-Module $logger -Force }
+if (Test-Path $logger)     { Import-Module $logger -Force; Initialize-Logger -LogPrefix 'sincronizacion' }
+if (Test-Path $snapshotter){ Import-Module $snapshotter -Force }
 if (Test-Path $validator)  { Import-Module $validator -Force }
 if (Test-Path $t05parser)  { Import-Module $t05parser -Force }
 if (Test-Path $rfqUpdater) { Import-Module $rfqUpdater -Force }
@@ -32,8 +34,14 @@ if (Get-Command Test-ContractCompliance -ErrorAction SilentlyContinue) {
         if (Get-Command Write-JsonLog -ErrorAction SilentlyContinue) {
             foreach($i in $val.Issues){ Write-JsonLog -Path $logJson -Message 'ValidacionContrato' -Level 'ERROR' -Data @{ issue=$i } }
         }
+        if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
+            Write-LogEntry -Level 'ERROR' -Message 'Validación contractual falló' -Context @{ Issues = $incongruencias; LogFile = $logJson }
+        }
         Write-Error "Validación contractual falló. Ver logs en $logJson"
         exit 1
+    }
+    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
+        Write-LogEntry -Level 'INFO' -Message 'Validación contractual OK'
     }
 }
 
@@ -105,7 +113,19 @@ function Update-RFQFiberTable_Inline {
 
 try{
     Write-Log "Sincronización TM01 iniciada"
-    # Pre-sync: actualizar RFQ FO usando CSV (o respaldo) — puede ejecutarse también post-sync
+    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronización iniciada' }
+    # Snapshot pre-sincronización
+    $masterFile = "Sistema_Validacion_Web/data/tm01_master_data.js"
+    if ((Test-Path -LiteralPath $masterFile) -and (Get-Command New-DataSnapshot -ErrorAction SilentlyContinue)) {
+        Write-LogEntry -Level 'INFO' -Message 'Creando snapshot pre-sync' -Context @{ File = $masterFile }
+        New-DataSnapshot -SourceFile $masterFile -Description "Pre-sync $(Get-Date -Format 'yyyy-MM-dd HH:mm')" | Out-Null
+    }
+    
+    # 1) T05 -> master (planificar/aplicar)
+    $syncT05 = Join-Path -Path (Split-Path -Parent $PSCommandPath) -ChildPath 'sync_master_from_T05.ps1'
+    if (Test-Path $syncT05) { powershell -ExecutionPolicy Bypass -File $syncT05 }
+
+    # 2) RFQ FO AUTOGEN
     $foItems = if (Get-Command Get-T05FiberQuantitiesFromRFQCsv -ErrorAction SilentlyContinue) { Get-T05FiberQuantitiesFromRFQCsv } else { Get-FiberQuantities }
     if (Get-Command Update-RFQFiberTable -ErrorAction SilentlyContinue) {
         Update-RFQFiberTable -Items $foItems
@@ -113,14 +133,14 @@ try{
         Update-RFQFiberTable_Inline -Items $foItems
     }
     Write-Log "Sincronización TM01 finalizada OK"
+    # Limpieza de snapshots antiguos
+    if (Get-Command Remove-OldSnapshots -ErrorAction SilentlyContinue) {
+        Remove-OldSnapshots -KeepLast 20
+    }
+    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronización finalizada OK' }
 }catch{
+    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Sincronización falló' -Context @{ error = ($_ | Out-String) } }
     Write-Error $_
     exit 1
 }
-# SCRIPT MAESTRO DE SINCRONIZACION TM01 - TRONCAL MAGDALENA
-# Archivo: scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1
-# Proposito: Ejecutar todos los scripts de sincronizacion en secuencia
-# Fecha: 24 de octubre de 2025
-# Version: 1.0
-
-# (Sección antigua de ejecución por lotes conservada en backups; esta versión prioriza validaciones y RFQ AUTOGEN)
+# SCRIPT MAESTRO ...
