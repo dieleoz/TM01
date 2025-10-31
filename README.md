@@ -15,6 +15,7 @@
 ![T05](https://img.shields.io/badge/T05_Detalle-10%2F10-success)
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 ![Web_System](https://img.shields.io/badge/Web_System-Operativo-success)
+![Merge_Bidirectional](https://img.shields.io/badge/Merge_Bidirectional-3--Way-success)
 
 **Versión:** 3.7  
 **Fecha de actualización:** 30 de Octubre 2025  
@@ -246,6 +247,47 @@ Fase 6: Validación Web     [████████████] 100% ✅ COMP
 ```
 
 **Tiempo de sincronización:** ~3 segundos (propagación automática)
+
+#### **🔄 SINCRONIZACIÓN BIDIRECCIONAL (Merge 3-vías):**
+
+**Resuelve DT-ARQUITECTURA-021:** Preservación de cambios manuales vs. datos de documentación técnica
+
+El sistema implementa **merge bidireccional** que combina tres fuentes de datos:
+
+```
+┌─────────────┐
+│    BASE     │ ← Snapshot anterior (estado conocido)
+│  (Snapshot) │
+└──────┬──────┘
+       │
+       ├──┐
+       │  │ Merge 3-vías
+       │  │
+       ▼  ▼
+┌─────────────┐   ┌─────────────┐
+│   SOURCE    │   │   CURRENT   │
+│    (T05)    │   │  (Manual)   │
+│ Documentación│   │ Cambios UI │
+└─────────────┘   └─────────────┘
+```
+
+**Reglas de Resolución:**
+- **Campos Contractuales** (`cantidad`, `vu`, `total`, `codigo`): Prioridad SOURCE (T05)
+- **Campos UI** (`descripcion`, `observaciones`, `notas`): Prioridad CURRENT (manuales)
+- **Arrays** (`wbs`, `layout`, `presupuesto`): Merge inteligente por ID/código
+
+**Componentes:**
+- `scripts/modules/MergeEngine.psm1` - Motor de merge 3-vías
+- `scripts/modules/DataMapper.psm1` - Orquestador de sincronización bidireccional
+- `rules/contract_rules.yaml` - Reglas declarativas de validación
+
+**Uso:**
+```powershell
+# La sincronización bidireccional se ejecuta automáticamente
+.\scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -Force
+```
+
+**Documentación:** Ver `docs/ARQUITECTURA_MERGE_BIDIRECCIONAL.md` para detalles completos.
 
 #### **🔄 METODOLOGÍA APLICADA:**
 
