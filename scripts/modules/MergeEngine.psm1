@@ -263,4 +263,36 @@ function Merge-ArrayField {
     }
 }
 
-Export-ModuleMember -Function Compare-ObjectDiff, Resolve-Conflict, Merge-ThreeWay, Merge-ArrayField
+function Save-ConflictReport {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)][array]$Conflicts,
+        [string]$OutputFile = 'Sistema_Validacion_Web/data/tm01_master_data.conflicts.json'
+    )
+    $outputDir = Split-Path -Parent $OutputFile
+    if (-not (Test-Path -LiteralPath $outputDir)) { New-Item -ItemType Directory -Path $outputDir -Force | Out-Null }
+    $report = @{
+        timestamp = (Get-Date).ToUniversalTime().ToString('o')
+        conflictCount = $Conflicts.Count
+        status = 'MANUAL_RESOLUTION_REQUIRED'
+        conflicts = $Conflicts
+        resolutionSteps = @(
+            '1. Revisar cada conflicto en la lista',
+            '2. Decidir valor a conservar (SOURCE vs CURRENT)',
+            '3. Editar tm01_master_data.js según resolución',
+            '4. Eliminar archivo .conflicts.json',
+            '5. Reintentar sincronización'
+        )
+    }
+    $report | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $OutputFile -Encoding UTF8
+    $logCopy = "logs/merge_conflicts_$(Get-Date -Format 'yyyyMMdd_HHmmss').json"
+    try { Copy-Item -LiteralPath $OutputFile -Destination $logCopy -Force } catch { }
+    Write-LogEntry -Level 'WARN' -Message 'Reporte de conflictos generado' -Context @{ File = $OutputFile; Count = $Conflicts.Count }
+    return $OutputFile
+}
+
+# Aliases de compatibilidad con documentación
+Set-Alias -Name Get-ObjectDiff -Value Compare-ObjectDiff
+Set-Alias -Name Invoke-ThreeWayMerge -Value Merge-ThreeWay
+
+Export-ModuleMember -Function Compare-ObjectDiff, Resolve-Conflict, Merge-ThreeWay, Merge-ArrayField, Save-ConflictReport -Alias Get-ObjectDiff, Invoke-ThreeWayMerge

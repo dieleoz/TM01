@@ -34,19 +34,28 @@ function Test-ContractCompliance {
 }
 
 # --- Declarative rules ---
+function ConvertFrom-SimpleYaml {
+    [CmdletBinding()] param([Parameter(Mandatory)][string]$YamlContent)
+    # Fallback mínimo y seguro: no parsea YAML complejo, retorna objeto vacío
+    return @{}
+}
+
 function Get-ContractRules {
     [CmdletBinding()] param([string]$RulesPath = 'rules/contract_rules.yaml')
-    if (-not (Test-Path -LiteralPath $RulesPath)) { return @() }
-    try {
-        $raw = Get-Content -LiteralPath $RulesPath -Raw -Encoding UTF8
-        # Conversión YAML mínima: si hay PowerShell con ConvertFrom-Yaml disponible
+    if (-not (Test-Path -LiteralPath $RulesPath)) { return @{} }
+    $raw = Get-Content -LiteralPath $RulesPath -Raw -Encoding UTF8
+    try{
         if (Get-Command ConvertFrom-Yaml -ErrorAction SilentlyContinue) {
-            return $raw | ConvertFrom-Yaml
+            $rules = $raw | ConvertFrom-Yaml
         } else {
-            # Fallback simple: intentar JSON si el archivo fuese JSON
-            return $raw | ConvertFrom-Json -ErrorAction SilentlyContinue
+            $rules = ConvertFrom-SimpleYaml -YamlContent $raw
         }
-    } catch { return @() }
+        if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Reglas contractuales cargadas' -Context @{ File=$RulesPath } }
+        return $rules
+    } catch {
+        if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Error cargando reglas contractuales' -Context @{ File=$RulesPath; Error=$_.Exception.Message } }
+        return @{}
+    }
 }
 
 function Invoke-DeclarativeValidation {

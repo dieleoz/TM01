@@ -100,11 +100,22 @@ function Invoke-BidirectionalSync {
     [CmdletBinding(SupportsShouldProcess)]
     param(
         [Parameter()][string]$SnapshotId = $null,
-        [switch]$DryRun
+        [switch]$DryRun,
+        [switch]$Force
     )
     
     Write-LogEntry -Level 'INFO' -Message 'Iniciando sincronización bidireccional' -Context @{ SnapshotId = $SnapshotId; DryRun = $DryRun.IsPresent }
     
+    # 0. Verificar conflictos pendientes
+    $conflictsFile = "Sistema_Validacion_Web/data/tm01_master_data.conflicts.json"
+    if ((Test-Path -LiteralPath $conflictsFile) -and -not $Force) {
+        Write-LogEntry -Level 'ERROR' -Message 'Conflictos pendientes de resolución' -Context @{ File = $conflictsFile }
+        Write-Host "`n❌ ERROR: Hay conflictos pendientes sin resolver" -ForegroundColor Red
+        Write-Host "Archivo: $conflictsFile" -ForegroundColor Yellow
+        Write-Host "Opciones: 1) Resolver y eliminar archivo  2) -Force para sobrescribir  3) usar rollback.ps1" -ForegroundColor Gray
+        return $false
+    }
+
     # 1. Cargar BASE (snapshot)
     $baseData = $null
     if ($SnapshotId) {
@@ -146,22 +157,75 @@ function Invoke-BidirectionalSync {
     
     # 5. Aplicar cambios (si no es DryRun)
     if (-not $DryRun -and $PSCmdlet.ShouldProcess($script:MasterFile, 'Aplicar merge 3-vías')) {
-        # TODO: Escribir merged data de vuelta a tm01_master_data.js
-        # Por ahora, solo loguear
-        Write-LogEntry -Level 'INFO' -Message 'Merge calculado (aplicación pendiente)' -Context @{
-            Stats = $mergeResult.Stats
-            Conflicts = $mergeResult.Conflicts.Count
+        if ($mergeResult.Conflicts.Count -gt 0) {
+            # Guardar reporte de conflictos en ruta contractual y bloquear
+            if (Get-Command Save-ConflictReport -ErrorAction SilentlyContinue) {
+                Save-ConflictReport -Conflicts $mergeResult.Conflicts -OutputFile $conflictsFile | Out-Null
+            } else {
+                # Fallback mínimo
+                $report = @{ timestamp=(Get-Date).ToUniversalTime().ToString('o'); conflictCount=$mergeResult.Conflicts.Count; conflicts=$mergeResult.Conflicts }
+                $report | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $conflictsFile -Encoding UTF8
+            }
+            Write-LogEntry -Level 'ERROR' -Message 'Conflictos detectados, merge detenido' -Context @{ File = $conflictsFile; Count = $mergeResult.Conflicts.Count }
+            return $false
         }
-    }
-    
-    # 6. Reportar conflictos
-    if ($mergeResult.Conflicts.Count -gt 0) {
-        $conflictFile = "logs/merge_conflicts_$(Get-Date -Format 'yyyyMMdd_HHmmss').json"
-        $mergeResult.Conflicts | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $conflictFile -Encoding UTF8
-        Write-LogEntry -Level 'WARN' -Message 'Conflictos detectados, guardados en archivo' -Context @{ File = $conflictFile; Count = $mergeResult.Conflicts.Count }
-    }
-    
-    return $mergeResult
+
+        # Escribir merged data a tm01_master_data.js
+        Write-LogEntry -Level 'INFO' -Message 'Merge sin conflictos, aplicando cambios'
+
+        $mergedJson = $mergeResult.Merged | ConvertTo-Json -Depth 100
+        $timestamp = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd HH:mm:ss UTC')
+        $jsContent = @"
+// TM01 Master Data - Generado automáticamente
+// Última sincronización: $timestamp
+// Merge 3-vías completado sin conflictos
+
+const tm01Data = $mergedJson;
+
+function parseNumeric(value) {
+    if (typeof value === 'number') return value;
+    if (typeof value === 'string') return parseFloat(value.replace(/,/g, ''));
+    return 0;
 }
 
-Export-ModuleMember -Function Get-MasterDataContent, Get-T05SourceData, Invoke-BidirectionalSync
+function normalizeWbsNumerics(data) {
+    const TASA_COP_USD = 4400;
+    if (data.wbs?.items) {
+        data.wbs.items = data.wbs.items.map(item => ({
+            ...item,
+            cantidad: parseNumeric(item.cantidad),
+            vu: parseNumeric(item.vu ?? item.valorUnitario),
+            total: parseNumeric(item.total ?? item.subtotal),
+            totalCOP: parseNumeric(item.totalCOP ?? 0)
+        }));
+    }
+    if (data.presupuesto?.items) {
+        data.presupuesto.items = data.presupuesto.items.map(item => ({
+            ...item,
+            cantidad: parseNumeric(item.cantidad),
+            vu: parseNumeric(item.vu ?? item.valorUnitario),
+            subtotal: parseNumeric(item.subtotal ?? (parseNumeric(item.cantidad) * parseNumeric(item.vu))),
+            totalUSD: parseNumeric(item.totalUSD ?? item.total),
+            totalCOP: parseNumeric(item.totalCOP ?? (parseNumeric(item.totalUSD ?? 0) * TASA_COP_USD))
+        }));
+    }
+    return data;
+}
+
+const normalizedData = normalizeWbsNumerics(tm01Data);
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = normalizedData;
+} else {
+    window.TM01_MASTER_DATA = normalizedData;
+}
+"@
+        Set-Content -LiteralPath $script:MasterFile -Value $jsContent -Encoding UTF8
+        Write-LogEntry -Level 'INFO' -Message 'tm01_master_data.js actualizado exitosamente' -Context @{ FilePath = $script:MasterFile; FieldsModified = $mergeResult.Stats.FieldsModified; Timestamp = $timestamp }
+    }
+
+    return $true
+}
+
+Set-Alias -Name Sync-MasterFromT05 -Value Invoke-BidirectionalSync
+
+Export-ModuleMember -Function Get-MasterDataContent, Get-T05SourceData, Invoke-BidirectionalSync -Alias Sync-MasterFromT05
