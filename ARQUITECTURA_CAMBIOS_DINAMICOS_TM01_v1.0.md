@@ -1,5 +1,7 @@
 # ARQUITECTURA DE CAMBIOS DINÁMICOS - SISTEMA TM01
 
+> OBSOLETO/MIGRADO: Este contenido fue integrado y mantenido en `ARCHITECTURE.md` (secciones: Contrato-first y validaciones, Cambios dinámicos, RFQ AUTOGEN). Este archivo se conserva solo como referencia histórica.
+
 ## 🏗️ ESTRUCTURA DE PROPAGACIÓN DE CAMBIOS
 
 ### 1. **FUENTE ÚNICA DE VERDAD (Single Source of Truth)**

@@ -35,6 +35,51 @@
 
 ---
 
+## 🔧 Plan 48h: Pipeline contrato → T05 → master (validado)
+
+1) Fuentes y prioridad (contrato-first)
+- C1/AT1/AT4 → T05 (FO, L3, L2, SOS) → T04 → T03/T01.
+- Si T05 contradice contrato: bloquear y registrar en `logs/`.
+
+2) Extracción T05 automática (PowerShell)
+- Parsear tablas/códigos en:
+  - `V. Ingenieria de Detalle/03_T05_Ingenieria_Detalle_Equipos_L3_v1.0.md`
+  - `V. Ingenieria de Detalle/*Fibra*/` (FO)
+  - `V. Ingenieria de Detalle/*L2*/`
+  - `IV. Ingenieria Basica/01_T04_Especificaciones_Tecnicas_Postes_SOS_v1.0.md`
+
+3) Validaciones bloqueantes
+- Cantidades mínimas/criterios AT1; plazos UF (C1 §5.2); reglas ITS (conectado a CCO/FO).
+- Coherencia SUM/OBRA/SERV y AIU/IVA por capítulo.
+
+4) Escritura segura
+- Actualizar `docs/data/tm01_master_data.js` solo si pasa validación completa.
+- Regenerar intermedios: `datos_wbs_TM01_items.js`, `layout_datos.js`, `presupuesto_datos.js`.
+
+5) RFQs AUTOGEN
+- Reescribir tabla FO en `X. Entregables Consolidados/RFQ_001_FIBRA_OPTICA_v1.0.md` entre marcadores.
+- Fuente: `RFQ-001_ANEXO_J_CANTIDADES_PRESUPUESTO.csv` (o respaldo embebido).
+
+6) UI/Cache Busting
+- Forzar `?v=timestamp` a `tm01_master_data.js` en vistas y botón “Refrescar datos”.
+
+7) Módulos (nuevos/ajustados)
+- `scripts/modules/Logger.psm1` (JSON logs)
+- `scripts/modules/ValidadorContractual.psm1` (AT1/C1)
+- `scripts/modules/T05Parser.psm1` (L3/FO/L2/SOS)
+- `scripts/modules/RFQUpdater.psm1` (bloques AUTOGEN)
+
+8) Comando único
+```powershell
+powershell -ExecutionPolicy Bypass -File "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1" -Force -Verbose
+```
+
+9) Entregables de la corrida
+- `logs/sync_completo_*.log`, `logs/incongruencias_YYYYMMDD.json` (si aplica)
+- RFQ FO actualizado, datos intermedios regenerados, vistas reflejando cambios.
+
+---
+
 ## 🔧 **CORRECCIÓN CRÍTICA VALORES USD/COP** (24-Oct-2025)
 
 ### **Problema Identificado:**

@@ -1,7 +1,7 @@
 # ARQUITECTURA DEL SISTEMA TM01 TRONCAL MAGDALENA
 # Proyecto: TM01 Troncal Magdalena - Sistema de Validación Web
-# Versión: 1.1 | Fecha: 28 de Octubre de 2025
-# Estado: ✅ IMPLEMENTADO Y OPERATIVO (Arquitectura 4 capas consolidada + UI clon ejemplo)
+# Versión: 1.2 | Fecha: 30 de Octubre de 2025
+# Estado: ✅ IMPLEMENTADO Y OPERATIVO (Arquitectura 4 capas consolidada + contrato-first + validaciones)
 
 ---
 
@@ -28,7 +28,7 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### **CAPA 2: TRANSFORMACIÓN (Scripts PowerShell)**
+### **CAPA 2: TRANSFORMACIÓN (Scripts PowerShell, contrato→T05→master)**
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  TRANSFORMACIÓN - PROCESAMIENTO DE DATOS                        │
@@ -40,7 +40,7 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │  • sincronizar_SISTEMA_TM01_COMPLETO.ps1 ✅ MAESTRO           │
 │  • Generadores de DTs                                           │
 │  • Módulos reutilizables                                        │
-│  • Validadores de coherencia técnica                            │
+│  • Validadores de coherencia técnica (C1/AT1/AT4 bloqueantes)   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -103,6 +103,16 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
        └──→ [Generación automática de DTs] → Documentos técnicos
 ```
 
+### Contrato-first y validaciones antes de escribir
+- El script maestro lee fuentes en prioridad: C1/AT1/AT4 → T05 → T04 → T03/T01.
+- Si una actualización viola el contrato, se bloquea la escritura y se registra en `logs/`.
+- `docs/data/tm01_master_data.js` solo se actualiza si todas las validaciones pasan.
+- RFQs con bloques AUTOGEN se reescriben entre marcadores, sin afectar el resto.
+
+### RFQ AUTOGEN (integración)
+- `X. Entregables Consolidados/RFQ_001_FIBRA_OPTICA_v1.0.md` contiene marcadores `<!-- AUTOGEN:FO_TABLE_START -->` / `<!-- AUTOGEN:FO_TABLE_END -->`.
+- La tabla se genera desde `RFQ-001_ANEXO_J_CANTIDADES_PRESUPUESTO.csv` o respaldo integrado en el script.
+
 ---
 
 ## 📋 SISTEMA DE DECISIONES TÉCNICAS (DT)
@@ -153,6 +163,14 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 5. Log de ejecución completado
 6. Auditoría completa mantenida
 
+Reglas:
+- Overrides por DT se aplican solo si no violan contrato; de lo contrario, se bloquean y se anotan en §12 del DT.
+
+### Cambios dinámicos (fusionado de ARQUITECTURA_CAMBIOS_DINAMICOS_TM01)
+- Propagación WBS → Presupuesto → Layout → Matriz contractual mediante funciones `actualizarPresupuesto`, `actualizarLayout`, y recálculo de totales.
+- Impacto presupuestal automático: recalcula CD, AIU (23/5/5) e IVA (19%) por tipo SUM/OBRA/SERV.
+- Validaciones automáticas: cantidad, VU, ubicación/PK (UF) y criterio técnico previa a escritura.
+
 ---
 
 ## 🔄 SINCRONIZACIÓN AUTOMÁTICA
@@ -173,6 +191,9 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 ```
 
 **Resultado:** 4 interfaces sincronizadas en ~6 segundos
+
+**Logs y bloqueo por validación:**
+- Si hay inconsistencias contractuales o técnicas, la ejecución se detiene, se dejan entradas en `logs/incongruencias_YYYYMMDD.json` y no se escriben datos.
 
 ---
 

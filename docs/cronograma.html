@@ -78,6 +78,24 @@
         <div class="legend"><span class="lg lg1"></span>Actividad <span class="lg lg2"></span>Hito</div>
       </div>
     </div>
+
+    <div class="panel">
+      <h2>📑 Plazos Contractuales por UF (C1 Sección 5.2)</h2>
+      <div class="content" style="padding:14px">
+        <p style="margin:0 0 12px 0;color:var(--muted);font-size:13px">
+          <strong>Acta de Inicio:</strong> 26/11/2024 | <strong>Ruta Crítica:</strong> UF5 (Oct 2028) | 
+          <strong>Nota:</strong> Fechas Máximas = fecha límite contractual; Fecha con Cura = +20% plazo adicional
+        </p>
+        <table id="tablaUF">
+          <thead>
+            <tr>
+              <th>UF</th><th>Plazo (meses)</th><th>Fecha Máxima</th><th>Fecha con Cura (+20%)</th><th>Estado</th>
+            </tr>
+          </thead>
+          <tbody><tr><td colspan="5" style="color:var(--muted)">Cargando...</td></tr></tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
@@ -106,6 +124,94 @@
       all = defaultPlan.map(t=>({ ...t, ini: parseDate(t.inicio), fin: parseDate(t.fin), dur: (parseDate(t.fin) && parseDate(t.inicio)) ? diffMonths(parseDate(t.inicio), parseDate(t.fin)) : 0 }));
       filtered = [...all];
       poblarFiltros(); renderTabla(); actualizarMetricas();
+
+      try {
+        const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : null;
+        const hoy = new Date();
+        hoy.setHours(0,0,0,0);
+        
+        // Añadir UF0 con fechas especiales (D+180 y mes 36)
+        const T0 = new Date('2024-11-26T00:00:00');
+        const addDays = (d, days) => { const r = new Date(d); r.setDate(r.getDate() + days); return r; };
+        const addMonths = (d, m) => { const r = new Date(d); r.setMonth(r.getMonth() + m); return r; };
+        
+        let ufs = [];
+        if (dm && dm.data && Array.isArray(dm.data.cronogramaUF)) {
+          ufs = [...dm.data.cronogramaUF];
+        }
+        
+        // Añadir UF0 con fechas especiales
+        const uf0_d180 = addDays(T0, 180);
+        const uf0_mes36 = addMonths(T0, 36);
+        ufs.push({
+          uf: 'UF0-D',
+          plazoMeses: 0,
+          fechaMax: uf0_d180.toISOString().slice(0,10),
+          fechaCura: uf0_d180.toISOString().slice(0,10),
+          descripcion: 'Puesta a Punto (D+180)'
+        });
+        ufs.push({
+          uf: 'UF0-M36',
+          plazoMeses: 36,
+          fechaMax: uf0_mes36.toISOString().slice(0,10),
+          fechaCura: uf0_mes36.toISOString().slice(0,10),
+          descripcion: 'Cumplimiento valores mínimos (mes 36)'
+        });
+        
+        if (ufs.length > 0) {
+          const tbody = document.querySelector('#tablaUF tbody');
+          tbody.innerHTML = ufs
+            .sort((a,b)=> {
+              if (a.uf.startsWith('UF0') && !b.uf.startsWith('UF0')) return -1;
+              if (!a.uf.startsWith('UF0') && b.uf.startsWith('UF0')) return 1;
+              return new Date(a.fechaMax) - new Date(b.fechaMax);
+            })
+            .map(r=>{
+              const fechaMax = new Date(r.fechaMax);
+              fechaMax.setHours(0,0,0,0);
+              const diasRestantes = Math.round((fechaMax - hoy) / (24*60*60*1000));
+              
+              let estado = '', estadoColor = '';
+              if (r.uf === 'UF5' || r.uf === 'UF0-M36') {
+                estado = '⚠️ CRÍTICA';
+                estadoColor = '#fff3cd';
+              } else if (diasRestantes < 0) {
+                estado = '❌ Vencida';
+                estadoColor = '#f8d7da';
+              } else if (diasRestantes < 90) {
+                estado = '🔴 Urgente';
+                estadoColor = '#fff3cd';
+              } else if (diasRestantes < 180) {
+                estado = '🟡 En plazo';
+                estadoColor = '#d4edda';
+              } else {
+                estado = '🟢 OK';
+                estadoColor = '#d1ecf1';
+              }
+              
+              const fmtFecha = (f) => {
+                const d = new Date(f);
+                return new Intl.DateTimeFormat('es-CO', {year:'numeric',month:'2-digit',day:'2-digit'}).format(d);
+              };
+              
+              const plazoText = r.plazoMeses > 0 ? `${r.plazoMeses} meses` : (r.descripcion || 'N/A');
+              const diasText = diasRestantes >= 0 ? `${diasRestantes} días` : `${Math.abs(diasRestantes)} días vencidos`;
+              
+              return `<tr style="background:${estadoColor}">
+                <td><strong>${r.uf}</strong>${r.descripcion ? `<br><small style="color:var(--muted)">${r.descripcion}</small>` : ''}</td>
+                <td>${plazoText}</td>
+                <td><strong>${fmtFecha(r.fechaMax)}</strong><br><small style="color:var(--muted)">${diasText}</small></td>
+                <td>${fmtFecha(r.fechaCura)}</td>
+                <td>${estado}</td>
+              </tr>`;
+            })
+            .join('');
+        }
+      } catch(e) { 
+        console.error('Error cargando plazos UF:', e);
+        const tbody = document.querySelector('#tablaUF tbody');
+        tbody.innerHTML = `<tr><td colspan="5" style="color:#dc3545">❌ Error: ${e.message}</td></tr>`;
+      }
     }
 
     function poblarFiltros(){

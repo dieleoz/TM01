@@ -16,9 +16,9 @@
 ![Val_Contractual](https://img.shields.io/badge/Val_Contractual-13%2F13-brightgreen)
 ![Web_System](https://img.shields.io/badge/Web_System-Operativo-success)
 
-**Versión:** 3.6  
-**Fecha de actualización:** 28 de Octubre 2025 (PM)  
-**Estado:** ✅ Arquitectura 4 capas consolidada + UI clon del ejemplo | **OPERATIVO**    
+**Versión:** 3.7  
+**Fecha de actualización:** 30 de Octubre 2025  
+**Estado:** ✅ Arquitectura 4 capas consolidada | ✅ Pipeline contrato→T05→master con validación | **OPERATIVO**    
 **Responsable:** Equipo Técnico TM01  
 **Metodología:** Punto 42 v1.0 + Arquitectura Dinámica 4 Capas  
 **GitHub:** https://github.com/dieleoz/TM01  
@@ -55,13 +55,17 @@ Fase 4: Scripts Sincronización [████████░░░░] 50% 🔄 
 
 ### 🚀 **SCRIPTS DE SINCRONIZACIÓN AUTOMÁTICA** (ACTUALIZADO)
 
-**Estado:** ✅ **COMPLETADO** - 4/4 scripts
+**Estado:** ✅ **COMPLETADO** - 4/4 scripts + validaciones contrato-first
 
 ✅ **COMPLETADO:**
 - **sync_wbs_tm01.ps1**: Sincronización WBS (24 items) - ✅ FUNCIONANDO
 - **sincronizar_layout.ps1**: Layout georreferenciado (52+ equipos) - ✅ FUNCIONANDO
 - **sincronizar_presupuesto.ps1**: Presupuesto dinámico con cálculos AIU/IVA - ✅ FUNCIONANDO
-- **sincronizar_SISTEMA_TM01_COMPLETO.ps1**: Script maestro - ✅ FUNCIONANDO
+- **sincronizar_SISTEMA_TM01_COMPLETO.ps1**: Script maestro - ✅ FUNCIONANDO (contrato→T05→T04→T03/T01)
+  - Validación previa vs C1/AT1/AT4 (bloqueante)
+  - Actualiza `docs/data/tm01_master_data.js` sólo si pasa validación
+  - Reescribe tablas AUTOGEN en RFQs (entre marcadores) y Anexos CSV
+  - Log de incongruencias en `logs/incongruencias_YYYYMMDD.json`
 - **.cursorrules**: Detección automática de DTs + propagación 4 capas - ✅ IMPLEMENTADO
 Fase 3.1: Arquitectura Red [████████████] 100% ✅ COMPLETADA
 Fase 4: Ing. Detalle (T05) [████████████] 100% ✅ COMPLETADA
@@ -76,7 +80,7 @@ Fase 6: Validación Web     [████████████] 100% ✅ COMP
 **Bloqueador:** Ninguno  
 **Estado:** ✅ Sistema de validación web con arquitectura dinámica 100% operativo
 
-### 🌐 **SISTEMA DE VALIDACIÓN WEB IMPLEMENTADO** (23-Oct-2025)
+### 🌐 **SISTEMA DE VALIDACIÓN WEB IMPLEMENTADO** (30-Oct-2025)
 
 **Sistema HTML interactivo basado en metodología del proyecto base (APP La Dorada-Chiriguaná):**
 
@@ -144,6 +148,10 @@ Fase 6: Validación Web     [████████████] 100% ✅ COMP
 └── data/
     ├── tm01_master_data.js                       # 🗄️ Fuente única de verdad
     └── datos_wbs_TM01_items.js                   # 📊 Datos WBS estructurados
+
+#### **🔗 RFQs con tablas autogeneradas (AUTOGEN)**
+- `X. Entregables Consolidados/RFQ_001_FIBRA_OPTICA_v1.0.md`: bloque entre `<!-- AUTOGEN:FO_TABLE_START -->` y `<!-- AUTOGEN:FO_TABLE_END -->` actualizado por el script maestro (fuente CSV Anexo J o respaldo).
+  - CSV asociado: `X. Entregables Consolidados/RFQ-001_ANEXO_J_CANTIDADES_PRESUPUESTO.csv`
 ```
 
 #### **🔐 SISTEMA DE ACCESO SEGURO:**
@@ -194,6 +202,7 @@ Fase 6: Validación Web     [████████████] 100% ✅ COMP
 - ✅ **Plantillas predefinidas:** Cambio técnico, optimización, gestión de riesgo
 - ✅ **Propagación automática:** Afecta presupuesto, layout, documentación
 - ✅ **Trazabilidad completa:** Desde propuesta hasta implementación
+ - ✅ **Overrides con YAML:** Aplicables solo si no violan contrato; si violan, se bloquea la escritura y se registra en §12 del DT
 
 **7. Reportes y Validación:**
 - ✅ **Reportes automáticos** para Interventoría y ANI
