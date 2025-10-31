@@ -63,8 +63,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">â† Volver al MenÃº</button>
-            <h1>ðŸ—ºï¸ LAYOUT MAESTRO INTERACTIVO</h1>
+            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">← Volver al Menúú</button>
+            <h1>🗺️ LAYOUT MAESTRO INTERACTIVO</h1>
             <p>TM01 Troncal Magdalena | Sistema Integrado de Equipamiento e Infraestructura</p>
         </div>
         
@@ -75,31 +75,31 @@
         <!-- Filtros -->
         <div class="filters">
             <div class="filter-group">
-                <label>ðŸ”§ Sistema:</label>
+                <label>🔍 Sistema:</label>
                 <select id="filter-sistema" onchange="applyFilters();">
                     <option value="">Todos los sistemas</option>
                 </select>
             </div>
             <div class="filter-group">
-                <label>ðŸ“ Unidad Funcional (UF):</label>
+                <label>🔍 Unidad Funcional (UF):</label>
                 <select id="filter-uf" onchange="applyFilters();">
                     <option value="">Todas las UFs</option>
                 </select>
             </div>
             <div class="filter-group">
-                <label>ðŸ” Buscar:</label>
+                <label>🔍 Buscar:</label>
                 <input type="text" id="filter-buscar" placeholder="Buscar por nombre..." oninput="applyFilters();">
             </div>
         </div>
         
         <!-- Acciones -->
         <div class="filter-actions">
-            <button class="btn btn-primary" onclick="applyFilters();">ðŸ” Aplicar Filtros</button>
-            <button class="btn btn-secondary" onclick="clearFilters();">ðŸ”„ Limpiar</button>
-            <button class="btn btn-success" onclick="exportarCSV();">ðŸ“Š Exportar CSV</button>
+            <button class="btn btn-primary" onclick="applyFilters();">🔍 Aplicar Filtros</button>
+            <button class="btn btn-secondary" onclick="clearFilters();">🗑️ Limpiar</button>
+            <button class="btn btn-success" onclick="exportarCSV();">📊 Exportar CSV</button>
         </div>
         
-        <!-- EstadÃ­sticas -->
+        <!-- Estadísticas -->
         <div class="stats">
             <div class="stats-content" id="stats-content">
                 <div class="stat-item">
@@ -119,7 +119,7 @@
         
         <!-- Resumen por UF -->
         <div class="stats" id="stats-uf-container" style="display: none; padding: 15px 20px; background: #e9ecef; border-top: 2px solid #11998e;">
-            <h3 style="margin-bottom: 15px; font-size: 16px; color: #495057;">ðŸ“Š Equipos por Unidad Funcional (UF)</h3>
+            <h3 style="margin-bottom: 15px; font-size: 16px; color: #495057;">📊 Equipos por Unidad Funcional (UF)</h3>
             <div id="stats-uf-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;"></div>
         </div>
         
@@ -133,7 +133,7 @@
                         <th>Sistema</th>
                         <th>Cantidad</th>
                         <th>UF</th>
-                        <th>UbicaciÃ³n</th>
+                        <th>Ubicación</th>
                     </tr>
                 </thead>
                 <tbody id="layout-tbody">
@@ -159,16 +159,16 @@
         let allData = [];
         let filteredData = [];
         
-        // Inicializar cuando el DOM estÃ© listo
+        // Inicializar cuando el DOM esté listo
         window.addEventListener('DOMContentLoaded', function() {
             initLayout();
         });
         
         function initLayout() {
             try {
-                console.log('ðŸ”„ Iniciando carga de layout...');
+                console.log('📋 Iniciando carga de layout...');
                 
-                // Esperar a que TM01MasterData estÃ© disponible
+                // Esperar a que TM01MasterData esté disponible
                 if (typeof TM01MasterData === 'undefined') {
                     console.warn('âš ï¸ TM01MasterData no disponible, reintentando...');
                     setTimeout(initLayout, 100);
@@ -179,19 +179,19 @@
                 let tm01Data;
                 if (typeof window.tm01MasterData !== 'undefined' && window.tm01MasterData instanceof TM01MasterData) {
                     tm01Data = window.tm01MasterData;
-                    console.log('âœ… Usando instancia global tm01MasterData');
+                    console.log('✅ Usando instancia global tm01MasterData');
                 } else {
                     tm01Data = new TM01MasterData();
-                    console.log('âœ… Creando nueva instancia TM01MasterData');
+                    console.log('✅ Creando nueva instancia TM01MasterData');
                 }
                 
                 // Obtener datos de layout
                 const layoutData = tm01Data.data.layout || [];
-                console.log('ðŸ“Š Datos de layout obtenidos:', layoutData.length, 'elementos');
+                console.log('📊 Datos de layout obtenidos:', layoutData.length, 'elementos');
                 
                 if (layoutData.length === 0) {
                     console.warn('âš ï¸ No hay datos de layout disponibles');
-                    mostrarError('No hay datos de layout disponibles. Verifica que los datos WBS estÃ©n cargados correctamente.');
+                    mostrarError('No hay datos de layout disponibles. Verifica que los datos WBS estén cargados correctamente.');
                     return;
                 }
                 
@@ -206,7 +206,7 @@
                     coordenadas: item.coordenadas || null
                 }));
                 
-                console.log('âœ… Datos procesados:', allData.length, 'elementos');
+                console.log('✅ Datos procesados:', allData.length, 'elementos');
                 
                 // Ocultar alerta de carga
                 document.getElementById('alertInfo').style.display = 'none';
@@ -291,7 +291,7 @@
             const tbody = document.getElementById('layout-tbody');
             
             if (filteredData.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">ðŸ”</div><div>No se encontraron resultados con los filtros aplicados</div></td></tr>';
+                tbody.innerHTML = '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">🔍 No se encontraron resultados con los filtros aplicados</div></td></tr>';
                 return;
             }
             
@@ -371,7 +371,7 @@
                 return;
             }
             
-            const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'UF', 'UbicaciÃ³n'];
+            const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'UF', 'Ubicación'];
             const rows = filteredData.map(item => [
                 item.id,
                 item.nombre,

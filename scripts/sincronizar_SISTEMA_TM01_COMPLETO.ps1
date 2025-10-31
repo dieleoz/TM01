@@ -15,6 +15,7 @@ $validator  = Join-Path $modulesPath 'ValidadorContractual.psm1'
 $t05parser  = Join-Path $modulesPath 'T05Parser.psm1'
 $rfqUpdater = Join-Path $modulesPath 'RFQUpdater.psm1'
 $dataMapper = Join-Path $modulesPath 'DataMapper.psm1'
+$encValidator= Join-Path $modulesPath 'EncodingValidator.psm1'
 if (Test-Path $logger)     { Import-Module $logger -Force; Initialize-Logger -LogPrefix 'sincronizacion' }
 if (Test-Path $snapshotter){ Import-Module $snapshotter -Force }
 if (Test-Path $cachebuster){ Import-Module $cachebuster -Force }
@@ -22,6 +23,7 @@ if (Test-Path $validator)  { Import-Module $validator -Force }
 if (Test-Path $t05parser)  { Import-Module $t05parser -Force }
 if (Test-Path $rfqUpdater) { Import-Module $rfqUpdater -Force }
 if (Test-Path $dataMapper) { Import-Module $dataMapper -Force }
+if (Test-Path $encValidator){ Import-Module $encValidator -Force }
 
 function Write-Log([string]$msg){
     $ts = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
@@ -211,9 +213,33 @@ try{
         if (Test-Path -LiteralPath 'docs') { $htmlTargets += Get-ChildItem 'docs' -Filter '*.html' -Recurse -ErrorAction SilentlyContinue }
         if (Test-Path -LiteralPath 'Sistema_Validacion_Web') { $htmlTargets += Get-ChildItem 'Sistema_Validacion_Web' -Filter '*.html' -Recurse -ErrorAction SilentlyContinue }
         foreach($f in $htmlTargets){
-            try { Add-CacheBusting -HtmlFile $f.FullName -Version $version } catch { }
+            try { Add-CacheBusting -HtmlFile $f.FullName -Version $version } catch { 
+                if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'WARN' -Message "Cache-busting fallo para $($f.Name)" }
+            }
         }
     }
+    
+    # Validación post-sync: verificar que no se haya corrompido el encoding de HTMLs
+    if (Get-Command Test-AllHtmlEncoding -ErrorAction SilentlyContinue) {
+        $encodingCheck = Test-AllHtmlEncoding -Directories @('docs', 'Sistema_Validacion_Web')
+        if ($encodingCheck.Invalid -gt 0) {
+            $errorMsg = "VALIDACION ENCODING FALLO: $($encodingCheck.Invalid) archivos HTML tienen problemas de encoding"
+            if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
+                Write-LogEntry -Level 'ERROR' -Message $errorMsg -Context @{ Issues = $encodingCheck.Issues }
+            }
+            Write-Host "`n❌ $errorMsg" -ForegroundColor Red
+            foreach ($issue in $encodingCheck.Issues) {
+                Write-Host "  - $($issue.File): $($issue.Message)" -ForegroundColor Yellow
+            }
+            Write-Error $errorMsg
+            exit 1
+        } else {
+            if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
+                Write-LogEntry -Level 'INFO' -Message "Validacion encoding OK: $($encodingCheck.Valid) archivos HTML validados"
+            }
+        }
+    }
+    
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion finalizada OK' }
 }catch{
     $errorMsg = $_ | Out-String

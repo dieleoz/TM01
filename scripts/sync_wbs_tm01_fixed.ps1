@@ -164,8 +164,9 @@ function calcularTotalesPorSistema() {
 console.log('Datos WBS TM01 cargados:', window.datos_wbs);
 "@
         
-        # Escribir el archivo
-        $FileContent | Out-File -FilePath $TargetPath -Encoding UTF8 -Force
+        # Escribir el archivo con UTF-8 sin BOM (preserva caracteres especiales)
+        $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+        [System.IO.File]::WriteAllText((Resolve-Path $TargetPath -ErrorAction SilentlyContinue), $FileContent, $utf8NoBom)
         
         Write-Log "Archivo generado exitosamente: $TargetPath"
         return $true

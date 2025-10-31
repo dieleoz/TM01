@@ -41,24 +41,24 @@
 <body>
     <div class="container">
         <div class="header">
-            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">â† Volver al MenÃº</button>
-            <h1>ðŸ’° WBS PRESUPUESTAL</h1>
-            <p>TM01 Troncal Magdalena | CÃ¡lculos AIU/IVA y ExportaciÃ³n</p>
+            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">← Volver al Menúú</button>
+            <h1>💰 WBS PRESUPUESTAL</h1>
+            <p>TM01 Troncal Magdalena | Cálculos AIU/IVA y Exportación</p>
         </div>
         
         <div class="controls">
-            <button class="btn btn-primary" onclick="aplicarFiltros()">ðŸ” Aplicar</button>
-            <button class="btn" onclick="limpiarFiltros()">ðŸ”„ Limpiar</button>
-            <button class="btn btn-success" onclick="exportarExcel()">ðŸ“Š Exportar Excel</button>
-            <button class="btn" style="background:#17a2b8;color:#fff;" onclick="exportarDesgloseAIU()">ðŸ“„ Ver Desglose AIU</button>
-            <button class="btn" style="background:#ffc107;color:#212529;" onclick="generarActaObra()">ðŸ§¾ Ver Acta de Obra</button>
+            <button class="btn btn-primary" onclick="aplicarFiltros()">🔍 Aplicar</button>
+            <button class="btn" onclick="limpiarFiltros()">🗑️ Limpiar</button>
+            <button class="btn btn-success" onclick="exportarExcel()">📊 Exportar Excel</button>
+            <button class="btn" style="background:#17a2b8;color:#fff;" onclick="exportarDesgloseAIU()">📋 Ver Desglose AIU</button>
+            <button class="btn" style="background:#ffc107;color:#212529;" onclick="generarActaObra()">🧾 Ver Acta de Obra</button>
             <div class="filter-group">
                 <label for="fSistema">Sistema:</label>
                 <select id="fSistema"></select>
                 <label for="fUF">UF:</label>
                 <select id="fUF"></select>
                 <label for="fBuscar">Buscar:</label>
-                <input id="fBuscar" type="text" placeholder="CÃ³digo o descripciÃ³n" oninput="aplicarFiltros()" />
+                <input id="fBuscar" type="text" placeholder="Código o descripción" oninput="aplicarFiltros()" />
             </div>
                 </div>
 
@@ -77,8 +77,8 @@
             <table id="tablaPresupuesto">
                 <thead>
                     <tr>
-                        <th>Ãtem</th>
-                        <th>DescripciÃ³n</th>
+                        <th>Ñtem</th>
+                        <th>Descripción</th>
                         <th>Sistema</th>
                         <th class="right">Cant.</th>
                         <th>Und</th>
@@ -97,11 +97,11 @@
                 </div>
 
         <div class="table-container" id="desgloseContainer">
-            <h3 style="margin:6px 0 10px;color:#1e3c72;">ðŸ“Š Desglose Presupuestal por CapÃ­tulos</h3>
+            <h3 style="margin:6px 0 10px;color:#1e3c72;">📊 Desglose Presupuestal por Capítulos</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>CapÃ­tulo</th>
+                        <th>Capítulo</th>
                         <th class="right">Suministros (COP)</th>
                         <th class="right">Obra Civil (COP)</th>
                         <th class="right">Servicios (COP)</th>
@@ -117,7 +117,7 @@
             </div>
             
         <div class="footer">
-            Ãšltima actualizaciÃ³n: <span id="fechaActual"></span>
+            Última actualización: <span id="fechaActual"></span>
         </div>
     </div>
 
@@ -135,25 +135,25 @@
 
         function inferTipoPresupuestal(item) {
             const desc = (item.descripcion || '').toLowerCase();
-            // Override por item si existe (el consultor puede definirlo antes de cargar la pÃ¡gina)
+            // Override por item si existe (el consultor puede definirlo antes de cargar la página)
             if (window && window.TM01_TIPO_ITEM && window.TM01_TIPO_ITEM[item.item]) {
                 return window.TM01_TIPO_ITEM[item.item];
             }
             if (item.tipo_presupuesto) return item.tipo_presupuesto; // prioridad si viene desde datos
-            // SeÃ±ales claras de suministro
+            // Señales claras de suministro
             const esSuministroExplicito = /(\bsuministro\b|\bsuministros\b)/.test(desc);
-            // Palabras clave de OBRA CIVIL (instalaciones, obra fÃ­sica, civil y montaje)
-            const obraRe = /(instalaci[oÃ³]n|tendido|hincado|zanja|excavaci[oÃ³]n|canalizaci[oÃ³]n|ducto|obra civil|\bobra\b|poste|postes|torre|torres|cimentaci[oÃ³]n|fundaci[oÃ³]n|concreto|anclaje|anclajes|soporte de montaje|montaje|tuber[iÃ­]a|canaleta|bandeja|puesta a tierra|adecuaci[oÃ³]n|soldadur|levante|elevaci[oÃ³]n|demolici[oÃ³]n|vaciado|zapata|plataforma|pavimento|relleno|corte|trinchera|estructura)/;
-            // Palabras clave de SERVICIOS (sin obra fÃ­sica)
-            const servRe = /(capacitaci[oÃ³]n|documentaci[oÃ³]n|pruebas|\bfat\b|\bsat\b|comisionamiento|mantenimiento|soporte|dise[nÃ±]o|ingenier[iÃ­]a|configuraci[oÃ³]n|licencia|servicio\b|servicios\b|asesor[iÃ­]a|interventor[iÃ­]a)/;
-            // Unidades tÃ­picas de obra (indicador adicional)
+            // Palabras clave de OBRA CIVIL (instalaciones, obra física, civil y montaje)
+            const obraRe = /(instalaci[oó]n|tendido|hincado|zanja|excavaci[oó]n|canalizaci[oó]n|ducto|obra civil|\bobra\b|poste|postes|torre|torres|cimentaci[oó]n|fundaci[oó]n|concreto|anclaje|anclajes|soporte de montaje|montaje|tuber[ií]a|canaleta|bandeja|puesta a tierra|adecuaci[oó]n|soldadur|levante|elevaci[oó]n|demolici[oó]n|vaciado|zapata|plataforma|pavimento|relleno|corte|trinchera|estructura)/;
+            // Palabras clave de SERVICIOS (sin obra física)
+            const servRe = /(capacitaci[oó]n|documentaci[oó]n|pruebas|\bfat\b|\bsat\b|comisionamiento|mantenimiento|soporte|dise[nñ]o|ingenier[ií]a|configuraci[oó]n|licencia|servicio\b|servicios\b|asesor[ií]a|interventor[ií]a)/;
+            // Unidades típicas de obra (indicador adicional)
             const unidad = (item.unidad || '').toLowerCase();
             const unidadObra = /(km|\bml\b|\bm\b|m2|m3|m\^2|m\^3|glb\b)/.test(unidad);
 
-            // Si menciona instalaciÃ³n/obra fÃ­sica, clasificar como OBRA
+            // Si menciona instalación/obra física, clasificar como OBRA
             if (obraRe.test(desc) || unidadObra) {
-                // Evitar falsos positivos donde solo dice "suministro" sin instalaciÃ³n
-                if (esSuministroExplicito && !/instalaci[oÃ³]n|montaje|obra/.test(desc)) {
+                // Evitar falsos positivos donde solo dice "suministro" sin instalación
+                if (esSuministroExplicito && !/instalaci[oó]n|montaje|obra/.test(desc)) {
                     return 'SUMINISTRO';
                 }
                 return 'OBRA';
@@ -168,7 +168,7 @@
             try {
                 const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
                 const wbs = Array.isArray(dm.data?.wbs) ? dm.data.wbs : [];
-                // Tomamos sÃ³lo items presupuestales (tipo 'item') y proyectamos campos de precio/costo
+                // Tomamos sólo items presupuestales (tipo 'item') y proyectamos campos de precio/costo
                 // Obtener layout para mapear UF
                 const layout = Array.isArray(dm.data?.layout) ? dm.data.layout : [];
                 const layoutMap = new Map(layout.map(l => [l.id, l.uf]));
@@ -274,30 +274,30 @@
             const overrides = (window && window.TM01_CAPITULO_NOMBRES) ? window.TM01_CAPITULO_NOMBRES : {};
             // Mapeo legible por defecto (fallback)
             const defaults = {
-                '1': '1. CONTROL Y SEÃ‘ALIZACIÃ“N VIRTUAL',
+                '1': '1. CONTROL Y SEÑ‘ALIZACIÑ“N VIRTUAL',
                 '2': '2. TELECOMUNICACIONES COLOCALIZADAS',
                 '3': '3. SISTEMAS ITS Y SEGURIDAD',
                 '4': '4. PASOS A NIVEL',
                 '5': '5. CENTRO DE CONTROL OPERACIONAL',
                 '6': '6. MATERIAL RODANTE'
             };
-            // Inicializar capÃ­tulos presentes
+            // Inicializar capítulos presentes
             all.forEach(i => {
                 const cap = String((i.item || '').split('.')[0] || '').trim();
                 if (!cap) return;
                 if (!names[cap]) names[cap] = cap; // placeholder
             });
-            // Enriquecer con Ã­tems de nivel 1 (capÃ­tulos) cuando existan
+            // Enriquecer con ítems de nivel 1 (capítulos) cuando existan
             const level1 = all.filter(i => (i.nivel === 1 || (i.item && i.item.indexOf('.') === -1)) && i.descripcion);
             level1.forEach(i => {
                 const cap = String(i.item || '').split('.')[0];
                 if (cap) names[cap] = `${cap}. ${i.descripcion}`;
             });
-            // Si no hay nivel 1, derivar por sistema predominante dentro del capÃ­tulo
+            // Si no hay nivel 1, derivar por sistema predominante dentro del capítulo
             Object.keys(names).forEach(cap => {
                 if (overrides[cap]) { names[cap] = `${cap}. ${overrides[cap]}`; return; }
                 if (names[cap] !== cap) return; // ya definido por nivel 1
-                // Buscar items del capÃ­tulo y contar sistemas
+                // Buscar items del capítulo y contar sistemas
                 const itemsCap = all.filter(i => String((i.item || '').split('.')[0]) === cap);
                 const freq = {};
                 itemsCap.forEach(i => { const s = (i.sistema || '').trim(); if (!s) return; freq[s] = (freq[s] || 0) + 1; });
@@ -305,7 +305,7 @@
                 if (dominante) {
                     names[cap] = `${cap}. ${dominante}`;
                 } else {
-                    names[cap] = defaults[cap] || `CapÃ­tulo ${cap}`;
+                    names[cap] = defaults[cap] || `Capítulo ${cap}`;
                 }
             });
             return names;
@@ -340,23 +340,23 @@
                 `);
                 // Subfilas como en el ejemplo
                 rows.push(`
-                    <tr><td style="padding-left:30px;color:#004085;">â†³ IVA Suministros (19%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaSum,'COP')}</td><td></td><td class="right">${fm(ivaSum/4400,'USD')}</td></tr>
+                    <tr><td style="padding-left:30px;color:#004085;">←³ IVA Suministros (19%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaSum,'COP')}</td><td></td><td class="right">${fm(ivaSum/4400,'USD')}</td></tr>
                 `);
                 rows.push(`
-                    <tr><td style="padding-left:30px;color:#004085;">â†³ IVA Servicios (19%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaServ,'COP')}</td><td></td><td class="right">${fm(ivaServ/4400,'USD')}</td></tr>
+                    <tr><td style="padding-left:30px;color:#004085;">←³ IVA Servicios (19%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaServ,'COP')}</td><td></td><td class="right">${fm(ivaServ/4400,'USD')}</td></tr>
                 `);
                 rows.push(`
-                    <tr><td style="padding-left:30px;color:#004085;">â†³ IVA/Utilidad Obra (19% Ã— 5%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaUtil,'COP')}</td><td></td><td class="right">${fm(ivaUtil/4400,'USD')}</td></tr>
+                    <tr><td style="padding-left:30px;color:#004085;">←³ IVA/Utilidad Obra (19% × 5%)</td><td></td><td></td><td></td><td></td><td></td><td class="right">${fm(ivaUtil,'COP')}</td><td></td><td class="right">${fm(ivaUtil/4400,'USD')}</td></tr>
                 `);
                 if (c.OBRA > 0) {
                     rows.push(`
-                        <tr><td style="padding-left:30px;color:#6c757d;">â†³ AdministraciÃ³n (23%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.23,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.23)/4400,'USD')}</td></tr>
+                        <tr><td style="padding-left:30px;color:#6c757d;">←³ Administración (23%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.23,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.23)/4400,'USD')}</td></tr>
                     `);
                     rows.push(`
-                        <tr><td style="padding-left:30px;color:#6c757d;">â†³ Imprevistos (5%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.05)/4400,'USD')}</td></tr>
+                        <tr><td style="padding-left:30px;color:#6c757d;">←³ Imprevistos (5%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.05)/4400,'USD')}</td></tr>
                     `);
                     rows.push(`
-                        <tr><td style="padding-left:30px;color:#6c757d;">â†³ Utilidad (5%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.05)/4400,'USD')}</td></tr>
+                        <tr><td style="padding-left:30px;color:#6c757d;">←³ Utilidad (5%)</td><td></td><td></td><td></td><td></td><td class="right">${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td class="right">${fm((c.OBRA*0.05)/4400,'USD')}</td></tr>
                     `);
                 }
             });
@@ -378,7 +378,7 @@
         }
 
         function calcularAIUIVA(data) {
-            // Suma por capÃ­tulo y por tipo SUM/OBRA/SERV
+            // Suma por capítulo y por tipo SUM/OBRA/SERV
             const subtotales = {}; // { cap: { SUMINISTRO, OBRA, SERVICIO, ... } }
             let totalSuministros = 0, totalObraCivil = 0, totalServicios = 0;
             data.forEach(i => {
@@ -432,7 +432,7 @@
             if (filteredItems.length === 0) { alert('No hay datos para exportar'); return; }
             const rows = filteredItems.map(i => ({
                 Item: i.item || '',
-                DescripciÃ³n: i.descripcion || '',
+                Descripción: i.descripcion || '',
                 Sistema: i.sistema || '',
                 Tipo: i._tipoCalc || '',
                 Cantidad: num(i.cantidad),
@@ -453,7 +453,7 @@
             const calc = calcularAIUIVA(filteredItems);
             const names = getChapterNamesFromWBS(allItems);
 
-            // Preparar datos estructurados por capÃ­tulo para usar en la vista previa y en la exportaciÃ³n
+            // Preparar datos estructurados por capítulo para usar en la vista previa y en la exportación
             const caps = Object.keys(calc.subtotales).sort().map(cap => {
                 const c = calc.subtotales[cap];
                 const cd = c.SUMINISTRO + c.OBRA + c.SERVICIO;
@@ -496,20 +496,20 @@
 
             const header = `
                 <div class="hdr">
-                    <h1>ðŸ“Š DESGLOSE PRESUPUESTAL POR CAPÃTULOS</h1>
+                    <h1>📊 DESGLOSE PRESUPUESTAL POR CAPÑTULOS</h1>
                     <div class="tools">
-                        <button class="btn btn-print" onclick="window.print()">ðŸ–¨ï¸ Imprimir</button>
-                        <button class="btn btn-xlsx" onclick="exportarDesdePreview()">ðŸ“¤ Exportar Desglose a Excel</button>
+                        <button class="btn btn-print" onclick="window.print()">🖨️ Imprimir</button>
+                        <button class="btn btn-xlsx" onclick="exportarDesdePreview()">📊 Exportar Desglose a Excel</button>
                     </div>
                 </div>
-                <div class="sub">âœ… WBS Actualizada - CÃ¡lculo: AIU 33% solo OBRA; IVA 19% a SUM+SERV + 19% a Utilidad de OBRA (5%).</div>
+                <div class="sub">✅ WBS Actualizada - Cálculo: AIU 33% solo OBRA; IVA 19% a SUM+SERV + 19% a Utilidad de OBRA (5%).</div>
             `;
 
             const tableHead = `
                 <table>
                     <thead>
                         <tr>
-                            <th>CAPÃTULO</th>
+                            <th>CAPÑTULO</th>
                             <th>SUMINISTROS (COP)</th>
                             <th>OBRA CIVIL (COP)</th>
                             <th>SERVICIOS (COP)</th>
@@ -538,30 +538,30 @@
                         <td>${fm(usd,'USD')}</td>
                     </tr>
                     <tr class="row-sub">
-                        <td>â†³ IVA Suministros (19%)</td>
+                        <td>←³ IVA Suministros (19%)</td>
                         <td></td><td></td><td></td><td></td><td></td>
                         <td>${fm(c.ivaSum,'COP')}</td>
                         <td></td>
                         <td>${fm(c.ivaSum/4400,'USD')}</td>
                     </tr>
                     <tr class="row-sub">
-                        <td>â†³ IVA Servicios (19%)</td>
+                        <td>←³ IVA Servicios (19%)</td>
                         <td></td><td></td><td></td><td></td><td></td>
                         <td>${fm(c.ivaServ,'COP')}</td>
                         <td></td>
                         <td>${fm(c.ivaServ/4400,'USD')}</td>
                     </tr>
                     <tr class="row-sub">
-                        <td>â†³ IVA/Utilidad Obra (19% Ã— 5%)</td>
+                        <td>←³ IVA/Utilidad Obra (19% × 5%)</td>
                         <td></td><td></td><td></td><td></td><td></td>
                         <td>${fm(c.ivaUtil,'COP')}</td>
                         <td></td>
                         <td>${fm(c.ivaUtil/4400,'USD')}</td>
                     </tr>
                     ${c.OBRA>0 ? `
-                    <tr class="row-sub-obra"><td>â†³ AdministraciÃ³n (23%)</td><td></td><td>${fm(c.OBRA*0.23,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr class="row-sub-obra"><td>â†³ Imprevistos (5%)</td><td></td><td>${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr class="row-sub-obra"><td>â†³ Utilidad (5%)</td><td></td><td>${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr class="row-sub-obra"><td>←³ Administración (23%)</td><td></td><td>${fm(c.OBRA*0.23,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr class="row-sub-obra"><td>←³ Imprevistos (5%)</td><td></td><td>${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr class="row-sub-obra"><td>←³ Utilidad (5%)</td><td></td><td>${fm(c.OBRA*0.05,'COP')}</td><td></td><td></td><td></td><td></td><td></td></tr>
                     `: ''}
                 `;
             }).join('');
@@ -602,19 +602,19 @@
                     })};
                     function exportarDesdePreview(){
                         const data = [
-                            ['DESGLOSE PRESUPUESTAL POR CAPÃTULOS - TM01'],
+                            ['DESGLOSE PRESUPUESTAL POR CAPÑTULOS - TM01'],
                             ['Fecha', new Date().toLocaleDateString('es-CO')],
                             [],
-                            ['CAPÃTULO','SUMINISTROS (COP)','OBRA CIVIL (COP)','SERVICIOS (COP)','COSTO DIRECTO (COP)','AIU 33% (COP)','IVA (COP)','TOTAL (COP)','TOTAL (USD)']
+                            ['CAPÑTULO','SUMINISTROS (COP)','OBRA CIVIL (COP)','SERVICIOS (COP)','COSTO DIRECTO (COP)','AIU 33% (COP)','IVA (COP)','TOTAL (COP)','TOTAL (USD)']
                         ];
                         capsData.forEach(c=>{
                             data.push([c.capName,c.SUMINISTRO,c.OBRA,c.SERVICIO,c.cd,c.aiu,c.iva,c.total,c.total/4400]);
-                            data.push(['', 'â†³ AdministraciÃ³n (23%)', '', '', '', c.OBRA*0.23, '', '', (c.OBRA*0.23)/4400]);
-                            data.push(['', 'â†³ Imprevistos (5%)', '', '', '', c.OBRA*0.05, '', '', (c.OBRA*0.05)/4400]);
-                            data.push(['', 'â†³ Utilidad (5%)', '', '', '', c.OBRA*0.05, '', '', (c.OBRA*0.05)/4400]);
-                            data.push(['', 'â†³ IVA Suministros (19%)', '', '', '', c.ivaSum, '', '', (c.ivaSum)/4400]);
-                            data.push(['', 'â†³ IVA Servicios (19%)', '', '', '', c.ivaServ, '', '', (c.ivaServ)/4400]);
-                            data.push(['', 'â†³ IVA/Utilidad Obra (19%Ã—5%)', '', '', '', c.ivaUtil, '', '', (c.ivaUtil)/4400]);
+                            data.push(['', '←³ Administración (23%)', '', '', '', c.OBRA*0.23, '', '', (c.OBRA*0.23)/4400]);
+                            data.push(['', '←³ Imprevistos (5%)', '', '', '', c.OBRA*0.05, '', '', (c.OBRA*0.05)/4400]);
+                            data.push(['', '←³ Utilidad (5%)', '', '', '', c.OBRA*0.05, '', '', (c.OBRA*0.05)/4400]);
+                            data.push(['', '←³ IVA Suministros (19%)', '', '', '', c.ivaSum, '', '', (c.ivaSum)/4400]);
+                            data.push(['', '←³ IVA Servicios (19%)', '', '', '', c.ivaServ, '', '', (c.ivaServ)/4400]);
+                            data.push(['', '←³ IVA/Utilidad Obra (19%×5%)', '', '', '', c.ivaUtil, '', '', (c.ivaUtil)/4400]);
                         });
                         data.push([]);
                         data.push(['TOTAL GENERAL', totales.totalSuministros, totales.totalObraCivil, totales.totalServicios, totales.costoDirecto, totales.aiu, totales.iva, totales.total, totales.total/4400]);
@@ -693,7 +693,7 @@
                 return `
                     <h3>${titulo}</h3>
                     <table class=\"t ${estiloExtra}\"><thead><tr>
-                        <th>ÃTEM</th><th>DESCRIPCIÃ“N</th><th>TIPO</th><th>UNIDAD</th><th>CANTIDAD</th><th>VU (COP)</th><th>TOTAL (COP)</th><th>TOTAL (USD)</th>
+                        <th>ÑTEM</th><th>DESCRIPCIÑ“N</th><th>TIPO</th><th>UNIDAD</th><th>CANTIDAD</th><th>VU (COP)</th><th>TOTAL (COP)</th><th>TOTAL (USD)</th>
                     </tr></thead><tbody>${filas}</tbody>
                     <tfoot><tr class=\"row-subtotal\"><th colspan=\"6\" style=\"text-align:right;\">SUBTOTAL ${titulo.toUpperCase()}:</th><th>${fmtCOP(subtotalCOP)}</th><th>${fmtUSD(subtotalUSD)}</th></tr></tfoot></table>`;
             };
@@ -708,7 +708,7 @@
                 const ivaSum = sumCOP * 0.19, ivaServ = servCOP * 0.19, ivaUtil = obraCOP * 0.05 * 0.19, iva = ivaSum + ivaServ + ivaUtil;
                 const total = cd + aiu + iva;
                 return `
-                    <h2>${names[cap] || ('CapÃ­tulo '+cap)}</h2>
+                    <h2>${names[cap] || ('Capítulo '+cap)}</h2>
                     ${tablaItems('1.1 SUMINISTROS', listas.SUMINISTRO)}
                     ${sumCOP>0?`<table class=\"t mini\"><tbody>
                         <tr class=\"row-iva\"><td>IVA 19% (Solo aplica a SUMINISTROS)</td><td style=\"text-align:right;\">${fmtCOP(ivaSum)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaSum))}</td></tr>
@@ -716,19 +716,19 @@
                     </tbody></table>`:''}
                     ${tablaItems('2.2 OBRA CIVIL', listas.OBRA, 'mini')}
                     ${obraCOP>0?`<table class=\"t mini\"><tbody>
-                        <tr class=\"row-aiu\"><td>AdministraciÃ³n (23%)</td><td style=\"text-align:right;\">${fmtCOP(adm)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(adm))}</td></tr>
+                        <tr class=\"row-aiu\"><td>Administración (23%)</td><td style=\"text-align:right;\">${fmtCOP(adm)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(adm))}</td></tr>
                         <tr class=\"row-aiu\"><td>Imprevistos (5%)</td><td style=\"text-align:right;\">${fmtCOP(imp)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(imp))}</td></tr>
                         <tr class=\"row-aiu\"><td>Utilidad (5%)</td><td style=\"text-align:right;\">${fmtCOP(uti)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(uti))}</td></tr>
                         <tr class=\"row-highlight\"><td><strong>AIU Total (33%)</strong></td><td style=\"text-align:right;\"><strong>${fmtCOP(aiu)}</strong></td><td style=\"text-align:right;\"><strong>${fmtUSD(toUSD(aiu))}</strong></td></tr>
-                        <tr class=\"row-iva\"><td>IVA/Utilidad (19% Ã— 5%)</td><td style=\"text-align:right;\">${fmtCOP(ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaUtil))}</td></tr>
+                        <tr class=\"row-iva\"><td>IVA/Utilidad (19% × 5%)</td><td style=\"text-align:right;\">${fmtCOP(ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaUtil))}</td></tr>
                         <tr class=\"row-total\"><td>TOTAL OBRA CIVIL (con AIU + IVA)</td><td style=\"text-align:right;\">${fmtCOP(obraCOP+aiu+ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(obraCOP+aiu+ivaUtil))}</td></tr>
                     </tbody></table>`:''}
                     ${tablaItems('3.3 SERVICIOS', listas.SERVICIO)}
                     <table class=\"t mini\"><tbody>
                         <tr class=\"row-iva\"><td>IVA Suministros (19%)</td><td style=\"text-align:right;\">${fmtCOP(ivaSum)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaSum))}</td></tr>
                         <tr class=\"row-iva\"><td>IVA Servicios (19%)</td><td style=\"text-align:right;\">${fmtCOP(ivaServ)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaServ))}</td></tr>
-                        <tr class=\"row-iva\"><td>IVA/Utilidad Obra (19% Ã— 5%)</td><td style=\"text-align:right;\">${fmtCOP(ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaUtil))}</td></tr>
-                        <tr class=\"row-total\"><td><strong>TOTAL ${names[cap] || ('CapÃ­tulo '+cap)}</strong></td><td style=\"text-align:right;\"><strong>${fmtCOP(total)}</strong></td><td style=\"text-align:right;\"><strong>${fmtUSD(toUSD(total))}</strong></td></tr>
+                        <tr class=\"row-iva\"><td>IVA/Utilidad Obra (19% × 5%)</td><td style=\"text-align:right;\">${fmtCOP(ivaUtil)}</td><td style=\"text-align:right;\">${fmtUSD(toUSD(ivaUtil))}</td></tr>
+                        <tr class=\"row-total\"><td><strong>TOTAL ${names[cap] || ('Capítulo '+cap)}</strong></td><td style=\"text-align:right;\"><strong>${fmtCOP(total)}</strong></td><td style=\"text-align:right;\"><strong>${fmtUSD(toUSD(total))}</strong></td></tr>
                     </tbody></table>
                 `;
             }).join('');
@@ -737,9 +737,9 @@
                 <style>${estilo}</style>
                 <script src=\"https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js\"><\/script>
             </head><body>
-                <div class=\"toolbar\"><button class=\"btn btn-print\" onclick=\"window.print()\">ðŸ–¨ï¸ Imprimir</button><button class=\"btn btn-excel\" onclick=\"exportarActaExcel()\">ðŸ“¤ Exportar Excel</button></div>
+                <div class=\"toolbar\"><button class=\"btn btn-print\" onclick=\"window.print()\">🖨️ Imprimir</button><button class=\"btn btn-excel\" onclick=\"exportarActaExcel()\">📊 Exportar Excel</button></div>
                 <div class=\"hero\"><div class=\"wrap\">
-                    <h1>ðŸ“ ACTA DE OBRA</h1>
+                    <h1>📝 ACTA DE OBRA</h1>
                     <div style=\"font-size:22px;margin-top:6px;\">WBS - Sistema de Comunicaciones y Control<span class=\"pill\">UF-2.2 | v3.0</span></div>
                     <div style=\"margin-top:12px;opacity:.95\">Fecha: ${new Date().toLocaleDateString('es-CO')}</div>
                 </div></div>
@@ -751,10 +751,10 @@
                         const obra = listas.OBRA.reduce((s,it)=>s+it.totalCOP,0);
                         const serv = listas.SERVICIO.reduce((s,it)=>s+it.totalCOP,0);
                         const cd = sum+obra+serv; const aiu = obra*0.33; const iva = (sum*0.19)+(serv*0.19)+(obra*0.05*0.19);
-                        return { cap: cap, name: (names && names[cap]) || ('CapÃ­tulo '+cap), sum, obra, serv, cd, aiu, iva, total: cd+aiu+iva };
+                        return { cap: cap, name: (names && names[cap]) || ('Capítulo '+cap), sum, obra, serv, cd, aiu, iva, total: cd+aiu+iva };
                     }))};
                     function exportarActaExcel(){
-                        const data = [['ACTA DE OBRA - TM01'],['Fecha', new Date().toLocaleDateString('es-CO')],[],['CAPÃTULO','SUM (COP)','OBRA (COP)','SERV (COP)','CD (COP)','AIU 33% (COP)','IVA (COP)','TOTAL (COP)','TOTAL (USD)']];
+                        const data = [['ACTA DE OBRA - TM01'],['Fecha', new Date().toLocaleDateString('es-CO')],[],['CAPÑTULO','SUM (COP)','OBRA (COP)','SERV (COP)','CD (COP)','AIU 33% (COP)','IVA (COP)','TOTAL (COP)','TOTAL (USD)']];
                         capsResumen.forEach(c=>{ data.push([c.name,c.sum,c.obra,c.serv,c.cd,c.aiu,c.iva,c.total,c.total/4400]); });
                         const ws = XLSX.utils.aoa_to_sheet(data); ws['!cols']=[{wch:40},{wch:18},{wch:18},{wch:18},{wch:18},{wch:16},{wch:16},{wch:18},{wch:16}];
                         const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Acta de Obra');

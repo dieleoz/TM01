@@ -36,13 +36,13 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>ðŸ—‚ï¸ EDT Detallado - Estructura de Desglose del Trabajo</h1>
-            <p>TM01 Troncal Magdalena | Sistema de ValidaciÃ³n ITS</p>
+            <h1>📈 EDT Detallado - Estructura de Desglose del Trabajo</h1>
+            <p>TM01 Troncal Magdalena | Sistema de Validación ITS</p>
         </div>
         <div class="content">
-            <a href="WBS_Menu_Principal.html" class="back-btn">â† Volver al MenÃº Principal</a>
+            <a href="WBS_Menu_Principal.html" class="back-btn">← Volver al Menúú Principal</a>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="ðŸ” Buscar Ã­tem por cÃ³digo o descripciÃ³n..." onkeyup="filterEDT(this.value)">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar ítem por código o descripción..." onkeyup="filterEDT(this.value)">
             </div>
             <div class="edt-container">
                 <div class="edt-tree" id="edtTree">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="edt-details">
                     <div id="detailsContent" class="detail-section">
-                        <h3>ðŸŽ¯ Seleccione un Ã­tem del EDT</h3>
+                        <h3>✅ Seleccione un ítem del EDT</h3>
                         <p>Haga clic en cualquier elemento de la estructura para ver detalles.</p>
                     </div>
                 </div>
@@ -84,10 +84,10 @@
                 if (!porCapitulo[cap]) porCapitulo[cap] = [];
                 porCapitulo[cap].push(item);
             });
-            let html = '<h3 style="margin-bottom:20px;color:#1e3c72;">ðŸŒ³ Estructura EDT</h3>';
+            let html = '<h3 style="margin-bottom:20px;color:#1e3c72;">🗺️³ Estructura EDT</h3>';
             Object.keys(porCapitulo).sort().forEach(cap => {
                 const capId = 'cap-' + cap;
-                html += `<div class="tree-level-1" onclick="toggleCapitulo('${capId}')"><span id="${capId}-icon">â–¶</span> CapÃ­tulo ${cap} <span style="opacity:0.7;font-size:12px;">(${porCapitulo[cap].length} items)</span></div><div id="${capId}" style="display:none;">`;
+                html += `<div class="tree-level-1" onclick="toggleCapitulo('${capId}')"><span id="${capId}-icon">â–¶</span> Capítulo ${cap} <span style="opacity:0.7;font-size:12px;">(${porCapitulo[cap].length} items)</span></div><div id="${capId}" style="display:none;">`;
                 porCapitulo[cap].forEach(item => {
                     html += `<div class="tree-item" onclick="showDetails('${item.id}')"><strong>${item.item}</strong> - ${item.descripcion}</div>`;
                 });
@@ -106,7 +106,7 @@
             const formatCOP = (val) => val ? new Intl.NumberFormat('es-CO', {style:'currency',currency:'COP',maximumFractionDigits:0}).format(val) : 'N/A';
             document.getElementById('detailsContent').innerHTML = `
                 <div class="detail-section">
-                    <h3 style="color:#1e3c72;">ðŸ“‹ ${item.item} - ${item.descripcion}</h3>
+                    <h3 style="color:#1e3c72;">📋 ${item.item} - ${item.descripcion}</h3>
                     <p><strong>Tipo:</strong> ${item.tipo} | <strong>Sistema:</strong> ${item.sistema || 'N/A'} | <strong>Cantidad:</strong> ${item.cantidad || 'N/A'} ${item.unidad || ''}</p>
                     <p><strong>VU:</strong> ${formatCOP(parseFloat(item.vuCOP?.replace(/[,.]/g,'') || 0))}</p>
                     <p><strong>Total:</strong> <span style="font-size:20px;font-weight:bold;color:#28a745;">${formatCOP(parseFloat(item.totalCOP?.replace(/[,.]/g,'') || 0))}</span></p>
