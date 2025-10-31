@@ -14,12 +14,14 @@ $cachebuster= Join-Path $modulesPath 'CacheBuster.psm1'
 $validator  = Join-Path $modulesPath 'ValidadorContractual.psm1'
 $t05parser  = Join-Path $modulesPath 'T05Parser.psm1'
 $rfqUpdater = Join-Path $modulesPath 'RFQUpdater.psm1'
+$dataMapper = Join-Path $modulesPath 'DataMapper.psm1'
 if (Test-Path $logger)     { Import-Module $logger -Force; Initialize-Logger -LogPrefix 'sincronizacion' }
 if (Test-Path $snapshotter){ Import-Module $snapshotter -Force }
 if (Test-Path $cachebuster){ Import-Module $cachebuster -Force }
 if (Test-Path $validator)  { Import-Module $validator -Force }
 if (Test-Path $t05parser)  { Import-Module $t05parser -Force }
 if (Test-Path $rfqUpdater) { Import-Module $rfqUpdater -Force }
+if (Test-Path $dataMapper) { Import-Module $dataMapper -Force }
 
 function Write-Log([string]$msg){
     $ts = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
@@ -151,9 +153,25 @@ try{
         New-DataSnapshot -SourceFile $masterFile -Description "Pre-sync $(Get-Date -Format 'yyyy-MM-dd HH:mm')" | Out-Null
     }
     
-    # 1) T05 -> master (planificar/aplicar)
-    $syncT05 = Join-Path -Path (Split-Path -Parent $PSCommandPath) -ChildPath 'sync_master_from_T05.ps1'
-    if (Test-Path $syncT05) { powershell -ExecutionPolicy Bypass -File $syncT05 }
+    # 1) Sincronización bidireccional: BASE (snapshot) vs SOURCE (T05) vs CURRENT (master)
+    if (Get-Command Invoke-BidirectionalSync -ErrorAction SilentlyContinue) {
+        Write-Log "Ejecutando merge bidireccional..."
+        $mergeResult = Invoke-BidirectionalSync
+        if ($mergeResult) {
+            Write-LogEntry -Level 'INFO' -Message 'Merge bidireccional completado' -Context @{
+                FieldsModified = $mergeResult.Stats.FieldsModified
+                Conflicts = $mergeResult.Conflicts.Count
+            }
+            if ($mergeResult.Conflicts.Count -gt 0) {
+                Write-Log "⚠️  ATENCIÓN: $($mergeResult.Conflicts.Count) conflictos detectados. Revisar logs/merge_conflicts_*.json"
+            }
+        }
+    } else {
+        # Fallback: sync T05 tradicional (solo si DataMapper no está disponible)
+        Write-Log "DataMapper no disponible, usando sync T05 tradicional"
+        $syncT05 = Join-Path -Path (Split-Path -Parent $PSCommandPath) -ChildPath 'sync_master_from_T05.ps1'
+        if (Test-Path $syncT05) { powershell -ExecutionPolicy Bypass -File $syncT05 }
+    }
 
     # 2) RFQ FO AUTOGEN
     $foItems = if (Get-Command Get-T05FiberQuantitiesFromRFQCsv -ErrorAction SilentlyContinue) { Get-T05FiberQuantitiesFromRFQCsv } else { Get-FiberQuantities }
