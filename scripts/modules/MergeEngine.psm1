@@ -3,6 +3,28 @@
 
 Import-Module (Join-Path $PSScriptRoot 'Logger.psm1') -Force
 
+function ConvertTo-Hashtable {
+    [CmdletBinding()]
+    param([AllowNull()]$InputObject)
+    if ($null -eq $InputObject) { return $null }
+    if ($InputObject -is [System.Collections.IDictionary]) {
+        $ht = @{}
+        foreach ($key in $InputObject.Keys) { $ht[$key] = ConvertTo-Hashtable -InputObject $InputObject[$key] }
+        return $ht
+    }
+    if ($InputObject -is [pscustomobject]) {
+        $ht = @{}
+        foreach ($prop in $InputObject.PSObject.Properties) { $ht[$prop.Name] = ConvertTo-Hashtable -InputObject $prop.Value }
+        return $ht
+    }
+    if ($InputObject -is [System.Collections.IEnumerable] -and -not ($InputObject -is [string])) {
+        $arr = @()
+        foreach ($item in $InputObject) { $arr += ,(ConvertTo-Hashtable -InputObject $item) }
+        return $arr
+    }
+    return $InputObject
+}
+
 function Compare-ObjectDiff {
     <#
     .SYNOPSIS
@@ -23,8 +45,8 @@ function Compare-ObjectDiff {
     if ($null -eq $Base) { $Base = @{} }
     if ($null -eq $Modified) { $Modified = @{} }
     
-    if ($Base -is [PSCustomObject]) { $Base = [hashtable]$Base }
-    if ($Modified -is [PSCustomObject]) { $Modified = [hashtable]$Modified }
+    if ($Base -is [PSCustomObject] -or $Base -is [System.Collections.IEnumerable]) { $Base = ConvertTo-Hashtable -InputObject $Base }
+    if ($Modified -is [PSCustomObject] -or $Modified -is [System.Collections.IEnumerable]) { $Modified = ConvertTo-Hashtable -InputObject $Modified }
     
     # Campos nuevos o modificados
     foreach ($key in $Modified.Keys) {
@@ -129,9 +151,9 @@ function Merge-ThreeWay {
     }
     
     # Convertir a hashtables si es necesario
-    if ($Base -is [PSCustomObject]) { $Base = [hashtable]$Base }
-    if ($Source -is [PSCustomObject]) { $Source = [hashtable]$Source }
-    if ($Current -is [PSCustomObject]) { $Current = [hashtable]$Current }
+    if ($Base -is [PSCustomObject] -or $Base -is [System.Collections.IEnumerable]) { $Base = ConvertTo-Hashtable -InputObject $Base }
+    if ($Source -is [PSCustomObject] -or $Source -is [System.Collections.IEnumerable]) { $Source = ConvertTo-Hashtable -InputObject $Source }
+    if ($Current -is [PSCustomObject] -or $Current -is [System.Collections.IEnumerable]) { $Current = ConvertTo-Hashtable -InputObject $Current }
     
     $merged = @{}
     $allKeys = @()

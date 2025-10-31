@@ -25,12 +25,17 @@ function Get-MasterDataContent {
     
     $content = Get-Content -LiteralPath $FilePath -Raw -Encoding UTF8
     
-    # Extraer this.data = { ... }
-    $dataMatch = [regex]::Match($content, 'this\.data\s*=\s*(\{[^\}]*\})', [System.Text.RegularExpressions.RegexOptions]::Singleline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-    
+    # Intentos de extracción del objeto de datos
+    $rxOpts = [System.Text.RegularExpressions.RegexOptions]::Singleline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
+    # 1) this.data = { ... }
+    $dataMatch = [regex]::Match($content, 'this\.data\s*=\s*(\{[\s\S]*?\})', $rxOpts)
+    # 2) window.TM01_MASTER_DATA = { ... }
     if (-not $dataMatch.Success) {
-        # Intentar formato alternativo: window.TM01MasterData = { data: {...} }
-        $dataMatch = [regex]::Match($content, '(?:window\.)?TM01MasterData\s*=\s*\{[^}]*data\s*:\s*(\{[^\}]*\})', [System.Text.RegularExpressions.RegexOptions]::Singleline -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        $dataMatch = [regex]::Match($content, '(?:window\.)?TM01_MASTER_DATA\s*=\s*(\{[\s\S]*?\})', $rxOpts)
+    }
+    # 3) const tm01Data = { ... }
+    if (-not $dataMatch.Success) {
+        $dataMatch = [regex]::Match($content, 'const\s+tm01Data\s*=\s*(\{[\s\S]*?\})', $rxOpts)
     }
     
     if (-not $dataMatch.Success) {
@@ -152,7 +157,10 @@ function Invoke-BidirectionalSync {
         return $null
     }
     
-    # 4. Ejecutar merge 3-vías
+    # 4. Ejecutar merge 3-vías (con defaults seguros si hay nulls)
+    if ($null -eq $baseData) { $baseData = @{} }
+    if ($null -eq $sourceData) { $sourceData = @{} }
+    if ($null -eq $currentData) { $currentData = @{} }
     $mergeResult = Merge-ThreeWay -Base $baseData -Source $sourceData -Current $currentData
     
     # 5. Aplicar cambios (si no es DryRun)
@@ -218,6 +226,8 @@ if (typeof module !== 'undefined' && module.exports) {
 } else {
     window.TM01_MASTER_DATA = normalizedData;
 }
+// Compatibilidad con lectores que buscan this.data
+this.data = normalizedData;
 "@
         Set-Content -LiteralPath $script:MasterFile -Value $jsContent -Encoding UTF8
         Write-LogEntry -Level 'INFO' -Message 'tm01_master_data.js actualizado exitosamente' -Context @{ FilePath = $script:MasterFile; FieldsModified = $mergeResult.Stats.FieldsModified; Timestamp = $timestamp }

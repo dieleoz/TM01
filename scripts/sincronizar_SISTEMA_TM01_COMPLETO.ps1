@@ -141,11 +141,11 @@ function Update-RFQFiberTable_Inline {
 try{
     # Acquire lock
     if (-not (New-SyncLock)) {
-        if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'WARN' -Message 'Sincronización bloqueada por lockfile' -Context @{ Lock = $lockPath } }
-        Write-Error "Sincronización en curso (lock: $lockPath)"; exit 1
+        if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'WARN' -Message 'Sincronizacion bloqueada por lockfile' -Context @{ Lock = $lockPath } }
+        Write-Error "Sincronizacion en curso (lock: $lockPath)"; exit 1
     }
-    Write-Log "Sincronización TM01 iniciada"
-    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronización iniciada' }
+    Write-Log "Sincronizacion TM01 iniciada"
+    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion iniciada' }
     # Snapshot pre-sincronización
     $masterFile = "Sistema_Validacion_Web/data/tm01_master_data.js"
     if ((Test-Path -LiteralPath $masterFile) -and (Get-Command New-DataSnapshot -ErrorAction SilentlyContinue)) {
@@ -156,16 +156,14 @@ try{
     # 1) Sincronización bidireccional: BASE (snapshot) vs SOURCE (T05) vs CURRENT (master)
     if (Get-Command Invoke-BidirectionalSync -ErrorAction SilentlyContinue) {
         Write-Log "Ejecutando merge bidireccional..."
-        $mergeResult = Invoke-BidirectionalSync
-        if ($mergeResult) {
-            Write-LogEntry -Level 'INFO' -Message 'Merge bidireccional completado' -Context @{
-                FieldsModified = $mergeResult.Stats.FieldsModified
-                Conflicts = $mergeResult.Conflicts.Count
-            }
-            if ($mergeResult.Conflicts.Count -gt 0) {
-                Write-Log "⚠️  ATENCIÓN: $($mergeResult.Conflicts.Count) conflictos detectados. Revisar logs/merge_conflicts_*.json"
-            }
+        $syncResult = Invoke-BidirectionalSync -Force:$Force
+        if (-not $syncResult) {
+            if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Sincronizacion bidireccional fallo (conflictos o error)' }
+            Write-Host "`nSINCRONIZACION DETENIDA POR CONFLICTOS" -ForegroundColor Red
+            Write-Host "Ver: Sistema_Validacion_Web/data/tm01_master_data.conflicts.json" -ForegroundColor Yellow
+            exit 1
         }
+        if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion bidireccional completada exitosamente' }
     } else {
         # Fallback: sync T05 tradicional (solo si DataMapper no está disponible)
         Write-Log "DataMapper no disponible, usando sync T05 tradicional"
@@ -180,7 +178,7 @@ try{
     } else {
         Update-RFQFiberTable_Inline -Items $foItems
     }
-    # Validación declarativa por reglas YAML
+    # Validacion declarativa por reglas YAML
     if (Get-Command Invoke-DeclarativeValidation -ErrorAction SilentlyContinue) {
         $masterDataObj = (Get-Content -LiteralPath $masterFile -Raw -Encoding UTF8)
         $dataMatch = [regex]::Match($masterDataObj, 'this\.data\s*=\s*(\{[\s\S]*?\})', [System.Text.RegularExpressions.RegexOptions]::Singleline)
@@ -190,10 +188,10 @@ try{
                 $obj = $jsonStr | ConvertFrom-Json
                 $decl = Invoke-DeclarativeValidation -MasterData $obj
                 if (-not $decl.IsValid) {
-                    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Validación declarativa falló' -Context @{ Issues = $decl.Issues } }
-                    throw "Validación declarativa falló: $($decl.Issues -join '; ')"
+                    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Validacion declarativa fallo' -Context @{ Issues = $decl.Issues } }
+                    throw ("Validacion declarativa fallo: " + ($decl.Issues -join '; '))
                 } else {
-                    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Validación declarativa OK' }
+                    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Validacion declarativa OK' }
                 }
             } catch {
                 throw $_
@@ -201,7 +199,7 @@ try{
         }
     }
 
-    Write-Log "Sincronización TM01 finalizada OK"
+    Write-Log 'Sincronizacion TM01 finalizada OK'
     # Limpieza de snapshots antiguos
     if (Get-Command Remove-OldSnapshots -ErrorAction SilentlyContinue) {
         Remove-OldSnapshots -KeepLast 20
@@ -216,10 +214,13 @@ try{
             try { Add-CacheBusting -HtmlFile $f.FullName -Version $version } catch { }
         }
     }
-    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronización finalizada OK' }
+    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion finalizada OK' }
 }catch{
-    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Sincronización falló' -Context @{ error = ($_ | Out-String) } }
-    Write-Error $_
+    $errorMsg = $_ | Out-String
+    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
+        try { Write-LogEntry -Level 'ERROR' -Message 'Sincronizacion fallo' -Context @{ error = $errorMsg } } catch { }
+    }
+    Write-Error $errorMsg
     exit 1
 }finally{
     Remove-SyncLock
