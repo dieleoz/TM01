@@ -61,7 +61,7 @@
 - Fuente: `RFQ-001_ANEXO_J_CANTIDADES_PRESUPUESTO.csv` (o respaldo embebido).
 
 6) UI/Cache Busting
-- Forzar `?v=timestamp` a `tm01_master_data.js` en vistas y botón “Refrescar datos”.
+- Forzar `?v=timestamp` a `tm01_master_data.js` en vistas y botón "Refrescar datos".
 
 7) Módulos (nuevos/ajustados)
 - `scripts/modules/Logger.psm1` (JSON logs)
@@ -1543,3 +1543,26 @@ Durante la sesión del 20/10/2025, el usuario identificó que las "correcciones"
 **GitHub Pages:** https://dieleoz.github.io/TM01/  
 **Progreso:** ✅ **85+ documentos generados, Sistema web 100% operativo, Integración UF completa, Cronograma mejorado**  
 **💰 PRESUPUESTO:** USD 13M validado (incluye peajes con 6 items detallados)
+
+---
+
+## 🟦 Actualización 31-Oct-2025 (AM)
+
+- Implementado contrato-first en sincronizador maestro:
+  - Nuevos módulos: `Logger.psm1`, `ValidadorContractual.psm1`, `T05Parser.psm1`, `RFQUpdater.psm1`.
+  - `sincronizar_SISTEMA_TM01_COMPLETO.ps1`: valida C1/AT1 (bloqueante) y actualiza AUTOGEN de RFQ FO.
+  - Verificación de T0 (26/11/2024) movida a warning si no se detecta literal.
+- Hook T05→master inicial:
+  - `scripts/sync_master_from_T05.ps1` + `MasterUpdater.psm1` (log-only, sin modificar JS aún).
+  - Corrida exitosa de sincronización.
+
+### Siguiente (en esta rama)
+1. Parser T05 real (FO/L3/L2/SOS) → aplicar en `tm01_master_data.js` (con dry-run + apply seguro).
+2. Regenerar intermedios: `datos_wbs_TM01_items.js`, `layout_datos.js`, `presupuesto_datos.js` tras validación.
+3. Extender validador:
+   - Plazos UF (C1 §5.2) y estado por UF.
+   - Coherencia SUM/OBRA/SERV y AIU/IVA por capítulo.
+4. Cache-busting automático en vistas + botón "Refrescar datos".
+5. Probar `docs/*` y ajustar UI donde aplique.
+
+---
