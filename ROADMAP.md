@@ -35,6 +35,24 @@
 
 ---
 
+## 🟪 Actualización 31-Oct-2025 (PM) – Inicio Fase 2: DTs + Merge bidireccional
+
+**Objetivo Fase 2:** Resolver DT-ARQUITECTURA-021 con sincronización bidireccional Docs ↔ Data.
+
+**Tareas priorizadas:**
+- [ ] TAREA-007: DTProcessor (cola DTs secuencial, idempotente) – INICIADA
+- [ ] TAREA-008: MergeEngine + DataMapper (merge 3‑vías + conflictos) – PENDIENTE
+- [ ] TAREA-009: Validator declarativo (rules/contract_rules.yaml) – PENDIENTE
+- [ ] TAREA-010: Tests end-to-end + documentación merge – PENDIENTE
+
+**Hecho Fase 1 (base técnica lista):** Logger, Snapshotter, Rollback, Cache-busting, Lockfile atómico, Normalización numérica, Maestro endurecido.
+
+**Siguiente inmediato:**
+1) Crear `scripts/modules/DTProcessor.psm1` + `scripts/process_dt_queue.ps1` y estructura `VII/DTs/{pending,processing,applied,failed}`
+2) Probar cola con DT mock y dejar lista para integrar MergeEngine en TAREA-008
+
+---
+
 ## 🔧 Plan 48h: Pipeline contrato → T05 → master (validado)
 
 1) Fuentes y prioridad (contrato-first)
