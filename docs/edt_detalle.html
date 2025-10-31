@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -36,21 +36,21 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🗂️ EDT Detallado - Estructura de Desglose del Trabajo</h1>
-            <p>TM01 Troncal Magdalena | Sistema de Validación ITS</p>
+            <h1>ðŸ—‚ï¸ EDT Detallado - Estructura de Desglose del Trabajo</h1>
+            <p>TM01 Troncal Magdalena | Sistema de ValidaciÃ³n ITS</p>
         </div>
         <div class="content">
-            <a href="WBS_Menu_Principal.html" class="back-btn">← Volver al Menú Principal</a>
+            <a href="WBS_Menu_Principal.html" class="back-btn">â† Volver al MenÃº Principal</a>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Buscar ítem por código o descripción..." onkeyup="filterEDT(this.value)">
+                <input type="text" id="searchInput" placeholder="ðŸ” Buscar Ã­tem por cÃ³digo o descripciÃ³n..." onkeyup="filterEDT(this.value)">
             </div>
             <div class="edt-container">
                 <div class="edt-tree" id="edtTree">
-                    <div style="padding:20px;text-align:center;color:#999;">⏳ Cargando estructura EDT...</div>
+                    <div style="padding:20px;text-align:center;color:#999;">â³ Cargando estructura EDT...</div>
                 </div>
                 <div class="edt-details">
                     <div id="detailsContent" class="detail-section">
-                        <h3>🎯 Seleccione un ítem del EDT</h3>
+                        <h3>ðŸŽ¯ Seleccione un Ã­tem del EDT</h3>
                         <p>Haga clic en cualquier elemento de la estructura para ver detalles.</p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
         </div>
     </div>
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
-    <script src="data/tm01_master_data.js"></script>
+    <script src="data/tm01_master_data.js?v=20251031150439"></script>
     <script>
         let edtData = [];
         function initEDT() {
@@ -72,8 +72,8 @@
                 if (edtData.length === 0) throw new Error('No hay datos WBS');
                 renderEDT();
             } catch (error) {
-                console.error('❌ Error:', error);
-                document.getElementById('edtTree').innerHTML = '<div style="padding:20px;background:#fff3cd;border-radius:8px;"><h3>⚠️ Error al cargar datos</h3><p>' + error.message + '</p></div>';
+                console.error('âŒ Error:', error);
+                document.getElementById('edtTree').innerHTML = '<div style="padding:20px;background:#fff3cd;border-radius:8px;"><h3>âš ï¸ Error al cargar datos</h3><p>' + error.message + '</p></div>';
             }
         }
         function renderEDT() {
@@ -84,10 +84,10 @@
                 if (!porCapitulo[cap]) porCapitulo[cap] = [];
                 porCapitulo[cap].push(item);
             });
-            let html = '<h3 style="margin-bottom:20px;color:#1e3c72;">🌳 Estructura EDT</h3>';
+            let html = '<h3 style="margin-bottom:20px;color:#1e3c72;">ðŸŒ³ Estructura EDT</h3>';
             Object.keys(porCapitulo).sort().forEach(cap => {
                 const capId = 'cap-' + cap;
-                html += `<div class="tree-level-1" onclick="toggleCapitulo('${capId}')"><span id="${capId}-icon">▶</span> Capítulo ${cap} <span style="opacity:0.7;font-size:12px;">(${porCapitulo[cap].length} items)</span></div><div id="${capId}" style="display:none;">`;
+                html += `<div class="tree-level-1" onclick="toggleCapitulo('${capId}')"><span id="${capId}-icon">â–¶</span> CapÃ­tulo ${cap} <span style="opacity:0.7;font-size:12px;">(${porCapitulo[cap].length} items)</span></div><div id="${capId}" style="display:none;">`;
                 porCapitulo[cap].forEach(item => {
                     html += `<div class="tree-item" onclick="showDetails('${item.id}')"><strong>${item.item}</strong> - ${item.descripcion}</div>`;
                 });
@@ -98,7 +98,7 @@
         function toggleCapitulo(capId) {
             const el = document.getElementById(capId);
             const icon = document.getElementById(capId + '-icon');
-            if (el.style.display === 'none') { el.style.display = 'block'; icon.textContent = '▼'; } else { el.style.display = 'none'; icon.textContent = '▶'; }
+            if (el.style.display === 'none') { el.style.display = 'block'; icon.textContent = 'â–¼'; } else { el.style.display = 'none'; icon.textContent = 'â–¶'; }
         }
         function showDetails(id) {
             const item = edtData.find(i => i.id === id);
@@ -106,11 +106,11 @@
             const formatCOP = (val) => val ? new Intl.NumberFormat('es-CO', {style:'currency',currency:'COP',maximumFractionDigits:0}).format(val) : 'N/A';
             document.getElementById('detailsContent').innerHTML = `
                 <div class="detail-section">
-                    <h3 style="color:#1e3c72;">📋 ${item.item} - ${item.descripcion}</h3>
+                    <h3 style="color:#1e3c72;">ðŸ“‹ ${item.item} - ${item.descripcion}</h3>
                     <p><strong>Tipo:</strong> ${item.tipo} | <strong>Sistema:</strong> ${item.sistema || 'N/A'} | <strong>Cantidad:</strong> ${item.cantidad || 'N/A'} ${item.unidad || ''}</p>
                     <p><strong>VU:</strong> ${formatCOP(parseFloat(item.vuCOP?.replace(/[,.]/g,'') || 0))}</p>
                     <p><strong>Total:</strong> <span style="font-size:20px;font-weight:bold;color:#28a745;">${formatCOP(parseFloat(item.totalCOP?.replace(/[,.]/g,'') || 0))}</span></p>
-                    ${item.criterio ? `<h4>⚙️ Criterio</h4><p>${item.criterio}</p>` : ''}
+                    ${item.criterio ? `<h4>âš™ï¸ Criterio</h4><p>${item.criterio}</p>` : ''}
                 </div>
             `;
             document.querySelectorAll('.tree-item').forEach(i => i.classList.remove('active'));
@@ -123,7 +123,7 @@
             });
             if (t !== '') {
                 document.querySelectorAll('[id^="cap-"]').forEach(el => {
-                    if (!el.id.includes('-icon')) { el.style.display = 'block'; document.getElementById(el.id + '-icon').textContent = '▼'; }
+                    if (!el.id.includes('-icon')) { el.style.display = 'block'; document.getElementById(el.id + '-icon').textContent = 'â–¼'; }
                 });
             }
         }
@@ -131,3 +131,4 @@
     </script>
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -36,14 +36,14 @@
 </head>
 <body>
     <div class="toolbar">
-        <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn btn-success" onclick="exportarExcelReporte()">📤 Exportar Excel</button>
+        <button class="btn btn-primary" onclick="window.print()">ðŸ–¨ï¸ Imprimir</button>
+        <button class="btn btn-success" onclick="exportarExcelReporte()">ðŸ“¤ Exportar Excel</button>
     </div>
 
     <div class="wrap">
         <div class="hero">
-            <h1>📋 REPORTE GERENCIAL EJECUTIVO</h1>
-            <p>TM01 Troncal Magdalena | Sistema de Validación ITS | Últ. act.: <span id="fechaAct"></span></p>
+            <h1>ðŸ“‹ REPORTE GERENCIAL EJECUTIVO</h1>
+            <p>TM01 Troncal Magdalena | Sistema de ValidaciÃ³n ITS | Ãšlt. act.: <span id="fechaAct"></span></p>
             <div class="grid">
                 <div class="metric"><div class="val" id="mUSD">-</div><div class="lab">Presupuesto Total (USD)</div></div>
                 <div class="metric"><div class="val" id="mCOP">-</div><div class="lab">Presupuesto Total (COP)</div></div>
@@ -53,11 +53,11 @@
         </div>
 
         <div class="section">
-            <h2>🔎 Pareto 80% del Presupuesto</h2>
+            <h2>ðŸ”Ž Pareto 80% del Presupuesto</h2>
             <div class="content">
                 <table id="tablaPareto">
                     <thead>
-                        <tr><th>Ítem</th><th>Descripción</th><th>Sistema</th><th class="right">Total (COP)</th><th class="right">Total (USD)</th><th class="right">% Acum.</th></tr>
+                        <tr><th>Ãtem</th><th>DescripciÃ³n</th><th>Sistema</th><th class="right">Total (COP)</th><th class="right">Total (USD)</th><th class="right">% Acum.</th></tr>
                     </thead>
                     <tbody><tr><td colspan="6" class="muted">Calculando...</td></tr></tbody>
                 </table>
@@ -65,11 +65,11 @@
         </div>
 
         <div class="section">
-            <h2>📊 Justificación de Cantidades por Sistema</h2>
+            <h2>ðŸ“Š JustificaciÃ³n de Cantidades por Sistema</h2>
             <div class="content">
                 <table id="tablaSistemas">
                     <thead>
-                        <tr><th>Sistema</th><th class="right">Cantidad Total</th><th>Justificación Técnica</th></tr>
+                        <tr><th>Sistema</th><th class="right">Cantidad Total</th><th>JustificaciÃ³n TÃ©cnica</th></tr>
                     </thead>
                     <tbody></tbody>
                 </table>
@@ -77,35 +77,35 @@
         </div>
 
         <div class="section">
-            <h2>🔧 Supuestos Técnicos y Comerciales</h2>
+            <h2>ðŸ”§ Supuestos TÃ©cnicos y Comerciales</h2>
             <div class="content cards" id="supuestosCards">
-                <div class="card"><h3>Arquitectura</h3><div class="muted">4 capas: Fuente → Transformación → Datos → Visualización</div></div>
-                <div class="card"><h3>Comunicaciones</h3><div class="muted">Fibra óptica backbone; energía autónoma en equipos remotos</div></div>
-                <div class="card"><h3>Comerciales</h3><div class="muted">AIU 33% (Adm 23% + Imp 5% + Util 5%). IVA: SUM y SERV 19%; Utilidad OBRA 19% × 5%</div></div>
+                <div class="card"><h3>Arquitectura</h3><div class="muted">4 capas: Fuente â†’ TransformaciÃ³n â†’ Datos â†’ VisualizaciÃ³n</div></div>
+                <div class="card"><h3>Comunicaciones</h3><div class="muted">Fibra Ã³ptica backbone; energÃ­a autÃ³noma en equipos remotos</div></div>
+                <div class="card"><h3>Comerciales</h3><div class="muted">AIU 33% (Adm 23% + Imp 5% + Util 5%). IVA: SUM y SERV 19%; Utilidad OBRA 19% Ã— 5%</div></div>
                 <div class="card"><h3>TRM</h3><div class="muted">4,400 COP/USD</div></div>
             </div>
         </div>
 
         <div class="section">
-            <h2>⚠️ Riesgos Principales</h2>
+            <h2>âš ï¸ Riesgos Principales</h2>
             <div class="content cards" id="riesgosCards">
-                <div class="card"><h3>Interoperabilidad</h3><div class="muted">Integración con terceros requiere pruebas conjuntas y protocolos estándar.</div></div>
+                <div class="card"><h3>Interoperabilidad</h3><div class="muted">IntegraciÃ³n con terceros requiere pruebas conjuntas y protocolos estÃ¡ndar.</div></div>
                 <div class="card"><h3>Disponibilidad FO</h3><div class="muted">Cobertura de 293 km; asegurar suministro y redundancias.</div></div>
-                <div class="card"><h3>Suministro y Plazos</h3><div class="muted">Cumplimiento de plazos contractuales por UF; coordinar entregas críticas (UF5, UF0-M36).</div></div>
+                <div class="card"><h3>Suministro y Plazos</h3><div class="muted">Cumplimiento de plazos contractuales por UF; coordinar entregas crÃ­ticas (UF5, UF0-M36).</div></div>
             </div>
         </div>
 
         <div class="section">
-            <h2>🎯 Recomendaciones Estratégicas</h2>
+            <h2>ðŸŽ¯ Recomendaciones EstratÃ©gicas</h2>
             <div class="content cards">
-                <div class="card"><h3>Foco PMO</h3><div class="muted">Supervisión intensiva a Ítems Pareto 80%.</div></div>
-                <div class="card"><h3>QA Datos</h3><div class="muted">Validar coherencia WBS, Presupuesto y Layout en cada sincronización.</div></div>
-                <div class="card"><h3>DTs</h3><div class="muted">Registrar y trazar todas las Decisiones Técnicas con impacto.</div></div>
+                <div class="card"><h3>Foco PMO</h3><div class="muted">SupervisiÃ³n intensiva a Ãtems Pareto 80%.</div></div>
+                <div class="card"><h3>QA Datos</h3><div class="muted">Validar coherencia WBS, Presupuesto y Layout en cada sincronizaciÃ³n.</div></div>
+                <div class="card"><h3>DTs</h3><div class="muted">Registrar y trazar todas las Decisiones TÃ©cnicas con impacto.</div></div>
             </div>
         </div>
     </div>
 
-    <script src="data/tm01_master_data.js"></script>
+    <script src="data/tm01_master_data.js?v=20251031150439"></script>
     <script>
         function n(v){ const x = parseFloat((v??'').toString().replace(/[^0-9.\-]/g,'')); return isNaN(x)?0:x; }
         function fm(n, curr){ return new Intl.NumberFormat(curr==='USD'?'en-US':'es-CO',{style:'currency',currency: curr||'COP',maximumFractionDigits:0}).format(n); }
@@ -133,7 +133,7 @@
             tbp.innerHTML = pareto.map(r=>`<tr><td>${r.item}</td><td>${r.desc}</td><td>${r.sistema||''}</td><td class="right">${fm(r.cop,'COP')}</td><td class="right">${fm(r.cop/4400,'USD')}</td><td class="right">${r.pctAcc.toFixed(1)}%</td></tr>`).join('');
 
             const just = {};
-            items.forEach(i=>{ const s=i.sistema||'SIN SISTEMA'; if(!just[s]) just[s]={cant:0, criterio: i.criterio||'Criterio técnico aplicado'}; just[s].cant += n(i.cantidad)||0; if (i.criterio) just[s].criterio = i.criterio; });
+            items.forEach(i=>{ const s=i.sistema||'SIN SISTEMA'; if(!just[s]) just[s]={cant:0, criterio: i.criterio||'Criterio tÃ©cnico aplicado'}; just[s].cant += n(i.cantidad)||0; if (i.criterio) just[s].criterio = i.criterio; });
             const tbs = document.querySelector('#tablaSistemas tbody');
             tbs.innerHTML = Object.keys(just).sort().map(s=>`<tr><td><strong>${s}</strong></td><td class="right">${just[s].cant}</td><td>${just[s].criterio}</td></tr>`).join('');
 
@@ -143,9 +143,9 @@
         function exportarExcelReporte(){
             if (!window.__reporteData){ alert('Espere a que carguen los datos...'); return; }
             const { totalUSD, totalCOP, pareto, just } = window.__reporteData;
-            const data = [['REPORTE GERENCIAL - TM01'],['Fecha', new Date().toLocaleString('es-CO')],[],['Métrica','Valor'],['Total (USD)', totalUSD],['Total (COP)', totalCOP],[],['PARETO 80% - Ítems'],['Ítem','Descripción','Sistema','Total (COP)','Total (USD)','% Acum']];
+            const data = [['REPORTE GERENCIAL - TM01'],['Fecha', new Date().toLocaleString('es-CO')],[],['MÃ©trica','Valor'],['Total (USD)', totalUSD],['Total (COP)', totalCOP],[],['PARETO 80% - Ãtems'],['Ãtem','DescripciÃ³n','Sistema','Total (COP)','Total (USD)','% Acum']];
             pareto.forEach(p=> data.push([p.item,p.desc,p.sistema,p.cop,p.cop/4400,p.pctAcc]));
-            data.push([]); data.push(['Justificación por Sistema']); data.push(['Sistema','Cantidad Total','Criterio']);
+            data.push([]); data.push(['JustificaciÃ³n por Sistema']); data.push(['Sistema','Cantidad Total','Criterio']);
             Object.keys(just).sort().forEach(s=> data.push([s, just[s].cant, just[s].criterio]));
             const ws = XLSX.utils.aoa_to_sheet(data); ws['!cols'] = [{wch:16},{wch:60},{wch:18},{wch:18},{wch:16},{wch:10}];
             const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Reporte Gerencial');
@@ -158,3 +158,4 @@
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </body>
 </html>
+

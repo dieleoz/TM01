@@ -10,11 +10,13 @@ $ErrorActionPreference = 'Stop'
 $modulesPath = Join-Path -Path (Split-Path -Parent $PSCommandPath) -ChildPath 'modules'
 $logger     = Join-Path $modulesPath 'Logger.psm1'
 $snapshotter= Join-Path $modulesPath 'Snapshotter.psm1'
+$cachebuster= Join-Path $modulesPath 'CacheBuster.psm1'
 $validator  = Join-Path $modulesPath 'ValidadorContractual.psm1'
 $t05parser  = Join-Path $modulesPath 'T05Parser.psm1'
 $rfqUpdater = Join-Path $modulesPath 'RFQUpdater.psm1'
 if (Test-Path $logger)     { Import-Module $logger -Force; Initialize-Logger -LogPrefix 'sincronizacion' }
 if (Test-Path $snapshotter){ Import-Module $snapshotter -Force }
+if (Test-Path $cachebuster){ Import-Module $cachebuster -Force }
 if (Test-Path $validator)  { Import-Module $validator -Force }
 if (Test-Path $t05parser)  { Import-Module $t05parser -Force }
 if (Test-Path $rfqUpdater) { Import-Module $rfqUpdater -Force }
@@ -24,13 +26,36 @@ function Write-Log([string]$msg){
     Write-Host "[$ts] $msg"
 }
 
+# Lockfile helpers (en la raíz del repo junto al directorio scripts)
+$repoRoot = Split-Path -Parent $PSCommandPath
+$lockPath = Join-Path $repoRoot '.sync.lock'
+function Test-SyncLock { return (Test-Path -LiteralPath $lockPath) }
+function New-SyncLock {
+    if (Test-SyncLock) { return $false }
+    try {
+        $fs = [System.IO.File]::Open($lockPath, [System.IO.FileMode]::CreateNew, [System.IO.FileAccess]::Write, [System.IO.FileShare]::None)
+        $bytes = [System.Text.Encoding]::UTF8.GetBytes((Get-Date).ToUniversalTime().ToString('o'))
+        $fs.Write($bytes, 0, $bytes.Length)
+        $fs.Flush(); $fs.Close()
+        return $true
+    } catch [System.IO.IOException] {
+        return $false
+    } catch {
+        return $false
+    }
+}
+function Remove-SyncLock { if (Test-Path -LiteralPath $lockPath) { Remove-Item -LiteralPath $lockPath -Force -ErrorAction SilentlyContinue } }
+
 # Validación contrato-first (bloqueante)
 $incongruencias = @()
 if (Get-Command Test-ContractCompliance -ErrorAction SilentlyContinue) {
     $val = Test-ContractCompliance
     if (-not $val.IsValid) {
         $incongruencias += $val.Issues
-        $logJson = "logs/incongruencias_$(Get-Date -Format 'yyyyMMdd').jsonl"
+        $repoRoot = Split-Path -Parent $PSCommandPath
+        $logsDir  = Join-Path $repoRoot 'logs'
+        if (-not (Test-Path -LiteralPath $logsDir)) { New-Item -ItemType Directory -Path $logsDir -Force | Out-Null }
+        $logJson = Join-Path $logsDir ("incongruencias_{0}.jsonl" -f (Get-Date -Format 'yyyyMMdd'))
         if (Get-Command Write-JsonLog -ErrorAction SilentlyContinue) {
             foreach($i in $val.Issues){ Write-JsonLog -Path $logJson -Message 'ValidacionContrato' -Level 'ERROR' -Data @{ issue=$i } }
         }
@@ -112,6 +137,11 @@ function Update-RFQFiberTable_Inline {
 }
 
 try{
+    # Acquire lock
+    if (-not (New-SyncLock)) {
+        if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'WARN' -Message 'Sincronización bloqueada por lockfile' -Context @{ Lock = $lockPath } }
+        Write-Error "Sincronización en curso (lock: $lockPath)"; exit 1
+    }
     Write-Log "Sincronización TM01 iniciada"
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronización iniciada' }
     # Snapshot pre-sincronización
@@ -137,10 +167,22 @@ try{
     if (Get-Command Remove-OldSnapshots -ErrorAction SilentlyContinue) {
         Remove-OldSnapshots -KeepLast 20
     }
+    # Cache-busting en HTMLs de docs y Sistema_Validacion_Web
+    if (Get-Command Add-CacheBusting -ErrorAction SilentlyContinue) {
+        $version = (Get-Date).ToUniversalTime().ToString('yyyyMMddHHmmss')
+        $htmlTargets = @()
+        if (Test-Path -LiteralPath 'docs') { $htmlTargets += Get-ChildItem 'docs' -Filter '*.html' -Recurse -ErrorAction SilentlyContinue }
+        if (Test-Path -LiteralPath 'Sistema_Validacion_Web') { $htmlTargets += Get-ChildItem 'Sistema_Validacion_Web' -Filter '*.html' -Recurse -ErrorAction SilentlyContinue }
+        foreach($f in $htmlTargets){
+            try { Add-CacheBusting -HtmlFile $f.FullName -Version $version } catch { }
+        }
+    }
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronización finalizada OK' }
 }catch{
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Sincronización falló' -Context @{ error = ($_ | Out-String) } }
     Write-Error $_
     exit 1
+}finally{
+    Remove-SyncLock
 }
 # SCRIPT MAESTRO ...

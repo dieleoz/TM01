@@ -12,8 +12,8 @@ function Initialize-Logger {
     if (-not (Test-Path -LiteralPath $LogDirectory)) {
         New-Item -ItemType Directory -Path $LogDirectory -Force | Out-Null
     }
-    $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
-    $script:CurrentLogFile = Join-Path $LogDirectory ("{0}_{1}.jsonl" -f $LogPrefix, $timestamp)
+    $timestamp = Get-Date -Format "yyyyMMdd_HHmmss_ffff"
+    $script:CurrentLogFile = Join-Path $LogDirectory ("{0}_{1}_{2}.jsonl" -f $LogPrefix, $timestamp, $PID)
 
     Write-LogEntry -Level "INFO" -Message "Logger initialized" -Context @{ LogFile = $script:CurrentLogFile; PSVersion = $PSVersionTable.PSVersion.ToString() }
 }
@@ -40,7 +40,20 @@ function Write-LogEntry {
         user = $env:USERNAME
     }
     $jsonLine = $entry | ConvertTo-Json -Compress -Depth 10
-    Add-Content -LiteralPath $script:CurrentLogFile -Value $jsonLine -Encoding UTF8
+    
+    # Escritura con retry para evitar colisiones de acceso
+    $maxAttempts = 5
+    for($attempt=1; $attempt -le $maxAttempts; $attempt++){
+        try{
+            $sw = New-Object System.IO.StreamWriter($script:CurrentLogFile, $true, [System.Text.Encoding]::UTF8)
+            $sw.WriteLine($jsonLine)
+            $sw.Flush(); $sw.Close()
+            break
+        }catch{
+            if ($attempt -eq $maxAttempts) { throw }
+            Start-Sleep -Milliseconds (50 * $attempt)
+        }
+    }
 
     $color = switch ($Level) {
         'DEBUG' {'Gray'} 'INFO' {'Green'} 'WARN' {'Yellow'} 'ERROR' {'Red'} 'CRITICAL' {'Magenta'}

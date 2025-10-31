@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estado de Sincronización - TM01 Troncal Magdalena</title>
+    <title>Estado de SincronizaciÃ³n - TM01 Troncal Magdalena</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -78,44 +78,44 @@
 <body>
     <div class="container">
         <div class="header">
-            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">← Volver</button>
-            <h1>📊 Estado de Sincronización</h1>
+            <button class="back-btn" onclick="window.location.href='WBS_Menu_Principal.html'">â† Volver</button>
+            <h1>ðŸ“Š Estado de SincronizaciÃ³n</h1>
             <p>Sistema TM01 Troncal Magdalena</p>
         </div>
         
         <div class="content">
             <div class="status-card success">
-                <div class="status-title">✅ Última Sincronización</div>
+                <div class="status-title">âœ… Ãšltima SincronizaciÃ³n</div>
                 <div class="status-detail" id="lastSync">Cargando...</div>
             </div>
             
             <div class="status-card success">
-                <div class="status-title">📁 Archivos Generados</div>
+                <div class="status-title">ðŸ“ Archivos Generados</div>
                 <div class="status-detail" id="filesGenerated">Cargando...</div>
             </div>
             
             <div class="status-card">
-                <div class="status-title">⏱️ Duración</div>
+                <div class="status-title">â±ï¸ DuraciÃ³n</div>
                 <div class="status-detail" id="duration">Cargando...</div>
             </div>
             
             <div class="status-card">
-                <div class="status-title">🔧 Acciones</div>
-                <button class="btn" onclick="window.location.href='WBS_Menu_Principal.html'">🔄 Volver al Menú</button>
-                <button class="btn" onclick="location.reload()">🔄 Refrescar Estado</button>
+                <div class="status-title">ðŸ”§ Acciones</div>
+                <button class="btn" onclick="window.location.href='WBS_Menu_Principal.html'">ðŸ”„ Volver al MenÃº</button>
+                <button class="btn" onclick="location.reload()">ðŸ”„ Refrescar Estado</button>
             </div>
         </div>
     </div>
     
     <script>
-        // Simular estado de sincronización (en producción leería logs reales)
+        // Simular estado de sincronizaciÃ³n (en producciÃ³n leerÃ­a logs reales)
         const now = new Date();
         const files = ['datos_wbs_TM01_items.js', 'layout_datos.js', 'presupuesto_datos.js'];
         const fileStats = files.map(f => {
             const el = document.createElement('div');
             el.textContent = f;
-            const exists = false; // En producción verificar con fetch
-            return { name: f, exists, status: exists ? '✅' : '❌' };
+            const exists = false; // En producciÃ³n verificar con fetch
+            return { name: f, exists, status: exists ? 'âœ…' : 'âŒ' };
         });
         
         document.getElementById('lastSync').textContent = now.toLocaleString('es-CO');
@@ -126,3 +126,4 @@
     </script>
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -38,25 +38,25 @@
 <body>
   <div class="top">
     <div style="display:flex;gap:8px;align-items:center">
-      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">← Menú</button>
-      <strong>📅 Cronograma Maestro</strong>
+      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">â† MenÃº</button>
+      <strong>ðŸ“… Cronograma Maestro</strong>
     </div>
     <div style="display:flex;gap:8px">
-      <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
-      <button class="btn btn-success" onclick="exportarExcel()">📤 Exportar Excel</button>
+      <button class="btn" onclick="window.print()">ðŸ–¨ï¸ Imprimir</button>
+      <button class="btn btn-success" onclick="exportarExcel()">ðŸ“¤ Exportar Excel</button>
     </div>
   </div>
 
   <div class="wrap">
     <div class="grid">
-      <div class="metric"><div class="val" id="mDuracion">-</div><div class="lab">Duración total (meses)</div></div>
+      <div class="metric"><div class="val" id="mDuracion">-</div><div class="lab">DuraciÃ³n total (meses)</div></div>
       <div class="metric"><div class="val" id="mHitos">-</div><div class="lab">Hitos</div></div>
       <div class="metric"><div class="val" id="mFases">-</div><div class="lab">Fases</div></div>
       <div class="metric"><div class="val" id="mInicioFin">-</div><div class="lab">Rango de fechas</div></div>
     </div>
 
     <div class="panel">
-      <h2>🎛️ Filtros</h2>
+      <h2>ðŸŽ›ï¸ Filtros</h2>
       <div class="content filters">
         <select id="fFase" onchange="aplicarFiltros()"><option value="">Todas las fases</option></select>
         <select id="fSistema" onchange="aplicarFiltros()"><option value="">Todos los sistemas</option></select>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="panel">
-      <h2>🗂️ Plan Maestro (Tabla tipo Gantt)</h2>
+      <h2>ðŸ—‚ï¸ Plan Maestro (Tabla tipo Gantt)</h2>
       <div class="content">
         <table id="tabla">
           <thead>
@@ -80,16 +80,16 @@
     </div>
 
     <div class="panel">
-      <h2>📑 Plazos Contractuales por UF (C1 Sección 5.2)</h2>
+      <h2>ðŸ“‘ Plazos Contractuales por UF (C1 SecciÃ³n 5.2)</h2>
       <div class="content" style="padding:14px">
         <p style="margin:0 0 12px 0;color:var(--muted);font-size:13px">
-          <strong>Acta de Inicio:</strong> 26/11/2024 | <strong>Ruta Crítica:</strong> UF5 (Oct 2028) | 
-          <strong>Nota:</strong> Fechas Máximas = fecha límite contractual; Fecha con Cura = +20% plazo adicional
+          <strong>Acta de Inicio:</strong> 26/11/2024 | <strong>Ruta CrÃ­tica:</strong> UF5 (Oct 2028) | 
+          <strong>Nota:</strong> Fechas MÃ¡ximas = fecha lÃ­mite contractual; Fecha con Cura = +20% plazo adicional
         </p>
         <table id="tablaUF">
           <thead>
             <tr>
-              <th>UF</th><th>Plazo (meses)</th><th>Fecha Máxima</th><th>Fecha con Cura (+20%)</th><th>Estado</th>
+              <th>UF</th><th>Plazo (meses)</th><th>Fecha MÃ¡xima</th><th>Fecha con Cura (+20%)</th><th>Estado</th>
             </tr>
           </thead>
           <tbody><tr><td colspan="5" style="color:var(--muted)">Cargando...</td></tr></tbody>
@@ -99,7 +99,7 @@
   </div>
 
   <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
-  <script src="data/tm01_master_data.js"></script>
+  <script src="data/tm01_master_data.js?v=20251031150439"></script>
   <script>
     const MS_IN_DAY = 24*60*60*1000;
     function parseDate(s){ const d=new Date(s); return isNaN(d)?null:d; }
@@ -109,12 +109,12 @@
     let all=[], filtered=[];
 
     const defaultPlan = [
-      { fase:'0. Preparación', nombre:'Acta de inicio firmada', sistema:'PMO', inicio:'2024-11-26', fin:'2024-11-26', hito:true },
-      { fase:'0. Preparación', nombre:'Plan de trabajo aprobado', sistema:'PMO', inicio:'2024-11-27', fin:'2024-12-15', hito:false },
-      { fase:'1. Ingeniería', nombre:'WBS completa y validada', sistema:'PMO', inicio:'2024-12-01', fin:'2025-06-30' },
-      { fase:'1. Ingeniería', nombre:'Especificaciones técnicas', sistema:'PMO', inicio:'2024-12-10', fin:'2025-03-31' },
+      { fase:'0. PreparaciÃ³n', nombre:'Acta de inicio firmada', sistema:'PMO', inicio:'2024-11-26', fin:'2024-11-26', hito:true },
+      { fase:'0. PreparaciÃ³n', nombre:'Plan de trabajo aprobado', sistema:'PMO', inicio:'2024-11-27', fin:'2024-12-15', hito:false },
+      { fase:'1. IngenierÃ­a', nombre:'WBS completa y validada', sistema:'PMO', inicio:'2024-12-01', fin:'2025-06-30' },
+      { fase:'1. IngenierÃ­a', nombre:'Especificaciones tÃ©cnicas', sistema:'PMO', inicio:'2024-12-10', fin:'2025-03-31' },
       { fase:'2. ITS', nombre:'Suministros ITS (SOS/ETD/CCTV/PMV/METEO/WIM/FO)', sistema:'ITS', inicio:'2025-07-01', fin:'2025-10-31' },
-      { fase:'2. ITS', nombre:'Obra civil y montaje ITS (canalizaciones, soportes, FO/energía)', sistema:'ITS', inicio:'2025-08-01', fin:'2026-02-28' },
+      { fase:'2. ITS', nombre:'Obra civil y montaje ITS (canalizaciones, soportes, FO/energÃ­a)', sistema:'ITS', inicio:'2025-08-01', fin:'2026-02-28' },
       { fase:'3. Fibra', nombre:'Tendido FO 48F (594 km)', sistema:'FO', inicio:'2025-07-15', fin:'2028-08-31' },
       { fase:'4. Puesta en Marcha', nombre:'Pruebas integrales (FAT/SAT)', sistema:'QA', inicio:'2028-09-01', fin:'2028-12-31' },
       { fase:'4. Puesta en Marcha', nombre:'Acta de recibo', sistema:'PMO', inicio:'2029-01-31', fin:'2029-01-31', hito:true }
@@ -130,7 +130,7 @@
         const hoy = new Date();
         hoy.setHours(0,0,0,0);
         
-        // Añadir UF0 con fechas especiales (D+180 y mes 36)
+        // AÃ±adir UF0 con fechas especiales (D+180 y mes 36)
         const T0 = new Date('2024-11-26T00:00:00');
         const addDays = (d, days) => { const r = new Date(d); r.setDate(r.getDate() + days); return r; };
         const addMonths = (d, m) => { const r = new Date(d); r.setMonth(r.getMonth() + m); return r; };
@@ -140,7 +140,7 @@
           ufs = [...dm.data.cronogramaUF];
         }
         
-        // Añadir UF0 con fechas especiales
+        // AÃ±adir UF0 con fechas especiales
         const uf0_d180 = addDays(T0, 180);
         const uf0_mes36 = addMonths(T0, 36);
         ufs.push({
@@ -155,7 +155,7 @@
           plazoMeses: 36,
           fechaMax: uf0_mes36.toISOString().slice(0,10),
           fechaCura: uf0_mes36.toISOString().slice(0,10),
-          descripcion: 'Cumplimiento valores mínimos (mes 36)'
+          descripcion: 'Cumplimiento valores mÃ­nimos (mes 36)'
         });
         
         if (ufs.length > 0) {
@@ -173,19 +173,19 @@
               
               let estado = '', estadoColor = '';
               if (r.uf === 'UF5' || r.uf === 'UF0-M36') {
-                estado = '⚠️ CRÍTICA';
+                estado = 'âš ï¸ CRÃTICA';
                 estadoColor = '#fff3cd';
               } else if (diasRestantes < 0) {
-                estado = '❌ Vencida';
+                estado = 'âŒ Vencida';
                 estadoColor = '#f8d7da';
               } else if (diasRestantes < 90) {
-                estado = '🔴 Urgente';
+                estado = 'ðŸ”´ Urgente';
                 estadoColor = '#fff3cd';
               } else if (diasRestantes < 180) {
-                estado = '🟡 En plazo';
+                estado = 'ðŸŸ¡ En plazo';
                 estadoColor = '#d4edda';
               } else {
-                estado = '🟢 OK';
+                estado = 'ðŸŸ¢ OK';
                 estadoColor = '#d1ecf1';
               }
               
@@ -195,7 +195,7 @@
               };
               
               const plazoText = r.plazoMeses > 0 ? `${r.plazoMeses} meses` : (r.descripcion || 'N/A');
-              const diasText = diasRestantes >= 0 ? `${diasRestantes} días` : `${Math.abs(diasRestantes)} días vencidos`;
+              const diasText = diasRestantes >= 0 ? `${diasRestantes} dÃ­as` : `${Math.abs(diasRestantes)} dÃ­as vencidos`;
               
               return `<tr style="background:${estadoColor}">
                 <td><strong>${r.uf}</strong>${r.descripcion ? `<br><small style="color:var(--muted)">${r.descripcion}</small>` : ''}</td>
@@ -210,7 +210,7 @@
       } catch(e) { 
         console.error('Error cargando plazos UF:', e);
         const tbody = document.querySelector('#tablaUF tbody');
-        tbody.innerHTML = `<tr><td colspan="5" style="color:#dc3545">❌ Error: ${e.message}</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="5" style="color:#dc3545">âŒ Error: ${e.message}</td></tr>`;
       }
     }
 
@@ -234,7 +234,7 @@
     }
 
     function actualizarMetricas(){
-      const minIni = all.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null); const maxFin = all.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null); const meses = minIni && maxFin ? Math.max(1, Math.round((maxFin-minIni)/(30*MS_IN_DAY))) : 0; document.getElementById('mDuracion').textContent = meses; document.getElementById('mHitos').textContent = all.filter(t=>t.hito).length; document.getElementById('mFases').textContent = new Set(all.map(t=>t.fase)).size; document.getElementById('mInicioFin').textContent = (minIni&&maxFin)? (fmt(minIni)+' → '+fmt(maxFin)) : '-';
+      const minIni = all.reduce((m,t)=> t.ini && (!m || t.ini<m)?t.ini:m, null); const maxFin = all.reduce((m,t)=> t.fin && (!m || t.fin>m)?t.fin:m, null); const meses = minIni && maxFin ? Math.max(1, Math.round((maxFin-minIni)/(30*MS_IN_DAY))) : 0; document.getElementById('mDuracion').textContent = meses; document.getElementById('mHitos').textContent = all.filter(t=>t.hito).length; document.getElementById('mFases').textContent = new Set(all.map(t=>t.fase)).size; document.getElementById('mInicioFin').textContent = (minIni&&maxFin)? (fmt(minIni)+' â†’ '+fmt(maxFin)) : '-';
     }
 
     function exportarExcel(){ const rows = filtered.map(t=>({ Fase:t.fase, Tarea:t.nombre, Sistema:t.sistema, Inicio:fmt(t.ini), Fin:fmt(t.fin), DuracionMeses:t.dur })); const ws = XLSX.utils.json_to_sheet(rows); const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Cronograma'); XLSX.writeFile(wb, 'Cronograma_TM01.xlsx'); }
@@ -243,5 +243,6 @@
   </script>
 </body>
 </html>
+
 
 

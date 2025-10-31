@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Análisis de Riesgos - TM01 Troncal Magdalena</title>
+  <title>AnÃ¡lisis de Riesgos - TM01 Troncal Magdalena</title>
   <style>
     body{font-family:'Segoe UI',Tahoma,Verdana,sans-serif;margin:0;background:#0f172a;color:#e2e8f0}
     .top{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#111827;border-bottom:1px solid #1f2937}
@@ -36,12 +36,12 @@
 <body>
   <div class="top">
     <div style="display:flex;gap:8px;align-items:center">
-      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">← Menú</button>
-      <strong>⚠️ Análisis de Riesgos</strong>
+      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">â† MenÃº</button>
+      <strong>âš ï¸ AnÃ¡lisis de Riesgos</strong>
     </div>
     <div style="display:flex;gap:8px">
-      <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
-      <button class="btn btn-success" onclick="exportarExcel()">📤 Exportar Excel</button>
+      <button class="btn" onclick="window.print()">ðŸ–¨ï¸ Imprimir</button>
+      <button class="btn btn-success" onclick="exportarExcel()">ðŸ“¤ Exportar Excel</button>
     </div>
   </div>
 
@@ -54,24 +54,24 @@
     </div>
 
     <div class="panel">
-      <h2>🎛️ Filtros</h2>
+      <h2>ðŸŽ›ï¸ Filtros</h2>
       <div class="content filters">
         <select id="fSeveridad" onchange="aplicarFiltros()"><option value="">Todas las severidades</option><option>ALTO</option><option>MEDIO</option><option>BAJO</option></select>
-        <select id="fCategoria" onchange="aplicarFiltros()"><option value="">Todas las categorías</option></select>
+        <select id="fCategoria" onchange="aplicarFiltros()"><option value="">Todas las categorÃ­as</option></select>
         <input id="fBuscar" placeholder="Buscar riesgo" oninput="aplicarFiltros()"/>
       </div>
     </div>
 
     <div class="panel">
-      <h2>🧭 Matriz Probabilidad vs Impacto</h2>
+      <h2>ðŸ§­ Matriz Probabilidad vs Impacto</h2>
       <div class="content" id="matrix"></div>
     </div>
 
     <div class="panel">
-      <h2>📋 Listado de Riesgos</h2>
+      <h2>ðŸ“‹ Listado de Riesgos</h2>
       <div class="content">
         <table id="tabla">
-          <thead><tr><th>Riesgo</th><th>Categoría</th><th>Severidad</th><th>Probabilidad</th><th>Impacto</th><th>Mitigación</th></tr></thead>
+          <thead><tr><th>Riesgo</th><th>CategorÃ­a</th><th>Severidad</th><th>Probabilidad</th><th>Impacto</th><th>MitigaciÃ³n</th></tr></thead>
           <tbody><tr><td colspan="6" style="color:#94a3b8">Cargando...</td></tr></tbody>
         </table>
       </div>
@@ -79,22 +79,22 @@
   </div>
 
   <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
-  <script src="data/tm01_master_data.js"></script>
+  <script src="data/tm01_master_data.js?v=20251031150439"></script>
   <script>
     let all=[], filtered=[];
 
     const seed = [
-      { titulo:'Interoperabilidad con terceros', categoria:'Integración', prob:4, imp:5, mitigacion:'Pruebas conjuntas y protocolos estándar' },
-      { titulo:'Disponibilidad fibra óptica', categoria:'Suministro', prob:3, imp:4, mitigacion:'Contratos marco y inventario 10% repuesto' },
-      { titulo:'Retrasos obra civil', categoria:'Ejecución', prob:3, imp:3, mitigacion:'Plan de contingencia y frente paralelo' },
-      { titulo:'Permisos ambientales', categoria:'Permisos', prob:2, imp:4, mitigacion:'Gestión temprana con autoridades' },
-      { titulo:'Seguridad física equipos', categoria:'Operación', prob:2, imp:3, mitigacion:'Diseño anti-vandálico y monitoreo' }
+      { titulo:'Interoperabilidad con terceros', categoria:'IntegraciÃ³n', prob:4, imp:5, mitigacion:'Pruebas conjuntas y protocolos estÃ¡ndar' },
+      { titulo:'Disponibilidad fibra Ã³ptica', categoria:'Suministro', prob:3, imp:4, mitigacion:'Contratos marco y inventario 10% repuesto' },
+      { titulo:'Retrasos obra civil', categoria:'EjecuciÃ³n', prob:3, imp:3, mitigacion:'Plan de contingencia y frente paralelo' },
+      { titulo:'Permisos ambientales', categoria:'Permisos', prob:2, imp:4, mitigacion:'GestiÃ³n temprana con autoridades' },
+      { titulo:'Seguridad fÃ­sica equipos', categoria:'OperaciÃ³n', prob:2, imp:3, mitigacion:'DiseÃ±o anti-vandÃ¡lico y monitoreo' }
     ];
 
     function severidad(prob, imp){ const s=prob*imp; if (s>=16) return 'ALTO'; if (s>=9) return 'MEDIO'; return 'BAJO'; }
 
     function load(){
-      // En el futuro podríamos leer dm.data.riesgos; por ahora semilla
+      // En el futuro podrÃ­amos leer dm.data.riesgos; por ahora semilla
       all = seed.map(r=> ({...r, sev: severidad(r.prob,r.imp)}));
       filtered = [...all];
       poblarFiltros();
@@ -126,7 +126,7 @@
 
     function renderMatriz(){
       const cont=document.getElementById('matrix');
-      const labels=['Bajo','Medio','Alto','Muy Alto','Crítico'];
+      const labels=['Bajo','Medio','Alto','Muy Alto','CrÃ­tico'];
       const grid=[];
       for(let i=0;i<5;i++){ grid[i]=[]; for(let j=0;j<5;j++){ grid[i][j]=[]; } }
       filtered.forEach(r=>{ const p=Math.max(1,Math.min(5,r.prob))-1; const im=Math.max(1,Math.min(5,r.imp))-1; grid[p][im].push(r); });
@@ -178,5 +178,6 @@
   </script>
 </body>
 </html>
+
 
 

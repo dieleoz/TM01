@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -79,60 +79,60 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📋 WBS Completa Interactiva</h1>
-            <p>TM01 Troncal Magdalena - Sistema de Validación Web</p>
+            <h1>ðŸ“‹ WBS Completa Interactiva</h1>
+            <p>TM01 Troncal Magdalena - Sistema de ValidaciÃ³n Web</p>
             <p>Estructura de Desglose de Trabajo Completa</p>
         </div>
         <div class="stats-grid">
             <div class="stat-card"><div class="stat-number" id="totalItems">-</div><div class="stat-label">Total Items</div></div>
-            <div class="stat-card"><div class="stat-number" id="totalCapitulos">-</div><div class="stat-label">Capítulos</div></div>
+            <div class="stat-card"><div class="stat-number" id="totalCapitulos">-</div><div class="stat-label">CapÃ­tulos</div></div>
             <div class="stat-card"><div class="stat-number" id="totalSistemas">-</div><div class="stat-label">Sistemas</div></div>
             <div class="stat-card"><div class="stat-number" id="costoTotal">-</div><div class="stat-label">Costo Total (USD)</div></div>
         </div>
         <div class="controls">
-            <h3>🔍 Filtros y Controles</h3>
+            <h3>ðŸ” Filtros y Controles</h3>
             <div class="filter-group">
                 <label for="sistemaFilter">Sistema:</label>
                 <select id="sistemaFilter"><option value="">Todos los sistemas</option></select>
                 <label for="nivelFilter">Nivel:</label>
-                <select id="nivelFilter"><option value="">Todos los niveles</option><option value="1">Capítulos</option><option value="2">Subcapítulos</option><option value="3">Items</option></select>
+                <select id="nivelFilter"><option value="">Todos los niveles</option><option value="1">CapÃ­tulos</option><option value="2">SubcapÃ­tulos</option><option value="3">Items</option></select>
                 <label for="searchInput">Buscar:</label>
-                <input type="text" id="searchInput" placeholder="Buscar por descripción...">
+                <input type="text" id="searchInput" placeholder="Buscar por descripciÃ³n...">
             </div>
             <div class="filter-group">
-                <button class="btn btn-primary" onclick="filtrarWBS()">🔍 Aplicar Filtros</button>
-                <button class="btn btn-warning" onclick="limpiarFiltros()">🗑️ Limpiar Filtros</button>
-                <button class="btn btn-success" onclick="expandirTodo()">📖 Expandir Todo</button>
+                <button class="btn btn-primary" onclick="filtrarWBS()">ðŸ” Aplicar Filtros</button>
+                <button class="btn btn-warning" onclick="limpiarFiltros()">ðŸ—‘ï¸ Limpiar Filtros</button>
+                <button class="btn btn-success" onclick="expandirTodo()">ðŸ“– Expandir Todo</button>
             </div>
         </div>
         <div id="subtotalesSection" class="subtotal-section" style="display: none;">
-            <div class="subtotal-header">💰 Subtotales por Sistema</div>
+            <div class="subtotal-header">ðŸ’° Subtotales por Sistema</div>
             <div id="subtotalesGrid" class="subtotal-grid"></div>
         </div>
         <div class="subtotal-toggle">
-            <button class="btn btn-primary" onclick="toggleSubtotales()">📊 Mostrar Subtotales por Sistema</button>
+            <button class="btn btn-primary" onclick="toggleSubtotales()">ðŸ“Š Mostrar Subtotales por Sistema</button>
         </div>
         <div class="wbs-container">
-            <div id="wbsTree" class="wbs-tree"><div class="loading">🔄 Cargando datos WBS...</div></div>
+            <div id="wbsTree" class="wbs-tree"><div class="loading">ðŸ”„ Cargando datos WBS...</div></div>
             <div class="export-buttons">
-                <button class="btn btn-primary" onclick="exportarCSV()">📊 Exportar CSV</button>
-                <button class="btn btn-success" onclick="exportarExcel()">📈 Exportar Excel</button>
+                <button class="btn btn-primary" onclick="exportarCSV()">ðŸ“Š Exportar CSV</button>
+                <button class="btn btn-success" onclick="exportarExcel()">ðŸ“ˆ Exportar Excel</button>
             </div>
         </div>
     </div>
     <div id="dtModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <div class="modal-title">📋 Crear Decisión Técnica (DT)</div>
+                <div class="modal-title">ðŸ“‹ Crear DecisiÃ³n TÃ©cnica (DT)</div>
                 <span class="close" onclick="cerrarModal()">&times;</span>
             </div>
             <form id="dtForm">
                 <div class="form-group"><label for="dtItem">Item WBS:</label><input type="text" id="dtItem" readonly></div>
-                <div class="form-group"><label for="dtDescripcion">Descripción:</label><input type="text" id="dtDescripcion" readonly></div>
+                <div class="form-group"><label for="dtDescripcion">DescripciÃ³n:</label><input type="text" id="dtDescripcion" readonly></div>
                 <div class="form-group"><label for="dtSistema">Sistema:</label><input type="text" id="dtSistema" readonly></div>
-                <div class="form-group"><label for="dtTipo">Tipo de DT:</label><select id="dtTipo" required><option value="">Seleccionar tipo...</option><option value="Cambio Técnico">Cambio Técnico</option><option value="Optimización">Optimización</option><option value="Gestión de Riesgo">Gestión de Riesgo</option><option value="Verificación">Verificación</option></select></div>
-                <div class="form-group"><label for="dtJustificacion">Justificación Técnica:</label><textarea id="dtJustificacion" placeholder="Describir la justificación técnica del cambio..." required></textarea></div>
-                <div class="form-group"><label for="dtCriterios">Criterios de Diseño:</label><textarea id="dtCriterios" placeholder="Criterios técnicos aplicables..."></textarea></div>
+                <div class="form-group"><label for="dtTipo">Tipo de DT:</label><select id="dtTipo" required><option value="">Seleccionar tipo...</option><option value="Cambio TÃ©cnico">Cambio TÃ©cnico</option><option value="OptimizaciÃ³n">OptimizaciÃ³n</option><option value="GestiÃ³n de Riesgo">GestiÃ³n de Riesgo</option><option value="VerificaciÃ³n">VerificaciÃ³n</option></select></div>
+                <div class="form-group"><label for="dtJustificacion">JustificaciÃ³n TÃ©cnica:</label><textarea id="dtJustificacion" placeholder="Describir la justificaciÃ³n tÃ©cnica del cambio..." required></textarea></div>
+                <div class="form-group"><label for="dtCriterios">Criterios de DiseÃ±o:</label><textarea id="dtCriterios" placeholder="Criterios tÃ©cnicos aplicables..."></textarea></div>
                 <div class="form-group"><label for="dtAlternativas">Alternativas Evaluadas:</label><textarea id="dtAlternativas" placeholder="Alternativas consideradas y descartadas..."></textarea></div>
                 <div class="form-group"><label for="dtRiesgos">Riesgos Identificados:</label><textarea id="dtRiesgos" placeholder="Riesgos asociados al cambio..."></textarea></div>
                 <div class="modal-actions"><button type="button" class="btn btn-warning" onclick="cerrarModal()">Cancelar</button><button type="submit" class="btn btn-success">Crear DT</button></div>
@@ -146,7 +146,7 @@
         
         function initWBS() {
             try {
-                // Esperar a que TM01MasterData esté disponible
+                // Esperar a que TM01MasterData estÃ© disponible
                 if (typeof TM01MasterData === 'undefined') {
                     setTimeout(initWBS, 50);
                     return;
@@ -155,21 +155,21 @@
                 // Intentar usar la instancia global primero
                 if (typeof window.tm01MasterData !== 'undefined' && window.tm01MasterData instanceof TM01MasterData) {
                     tm01Data = window.tm01MasterData;
-                    console.log('✅ Usando instancia global tm01MasterData');
+                    console.log('âœ… Usando instancia global tm01MasterData');
                 } else {
                     // Si no hay instancia global, crear una nueva
                     tm01Data = new TM01MasterData();
-                    console.log('✅ Creando nueva instancia TM01MasterData');
+                    console.log('âœ… Creando nueva instancia TM01MasterData');
                 }
                 
                 window.dataManager = tm01Data;
                 
                 if (tm01Data && tm01Data.data && Array.isArray(tm01Data.data.wbs)) {
                     wbsData = tm01Data.data.wbs;
-                    console.log('✅ Datos WBS cargados:', wbsData.length, 'items');
+                    console.log('âœ… Datos WBS cargados:', wbsData.length, 'items');
                     
                     if (wbsData.length === 0) {
-                        throw new Error('Los datos WBS están vacíos');
+                        throw new Error('Los datos WBS estÃ¡n vacÃ­os');
                     }
                     
                     filteredData = [...wbsData];
@@ -177,13 +177,13 @@
                     actualizarEstadisticas();
                     renderizarWBS();
                 } else {
-                    throw new Error('tm01Data.data.wbs no es un array válido');
+                    throw new Error('tm01Data.data.wbs no es un array vÃ¡lido');
                 }
             } catch (error) {
-                console.error('❌ Error cargando datos:', error);
+                console.error('âŒ Error cargando datos:', error);
                 const wbsTree = document.getElementById('wbsTree');
                 if (wbsTree) {
-                    wbsTree.innerHTML = '<div class="error">❌ Error cargando datos: ' + error.message + '<br>Verificar que data/tm01_master_data.js esté disponible.</div>';
+                    wbsTree.innerHTML = '<div class="error">âŒ Error cargando datos: ' + error.message + '<br>Verificar que data/tm01_master_data.js estÃ© disponible.</div>';
                 }
                 document.getElementById('totalItems').textContent = 'ERROR';
                 document.getElementById('totalCapitulos').textContent = 'ERROR';
@@ -192,9 +192,9 @@
             }
         }
     </script>
-    <script src="data/tm01_master_data.js"></script>
+    <script src="data/tm01_master_data.js?v=20251031150439"></script>
     <script>
-        // Función para verificar y cargar datos cuando el script externo esté listo
+        // FunciÃ³n para verificar y cargar datos cuando el script externo estÃ© listo
         function checkAndInit() {
             if (typeof TM01MasterData !== 'undefined') {
                 initWBS();
@@ -203,7 +203,7 @@
             }
         }
         
-        // Inicializar cuando el DOM esté listo
+        // Inicializar cuando el DOM estÃ© listo
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', checkAndInit);
         } else {
@@ -231,10 +231,10 @@
             const button = event.target;
             if (subtotalesSection.style.display === 'none' || subtotalesSection.style.display === '') {
                 mostrarSubtotales();
-                button.textContent = '📊 Ocultar Subtotales';
+                button.textContent = 'ðŸ“Š Ocultar Subtotales';
             } else {
                 subtotalesSection.style.display = 'none';
-                button.textContent = '📊 Mostrar Subtotales por Sistema';
+                button.textContent = 'ðŸ“Š Mostrar Subtotales por Sistema';
             }
         }
         function mostrarSubtotales() {
@@ -260,13 +260,13 @@
             });
             let totalGeneralUSD = 0, totalGeneralCOP = 0, totalItems = 0, totalUnidades = 0;
             Object.values(subtotales).forEach(s => { totalGeneralUSD += s.costoTotalUSD; totalGeneralCOP += s.costoTotalCOP; totalItems += s.items; totalUnidades += s.cantidad; });
-            html += `<div class="subtotal-item" style="border: 3px solid #e74c3c; background: #fff5f5;"><div class="subtotal-label" style="color: #e74c3c; font-size: 1.2em;">🎯 TOTAL GENERAL</div><div class="subtotal-value" style="color: #e74c3c; font-size: 1.1em;">${totalItems} items | ${totalUnidades} unidades<br><strong>USD: $${totalGeneralUSD.toLocaleString()}</strong><br><strong>COP: $${totalGeneralCOP.toLocaleString()}</strong></div></div>`;
+            html += `<div class="subtotal-item" style="border: 3px solid #e74c3c; background: #fff5f5;"><div class="subtotal-label" style="color: #e74c3c; font-size: 1.2em;">ðŸŽ¯ TOTAL GENERAL</div><div class="subtotal-value" style="color: #e74c3c; font-size: 1.1em;">${totalItems} items | ${totalUnidades} unidades<br><strong>USD: $${totalGeneralUSD.toLocaleString()}</strong><br><strong>COP: $${totalGeneralCOP.toLocaleString()}</strong></div></div>`;
             subtotalesGrid.innerHTML = html;
             subtotalesSection.style.display = 'block';
         }
         function renderizarWBS() {
             const wbsTree = document.getElementById('wbsTree');
-            if (filteredData.length === 0) { wbsTree.innerHTML = '<div class="no-data">❌ No se encontraron datos que coincidan con los filtros</div>'; return; }
+            if (filteredData.length === 0) { wbsTree.innerHTML = '<div class="no-data">âŒ No se encontraron datos que coincidan con los filtros</div>'; return; }
             let html = '';
             const capitulos = filteredData.filter(item => item.nivel === 1);
             capitulos.forEach(capitulo => {
@@ -281,7 +281,7 @@
                     html += `<div class="wbs-item subcapitulo" onclick="toggleSubcapitulo('${subcapitulo.id}')"><span class="item-code">${subcapitulo.item}</span><span class="item-desc">${subcapitulo.descripcion}</span></div>`;
                     const items = filteredData.filter(item => item.nivel === 3 && item.item.startsWith(subcapitulo.item + '.'));
                     items.forEach(item => {
-                        html += `<div class="wbs-item item"><div><span class="item-code">${item.item}</span> <span class="item-desc">${item.descripcion}</span></div><div class="item-qty">${item.cantidad || '-'} ${item.unidad || ''}</div><div class="item-cost">$${item.vu || '0'} USD<br><small>$${item.vuCOP || '0'} COP</small></div><div class="item-cost">$${item.total || '0'} USD<br><small>$${item.totalCOP || '0'} COP</small></div><div class="item-actions"><button class="btn btn-small btn-dt" onclick="crearDT('${item.id}', '${item.item}', '${item.descripcion}', '${item.sistema}')">📋 DT</button><button class="btn btn-small btn-details" onclick="verDetalles('${item.id}')">👁️ Ver</button></div></div>`;
+                        html += `<div class="wbs-item item"><div><span class="item-code">${item.item}</span> <span class="item-desc">${item.descripcion}</span></div><div class="item-qty">${item.cantidad || '-'} ${item.unidad || ''}</div><div class="item-cost">$${item.vu || '0'} USD<br><small>$${item.vuCOP || '0'} COP</small></div><div class="item-cost">$${item.total || '0'} USD<br><small>$${item.totalCOP || '0'} COP</small></div><div class="item-actions"><button class="btn btn-small btn-dt" onclick="crearDT('${item.id}', '${item.item}', '${item.descripcion}', '${item.sistema}')">ðŸ“‹ DT</button><button class="btn btn-small btn-details" onclick="verDetalles('${item.id}')">ðŸ‘ï¸ Ver</button></div></div>`;
                     });
                 });
             });
@@ -291,10 +291,10 @@
         function cerrarModal() { document.getElementById('dtModal').style.display = 'none'; document.getElementById('dtForm').reset(); }
         function verDetalles(itemId) {
             const item = wbsData.find(i => i.id === itemId);
-            if (!item) { alert('No se encontró el item solicitado'); return; }
+            if (!item) { alert('No se encontrÃ³ el item solicitado'); return; }
             const modal = document.createElement('div');
             modal.className = 'modal-componentes';
-            modal.innerHTML = `<div class="modal-content"><div class="modal-header"><div class="modal-title">👁️ Detalles del Item WBS</div><span class="close">&times;</span></div><div style="padding: 20px;"><div class="form-group"><label><strong>Código WBS:</strong></label><div>${item.item}</div></div><div class="form-group"><label><strong>Descripción:</strong></label><div>${item.descripcion}</div></div><div class="form-group"><label><strong>Sistema:</strong></label><div>${item.sistema}</div></div><div class="form-group"><label><strong>Nivel:</strong></label><div>${item.nivel}</div></div><div class="form-group"><label><strong>Tipo:</strong></label><div>${item.tipo||''}</div></div><div class="form-group"><label><strong>Cantidad:</strong></label><div>${item.cantidad || 'N/A'} ${item.unidad || ''}</div></div><div class="form-group"><label><strong>Valor Unitario:</strong></label><div>$${item.vu || '0'} USD | $${item.vuCOP || '0'} COP</div></div><div class="form-group"><label><strong>Total:</strong></label><div>$${item.total || '0'} USD | $${item.totalCOP || '0'} COP</div></div><div class="form-group"><label><strong>Criterio Técnico:</strong></label><div>${item.criterio || 'N/A'}</div></div></div></div>`;
+            modal.innerHTML = `<div class="modal-content"><div class="modal-header"><div class="modal-title">ðŸ‘ï¸ Detalles del Item WBS</div><span class="close">&times;</span></div><div style="padding: 20px;"><div class="form-group"><label><strong>CÃ³digo WBS:</strong></label><div>${item.item}</div></div><div class="form-group"><label><strong>DescripciÃ³n:</strong></label><div>${item.descripcion}</div></div><div class="form-group"><label><strong>Sistema:</strong></label><div>${item.sistema}</div></div><div class="form-group"><label><strong>Nivel:</strong></label><div>${item.nivel}</div></div><div class="form-group"><label><strong>Tipo:</strong></label><div>${item.tipo||''}</div></div><div class="form-group"><label><strong>Cantidad:</strong></label><div>${item.cantidad || 'N/A'} ${item.unidad || ''}</div></div><div class="form-group"><label><strong>Valor Unitario:</strong></label><div>$${item.vu || '0'} USD | $${item.vuCOP || '0'} COP</div></div><div class="form-group"><label><strong>Total:</strong></label><div>$${item.total || '0'} USD | $${item.totalCOP || '0'} COP</div></div><div class="form-group"><label><strong>Criterio TÃ©cnico:</strong></label><div>${item.criterio || 'N/A'}</div></div></div></div>`;
             document.body.appendChild(modal);
             modal.querySelector('.close').onclick = () => { document.body.removeChild(modal); };
             modal.onclick = (e) => { if (e.target === modal) { document.body.removeChild(modal); } };
@@ -307,7 +307,7 @@
         });
         function generarDT(formData) {
             const dtId = `DT-TM01-${formData.sistema}-${Date.now()}`;
-            const dtContent = `# ${dtId}\n\n## § 1. INFORMACIÓN GENERAL\n- **Fecha**: ${formData.fecha}\n- **Tipo**: ${formData.tipo}\n- **Sistema**: ${formData.sistema}\n- **Item WBS**: ${formData.item}\n- **Responsable**: Ing. Sistemas\n\n## § 2. DESCRIPCIÓN DEL CAMBIO\n${formData.descripcion}\n\n## § 3. JUSTIFICACIÓN TÉCNICA\n${formData.justificacion}\n\n## § 4. CRITERIOS DE DISEÑO\n${formData.criterios}\n\n## § 5. ALTERNATIVAS EVALUADAS\n${formData.alternativas}\n\n## § 6. IMPACTO PRESUPUESTAL\n- **Diferencia USD**: $0\n- **Diferencia COP**: $0\n- **Impacto %**: 0%\n\n## § 7. RIESGOS IDENTIFICADOS\n${formData.riesgos}\n\n## § 8. DOCUMENTOS AFECTADOS\n- WBS\n- Presupuesto\n- Layout\n- Especificaciones Técnicas\n\n## § 9. PLAN DE IMPLEMENTACIÓN\n1. Revisar impacto técnico\n2. Actualizar documentación\n3. Implementar cambios\n4. Validar funcionamiento\n\n## § 10. YAML DE INSTRUCCIONES\n\`\`\`yaml\ndt_metadata:\n  dt_id: "${dtId}"\n  sistema: "${formData.sistema}"\n  impacto_presupuesto: false\n  impacto_layout: false\n  impacto_wbs: true\n\narchivos_actualizar:\n  - file: "Sistema_Validacion_Web/data/tm01_master_data.js"\n    cambios:\n      - campo: "descripcion"\n        buscar: "${formData.descripcion}"\n        reemplazar: "${formData.descripcion} (Modificado por ${dtId})"\n\nscripts_ejecutar:\n  - script: "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1"\n    parametros: ["-Force"]\n\`\`\`\n\n## § 11. CHECKBOX DE EJECUCIÓN\n- [ ] Ejecutado por Cursor\n- [ ] Validado por QA\n- [ ] Aprobado por Especificador\n- [ ] Implementado en producción\n\n## § 12. LOG DE EJECUCIÓN\n[Se completa automáticamente al ejecutar]`;
+            const dtContent = `# ${dtId}\n\n## Â§ 1. INFORMACIÃ“N GENERAL\n- **Fecha**: ${formData.fecha}\n- **Tipo**: ${formData.tipo}\n- **Sistema**: ${formData.sistema}\n- **Item WBS**: ${formData.item}\n- **Responsable**: Ing. Sistemas\n\n## Â§ 2. DESCRIPCIÃ“N DEL CAMBIO\n${formData.descripcion}\n\n## Â§ 3. JUSTIFICACIÃ“N TÃ‰CNICA\n${formData.justificacion}\n\n## Â§ 4. CRITERIOS DE DISEÃ‘O\n${formData.criterios}\n\n## Â§ 5. ALTERNATIVAS EVALUADAS\n${formData.alternativas}\n\n## Â§ 6. IMPACTO PRESUPUESTAL\n- **Diferencia USD**: $0\n- **Diferencia COP**: $0\n- **Impacto %**: 0%\n\n## Â§ 7. RIESGOS IDENTIFICADOS\n${formData.riesgos}\n\n## Â§ 8. DOCUMENTOS AFECTADOS\n- WBS\n- Presupuesto\n- Layout\n- Especificaciones TÃ©cnicas\n\n## Â§ 9. PLAN DE IMPLEMENTACIÃ“N\n1. Revisar impacto tÃ©cnico\n2. Actualizar documentaciÃ³n\n3. Implementar cambios\n4. Validar funcionamiento\n\n## Â§ 10. YAML DE INSTRUCCIONES\n\`\`\`yaml\ndt_metadata:\n  dt_id: "${dtId}"\n  sistema: "${formData.sistema}"\n  impacto_presupuesto: false\n  impacto_layout: false\n  impacto_wbs: true\n\narchivos_actualizar:\n  - file: "Sistema_Validacion_Web/data/tm01_master_data.js"\n    cambios:\n      - campo: "descripcion"\n        buscar: "${formData.descripcion}"\n        reemplazar: "${formData.descripcion} (Modificado por ${dtId})"\n\nscripts_ejecutar:\n  - script: "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1"\n    parametros: ["-Force"]\n\`\`\`\n\n## Â§ 11. CHECKBOX DE EJECUCIÃ“N\n- [ ] Ejecutado por Cursor\n- [ ] Validado por QA\n- [ ] Aprobado por Especificador\n- [ ] Implementado en producciÃ³n\n\n## Â§ 12. LOG DE EJECUCIÃ“N\n[Se completa automÃ¡ticamente al ejecutar]`;
             const blob = new Blob([dtContent], { type: 'text/markdown' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -315,7 +315,7 @@
             a.download = `${dtId}.md`;
             a.click();
             window.URL.revokeObjectURL(url);
-            alert(`✅ DT generada exitosamente: ${dtId}`);
+            alert(`âœ… DT generada exitosamente: ${dtId}`);
         }
         function filtrarWBS() {
             const sistemaFilter = document.getElementById('sistemaFilter').value;
@@ -332,12 +332,12 @@
             renderizarWBS();
         }
         function limpiarFiltros() { document.getElementById('sistemaFilter').value = ''; document.getElementById('nivelFilter').value = ''; document.getElementById('searchInput').value = ''; filteredData = [...wbsData]; actualizarEstadisticas(); renderizarWBS(); }
-        function expandirTodo() { /* reservado para futura lógica de expansión */ }
+        function expandirTodo() { /* reservado para futura lÃ³gica de expansiÃ³n */ }
         function toggleCapitulo(capituloId) { /* reservado para toggle */ }
         function toggleSubcapitulo(subcapituloId) { /* reservado para toggle */ }
         function exportarCSV() {
             if (filteredData.length === 0) { alert('No hay datos para exportar'); return; }
-            const headers = ['Item', 'Descripción', 'Sistema', 'Nivel', 'Cantidad', 'Unidad', 'VU', 'Total'];
+            const headers = ['Item', 'DescripciÃ³n', 'Sistema', 'Nivel', 'Cantidad', 'Unidad', 'VU', 'Total'];
             const csvContent = [ headers.join(','), ...filteredData.map(item => [ item.item, `"${item.descripcion}"`, item.sistema, item.nivel, item.cantidad || '', item.unidad || '', item.vu || '', item.total || '' ].join(',')) ].join('\n');
             const blob = new Blob([csvContent], { type: 'text/csv' });
             const url = window.URL.createObjectURL(blob);
@@ -349,7 +349,7 @@
             try {
                 const wbs = window.dataManager.data.wbs;
                 const excelData = [];
-                excelData.push(['ID', 'Nivel', 'Item', 'Descripción', 'Sistema', 'Cantidad', 'Unidad', 'Tipo', 'Criterio', 'Precio Unit USD', 'Precio Unit COP', 'Total USD', 'Total COP']);
+                excelData.push(['ID', 'Nivel', 'Item', 'DescripciÃ³n', 'Sistema', 'Cantidad', 'Unidad', 'Tipo', 'Criterio', 'Precio Unit USD', 'Precio Unit COP', 'Total USD', 'Total COP']);
                 wbs.forEach(item => { excelData.push([ item.id || '', item.nivel || '', item.item || '', item.descripcion || '', item.sistema || '', item.cantidad || '', item.unidad || '', item.tipo || '', item.criterio || '', item.vu || '', item.vuCOP || '', item.total || '', item.totalCOP || '' ]); });
                 const wb = XLSX.utils.book_new();
                 const ws = XLSX.utils.aoa_to_sheet(excelData);
@@ -358,13 +358,13 @@
                 const fecha = new Date().toISOString().split('T')[0];
                 const nombreArchivo = `WBS_TM01_Troncal_Magdalena_${fecha}.xlsx`;
                 XLSX.writeFile(wb, nombreArchivo);
-                alert(`✅ Archivo Excel exportado exitosamente: ${nombreArchivo}`);
+                alert(`âœ… Archivo Excel exportado exitosamente: ${nombreArchivo}`);
             } catch (error) {
                 console.error('Error al exportar Excel:', error);
-                alert('❌ Error al exportar a Excel. Verifique la consola para más detalles.');
+                alert('âŒ Error al exportar a Excel. Verifique la consola para mÃ¡s detalles.');
             }
         }
-        function mostrarError(mensaje) { const wbsTree = document.getElementById('wbsTree'); wbsTree.innerHTML = `<div class="error">❌ ${mensaje}</div>`; }
+        function mostrarError(mensaje) { const wbsTree = document.getElementById('wbsTree'); wbsTree.innerHTML = `<div class="error">âŒ ${mensaje}</div>`; }
         window.onclick = function(event) { const modal = document.getElementById('dtModal'); if (event.target === modal) { cerrarModal(); } }
     </script>
 </body>

@@ -445,7 +445,7 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 
 <!-- AUTOGEN:FO_TABLE_START -->
 
-> Ãšltima sincronizaciÃ³n: 2025-10-31 09:28:01
+> Ãšltima sincronizaciÃ³n: 2025-10-31 10:03:52
 
 | ID   | Nombre                                       | Und | Cantidad | Precio Unit. USD | Precio Unit. COP | Total USD | Total COP |
 |------|----------------------------------------------|-----|----------|------------------|------------------|-----------|-----------|
@@ -1490,6 +1490,14 @@ Los siguientes documentos están disponibles para descarga:
 ---
 
 **IMPORTANTE:** Esta RFQ es un documento técnico-comercial oficial del proyecto. Cualquier modificación debe ser notificada por escrito a todos los oferentes.
+
+
+
+
+
+
+
+
 
 
 
