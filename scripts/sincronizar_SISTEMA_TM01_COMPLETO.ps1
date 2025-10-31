@@ -180,6 +180,27 @@ try{
     } else {
         Update-RFQFiberTable_Inline -Items $foItems
     }
+    # Validación declarativa por reglas YAML
+    if (Get-Command Invoke-DeclarativeValidation -ErrorAction SilentlyContinue) {
+        $masterDataObj = (Get-Content -LiteralPath $masterFile -Raw -Encoding UTF8)
+        $dataMatch = [regex]::Match($masterDataObj, 'this\.data\s*=\s*(\{[\s\S]*?\})', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+        if ($dataMatch.Success) {
+            try {
+                $jsonStr = $dataMatch.Groups[1].Value -replace '//.*$', '' -replace ',(\s*[}\]])', '$1'
+                $obj = $jsonStr | ConvertFrom-Json
+                $decl = Invoke-DeclarativeValidation -MasterData $obj
+                if (-not $decl.IsValid) {
+                    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Validación declarativa falló' -Context @{ Issues = $decl.Issues } }
+                    throw "Validación declarativa falló: $($decl.Issues -join '; ')"
+                } else {
+                    if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Validación declarativa OK' }
+                }
+            } catch {
+                throw $_
+            }
+        }
+    }
+
     Write-Log "Sincronización TM01 finalizada OK"
     # Limpieza de snapshots antiguos
     if (Get-Command Remove-OldSnapshots -ErrorAction SilentlyContinue) {

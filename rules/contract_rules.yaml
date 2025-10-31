@@ -1,0 +1,50 @@
+version: 1.0
+updated: "2025-10-31T00:00:00Z"
+
+metadata:
+  description: Reglas declarativas de validación contractual TM01
+  sources:
+    - I. Contrato General/2_Parte_Especial_v1.0.md
+    - II. Apendices Tecnicos/AT1_Alcance_Proyecto_v1.0.md
+    - II. Apendices Tecnicos/AF1_Informacion_Financiera_v1.0.md
+
+rules:
+  # Ejemplos base; extender según necesidad
+  - id: AT1_SOS_CANTIDAD
+    scope: wbs
+    filter:
+      sistema: SOS
+    field: cantidad
+    operator: gte
+    value: 88
+    severity: error
+    message: "SOS: cantidad mínima contractual 88 unidades (AT1 Cap. 3)"
+
+  - id: AT1_PMV_CANTIDAD
+    scope: wbs
+    filter:
+      sistema: PMV
+    field: cantidad
+    operator: gte
+    value: 12
+    severity: error
+    message: "PMV: cantidad mínima contractual 12 unidades (AT1 Cap. 3)"
+
+  - id: AT1_METEO_CANTIDAD
+    scope: wbs
+    filter:
+      sistema: METEO
+    field: cantidad
+    operator: eq
+    value: 3
+    severity: warn
+    message: "METEO: 3 unidades esperadas (2 peajes + 1 CCO)"
+
+  - id: C1_UF_PLAZOS
+    scope: cronogramaUF
+    field: fechaMaxima
+    operator: notnull
+    severity: warn
+    message: "Cada UF debe tener fecha máxima (C1 §5.2)"
+
+
