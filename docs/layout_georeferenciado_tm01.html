@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Georreferenciado - TM01 Troncal Magdalena</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .sidebar {
+            width: 400px;
+            background: white;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .controls {
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        .control-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+        
+        .control-group select, .control-group input {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #dee2e6;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #5568d3;
+        }
+        
+        .stats {
+            padding: 15px;
+            background: #d1ecf1;
+            border-bottom: 2px solid #0c5460;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: #666;
+            margin-top: 3px;
+        }
+        
+        .map-container {
+            flex: 1;
+            position: relative;
+        }
+        
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-width: 250px;
+        }
+        
+        .legend h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+        
+        .legend-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 2px solid #333;
+        }
+        
+        .equipment-list {
+            padding: 10px;
+        }
+        
+        .equipment-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            cursor: pointer;
+            border-left: 4px solid #667eea;
+            transition: all 0.2s;
+        }
+        
+        .equipment-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .equipment-item h4 {
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .equipment-item p {
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .uf-route {
+            stroke-width: 3;
+            opacity: 0.7;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+        
+        .pkd-marker {
+            background: transparent !important;
+            border: none !important;
+            z-index: 1000 !important;
+        }
+        
+        .pkd-marker div {
+            cursor: pointer;
+            transition: transform 0.2s;
+            z-index: 1000 !important;
+            position: relative !important;
+        }
+        
+        .pkd-marker div:hover {
+            transform: scale(1.2);
+            z-index: 1001 !important;
+        }
+        
+        /* Asegurar que los marcadores PKD sean visibles */
+        .leaflet-marker-icon.pkd-marker {
+            z-index: 1000 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header">
+                <h1>📍 Layout Georreferenciado</h1>
+                <p>TM01 Troncal Magdalena</p>
+            </div>
+            
+            <div class="stats">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalElements">-</div>
+                        <div class="stat-label">Equipos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="visibleElements">-</div>
+                        <div class="stat-label">Visibles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalUFs">-</div>
+                        <div class="stat-label">UFs Cargadas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="visibleUFs">-</div>
+                        <div class="stat-label">UFs Visibles</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label>🗺️ Unidad Funcional (UF):</label>
+                    <select id="ufFilter">
+                        <option value="">Todas las UFs</option>
+                        <option value="UF1">UF1 - El Trique – Dos y Medio</option>
+                        <option value="UF2">UF2 - Batallón Bárbula – PR52</option>
+                        <option value="UF3">UF3 - PR 52 – Puerto Araujo</option>
+                        <option value="UF4">UF4 - Puerto Araujo – Puerto Parra</option>
+                        <option value="UF5">UF5 - Puerto Salgar – Cimitarra</option>
+                        <option value="UF6">UF6 - Puerto Parra – Aguas Negras</option>
+                        <option value="UF7">UF7 - Aguas Negras – Puerto Nuevo</option>
+                        <option value="UF8">UF8 - Puerto Nuevo – PR107+000</option>
+                        <option value="UF9">UF9 - PR107+000 – Campo 23</option>
+                        <option value="UF10">UF10 - Campo 23 – Rancho Camacho</option>
+                        <option value="UF11">UF11 - Puerto Parra – Barrancabermeja</option>
+                        <option value="UF12">UF12 - Barrancabermeja – La Lizama</option>
+                        <option value="UF13">UF13 - La Lizama – Río Sogamoso</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>⚙️ Sistema:</label>
+                    <select id="sistemaFilter">
+                        <option value="">Todos los sistemas</option>
+                        <option value="SOS">SOS - Postes de Auxilio</option>
+                        <option value="ETD/RADAR">ETD/RADAR - Estaciones de Tratamiento</option>
+                        <option value="CCTV">CCTV - Cámaras de Vigilancia</option>
+                        <option value="PMV">PMV - Paneles de Mensaje Variable</option>
+                        <option value="METEO">METEO - Estaciones Meteorológicas</option>
+                        <option value="WIM">WIM - Sistema de Pesaje</option>
+                        <option value="PEAJES">PEAJES - Estaciones de Peaje</option>
+                        <option value="CCO">CCO - Centro de Control Operacional</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>🔍 Tipo de Equipo:</label>
+                    <select id="tipoFilter">
+                        <option value="">Todos los tipos</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>
+                        <input type="checkbox" id="mostrarPKD" disabled>
+                        📍 Mostrar PKD cada 10km <span style="color: #999; font-size: 0.9em;">(Pendiente: KMZ/KML completo)</span>
+                    </label>
+                </div>
+                
+                <button class="btn" onclick="limpiarFiltros()">🔄 Limpiar Filtros</button>
+                <button class="btn" onclick="mostrarTodasUFs()">🗺️ Mostrar Todas las UFs</button>
+                <button class="btn" onclick="ocultarTodasUFs()">👁️ Ocultar Todas las UFs</button>
+            </div>
+            
+            <div class="equipment-list" id="equipmentList">
+                <div class="loading">Cargando datos...</div>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="legend">
+                <h4>Leyenda</h4>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #e74c3c;"></div>
+                    <span>SOS</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #3498db;"></div>
+                    <span>ETD/RADAR</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #2ecc71;"></div>
+                    <span>CCTV</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #f39c12;"></div>
+                    <span>PMV</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #9b59b6;"></div>
+                    <span>METEO</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #e67e22;"></div>
+                    <span>WIM</span>
+                </div>
+                <div class="legend-item">
+                    <div style="width: 20px; height: 3px; background: #e74c3c; margin-right: 8px;"></div>
+                    <span>Rutas UF</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Cargar datos del layout -->
+    <script src="layout_datos.js"></script>
+    
+    <!-- Cargar PKD cada 10km -->
+    <script src="data/pkd_cada_10km.js"></script>
+    
+    <!-- Cargar coordenadas UF desde JS (evita problemas de CORS) -->
+    <script src="data/coordenadas_uf_tm01.js"></script>
+    
+    <script>
+        // Inicializar mapa centrado en TM01 Troncal Magdalena
+        // Centro aproximado del corredor: 7.4, -73.2
+        var map = L.map('map').setView([7.4, -73.2], 9);
+        
+        // Agregar capa base OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors | TM01 Troncal Magdalena',
+            maxZoom: 18
+        }).addTo(map);
+        
+        // Variables globales
+        let allMarkers = [];
+        let allUFRoutes = [];
+        let equipmentMarkers = {};
+        let ufRoutesLayers = {};
+        let coordenadasUF = null;
+        let equiposLayout = [];
+        let pkdMarkers = []; // Marcadores de PKD cada 10km
+        
+        // Colores por sistema
+        const coloresSistema = {
+            'SOS': '#e74c3c',
+            'ETD/RADAR': '#3498db',
+            'CCTV': '#2ecc71',
+            'PMV': '#f39c12',
+            'METEO': '#9b59b6',
+            'WIM': '#e67e22',
+            'PEAJES': '#1abc9c',
+            'CCO': '#34495e'
+        };
+        
+        // Colores por UF (13 colores distintos)
+        const coloresUF = [
+            '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6',
+            '#e67e22', '#1abc9c', '#34495e', '#16a085', '#27ae60',
+            '#8e44ad', '#c0392b', '#d35400'
+        ];
+        
+        // Cargar coordenadas UF - DESDE ARCHIVO JS (sin fetch, evita CORS)
+        function cargarCoordenadasUF() {
+            try {
+                console.log('🔄 [DEBUG] ========================================');
+                console.log('🔄 [DEBUG] INICIANDO CARGA DE COORDENADAS UF');
+                console.log('🔄 [DEBUG] ========================================');
+                console.log('🔄 [DEBUG] Verificando variable global coordenadasUFData...');
+                
+                // Verificar si la variable global existe (cargada desde coordenadas_uf_tm01.js)
+                if (typeof coordenadasUFData !== 'undefined') {
+                    console.log('✅ [DEBUG] coordenadasUFData encontrado en variable global');
+                    coordenadasUF = coordenadasUFData;
+                } else if (typeof obtenerCoordenadasUF === 'function') {
+                    console.log('✅ [DEBUG] Usando función obtenerCoordenadasUF()');
+                    coordenadasUF = obtenerCoordenadasUF();
+                } else {
+                    console.error('❌ [DEBUG] No se encontró coordenadasUFData ni obtenerCoordenadasUF()');
+                    console.error('❌ [DEBUG] Verifica que coordenadas_uf_tm01.js esté cargado');
+                    throw new Error('coordenadasUFData no está disponible. Verifica que coordenadas_uf_tm01.js esté cargado.');
+                }
+                
+                console.log('✅ [DEBUG] Coordenadas UF cargadas desde JS');
+                console.log('🔄 [DEBUG] Tipo de coordenadasUF:', typeof coordenadasUF);
+                console.log('🔄 [DEBUG] Keys del objeto:', Object.keys(coordenadasUF || {}));
+                console.log('🔄 [DEBUG] total_ufs:', coordenadasUF?.total_ufs || 'no definido');
+                
+                if (coordenadasUF && coordenadasUF.unidades_funcionales) {
+                    const ufKeys = Object.keys(coordenadasUF.unidades_funcionales);
+                    console.log('✅ [DEBUG] unidades_funcionales encontrado');
+                    console.log('🔄 [DEBUG] Total UFs:', ufKeys.length);
+                    console.log('🔄 [DEBUG] UFs:', ufKeys);
+                    
+                    // Debug detallado de cada UF
+                    ufKeys.forEach(ufKey => {
+                        const uf = coordenadasUF.unidades_funcionales[ufKey];
+                        const numCoords = uf.coordenadas_consolidadas?.length || 0;
+                        console.log(`  📍 ${ufKey}:`);
+                        console.log(`     - UF: ${uf.uf || 'sin UF'}`);
+                        console.log(`     - Nombre: ${uf.nombre || 'sin nombre'}`);
+                        console.log(`     - Coordenadas: ${numCoords}`);
+                        console.log(`     - Distancia: ${uf.distancia_total_km || 'N/A'} km`);
+                        console.log(`     - PK inicio: ${uf.pk_inicio || 'N/A'}`);
+                        console.log(`     - PK fin: ${uf.pk_fin || 'N/A'}`);
+                        if (numCoords > 0) {
+                            const primeraCoord = uf.coordenadas_consolidadas[0];
+                            const ultimaCoord = uf.coordenadas_consolidadas[numCoords - 1];
+                            console.log(`     - Primera coord: [${primeraCoord[0]}, ${primeraCoord[1]}]`);
+                            console.log(`     - Última coord: [${ultimaCoord[0]}, ${ultimaCoord[1]}]`);
+                        }
+                    });
+                } else {
+                    console.error('❌ [DEBUG] NO hay "unidades_funcionales" en coordenadasUF');
+                    if (coordenadasUF) {
+                        console.log('🔍 [DEBUG] Estructura disponible:', Object.keys(coordenadasUF));
+                    }
+                }
+                
+                console.log('✅ [DEBUG] Coordenadas UF cargadas correctamente');
+                console.log('🔄 [DEBUG] ========================================');
+                
+                renderizarRutasUF();
+                actualizarEstadisticas();
+            } catch (error) {
+                console.error('❌ [DEBUG] ========================================');
+                console.error('❌ [DEBUG] ERROR CARGANDO COORDENADAS UF');
+                console.error('❌ [DEBUG] ========================================');
+                console.error('❌ [DEBUG] Error:', error);
+                console.error('❌ [DEBUG] Mensaje:', error.message);
+                console.error('❌ [DEBUG] Stack:', error.stack);
+                document.getElementById('equipmentList').innerHTML = 
+                    '<div class="loading" style="color: #e74c3c;">⚠️ Error cargando coordenadas UF. Verifica que coordenadas_uf_tm01.js esté cargado.</div>';
+            }
+        }
+        
+        // Renderizar rutas UF en el mapa
+        function renderizarRutasUF() {
+            if (!coordenadasUF || !coordenadasUF.unidades_funcionales) {
+                console.warn('⚠️ No hay datos de UF para renderizar');
+                return;
+            }
+            
+            // Limpiar rutas anteriores
+            allUFRoutes.forEach(layer => {
+                if (map.hasLayer(layer)) {
+                    map.removeLayer(layer);
+                }
+            });
+            allUFRoutes = [];
+            ufRoutesLayers = {};
+            
+            const ufFiltro = document.getElementById('ufFilter').value;
+            let ufsVisibles = 0;
+            
+            Object.keys(coordenadasUF.unidades_funcionales).forEach((ufKey, index) => {
+                const uf = coordenadasUF.unidades_funcionales[ufKey];
+                
+                // Filtrar por UF seleccionada
+                if (ufFiltro && uf.uf !== ufFiltro) {
+                    return;
+                }
+                
+                if (!uf.coordenadas_consolidadas || uf.coordenadas_consolidadas.length === 0) {
+                    console.warn(`⚠️ UF ${uf.uf} no tiene coordenadas consolidadas`);
+                    return;
+                }
+                
+                // Convertir coordenadas [lon, lat] a [lat, lon] para Leaflet
+                const coordenadas = uf.coordenadas_consolidadas.map(coord => [coord[1], coord[0]]);
+                
+                // Color por UF
+                const color = coloresUF[index % coloresUF.length];
+                
+                // Crear polyline para la ruta UF
+                const polyline = L.polyline(coordenadas, {
+                    color: color,
+                    weight: 4,
+                    opacity: 0.8,
+                    className: 'uf-route'
+                });
+                
+                // Popup con información de la UF
+                polyline.bindPopup(`
+                    <div style="min-width: 200px;">
+                        <h3 style="margin: 0 0 10px 0; color: ${color};">${uf.uf}</h3>
+                        <p style="margin: 5px 0;"><strong>Nombre:</strong> ${uf.nombre || ufKey}</p>
+                        <p style="margin: 5px 0;"><strong>Puntos:</strong> ${uf.total_puntos || uf.coordenadas_consolidadas.length}</p>
+                        <p style="margin: 5px 0;"><strong>Distancia:</strong> ${(uf.distancia_total_km || 0).toFixed(2)} km</p>
+                    </div>
+                `);
+                
+                polyline.addTo(map);
+                allUFRoutes.push(polyline);
+                ufRoutesLayers[uf.uf] = polyline;
+                ufsVisibles++;
+            });
+            
+            console.log(`✅ ${ufsVisibles} rutas UF renderizadas`);
+            document.getElementById('visibleUFs').textContent = ufsVisibles;
+            
+            // TODO: Renderizar marcadores PKD cada 10km
+            // PENDIENTE: Esperando KMZ/KML completo para calcular coordenadas correctas
+            // renderizarMarcadoresPKD();
+        }
+        
+        // TODO: Renderizar marcadores PKD cada 10km
+        // PENDIENTE: La base de KML es incompleta. Esperando KMZ/KML completo para calcular coordenadas correctas.
+        // Una vez disponible el KMZ/KML completo, se podrá:
+        // 1. Consultar inicio y fin de cada UF en la web o en el KML
+        // 2. Interpolar coordenadas para PKD cada 10km
+        // 3. Renderizar marcadores en el mapa
+        function renderizarMarcadoresPKD() {
+            console.log('⚠️ Renderizado de marcadores PKD pendiente: esperando KMZ/KML completo');
+            // TODO: Implementar cuando esté disponible el KMZ/KML completo
+        }
+        
+        // TODO: Obtener coordenadas por PKD
+        // PENDIENTE: Esperando KMZ/KML completo
+        function obtenerCoordenadasPorPKD(pkd, longitudRN4510, longitudRN4511) {
+            console.log('⚠️ Función obtenerCoordenadasPorPKD pendiente: esperando KMZ/KML completo');
+            return null;
+        }
+        
+        // TODO: Toggle mostrar/ocultar marcadores PKD
+        // PENDIENTE: Esperando KMZ/KML completo
+        function toggleMarcadoresPKD() {
+            console.log('⚠️ Función toggleMarcadoresPKD pendiente: esperando KMZ/KML completo');
+        }
+        
+        // Renderizar equipos en el mapa
+        function renderizarEquipos() {
+            console.log('🔄 Iniciando renderizado de equipos...');
+            
+            // Limpiar marcadores anteriores
+            if (allMarkers.length > 0) {
+                console.log(`🗑️ Limpiando ${allMarkers.length} marcadores anteriores`);
+                allMarkers.forEach(marker => {
+                    if (map.hasLayer(marker)) {
+                        map.removeLayer(marker);
+                    }
+                });
+            }
+            allMarkers = [];
+            equipmentMarkers = {};
+            
+            // Cargar equipos desde layout_datos.js
+            if (typeof layoutDatos === 'undefined' || !layoutDatos || layoutDatos.length === 0) {
+                console.warn('⚠️ layoutDatos no está disponible');
+                equiposLayout = [];
+                actualizarListaEquipos();
+                return;
+            }
+            
+            equiposLayout = layoutDatos;
+            console.log(`✅ ${equiposLayout.length} equipos cargados`);
+            
+            // Aplicar filtros
+            const filtroUF = document.getElementById('ufFilter').value;
+            const filtroSistema = document.getElementById('sistemaFilter').value;
+            const filtroTipo = document.getElementById('tipoFilter').value;
+            
+            let equiposFiltrados = 0;
+            let equiposRenderizados = 0;
+            
+            equiposLayout.forEach(equipo => {
+                // Filtro por sistema
+                if (filtroSistema && equipo.sistema !== filtroSistema) {
+                    return;
+                }
+                
+                // Filtro por tipo
+                if (filtroTipo && equipo.tipo !== filtroTipo) {
+                    return;
+                }
+                
+                equiposFiltrados++;
+                
+                // Obtener coordenadas
+                let lat, lng;
+                
+                if (equipo.latitud && equipo.longitud) {
+                    // Usar coordenadas directas
+                    lat = parseFloat(equipo.latitud);
+                    lng = parseFloat(equipo.longitud);
+                } else {
+                    // Intentar obtener coordenadas desde UF si hay PK
+                    if (equipo.pk && coordenadasUF) {
+                        const coordenadas = obtenerCoordenadasPorPK(equipo.pk, filtroUF);
+                        if (coordenadas) {
+                            lat = coordenadas.lat;
+                            lng = coordenadas.lng;
+                        } else {
+                            // Coordenadas aproximadas
+                            lat = 7.4 + (Math.random() - 0.5) * 0.1;
+                            lng = -73.2 + (Math.random() - 0.5) * 0.1;
+                        }
+                    } else {
+                        // Coordenadas aproximadas
+                        lat = 7.4 + (Math.random() - 0.5) * 0.1;
+                        lng = -73.2 + (Math.random() - 0.5) * 0.1;
+                    }
+                }
+                
+                // Verificar coordenadas válidas
+                if (isNaN(lat) || isNaN(lng)) {
+                    console.warn(`⚠️ Coordenadas inválidas para ${equipo.nombre}:`, lat, lng);
+                    return;
+                }
+                
+                // Color según sistema
+                const color = coloresSistema[equipo.sistema] || '#667eea';
+                
+                // Crear marcador
+                const marker = L.circleMarker([lat, lng], {
+                    radius: 8,
+                    fillColor: color,
+                    color: '#fff',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                });
+                
+                // Popup con información
+                marker.bindPopup(`
+                    <div style="min-width: 200px;">
+                        <h3 style="margin: 0 0 10px 0; color: ${color};">${equipo.nombre || equipo.id}</h3>
+                        <p style="margin: 5px 0;"><strong>Sistema:</strong> ${equipo.sistema || 'N/A'}</p>
+                        <p style="margin: 5px 0;"><strong>Tipo:</strong> ${equipo.tipo || 'N/A'}</p>
+                        <p style="margin: 5px 0;"><strong>PK:</strong> ${equipo.pk || 'N/A'}</p>
+                        ${equipo.estado ? `<p style="margin: 5px 0;"><strong>Estado:</strong> ${equipo.estado}</p>` : ''}
+                        ${equipo.observaciones ? `<p style="margin: 5px 0; font-size: 11px; color: #666;">${equipo.observaciones}</p>` : ''}
+                    </div>
+                `);
+                
+                marker.addTo(map);
+                allMarkers.push(marker);
+                equipmentMarkers[equipo.id || equipo.nombre] = marker;
+                equiposRenderizados++;
+            });
+            
+            console.log(`✅ ${equiposRenderizados} equipos renderizados de ${equiposFiltrados} filtrados`);
+            
+            // Actualizar estadísticas
+            document.getElementById('totalElements').textContent = equiposLayout.length;
+            document.getElementById('visibleElements').textContent = equiposRenderizados;
+            
+            // Actualizar lista de equipos
+            actualizarListaEquipos();
+            
+            // Ajustar vista del mapa
+            if (allMarkers.length > 0 || allUFRoutes.length > 0) {
+                const group = new L.featureGroup([...allMarkers, ...allUFRoutes]);
+                map.fitBounds(group.getBounds().pad(0.1));
+            }
+        }
+        
+        // Obtener coordenadas por PK desde UF
+        function obtenerCoordenadasPorPK(pk, ufFiltro = null) {
+            if (!coordenadasUF || !pk) return null;
+            
+            // Convertir PK a número
+            let pkNumero = 0;
+            if (typeof pk === 'string' && pk.includes('+')) {
+                const parts = pk.split('+');
+                pkNumero = parseFloat(parts[0]) + (parseFloat(parts[1]) || 0) / 1000;
+            } else {
+                pkNumero = parseFloat(pk) || 0;
+            }
+            
+            // Buscar en todas las UFs o solo en la UF filtrada
+            const ufsABuscar = ufFiltro ? [ufFiltro] : Object.keys(coordenadasUF.unidades_funcionales);
+            
+            for (const ufKey of ufsABuscar) {
+                const uf = coordenadasUF.unidades_funcionales[ufKey];
+                if (!uf || !uf.coordenadas_consolidadas) continue;
+                
+                // Buscar el punto más cercano en la ruta
+                let minDist = Infinity;
+                let mejorCoord = null;
+                
+                uf.coordenadas_consolidadas.forEach(coord => {
+                    // Aquí podrías implementar una búsqueda más sofisticada
+                    // Por ahora, retornamos el primer punto si hay coincidencia aproximada
+                });
+                
+                // Por simplicidad, retornamos el punto medio de la UF
+                if (uf.coordenadas_consolidadas.length > 0) {
+                    const puntoMedio = Math.floor(uf.coordenadas_consolidadas.length / 2);
+                    const coord = uf.coordenadas_consolidadas[puntoMedio];
+                    return { lat: coord[1], lng: coord[0] };
+                }
+            }
+            
+            return null;
+        }
+        
+        // Actualizar lista de equipos en el sidebar
+        function actualizarListaEquipos() {
+            const lista = document.getElementById('equipmentList');
+            const filtroSistema = document.getElementById('sistemaFilter').value;
+            const filtroTipo = document.getElementById('tipoFilter').value;
+            
+            // Filtrar equipos
+            let equiposMostrar = equiposLayout.filter(equipo => {
+                if (filtroSistema && equipo.sistema !== filtroSistema) return false;
+                if (filtroTipo && equipo.tipo !== filtroTipo) return false;
+                return true;
+            });
+            
+            if (equiposMostrar.length === 0) {
+                lista.innerHTML = '<div class="loading">No hay equipos que coincidan con los filtros</div>';
+                return;
+            }
+            
+            // Limitar a 50 equipos para rendimiento
+            equiposMostrar = equiposMostrar.slice(0, 50);
+            
+            lista.innerHTML = equiposMostrar.map(equipo => {
+                const color = coloresSistema[equipo.sistema] || '#667eea';
+                return `
+                    <div class="equipment-item" onclick="centrarEnEquipo('${equipo.id || equipo.nombre}')" style="border-left-color: ${color};">
+                        <h4>${equipo.nombre || equipo.id}</h4>
+                        <p><strong>Sistema:</strong> ${equipo.sistema || 'N/A'} | <strong>Tipo:</strong> ${equipo.tipo || 'N/A'}</p>
+                        <p><strong>PK:</strong> ${equipo.pk || 'N/A'}</p>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Centrar mapa en un equipo
+        function centrarEnEquipo(equipoId) {
+            const marker = equipmentMarkers[equipoId];
+            if (marker) {
+                map.setView(marker.getLatLng(), 15);
+                marker.openPopup();
+            }
+        }
+        
+        // Actualizar opciones de tipo según sistema
+        function actualizarOpcionesTipo() {
+            const sistemaFiltro = document.getElementById('sistemaFilter').value;
+            const tipoSelect = document.getElementById('tipoFilter');
+            
+            if (!equiposLayout || equiposLayout.length === 0) return;
+            
+            tipoSelect.innerHTML = '<option value="">Todos los tipos</option>';
+            
+            // Obtener tipos únicos del sistema seleccionado
+            let tipos = [];
+            equiposLayout.forEach(equipo => {
+                if (!sistemaFiltro || equipo.sistema === sistemaFiltro) {
+                    if (equipo.tipo && !tipos.includes(equipo.tipo)) {
+                        tipos.push(equipo.tipo);
+                    }
+                }
+            });
+            
+            tipos.sort();
+            tipos.forEach(tipo => {
+                const option = document.createElement('option');
+                option.value = tipo;
+                option.textContent = tipo;
+                tipoSelect.appendChild(option);
+            });
+        }
+        
+        // Limpiar filtros
+        function limpiarFiltros() {
+            document.getElementById('ufFilter').value = '';
+            document.getElementById('sistemaFilter').value = '';
+            document.getElementById('tipoFilter').value = '';
+            renderizarRutasUF();
+            renderizarEquipos();
+        }
+        
+        // Mostrar todas las UFs
+        function mostrarTodasUFs() {
+            document.getElementById('ufFilter').value = '';
+            renderizarRutasUF();
+        }
+        
+        // Ocultar todas las UFs
+        function ocultarTodasUFs() {
+            allUFRoutes.forEach(layer => {
+                if (map.hasLayer(layer)) {
+                    map.removeLayer(layer);
+                }
+            });
+            document.getElementById('visibleUFs').textContent = '0';
+        }
+        
+        // Actualizar estadísticas
+        function actualizarEstadisticas() {
+            if (coordenadasUF && coordenadasUF.unidades_funcionales) {
+                document.getElementById('totalUFs').textContent = Object.keys(coordenadasUF.unidades_funcionales).length;
+            }
+        }
+        
+        // Event listeners
+        document.getElementById('ufFilter').addEventListener('change', function() {
+            renderizarRutasUF();
+            renderizarEquipos();
+        });
+        
+        document.getElementById('sistemaFilter').addEventListener('change', function() {
+            actualizarOpcionesTipo();
+            renderizarEquipos();
+        });
+        
+        document.getElementById('tipoFilter').addEventListener('change', function() {
+            renderizarEquipos();
+        });
+        
+        // Inicializar
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Inicializando layout georreferenciado TM01...');
+            
+            // Esperar a que se carguen los scripts JS (coordenadas_uf_tm01.js)
+            setTimeout(function() {
+                // Cargar coordenadas UF primero
+                cargarCoordenadasUF();
+                
+                // Luego renderizar equipos
+                setTimeout(() => {
+                    renderizarEquipos();
+                }, 500);
+            }, 100);
+        });
+    </script>
+</body>
+</html>
+

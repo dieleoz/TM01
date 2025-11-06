@@ -17,14 +17,14 @@
 ![Web_System](https://img.shields.io/badge/Web_System-Operativo-success)
 ![Merge_Bidirectional](https://img.shields.io/badge/Merge_Bidirectional-3--Way-success)
 
-**Versión:** 3.7  
-**Fecha de actualización:** 30 de Octubre 2025  
-**Estado:** ✅ Arquitectura 4 capas consolidada | ✅ Pipeline contrato→T05→master con validación | **OPERATIVO**    
+**Versión:** 3.8  
+**Fecha de actualización:** 31 de Octubre 2025  
+**Estado:** ✅ Arquitectura 4 capas consolidada | ✅ Pipeline contrato→T05→master con validación | ✅ Testing automatizado implementado | **OPERATIVO**    
 **Responsable:** Equipo Técnico TM01  
 **Metodología:** Punto 42 v1.0 + Arquitectura Dinámica 4 Capas  
 **GitHub:** https://github.com/dieleoz/TM01  
 **GitHub Pages:** https://dieleoz.github.io/TM01/  
-**Último Commit:** DT-PEAJES-018 (peajes actualizados con 6 items, sistema web reconstruido)  
+**Último Commit:** Mejoras arquitectónicas: Parser YAML funcional, Scripts consolidados, Testing con Pester  
 
 ---
 
@@ -721,6 +721,7 @@ El sistema implementa **merge bidireccional** que combina tres fuentes de datos:
    - ✅ **Documentos técnicos:** Generación automática desde DTs
    - ✅ **Presupuesto actualizado:** Cálculos automáticos AIU/IVA
    - ✅ **Layout georreferenciado:** 52 equipos con coordenadas precisas
+   - ⚠️ **PENDIENTE: Marcadores PKD cada 10km** - La base de KML actual es incompleta. Esperando KMZ/KML completo para calcular coordenadas correctas. Una vez disponible, se podrá consultar inicio y fin de cada UF y realizar interpolación para PKD cada 10km.
    - **Estado:** Sistema de validación operativo
 
 ### Prioridad Baja

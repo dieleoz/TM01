@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="28" errors="0" failures="11" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2025-10-31" time="13:53:44">
+  <environment user="Diego.Zuñiga" machine-name="CO36-ITSRP-P002" cwd="D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA" user-domain="CO36-ITSRP-P002" platform="Microsoft Windows 11 Pro|C:\Windows|\Device\Harddisk0\Partition3" nunit-version="2.5.8.0" os-version="10.0.26200" clr-version="4.0.30319.42000" />
+  <culture-info current-culture="es-CO" current-uiculture="es-ES" />
+  <test-suite type="Powershell" name="Pester" executed="True" result="Failure" success="False" time="5.1965" asserts="0">
+    <results>
+      <test-suite type="TestFixture" name="SincronizaciÃ³n End-to-End" executed="True" result="Failure" success="False" time="2.7409" asserts="0" description="SincronizaciÃ³n End-to-End">
+        <results>
+          <test-case description="Valida que script maestro existe" name="SincronizaciÃ³n End-to-End.Valida que script maestro existe" time="2.4569" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: {True}
+But was:  {False}</message>
+              <stack-trace>at line: 20 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1
+20:         Test-Path $scriptPath | Should Be $true
+</stack-trace>
+            </failure>
+          </test-case>
+          <test-case description="Valida que mÃ³dulos requeridos existen" name="SincronizaciÃ³n End-to-End.Valida que mÃ³dulos requeridos existen" time="0.2059" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: {True}
+But was:  {False}</message>
+              <stack-trace>at line: 33 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1
+33:             Test-Path $fullPath | Should Be $true
+</stack-trace>
+            </failure>
+          </test-case>
+          <test-case description="Valida estructura de directorios necesarios" name="SincronizaciÃ³n End-to-End.Valida estructura de directorios necesarios" time="0.037" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: {True}
+But was:  {False}</message>
+              <stack-trace>at line: 46 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1
+46:             Test-Path $fullPath | Should Be $true
+</stack-trace>
+            </failure>
+          </test-case>
+          <test-case description="Valida que archivo maestro existe" name="SincronizaciÃ³n End-to-End.Valida que archivo maestro existe" time="0.0211" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: {True}
+But was:  {False}</message>
+              <stack-trace>at line: 52 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1
+52:         Test-Path $masterFile | Should Be $true
+</stack-trace>
+            </failure>
+          </test-case>
+          <test-case description="Valida que archivo de reglas YAML existe" name="SincronizaciÃ³n End-to-End.Valida que archivo de reglas YAML existe" time="0.02" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: {True}
+But was:  {False}</message>
+              <stack-trace>at line: 57 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1
+57:         Test-Path $rulesFile | Should Be $true
+</stack-trace>
+            </failure>
+          </test-case>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="IntegraciÃ³n - MÃ³dulos PowerShell" executed="True" result="Failure" success="False" time="1.2367" asserts="0" description="IntegraciÃ³n - MÃ³dulos PowerShell">
+        <results>
+          <test-case description="Puede importar todos los mÃ³dulos sin errores" name="IntegraciÃ³n - MÃ³dulos PowerShell.Puede importar todos los mÃ³dulos sin errores" time="0.1605" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: the expression not to throw an exception. Message was {No se cargó el módulo 'D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\..\scripts\modules\DataMapper.psm1' especificado porque no se encontró ningún archivo de módulo válido en ningún directorio de módulo.}
+    En D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1: 74 Carácter: 15
+    + ...            { Import-Module $fullPath -Force -ErrorAction Stop } | Sho ...
+    +                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</message>
+              <stack-trace>at line: 74 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1
+74:             { Import-Module $fullPath -Force -ErrorAction Stop } | Should Not Throw
+</stack-trace>
+            </failure>
+          </test-case>
+          <test-case description="Funciones exportadas estÃ¡n disponibles" name="IntegraciÃ³n - MÃ³dulos PowerShell.Funciones exportadas estÃ¡n disponibles" time="1.0762" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: value to not be empty</message>
+              <stack-trace>at line: 85 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\integration\Sincronizacion.Tests.ps1
+85:         Get-Command "Compare-ObjectDiff" -ErrorAction SilentlyContinue | Should Not BeNullOrEmpty
+</stack-trace>
+            </failure>
+          </test-case>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="MergeEngine - Compare-ObjectDiff" executed="True" result="Success" success="True" time="0.1573" asserts="0" description="MergeEngine - Compare-ObjectDiff">
+        <results>
+          <test-case description="Detecta cambio en propiedad" name="MergeEngine - Compare-ObjectDiff.Detecta cambio en propiedad" time="0.1009" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Detecta propiedad agregada" name="MergeEngine - Compare-ObjectDiff.Detecta propiedad agregada" time="0.0207" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Detecta propiedad eliminada" name="MergeEngine - Compare-ObjectDiff.Detecta propiedad eliminada" time="0.0173" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="No detecta cambios si objetos son iguales" name="MergeEngine - Compare-ObjectDiff.No detecta cambios si objetos son iguales" time="0.0184" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="MergeEngine - Merge-ThreeWay" executed="True" result="Success" success="True" time="0.2468" asserts="0" description="MergeEngine - Merge-ThreeWay">
+        <results>
+          <test-case description="Merge sin conflictos - cambios en diferentes campos" name="MergeEngine - Merge-ThreeWay.Merge sin conflictos - cambios en diferentes campos" time="0.1344" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Preserva campos contractuales desde SOURCE" name="MergeEngine - Merge-ThreeWay.Preserva campos contractuales desde SOURCE" time="0.0396" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Preserva campos UI desde CURRENT" name="MergeEngine - Merge-ThreeWay.Preserva campos UI desde CURRENT" time="0.0335" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Detecta conflicto cuando SOURCE y CURRENT difieren de BASE" name="MergeEngine - Merge-ThreeWay.Detecta conflicto cuando SOURCE y CURRENT difieren de BASE" time="0.0393" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="MergeEngine - Resolve-Conflict" executed="True" result="Success" success="True" time="0.0779" asserts="0" description="MergeEngine - Resolve-Conflict">
+        <results>
+          <test-case description="Prioriza SOURCE para campos contractuales" name="MergeEngine - Resolve-Conflict.Prioriza SOURCE para campos contractuales" time="0.0413" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Prioriza CURRENT para campos UI" name="MergeEngine - Resolve-Conflict.Prioriza CURRENT para campos UI" time="0.0181" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Mantiene BASE si no hay cambios" name="MergeEngine - Resolve-Conflict.Mantiene BASE si no hay cambios" time="0.0184" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="ValidadorContractual - Get-ContractRules" executed="True" result="Failure" success="False" time="0.3917" asserts="0" description="ValidadorContractual - Get-ContractRules">
+        <results>
+          <test-case description="Carga reglas correctamente desde YAML" name="ValidadorContractual - Get-ContractRules.Carga reglas correctamente desde YAML" time="0.189" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Parsea cantidad mÃ­nima de SOS correctamente" name="ValidadorContractual - Get-ContractRules.Parsea cantidad mÃ­nima de SOS correctamente" time="0.0703" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Parsea cantidad mÃ­nima de PMV correctamente" name="ValidadorContractual - Get-ContractRules.Parsea cantidad mÃ­nima de PMV correctamente" time="0.053" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Parsea reglas con filtro correctamente" name="ValidadorContractual - Get-ContractRules.Parsea reglas con filtro correctamente" time="0.0608" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Retorna estructura vacÃ­a si archivo no existe" name="ValidadorContractual - Get-ContractRules.Retorna estructura vacÃ­a si archivo no existe" time="0.0186" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: value to not be empty</message>
+              <stack-trace>at line: 50 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\unit\ValidadorContractual.Tests.ps1
+50:         $rules.rules | Should Not BeNullOrEmpty
+</stack-trace>
+            </failure>
+          </test-case>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="ValidadorContractual - Invoke-DeclarativeValidation" executed="True" result="Failure" success="False" time="0.2563" asserts="0" description="ValidadorContractual - Invoke-DeclarativeValidation">
+        <results>
+          <test-case description="Valida datos maestros correctamente" name="ValidadorContractual - Invoke-DeclarativeValidation.Valida datos maestros correctamente" time="0.0998" asserts="0" success="True" result="Success" executed="True" />
+          <test-case description="Detecta violaciÃ³n de cantidad mÃ­nima" name="ValidadorContractual - Invoke-DeclarativeValidation.Detecta violaciÃ³n de cantidad mÃ­nima" time="0.047" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>Expected: {False}
+But was:  {True}</message>
+              <stack-trace>at line: 80 in D:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\tests\unit\ValidadorContractual.Tests.ps1
+80:         $result.IsValid | Should Be $false
+</stack-trace>
+            </failure>
+          </test-case>
+          <test-case description="Valida mÃºltiples reglas correctamente" name="ValidadorContractual - Invoke-DeclarativeValidation.Valida mÃºltiples reglas correctamente" time="0.1096" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>'BeGreaterThanOrEqual' is not a valid Should operator.</message>
+              <stack-trace>at line: 42 in C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0\Functions\Assertions\Should.ps1</stack-trace>
+            </failure>
+          </test-case>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="ValidadorContractual - Test-ContractCompliance" executed="True" result="Failure" success="False" time="0.0889" asserts="0" description="ValidadorContractual - Test-ContractCompliance">
+        <results>
+          <test-case description="Valida existencia de archivos contractuales" name="ValidadorContractual - Test-ContractCompliance.Valida existencia de archivos contractuales" time="0.0678" asserts="0" success="False" result="Failure" executed="True">
+            <failure>
+              <message>'-HaveMember' is not a valid Should operator.</message>
+              <stack-trace>at line: 42 in C:\Program Files\WindowsPowerShell\Modules\Pester\3.4.0\Functions\Assertions\Should.ps1</stack-trace>
+            </failure>
+          </test-case>
+          <test-case description="Detecta cuando faltan archivos contractuales" name="ValidadorContractual - Test-ContractCompliance.Detecta cuando faltan archivos contractuales" time="0.0211" asserts="0" success="True" result="Success" executed="True" />
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
