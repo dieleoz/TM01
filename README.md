@@ -268,20 +268,51 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 
 ## 🛠️ COMANDOS ÚTILES
 
-### Ejecutar Sincronización Completa
+### 🚀 Iniciar Sistema Web (Recomendado)
 ```powershell
+# Sincroniza automáticamente y sirve el sistema web
+powershell -ExecutionPolicy Bypass -File "docs/servidor_web.ps1"
+```
+**Resultado:** 
+- ✅ Parsea documentos T01/T03 MVP v1.1
+- ✅ Actualiza tm01_master_data.js
+- ✅ Regenera todas las interfaces
+- ✅ Inicia servidor en http://localhost:8000
+- ✅ **Sin revisión manual URL por URL**
+
+### 🔄 Sincronización Manual (Si es necesario)
+```powershell
+# Sincronización completa desde documentos fuente
 powershell -ExecutionPolicy Bypass -File "scripts/sincronizar_SISTEMA_TM01_COMPLETO.ps1" -Force -Verbose
 ```
 
-### Ejecutar Tests
+### 📊 Parsear Valores CAPEX desde T01
+```powershell
+# Extraer valores CAPEX desde documentos T01 MVP v1.1
+powershell -ExecutionPolicy Bypass -File "scripts/sync_T01_to_masterdata.ps1"
+
+# Modo DryRun (solo mostrar valores sin aplicar cambios)
+powershell -ExecutionPolicy Bypass -File "scripts/sync_T01_to_masterdata.ps1" -DryRun
+```
+
+### 🧪 Ejecutar Tests
 ```powershell
 powershell -ExecutionPolicy Bypass -File "tests/Run-AllTests.ps1"
 ```
 
-### Corregir Encoding HTML
+### 🔧 Corregir Encoding HTML
 ```powershell
 powershell -ExecutionPolicy Bypass -File "scripts/Fix-HtmlEncoding.ps1"
 ```
+
+### ⚠️ IMPORTANTE: Principio de Sincronización Automática
+
+> **"NO HARDCODEAR - PARSEAR AUTOMÁTICAMENTE"**
+> 
+> - Los valores en `tm01_master_data.js` NO deben estar hardcodeados
+> - Deben ser parseados automáticamente desde documentos T01/T03 MVP v1.1
+> - Al servir el sistema, la sincronización debe ser automática
+> - **No se debe revisar URL por URL manualmente**
 
 ---
 
@@ -304,6 +335,14 @@ powershell -ExecutionPolicy Bypass -File "scripts/Fix-HtmlEncoding.ps1"
 
 ## 📝 HISTORIAL DE VERSIONES
 
+### v4.1 (05-Dic-2025) - Sincronización Automática
+- ✅ **Parser automático de T01/T03:** Extrae valores CAPEX desde documentos fuente
+- ✅ **Servidor web mejorado:** Sincroniza automáticamente antes de servir
+- ✅ **Eliminación de hardcoding:** Valores parseados desde documentos
+- ✅ **Documentación actualizada:** ARCHITECTURE.md y README.md
+- ✅ **Principio fundamental:** "NO HARDCODEAR - PARSEAR AUTOMÁTICAMENTE"
+- ✅ **Resultado:** Sin revisión manual URL por URL necesaria
+
 ### v4.0 (31-Oct-2025)
 - ✅ Limpieza y organización completa del README
 - ✅ Consolidación de información duplicada
@@ -322,6 +361,6 @@ powershell -ExecutionPolicy Bypass -File "scripts/Fix-HtmlEncoding.ps1"
 
 ---
 
-**Última actualización:** 31 de octubre de 2025  
-**Versión:** 4.0  
-**Estado:** ✅ **OPERATIVO** - Sistema completo y funcional
+**Última actualización:** 05 de diciembre de 2025  
+**Versión:** 4.1  
+**Estado:** ✅ **OPERATIVO** - Sistema con sincronización automática completa

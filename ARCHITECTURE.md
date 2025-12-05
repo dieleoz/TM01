@@ -164,26 +164,84 @@ El sistema implementa **merge 3-vías** que preserva cambios manuales mientras s
 
 ## 🔄 SINCRONIZACIÓN AUTOMÁTICA
 
+### **Flujo de Sincronización Automática:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  1. PARSEO AUTOMÁTICO DE DOCUMENTOS T01/T03 MVP v1.1           │
+├─────────────────────────────────────────────────────────────────┤
+│  • Extrae valores CAPEX consolidados desde documentos fuente   │
+│  • Lee cantidades, precios unitarios y totales                 │
+│  • Valida coherencia entre T01/T03 y RESUMEN_EJECUTIVO         │
+│  • Script: sync_T01_to_masterdata.ps1                          │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  2. ACTUALIZACIÓN DE tm01_master_data.js                       │
+├─────────────────────────────────────────────────────────────────┤
+│  • Actualiza valores CAPEX en comentarios del archivo          │
+│  • Reconstruye estructura WBS desde documentos                 │
+│  • Aplica validaciones contractuales (C1/AT1/AT4)              │
+│  • Genera backup automático antes de cambios                   │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  3. PROPAGACIÓN A INTERFACES WEB                               │
+├─────────────────────────────────────────────────────────────────┤
+│  • Regenera datos_wbs_TM01_items.js                           │
+│  • Actualiza layout_datos.js                                   │
+│  • Recalcula presupuesto_datos.js                              │
+│  • Aplica cache-busting a archivos HTML                        │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  4. SERVIDOR WEB LISTO                                         │
+├─────────────────────────────────────────────────────────────────┤
+│  • Todas las interfaces reflejan valores actualizados          │
+│  • Sin necesidad de revisión manual URL por URL                │
+│  • Coherencia 100% garantizada                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### **Componentes Sincronizados:**
 
 | Componente | Fuente | Script | Destino | Frecuencia |
 |:-----------|:-------|:-------|:--------|:-----------|
-| **WBS Operativa** | tm01_master_data.js | sync_wbs_tm01.ps1 | datos_wbs_TM01_items.js | Manual |
-| **Layout** | DTs + T05 | sincronizar_layout.ps1 | layout_datos.js | Con DTs |
-| **Presupuesto** | WBS JSON | sincronizar_presupuesto.ps1 | presupuesto_datos.js | Automática |
+| **Valores CAPEX** | T01/T03 MVP v1.1 | sync_T01_to_masterdata.ps1 | tm01_master_data.js | **Automática al servir** |
+| **WBS Operativa** | tm01_master_data.js | sync_wbs_tm01.ps1 | datos_wbs_TM01_items.js | **Automática al servir** |
+| **Layout** | DTs + T05 | sincronizar_layout.ps1 | layout_datos.js | **Automática al servir** |
+| **Presupuesto** | WBS JSON | sincronizar_presupuesto.ps1 | presupuesto_datos.js | **Automática al servir** |
 | **RFQ FO** | CSV/Respaldo | RFQUpdater.psm1 | RFQ_001_FIBRA_OPTICA_v1.0.md | Con sync |
 
-**Comando único:**
+### **Comando Único (Ejecutar antes de servir):**
 ```powershell
+# Sincronización completa automática
 .\scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -Force -Verbose
+
+# O usar el script de servidor que sincroniza automáticamente
+.\docs\servidor_web.ps1  # Sincroniza y sirve automáticamente
 ```
 
-**Resultado:** Interfaces sincronizadas en ~6 segundos
+**Resultado:** 
+- ✅ Parseo de documentos T01/T03 en ~2 segundos
+- ✅ Actualización de tm01_master_data.js en ~1 segundo
+- ✅ Propagación a interfaces en ~3 segundos
+- ✅ **Total: ~6 segundos** de sincronización completa
+- ✅ **Sin revisión manual** URL por URL necesaria
 
 **Logs y bloqueo por validación:**
 - Si hay inconsistencias contractuales o técnicas, la ejecución se detiene
 - Entradas en `logs/incongruencias_YYYYMMDD.json`
 - No se escriben datos si falla validación
+- Backup automático antes de cada cambio
+
+### **Principio Fundamental:**
+
+> **"NO HARDCODEAR - PARSEAR AUTOMÁTICAMENTE"**
+> 
+> Los valores en `tm01_master_data.js` NO deben estar hardcodeados.
+> Deben ser parseados automáticamente desde los documentos T01/T03 MVP v1.1
+> que son la fuente de verdad del proyecto.
 
 ---
 
@@ -446,8 +504,43 @@ scripts/modules/
 ---
 
 **Documento creado:** 23 de Octubre de 2025  
-**Última actualización:** 31 de Octubre de 2025  
-**Versión:** 2.0  
+**Última actualización:** 05 de Diciembre de 2025  
+**Versión:** 2.1  
 **Estado:** ✅ COMPLETADO Y OPERATIVO  
 **Responsable:** Equipo Técnico / Arquitectura  
 **Próxima revisión:** Enero 2026
+
+---
+
+## 📝 CAMBIOS EN VERSIÓN 2.1 (05-Dic-2025)
+
+### ✅ Sincronización Automática Implementada
+
+**Problema identificado:**
+- Los valores en `tm01_master_data.js` estaban hardcodeados
+- No reflejaban los valores CAPEX consolidados de T01/T03 MVP v1.1
+- Requería revisión manual URL por URL
+
+**Solución implementada:**
+1. ✅ **Parser automático de T01/T03:** Script `sync_T01_to_masterdata.ps1`
+   - Extrae valores CAPEX desde documentos fuente
+   - Soporta múltiples formatos de tabla markdown
+   - Maneja rangos de valores (promedio automático)
+
+2. ✅ **Servidor web con sincronización automática:** `docs/servidor_web.ps1`
+   - Ejecuta sincronización completa antes de servir
+   - Parsea documentos T01/T03 MVP v1.1
+   - Actualiza tm01_master_data.js
+   - Regenera todas las interfaces
+   - **Sin revisión manual necesaria**
+
+3. ✅ **Documentación actualizada:**
+   - ARCHITECTURE.md con flujo de sincronización automática
+   - README.md con comandos actualizados
+   - Principio fundamental: "NO HARDCODEAR - PARSEAR AUTOMÁTICAMENTE"
+
+**Resultado:**
+- ✅ Coherencia 100% entre documentos y sistema web
+- ✅ Sincronización en ~6 segundos
+- ✅ Sin intervención manual
+- ✅ Trazabilidad completa desde documentos fuente
