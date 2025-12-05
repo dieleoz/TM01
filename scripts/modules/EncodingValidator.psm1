@@ -88,13 +88,29 @@ function Test-HtmlEncoding {
 function Test-AllHtmlEncoding {
     [CmdletBinding()]
     param(
-        [string[]]$Directories = @('docs', 'Sistema_Validacion_Web')
+        [string[]]$Directories = @('docs', 'Sistema_Validacion_Web'),
+        [string[]]$ExcludePatterns = @('*\old\*', '*\backup*', '*\temp*')
     )
     
     $htmlFiles = @()
     foreach ($dir in $Directories) {
         if (Test-Path -LiteralPath $dir) {
-            $htmlFiles += Get-ChildItem -Path $dir -Filter '*.html' -Recurse -ErrorAction SilentlyContinue
+            $allFiles = Get-ChildItem -Path $dir -Filter '*.html' -Recurse -ErrorAction SilentlyContinue
+            
+            # Filtrar archivos excluidos
+            foreach ($file in $allFiles) {
+                $shouldExclude = $false
+                foreach ($pattern in $ExcludePatterns) {
+                    if ($file.FullName -like $pattern) {
+                        $shouldExclude = $true
+                        break
+                    }
+                }
+                
+                if (-not $shouldExclude) {
+                    $htmlFiles += $file
+                }
+            }
         }
     }
     

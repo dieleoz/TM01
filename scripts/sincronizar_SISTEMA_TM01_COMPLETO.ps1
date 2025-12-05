@@ -220,10 +220,11 @@ try{
     }
     
     # Validación post-sync: verificar que no se haya corrompido el encoding de HTMLs
+    # Excluir carpetas old, backup y temp que contienen archivos legacy
     if (Get-Command Test-AllHtmlEncoding -ErrorAction SilentlyContinue) {
-        $encodingCheck = Test-AllHtmlEncoding -Directories @('docs', 'Sistema_Validacion_Web')
+        $encodingCheck = Test-AllHtmlEncoding -Directories @('docs', 'Sistema_Validacion_Web') -ExcludePatterns @('*\old\*', '*\backup*', '*\temp*')
         if ($encodingCheck.Invalid -gt 0) {
-            $errorMsg = "VALIDACION ENCODING FALLO: $($encodingCheck.Invalid) archivos HTML tienen problemas de encoding"
+            $errorMsg = "VALIDACION ENCODING FALLO: $($encodingCheck.Invalid) archivos HTML activos tienen problemas de encoding"
             if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
                 Write-LogEntry -Level 'ERROR' -Message $errorMsg -Context @{ Issues = $encodingCheck.Issues }
             }
@@ -235,7 +236,7 @@ try{
             exit 1
         } else {
             if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
-                Write-LogEntry -Level 'INFO' -Message "Validacion encoding OK: $($encodingCheck.Valid) archivos HTML validados"
+                Write-LogEntry -Level 'INFO' -Message "Validacion encoding OK: $($encodingCheck.Valid) archivos HTML activos validados (excluidos: old, backup, temp)"
             }
         }
     }
