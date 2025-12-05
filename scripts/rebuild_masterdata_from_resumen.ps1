@@ -104,48 +104,77 @@ class TM01MasterData {
 "@
 
 $sistemaId = 1
+$sistemasJS = @()
 foreach ($sistema in $capexTable.Keys | Sort-Object) {
     $capex = $capexTable[$sistema]
     $cantidad = if ($cantidades.ContainsKey($sistema)) { $cantidades[$sistema] } else { 1 }
     $capexCOP = $capex * 4000
+    $capexUnitario = [math]::Round($capex / $cantidad, 2)
     
-    $wbsData += @"
-
+    $sistemasJS += @"
             {
                 id: '$sistemaId',
                 sistema: '$sistema',
                 cantidad: $cantidad,
                 capexUSD: $capex,
                 capexCOP: $capexCOP,
-                capexUnitarioUSD: $([math]::Round($capex / $cantidad, 2)),
+                capexUnitarioUSD: $capexUnitario,
                 descripcion: 'Sistema $sistema completo',
                 estado: 'Validado'
-            },
+            }
 "@
     $sistemaId++
 }
 
-$wbsData = $wbsData.TrimEnd(',')
+$wbsData += ($sistemasJS -join ",`n")
+
 $wbsData += @"
 
         ];
         
-        // WBS - Estructura simplificada por capítulos
-        this.data.wbs = this.data.sistemas.map((s, idx) => ({
-            id: (idx + 1).toString(),
-            nivel: 1,
-            item: (idx + 1).toString(),
-            descripcion: s.sistema,
-            sistema: s.sistema,
-            cantidad: s.cantidad.toString(),
-            unidad: s.cantidad === 1 ? 'SISTEMA' : 'UND',
-            tipo: 'capitulo',
-            vu: s.capexUnitarioUSD.toString(),
-            vuCOP: (s.capexUnitarioUSD * 4000).toString(),
-            total: s.capexUSD.toString(),
-            totalCOP: s.capexCOP.toString(),
-            criterio: 'Validado contractualmente'
-        }));
+        // WBS - Estructura compatible con wbs.html (capítulo + subcapítulo + item)
+        this.data.wbs = [];
+        this.data.sistemas.forEach((s, idx) => {
+            const capId = (idx + 1).toString();
+            const sistemaUpper = s.sistema.toUpperCase();
+            
+            // Capítulo (nivel 1)
+            this.data.wbs.push({
+                id: capId,
+                nivel: 1,
+                item: capId,
+                descripcion: 'SISTEMA ' + sistemaUpper,
+                sistema: s.sistema,
+                tipo: 'capitulo'
+            });
+            
+            // Subcapítulo (nivel 2)
+            this.data.wbs.push({
+                id: capId + '.1',
+                nivel: 2,
+                item: capId + '.1',
+                descripcion: 'SUMINISTROS ' + sistemaUpper,
+                sistema: s.sistema,
+                tipo: 'subcapitulo'
+            });
+            
+            // Item principal (nivel 3)
+            this.data.wbs.push({
+                id: capId + '.1.1',
+                nivel: 3,
+                item: capId + '.1.1',
+                descripcion: s.sistema + ' - Sistema completo',
+                sistema: s.sistema,
+                cantidad: s.cantidad.toString(),
+                unidad: s.cantidad === 1 ? 'SISTEMA' : 'UND',
+                tipo: 'item',
+                vu: s.capexUnitarioUSD.toFixed(2),
+                vuCOP: (s.capexUnitarioUSD * 4000).toFixed(0),
+                total: s.capexUSD.toString(),
+                totalCOP: s.capexCOP.toString(),
+                criterio: 'Validado contractualmente - Fuente: RESUMEN_EJECUTIVO'
+            });
+        });
     }
     
     // MÉTODOS DE CONSULTA

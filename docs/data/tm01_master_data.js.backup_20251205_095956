@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════════════════════
 // SISTEMA TM01 - FUENTE ÚNICA DE VERDAD
 // Generado automáticamente desde: RESUMEN_EJECUTIVO_PROYECTO_COMPLETADO.md
-// Fecha de generación: 2025-12-05 09:59:56
+// Fecha de generación: 2025-12-05 09:54:44
 // ═══════════════════════════════════════════════════════════════════════════
 
 class TM01MasterData {
@@ -21,12 +21,13 @@ class TM01MasterData {
             totalCapex: 14674900,
             totalCapexCOP: 58699600000,
             trm: 4000,
-            fechaActualizacion: '2025-12-05 09:59:56',
+            fechaActualizacion: '2025-12-05 09:54:44',
             fuente: 'RESUMEN_EJECUTIVO_PROYECTO_COMPLETADO.md'
         };
         
         // SISTEMAS - Datos consolidados por sistema
-        this.data.sistemas = [            {
+        this.data.sistemas = [
+            {
                 id: '1',
                 sistema: 'CCTV',
                 cantidad: 30,
@@ -98,49 +99,22 @@ class TM01MasterData {
             }
         ];
         
-        // WBS - Estructura compatible con wbs.html (capítulo + subcapítulo + item)
-        this.data.wbs = [];
-        this.data.sistemas.forEach((s, idx) => {
-            const capId = (idx + 1).toString();
-            const sistemaUpper = s.sistema.toUpperCase();
-            
-            // Capítulo (nivel 1)
-            this.data.wbs.push({
-                id: capId,
-                nivel: 1,
-                item: capId,
-                descripcion: 'SISTEMA ' + sistemaUpper,
-                sistema: s.sistema,
-                tipo: 'capitulo'
-            });
-            
-            // Subcapítulo (nivel 2)
-            this.data.wbs.push({
-                id: capId + '.1',
-                nivel: 2,
-                item: capId + '.1',
-                descripcion: 'SUMINISTROS ' + sistemaUpper,
-                sistema: s.sistema,
-                tipo: 'subcapitulo'
-            });
-            
-            // Item principal (nivel 3)
-            this.data.wbs.push({
-                id: capId + '.1.1',
-                nivel: 3,
-                item: capId + '.1.1',
-                descripcion: s.sistema + ' - Sistema completo',
-                sistema: s.sistema,
-                cantidad: s.cantidad.toString(),
-                unidad: s.cantidad === 1 ? 'SISTEMA' : 'UND',
-                tipo: 'item',
-                vu: s.capexUnitarioUSD.toFixed(2),
-                vuCOP: (s.capexUnitarioUSD * 4000).toFixed(0),
-                total: s.capexUSD.toString(),
-                totalCOP: s.capexCOP.toString(),
-                criterio: 'Validado contractualmente - Fuente: RESUMEN_EJECUTIVO'
-            });
-        });
+        // WBS - Estructura simplificada por capítulos
+        this.data.wbs = this.data.sistemas.map((s, idx) => ({
+            id: (idx + 1).toString(),
+            nivel: 1,
+            item: (idx + 1).toString(),
+            descripcion: s.sistema,
+            sistema: s.sistema,
+            cantidad: s.cantidad.toString(),
+            unidad: s.cantidad === 1 ? 'SISTEMA' : 'UND',
+            tipo: 'capitulo',
+            vu: s.capexUnitarioUSD.toString(),
+            vuCOP: (s.capexUnitarioUSD * 4000).toString(),
+            total: s.capexUSD.toString(),
+            totalCOP: s.capexCOP.toString(),
+            criterio: 'Validado contractualmente'
+        }));
     }
     
     // MÉTODOS DE CONSULTA
@@ -191,4 +165,4 @@ window.exportarDatosCompletos = function() {
 
 console.log('✅ TM01 Master Data cargado desde RESUMEN_EJECUTIVO');
 console.log('📊 Total CAPEX: $' + window.tm01MasterData.getTotalCapex().toLocaleString() + ' USD');
-console.log('📅 Última actualización: 2025-12-05 09:59:56');
+console.log('📅 Última actualización: 2025-12-05 09:54:44');
