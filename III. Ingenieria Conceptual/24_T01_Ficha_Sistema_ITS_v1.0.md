@@ -40,7 +40,7 @@ El Sistema ITS tiene como objetivo **controlar y monitorear el tránsito de veh�
 - ✅ Circuito Cerrado de TV (CCTV)
 - ✅ Estaciones de Pesaje en Movimiento (WIM)
 - ✅ Estaciones Meteorológicas
-- ✅ Teléfonos de Emergencia (SOS)
+- ✅ Teléfonos de Emergencia (SOS) - Ver documento dedicado: `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md`
 - ✅ Detectores Automáticos de Incidentes (DAI)
 - ✅ Estaciones de Aforo Vehicular
 - ✅ Sistemas de Control de Velocidad (Radares)
@@ -124,13 +124,13 @@ El Concesionario deberá:
 
 | Componente | Cantidad Estimada | Ubicación | Función |
 |:-----------|:------------------|:----------|:--------|
-| **PMV** (Paneles de Mensaje Variable) | **28 unidades** | Distribuidos cada 10-20 km + peajes (AT1) | Información variable a usuarios (clima, incidentes, tiempos) |
-| **CCTV** (Cámaras de Vigilancia) | **30 cámaras** | Ubicaciones estratégicas del diseño | Vigilancia 24/7, detección incidentes, evidencia |
+| **PMV** (Paneles de Mensaje Variable) | **28 unidades** | Distribuidos cada 10-20 km + peajes (AT1) | Información variable a usuarios (clima, incidentes, tiempos) **Ver documento dedicado:** `24D_T01_Ficha_Sistema_PMV_MVP_v1.0.md` |
+| **CCTV** (Cámaras de Vigilancia) | **30 cámaras** | Ubicaciones estratégicas del diseño | Vigilancia 24/7, detección incidentes, evidencia **Ver documento dedicado:** `24C_T01_Ficha_Sistema_CCTV_MVP_v1.0.md` |
 | **Cámaras Panorámicas** | 4 unidades | Puntos críticos del corredor | Visión amplia de zonas estratégicas |
-| **WIM** (Pesaje en Movimiento) | **1 estación bidireccional** | PR4+0100 RN 4513 (ambos sentidos) | Control de peso de vehículos sin detenerlos |
-| **Estaciones Meteorológicas** | **3 estaciones** | 2 en peajes + 1 en CCO | Precipitación, temperatura, viento, visibilidad |
-| **Teléfonos SOS** | **88 unidades** ✅ | Cada 3 km máx. (AT1) + SOS #88 RN 4513 | Comunicación de emergencias |
-| **ETD/RADAR** | **16 unidades** | 2 RADAR-ANPR + 14 ETD puras | Detección automática de accidentes/congestión |
+| **WIM** (Pesaje en Movimiento) | **1 estación bidireccional** (4 plataformas: 2 WIM + 2 estáticas) | PR4+0100 RN 4513 (ambos sentidos) | Control de peso de vehículos sin detenerlos **Ver documento dedicado:** `24F_T01_Ficha_Sistema_WIM_MVP_v1.0.md` |
+| **Estaciones Meteorológicas** | **3 estaciones** | 2 en peajes + 1 en CCO | Precipitación, temperatura, viento, visibilidad **Ver documento dedicado:** `24G_T01_Ficha_Sistema_Estaciones_Meteorologicas_MVP_v1.0.md` |
+| **Teléfonos SOS** | **88 unidades** ✅ | Cada 3 km máx. (AT1) + SOS #88 RN 4513 | Comunicación de emergencias - Ver `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md` |
+| **ETD/RADAR** | **15 unidades** (13 ETD + 2 Radares) | 2 Radares sancionatorios + 13 ETD monitoreo | Detección automática de accidentes/congestión **Ver documento dedicado:** `24E_T01_Ficha_Sistema_ETD_RADAR_MVP_v1.0.md` |
 | **Estaciones de Aforo** | 10-15 estaciones | Puntos representativos | Conteo y clasificación vehicular |
 | **Radares de Velocidad** | **11 unidades** | Ubicaciones estratégicas por UF | Medición velocidad + foto matrícula |
 | **Detectores de Altura** | **8 unidades** | Puntos críticos (peajes/puentes/intersecciones) | Detección de vehículos sobredimensionados |
@@ -161,11 +161,11 @@ El Concesionario deberá:
 | Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:-----|:---------|:---------------------|:------------------|
 | PMV (Paneles Mensaje Variable) | 28 | $35,000 | $980,000 |
-| CCTV IP PTZ Exteriores | 30 | $15,787 | $473,621 |
+| CCTV IP PTZ Exteriores | 30 | $15,787 | $473,621 **Ver documento dedicado:** `24C_T01_Ficha_Sistema_CCTV_MVP_v1.0.md` (CAPEX: $390,000 USD) |
 | Cámaras Panorámicas | 4 | $15,000 | $60,000 |
 | Estaciones WIM (Pesaje) | 2 | $150,000 | $300,000 |
 | Estaciones Meteorológicas | 10 | $25,000 | $250,000 |
-| Teléfonos SOS | **87** | $3,500 | **$304,500** |
+| Teléfonos SOS | **88** | Ver T01 dedicado | Ver `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md` (CAPEX: $1.6M-$2.3M USD) |
 | Detectores Automáticos Incidentes | 16 | $22,847 | $365,548 |
 | Estaciones de Aforo | 12 | $30,000 | $360,000 |
 | Radares de Velocidad | 20 | $25,000 | $500,000 |
@@ -214,12 +214,11 @@ El Concesionario deberá:
 **Incremento:** +3 PMV (+$105,000 USD)  
 **Justificación:** Diseño detallado requiere 2 PMV por peaje (antes/después) + cobertura general cada 20 km máximo
 
-#### 🔴 **Nota de Ajuste Contractual - Postes SOS:**
-**Versión anterior:** 65 postes SOS ($227,500 USD)  
-**Versión ajustada:** 87 postes SOS ($304,500 USD)  
-**Incremento:** +22 postes (+$77,000 USD)  
+#### 📋 **Nota sobre Postes SOS:**
+**Documento dedicado:** Ver `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md` para información completa  
+**Cantidad:** 88 postes SOS (validado contractualmente)  
 **Fundamento legal:** AT1, Cap. 3 - Requisito explícito: "distancia máxima de 3 km entre sí"  
-**Cálculo obligatorio:** 259.6 km ÷ 3 km = **87 postes mínimos** (no negociable)
+**Presupuesto:** Ver documento dedicado (CAPEX estimado: $1.6M-$2.3M USD)
 
 ### 6.2 OPEX (Operación y Mantenimiento - Anual)
 
@@ -305,7 +304,7 @@ El Concesionario deberá:
   - CCTV: 1 cada 2-3 km + puntos críticos
   - WIM: 1 cada 30-50 km (según estudios de tráfico)
   - Estaciones Meteo: 1 cada 25-30 km
-  - **Teléfonos SOS: 87 unidades (máx. 3 km entre sí - AT1 obligatorio)** ✅
+  - **Teléfonos SOS: 88 unidades (máx. 3 km entre sí - AT1 obligatorio)** ✅ - Ver `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md`
   
 - **Supuesto 2:** Tecnología IP sobre fibra óptica como estándar de comunicación
 

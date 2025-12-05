@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** ETD (Estaciones de Toma de Datos) + Radares Sancionatorios  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.1  
+**Versión:** 1.2  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
 **Referencia Validación:** 35_VALIDACION_CONTRACTUAL_ETD_RADARES_v1.0  
@@ -18,6 +18,7 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - Separación ETD vs Radares según función | Adm. Contractual EPC |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** 16 equipos (14 ETD + 2 Radares), CAPEX actualizado | Adm. Contractual EPC |
+| 1.2 | 31/10/2025 | **Corrección según validación contractual:** 15 equipos (13 ETD + 2 Radares), CAPEX actualizado | Adm. Contractual EPC |
 
 ---
 
@@ -30,19 +31,19 @@
 | **Nombre del sistema** | ETD (Estaciones de Toma de Datos) + Radares Sancionatorios |
 | **Categoría** | ITS (Intelligent Transportation Systems) - Control de Tráfico |
 | **Código interno** | T04-ETD-RAD-002-v1.0 |
-| **Cantidad total** | **16 unidades** |
-| **CAPEX estimado** | **USD $436,548** (27,284 USD/unidad) |
-| **Documentos base** | T01 v1.2, T03 v1.0, Validación v1.0, Layout v1.0 |
+| **Cantidad total** | **15 unidades** |
+| **CAPEX estimado** | **USD $615,000** (41,000 USD/unidad) |
+| **Documentos base** | T01 v1.0 MVP, T03 v1.0, Validación v1.0, Layout v1.0 |
 
 ### 1.2 Distinción Funcional
 
 | Tipo | Cantidad | Función Principal | Certificación |
 |:-----|:---------|:------------------|:--------------|
-| **ETD (Monitoreo)** | 14 | Velocidad promedio, flujo, clasificación | ISO TC-204 |
+| **ETD (Monitoreo)** | 13 | Velocidad promedio, flujo, clasificación (una por UF) | ISO TC-204 |
 | **Radares (Sancionatorios)** | 2 | Detección infracciones, registro fotográfico | Res. 718/2018 + ONAC |
-| **TOTAL** | **16** | - | - |
+| **TOTAL** | **15** | - | - |
 
-> **Nota Crítica:** El proyecto contempla **16 equipos** (14 ETD + 2 Radares) que cubren todas las Unidades Funcionales del corredor. Los ETD proporcionan monitoreo estadístico y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
+> **Nota Crítica:** El proyecto contempla **15 equipos** (13 ETD + 2 Radares) que cubren todas las Unidades Funcionales del corredor. Los ETD proporcionan monitoreo estadístico (una por cada UF1-UF13) y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
 
 ### 1.3 Alcance de las Especificaciones
 

@@ -1,26 +1,28 @@
-# RFQ-003: SOLICITUD DE COTIZACIÓN - SISTEMA CCTV
-## Sistema de Circuito Cerrado de Televisión - Videovigilancia ITS
+# SOLICITUD DE COTIZACIÓN (RFQ-003)
+## SISTEMA CCTV (CIRCUITO CERRADO DE TELEVISIÓN) – VIDEOVIGILANCIA ITS
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Solicitud:** RFQ-003 - Sistema CCTV  
-**Fecha:** 22 de octubre de 2025  
+**RFQ No.:** RFQ-003-CCTV  
+**Fecha de emisión:** 04 de noviembre de 2025  
 **Versión:** 1.0  
-**Basado en:** T05 Ingeniería de Detalle CCTV v1.0  
+**Emitido por:** Administrador Contractual EPC  
 
 ---
 
-## 📋 **INFORMACIÓN GENERAL DEL PROYECTO**
+## 📋 INFORMACIÓN DEL PROYECTO
 
-### **Datos del Proyecto:**
-- **Nombre:** APP Puerto Salgar - Barrancabermeja
-- **Longitud:** 259.6 km
-- **Tipo:** Autopista de Peaje
-- **Modalidad:** APP (Asociación Público Privada)
-- **Contratista:** EPC (Engineering, Procurement, Construction)
-- **Ubicación:** Colombia (Cundinamarca - Santander)
+| Campo | Valor |
+|:------|:------|
+| **Longitud corredor** | 259.6 km |
+| **Distribución** | 13 Unidades Funcionales (UFs) |
+| **Tipo de proyecto** | Concesión vial 4G |
+| **Cliente final** | ANI |
 
-### **Objetivo de la Solicitud:**
-Cotización completa para el suministro, instalación, configuración y garantía del **Sistema de Circuito Cerrado de Televisión (CCTV)** consistente en 30 cámaras IP PTZ distribuidas estratégicamente a lo largo del corredor vial para videovigilancia ITS.
+---
+
+## 🎯 OBJETIVO DE LA COTIZACIÓN
+
+Solicitar oferta integral para el suministro, instalación, configuración, integración al CCO y puesta en marcha del **Sistema de Circuito Cerrado de Televisión (CCTV)** consistente en 30 cámaras IP PTZ distribuidas estratégicamente a lo largo del corredor vial para videovigilancia ITS, conforme a T04/T05 de CCTV y validación contractual vigente.
 
 ---
 
@@ -143,6 +145,50 @@ Cotización completa para el suministro, instalación, configuración y garantí
 - **Baterías:** 2×12V 50Ah AGM selladas
 - **Autonomía:** Mínimo 48 horas sin sol
 - **Protección:** Diodos bypass y sobrecarga
+
+---
+
+## 📍 UBICACIONES ESPECÍFICAS (PKD/PKR)
+
+Las 30 cámaras CCTV se ubicarán en los siguientes puntos kilométricos (PKD = Punto Kilométrico de Diseño, PKR = Punto Kilométrico Real):
+
+| # | PKR | Ruta | PKD | UF | Ubicación Física | Tipo | Observaciones |
+|:--|:----|:-----|:----|:---|:----------------|:-----|:--------------|
+| 1 | 38+100 | RN 4510 | 245+100 | UF-5.2 | Unidireccional | PTZ | Inicio monitoreo |
+| 2 | 40+050 | RN 4510 | 243+150 | UF-0D | Separador | PTZ | Inter Koran - REACTIVADA |
+| 3 | 69+000 | RN 4510 | 214+100 | UF-0D | Separador | PTZ | Peatonal 68+434 |
+| 4 | 81+000 | RN 4510 | 202+100 | UF-0D | Separador | PTZ | - |
+| 5 | 85+370 | RN 4510 | 197+730 | UF-1 | Separador | PTZ | ETD integrada |
+| 6 | 87+100 | RN 4510 | 196+000 | UF-1 | Separador | PTZ | - |
+| 7 | 91+850 | RN 4510 | 191+250 | UF-5.1 | Separador | PTZ | - |
+| 8 | 93+920 | RN 4510 | 189+180 | UF-1 | Separador | PTZ | - |
+| 9 | 97+030 | RN 4510 | 186+070 | UF-0D | Separador | PTZ | Inter Pto Boyacá 96+890 |
+| 10 | 104+150 | RN 4510 | 178+950 | UF-0D | Separador | PTZ | Área Servicio Zambito 104+100 |
+| 11 | 9+100 | RN 4511 | 141+400 | UF-5.1 | Izquierda | PTZ | - |
+| 12 | 9+365 | RN 4511 | 141+135 | UF-0D | Separador | PTZ | - |
+| 13 | 13+470 | RN 4511 | 137+030 | UF-2 | Separador | PTZ | - |
+| 14 | 14+500 | RN 4511 | 136+000 | UF-2 | Separador | PTZ | - |
+| 15 | 41+150 | RN 4511 | 109+350 | UF-5.1 | Separador | PTZ | - |
+| 16 | 60+480 | RN 4511 | 90+020 | UF-5.1 | Separador | PTZ | - |
+| 17 | 61+675 | RN 4511 | 88+825 | UF-5.1 | Izquierda | PTZ | Peatonal 61+346 |
+| 18 | 63+250 | RN 4511 | 87+250 | UF-5.1 | Separador | PTZ | - |
+| 19 | 81+650 | RN 4511 | 68+850 | UF-6 | Izquierda | PTZ | - |
+| 20 | 81+900 | RN 4511 | 68+600 | UF-6 | Izquierda | PTZ | - |
+| 21 | 113+300 | RN 4511 | 37+200 | UF-9 | Separador | PTZ | A.S. Aguas Negras 113+450 |
+| 22 | 115+800 | RN 4511 | 34+700 | UF-9 | Separador | PTZ | Peatonal 113+410 |
+| 23 | 116+900 | RN 4511 | 33+600 | UF-9 | Separador | PTZ | - |
+| 24 | 128+000 | RN 4511 | 22+500 | UF-11 | Separador | PTZ | - |
+| 25 | 0+320 | RN 4513 | 2+680 | UF-11 | Separador | PTZ | Inter Lizama 0+500 |
+| 26 | 3+875 | RN 4513 | 280+125 | UF-13 | Separador | PTZ | Báscula Izquierda 3+900 - WIM |
+| 27 | 4+150 | RN 4513 | 279+850 | UF-11 | Separador | PTZ | - |
+| 28 | 4+400 | RN 4513 | 279+600 | UF-11 | Separador | PTZ | CCO Izquierda 4+400 - N1-CCO |
+| 29 | 9+800 | RN 4513 | 274+200 | UF-11 | Sur | PTZ | Zona CCO |
+
+**Referencia:** `VII. Documentos Transversales/43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md`
+
+> **Nota:** El PKD (Punto Kilométrico de Diseño) es la distancia lineal en el anillo de fibra óptica desde el CCO (PKD 0+000). El PKR (Punto Kilométrico Real) es la progresiva kilométrica según los planos oficiales de la vía.
+
+**Observación:** 1 cámara eliminada sin justificación (fila 89 - PKR 41+800, eliminada del alcance).
 
 ---
 
@@ -375,15 +421,16 @@ Las coordenadas exactas de cada cámara se proporcionarán en el documento **Lay
 
 ---
 
-## 📅 **CRONOGRAMA Y CONDICIONES**
+## 📅 CRONOGRAMA DE LICITACIÓN
 
-### **Fechas Importantes:**
-- **Publicación RFQ:** 22 de octubre de 2025
-- **Fecha límite consultas:** 29 de octubre de 2025
-- **Fecha límite cotizaciones:** 5 de noviembre de 2025
-- **Evaluación propuestas:** 6-12 de noviembre de 2025
-- **Adjudicación:** 15 de noviembre de 2025
-- **Inicio trabajos:** 1 de diciembre de 2025
+| Fecha | Actividad |
+|:------|:----------|
+| 04-Nov-2025 | Emisión RFQ |
+| 11-Nov-2025 | Límite consultas |
+| 14-Nov-2025 | Respuesta a consultas |
+| 21-Nov-2025 | Cierre ofertas (12:00) |
+| 24-29 Nov-2025 | Evaluación |
+| 02-Dec-2025 | Adjudicación |
 
 ### **Condiciones de Pago:**
 - **Anticipo:** 30% contra garantía bancaria
@@ -398,23 +445,20 @@ Las coordenadas exactas de cada cámara se proporcionarán en el documento **Lay
 
 ---
 
-## 📞 **INFORMACIÓN DE CONTACTO**
+## 📎 ANEXOS Y REFERENCIAS
 
-### **Responsable Técnico:**
-- **Nombre:** Administrador Contractual EPC
-- **Email:** [email@contratista.com]
-- **Teléfono:** +57 (1) XXX-XXXX
-- **Horario atención:** Lunes a Viernes 8:00-17:00
+- `IV. Ingenieria Basica/03_T04_Especificaciones_Tecnicas_CCTV_v1.0.md`  
+- `V. Ingenieria de Detalle/05_T05_Ingenieria_Detalle_CCTV_v1.0.md`  
+- `VII. Documentos Transversales/42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md`
 
-### **Consultas Técnicas:**
-- **Email:** [cctv.rfq@proyecto.com]
-- **Asunto:** RFQ-003 CCTV - Consulta Técnica
-- **Respuesta:** Máximo 48 horas hábiles
+---
 
-### **Entrega Cotizaciones:**
-- **Email:** [cotizaciones@proyecto.com]
-- **Asunto:** RFQ-003 CCTV - Cotización
-- **Formato:** PDF + Excel (estructura requerida)
+## 📞 CONTACTO Y ENTREGA
+
+**Envío de ofertas:** licitaciones@proyecto.com  
+**Asunto:** "OFERTA RFQ-003 CCTV – [EMPRESA]"  
+**Formato:** PDF firmado + Excel de precios  
+**Plazo de validez:** ≥90 días
 
 ---
 
@@ -465,9 +509,6 @@ Las coordenadas exactas de cada cámara se proporcionarán en el documento **Lay
 
 ---
 
-**FIN DEL DOCUMENTO RFQ-003 CCTV**  
-**Versión:** 1.0  
-**Fecha:** 22 de octubre de 2025  
-**Páginas:** 15  
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Sistema:** Circuito Cerrado de Televisión (30 cámaras IP PTZ)
+---
+
+**Fin del documento – RFQ-003 CCTV v1.0**

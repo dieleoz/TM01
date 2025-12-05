@@ -1,7 +1,7 @@
 # ARQUITECTURA DEL SISTEMA TM01 TRONCAL MAGDALENA
-# Proyecto: TM01 Troncal Magdalena - Sistema de Validación Web
-# Versión: 1.2 | Fecha: 30 de Octubre de 2025
-# Estado: ✅ IMPLEMENTADO Y OPERATIVO (Arquitectura 4 capas consolidada + contrato-first + validaciones)
+**Proyecto:** TM01 Troncal Magdalena - Sistema de Validación Web  
+**Versión:** 2.0 | Fecha: 31 de Octubre de 2025  
+**Estado:** ✅ IMPLEMENTADO Y OPERATIVO
 
 ---
 
@@ -16,6 +16,7 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 ## 🏗️ ARQUITECTURA EN 4 CAPAS
 
 ### **CAPA 1: FUENTES DE VERDAD (Inmutables)**
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  FUENTES DE VERDAD - DOCUMENTOS BASE                            │
@@ -28,7 +29,8 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### **CAPA 2: TRANSFORMACIÓN (Scripts PowerShell, contrato→T05→master)**
+### **CAPA 2: TRANSFORMACIÓN (Scripts PowerShell)**
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  TRANSFORMACIÓN - PROCESAMIENTO DE DATOS                        │
@@ -38,37 +40,41 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │  • sincronizar_layout.ps1 ✅ COMPLETADO (Layout)              │
 │  • sincronizar_presupuesto.ps1 ✅ COMPLETADO (Presupuesto)    │
 │  • sincronizar_SISTEMA_TM01_COMPLETO.ps1 ✅ MAESTRO           │
-│  • Generadores de DTs                                           │
-│  • Módulos reutilizables                                        │
+│  • 11 módulos PowerShell reutilizables                         │
 │  • Validadores de coherencia técnica (C1/AT1/AT4 bloqueantes)   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ### **CAPA 3: DATOS INTERMEDIOS (Generados - No Editar)**
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  DATOS INTERMEDIOS - ESTRUCTURAS DINÁMICAS                     │
 ├─────────────────────────────────────────────────────────────────┤
-│  • datos_wbs_TM01_items.js ✅ GENERADO                         │
-│  • layout_datos.js ✅ GENERADO                                 │
-│  • criterios_tecnicos_base.js (UTF-8)                          │
-│  • riesgos_wbs.js (Riesgos dinámicos)                          │
+│  • datos_wbs_TM01_items.js ✅ GENERADO (24 items)             │
+│  • layout_datos.js ✅ GENERADO (52+ equipos)                  │
 │  • presupuesto_datos.js ✅ GENERADO                            │
+│  • criterios_tecnicos_base.js                                  │
+│  • riesgos_wbs.js (Riesgos dinámicos)                          │
 │                                                                 │
 │  ⚠️ NUNCA editar manualmente - regenerar con scripts            │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ### **CAPA 4: VISUALIZACIÓN (Interfaces de Usuario)**
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  VISUALIZACIÓN - INTERFACES INTERACTIVAS                       │
 ├─────────────────────────────────────────────────────────────────┤
 │  • index.html (login → redirige a docs/WBS_Menu_Principal.html) │
 │  • docs/WBS_Menu_Principal.html (entrada principal)            │
-│  • docs/wbs.html (WBS interactiva)                             │
-│  • docs/layout.html (layout filtrable)                         │
-│  • docs/presupuesto.html (dashboard presupuestal)              │
+│  • docs/wbs.html (WBS interactiva - 24 items)                 │
+│  • docs/layout.html (layout filtrable - 52+ equipos)           │
+│  • docs/presupuesto.html (dashboard presupuestal)             │
+│  • docs/cronograma.html (cronograma por UF)                   │
+│  • docs/reporte_gerencial.html (reporte ejecutivo)            │
+│  • docs/analisis_riesgos.html (análisis de riesgos)           │
 │                                                                 │
 │  ✅ Sistema operativo con propagación automática de cambios     │
 └─────────────────────────────────────────────────────────────────┘
@@ -94,30 +100,144 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │          (24 items)        │
 └──────┬────────────────────┘
        │
-       ├──→ [WBS_COMPLETA_TODO_Interactiva_v4.0.html] → Visualización WBS
+       ├──→ [docs/wbs.html] → Visualización WBS
        │
-       ├──→ [WBS_Presupuesto_TM01_Troncal_Magdalena.html] → Presupuesto
+       ├──→ [docs/presupuesto.html] → Presupuesto
        │
-       ├──→ [WBS_Layout_Maestro.html] → Layout georreferenciado
+       ├──→ [docs/layout.html] → Layout georreferenciado
        │
        └──→ [Generación automática de DTs] → Documentos técnicos
 ```
 
-### Contrato-first y validaciones antes de escribir
-- El script maestro lee fuentes en prioridad: C1/AT1/AT4 → T05 → T04 → T03/T01.
-- Si una actualización viola el contrato, se bloquea la escritura y se registra en `logs/`.
-- `docs/data/tm01_master_data.js` solo se actualiza si todas las validaciones pasan.
-- RFQs con bloques AUTOGEN se reescriben entre marcadores, sin afectar el resto.
+### **Contrato-First y Validaciones**
 
-### RFQ AUTOGEN (integración)
-- `X. Entregables Consolidados/RFQ_001_FIBRA_OPTICA_v1.0.md` contiene marcadores `<!-- AUTOGEN:FO_TABLE_START -->` / `<!-- AUTOGEN:FO_TABLE_END -->`.
-- La tabla se genera desde `RFQ-001_ANEXO_J_CANTIDADES_PRESUPUESTO.csv` o respaldo integrado en el script.
+- **Prioridad de fuentes:** C1/AT1/AT4 → T05 → T04 → T03/T01
+- **Validación bloqueante:** Si una actualización viola el contrato, se bloquea la escritura
+- **Logs de incongruencias:** Registro en `logs/incongruencias_YYYYMMDD.json`
+- **Escritura segura:** `docs/data/tm01_master_data.js` solo se actualiza si todas las validaciones pasan
+- **RFQs AUTOGEN:** Bloques entre marcadores `<!-- AUTOGEN:FO_TABLE_START -->` / `<!-- AUTOGEN:FO_TABLE_END -->` se reescriben automáticamente
+
+---
+
+## 🔄 SINCRONIZACIÓN BIDIRECCIONAL (Merge 3-vías)
+
+### **Sistema de Merge Bidireccional**
+
+El sistema implementa **merge 3-vías** que preserva cambios manuales mientras sincroniza desde documentación técnica:
+
+```
+┌─────────────┐
+│    BASE     │ ← Snapshot anterior (estado conocido)
+│  (Snapshot) │
+└──────┬──────┘
+       │
+       ├──┐
+       │  │ Merge 3-vías
+       │  │
+       ▼  ▼
+┌─────────────┐   ┌─────────────┐
+│   SOURCE    │   │   CURRENT   │
+│    (T05)    │   │  (Manual)   │
+│ Documentación│   │ Cambios UI │
+└─────────────┘   └─────────────┘
+```
+
+**Reglas de Resolución:**
+- **Campos Contractuales** (`cantidad`, `vu`, `total`, `codigo`): Prioridad SOURCE (T05)
+- **Campos UI** (`descripcion`, `observaciones`, `notas`): Prioridad CURRENT (manuales)
+- **Arrays** (`wbs`, `layout`, `presupuesto`): Merge inteligente por ID/código
+
+**Componentes:**
+- `scripts/modules/MergeEngine.psm1` - Motor de merge 3-vías
+- `scripts/modules/DataMapper.psm1` - Orquestador de sincronización bidireccional
+- `scripts/modules/Snapshotter.psm1` - Sistema de snapshots automáticos
+- `scripts/modules/ValidadorContractual.psm1` - Validación contract-first
+- `rules/contract_rules.yaml` - Reglas declarativas de validación
+
+**Uso:**
+```powershell
+# La sincronización bidireccional se ejecuta automáticamente
+.\scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -Force
+```
+
+---
+
+## 🔄 SINCRONIZACIÓN AUTOMÁTICA
+
+### **Componentes Sincronizados:**
+
+| Componente | Fuente | Script | Destino | Frecuencia |
+|:-----------|:-------|:-------|:--------|:-----------|
+| **WBS Operativa** | tm01_master_data.js | sync_wbs_tm01.ps1 | datos_wbs_TM01_items.js | Manual |
+| **Layout** | DTs + T05 | sincronizar_layout.ps1 | layout_datos.js | Con DTs |
+| **Presupuesto** | WBS JSON | sincronizar_presupuesto.ps1 | presupuesto_datos.js | Automática |
+| **RFQ FO** | CSV/Respaldo | RFQUpdater.psm1 | RFQ_001_FIBRA_OPTICA_v1.0.md | Con sync |
+
+**Comando único:**
+```powershell
+.\scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -Force -Verbose
+```
+
+**Resultado:** Interfaces sincronizadas en ~6 segundos
+
+**Logs y bloqueo por validación:**
+- Si hay inconsistencias contractuales o técnicas, la ejecución se detiene
+- Entradas en `logs/incongruencias_YYYYMMDD.json`
+- No se escriben datos si falla validación
+
+---
+
+## 🧩 MÓDULOS REUTILIZABLES
+
+### **11 Módulos PowerShell Implementados:**
+
+```
+scripts/modules/
+├─ DataMapper.psm1 (241 líneas, 5 funciones)
+│  └─ Sincronización bidireccional Docs ↔ Data
+│
+├─ MergeEngine.psm1 (320 líneas, 6 funciones)
+│  └─ Merge 3-vías con resolución automática de conflictos
+│
+├─ Logger.psm1 (97 líneas, 4 funciones)
+│  └─ Logging estructurado JSON con niveles
+│
+├─ ValidadorContractual.psm1 (115 líneas, 4 funciones)
+│  └─ Validación contract-first (C1/AT1/AT4)
+│
+├─ DTProcessor.psm1 (78 líneas, 7 funciones)
+│  └─ Procesamiento de cola de DTs secuencial
+│
+├─ Snapshotter.psm1 (88 líneas, 4 funciones)
+│  └─ Sistema de snapshots pre-sincronización
+│
+├─ EncodingValidator.psm1 (118 líneas, 2 funciones)
+│  └─ Validación y corrección de encoding UTF-8
+│
+├─ CacheBuster.psm1 (23 líneas, 1 función)
+│  └─ Versionamiento automático de archivos JS
+│
+├─ MasterUpdater.psm1 (22 líneas, 1 función)
+│  └─ Actualización segura del archivo maestro
+│
+├─ RFQUpdater.psm1 (28 líneas, 1 función)
+│  └─ Actualización de bloques AUTOGEN en RFQs
+│
+└─ T05Parser.psm1 (24 líneas, 2 funciones)
+   └─ Extracción de datos desde documentos T05
+```
+
+**Totales:**
+- **11 módulos** especializados
+- **37 funciones** reutilizables
+- **~1,154 líneas** de código PowerShell
+- **Promedio:** ~31 líneas/función, ~105 líneas/módulo
 
 ---
 
 ## 📋 SISTEMA DE DECISIONES TÉCNICAS (DT)
 
-### Arquitectura de Event Sourcing:
+### **Arquitectura de Event Sourcing:**
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -158,138 +278,15 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 **Flujo de ejecución:**
 1. Especialista genera DT (interfaz HTML o manual)
 2. DT incluye YAML con instrucciones
-3. Cursor lee YAML y ejecuta cambios
-4. Propagación automática en 4 niveles
-5. Log de ejecución completado
-6. Auditoría completa mantenida
+3. Sistema lee YAML y ejecuta cambios
+4. Validación contract-first antes de escribir
+5. Propagación automática en 4 niveles
+6. Log de ejecución completado
+7. Auditoría completa mantenida
 
-Reglas:
-- Overrides por DT se aplican solo si no violan contrato; de lo contrario, se bloquean y se anotan en §12 del DT.
-
-### Cambios dinámicos (fusionado de ARQUITECTURA_CAMBIOS_DINAMICOS_TM01)
-- Propagación WBS → Presupuesto → Layout → Matriz contractual mediante funciones `actualizarPresupuesto`, `actualizarLayout`, y recálculo de totales.
-- Impacto presupuestal automático: recalcula CD, AIU (23/5/5) e IVA (19%) por tipo SUM/OBRA/SERV.
-- Validaciones automáticas: cantidad, VU, ubicación/PK (UF) y criterio técnico previa a escritura.
-
----
-
-## 🔄 SINCRONIZACIÓN AUTOMÁTICA
-
-### Componentes Sincronizados:
-
-| Componente | Fuente | Script | Destino | Frecuencia |
-|:-----------|:-------|:-------|:--------|:-----------|
-| **WBS Operativa** | tm01_master_data.js | sync_wbs_tm01.ps1 | datos_wbs_TM01_items.js | Manual |
-| **Layout** | DTs | sincronizar_layout.ps1 | layout_datos.js | Con DTs |
-| **Presupuesto** | WBS JSON | sincronizar_presupuesto.ps1 | presupuesto_datos.js | Automática |
-| **Riesgos** | MATRIZ_RIESGOS | sincronizar_riesgos.ps1 | riesgos_wbs.js | Automática |
-| **Reporte** | WBS JSON | generar_reporte_gerencial.ps1 | reporte_gerencial_data.js | Automática |
-
-**Comando único:**
-```powershell
-.\scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1
-```
-
-**Resultado:** 4 interfaces sincronizadas en ~6 segundos
-
-**Logs y bloqueo por validación:**
-- Si hay inconsistencias contractuales o técnicas, la ejecución se detiene, se dejan entradas en `logs/incongruencias_YYYYMMDD.json` y no se escriben datos.
-
----
-
-## 🧩 MÓDULOS REUTILIZABLES
-
-### Módulos Creados:
-
-```
-scripts/modules/
-├─ Logger.psm1 (262 líneas)
-│  └─ 8 funciones de logging estructurado JSON
-│
-├─ SistemaMapper.psm1 (15 líneas)
-│  └─ Mapeo de 6 sistemas TM01
-│
-├─ DTDetector.psm1 (47 líneas)
-│  └─ Detección de DTs recientes/con impacto layout
-│
-├─ LayoutExecutor.psm1 (52 líneas)
-│  └─ Ejecución de scripts especializados (SOS, CCTV, PMV, etc.)
-│
-├─ Consolidator.psm1 (72 líneas)
-│  └─ Consolidación de documentos ejecutivos
-│
-└─ LayoutPreserver.psm1 (285 líneas)
-   ├─ Get-LayoutCompleto - Carga layout con fallback a backup
-   ├─ Get-EquiposPorCategoria - Filtra por categoría WBS
-   ├─ Remove-EquiposPorCategoria - Elimina solo categoría específica
-   ├─ Add-EquiposNuevos - Agrega nuevos equipos
-   └─ Save-LayoutCompleto - Guarda con backup automático
-```
-
----
-
-## 🔍 FLUJO COMPLETO DE UNA DT
-
-### Ejemplo: Cambio de Cantidad de Cámaras CCTV
-
-```
-PASO 1: ESPECIALISTA (WBS Interactiva HTML)
-├─ Filtra por "CCTV"
-├─ Ve 45 elementos
-├─ Click "📝 DT" en item específico
-├─ Completa observación técnica
-└─ Descarga: DT-TM01-CCTV-001-2025-10-23.md
-
-PASO 2: GUARDAR DT
-└─ Mover a: II. Apendices Tecnicos/Decisiones_Tecnicas/
-
-PASO 3: EJECUTAR (Automático o Manual)
-│
-├─ OPCIÓN A: Automático (Cursor con .cursorrules)
-│   └─ Cursor detecta DT → Lee YAML → Ejecuta
-│
-└─ OPCIÓN B: Manual (Script)
-    └─ .\scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1
-
-PASO 4: DETECCIÓN (cocinar.ps1)
-├─ Detecta DT con impacto_layout: true
-├─ Lee sistema: "CCTV"
-└─ Ejecuta: regenerar_cctv_45_camaras.ps1
-
-PASO 5: REGENERACIÓN LAYOUT
-├─ Limpia elementos antiguos
-├─ Genera 45 cámaras según criterio técnico
-├─ Actualiza layout.md
-├─ Regenera layout_datos.js
-└─ Actualiza LAYOUT_INTEGRAL_COMPLETO_v1.0.json
-
-PASO 6: CONSOLIDACIÓN (cocinar.ps1)
-├─ Lee fuentes de cocina (III, V)
-├─ Consolida en SISTEMA_03_CCTV_EJECUTIVO.md
-└─ Agrega nota de DT aplicada
-
-PASO 7: EXPORTACIÓN (servir.ps1)
-├─ Lee SISTEMA_03_...EJECUTIVO.md
-├─ Pandoc genera .docx
-├─ Pandoc genera .html
-└─ Guarda en X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/
-
-PASO 8: VERIFICACIÓN
-├─ Abrir WBS_Layout_Maestro.html
-├─ Ctrl+Shift+F5 (limpiar cache)
-├─ Filtrar por "CCTV"
-└─ Verificar: 45 elementos
-
-PASO 9: LOG (Si usa cocinar_v2.ps1 -ConLogs)
-└─ Genera: logs/cocinar_YYYYMMDD_HHMMSS.json
-   ├─ DTs procesadas: 1
-   ├─ Archivos modificados: 8
-   ├─ Duración: 25 segundos
-   └─ Métricas: elementos_procesados=45
-```
-
-**Tiempo total:** ~25 segundos (automático)  
-**Intervención manual:** Solo 1 comando
+**Reglas:**
+- Overrides por DT se aplican solo si no violan contrato
+- Si violan contrato, se bloquean y se registran en §12 del DT
 
 ---
 
@@ -299,24 +296,24 @@ PASO 9: LOG (Si usa cocinar_v2.ps1 -ConLogs)
 - ✅ **Fuente única de verdad:** `tm01_master_data.js` centraliza todos los datos
 - ✅ **Propagación automática:** Cambios se reflejan en todas las interfaces
 - ✅ **Sincronización en tiempo real:** ~3 segundos de actualización
-- ✅ **Estructura robusta:** Basada en arquitectura de 4 capas
+- ✅ **Merge bidireccional:** Preserva cambios manuales vs documentación técnica
 
 ### **2. Interfaces Interactivas:**
 - ✅ **Portal de acceso seguro:** Sistema de login con roles (QA, Especificador, Admin)
 - ✅ **Dashboard principal:** Navegación centralizada a todas las interfaces
-- ✅ **WBS interactiva:** 24 items con botones de acción (Exportar, Analizar Riesgos, Proponer Cambios, Generar DT)
-- ✅ **Layout georreferenciado:** 52 equipos con mapa interactivo
-- ✅ **Presupuesto dinámico:** Cálculos automáticos con AIU, IVA y subtotales por subsistema
-- ✅ **Modificador dinámico:** Cambios en tiempo real con propagación automática
+- ✅ **WBS interactiva:** 24 items con botones de acción
+- ✅ **Layout georreferenciado:** 52+ equipos con mapa interactivo
+- ✅ **Presupuesto dinámico:** Cálculos automáticos con AIU, IVA y subtotales
+- ✅ **Cronograma por UF:** Plazos contractuales con indicadores de estado
 
 ### **3. Generación de DTs:**
 - ✅ **DT por item WBS:** Botón contextual en cada elemento
-- ✅ **Menú de tipos:** Cambio Técnico, Optimización, Gestión de Riesgo, Verificación, Personalizado
-- ✅ **Formulario completo:** Observación, justificación, impacto presupuestal, responsable
+- ✅ **Menú de tipos:** Cambio Técnico, Optimización, Gestión de Riesgo, Verificación
+- ✅ **Formulario completo:** Observación, justificación, impacto presupuestal
 - ✅ **Descarga automática:** Archivo Markdown listo para usar
 
 ### **4. Análisis y Reportes:**
-- ✅ **Análisis de riesgos:** Ventana emergente con clasificación por nivel
+- ✅ **Análisis de riesgos:** Clasificación por nivel
 - ✅ **Propuestas de cambios:** Interfaz para proponer modificaciones
 - ✅ **Exportación Excel:** Múltiples hojas con desglose completo
 - ✅ **Estadísticas financieras:** Totales, AIU, IVA, subtotales por subsistema
@@ -341,34 +338,116 @@ PASO 9: LOG (Si usa cocinar_v2.ps1 -ConLogs)
 - **Implementación:** Interfaces cargan datos desde repositorio
 
 ### **4. Module Pattern**
-- **Módulos PowerShell:** `.psm1` reutilizables
+- **Módulos PowerShell:** 11 módulos `.psm1` reutilizables
 - **Beneficio:** Código modular y mantenible
-- **Implementación:** 6 módulos especializados
+- **Implementación:** Módulos especializados con responsabilidades claras
 
 ### **5. Cache-Busting Pattern**
 - **Versionamiento automático:** `archivo.js?v=timestamp`
 - **Beneficio:** Previene errores por caché del navegador
 - **Implementación:** Timestamps en carga de archivos JS
 
+### **6. Merge 3-vías Pattern**
+- **Sincronización bidireccional:** BASE vs SOURCE vs CURRENT
+- **Beneficio:** Preserva cambios manuales mientras sincroniza documentación
+- **Implementación:** MergeEngine con resolución automática de conflictos
+
+---
+
+## 🧪 TESTING Y CALIDAD
+
+### **Framework de Testing:**
+- ✅ **Pester implementado:** Framework de testing automatizado
+- ✅ **Tests unitarios:** 18 tests para módulos principales
+- ✅ **Tests de integración:** 10 tests para flujos críticos
+- ✅ **Cobertura de código:** 31.92% (323/1012 comandos)
+
+### **Scripts de Testing:**
+- `tests/Run-AllTests.ps1` - Script maestro de tests
+- `tests/unit/MergeEngine.Tests.ps1` - Tests unitarios MergeEngine
+- `tests/unit/ValidadorContractual.Tests.ps1` - Tests unitarios ValidadorContractual
+- `tests/integration/Sincronizacion.Tests.ps1` - Tests de integración
+
+---
+
+## 📊 MÉTRICAS DEL SISTEMA
+
+### **Módulos PowerShell:**
+- **Total módulos:** 11
+- **Total funciones:** 37
+- **Total líneas:** ~1,154 líneas
+- **Promedio líneas/función:** ~31 líneas
+- **Promedio líneas/módulo:** ~105 líneas
+
+### **Scripts Principales:**
+- `sincronizar_SISTEMA_TM01_COMPLETO.ps1` - Script maestro (~250 líneas)
+- `sync_wbs_tm01.ps1` - Sincronización WBS (~300 líneas)
+- `sincronizar_layout.ps1` - Sincronización Layout (~400 líneas)
+- `sincronizar_presupuesto.ps1` - Sincronización Presupuesto (~400 líneas)
+
+### **Interfaces Web:**
+- **8 interfaces HTML** operativas
+- **24 items WBS** estructurados
+- **52+ equipos** georreferenciados
+- **Presupuesto dinámico** con cálculos automáticos
+
+---
+
+## 🔐 SISTEMA DE ACCESO SEGURO
+
+### **Credenciales de Acceso:**
+
+| Rol | Usuario | Contraseña | Acceso |
+|:----|:--------|:-----------|:-------|
+| **QA** | qa | qa | Dashboard QA + todas las herramientas |
+| **Especificador** | especificador | esp | Herramientas de especificación |
+| **Admin** | admin | admin | Acceso completo al sistema |
+
 ---
 
 ## 📚 REFERENCIAS
 
-**Documentos relacionados:**
-- `README.md` - Documentación principal
+### **Documentos Relacionados:**
+- `README.md` - Documentación principal del proyecto
 - `ROADMAP.md` - Plan de trabajo y cronograma
+- `INDICE_MAESTRO_PROYECTO.md` - Índice completo del proyecto
 - `LECCIONES_APRENDIDAS.md` - Errores y soluciones documentadas
-- `GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md` - Metodología base
-- `scripts/REQUISITOS_SISTEMA.md` - Requisitos técnicos
+- `docs/ARQUITECTURA_MERGE_BIDIRECCIONAL.md` - Documentación detallada del merge
 
-**Diagramas:**
-- Este documento incluye diagramas ASCII de arquitectura
-- Para diagramas visuales: Ver `38. DiagramasArquitectura_v1.0.md`
+### **Documentación Técnica:**
+- `docs/ARQUITECTURA_WEB_TM01_v1.0.md` - Arquitectura del sistema web
+- `docs/MANUAL_DESARROLLADOR.md` - Manual para desarrolladores
+- `docs/MANUAL_USUARIO.md` - Manual para usuarios
+
+---
+
+## 🚀 COMANDOS ÚTILES
+
+### **Sincronización Completa:**
+```powershell
+.\scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1 -Force -Verbose
+```
+
+### **Ejecutar Tests:**
+```powershell
+.\tests\Run-AllTests.ps1
+```
+
+### **Corregir Encoding HTML:**
+```powershell
+.\scripts\Fix-HtmlEncoding.ps1
+```
+
+### **Procesar Cola de DTs:**
+```powershell
+.\scripts\process_dt_queue.ps1
+```
 
 ---
 
 **Documento creado:** 23 de Octubre de 2025  
-**Versión:** 1.0  
-**Estado:** ✅ COMPLETADO  
+**Última actualización:** 31 de Octubre de 2025  
+**Versión:** 2.0  
+**Estado:** ✅ COMPLETADO Y OPERATIVO  
 **Responsable:** Equipo Técnico / Arquitectura  
 **Próxima revisión:** Enero 2026

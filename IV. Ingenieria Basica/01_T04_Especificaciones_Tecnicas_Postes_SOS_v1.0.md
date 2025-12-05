@@ -30,7 +30,7 @@
 | **Nombre del sistema** | Postes SOS - Sistema de Telefonía de Emergencia |
 | **Categoría** | ITS (Intelligent Transportation Systems) |
 | **Código interno** | T04-SOS-001-v1.0 |
-| **Cantidad total** | **87 unidades** |
+| **Cantidad total** | **88 unidades** |
 | **CAPEX estimado** | **USD $1,044,000** (12,000 USD/unidad) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación Contractual v1.0, Layout v1.0 |
 

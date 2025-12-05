@@ -105,12 +105,12 @@ Esta arquitectura cubre los **10 subsistemas del ITS** a lo largo de 259.6 km pr
 
 | Componente | Función | Especificación Preliminar | Cantidad |
 |:-----------|:--------|:--------------------------|:---------|
-| **Cámaras CCTV IP PTZ** | Supervisión visual 24/7 | 1080p, 25 fps, H.265, IP66/IK10, PoE | **30** ✅ |
-| **PMV (Paneles Mensaje Variable)** | Información dinámica a usuarios | LED full-color, control remoto, Res. 546/2018 | **28** ✅ |
-| **Estaciones WIM** | Pesaje dinámico sin detención | Piezoeléctricas, ±5%, 100 ton | **1 estación bidireccional** ✅ |
-| **Estaciones Meteorológicas** | Monitoreo climático | Según IDEAM, precipitación, temp, viento | **3 estaciones** ✅ |
+| **Cámaras CCTV IP PTZ** | Supervisión visual 24/7 | 1080p, 25 fps, H.265, IP66/IK10, PoE | **30** ✅ **Ver documento dedicado:** `24C_T03_Arquitectura_Conceptual_CCTV_MVP_v1.0.md` |
+| **PMV (Paneles Mensaje Variable)** | Información dinámica a usuarios | LED full-color, control remoto, Res. 546/2018 | **28** ✅ **Ver documento dedicado:** `24D_T03_Arquitectura_Conceptual_PMV_MVP_v1.0.md` |
+| **Estaciones WIM** | Pesaje dinámico sin detención | Piezoeléctricas, ±5%, 100 ton | **1 estación bidireccional** (4 plataformas: 2 WIM + 2 estáticas) ✅ **Ver documento dedicado:** `24F_T03_Arquitectura_Conceptual_WIM_MVP_v1.0.md` |
+| **Estaciones Meteorológicas** | Monitoreo climático | Según IDEAM, precipitación, temp, viento | **3 estaciones** (2 en peajes + 1 en CCO) ✅ **Ver documento dedicado:** `24G_T03_Arquitectura_Conceptual_Estaciones_Meteorologicas_MVP_v1.0.md` |
 | **Teléfonos SOS** | Emergencias de usuarios | VoIP, geolocalización, conexión directa CCO | **88** ✅ |
-| **ETD/RADAR** | Detección automática de tráfico | Analítica de video, 90% detección, <10% FP | **16 unidades** ✅ |
+| **ETD/RADAR** | Detección automática de tráfico | Analítica de video, 90% detección, <10% FP | **15 unidades** (13 ETD + 2 Radares) ✅ **Ver documento dedicado:** `24E_T03_Arquitectura_Conceptual_ETD_RADAR_MVP_v1.0.md` |
 | **Estaciones Aforo** | Conteo y clasificación | Loops/Video, precisión ≥98%, Cat. I-VI | 10-15 |
 | **Radares de Velocidad** | Control de velocidad | Precisión ±2 km/h, foto matrícula | **11 unidades** ✅ |
 | **Detectores de Altura (Gálibos)** | Control de altura vehicular | Tecnología láser, ±5 cm | **8 unidades** ✅ |

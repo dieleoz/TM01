@@ -1,0 +1,293 @@
+# T01: FICHA DE SISTEMA - PMV (PANELES DE MENSAJE VARIABLE)
+## Proyecto APP Puerto Salgar - Barrancabermeja
+## MVP - Metodología Punto 42
+
+**Fecha:** 05/12/2025  
+**Sistema:** PMV - Paneles de Mensaje Variable (Dynamic Message Signs - DMS)  
+**Responsable:** Administrador Contractual EPC / Ingeniero de Sistemas ITS  
+**Versión:** 1.1 MVP  
+**Estado:** ✅ Ficha de Sistema Completada y Actualizada (CAPEX Consolidado)
+
+---
+
+## 1. IDENTIFICACIÓN DEL SISTEMA
+
+| Campo | Valor |
+|:------|:------|
+| **Nombre del sistema** | PMV - Paneles de Mensaje Variable |
+| **Categoría** | ITS - Sistemas Inteligentes de Transporte / Información Variable al Usuario |
+| **Prioridad** | 🔴 Alta |
+| **Fase contractual** | Construcción y O&M |
+| **AT relacionados** | AT1 (Cap. 3.8), AT2 (Sección 3.3.4.8), AT3 (Cap. IV), AT4 (Indicadores) |
+
+---
+
+## 2. DESCRIPCIÓN GENERAL
+
+### 2.1 Propósito del Sistema
+
+El Sistema de Paneles de Mensaje Variable (PMV) tiene como objetivo **proporcionar información dinámica y actualizada** a los usuarios de la vía sobre condiciones de tráfico, obras, eventos especiales, condiciones climáticas y alertas de seguridad vial, a lo largo del corredor vial Puerto Salgar - Barrancabermeja (259.6 km principales + 33.4 km adicionales), permitiendo:
+
+- **Información en tiempo real** sobre condiciones de tráfico y obras
+- **Alertas de seguridad vial** (accidentes, desvíos, condiciones adversas)
+- **Información de peajes** (tarifas, métodos de pago, tiempos de espera)
+- **Coordinación con Policía de Carreteras** para mensajes prioritarios
+- **Gestión de incidentes** mediante desvíos y recomendaciones
+- **Integración con sistemas ITS** para activación automática de mensajes
+
+### 2.2 Alcance del Sistema
+
+**Cobertura geográfica:**
+- **Longitud Principal:** 259.6 km (RN 4510 + RN 4511)
+- **Longitud Total:** ~293 km (incluyendo RN 4513 conexión CCO)
+- **Rutas:** RN 4510 (Honda-Río Ermitaño), RN 4511 (Río Ermitaño-La Lizama), RN 4513 (Conexión CCO)
+- **Ubicaciones:** Estaciones de peaje (antes/después), intersecciones críticas, zonas de obras, puntos estratégicos
+
+**Integración con:**
+- **CCO (Centro de Control Operacional):** Ubicado en La Lizama PK 4+300 (RN 4513) - Control remoto y supervisión
+- **SCADA:** Supervisión y control operacional
+- **Sistema ITS:** Integración con CCTV, DAI, estaciones meteorológicas
+- **Telecomunicaciones:** Fibra óptica como backbone (283 km anillo redundante)
+- **Sistemas de Peajes:** Coordinación para información de tarifas y tiempos
+
+---
+
+## 3. REQUISITOS CONTRACTUALES
+
+### 3.1 Obligaciones del Contrato
+
+**Según AT2, Sección 3.3.4.8 - Sistemas de Información Variable:**
+
+El Concesionario deberá:
+
+1. **Instalar paneles de mensaje variable** en puntos estratégicos del corredor, especialmente:
+   - Antes y después de cada estación de peaje
+   - Intersecciones críticas
+   - Zonas de obras
+   - Puntos de control de tráfico
+
+2. **Integrar al CCO** para control centralizado y transmisión de mensajes en tiempo real
+
+3. **Garantizar disponibilidad** de equipos: **≥99% anual mínimo** (AT4)
+
+4. **Cumplir protocolo NTCIP 1202** (obligatorio según AT3)
+
+5. **Distribución:** Separación máxima de **20 km por sentido** (AT1)
+
+6. **Cumplir especificaciones técnicas:**
+   - Tipo: LED Full Matrix (RGB) o alfanuméricos y gráficos
+   - Resolución: Mínimo 32×16 píxeles
+   - Brillo: ≥7,000 cd/m²
+   - Ángulo de visión: ≥120° horizontal
+   - Distancia de lectura: ≥300 metros
+   - Protocolo: NTCIP 1202
+
+### 3.2 Requisitos de Apéndices Técnicos
+
+**AT1, Capítulo 3.8:**
+- Separación máxima: 20 km por sentido
+- Instalación: Alternada en bermas externas (lado A/lado B)
+- Tipo: PASA-VÍAS (pórtico sobre calzada) o poste unidireccional
+- **2 PMV por peaje:** 1 antes + 1 después (obligatorio)
+
+**AT2, Sección 3.3.4.8:**
+- Información variable sobre: condiciones de tráfico, obras, eventos especiales
+- Integración con CCO
+- Transmisión en tiempo real
+- Coordinación con Policía de Carreteras (prioridad a mensajes de seguridad vial)
+
+**AT3, Capítulo IV:**
+- Protocolo NTCIP 1202 (obligatorio)
+- Interoperabilidad con sistema ITS
+
+**AT4 (Indicadores):**
+- Disponibilidad: ≥99% anual
+
+---
+
+## 4. COMPONENTES PRINCIPALES
+
+| Componente | Cantidad | Ubicación | Función |
+|:-----------|:---------|:----------|:--------|
+| **Paneles PMV Fijos (Pórtico)** | **14 unidades** | Antes/después peajes, estratégicos | Información bidireccional sobre calzada |
+| **Paneles PMV Fijos (Poste)** | **14 unidades** | Intersecciones, zonas críticas | Información unidireccional |
+| **TOTAL PMV** | **28 unidades** | Distribuidas estratégicamente | Cobertura completa del corredor |
+| **Controladores PMV** | 28 unidades | Gabinete en cada panel | Gestión de mensajes y comunicación |
+| **Estructuras soporte** | 28 unidades | Pórticos y postes | Soporte físico de paneles |
+| **Conexión a red FO** | 28 puntos | Integración con red de telecomunicaciones | Comunicación con CCO |
+
+**Distribución por tipo de ubicación:**
+- **Estaciones de Peaje:** 4 PMV (2 por peaje: antes + después)
+- **Intersecciones Críticas:** 8 PMV
+- **Zonas de Obras:** 6 PMV
+- **Zonas Urbanas:** 4 PMV
+- **Puntos de Control:** 4 PMV
+- **Zonas de Accidentalidad:** 2 PMV
+
+---
+
+## 5. INTERFACES CON OTROS SISTEMAS
+
+| Sistema Relacionado | Tipo de Interface | Protocolo/Medio | Datos Intercambiados |
+|:--------------------|:------------------|:----------------|:---------------------|
+| **CCO (Centro de Control)** | Red IP / Fibra Óptica | Ethernet / NTCIP 1202 | Control remoto, envío de mensajes, estado operativo |
+| **Sistema de Telecomunicaciones** | Red FO / L2/L3 | Ethernet | Tráfico de datos y control |
+| **SCADA** | Red IP | SNMP / Modbus TCP | Supervisión y control operacional |
+| **Sistema ITS (DAI)** | Lógica (vía CCO) | API REST | Activación automática de mensajes por incidentes |
+| **Estaciones Meteorológicas** | Lógica (vía CCO) | API REST | Activación automática de mensajes por condiciones climáticas |
+| **Sistema de Peajes** | Lógica (vía CCO) | Base de Datos / API | Información de tarifas, tiempos de espera |
+| **Sistema de Energía Eléctrica** | Alimentación | AC 120V/60Hz | Suministro de energía |
+| **Policía de Carreteras** | Lógica (vía CCO) | Red IP | Mensajes prioritarios de seguridad vial |
+
+**Flujo de comunicación:**
+```
+CCO → Sistema de Gestión PMV → NTCIP 1202 → Controlador PMV → Panel LED
+         (Control remoto)      (Protocolo)    (Procesamiento)   (Visualización)
+```
+
+---
+
+## 6. ESTIMACIÓN PRELIMINAR
+
+### 6.1 CAPEX (Inversión Inicial)
+
+| Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
+|:-----|:---------|:---------------------|:------------------|
+| **Panel PMV LED Full Matrix (3×1.5m)** | 28 | $25,000 | $700,000 |
+| **Controlador NTCIP 1202** | 28 | $5,000 | $140,000 |
+| **Estructura soporte pórticos** | 14 | $45,000 | $630,000 |
+| **Estructura soporte postes** | 14 | $15,000 | $210,000 |
+| **Sistema de gestión PMV (software)** | 1 | $80,000 | $80,000 |
+| **Obras civiles y cimentación** | 28 | $12,000 | $336,000 |
+| **Instalación y comisionamiento** | 28 | $12,500 | $350,000 |
+| **Contingencia (2%)** | - | - | $49,000 |
+| **TOTAL CAPEX** | **28 paneles** | **$87,500/panel** | **$2,450,000** |
+
+**Nota sobre actualización (05/12/2025):** El CAPEX fue ajustado de $644,000 a $2,450,000 USD para reflejar costos reales de estructuras pórtico (más complejas y costosas que postes simples), obras civiles de cimentación, sistema de gestión PMV centralizado, y costos de instalación/comisionamiento detallados. Este ajuste incorpora lecciones aprendidas de proyectos APP similares y validaciones contractuales finales.
+
+### 6.2 OPEX (Operación y Mantenimiento)
+
+| Ítem | Cantidad | Costo Unitario Anual (USD) | Costo Total Anual (USD) |
+|:-----|:---------|:---------------------------|:------------------------|
+| **Mantenimiento preventivo** | 28 | $400 | $11,200 |
+| **Mantenimiento correctivo** | 28 | $200 | $5,600 |
+| **TOTAL OPEX ANUAL** | **28 paneles** | **$600/panel/año** | **$16,800** |
+
+**OPEX 20 años:** $16,800 × 20 = **$336,000 USD**
+
+### 6.3 Costo Total del Ciclo de Vida (20 años)
+
+**CAPEX + OPEX:** $2,450,000 + $336,000 = **$2,786,000 USD**
+
+---
+
+## 7. DISTRIBUCIÓN GEOGRÁFICA
+
+### 7.1 Distribución por Unidad Funcional (UF)
+
+| UF | Cantidad | Ubicaciones Principales |
+|:---|:---------|:------------------------|
+| **UF1** | 3 | Peaje Zambito (2) + 1 intersección |
+| **UF2** | 2 | 1 intersección + 1 zona crítica |
+| **UF3** | 2 | 1 intersección + 1 zona crítica |
+| **UF4** | 2 | 1 intersección + 1 zona crítica |
+| **UF5** | 2 | 1 intersección + 1 zona crítica |
+| **UF6** | 2 | 1 intersección + 1 zona crítica |
+| **UF7** | 2 | 1 intersección + 1 zona crítica |
+| **UF8** | 2 | 1 intersección + 1 zona crítica |
+| **UF9** | 2 | 1 intersección + 1 zona crítica |
+| **UF10** | 2 | 1 intersección + 1 zona crítica |
+| **UF11** | 2 | 1 intersección + 1 zona crítica |
+| **UF12** | 2 | 1 intersección + 1 zona crítica |
+| **UF13** | 3 | Peaje Aguas Negras (2) + 1 intersección |
+| **TOTAL** | **28** | - |
+
+### 7.2 Ubicaciones Estratégicas Principales
+
+- **PK 0+000** (Puerto Salgar): Inicio del corredor
+- **PK 9+200** (Peaje Zambito): 2 PMV (antes + después)
+- **PK 50±5**: Punto medio Zona 1
+- **PK 80+000** (Peaje Aguas Negras): 2 PMV (antes + después)
+- **PK 130±5** (CCO La Lizama): Centro de control
+- **PK 180±5**: Punto medio Zona 3
+- **PK 259+600** (San Roque): Fin del corredor
+
+---
+
+## 8. ESPECIFICACIONES TÉCNICAS BÁSICAS
+
+### 8.1 Panel LED Matriz
+
+| Parámetro | Especificación Mínima |
+|:----------|:---------------------|
+| **Dimensiones** | 3.0 × 1.5 metros (ancho × alto) |
+| **Tecnología** | LED Full Matrix (RGB) |
+| **Pitch (espaciado píxeles)** | 20-25 mm |
+| **Resolución** | 96×48 píxeles mínimo |
+| **Colores** | RGB (16.7M colores) o 3 colores mínimo |
+| **Brillo** | ≥8,000 cd/m² (nits) |
+| **Vida útil LED** | ≥100,000 horas |
+| **Consumo típico** | 400-600W (mensaje estándar) |
+| **Protección** | IP65 frontal, IP54 posterior |
+| **Vandalismo** | IK08 mínimo |
+| **Temperatura** | -20°C a +60°C |
+
+### 8.2 Controlador PMV
+
+| Parámetro | Especificación Mínima |
+|:----------|:---------------------|
+| **Protocolo** | NTCIP 1202 (obligatorio) |
+| **Comunicación** | Ethernet 10/100/1000 Mbps |
+| **Almacenamiento local** | ≥100 mensajes predefinidos |
+| **Fuente de alimentación** | 24VDC 15A |
+| **Protección** | IP65 (gabinete) |
+
+---
+
+## 9. PRÓXIMOS PASOS
+
+- [x] ✅ Ficha de Sistema completada (T01)
+- [x] ✅ Análisis de Requisitos completado (T02)
+- [x] ✅ Arquitectura Conceptual completada (T03)
+- [x] ✅ Especificaciones Técnicas (T04) - Ya existe, validar coherencia
+- [x] ✅ Ingeniería de Detalle (T05) - Ya existe, validar coherencia
+- [x] ✅ Validación Contractual - Ya existe (`38_VALIDACION_CONTRACTUAL_PMV_v1.0.md`)
+
+---
+
+## 10. REFERENCIAS
+
+### 10.1 Documentos del Proyecto
+
+- **T02:** `24D_T02_Analisis_Requisitos_PMV_MVP_v1.0.md` (Pendiente)
+- **T03:** `24D_T03_Arquitectura_Conceptual_PMV_MVP_v1.0.md` (Pendiente)
+- **T04:** `IV. Ingenieria Basica/04_T04_Especificaciones_Tecnicas_PMV_v1.0.md`
+- **T05:** `V. Ingenieria de Detalle/06_T05_Ingenieria_Detalle_PMV_v1.0.md`
+- **T01 ITS General:** `24_T01_Ficha_Sistema_ITS_v1.0.md` (Referencia para contexto)
+- **Validación:** `VII. Documentos Transversales/38_VALIDACION_CONTRACTUAL_PMV_v1.0.md`
+
+### 10.2 Documentos Contractuales
+
+- **AT1:** Apéndice Técnico 1, Capítulo 3.8 "Sistemas de Información Variable"
+- **AT2:** Apéndice Técnico 2, Sección 3.3.4.8 "Sistemas de Información Variable"
+- **AT3:** Apéndice Técnico 3, Capítulo IV "Sistemas ITS"
+- **AT4:** Apéndice Técnico 4 (Indicadores de desempeño)
+
+### 10.3 Normativa Aplicable
+
+- **NTCIP 1202:** Protocolo estándar para PMV (obligatorio)
+- **Resolución 546/2018:** Interoperabilidad de Peajes (IP/REV)
+- **Manual Señalización Vial 2015:** Dispositivos uniformes
+- **RETIE:** Reglamento Técnico Instalaciones Eléctricas
+- **IEC 60529:** Grado de protección IP
+
+---
+
+**Versión:** 1.0 MVP  
+**Estado:** ✅ Ficha de Sistema Completada  
+**Fecha:** 31/10/2025  
+**Responsable:** Administrador Contractual EPC  
+**Próximo paso:** Validación de arquitectura con stakeholders  
+**T02 disponible:** `24D_T02_Analisis_Requisitos_PMV_MVP_v1.0.md`  
+**T03 disponible:** `24D_T03_Arquitectura_Conceptual_PMV_MVP_v1.0.md`
+

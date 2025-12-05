@@ -27,12 +27,12 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km princ
 
 **Ubicación del CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
 
-1. Paneles de Mensaje Variable (PMV) - 28 unidades
-2. CCTV (Circuito Cerrado de TV) - 30 cámaras
-3. Estaciones de Pesaje en Movimiento (WIM) - 1 estación bidireccional
-4. Estaciones Meteorológicas - 3 estaciones
+1. Paneles de Mensaje Variable (PMV) - 28 unidades **Ver documento dedicado:** `24D_T02_Analisis_Requisitos_PMV_MVP_v1.0.md`
+2. CCTV (Circuito Cerrado de TV) - 30 cámaras **Ver documento dedicado:** `24C_T02_Analisis_Requisitos_CCTV_MVP_v1.0.md`
+3. Estaciones de Pesaje en Movimiento (WIM) - 1 estación bidireccional (4 plataformas: 2 WIM + 2 estáticas) **Ver documento dedicado:** `24F_T02_Analisis_Requisitos_WIM_MVP_v1.0.md`
+4. Estaciones Meteorológicas - 3 estaciones (2 en peajes + 1 en CCO) **Ver documento dedicado:** `24G_T02_Analisis_Requisitos_Estaciones_Meteorologicas_MVP_v1.0.md`
 5. Teléfonos de Emergencia (SOS) - 88 postes
-6. ETD/RADAR (Estaciones de Detección de Tráfico/Radares) - 16 unidades
+6. ETD/RADAR (Estaciones de Detección de Tráfico/Radares) - 15 unidades (13 ETD + 2 Radares) **Ver documento dedicado:** `24E_T02_Analisis_Requisitos_ETD_RADAR_MVP_v1.0.md`
 7. Estaciones de Aforo Vehicular - 10-15 estaciones
 8. Radares de Velocidad - 11 unidades
 9. Detectores de Altura (Gálibos) - 8 unidades

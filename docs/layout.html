@@ -133,12 +133,16 @@
                         <th>Sistema</th>
                         <th>Cantidad</th>
                         <th>UF</th>
+                        <th>PKR</th>
+                        <th>PKD</th>
+                        <th>Ruta</th>
+                        <th>Ubicación Física</th>
                         <th>Ubicación</th>
                     </tr>
                 </thead>
                 <tbody id="layout-tbody">
                     <tr>
-                        <td colspan="6" class="empty-state">
+                        <td colspan="10" class="empty-state">
                             <div class="empty-state-icon">â³</div>
                             <div>Cargando datos del layout...</div>
                         </td>
@@ -202,6 +206,10 @@
                     sistema: item.sistema || 'N/A',
                     cantidad: item.cantidad || 1,
                     uf: item.uf || 'N/A',
+                    pkr: item.pkr || '',
+                    pkd: item.pkd || '',
+                    ruta: item.ruta || '',
+                    ubicacionFisica: item.ubicacionFisica || item.via || '',
                     ubicacion: item.ubicacion || 'Por definir',
                     coordenadas: item.coordenadas || null
                 }));
@@ -226,7 +234,7 @@
             document.getElementById('alertInfo').className = 'alert alert-warning';
             document.getElementById('alertInfo').innerHTML = 'âš ï¸ <strong>Error:</strong> ' + mensaje;
             document.getElementById('layout-tbody').innerHTML = 
-                '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">âŒ</div><div>' + mensaje + '</div></td></tr>';
+                '<tr><td colspan="10" class="empty-state"><div class="empty-state-icon">âŒ</div><div>' + mensaje + '</div></td></tr>';
         }
         
         function poblarFiltros() {
@@ -291,7 +299,7 @@
             const tbody = document.getElementById('layout-tbody');
             
             if (filteredData.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" class="empty-state"><div class="empty-state-icon">🔍 No se encontraron resultados con los filtros aplicados</div></td></tr>';
+                tbody.innerHTML = '<tr><td colspan="10" class="empty-state"><div class="empty-state-icon">🔍 No se encontraron resultados con los filtros aplicados</div></td></tr>';
                 return;
             }
             
@@ -305,6 +313,10 @@
                         <td><span class="${badgeClass}">${item.sistema}</span></td>
                         <td style="text-align: center;">${item.cantidad}</td>
                         <td style="text-align: center;">${ufBadge}</td>
+                        <td style="text-align: center; font-family: monospace;">${item.pkr || '-'}</td>
+                        <td style="text-align: center; font-family: monospace;">${item.pkd || '-'}</td>
+                        <td style="text-align: center;">${item.ruta || '-'}</td>
+                        <td>${item.ubicacionFisica || '-'}</td>
                         <td>${item.ubicacion}</td>
                     </tr>
                 `;
@@ -371,25 +383,34 @@
                 return;
             }
             
-            const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'UF', 'Ubicación'];
+            // Headers mejorados con PKR y PKD
+            const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'UF', 'PKR', 'PKD', 'Ruta', 'Ubicación Física', 'Observaciones'];
             const rows = filteredData.map(item => [
-                item.id,
-                item.nombre,
-                item.sistema,
-                item.cantidad,
+                item.id || '',
+                item.nombre || '',
+                item.sistema || '',
+                item.cantidad || '',
                 item.uf || 'N/A',
-                item.ubicacion
+                item.pkr || item.pk || '',
+                item.pkd || '',
+                item.ruta || '',
+                item.ubicacionFisica || item.ubicacion || '',
+                item.observaciones || ''
             ]);
             
-            const csv = [headers.join(','), ...rows.map(r => r.map(c => `"${c}"`).join(','))].join('\n');
+            const csv = [headers.join(','), ...rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(','))].join('\n');
             
-            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            // BOM para UTF-8 (Excel)
+            const BOM = '\uFEFF';
+            const blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `layout_tm01_${new Date().toISOString().split('T')[0]}.csv`;
+            a.download = `layout_tm01_completo_${new Date().toISOString().split('T')[0]}.csv`;
             a.click();
             URL.revokeObjectURL(url);
+            
+            alert(`✅ Exportado: ${filteredData.length} elementos a CSV`);
         }
     </script>
 </body>

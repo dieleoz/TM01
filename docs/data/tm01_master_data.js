@@ -13,7 +13,62 @@ class TM01MasterData {
             cronogramaUF: []
         };
         
+        // Cargar coordenadas reales del KML
+        this.coordenadasKML = null;
+        this.cargarCoordenadasKML();
+        
         this.initializeData();
+    }
+    
+    async cargarCoordenadasKML() {
+        try {
+            const response = await fetch('data/coordenadas_tm01_kml.json');
+            if (response.ok) {
+                const datos = await response.json();
+                this.coordenadasKML = datos.mapa_pk_coordenadas || {};
+                console.log('✅ Coordenadas KML cargadas:', Object.keys(this.coordenadasKML).length, 'puntos');
+            } else {
+                console.warn('⚠️ No se pudo cargar coordenadas KML, usando coordenadas aproximadas');
+            }
+        } catch (error) {
+            console.warn('⚠️ Error cargando coordenadas KML:', error);
+        }
+    }
+    
+    parsePK(pkString) {
+        // Convertir PK formato "41+100" a kilómetros (41.1)
+        if (!pkString || typeof pkString !== 'string') return null;
+        const parts = pkString.split('+');
+        if (parts.length === 2) {
+            const km = parseInt(parts[0]) || 0;
+            const metros = parseInt(parts[1]) || 0;
+            return km + (metros / 1000.0);
+        }
+        return null;
+    }
+    
+    obtenerCoordenadasPorPK(pkString) {
+        // Intentar obtener coordenadas reales del KML por PK
+        if (!this.coordenadasKML || !pkString) {
+            return null;
+        }
+        
+        const pkNumero = this.parsePK(pkString);
+        if (pkNumero === null) return null;
+        
+        // Buscar el PK más cercano (redondeado)
+        const pkRedondeado = Math.round(pkNumero);
+        const pkStr = pkRedondeado.toString();
+        
+        if (this.coordenadasKML[pkStr]) {
+            const coord = this.coordenadasKML[pkStr];
+            return {
+                lat: coord.lat,
+                lng: coord.lon
+            };
+        }
+        
+        return null;
     }
     
     initializeData() {
@@ -287,28 +342,520 @@ class TM01MasterData {
     }
     
     generateLayoutData() {
-        // Generar datos de layout basados en WBS
-        return this.data.wbs
-            .filter(item => item.tipo === 'item' && item.cantidad)
-            .map(item => ({
-                id: item.id,
-                nombre: item.descripcion,
-                cantidad: parseInt(item.cantidad),
-                ubicacion: this.getUbicacionDefault(item.sistema),
-                coordenadas: this.generateCoordinates(item.sistema),
-                sistema: item.sistema
-            }));
+        // Generar datos de layout desde tabla maestra con ubicaciones reales (PKR/PKD)
+        // Referencia: 43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md
+        const layoutData = [];
+        
+        // === CCTV (30 ubicaciones reales) ===
+        const cctvLocations = [
+            {id: 'CCTV-001', pkr: '38+100', pkd: '245+100', ruta: 'RN 4510', uf: 'UF-5.2', via: 'Unidireccional', nombre: 'CCTV - Inicio monitoreo'},
+            {id: 'CCTV-002', pkr: '40+050', pkd: '243+150', ruta: 'RN 4510', uf: 'UF-0D', via: 'Separador', nombre: 'CCTV - Inter Koran REACTIVADA'},
+            {id: 'CCTV-003', pkr: '69+000', pkd: '214+100', ruta: 'RN 4510', uf: 'UF-0D', via: 'Separador', nombre: 'CCTV - Peatonal 68+434'},
+            {id: 'CCTV-004', pkr: '81+000', pkd: '202+100', ruta: 'RN 4510', uf: 'UF-0D', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-005', pkr: '85+370', pkd: '197+730', ruta: 'RN 4510', uf: 'UF-1', via: 'Separador', nombre: 'CCTV - ETD integrada'},
+            {id: 'CCTV-006', pkr: '87+100', pkd: '196+000', ruta: 'RN 4510', uf: 'UF-1', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-007', pkr: '91+850', pkd: '191+250', ruta: 'RN 4510', uf: 'UF-5.1', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-008', pkr: '93+920', pkd: '189+180', ruta: 'RN 4510', uf: 'UF-1', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-009', pkr: '97+030', pkd: '186+070', ruta: 'RN 4510', uf: 'UF-0D', via: 'Separador', nombre: 'CCTV - Inter Pto Boyacá'},
+            {id: 'CCTV-010', pkr: '104+150', pkd: '178+950', ruta: 'RN 4510', uf: 'UF-0D', via: 'Separador', nombre: 'CCTV - Área Servicio Zambito'},
+            {id: 'CCTV-011', pkr: '9+100', pkd: '141+400', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Izquierda', nombre: 'CCTV'},
+            {id: 'CCTV-012', pkr: '9+365', pkd: '141+135', ruta: 'RN 4511', uf: 'UF-0D', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-013', pkr: '13+470', pkd: '137+030', ruta: 'RN 4511', uf: 'UF-2', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-014', pkr: '14+500', pkd: '136+000', ruta: 'RN 4511', uf: 'UF-2', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-015', pkr: '41+150', pkd: '109+350', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-016', pkr: '60+480', pkd: '90+020', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-017', pkr: '61+675', pkd: '88+825', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Izquierda', nombre: 'CCTV - Peatonal 61+346'},
+            {id: 'CCTV-018', pkr: '63+250', pkd: '87+250', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-019', pkr: '81+650', pkd: '68+850', ruta: 'RN 4511', uf: 'UF-6', via: 'Izquierda', nombre: 'CCTV'},
+            {id: 'CCTV-020', pkr: '81+900', pkd: '68+600', ruta: 'RN 4511', uf: 'UF-6', via: 'Izquierda', nombre: 'CCTV'},
+            {id: 'CCTV-021', pkr: '113+300', pkd: '37+200', ruta: 'RN 4511', uf: 'UF-9', via: 'Separador', nombre: 'CCTV - A.S. Aguas Negras'},
+            {id: 'CCTV-022', pkr: '115+800', pkd: '34+700', ruta: 'RN 4511', uf: 'UF-9', via: 'Separador', nombre: 'CCTV - Peatonal 113+410'},
+            {id: 'CCTV-023', pkr: '116+900', pkd: '33+600', ruta: 'RN 4511', uf: 'UF-9', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-024', pkr: '128+000', pkd: '22+500', ruta: 'RN 4511', uf: 'UF-11', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-025', pkr: '0+320', pkd: '2+680', ruta: 'RN 4513', uf: 'UF-11', via: 'Separador', nombre: 'CCTV - Inter Lizama'},
+            {id: 'CCTV-026', pkr: '3+875', pkd: '280+125', ruta: 'RN 4513', uf: 'UF-13', via: 'Separador', nombre: 'CCTV - Báscula WIM'},
+            {id: 'CCTV-027', pkr: '4+150', pkd: '279+850', ruta: 'RN 4513', uf: 'UF-11', via: 'Separador', nombre: 'CCTV'},
+            {id: 'CCTV-028', pkr: '4+400', pkd: '279+600', ruta: 'RN 4513', uf: 'UF-11', via: 'Separador', nombre: 'CCTV - CCO N1-CCO'},
+            {id: 'CCTV-029', pkr: '9+800', pkd: '274+200', ruta: 'RN 4513', uf: 'UF-11', via: 'Sur', nombre: 'CCTV - Zona CCO'},
+            {id: 'CCTV-030', pkr: '41+800', pkd: '108+700', ruta: 'RN 4511', uf: 'UF-0D', via: 'Separador', nombre: 'CCTV - Eliminada sin justificación (reactivar si necesario)'}
+        ];
+        
+        cctvLocations.forEach(loc => {
+            // Agregar CCTV
+            layoutData.push({
+                id: loc.id,
+                nombre: loc.nombre,
+                sistema: 'CCTV',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: loc.nombre,
+                coordenadas: this.generateCoordinates('CCTV', loc.pkr, loc.pkd)
+            });
+            
+            // Agregar Switch L2 asociado a este CCTV
+            // PKD formato: "245+100" -> extraer parte entera: 245
+            const pkdParts = loc.pkd.split('+');
+            const pkdNum = parseInt(pkdParts[0]);
+            const switchL2Id = `L2-${pkdNum.toString().padStart(3, '0')}`;
+            layoutData.push({
+                id: `${loc.id}-L2`,
+                nombre: `Switch L2 ${switchL2Id} - ${loc.nombre}`,
+                sistema: 'TELECOM',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: `Switch L2 asociado a ${loc.id}`,
+                coordenadas: this.generateCoordinates('TELECOM', loc.pkr, loc.pkd)
+            });
+        });
+        
+        // === GÁLIBOS (8 ubicaciones reales) ===
+        const galibosLocations = [
+            {id: 'GAL-001', pkr: '41+350', pkd: '241+750', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'Gálibo - Intersección crítica'},
+            {id: 'GAL-002', pkr: '116+200', pkd: '166+900', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'Gálibo - Puente vehicular'},
+            {id: 'GAL-003', pkr: '3+600', pkd: '146+900', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'Gálibo - Separador central'},
+            {id: 'GAL-004', pkr: '16+550', pkd: '133+950', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Izquierda', nombre: 'Gálibo - Intersección a desnivel'},
+            {id: 'GAL-005', pkr: '72+890', pkd: '77+610', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'Gálibo - Paso elevado'},
+            {id: 'GAL-006', pkr: '82+800', pkd: '67+700', ruta: 'RN 4511', uf: 'UF-6', via: 'Izquierda', nombre: 'Gálibo - Puente principal'},
+            {id: 'GAL-007', pkr: '127+250', pkd: '23+250', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'Gálibo - Intersección compleja'},
+            {id: 'GAL-008', pkr: '5+900', pkd: '278+100', ruta: 'RN 4513', uf: 'UF-13', via: 'Izquierda', nombre: 'Gálibo - Acceso urbano'}
+        ];
+        
+        galibosLocations.forEach(loc => {
+            // Agregar Gálibo
+            layoutData.push({
+                id: loc.id,
+                nombre: loc.nombre,
+                sistema: 'GALIBOS',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: loc.nombre,
+                coordenadas: this.generateCoordinates('GALIBOS', loc.pkr, loc.pkd)
+            });
+            
+            // Agregar Switch L2 asociado a este Gálibo
+            // PKD formato: "241+750" -> extraer parte entera: 241
+            const pkdParts = loc.pkd.split('+');
+            const pkdNum = parseInt(pkdParts[0]);
+            const switchL2Id = `L2-${pkdNum.toString().padStart(3, '0')}`;
+            layoutData.push({
+                id: `${loc.id}-L2`,
+                nombre: `Switch L2 ${switchL2Id} - ${loc.nombre}`,
+                sistema: 'TELECOM',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: `Switch L2 asociado a ${loc.id}`,
+                coordenadas: this.generateCoordinates('TELECOM', loc.pkr, loc.pkd)
+            });
+        });
+        
+        // === ETD (14 ubicaciones: 3 explícitas + 11 integradas) ===
+        const etdLocations = [
+            {id: 'ETD-001', pkr: '85+370', pkd: '197+730', ruta: 'RN 4510', uf: 'UF-1', via: 'Separador', nombre: 'ETD - Integrada en poste CCTV'},
+            {id: 'ETD-002', pkr: '106+580', pkd: '43+920', ruta: 'RN 4511', uf: 'UF-8', via: 'Izquierda', nombre: 'ETD - Integrada en pórtico PMV'},
+            {id: 'ETD-003', pkr: '126+580', pkd: '23+920', ruta: 'RN 4511', uf: 'UF-10', via: 'Izquierda', nombre: 'ETD - Integrada en pórtico PMV'}
+            // Nota: Las otras 11 ETD están integradas en CCTV/PMV según necesidades por UF
+        ];
+        
+        etdLocations.forEach(loc => {
+            // Agregar ETD
+            layoutData.push({
+                id: loc.id,
+                nombre: loc.nombre,
+                sistema: 'ETD',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: loc.nombre,
+                coordenadas: this.generateCoordinates('ETD/RADAR', loc.pkr, loc.pkd)
+            });
+            
+            // Agregar Switch L2 asociado a este ETD
+            // PKD formato: "197+730" -> extraer parte entera: 197
+            const pkdParts = loc.pkd.split('+');
+            const pkdNum = parseInt(pkdParts[0]);
+            const switchL2Id = `L2-${pkdNum.toString().padStart(3, '0')}`;
+            layoutData.push({
+                id: `${loc.id}-L2`,
+                nombre: `Switch L2 ${switchL2Id} - ${loc.nombre}`,
+                sistema: 'TELECOM',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: `Switch L2 asociado a ${loc.id}`,
+                coordenadas: this.generateCoordinates('TELECOM', loc.pkr, loc.pkd)
+            });
+        });
+        
+        // === METEO (2 ubicaciones en peajes) ===
+        const meteoLocations = [
+            {id: 'METEO-001', pkr: '9+200', pkd: '141+300', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Izquierda', nombre: 'METEO - Peaje Zambito'},
+            {id: 'METEO-002', pkr: '81+800', pkd: '68+700', ruta: 'RN 4511', uf: 'UF-6', via: 'Separador', nombre: 'METEO - Peaje Aguas Negras'}
+        ];
+        
+        meteoLocations.forEach(loc => {
+            // Agregar METEO
+            layoutData.push({
+                id: loc.id,
+                nombre: loc.nombre,
+                sistema: 'METEO',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: loc.nombre,
+                coordenadas: this.generateCoordinates('METEO', loc.pkr, loc.pkd)
+            });
+            
+            // Agregar Switch L2 asociado a este METEO
+            // PKD formato: "141+300" -> extraer parte entera: 141
+            const pkdParts = loc.pkd.split('+');
+            const pkdNum = parseInt(pkdParts[0]);
+            const switchL2Id = `L2-${pkdNum.toString().padStart(3, '0')}`;
+            layoutData.push({
+                id: `${loc.id}-L2`,
+                nombre: `Switch L2 ${switchL2Id} - ${loc.nombre}`,
+                sistema: 'TELECOM',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: `Switch L2 asociado a ${loc.id}`,
+                coordenadas: this.generateCoordinates('TELECOM', loc.pkr, loc.pkd)
+            });
+        });
+        
+        // === PEAJES (2 ubicaciones) ===
+        const peajesLocations = [
+            {id: 'PEAJE-001', pkr: '9+200', pkd: '141+300', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Edificación', nombre: 'Peaje Zambito - N2-ZAMBITO'},
+            {id: 'PEAJE-002', pkr: '81+800', pkd: '68+700', ruta: 'RN 4511', uf: 'UF-6', via: 'Edificación', nombre: 'Peaje Aguas Negras - N4-AGUAS_NEGRAS'}
+        ];
+        
+        peajesLocations.forEach(loc => {
+            layoutData.push({
+                id: loc.id,
+                nombre: loc.nombre,
+                sistema: 'PEAJES',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: loc.nombre,
+                coordenadas: this.generateCoordinates('PEAJES', loc.pkr, loc.pkd)
+            });
+        });
+        
+        // === CCO (1 ubicación) ===
+        layoutData.push({
+            id: 'CCO-001',
+            nombre: 'Centro de Control - N1-CCO',
+            sistema: 'CCO',
+            cantidad: 1,
+            uf: 'UF-11',
+            pkr: '4+400',
+            pkd: '0+000',
+            ruta: 'RN 4513',
+            ubicacionFisica: 'Edificación',
+            ubicacion: 'RN 4513 4+400 (PKD 0+000)',
+            observaciones: 'N1-CCO - Nodo L3 Core',
+            coordenadas: this.generateCoordinates('CCO', '4+400', '0+000')
+        });
+        
+        // === SWITCHES L3 (7 nodos principales) ===
+        const switchesL3 = [
+            {id: 'L3-001', pkr: '4+400', pkd: '0+000', ruta: 'RN 4513', uf: 'UF-11', nombre: 'Switch L3 - N1-CCO (Core)'},
+            {id: 'L3-002', pkr: '9+200', pkd: '141+300', ruta: 'RN 4511', uf: 'UF-5.1', nombre: 'Switch L3 - N2-ZAMBITO (Peaje)'},
+            {id: 'L3-003', pkr: '81+800', pkd: '68+700', ruta: 'RN 4511', uf: 'UF-6', nombre: 'Switch L3 - N4-AGUAS_NEGRAS (Peaje)'},
+            {id: 'L3-004', pkr: '104+100', pkd: '178+000', ruta: 'RN 4510', uf: 'UF-5.1', nombre: 'Switch L3 - N6-AS_ZAMBITO'},
+            {id: 'L3-005', pkr: '113+450', pkd: '37+050', ruta: 'RN 4511', uf: 'UF-9', nombre: 'Switch L3 - N5-AS_AGUAS_NEGRAS'},
+            {id: 'L3-006', pkr: 'TBD', pkd: '70+450', ruta: 'RN 4511', uf: 'TBD', nombre: 'Switch L3 - N3-BUNKER01'},
+            {id: 'L3-007', pkr: 'TBD', pkd: '233+150', ruta: 'RN 4510', uf: 'TBD', nombre: 'Switch L3 - N7-BUNKER02'}
+        ];
+        
+        switchesL3.forEach(sw => {
+            layoutData.push({
+                id: sw.id,
+                nombre: sw.nombre,
+                sistema: 'TELECOM',
+                cantidad: 1,
+                uf: sw.uf,
+                pkr: sw.pkr,
+                pkd: sw.pkd,
+                ruta: sw.ruta,
+                ubicacionFisica: 'Edificación',
+                ubicacion: `${sw.ruta} ${sw.pkr} (PKD ${sw.pkd})`,
+                observaciones: 'Switch L3 - Nodo Core',
+                coordenadas: this.generateCoordinates('TELECOM', sw.pkr, sw.pkd)
+            });
+        });
+        
+        // === SWITCHES L2 (en cada equipo ITS - datos aproximados) ===
+        // Nota: Los switches L2 están en cada equipo ITS según la tabla maestra
+        // Se generan automáticamente asociados a cada equipo (CCTV, SOS, PMV, etc.)
+        // Ejemplo: L2-245, L2-243, L2-242, etc. según PKD del equipo
+        
+        // === SOS (88 unidades completas desde tabla maestra) ===
+        const sosLocations = [
+            {id: 'SOS-001', pkr: '41+180', pkd: '241+920', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #1'},
+            {id: 'SOS-002', pkr: '43+560', pkd: '239+540', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #2'},
+            {id: 'SOS-003', pkr: '46+550', pkd: '236+550', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #3'},
+            {id: 'SOS-004', pkr: '49+550', pkd: '233+550', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #4'},
+            {id: 'SOS-005', pkr: '52+550', pkd: '230+550', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #5'},
+            {id: 'SOS-006', pkr: '55+500', pkd: '227+600', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #6'},
+            {id: 'SOS-007', pkr: '58+500', pkd: '224+600', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #7'},
+            {id: 'SOS-008', pkr: '61+500', pkd: '221+600', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #8'},
+            {id: 'SOS-009', pkr: '64+450', pkd: '218+650', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #9'},
+            {id: 'SOS-010', pkr: '67+150', pkd: '215+950', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #10'},
+            {id: 'SOS-011', pkr: '70+150', pkd: '212+950', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #11'},
+            {id: 'SOS-012', pkr: '73+110', pkd: '210+000', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #12'},
+            {id: 'SOS-013', pkr: '76+020', pkd: '207+080', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #13'},
+            {id: 'SOS-014', pkr: '78+800', pkd: '204+300', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #14'},
+            {id: 'SOS-015', pkr: '81+500', pkd: '201+600', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #15'},
+            {id: 'SOS-016', pkr: '83+950', pkd: '199+150', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #16'},
+            {id: 'SOS-017', pkr: '86+900', pkd: '196+200', ruta: 'RN 4510', uf: 'UF-1', via: 'Derecha', nombre: 'SOS #17'},
+            {id: 'SOS-018', pkr: '89+780', pkd: '193+320', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #18'},
+            {id: 'SOS-019', pkr: '92+520', pkd: '190+580', ruta: 'RN 4510', uf: 'UF-1', via: 'Derecha', nombre: 'SOS #19'},
+            {id: 'SOS-020', pkr: '95+300', pkd: '187+800', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #20'},
+            {id: 'SOS-021', pkr: '98+250', pkd: '184+850', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #21'},
+            {id: 'SOS-022', pkr: '100+750', pkd: '182+350', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #22'},
+            {id: 'SOS-023', pkr: '102+800', pkd: '180+300', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #23'},
+            {id: 'SOS-024', pkr: '105+360', pkd: '177+740', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #24'},
+            {id: 'SOS-025', pkr: '108+130', pkd: '174+970', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #25'},
+            {id: 'SOS-026', pkr: '111+070', pkd: '172+030', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #26'},
+            {id: 'SOS-027', pkr: '114+050', pkd: '169+050', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #27'},
+            {id: 'SOS-028', pkr: '117+020', pkd: '166+080', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #28'},
+            {id: 'SOS-029', pkr: '119+940', pkd: '163+160', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #29'},
+            {id: 'SOS-030', pkr: '122+940', pkd: '160+160', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #30'},
+            {id: 'SOS-031', pkr: '125+940', pkd: '157+160', ruta: 'RN 4510', uf: 'UF-2', via: 'Derecha', nombre: 'SOS #31'},
+            {id: 'SOS-032', pkr: '128+840', pkd: '154+260', ruta: 'RN 4510', uf: 'UF-5.1', via: 'Izquierda', nombre: 'SOS #32'},
+            {id: 'SOS-033', pkr: '131+700', pkd: '151+400', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #33'},
+            {id: 'SOS-034', pkr: '0+650', pkd: '149+850', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Izquierda', nombre: 'SOS #34'},
+            {id: 'SOS-035', pkr: '3+550', pkd: '146+950', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #35'},
+            {id: 'SOS-036', pkr: '6+450', pkd: '144+050', ruta: 'RN 4511', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #36'},
+            {id: 'SOS-037', pkr: '11+155', pkd: '139+345', ruta: 'RN 4511', uf: 'UF-2', via: 'Derecha', nombre: 'SOS #37'},
+            {id: 'SOS-038', pkr: '13+590', pkd: '136+910', ruta: 'RN 4511', uf: 'UF-2', via: 'Izquierda', nombre: 'SOS #38'},
+            {id: 'SOS-039', pkr: '16+460', pkd: '134+040', ruta: 'RN 4511', uf: 'UF-2', via: 'Derecha', nombre: 'SOS #39'},
+            {id: 'SOS-040', pkr: '19+390', pkd: '131+110', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Izquierda', nombre: 'SOS #40'},
+            {id: 'SOS-041', pkr: '22+300', pkd: '128+200', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #41'},
+            {id: 'SOS-042', pkr: '25+100', pkd: '125+400', ruta: 'RN 4511', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #42'},
+            {id: 'SOS-043', pkr: '28+060', pkd: '122+440', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #43'},
+            {id: 'SOS-044', pkr: '30+600', pkd: '119+900', ruta: 'RN 4511', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #44'},
+            {id: 'SOS-045', pkr: '33+330', pkd: '117+170', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #45'},
+            {id: 'SOS-046', pkr: '36+250', pkd: '114+250', ruta: 'RN 4511', uf: 'UF-0D', via: 'Izquierda', nombre: 'SOS #46'},
+            {id: 'SOS-047', pkr: '39+100', pkd: '111+400', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'SOS #47'},
+            {id: 'SOS-048', pkr: '41+940', pkd: '108+560', ruta: 'RN 4511', uf: 'UF-2', via: 'Izquierda', nombre: 'SOS #48'},
+            {id: 'SOS-049', pkr: '44+550', pkd: '105+950', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'SOS #49'},
+            {id: 'SOS-050', pkr: '47+510', pkd: '102+990', ruta: 'RN 4511', uf: 'UF-2', via: 'Izquierda', nombre: 'SOS #50'},
+            {id: 'SOS-051', pkr: '50+470', pkd: '100+030', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'SOS #51'},
+            {id: 'SOS-052', pkr: '53+320', pkd: '97+180', ruta: 'RN 4511', uf: 'UF-3', via: 'Izquierda', nombre: 'SOS #52'},
+            {id: 'SOS-053', pkr: '55+905', pkd: '94+595', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'SOS #53'},
+            {id: 'SOS-054', pkr: '58+970', pkd: '91+530', ruta: 'RN 4511', uf: 'UF-3', via: 'Izquierda', nombre: 'SOS #54'},
+            {id: 'SOS-055', pkr: '61+900', pkd: '88+600', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'SOS #55'},
+            {id: 'SOS-056', pkr: '64+510', pkd: '85+990', ruta: 'RN 4511', uf: 'UF-3', via: 'Izquierda', nombre: 'SOS #56'},
+            {id: 'SOS-057', pkr: '67+000', pkd: '83+500', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'SOS #57'},
+            {id: 'SOS-058', pkr: '69+955', pkd: '80+545', ruta: 'RN 4511', uf: 'UF-4', via: 'Izquierda', nombre: 'SOS #58'},
+            {id: 'SOS-059', pkr: '72+890', pkd: '77+610', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'SOS #59'},
+            {id: 'SOS-060', pkr: '76+200', pkd: '74+300', ruta: 'RN 4511', uf: 'UF-6', via: 'Izquierda', nombre: 'SOS #60'},
+            {id: 'SOS-061', pkr: '79+290', pkd: '71+210', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #61'},
+            {id: 'SOS-062', pkr: '84+805', pkd: '65+695', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #62'},
+            {id: 'SOS-063', pkr: '87+103', pkd: '63+397', ruta: 'RN 4511', uf: 'UF-7', via: 'Izquierda', nombre: 'SOS #63'},
+            {id: 'SOS-064', pkr: '89+840', pkd: '60+660', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #64'},
+            {id: 'SOS-065', pkr: '92+643', pkd: '57+857', ruta: 'RN 4511', uf: 'UF-7', via: 'Izquierda', nombre: 'SOS #65'},
+            {id: 'SOS-066', pkr: '95+400', pkd: '55+100', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #66'},
+            {id: 'SOS-067', pkr: '97+950', pkd: '52+550', ruta: 'RN 4511', uf: 'UF-8', via: 'Izquierda', nombre: 'SOS #67'},
+            {id: 'SOS-068', pkr: '100+600', pkd: '49+900', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #68'},
+            {id: 'SOS-069', pkr: '103+300', pkd: '47+200', ruta: 'RN 4511', uf: 'UF-11', via: 'Izquierda', nombre: 'SOS #69'},
+            {id: 'SOS-070', pkr: '106+145', pkd: '44+355', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #70'},
+            {id: 'SOS-071', pkr: '109+100', pkd: '41+400', ruta: 'RN 4511', uf: 'UF-9', via: 'Izquierda', nombre: 'SOS #71'},
+            {id: 'SOS-072', pkr: '111+930', pkd: '38+570', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #72'},
+            {id: 'SOS-073', pkr: '116+200', pkd: '34+300', ruta: 'RN 4511', uf: 'UF-9', via: 'Derecha', nombre: 'SOS #73'},
+            {id: 'SOS-074', pkr: '119+240', pkd: '31+260', ruta: 'RN 4511', uf: 'UF-10', via: 'Izquierda', nombre: 'SOS #74'},
+            {id: 'SOS-075', pkr: '122+185', pkd: '28+315', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #75'},
+            {id: 'SOS-076', pkr: '125+305', pkd: '25+195', ruta: 'RN 4511', uf: 'UF-10', via: 'Izquierda', nombre: 'SOS #76'},
+            {id: 'SOS-077', pkr: '127+490', pkd: '23+010', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #77'},
+            {id: 'SOS-078', pkr: '129+910', pkd: '20+590', ruta: 'RN 4511', uf: 'UF-12', via: 'Izquierda', nombre: 'SOS #78'},
+            {id: 'SOS-079', pkr: '132+832', pkd: '17+668', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #79'},
+            {id: 'SOS-080', pkr: '135+482', pkd: '15+018', ruta: 'RN 4511', uf: 'UF-12', via: 'Izquierda', nombre: 'SOS #80'},
+            {id: 'SOS-081', pkr: '138+302', pkd: '12+198', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #81'},
+            {id: 'SOS-082', pkr: '141+095', pkd: '9+405', ruta: 'RN 4511', uf: 'UF-12', via: 'Izquierda', nombre: 'SOS #82'},
+            {id: 'SOS-083', pkr: '144+390', pkd: '6+110', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #83'},
+            {id: 'SOS-084', pkr: '147+385', pkd: '3+115', ruta: 'RN 4511', uf: 'UF-12', via: 'Izquierda', nombre: 'SOS #84'},
+            {id: 'SOS-085', pkr: '1+240', pkd: '1+760', ruta: 'RN 4513', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #85'},
+            {id: 'SOS-086', pkr: '3+656', pkd: '280+344', ruta: 'RN 4513', uf: 'UF-13', via: 'Izquierda', nombre: 'SOS #86'},
+            {id: 'SOS-087', pkr: '6+050', pkd: '277+950', ruta: 'RN 4513', uf: 'UF-11', via: 'Derecha', nombre: 'SOS #87'},
+            {id: 'SOS-088', pkr: '9+000', pkd: '275+000', ruta: 'RN 4513', uf: 'UF-13', via: 'Sur', nombre: 'SOS #88'}
+        ];
+        
+        sosLocations.forEach(loc => {
+            // Agregar Poste SOS
+            layoutData.push({
+                id: loc.id,
+                nombre: `Poste ${loc.nombre}`,
+                sistema: 'SOS',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd}) - ${loc.via}`,
+                observaciones: loc.nombre,
+                coordenadas: this.generateCoordinates('SOS', loc.pkr, loc.pkd)
+            });
+            
+            // Agregar Switch L2 asociado a este SOS
+            // PKD formato: "241+920" -> extraer parte entera: 241
+            const pkdParts = loc.pkd.split('+');
+            const pkdNum = parseInt(pkdParts[0]);
+            const switchL2Id = `L2-${pkdNum.toString().padStart(3, '0')}`;
+            layoutData.push({
+                id: `${loc.id}-L2`,
+                nombre: `Switch L2 ${switchL2Id} - ${loc.nombre}`,
+                sistema: 'TELECOM',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: `Switch L2 asociado a ${loc.id}`,
+                coordenadas: this.generateCoordinates('TELECOM', loc.pkr, loc.pkd)
+            });
+        });
+        
+        // === PMV (28 unidades completas desde tabla maestra) ===
+        const pmvLocations = [
+            {id: 'PMV-001', pkr: '41+000', pkd: '242+100', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'Inter Koran'},
+            {id: 'PMV-002', pkr: '41+200', pkd: '242+000', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-003', pkr: '57+350', pkd: '225+750', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-004', pkr: '58+950', pkd: '224+150', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-005', pkr: '77+350', pkd: '205+750', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-006', pkr: '78+950', pkd: '204+150', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-007', pkr: '97+250', pkd: '185+850', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-008', pkr: '98+750', pkd: '184+350', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-009', pkr: '117+250', pkd: '165+850', ruta: 'RN 4510', uf: 'UF-0D', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-010', pkr: '118+660', pkd: '164+440', ruta: 'RN 4510', uf: 'UF-0D', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-011', pkr: '2+790', pkd: '147+710', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-012', pkr: '4+200', pkd: '146+300', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'PMV - Peatonal'},
+            {id: 'PMV-013', pkr: '14+200', pkd: '136+300', ruta: 'RN 4511', uf: 'UF-2', via: 'Izquierda', nombre: 'PMV - Peatonal'},
+            {id: 'PMV-014', pkr: '22+300', pkd: '128+200', ruta: 'RN 4511', uf: 'UF-0D', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-015', pkr: '34+200', pkd: '116+300', ruta: 'RN 4511', uf: 'UF-0D', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-016', pkr: '42+300', pkd: '108+200', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-017', pkr: '54+200', pkd: '96+300', ruta: 'RN 4511', uf: 'UF-3', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-018', pkr: '60+480', pkd: '90+020', ruta: 'RN 4511', uf: 'UF-5.1', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-019', pkr: '74+200', pkd: '76+300', ruta: 'RN 4511', uf: 'UF-4', via: 'Izquierda', nombre: 'PMV - Peatonal'},
+            {id: 'PMV-020', pkr: '77+350', pkd: '73+150', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-021', pkr: '86+800', pkd: '63+700', ruta: 'RN 4511', uf: 'UF-7', via: 'Izquierda', nombre: 'PMV'},
+            {id: 'PMV-022', pkr: '97+200', pkd: '53+300', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'PMV - Peatonal'},
+            {id: 'PMV-023', pkr: '106+580', pkd: '43+920', ruta: 'RN 4511', uf: 'UF-8', via: 'Izquierda', nombre: 'PMV - ETD integrada'},
+            {id: 'PMV-024', pkr: '117+200', pkd: '33+300', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'PMV'},
+            {id: 'PMV-025', pkr: '126+580', pkd: '23+920', ruta: 'RN 4511', uf: 'UF-10', via: 'Izquierda', nombre: 'PMV - ETD integrada'},
+            {id: 'PMV-026', pkr: '136+750', pkd: '13+750', ruta: 'RN 4511', uf: 'UF-11', via: 'Derecha', nombre: 'PMV - Peatonal'},
+            {id: 'PMV-027', pkr: '146+580', pkd: '3+920', ruta: 'RN 4511', uf: 'UF-12', via: 'Izquierda', nombre: 'PMV - Fin Ruta'},
+            {id: 'PMV-028', pkr: '5+900', pkd: '278+100', ruta: 'RN 4513', uf: 'UF-11', via: 'Derecha', nombre: 'PMV'}
+        ];
+        
+        pmvLocations.forEach(loc => {
+            // Agregar Panel PMV
+            layoutData.push({
+                id: loc.id,
+                nombre: `Panel ${loc.nombre}`,
+                sistema: 'PMV',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd}) - ${loc.via}`,
+                observaciones: loc.nombre,
+                coordenadas: this.generateCoordinates('PMV', loc.pkr, loc.pkd)
+            });
+            
+            // Agregar Switch L2 asociado a este PMV
+            // PKD formato: "242+100" -> extraer parte entera: 242
+            const pkdParts = loc.pkd.split('+');
+            const pkdNum = parseInt(pkdParts[0]);
+            const switchL2Id = `L2-${pkdNum.toString().padStart(3, '0')}`;
+            layoutData.push({
+                id: `${loc.id}-L2`,
+                nombre: `Switch L2 ${switchL2Id} - PMV ${loc.nombre}`,
+                sistema: 'TELECOM',
+                cantidad: 1,
+                uf: loc.uf,
+                pkr: loc.pkr,
+                pkd: loc.pkd,
+                ruta: loc.ruta,
+                ubicacionFisica: loc.via,
+                ubicacion: `${loc.ruta} ${loc.pkr} (PKD ${loc.pkd})`,
+                observaciones: `Switch L2 asociado a ${loc.id}`,
+                coordenadas: this.generateCoordinates('TELECOM', loc.pkr, loc.pkd)
+            });
+        });
+        
+        return layoutData;
     }
     
-    generateCoordinates(sistema) {
-        // Coordenadas aproximadas por sistema
+    generateCoordinates(sistema, pkr = null, pkd = null) {
+        // Intentar obtener coordenadas reales del KML por PKR o PKD
+        if (pkr) {
+            const coord = this.obtenerCoordenadasPorPK(pkr);
+            if (coord) return coord;
+        }
+        if (pkd) {
+            const coord = this.obtenerCoordenadasPorPK(pkd);
+            if (coord) return coord;
+        }
+        
+        // Fallback: Coordenadas aproximadas por sistema (si no hay KML o PK)
         const coordenadas = {
             'SOS': { lat: 7.5, lng: -73.2 },
             'ETD/RADAR': { lat: 7.6, lng: -73.1 },
             'CCTV': { lat: 7.4, lng: -73.3 },
             'PMV': { lat: 7.5, lng: -73.2 },
             'METEO': { lat: 7.5, lng: -73.2 },
-            'WIM': { lat: 7.4, lng: -73.3 }
+            'WIM': { lat: 7.4, lng: -73.3 },
+            'TELECOM': { lat: 7.5, lng: -73.2 },
+            'GALIBOS': { lat: 7.5, lng: -73.2 },
+            'PEAJES': { lat: 7.5, lng: -73.2 },
+            'CCO': { lat: 7.5, lng: -73.2 }
         };
         return coordenadas[sistema] || { lat: 7.5, lng: -73.2 };
     }

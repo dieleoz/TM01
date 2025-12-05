@@ -247,7 +247,7 @@ El Concesionario deberá disponer de:
 | Camión Cama Baja | 2 | $150,000 | $300,000 |
 | Equipos de Rescate Vehicular (juegos completos) | 5 | $40,000 | $200,000 |
 | Radios Móviles | 30 | $2,500 | $75,000 |
-| ~~Teléfonos SOS (postes)~~ | ~~65~~ | ~~$3,500~~ | ~~$227,500~~ **ELIMINADO - ya en ITS** |
+| ~~Teléfonos SOS (postes)~~ | ~~65~~ | ~~$3,500~~ | ~~$227,500~~ **Ver documento dedicado:** `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md` |
 | Bases de Operación (edificaciones) | 2 | $200,000 | $400,000 |
 | Equipamiento de Bases (talleres, dormitorios) | 2 | $100,000 | $200,000 |
 | Equipos Médicos y Herramientas | - | - | $150,000 |
@@ -258,9 +258,10 @@ El Concesionario deberá disponer de:
 
 #### 🔴 **Nota de Corrección v1.1 (21/10/2025):**
 
-**Duplicación eliminada:**
-- ❌ 65 Postes SOS: $227,500 (YA están en Sistema ITS con 87 unidades)
-- **Ahorro: -$227,500 USD**
+**Referencia a Postes SOS:**
+- 📋 Postes SOS: Ver documento dedicado `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md`
+- **Cantidad:** 88 postes SOS (validado contractualmente)
+- **Presupuesto:** Ver documento dedicado (CAPEX: $1.6M-$2.3M USD)
 
 **Aclaración sobre vehículos:**
 - ✅ Los vehículos de emergencia se ESTACIONAN en las bases de las áreas de servicio

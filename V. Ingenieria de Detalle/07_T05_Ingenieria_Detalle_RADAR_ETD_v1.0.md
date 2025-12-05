@@ -2,10 +2,10 @@
 ## Sistemas de Detección de Tráfico y Reconocimiento de Placas
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Sistema:** RADAR-ANPR + ETD (Estaciones Toma de Datos)  
-**Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
-**Basado en:** T04 ETD/Radares v1.0 + Validación Contractual v1.0  
+**Sistema:** ETD (Estaciones Toma de Datos) + Radares Sancionatorios  
+**Fecha:** 31 de octubre de 2025  
+**Versión:** 1.1  
+**Basado en:** T01 ETD/RADAR MVP v1.0, T04 ETD/Radares v1.2 + Validación Contractual v1.0  
 
 ---
 
@@ -15,13 +15,13 @@
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad RADAR-ANPR** | **12 equipos** (pares bidireccionales) | 6 ubicaciones × 2 sentidos |
-| **Cantidad ETD puras** | **3 equipos** | Integradas en CCTV/PMV |
+| **Cantidad ETD (Monitoreo)** | **13 equipos** | Una por cada UF (UF1-UF13) |
+| **Cantidad Radares Sancionatorios** | **2 equipos** | Sitios críticos (según estudio técnico) |
 | **Total equipos** | **15** | Validación contractual |
 | **Cobertura** | 13/13 UFs | 100% unidades funcionales |
-| **CAPEX Total** | **$555,000 USD** | $37,000/equipo instalado |
-| **OPEX Anual** | **$22,500 USD** | $1,500/equipo/año |
-| **OPEX 20 años** | **$450,000 USD** | Mantenimiento + licencias |
+| **CAPEX Total** | **$615,000 USD** | $41,000/equipo instalado |
+| **OPEX Anual** | **$29,500 USD** | $1,967/equipo/año |
+| **OPEX 20 años** | **$590,000 USD** | Mantenimiento + licencias + calibración ONAC |
 
 ---
 
@@ -31,28 +31,29 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. RADAR-ANPR COMPLETO (12 pares)** | **12** | **$25,000** | **$300,000** | **54.1%** |
-| Radar Doppler (detección velocidad) | 12 | $8,000 | $96,000 | 17.3% |
-| Cámara ANPR (reconocimiento placas) | 12 | $6,500 | $78,000 | 14.1% |
-| Controlador ETD | 12 | $4,500 | $54,000 | 9.7% |
-| Cámara contextual (evidencia) | 12 | $3,200 | $38,400 | 6.9% |
-| Software ANPR (licencia) | 12 | $2,000 | $24,000 | 4.3% |
-| Gabinete control IP65 | 12 | $600 | $7,200 | 1.3% |
-| Accesorios y conectores | 12 | $150 | $1,800 | 0.3% |
-| **2. ETD PURAS (3 unidades)** | **3** | **$25,000** | **$75,000** | **13.5%** |
-| Controlador ETD | 3 | $4,500 | $13,500 | 2.4% |
-| Cámara clasificación vehicular | 3 | $5,800 | $17,400 | 3.1% |
-| Software analítica tráfico | 3 | $3,500 | $10,500 | 1.9% |
-| Sensores láser/inductivos | 3 | $8,000 | $24,000 | 4.3% |
-| Gabinete + accesorios | 3 | $3,200 | $9,600 | 1.7% |
-| **3. INSTALACIÓN** | **15** | **$12,000** | **$180,000** | **32.4%** |
-| Mano de obra | 15 | $6,500 | $97,500 | 17.6% |
-| Obras civiles | 15 | $2,800 | $42,000 | 7.6% |
-| Pórtico/soporte (si requerido) | 12 | $2,500 | $30,000 | 5.4% |
-| Certificación SIMIT | 15 | $700 | $10,500 | 1.9% |
-| **TOTAL CAPEX** | - | - | **$555,000** | **100%** |
+| **1. ETD (Monitoreo) - 13 unidades** | **13** | **$25,000** | **$325,000** | **52.8%** |
+| Sensor radar/microondas | 13 | $8,000 | $104,000 | 16.9% |
+| Controlador ETD | 13 | $4,500 | $58,500 | 9.5% |
+| Software analítica tráfico | 13 | $3,500 | $45,500 | 7.4% |
+| Gabinete control IP65 | 13 | $600 | $7,800 | 1.3% |
+| Accesorios y conectores | 13 | $150 | $1,950 | 0.3% |
+| **2. RADARES SANCIONATORIOS - 2 unidades** | **2** | **$55,000** | **$110,000** | **17.9%** |
+| Sensor radar Doppler | 2 | $8,000 | $16,000 | 2.6% |
+| Cámara ANPR (reconocimiento placas) | 2 | $6,500 | $13,000 | 2.1% |
+| Controlador radar | 2 | $4,500 | $9,000 | 1.5% |
+| Cámara contextual (evidencia) | 2 | $3,200 | $6,400 | 1.0% |
+| Software ANPR (licencia) | 2 | $2,000 | $4,000 | 0.7% |
+| Certificación ONAC | 2 | $15,000 | $30,000 | 4.9% |
+| Gabinete control IP65 | 2 | $600 | $1,200 | 0.2% |
+| Accesorios y conectores | 2 | $150 | $300 | 0.0% |
+| **3. INSTALACIÓN** | **15** | **$12,000** | **$180,000** | **29.3%** |
+| Mano de obra | 15 | $6,500 | $97,500 | 15.9% |
+| Obras civiles | 15 | $2,800 | $42,000 | 6.8% |
+| Pórtico/soporte (si requerido) | 15 | $2,500 | $37,500 | 6.1% |
+| Certificación SIMIT (opcional) | 2 | $1,500 | $3,000 | 0.5% |
+| **TOTAL CAPEX** | - | - | **$615,000** | **100%** |
 
-**CAPEX/equipo:** $555,000 / 15 = **$37,000 USD/equipo**
+**CAPEX/equipo:** $615,000 / 15 = **$41,000 USD/equipo**
 
 ---
 
