@@ -15,32 +15,32 @@ Write-Host "  🚀 SERVIDOR WEB TM01 CON SINCRONIZACIÓN AUTOMÁTICA" -Foregroun
 Write-Host "═══════════════════════════════════════════════════════════" -ForegroundColor Cyan
 Write-Host ""
 
-# PASO 1: Sincronización automática
+# PASO 1: Reconstrucción automática desde fuente única
 if (-not $SkipSync) {
-    Write-Host "📊 PASO 1/3: Sincronizando datos desde documentos fuente..." -ForegroundColor Yellow
+    Write-Host "📊 PASO 1/3: Reconstruyendo datos desde FUENTE ÚNICA..." -ForegroundColor Yellow
     Write-Host ""
     
-    # Ejecutar script de sincronización completa
-    $syncScript = Join-Path $REPO_ROOT "scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1"
+    # Ejecutar script de reconstrucción desde RESUMEN_EJECUTIVO
+    $rebuildScript = Join-Path $REPO_ROOT "scripts\rebuild_masterdata_from_resumen.ps1"
     
-    if (Test-Path $syncScript) {
+    if (Test-Path $rebuildScript) {
         try {
-            Write-Host "  ⏳ Parseando documentos T01/T03 MVP v1.1..." -ForegroundColor Gray
-            & $syncScript -Force -ErrorAction Stop
+            Write-Host "  ⏳ Leyendo RESUMEN_EJECUTIVO_PROYECTO_COMPLETADO.md..." -ForegroundColor Gray
+            & $rebuildScript -ErrorAction Stop
             Write-Host ""
-            Write-Host "  ✅ Sincronización completada exitosamente" -ForegroundColor Green
+            Write-Host "  ✅ Reconstrucción completada exitosamente" -ForegroundColor Green
         } catch {
             Write-Host ""
-            Write-Host "  ⚠️  Error en sincronización: $($_.Exception.Message)" -ForegroundColor Yellow
+            Write-Host "  ⚠️  Error en reconstrucción: $($_.Exception.Message)" -ForegroundColor Yellow
             Write-Host "  ℹ️  Continuando con datos existentes..." -ForegroundColor Gray
         }
     } else {
-        Write-Host "  ⚠️  Script de sincronización no encontrado" -ForegroundColor Yellow
+        Write-Host "  ⚠️  Script de reconstrucción no encontrado" -ForegroundColor Yellow
         Write-Host "  ℹ️  Continuando con datos existentes..." -ForegroundColor Gray
     }
     Write-Host ""
 } else {
-    Write-Host "⏭️  Sincronización omitida (modo desarrollo)" -ForegroundColor Yellow
+    Write-Host "⏭️  Reconstrucción omitida (modo desarrollo)" -ForegroundColor Yellow
     Write-Host ""
 }
 
