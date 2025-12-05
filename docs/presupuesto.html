@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WBS Presupuestal - TM01 Troncal Magdalena</title>
@@ -123,7 +126,7 @@
 
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
     <script src="data/uf_pk_map.js"></script>
-    <script src="data/tm01_master_data.js?v=20251205095745"></script>
+    <script src="data/tm01_master_data.js?v=20251205100715"></script>
     <script>
         let allItems = [];
         let filteredItems = [];
@@ -582,7 +585,10 @@
 
             const end = `</tbody></table>`;
 
-            const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Desglose AIU - TM01</title>
+            const html = `<!DOCTYPE html><html><head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0"><meta charset="UTF-8"><title>Desglose AIU - TM01</title>
                 <style>${style}</style>
                 <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"><\/script>
             </head><body>
@@ -733,7 +739,10 @@
                 `;
             }).join('');
 
-            const html = `<!DOCTYPE html><html><head><meta=\"UTF-8\"><title>ACTA DE OBRA - TM01</title>
+            const html = `<!DOCTYPE html><html><head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0"><meta=\"UTF-8\"><title>ACTA DE OBRA - TM01</title>
                 <style>${estilo}</style>
                 <script src=\"https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js\"><\/script>
             </head><body>
