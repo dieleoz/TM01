@@ -98,6 +98,16 @@ class TM01MasterData {
             capexUnitarioUSD: 523538.79,
             descripcion: 'Sistema WIM completo',
             estado: 'Validado'
+        },
+        {
+            id: '8',
+            sistema: 'Peaje',
+            cantidad: 1,
+            capexUSD: 2400000,
+            capexCOP: 9600000000,
+            capexUnitarioUSD: 2400000,
+            descripcion: 'Sistema de Peaje y Recaudo (2 Estaciones)',
+            estado: 'Validado'
         }
         ];
 

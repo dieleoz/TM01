@@ -1,6 +1,6 @@
 window.wbsDataGlobal = window.datos_wbs = {
     "fecha_actualizacion": "2025-12-09",
-    "total_items": 150,
+    "total_items": 162,
     "version": "2.2",
     "items": [
 { item: '1', descripcion: 'SISTEMA CCTV', id: '1', nivel: 1, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'CCTV', totalCOP: '', tipo: 'capitulo', total: '' },
@@ -152,6 +152,18 @@ window.wbsDataGlobal = window.datos_wbs = {
 { item: '7.1.10', descripcion: 'Periféricos Control (Talanq/Semáf)', id: '7.1.10', nivel: 3, cantidad: '8', vuCOP: '7296880', criterio: 'T05', unidad: 'UND', vu: '1824.22', sistema: 'WIM', totalCOP: '58375040', tipo: 'item', total: '14593.76' },
 { item: '7.1.11', descripcion: 'Cámaras LPR y Seguridad Estática', id: '7.1.11', nivel: 3, cantidad: '6', vuCOP: '9088120', criterio: 'T05', unidad: 'UND', vu: '2272.03', sistema: 'WIM', totalCOP: '54528720', tipo: 'item', total: '13632.18' },
 { item: '7.1.12', descripcion: 'Servicios Instalación Estática (Global)', id: '7.1.12', nivel: 3, cantidad: '1', vuCOP: '234297680', criterio: 'T05', unidad: 'UND', vu: '58574.42', sistema: 'WIM', totalCOP: '234297680', tipo: 'item', total: '58574.42' },
-{ item: '7.1.13', descripcion: 'Otros Suministros Estáticos', id: '7.1.13', nivel: 3, cantidad: '1', vuCOP: '214269120', criterio: 'T05', unidad: 'UND', vu: '53567.28', sistema: 'WIM', totalCOP: '214269120', tipo: 'item', total: '53567.28' }
+{ item: '7.1.13', descripcion: 'Otros Suministros Estáticos', id: '7.1.13', nivel: 3, cantidad: '1', vuCOP: '214269120', criterio: 'T05', unidad: 'UND', vu: '53567.28', sistema: 'WIM', totalCOP: '214269120', tipo: 'item', total: '53567.28' },
+{ item: '8', descripcion: 'SISTEMA PEAJE', id: '8', nivel: 1, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'Peaje', totalCOP: '', tipo: 'capitulo', total: '' },
+{ item: '8.1', descripcion: 'SUMINISTROS PEAJE', id: '8.1', nivel: 2, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'Peaje', totalCOP: '', tipo: 'subcapitulo', total: '' },
+{ item: '8.1.1', descripcion: 'Antenas TAG (Telepeaje)', id: '8.1.1', nivel: 3, cantidad: '16', vuCOP: '32000000', criterio: 'T05', unidad: 'UND', vu: '8000.00', sistema: 'Peaje', totalCOP: '512000000', tipo: 'item', total: '128000.00' },
+{ item: '8.1.2', descripcion: 'Cámaras ANPR (Reconocimiento)', id: '8.1.2', nivel: 3, cantidad: '16', vuCOP: '12000000', criterio: 'T05', unidad: 'UND', vu: '3000.00', sistema: 'Peaje', totalCOP: '192000000', tipo: 'item', total: '48000.00' },
+{ item: '8.1.3', descripcion: 'Barreras Automáticas', id: '8.1.3', nivel: 3, cantidad: '16', vuCOP: '60000000', criterio: 'T05', unidad: 'UND', vu: '15000.00', sistema: 'Peaje', totalCOP: '960000000', tipo: 'item', total: '240000.00' },
+{ item: '8.1.4', descripcion: 'Sensores de Presencia', id: '8.1.4', nivel: 3, cantidad: '32', vuCOP: '2000000', criterio: 'T05', unidad: 'UND', vu: '500.00', sistema: 'Peaje', totalCOP: '64000000', tipo: 'item', total: '16000.00' },
+{ item: '8.1.5', descripcion: 'PMV Informativos Peaje', id: '8.1.5', nivel: 3, cantidad: '4', vuCOP: '100000000', criterio: 'T05', unidad: 'UND', vu: '25000.00', sistema: 'Peaje', totalCOP: '400000000', tipo: 'item', total: '100000.00' },
+{ item: '8.1.6', descripcion: 'CCTV Vigilancia Peaje', id: '8.1.6', nivel: 3, cantidad: '20', vuCOP: '8000000', criterio: 'T05', unidad: 'UND', vu: '2000.00', sistema: 'Peaje', totalCOP: '160000000', tipo: 'item', total: '40000.00' },
+{ item: '8.1.7', descripcion: 'Switch L3 por Estación', id: '8.1.7', nivel: 3, cantidad: '2', vuCOP: '100000000', criterio: 'T05', unidad: 'UND', vu: '25000.00', sistema: 'Peaje', totalCOP: '200000000', tipo: 'item', total: '50000.00' },
+{ item: '8.1.8', descripcion: 'Software de Gestión Peaje', id: '8.1.8', nivel: 3, cantidad: '2', vuCOP: '200000000', criterio: 'T05', unidad: 'UND', vu: '50000.00', sistema: 'Peaje', totalCOP: '400000000', tipo: 'item', total: '100000.00' },
+{ item: '8.1.9', descripcion: 'Instalación y Puesta en Marcha (Global)', id: '8.1.9', nivel: 3, cantidad: '1', vuCOP: '4800000000', criterio: 'T05', unidad: 'UND', vu: '1200000.00', sistema: 'Peaje', totalCOP: '4800000000', tipo: 'item', total: '1200000.00' },
+{ item: '8.1.10', descripcion: 'Otros Suministros', id: '8.1.10', nivel: 3, cantidad: '1', vuCOP: '1912000000', criterio: 'T05', unidad: 'UND', vu: '478000.00', sistema: 'Peaje', totalCOP: '1912000000', tipo: 'item', total: '478000.00' }
     ]
 };

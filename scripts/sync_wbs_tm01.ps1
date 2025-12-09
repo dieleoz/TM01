@@ -37,6 +37,7 @@ function Extract-T05Components {
         "05_T05_Ingenieria_Detalle_CCTV_v1.0.md"                      = "CCTV"
         "06_T05_Ingenieria_Detalle_PMV_v1.0.md"                       = "PMV"
         "10_T05_Ingenieria_Detalle_WIM_v1.0.md"                       = "WIM"
+        "11_T05_Ingenieria_Detalle_Peaje_v1.0.md"                     = "Peaje"
         "01_T05_Ingenieria_Detalle_Fibra_Optica_v1.0.md"              = "Telecomunicaciones"
         "09_T05_Ingenieria_Detalle_Estaciones_Meteorologicas_v1.0.md" = "Estaciones Meteorológicas"
     }
