@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -8,61 +9,278 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAYOUT MAESTRO - TM01 Troncal Magdalena</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; }
-        
-        .container { max-width: 1800px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-        
-        .header { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 30px; text-align: center; border-radius: 12px 12px 0 0; position: relative; }
-        .header h1 { font-size: 32px; margin-bottom: 10px; }
-        .header p { font-size: 16px; opacity: 0.95; }
-        .back-btn { position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.2); color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 14px; }
-        .back-btn:hover { background: rgba(255,255,255,0.3); }
-        
-        .filters { padding: 20px; background: #f8f9fa; border-bottom: 2px solid #11998e; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .filter-group { display: flex; flex-direction: column; }
-        .filter-group label { font-size: 12px; font-weight: 600; color: #495057; margin-bottom: 5px; }
-        .filter-group select, .filter-group input { padding: 10px; border: 2px solid #dee2e6; border-radius: 6px; font-size: 14px; }
-        
-        .filter-actions { padding: 15px 20px; background: #e9ecef; display: flex; gap: 10px; flex-wrap: wrap; }
-        .btn { padding: 10px 20px; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
-        .btn-primary { background: #11998e; color: white; }
-        .btn-primary:hover { background: #0d7a6e; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(17,153,142,0.4); }
-        .btn-secondary { background: #6c757d; color: white; }
-        .btn-success { background: #28a745; color: white; }
-        
-        .stats { padding: 15px 20px; background: #d1ecf1; border-bottom: 2px solid #0c5460; text-align: center; }
-        .stats-content { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 28px; font-weight: 700; color: #11998e; }
-        .stat-label { font-size: 12px; color: #666; margin-top: 5px; }
-        
-        .table-container { padding: 20px; overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; }
-        thead { background: #11998e; color: white; position: sticky; top: 0; z-index: 10; }
-        th { padding: 12px; text-align: left; font-size: 13px; font-weight: 600; }
-        tbody tr { border-bottom: 1px solid #dee2e6; transition: background 0.2s; }
-        tbody tr:hover { background: #f8f9fa; }
-        td { padding: 10px 12px; font-size: 13px; }
-        
-        .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
-        .badge-sos { background: #e3f2fd; color: #1976d2; }
-        .badge-etd { background: #fff3e0; color: #f57c00; }
-        .badge-cctv { background: #e8f5e9; color: #388e3c; }
-        .badge-pmv { background: #fff8e1; color: #fbc02d; }
-        .badge-meteo { background: #f3e5f5; color: #7b1fa2; }
-        .badge-wim { background: #ffe0b2; color: #e65100; }
-        
-        .empty-state { padding: 60px 20px; text-align: center; color: #6c757d; }
-        .empty-state-icon { font-size: 64px; margin-bottom: 20px; }
-        
-        .alert { padding: 15px 20px; margin: 20px; border-radius: 6px; font-size: 14px; }
-        .alert-info { background: #d1ecf1; border-left: 4px solid #0c5460; color: #0c5460; }
-        .alert-warning { background: #fff3cd; border-left: 4px solid #856404; color: #856404; }
-        
-        .footer { background: #343a40; color: white; padding: 20px; text-align: center; font-size: 14px; border-radius: 0 0 12px 12px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .filters {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #11998e;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 10px;
+            border: 2px solid #dee2e6;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .filter-actions {
+            padding: 15px 20px;
+            background: #e9ecef;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #11998e;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0d7a6e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(17, 153, 142, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .stats {
+            padding: 15px 20px;
+            background: #d1ecf1;
+            border-bottom: 2px solid #0c5460;
+            text-align: center;
+        }
+
+        .stats-content {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #11998e;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .table-container {
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #11998e;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 12px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #dee2e6;
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        td {
+            padding: 10px 12px;
+            font-size: 13px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge-sos {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-etd {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .badge-cctv {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .badge-pmv {
+            background: #fff8e1;
+            color: #fbc02d;
+        }
+
+        .badge-meteo {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-wim {
+            background: #ffe0b2;
+            color: #e65100;
+        }
+
+        .empty-state {
+            padding: 60px 20px;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .alert {
+            padding: 15px 20px;
+            margin: 20px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            color: #0c5460;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            border-left: 4px solid #856404;
+            color: #856404;
+        }
+
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 0 0 12px 12px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -70,11 +288,11 @@
             <h1>🗺️ LAYOUT MAESTRO INTERACTIVO</h1>
             <p>TM01 Troncal Magdalena | Sistema Integrado de Equipamiento e Infraestructura</p>
         </div>
-        
+
         <div class="alert alert-info" id="alertInfo">
             â³ Cargando datos del layout desde tm01_master_data.js...
         </div>
-        
+
         <!-- Filtros -->
         <div class="filters">
             <div class="filter-group">
@@ -94,14 +312,14 @@
                 <input type="text" id="filter-buscar" placeholder="Buscar por nombre..." oninput="applyFilters();">
             </div>
         </div>
-        
+
         <!-- Acciones -->
         <div class="filter-actions">
             <button class="btn btn-primary" onclick="applyFilters();">🔍 Aplicar Filtros</button>
             <button class="btn btn-secondary" onclick="clearFilters();">🗑️ Limpiar</button>
             <button class="btn btn-success" onclick="exportarCSV();">📊 Exportar CSV</button>
         </div>
-        
+
         <!-- Estadísticas -->
         <div class="stats">
             <div class="stats-content" id="stats-content">
@@ -119,13 +337,15 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Resumen por UF -->
-        <div class="stats" id="stats-uf-container" style="display: none; padding: 15px 20px; background: #e9ecef; border-top: 2px solid #11998e;">
+        <div class="stats" id="stats-uf-container"
+            style="display: none; padding: 15px 20px; background: #e9ecef; border-top: 2px solid #11998e;">
             <h3 style="margin-bottom: 15px; font-size: 16px; color: #495057;">📊 Equipos por Unidad Funcional (UF)</h3>
-            <div id="stats-uf-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;"></div>
+            <div id="stats-uf-content"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;"></div>
         </div>
-        
+
         <!-- Tabla -->
         <div class="table-container">
             <table id="layout-table">
@@ -153,7 +373,7 @@
                 </tbody>
             </table>
         </div>
-        
+
         <div class="footer">
             <p>&copy; 2025 TM01 Troncal Magdalena | Sistema WBS Interactivo v1.0</p>
             <p style="margin-top: 5px; font-size: 12px; opacity: 0.8;">Layout generado desde tm01_master_data.js</p>
@@ -161,47 +381,51 @@
     </div>
 
     <script src="data/uf_pk_map.js"></script>
-    <script src="data/tm01_master_data.js?v=20251205100715"></script>
+    <script src="data/tm01_master_data.js?v=20251209"></script>
+    <script src="datos_wbs_TM01_items.js?v=20251209"></script>
     <script>
         let allData = [];
         let filteredData = [];
-        
+
         // Inicializar cuando el DOM esté listo
-        window.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('DOMContentLoaded', function () {
             initLayout();
         });
-        
+
         function initLayout() {
             try {
                 console.log('📋 Iniciando carga de layout...');
-                
-                // Esperar a que TM01MasterData esté disponible
-                if (typeof TM01MasterData === 'undefined') {
-                    console.warn('âš ï¸ TM01MasterData no disponible, reintentando...');
+
+                // Check for either data source
+                if (typeof TM01MasterData === 'undefined' && typeof window.wbsDataGlobal === 'undefined') {
+                    console.warn('⚠️ Cargando datos...');
                     setTimeout(initLayout, 100);
                     return;
                 }
-                
-                // Obtener o crear instancia
-                let tm01Data;
-                if (typeof window.tm01MasterData !== 'undefined' && window.tm01MasterData instanceof TM01MasterData) {
-                    tm01Data = window.tm01MasterData;
-                    console.log('✅ Usando instancia global tm01MasterData');
+
+                // DATA SOURCE SWITCH: Use Detailed WBS Items directly if available
+                let layoutData = [];
+
+                if (typeof window.wbsDataGlobal !== 'undefined' && window.wbsDataGlobal.items) {
+                    layoutData = window.wbsDataGlobal.items.filter(i => i.tipo === 'item');
+                    console.log('✅ Usando datos detallados WBS (wbsDataGlobal):', layoutData.length);
+                } else if (typeof window.datos_wbs !== 'undefined' && window.datos_wbs.items) {
+                    layoutData = window.datos_wbs.items.filter(i => i.tipo === 'item');
+                    console.log('✅ Usando datos detallados WBS (datos_wbs):', layoutData.length);
                 } else {
-                    tm01Data = new TM01MasterData();
-                    console.log('✅ Creando nueva instancia TM01MasterData');
+                    // Fallback to legacy
+                    let tm01Data = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
+                    layoutData = tm01Data.data.layout || [];
+                    console.log('⚠️ Usando fallback layoutData:', layoutData.length);
                 }
-                
-                // Obtener datos de layout
-                const layoutData = tm01Data.data.layout || [];
                 console.log('📊 Datos de layout obtenidos:', layoutData.length, 'elementos');
-                
+
                 if (layoutData.length === 0) {
                     console.warn('âš ï¸ No hay datos de layout disponibles');
                     mostrarError('No hay datos de layout disponibles. Verifica que los datos WBS estén cargados correctamente.');
                     return;
                 }
-                
+
                 // Preparar datos para mostrar
                 allData = layoutData.map((item, index) => ({
                     id: item.id || `ITEM-${index}`,
@@ -216,39 +440,39 @@
                     ubicacion: item.ubicacion || 'Por definir',
                     coordenadas: item.coordenadas || null
                 }));
-                
+
                 console.log('✅ Datos procesados:', allData.length, 'elementos');
-                
+
                 // Ocultar alerta de carga
                 document.getElementById('alertInfo').style.display = 'none';
-                
+
                 // Poblar filtros y renderizar
                 poblarFiltros();
                 applyFilters();
                 actualizarEstadisticas();
-                
+
             } catch (error) {
                 console.error('âŒ Error cargando layout:', error);
                 mostrarError('Error al cargar datos: ' + error.message);
             }
         }
-        
+
         function mostrarError(mensaje) {
             document.getElementById('alertInfo').className = 'alert alert-warning';
             document.getElementById('alertInfo').innerHTML = 'âš ï¸ <strong>Error:</strong> ' + mensaje;
-            document.getElementById('layout-tbody').innerHTML = 
+            document.getElementById('layout-tbody').innerHTML =
                 '<tr><td colspan="10" class="empty-state"><div class="empty-state-icon">âŒ</div><div>' + mensaje + '</div></td></tr>';
         }
-        
+
         function poblarFiltros() {
             const sistemasSet = new Set();
             const ufsSet = new Set();
-            
+
             allData.forEach(item => {
                 if (item.sistema) sistemasSet.add(item.sistema);
                 if (item.uf && item.uf !== 'N/A') ufsSet.add(item.uf);
             });
-            
+
             // Poblar filtro de sistemas
             const sistemaSelect = document.getElementById('filter-sistema');
             sistemaSelect.innerHTML = '<option value="">Todos los sistemas</option>';
@@ -258,7 +482,7 @@
                 option.textContent = sistema;
                 sistemaSelect.appendChild(option);
             });
-            
+
             // Poblar filtro de UFs
             const ufSelect = document.getElementById('filter-uf');
             ufSelect.innerHTML = '<option value="">Todas las UFs</option>';
@@ -274,38 +498,38 @@
                 ufSelect.appendChild(option);
             });
         }
-        
+
         function applyFilters() {
             const sistemaFilter = document.getElementById('filter-sistema').value;
             const ufFilter = document.getElementById('filter-uf').value;
             const buscarFilter = (document.getElementById('filter-buscar').value || '').toLowerCase();
-            
+
             filteredData = allData.filter(item => {
                 if (sistemaFilter && item.sistema !== sistemaFilter) return false;
                 if (ufFilter && item.uf !== ufFilter) return false;
                 if (buscarFilter && !item.nombre.toLowerCase().includes(buscarFilter)) return false;
                 return true;
             });
-            
+
             renderTable();
             actualizarEstadisticas();
         }
-        
+
         function clearFilters() {
             document.getElementById('filter-sistema').value = '';
             document.getElementById('filter-uf').value = '';
             document.getElementById('filter-buscar').value = '';
             applyFilters();
         }
-        
+
         function renderTable() {
             const tbody = document.getElementById('layout-tbody');
-            
+
             if (filteredData.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="10" class="empty-state"><div class="empty-state-icon">🔍 No se encontraron resultados con los filtros aplicados</div></td></tr>';
                 return;
             }
-            
+
             tbody.innerHTML = filteredData.map(item => {
                 const badgeClass = `badge badge-${(item.sistema || '').toLowerCase().replace(/[\/\s]+/g, '-')}`;
                 const ufBadge = item.uf && item.uf !== 'N/A' ? `<span class="badge" style="background: #e3f2fd; color: #1976d2;">${item.uf}</span>` : '<span style="color: #999;">N/A</span>';
@@ -325,22 +549,22 @@
                 `;
             }).join('');
         }
-        
+
         function actualizarEstadisticas() {
             document.getElementById('stat-total').textContent = allData.length;
             document.getElementById('stat-filtered').textContent = filteredData.length;
-            
+
             // Contar UFs con equipos
             const ufsConEquipos = new Set(allData.filter(item => item.uf && item.uf !== 'N/A').map(item => item.uf));
             document.getElementById('stat-ufs').textContent = ufsConEquipos.size;
-            
+
             // Resumen por UF
             actualizarResumenUF();
         }
-        
+
         function actualizarResumenUF() {
             const ufStats = {};
-            
+
             filteredData.forEach(item => {
                 const uf = item.uf || 'N/A';
                 if (!ufStats[uf]) {
@@ -349,17 +573,17 @@
                 ufStats[uf].count++;
                 ufStats[uf].cantidad += parseInt(item.cantidad || 0);
             });
-            
+
             const container = document.getElementById('stats-uf-container');
             const content = document.getElementById('stats-uf-content');
-            
+
             if (Object.keys(ufStats).length === 0) {
                 container.style.display = 'none';
                 return;
             }
-            
+
             container.style.display = 'block';
-            
+
             const ufsSorted = Object.keys(ufStats).sort((a, b) => {
                 if (a === 'N/A') return 1;
                 if (b === 'N/A') return -1;
@@ -367,7 +591,7 @@
                 const bNum = parseInt(b.replace('UF', '')) || 999;
                 return aNum - bNum;
             });
-            
+
             content.innerHTML = ufsSorted.map(uf => {
                 const stat = ufStats[uf];
                 const ufClass = uf === 'N/A' ? 'color: #999;' : 'background: #e3f2fd; color: #1976d2;';
@@ -379,13 +603,13 @@
                 `;
             }).join('');
         }
-        
+
         function exportarCSV() {
             if (filteredData.length === 0) {
                 alert('No hay datos para exportar');
                 return;
             }
-            
+
             // Headers mejorados con PKR y PKD
             const headers = ['ID', 'Nombre', 'Sistema', 'Cantidad', 'UF', 'PKR', 'PKD', 'Ruta', 'Ubicación Física', 'Observaciones'];
             const rows = filteredData.map(item => [
@@ -400,9 +624,9 @@
                 item.ubicacionFisica || item.ubicacion || '',
                 item.observaciones || ''
             ]);
-            
+
             const csv = [headers.join(','), ...rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(','))].join('\n');
-            
+
             // BOM para UTF-8 (Excel)
             const BOM = '\uFEFF';
             const blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
@@ -412,11 +636,10 @@
             a.download = `layout_tm01_completo_${new Date().toISOString().split('T')[0]}.csv`;
             a.click();
             URL.revokeObjectURL(url);
-            
+
             alert(`✅ Exportado: ${filteredData.length} elementos a CSV`);
         }
     </script>
 </body>
+
 </html>
-
-

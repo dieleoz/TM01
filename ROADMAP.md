@@ -1,9 +1,9 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo - Metodología Punto 42 + Arquitectura 4 Capas
 
-**Versión:** 23.1 (Post-MVP - Coherencia CAPEX Consolidada)  
-**Fecha de actualización:** 05 de Diciembre 2025  
-**Estado:** ✅ **TODOS LOS SISTEMAS ITS COMPLETADOS** - Coherencia CAPEX 100% (T01/T03 vs RESUMEN_EJECUTIVO)  
+**Versión:** 23.2 (Estabilización - Presupuesto & UI AIU)  
+**Fecha de actualización:** 09 de Diciembre 2025  
+**Estado:** ✅ **ESTABILIZACIÓN PRESUPUESTAL** - Coherencia AIU/IVA y Corrección de UI  
 **Fecha de inicio MVP:** 31 de octubre de 2025  
 **Progreso MVP:** ✅ **100% COMPLETADO** (6/6 fases)  
 **Sistemas Completados:** 7/7 (Postes SOS ✅, CCTV ✅, PMV ✅, ETD/RADAR ✅, WIM ✅, Estaciones Meteorológicas ✅, Telecomunicaciones ✅)

@@ -589,9 +589,12 @@
 
                 window.dataManager = tm01Data;
 
-                if (typeof window.datos_wbs !== 'undefined' && Array.isArray(window.datos_wbs.items)) {
+                if (typeof window.wbsDataGlobal !== 'undefined' && Array.isArray(window.wbsDataGlobal.items)) {
+                    wbsData = window.wbsDataGlobal.items;
+                    console.log('✅ Datos WBS detallados cargados (wbsDataGlobal):', wbsData.length, 'items');
+                } else if (typeof window.datos_wbs !== 'undefined' && Array.isArray(window.datos_wbs.items)) {
                     wbsData = window.datos_wbs.items;
-                    console.log('✅ Datos WBS detallados cargados:', wbsData.length, 'items');
+                    console.log('✅ Datos WBS detallados cargados (datos_wbs):', wbsData.length, 'items');
                 } else if (tm01Data && tm01Data.data && Array.isArray(tm01Data.data.wbs)) {
                     wbsData = tm01Data.data.wbs;
                     console.log('✅ Datos Master Data cargados:', wbsData.length, 'items');
@@ -620,7 +623,8 @@
             }
         }
     </script>
-    <script src="data/tm01_master_data.js?v=20251205100715"></script>
+    <script src="data/tm01_master_data.js?v=20251209"></script>
+    <script src="datos_wbs_TM01_items.js?v=20251209"></script>
     <script src="datos_wbs_TM01_items.js?v=20251209_114300"></script>
     <script>
         // Función para verificar y cargar datos cuando el script externo esté listo

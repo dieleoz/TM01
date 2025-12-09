@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -8,34 +9,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDT Detallado - TM01 Troncal Magdalena</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; padding: 10px; line-height: 1.6; }
-        .container { max-width: 1600px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
-        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 40px; text-align: center; }
-        .header h1 { font-size: 28px; margin-bottom: 10px; font-weight: 600; }
-        .content { padding: 40px; }
-        .back-btn { background: #667eea; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; margin-bottom: 20px; text-decoration: none; display: inline-block; }
-        .back-btn:hover { background: #5568d3; }
-        .search-box { margin: 20px 0; padding: 15px; background: #f0f8ff; border-radius: 8px; }
-        .search-box input { width: 100%; padding: 12px; border: 2px solid #667eea; border-radius: 6px; font-size: 14px; }
-        .edt-container { display: flex; gap: 30px; margin-top: 30px; }
-        .edt-tree { flex: 1; background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-height: 800px; overflow-y: auto; }
-        .edt-details { flex: 1; background: #f8f9fa; border-radius: 8px; padding: 20px; max-height: 800px; overflow-y: auto; }
-        .tree-level-1 { padding: 12px; margin: 8px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 6px; font-weight: 600; cursor: pointer; user-select: none; }
-        .tree-level-1:hover { background: linear-gradient(135deg, #5568d3 0%, #654091 100%); }
-        .tree-level-2 { padding: 10px; margin: 5px 0 5px 20px; background: #e3f2fd; border-left: 3px solid #2196f3; border-radius: 4px; cursor: pointer; user-select: none; }
-        .tree-level-2:hover { background: #bbdefb; }
-        .tree-item { padding: 8px; margin: 3px 0 3px 40px; background: white; border: 1px solid #e0e0e0; border-left: 3px solid #4caf50; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; }
-        .tree-item:hover { background: #f1f8e9; border-left-color: #2e7d32; transform: translateX(5px); }
-        .tree-item.active { background: #c8e6c9; border-left-color: #1b5e20; }
-        .detail-section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .detail-section h4 { margin-top: 20px; margin-bottom: 10px; color: #1e3c72; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            padding: 10px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .back-btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background: #5568d3;
+        }
+
+        .search-box {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 8px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #667eea;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .edt-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .edt-tree {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-height: 800px;
+            overflow-y: auto;
+        }
+
+        .edt-details {
+            flex: 1;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            max-height: 800px;
+            overflow-y: auto;
+        }
+
+        .tree-level-1 {
+            padding: 12px;
+            margin: 8px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .tree-level-1:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #654091 100%);
+        }
+
+        .tree-level-2 {
+            padding: 10px;
+            margin: 5px 0 5px 20px;
+            background: #e3f2fd;
+            border-left: 3px solid #2196f3;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .tree-level-2:hover {
+            background: #bbdefb;
+        }
+
+        .tree-item {
+            padding: 8px;
+            margin: 3px 0 3px 40px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-left: 3px solid #4caf50;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tree-item:hover {
+            background: #f1f8e9;
+            border-left-color: #2e7d32;
+            transform: translateX(5px);
+        }
+
+        .tree-item.active {
+            background: #c8e6c9;
+            border-left-color: #1b5e20;
+        }
+
+        .detail-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .detail-section h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+
         @media (max-width: 768px) {
-            .edt-container { flex-direction: column; }
-            .edt-tree, .edt-details { max-height: 400px; }
+            .edt-container {
+                flex-direction: column;
+            }
+
+            .edt-tree,
+            .edt-details {
+                max-height: 400px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -45,7 +192,8 @@
         <div class="content">
             <a href="WBS_Menu_Principal.html" class="back-btn">← Volver al Menúú Principal</a>
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Buscar ítem por código o descripción..." onkeyup="filterEDT(this.value)">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar ítem por código o descripción..."
+                    onkeyup="filterEDT(this.value)">
             </div>
             <div class="edt-container">
                 <div class="edt-tree" id="edtTree">
@@ -61,17 +209,24 @@
         </div>
     </div>
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
-    <script src="data/tm01_master_data.js?v=20251205100715"></script>
+    <script src="data/tm01_master_data.js?v=20251209"></script>
+    <script src="datos_wbs_TM01_items.js?v=20251209"></script>
     <script>
         let edtData = [];
         function initEDT() {
             try {
-                if (typeof TM01MasterData === 'undefined') {
+                if (typeof TM01MasterData === 'undefined' && typeof window.wbsDataGlobal === 'undefined') {
                     setTimeout(initEDT, 100);
                     return;
                 }
-                const tm01Data = typeof window.tm01MasterData !== 'undefined' ? window.tm01MasterData : new TM01MasterData();
-                edtData = tm01Data.data.wbs || [];
+
+                if (typeof window.wbsDataGlobal !== 'undefined' && window.wbsDataGlobal.items) {
+                    edtData = window.wbsDataGlobal.items;
+                } else {
+                    const tm01Data = typeof window.tm01MasterData !== 'undefined' ? window.tm01MasterData : new TM01MasterData();
+                    edtData = tm01Data.data.wbs || [];
+                }
+
                 if (edtData.length === 0) throw new Error('No hay datos WBS');
                 renderEDT();
             } catch (error) {
@@ -106,13 +261,13 @@
         function showDetails(id) {
             const item = edtData.find(i => i.id === id);
             if (!item) return;
-            const formatCOP = (val) => val ? new Intl.NumberFormat('es-CO', {style:'currency',currency:'COP',maximumFractionDigits:0}).format(val) : 'N/A';
+            const formatCOP = (val) => val ? new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(val) : 'N/A';
             document.getElementById('detailsContent').innerHTML = `
                 <div class="detail-section">
                     <h3 style="color:#1e3c72;">📋 ${item.item} - ${item.descripcion}</h3>
                     <p><strong>Tipo:</strong> ${item.tipo} | <strong>Sistema:</strong> ${item.sistema || 'N/A'} | <strong>Cantidad:</strong> ${item.cantidad || 'N/A'} ${item.unidad || ''}</p>
-                    <p><strong>VU:</strong> ${formatCOP(parseFloat(item.vuCOP?.replace(/[,.]/g,'') || 0))}</p>
-                    <p><strong>Total:</strong> <span style="font-size:20px;font-weight:bold;color:#28a745;">${formatCOP(parseFloat(item.totalCOP?.replace(/[,.]/g,'') || 0))}</span></p>
+                    <p><strong>VU:</strong> ${formatCOP(parseFloat(item.vuCOP?.replace(/[,.]/g, '') || 0))}</p>
+                    <p><strong>Total:</strong> <span style="font-size:20px;font-weight:bold;color:#28a745;">${formatCOP(parseFloat(item.totalCOP?.replace(/[,.]/g, '') || 0))}</span></p>
                     ${item.criterio ? `<h4>âš™ï¸ Criterio</h4><p>${item.criterio}</p>` : ''}
                 </div>
             `;
@@ -133,6 +288,5 @@
         window.addEventListener('DOMContentLoaded', initEDT);
     </script>
 </body>
+
 </html>
-
-

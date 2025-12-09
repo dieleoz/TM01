@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -8,35 +9,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte Gerencial - TM01 Troncal Magdalena</title>
     <style>
-        :root{ --g1:#667eea; --g2:#764ba2; --h1:#1e3c72; --h2:#2a5298; --bg:#f8f9fa; --card:#ffffff; --line:#dee2e6; --text:#212529; --muted:#6c757d; --accent:#667eea; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); }
-        .toolbar { position: sticky; top: 0; z-index: 20; display: flex; gap: 10px; justify-content: flex-end; padding: 12px 16px; background: linear-gradient(135deg,var(--g1),var(--g2)); border-bottom: 1px solid rgba(0,0,0,.06); }
-        .btn { padding: 10px 14px; border: 1px solid rgba(255,255,255,.6); border-radius: 8px; background: rgba(255,255,255,.15); color: #fff; font-weight: 600; cursor: pointer; }
-        .btn-primary { background: rgba(255,255,255,.2); }
-        .btn-success { background: #28a745; border-color: #28a745; }
-        .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .hero { background: linear-gradient(135deg,var(--g1),var(--g2)); border-radius: 14px; padding: 36px 26px; box-shadow: 0 12px 30px rgba(0,0,0,.15); color:#fff; }
-        .hero h1 { font-size: 30px; margin-bottom: 6px; }
-        .hero p { opacity: .95; font-size: 14px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
-        .metric { background: var(--card); border: 1px solid var(--line); padding: 16px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.06); }
-        .metric .val { font-size: 22px; font-weight: 800; color: var(--accent); }
-        .metric .lab { font-size: 12px; color: var(--muted); margin-top: 6px; }
-        .section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin: 18px 0; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.05); }
-        .section h2 { background: #ffffff; color: var(--h1); padding: 14px 16px; border-bottom: 1px solid var(--line); font-size: 18px; }
-        .content { padding: 16px; }
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
-        .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; box-shadow: 0 4px 14px rgba(0,0,0,.05); }
-        .card h3 { font-size: 14px; color: var(--h2); margin-bottom: 6px; }
-        table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); }
-        th { background: var(--h1); color: #fff; padding: 10px; text-align: left; font-size: 13px; }
-        td { padding: 10px; border-top: 1px solid var(--line); font-size: 13px; color: var(--text); }
-        .right { text-align: right; }
-        .muted { color: var(--muted); font-size: 12px; }
-        @media print { .toolbar { display: none; } body { background: #fff; color: #000; } .hero, .section, .card, .metric { box-shadow: none; border-color: #ddd; } th{background:#333} }
+        :root {
+            --g1: #667eea;
+            --g2: #764ba2;
+            --h1: #1e3c72;
+            --h2: #2a5298;
+            --bg: #f8f9fa;
+            --card: #ffffff;
+            --line: #dee2e6;
+            --text: #212529;
+            --muted: #6c757d;
+            --accent: #667eea;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, var(--g1), var(--g2));
+            border-bottom: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border: 1px solid rgba(255, 255, 255, .6);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .15);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, .2);
+        }
+
+        .btn-success {
+            background: #28a745;
+            border-color: #28a745;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--g1), var(--g2));
+            border-radius: 14px;
+            padding: 36px 26px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 30px;
+            margin-bottom: 6px;
+        }
+
+        .hero p {
+            opacity: .95;
+            font-size: 14px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 18px 0;
+        }
+
+        .metric {
+            background: var(--card);
+            border: 1px solid var(--line);
+            padding: 16px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+        }
+
+        .metric .val {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .metric .lab {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .section {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            margin: 18px 0;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+        }
+
+        .section h2 {
+            background: #ffffff;
+            color: var(--h1);
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--line);
+            font-size: 18px;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 14px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .05);
+        }
+
+        .card h3 {
+            font-size: 14px;
+            color: var(--h2);
+            margin-bottom: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border: 1px solid var(--line);
+        }
+
+        th {
+            background: var(--h1);
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        td {
+            padding: 10px;
+            border-top: 1px solid var(--line);
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        @media print {
+            .toolbar {
+                display: none;
+            }
+
+            body {
+                background: #fff;
+                color: #000;
+            }
+
+            .hero,
+            .section,
+            .card,
+            .metric {
+                box-shadow: none;
+                border-color: #ddd;
+            }
+
+            th {
+                background: #333
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="toolbar">
         <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir</button>
@@ -48,10 +224,22 @@
             <h1>📋 REPORTE GERENCIAL EJECUTIVO</h1>
             <p>TM01 Troncal Magdalena | Sistema de Validación ITS | Últ. act.: <span id="fechaAct"></span></p>
             <div class="grid">
-                <div class="metric"><div class="val" id="mUSD">-</div><div class="lab">Presupuesto Total (USD)</div></div>
-                <div class="metric"><div class="val" id="mCOP">-</div><div class="lab">Presupuesto Total (COP)</div></div>
-                <div class="metric"><div class="val" id="mItems">-</div><div class="lab">Items WBS (tipo item)</div></div>
-                <div class="metric"><div class="val" id="mSistemas">-</div><div class="lab">Sistemas</div></div>
+                <div class="metric">
+                    <div class="val" id="mUSD">-</div>
+                    <div class="lab">Presupuesto Total (USD)</div>
+                </div>
+                <div class="metric">
+                    <div class="val" id="mCOP">-</div>
+                    <div class="lab">Presupuesto Total (COP)</div>
+                </div>
+                <div class="metric">
+                    <div class="val" id="mItems">-</div>
+                    <div class="lab">Items WBS (tipo item)</div>
+                </div>
+                <div class="metric">
+                    <div class="val" id="mSistemas">-</div>
+                    <div class="lab">Sistemas</div>
+                </div>
             </div>
         </div>
 
@@ -60,9 +248,20 @@
             <div class="content">
                 <table id="tablaPareto">
                     <thead>
-                        <tr><th>Ñtem</th><th>Descripción</th><th>Sistema</th><th class="right">Total (COP)</th><th class="right">Total (USD)</th><th class="right">% Acum.</th></tr>
+                        <tr>
+                            <th>Ñtem</th>
+                            <th>Descripción</th>
+                            <th>Sistema</th>
+                            <th class="right">Total (COP)</th>
+                            <th class="right">Total (USD)</th>
+                            <th class="right">% Acum.</th>
+                        </tr>
                     </thead>
-                    <tbody><tr><td colspan="6" class="muted">Calculando...</td></tr></tbody>
+                    <tbody>
+                        <tr>
+                            <td colspan="6" class="muted">Calculando...</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -72,7 +271,11 @@
             <div class="content">
                 <table id="tablaSistemas">
                     <thead>
-                        <tr><th>Sistema</th><th class="right">Cantidad Total</th><th>Justificación Técnica</th></tr>
+                        <tr>
+                            <th>Sistema</th>
+                            <th class="right">Cantidad Total</th>
+                            <th>Justificación Técnica</th>
+                        </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
@@ -82,76 +285,115 @@
         <div class="section">
             <h2>⚙️ Supuestos Técnicos y Comerciales</h2>
             <div class="content cards" id="supuestosCards">
-                <div class="card"><h3>Arquitectura</h3><div class="muted">4 capas: Fuente ←’ Transformación ←’ Datos ←’ Visualización</div></div>
-                <div class="card"><h3>Comunicaciones</h3><div class="muted">Fibra óptica backbone; energía autónoma en equipos remotos</div></div>
-                <div class="card"><h3>Comerciales</h3><div class="muted">AIU 33% (Adm 23% + Imp 5% + Util 5%). IVA: SUM y SERV 19%; Utilidad OBRA 19% × 5%</div></div>
-                <div class="card"><h3>TRM</h3><div class="muted">4,400 COP/USD</div></div>
+                <div class="card">
+                    <h3>Arquitectura</h3>
+                    <div class="muted">4 capas: Fuente ←’ Transformación ←’ Datos ←’ Visualización</div>
+                </div>
+                <div class="card">
+                    <h3>Comunicaciones</h3>
+                    <div class="muted">Fibra óptica backbone; energía autónoma en equipos remotos</div>
+                </div>
+                <div class="card">
+                    <h3>Comerciales</h3>
+                    <div class="muted">AIU 33% (Adm 23% + Imp 5% + Util 5%). IVA: SUM y SERV 19%; Utilidad OBRA 19% × 5%
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>TRM</h3>
+                    <div class="muted">4,400 COP/USD</div>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <h2>⚙️ Riesgos Principales</h2>
             <div class="content cards" id="riesgosCards">
-                <div class="card"><h3>Interoperabilidad</h3><div class="muted">Integración con terceros requiere pruebas conjuntas y protocolos estándar.</div></div>
-                <div class="card"><h3>Disponibilidad FO</h3><div class="muted">Cobertura de 293 km; asegurar suministro y redundancias.</div></div>
-                <div class="card"><h3>Suministro y Plazos</h3><div class="muted">Cumplimiento de plazos contractuales por UF; coordinar entregas críticas (UF5, UF0-M36).</div></div>
+                <div class="card">
+                    <h3>Interoperabilidad</h3>
+                    <div class="muted">Integración con terceros requiere pruebas conjuntas y protocolos estándar.</div>
+                </div>
+                <div class="card">
+                    <h3>Disponibilidad FO</h3>
+                    <div class="muted">Cobertura de 293 km; asegurar suministro y redundancias.</div>
+                </div>
+                <div class="card">
+                    <h3>Suministro y Plazos</h3>
+                    <div class="muted">Cumplimiento de plazos contractuales por UF; coordinar entregas críticas (UF5,
+                        UF0-M36).</div>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <h2>✅ Recomendaciones Estratégicas</h2>
             <div class="content cards">
-                <div class="card"><h3>Foco PMO</h3><div class="muted">Supervisión intensiva a Ñtems Pareto 80%.</div></div>
-                <div class="card"><h3>QA Datos</h3><div class="muted">Validar coherencia WBS, Presupuesto y Layout en cada sincronización.</div></div>
-                <div class="card"><h3>DTs</h3><div class="muted">Registrar y trazar todas las Decisiones Técnicas con impacto.</div></div>
+                <div class="card">
+                    <h3>Foco PMO</h3>
+                    <div class="muted">Supervisión intensiva a Ñtems Pareto 80%.</div>
+                </div>
+                <div class="card">
+                    <h3>QA Datos</h3>
+                    <div class="muted">Validar coherencia WBS, Presupuesto y Layout en cada sincronización.</div>
+                </div>
+                <div class="card">
+                    <h3>DTs</h3>
+                    <div class="muted">Registrar y trazar todas las Decisiones Técnicas con impacto.</div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="data/tm01_master_data.js?v=20251205100715"></script>
+    <script src="data/tm01_master_data.js?v=20251209"></script>
+    <script src="datos_wbs_TM01_items.js?v=20251209"></script>
     <script>
-        function n(v){ const x = parseFloat((v??'').toString().replace(/[^0-9.\-]/g,'')); return isNaN(x)?0:x; }
-        function fm(n, curr){ return new Intl.NumberFormat(curr==='USD'?'en-US':'es-CO',{style:'currency',currency: curr||'COP',maximumFractionDigits:0}).format(n); }
-        function sum(arr, fn){ return arr.reduce((s,a)=> s + (fn?fn(a):a), 0); }
+        function n(v) { const x = parseFloat((v ?? '').toString().replace(/[^0-9.\-]/g, '')); return isNaN(x) ? 0 : x; }
+        function fm(n, curr) { return new Intl.NumberFormat(curr === 'USD' ? 'en-US' : 'es-CO', { style: 'currency', currency: curr || 'COP', maximumFractionDigits: 0 }).format(n); }
+        function sum(arr, fn) { return arr.reduce((s, a) => s + (fn ? fn(a) : a), 0); }
 
-        function init(){
-            if (typeof TM01MasterData === 'undefined'){ setTimeout(init, 60); return; }
-            const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
-            const wbs = (dm.data && Array.isArray(dm.data.wbs)) ? dm.data.wbs : [];
-            const items = wbs.filter(i=>i && i.tipo==='item');
+        function init() {
+            if (typeof TM01MasterData === 'undefined' && typeof window.wbsDataGlobal === 'undefined') { setTimeout(init, 60); return; }
 
-            const totalUSD = sum(items, i => n(i.cantidad)*n(i.vu));
-            const totalCOP = sum(items, i => n(i.totalCOP) || (n(i.cantidad)*n(i.vuCOP)));
-            const sistemas = new Set(items.map(i=>i.sistema).filter(Boolean));
-            document.getElementById('mUSD').textContent = fm(totalUSD,'USD');
-            document.getElementById('mCOP').textContent = fm(totalCOP,'COP');
+            let items = [];
+            if (typeof window.wbsDataGlobal !== 'undefined' && window.wbsDataGlobal.items) {
+                items = window.wbsDataGlobal.items.filter(i => i.tipo === 'item');
+            } else {
+                const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
+                const wbs = (dm.data && Array.isArray(dm.data.wbs)) ? dm.data.wbs : [];
+                items = wbs.filter(i => i && i.tipo === 'item');
+            }
+
+            const totalUSD = sum(items, i => n(i.cantidad) * n(i.vu));
+            const totalCOP = sum(items, i => n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)));
+            const sistemas = new Set(items.map(i => i.sistema).filter(Boolean));
+            document.getElementById('mUSD').textContent = fm(totalUSD, 'USD');
+            document.getElementById('mCOP').textContent = fm(totalCOP, 'COP');
             document.getElementById('mItems').textContent = items.length;
             document.getElementById('mSistemas').textContent = sistemas.size;
             document.getElementById('fechaAct').textContent = new Date().toLocaleString('es-CO');
 
             const trm = window.TRM_OFICIAL || 4000;
-            const byValue = items.map(i=>({ item: i.item, desc: i.descripcion, sistema: i.sistema, cop: n(i.totalCOP) || (n(i.cantidad)*n(i.vuCOP)) })).sort((a,b)=> b.cop-a.cop);
-            let acc=0; const pareto=[]; const total= sum(byValue,v=>v.cop);
-            for (const r of byValue){ acc+=r.cop; pareto.push({...r, pctAcc: (acc/total)*100}); if (acc/total>=0.8) break; }
+            const byValue = items.map(i => ({ item: i.item, desc: i.descripcion, sistema: i.sistema, cop: n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)) })).sort((a, b) => b.cop - a.cop);
+            let acc = 0; const pareto = []; const total = sum(byValue, v => v.cop);
+            for (const r of byValue) { acc += r.cop; pareto.push({ ...r, pctAcc: (acc / total) * 100 }); if (acc / total >= 0.8) break; }
             const tbp = document.querySelector('#tablaPareto tbody');
-            tbp.innerHTML = pareto.map(r=>`<tr><td>${r.item}</td><td>${r.desc}</td><td>${r.sistema||''}</td><td class="right">${fm(r.cop,'COP')}</td><td class="right">${fm(r.cop/trm,'USD')}</td><td class="right">${r.pctAcc.toFixed(1)}%</td></tr>`).join('');
+            tbp.innerHTML = pareto.map(r => `<tr><td>${r.item}</td><td>${r.desc}</td><td>${r.sistema || ''}</td><td class="right">${fm(r.cop, 'COP')}</td><td class="right">${fm(r.cop / trm, 'USD')}</td><td class="right">${r.pctAcc.toFixed(1)}%</td></tr>`).join('');
 
             const just = {};
-            items.forEach(i=>{ const s=i.sistema||'SIN SISTEMA'; if(!just[s]) just[s]={cant:0, criterio: i.criterio||'Criterio técnico aplicado'}; just[s].cant += n(i.cantidad)||0; if (i.criterio) just[s].criterio = i.criterio; });
+            items.forEach(i => { const s = i.sistema || 'SIN SISTEMA'; if (!just[s]) just[s] = { cant: 0, criterio: i.criterio || 'Criterio técnico aplicado' }; just[s].cant += n(i.cantidad) || 0; if (i.criterio) just[s].criterio = i.criterio; });
             const tbs = document.querySelector('#tablaSistemas tbody');
-            tbs.innerHTML = Object.keys(just).sort().map(s=>`<tr><td><strong>${s}</strong></td><td class="right">${just[s].cant}</td><td>${just[s].criterio}</td></tr>`).join('');
+            tbs.innerHTML = Object.keys(just).sort().map(s => `<tr><td><strong>${s}</strong></td><td class="right">${just[s].cant}</td><td>${just[s].criterio}</td></tr>`).join('');
 
             window.__reporteData = { totalUSD, totalCOP, items, pareto, just };
         }
 
-        function exportarExcelReporte(){
-            if (!window.__reporteData){ alert('Espere a que carguen los datos...'); return; }
+        function exportarExcelReporte() {
+            if (!window.__reporteData) { alert('Espere a que carguen los datos...'); return; }
             const { totalUSD, totalCOP, pareto, just } = window.__reporteData;
-            const data = [['REPORTE GERENCIAL - TM01'],['Fecha', new Date().toLocaleString('es-CO')],[],['Métrica','Valor'],['Total (USD)', totalUSD],['Total (COP)', totalCOP],[],['PARETO 80% - Ñtems'],['Ñtem','Descripción','Sistema','Total (COP)','Total (USD)','% Acum']];
-            pareto.forEach(p=> data.push([p.item,p.desc,p.sistema,p.cop,p.cop/4400,p.pctAcc]));
-            data.push([]); data.push(['Justificación por Sistema']); data.push(['Sistema','Cantidad Total','Criterio']);
-            Object.keys(just).sort().forEach(s=> data.push([s, just[s].cant, just[s].criterio]));
-            const ws = XLSX.utils.aoa_to_sheet(data); ws['!cols'] = [{wch:16},{wch:60},{wch:18},{wch:18},{wch:16},{wch:10}];
+            const data = [['REPORTE GERENCIAL - TM01'], ['Fecha', new Date().toLocaleString('es-CO')], [], ['Métrica', 'Valor'], ['Total (USD)', totalUSD], ['Total (COP)', totalCOP], [], ['PARETO 80% - Ñtems'], ['Ñtem', 'Descripción', 'Sistema', 'Total (COP)', 'Total (USD)', '% Acum']];
+            pareto.forEach(p => data.push([p.item, p.desc, p.sistema, p.cop, p.cop / 4400, p.pctAcc]));
+            data.push([]); data.push(['Justificación por Sistema']); data.push(['Sistema', 'Cantidad Total', 'Criterio']);
+            Object.keys(just).sort().forEach(s => data.push([s, just[s].cant, just[s].criterio]));
+            const ws = XLSX.utils.aoa_to_sheet(data); ws['!cols'] = [{ wch: 16 }, { wch: 60 }, { wch: 18 }, { wch: 18 }, { wch: 16 }, { wch: 10 }];
             const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Reporte Gerencial');
             const fname = 'Reporte_Gerencial_TM01_' + new Date().toISOString().split('T')[0] + '.xlsx';
             XLSX.writeFile(wb, fname);
@@ -161,6 +403,5 @@
     </script>
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </body>
+
 </html>
-
-
