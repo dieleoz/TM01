@@ -25,6 +25,9 @@ class TM01MasterData {
             fuente: 'RESUMEN_EJECUTIVO_PROYECTO_COMPLETADO.md'
         };
         
+        // TRM GLOBAL - Fuente única de verdad
+        window.TRM_OFICIAL = 4000;
+        
         // SISTEMAS - Datos consolidados por sistema
         this.data.sistemas = [            {
                 id: '1',

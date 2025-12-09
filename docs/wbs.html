@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -9,76 +10,460 @@
     <title>WBS Completa Interactiva - TM01 Troncal Magdalena</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; }
-        .container { max-width: 1600px; margin: 0 auto; padding: 20px; }
-        .header { background: rgba(255, 255, 255, 0.95); padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); margin-bottom: 30px; text-align: center; }
-        .header h1 { color: #2c3e50; font-size: 2.5em; margin-bottom: 10px; font-weight: 700; }
-        .header p { color: #7f8c8d; font-size: 1.2em; margin-bottom: 20px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .stat-card { background: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
-        .stat-number { font-size: 2em; font-weight: bold; color: #3498db; margin-bottom: 5px; }
-        .stat-label { color: #7f8c8d; font-size: 0.9em; }
-        .controls { background: rgba(255, 255, 255, 0.95); padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
-        .controls h3 { margin-bottom: 15px; color: #2c3e50; }
-        .filter-group { display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; align-items: center; }
-        .filter-group label { font-weight: 600; color: #34495e; }
-        .filter-group select, .filter-group input { padding: 8px 12px; border: 2px solid #bdc3c7; border-radius: 5px; font-size: 14px; }
-        .btn { padding: 10px 20px; border: none; border-radius: 5px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-primary { background: #3498db; color: white; }
-        .btn-primary:hover { background: #2980b9; transform: translateY(-2px); }
-        .btn-success { background: #27ae60; color: white; }
-        .btn-success:hover { background: #229954; }
-        .btn-warning { background: #f39c12; color: white; }
-        .btn-warning:hover { background: #e67e22; }
-        .wbs-container { background: rgba(255, 255, 255, 0.95); border-radius: 10px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
-        .wbs-tree { font-family: 'Courier New', monospace; line-height: 1.6; }
-        .wbs-item { margin: 5px 0; padding: 8px; border-radius: 5px; transition: all 0.3s; cursor: pointer; }
-        .wbs-item:hover { background: #ecf0f1; transform: translateX(5px); }
-        .wbs-item.capitulo { background: #e8f4fd; border-left: 4px solid #3498db; font-weight: bold; font-size: 1.1em; display: flex; gap: 12px; align-items: center; }
-        .wbs-item.subcapitulo { background: #f8f9fa; border-left: 4px solid #95a5a6; margin-left: 20px; }
-        .wbs-item.item { background: #fff; border-left: 4px solid #27ae60; margin-left: 40px; display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 15px; align-items: center; }
-        .wbs-item.item:hover { background: #f1f2f6; }
-        .item-actions { display: flex; gap: 5px; }
-        .btn-small { padding: 4px 8px; font-size: 12px; border-radius: 3px; }
-        .btn-dt { background: #e74c3c; color: white; }
-        .btn-dt:hover { background: #c0392b; }
-        .btn-details { background: #3498db; color: white; }
-        .btn-details:hover { background: #2980b9; }
-        .subtotal-section { background: #f8f9fa; border: 2px solid #dee2e6; border-radius: 8px; padding: 15px; margin: 10px 0; }
-        .subtotal-header { font-weight: bold; color: #495057; margin-bottom: 10px; font-size: 1.1em; }
-        .subtotal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .subtotal-item { background: white; padding: 10px; border-radius: 5px; border-left: 4px solid #28a745; }
-        .subtotal-label { font-weight: bold; color: #495057; font-size: 0.9em; }
-        .subtotal-toggle { text-align: center; margin: 20px 0; }
-        .subtotal-toggle .btn { background: #3498db; color: white; padding: 12px 24px; font-size: 16px; border-radius: 8px; border: none; cursor: pointer; transition: background 0.3s; }
-        .capitulo-totales { display: flex; flex-direction: column; align-items: flex-end; margin-left: auto; font-size: 0.9em; }
-        .total-unidades { color: #e67e22; font-weight: bold; margin-bottom: 2px; }
-        .capitulo .total-cost { font-size: 0.85em; margin-bottom: 1px; }
-        .modal-componentes, .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
-        .modal-content { background-color: white; margin: 5% auto; padding: 20px; border-radius: 10px; width: 80%; max-width: 1000px; max-height: 80vh; overflow-y: auto; position: relative; }
-        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #dee2e6; }
-        .modal-title { font-size: 1.5em; font-weight: bold; color: #2c3e50; }
-        .close { color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer; }
-        .close:hover { color: #000; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #495057; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 8px 12px; border: 2px solid #ced4da; border-radius: 5px; font-size: 14px; }
-        .form-group textarea { height: 100px; resize: vertical; }
-        .modal-actions { margin-top: 20px; text-align: right; }
-        .modal-actions .btn { margin-left: 10px; }
-        .item-code { font-weight: bold; color: #2c3e50; }
-        .item-desc { color: #34495e; }
-        .item-qty { color: #e67e22; font-weight: bold; }
-        .item-cost { color: #27ae60; font-weight: bold; }
-        .loading { text-align: center; padding: 40px; color: #7f8c8d; font-size: 1.2em; }
-        .error { background: #e74c3c; color: white; padding: 20px; border-radius: 5px; margin: 20px 0; text-align: center; }
-        .no-data { text-align: center; padding: 40px; color: #7f8c8d; font-style: italic; }
-        .export-buttons { margin-top: 20px; text-align: center; }
-        .export-buttons .btn { margin: 0 10px; }
-        @media (max-width: 768px) { .container { padding: 10px; } .header h1 { font-size: 2em; } .filter-group { flex-direction: column; align-items: stretch; } .wbs-item.item { grid-template-columns: 1fr; gap: 5px; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .controls {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: #34495e;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 8px 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #229954;
+        }
+
+        .btn-warning {
+            background: #f39c12;
+            color: white;
+        }
+
+        .btn-warning:hover {
+            background: #e67e22;
+        }
+
+        .wbs-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .wbs-tree {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+
+        .wbs-item {
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .wbs-item:hover {
+            background: #ecf0f1;
+            transform: translateX(5px);
+        }
+
+        .wbs-item.capitulo {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .wbs-item.subcapitulo {
+            background: #f8f9fa;
+            border-left: 4px solid #95a5a6;
+            margin-left: 20px;
+        }
+
+        .wbs-item.item {
+            background: #fff;
+            border-left: 4px solid #27ae60;
+            margin-left: 40px;
+            display: grid;
+            grid-template-columns: 1fr auto auto auto auto;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .wbs-item.item:hover {
+            background: #f1f2f6;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .btn-dt {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-dt:hover {
+            background: #c0392b;
+        }
+
+        .btn-details {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-details:hover {
+            background: #2980b9;
+        }
+
+        .subtotal-section {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .subtotal-header {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .subtotal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .subtotal-item {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+
+        .subtotal-label {
+            font-weight: bold;
+            color: #495057;
+            font-size: 0.9em;
+        }
+
+        .subtotal-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .subtotal-toggle .btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .capitulo-totales {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: auto;
+            font-size: 0.9em;
+        }
+
+        .total-unidades {
+            color: #e67e22;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .capitulo .total-cost {
+            font-size: 0.85em;
+            margin-bottom: 1px;
+        }
+
+        .modal-componentes,
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .modal-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .modal-actions {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .modal-actions .btn {
+            margin-left: 10px;
+        }
+
+        .item-code {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .item-desc {
+            color: #34495e;
+        }
+
+        .item-qty {
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        .item-cost {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+
+        .error {
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .export-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .export-buttons .btn {
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .wbs-item.item {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -87,18 +472,37 @@
             <p>Estructura de Desglose de Trabajo Completa</p>
         </div>
         <div class="stats-grid">
-            <div class="stat-card"><div class="stat-number" id="totalItems">-</div><div class="stat-label">Total Items</div></div>
-            <div class="stat-card"><div class="stat-number" id="totalCapitulos">-</div><div class="stat-label">Capítulos</div></div>
-            <div class="stat-card"><div class="stat-number" id="totalSistemas">-</div><div class="stat-label">Sistemas</div></div>
-            <div class="stat-card"><div class="stat-number" id="costoTotal">-</div><div class="stat-label">Costo Total (USD)</div></div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalItems">-</div>
+                <div class="stat-label">Total Items</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalCapitulos">-</div>
+                <div class="stat-label">Capítulos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalSistemas">-</div>
+                <div class="stat-label">Sistemas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="costoTotal">-</div>
+                <div class="stat-label">Costo Total (USD)</div>
+            </div>
         </div>
         <div class="controls">
             <h3>🔍 Filtros y Controles</h3>
             <div class="filter-group">
                 <label for="sistemaFilter">Sistema:</label>
-                <select id="sistemaFilter"><option value="">Todos los sistemas</option></select>
+                <select id="sistemaFilter">
+                    <option value="">Todos los sistemas</option>
+                </select>
                 <label for="nivelFilter">Nivel:</label>
-                <select id="nivelFilter"><option value="">Todos los niveles</option><option value="1">Capítulos</option><option value="2">Subcapítulos</option><option value="3">Items</option></select>
+                <select id="nivelFilter">
+                    <option value="">Todos los niveles</option>
+                    <option value="1">Capítulos</option>
+                    <option value="2">Subcapítulos</option>
+                    <option value="3">Items</option>
+                </select>
                 <label for="searchInput">Buscar:</label>
                 <input type="text" id="searchInput" placeholder="Buscar por descripción...">
             </div>
@@ -116,7 +520,9 @@
             <button class="btn btn-primary" onclick="toggleSubtotales()">📊 Mostrar Subtotales por Sistema</button>
         </div>
         <div class="wbs-container">
-            <div id="wbsTree" class="wbs-tree"><div class="loading">📋 Cargando datos WBS...</div></div>
+            <div id="wbsTree" class="wbs-tree">
+                <div class="loading">📋 Cargando datos WBS...</div>
+            </div>
             <div class="export-buttons">
                 <button class="btn btn-primary" onclick="exportarCSV()">📊 Exportar CSV</button>
                 <button class="btn btn-success" onclick="exportarExcel()">📄 Exportar Excel</button>
@@ -130,15 +536,31 @@
                 <span class="close" onclick="cerrarModal()">&times;</span>
             </div>
             <form id="dtForm">
-                <div class="form-group"><label for="dtItem">Item WBS:</label><input type="text" id="dtItem" readonly></div>
-                <div class="form-group"><label for="dtDescripcion">Descripción:</label><input type="text" id="dtDescripcion" readonly></div>
-                <div class="form-group"><label for="dtSistema">Sistema:</label><input type="text" id="dtSistema" readonly></div>
-                <div class="form-group"><label for="dtTipo">Tipo de DT:</label><select id="dtTipo" required><option value="">Seleccionar tipo...</option><option value="Cambio Técnico">Cambio Técnico</option><option value="Optimización">Optimización</option><option value="Gestión de Riesgo">Gestión de Riesgo</option><option value="Verificación">Verificación</option></select></div>
-                <div class="form-group"><label for="dtJustificacion">Justificación Técnica:</label><textarea id="dtJustificacion" placeholder="Describir la justificación técnica del cambio..." required></textarea></div>
-                <div class="form-group"><label for="dtCriterios">Criterios de Diseño:</label><textarea id="dtCriterios" placeholder="Criterios técnicos aplicables..."></textarea></div>
-                <div class="form-group"><label for="dtAlternativas">Alternativas Evaluadas:</label><textarea id="dtAlternativas" placeholder="Alternativas consideradas y descartadas..."></textarea></div>
-                <div class="form-group"><label for="dtRiesgos">Riesgos Identificados:</label><textarea id="dtRiesgos" placeholder="Riesgos asociados al cambio..."></textarea></div>
-                <div class="modal-actions"><button type="button" class="btn btn-warning" onclick="cerrarModal()">Cancelar</button><button type="submit" class="btn btn-success">Crear DT</button></div>
+                <div class="form-group"><label for="dtItem">Item WBS:</label><input type="text" id="dtItem" readonly>
+                </div>
+                <div class="form-group"><label for="dtDescripcion">Descripción:</label><input type="text"
+                        id="dtDescripcion" readonly></div>
+                <div class="form-group"><label for="dtSistema">Sistema:</label><input type="text" id="dtSistema"
+                        readonly></div>
+                <div class="form-group"><label for="dtTipo">Tipo de DT:</label><select id="dtTipo" required>
+                        <option value="">Seleccionar tipo...</option>
+                        <option value="Cambio Técnico">Cambio Técnico</option>
+                        <option value="Optimización">Optimización</option>
+                        <option value="Gestión de Riesgo">Gestión de Riesgo</option>
+                        <option value="Verificación">Verificación</option>
+                    </select></div>
+                <div class="form-group"><label for="dtJustificacion">Justificación Técnica:</label><textarea
+                        id="dtJustificacion" placeholder="Describir la justificación técnica del cambio..."
+                        required></textarea></div>
+                <div class="form-group"><label for="dtCriterios">Criterios de Diseño:</label><textarea id="dtCriterios"
+                        placeholder="Criterios técnicos aplicables..."></textarea></div>
+                <div class="form-group"><label for="dtAlternativas">Alternativas Evaluadas:</label><textarea
+                        id="dtAlternativas" placeholder="Alternativas consideradas y descartadas..."></textarea></div>
+                <div class="form-group"><label for="dtRiesgos">Riesgos Identificados:</label><textarea id="dtRiesgos"
+                        placeholder="Riesgos asociados al cambio..."></textarea></div>
+                <div class="modal-actions"><button type="button" class="btn btn-warning"
+                        onclick="cerrarModal()">Cancelar</button><button type="submit" class="btn btn-success">Crear
+                        DT</button></div>
             </form>
         </div>
     </div>
@@ -146,7 +568,7 @@
         let tm01Data = null;
         let wbsData = [];
         let filteredData = [];
-        
+
         function initWBS() {
             try {
                 // Esperar a que TM01MasterData esté disponible
@@ -154,7 +576,7 @@
                     setTimeout(initWBS, 50);
                     return;
                 }
-                
+
                 // Intentar usar la instancia global primero
                 if (typeof window.tm01MasterData !== 'undefined' && window.tm01MasterData instanceof TM01MasterData) {
                     tm01Data = window.tm01MasterData;
@@ -164,24 +586,27 @@
                     tm01Data = new TM01MasterData();
                     console.log('✅ Creando nueva instancia TM01MasterData');
                 }
-                
+
                 window.dataManager = tm01Data;
-                
-                if (tm01Data && tm01Data.data && Array.isArray(tm01Data.data.wbs)) {
+
+                if (typeof window.datos_wbs !== 'undefined' && Array.isArray(window.datos_wbs.items)) {
+                    wbsData = window.datos_wbs.items;
+                    console.log('✅ Datos WBS detallados cargados:', wbsData.length, 'items');
+                } else if (tm01Data && tm01Data.data && Array.isArray(tm01Data.data.wbs)) {
                     wbsData = tm01Data.data.wbs;
-                    console.log('✅ Datos WBS cargados:', wbsData.length, 'items');
-                    
-                    if (wbsData.length === 0) {
-                        throw new Error('Los datos WBS están vacíos');
-                    }
-                    
-                    filteredData = [...wbsData];
-                    inicializarFiltros();
-                    actualizarEstadisticas();
-                    renderizarWBS();
+                    console.log('✅ Datos Master Data cargados:', wbsData.length, 'items');
                 } else {
-                    throw new Error('tm01Data.data.wbs no es un array válido');
+                    throw new Error('No se encontraron datos WBS válidos');
                 }
+
+                if (wbsData.length === 0) {
+                    throw new Error('Los datos WBS están vacíos');
+                }
+
+                filteredData = [...wbsData];
+                inicializarFiltros();
+                actualizarEstadisticas();
+                renderizarWBS();
             } catch (error) {
                 console.error('❌ Error cargando datos:', error);
                 const wbsTree = document.getElementById('wbsTree');
@@ -196,6 +621,7 @@
         }
     </script>
     <script src="data/tm01_master_data.js?v=20251205100715"></script>
+    <script src="datos_wbs_TM01_items.js?v=20251209_105800"></script>
     <script>
         // Función para verificar y cargar datos cuando el script externo esté listo
         function checkAndInit() {
@@ -205,14 +631,14 @@
                 setTimeout(checkAndInit, 50);
             }
         }
-        
+
         // Inicializar cuando el DOM esté listo
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', checkAndInit);
         } else {
             checkAndInit();
         }
-        
+
         function inicializarFiltros() {
             const sistemaFilter = document.getElementById('sistemaFilter');
             const sistemas = [...new Set(wbsData.map(item => item.sistema).filter(s => s))];
@@ -222,7 +648,7 @@
             const totalItems = filteredData.length;
             const totalCapitulos = filteredData.filter(item => item.nivel === 1).length;
             const sistemas = [...new Set(filteredData.map(item => item.sistema).filter(s => s))].length;
-            const costoTotal = filteredData.reduce((sum, item) => { const costo = parseFloat((item.total||'').toString().replace(/,/g, '')) || 0; return sum + costo; }, 0);
+            const costoTotal = filteredData.reduce((sum, item) => { const costo = parseFloat((item.total || '').toString().replace(/,/g, '')) || 0; return sum + costo; }, 0);
             document.getElementById('totalItems').textContent = totalItems;
             document.getElementById('totalCapitulos').textContent = totalCapitulos;
             document.getElementById('totalSistemas').textContent = sistemas;
@@ -247,9 +673,9 @@
             filteredData.forEach(item => {
                 if (item.nivel === 3 && item.sistema) {
                     if (!subtotales[item.sistema]) { subtotales[item.sistema] = { cantidad: 0, costoTotalUSD: 0, costoTotalCOP: 0, items: 0 }; }
-                    const cantidad = parseFloat((item.cantidad||'').toString().replace(/,/g, '')) || 0;
-                    const costoUSD = parseFloat((item.total||'').toString().replace(/,/g, '')) || 0;
-                    const costoCOP = parseFloat((item.totalCOP||'').toString().replace(/,/g, '')) || 0;
+                    const cantidad = parseFloat((item.cantidad || '').toString().replace(/,/g, '')) || 0;
+                    const costoUSD = parseFloat((item.total || '').toString().replace(/,/g, '')) || 0;
+                    const costoCOP = parseFloat((item.totalCOP || '').toString().replace(/,/g, '')) || 0;
                     subtotales[item.sistema].cantidad += cantidad;
                     subtotales[item.sistema].costoTotalUSD += costoUSD;
                     subtotales[item.sistema].costoTotalCOP += costoCOP;
@@ -276,8 +702,8 @@
                 const itemsCapitulo = filteredData.filter(item => item.item.startsWith(capitulo.item + '.') && item.nivel === 3);
                 let totalCapituloUSD = 0; let totalCapituloCOP = 0; let cantidadPrincipal = 0;
                 const itemPrincipal = itemsCapitulo[0];
-                if (itemPrincipal) { cantidadPrincipal = parseFloat((itemPrincipal.cantidad||'').toString().replace(/,/g, '')) || 0; }
-                itemsCapitulo.forEach(item => { const costoUSD = parseFloat((item.total||'').toString().replace(/,/g, '')) || 0; const costoCOP = parseFloat((item.totalCOP||'').toString().replace(/,/g, '')) || 0; totalCapituloUSD += costoUSD; totalCapituloCOP += costoCOP; });
+                if (itemPrincipal) { cantidadPrincipal = parseFloat((itemPrincipal.cantidad || '').toString().replace(/,/g, '')) || 0; }
+                itemsCapitulo.forEach(item => { const costoUSD = parseFloat((item.total || '').toString().replace(/,/g, '')) || 0; const costoCOP = parseFloat((item.totalCOP || '').toString().replace(/,/g, '')) || 0; totalCapituloUSD += costoUSD; totalCapituloCOP += costoCOP; });
                 html += `<div class="wbs-item capitulo" onclick="toggleCapitulo('${capitulo.id}')"><span class="item-code">${capitulo.item}</span><span class="item-desc">${capitulo.descripcion}</span><span class="item-qty">Sistema: ${capitulo.sistema}</span><div class="capitulo-totales"><div class="total-unidades">${cantidadPrincipal} unidades</div><div class="total-cost">$${totalCapituloUSD.toLocaleString()} USD</div><div class="total-cost">$${totalCapituloCOP.toLocaleString()} COP</div></div></div>`;
                 const subcapitulos = filteredData.filter(item => item.nivel === 2 && item.item.startsWith(capitulo.item + '.'));
                 subcapitulos.forEach(subcapitulo => {
@@ -297,12 +723,12 @@
             if (!item) { alert('No se encontró el item solicitado'); return; }
             const modal = document.createElement('div');
             modal.className = 'modal-componentes';
-            modal.innerHTML = `<div class="modal-content"><div class="modal-header"><div class="modal-title">ℹ️ Detalles del Item WBS</div><span class="close">&times;</span></div><div style="padding: 20px;"><div class="form-group"><label><strong>Código WBS:</strong></label><div>${item.item}</div></div><div class="form-group"><label><strong>Descripción:</strong></label><div>${item.descripcion}</div></div><div class="form-group"><label><strong>Sistema:</strong></label><div>${item.sistema}</div></div><div class="form-group"><label><strong>Nivel:</strong></label><div>${item.nivel}</div></div><div class="form-group"><label><strong>Tipo:</strong></label><div>${item.tipo||''}</div></div><div class="form-group"><label><strong>Cantidad:</strong></label><div>${item.cantidad || 'N/A'} ${item.unidad || ''}</div></div><div class="form-group"><label><strong>Valor Unitario:</strong></label><div>$${item.vu || '0'} USD | $${item.vuCOP || '0'} COP</div></div><div class="form-group"><label><strong>Total:</strong></label><div>$${item.total || '0'} USD | $${item.totalCOP || '0'} COP</div></div><div class="form-group"><label><strong>Criterio Técnico:</strong></label><div>${item.criterio || 'N/A'}</div></div></div></div>`;
+            modal.innerHTML = `<div class="modal-content"><div class="modal-header"><div class="modal-title">ℹ️ Detalles del Item WBS</div><span class="close">&times;</span></div><div style="padding: 20px;"><div class="form-group"><label><strong>Código WBS:</strong></label><div>${item.item}</div></div><div class="form-group"><label><strong>Descripción:</strong></label><div>${item.descripcion}</div></div><div class="form-group"><label><strong>Sistema:</strong></label><div>${item.sistema}</div></div><div class="form-group"><label><strong>Nivel:</strong></label><div>${item.nivel}</div></div><div class="form-group"><label><strong>Tipo:</strong></label><div>${item.tipo || ''}</div></div><div class="form-group"><label><strong>Cantidad:</strong></label><div>${item.cantidad || 'N/A'} ${item.unidad || ''}</div></div><div class="form-group"><label><strong>Valor Unitario:</strong></label><div>$${item.vu || '0'} USD | $${item.vuCOP || '0'} COP</div></div><div class="form-group"><label><strong>Total:</strong></label><div>$${item.total || '0'} USD | $${item.totalCOP || '0'} COP</div></div><div class="form-group"><label><strong>Criterio Técnico:</strong></label><div>${item.criterio || 'N/A'}</div></div></div></div>`;
             document.body.appendChild(modal);
             modal.querySelector('.close').onclick = () => { document.body.removeChild(modal); };
             modal.onclick = (e) => { if (e.target === modal) { document.body.removeChild(modal); } };
         }
-        document.getElementById('dtForm').addEventListener('submit', function(e) {
+        document.getElementById('dtForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const formData = { item: document.getElementById('dtItem').value, descripcion: document.getElementById('dtDescripcion').value, sistema: document.getElementById('dtSistema').value, tipo: document.getElementById('dtTipo').value, justificacion: document.getElementById('dtJustificacion').value, criterios: document.getElementById('dtCriterios').value, alternativas: document.getElementById('dtAlternativas').value, riesgos: document.getElementById('dtRiesgos').value, fecha: new Date().toISOString().split('T')[0] };
             generarDT(formData);
@@ -341,7 +767,7 @@
         function exportarCSV() {
             if (filteredData.length === 0) { alert('No hay datos para exportar'); return; }
             const headers = ['Item', 'Descripción', 'Sistema', 'Nivel', 'Cantidad', 'Unidad', 'VU', 'Total'];
-            const csvContent = [ headers.join(','), ...filteredData.map(item => [ item.item, `"${item.descripcion}"`, item.sistema, item.nivel, item.cantidad || '', item.unidad || '', item.vu || '', item.total || '' ].join(',')) ].join('\n');
+            const csvContent = [headers.join(','), ...filteredData.map(item => [item.item, `"${item.descripcion}"`, item.sistema, item.nivel, item.cantidad || '', item.unidad || '', item.vu || '', item.total || ''].join(','))].join('\n');
             const blob = new Blob([csvContent], { type: 'text/csv' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -353,10 +779,10 @@
                 const wbs = window.dataManager.data.wbs;
                 const excelData = [];
                 excelData.push(['ID', 'Nivel', 'Item', 'Descripción', 'Sistema', 'Cantidad', 'Unidad', 'Tipo', 'Criterio', 'Precio Unit USD', 'Precio Unit COP', 'Total USD', 'Total COP']);
-                wbs.forEach(item => { excelData.push([ item.id || '', item.nivel || '', item.item || '', item.descripcion || '', item.sistema || '', item.cantidad || '', item.unidad || '', item.tipo || '', item.criterio || '', item.vu || '', item.vuCOP || '', item.total || '', item.totalCOP || '' ]); });
+                wbs.forEach(item => { excelData.push([item.id || '', item.nivel || '', item.item || '', item.descripcion || '', item.sistema || '', item.cantidad || '', item.unidad || '', item.tipo || '', item.criterio || '', item.vu || '', item.vuCOP || '', item.total || '', item.totalCOP || '']); });
                 const wb = XLSX.utils.book_new();
                 const ws = XLSX.utils.aoa_to_sheet(excelData);
-                ws['!cols'] = [ { wch: 8 }, { wch: 6 }, { wch: 10 }, { wch: 40 }, { wch: 12 }, { wch: 12 }, { wch: 8 }, { wch: 12 }, { wch: 30 }, { wch: 15 }, { wch: 15 }, { wch: 15 }, { wch: 15 } ];
+                ws['!cols'] = [{ wch: 8 }, { wch: 6 }, { wch: 10 }, { wch: 40 }, { wch: 12 }, { wch: 12 }, { wch: 8 }, { wch: 12 }, { wch: 30 }, { wch: 15 }, { wch: 15 }, { wch: 15 }, { wch: 15 }];
                 XLSX.utils.book_append_sheet(wb, ws, 'WBS_TM01');
                 const fecha = new Date().toISOString().split('T')[0];
                 const nombreArchivo = `WBS_TM01_Troncal_Magdalena_${fecha}.xlsx`;
@@ -368,7 +794,8 @@
             }
         }
         function mostrarError(mensaje) { const wbsTree = document.getElementById('wbsTree'); wbsTree.innerHTML = `<div class="error">âŒ ${mensaje}</div>`; }
-        window.onclick = function(event) { const modal = document.getElementById('dtModal'); if (event.target === modal) { cerrarModal(); } }
+        window.onclick = function (event) { const modal = document.getElementById('dtModal'); if (event.target === modal) { cerrarModal(); } }
     </script>
 </body>
+
 </html>

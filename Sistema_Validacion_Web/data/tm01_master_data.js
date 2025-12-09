@@ -1,16 +1,16 @@
 // TM01 Master Data - Generado automáticamente
-// Última sincronización: 2025-12-05 14:42:30 UTC
+// Última sincronización: 2025-12-09 16:02:41 UTC
 // Merge 3-vías completado sin conflictos
 
 const tm01Data = {
-  "contratos": null,
-  "layout": null,
   "cambios": null,
-  "wbs": null,
+  "CAPEX_L3_USD": null,
   "presupuesto": null,
-  "dts": null,
+  "layout": null,
+  "wbs": null,
+  "contratos": null,
   "TOTAL_SWITCHES_L3": null,
-  "CAPEX_L3_USD": null
+  "dts": null
 };
 
 function parseNumeric(value) {

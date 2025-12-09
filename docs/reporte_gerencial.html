@@ -129,11 +129,12 @@
             document.getElementById('mSistemas').textContent = sistemas.size;
             document.getElementById('fechaAct').textContent = new Date().toLocaleString('es-CO');
 
+            const trm = window.TRM_OFICIAL || 4000;
             const byValue = items.map(i=>({ item: i.item, desc: i.descripcion, sistema: i.sistema, cop: n(i.totalCOP) || (n(i.cantidad)*n(i.vuCOP)) })).sort((a,b)=> b.cop-a.cop);
             let acc=0; const pareto=[]; const total= sum(byValue,v=>v.cop);
             for (const r of byValue){ acc+=r.cop; pareto.push({...r, pctAcc: (acc/total)*100}); if (acc/total>=0.8) break; }
             const tbp = document.querySelector('#tablaPareto tbody');
-            tbp.innerHTML = pareto.map(r=>`<tr><td>${r.item}</td><td>${r.desc}</td><td>${r.sistema||''}</td><td class="right">${fm(r.cop,'COP')}</td><td class="right">${fm(r.cop/4400,'USD')}</td><td class="right">${r.pctAcc.toFixed(1)}%</td></tr>`).join('');
+            tbp.innerHTML = pareto.map(r=>`<tr><td>${r.item}</td><td>${r.desc}</td><td>${r.sistema||''}</td><td class="right">${fm(r.cop,'COP')}</td><td class="right">${fm(r.cop/trm,'USD')}</td><td class="right">${r.pctAcc.toFixed(1)}%</td></tr>`).join('');
 
             const just = {};
             items.forEach(i=>{ const s=i.sistema||'SIN SISTEMA'; if(!just[s]) just[s]={cant:0, criterio: i.criterio||'Criterio técnico aplicado'}; just[s].cant += n(i.cantidad)||0; if (i.criterio) just[s].criterio = i.criterio; });
@@ -161,4 +162,5 @@
     <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </body>
 </html>
+
 

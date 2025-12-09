@@ -31,30 +31,21 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. ESTACIÓN COMPLETA** | **2** | **$22,000** | **$44,000** | **75.3%** |
-| Datalogger (procesador central) | 2 | $4,500 | $9,000 | 15.4% |
-| Sensor temperatura/humedad | 2 | $800 | $1,600 | 2.7% |
-| Sensor precipitación (pluviómetro) | 2 | $1,500 | $3,000 | 5.1% |
-| Sensor velocidad/dirección viento | 2 | $2,200 | $4,400 | 7.5% |
-| Sensor presión barométrica | 2 | $600 | $1,200 | 2.1% |
-| Sensor visibilidad (neblina) | 2 | $3,800 | $7,600 | 13.0% |
-| Sensor radiación solar | 2 | $1,200 | $2,400 | 4.1% |
-| Sensor estado pavimento | 2 | $2,800 | $5,600 | 9.6% |
-| Panel solar 150W | 2 | $450 | $900 | 1.5% |
-| Baterías 12V 100Ah (×2) | 4 | $180 | $720 | 1.2% |
-| Controlador solar MPPT | 2 | $200 | $400 | 0.7% |
-| Módulo comunicaciones (FO) | 2 | $450 | $900 | 1.5% |
-| Gabinete IP66 con ventilación | 2 | $800 | $1,600 | 2.7% |
-| Mástil 10m galvanizado | 2 | $1,800 | $3,600 | 6.2% |
-| Accesorios y cables | 2 | $900 | $1,800 | 3.1% |
-| **2. INSTALACIÓN** | **2** | **$7,200** | **$14,400** | **24.7%** |
-| Mano de obra instalación | 2 | $4,200 | $8,400 | 14.4% |
-| Obras civiles (cimentación) | 2 | $1,800 | $3,600 | 6.2% |
-| Calibración inicial | 2 | $600 | $1,200 | 2.1% |
-| Comisionamiento | 2 | $600 | $1,200 | 2.1% |
-| **TOTAL CAPEX** | - | - | **$58,400** | **100%** |
+| **1. ESTACIÓN DAVIS VANTAGE PRO2 PLUS** | **2** | **$6,214.78** | **$12,429.56** | **67.6%** |
+| Davis 6327m ISS (Sensor Suite) | 2 | $3,822.50 | $7,645.00 | 41.6% |
+| WeatherLink Live 6100 | 2 | $1,146.40 | $2,292.80 | 12.5% |
+| Trípode Universal Montaje | 2 | $253.65 | $507.30 | 2.8% |
+| IVA (19%) + AIU (20%) sobre equipos | 2 | $992.23 | $1,984.46 | 10.8% |
+| **2. INSTALACIÓN** | **2** | **$0** | **$0** | **0%** |
+| Mano de obra instalación | 2 | $0 | $0 | 0% |
+| Obras civiles (cimentación) | 2 | $0 | $0 | 0% |
+| Calibración inicial | 2 | $0 | $0 | 0% |
+| Comisionamiento | 2 | $0 | $0 | 0% |
+| **TOTAL CAPEX** | - | - | **$12,429.56 (Calculado)** | **100%** |
 
-**CAPEX/estación:** $58,400 / 2 = **$29,200 USD/estación** (instalada y operativa)
+**CAPEX/estación:** $12,429.56 / 2 = **$6,214.78 USD/estación** (sólo equipos)
+
+> **Nota Técnica:** La estación Davis Vantage Pro2 mide **Radiación Solar Global (W/m²)**, permitiendo un análisis energético preciso. No mide horas de sol directas. La **Evapotranspiración (ETo)** se calcula mediante la plataforma WeatherLink utilizando la fórmula Penman-Monteith FAO-56.
 
 ---
 
@@ -198,44 +189,44 @@
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. | Total |
 |:-----|:------------|:-------|:---------|:-------------|:------|
-| **A. EQUIPO ESTACIÓN** | | | | | **$22,000** |
-| Estación completa (según especif.) | 8 sensores + datalogger | UND | 1.0 | $22,000 | $22,000 |
-| **B. OBRAS CIVILES** | | | | | **$1,800** |
-| Excavación cimentación | 1.2×1.2×1.5m | M³ | 2.2 | $45.00 | $99.00 |
-| Concreto f'c=3000 PSI | Fundación mástil | M³ | 1.5 | $180.00 | $270.00 |
-| Acero refuerzo | #4 + estribos | KG | 30.0 | $2.80 | $84.00 |
-| Pernos anclaje | 4×M20×600mm | UND | 4.0 | $18.00 | $72.00 |
-| Canalización FO | Hasta edificio peaje | ML | 50.0 | $8.50 | $425.00 |
-| Ducto HDPE 2" | Fibra + energía | ML | 50.0 | $3.20 | $160.00 |
-| Sensor pavimento | Instalación embebida | UND | 1.0 | $450.00 | $450.00 |
-| Puesta a tierra | Varilla + anillo | UND | 1.0 | $550.00 | $550.00 |
-| **C. INSTALACIÓN** | | | | | **$4,200** |
-| Ingeniero meteorología | Supervisión + config | HH | 16.0 | $60.00 | $960.00 |
-| Técnico instrumentación | Montaje sensores | HH | 24.0 | $30.00 | $720.00 |
-| Técnico FO | Conexiones | HH | 8.0 | $25.00 | $200.00 |
-| Oficial electricista | Energía | HH | 12.0 | $18.00 | $216.00 |
-| Oficial civil | Cimentación | HH | 16.0 | $18.00 | $288.00 |
-| Operador grúa | Izaje mástil 10m | HH | 4.0 | $50.00 | $200.00 |
-| Ayudantes | Apoyo | HH | 32.0 | $10.00 | $320.00 |
-| Supervisor SST | Seguridad | HH | 12.0 | $20.00 | $240.00 |
-| Transporte | Movilización | GLB | 1.0 | $180.00 | $180.00 |
-| **D. CALIBRACIÓN** | | | | | **$600** |
-| Calibración 8 sensores | Con patrones certificados | UND | 1.0 | $600.00 | $600.00 |
-| **E. EQUIPOS** | | | | | **$1,200** |
-| Grúa telescópica | Izaje mástil | HH | 4.0 | $120.00 | $480.00 |
-| Mezcladora concreto | Fundación | HH | 3.0 | $25.00 | $75.00 |
-| Compactador | Relleno | HH | 4.0 | $12.00 | $48.00 |
-| Fusionadora FO | Empalmes | HH | 4.0 | $30.00 | $120.00 |
-| Laptop + software | Configuración | HH | 8.0 | $10.00 | $80.00 |
-| Equipo calibración | Patrones | HH | 8.0 | $40.00 | $320.00 |
-| Herramienta menor | Varios | GLB | 1.0 | $77.00 | $77.00 |
-| **SUBTOTAL DIRECTO** | | | | | **$29,800** |
-| **Administración (1%)** | | | | | **$298** |
-| **Imprevistos (0.5%)** | | | | | **$150** |
-| **Utilidad (0.5%)** | | | | | **$151** |
-| **TOTAL APU-METEO-001** | | | | | **$30,399/estación** |
+| **A. EQUIPO ESTACIÓN** | | | | | **$6,214.78** |
+| Davis Vantage Pro2 Plus Wireless | Incluye consola y trípode | UND | 1.0 | $6,214.78 | $6,214.78 |
+| **B. OBRAS CIVILES** | | | | | **$0** |
+| Excavación cimentación | 1.2×1.2×1.5m | M³ | 2.2 | $0 | $0 |
+| Concreto f'c=3000 PSI | Fundación mástil | M³ | 1.5 | $0 | $0 |
+| Acero refuerzo | #4 + estribos | KG | 30.0 | $0 | $0 |
+| Pernos anclaje | 4×M20×600mm | UND | 4.0 | $0 | $0 |
+| Canalización FO | Hasta edificio peaje | ML | 50.0 | $0 | $0 |
+| Ducto HDPE 2" | Fibra + energía | ML | 50.0 | $0 | $0 |
+| Sensor pavimento | Instalación embebida | UND | 1.0 | $0 | $0 |
+| Puesta a tierra | Varilla + anillo | UND | 1.0 | $0 | $0 |
+| **C. INSTALACIÓN** | | | | | **$0** |
+| Ingeniero meteorología | Supervisión + config | HH | 16.0 | $0 | $0 |
+| Técnico instrumentación | Montaje sensores | HH | 24.0 | $0 | $0 |
+| Técnico FO | Conexiones | HH | 8.0 | $0 | $0 |
+| Oficial electricista | Energía | HH | 12.0 | $0 | $0 |
+| Oficial civil | Cimentación | HH | 16.0 | $0 | $0 |
+| Operador grúa | Izaje mástil 10m | HH | 4.0 | $0 | $0 |
+| Ayudantes | Apoyo | HH | 32.0 | $0 | $0 |
+| Supervisor SST | Seguridad | HH | 12.0 | $0 | $0 |
+| Transporte | Movilización | GLB | 1.0 | $0 | $0 |
+| **D. CALIBRACIÓN** | | | | | **$0** |
+| Calibración 8 sensores | Con patrones certificados | UND | 1.0 | $0 | $0 |
+| **E. EQUIPOS** | | | | | **$0** |
+| Grúa telescópica | Izaje mástil | HH | 4.0 | $0 | $0 |
+| Mezcladora concreto | Fundación | HH | 3.0 | $0 | $0 |
+| Compactador | Relleno | HH | 4.0 | $0 | $0 |
+| Fusionadora FO | Empalmes | HH | 4.0 | $0 | $0 |
+| Laptop + software | Configuración | HH | 8.0 | $0 | $0 |
+| Equipo calibración | Patrones | HH | 8.0 | $0 | $0 |
+| Herramienta menor | Varios | GLB | 1.0 | $0 | $0 |
+| **SUBTOTAL DIRECTO** | | | | | **$6,214.78** |
+| **Administración (1%)** | | | | | **$62.15** |
+| **Imprevistos (0.5%)** | | | | | **$31.07** |
+| **Utilidad (0.5%)** | | | | | **$31.07** |
+| **TOTAL APU-METEO-001** | | | | | **$6,339.07/estación** |
 
-**Para 2 estaciones:** 2 × $30,399 = **$60,798 USD** ≈ **$58,400 USD** (con optimización 4%)
+**Para 2 estaciones:** 2 × $6,339.07 = **$12,678.14 USD**
 
 ---
 
@@ -344,9 +335,9 @@ CCO/SCADA
 
 | Concepto | Valor (USD) | % |
 |:---------|:------------|:--|
-| **CAPEX (2 estaciones)** | $58,400 | 44.8% |
-| **OPEX (20 años)** | $72,000 | 55.2% |
-| **TOTAL 20 AÑOS** | **$130,400** | **100%** |
+| **CAPEX (2 estaciones)** | $12,678.14 | 15.0% |
+| **OPEX (20 años)** | $72,000 | 85.0% |
+| **TOTAL 20 AÑOS** | **$84,678** | **100%** |
 
 ---
 

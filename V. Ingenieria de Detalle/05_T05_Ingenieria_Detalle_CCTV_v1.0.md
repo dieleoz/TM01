@@ -39,8 +39,8 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. CÁMARAS IP PTZ COMPLETAS** | **30** | **$8,000** | **$240,000** | **61.5%** |
-| Cámara PTZ IP 1080p | 30 | $5,500 | $165,000 | 42.3% |
+| **1. CÁMARAS IP PTZ COMPLETAS** | **30** | **-** | **-** | **-** |
+| Cámara PTZ Dahua DH-SD5A432GB-HNR | 30 | $868.36 | $26,050.80 | 10.9% |
 | Domo policarbonato anti-vandálico | 30 | $800 | $24,000 | 6.2% |
 | Soporte montaje poste/pared | 30 | $350 | $10,500 | 2.7% |
 | Cable UTP Cat6 ext 100m | 30 | $80 | $2,400 | 0.6% |
@@ -185,8 +185,8 @@
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. | Total |
 |:-----|:------------|:-------|:---------|:-------------|:------|
-| **A. EQUIPO CÁMARA** | | | | | **$8,000** |
-| Cámara PTZ IP 1080p 30× | Especificación T04 | UND | 1.0 | $5,500 | $5,500 |
+| **A. EQUIPO CÁMARA** | | | | | **$3,368.36** |
+| Cámara PTZ Dahua 4MP 32x | DH-SD5A432GB-HNR | UND | 1.0 | $868.36 | $868.36 |
 | Domo policarbonato | IP66/IK10 | UND | 1.0 | $800 | $800 |
 | Soporte montaje | Para poste Ø4" | UND | 1.0 | $350 | $350 |
 | Inyector PoE+ 30W | IEEE 802.3at | UND | 1.0 | $180 | $180 |
@@ -228,11 +228,11 @@
 | OTDR | Pruebas fibra | HH | 2.0 | $10.00 | $20.00 |
 | Laptop + software NVR | Configuración | HH | 6.0 | $10.00 | $60.00 |
 | Herramienta menor | Varios | GLB | 1.0 | $160.00 | $160.00 |
-| **SUBTOTAL DIRECTO** | | | | | **$17,000** |
-| **Administración (2%)** | | | | | **$340** |
-| **Imprevistos (1%)** | | | | | **$173** |
-| **Utilidad (1%)** | | | | | **$175** |
-| **TOTAL APU-CCTV-001** | | | | | **$17,688/cámara** |
+| **SUBTOTAL DIRECTO** | | | | | **$12,368.36** |
+| **Administración (2%)** | | | | | **$247.37** |
+| **Imprevistos (1%)** | | | | | **$123.68** |
+| **Utilidad (1%)** | | | | | **$123.68** |
+| **TOTAL APU-CCTV-001** | | | | | **$12,863.09/cámara** |
 
 **Para 15 cámaras Tipo A:** 15 × $17,688 = **$265,320 USD**
 
@@ -247,11 +247,11 @@
 | **Obras civiles** | Solo canalización (sin cimentación) | $600 |
 | **Instalación** | Menor complejidad | $1,800 |
 | **Equipos** | Sin grúa grande | $400 |
-| **SUBTOTAL** | | $11,200 |
-| **AIU (4%)** | | $448 |
-| **TOTAL APU-CCTV-002** | | **$11,648/cámara** |
+| **SUBTOTAL** | | $6,568.36 |
+| **AIU (4%)** | | $262.73 |
+| **TOTAL APU-CCTV-002** | | **$6,831.09/cámara** |
 
-**Para 10 cámaras Tipo B:** 10 × $11,648 = **$116,480 USD**
+**Para 10 cámaras Tipo B:** 10 × $6,831.09 = **$68,310.90 USD**
 
 ---
 
@@ -264,11 +264,11 @@
 | **Obras civiles** | $1,000 |
 | **Instalación** | $2,000 |
 | **Equipos** | $800 |
-| **SUBTOTAL** | $13,600 |
-| **AIU (4%)** | $544 |
-| **TOTAL APU-CCTV-003** | **$14,144/cámara** |
+| **SUBTOTAL** | $8,968.36 |
+| **AIU (4%)** | $358.73 |
+| **TOTAL APU-CCTV-003** | **$9,327.09/cámara** |
 
-**Para 5 cámaras Tipo C:** 5 × $14,144 = **$70,720 USD**
+**Para 5 cámaras Tipo C:** 5 × $9,327.09 = **$46,635.45 USD**
 
 ---
 
@@ -276,12 +276,12 @@
 
 | Tipo | Cantidad | Costo Unit. | Subtotal |
 |:-----|:---------|:------------|:---------|
-| **Tipo A** (Poste nuevo 12m) | 15 | $17,688 | $265,320 |
-| **Tipo B** (Infraestructura existente) | 10 | $11,648 | $116,480 |
-| **Tipo C** (Separador 8m) | 5 | $14,144 | $70,720 |
-| **TOTAL CAPEX DETALLADO** | **30** | - | **$452,520** |
-| **Descuento volumen (-15%)** | - | - | **-$67,878** |
-| **TOTAL AJUSTADO** | - | - | **$384,642 USD** ≈ **$390,000 USD** ✅ |
+| **Tipo A** (Poste nuevo 12m) | 15 | $12,863.09 | $192,946.35 |
+| **Tipo B** (Infraestructura existente) | 10 | $6,831.09 | $68,310.90 |
+| **Tipo C** (Separador 8m) | 5 | $9,327.09 | $46,635.45 |
+| **TOTAL CAPEX DETALLADO** | **30** | - | **$307,892.70** |
+| **Descuento volumen (-15%)** | - | - | **-$46,183.90** |
+| **TOTAL AJUSTADO** | - | - | **$261,708.80 USD** |
 
 **✅ VALIDADO vs. PRESUPUESTO_ITS_PURO ($240,000 equipos + $150,000 instalación = $390,000)**
 

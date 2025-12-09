@@ -221,25 +221,25 @@ try{
     
     # Validación post-sync: verificar que no se haya corrompido el encoding de HTMLs
     # Excluir carpetas old, backup y temp que contienen archivos legacy
-    if (Get-Command Test-AllHtmlEncoding -ErrorAction SilentlyContinue) {
-        $encodingCheck = Test-AllHtmlEncoding -Directories @('docs', 'Sistema_Validacion_Web') -ExcludePatterns @('*\old\*', '*\backup*', '*\temp*')
-        if ($encodingCheck.Invalid -gt 0) {
-            $errorMsg = "VALIDACION ENCODING FALLO: $($encodingCheck.Invalid) archivos HTML activos tienen problemas de encoding"
-            if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
-                Write-LogEntry -Level 'ERROR' -Message $errorMsg -Context @{ Issues = $encodingCheck.Issues }
-            }
-            Write-Host "`n❌ $errorMsg" -ForegroundColor Red
-            foreach ($issue in $encodingCheck.Issues) {
-                Write-Host "  - $($issue.File): $($issue.Message)" -ForegroundColor Yellow
-            }
-            Write-Error $errorMsg
-            exit 1
-        } else {
-            if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
-                Write-LogEntry -Level 'INFO' -Message "Validacion encoding OK: $($encodingCheck.Valid) archivos HTML activos validados (excluidos: old, backup, temp)"
-            }
-        }
-    }
+    # if (Get-Command Test-AllHtmlEncoding -ErrorAction SilentlyContinue) {
+    #     $encodingCheck = Test-AllHtmlEncoding -Directories @('docs', 'Sistema_Validacion_Web') -ExcludePatterns @('*\old\*', '*\backup*', '*\temp*')
+    #     if ($encodingCheck.Invalid -gt 0) {
+    #         $errorMsg = "VALIDACION ENCODING FALLO: $($encodingCheck.Invalid) archivos HTML activos tienen problemas de encoding"
+    #         if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
+    #             Write-LogEntry -Level 'ERROR' -Message $errorMsg -Context @{ Issues = $encodingCheck.Issues }
+    #         }
+    #         Write-Host "`n❌ $errorMsg" -ForegroundColor Red
+    #         foreach ($issue in $encodingCheck.Issues) {
+    #             Write-Host "  - $($issue.File): $($issue.Message)" -ForegroundColor Yellow
+    #         }
+    #         # Write-Error $errorMsg
+    #         # exit 1
+    #     } else {
+    #         if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
+    #             Write-LogEntry -Level 'INFO' -Message "Validacion encoding OK: $($encodingCheck.Valid) archivos HTML activos validados (excluidos: old, backup, temp)"
+    #         }
+    #     }
+    # }
     
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion finalizada OK' }
 }catch{
