@@ -39,19 +39,24 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. PANEL PMV COMPLETO** | **28** | **$15,000** | **$420,000** | **65.2%** |
-| Panel LED matriz 3×1.5m | 28 | $10,000 | $280,000 | 43.5% |
-| Controlador PMV | 28 | $2,500 | $70,000 | 10.9% |
-| Gabinete control IP65 | 28 | $800 | $22,400 | 3.5% |
-| Conversor FO/Ethernet | 28 | $150 | $4,200 | 0.7% |
-| Fuente alimentación 24VDC 15A | 28 | $350 | $9,800 | 1.5% |
-| DPS (datos + energía) | 28 | $150 | $4,200 | 0.7% |
-| Cable UTP Cat6 ext 50m | 28 | $60 | $1,680 | 0.3% |
-| Accesorios y conectores | 28 | $200 | $5,600 | 0.9% |
-| **2. ESTRUCTURA SOPORTE** | **28** | **$8,000** | **$224,000** | **34.8%** |
-| Pórtico metálico tipo bandera | 14 | $12,000 | $168,000 | 26.1% |
-| Poste metálico 8m (PMV unidireccional) | 14 | $4,000 | $56,000 | 8.7% |
-| **SUBTOTAL** | - | - | **$644,000** | **100%** |
+| **1. PANEL PMV P20 1G 64x64** | **28** | **$43,354.08** | **$1,213,914.24** | **29.0%** |
+| PMV P20 1G 64x64 RGB 3L 12C 450 A | 28 | $26,180 | $733,040 | 17.5% |
+| Factor Imprevistos (x1.38) + AIU (20%) | 28 | $17,174.08 | $480,874.24 | 11.5% |
+| **2. ESTRUCTURA PÓRTICO (BIDIRECCIONAL)** | **14** | **$72,167.24** | **$1,010,341.36** | **24.1%** |
+| Suministro estructura metálica | 14 | $33,126 | $463,764 | 11.1% |
+| Obras Civiles (Zapata) | 14 | $19,047 | $266,658 | 6.4% |
+| Izaje e Instalación | 14 | $7,039 | $98,546 | 2.4% |
+| Factor (x1.38) + AIU (20%) | 14 | Included in Total | - | - |
+| **3. POSTE (UNIDIRECCIONAL)** | **14** | **$28,866.90** | **$404,136.60** | **9.7%** |
+| Estructura y montaje (Estimado 40% Gantry) | 14 | $28,866.90 | $404,136.60 | 9.7% |
+| **4. SISTEMA SOLAR OFF-GRID** | **28** | **$30,076.62** | **$842,145.36** | **20.1%** |
+| Kit Solar (Paneles + Baterías + Gabinete) | 28 | $18,162 | $508,536 | 12.1% |
+| Factor (x1.38) + AIU (20%) | 28 | $11,914.62 | $333,609.36 | 8.0% |
+| **5. PUESTA A TIERRA** | **28** | **$3,947.94** | **$110,542.32** | **2.6%** |
+| Sistema SPT (Varilla, cable, soldadura) | 28 | $2,384 | $66,752 | 1.6% |
+| Factor (x1.38) + AIU (20%) | 28 | $1,563.94 | $43,790.32 | 1.0% |
+| **SUBTOTAL** | - | - | **$3,581,079.88** | **85.5%** |
+| **TOTAL CAPEX** | 28 | **$127,895** (Avg) | **$3,581,079.88** | **100%** |
 
 **Nota:** Instalación incluida en costo de estructura
 
@@ -65,21 +70,21 @@
 
 | Parámetro | Especificación Mínima | Cumplimiento |
 |:----------|:---------------------|:------------|
-| **Dimensiones** | 3.0 × 1.5 metros (ancho × alto) | AT3 |
-| **Tecnología** | LED Full Matrix (RGB) | - |
-| **Pitch (espaciado píxeles)** | 20-25 mm | Legibilidad 200m |
-| **Resolución** | 96×48 píxeles mínimo | - |
-| **Colores** | RGB (16.7M colores) o 3 colores mínimo | - |
-| **Brillo** | ≥8,000 cd/m² (nits) | Legible pleno sol |
-| **Vida útil LED** | ≥100,000 horas | ~11 años 24/7 |
-| **Consumo máximo** | 1,500W (todos LEDs encendidos) | - |
-| **Consumo típico** | 400-600W (mensaje estándar) | - |
-| **Protección frontal** | IP65 mínimo | Intemperie |
-| **Protección posterior** | IP54 mínimo | Acceso mantenimiento |
-| **Vandalismo** | IK08 mínimo | Resistente impactos |
-| **Temperatura** | -20°C a +60°C | Ambiente colombiano |
-| **Viento** | Resistente hasta 140 km/h | NSR-10 |
-| **Alimentación** | 110-220 VAC o 24 VDC | - |
+| **Dimensiones Totales** | 5.120 mm (L) × 1.440 mm (A) (Área Texto) | Modelo P20 1G |
+| **Dimensiones Gráfica** | 1.280 mm × 1.280 mm | RGB |
+| **Tecnología** | LED SMD Full Matrix RGB | - |
+| **Pitch** | 20 mm | - |
+| **Resolución** | 256×72 px (Texto) / 64x64 px (Gráfico) | - |
+| **Líneas/Caracteres** | 3 líneas de 12 caracteres (H: 450 mm) | - |
+| **Colores** | Ámbar (Texto) + RGB (16.7M Grafico) | - |
+| **Brillo** | Luminosidad L3 (Según EN 12966) | - |
+| **Ángulo Visión** | Clase B6 | - |
+| **Peso** | 810 KG | Requiere estructura reforzada |
+| **Consumo** | Max 1.7 KW / Promedio 720W | - |
+| **Protección** | IP65, EN 12966 | - |
+| **Temp. Operación** | -50°C a +65°C | - |
+| **Comunicación** | Ethernet IP, ModBus RS485/TCP, NTCIP 1203 | - |
+| **Alimentación** | 110-220 VAC 60Hz | - |
 
 **Marcas aceptadas:** Daktronics, SWARCO, Messagemaker, Ver-Mac, Econolite
 
@@ -113,13 +118,7 @@
 | **Derecha** | 14 | 7 bidireccionales + 7 unidireccionales | Calzada Derecha |
 | **TOTAL** | **28** | 14 pórticos + 14 postes | - |
 
-### **Distribución por Tipo de Instalación:**
 
-| Tipo | Estructura | Cantidad | Costo Unit. | Total |
-|:-----|:-----------|:---------|:------------|:------|
-| **A - Bidireccional** | Pórtico tipo bandera sobre separador | 14 | $27,000 | $378,000 |
-| **B - Unidireccional** | Poste metálico 8m en berma | 14 | $19,000 | $266,000 |
-| **TOTAL** | - | **28** | - | **$644,000** |
 
 ---
 
@@ -129,54 +128,21 @@
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. | Total |
 |:-----|:------------|:-------|:---------|:-------------|:------|
-| **A. PANEL PMV** | | | | | **$15,000** |
-| Panel LED 3×1.5m (según especif.) | Equipo completo | UND | 1.0 | $15,000 | $15,000 |
-| **B. PÓRTICO METÁLICO** | | | | | **$12,000** |
-| Estructura pórtico tipo bandera | Acero A36 galvanizado | UND | 1.0 | $8,500 | $8,500 |
-| Brazo voladizo 6m | Para panel 3m + margen | UND | 1.0 | $2,200 | $2,200 |
-| Cables tensor | Estabilización | UND | 2.0 | $180.00 | $360.00 |
-| Corona antiescalatoria | Protección | UND | 1.0 | $250.00 | $250.00 |
-| Pintura tráfico amarilla | Acabado | GLB | 1.0 | $350.00 | $350.00 |
-| Señalización reflectiva | Franjas blancas | GLB | 1.0 | $340.00 | $340.00 |
-| **C. OBRAS CIVILES** | | | | | **$3,500** |
-| Excavación cimentación | 1.5×1.5×2.0m | M³ | 4.5 | $45.00 | $202.50 |
-| Concreto f'c=4000 PSI | Fundación reforzada | M³ | 3.5 | $200.00 | $700.00 |
-| Acero refuerzo | #6 + estribos | KG | 120.0 | $2.80 | $336.00 |
-| Pernos anclaje | 8×M24×800mm | UND | 8.0 | $28.00 | $224.00 |
-| Canalización FO/energía | Hasta troncal | ML | 50.0 | $8.50 | $425.00 |
-| Ducto HDPE 2"+3" | FO + energía | ML | 50.0 | $6.00 | $300.00 |
-| Cajas paso (FO + eléctrica) | 2 cajas | UND | 2.0 | $500.00 | $1,000.00 |
-| Puesta a tierra | Varillas + anillo | UND | 1.0 | $550.00 | $550.00 |
-| **D. INSTALACIÓN** | | | | | **$8,000** |
-| Ingeniero proyecto | Supervisión técnica | HH | 16.0 | $50.00 | $800.00 |
-| Ingeniero estructural | Montaje pórtico | HH | 12.0 | $45.00 | $540.00 |
-| Técnico PMV | Config + comisionamiento | HH | 16.0 | $35.00 | $560.00 |
-| Técnico FO | Fusiones y conexiones | HH | 8.0 | $25.00 | $200.00 |
-| Oficial electricista | Conexiones | HH | 16.0 | $18.00 | $288.00 |
-| Oficial civil | Cimentación | HH | 24.0 | $18.00 | $432.00 |
-| Soldador | Estructura metálica | HH | 20.0 | $22.00 | $440.00 |
-| Operador grúa | Izaje pórtico | HH | 8.0 | $50.00 | $400.00 |
-| Ayudantes | Apoyo general | HH | 80.0 | $10.00 | $800.00 |
-| Supervisor SST | Seguridad altura | HH | 24.0 | $20.00 | $480.00 |
-| Transporte | Movilización | GLB | 1.0 | $350.00 | $350.00 |
-| Señalamiento vial | Durante obras | GLB | 1.0 | $250.00 | $250.00 |
-| Certificación | Pruebas + as-built | UND | 1.0 | $1,200.00 | $1,200.00 |
-| **E. EQUIPOS** | | | | | **$3,500** |
-| Grúa telescópica 25m | Izaje pórtico | HH | 8.0 | $180.00 | $1,440.00 |
-| Plataforma elevadora 15m | Trabajo altura | HH | 16.0 | $60.00 | $960.00 |
-| Equipo soldadura | Estructura | HH | 12.0 | $15.00 | $180.00 |
-| Mezcladora concreto | Fundación | HH | 6.0 | $25.00 | $150.00 |
-| Compactador | Relleno | HH | 8.0 | $12.00 | $96.00 |
-| Fusionadora FO | Empalmes | HH | 4.0 | $30.00 | $120.00 |
-| Generador 15kVA | Energía temporal | HH | 24.0 | $18.00 | $432.00 |
-| Herramienta menor | Varios | GLB | 1.0 | $122.00 | $122.00 |
-| **SUBTOTAL DIRECTO** | | | | | **$42,000** |
-| **Administración (3%)** | | | | | **$1,260** |
-| **Imprevistos (2%)** | | | | | **$865** |
-| **Utilidad (2%)** | | | | | **$881** |
-| **TOTAL APU-PMV-001** | | | | | **$45,006/panel** |
+| **A. PANEL PMV P20** | | | | | **$43,354.08** |
+| PMV P20 1G 64x64 (Suministro) | Incluye IVA+Factor+AIU | UND | 1.0 | $43,354.08 | $43,354.08 |
+| **B. ESTRUCTURA PÓRTICO (A)** | | | | | **$72,167.24** |
+| Suministro y Montaje Estructura | Según cotización (x1.38 + AIU) | UND | 1.0 | $72,167.24 | $72,167.24 |
+| **C. SISTEMA SOLAR OFF-GRID** | | | | | **$30,076.62** |
+| Kit Solar (16 Paneles + 5 Baterías) | Según cotización (x1.38 + AIU) | UND | 1.0 | $30,076.62 | $30,076.62 |
+| **D. PUESTA A TIERRA** | | | | | **$3,947.94** |
+| Sistema SPT completo | Según cotización (x1.38 + AIU) | UND | 1.0 | $3,947.94 | $3,947.94 |
+| **SUBTOTAL COSTO BASE** | | | | | **$149,545.88** |
+| **Administración (0%)** | | | | | **$0** |
+| **Imprevistos (0%)** | | | | | **$0** |
+| **Utilidad (0%)** | | | | | **$0** |
+| **TOTAL APU-PMV-001 (Pórtico)** | | | | | **$149,545.88/panel** |
 
-**Para 14 PMV bidireccionales:** 14 × $45,006 = **$630,084 USD**
+**Para 14 PMV bidireccionales:** 14 × $149,545.88 = **$2,093,642.32 USD**
 
 ---
 
@@ -184,16 +150,15 @@
 
 | Componente | Total (USD) |
 |:-----------|:------------|
-| **Panel PMV** | $15,000 |
-| **Poste 8m** | $4,000 |
-| **Obras civiles** | $2,000 |
-| **Instalación** | $4,500 |
-| **Equipos** | $2,000 |
-| **SUBTOTAL** | $27,500 |
-| **AIU (4%)** | $1,100 |
-| **TOTAL APU-PMV-002** | **$28,600/panel** |
+| **Panel PMV P20** | $43,354.08 |
+| **Estructura Poste (Estimada)** | $28,866.90 |
+| **Sistema Solar** | $30,076.62 |
+| **Puesta a Tierra** | $3,947.94 |
+| **SUBTOTAL** | $106,245.54 |
+| **AIU (0%)** | $0 |
+| **TOTAL APU-PMV-002 (Poste)** | **$106,245.54/panel** |
 
-**Para 14 PMV unidireccionales:** 14 × $28,600 = **$400,400 USD**
+**Para 14 PMV unidireccionales:** 14 × $106,245.54 = **$1,487,437.56 USD**
 
 ---
 
@@ -372,9 +337,9 @@
 
 | Concepto | Valor (USD) |
 |:---------|:------------|
-| **CAPEX (28 paneles)** | $644,000 |
-| **OPEX (20 años)** | $336,000 |
-| **TOTAL 20 AÑOS** | **$980,000** |
+| **CAPEX (28 paneles)** | $3,581,079.88 | 91.0% |
+| **OPEX (20 años)** | $336,000 | 9.0% |
+| **TOTAL 20 AÑOS** | **$3,917,079.88** | **100%** |
 
 ---
 
