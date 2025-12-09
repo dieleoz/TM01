@@ -31,19 +31,19 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. ESTACIÓN DAVIS VANTAGE PRO2 PLUS** | **2** | **$6,214.78** | **$12,429.56** | **67.6%** |
-| Davis 6327m ISS (Sensor Suite) | 2 | $3,822.50 | $7,645.00 | 41.6% |
-| WeatherLink Live 6100 | 2 | $1,146.40 | $2,292.80 | 12.5% |
-| Trípode Universal Montaje | 2 | $253.65 | $507.30 | 2.8% |
-| IVA (19%) + AIU (20%) sobre equipos | 2 | $992.23 | $1,984.46 | 10.8% |
+| **1. ESTACIÓN DAVIS VANTAGE PRO2 PLUS** | **2** | **$7,404.09** | **$14,808.18** | **100%** |
+| Davis 6327m ISS (Sensor Suite) | 2 | $3,822.50 | $7,645.00 | 51.6% |
+| WeatherLink Live 6100 | 2 | $1,146.40 | $2,292.80 | 15.5% |
+| Trípode Universal Montaje | 2 | $253.65 | $507.30 | 3.4% |
+| Factor Imprevistos (x1.38) + AIU (20%) | 2 | $2,181.54 | $4,363.08 | 29.5% |
 | **2. INSTALACIÓN** | **2** | **$0** | **$0** | **0%** |
 | Mano de obra instalación | 2 | $0 | $0 | 0% |
 | Obras civiles (cimentación) | 2 | $0 | $0 | 0% |
 | Calibración inicial | 2 | $0 | $0 | 0% |
 | Comisionamiento | 2 | $0 | $0 | 0% |
-| **TOTAL CAPEX** | - | - | **$12,429.56 (Calculado)** | **100%** |
+| **TOTAL CAPEX** | - | - | **$14,808.18 (Calculado)** | **100%** |
 
-**CAPEX/estación:** $12,429.56 / 2 = **$6,214.78 USD/estación** (sólo equipos)
+**CAPEX/estación:** $14,808.18 / 2 = **$7,404.09 USD/estación** (sólo equipos)
 
 > **Nota Técnica:** La estación Davis Vantage Pro2 mide **Radiación Solar Global (W/m²)**, permitiendo un análisis energético preciso. No mide horas de sol directas. La **Evapotranspiración (ETo)** se calcula mediante la plataforma WeatherLink utilizando la fórmula Penman-Monteith FAO-56.
 
@@ -189,8 +189,8 @@
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. | Total |
 |:-----|:------------|:-------|:---------|:-------------|:------|
-| **A. EQUIPO ESTACIÓN** | | | | | **$6,214.78** |
-| Davis Vantage Pro2 Plus Wireless | Incluye consola y trípode | UND | 1.0 | $6,214.78 | $6,214.78 |
+| **A. EQUIPO ESTACIÓN** | | | | | **$7,404.09** |
+| Davis Vantage Pro2 Plus Wireless | Incluye consola y trípode | UND | 1.0 | $7,404.09 | $7,404.09 |
 | **B. OBRAS CIVILES** | | | | | **$0** |
 | Excavación cimentación | 1.2×1.2×1.5m | M³ | 2.2 | $0 | $0 |
 | Concreto f'c=3000 PSI | Fundación mástil | M³ | 1.5 | $0 | $0 |
@@ -220,13 +220,13 @@
 | Laptop + software | Configuración | HH | 8.0 | $0 | $0 |
 | Equipo calibración | Patrones | HH | 8.0 | $0 | $0 |
 | Herramienta menor | Varios | GLB | 1.0 | $0 | $0 |
-| **SUBTOTAL DIRECTO** | | | | | **$6,214.78** |
-| **Administración (1%)** | | | | | **$62.15** |
-| **Imprevistos (0.5%)** | | | | | **$31.07** |
-| **Utilidad (0.5%)** | | | | | **$31.07** |
-| **TOTAL APU-METEO-001** | | | | | **$6,339.07/estación** |
+| **SUBTOTAL DIRECTO** | | | | | **$14,014.78** |
+| **Administración (0%)** | | | | | **$0** |
+| **Imprevistos (0%)** | | | | | **$0** |
+| **Utilidad (0%)** | | | | | **$0** |
+| **TOTAL APU-METEO-001** | | | | | **$7,404.09/estación** |
 
-**Para 2 estaciones:** 2 × $6,339.07 = **$12,678.14 USD**
+**Para 2 estaciones:** 2 × $7,404.09 = **$14,808.18 USD**
 
 ---
 
@@ -335,9 +335,9 @@ CCO/SCADA
 
 | Concepto | Valor (USD) | % |
 |:---------|:------------|:--|
-| **CAPEX (2 estaciones)** | $12,678.14 | 15.0% |
-| **OPEX (20 años)** | $72,000 | 85.0% |
-| **TOTAL 20 AÑOS** | **$84,678** | **100%** |
+| **CAPEX (2 estaciones)** | $14,808.18 | 17.0% |
+| **OPEX (20 años)** | $72,000 | 83.0% |
+| **TOTAL 20 AÑOS** | **$86,808** | **100%** |
 
 ---
 
