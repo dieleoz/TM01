@@ -108,6 +108,16 @@ class TM01MasterData {
             capexUnitarioUSD: 1806218.94,
             descripcion: 'Sistema de Peaje y Recaudo (2 Estaciones)',
             estado: 'Validado'
+        },
+        {
+            id: '9',
+            sistema: 'Pesaje Dinámico (Peaje)',
+            cantidad: 1,
+            capexUSD: 280358.30,
+            capexCOP: 1121433200,
+            capexUnitarioUSD: 280358.30,
+            descripcion: 'Sistema WIM en Peajes (Contractual 3.3.4.2)',
+            estado: 'Condicional'
         }
         ];
 
