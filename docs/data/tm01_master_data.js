@@ -11,10 +11,10 @@ class TM01MasterData {
             sistemas: [],
             resumen: {}
         };
-        
+
         this.initializeData();
     }
-    
+
     initializeData() {
         // RESUMEN EJECUTIVO - Valores consolidados
         this.data.resumen = {
@@ -24,89 +24,89 @@ class TM01MasterData {
             fechaActualizacion: '2025-12-05 09:59:56',
             fuente: 'RESUMEN_EJECUTIVO_PROYECTO_COMPLETADO.md'
         };
-        
+
         // TRM GLOBAL - Fuente única de verdad
         window.TRM_OFICIAL = 4000;
-        
+
         // SISTEMAS - Datos consolidados por sistema
-        this.data.sistemas = [            {
-                id: '1',
-                sistema: 'CCTV',
-                cantidad: 30,
-                capexUSD: 1890000,
-                capexCOP: 7560000000,
-                capexUnitarioUSD: 63000,
-                descripcion: 'Sistema CCTV completo',
-                estado: 'Validado'
-            },
-            {
-                id: '2',
-                sistema: 'Estaciones Meteorológicas',
-                cantidad: 3,
-                capexUSD: 180000,
-                capexCOP: 720000000,
-                capexUnitarioUSD: 60000,
-                descripcion: 'Sistema Estaciones Meteorológicas completo',
-                estado: 'Validado'
-            },
-            {
-                id: '3',
-                sistema: 'ETD/RADAR',
-                cantidad: 15,
-                capexUSD: 1650000,
-                capexCOP: 6600000000,
-                capexUnitarioUSD: 110000,
-                descripcion: 'Sistema ETD/RADAR completo',
-                estado: 'Validado'
-            },
-            {
-                id: '4',
-                sistema: 'PMV',
-                cantidad: 28,
-                capexUSD: 2450000,
-                capexCOP: 9800000000,
-                capexUnitarioUSD: 87500,
-                descripcion: 'Sistema PMV completo',
-                estado: 'Validado'
-            },
-            {
-                id: '5',
-                sistema: 'Postes SOS',
-                cantidad: 88,
-                capexUSD: 1234000,
-                capexCOP: 4936000000,
-                capexUnitarioUSD: 14022.73,
-                descripcion: 'Sistema Postes SOS completo',
-                estado: 'Validado'
-            },
-            {
-                id: '6',
-                sistema: 'Telecomunicaciones',
-                cantidad: 1,
-                capexUSD: 6719900,
-                capexCOP: 26879600000,
-                capexUnitarioUSD: 6719900,
-                descripcion: 'Sistema Telecomunicaciones completo',
-                estado: 'Validado'
-            },
-            {
-                id: '7',
-                sistema: 'WIM',
-                cantidad: 1,
-                capexUSD: 551000,
-                capexCOP: 2204000000,
-                capexUnitarioUSD: 551000,
-                descripcion: 'Sistema WIM completo',
-                estado: 'Validado'
-            }
+        this.data.sistemas = [{
+            id: '1',
+            sistema: 'CCTV',
+            cantidad: 30,
+            capexUSD: 1890000,
+            capexCOP: 7560000000,
+            capexUnitarioUSD: 63000,
+            descripcion: 'Sistema CCTV completo',
+            estado: 'Validado'
+        },
+        {
+            id: '2',
+            sistema: 'Estaciones Meteorológicas',
+            cantidad: 3,
+            capexUSD: 180000,
+            capexCOP: 720000000,
+            capexUnitarioUSD: 60000,
+            descripcion: 'Sistema Estaciones Meteorológicas completo',
+            estado: 'Validado'
+        },
+        {
+            id: '3',
+            sistema: 'ETD/RADAR',
+            cantidad: 15,
+            capexUSD: 1650000,
+            capexCOP: 6600000000,
+            capexUnitarioUSD: 110000,
+            descripcion: 'Sistema ETD/RADAR completo',
+            estado: 'Validado'
+        },
+        {
+            id: '4',
+            sistema: 'PMV',
+            cantidad: 28,
+            capexUSD: 3581079.88,
+            capexCOP: 14324319520,
+            capexUnitarioUSD: 127895.71,
+            descripcion: 'Sistema PMV completo',
+            estado: 'Validado'
+        },
+        {
+            id: '5',
+            sistema: 'Postes SOS',
+            cantidad: 88,
+            capexUSD: 1234000,
+            capexCOP: 4936000000,
+            capexUnitarioUSD: 14022.73,
+            descripcion: 'Sistema Postes SOS completo',
+            estado: 'Validado'
+        },
+        {
+            id: '6',
+            sistema: 'Telecomunicaciones',
+            cantidad: 1,
+            capexUSD: 6719900,
+            capexCOP: 26879600000,
+            capexUnitarioUSD: 6719900,
+            descripcion: 'Sistema Telecomunicaciones completo',
+            estado: 'Validado'
+        },
+        {
+            id: '7',
+            sistema: 'WIM',
+            cantidad: 1,
+            capexUSD: 551000,
+            capexCOP: 2204000000,
+            capexUnitarioUSD: 551000,
+            descripcion: 'Sistema WIM completo',
+            estado: 'Validado'
+        }
         ];
-        
+
         // WBS - Estructura compatible con wbs.html (capítulo + subcapítulo + item)
         this.data.wbs = [];
         this.data.sistemas.forEach((s, idx) => {
             const capId = (idx + 1).toString();
             const sistemaUpper = s.sistema.toUpperCase();
-            
+
             // Capítulo (nivel 1)
             this.data.wbs.push({
                 id: capId,
@@ -116,7 +116,7 @@ class TM01MasterData {
                 sistema: s.sistema,
                 tipo: 'capitulo'
             });
-            
+
             // Subcapítulo (nivel 2)
             this.data.wbs.push({
                 id: capId + '.1',
@@ -126,7 +126,7 @@ class TM01MasterData {
                 sistema: s.sistema,
                 tipo: 'subcapitulo'
             });
-            
+
             // Item principal (nivel 3)
             this.data.wbs.push({
                 id: capId + '.1.1',
@@ -145,16 +145,16 @@ class TM01MasterData {
             });
         });
     }
-    
+
     // MÉTODOS DE CONSULTA
     getSistema(nombre) {
         return this.data.sistemas.find(s => s.sistema === nombre);
     }
-    
+
     getTotalCapex() {
         return this.data.resumen.totalCapex;
     }
-    
+
     getEstadisticas() {
         const stats = {};
         this.data.sistemas.forEach(s => {
@@ -167,7 +167,7 @@ class TM01MasterData {
         });
         return stats;
     }
-    
+
     exportarDatos() {
         return {
             wbs: this.data.wbs,
@@ -184,11 +184,11 @@ window.tm01MasterData = new TM01MasterData();
 window.TM01MasterData = TM01MasterData;
 
 // Funciones de utilidad globales
-window.obtenerEstadisticas = function() {
+window.obtenerEstadisticas = function () {
     return window.tm01MasterData.getEstadisticas();
 };
 
-window.exportarDatosCompletos = function() {
+window.exportarDatosCompletos = function () {
     return window.tm01MasterData.exportarDatos();
 };
 
