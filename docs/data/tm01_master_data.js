@@ -103,9 +103,9 @@ class TM01MasterData {
             id: '8',
             sistema: 'Peaje',
             cantidad: 1,
-            capexUSD: 2400000,
-            capexCOP: 9600000000,
-            capexUnitarioUSD: 2400000,
+            capexUSD: 1806218.94,
+            capexCOP: 7224875759,
+            capexUnitarioUSD: 1806218.94,
             descripcion: 'Sistema de Peaje y Recaudo (2 Estaciones)',
             estado: 'Validado'
         }

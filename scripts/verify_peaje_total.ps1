@@ -20,9 +20,9 @@ foreach ($match in $matches) {
 Write-Host "Found $count Peaje items."
 Write-Host "Total Calculated: $total"
 
-# Expected 2,400,000
-$expectedLow = 2390000
-$expectedHigh = 2410000
+# Expected 1,806,218.94
+$expectedLow = 1806000
+$expectedHigh = 1807000
 
 if ($total -gt $expectedLow -and $total -lt $expectedHigh) {
     Write-Host "✅ VERIFICATION SUCCESSFUL: Total is within range (~$total)" -ForegroundColor Green
