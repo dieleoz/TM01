@@ -27,91 +27,74 @@
 
 ## 💰 **PRESUPUESTO DETALLADO**
 
-### **CAPEX POR COMPONENTE:**
+## 💰 **PRESUPUESTO DETALLADO**
 
-| Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
-|:-----------|:---------|:------------------|:------------|:------------|
-| **1. ETD (Monitoreo) - 13 unidades** | **13** | **$25,000** | **$325,000** | **52.8%** |
-| Sensor radar/microondas | 13 | $8,000 | $104,000 | 16.9% |
-| Controlador ETD | 13 | $4,500 | $58,500 | 9.5% |
-| Software analítica tráfico | 13 | $3,500 | $45,500 | 7.4% |
-| Gabinete control IP65 | 13 | $600 | $7,800 | 1.3% |
-| Accesorios y conectores | 13 | $150 | $1,950 | 0.3% |
-| **2. RADARES SANCIONATORIOS - 2 unidades** | **2** | **$55,000** | **$110,000** | **17.9%** |
-| Sensor radar Doppler | 2 | $8,000 | $16,000 | 2.6% |
-| Cámara ANPR (reconocimiento placas) | 2 | $6,500 | $13,000 | 2.1% |
-| Controlador radar | 2 | $4,500 | $9,000 | 1.5% |
-| Cámara contextual (evidencia) | 2 | $3,200 | $6,400 | 1.0% |
-| Software ANPR (licencia) | 2 | $2,000 | $4,000 | 0.7% |
-| Certificación ONAC | 2 | $15,000 | $30,000 | 4.9% |
-| Gabinete control IP65 | 2 | $600 | $1,200 | 0.2% |
-| Accesorios y conectores | 2 | $150 | $300 | 0.0% |
-| **3. INSTALACIÓN** | **15** | **$12,000** | **$180,000** | **29.3%** |
-| Mano de obra | 15 | $6,500 | $97,500 | 15.9% |
-| Obras civiles | 15 | $2,800 | $42,000 | 6.8% |
-| Pórtico/soporte (si requerido) | 15 | $2,500 | $37,500 | 6.1% |
-| Certificación SIMIT (opcional) | 2 | $1,500 | $3,000 | 0.5% |
-| **TOTAL CAPEX** | - | - | **$615,000** | **100%** |
+### **1. ETD - AFORO VEHICULAR (DEEPBLUE VIA)**
+**Fuente: Cotización Deviteck (Valor: $426,610,212 COP IVA Inc)**
+*Tasa de cambio ref: 4,000 COP/USD*
 
-**CAPEX/equipo:** $615,000 / 15 = **$41,000 USD/equipo**
+| Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
+|:-----------|:---------|:------------------|:------------|
+| **SUMINISTROS Y LICENCIAS** | | | **$62,157.01** |
+| Cámara Analítica DeepBlue (Bullet 5M + Accesorios) | 13 und | $2,736.84 | $35,578.94 |
+| Licencia Integración DeepBlue VIA | 13 und | $2,044.47 | $26,578.07 |
+| **INSTALACIÓN Y SERVICIOS** | | | **$24,545.16** |
+| Servicio Instalación y Puesta en Marcha (Global) | 1 und | $24,545.16 | $24,545.16 |
+| **SISTEMA DE ENERGÍA** | | | **$2,921.82** |
+| Kit Solar Fotovoltaico (Panel, Baterías, Gabinete) | 1 und | $2,921.82 | $2,921.82 |
+| **TOTAL AFORO (13 Uds)** | - | - | **$89,623.99** |
 
 ---
 
-## 📐 **ESPECIFICACIONES TÉCNICAS - RADAR-ANPR**
+### **2. RADARES SANCIONATORIOS (VIDAR SPEED)**
+**Fuente: Cotización Vidar (Base €12,507 + Estimados)**
+*Tasa cambio: 1.08 USD/EUR*
 
-### **1. RADAR DOPPLER**
-
-| Parámetro | Especificación |
-|:----------|:--------------|
-| **Tecnología** | Doppler K-band (24 GHz) |
-| **Rango medición velocidad** | 20-250 km/h |
-| **Precisión** | ±2 km/h |
-| **Alcance** | 100-150 metros |
-| **Carriles simultáneos** | Hasta 4 carriles por sensor |
-| **Clasificación vehículos** | 10 categorías (FHWA) |
-| **Dirección** | Bidireccional (acercamiento/alejamiento) |
-| **Comunicación** | Ethernet 10/100 Mbps |
-| **Alimentación** | 12-24 VDC |
-| **Consumo** | ≤15W |
-| **Protección** | IP66/IK08 |
-| **Certificación** | CE, FCC, Resolución 718/2018 (MinTransporte Colombia) |
-
-**Marcas aceptadas:** Jenoptik, Vitronic, Swarco, Kapsch, Gatso
+| Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
+|:-----------|:---------|:------------------|:------------|
+| **SUMINISTROS (Vidar Quote)** | | | **$27,015.12** |
+| Vidar Speed 5MpHDx LT (Cámara + Radar) | 2 und | $12,298.00 | $24,596.00 |
+| Licencia GDS (Globessey Data Server) | 2 und | $1,209.60 | $2,419.20 |
+| **COMPLEMENTOS (Estimados)** | | | **$36,000.00** |
+| Gabinete Electrónico + UPS + Solar/Red | 2 und | $5,500.00 | $11,000.00 |
+| Pórtico Estructural (Sancionatorio) | 2 und | $8,000.00 | $16,000.00 |
+| Instalación y Certificación ONAC | 2 und | $4,500.00 | $9,000.00 |
+| **TOTAL RADARES (2 Uds)** | - | - | **$63,015.12** |
 
 ---
 
-### **2. CÁMARA ANPR (RECONOCIMIENTO DE PLACAS)**
+## 💰 **PRESUPUESTO DETALLADO CONSOLIDADO**
+**Tabla fuente para extracción WBS (Mascara APUs anteriores)**
 
-| Parámetro | Especificación |
-|:----------|:--------------|
-| **Resolución** | ≥2 MP (1920×1080) |
-| **FPS** | ≥30 fps |
-| **Shutter** | Alta velocidad (1/10,000s) |
-| **Iluminación IR** | 850 nm, alcance 30m |
-| **Ángulo captura** | 30-45° óptimo |
-| **Software OCR** | ≥95% tasa reconocimiento |
-| **Placas soportadas** | Colombia + Mercosur |
-| **Velocidad lectura** | Hasta 250 km/h |
-| **Carriles** | Hasta 4 por cámara |
-| **Almacenamiento local** | MicroSD 128GB |
-| **Comunicación** | Ethernet PoE+ |
+| Componente | Cantidad | Costo Unit. WBS | Total |
+|:-----------|:---------|:----------------|:------|
+| **SISTEMA ETD (AFORO DEEPBLUE)** | | | |
+| Cámara Analítica DeepBlue (Kit) | 13 | $2,736.84 | $35,578.92 |
+| Licencia DeepBlue VIA | 13 | $2,044.47 | $26,578.11 |
+| Kit Solar Fotovoltaico (Punto Aislado) | 1 | $2,921.82 | $2,921.82 |
+| Instalación y Configuración ETD (Global) | 1 | $24,545.16 | $24,545.16 |
+| **SISTEMA RADAR (VIDAR SPEED)** | | | |
+| Vidar Speed 5MpHDx (Radar+Cámara) | 2 | $12,298.00 | $24,596.00 |
+| Licencia GDS Vidar | 2 | $1,209.60 | $2,419.20 |
+| Estructura, Solar e Instalación Radar | 2 | $18,000.00 | $36,000.00 |
+| **TOTAL WBS RADAR/ETD** | **-** | **-** | **$152,639.21** |
 
 ---
 
-### **3. CONTROLADOR ETD**
+## 📋 **ESPECIFICACIONES TÉCNICAS ACTUALIZADAS**
 
-| Parámetro | Especificación |
-|:----------|:--------------|
-| **Procesador** | Intel Core i5 o superior |
-| **RAM** | ≥8 GB |
-| **Almacenamiento** | SSD 256 GB mínimo |
-| **OS** | Linux o Windows embedded |
-| **Interfaces** | 4×Ethernet Gigabit mínimo |
-| **Video inputs** | ≥4 canales IP |
-| **Protocolos** | NTCIP, SNMP, API REST |
-| **Integración SIMIT** | ✅ Obligatoria (Res. 718/2018) |
-| **Alimentación** | 12-48 VDC redundante |
-| **Temperatura** | -10°C a +60°C |
+### **1. CÁMARA ANALÍTICA (DEEPBLUE - VIVOTEK)**
+*   **Modelo:** IB9387-EHTV-V3 (o superior)
+*   **Resolución:** 5 Megapíxeles, 30 fps
+*   **Lente:** Motorizado 2.7-13.5mm P-iris
+*   **Funciones:** WDR Pro, SNV, Smart Stream III, Analítica VCA embebida
+*   **Protección:** IP66/IP67, IK10 (Antivandálico), NEMA 4X
+*   **Accesorios:** Iluminador IR 120-200m (48W), Inyector PoE 30W
+
+### **2. SOFTWARE DEEPBLUE VIA**
+*   **Capacidad:** Conteo, clasificación y aforo vehicular.
+*   **Licencia:** Vitalicia con soporte anual opcional.
+*   **Nube:** Virtual Control Center (1 año incluido).
 
 ---
 
@@ -153,7 +136,7 @@
 | **AIU (5%)** | $2,750 |
 | **TOTAL** | **$57,750/equipo** |
 
-**Para 10 RADAR-ANPR (pórticos nuevos):** 10 × $57,750 = **$577,500 USD**
+**Para 10 RADAR-ANPR (pórticos nuevos):** 10 und × $57,750 = **$577,500 USD**
 
 ---
 
@@ -169,7 +152,7 @@
 | **AIU (5%)** | $1,600 |
 | **TOTAL** | **$33,600/equipo** |
 
-**Para 2 RADAR-ANPR (PMV existente):** 2 × $33,600 = **$67,200 USD**
+**Para 2 RADAR-ANPR (PMV existente):** 2 und × $33,600 = **$67,200 USD**
 
 ---
 

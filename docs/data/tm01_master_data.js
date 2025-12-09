@@ -53,9 +53,9 @@ class TM01MasterData {
             id: '3',
             sistema: 'ETD/RADAR',
             cantidad: 15,
-            capexUSD: 1650000,
-            capexCOP: 6600000000,
-            capexUnitarioUSD: 110000,
+            capexUSD: 152639.21,
+            capexCOP: 610556840,
+            capexUnitarioUSD: 152639.21,
             descripcion: 'Sistema ETD/RADAR completo',
             estado: 'Validado'
         },
