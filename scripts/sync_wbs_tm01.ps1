@@ -56,7 +56,7 @@ function Extract-T05Components {
             # Group 2: Quantity (Digits or dots)
             # Group 3: Unit Price (Digits, dots, commas)
             # Group 4: Total (Digits, dots, commas)
-            $pattern = '\|\s*([^|]+?)\s*\|\s*([0-9.]+)\s*\|\s*\$?([0-9,.]+)\s*\|\s*\$?([0-9,.]+)\s*\|'
+            $pattern = '\|\s*([^|]+?)\s*\|\s*([0-9.,]+)\s*\|\s*\$?([0-9,.]+)\s*\|\s*\$?([0-9,.]+)\s*\|'
             $matches = [regex]::Matches($content, $pattern)
             
             foreach ($match in $matches) {

@@ -83,9 +83,9 @@ class TM01MasterData {
             id: '6',
             sistema: 'Telecomunicaciones',
             cantidad: 1,
-            capexUSD: 6719900,
-            capexCOP: 26879600000,
-            capexUnitarioUSD: 6719900,
+            capexUSD: 7661295.12,
+            capexCOP: 30645180480,
+            capexUnitarioUSD: 7661295.12,
             descripcion: 'Sistema Telecomunicaciones completo',
             estado: 'Validado'
         },
