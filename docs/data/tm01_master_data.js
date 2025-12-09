@@ -93,9 +93,9 @@ class TM01MasterData {
             id: '7',
             sistema: 'WIM',
             cantidad: 1,
-            capexUSD: 551000,
-            capexCOP: 2204000000,
-            capexUnitarioUSD: 551000,
+            capexUSD: 523538.79,
+            capexCOP: 2094155160,
+            capexUnitarioUSD: 523538.79,
             descripcion: 'Sistema WIM completo',
             estado: 'Validado'
         }
