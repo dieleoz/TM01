@@ -27,9 +27,9 @@
 | **Separación promedio** | ~20 km entre PMV del mismo sentido | Validación contractual |
 | **Peajes** | 4 PMV (2 por peaje × 2 peajes) | Obligatorio AT2 |
 | **Estratégicos** | 24 PMV en corredor | Cada ~20 km |
-| **CAPEX Total** | **$644,000 USD** | $23,000/panel instalado |
-| **OPEX Anual** | **$16,800 USD** | $600/panel/año |
-| **OPEX 20 años** | **$336,000 USD** | Mantenimiento |
+| **CAPEX Total** | **$4,187,284.64 USD** | ~$149k/unidad (Estructura Unificada) |
+| **OPEX Anual** | **$104,682 USD** | ~2.5% del CAPEX |
+| **OPEX 20 años** | **$2,093,640 USD** | Mantenimiento + Repuestos |
 
 ---
 
@@ -39,24 +39,22 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. PANEL PMV P20 1G 64x64** | **28** | **$43,354.08** | **$1,213,914.24** | **29.0%** |
-| PMV P20 1G 64x64 RGB 3L 12C 450 A | 28 | $26,180 | $733,040 | 17.5% |
-| Factor Imprevistos (x1.38) + AIU (20%) | 28 | $17,174.08 | $480,874.24 | 11.5% |
-| **2. ESTRUCTURA PÓRTICO (BIDIRECCIONAL)** | **14** | **$72,167.24** | **$1,010,341.36** | **24.1%** |
-| Suministro estructura metálica | 14 | $33,126 | $463,764 | 11.1% |
-| Obras Civiles (Zapata) | 14 | $19,047 | $266,658 | 6.4% |
-| Izaje e Instalación | 14 | $7,039 | $98,546 | 2.4% |
-| Factor (x1.38) + AIU (20%) | 14 | Included in Total | - | - |
-| **3. POSTE (UNIDIRECCIONAL)** | **14** | **$28,866.90** | **$404,136.60** | **9.7%** |
-| Estructura y montaje (Estimado 40% Gantry) | 14 | $28,866.90 | $404,136.60 | 9.7% |
-| **4. SISTEMA SOLAR OFF-GRID** | **28** | **$30,076.62** | **$842,145.36** | **20.1%** |
-| Kit Solar (Paneles + Baterías + Gabinete) | 28 | $18,162 | $508,536 | 12.1% |
-| Factor (x1.38) + AIU (20%) | 28 | $11,914.62 | $333,609.36 | 8.0% |
-| **5. PUESTA A TIERRA** | **28** | **$3,947.94** | **$110,542.32** | **2.6%** |
-| Sistema SPT (Varilla, cable, soldadura) | 28 | $2,384 | $66,752 | 1.6% |
-| Factor (x1.38) + AIU (20%) | 28 | $1,563.94 | $43,790.32 | 1.0% |
-| **SUBTOTAL** | - | - | **$3,581,079.88** | **85.5%** |
-| **TOTAL CAPEX** | 28 | **$127,895** (Avg) | **$3,581,079.88** | **100%** |
+| **1. PANEL PMV P20 1G 64x64** | **28 und** | **$43,354.08** | **$1,213,914.24** | **29.0%** |
+| PMV P20 1G 64x64 RGB 3L 12C 450 A | 28 und | $26,180 | $733,040 | 17.5% |
+| Factor Imprevistos (x1.38) + AIU (20%) | 28 und | $17,174.08 | $480,874.24 | 11.5% |
+| **2. ESTRUCTURA PÓRTICO (SOPORTE PMV)** | **28 und** | **$72,167.24** | **$2,020,682.72** | **48.2%** |
+| Suministro estructura metálica | 28 und | $33,126 | $927,528 | 22.1% |
+| Obras Civiles (Zapata) | 28 und | $19,047 | $533,316 | 12.7% |
+| Izaje e Instalación | 28 und | $7,039 | $197,092 | 4.7% |
+| Factor (x1.38) + AIU (20%) | 28 und | Included in Total | - | - |
+| **3. SISTEMA SOLAR OFF-GRID** | **28 und** | **$30,076.62** | **$842,145.36** | **20.1%** |
+| Kit Solar (Paneles + Baterías + Gabinete) | 28 und | $18,162 | $508,536 | 12.1% |
+| Factor (x1.38) + AIU (20%) | 28 und | $11,914.62 | $333,609.36 | 8.0% |
+| **4. PUESTA A TIERRA** | **28 und** | **$3,947.94** | **$110,542.32** | **2.6%** |
+| Sistema SPT (Varilla, cable, soldadura) | 28 und | $2,384 | $66,752 | 1.6% |
+| Factor (x1.38) + AIU (20%) | 28 und | $1,563.94 | $43,790.32 | 1.0% |
+| **SUBTOTAL** | - | - | **$4,187,284.64** | **100%** |
+| **TOTAL CAPEX** | 28 und | **$149,545** (Avg) | **$4,187,284.64** | **100%** |
 
 **Nota:** Instalación incluida en costo de estructura
 
@@ -126,21 +124,39 @@
 
 ### **APU-PMV-001: PMV en Pórtico Tipo Bandera**
 
-| Ítem | Descripción | Unidad | Cantidad | Precio Unit. | Total |
-|:-----|:------------|:-------|:---------|:-------------|:------|
-| **A. PANEL PMV P20** | | | | | **$43,354.08** |
-| PMV P20 1G 64x64 (Suministro) | Incluye IVA+Factor+AIU | UND | 1.0 | $43,354.08 | $43,354.08 |
-| **B. ESTRUCTURA PÓRTICO (A)** | | | | | **$72,167.24** |
-| Suministro y Montaje Estructura | Según cotización (x1.38 + AIU) | UND | 1.0 | $72,167.24 | $72,167.24 |
-| **C. SISTEMA SOLAR OFF-GRID** | | | | | **$30,076.62** |
-| Kit Solar (16 Paneles + 5 Baterías) | Según cotización (x1.38 + AIU) | UND | 1.0 | $30,076.62 | $30,076.62 |
-| **D. PUESTA A TIERRA** | | | | | **$3,947.94** |
-| Sistema SPT completo | Según cotización (x1.38 + AIU) | UND | 1.0 | $3,947.94 | $3,947.94 |
-| **SUBTOTAL COSTO BASE** | | | | | **$149,545.88** |
-| **Administración (0%)** | | | | | **$0** |
-| **Imprevistos (0%)** | | | | | **$0** |
-| **Utilidad (0%)** | | | | | **$0** |
-| **TOTAL APU-PMV-001 (Pórtico)** | | | | | **$149,545.88/panel** |
+| Componente | Cantidad | Costo Unit. | Total |
+|:-----------|:---------|:------------|:------|
+| **A. PANEL PMV P20** | | | **$43,354.08** |
+| PMV P20 1G 64x64 (Suministro, Incluye IVA) | 1.0 und | $26,180.00 | $26,180.00 |
+| Factor Imprevistos + AIU (Panel) (x1.38 + 20% AIU) | 1.0 und | $17,174.08 | $17,174.08 |
+| **B. ESTRUCTURA PÓRTICO (A)** | | | **$72,167.24** |
+| Suministro y Montaje Estructura (Según cotización x1.38 + AIU) | 1.0 und | $72,167.24 | $72,167.24 |
+| **C. SISTEMA SOLAR OFF-GRID** | | | **$30,076.62** |
+| Kit Solar 16 Paneles + 5 Baterías (Según cotización) | 1.0 und | $18,162.00 | $18,162.00 |
+| Factor Imprevistos + AIU (Solar) (x1.38 + 20% AIU) | 1.0 und | $11,914.62 | $11,914.62 |
+| **D. PUESTA A TIERRA** | | | **$3,947.94** |
+| Sistema SPT completo (Según cotización) | 1.0 und | $2,384.00 | $2,384.00 |
+| Factor Imprevistos + AIU (SPT) (x1.38 + 20% AIU) | 1.0 und | $1,563.94 | $1,563.94 |
+| **SUBTOTAL COSTO BASE** | | | **$149,545.88** |
+| **Administración (0%)** | | | **$0** |
+| **Imprevistos (0%)** | | | **$0** |
+| **Utilidad (0%)** | | | **$0** |
+| **TOTAL APU-PMV-001 (Pórtico)** | | | **$149,545.88/panel** |
+
+---
+
+## 📋 **PRESUPUESTO WBS CONSOLIDADO**
+
+| Componente | Cantidad | Costo Unit. | Total |
+|:-----------|:---------|:------------|:------|
+| PMV P20 1G 64x64 (Suministro) | 28 | $26,180.00 | $733,040.00 |
+| Factor Imprevistos + AIU (Panel) | 28 | $17,174.08 | $480,874.24 |
+| Estructura Pórtico (Soporte PMV) | 28 | $72,167.24 | $2,020,682.72 |
+| Kit Solar Off-Grid | 28 | $18,162.00 | $508,536.00 |
+| Factor Imprevistos + AIU (Solar) | 28 | $11,914.62 | $333,609.36 |
+| Sistema Puesta a Tierra (SPT) | 28 | $2,384.00 | $66,752.00 |
+| Factor Imprevistos + AIU (SPT) | 28 | $1,563.94 | $43,790.32 |
+| **TOTAL SISTEMA PMV** | **-** | **-** | **$4,187,284.64** |
 
 **Para 14 PMV bidireccionales:** 14 × $149,545.88 = **$2,093,642.32 USD**
 
@@ -337,9 +353,9 @@
 
 | Concepto | Valor (USD) |
 |:---------|:------------|
-| **CAPEX (28 paneles)** | $3,581,079.88 | 91.0% |
-| **OPEX (20 años)** | $336,000 | 9.0% |
-| **TOTAL 20 AÑOS** | **$3,917,079.88** | **100%** |
+| **CAPEX (28 paneles)** | $4,187,284.64 | 91.0% |
+| **OPEX (20 años)** | $418,728 | 9.0% |
+| **TOTAL 20 AÑOS** | **$4,606,012.64** | **100%** |
 
 ---
 

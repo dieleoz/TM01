@@ -51,7 +51,12 @@ function Extract-T05Components {
             $content = Get-Content $filePath -Raw -Encoding UTF8
             
             # Pattern to match table rows: | Componente | Cant | Unit | Total |
-            $pattern = '\|\s*([^|]+?)\s*\|\s*(\d+)\s*\|\s*\$?([0-9,.]+)\s*\|\s*\$?([0-9,.]+)\s*\|'
+            # We assume standard format: | Description | Quantity | Unit Price | Total | ...
+            # Group 1: Description (Componente)
+            # Group 2: Quantity (Digits or dots)
+            # Group 3: Unit Price (Digits, dots, commas)
+            # Group 4: Total (Digits, dots, commas)
+            $pattern = '\|\s*([^|]+?)\s*\|\s*([0-9.]+)\s*\|\s*\$?([0-9,.]+)\s*\|\s*\$?([0-9,.]+)\s*\|'
             $matches = [regex]::Matches($content, $pattern)
             
             foreach ($match in $matches) {
