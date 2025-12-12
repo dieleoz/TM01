@@ -116,7 +116,10 @@
 | Software gestión | 2 | $50,000 | $100,000 |
 | Instalación | global | - | $1,200,000 |
 | Otros | - | - | $478,000 |
-| **TOTAL** | - | - | **$2,400,000** |
+| **TOTAL (ESTIMADO)** | - | - | **$2,400,000** |
+
+> [!WARNING]
+> **NOTA DE VALIDACIÓN (2025-12-12)**: Este presupuesto es una **estimación preliminar**. El presupuesto oficial validado se encuentra en el documento **T05 - Ingeniería de Detalle**, con un valor optimizado de **$1,806,218.94 USD** y una cantidad ajustada de **14 carriles**. Ver DT-TM01-PEAJES-019.
 
 ---
 

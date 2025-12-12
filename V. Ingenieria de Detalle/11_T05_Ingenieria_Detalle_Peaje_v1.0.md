@@ -31,5 +31,4 @@
 
 ---
 
-> [!WARNING]
-> Este sistema ha sido incluido estructuralmente pero carece de valores económicos. Se requiere ingresar los ítems del presupuesto de Peaje.
+

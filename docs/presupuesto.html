@@ -784,27 +784,26 @@
 
             // Abrir vista previa
             const w = window.open('', '_blank');
-            const style = `body{ font - family: Segoe UI, Tahoma, Verdana, sans - serif; background: #f7f9fc; color:#111; margin: 0; padding: 16px
-        }
-            .wrap{ max - width: 1200px; margin: 0 auto; background: #fff; border - radius: 10px; box - shadow: 0 10px 30px rgba(0, 0, 0, .08); overflow: hidden }
-            .hdr{ display: flex; justify - content: space - between; align - items: center; padding: 16px 18px; background:#0ea5e9; color: #fff }
-            .hdr h1{ margin: 0; font - size: 18px }
-            .sub{ padding: 10px 18px; background: #ecfeff; color:#0369a1; font - size: 13px }
+            const style = `body{ font-family: Segoe UI, Tahoma, Verdana, sans-serif; background: #f7f9fc; color:#111; margin: 0; padding: 16px }
+            .wrap{ max-width: 1200px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, .08); overflow: hidden }
+            .hdr{ display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; background:#0ea5e9; color: #fff }
+            .hdr h1{ margin: 0; font-size: 18px }
+            .sub{ padding: 10px 18px; background: #ecfeff; color:#0369a1; font-size: 13px }
             .tools{ display: flex; gap: 8px }
-            .btn{ padding: 8px 12px; border: none; border - radius: 6px; font - weight: 600; cursor: pointer }
-            .btn - print{ background:#1f2937; color: #fff }
-            .btn - xlsx{ background:#22c55e; color: #fff }
-            table{ border - collapse: collapse; width: 100 %; font - size: 13px }
+            .btn{ padding: 8px 12px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer }
+            .btn-print{ background:#1f2937; color: #fff }
+            .btn-xlsx{ background:#22c55e; color: #fff }
+            table{ border-collapse: collapse; width: 100%; font-size: 13px }
             thead th{ position: sticky; top: 0; background:#0f172a; color: #fff }
-        th, td{ border: 1px solid #e5e7eb; padding: 10px; text - align: right }
-        th: first - child, td: first - child{ text - align: left }
-            .row - sub td{ color:#0369a1; background: #f0f9ff }
-            .row - sub - obra td{ color:#6b7280; background: #fff7ed }
-            .row - total td{ font - weight: 700; background: #f8fafc }
-        `;
+            th, td{ border: 1px solid #e5e7eb; padding: 10px; text-align: right }
+            th:first-child, td:first-child{ text-align: left }
+            .row-sub td{ color:#0369a1; background: #f0f9ff }
+            .row-sub-obra td{ color:#6b7280; background: #fff7ed }
+            .row-total td{ font-weight: 700; background: #f8fafc }
+            `;
 
             const header = `
-            < div class="hdr" >
+            <div class="hdr">
                     <h1>📊 DESGLOSE PRESUPUESTAL POR CAPÍTULOS</h1>
                     <div class="tools">
                         <button class="btn btn-print" onclick="window.print()">🖨️ Imprimir</button>
