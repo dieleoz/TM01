@@ -1,4 +1,4 @@
-# SOLICITUD DE COTIZACIÓN (RFQ-001)
+﻿# SOLICITUD DE COTIZACIÓN (RFQ-001)
 ## FIBRA ÓPTICA - RED TRONCAL ITS
 ### Proyecto APP Puerto Salgar - Barrancabermeja
 
@@ -445,27 +445,27 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 
 <!-- AUTOGEN:FO_TABLE_START -->
 
-> Última sincronización: 2025-12-09 11:49:43
+> Ãšltima sincronizaciÃ³n: 2025-12-12 08:27:39
 
 | ID   | Nombre                                       | Und | Cantidad | Precio Unit. USD | Precio Unit. COP | Total USD | Total COP |
 |------|----------------------------------------------|-----|----------|------------------|------------------|-----------|-----------|
-| 1021 | Cable fibra óptica 48h | m | 314824 |  |  |  |  |
-| 1022 | Cable fibra óptica 12h | m | 10856 |  |  |  |  |
-| 1024 | Cajas empalme 80×80 | und | 65 |  |  |  |  |
-| 1025 | Cajas empalme 60×60 | und | 1192 |  |  |  |  |
+| 1021 | Cable fibra Ã³ptica 48h | m | 314824 |  |  |  |  |
+| 1022 | Cable fibra Ã³ptica 12h | m | 10856 |  |  |  |  |
+| 1024 | Cajas empalme 80Ã—80 | und | 65 |  |  |  |  |
+| 1025 | Cajas empalme 60Ã—60 | und | 1192 |  |  |  |  |
 | 1026 | Cruces especiales puentes | m | 4132 |  |  |  |  |
 | 1027 | Cruces especiales muros | m | 236 |  |  |  |  |
 | 1028 | Cruces especiales box culvert | m | 6732 |  |  |  |  |
 | 1029 | Cruces especiales alcantarillas | m | 2006 |  |  |  |  |
 | 10210 | Empalmes y conectores globales | glb | 1 |  |  |  |  |
-| 1031 | Excavación asfalto + tritubo | m | 27140 |  |  |  |  |
-| 1032 | Excavación andén + tritubo | m | 13570 |  |  |  |  |
-| 1033 | Excavación blanda + tritubo | m | 238560 |  |  |  |  |
-| 1034 | Instalación cruces especiales | m | 13920 |  |  |  |  |
-| 1035 | Instalación cajas empalme | und | 1257 |  |  |  |  |
-| 1041 | Halado fibra óptica 48h | m | 293190 |  |  |  |  |
-| 1042 | Instalación fibra óptica 12h (altura/piso) | m | 9440 |  |  |  |  |
-| 1043 | Trabajos instalación especializada | glb | 1 |  |  |  |  |
+| 1031 | ExcavaciÃ³n asfalto + tritubo | m | 27140 |  |  |  |  |
+| 1032 | ExcavaciÃ³n andÃ©n + tritubo | m | 13570 |  |  |  |  |
+| 1033 | ExcavaciÃ³n blanda + tritubo | m | 238560 |  |  |  |  |
+| 1034 | InstalaciÃ³n cruces especiales | m | 13920 |  |  |  |  |
+| 1035 | InstalaciÃ³n cajas empalme | und | 1257 |  |  |  |  |
+| 1041 | Halado fibra Ã³ptica 48h | m | 293190 |  |  |  |  |
+| 1042 | InstalaciÃ³n fibra Ã³ptica 12h (altura/piso) | m | 9440 |  |  |  |  |
+| 1043 | Trabajos instalaciÃ³n especializada | glb | 1 |  |  |  |  |
 <!-- AUTOGEN:FO_TABLE_END -->
 
 | Ítem | Descripción | Cantidad | Unidad | Precio Ref. Unit. (USD) | Total Ref. (USD) |
@@ -1507,6 +1507,7 @@ Los siguientes documentos están disponibles para descarga:
 ---
 
 **IMPORTANTE:** Esta RFQ es un documento técnico-comercial oficial del proyecto. Cualquier modificación debe ser notificada por escrito a todos los oferentes.
+
 
 
 

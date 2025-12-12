@@ -300,32 +300,56 @@
 
   <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
   <script src="data/tm01_master_data.js?v=20251209"></script>
+  <script src="data/tm01_riesgos_data.js?v=20251212"></script>
   <script>
     let all = [], filtered = [];
 
-    const seed = [
-      { titulo: 'Interoperabilidad con terceros', categoria: 'Integración', prob: 4, imp: 5, mitigacion: 'Pruebas conjuntas y protocolos estándar' },
-      { titulo: 'Disponibilidad fibra óptica', categoria: 'Suministro', prob: 3, imp: 4, mitigacion: 'Contratos marco y inventario 10% repuesto' },
-      { titulo: 'Retrasos obra civil', categoria: 'Ejecución', prob: 3, imp: 3, mitigacion: 'Plan de contingencia y frente paralelo' },
-      { titulo: 'Permisos ambientales', categoria: 'Permisos', prob: 2, imp: 4, mitigacion: 'Gestión temprana con autoridades' },
-      { titulo: 'Seguridad física equipos', categoria: 'Operación', prob: 2, imp: 3, mitigacion: 'Diseño anti-vandálico y monitoreo' }
-    ];
+    // Lógica de Severidad Centralizada
+    function severidad(prob, imp) {
+      const s = prob * imp;
+      if (s >= 15) return 'ALTO'; // Ajustado a estandar PMI (5x3=15)
+      if (s >= 8) return 'MEDIO';
+      return 'BAJO';
+    }
 
-    function severidad(prob, imp) { const s = prob * imp; if (s >= 16) return 'ALTO'; if (s >= 9) return 'MEDIO'; return 'BAJO'; }
+    function init() {
+      // Cargar datos desde fuente externa
+      if (typeof window.TM01_RIESGOS_DATA === 'undefined') {
+        // Reintentar si no ha cargado (race condition)
+        setTimeout(init, 100);
+        return;
+      }
 
-    function load() {
-      // En el futuro podríamos leer dm.data.riesgos; por ahora semilla
-      all = seed.map(r => ({ ...r, sev: severidad(r.prob, r.imp) }));
-      filtered = [...all];
+      const data = window.TM01_RIESGOS_DATA;
+
+      // Mapeo de datos
+      all = data.riesgos.map(r => ({
+        ...r,
+        sev: severidad(r.prob, r.imp)
+      }));
+
+      filtered = [...all]; // Copia inicial
+
+      // Renderizado
       poblarFiltros();
       renderMatriz();
       renderTabla();
       actualizarMetricas();
+
+      // Mostrar fecha actualización
+      const infoDiv = document.createElement('div');
+      infoDiv.style.textAlign = 'center';
+      infoDiv.style.color = '#64748b';
+      infoDiv.style.fontSize = '12px';
+      infoDiv.style.marginTop = '20px';
+      infoDiv.innerHTML = `Datos actualizados a: ${data.fechaActualizacion || 'Desconocida'}`;
+      document.querySelector('.wrap').appendChild(infoDiv);
     }
 
     function poblarFiltros() {
       const cat = [...new Set(all.map(r => r.categoria))];
       const s = document.getElementById('fCategoria');
+      s.innerHTML = '<option value="">Todas las categorías</option>'; // Reset
       cat.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; s.appendChild(o); });
     }
 
@@ -333,12 +357,14 @@
       const sev = document.getElementById('fSeveridad').value;
       const cat = document.getElementById('fCategoria').value;
       const q = (document.getElementById('fBuscar').value || '').toLowerCase();
+
       filtered = all.filter(r => {
         if (sev && r.sev !== sev) return false;
         if (cat && r.categoria !== cat) return false;
         if (q && !(r.titulo || '').toLowerCase().includes(q)) return false;
         return true;
       });
+
       renderMatriz();
       renderTabla();
       actualizarMetricas();
@@ -346,18 +372,40 @@
 
     function renderMatriz() {
       const cont = document.getElementById('matrix');
-      const labels = ['Bajo', 'Medio', 'Alto', 'Muy Alto', 'Crítico'];
+      const labels = ['Muy Bajo', 'Bajo', 'Medio', 'Alto', 'Muy Alto']; // Etiquetas X
+
+      // Inicializar Grid 5x5
       const grid = [];
       for (let i = 0; i < 5; i++) { grid[i] = []; for (let j = 0; j < 5; j++) { grid[i][j] = []; } }
-      filtered.forEach(r => { const p = Math.max(1, Math.min(5, r.prob)) - 1; const im = Math.max(1, Math.min(5, r.imp)) - 1; grid[p][im].push(r); });
+
+      // Poblar Grid
+      filtered.forEach(r => {
+        const p = Math.max(1, Math.min(5, r.prob)) - 1; // Y (0-4)
+        const im = Math.max(1, Math.min(5, r.imp)) - 1; // X (0-4)
+        grid[p][im].push(r);
+      });
+
       let html = '<div class="matrix">';
-      html += '<div class="cell h">Prob/Imp</div>'; labels.forEach(l => html += `<div class="cell h">${l}</div>`);
+
+      // Header X (Impacto)
+      html += '<div class="cell h">Prob/Imp</div>';
+      labels.forEach(l => html += `<div class="cell h">${l}</div>`);
+
+      // Filas (Probabilidad descendente 5->1)
       for (let p = 4; p >= 0; p--) {
-        html += `<div class="cell h">${p + 1}</div>`;
+        html += `<div class="cell h">Prob ${p + 1}</div>`;
         for (let im = 0; im < 5; im++) {
           const cel = grid[p][im];
-          const cls = cel.some(x => x.sev === 'ALTO') ? 'R' : cel.some(x => x.sev === 'MEDIO') ? 'M' : 'B';
-          html += `<div class="cell ${cls}">` + cel.map(x => `<div class="risk">${x.titulo}</div>`).join('') + `</div>`;
+          // Determinar color de celda basado en el contenido o posición teórica
+          const score = (p + 1) * (im + 1);
+          let bgClass = '';
+          if (score >= 15) bgClass = 'R';       // Zona Roja
+          else if (score >= 8) bgClass = 'M';   // Zona Amarilla/Naranja
+          else bgClass = 'B';                   // Zona Verde
+
+          html += `<div class="cell ${bgClass}">` +
+            cel.map(x => `<div class="risk" title="${x.mitigacion}">${x.titulo}</div>`).join('') +
+            `</div>`;
         }
       }
       html += '</div>';
@@ -366,16 +414,25 @@
 
     function renderTabla() {
       const tb = document.querySelector('#tabla tbody');
-      if (filtered.length === 0) { tb.innerHTML = '<tr><td colspan="6" style="color:#94a3b8">Sin resultados</td></tr>'; return; }
+      if (filtered.length === 0) { tb.innerHTML = '<tr><td colspan="6" style="color:#94a3b8;text-align:center">Sin resultados que coincidan con los filtros</td></tr>'; return; }
+
       tb.innerHTML = filtered.map(r => {
         const tag = r.sev === 'ALTO' ? 'tR' : r.sev === 'MEDIO' ? 'tM' : 'tB';
+        const estadoTag = r.estado === 'CERRADO' ? 'background:#334155;color:#94a3b8' : '';
+
         return `<tr>
-          <td>${r.titulo}</td>
+          <td>
+            <strong>${r.titulo}</strong><br>
+            <span style="font-size:10px;color:#64748b">${r.id}</span>
+          </td>
           <td>${r.categoria}</td>
           <td><span class="tag ${tag}">${r.sev}</span></td>
-          <td>${r.prob}</td>
-          <td>${r.imp}</td>
-          <td>${r.mitigacion}</td>
+          <td style="text-align:center">${r.prob}</td>
+          <td style="text-align:center">${r.imp}</td>
+          <td>
+             ${r.mitigacion}
+             ${r.estado ? `<br><span class="tag" style="margin-top:4px;font-size:9px;${estadoTag}">${r.estado}</span>` : ''}
+          </td>
         </tr>`;
       }).join('');
     }
@@ -388,13 +445,25 @@
     }
 
     function exportarExcel() {
-      const rows = filtered.map(r => ({ Riesgo: r.titulo, Categoria: r.categoria, Severidad: r.sev, Prob: r.prob, Impacto: r.imp, Mitigacion: r.mitigacion }));
-      const ws = XLSX.utils.json_to_sheet(rows); const wb = XLSX.utils.book_new();
+      if (filtered.length === 0) return alert('No hay datos para exportar');
+      const rows = filtered.map(r => ({
+        ID: r.id,
+        Riesgo: r.titulo,
+        Categoria: r.categoria,
+        Severidad: r.sev,
+        Probabilidad: r.prob,
+        Impacto: r.imp,
+        Score: r.prob * r.imp,
+        Mitigacion: r.mitigacion,
+        Estado: r.estado
+      }));
+      const ws = XLSX.utils.json_to_sheet(rows);
+      const wb = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(wb, ws, 'Riesgos');
       XLSX.writeFile(wb, 'Analisis_Riesgos_TM01.xlsx');
     }
 
-    window.addEventListener('DOMContentLoaded', load);
+    window.addEventListener('DOMContentLoaded', init);
   </script>
 </body>
 

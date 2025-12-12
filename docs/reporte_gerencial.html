@@ -351,25 +351,47 @@
         function sum(arr, fn) { return arr.reduce((s, a) => s + (fn ? fn(a) : a), 0); }
 
         function init() {
-            if (typeof TM01MasterData === 'undefined' && typeof window.wbsDataGlobal === 'undefined') { setTimeout(init, 60); return; }
+            // Unificar fuentes de datos (Soporte para TM01MasterData clase o TM01_MASTER_DATA objeto global)
+            const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
+                       (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
+            
+            const wbsData = (typeof window.wbsDataGlobal !== 'undefined') ? window.wbsDataGlobal : null;
 
+            if (!md && !wbsData) { setTimeout(init, 100); return; }
+
+            // Determinar items y fecha de actualización
             let items = [];
-            if (typeof window.wbsDataGlobal !== 'undefined' && window.wbsDataGlobal.items) {
-                items = window.wbsDataGlobal.items.filter(i => i.tipo === 'item');
-            } else {
-                const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
-                const wbs = (dm.data && Array.isArray(dm.data.wbs)) ? dm.data.wbs : [];
-                items = wbs.filter(i => i && i.tipo === 'item');
+            let fechaDatos = 'Desconocida';
+            
+            if (wbsData && wbsData.items && wbsData.items.length > 0) {
+                // Prioridad: Datos detallados WBS
+                items = wbsData.items.filter(i => i.tipo === 'item');
+                fechaDatos = wbsData.fecha_actualizacion || wbsData.fecha_generacion || new Date().toLocaleDateString();
+            } else if (md && md.data) {
+                // Fallback: Master Data (puede ser simplificado o detallado)
+                // Soporte para estructura wbs.items o tm01Data.data.wbs
+                const wbsArray = Array.isArray(md.data.wbs) ? md.data.wbs : 
+                                (md.data.wbs && md.data.wbs.items) ? md.data.wbs.items : [];
+                items = wbsArray.filter(i => i && i.tipo === 'item');
+                
+                // Intentar obtener fecha del resumen
+                if (md.data.resumen && md.data.resumen.fechaActualizacion) {
+                    fechaDatos = md.data.resumen.fechaActualizacion;
+                }
             }
 
             const totalUSD = sum(items, i => n(i.cantidad) * n(i.vu));
             const totalCOP = sum(items, i => n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)));
             const sistemas = new Set(items.map(i => i.sistema).filter(Boolean));
+            
             document.getElementById('mUSD').textContent = fm(totalUSD, 'USD');
             document.getElementById('mCOP').textContent = fm(totalCOP, 'COP');
             document.getElementById('mItems').textContent = items.length;
             document.getElementById('mSistemas').textContent = sistemas.size;
-            document.getElementById('fechaAct').textContent = new Date().toLocaleString('es-CO');
+            
+            // Mostrar fecha de datos + fecha actual reporte
+            const fechaReporte = new Date().toLocaleString('es-CO');
+            document.getElementById('fechaAct').innerHTML = `${fechaDatos} <br><small class='muted'>(Reporte: ${fechaReporte})</small>`;
 
             const trm = window.TRM_OFICIAL || 4000;
             const byValue = items.map(i => ({ item: i.item, desc: i.descripcion, sistema: i.sistema, cop: n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)) })).sort((a, b) => b.cop - a.cop);
