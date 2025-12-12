@@ -316,6 +316,19 @@
   - [ ] Corregir inconsistencias
   - [ ] Confirmar cantidad contractual
 
+#### Fase 6: Servir Ingeniería - Del Horno al Plato 🍳
+- [ ] **Consolidación Final (La Cocina)**
+  - [ ] Unificar cambios en carpetas I-VI
+  - [ ] Verificar integridad de Decisiones Técnicas (DTs)
+  - [ ] Implementar scripts de consolidación (`cocinar.ps1` - *Pendiente de migración*)
+- [ ] **Generación de Entregables (El Servicio)**
+  - [ ] Generar documentos Word (.docx) finales para cliente
+  - [ ] Generar visualización HTML para impresión/navegación
+  - [ ] Crear Índice Interactivo con todas las DTs aplicadas
+- [ ] **Entrega a Stakeholders**
+  - [ ] Empaquetado final de documentos
+  - [ ] Validación de formatos y estilos
+
 #### Integración con Arquitectura 4 Capas
 - [ ] **Sincronización con Sistema Web**
   - [ ] Ejecutar `sincronizar_SISTEMA_TM01_COMPLETO.ps1`
