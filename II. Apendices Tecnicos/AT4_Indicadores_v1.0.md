@@ -2276,577 +2276,56 @@ Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-IDT  INDICADOR
+### Tabla 4 - Pesos de los Indicadores
+Corresponden al valor base para ponderar cada indicador según la Unidad Funcional (UF).
+
+| IDT | INDICADOR | UF0-D | UF1 a UF5 | UF6 | UF7 | UF8 a UF10 | UF11 | UF12 | UF13 |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **E1** | IRI | 4,0 | 4,0 | 4,0 | 4,0 | 4,0 | 4,0 | 4,0 | 4,0 |
+| **E2** | Ahuellamiento | 2,5 | 3,5 | 3,5 | 3,5 | 3,5 | 3,5 | 3,5 | 3,5 |
+| **E3** | Fisuras / Grietas | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 |
+| **E4** | Coef. Fricción | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 |
+| **E5** | Textura | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 |
+| **E6** | Baches | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 | 2,5 |
+| **E7** | Hundimientos | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 |
+| **E8** | Márgenes / Separador | 1,0 | 1,0 | 0,5 | 0,5 | 1,0 | 0,5 | 1,0 | 1,0 |
+| **E10** | Drenajes Superficiales | 1,0 | 1,5 | 1,0 | 1,0 | 1,5 | 1,0 | 1,5 | 1,5 |
+| **E11** | Señalización Vertical | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 |
+| **E12** | Señalización Horizontal | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 | 2,0 |
+| **E13** | Barreras de Contención | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 |
+| **E14** | Iluminación | 1,0 | 1,5 | 1,0 | 1,5 | 1,5 | 1,0 | 1,5 | 1,5 |
+| **E15** | Puentes y Estructuras | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 |
+| **E16** | Capacidad Estructural | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 | 1,5 |
+| **E17** | Disponibilidad de Vía | 65,0 | 65,0 | 65,0 | 65,0 | 65,0 | 65,0 | 65,0 | 65,0 |
+| **O1** | Mortalidad (Nota 1) | 0,5 | 0,5 | 0,5 | 0,5 | 0,5 | 0,5 | 0,5 | 0,5 |
+| **O2** | Ocupación de Carriles | 1,0 | 1,0 | 0,5 | 0,5 | 1,0 | 0,5 | 1,0 | 1,0 |
+| **O3** | Cola de Peaje | - | - | 1,5 | 1,5 | - | 0,5 | - | - |
+| **O4** | Atención Incidentes | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 |
+| **O5** | Atención Accidentes | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 |
+| **O6** | Disponibilidad SICC | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 | 1,0 |
+
+*Nota: El símbolo "-" indica que el indicador no aplica o tiene peso cero para esa UF específica.*
+
+### Tabla 5 - Valor Ponderado de cada Indicador (VPI)
+Esta tabla define la lógica matemática para aplicar los pesos anteriores. El marcador `[•]` debe ser reemplazado por el valor correspondiente de la Tabla 4 arriba expuesta.
+
+| IDT | Indicadores | Fórmula del Valor Ponderado ($VPI_i$) |
+|:---:|:---|:---|
+| **E1 a E14 / E16 / E17** | Estado de la vía y disponibilidad | $$ VPI_i = \left( \frac{Km_c}{Km_t} \right) \times [•] $$ |
+| **E15** | Puentes y Estructuras | $$ VPI_i = \left( \frac{P_t}{P_c} \right) \times [•] $$ |
+| **O2 / O3 / O6** | Operación y SICC | $$ VPI_i = R \times [•] $$ |
+| **O4** | Tiempo Atención Incidentes | $$ VPI_i = \left( \frac{I_{tiempo}}{I_{total}} \right) \times [•] $$ |
+| **O5** | Tiempo Atención Accidentes | $$ VPI_i = \left( \frac{Eventos_{tiempo}}{Eventos_{total}} \right) \times [•] $$ |
+| **O1** | Índice de Mortalidad | $$ VPI_i = R \times [•] $$ |
+
+**Variables clave:**
+• $Km_c$: Kilómetros que cumplen el Valor de Aceptación.
+• $Km_t$: Kilómetros totales de la Unidad Funcional.
+• $R$: Resultado binario (1 si cumple, 0 si incumple).
+• $[•]$: Peso obtenido de la Tabla 4.
 
 
-E12
 
-
-E13
-
-
-E14 E15
-
-E16/E22
-
-
-E17
-
-O1 O2
-O3 O3-1
-O4
-
-
-O5
-Señalización Horizontal
-Barreras y Elementos de Contención
-
-Iluminación
-
-Puentes y Estructuras
-Capacidad Estructural / Eficiencia en la transferencia de carga
-Disponibilidad de la Vía
-Índice de Mortalidad
-Ocupación de Carriles
-
-Cola de Peaje
-
-Cola de Peaje carril IP/REV
-Tiempo de Atención de Incidentes.
-Tiempo de Atención de
-2
-
-1,5
-
-1
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-1,5
-
-0,5
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-0,5
-
-1,5
-
-0,5
-
-1
-
-1
-2
-
-1,5
-
-1
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-0,5
-
-1,5
-
-0,5
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-0,5
-
-1,5
-
-0,5
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-1
-
-1
-
-Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-IDT  INDICADOR
-
-
-Accidentes y Emergencias
-
-Disponibilidad
-O6  del SICC
-
-
-1    1    1    1
-
-
-1    1    1    1    1
-
-
-1    1    1
-
-1 IDT= Identificador
-
-Nota: Las longitudes son de referencias y dependerán de las longitudes definitivas una vez suscrita el Acta de Terminación de cada Unidad Funcional.
-Nota (1): La sumatoria de la ponderación de los Indicadores es mayor a 100%, debido a que le indicador O1 Mortalidad se considera como un Indicador adicional.
-
-Nota (2): Los porcentajes de los indicadores de Operación en peaje que se muestran en las UF6 y UF7 solo aplicarán en una de ellas de acuerdo con la ubicación del peaje Aguas Negras en el momento de la medición, debido a que este deberá ser reubicado del PR 83+900 RN 4511 (UF7) al PR 80+000 RN4511 (UF6). En la UF que no esté ubicado el peaje, le aplican los mismos porcentajes de las UFs que no tienen peajes.
-
-Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-Tabla 5 – Valor de ponderación de cada Indicador
-
-
-IDT E1 E2/E18
-E3/E19
-E4 E5
-E6/E20 E7/E21 E8
-E10
-E11 E12
-INDICADOR
-IRI
-Ahuellamiento / Escalonamientos Fisuras / Grietas
-Coeficiente de Fricción Transversal Textura
-Baches / Desportillamiento de juntas
-Hundimientos / Juntas
-Estado de Márgenes, separador central. Área de servicio y Derecho de vía.
-Drenajes Superficiales, longitudinal y trasversal Señalización Vertical
-Señalización Horizontal
-VALOR PONDERADO
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-[•]
-𝐾𝑚𝑡
-
-E13
-E14
-Barreras y Elementos de Contención
-Iluminación
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-
-E15 E16/E22 E17
-E23
-E18
-O1 O2
-O3/O3-1 O4
-O5 O6
-Puentes y Estructuras Capacidad Estructural / Eficiencia en la
-transferencia de carga
-Disponibilidad de la Vía Estado de elementos estructurales
-Estado de elementos estructurales
-Índice de Mortalidad Ocupación de Carriles Cola de Peaje
-Tiempo de Atención de Incidentes.
-Tiempo de Atención de Accidentes y Emergencias Disponibilidad del SICC
-𝑃𝑐
-∗ [•]
-𝑃𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐾𝑚𝑐
-∗ [•]
-𝐾𝑚𝑡
-𝐻𝑚𝑐
-∗ [•]
-𝐻𝑚𝑡
-𝐻𝑚𝑐
-∗ [•]
-𝐻𝑚𝑡
-𝑅 ∗ [•]
-𝑅 ∗ [•]
-𝑅 ∗ [•]
-𝐼𝑐
-∗ [•]
-𝐼𝑡
-𝐸𝑐
-∗ [•]
-𝐸𝑡
-𝑅 ∗ [•]
-
-Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-IDT
-
-
-E1 E2/E18 E3/E19 E4
-E5 E6/E20 E7/E21 E8
-E10 E11 E12 E13 E14 E15
-E16/E22 E17 O1
-INDICADOR
-
-
-IRI
-
-Ahuellamiento / Escalonamientos Fisuras / Grietas
-Coeficiente de Fricción Transversal Textura
-Baches / Desportillamiento de juntas
-
-Hundimientos / Juntas
-
-Estado de Márgenes, separador central. Área de servicio y Derecho de Vía.
-
-Drenajes Superficiales, longitudinal y trasversal Señalización Vertical
-Señalización Horizontal Barreras y Elementos de Contención
-Iluminación
-
-Puentes y Estructuras
-
-Capacidad Estructural / Eficiencia en la transferencia de carga
-
-Disponibilidad de la Vía Índice de Mortalidad
-VALOR PONDERADO
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝑃 𝑐
-𝑃 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-𝐾𝑚 𝑐
-𝐾𝑚 𝑡
-R
-O2             Ocupación de Carriles              R
-
-O3/O3-1             Cola de Peaje                R
-
-Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-IDT
-
-
-O4 O5 O6
-INDICADOR
-
-
-Tiempo de Atención de Incidentes.
-
-Tiempo de Atención de Accidentes y Emergencias Disponibilidad del SICC
-VALOR PONDERADO
-𝐼 𝑐
-𝐼 𝑡
-𝐸 𝑐
-𝐸 𝑡
-R
 Donde:
 
 
@@ -2866,9 +2345,7 @@ De conformidad con lo anterior, el valor del Índice de Cumplimiento de cada Uni
 
 
 Donde,
-𝑛
-𝐼𝐶𝑖𝑥 = ∑ 𝑉𝑃𝐼𝑛𝑖
-𝑛=1
+$$ IC_{ix} = \sum_{n=1}^{n} VPI_{ni} $$
 
 
 ICix VPI

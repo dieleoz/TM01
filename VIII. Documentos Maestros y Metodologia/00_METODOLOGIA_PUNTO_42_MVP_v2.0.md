@@ -1,11 +1,11 @@
-# METODOLOGÍA PUNTO 42 - v2.0
+# METODOLOGÍA PUNTO 42 - v2.1
 ## Framework para Proyectos EPC de Infraestructura
-## Lecciones Aprendidas del MVP - Postes SOS
+## Actualización: Fase 0.5 "Fuente de Verdad" y Lógica IC
 
-**Versión:** 2.0 (Post-MVP)  
-**Fecha:** 31 de Octubre 2025  
+**Versión:** 2.1 (Post-Certificación Contractual)  
+**Fecha:** 13 de Enero 2026  
 **Proyecto:** TM01 Troncal Magdalena  
-**Estado:** ✅ **MVP COMPLETADO** - Listo para escalado  
+**Estado:** ✅ **Fase 0.5 Estandarizada** - Listo para Ingeniería  
 **Responsable:** Administrador Contractual EPC
 
 ---
@@ -65,6 +65,8 @@ La **Metodología Punto 42** es un framework sistemático para la gestión docum
 
 ```
 PROYECTO/
+├── 00. Gobernanza PMO/               # Roles (RACI) y Riesgos
+│
 ├── I. Contrato General/              # Fuente de verdad primaria
 │   ├── Parte General
 │   └── Parte Especial
@@ -103,6 +105,17 @@ PROYECTO/
 
 ## 🔄 FASES DE LA METODOLOGÍA
 
+### **FASE 00: GOBERNANZA PMO** ✅ INTEGRADA
+
+**Objetivo:** Establecer las reglas de juego, roles (RACI) y gestión de riesgos transversales.
+**Entregables:**
+- [x] **Matriz RACI:** `00. Gobernanza PMO/0.1_MATRIZ_ROLES_PMO_EPC_RACI.md`
+- [x] **Matriz Riesgos:** `00. Gobernanza PMO/Matriz_Riesgos_PMO_Consolidada_v1.0.md`
+
+**Lección:** La gobernanza precede a la ingeniería. Definir "Quién hace qué" (RACI) evita cuellos de botella en las aprobaciones de T04/T05.
+
+---
+
 ### **FASE 0: PREPARACIÓN** ✅ COMPLETADA
 
 **Objetivo:** Establecer estructura base y entender el contrato
@@ -114,6 +127,25 @@ PROYECTO/
 - [x] README.md con visión del proyecto
 
 **Lección MVP:** La estructura ya existía - solo se requirió validación
+
+---
+
+### **FASE 0.5: VALIDACIÓN DE BASE CONTRACTUAL** ✅ NUEVA (Estandarizada)
+
+**Objetivo:** Certificar la "Fuente de Verdad" limpiando artefactos de OCR y normalizando datos contractuales ANTES de iniciar ingeniería.
+
+**Entregables:**
+- [x] **Limpieza de Artefactos:** Eliminación de encabezados/pies de página repetitivos y números de página incrustados (ej. `... 19`).
+- [x] **Normalización de Romanos:** Corrección de fusiones (ej. `CAPÍTULO XVSOLUCIÓN` -> `CAPÍTULO XV SOLUCIÓN`).
+- [x] **Identidad Definida:** Reemplazo de placeholders `[•]` por "Autopista Magdalena Medio S.A.S." donde aplica.
+- [x] **Lógica Matemática Certificada:** Extracción y documentación de fórmulas del **Índice de Cumplimiento (IC)** según Apéndice Técnico 4 (Tablas 4 y 5).
+
+**Estándar de Limpieza:**
+1. **Sin Ruido:** No deben existir cadenas de paginación interrumpiendo párrafos.
+2. **Contexto Matemático:** Los placeholders en fórmulas (`* [•]`) deben mapearse explícitamente a sus tablas de pesos.
+3. **Integridad:** Tablas y Coordenadas geográficas deben verificarse línea a línea.
+
+**Lección Aprendida:** "Garbage In, Garbage Out". No se puede automatizar ingeniería (Capas 2-4) si la Capa 1 (Markdown) tiene errores de OCR.
 
 ---
 
@@ -438,7 +470,11 @@ CAPA 4: Interfaces HTML (Visualización)
    - Scripts PowerShell sincronizan cambios
    - Interfaces HTML reflejan datos actualizados
 
-2. **Validación Contractual es fuente de verdad:**
+2. **La Lógica Contractual es el Motor (IC Calculation):**
+   - El cálculo del **Índice de Cumplimiento (IC)** no es arbitrario; sigue las fórmulas extraídas del AT4 (Capítulo 6).
+   - **Regla de Oro:** El indicador de Mortalidad (O1) es una excepción lógica (Bonus si IC < 1) y debe tratarse como tal en el código.
+
+3. **Validación Contractual es fuente de verdad:**
    - Usar validaciones existentes como referencia
    - Corregir documentos técnicos si hay inconsistencias
    - Mantener coherencia entre todos los documentos

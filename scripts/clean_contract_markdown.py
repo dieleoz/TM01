@@ -3,8 +3,7 @@ import re
 
 # Directories to clean
 DIRECTORIES = [
-    r"d:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\I. Contrato General",
-    r"d:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\II. Apendices Tecnicos"
+    r"d:\onedrive\gdrive\TM1\0.1 ingenieria basica\0.0 FORMATOS PARA IA\0.0 Formatos para IA - copia\01. contrato en .md"
 ]
 
 # Regex Patterns

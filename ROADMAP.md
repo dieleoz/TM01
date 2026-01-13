@@ -12,6 +12,12 @@
 
 ## 📊 ESTADO ACTUAL DEL PROYECTO
 
+### ✅ COMPLETADO: Validación de Base Contractual (Post-OCR)
+**Se ha certificado la "Fuente de Verdad" (Contrato + Apéndices) eliminando artefactos de OCR. La lógica del Índice de Cumplimiento (IC) ha sido documentada en `CONTRACT_ICALC_LOGIC.md`.**
+
+### 🚀 EN EJECUCIÓN: Fase 6 - Servir Ingeniería ("Del Horno al Plato")
+**Objetivo:** Consolidar los 7 sistemas completados y generar los entregables finales (Word + HTML) utilizando la base contractual certificada.
+
 ### ✅ Sistemas Completados
 
 **Sistema 1:** **Postes SOS** ✅  
@@ -145,6 +151,13 @@
 ---
 
 ## 🎯 FASES DE TRABAJO
+
+### ✅ Fase 0.5: Validación de Base Contractual - COMPLETADA
+**Objetivo:** Certificar la integridad de los documentos fuente tras corrección manual de OCR.
+- [x] Validación I. Contrato General (Parte General y Especial)
+- [x] Validación II. Apéndices Técnicos (AT1, AT2, etc.)
+- [x] Generar Pack de Preguntas/Validación por documento
+- [x] Cierre y Congelamiento de versión base
 
 ### ✅ Fase 0: Preparación - COMPLETADA
 
@@ -474,8 +487,8 @@
 
 ---
 
-**Versión:** 23.0 (Post-MVP - Todos los Sistemas ITS Completados)  
-**Estado:** ✅ **TODOS LOS SISTEMAS ITS COMPLETADOS**  
-**Fecha:** 05 de Diciembre 2025  
-**Sistemas Completados:** 7/7 (Postes SOS ✅, CCTV ✅, PMV ✅, ETD/RADAR ✅, WIM ✅, Meteo ✅, Telecomunicaciones ✅)  
-**Próximo paso:** Sincronización con sistema web y validación final
+**Versión:** 24.0 (Servir Ingeniería - Del Horno al Plato)  
+**Estado:** 🚀 **SIRVIENDO INGENIERÍA** - Generación de Entregables Finales  
+**Fecha:** 13 de Enero 2026  
+**Sistemas Completados:** 7/7 (Listos para empaquetado final)  
+**Próximo paso:** Ejecutar scripts de consolidación y generar Dashboards HTML

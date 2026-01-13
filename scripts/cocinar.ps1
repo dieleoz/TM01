@@ -44,10 +44,12 @@ $sistemasACocinar = @()
 if ($Sistema -ne "") {
     Write-Host "Modo: COCINAR SOLO SISTEMA_$Sistema" -ForegroundColor Yellow
     $sistemasACocinar = @($Sistema)
-} elseif ($Todo) {
+}
+elseif ($Todo) {
     Write-Host "Modo: COCINAR TODO" -ForegroundColor Yellow
     $sistemasACocinar = $mapeoSistemas.Keys
-} else {
+}
+else {
     Write-Host "Modo: DETECTAR DTs RECIENTES (ultimos 7 dias)" -ForegroundColor Yellow
     
     $fechaLimite = (Get-Date).AddDays(-7)
@@ -137,7 +139,8 @@ if ($dtsConImpactoLayout) {
         }
     }
     Write-Host ""
-} else {
+}
+else {
     Write-Host "  No hay DTs con impacto en layout" -ForegroundColor Gray
     Write-Host ""
 }
@@ -185,8 +188,11 @@ Este documento consolida la ingenieria de detalle del sistema.
     $fuentesEncontradas = 0
     foreach ($patronFuente in $config.Fuentes) {
         $archivos = Get-ChildItem -Path $raiz -Filter ($patronFuente -replace '\*.*', '*') -Recurse -ErrorAction SilentlyContinue | 
-                    Where-Object { $_.FullName -match 'III\. Ingenieria conceptual|V\. Ingenieria de detalle' } | 
-                    Select-Object -First 1
+        Where-Object { 
+            $_.FullName -match 'III\. Ingenieria conceptual|V\. Ingenieria de detalle' -and 
+            $_.FullName -notmatch 'copia|0\.0 Formatos para IA - copia'
+        } | 
+        Select-Object -First 1
         
         if ($archivos) {
             $fuentesEncontradas++
