@@ -48,20 +48,10 @@ status: Actualizado con mapeo UF y cronograma contractual
 Documento que contiene la información financiera del proyecto de la Concesión APP Puerto Salgar - Barrancabermeja, incluyendo la estructura de financiamiento, proyecciones financieras y análisis de indicadores.
 
 
-
-
-
-
-
 REPÚBLICA DE COLOMBIA
 
 
 MINISTERIO DE TRANSPORTE
-
-
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
 
 
 CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No     
@@ -71,7 +61,6 @@ APÉNDICE FINANCIERO 1: INFORMACIÓN FINANCIERA
 
 
 Entre: Concedente:
-Agencia Nacional de Infraestructura
 
 
 Concesionario:

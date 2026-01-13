@@ -45,22 +45,6 @@ status: Contenido completo
 ## 2. CONTENIDO DEL DOCUMENTO
 
 
-
-
-
-
-
-
-
-
-
-REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-
-
 CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No XXX
 Entre:
 
@@ -72,8 +56,6 @@ INDICADORES DE DISPONIBILIDAD, SEGURIDAD, CALIDAD Y NIVEL DE SERVICIO
 
 Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 CONTENIDO
@@ -110,8 +92,6 @@ CONTENIDO
 7.2   Mantenimiento Programado                              47
 
 Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
 
 
 ÍNDICE DE TABLAS
@@ -122,8 +102,6 @@ Tabla 4 Valor para ponderar cada uno de los Indicadores para efectos del cálcul
 Tabla 5 – Valor de ponderación de cada Indicador                      43
 
 Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
 
 
 1. INTRODUCCIÓN
@@ -134,7 +112,6 @@ Adicionalmente, este Apéndice contiene los procedimientos para la verificación
 La aplicación de los Indicadores, su verificación y la aplicación de los procedimientos para el cálculo de la Retribución deberán ser efectuadas en concordancia con lo establecido en la Parte General y en la Parte Especial del Contrato. En todo caso, de presentarse alguna contradicción entre lo previsto en este Apéndice y los demás documentos contractuales, se atenderá a lo previsto en el numeral 19.15 de la Parte General.
 
 Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 2. MODELO DE INDICADORES
@@ -158,7 +135,6 @@ g)  Valor de Aceptación: Corresponde al valor mínimo o máximo que resulta ace
 h) Tiempo Máximo de Corrección: Corresponde al tiempo máximo durante el cual el Concesionario debe llevar la medición al Valor de Aceptación establecido para cualquier Indicador, sin que se afecte el Índice de Cumplimiento.
 
 Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 Para la Unidad Funcional 0, la Operación y Mantenimiento comenzará a partir de la entrega de la infraestructura, en las condiciones descritas en la Sección 3.5 de esta Parte Especial y se extenderá en los siguientes términos:
@@ -171,7 +147,6 @@ UF0-P: Unidad Funcional 0 Provisional. Para esta Unidad Funcional la medición d
 Será además obligación del Concesionario cumplir con los Valores Mínimos de Aceptación de los Indicadores incluidos en la presente sección.
 
 Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 •  Desde los plazos anteriormente señalados los Valores de Aceptación serán los dispuestos en las Tabla 1, Tabla 2, Tabla 3 y Tabla 4, (según aplique) del presente Apéndice.
@@ -194,72 +169,22 @@ Tiempo de atención de incidentes Tiempo de atención de accidentes y emergencia
 •  Para su devolución al Instituto Nacional de Vías – INVÍAS el Concesionario deberá realizar como mínimo las actividades de puesta a punto de tramos UF0-P definidos en la Sección 4.2 del Apéndice Técnico 1 – Alcance.
 
 
-
-
-
-
-
-
-
-
-
 En adelante: ATUF – ATPUF (Acta de Terminación de Unidad Funcional y/o Acta de Terminación Parcial de Unidad Funcional)
 
 Apéndice Técnico 4 - Indicadores
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
 
 
 3. INDICADORES
 A continuación, se presentan los Indicadores aplicables al Concesionario a partir de la suscripción del Acta de Terminación de Unidad Funcional, en cada una de las Unidades Funcionales.
 
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Tabla 1 – Indicadores exclusivos para Pavimento Flexible.
-
 
 
 Nombre del Indicador
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Ahuellamiento
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Fisuras
@@ -267,44 +192,7 @@ Fisuras
 Identificador
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 E2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 E3
@@ -312,41 +200,7 @@ E3
 Concepto de medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Regularidad Transversal, en mm
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Fisuras.
@@ -354,26 +208,8 @@ Inspección Visual (Área afectada por km)
 Normatividad Específica Aplicable
 
 
-
-
-
-
-
-
-
-
-
 INV E-789-13
 Medida  del Ahuellamiento en superficies pavimentadas, Manual para la Inspección Visual   de Pavimentos asfalticos.
-
-
-
-
-
-
-
-
-
 
 
 Manual para la Inspección Visual de Pavimentos Flexibles.
@@ -387,86 +223,14 @@ Bacheos, INVIAS 2013.
 Frecuencia Máxima de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Semestral
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Mensual
 Unidad de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 km
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 km
@@ -474,23 +238,10 @@ km
 Método de Medida
 
 
-
-
-
-
-
-
 Se considerará la máxima profundidad de la rodada medida como la diferencia máxima de cota, entre las crestas y los senos de la rodada más pronunciada de cada carril. Se tomarán medidas en las dos rodadas o huellas del carril, por donde circulen más vehículos pesados en cada sentido de circulación. El valor a considerar será el promedio de los dos valores obtenidos (uno de cada rodada o huella).
 El reporte del valor puntual se tomará cada 20 m, dentro de cada km
 
 Los resultados de la auscultación se presentarán siguiendo el manual para la inspección de pavimentos flexibles del INVIAS. Como indica el numeral 1.3 Pérdida de las capas de la estructura y 1.4 Daños superficiales.
-
-
-
-
-
-
-
 
 
 Se contabilizarán las fisuras superiores a 3 mm de apertura. Se tomarán medidas cada 50 m.
@@ -527,97 +278,16 @@ Después ATUF – ATPUF:
 Tiempo Máximo de Corrección
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 3 meses
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1 mes
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Baches
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Hundimientos
@@ -625,49 +295,7 @@ Hundimientos
 Identificador
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 E6
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 E7
@@ -675,71 +303,12 @@ E7
 Concepto de medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Baches.
 Inspección Visual
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Hundimientos Inspección Visual (%Área afectada x km)
 Normatividad Específica Aplicable
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Manual para la inspección visual de pavimentos flexibles- INVIAS
@@ -747,134 +316,23 @@ Art. 450.4.13
 Bacheos, INVIAS 2013
 
 
-
-
-
-
-
-
-
-
-
-
-
 Manual para la inspección visual de pavimentos flexibles- INVIAS
 Frecuencia Máxima de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Mensual
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Mensual
 Unidad de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 km
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 km
 
 Método de Medida
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Se tendrán en cuenta como afectación todos los baches que cumplan con al menos una de las siguientes condiciones:
@@ -885,12 +343,6 @@ Se tendrán en cuenta como afectación todos los baches que cumplan con al menos
 Se inspeccionará la calzada completa midiendo el área del bache.
 
 Los resultados de la auscultación se presentarán siguiendo el manual para la inspección de pavimentos flexibles del INVIAS.
-
-
-
-
-
-
 
 
 Se tendrá en cuenta como área afectada todos los hundimientos de profundidad mayor o igual a 20 mm (severidad media y alta).
@@ -929,26 +381,6 @@ El Valor Puntual será: 0,1% del área de la calzada. Para la ciclorruta el Valo
 Tiempo Máximo de Corrección
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Antes de ATUF- ATPUF:
 1 semana
 
@@ -956,24 +388,7 @@ Después ATUF – ATPUF:
 24 horas
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 2 semanas
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -1000,55 +415,16 @@ Cada segmento debe cumplir con las siguientes condiciones:
 Valor Puntual
 
 
-
-
-
-
-
-
-
-
 Capacidad Estructural
-
-
-
-
-
-
-
-
 
 
 E16
 
 
-
-
-
-
-
-
-
 Medición de la Deflexión mediante FWD.
 
 
-
-
-
-
-
-
-
-
 INV-E-798-13
-
-
-
-
-
-
-
-
 
 
 Cada 2 años
@@ -1073,19 +449,10 @@ Valor medio D0 (10-2 mm)
 <70
 
 
-
 Valor medio D0 (10-2 mm)
 <100
 <80
 <50
-
-
-
-
-
-
-
-
 
 
 3 Meses
@@ -1095,13 +462,8 @@ El incumplimiento del valor medio de un segmento implicará el incumplimiento de
 Si se produjeran en un mismo segmento incumplimientos en los umbrales: puntual y medio, se considerará un único incumplimiento sobre el segmento.
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
 
 Tabla 2 – Indicadores exclusivos para Pavimento Rígido.
-
 
 
 Nombre del Indicador
@@ -1119,71 +481,20 @@ Valor de Aceptación
 Tiempo Máximo de Corrección
 
 
-
-
-
-
-
-
-
-
-
-
-
 Escalonamientos
 
 
-
-
-
-
-
-
-
-
-
-
 E18
-
-
-
-
-
-
-
-
 
 
 Escalonamiento
 Inspección Visual
 
 
-
-
-
-
-
-
-
 Manual para la inspección visual de pavimentos Rígido- INVIAS
 
 
-
-
-
-
-
-
-
-
-
-
 Semestral
-
-
-
-
-
 
 
 Se verificarán todas las juntas longitudinales y transversales y se contabilizarán los escalonamientos superiores a 5 mm.
@@ -1203,77 +514,19 @@ El incumplimiento de uno o más valores puntuales en un mismo segmento generará
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
-
-
-
 3 Meses
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Grietas
 
 
-
-
-
-
-
-
-
-
-
-
 E19
-
-
-
-
-
-
-
-
-
 
 
 Inspección Visual de Grietas (Área afectada por km)
 
 
-
-
-
-
-
-
-
 Manual para la inspección visual de pavimentos Rígidos- INVIAS
-
-
-
-
-
-
-
-
-
-
 
 
 Semestral
@@ -1300,21 +553,7 @@ Valores medios:
 Losas afectadas con un área mayor de 4,5 m2/Total losas en el segmento menor o igual a 20%.
 
 
-
-
-
-
-
-
-
-
-
-
 1 mes
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -1338,49 +577,19 @@ El incumplimiento de cualquiera de los valores medios implicará el incumplimien
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
 Desportillamient o de juntas
-
-
-
-
-
-
-
 
 
 E20
 
 
-
-
-
-
 Desportillamiento de juntas Inspección Visual (superficie afectada)
-
-
-
-
 
 
 Manual para la inspección visual de pavimentos Rígido- INVIAS
 
 
-
-
-
-
-
-
-
 Mensual
-
 
 
 Se medirá la longitud de cada desportillamiento,
@@ -1395,61 +604,19 @@ Valor Puntual: N° de desportillamientos inferior a 30 en el kilómetro medido.
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
 2 semanas
-
-
-
-
-
-
-
-
-
 
 
 Juntas
 
 
-
-
-
-
-
-
-
 E21
-
-
-
-
-
-
-
 
 
 Deterioro de sellos de Juntas
 
 
-
-
-
-
-
 Manual para la inspección visual de pavimentos Rígido- INVIAS
-
-
-
-
-
-
-
 
 
 Mensual
@@ -1474,18 +641,7 @@ El incumplimiento del valor medio generará un incumplimiento del segmento.
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total
 
 
-
-
-
-
-
-
-
 1 mes
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -1508,38 +664,10 @@ Se contabilizarán los deterioros de sellos de nivel de severidad medio y alto (
 de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
-
-
-
-
 Eficiencia en la transferencia de carga
 
 
-
-
-
-
-
-
-
-
-
-
 E22
-
-
-
-
-
-
-
 
 
 Eficiencia en la
@@ -1547,27 +675,10 @@ transferencia Prueba de carga en la junta transversal
 Mediante FWD.
 
 
-
-
-
-
-
-
-
 Manual para la inspección visual de pavimentos Rígido- INVIAS
 
 
-
-
-
-
-
-
-
-
-
 Cada dos años
-
 
 
 Se deberá comprobar la transferencia de carga en juntas transversales seleccionadas aleatoriamente por la Interventoría.
@@ -1585,24 +696,10 @@ El incumplimiento del valor puntual generará un incumplimiento del segmento.
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada
 
 
-
-
-
-
-
-
-
-
-
-
 1 año
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 
 Tabla 3 – Indicadores Pavimento Rígido y Flexible.
-
 
 
 Nombre del Indicador
@@ -1620,47 +717,12 @@ Valor de Aceptación
 Tiempo Máximo de Corrección
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 IRI
-
-
-
-
-
-
-
-
-
-
-
 
 
 Rugosidad Longitudinal
 E1      según el índice de Rugosidad
 Internacional (en m/km)
-
-
-
-
-
-
-
-
-
 
 
 INV E-790-13 INV-E-794-13
@@ -1670,25 +732,7 @@ y/o Art.450.5.2.5.9
 Especificacion es Generales de Construcción INVIAS 2013.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Semestral  km
-
-
-
-
-
 
 
 La unidad de medida será el IRI cada 100 m. Se tomarán medidas en las dos rodadas o huellas del carril, por donde circulen más vehículos pesados en cada sentido de circulación. Se debe calcular el IRI cada 100 m en ambas huellas de la llanta en m/km aproximado a un decimal. Para determinar el valor puntual del IRI se promedia las dos medidas del peor carril cada 100 m.
@@ -1708,58 +752,19 @@ Si se produjeran en un mismo segmento incumplimientos en los umbrales: puntual y
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 3 meses
-
-
-
-
-
-
 
 
 Coeficiente de Fricción (1)  E4
 
 
-
-
-
-
-
-
 (2)
-
-
-
-
-
-
 
 
 (3)
 
 
-
-
-
-
-
-
 Semestral  km
-
-
 
 
 Se tomarán medidas en una las dos rodadas o huellas del carril, por donde circulen más vehículos pesados en cada sentido de circulación.
@@ -1776,17 +781,7 @@ Cada segmento debe cumplir con las siguientes condiciones:
 (5)
 
 
-
-
-
-
-
-
 3 Meses
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -1806,36 +801,7 @@ Tiempo Máximo de Corrección
 El incumplimiento de uno o más valores puntuales en un mismo segmento, o el incumplimiento del valor medio de un segmento, generará un incumplimiento del segmento.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Textura     E5
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Estado   de Márgenes, separador
@@ -1844,70 +810,14 @@ servicio   y
 Corredor  del Proyecto
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 Medición de la macro textura en mm
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Altura  de  la
 vegetación   y limpieza general
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ISO-13473-1,2,3
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Art 802-13
@@ -1917,62 +827,13 @@ Plantación de árboles.
 Especificacion es Generales de Construcción de Carreteras INVIAS 2013
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Semestral  km
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Mensual   km
 
 
-
-
-
-
-
-
-
-
-
-
-
 Se tomarán medidas por donde circulen más vehículos pesados en cada sentido de circulación, también se medirán los carriles que tenga capa de rodadura distinta. El reporte del valor puntual se tomará cada 10 m, dentro de cada km.
-
-
-
-
-
-
-
 
 
 La medición se realizará mediante inspección visual y toma de medidas en una franja de 4 m a partir de los bordes de berma exterior y en todo el separador central, si lo hubiera.
@@ -2001,45 +862,10 @@ No existe vegetación que afecte a la seguridad vial por disminución de distanc
 Se deberá dar cumplimiento a lo establecido en el numeral 6.3.6 del Apéndice Técnico 2 Condiciones para la Operación y Mantenimiento
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 3 Meses
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1 Semana
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -2065,130 +891,26 @@ El incumplimiento de uno o más valores puntuales en un mismo segmento generará
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Drenaje Superficial, longitudinal  y trasversal
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Señalización Vertical
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 E10
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 E11
 
 
-
-
-
-
-
-
-
-
-
 Capacidad Hidráulica   y estado de cunetas, zanjas, alcantarillas, canales  encoles, descoles y otras obras de drenaje existentes. (Obstrucción)
-
-
-
-
-
-
-
-
-
-
 
 
 Posición, legibilidad de la señal  y  %  de Retrorreflectividad sobre  la  exigida para  instalación Inicial
 
 
-
-
-
-
-
-
-
-
-
-
-
 1) Manual de Drenaje para Carreteras, INVIAS, 2009.
 2) Manual para la inspección visual de estructuras de drenaje, INVIAS, 2006
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Art. 710-13
@@ -2197,47 +919,11 @@ Art. 720-13
 Postes de referencia, INVIAS 2013
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Mensual   Km
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Mensual/
 Semestral  Km
-
-
-
-
-
 
 
 Se medirá mensualmente la sección hidráulica de la obra de drenaje con ayuda de una cinta métrica o similar Se tomarán medidas puntuales en los lugares indicados por la Interventoría. Se incluye el drenaje de Puentes y pasos superiores.
@@ -2246,12 +932,6 @@ Se inspeccionará semanalmente las obstrucciones graves de las obras de drenaje 
 
 Sin embargo, se debe tener en cuenta si la colmatación que se presenta es por causas no imputables al concesionario pues se pueden presentar casos en que los propietarios no permiten realizar la limpieza de los descoles de las obras, o cambian los cursos de las aguas.
 Se excluirán de la medición los tramos urbanos de los Pasos Nacionales.
-
-
-
-
-
-
 
 
 Se  medirá  la  retrorreflectividad  (o  luminancia retrorreflejada) a través del coeficiente de retrorreflexión R1.
@@ -2276,92 +956,15 @@ Para la verificación del Valor de Aceptación, se dividirá la Unidad Funcional
 Cada segmento debe cumplir con las siguientes condiciones:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1 semana
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 1  semana
 para   las señales que incumplan la retrorreflecti vidad y 48 horas  para
 las señales ilegibles y/o dañadas
 
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
 
 Nombre del Indicador
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Señalización Horizontal
@@ -2369,102 +972,9 @@ Señalización Horizontal
 Identificador
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 E12
 
 Concepto de Medición
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Retrorreflectividad (en milicandelas por metro cuadrado y Lux)
@@ -2480,31 +990,6 @@ NTC 4739
 Láminas retrorreflectiva s para control de tránsito
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Art. 700-13
 Líneas de demarcación y marcas viales, INVIAS 2013.
 Art. 701-13
@@ -2512,100 +997,8 @@ Tachas reflectivas. INVIAS 2013
 Frecuencia Máxima de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Semestral
 Unidad de Medición
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 km
@@ -2614,46 +1007,6 @@ Método de Medida
 
 
 •  Semestralmente se medirá la Retrorreflectividad a todas las señales. Estas inspecciones deberán realizarse también en horas nocturnas.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Se tomará una medida cada 20 m en cada línea de borde (derecho e izquierdo) y en cada línea interior central, de división de carriles.
@@ -2686,57 +1039,7 @@ Para la verificación del Valor de Aceptación, se dividirá la Unidad Funcional
 Tiempo Máximo de Corrección
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1 Semana
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -2781,7 +1084,6 @@ Nota (1):Para equipo con geometría 15 m Nota (2): Para equipo con geometría 30
 •  El 85% de las tachas deben estar completas y continuas.
 
 
-
 Después de ATUF- ATPUF:
 
 Cada segmento debe cumplir con las siguientes condiciones:
@@ -2799,10 +1101,6 @@ Nota (1):Para equipo con geometría 15 m Nota (2): Para equipo con geometría 30
 
 El incumplimiento de una o varias de las condiciones anteriormente señaladas en un mismo segmento  generará  un  incumplimiento  del segmento.
 Cuando se tenga doble calzada y/o ciclorruta se evaluará cada una de manera independiente, por lo
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -2822,103 +1120,22 @@ Tiempo Máximo de Corrección
 que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Barreras   y
 elementos  de contención
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Iluminación
 
 
-
-
-
-
-
-
-
-
-
-
 E13
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 E14
 
 
-
-
-
-
-
-
-
-
 Estado    y
 estabilidad de las barreras   y
 elementos  de contención
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Estado  de  los elementos asociados a la iluminación
@@ -2930,60 +1147,14 @@ Captafaros, Especificacion es Generales de Construcción de Carreteras INVIAS 20
 Manual de señalización Vial del Ministerio de Transporte.
 
 
-
-
-
-
-
-
-
-
-
-
 Mensual   km
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Mensual
 
 
-
-
-
-
-
-
 Se inspeccionará visualmente el estado de los componentes de barreras y elementos de contención especialmente los mencionados por los umbrales (postes, conexiones, etc.). Deformaciones medias, oxidaciones fijaciones. Geometría según normativa.
 Barreras de concreto: Perfectamente alienadas, según lo definido en el Proyecto.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Se inspeccionará visualmente el funcionamiento de los puntos de luz y del resto de los elementos componentes asociados a la iluminación (soportes, centros de mando, tableros y luminarias), operados e instalados por el Concesionario.
@@ -3006,42 +1177,10 @@ Valor Puntual: Menor o igual a 5% de iluminarias defectuosas del total instalado
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada.
 
 
-
-
-
-
-
-
-
-
-
-
 1 mes
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1 semana
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -3061,91 +1200,14 @@ Tiempo Máximo de Corrección
 Cada puente debe cumplir con la totalidad de las siguientes condiciones:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Puentes   y Estructuras
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 E15
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Verificación visual  de  los elementos  que
 componen  el Puente.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Inventario según SIPUCOL
@@ -3155,73 +1217,10 @@ Pontones,  y
 Manual  de inspección visual de obras de  drenaje- INVIAS
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Anual
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Puente o Estructura
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Inspección visual
@@ -3249,75 +1248,18 @@ Puentes Metálicos o mixtos:
 •  Si algún puente presenta algún defecto de acuerdo a lo aclarado anteriormente, se procede a anotar el incumplimiento en el Km que corresponda.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1 mes
 Drenaje:
 •  Superficie erosionada: ninguna
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
 
 
-
-
-
-
-
-
-
-
-
-
-
 Disponibilidad de la Vía
 
 
-
-
-
-
-
-
-
-
-
-
 Índice   de Mortalidad
-
-
-
-
-
-
-
-
-
-
-
 
 
 Ocupación de Carriles
@@ -3325,45 +1267,10 @@ Ocupación de Carriles
 Identificador
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 E17
 
 
-
-
-
-
-
-
-
-
-
-
-
 O1
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 O2
@@ -3371,185 +1278,39 @@ O2
 Concepto de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 La relación entre el  Número  de accidentes mensuales  de todo el Corredor del Proyecto
-
-
-
-
-
-
-
-
-
 
 
 Disponibilidad y ocupación  de carriles.
 Normatividad Específica Aplicable
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 NA
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 NA
 Frecuencia Máxima de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
 Diaria
 
 
-
-
-
-
-
-
-
-
-
-
-
 Mensual
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Evento ocurrido
 Unidad de Medición
 
 
-
-
-
-
-
-
-
-
-
-
-
 Km
-
-
-
-
-
-
-
-
-
-
-
 
 
 Im
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 UF
 
 Método de Medida
-
-
-
-
-
-
 
 
 Se considerará que un Kilómetro se encuentra disponible cuando resulta posible la Circulación de vehículos de todas las categorías a lo largo de la totalidad del kilómetro.
@@ -3577,19 +1338,7 @@ Para la verificación de la Disponibilidad de la vía, se dividirá la Unidad Fu
 Cuando se tenga doble calzada, se evaluará cada una de manera independiente, por lo que la longitud total de la unidad funcional será la suma de la longitud de cada calzada
 
 
-
-
-
-
-
-
-
 Im mes debe ser menor de a 0.13
-
-
-
-
-
 
 
 La unidad funcional debe cumplir con:
@@ -3604,51 +1353,13 @@ Este indicador no se medirá para los enlaces de acceso o salida de las vías fi
 Tiempo Máximo de Corrección
 
 
-
-
-
-
-
-
-
-
-
-
-
 3 meses
-
-
-
-
-
-
-
-
-
-
-
 
 
 N/A
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 1 hora
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 Nombre del Indicador
@@ -3668,7 +1379,6 @@ Tiempo Máximo de Corrección
 Se excluirán de la medición los tramos urbanos de los Pasos Nacionales.
 
 
-
 La unidad funcional debe cumplir con:
 
 Antes de ATUF- ATPUF:
@@ -3676,19 +1386,11 @@ Antes de ATUF- ATPUF:
 No podrá acumularse un número igual o mayor a 20 vehículos por carril, en la mitad de los carriles de cobro manual o semiautomático, que se encuentren en servicio; por un periodo continuo igual o mayor a sesenta (60) minutos, durante el periodo de medición.
 
 
-
-
-
-
 Cola de Peaje  O3
-
-
 
 
 Tiempo   de
 Atención   en  NA casetas de Peaje
-
-
 
 
 Mínimo 5 al
@@ -3707,40 +1409,20 @@ No podrá acumularse un número igual o mayor a 10 vehículos por carril, en la 
 En el caso en que el número de estaciones de pago en servicio fuere impar, éste se dividirá en dos y se tomará el resultado sin decimales.
 
 
-
-
-
 n/a
 
 
-
-
-
-
 Cola de Peaje (IP/REV)
-
-
 
 
 Tiempo  de
 atención  de incidentes
 
 
-
-
-
-
 O3-1
 
 
-
-
-
-
 O4
-
-
-
 
 
 Tiempo de Atención en casetas de Peajes
@@ -3751,37 +1433,20 @@ atención    a incidentes: tiempos    de
 señalización  y tiempo de despeje del evento.
 
 
-
-
-
 Resolución 0546 de 9 de
 marzo de 2018
-
-
-
 
 
 Mínimo 5 al mes
 
 
-
-
-
 Evento ocurrido
-
-
-
-
 
 
 UF
 
 
-
-
-
 Eventos atendidos
-
 
 
 El Operador IP/REV deberá permitir el tránsito de por lo menos (300) vehículos/hora/carril, sin que se presenten acumulaciones en un mismo carril de vehículos que detienen su marcha de manera simultánea, para pagar la Tasa de Peaje superiores a diez (10) vehículos para las demás categorías que se encuentran en servicio, por un periodo igual o mayor a sesenta (60) minutos
@@ -3797,21 +1462,10 @@ Vehículos en Cola: Categoría 1 <=10 y Categoría II, III, IV, V y demás <= 5
 En todos los casos deben cumplirse los tiempos máximos establecidos para señalización y despeje, El incumplimiento de cualquiera de estos tiempos generará (1) un incumplimiento en la atención del evento.
 
 
-
-
-
-
 1 hora
 
 
-
-
-
-
 n/a
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 
 Incidente: Suceso repentino no deseado que ocurre por las mismas causas que se presentan los accidentes, sólo que por cuestiones del azar no desencadena en un daño a las personas, y puede incluir daños materiales a equipos o instalaciones. Este hecho da como resultado una condición de inseguridad vial y/o podría desencadenar un accidente.
@@ -3837,19 +1491,10 @@ Tiempo de respuesta de señalización: Acudir y señalizar el lugar del incident
 Tiempo de despeje (<200 m3): 4 horas (en calzada); 24 horas (en bermas).
 Tiempo de despeje Volumen de Material (200 – 2000 m3) 24 horas (en calzada); 24 Horas (en bermas)
 
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 Tiempo de despeje en volúmenes de Material (> 2000 m3) Condición especial (Disposición de nuevos dispositivos de contención (1 semana); Si se considera mayores dificultades (1 mes), lo que el Concesionario deberá someter fundadamente a calificación de la ANI.
 
 El Concesionario y/o la Interventoría cronometrarán y registrarán en el SICC, el tiempo transcurrido desde el momento de conocer el evento hasta el momento en que se presenten todo el equipo personal y vehicular necesario para atender dicho evento.
-
-
-
-
-
-
 
 
 Tiempo  de
@@ -3858,23 +1503,8 @@ accidentes  y
 emergencias
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 Disponibilidad
 del SICC    O6
-
-
-
 
 
 Tiempo   de
@@ -3883,67 +1513,16 @@ accidentes: tiempos   de
 señalización  y tiempo de despeje del evento.
 
 
-
-
-
-
-
-
-
-
-
-
-
 Disponibilidad del SICC
-
-
-
-
-
-
 
 
 Evento Ocurrido
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Mensual
 
 
-
-
-
-
-
-
 Eventos atendidos
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 SICC
@@ -3968,37 +1547,10 @@ Si el número de incumplimientos, de los eventos independientes generados durant
 Si vencido el tiempo, el Concesionario no atiende el evento, el valor de ponderación para este Indicador será igual a cero (0).
 
 
-
-
-
-
-
-
 El SICC debe contar con una disponibilidad mínima del 99%
 
 
-
-
-
-
-
-
-
 n/a
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 1 semana
@@ -4012,9 +1564,6 @@ Griptester    Coeficiente Longitudinal
 Mu Meter    Coeficiente Transversal
 
 Scrim      Coeficiente Transversal
-
-Apéndice Técnico 4 – Indicadores                               Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 
 (2)                                                  (3)
@@ -4052,10 +1601,7 @@ INV E -792-13
 (4)
 
 
-
-
 Equipo
-
 
 
 Velocidad mínima de medición
@@ -4064,11 +1610,7 @@ Sectores en recta
 Espesor   mínimo lámina   de agua (mm)
 
 
-
-
 Valor Puntual
-
-
 
 
 Valor Medio
@@ -4099,8 +1641,6 @@ Péndulo Británico
 No Aplica
 >= 0.55
 >= 0.60
-
-
 
 
 Nota: El Péndulo Británico solo servirá para singularidades
@@ -4155,7 +1695,6 @@ En todo caso, para efectos del cálculo del Índice de Cumplimiento y hasta tant
 
 Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 
 Cuando el Amigable Componedor encontrare que un Indicador no cumple con el Valor de Aceptación, se tendrá por fecha de inicio del Tiempo Máximo de Corrección aquella en la cual el Interventor registró tal situación en el SICC y por lo tanto, el Tiempo Máximo de Corrección no se suspenderá o extenderá como consecuencia de la actuación del Amigable Componedor.
@@ -4405,9 +1944,7 @@ Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-
 Tabla 4 Valor para ponderar cada uno de los Indicadores para efectos del cálculo del Índice de Cumplimiento por Unidad Funcional (Pavimento flexible / rígido)
-
 
 
 IDT  INDICADOR
@@ -4492,15 +2029,12 @@ Fisuras / Grietas
 2,5
 
 
-
 E4
 
 
 E5 E6/E20 E7/E21
 
 E8
-
-
 
 
 E10
@@ -4526,7 +2060,6 @@ Señalización Vertical
 1
 
 
-
 1
 
 2
@@ -4541,7 +2074,6 @@ Señalización Vertical
 
 
 1
-
 
 
 1,5
@@ -4560,7 +2092,6 @@ Señalización Vertical
 1
 
 
-
 1,5
 
 2
@@ -4575,24 +2106,6 @@ Señalización Vertical
 
 
 1
-
-
-
-1,5
-
-2
-
-2
-
-2
-2,5
-
-
-2
-
-
-1
-
 
 
 1,5
@@ -4611,58 +2124,6 @@ Señalización Vertical
 1
 
 
-
-1,5
-
-2
-
-2
-
-2
-2,5
-
-
-2
-
-
-0,5
-
-
-
-1
-
-2
-
-2
-
-2
-2,5
-
-
-2
-
-
-0,5
-
-
-
-1
-
-2
-
-2
-
-2
-2,5
-
-
-2
-
-
-1
-
-
-
 1,5
 
 2
@@ -4677,24 +2138,6 @@ Señalización Vertical
 
 
 1
-
-
-
-1,5
-
-2
-
-2
-
-2
-2,5
-
-
-2
-
-
-1
-
 
 
 1,5
@@ -4713,6 +2156,21 @@ Señalización Vertical
 0,5
 
 
+1
+
+2
+
+2
+
+2
+2,5
+
+
+2
+
+
+0,5
+
 
 1
 
@@ -4728,7 +2186,6 @@ Señalización Vertical
 
 
 1
-
 
 
 1,5
@@ -4746,6 +2203,69 @@ Señalización Vertical
 
 1
 
+
+1,5
+
+2
+
+2
+
+2
+2,5
+
+
+2
+
+
+1
+
+
+1,5
+
+2
+
+2
+
+2
+2,5
+
+
+2
+
+
+0,5
+
+
+1
+
+2
+
+2
+
+2
+2,5
+
+
+2
+
+
+1
+
+
+1,5
+
+2
+
+2
+
+2
+2,5
+
+
+2
+
+
+1
 
 
 1,5
@@ -4754,8 +2274,6 @@ Señalización Vertical
 
 Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 IDT  INDICADOR
@@ -4770,7 +2288,6 @@ E13
 E14 E15
 
 E16/E22
-
 
 
 E17
@@ -4839,8 +2356,25 @@ Tiempo de Atención de
 1
 
 
+1
+
+1
+2
+
+1,5
+
+1,5
+
+1,5
 
 
+1,5
+
+
+65
+
+0,5
+1
 
 
 1
@@ -4864,10 +2398,6 @@ Tiempo de Atención de
 1
 
 
-
-
-
-
 1
 
 1
@@ -4889,10 +2419,6 @@ Tiempo de Atención de
 1
 
 
-
-
-
-
 1
 
 1
@@ -4912,35 +2438,6 @@ Tiempo de Atención de
 
 0,5
 1
-
-
-
-
-
-
-1
-
-1
-2
-
-1,5
-
-1,5
-
-1,5
-
-
-1,5
-
-
-65
-
-0,5
-1
-
-
-
-
 
 
 1
@@ -5012,10 +2509,6 @@ Tiempo de Atención de
 1
 
 
-
-
-
-
 1
 
 1
@@ -5037,10 +2530,6 @@ Tiempo de Atención de
 1
 
 
-
-
-
-
 1
 
 1
@@ -5060,10 +2549,6 @@ Tiempo de Atención de
 
 0,5
 1
-
-
-
-
 
 
 1
@@ -5111,10 +2596,6 @@ Tiempo de Atención de
 1
 
 
-
-
-
-
 1
 
 1
@@ -5134,10 +2615,6 @@ Tiempo de Atención de
 
 0,5
 1
-
-
-
-
 
 
 1
@@ -5146,8 +2623,6 @@ Tiempo de Atención de
 
 Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 IDT  INDICADOR
@@ -5159,13 +2634,10 @@ Disponibilidad
 O6  del SICC
 
 
-
 1    1    1    1
 
 
-
 1    1    1    1    1
-
 
 
 1    1    1
@@ -5288,7 +2760,6 @@ Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-
 IDT
 
 
@@ -5360,7 +2831,6 @@ Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-
 IDT
 
 
@@ -5395,10 +2865,6 @@ Accidentes atendidos en los tiempos previstos en los Indicadores. Accidentes tot
 De conformidad con lo anterior, el valor del Índice de Cumplimiento de cada Unidad Funcional será el que resulte de la aplicación de la siguiente fórmula:
 
 
-
-
-
-
 Donde,
 𝑛
 𝐼𝐶𝑖𝑥 = ∑ 𝑉𝑃𝐼𝑛𝑖
@@ -5426,7 +2892,6 @@ Nota (2): En el caso en que después de sumar el Indicador de Mortalidad en el �
 
 Apéndice Técnico 4 - Indicadores
 Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 
 7.  INDICADORES,  EVENTOS  EXIMENTES  DE  RESPONSABILIDAD,  Y MANTENIMIENTO PROGRAMADO

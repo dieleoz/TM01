@@ -145,28 +145,17 @@ La cesión especial de retribución tendrá una vigencia determinada en el acto 
 
 **Entre las partes:**  
 **Concedente:**
-Agencia Nacional de Infraestructura
 
 
 Concesionario:
 [ • ]
 
 
-
-
-
-
-
-
-
-
-
-
 1
 
 TABLA DE CONTENIDO
 CAPÍTULO I Definiciones                                   3
-CAPÍTULO II Términos de la Cesión Especial                        5
+CAPÍTULO I I Términos de la Cesión Especial                        5
 2.1.  Suma Mensual No Cedible                              5
 2.2.  Solicitud de Emisión de la Certificación de Cesión                 5
 2.3.  Certificación de Cesión Especial de Retribución                   6
@@ -181,32 +170,7 @@ ANEXO AF2.2                                        13
 CERTIFICACIÓN DE CESIÓN                              13
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 2
-
 
 
 CAPÍTULO I
@@ -253,7 +217,7 @@ menos las Sumas Mensuales No Cedibles de la Retribución, descritas en el numera
 10. “Suma Máxima Mensual de Cesión”: significa, en relación con cada una de las Unidades Funcionales, al monto mensual máximo de la Retribución y/o de la Compensación Especial que será trasladado a los Cesionarios, la cual fue indicada por el Concesionario en la Solicitud de Cesión Especial de la Retribución.
 
 
-CAPÍTULO II
+CAPÍTULO I I
 Términos de la Cesión Especial
 2.1.  Suma Mensual No Cedible:
 El Concesionario podrá solicitar una Suma Mensual No Cedible en relación con la Retribución y/o Compensación Especial por Unidad Funcional, la cual deberá ser indicada en la Solicitud de Cesión Especial de Retribución para cada Unidad Funcional.
@@ -306,7 +270,6 @@ Mediante la certificación de la Cesión Especial de Retribución, la ANI de man
 (i) certificará la cesión irrevocable y prioritaria de los derechos económicos y de los flujos derivados de la Retribución y/o de la Compensación Especial, cuando sea aplicable, respecto de una Unidad Funcional, hasta el Monto Cedido, según la respectiva Solicitud de Cesión Especial de Retribución; y (ii) instruirá a la Fiduciaria para que según la cesión solicitada por el Concesionario, cada vez que se realice un traslado de la Retribución y/o de la Compensación Especial, cuando sea aplicable, se traslade primero la Suma Mensual No Cedible a la Cuenta Proyecto (en caso que aplique) y que los recursos remanentes de la Retribución y/o de la Compensación Especial, cuando sea aplicable, o el cien por ciento (100%) de la Retribución y/o de la Compensación Especial, cuando sea aplicable, cuando no haya Suma Mensual No Cedible, los trasladen al Cesionario, hasta la Suma Máxima Mensual de Cesión indicada por el Concesionario en la Solicitud de Cesión Especial de Retribución respectiva y hasta completar el Monto Cedido.
 
 
-
 7
 
 Los traslados que realizará la Fiduciaria en relación con el Monto Cedido de las Retribuciones y/o Compensaciones Especiales, cuando sea aplicable, a los Cesionarios, se harán de manera preferencial frente a cualesquiera otras transferencias que deban realizarse desde la respectiva Cuenta ANI, sin importar si tales otras transferencias corresponden a instrucciones anteriores o posteriores de la que trata el presente numeral, excepto por la Suma Mensual No Cedible de la Retribución, la cual se transferirá de manera preferencial a la Cuenta Proyecto, en el caso que aplique.
@@ -331,61 +294,12 @@ Ante la terminación anticipada del Contrato, cuando de la fórmula de liquidaci
 de manera preferencial al pago de todas las sumas adeudadas bajo la financiación respaldada con las cesiones a las que hace referencia el numeral 2.2 del presente Apéndice, lo anterior sin perjuicio de los pagos derivados de obligaciones laborales y tributarias del Concesionario.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 9
-
-
 
 
 ANEXO AF2.1
 FORMATO SOLICITUD DE CESIÓN ESPECIAL DE RETRIBUCIÓN
 [Ciudad], [fecha] Señores
-AGENCIA NACIONAL DE INFRAESTRUCTURA
 Atención: [INSERTAR] Supervisor(a) ANI [Dirección ANI] Bogotá, D.C.,
 
 REFERENCIA: Contrato de Concesión No. [INSERTAR]
@@ -453,38 +367,7 @@ Quedamos atentos a su respuesta oportuna a la presente comunicación. Cordialmen
 c.c. Señores, [Insertar Fiduciaria], [Insertar Nombre], [Insertar Cargo]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 13
-
-
-
 
 
 ANEXO AF2.2 CERTIFICACIÓN DE CESIÓN
@@ -541,11 +424,6 @@ Los términos utilizados con mayúscula inicial en la presente comunicación que
 Cordialmente,
 
 [INSERTAR NOMBRE DEL REPRESENTANTE o DELEGADO] [INSERTAR CARGO]
-Agencia Nacional de Infraestructura
-
-
-
-
 
 
 16

@@ -48,64 +48,33 @@ status: Contenido completo
 Documento que establece las especificaciones generales aplicables al proyecto de la Concesión APP Puerto Salgar - Barrancabermeja, incluyendo los estándares técnicos, materiales, procedimientos constructivos y controles de calidad requeridos para la ejecución de las obras.
 
 
-
-
-
-
-
-
-
-
-
-REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-
-
-CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [•] DE [•]
+CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [VARIABLE] DE [VARIABLE]
 Entre:
 
 Concedente:
-AGENCIA NACIONAL DE INFRAESTRUCTURA
 
 
 Concesionario:
 [*]
 
 
-
-
 APENDICE TÉCNICO 3 ESPECIFICACIONES GENERALES
 
-
-
-
-
-
-
-
-
-
-
-Página 1 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-
 CONTENIDO
 CAPÍTULO I  INTRODUCCIÓN                             3
-CAPÍTULO II   CARRETERAS                              4
+CAPÍTULO I I   CARRETERAS                              4
 2.1   Estudios y Diseños                                    4
 2.2   Intervenciones                                      7
 2.3   Requerimientos a la terminación de la Unidad Funcional               9
-CAPÍTULO III  PUENTES, VIADUCTOS Y OTRAS ESTRUCTURAS      10
+CAPÍTULO II I  PUENTES, VIADUCTOS Y OTRAS ESTRUCTURAS      10
 3.1   Estudios y Diseños                                   10
 3.2   Intervenciones                                     12
 3.3   Requerimientos a la terminación de la Unidad Funcional              13
-CAPÍTULO IV  OTRAS ESPECIFICACIONES Y NORMATIVAS APLICABLES A SISTEMAS Y EQUIPOS                                 14
+CAPÍTULO I V  OTRAS ESPECIFICACIONES Y NORMATIVAS APLICABLES A SISTEMAS Y EQUIPOS                                 14
 4.1   Equipos                                         14
 4.2   Sistema Inteligente de Transporte (ITS)                       14
 4.3   Seguridad vial                                     16
@@ -115,22 +84,6 @@ CAPÍTULO IV  OTRAS ESPECIFICACIONES Y NORMATIVAS APLICABLES A SISTEMAS Y EQUIPO
 CAPÍTULO V   SISTEMAS DE GESTIÓN DE LA SEGURIDAD Y GESTIÓN INTEGRAL    19
 5.1   Sistema de gestión de la seguridad vial                        19
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 2 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -149,27 +102,8 @@ CAPÍTULO I INTRODUCCIÓN
 (e)    La aplicación de este Apéndice deberá ser efectuada en concordancia con lo establecido en la Parte General y Especial del Contrato. En todo caso, de presentarse alguna contradicción entre lo previsto en este Apéndice y los demás documentos contractuales, se atenderá a lo previsto en el numeral 19.14 de la Parte General.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 3 de 27
-
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
-CAPÍTULO II   CARRETERAS
+CAPÍTULO I I   CARRETERAS
 
 
 2.1  Estudios y Diseños
@@ -193,7 +127,6 @@ NORMAS DE ENSAYOS DE MATERIALES PARA CARRETERAS INV-
 13, adoptado mediante Resolución 1375 del 26 de mayo de 2014 del Ministerio de Transporte.
 MANUAL DE DISEÑO DE PAVIMENTOS DE CONCRETO PARA VÍAS CON BAJOS, MEDIOS Y ALTOS VOLÚMENES DE TRÁNSITO, adoptado
 mediante Resolución 000803 de 2009 del Ministerio de Transporte.
-Página 4 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -208,7 +141,6 @@ Documentos Evaluación del modelo de operación para la interoperabilidad de pea
 Resolución 546 del 9 de marzo del 2018 “Por la cual se adecua la reglamentación del sistema de Interoperabilidad de Peajes con Recaudo Electrónico Vehicular (IP/REV), se establecen nomas de proyección a los usuarios y se dictan otras disposiciones”, la Resolución 883 del 11 de marzo del 2019 y la Resolución 509 de 2020 "Por la cual se prorrogan los plazos del régimen ele transición establecidos en el artículo 33 de la Resolución 00546 de 2018 del Ministerio de Transporte" y la(s) resolución(es) vigente(s) que la sustituya(n), adicione(n), modifique(n) o derogue(n) durante la ejecución del Contrato.
 Resolución 256 de 2018 “Por la cual se adopta la actualización del Manual de Compensaciones  Ambientales  del  Medio  Biótico  y  se  toman  otras determinaciones”, emitido por el Ministerio de Ambiente y Desarrollo Sostenible.
 Ley 1523 del 24 de abril del 2012 “Por la cual se adopta la política nacional de gestión del riesgo de desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres”, Decreto 2157 de diciembre 20 de 2017 “Por medio del cual se adoptan directrices generales para la elaboración del plan de gestión del riesgo de desastres de las entidades públicas y privadas en el marco del artículo 42 de la Ley 1523 de 2012” y el Decreto 602 del 6 de abril de 2017
-Página 5 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -234,8 +166,6 @@ Decreto 1320 de 1998 Por el cual se reglamenta la consulta previa con las comuni
 Ley 1228 de 2008 por la cual se determinan las fajas mínimas de retiro obligatorio o áreas de exclusión, para las carreteras del sistema vial nacional.
 
 
-Página 6 de 27
-
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Decreto 1079 del 26 de mayo de 2015 expedido por el Ministerio de Transporte “Por medio del cual se expide el Decreto Único Reglamentario del Sector Transporte”.
@@ -254,7 +184,6 @@ REGLAMENTO PARA LA CERTIFICACIÓN SOBRE LA CALIDAD TÉCNICA  DE  MEZCLAS  ASFÁL
 PAVIMENTACIÓN adoptada mediante la Resolución No. 000070 del 21 de enero de 2004 por el MINISTERIO DE TRANSPORTE, además de los documentos posteriores que las actualicen, modifiquen, desarrollen o sustituyan.
 GUÍA  METODOLÓGICA  PARA  EL  DISEÑO  DE  OBRAS  DE REHABILITACIÓN   DE   PAVIMENTOS   ASFÁLTICOS   DE
 CARRETERAS. Adoptada mediante la Resolución 743 de 2009 del Ministerio de Transporte.
-Página 7 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -281,7 +210,6 @@ Decreto 1320 de 1998 Por el cual se reglamenta la consulta previa con las comuni
 Ley 1228 de 2008 por la cual se determinan las fajas mínimas de retiro obligatorio o áreas de exclusión, para las carreteras del sistema vial nacional. Decreto 1079 del 26 de mayo de 2015 expedido por el Ministerio de Transporte “Por medio del cual se expide el Decreto Único Reglamentario del Sector Transporte”.
 Decreto 4165 de 2011, art. 4 numeral 9, reglamentado por la Resolución 716 de 2015, GCSP-I-008-2015, Permiso para el uso, la ocupación y la intervención temporal de la infraestructura vial carretera concesionada y férrea, y en todo caso por las normas que lo modifiquen vigentes al momento de realizar las actividades previstas en el contrato.
 
-Página 8 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -295,31 +223,8 @@ Ley 1523 del 24 de abril del 2012 “Por la cual se adopta la política nacional
 (b)    Esta información deberá ser entregada cumpliendo los requisitos exigidos en la Sección 2.1 del presente Apéndice.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 9 de 27
-
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
-CAPÍTULO III   PUENTES, VIADUCTOS Y OTRAS
+CAPÍTULO II I   PUENTES, VIADUCTOS Y OTRAS
 ESTRUCTURAS
 3.1  Estudios y Diseños
 
@@ -339,7 +244,6 @@ AASHTO LRFD BRIDGE DESIGN SPECIFICATIONS, Customary U.S.
 Units, 4th Edition with 2008 U.S. Edition Interim, and AASHTO LRFD Bridge Design Specifications, SI Units, 4th Edition. AASHTO LRFD Bridge Construction Specifications, 2010 Interim Revisions. AASHTO LFRD Bridge design specifications, Customary U.S. Units, 7ᵗʰ Edition, 2014, with 2016 Interim Revisions.
 EUROCÓDIGO 8: DISEÑO DE ESTRUCTURAS SISMORESISTENTES. EUROCÓDIGO 1: ACCIONES EN ESTRUCTURAS (Partes 1 y 2).
 EUROCÓDIGO 2: DISEÑO DE ESTRUCTURAS DE CONCRETO. EUROCÓDIGO 3: DISEÑO DE ESTRUCTURAS DE ACERO. EUROCÓDIGO  4:  DISEÑO  DE  ESTRUCTURAS  DE  ACERO  Y CONCRETO.
-Página 10 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -358,7 +262,6 @@ Decreto 1076 de 2015 “Decreto Único Reglamentario del Sector Ambiente y Desar
 Ley 1523 del 24 de abril del 2012 “Por la cual se adopta la política nacional de gestión del riesgo de desastres y se establece el Sistema Nacional de Gestión del Riesgo de Desastres”, Decreto 2157 de diciembre 20 de 2017 “Por medio del cual se adoptan directrices generales para la elaboración del plan de gestión del riesgo de desastres de las entidades públicas y privadas en el marco del artículo 42 de la Ley 1523 de 2012” y el Decreto 602 del 6 de abril de 2017 “por el cual se adiciona la Parte 4 del Libro 2 del Decreto 1079 de 2015 y se reglamentan los artículos 84 de la Ley 1523 de 2012 y 12 y 63 de la Ley 1682 de 2013, en relación con la gestión del riesgo de desastres en el Sector Transporte y se dictan otras disposiciones”.
 METODOLOGÍA GENERAL PARA LA PRESENTACIÓN DE ESTUDIOS
 AMBIENTALES, expedida por el Ministerio de Ambiente, Vivienda y Desarrollo Territorial conforme Resolución 1503 del 4 de agosto de 2010. Se
-Página 11 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -384,7 +287,6 @@ American Institute of Steel Construction – AISC Instituto Colombiano de Produc
 
 CÓDIGO  NACIONAL  DE  LOS  RECURSOS  NATURALES RENOVABLES Y DE PROTECCIÓN DEL MEDIO AMBIENTE adoptado
 mediante Decreto Ley 2811 de 1974, y sus decretos reglamentarios.
-Página 12 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -400,33 +302,8 @@ Ley 1228 de 2008 por la cual se determinan las fajas mínimas de retiro obligato
 (b)    Esta información deberá ser entregada cumpliendo los requisitos exigidos en la Sección 3.1 del presente Apéndice.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 13 de 27
-
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
-CAPÍTULO IV   OTRAS ESPECIFICACIONES Y NORMATIVAS APLICABLES A SISTEMAS Y EQUIPOS
+CAPÍTULO I V   OTRAS ESPECIFICACIONES Y NORMATIVAS APLICABLES A SISTEMAS Y EQUIPOS
 
 
 4.1  Equipos
@@ -449,7 +326,6 @@ Decreto 2060 de octubre 22 de 2015 “por el cual se adicional el Decreto 1079 d
 Documentos Evaluación del modelo de operación para la interoperabilidad de peajes electrónicos IP/REV y esquema propuesto en las Resoluciones 4303 de 2015, 3379 de 2016 y 5708 de 2016 expedidas por el Ministerios de Transporte.
 Resolución 546 del 9 de marzo de 2018 “por el cual se adecua la reglamentación del sistema de Interoperabilidad de Peajes con Recaudo Electrónico Vehicular (IP/REV), se establecen normas de protección a los usuarios y se dictan otras disposiciones”, la Resolución 883 del 11 de marzo del 2019 y la 509 de marzo del 2020 "Por la cual se prorrogan los plazos del régimen ele transición establecidos en el artículo 33 de la Resolución 00546
 
-Página 14 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -480,7 +356,6 @@ Las características y especificaciones de la fibra óptica deben cumplir con la
 
 Otras Especificaciones:
 
-Página 15 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -508,7 +383,6 @@ NTC 6107 – 1 Señalización vertical de Calles y Carreteras. Dispositivos Defo
 NTC 6107 – 2 Señalización vertical de Calles y Carreteras. Dispositivos Deformables Portátiles y Fijos para Señalización Vial. Parte 2. CONOS
 NTC 6107 – 3 Señalización vertical de Calles y Carreteras. Dispositivos Deformables Portátiles y Fijos para Señalización Vial. Parte 3. Marcador Cilíndrico o Hito Tubular. Características, Medidas y Métodos de Ensayo.
 NTC 6107 – 5 Señalización vertical de Calles y Carreteras. Dispositivos Deformables Portátiles y Fijos para Señalización Vial. Parte 5. Hitos de Vértice.
-Página 16 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -542,7 +416,6 @@ El Concesionario estará obligado a cumplir, también, el listado de Normativida
 SIMBOLO ACCESIBILIDAD (NTC - 4139)
 SIMBOLO DISCAPACIDAD AUDITIVA (NTC - 4141) SIMBOLO DISCAPACIDAD VISUAL (NTC - 4142) CARACTERÍSTICAS DE LAS SEÑALES (NTC - 4144)
 REQUISITOS DE SEÑALES DE TRANSITO PEATONAL (NTC - 4695)
-Página 17 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -567,12 +440,6 @@ SERVICIOS SANITARIOS ACCESIBLES – EDIFICIOS (NTC – 5017)
 Resoluciones CREG 070 de 1998 y 101 de 2001 RETIE, Reglamente Técnico de Instalaciones Eléctricas
 RETILAP, Reglamento Técnico de Iluminación y Alumbrado Público -
 
-
-
-
-
-
-Página 18 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 CAPÍTULO V   SISTEMAS DE GESTIÓN DE LA SEGURIDAD Y
@@ -599,8 +466,6 @@ Técnicas para la definición de medidas de Intervención para mejorar la seguri
 (1)     Las Intervenciones, Obras de Mantenimiento y, en general, cualquier acción para mejorar la seguridad vial que implemente el Concesionario, deberán realizarse utilizando el concepto de vías seguras y en consideración con los efectos producidos por la entrada y salida de vehículos y personas a la carretera, así como
 
 
-Página 19 de 27
-
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 con la atención de las víctimas en el evento que ocurran accidentes de tránsito.
@@ -615,7 +480,6 @@ con la atención de las víctimas en el evento que ocurran accidentes de tránsi
 
 ▪  Inspecciones  de  Seguridad  Vial:  Las  inspecciones  de seguridad vial (ISV) serán realizadas por el Interventor con profesionales independientes y expertos en el tema, como parte de la gestión de seguridad vial en carreteras y corresponde a una herramienta proactiva de evaluación sistemática para identificar los riesgos o peligros en el tránsito, relacionados especialmente con las señales de tránsito, los elementos laterales de las vías, los factores ambientales y el estado de la superficie de la vía y sugerir medidas correctivas. Las ISV están basadas en listas y procedimientos de chequeo se desarrollarán sobre vías en
 
-Página 20 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -636,7 +500,6 @@ Operación. Se realizarán periódicamente, dependiendo del aspecto que se vaya 
 •  Estudio de comportamiento de los usuarios: Como parte del  sistema  de  gestión  de  la  seguridad  vial,  el Concesionario está obligado a disponer de metodologías de evaluación del comportamiento de los usuarios y de las causas que originan los comportamientos de las personas dentro de la vía.
 Sistema de monitoreo, control y seguimiento
 (1)     Como parte del SGSV el Concesionario debe implementar un sistema de monitoreo, control y seguimiento para medir los
-Página 21 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -656,12 +519,8 @@ Apoyo de la comunidad y cuerpos de control
 (1)     En el marco del SGSV el Concesionario deberá crear mecanismos para recibir por parte de los usuarios de la vía, los habitantes de pasos urbanos y poblaciones vecinas y de la comunidad en general las percepciones en materia de seguridad vial y sobre los riesgos que los usuarios cotidianos perciben. El Concesionario deberá procesar la información e incluirla en los análisis que hacen parte del propio SGSV para las acciones de mejoramiento a que haya lugar.
 
 (2)     El  Concesionario  deberá  realizar  el  análisis  de  las recomendaciones de los cuerpos encargados del control del tránsito en la vía y para la ejecución del método proactivo para la gestión de la seguridad vial.
-Página 22 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
 
 
 Gestión del Riesgo: en materia de seguridad vial
@@ -681,7 +540,6 @@ Gestión del Riesgo: en materia de seguridad vial
 • Probabilidad del riesgo.
 • Severidad del riesgo.
 
-Página 23 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -697,26 +555,11 @@ Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BAR
 Figura 1 – Diagrama de la gestión del proceso
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Constitución del Sistema de Gestión de la Seguridad Vial
 
 (1)     El Sistema de Gestión de la Seguridad Vial estará integrado por los módulos que se describen a continuación.
 
 (2)     Estructura Organizacional: Comprende la estructuración de una organización encargada de la gestión de la seguridad vial, con los
-Página 24 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -740,7 +583,6 @@ niveles  de  dirección,  líneas  dependencia,  funciones  y responsabilidades.
 ▪  Analizar la información espacial relacionada a un entorno geográfico como ayuda a la toma de decisiones.
 ▪  Facilitar la selección y traspaso de información a modelos analíticos capaces de evaluar los impactos que originarían la elección de una u otra alternativa en un entorno geográfico previamente definido.
 ▪  Permitir la visualización gráfica y numérica del entorno geográfico definido ya sea antes o después del análisis.
-Página 25 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -776,7 +618,6 @@ Señalización Horizontal Barreras y Elementos de Contención
 Iluminación Puentes y Estructuras
 Capacidad Estructural / Eficiencia en la transferencia de carga Disponibilidad de la Vía
 Estado de elementos estructurales Índice de Mortalidad Ocupación de Carriles
-Página 26 de 27
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -791,46 +632,6 @@ Tiempo de Atención de Incidentes T. Tiempo de Atención de Accidentes y Emergen
 
 
 Políticas y Procedimientos: El SGSV de una vía Concesionada debe funcionar sobre la base del establecimiento de una política de seguridad vial, con metas y objetivos precisos, definidos en la creación del mismo. De igual manera, el sistema debe estar apoyado sobre la construcción de procedimientos claros, realizables y documentados.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 27 de 27
 
 
 ---

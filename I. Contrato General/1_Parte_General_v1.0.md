@@ -57,53 +57,18 @@
 ## 2. CONTENIDO DEL CONTRATO
 
 
-
-
-
-
-
-
-
-
-REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-
-
-CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [•] DE [•]
+CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [VARIABLE] DE [VARIABLE]
 Entre:
 
 
 Concedente:
-Agencia Nacional de Infraestructura
 
 
-Concesionario: [•]
-
-
+Concesionario: Autopista Magdalena Medio S.A.S.
 
 
 PARTE GENERAL
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 1 de 288
 
 CAPÍTULO I  Definiciones                               13
 1.1   “Acta de Cálculo de la Retribución”                       13
@@ -140,7 +105,6 @@ CAPÍTULO I  Definiciones                               13
 1.32  “Comité Fiduciario”                                18
 1.33  “Compensación Especial”                             18
 1.34  “Compensaciones Socioambientales”                       19
-Página 2 de 288
 
 1.35  “Compensaciones Socioeconómicas”                       19
 1.36  “Concesionario”                                  19
@@ -177,7 +141,6 @@ Página 2 de 288
 1.67  “Etapa de Operación y Mantenimiento”                     24
 1.68  “Etapa de Reversión”                               24
 1.69  “Etapa Preoperativa”                                24
-Página 3 de 288
 
 1.70  “Evasión”                                      24
 1.71  “Evento Eximente de Responsabilidad”                     25
@@ -214,7 +177,6 @@ Página 3 de 288
 1.102  “IPC”                                        30
 1.103  “Ley Aplicable”                                  30
 1.104  “Licencia Ambiental”                               30
-Página 4 de 288
 
 1.105  “Licencias y Permisos”                              30
 1.106  “Líder”                                       30
@@ -251,7 +213,6 @@ Página 4 de 288
 1.137  “Periodo Especial”                                 36
 1.138  “Pesos” o “COL$”                                 36
 1.139  “Plan de Adquisición de Predios”                         36
-Página 5 de 288
 
 1.140 “Plan de Compensaciones Socioeconómicas”                  37
 1.141  “Plan de Manejo Ambiental”                           37
@@ -288,7 +249,6 @@ Página 5 de 288
 1.172  “Sobrantes”                                     43
 1.173  “Soporte de Ingresos” o “SIi”                           43
 1.174  “Subcuenta Aportes ANI”                             43
-Página 6 de 288
 
 1.175  “Subcuenta Cambio Climático”                          43
 1.176 “Subcuenta Compensaciones Socioambientales”                43
@@ -322,16 +282,15 @@ Página 6 de 288
 1.204  “VPIP”                                       47
 1.205  “VPIPm”                                      47
 1.206 Las demás establecidas en el Parte Especial.                   48
-CAPÍTULO II ASPECTOS GENERALES DEL CONTRATO          49
+CAPÍTULO I I ASPECTOS GENERALES DEL CONTRATO          49
 2.1   Objeto                                        49
 2.2   Valor del Contrato y Aportes Presupuestales                   49
-Página 7 de 288
 
 2.3   Perfeccionamiento e Inicio de Ejecución del Contrato              49
 2.4   Plazo del Contrato                                 51
 2.5   Etapas de Ejecución Contractual                         51
 2.6   Declaraciones y Garantías de las Partes                      52
-CAPÍTULO III ASPECTOS ECONÓMICOS DEL CONTRATO         59
+CAPÍTULO II I ASPECTOS ECONÓMICOS DEL CONTRATO         59
 3.1   Retribución                                     59
 3.2   Deducciones por Desempeño                           61
 3.3   Peajes, Tráfico, Derecho de Recaudo e Ingresos por Explotación Comercial  61
@@ -348,7 +307,7 @@ CAPÍTULO III ASPECTOS ECONÓMICOS DEL CONTRATO         59
 3.14  Cuentas y Subcuentas del Patrimonio Autónomo                91
 3.15  Términos y condiciones de obligatoria inclusión en el Contrato de Fiducia Mercantil                                          111
 3.16  Cambio Tributario                                115
-CAPÍTULO IV ETAPA PREOPERATIVA - GENERALIDADES        116
+CAPÍTULO I V ETAPA PREOPERATIVA - GENERALIDADES        116
 4.1   Condiciones Precedentes para el Inicio de la Fase de Preconstrucción    116
 4.2   Principales Obligaciones del Concesionario durante la Fase de Preconstrucción 117
 4.3   Principales Obligaciones de la ANI durante la Fase de Preconstrucción    126
@@ -359,7 +318,6 @@ CAPÍTULO IV ETAPA PREOPERATIVA - GENERALIDADES        116
 4.8   Efectos del Retraso del Plan de Obras                      136
 4.9   Procedimiento para solicitar la ampliación del plazo del Plan de Obras por causas imputables a la ANI                                    136
 4.10  Plazo Adicional sin Sanciones para el Concesionario             137
-Página 8 de 288
 
 4.11  Especificaciones Técnicas y calidad de las Intervenciones           139
 4.12  Modificación de las Especificaciones Técnicas                 141
@@ -374,23 +332,22 @@ CAPÍTULO V  ETAPA  PREOPERATIVA  -  CONTRATOS  DE  DISEÑO, CONSTRUCCIÓN Y OPE
 5.1   Generalidades                                   152
 5.2   Contratistas                                    152
 5.3   Certificación y Verificación                           153
-CAPÍTULO VI ETAPA PREOPERATIVA–ESTUDIOS Y DISEÑOS     155
+CAPÍTULO V I ETAPA PREOPERATIVA–ESTUDIOS Y DISEÑOS     155
 6.1   Presentación de los Estudios                           155
 6.2   Revisión de los Estudios de Trazado y Diseño Geométrico y los Estudios de Detalle 155
 6.3   Modificaciones y Adecuaciones a los Estudios de Trazado y Diseño Geométrico que sobrepasen la Franja de Utilidad Pública                      156
 6.4   Modificaciones y Adecuaciones a los Estudios de Trazado y Diseño Geométrico y/o los Estudios de Detalle                                158
 6.5   Plazo para Ajustes por parte del Concesionario                 159
-CAPÍTULO VII  ETAPA PREOPERATIVA - GESTIÓN PREDIAL     160
+CAPÍTULO VI I  ETAPA PREOPERATIVA - GESTIÓN PREDIAL     160
 7.1   Generalidades de la Gestión Predial                       160
 7.2   Recursos para la Adquisición de Predios y Compensaciones Socioeconómicas 167
 7.3   Disposiciones Especiales para el Procedimiento de Adquisición Predial   170
 7.4   Fuerza Mayor Predial                               170
-CAPÍTULO VIII  ETAPA  PREOPERATIVA  -  GESTIÓN  SOCIAL  Y AMBIENTAL, REDES, OTROS                            172
+CAPÍTULO VII I  ETAPA  PREOPERATIVA  -  GESTIÓN  SOCIAL  Y AMBIENTAL, REDES, OTROS                            172
 8.1   Gestión Social y Ambiental                           172
 8.2   Redes                                        177
 8.3   Implementación de nuevas tecnologías para recaudo electrónico de Peajes  180
-CAPÍTULO IX ETAPA DE OPERACIÓN Y MANTENIMIENTO Y ETAPA DE REVERSIÓN  182
-Página 9 de 288
+CAPÍTULO I X ETAPA DE OPERACIÓN Y MANTENIMIENTO Y ETAPA DE REVERSIÓN  182
 
 9.1  Condiciones Precedentes para el Inicio de la Etapa de Operación y Mantenimiento 182
 9.2   Obligaciones principales del Concesionario durante la Etapa de Operación y Mantenimiento                                       182
@@ -406,11 +363,11 @@ CAPÍTULO X SANCIONES Y ESQUEMAS DE APREMIO          192
 10.4  Procedimiento para la imposición de Multas y Sanciones           194
 10.5  Actualización de las Multas y Sanciones                    194
 10.6  Cláusula Penal                                   194
-CAPÍTULO XI CLÁUSULAS EXCEPCIONALES AL DERECHO COMÚN 195
+CAPÍTULO X I CLÁUSULAS EXCEPCIONALES AL DERECHO COMÚN 195
 11.1  Caducidad                                     195
 11.2  Terminación unilateral                              197
 11.3  Otras cláusulas excepcionales al derecho común                197
-CAPÍTULO XII  GARANTÍAS  Y  MECANISMOS  DE  COBERTURA  DE RIESGOS    198
+CAPÍTULO XI I  GARANTÍAS  Y  MECANISMOS  DE  COBERTURA  DE RIESGOS    198
 12.1  Garantías como Requisito de Inicio del Contrato y de sus Fases o Etapas   198
 12.2  Clases de Garantías                                198
 12.3  Reglas Generales Aplicables a las Garantías                  199
@@ -420,41 +377,39 @@ CAPÍTULO XII  GARANTÍAS  Y  MECANISMOS  DE  COBERTURA  DE RIESGOS    198
 12.7  Garantía de Responsabilidad Extracontractual                 204
 12.8  Seguro de daños contra todo riesgo bajo formatos ANI            205
 12.9  Actualización de los valores de las garantías                  206
-CAPÍTULO XIII  ECUACIÓN  CONTRACTUAL  Y  ASIGNACIÓN  DE RIESGOS    208
+CAPÍTULO XII I  ECUACIÓN  CONTRACTUAL  Y  ASIGNACIÓN  DE RIESGOS    208
 13.1  Ecuación Contractual                               208
-Página 10 de 288
 
 13.2  Riesgos asignados al Concesionario                       209
 13.3  Riesgos de la ANI                                 214
 13.4  Cascada de Pagos para cobertura de Riesgos a cargo de la ANI        217
-CAPÍTULO XIV  TERMINACIÓN  PARCIAL  DE  UNIDAD  FUNCIONAL, EVENTO EXIMENTE DE RESPONSABILIDAD E INDEMNIDADES     219
+CAPÍTULO XI V  TERMINACIÓN  PARCIAL  DE  UNIDAD  FUNCIONAL, EVENTO EXIMENTE DE RESPONSABILIDAD E INDEMNIDADES     219
 14.1  Imposibilidad de Terminación por Eventos Eximentes de Responsabilidad o por razones imputables a la ANI                               219
 14.2  Evento Eximente de Responsabilidad                      221
 14.3  Indemnidad                                    230
-CAPÍTULO XVSOLUCIÓN DE CONTROVERSIAS               232
+CAPÍTULO XV SOLUCIÓN DE CONTROVERSIAS               232
 15.1  Amigable Composición                              232
 15.2  Arbitraje Nacional                                238
 15.3  Arbitraje Internacional                              241
 15.4  Continuidad en la ejecución                           243
-CAPÍTULO XVI ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL 244
+CAPÍTULO XV I ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL 244
 16.1  Personal del Concesionario                            244
 16.2  Seguridad e Higiene Industrial                          245
 16.3  Relación entre las Partes                             245
-CAPÍTULO XVII  TERMINACIÓN DEL CONTRATO             246
+CAPÍTULO XVI I  TERMINACIÓN DEL CONTRATO             246
 17.1  Ocurrencia                                     246
 17.2  Causales de Terminación Anticipada del Contrato               246
 17.3  Efectos de la Ocurrencia de una Causal de Terminación Anticipada por causas imputables al Concesionario                               247
-CAPÍTULO XVIII  LIQUIDACIÓN DEL CONTRATO             249
+CAPÍTULO XVII I  LIQUIDACIÓN DEL CONTRATO             249
 18.1  Término                                      249
 18.2  Obligaciones de la Fiduciaria en la Liquidación                249
 18.3  Fórmulas de Liquidación del Contrato                     251
 18.4  Pago de las sumas por concepto de Liquidación                270
 18.5  Pagos en caso de controversia                          273
 18.6  Cálculo del ARh                                 274
-CAPÍTULO XIX  VARIOS                              278
+CAPÍTULO XI X  VARIOS                              278
 19.1  Obras Menores                                  278
 19.2  Obras Complementarias                             280
-Página 11 de 288
 
 19.3  Obras Voluntarias                                 281
 19.4  Obras Sociales                                   282
@@ -475,36 +430,6 @@ Página 11 de 288
 19.19  Información Estadística                             288
 19.20  Manejo de Información                              288
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 12 de 288
 
 CAPÍTULO I  Definiciones
 
@@ -528,9 +453,8 @@ Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la
 
 1.5   “Acta de Liquidación del Contrato”
 
-Página 13 de 288
 
-Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la ANI, el Vicepresidente Ejecutivo de la ANI o quien haga sus veces, según corresponda, el Gerente de Proyecto de la ANI, el Interventor y el Concesionario, de acuerdo con lo señalado en este Contrato, en especial en el CAPÍTULO XVIII de esta Parte General, para los efectos previstos en el Artículo 60 de la Ley 80 de 1993 (modificado por el Artículo 217 del Decreto 19 de 2012) y en el Artículo 11 de la Ley 1150 de 2007, y las normas que los modifiquen, complementen o sustituyan.
+Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la ANI, el Vicepresidente Ejecutivo de la ANI o quien haga sus veces, según corresponda, el Gerente de Proyecto de la ANI, el Interventor y el Concesionario, de acuerdo con lo señalado en este Contrato, en especial en el CAPÍTULO XVII I de esta Parte General, para los efectos previstos en el Artículo 60 de la Ley 80 de 1993 (modificado por el Artículo 217 del Decreto 19 de 2012) y en el Artículo 11 de la Ley 1150 de 2007, y las normas que los modifiquen, complementen o sustituyan.
 
 1.6  “Acta de Reconocimiento de EER”
 Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la ANI, el Vicepresidente Ejecutivo de la ANI o quien haga sus veces, según corresponda, el Gerente del Proyecto de la ANI, el Interventor y el Concesionario en el que se consignará la declaratoria de un Evento Eximente de Responsabilidad y se indicarán las obligaciones afectadas, el Período Especial y los demás elementos inherentes a dicha declaratoria, aplicando el procedimiento descrito en la Sección 14.2(d) de esta Parte General.
@@ -551,7 +475,6 @@ Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la
 
 1.11 “Acuerdo de Garantía”
 
-Página 14 de 288
 
 Es el contrato atípico que suscribieron y entregaron el (los) integrante (s) del oferente adjudicatario dentro del Proceso de Selección y que tiene como objeto garantizar la realización de los Giros de Equity establecidos en el presente Contrato.
 
@@ -583,8 +506,6 @@ Apéndice Financiero 2: Cesión Especial de la Retribución Apéndice Financiero
 1.18 “Apéndices Técnicos”
 
 
-Página 15 de 288
-
 Son los documentos adjuntos al Contrato de carácter técnico, ambiental, social y predial, que contienen obligaciones a cargo del Concesionario. Cualquier modificación a un Apéndice Técnico implicará la modificación del presente Contrato. Los Apéndices Técnicos son los siguientes:
 
 Apéndice Técnico 1: Alcance del Proyecto
@@ -609,7 +530,6 @@ Es cualquier autoridad de la República de Colombia que tenga competencia en asu
 
 1.21 “Autoridad Estatal”
 
-Página 16 de 288
 
 Es cualquier autoridad de la rama ejecutiva y judicial de la República de Colombia distinta de la ANI, incluyendo pero sin limitarse al Ministerio de Transporte, el Ministerio de Hacienda y Crédito Público, la Dirección de Impuestos y Aduanas Nacionales, Ministerio de Ambiente y Desarrollo Sostenible, la Autoridad Nacional de Licencias Ambientales, la Policía Nacional –Dirección de Tránsito y Transporte o quien haga sus veces-, la Agencia Nacional de Seguridad Vial, entre otras, del nivel nacional, regional, departamental, distrital o municipal, cuyas competencias se ejerzan sobre asuntos relacionados con el presente Contrato.
 
@@ -631,11 +551,8 @@ Se exceptúan de esta definición los cambios que se presenten en impuestos que 
 Es el acto jurídico por medio del cual se transfiere el derecho real de dominio de un Predio Requerido de propiedad del Estado a cualquier título, ya sea oneroso o gratuito en favor de la ANI, como entidad adquiriente, en beneficio del Proyecto.
 
 
-
 1.26 “Cesionario Especial”
 
-
-Página 17 de 288
 
 Corresponde a cualquiera de las personas, fondos o patrimonios a que se refiere el Apéndice Financiero 2 a quien efectivamente se le haya hecho la cesión de los derechos económicos del Concesionario, en los términos del Contrato y de dicho Apéndice en particular.
 
@@ -665,7 +582,6 @@ Es el organismo encargado de vigilar e impartir instrucciones a la Fiduciaria pa
 1.33 “Compensación Especial”
 
 Corresponde a los pagos que serán hechos al Concesionario en el caso previsto en la Sección 14.1 de esta Parte General. El reconocimiento de la Compensación Especial se verificará en los mismos plazos y mediante los mismos mecanismos previstos en este Contrato para el reconocimiento de la Retribución. Para todos los efectos previstos en este Contrato, la Compensación Especial corresponde a un derecho económico a favor del Concesionario, que puede ser cedido a los Prestamistas y, en general, del que puede disponer el Concesionario de la misma forma en que puede disponer de la Retribución.
-Página 18 de 288
 
 1.34  “Compensaciones Socioambientales”
 
@@ -693,7 +609,6 @@ Es el(los) contrato(s) que celebrará(n) el Concesionario con el(los) Contratist
 
 1.40 “Contrato de Diseño”
 
-Página 19 de 288
 
 Es el(los) contrato(s) que celebrará(n) el Concesionario con el(los) Contratista(s) para la ejecución de los Estudios de Trazado y Diseño Geométrico y de los Estudios de Detalle del Proyecto.
 
@@ -719,7 +634,6 @@ Se refiere al Cronograma de Adquisición Predial definido en el Apéndice Técni
 
 Corresponde al cronograma que, en armonía con el Plan de Obras, deberá presentar el Concesionario para obtener la titularidad y disponibilidad de los Predios Requeridos para la ejecución del Proyecto a favor de la ANI, el cual debe incluir lo siguiente: (i) actividades de investigación técnica, jurídica, física y socio-económica, en la cual se identifique la relación existente entre los inmuebles requeridos para la ejecución del Proyecto y sus propietarios y/o terceros; (ii) actividades necesarias para iniciar y culminar la adquisición de los Predios Requeridos para la ejecución de cada Unidad Funcional, sea a través de enajenación voluntaria o expropiación; (iii) actividades para lograr la restitución del espacio público (lo cual incluye la restitución de los bienes inmuebles adquiridos con anterioridad por el Estado, para la ejecución de proyectos viales); (iv) actividades para la adjudicación de predios baldíos y ejidos; y (v) las demás actividades
 
-Página 20 de 288
 
 a que haya lugar, tendientes a la obtención de la titularidad de los Predios Requeridos para la ejecución del Proyecto.
 
@@ -747,8 +661,6 @@ Es cualquier día calendario que comprende veinticuatro (24) horas. Cuando este 
 1.53 “Día Hábil”
 
 
-Página 21 de 288
-
 Es cualquier Día en la semana, de lunes a viernes (inclusive), sin incluir los Días feriados en la República de Colombia.
 
 1.54 “Director del Proyecto”
@@ -770,7 +682,6 @@ Se entiende como el uso legítimo de Nuevas Vías Públicas que no fueron contem
 1.58  “Entrega de la Infraestructura”
 
 La Entrega de la Infraestructura será condición precedente para la suscripción del Acta de Inicio o la expedición de la Orden de Inicio y comprenderá la entrega de las obras y Predios existentes en el estado en que se encuentren, los cuales se incorporarán en el Inventario de Activos de la Concesión correspondientes a cada una de las Unidades Funcionales. La Entrega de la Infraestructura se someterá al contenido de las resoluciones y demás actos expedidos por las Autoridades Estatales. Ni al momento de la Entrega de la Infraestructura ni en momento alguno de la ejecución del Contrato, el Concesionario podrá incluir reserva, condicionamiento, objeción u observación alguna relacionada con
-Página 22 de 288
 
 el estado de la infraestructura entregada, en tanto es obligación del Concesionario recibirla en el estado en que se encuentre.
 
@@ -797,7 +708,6 @@ Corresponde al grupo de firmas que se identifican en la Parte Especial que estuv
 1.64 “Estudio de Impacto Ambiental”
 
 Es el documento elaborado por el Concesionario que haya sido requerido por la Autoridad Ambiental como fundamento para la aprobación y expedición de una Licencia Ambiental.
-Página 23 de 288
 
 1.65 “Estudios de Detalle”
 
@@ -822,7 +732,6 @@ Se refiere a la primera etapa del Contrato de Concesión que comprende la Fase d
 
 Corresponde al no pago de las tarifas de Peaje definidas en la(s) Resolución(es) de Peaje(s) por parte de los usuarios de la vía al pasar por las Estaciones de Peaje asociadas
 
-Página 24 de 288
 
 al Proyecto. Se excluyen de esta definición las exenciones de pago de tarifas previstas en la Ley Aplicable.
 
@@ -850,8 +759,6 @@ Es el Día siguiente a la fecha en la que las Partes suscriban el Acta de Inicio
 Se entenderá de conformidad con lo establecido en la Sección 2.4(b) de esta Parte General.
 
 
-Página 25 de 288
-
 1.77 “Fiduciaria”
 
 Es la sociedad de servicios financieros constituida en Colombia y vigilada por la Superintendencia Financiera de Colombia, autorizada para celebrar contratos de fiducia mercantil, que tenga una calificación de riesgo en calidad en administración de portafolios o en administración de activos, que corresponda al menos a la segunda mejor calificación de la escala utilizada por la respectiva calificadora de riesgo autorizada por la Superintendencia  Financiera  de  Colombia.  La  Fiduciaria  será  escogida  por  el Concesionario para actuar como administradora y vocera del Patrimonio Autónomo.
@@ -877,7 +784,6 @@ Además se considerará una Fuerza Mayor si transcurriere más del ciento cincue
 1.82 “Fuerza Mayor Ambiental”
 
 Se refiere a la ocurrencia de uno de los eventos descritos en la Sección 8.1(h) de esta Parte General.
-Página 26 de 288
 
 1.83 “Fuerza Mayor por Redes”
 
@@ -895,7 +801,7 @@ Es la garantía presentada como parte de la Oferta del Concesionario, en los té
 
 1.87 “Garantía Única de Cumplimiento”
 
-Se refiere a la garantía que deberá constituir el Concesionario en los términos y condiciones de la Sección 2.3(b)(i), así como en el CAPÍTULO XII de esta Parte General.
+Se refiere a la garantía que deberá constituir el Concesionario en los términos y condiciones de la Sección 2.3(b)(i), así como en el CAPÍTULO XI I de esta Parte General.
 
 1.88 “Gerente de Proyecto”
 
@@ -906,13 +812,10 @@ Es el funcionario delegado por el Vicepresidente de Gestión Contractual de la A
 Son las obligaciones a cargo del Concesionario relacionadas con la adquisición de Predios para el Proyecto y con la implementación del Plan de Compensaciones Socioeconómicas, tal y como se definen en esta Parte General y en el Apéndice Técnico 7.
 
 
-
 1.90 “Gestión Social y Ambiental”
 
 Es el conjunto de obligaciones a cargo del Concesionario relacionadas con el cumplimiento oportuno y eficaz de la Ley Aplicable en materia ambiental y social con relación al desarrollo del Proyecto, así como de la aplicación de las mejores prácticas que garanticen un adecuado desempeño ambiental y social del mismo. Estas obligaciones están descritas en el presente Contrato, principalmente en la Sección 8.1 de esta Parte General y en los Apéndices Técnicos 6 y 8.
 
-
-Página 27 de 288
 
 1.91 “Giro de Equity”
 
@@ -931,12 +834,11 @@ Es el producto de la aplicación del Indicador de adquisición predial que resul
 
 1.95 “Información Financiera”
 
-Es la tabla de datos financieros entregada por el Concesionario en la fecha y condiciones previstas en la Sección 2.3(b)(ix) de esta Parte General, la cual será construida con base en los lineamientos señalados en el Apéndice Financiero 1. Las Partes entienden que la Información  Financiera  contiene  algunos  datos  de  referencia  proveídos  por  el Concesionario y el alcance de la información tendrá propósitos meramente informativos, toda vez que los riesgos se asignan a las Partes en los términos del CAPÍTULO XIII de este Contrato, sin que dicha asignación se vea afectada por el hecho de la entrega de esta información, por lo cual no genera obligatoriedad alguna para la ANI, quien podrá usar la Información Financiera a su entera discreción y con el alcance que determine la propia ANI, en los casos en que este Contrato así lo prevea de manera expresa. Sin perjuicio de lo anterior, la Información Financiera no servirá de criterio de interpretación de este Contrato y en ningún caso servirá de base para la presentación de reclamaciones sobre la supuesta existencia de un desequilibrio económico del Contrato, a favor de cualquiera de las Partes, en el marco del Tribunal de Arbitramento, del Amigable Componedor ni ningún otro mecanismo de solución de controversias, por lo cual esas instancias no podrán basarse en dicha información para adoptar cualquier decisión que les competa, conforme al Contrato.
+Es la tabla de datos financieros entregada por el Concesionario en la fecha y condiciones previstas en la Sección 2.3(b)(ix) de esta Parte General, la cual será construida con base en los lineamientos señalados en el Apéndice Financiero 1. Las Partes entienden que la Información  Financiera  contiene  algunos  datos  de  referencia  proveídos  por  el Concesionario y el alcance de la información tendrá propósitos meramente informativos, toda vez que los riesgos se asignan a las Partes en los términos del CAPÍTULO XII I de este Contrato, sin que dicha asignación se vea afectada por el hecho de la entrega de esta información, por lo cual no genera obligatoriedad alguna para la ANI, quien podrá usar la Información Financiera a su entera discreción y con el alcance que determine la propia ANI, en los casos en que este Contrato así lo prevea de manera expresa. Sin perjuicio de lo anterior, la Información Financiera no servirá de criterio de interpretación de este Contrato y en ningún caso servirá de base para la presentación de reclamaciones sobre la supuesta existencia de un desequilibrio económico del Contrato, a favor de cualquiera de las Partes, en el marco del Tribunal de Arbitramento, del Amigable Componedor ni ningún otro mecanismo de solución de controversias, por lo cual esas instancias no podrán basarse en dicha información para adoptar cualquier decisión que les competa, conforme al Contrato.
 
 1.96 “Informe de Interventoría”
 
 Es el informe que entregará mensualmente el Interventor a la ANI, con copia al Concesionario, donde se reportará de manera detallada el estado de la ejecución de las
-Página 28 de 288
 
 Intervenciones y, en general, el cumplimiento de las obligaciones del Concesionario contenidas en el presente Contrato.
 
@@ -959,7 +861,6 @@ Para efectos de las comunicaciones que el Interventor esté obligado a remitir a
 
 Corresponde al inventario de los activos del Proyecto e incluye una descripción del estado de tales activos al momento de la Entrega de la Infraestructura. En ningún caso el contenido de este Inventario o las descripciones que en el mismo se hagan –ni sus actualizaciones– implicarán responsabilidad alguna de la ANI, ni implicarán algún tipo de limitación de la responsabilidad y riesgo a cargo del Concesionario de ejecutar las Intervenciones, así como mantener y operar el Proyecto, cumpliendo con todas las obligaciones de resultado que en este Contrato se establecen. El Inventario de Activos de
 
-Página 29 de 288
 
 la Concesión deberá ser elaborado por el Concesionario y será objeto de actualización de conformidad con lo establecido en el presente Contrato.
 
@@ -980,7 +881,6 @@ Se refiere a la ley, reglamentos, actos administrativos y demás normas vigentes
 Es el acto administrativo emitido por la Autoridad Ambiental mediante el cual se autoriza la ejecución de obras del Proyecto, de una Unidad Funcional o Intervención, en el caso en que dicha Licencia sea exigida conforme a la Ley Aplicable y cuyo trámite, obtención, cesión o modificación si es del caso, e implementación y costo estará a cargo del Concesionario, por su cuenta y riesgo, incluidas las acciones de seguimiento a la misma.
 
 
-
 1.105 “Licencias y Permisos”
 
 Son los permisos, concesiones, autorizaciones y/o licencias que deban ser otorgados por cualquier Autoridad Estatal, necesarios para la ejecución del Proyecto por parte del Concesionario, cuyo trámite y costo estará a cargo del Concesionario, por su cuenta y riesgo.
@@ -988,7 +888,6 @@ Son los permisos, concesiones, autorizaciones y/o licencias que deban ser otorga
 1.106 “Líder”
 
 Es cada uno de los Integrantes de una Estructura Plural en quien concurren las tres (3) siguientes condiciones (1) tener una participación mínima en dicha Estructura Plural del
-Página 30 de 288
 
 veinticinco por ciento (25%); (2) acreditar experiencia en inversión y/o capacidad financiera directamente, o a través de terceros (las sociedades controlantes del o controladas por el Oferente o subordinadas de la misma matriz o integrante de Oferente en caso de Estructuras Plurales) o a través de Fondos de Capital Privado; y (3) La calidad de Líder se deberá indicar en la carta de manifestación de interés, o en la Oferta, según corresponda, para ser tenido como tal por la ANI.
 
@@ -1019,8 +918,6 @@ Es cualquiera de los doce (12) Meses del año calendario.
 Es el Mes en el cual se expresan los valores constantes. Para efectos del presente Contrato es el que se establece en la Parte Especial.
 
 
-Página 31 de 288
-
 1.114 “Multas”
 
 Son las sanciones pecuniarias por incumplimientos subsanables del Contrato, cuya finalidad es la de conminar al Concesionario al cumplimiento de las obligaciones en él establecidas, y que podrán ser impuestas al Concesionario por la ANI, de conformidad con este Contrato, en especial el CAPÍTULO X de esta Parte General, y con respeto de lo previsto en la Ley Aplicable.
@@ -1044,8 +941,6 @@ Es la Notificación enviada por el representante de los Prestamistas a la ANI me
 1.118 “Nuevas Vías Públicas”
 
 
-Página 32 de 288
-
 Se entenderá como Nuevas Vías Públicas las vías que, enmarcadas en la Ley 105 de 1993, como infraestructura de transporte a cargo de: la Nación, Departamentos, Distritos y/o Municipios, incluyendo caminos vecinales, se creen por parte del Estado con posterioridad a la apertura del Proceso de Selección, salvo por las excepciones establecidas en la Parte Especial.
 
 1.119 “Obras Complementarias”
@@ -1068,7 +963,6 @@ Las Obras Menores no comprenden: (i) las obras que se originen con ocasión de l
 Son aquellas obras y/o iniciativas, diferentes a las Obras Menores, que tienen como fin, atender las necesidades que sean solicitadas por los grupos de interés o comunidades en general que permita dar viabilidad al Proyecto. Dichas obras podrán estar focalizadas en aspectos  de  movilidad,  recreación,  productividad,  emprendimiento,  educación, habitabilidad, entre otras. Aspectos que deben ser representativos y de beneficio e interés general para una comunidad, sostenibles, contribuir al fortalecimiento del entorno social, cultural, económico, y mejoramiento del bienestar social y condiciones de vida de las mismas.
 
 Estas obras y/o iniciativas deberán ser solicitadas por escrito por las autoridades territoriales y/o representantes legítimos de las comunidades ante el Concesionario o la ANI y se pondrán en consideración de las instancias que determine la ANI para su estudio, priorización y aprobación previo concepto de la Interventoría, de acuerdo con las
-Página 33 de 288
 
 condiciones establecidas en el Apéndice Técnico 8. Los aspectos inherentes al proceso de definición, evaluación y aprobación de las Obras Sociales estarán definidos en el procedimiento de gestión de calidad de la ANI establecido para tal fin.
 
@@ -1101,8 +995,6 @@ Son, individual o conjuntamente, el Concesionario y la ANI, tal y como se identi
 Se refiere al presente documento que hace parte del Contrato de Concesión.
 
 
-Página 34 de 288
-
 1.130 “Parte Especial”
 
 Se refiere al documento que hace parte del Contrato de Concesión que contiene ciertas estipulaciones especiales aplicables al Proyecto y que prima sobre todos los demás documentos del Contrato en lo expresamente regulado en su contenido. A pesar de dicha primacía, el Contrato deberá interpretarse de forma que haya la debida correspondencia y armonía entre sus partes.
@@ -1125,7 +1017,6 @@ En el marco del proceso de expropiación judicial, corresponde al periodo compre
 1.135 “Periodo de Exclusión 2”
 
 En el marco del proceso de expropiación judicial, corresponde al periodo comprendido entre el vencimiento del tercer Mes posterior a la radicación por parte del Concesionario de la demanda de expropiación del(os) Predio(s) Requerido(s) y la fecha en la que el juez
-Página 35 de 288
 
 profiere el auto admisorio de la demanda de expropiación. Durante el Periodo de Exclusión 2 el Concesionario quedará relevado de dar cumplimiento a la obligación de acreditar la adquisición del(os) Predio(s) Requerido(s) para la Unidad Funcional respectiva que se encuentra(n) cobijado(s) por el Periodo de Exclusión 2. El plazo previsto en este Contrato para el cumplimiento de esta obligación se entenderá prorrogado por un término igual a aquel del Periodo de Exclusión 2.
 
@@ -1146,7 +1037,6 @@ Se entenderá como la moneda de curso forzoso y poder liberatorio en Colombia.
 1.139  “Plan de Adquisición de Predios”
 
 Es el documento que preparará el Concesionario y entregará a la ANI donde establecerá un Cronograma de Adquisición de Predios, así como una metodología de trabajo para adelantar la Gestión Predial, entre otros. Una vez no objetado por la Interventoría y la ANI, dicho Plan servirá de base para el cumplimiento de las obligaciones previstas en este Contrato relacionadas con la Gestión Predial. La aplicación del Plan de Adquisición de Predios se sujetará a lo previsto en el Apéndice Técnico 7.
-Página 36 de 288
 
 1.140 “Plan de Compensaciones Socioeconómicas”
 
@@ -1169,7 +1059,6 @@ Es el documento que describe el plan y cronograma presentado por los Prestamista
 1.144 “Plan de Reasentamientos”
 
 Es el plan que ordene la Autoridad Ambiental o quien haga sus veces, como condición para la expedición de la Licencia Ambiental, en aplicación de la Resolución 077 de 2012 expedida por la ANI o aquellas que la modifiquen, complementen o sustituyan. En virtud del Plan de Reasentamientos, las unidades sociales residentes o productivas que no tienen derechos legales respecto a las áreas de terreno de utilidad pública e interés social
-Página 37 de 288
 
 requeridas para la ejecución del Proyecto, pero que reclaman derecho sobre las construcciones que ocupan en el momento del levantamiento de la información, serán trasladadas y beneficiadas con una vivienda de reposición.
 
@@ -1178,7 +1067,6 @@ Es el documento que entregará el Concesionario y presentará al Interventor y l
 
 1.146 “Plan de Redes”
 Es el documento que contendrá la planeación de las actividades de identificación y ejecución para el traslado y/o intervención de Redes, garantizando el cumplimiento del Plan de Obras y los plazos máximos otorgados para la ejecución de las Intervenciones de cada Unidad Funcional descrito en la Parte Especial. Una vez no objetado por la Interventoría y la ANI, dicho Plan servirá de base para el cumplimiento de las obligaciones previstas en este Contrato relacionadas con el traslado y/o intervención de Redes, sin perjuicio de los ajustes que deban incluirse derivados de la ocurrencia de un Evento Eximente de Responsabilidad.
-
 
 
 1.147 “Plan Remedial”
@@ -1191,7 +1079,6 @@ Es el período durante el cual el Concesionario podrá subsanar los incumplimien
 
 1.149 “Plazo Máximo de la Etapa de Reversión”
 
-Página 38 de 288
 
 Corresponde al término de ciento ochenta (180) Días contados a partir de la Fecha de Terminación de la Etapa de Operación y Mantenimiento conforme a lo previsto en la Sección 2.4(b) de esta Parte General. En caso de Terminación Anticipada del Contrato, el Plazo Máximo de la Etapa de Reversión podrá ampliarse por decisión autónoma y exclusiva de la ANI en cualquier término adicional, hasta un máximo de quinientos cuarenta (540) Días contados a partir de la fecha en que se declare la ocurrencia de una causal de Terminación Anticipada del Contrato en cualquiera de las Etapas.
 
@@ -1214,7 +1101,6 @@ Son los Predios que cumplen las siguientes condiciones: (i) en el folio de matr�
 
 Son los predios que, siendo requeridos para la ejecución del Proyecto, no han sido adquiridos cedidos o adjudicados a nombre de la Agencia Nacional de Infraestructura, a través del procedimiento de enajenación voluntaria directa y/o expropiación judicial o
 
-Página 39 de 288
 
 administrativa según el caso, o cuya transferencia de dominio se encuentra sometida a un trámite ante cualquier Autoridad Estatal.
 
@@ -1240,7 +1126,6 @@ Son los recursos destinados al Proyecto que tienen como fuente los Prestamistas,
 1.160 “Recursos de Patrimonio”
 
 Son los recursos destinados al Proyecto aportados por los socios del Concesionario. Los Recursos de Patrimonio serán entregados al Patrimonio Autónomo (Cuenta Proyecto) cumpliendo con los Giros de Equity mínimos definidos en este Contrato. Estos recursos podrán constituir deuda subordinada de los accionistas (no del Concesionario); en este
-Página 40 de 288
 
 caso, hasta que no se paguen en su totalidad los endeudamientos que dan origen a los Recursos de Deuda no se podrán utilizar los recursos disponibles de la Cuenta Proyecto para pagar la deuda subordinada de los accionistas del Concesionario, excepto si media acuerdo expreso en contrario de los Prestamistas. En ningún caso se entenderá por deuda subordinada de socios, deuda bancaria del Concesionario respaldada por los socios.
 
@@ -1266,7 +1151,6 @@ Se refiere al acto administrativo que se identifica en la Parte Especial, expedi
 
 Se refiere a la ocurrencia de un evento o serie de eventos relacionados directamente con la declaratoria de un estado constitucional de excepción y/o por un estado de emergencia, por decisión de una Autoridad Estatal del orden nacional, que restrinja la movilidad y/o libre circulación, tales como órdenes de confinamiento o restricciones vehiculares, que generen un impacto atípico, significativo y directo en el tráfico de alguno de los
 
-Página 41 de 288
 
 corredores del Proyecto, causando un menor Recaudo de Peaje, exclusivamente durante el periodo en el que se haya materializado dicho evento.
 
@@ -1275,7 +1159,6 @@ Corresponde a los valores retenidos por suspensión de la Retribución o Compens
 1.167  “Retribución”
 
 Se refiere a la contraprestación económica a la que tiene derecho el Concesionario en los términos de la Sección 3.1 de esta Parte General. El reconocimiento de la Retribución –y de la Compensación Especial, cuando sea aplicable– se realizará mediante los traslados entre las subcuentas del Patrimonio Autónomo a los que se refiere dicha Sección. En el caso en que el Concesionario decida instrumentar mecanismos de financiación a través de uno o varios Patrimonios Autónomos-Deuda, incluido el mecanismo previsto en el Apéndice Financiero 2, el reconocimiento de la Retribución se realizará mediante el traslado de las subcuentas del Patrimonio Autónomo que correspondan, de conformidad con este Contrato, a dicho(s) Patrimonio(s) Autónomo(s)-Deuda. El reconocimiento de la Retribución –y de la Compensación Especial, cuando sea aplicable– también se podrá efectuar mediante el traslado de recursos directamente a los Cesionarios Especiales, tal y como se prevé en el Apéndice Financiero 2.
-
 
 
 1.168 “Reversión”
@@ -1290,7 +1173,6 @@ Son las penas pecuniarias por incumplimientos definitivos e insubsanables del Co
 Corresponde a una referencia específica de esta Parte General la cual muestra el contexto completo en el que se encuentra ubicada la parte referenciada. Las Secciones se presentan en orden de jerarquía, iniciando por el número del capítulo de la Parte General e indicando las subsecuentes numeraciones, hasta la ubicación específica de la parte referenciada, bajo la forma x.y(a)(i)(1), donde:
 
 x:   Número del capítulo.
-Página 42 de 288
 
 y:   Numeral al interior del capítulo. (a):  Literal al interior del numeral.
 (i):  Numeral romano al interior del literal.
@@ -1301,7 +1183,6 @@ Se entenderán por tales la publicidad en la zona del Proyecto, la venta de bien
 1.172 “Sobrantes”
 
 Corresponde a las sumas en exceso del Recaudo de Peaje como resultado de realizar el comparativo entre las sumas efectivamente recaudadas y el registrado en los diferentes libros o a las sumas pagadas en cada carril de las Estaciones de Peaje a los vehículos que pagan y que transitan por el mismo.
-
 
 
 1.173 “Soporte de Ingresos” o “SIi”
@@ -1319,7 +1200,6 @@ Es la subcuenta de la Cuenta Proyecto en la cual se depositarán las sumas descr
 
 Es la subcuenta de la Cuenta Proyecto en la cual se depositarán las sumas que el Concesionario debe aportar conforme a lo previsto en la Sección 3.14(g)(vi) de esta Parte General.
 
-Página 43 de 288
 
 1.177 “Subcuenta de Soporte Contractual”
 
@@ -1355,7 +1235,6 @@ Es la subcuenta de la Cuenta ANI en la cual se depositarán las sumas que el Con
 1.185 “Subcuenta Predios”
 
 Es la subcuenta de la Cuenta Proyecto en la cual se depositarán las sumas que el Concesionario debe aportar conforme a lo previsto en la Sección 3.14(g)(v) de esta Parte General.
-Página 44 de 288
 
 1.186 “Subcuenta Policía de Carreteras”
 
@@ -1384,7 +1263,6 @@ Es la consecuencia de la ocurrencia de cualquiera de las causales previstas en l
 
 Para cada Indicador, es el período de tiempo máximo durante el cual el Concesionario debe solucionar cualquier evento en el que los resultados del Indicador respectivo sean
 
-Página 45 de 288
 
 inferiores al Valor de Aceptación señalado en el Apéndice Técnico 4, con el fin de evitar la afectación del Índice de Cumplimiento.
 
@@ -1411,7 +1289,6 @@ Corresponde al valor de referencia que se utilizará para efectos de cálculo de
 1.199 “Valor Estimado de Compensaciones Socioambientales”
 
 Corresponde al cien por ciento (100%) del valor que deberá ser aportado por el Concesionario en la Subcuenta Compensaciones Socioambientales, en los términos y condiciones señalados en la Parte Especial y que se destinará a dichas compensaciones, de acuerdo con lo previsto en este Contrato, en especial en las Secciones 3.14(g)(vi) y 8.1(c) de la Parte General.
-Página 46 de 288
 
 1.200 “Valor Estimado de Nuevas Consultas Previas”
 
@@ -1436,70 +1313,11 @@ Es el valor presente del Recaudo de Peaje calculado a la Fecha de Inicio del Con
 1.205 “VPIPm”
 
 Es el valor presente del Recaudo de Peaje calculado desde la Fecha de Inicio expresado en pesos del Mes de Referencia efectivamente observado en el Proyecto acumulado hasta cualquier Mes de la ejecución del presente Contrato (el Mes “m”), incluyendo las eventuales compensaciones por Soporte de Ingresos.
-Página 47 de 288
 
 1.206 Las demás establecidas en el Parte Especial.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 48 de 288
-
-CAPÍTULO II  ASPECTOS GENERALES DEL CONTRATO
+CAPÍTULO I I  ASPECTOS GENERALES DEL CONTRATO
 
 2.1  Objeto
 
@@ -1524,7 +1342,6 @@ El presente Contrato de concesión bajo un esquema de asociación público priva
 (b)    Para iniciar la ejecución del presente Contrato dentro de los treinta y cinco (35) Días Hábiles siguientes a la suscripción del mismo, se suscribirá el Acta de Inicio siempre que se hayan cumplido los siguientes requisitos:
 
 (i)  La presentación por parte del Concesionario y aprobación por parte de la ANI de la Garantía Única de Cumplimiento del Contrato y de las demás garantías que deban ser entregadas con la Garantía Única de Cumplimiento como requisito para iniciar la ejecución del presente
-Página 49 de 288
 
 Contrato, conforme a lo señalado en la Sección 12.1(a) de esta Parte General.
 
@@ -1546,8 +1363,6 @@ Contrato, conforme a lo señalado en la Sección 12.1(a) de esta Parte General.
 
 (x)  La Entrega de la Infraestructura programada para ser recibida por el Concesionario al inicio del Contrato en los términos previstos para ello en la Parte Especial y en la fecha que señale la ANI, incluyendo las Estaciones de Peaje, las Estaciones de Pesaje y toda aquella infraestructura asociada.
 
-
-Página 50 de 288
 
 (xi) Las demás que se señalen en la Parte Especial.
 
@@ -1573,7 +1388,6 @@ Página 50 de 288
 (3)     A la terminación de las Intervenciones de cada Unidad Funcional según los términos establecidos en la Sección 4.18 de esta Parte General, se suscribirá el Acta de Terminación de la Unidad Funcional respectiva, salvo para la Unidad Funcional de Operación y Mantenimiento sobre la cual no se suscribirá Acta de Terminación de Unidad Funcional.
 
 (4)     Las obligaciones del Concesionario relativas a la Operación y Mantenimiento de las Unidades Funcionales respecto de las cuales se haya suscrito Acta de Terminación de Unidad Funcional serán exigibles y estarán sujetas a todas las estipulaciones que en el presente Contrato se establecen para la Etapa de Operación y Mantenimiento en relación con
-Página 51 de 288
 
 dichas Unidades Funcionales. Por lo anterior, las garantías constituidas en la Etapa Preoperativa deberán amparar también las obligaciones de Operación y Mantenimiento de aquellas Unidades Funcionales respecto de las cuales se haya suscrito Acta de Terminación de Unidad Funcional y de la Unidad de Operación y Mantenimiento.
 
@@ -1599,7 +1413,6 @@ Con la suscripción del Contrato, el Concesionario declara y garantiza lo siguie
 (i)  Creación y existencia: el Concesionario es una sociedad válidamente constituida y organizada bajo las leyes de la República de Colombia, y se encuentra domiciliada en Colombia. El Concesionario está actualmente vigente, su duración no es inferior a la señalada en la Parte Especial, ejerce válidamente su objeto social y, a la fecha, no tiene obligaciones diferentes a las emanadas en el presente Contrato.
 
 Así mismo, el Concesionario se obliga a informar a la ANI en el evento en que, durante la ejecución del Contrato, se encuentre en proceso de liquidación o incurso en causal alguna de disolución, o entre voluntaria u obligatoriamente en algún tipo de proceso concursal o acuerdo de
-Página 52 de 288
 
 restructuración y/o se presente petición alguna para que aquella sea admitida en un proceso de esta naturaleza.
 
@@ -1610,7 +1423,6 @@ restructuración y/o se presente petición alguna para que aquella sea admitida 
 
 (v)  Aceptación del Contrato: el Concesionario ha leído cuidadosamente los términos del Contrato, Parte General y Parte Especial, sus Apéndices y Anexos y demás documentos que hacen parte del mismo, hizo los comentarios que a su juicio fueron necesarios y, con la presentación de la Oferta, determinó que las modificaciones que se efectuaron por parte de la ANI durante el Proceso de Selección fueron adecuadas y suficientes para atender sus inquietudes. Declara así mismo, que en los términos de la Ley 1508 de 2012, del Artículo 24 de la Ley 80 de 1993 y en general de las normas y principios aplicables a la contratación pública, puso en conocimiento de la ANI aquellos apartes que a su juicio no eran claros y acepta que tales apartes fueron debidamente aclarados de manera que en el presente Contrato no existen apartes confusos ni contradicciones o de existirlos, están claramente solucionados con base en los criterios y reglas de interpretación contenidos en el mismo Contrato. El Concesionario declara que acepta los términos y condiciones del Contrato en la medida en que los ha estudiado y ha valorado con la diligencia necesaria el costo que implica el cumplimiento cabal, oportuno y conforme a los términos del Contrato de la totalidad de las obligaciones y de la asunción de los riesgos previstos en el Contrato sus Apéndices y Anexos, incluyendo los plazos de las fases de cada una de las etapas del Contrato, los cuales reconoce como suficientes para el cumplimiento de las obligaciones previstas para cada una de ellas. Particularmente, declara que ha efectuado una valoración de los riesgos a su cargo conforme a los términos del presente Contrato y
 
-Página 53 de 288
 
 acepta dicha asunción de sus efectos favorables y/o desfavorables sin limitación alguna.
 
@@ -1623,12 +1435,10 @@ acepta dicha asunción de sus efectos favorables y/o desfavorables sin limitaci�
 (ix) Recursos del Proyecto: El Concesionario declara y garantiza que todos y cada uno de los recursos que se manejen en el Proyecto serán administrados y estarán registrados en el Patrimonio Autónomo. Asimismo, que contará con la información disponible veraz y oportuna que soporte todos y cada uno de dichos recursos y de los hechos económicos que los afecten, los cuales podrán ser consultados, en cualquier momento, por parte del Interventor y/o de la ANI ya sea que dicha información se encuentre bajo el control del Concesionario o del Patrimonio Autónomo.
 
 (x)  Usos de los recursos: el Concesionario declara y garantiza que durante la ejecución del Contrato, los usos que le dará a los recursos provenientes de los Giros de Equity y Recursos de Deuda regulados en
-Página 54 de 288
 
 el Contrato serán única y exclusivamente para la ejecución de las obligaciones previstas en el presente Contrato, incluyendo la atención del servicio de la deuda del Proyecto, el pago a los Contratistas, el pago de impuestos y demás gastos propios del Patrimonio Autónomo. El Concesionario declara que los recursos provenientes de la Retribución serán suficientes para cumplir con la totalidad de las obligaciones y riesgos a su cargo, en los términos de la Sección 2.6(a)(vi) de esta Parte General. De la misma manera, el Concesionario declara y garantiza que siempre contará con información disponible, veraz y oportuna que soporte todos y cada uno de los pagos que haga a terceros, la cual será fácilmente  consultable,  en  cualquier  momento,  por  parte  del Interventor y/o de la ANI, ya sea que dicha información se encuentre bajo el control del Concesionario o del Patrimonio Autónomo.
 
 (xi) Información del Proyecto: El Concesionario declara y garantiza que conoce  y  ha  revisado  cuidadosamente  todos  los  asuntos  e informaciones relacionados con la celebración y ejecución del Contrato, su régimen legal y naturaleza jurídica, la naturaleza financiera del mismo, el cronograma para los pagos a cargo de la ANI, la posibilidad real de ejecutar todas las prestaciones del Contrato con cargo a los recursos disponibles, así como los lugares donde se ejecutará el Contrato, incluyendo condiciones de seguridad, orden público, transporte a los sitios de trabajo, obtención, manejo y almacenamiento de materiales, transporte, manejo y disposición de desechos,  disponibilidad  de  materiales,  mano  de  obra,  agua, electricidad, comunicaciones, vías de acceso, condiciones del suelo, condiciones climáticas, de pluviosidad y topográficas, características de los equipos requeridos para su ejecución, características del tráfico automotor, incluyendo las categorías vehiculares y las condiciones de volumen y peso de los vehículos, el régimen tributario a que estará sometido el Concesionario, normatividad jurídica aplicable y, en general, todos los demás aspectos que puedan afectar el cumplimiento del Contrato, todo lo cual fue tomado en cuenta en la preparación de la Oferta del Concesionario. Asimismo, el Concesionario declara y garantiza que ha realizado el examen completo de los sitios de la obra, específicamente, de cada uno de los lugares donde se llevarán a cabo las Intervenciones, y que ha investigado plenamente los riesgos asociados  con  el  Proyecto,  y  en  general,  todos  los  factores determinantes de los costos de ejecución de los trabajos, los cuales se incluyeron en los componentes económicos de su Oferta, teniendo en cuenta estrictamente la estructura de las fuentes de pago para la Retribución estipulada en el Contrato, sin perjuicio del cubrimiento de los efectos derivados de algunos riesgos en los estrictos términos del Contrato. El hecho que el Concesionario no haya obtenido toda la información que pueda influir en la determinación de los costos, no lo eximirá de responsabilidad por la ejecución completa del Proyecto de conformidad con el Contrato, ni le dará derecho a reconocimiento adicional alguno por parte de la ANI, ya que el Concesionario asumió la carga de diligencia de efectuar las investigaciones y verificaciones necesarias para preparar su Oferta.
-Página 55 de 288
 
 (xii) Normativa ambiental: El Concesionario conoce la normatividad vigente  en  Colombia  en  materia  ambiental  y  sobre  uso  y aprovechamiento de recursos naturales, incluyendo pero sin limitarse la Ley 23 de 1993, el Decreto Ley 2811 de 1974, la Ley 99 de 1993, el
 Decreto 321 de 1999, el Decreto 1076 de 2015, Resolución 631 de
@@ -1645,7 +1455,6 @@ Decreto 321 de 1999, el Decreto 1076 de 2015, Resolución 631 de
 (xvii)  Obligaciones tributarias: El Concesionario declara y garantiza que cumplirá cabalmente con todas sus obligaciones tributarias, tanto las que se refieren al cumplimiento de obligaciones formales y de información a las autoridades competentes, tales como la presentación de declaraciones y la presentación de información exógena y/o con relevancia tributaria ante la administración tributaria, así como aquellas referidas al pago de impuestos y retenciones en la fuente. Así mismo, el Concesionario se compromete a no realizar conductas que, de conformidad con la Ley Aplicable, puedan ser calificadas como conductas abusivas en materia tributaria.
 
 (xviii)  Debida Diligencia del Concesionario: El Concesionario acepta que no existe responsabilidad de la ANI derivada del uso de la información
-Página 56 de 288
 
 que fue puesta a disposición del público, pues asumió la carga de analizar con sus propios medios la adecuación del Proyecto a las condiciones de su Oferta. También declara el Concesionario que acepta que fue puesta a su disposición toda la información relacionada con el Proyecto. Así mismo, manifiesta que tal información es completa,  adecuada  o  suficiente,  siendo  su  responsabilidad  la realización de la debida diligencia adicional, sobre cada uno de estos.
 
@@ -1655,7 +1464,6 @@ que fue puesta a disposición del público, pues asumió la carga de analizar co
 
 
 (xxi) El Concesionario declara y garantiza que una vez suscrito el presente Contrato y durante toda su ejecución, informará a la ANI la existencia de  investigaciones,  medidas  de  aseguramiento  y/o  condenas nacionales y/o internacionales en contra de sus representantes legales, socios y/o accionistas, una vez tenga conocimiento de estas por delitos cometidos contra la Administración pública, la administración de justicia y que afecten el patrimonio del Estado, o de cualquiera de los delitos o faltas contempladas por la Ley 1474 de 2011 y sus normas
-Página 57 de 288
 
 modificatorias  o  de  cualquiera  de  las  conductas  delictivas contempladas por las convenciones o tratados de lucha contra la corrupción suscritos y ratificados por Colombia. El incumplimiento de esta obligación generara la imposición de la Multa por incumplimiento de otras obligaciones del Proyecto prevista en la Parte Especial.
 
@@ -1674,15 +1482,7 @@ Con la suscripción del Contrato, la ANI declara y garantiza lo siguiente:
 (v)  Responsabilidad de accionistas: De acuerdo con el artículo 18 de la Ley 1682 de 2013, el régimen de responsabilidad de las personas jurídicas que ejecuten proyectos de infraestructura bajo la modalidad de Asociación Público Privado será el que se establezca en las leyes civiles y comerciales de acuerdo con el tipo de empresa que se conforme, –salvo que el Concesionario opte por un tipo societario que implique responsabilidad solidaria de los socios respecto de las obligaciones de la sociedad– la solidaridad entre los socios del Concesionario cesa con la firma del Contrato de Concesión. Lo anterior sin perjuicio de las responsabilidades que se deriven del Acuerdo de Garantía.
 
 
-
-
-
-
-
-
-Página 58 de 288
-
-CAPÍTULO III ASPECTOS ECONÓMICOS DEL CONTRATO
+CAPÍTULO II I ASPECTOS ECONÓMICOS DEL CONTRATO
 
 3.1  Retribución
 
@@ -1704,7 +1504,6 @@ CAPÍTULO III ASPECTOS ECONÓMICOS DEL CONTRATO
 (e)    El Acta de Cálculo de la Retribución será remitida por el Interventor a la ANI y a la Fiduciaria, a más tardar el Día Hábil siguiente a su suscripción. De no haber objeción por parte de la ANI dentro de los doce (12) Días Hábiles siguientes a la recepción de dicha acta, la Fiduciaria procederá a realizar la transferencia de la Retribución. Lo anterior sin perjuicio de que, si con posterioridad se identifican errores en el cálculo de la Retribución, cualquiera de las Partes podrá solicitar la corrección correspondiente, la cual se reconocerá o descontará –actualizada con la variación del IPC– en la Retribución inmediatamente siguiente de la Unidad Funcional respecto de la cual se haya identificado el error.
 
 (f)    De no existir acuerdo entre el Concesionario y el Interventor, y salvo que la ANI esté de acuerdo con el Concesionario en cuanto al cálculo de la Retribución, se procederá así:
-Página 59 de 288
 
 (i)  La Retribución se reconocerá conforme al cálculo efectuado por el Interventor, siempre que dicho cálculo no haya sido objetado por la ANI.
 
@@ -1726,8 +1525,6 @@ Página 59 de 288
 (i)    El Concesionario declara que conoce y acepta que la Retribución dependerá del Índice de Cumplimiento, el cual se deriva de la ponderación de los Indicadores.
 
 
-Página 60 de 288
-
 3.2  Deducciones por Desempeño
 
 (a)    La  Retribución  del  Concesionario  –  o  Compensación  Especial-  del Concesionario por Unidad Funcional será objeto de Deducciones en función del cumplimiento de los Indicadores previstos en el presente Contrato y la consecuente  afectación  del  Índice  de  Cumplimiento  y  del  Índice  de Cumplimiento Predial, según la metodología definida en el Apéndice Técnico 4 y en la Parte Especial.
@@ -1746,8 +1543,6 @@ Página 60 de 288
 
 El Concesionario también tendrá la obligación de realizar y asumir los costos de todas las actividades administrativas para verificar la documentación que acredite los requisitos establecidos para el otorgamiento del beneficio de tarifas especiales diferenciales, incluyendo la instalación de tarjetas inteligentes o sus equivalentes tecnológicos, previa la validación de identidad del beneficiario y del vehículo.
 
-
-Página 61 de 288
 
 (d)    En el caso en que el Concesionario cobre una tarifa superior a la autorizada en este Contrato que corresponde a la prevista en la Resolución de Peaje, además de las Multas que de acuerdo con la Parte Especial se causen, el Concesionario deberá consignar el valor cobrado en exceso en la Subcuenta Excedentes ANI dentro de los plazos establecidos en la Sección 3.14(h)(iv)(4) de esta Parte General.
 
@@ -1772,7 +1567,6 @@ Página 61 de 288
 (i)  No se generará compensación alguna a cargo de la ANI por cualquiera de las circunstancias descritas en la Sección 3.3(g) de esta Parte General, con excepción del evento establecido en la Sección 3.3(g)(v) anterior, durante los primeros noventa (90) Días siguientes a:
 
 (1)     Para los eventos a los que se refiere la Sección 3.3(g)(i) de esta Parte General: el Día de la suscripción del Acta de Terminación de Unidad Funcional –o el Acta de Terminación
-Página 62 de 288
 
 Parcial de Unidad Funcional, según corresponda– dentro de la cual el Apéndice Técnico 1 contempla la instalación de la Estación  de  Peaje  no  instalada;  o  el  día  en  que  el Concesionario Notifique a la ANI la imposibilidad de realizar el Recaudo de Peaje en las Estaciones de Peaje durante como mínimo 24 horas continuas.
 
@@ -1789,7 +1583,6 @@ Parcial de Unidad Funcional, según corresponda– dentro de la cual el Apéndic
 
 (v)  La compensación por menor Recaudo de Peaje para los eventos descritos en la Sección 3.3(g) de esta Parte General, con excepción del evento establecido en la Sección 3.3(g)(v), será calculada para cada trimestre de ejecución del Contrato posterior al cumplimiento del término de noventa (90) Días, y equivaldrá al noventa por ciento (90%) de la diferencia entre el Recaudo de Peaje que se hubiese producido de haberse instalado u operado la Estación de Peaje en los términos del Apéndice Técnico 1 –determinado de acuerdo con lo establecido en la Sección 3.3(h)(viii) de esta Parte General–, salvo por el evento señalado en la Sección 3.3(g)(iv) de esta Parte General, en cuyo caso equivaldrá al cien por ciento (100%) de la diferencia descrita y, según sea el caso:
 
-Página 63 de 288
 
 (1)  Para las situaciones descritas en las Secciones 3.3(g)(i) y 3.3(g)(iii): Cero (0).
 
@@ -1801,7 +1594,6 @@ Página 63 de 288
 Para determinar el Recaudo de Peaje que se hubiese producido de no haberse materializado el riesgo de Elusión, el Concesionario deberá aplicar los mecanismos y/o actividades que permitan demostrar efectivamente la Elusión (incluyendo pero sin limitarse a estudios de tráfico, matrices de origen – destino, encuestas de preferencia declarada, entre otras, desagregadas por cada categoría vehicular, de acuerdo con la Resolución de Peaje vigente) a su entero costo y riesgo, aplicando estos mecanismos para determinar la variación del recaudo (con base en el tráfico real al momento de la estimación).
 
 Una vez determinada la variación del Recaudo de Peaje por la materialización del riesgo de Elusión por parte del Concesionario este deberá entregar los documentos correspondientes a la ANI y a la Interventoría. La ANI contará con un plazo máximo de sesenta (60) Días contados a partir de la entrega de los documentos completos por parte del Concesionario para la emisión del acto administrativo mediante el
-Página 64 de 288
 
 cual se declara la Elusión. Transcurrido dicho plazo máximo sin que la ANI emita el acto administrativo correspondiente se entenderá que la materialización del riesgo de Elusión no fue demostrada. En este caso o en el evento en que existan diferencias entre las Partes en torno a la configuración del riesgo de Elusión, éstas podrán acudir al Amigable Componedor para que resuelva la controversia.
 
@@ -1816,7 +1608,6 @@ Para determinar el Recaudo de Peaje que se hubiese producido de no haberse mater
 (3)     El tráfico resultante de la aplicación de los dos numerales anteriores, será validado por la Interventoría y una vez validado se multiplicará por la tarifa mensual (debidamente indexada) establecida en la Resolución de Peaje vigente al momento de la declaratoria del evento de Restricción de Movilidad.
 
 (4)     En caso en que no se cuente con información histórica suficiente  para  desarrollar  los  numerales  anteriores,  el Concesionario deberá aplicar los mecanismos y/o actividades que permitan establecer el valor base del tráfico afectado por la materialización de dicho evento (incluyendo pero sin limitarse a estudios de tráfico, matrices de origen – destino, encuestas de preferencia declarada, entre otras) a su entero costo y riesgo. El resultado del tráfico establecido con el procedimiento anterior será validado por la Interventoría y una vez validado se multiplicará por la tarifa mensual
-Página 65 de 288
 
 (debidamente indexada) establecida en la Resolución de Peaje vigente al momento de la declaratoria del evento de Restricción de Movilidad.
 
@@ -1831,7 +1622,6 @@ Nota: En el caso en que se haya materializado y esté vigente uno o varios de lo
 (i)    Si el Ministerio de Transporte o la entidad que resulte competente para fijar las tarifas de Peaje decide i) modificar dichas tarifas, ii) crear exenciones o tarifas especiales para ciertos usuarios, o iii) de cualquier otra forma afectar la estructura tarifaria o condición que se desprenda de la Resolución de Peaje vigente a la fecha de celebración del Contrato o se haga imposible la aplicación del incremento de tarifas previsto en la Resolución de Peaje, se aplicarán las siguientes reglas:
 
 (i)  Para cada trimestre de ejecución del Contrato se deberá calcular, entre el Interventor, el Líder de Proyecto y el Concesionario, la diferencia entre el Recaudo de Peaje que se hubiese producido de haberse
-Página 66 de 288
 
 aplicado la estructura tarifaria (debidamente indexada) prevista en la Resolución de Peaje y el Recaudo de Peaje correspondiente a las modificaciones adoptadas por el Ministerio de Transporte, de lo cual se dejará constancia en una acta suscrita dentro de los cinco (5) Días siguientes a la terminación de dicho trimestre. En caso de existir diferencias entre las Partes, éstas acudirán al Amigable Componedor para que resuelva la controversia.
 
@@ -1850,14 +1640,12 @@ aplicado la estructura tarifaria (debidamente indexada) prevista en la Resoluci�
 (a)    Cálculo del VPIP. En cualquier momento de ejecución del Contrato (Mes “m”) se podrá calcular el valor presente del Recaudo de Peaje calculado desde el Mes de la Fecha de Inicio expresado en Pesos del Mes de Referencia acumulado hasta ese momento (VPIPm), conforme a la siguiente fórmula:
 
 
-
 𝑚
 𝑉𝑃𝐼𝑃𝑚 = ∑
 𝑖=1
 𝑃𝑒𝑎𝑗𝑒𝑠𝑖 + 𝑆𝐼𝑖 (1 + 𝑇𝐷𝐼)𝑖
 Dónde,
 
-Página 67 de 288
 
 VPIPm
 
@@ -1877,8 +1665,6 @@ Donde,
 PeajesEi = Valor del Recaudo de Peaje durante el Mes i, en Pesos corrientes incluyendo, de ser el caso, el monto que haya sido reconocido al Concesionario en aplicación de lo previsto en las Secciones 3.3(g), 3.3(h) y 3.3(i) de esta Parte General.
 
 
-
-
 TDI
 IPCr = IPC correspondiente al Mes de Referencia IPCi = IPC correspondiente al Mes i
 Tasa de descuento real de los ingresos expresada en términos efectivo mensual y que para efectos de esta fórmula será la que se incluye en la Parte Especial.
@@ -1895,13 +1681,11 @@ Mes en que se hace el cálculo del VPIPm
 Corresponde al valor del Soporte de Ingresos, expresado en Pesos constantes del Mes de Referencia, para cada Mes i, calculado conforme se establece en la Sección 3.4(b) de esta Parte General.
 
 
-
 (b)    Para cada periodo de doce (12) Meses consecutivos contados desde la suscripción de la última Acta de Terminación de Unidad Funcional -es decir desde el inicio de la Etapa de Operación y Mantenimiento o según se definan en la Parte Especial, si el valor del Recaudo de Peaje acumulado de los doce
 (12) Meses anteriores a dicho periodo es inferior al valor 𝑉𝑆𝐼𝑖 definido en la Parte Especial, la ANI compensará al Concesionario el riesgo a través de la transferencia a la Subcuenta de Recaudo del Soporte de Ingresos de ese periodo (“𝑆𝐼𝑖”) teniendo en cuenta lo siguiente:
 (i)  El 𝑆𝐼𝑖, será calculado conforme la siguiente fórmula para cada Mes i:
 𝑆𝐼𝑖 = max(0; 𝑉𝑆𝐼𝑖 − 𝑃𝑒𝑎𝑗𝑒𝑠𝐴𝑐𝑢𝑚𝑖) ∗ 𝐼𝐶𝑃𝑖
 Dónde,
-Página 68 de 288
 
 SIi
 Valor correspondiente al Soporte de Ingresos para el Mes i, expresado en pesos del Mes de Referencia
@@ -1927,8 +1711,6 @@ ICPi
 Es el Índice de Cumplimiento Promedio durante los últimos doce (12) Meses al Mes i, calculado de acuerdo con la siguiente fórmula:
 
 
-
-
 Donde,
 
 𝐼𝐶𝑃𝑖 =
@@ -1948,8 +1730,6 @@ Donde,
 𝐼𝐶𝑗 = ∑ 𝐼𝐶𝑈𝐹𝑢𝑗 ∗ (  𝑇  )
 𝑢=1
 
-Página 69 de 288
-
 
 𝐼𝐶𝑈𝐹𝑢𝑗= Índice de Cumplimiento de la Unidad Funcional u para el periodo j.
 %𝑝𝑈𝐹𝑢 = Porcentaje de participación de la Unidad
@@ -1966,8 +1746,6 @@ z = Número de Unidades Funcionales para las que fue medido el Índice de Cumpli
 (v)  En caso de resultar pago a favor del Concesionario, la ANI deberá transferir el valor del 𝑆𝐼𝑖 registrado en el Acta de Cálculo del pago por Soporte de Ingresos a la Subcuenta Recaudo Peaje en pesos corrientes, a más tardar a los cuarenta y cinco (45) Días siguientes a la fecha de suscripción del Acta de Cálculo del Pago por Soporte de Ingresos, de conformidad con lo establecido en la Sección 13.4 de esta Parte General. En cualquier caso, aplicarán los plazos e intereses previstos en la Sección 3.6 de esta Parte General. Estos plazos comenzarán a contar vencido el plazo establecido en esta Sección.
 
 
-Página 70 de 288
-
 (vi) Estos recursos así compensados por la ANI se tendrán en cuenta como parte del Recaudo de Peaje del periodo en que se realice el pago, para todos los efectos previstos en este Contrato, entre ellos -pero sin limitarse- para el cálculo de la Retribución y del VPIPm.
 
 (vii) El valor de SIi será igual a cero para los demás Meses de ejecución del Contrato.
@@ -1982,7 +1760,6 @@ Página 70 de 288
 
 (h)    En caso de que la Etapa de Reversión inicie cuando se declare la Terminación Anticipada del Contrato en cualquiera de sus etapas, el Concesionario tendrá derecho al porcentaje del Recaudo de Peaje (%RP) que se establece en la Parte Especial –ponderado por el Índice de Cumplimiento aplicable a cada Mes– desde el inicio de la Etapa de Reversión hasta la fecha en que se termine la misma, únicamente cuando se cuente con Recaudo Peaje en la totalidad de las estaciones que hacen parte del Proyecto.
 
-Página 71 de 288
 
 3.5  Descuentos
 
@@ -2005,8 +1782,6 @@ Página 71 de 288
 B). Los intereses que debe pagar la ANI acrecerán la Subcuenta Aportes ANI.
 
 
-Página 72 de 288
-
 (d)    Para obligaciones de pago de dinero distintas de las de realizar los Aportes ANI, desde la fecha de surgimiento de la respectiva obligación a cargo de la ANI y durante los primeros cuarenta y cinco (45) Días no se causarán intereses de ningún tipo. De acuerdo con lo establecido en la Sección 3.3(h)(viii), para el evento descrito en la Sección 3.3(g)(v) de esta Parte General, las obligaciones de pago de dinero a cargo de la ANI asociadas exclusivamente a dicho evento no  generarán intereses de ningún tipo desde la fecha de surgimiento de la respectiva obligación a cargo de la ANI y durante los primeros noventa (90) Días, siempre que este evento se materialice dentro de los primeros tres (3) Meses contados desde la Fecha de Inicio. Desde el vencimiento de los plazos indicados anteriormente y hasta los quinientos cuarenta (540) Días se causarán intereses remuneratorios a la tasa DTF más cinco puntos porcentuales (5%).
 
 (e)    En el caso de los desembolsos de los Aportes ANI, los intereses remuneratorios a la tasa DTF más cinco puntos porcentuales (5%) se causarán desde el vencimiento de los cuarenta y cinco (45) Días contados desde la fecha a la que se refiere la Sección 3.6(c) anterior, hasta el vencimiento de ciento veinte (120) Días contados desde esa misma fecha.
@@ -2023,7 +1798,6 @@ Página 72 de 288
 
 (i)  Préstamos bancarios.
 (ii) Emisión de títulos en el mercado de capitales.
-Página 73 de 288
 
 (iii) Recursos de Fondos de Capital Privado.
 (iv) Las demás previstas en la Parte Especial.
@@ -2037,7 +1811,6 @@ Página 73 de 288
 
 (ii)  Emisiones en el mercado de capitales: El Concesionario deberá aportar una certificación emitida por el representante legal de los tenedores de los títulos en la que se indique al menos lo siguiente: (a) valor de la emisión; (b) garantías; (c) plazo para el pago; y (d) tasa. Así mismo, el Concesionario deberá adjuntar una certificación suscrita por el representante legal de la Fiduciaria en la que conste que los recursos se desembolsaron al Patrimonio Autónomo. También será aceptable demostrar el Cierre Financiero mediante un underwriting de la emisión o de un programa de emisión, siempre que i) se trate de un underwriting en firme –no será aceptable al mejor esfuerzo–, sobre toda la emisión o programa de emisión, ii) el underwriter sea una entidad autorizada por las leyes del país en donde la(s) colocación(es) se haga para realizar este tipo de operaciones y iii) si se trata de una emisión en países diferentes a Colombia, el underwriter debe contar con una calificación de riesgo de su deuda de largo plazo que corresponda a “grado de inversión”, en la escala internacional, sin que se acepten escalas locales aplicables en el país del domicilio del underwriter. Si la emisión se hace en Colombia, el underwriter deberá contar con una calificación de riesgo de su deuda de largo plazo según escala local de las calificadoras aprobadas por la Superintendencia Financiera de al menos AA+ según BRC Investor Services, Fitch Ratings Colombia S.A., Value and Risk Rating S.A, o su equivalente si se trata de otra firma calificadora.
 
-Página 74 de 288
 
 (iii) Recursos de Deuda de Fondos de Capital Privado. Se podrá acreditar la financiación del Proyecto a través de préstamos de recursos otorgados por parte de Fondos de Capital Privado incorporados en Colombia y/o en el exterior. Para acreditar la financiación del Proyecto se exigirán, mutatis mutandis los mismos documentos señalados en la Sección 3.8(a)(i) anterior.
 
@@ -2056,7 +1829,6 @@ Una vez se encuentre debidamente legalizado el contrato de crédito o su documen
 (i)  Si los Prestamistas son entidades financieras colombianas deberán estar vigiladas por la Superintendencia Financiera de Colombia.
 
 (ii)  Si los Prestamistas son entidades financieras del exterior, deberán contar con código de acreedor externo, expedido conforme a las reglas emitidas por el Banco de la República, de acuerdo con las normas aplicables. También deberán ser entidades vigiladas por el equivalente a la Superintendencia Financiera de la jurisdicción de incorporación
-Página 75 de 288
 
 (si es financiación internacional de mercado de capitales, no será necesario acreditar esta condición).
 
@@ -2069,7 +1841,6 @@ Página 75 de 288
 (vi) Si los Prestamistas son personas naturales o jurídicas diferentes de las anteriores, deberán ser tenedores de títulos emitidos en el mercado de capitales para que sus aportes sean considerados Recursos de Deuda.
 
 (vii) También podrán ser Prestamistas (A) las entidades multilaterales de crédito cuyos principales accionistas sean gobiernos soberanos; o (B) las agencias de crédito a la exportación propiedad de gobiernos soberanos.
-Página 76 de 288
 
 (viii) Las demás características establecidas en la Parte Especial.
 
@@ -2088,8 +1859,6 @@ Página 76 de 288
 (j)    Aunque el Concesionario determinará a su entera discreción el nivel de endeudamiento, en ningún caso se disminuirá el monto mínimo del Cierre Financiero, tal y como ese monto se define en la Parte Especial.
 
 
-Página 77 de 288
-
 (k)    En consecuencia, la obligación del Concesionario de financiar el Proyecto no se agota ni se entiende cumplida con la obtención del Cierre Financiero. Por lo tanto, si con posterioridad a dicha obtención, cualquier Prestamista incumpliese o se retirase del Proyecto por cualquier causa, justificada o no, el Concesionario deberá asegurar la consecución de los recursos adicionales que requiera para terminar el Proyecto, cumpliendo con la totalidad de los requisitos previstos en el Contrato. Tal retiro de cualquier Prestamista no servirá de excusa para el incumplimiento de las obligaciones del Concesionario ni para alegar la ocurrencia de un Evento Eximente de Responsabilidad. Por lo tanto, ni el retiro ni cualquier incumplimiento de un Prestamista, con posterioridad al Cierre Financiero, implicará por sí mismo un incumplimiento del Concesionario ni afectará la acreditación ya hecha de dicho Cierre Financiero.
 
 3.9  Giros de Equity
@@ -2097,7 +1866,6 @@ Página 77 de 288
 (a)    El Concesionario deberá girar a la Cuenta Proyecto por lo menos los valores señalados en la Parte Especial, correspondientes a Giros de Equity en los plazos previstos en la misma. No habrá Giro de Equity en especie.
 
 (b)    El Concesionario deberá actualizar los valores de los Giros de Equity y de cualquier otra obligación dineraria a cargo del Concesionario, con base en el siguiente factor de ajuste, en la fecha de aporte correspondiente:
-
 
 
 Dónde: En
@@ -2114,7 +1882,6 @@ IPC del Mes de Referencia
 (c)    La anterior fórmula deberá ser utilizada para actualizar otros valores cuando dicha actualización esté expresamente prevista en el presente Contrato, entre los que se encuentran los fondeos de la Subcuenta Interventoría y Coordinación, Subcuenta de Soporte Contractual y Subcuenta MASC, (salvo cuando se establezcan fórmulas de actualización particulares), caso en el cual será necesario ajustar las variables En y Er por las que corresponda, de acuerdo con los montos a actualizar.
 (d)    Corresponderá a la Fiduciaria certificar al Interventor y a la ANI que los recursos correspondientes a los Giros de Equity han sido efectivamente recibidos por el Patrimonio Autónomo en la fecha máxima prevista y en los términos exigidos en el presente Contrato mediante el envío de una Notificación dentro de los cinco (5) Días Hábiles siguientes a la fecha en que se haga el Giro de Equity. En caso de que los Giros de Equity fueren realizados en una fecha posterior a la máxima prevista, la Fiduciaria igualmente certificará al Interventor y a la ANI la fecha efectiva de la realización del Giro de Equity
 
-Página 78 de 288
 
 respectivo y de ello se seguirán las consecuencias previstas en la Parte Especial del Contrato.
 
@@ -2129,7 +1896,6 @@ En todo caso, el Concesionario está obligado a mantener permanentemente actuali
 (b)    Igualmente, en dicha Notificación se deberá señalar el representante que dichos Prestamistas han escogido, el cual será el encargado de recibir todas las Notificaciones de la ANI relativas al presente Contrato. Si cada Unidad Funcional tuviese Prestamistas diferentes, el Concesionario lo especificará en la comunicación y se podrán designar representantes diferentes de los Prestamistas para cada Unidad Funcional.
 
 (c)    Cualquier cambio en los Prestamistas o en el representante de los tenedores de títulos deberá comunicarse a la ANI mediante el envío de una Notificación
-Página 79 de 288
 
 dentro de los tres (3) Días Hábiles siguientes a la fecha en que se produzca el cambio.
 
@@ -2151,7 +1917,6 @@ dentro de los tres (3) Días Hábiles siguientes a la fecha en que se produzca e
 
 (ii)  Cuando la ANI les notifique que pueden ejercer tal derecho antes de que se declare la Terminación Anticipada cuando se verifique cualquiera de las causales que puedan dar lugar a las declaratorias
 
-Página 80 de 288
 
 previstas en las Secciones 17.2(a)(i), 17.2(a)(ii) y 17.2(a)(iii) de esta Parte General.
 
@@ -2165,8 +1930,6 @@ previstas en las Secciones 17.2(a)(i), 17.2(a)(ii) y 17.2(a)(iii) de esta Parte 
 
 (iii) Para el evento descrito en la Sección 3.12(c)(i) anterior, los Prestamistas deberán acreditar el certificado de carencia de informes por tráfico de estupefacientes de que trata el Decreto 048 de 2014 o las normas que lo modifiquen, complementen o adicionen, respecto de la persona que se propone como nuevo concesionario y sus accionistas. Para el evento descrito en la Sección 3.12(c)(ii) anterior, este requisito deberá acreditarse respecto de aquellos que se proponen como nuevos accionistas y de los accionistas de éstos.
 
-
-Página 81 de 288
 
 (iv) Para los efectos de la Sección 3.12(c)(ii) anterior, se entenderá por compra indirecta aquella que efectúen personas jurídicas del mismo grupo empresarial del(los) Prestamista(s).
 
@@ -2184,9 +1947,8 @@ Página 81 de 288
 
 
 (2)     La Interventoría, a través de la ANI, a su vez tendrá un plazo de treinta (30) Días contados desde la Notificación Para Toma para entregar a los Prestamistas un informe el cual incluirá, por lo menos, el estado de cumplimiento, avance del Plan de Obras y pagos de la Retribución y la Compensación Especial de ser el caso y la descripción del estado actual de los riesgos
-Página 82 de 288
 
-del Proyecto descritos en el CAPÍTULO XIII de esta Parte General, con fines informativos, sin perjuicio de cualquier información técnica que requieran los Prestamistas, con previa aprobación de la ANI.
+del Proyecto descritos en el CAPÍTULO XII I de esta Parte General, con fines informativos, sin perjuicio de cualquier información técnica que requieran los Prestamistas, con previa aprobación de la ANI.
 
 (3)     Dentro de los sesenta (60) Días siguientes a la Notificación Para Toma, los Prestamistas enviarán una nueva Notificación a la ANI en la que informarán bajo cuál de las modalidades previstas en las Secciones 3.12(c)(i) y 3.12(c)(ii) de esta Parte General harán la toma de posesión y harán entrega del Plan de Reactivación. Si la ANI no recibiere esta Notificación en el plazo  señalado en  esta Sección  se entenderá que los Prestamistas han desistido de su derecho a la toma de posesión del Proyecto.
 
@@ -2202,7 +1964,6 @@ del Proyecto descritos en el CAPÍTULO XIII de esta Parte General, con fines inf
 (8)     De presentarse la modificación al Plan de Reactivación, la Interventoría tendrá diez (10) Días para emitir concepto frente al mismo. La ANI tendrá diez (10) Días, para pronunciarse sobre el concepto emitido por la Interventoría e informar a los Prestamistas.
 
 (9)     Los Prestamistas tendrán un término máximo de ciento ochenta (180) Días, contados desde la fecha de la Notificación para Toma, para concretar las condiciones de la modalidad de toma de posesión escogida e informar a la ANI acerca de la persona que continuará con la ejecución del Contrato (si es la cesión)  o  el  nombre  de  los  nuevos  accionistas  del Concesionario (si es la compraventa de acciones por parte de los Prestamistas –directa o indirectamente– o por parte de un tercero designado por los Prestamistas).
-Página 83 de 288
 
 (iii) Si la causal de toma de posesión es el acaecimiento de una causal de Terminación Anticipada del presente Contrato de las señaladas en las Secciones 17.2(a)(i), 17.2(a)(ii) y 17.2(a)(iii) de esta Parte General, y procede la toma de posesión:
 
@@ -2211,14 +1972,12 @@ Página 83 de 288
 (2) Para efecto de que los Prestamistas evalúen y determinen la conveniencia de tomar posesión del Proyecto, dentro de los sesenta
 (60) Días siguientes a la Notificación Derecho de Toma, los Prestamistas deberán enviar una Notificación a la ANI y a la Interventoría en la que manifiesten (i) si ejercen o no su derecho a tomar posesión del Proyecto, (ii) bajo cuál de las modalidades previstas en las Secciones 3.12(c)(i)y 3.12(c)(ii) de esta Parte General harán la toma de posesión, y (iii) presentar el Plan de Reactivación. Si la ANI no recibe comunicación alguna dentro del plazo aquí señalado, se entenderá que los Prestamistas no tienen interés en tomar posesión del Proyecto.
 
-(3) La Interventoría, a través de la ANI, a su vez tendrá un plazo de treinta (30) Días contados desde la Notificación Derecho de Toma para entregar a los Prestamistas un informe con la descripción del estado actual de los  riesgos del Proyecto  descritos en el CAPÍTULO XIII de esta Parte General, con fines informativos, sin perjuicio de cualquier información técnica que requieran los Prestamistas, con previa aprobación de la ANI.
+(3) La Interventoría, a través de la ANI, a su vez tendrá un plazo de treinta (30) Días contados desde la Notificación Derecho de Toma para entregar a los Prestamistas un informe con la descripción del estado actual de los  riesgos del Proyecto  descritos en el CAPÍTULO XII I de esta Parte General, con fines informativos, sin perjuicio de cualquier información técnica que requieran los Prestamistas, con previa aprobación de la ANI.
 
 (4) Si los Prestamistas ejercen el derecho a tomar posesión del Proyecto, tendrán un término máximo de ciento ochenta (180) Días, contados a partir de la Notificación Derecho de Toma, para concretar y perfeccionar las condiciones de la modalidad de toma de posesión escogida e informar a la ANI acerca de la persona que continuará con la ejecución del Contrato (si es la cesión) o el nombre de los nuevos accionistas del Concesionario (si es la compraventa de acciones).
 
 (5) El plazo en Días previsto en la presente Sección 3.12(d) podrá ser prorrogado a entera discreción de la ANI, previa solicitud de los Prestamistas, debidamente sustentada.
 
-
-Página 84 de 288
 
 (6) Una vez que se presente el Plan de Reactivación, la ANI contará con veinte (20) Días para pronunciarse sobre este, para lo cual contará con el concepto del Interventor en un plazo no mayor a diez
 (10) Días contados desde el recibo del Plan de Reactivación.
@@ -2239,8 +1998,6 @@ Página 84 de 288
 (iii) El  Concesionario  saliente  se  abstendrá  de  contraer  cualquier endeudamiento adicional, mientras se surte el proceso de toma de posesión. Una vez perfeccionada la toma de posesión, el nuevo concesionario tendrá la posibilidad de obtener deuda o estructurar cualquier mecanismo financiero, en las mismas condiciones previstas en este Contrato.
 
 
-Página 85 de 288
-
 (iv) En relación con el Patrimonio Autónomo: Desde el recibo de la Notificación para Toma o de la Notificación Derecho de Toma, la Fiduciaria que administra el Patrimonio Autónomo deberá:
 
 (1)  Notificar a los Contratistas, a los Prestamistas y proveedores del Proyecto sobre el acaecimiento de una de las causales previstas en la Sección 3.12(a) de esta Parte General e inicio del proceso de toma de posesión del Proyecto;
@@ -2256,7 +2013,6 @@ Página 85 de 288
 
 (vi) En relación con la Cuenta ANI y sus subcuentas, las mismas seguirán bajo el control de la ANI durante el proceso de toma de posesión. En el caso que se liquide el Patrimonio Autónomo por cuenta de la cesión del Contrato a un tercero designado por los Prestamistas o por la ANI, la ANI dará las instrucciones sobre el manejo de los recursos de la Cuenta ANI y de cada una de sus subcuentas.
 
-Página 86 de 288
 
 (vii) En el caso que se liquide el Patrimonio Autónomo por cuenta de la cesión del Contrato a un tercero designado por los Prestamistas o por la ANI, se seguirán las reglas que se establecen a continuación:
 
@@ -2274,7 +2030,6 @@ Página 86 de 288
 (1)  Unidades Funcionales terminadas y el estado de avance de las Unidades Funcionales no terminadas.
 
 (2)  Retribuciones  –y  Compensaciones  Especiales,  cuando  sea aplicable– transferidas por Unidad Funcional al concesionario saliente (y a los cesionarios autorizados en caso que aplique), hasta el Día anterior a la fecha de suscripción del acta de entrega, y
-Página 87 de 288
 
 cualquier otro traslado efectuado desde la Cuenta ANI a la Cuenta Proyecto.
 
@@ -2293,7 +2048,6 @@ cualquier otro traslado efectuado desde la Cuenta ANI a la Cuenta Proyecto.
 (xii) En el caso en que, como parte del procedimiento de toma de posesión, la ANI apruebe a un nuevo concesionario o accionista(s) del Concesionario, el límite de Multas y Sanciones establecido en la Sección 10.3(e) de esta Parte General se reestablecerá. Por consiguiente, para todos los efectos establecidos en dicha Sección para calcular si se ha llegado a dicho límite no se contabilizará ninguna Multa o Sanción que se haya cobrado por parte de la ANI con anterioridad a la aprobación del nuevo Concesionario o accionista del Concesionario.
 
 (f)   Aprobación del nuevo concesionario o del nuevo accionista del Concesionario.
-Página 88 de 288
 
 (i)  El nuevo concesionario o accionista del Concesionario, según el caso, deberá ser aprobado previamente por la ANI, aprobación que se dará siempre que la entidad designada por los Prestamistas cumpla con todos los Requisitos Habilitantes establecidos en la Invitación a Precalificar  y  que  fueron  evaluados  por  la  ANI  durante  la Precalificación o el Proceso de Selección, incluyendo la presentación de los Acuerdo de Garantía y Acuerdo de Permanencia, de ser el caso.
 
@@ -2308,8 +2062,6 @@ Página 88 de 288
 (a)    El Concesionario, actuando como fideicomitente, deberá incorporar, a su cuenta y riesgo, un Patrimonio Autónomo a través del cual se canalicen todos los activos y pasivos y en general se administren todos los recursos del Proyecto como requisito para la suscripción del Acta de Inicio del presente Contrato. A juicio del Concesionario y sus Prestamistas, se podrán constituir Patrimonios Autónomos-Deuda, diferentes al Patrimonio Autónomo sobre los cuales recaerán los mismos deberes y obligaciones de información previstos en el presente Contrato para el Patrimonio Autónomo, sin que se entienda como el mismo Patrimonio Autónomo.
 
 
-Página 89 de 288
-
 (b)    La selección de la Fiduciaria será responsabilidad del Concesionario. Sin embargo, la ANI verificará que la Fiduciaria propuesta por el Concesionario cuenta con las calidades exigidas en la Sección 1.77 de esta Parte General, y el Concesionario no podrá suscribir con ella el Contrato de Fiducia Mercantil si:
 (i) la Fiduciaria no cumple con dichas calidades o (ii) si la ANI ha solicitado su remoción en algún proyecto en los últimos cinco (5) años previos a la fecha límite para la selección de la Fiduciaria, con la que se realizaría la constitución del Patrimonio Autónomo.
 No obstante, en cualquier momento la ANI podrá solicitar la remoción de la Fiducia hasta la suscripción del Acta de Liquidación del Contrato por el incumplimiento de cualquiera de las obligaciones a su cargo descritas en el Contrato, en este caso para la selección de la nueva Fiduciaria se deberán observar las mismas condiciones previstas en esta Sección.
@@ -2320,8 +2072,6 @@ No obstante, en cualquier momento la ANI podrá solicitar la remoción de la Fid
 
 (i)  La ANI tendrá hasta diez (10) Días Hábiles para verificar que el Contrato de Fiducia Mercantil se sujete a las condiciones señaladas en el presente Contrato y para hacer los correspondientes comentarios y observaciones al borrador del Contrato de Fiducia Mercantil remitido por el Concesionario. Dichos comentarios y observaciones deberán ser atendidos e incorporados al texto definitivo del Contrato de Fiducia Mercantil que se suscriba dentro de los cinco (5) Días Hábiles siguientes. Vencido el antedicho plazo de diez (10) Días Hábiles sin que la ANI informe al Concesionario comentarios u observaciones al texto del Contrato de Fiducia Mercantil, se entenderá que la ANI no tiene objeción en que se proceda con la firma de dicho Contrato, sin perjuicio de que, en cualquier momento de la ejecución de este Contrato, la ANI podrá solicitar la modificación del Contrato de Fiducia Mercantil, conforme lo previsto en la Sección 3.15(h) de esta Parte General.
 
-
-Página 90 de 288
 
 (ii)  En cualquier caso, el Contrato de Fiducia Mercantil deberá quedar suscrito y perfeccionado a más tardar a los cinco (5) Días Hábiles siguientes a la fecha en que la ANI se haya pronunciado o en que haya vencido el plazo a que se refiere la Sección 3.13(d)(i) anterior, sin que haya habido pronunciamiento de la ANI.
 
@@ -2358,8 +2108,6 @@ Página 90 de 288
 (b)    Podrán existir diferentes beneficiarios para cada una de las subcuentas y cuentas en que se divida el Patrimonio Autónomo, pero en todo caso el beneficiario único de la Cuenta ANI junto con las respectivas subcuentas de esta cuenta será la ANI. Los beneficiarios de las demás cuentas y subcuentas serán designados por el Concesionario, en cumplimiento de las previsiones de este Contrato.
 
 
-Página 91 de 288
-
 (c)    La transferencia de los recursos de la Cuenta ANI y de cada una de las Subcuentas en que ésta se divide solo podrá hacerse mediante instrucciones de la ANI a la Fiduciaria, sin perjuicio de lo previsto en la Sección 3.1(g) de esta Parte General. Los recursos de estas Subcuentas podrán invertirse de acuerdo con lo previsto en el Decreto 1068 de 2015, según se modifique o adicione.
 
 (d)    El Comité Fiduciario será responsable por definir las inversiones que haga la Fiduciaria de los recursos de la Subcuenta Aportes ANI, siempre que dichas inversiones i) sean admisibles, de acuerdo con el Decreto 1068 de 2015, ii) el emisor, deudor y/o destinatario de las inversiones no sea el Concesionario, ni sus socios, ni los Beneficiarios Reales del Concesionario, ni cualquier otra persona en la cual el Concesionario, sus socios o los Beneficiarios Reales del Concesionario, tengan cualquier participación o compartan de cualquier manera los resultados de su actividad económica y iii) busquen, de manera prioritaria, generar operaciones de cobertura de tasa de cambio para la porción en dólares de los Aportes ANI.
@@ -2373,7 +2121,6 @@ Página 91 de 288
 
 (i)  La Cuenta Proyecto se creará con la suscripción del Contrato de Fiducia Mercantil, y se fondeará inicialmente con los Giros de Equity de acuerdo con lo señalado en la Sección 3.9 de esta Parte General y con los demás aportes que el Concesionario considere necesario hacer. A esta Cuenta deberán ingresar también los Recursos de Deuda obtenida de los Prestamistas y cualquier transferencia que, de acuerdo con este Contrato, deba hacerse desde la Cuenta ANI, incluidos los traslados correspondientes a la Retribución –y a la Compensación Especial, cuando sea aplicable– (salvo cuando el Concesionario haya solicitado  que  la  Retribución  sea  hecha  al(los)  Patrimonio(s) Autónomo(s)-Deuda o a los Cesionarios Especiales). Cualquier otro pago, compensación o reconocimiento previsto en este Contrato a favor del Concesionario, será hecho a la Cuenta Proyecto.
 
-Página 92 de 288
 
 (ii)  Los recursos disponibles en esta Cuenta Proyecto se destinarán única y exclusivamente a la atención de todos los pagos, costos y gastos a cargo del Concesionario que se deriven de la ejecución del presente Contrato –salvo que dichos pagos deban hacerse con cargo a otra de las cuentas o subcuentas de acuerdo con lo previsto en este Contrato– incluyendo, pero sin limitarse a:
 
@@ -2394,8 +2141,6 @@ Página 92 de 288
 (8)     En general, todos los pagos, impuestos, costos y gastos a cargo del Concesionario para el cumplimiento de sus obligaciones derivadas del presente Contrato.
 
 
-Página 93 de 288
-
 (iii) Como  consecuencia  de  los  esquemas  de  financiación  y  de organización, el Concesionario podrá crear subcuentas adicionales en la Cuenta Proyecto, siempre que el fondeo de esas subcuentas esté subordinado al fondeo de las subcuentas que se establecen en este Contrato.
 
 (iv) Los recursos remanentes de esta Cuenta Proyecto, una vez cumplida la finalidad de la misma, serán de libre disposición del Concesionario, siempre y cuando el Contrato se encuentre en Etapa de Operación y Mantenimiento, exceptuando los recursos de la Subcuenta Predios, la Subcuenta Compensaciones Socioambientales, la Subcuenta Redes y la Subcuenta de Policía de Carreteras. Los rendimientos que generen los recursos de esta Cuenta Proyecto acrecerán esta cuenta. Los rendimientos  generados  por  la  Subcuenta  Compensaciones Socioambientales, la Subcuenta Predios y la Subcuenta Redes acrecerán cada una de dichas subcuentas.
@@ -2414,7 +2159,6 @@ Página 93 de 288
 (1)     La  Subcuenta  Compensaciones  Socioambientales  de  la Cuenta Proyecto se creará con la suscripción del Contrato de Fiducia Mercantil y se fondeará con los recursos de la Cuenta Proyecto, en los montos y plazos señalados en la Parte Especial.
 
 (2)     Los recursos disponibles en esta Subcuenta Compensaciones Socioambientales se destinarán única y exclusivamente a la atención  de  los  pagos  de  las  Compensaciones
-Página 94 de 288
 
 Socioambientales que se tienen previstos en la Sección 8.1(c)(ii) de esta Parte General, y si existieren remanentes, éstos serán distribuidos conforme a lo señalado en dicha Sección. Los remanentes que correspondan a la ANI serán trasladados a la Subcuenta Excedentes ANI, previa instrucción expresa y escrita de la ANI.
 
@@ -2433,7 +2177,6 @@ Socioambientales que se tienen previstos en la Sección 8.1(c)(ii) de esta Parte
 
 (3)     Los recursos de la Subcuenta Redes podrán ser invertidos en los términos del Decreto 1068 de 2015, según éste se modifique o adicione y los rendimientos de estas operaciones de tesorería acrecerán los recursos de esta subcuenta.
 
-Página 95 de 288
 
 (viii) Subcuenta Policía de Carreteras
 
@@ -2452,7 +2195,6 @@ Página 95 de 288
 (2)     Dichos aportes serán única y exclusivamente para ejecución de  programas  de  mitigación  y  adaptación  al  Cambio Climático según los lineamientos de la entidad cooperante.
 
 (3)     El manejo de los recursos aportados, así como la ejecución de los programas y proyectos de cambio climático serán responsabilidad exclusiva del Concesionario con la entidad cooperante. En consecuencia, las actividades que lleguen a desarrollarse en el marco de los acuerdos de cooperación no afectará la distribución de riesgos contenida en el CAPÍTULO
-Página 96 de 288
 
 XIII  de  esta  Parte  General,  ni  las  obligaciones  e Intervenciones contenidas en el presente Contrato.
 
@@ -2467,10 +2209,9 @@ XIII  de  esta  Parte  General,  ni  las  obligaciones  e Intervenciones conteni
 
 (1)     La Subcuenta Indemnizaciones y Giros Aseguradoras se creará en el momento que se presente una reclamación de seguros bajo la póliza de obras civiles u otra que otorgue amparo por la pérdida o daños a la infraestructura a cargo del Concesionario, ya sea la que recibe, interviene, construye, mejora u opera en virtud del presente Contrato.
 
-(2)     Dichos recursos serán única y exclusivamente para la recuperación, reconstrucción o reposición de los bienes de la concesión y la ejecución será responsabilidad exclusiva del Concesionario debidamente observado por el Interventor. En consecuencia, las actividades que lleguen a desarrollarse no afectarán ni modificaran la distribución de riesgos contenida en el CAPÍTULO XIII de esta Parte General, ni las obligaciones e Intervenciones contenidas en el presente Contrato, en especial las de asignación del riesgo de fuerza mayor asegurable.
+(2)     Dichos recursos serán única y exclusivamente para la recuperación, reconstrucción o reposición de los bienes de la concesión y la ejecución será responsabilidad exclusiva del Concesionario debidamente observado por el Interventor. En consecuencia, las actividades que lleguen a desarrollarse no afectarán ni modificaran la distribución de riesgos contenida en el CAPÍTULO XII I de esta Parte General, ni las obligaciones e Intervenciones contenidas en el presente Contrato, en especial las de asignación del riesgo de fuerza mayor asegurable.
 
 (3)     El Concesionario declara y reconoce que mantendrá indemne a la ANI por eventuales causales de inoperancia del seguro, atribuibles a su reclamación y trámite, en especial las relacionadas con la prescripción, reticencia, incumplimiento
-Página 97 de 288
 
 de garantías, errores o faltas en los deberes a su cargo como tomador y asegurado en general.
 
@@ -2487,7 +2228,6 @@ de garantías, errores o faltas en los deberes a su cargo como tomador y asegura
 (iii) Subcuenta Aportes ANI.
 
 (1)     La Subcuenta Aportes ANI se dividirá en subcuentas por cada Unidad Funcional que tenga el Proyecto. En cada una de las subcuentas por Unidad Funcional se consignará la suma resultante de multiplicar los Aportes ANI (incluidos los intereses remuneratorios y moratorios, de ser el caso, de conformidad con lo previsto en las Secciones 3.6(b) y 3.6(d) de esta Parte General) por el porcentaje de participación que
-Página 98 de 288
 
 corresponda a la Unidad Funcional respectiva establecido en la Parte Especial.
 
@@ -2505,7 +2245,6 @@ corresponda a la Unidad Funcional respectiva establecido en la Parte Especial.
 (iv) Subcuenta Recaudo Peaje
 
 (1)     La Subcuenta Recaudo Peaje se dividirá en subcuentas por cada Unidad Funcional que tenga el Proyecto. En cada una de
-Página 99 de 288
 
 las subcuentas por Unidad Funcional se consignará la suma resultante de multiplicar el Recaudo de Peaje por el porcentaje de participación que corresponda a la Unidad Funcional respectiva, establecido en la Parte Especial. La administración de la Subcuenta Recaudo Peaje estará a cargo de la ANI.
 
@@ -2523,7 +2262,6 @@ iii.  Los demás recursos que de conformidad con las Secciones 3.4(b), 3.3(h)(vi
 (5)     El periodo de recaudo corresponderá a los Días transcurridos desde el Día en que se efectuó la última consignación (incluido), hasta el Día anterior a la consignación siguiente.
 
 (6)     En el caso en que la suma consignada por el Concesionario a la  Subcuenta  Recaudo  Peaje  fuere  inferior  a  la  que corresponda de acuerdo con lo previsto en este Contrato, el Concesionario  pagará  intereses  moratorios  –que  se consignarán en la Subcuenta Excedentes ANI– desde la fecha en la que realizó la consignación y hasta el pago de la
-Página 100 de 288
 
 diferencia, dichos intereses se calcularán conforme a lo previsto en la Sección 3.6(a) de esta Parte General.
 
@@ -2539,7 +2277,6 @@ ii) que no haya recursos disponibles ni en el Fondo de Contingencias ni en la Su
 
 (12)     De haber remanentes, después de atender los gastos descritos en la Sección 3.14(h)(iv)(11) anterior, serán destinados al cubrimiento de las obligaciones de pago de la Retribución a cargo de la ANI, lo que consecuentemente implicará la
 
-Página 101 de 288
 
 reducción de la programación de vigencias futuras de que dispone la entidad para atender el pago de la Retribución.
 
@@ -2561,7 +2298,6 @@ reducción de la programación de vigencias futuras de que dispone la entidad pa
 (6)     El Concesionario estará obligado a fondear esta Subcuenta durante la vigencia del Contrato y como parte de las obligaciones a su cargo, los aportes definidos en Parte Especial deberán realizarse de manera anticipada.
 
 En el evento que las Fases contenidas en la Etapa Preoperativa tengan una duración superior a la establecida en la Parte Especial, originada incluso por Eventos Eximentes de
-Página 102 de 288
 
 Responsabilidad, el Concesionario deberá seguir fondeando esta Subcuenta, en el monto correspondiente al plazo adicional de la Fase. Estos aportes deberán realizarse de tal forma que garanticen los valores faltantes y en los plazos y montos que le establezca la ANI, de tal forma que el mecanismo sea eficiente y oportuno.
 
@@ -2576,7 +2312,6 @@ Responsabilidad, el Concesionario deberá seguir fondeando esta Subcuenta, en el
 (vi) Subcuenta de Soporte Contractual:
 
 (1)     La Subcuenta de Soporte Contractual se creará con la suscripción del Contrato de Fiducia Mercantil y se fondeará
-Página 103 de 288
 
 con los recursos de la Cuenta Proyecto, en los montos y plazos señalados en la Parte Especial.
 
@@ -2590,7 +2325,6 @@ con los recursos de la Cuenta Proyecto, en los montos y plazos señalados en la 
 (6)     En el evento que el Concesionario incumpla con la obligación de fondear la Subcuenta Soporte Contractual o lo realice de manera parcial, la ANI podrá ordenar el traslado de los recursos faltantes de la Subcuentas Recaudo Peaje y/o Ingresos por Explotación Comercial. En este evento, el Concesionario acepta que la Retribución se disminuirá en los valores que debieron haber trasladado a la Subcuenta de Soporte Contractual.
 
 (7)     En caso de que, no haya recursos suficientes en las Subcuentas Recaudo Peaje e Ingresos por Explotación Comercial para efectos de lo señalado en la Sección 3.14(h)(vi)(6) anterior, la ANI podrá ordenar el traslado del faltante con cargo a la Subcuenta Excedentes ANI. En este último caso, la ANI iniciará los procesos sancionatorios al Concesionario a que haya lugar y lo conminará al cumplimiento de esta obligación aplicando lo previsto en la Sección 3.14(e) de esta Parte General. Una vez el Concesionario cumpla con la obligación de realizar el (los) fondeo(s) incumplidos de la Subcuenta Soporte Contractual, si dichos recursos fueron tomados de la Subcuenta Excedentes ANI, la ANI solicitará la restitución a la Subcuenta Excedentes ANI de las sumas fondeadas a la Subcuenta Soporte Contractual.
-Página 104 de 288
 
 (8)     En el evento que, el valor mínimo del aporte a la Subcuenta Soporte  Contractual  descrito  en  la  Parte  Especial  sea insuficiente para atender los reconocimientos destinados a la atención  de  los  pagos,  los  recursos  adicionales  serán aportados oportunamente y cuando se necesiten por el Concesionario, con previa aprobación de la ANI.
 
@@ -2605,7 +2339,6 @@ Página 104 de 288
 (2)     La ANI será la encargada de dar instrucciones a la Fiduciaria para el uso de estos recursos, los cuales en todo caso deberán destinarse  a  atender  prioritariamente  las  actividades relacionadas con la Amigable Composición del Contrato en los términos previstos en la Sección 15.1 de esta Parte General.  Los  Amigables  Componedores  designados  de acuerdo con este Contrato serán los beneficiarios de los pagos de la Subcuenta MASC. Los recursos disponibles en la Subcuenta MASC serán de monto agotable y se destinarán a la atención de los pagos al Amigable Componedor del Contrato y de los gastos administrativos y secretariales del mecanismo, exclusivamente en la porción a cargo de la ANI, que será equivalente al cincuenta por ciento (50%) de la suma correspondiente por dichos conceptos. Los costos y gastos en que  incurra  el  Concesionario  en  la  convocatoria  del mecanismo de Amigable Composición serán asumidos en su totalidad por el Concesionario y no harán parte del concepto de gasto de la Subcuenta MASC.
 
 (3)     De haber recursos disponibles en la Subcuenta MASC, los mismos podrán destinarse al pago de honorarios de árbitros y demás gastos que se causen con ocasión de la convocatoria del Tribunal de Arbitramento incluida la práctica de pruebas, exclusivamente en la porción a cargo de la ANI equivalente al
-Página 105 de 288
 
 cincuenta por ciento (50%) de la suma correspondiente por dichos conceptos, así como a los gastos que demande cualquier  otro  mecanismo  alternativo  de  solución  de controversias al que las Partes acuerden acudir en el momento en que una controversia se presente. Los costos y gastos en que incurra el Concesionario en la convocatoria del Tribunal de Arbitramento serán asumidos en su totalidad por el Concesionario y no harán parte del concepto de gasto de la Subcuenta MASC.
 
@@ -2623,7 +2356,6 @@ cincuenta por ciento (50%) de la suma correspondiente por dichos conceptos, así
 (3)     Los rendimientos de las operaciones de tesorería que se efectúen con cargo a los recursos de la Subcuenta Excedentes ANI acrecentarán dicha subcuenta.
 
 (4)     En caso de presentarse la situación prevista en las Secciones 3.1(f)(iv) y 3.1(f)(v) de esta Parte General, la diferencia establecida por el Amigable Componedor a favor del
-Página 106 de 288
 
 Concesionario se pagará con cargo a la Subcuenta Excedentes ANI.
 
@@ -2640,7 +2372,6 @@ Concesionario se pagará con cargo a la Subcuenta Excedentes ANI.
 (5)     Al momento en que se haga exigible el derecho a favor del Concesionario a que sean transferidos los recursos a la Cuenta Proyecto  por  haberse  causado  la  Retribución  –o  la Compensación  Especial,  cuando  sea  aplicable–  en  los términos del presente Contrato, la ANI ordenará trasferir las sumas descontadas por Deducciones y los Descuentos a la Subcuenta Excedentes ANI.
 
 (6)     En el Contrato de Fiducia Mercantil deberá consignarse de manera clara y expresa que si el presente Contrato se
-Página 107 de 288
 
 terminare de manera anticipada, por cualquier causa, todas las sumas  disponibles  en  la  Subcuenta  de  Ingresos  por Explotación Comercial deberán ser utilizadas por la ANI para pagar el valor de la liquidación del Contrato en los términos establecidos en la Sección 18.4(b) de esta Parte General.
 
@@ -2662,8 +2393,6 @@ terminare de manera anticipada, por cualquier causa, todas las sumas  disponible
 (2)     Los recursos disponibles en la Subcuenta Obras Sociales se destinarán conforme lo instruya la ANI mediante Notificación a la Fiduciaria, a cubrir los gastos que se generen a cargo de la ANI para atender las Obras Sociales que se describen en la Sección 19.4 de esta Parte General.
 
 
-Página 108 de 288
-
 (3)     Los rendimientos de las operaciones de tesorería que se efectúen con cargo a los recursos de la Subcuenta Obras Sociales acrecerán la subcuenta. En caso de liquidación los recursos disponibles en esta subcuenta pertenecerán a la ANI.
 
 (4)     Los recursos remanentes de la Subcuenta Obras Sociales que no fueron necesarios para los pagos derivados de la presente Sección deberán ser transferidos a la Subcuenta Excedentes ANI, previa instrucción expresa y escrita de la ANI.
@@ -2678,7 +2407,6 @@ Página 108 de 288
 (4)     Los recursos disponibles en esta Subcuenta se destinarán única y exclusivamente a sufragar las tarifas de peaje de los usuarios de la vía que hayan aportado previamente las sumas depositadas, para lo cual el Concesionario deberá llevar un control diario detallado de los saldos prepagados de las tarjetas o tiquetes emitidos, así como los usos de dichos saldos en cada Estación de Peaje. La Interventoría verificará en cualquier momento y como mínimo de manera mensual el control diario detallado que lleve el Concesionario sobre los saldos prepagados y los usos de estos saldos.
 
 (5)     En la medida en que se genere para cada usuario de la vía la obligación de pago de la tarifa de peaje, el Concesionario deberá descontar el importe correspondiente del saldo de la Subcuenta  Tiquetes  Prepagados  y  abonar  la  suma correspondiente a la Subcuenta Recaudo Peaje. Para estos efectos, el Concesionario deberá llevar la relación de los valores descontados de la Subcuenta Tiquetes Prepagados por
-Página 109 de 288
 
 el pago de tarifas de peaje y la ANI deberá ordenar el traslado de los recursos correspondientes a la Subcuenta Recaudo Peaje como máximo cada tercer (3) Día, de manera análoga a lo establecido en la Sección 3.14(h)(iv)(4) de esta Parte General. El Interventor podrá auditar en cualquier momento estos traslados, para lo cual el Concesionario deberá poner a su disposición el control diario de tarjetas o tiquetes y sus saldos,  así  como  cualquier  otra  información  que razonablemente le solicite el Interventor.
 
@@ -2695,8 +2423,6 @@ el pago de tarifas de peaje y la ANI deberá ordenar el traslado de los recursos
 (1)     La Subcuenta de Retenciones de la Cuenta ANI se creará con la suscripción del Contrato de Fiducia Mercantil.
 
 
-Página 110 de 288
-
 (2)     La Subcuenta de Retenciones se dividirá en subcuentas por cada Unidad Funcional afectada por los eventos descritos en las Secciones 4.17(a)(viii), 7.1(f)(iv) y 14.1 de esta Parte General. En cada una de las subcuentas por Unidad Funcional se consignará la suma resultante: (i) los valores objeto de Retención de la Retribución, en los eventos descritos en la Sección 7.1(f)(iv) de esta Parte General, (ii) Las sumas objeto de Retención de la Retribución de que trata la Sección 4.17(a)(viii) de esta Parte General, o (iii) con la diferencia entre el resultado del cálculo de la Retribución y la suma a reconocer por Compensación Especial en las condiciones dispuestos en la Sección 14.1 de esta Parte General. La administración de la Subcuenta de Retenciones estará a cargo de la ANI.
 
 (3)     Los recursos disponibles en la Subcuenta de Retenciones, incluidos sus rendimientos se transferirán al Concesionario conforme lo instruya la ANI mediante Notificación a la Fiduciaria, una vez se subsane el evento que dio origen a su retención en los términos dispuestos en esta Parte General, salvo por los rendimiento financieros generados por los valores  objeto  de  Retención  de  la  Retribución  o Compensación Especial, en los eventos descritos en la Sección 7.1(f)(iv) de esta Parte General.
@@ -2709,8 +2435,6 @@ Página 110 de 288
 
 (b)    Plazo: La duración del Contrato de Fiducia Mercantil tendrá que incluir todas las etapas del Contrato de Concesión y prolongarse hasta la culminación de la Liquidación del presente Contrato.
 
-
-Página 111 de 288
 
 (c)    Comisión Fiduciaria: la Comisión Fiduciaria será acordada libremente entre el Concesionario y la Fiduciaria, pero en ningún caso esta comisión podrá descontarse ni total ni parcialmente de los montos (incluidos sus rendimientos) que se encuentren en la Cuenta ANI, incluyendo sus respectivas subcuentas, ni de las Subcuentas Predios, Redes y Compensaciones Socioambientales que hacen parte de la Cuenta Proyecto.
 
@@ -2729,10 +2453,6 @@ Página 111 de 288
 (f)    Terminación: la Terminación Anticipada del Contrato, dará lugar a la terminación anticipada del Contrato de Fiducia Mercantil, siempre que se haya perfeccionado o haya quedado en firme la liquidación del Contrato y se haya aprobado el informe final por parte de la ANI y del Interventor. Lo anterior, salvo que los Prestamistas decidan otra cosa y así se lo notifique a la ANI el representante de los Prestamistas.
 
 
-
-
-Página 112 de 288
-
 (g)    No fraude: el Contrato de Fiducia Mercantil deberá señalar de manera expresa que el Patrimonio Autónomo no se constituye en fraude de los acreedores del Concesionario ni de ninguno de sus accionistas.
 
 (h)    Prevalencia: Las estipulaciones del Contrato de Fiducia Mercantil que contradigan lo previsto en el Contrato se tendrán por no escritas y la ANI podrá, en cualquier momento durante la ejecución del Contrato, solicitar la modificación del mismo para ajustarlo a lo previsto en el Contrato.
@@ -2744,7 +2464,6 @@ Página 112 de 288
 
 (l)    Información: Independientemente del derecho de auditoría que tienen la ANI y el Interventor y del derecho a solicitar directamente a la Fiduciaria información, reportes y certificaciones en la forma, formatos, protocolos y tiempos que defina la ANI para cada caso, la Fiduciaria deberá presentar al menos la
 
-Página 113 de 288
 
 información que se especifica a continuación, en la forma, plazos y los formatos que para cada caso disponga la ANI:
 
@@ -2766,8 +2485,6 @@ información que se especifica a continuación, en la forma, plazos y los format
 (ix) Dentro de los primeros quince (15) Días de cada Mes presentar un informe general sobre la operación del Patrimonio Autónomo.
 
 
-Página 114 de 288
-
 (x)  Dentro de los primeros quince (15) Días de cada Mes presentar un informe sobre los costos y gastos del Concesionario, debidamente discriminado por actividades de operación y mantenimiento e inversión.
 
 (xi) Sin perjuicio de lo dispuesto por la Superintendencia Financiera de Colombia, entregar a la ANI los estados financieros auditados del Patrimonio Autónomo (incluyendo los del Patrimonio Autónomo- Deuda, si los hubiere), con cortes a 31 de diciembre y 30 de junio de cada año. La auditoría deberá estar efectuada por un auditor externo que preste sus servicios a nivel internacional es decir que preste sus servicios de auditoria en por lo menos dos (2) países diferentes a Colombia. Esta documentación deberá entregarse dentro de los primeros diez (10) Días de los Meses de septiembre y marzo de cada año.
@@ -2781,7 +2498,6 @@ Página 114 de 288
 (i)  Si la variación en el valor de todos los tributos efectivamente pagados por  parte  del  Concesionario  correspondiente  al  año  fiscal inmediatamente anterior (enero a diciembre), originada por el Cambio Tributario, no supera positiva o negativamente un monto equivalente al tres por ciento (3%) del valor de los ingresos brutos (estados financieros,  reportados  bajo  normas  NIIF)  del  Concesionario correspondientes al mismo año fiscal, el impacto económico será asumido por el Concesionario, por su cuenta y riesgo.
 
 (ii)  Si la variación en el valor de todos los tributos efectivamente pagados por  parte  del  Concesionario,  correspondiente  al  año  fiscal inmediatamente anterior (enero a diciembre) originada por el Cambio Tributario, genera un efecto desfavorable para el Concesionario que supere el tres por ciento (3%) de los ingresos brutos (estados financieros, reportados bajo normas NIIF) del Concesionario del correspondiente año fiscal, el Concesionario podrá solicitarle a la ANI
-Página 115 de 288
 
 que se le reconozca la diferencia que exceda dicho porcentaje, en los términos dispuestos en la presente Sección.
 
@@ -2796,8 +2512,7 @@ que se le reconozca la diferencia que exceda dicho porcentaje, en los términos 
 (e)    La diferencia de que trata la Sección 3.16(a)(ii) anterior deberá ser consignada por la ANI en la Cuenta Proyecto con los recursos de que trata la Sección 13.4 de esta Parte General.
 
 
-
-CAPÍTULO IV  ETAPA PREOPERATIVA - GENERALIDADES
+CAPÍTULO I V  ETAPA PREOPERATIVA - GENERALIDADES
 
 4.1  Condiciones Precedentes para el Inicio de la Fase de Preconstrucción
 
@@ -2807,7 +2522,6 @@ Son condiciones precedentes, es decir, requisitos sobre los cuales se deberá ha
 
 (b)    Con relación a la infraestructura entregada del Corredor del Proyecto, el Concesionario deberá haber suscrito el (los) Contrato(s) de Operación y Mantenimiento durante la Etapa Preoperativa o haber expresado la condición de que ejercerá las obligaciones relacionadas de manera directa. Ambas
 
-Página 116 de 288
 
 situaciones deberán ser informadas a la ANI mediante Notificación enviada por el Concesionario con anterioridad a la Fecha de Inicio.
 
@@ -2831,7 +2545,6 @@ Sin perjuicio de las demás obligaciones previstas en otros apartes de este Cont
 
 (f)    Entregar el Plan de Adquisición de Predios. Este plan deberá tener ilustración suficiente de las actividades y los tiempos, de manera que el Interventor pueda hacerse un juicio acerca de los plazos en los cuales se ejecutará dicho plan. La entrega de este Plan se hará dentro del plazo señalado en el Apéndice Técnico
 7. En todo caso, el Concesionario deberá entregar a la Interventoría, con copia a la ANI, a los dos (2) Meses de suscrita el Acta de Inicio u Orden de Inicio, un Cronograma de Trabajo Predial, diferente al Cronograma de Adquisición de Predios, que indique las actividades que desarrollará y los plazos previstos, para la elaboración del Plan de Adquisición de Predios y para la obtención, sea por disponibilidad o adquisición, de los Predios Requeridos para el inicio de las obras en la(s) primera(s) Unidad(es) Funcional(es) que intervendrá al inicio de la Fase de Construcción. Adicionalmente, el Cronograma de Adquisición de
-Página 117 de 288
 
 Predios y el Cronograma de Trabajo Predial deberán ser actualizados dentro de los diez (10) Días Hábiles siguientes a cualquier modificación, ajuste o complementación que sufra el Plan de Obras.
 
@@ -2847,7 +2560,6 @@ Predios y el Cronograma de Trabajo Predial deberán ser actualizados dentro de l
 (l)    Tramitar y obtener ante las Autoridades Estatales y/o Autoridades Ambientales todos los permisos, licencias, autorizaciones y concesiones para adelantar el Proyecto y para el uso y aprovechamiento de recursos naturales y para el depósito de materiales. Así mismo, preparar todos los estudios que le soliciten tales Autoridades.
 
 (m)   Entregar el Plan de Trámites Ambientales dentro del plazo señalado en la Parte Especial. En todo caso, el Concesionario deberá entregar a la Interventoría, con copia a la ANI, a los dos (2) Meses siguientes a la Fecha de Inicio, un cronograma  de  trámites  ambientales,  que  indique  las  actividades  que desarrollará y los plazos previstos, para la obtención de los trámites
-Página 118 de 288
 
 ambientales. El Plan de Trámites Ambientales podrá ser actualizado dentro de los diez (10) Días Hábiles siguientes a cualquier modificación, ajuste o complementación que sufra el Plan de Obras, pero únicamente respecto a la Parte afectada.
 
@@ -2860,7 +2572,6 @@ ambientales. El Plan de Trámites Ambientales podrá ser actualizado dentro de l
 (q)    Entregar a la ANI y al Interventor, dentro de los plazos señalados en la Parte Especial, el Plan de Obras que cumpla con las obligaciones previstas en el Contrato, en particular con lo establecido en el Apéndice Técnico 9, el cual deberá incluir una ilustración suficiente de los tiempos, de manera que el Interventor pueda hacerse un juicio acerca de los plazos en los cuales se ejecutarán las Intervenciones. El contenido de este Plan de Obras no podrá modificar, en ningún caso, ninguna de las obligaciones previstas en el Contrato ni en ninguno de sus Apéndices y deberá ser consistente con las fechas de inicio de operación máximas de cada Unidad Funcional de acuerdo con la Parte Especial.
 
 (r)    Presentar a la ANI y al Interventor los estados financieros auditados del Concesionario y del Patrimonio Autónomo (incluyendo los del Patrimonio Autónomo-Deuda, si lo hubiere) a 31 de diciembre y 30 de junio de cada año calendario, dentro de los primeros diez (10) Días de los Meses de septiembre y
-Página 119 de 288
 
 marzo de cada año y no auditados en forma trimestral dentro de los quince (15) Días siguientes al vencimiento de cada trimestre.
 
@@ -2879,7 +2590,6 @@ Adicionalmente, el Concesionario deberá mantener en su contabilidad claramente 
 
 (iv) Condiciones de utilización de los equipos y vehículos que fueren puestos a disposición de las autoridades de tránsito por parte del Concesionario, así como procedimientos de reparación de los daños que se pudieren presentar e instrumentos de mitigación y cobertura de los mismos.
 
-Página 120 de 288
 
 (u)    Colaborar con las autoridades de tránsito en el diseño y puesta en marcha de programas y proyectos de planes de educación vial y de seguridad vial, de conformidad con las regulaciones, políticas, estrategias y directrices de la autoridad competente para el efecto.
 
@@ -2894,7 +2604,6 @@ Página 120 de 288
 (z)    Llevar y mantener actualizado un registro sobre las actividades y gestiones efectuadas ante las Autoridades Estatales que sean necesarias para el cumplimiento de las obligaciones a su cargo contenidas en el presente Contrato. Este registro podrá ser consultado por la ANI y/o el Interventor en cualquier momento, para lo cual darán aviso al Concesionario con dos (2) Días Hábiles de antelación a la fecha de la consulta.
 
 (aa)   Atender oportunamente y de manera completa los requerimientos de las Autoridades  Estatales,  incluyendo  los  requerimientos  de  la  Autoridad Ambiental, y responder por las medidas o acciones a las que se obligue a la ANI por decisiones de la Autoridad Ambiental u otras relacionadas, así como informar inmediatamente a la ANI, para que pueda hacer uso del derecho de defensa y de los recursos de ley dentro del proceso a que haya lugar.
-Página 121 de 288
 
 (bb)   Actualizar anualmente el Inventario de Activos de la Concesión y enviar tal actualización a la ANI dentro de los primeros tres (3) Meses de cada año.
 
@@ -2915,7 +2624,6 @@ Página 121 de 288
 ▪  Información sobre auditoría técnica, legal, financiera y contable y el informe anual de gobierno corporativo.
 
 (2)     Los anteriores documentos (excepto el informe anual de gobierno corporativo que deberá ser publicado en el portal de Internet máximo dos (2) Meses después de haber sido aprobados por la junta directiva) tendrán que ser publicados en el portal de internet máximo seis (6) Meses después de la firma del Contrato.
-Página 122 de 288
 
 (3)     Divulgación pública en el portal de internet de su información financiera que se reporte a las autoridades o que sea de pública información, máximo dos (2) Meses después de haber sido aprobados por la junta directiva.
 
@@ -2931,7 +2639,6 @@ Página 122 de 288
 
 (9)     Procedimientos de contratación gobernados por principios de economía, transparencia y buena fe.
 
-Página 123 de 288
 
 (10)    Obligatoriedad  del  manual  de  gobierno  corporativo  y sanciones por su incumplimiento.
 
@@ -2945,8 +2652,6 @@ Los  documentos  mencionados  en  las  Secciones  4.2(dd)(i)(4)  a 4.2(dd)(i)(11
 (iii) Un plan de gestión de riesgo de desastre que incorpore un componente de reducción del riesgo y que consulte los lineamientos de los planes de gestión de riesgos de los municipios o departamentos del área de influencia directa del corredor en donde se realizarán las inversiones, todo esto en línea y dando cumplimiento a lo establecido en la ley 1523 de 2012. Este plan será diseñado, implementado y actualizado por el Concesionario de acuerdo con los lineamientos descritos en el Anexo del Apéndice Técnico 3 “Plan de Gestión de Riesgos de Desastres”.
 
 
-Página 124 de 288
-
 (iv) Un plan para implementar, desarrollar y ejecutar acciones preventivas para evitar que cualquier persona natural o jurídica utilice a las entidades públicas o privadas que participen dentro del Proyecto, como instrumento para el lavado de activos y/o canalización de recursos hacia la financiación del terrorismo y/o actos de corrupción, en cumplimiento de la Ley Aplicable. Este plan será aplicado por el Concesionario durante todo el plazo de la Concesión.
 
 (v)  Elaborar y presentar a la ANI para su aprobación dentro de los ciento ochenta (180) Días contados desde la Fecha de Inicio, un plan de trabajo para la ejecución de los acuerdos y compromisos adquiridos con las comunidades étnicas en los procesos de consulta previa protocolizados durante la fase de estructuración del Proyecto, los cuales se encuentran listados y detallados en el Apéndice Técnico 1. La ANI contará con un plazo máximo de quince (15) Días para revisar dicho plan de trabajo, vencido el cual, si no hubiese pronunciamiento por parte de la ANI se entenderá que lo encuentra acorde con los acuerdos y compromisos adquiridos en las consultas.
@@ -2958,7 +2663,6 @@ Página 124 de 288
 (ff)    El Concesionario deberá, como actor de la gestión del riesgo de desastres en el sector transporte, dar cumplimiento en lo de su competencia, a lo establecido en la Ley 1523 del 24 de abril del 2012, el decreto 2157 de diciembre 20 de 2017 y el decreto 602 del 6 de abril de 2017, y deberá incorporar la reducción de riesgos de desastres en el Proyecto, contando, entre otros, con metodologías de planificación y con normas técnicas de diseño a lo largo del ciclo de formulación y ejecución de proyectos, por lo cual se acogerá a los lineamientos del sector transporte y a las directrices que el Gobierno Nacional y el Ministerio de  Transporte,  emitan  al  respecto.  Como  resultado  deberá  elaborar, implementar y actualizar el plan de gestión de riesgos de desastres de acuerdo con las disposiciones contenidas en el Anexo del Apéndice Técnico 3 “Plan de Gestión de Riesgos de Desastres”.
 
 (gg)   A partir del inicio de la Fase de Preconstrucción y hasta la terminación de las obligaciones que han de ser cubiertas con los recursos contenidos en la
-Página 125 de 288
 
 Subcuenta  Predios,  Subcuenta  Redes  y  Subcuenta  Compensaciones Socioambientales,  el  Concesionario  deberá  entregar  como  mínimo trimestralmente, un informe de proyección de ingresos y egresos de las Subcuentas asociadas a los riesgos de sobrecostos a cargo de la ANI de acuerdo con el procedimiento interno de la ANI.
 
@@ -2976,7 +2680,6 @@ Subcuenta  Predios,  Subcuenta  Redes  y  Subcuenta  Compensaciones Socioambient
 
 (e)    Elaborar  y  entregar  al  Concesionario  comunicaciones  dirigidas  a  los registradores de instrumentos públicos de la zona de influencia del Proyecto notificando: (i) la existencia del Contrato y del poder; y (ii) la facultad que tiene el Concesionario de actuar en nombre y representación de la ANI. Tanto el poder como la comunicación de que trata el presente literal serán entregados al Concesionario dentro de los tres (3) Días Hábiles siguientes a la Fecha de Inicio.
 
-Página 126 de 288
 
 (f)    Realizar los aportes que correspondan al Fondo de Contingencias en los términos y condiciones aprobados por el Ministerio de Hacienda y Crédito Público.
 
@@ -2998,7 +2701,6 @@ Página 126 de 288
 4.4  Condiciones Precedentes para el Inicio de la Fase de Construcción
 
 Son condiciones precedentes, es decir, requisitos sobre los cuales se deberá haber verificado su cumplimiento para el inicio de la Fase de Construcción del Contrato:
-Página 127 de 288
 
 (a)    Haberse no objetado el Plan de Obras, de conformidad con lo establecido en la Sección 4.7 de esta Parte General y en el Apéndice Técnico 9.
 
@@ -3016,11 +2718,10 @@ Página 127 de 288
 (h)    Haber obtenido las Licencias y Permisos –incluida la Licencia Ambiental, de ser procedente– requeridos por la Autoridad Estatal y por la Autoridad Ambiental para el inicio de las Intervenciones de la primera Unidad Funcional a que se refiere la Sección 4.4(g), que requieran conforme a la Ley Aplicable de Licencias y/o Permisos, en general dar aplicación a lo establecido en el Capítulo III del Apéndice Técnico 6 Gestión Ambiental – Obligaciones durante la Fase de Preconstrucción.
 
 (i)    Respecto del cumplimiento del proceso de consulta previa a comunidades étnicas,  que  sean  reconocidas  por  Autoridad  Estatal  competente  con posterioridad a la apertura del Proceso de Selección, en los casos en los que aplique para el inicio de las Intervenciones de las Unidades Funcionales que deben acometerse al inicio de la Fase de Construcción, haber logrado los acuerdos definitivos y protocolizados por parte del Ministerio del Interior.
-Página 128 de 288
 
 (j)    Haber cumplido con las demás obligaciones previstas en los Apéndices y Anexos  del  Contrato  que  deben  ser  cumplidas  durante  la  Fase  de Preconstrucción.
 
-(k)    Obtener y mantener en vigor las garantías de que trata el CAPÍTULO XII de esta Parte General.
+(k)    Obtener y mantener en vigor las garantías de que trata el CAPÍTULO XI I de esta Parte General.
 (l)    Fondear las subcuentas del Patrimonio Autónomo que así lo requieran, de conformidad con lo previsto en este Contrato.
 4.5  Principales Obligaciones del Concesionario durante la Fase de Construcción
 
@@ -3030,12 +2731,11 @@ Página 128 de 288
 
 (c)    Efectuar la Operación y Mantenimiento del Proyecto, incluida la de las Unidades Funcionales respecto de las cuales se haya suscrito el Acta de Terminación de Unidad Funcional o el Acta de Terminación Parcial de Unidad Funcional –según corresponda–, conforme a los requisitos previstos en el Apéndice Técnico 2.
 
-(d)    Obtener y mantener en vigor las garantías de que trata el CAPÍTULO XII de esta Parte General.
+(d)    Obtener y mantener en vigor las garantías de que trata el CAPÍTULO XI I de esta Parte General.
 
 (e)    Asegurarse de que los Contratistas: (i) obtengan y mantengan vigentes las garantías que le sean exigidas en virtud del presente Contrato; (ii) mantengan todos los equipos, materiales y el personal que necesiten para la ejecución de las obras y actividades correspondientes al objeto contratado; (iii) cumplan con la normatividad laboral y de riesgos profesionales vigente; (iv) cumplan con los cronogramas y plazos establecidos en el Contrato de Concesión y en el Plan de Obras; (v) cumplan con los planes de inversión de recursos entregados por el Concesionario para la adecuada ejecución de las actividades contratadas y (vi) cumplan con las obligaciones ambientales y sociales establecidas en las Licencias Ambientales y demás permisos, autorizaciones y compromisos proferidos por las autoridades competentes.
 
 (f)    Tramitar y obtener ante las Autoridades Estatales y/o Autoridades Ambientales todos los permisos, licencias, autorizaciones y concesiones para adelantar las Intervenciones de cada Unidad Funcional y para el uso y aprovechamiento de recursos naturales y para el depósito de materiales. Así mismo, preparar todos los estudios que le solicite la Autoridad Ambiental, necesarios para el trámite y obtención de la(s) Licencia(s) Ambiental(es) o los estudios adicionales
-Página 129 de 288
 
 solicitados por la Autoridad Ambiental o cualquier otra Autoridad Estatal durante la ejecución del Proyecto, así como asumir todos los costos y tiempos requeridos para la realización de tales estudios.
 
@@ -3052,7 +2752,6 @@ solicitados por la Autoridad Ambiental o cualquier otra Autoridad Estatal durant
 (l)    Evitar la revocatoria, por causas imputables al Concesionario, de cualquiera de los permisos, licencias o aprobaciones gubernamentales requeridas para la ejecución del Contrato.
 
 (m)   Coordinar con la ANI los trámites ante las entidades propietarias de las Redes afectadas de acuerdo con los Estudios de Trazado y Diseño Geométrico y Estudios de Detalle, para que se efectúen los traslados –o cualquier otro manejo a que haya lugar– o efectuar los correspondientes traslados según se haya acordado con la respectiva entidad titular. La coordinación de la ANI no implica asunción de responsabilidad por parte de la entidad ni relevo de las obligaciones del Concesionario.
-Página 130 de 288
 
 (n)    Efectuar la Gestión Predial de manera que antes de iniciar las Intervenciones de cada Unidad Funcional el Concesionario como mínimo debe (i) haber adquirido, o (ii) demostrar que se tiene disponibilidad –entendida como la tenencia que le permita al Concesionario acceder físicamente al predio y realizar las actividades que impliquen su destinación al Proyecto– del cuarenta por ciento (40%) (ya sea por (i), por (ii) o por la suma de ambos) de la longitud efectiva de los Predios necesarios para la ejecución de las Intervenciones de la respectiva Unidad Funcional. El porcentaje anterior podrá ser superior, si así se define entre el Concesionario y los Prestamistas.
 
@@ -3066,7 +2765,6 @@ Página 130 de 288
 
 (s)    Colaborar con las autoridades de tránsito y demás Autoridades Estatales en el diseño y puesta en marcha de programas y proyectos de planes de educación vial y de seguridad vial, de conformidad con las regulaciones, políticas, estrategias y directrices de la autoridad competente para el efecto, así como implementar campañas y programas de seguridad vial con relación a la población escolar, peatones, usuarios y, en general, población afectada positiva o negativamente con el Proyecto.
 
-Página 131 de 288
 
 (t)    Salir en defensa jurídica de los bienes que conforman la infraestructura vial del Proyecto y de los derechos que se le han conferido al Concesionario, especialmente la defensa y protección del Corredor del Proyecto y la protección de la destinación legal de las Fajas.
 
@@ -3082,7 +2780,6 @@ Página 131 de 288
 (y)    Implementar la instrumentalización y el monitoreo de los sitios previamente definidos en la Fase de Preconstrucción, de acuerdo con lo previsto en la Sección 4.2(cc) de esta Parte General, e iniciar el reporte de la información (cuya  periodicidad  de  reportes  estará  en  función  de  las  condiciones hidrometeorológicas y deberá ser definida por la ANI, previo concepto de la Interventoría) con miras al seguimiento y monitoreo para la prevención de eventos asociados a la naturaleza a lo largo del Corredor del Proyecto, generando las alertas tempranas y ejecutando las obras de prevención y/o mitigación necesarias, sujeto a la verificación de la Interventoría. Esta obligación es también aplicable a la Etapa de Operación y Mantenimiento.
 
 (z)    El Concesionario deberá levantar, previo al inicio de las obras de cada Unidad Funcional, las actas de vecindad de los predios aledaños a las Intervenciones y deberá garantizar que las Intervenciones no afecten de manera injustificada la provisión de servicios públicos domiciliarios que sirven a esos predios. Tanto el formato como su diligenciamiento son de absoluta responsabilidad del Concesionario.
-Página 132 de 288
 
 (aa)   Adicionalmente,  el Concesionario deberá mantener en su  contabilidad claramente identificados y detallados los ingresos y egresos debidamente soportados correspondientes a cada Unidad Funcional y deberá presentar a la ANI y al Interventor un informe mensual (dentro de los primeros quince (15) Días del Mes) suscrito por su auditor sobre los criterios empleados por el Concesionario para contabilizar la acumulación de los ingresos y egresos por Unidad Funcional.
 
@@ -3100,7 +2797,6 @@ Página 132 de 288
 
 4.6  Principales Obligaciones de la ANI durante la Fase de Construcción
 
-Página 133 de 288
 
 (a)    Efectuar los Aportes ANI al Patrimonio Autónomo, en los montos y plazos previstos en la Parte Especial, y pagar los intereses remuneratorios y/o moratorios en el caso que los mismos se causen de conformidad con lo previsto en las Secciones 3.6(b) y 3.6(d) de esta Parte General.
 
@@ -3120,7 +2816,6 @@ Página 133 de 288
 (i)    Coordinar con el Concesionario y los dueños de las Redes, lo relacionado con las eventuales Intervenciones que deban hacerse sobre las mismas. La participación de la ANI en el trámite mencionado no implica que el riesgo de Redes se convierta en un riesgo compartido o a cargo de la ANI.
 
 (j)    Delegar a un funcionario de la ANI, que podrá ser parte del Equipo de Coordinación y Seguimiento del Contrato, para que lidere y acompañe al
-Página 134 de 288
 
 Concesionario en las nuevas consultas con las comunidades étnicas que sean reconocidas por Autoridad Estatal competente, y coordine con esta Autoridad los  trámites  necesarios  para adelantar  y  concluir  estas  consultas.  La participación de la ANI en el trámite mencionado no implica que el riesgo de Gestión Social y Ambiental se convierta en un riesgo compartido o a cargo de la ANI.
 
@@ -3138,7 +2833,6 @@ Concesionario en las nuevas consultas con las comunidades étnicas que sean reco
 (c)    La ANI contará con un plazo máximo de quince (15) Días para revisar el Plan de Obras, vencido el cual, si no hubiese pronunciamiento por parte de la ANI se entenderá que lo encuentra acorde con las obligaciones previstas en este Contrato. La ANI solamente podrá revisar la consistencia de este Plan en lo pertinente a los requisitos contenidos en el Apéndice Técnico 9 y las fechas previstas en la Parte Especial del Contrato para la terminación de las Intervenciones de cada Unidad Funcional.
 
 (d)    El Interventor verificará el avance de las Intervenciones objeto del Contrato de manera bimestral y dejará constancia del porcentaje de avance de obra de cada una de las Intervenciones en cada Unidad Funcional, conforme con la metodología que defina la ANI; sin embargo, el cumplimiento del cronograma
-Página 135 de 288
 
 de obras será verificado en la fecha de terminación de las Intervenciones que se señale en el Plan de Obras.
 
@@ -3157,7 +2851,6 @@ de obras será verificado en la fecha de terminación de las Intervenciones que 
 (b)    Copia de la Notificación deberá ser remitida al representante de los Prestamistas.
 
 (c)    La ANI y el Interventor contarán con un plazo máximo de sesenta (60) Días para analizar las razones aducidas por el Concesionario y pronunciarse por escrito contados desde la Notificación de que trata la Sección 4.9(a) o desde la
-Página 136 de 288
 
 complementación de la información que requiera la ANI y/o el Interventor, requerimiento que podrá ser realizado por una sola vez por parte de la ANI y/o Interventor.
 
@@ -3182,8 +2875,6 @@ complementación de la información que requiera la ANI y/o el Interventor, requ
 (iii) El Concesionario podrá solicitar plazo adicional para la terminación de la Unidad Funcional, siempre y cuando no le haya sido otorgado el Plazo de Cura para la terminación de la Unidad Funcional sobre la que eleva la solicitud.
 
 
-Página 137 de 288
-
 (c)    Con la presentación de la solicitud, el Concesionario acepta que por cada Día de plazo adicional utilizado para terminar la Unidad Funcional, se generará un valor a favor de la ANI por el monto previsto para el efecto en la Parte Especial multiplicado por el número de Días efectivamente utilizado por cada Unidad Funcional de conformidad con la Sección 4.10(e) siguiente de esta Parte General y se pagará en la forma establecida en la Sección 4.10(k) de esta Parte General.
 
 (d)    La solicitud formal para la aplicación de lo previsto en la Sección 4.10(a) de esta Parte General deberá presentarse por parte del Concesionario con al menos treinta (30) Días de anticipación al cumplimiento del plazo máximo de ejecución previsto para la Unidad Funcional respectiva descrito en la Parte Especial, mediante Notificación dirigida tanto a la ANI como al Interventor y con copia a los Prestamistas.
@@ -3197,7 +2888,6 @@ Página 137 de 288
 (h)    Las consecuencias desfavorables y las modificaciones en las condiciones de los riesgos a cargo del Concesionario, que se generen con ocasión de la aplicación de lo dispuesto en esta Sección no podrán ser utilizadas por el Concesionario para futuras reclamaciones, como tampoco aplicarán pagos a favor del Concesionario por riesgos de menor recaudo a cargo de la ANI, generados por el plazo adicional.
 
 (i)    Además del valor a favor de la ANI que establece la Sección 4.10(k) de esta Parte General, el Concesionario deberá cubrir en todo caso el mayor valor generado por el plazo adicional respecto de los costos de Interventoría y Coordinación  mediante  un  fondeo  en  la  Subcuenta  Interventoría  y Coordinación en un monto proporcional al plazo adicional estimado solicitado, que será calculado por la ANI tomando como base el monto establecido en la Parte Especial para los aportes a esta Subcuenta durante la Fase de Construcción del Contrato. Por consiguiente, el Concesionario deberá fondear la Subcuenta Interventoría y Coordinación garantizando los valores y plazos que le establezca la ANI, de tal forma que el mecanismo sea eficiente y oportuno. En caso de no cumplirse con este fondeo adicional se entenderá no otorgado el plazo adicional solicitado por el Concesionario y se iniciarán los
-Página 138 de 288
 
 procesos sancionatorios que resulten pertinentes. Cuando el monto del fondeo efectuado a la Subcuenta Interventoría y Coordinación fuere superior al plazo efectivamente utilizado para terminar la Unidad Funcional, el monto en exceso consignado será trasferido a la Subcuenta de la Cuenta Proyecto que indique el Concesionario.
 
@@ -3219,8 +2909,6 @@ procesos sancionatorios que resulten pertinentes. Cuando el monto del fondeo efe
 (a)    El cumplimiento de las Especificaciones Técnicas no eximirá al Concesionario del cumplimiento de todas las obligaciones a su cargo y de la obtención de los resultados previstos en el Contrato y sus Apéndices.
 
 
-Página 139 de 288
-
 (b)    En consecuencia, no se aceptará reclamación alguna, ni solicitud de extensión de plazos, ni solicitudes de compensaciones derivadas de insuficiencias en las Especificaciones  Técnicas,  pretendidas  o  reales,  puesto  que  estas especificaciones son exigencias mínimas que el Concesionario deberá cumplir, y, -de ser el caso- mejorar en lo que resulte necesario para garantizar la obtención de los resultados previstos en el Contrato y sus Apéndices.
 
 (c)    La aplicación de las previsiones contenidas en los Apéndices Técnicos genera a cargo del Concesionario obligaciones de resultado y no de medio. En todo caso, las Intervenciones deberán cumplir con las Especificaciones Técnicas contenidas en dichos Apéndices, especialmente en materia de calidad, resistencia y durabilidad.
@@ -3232,7 +2920,6 @@ Página 139 de 288
 (f)    Si durante la ejecución del presente Contrato sobreviene un cambio de la Ley Aplicable que pudiese implicar a su vez un cambio en las Especificaciones Técnicas, esa modificación no le será obligatoria al Concesionario, salvo que la ANI lo requiera mediante una Notificación, en la que se indique la forma en que la ANI cubrirá los mayores costos –de ser el caso– que conlleve la ejecución del cambio en las Especificaciones Técnicas. Si las modificaciones a que se refiere esta Sección no implican mayores costos, las mismas serán de obligatorio  cumplimiento  para  el  Concesionario,  sin  necesidad  de requerimiento alguno por parte de la ANI. Los ahorros por el cambio en las Especificaciones Técnicas  serán  a favor de  la ANI, para lo cual el Concesionario deberá calcular dichos ahorros y suministrar a la ANI y al Interventor toda la información y soportes necesarios para el cálculo de los mismos, así mismo, dichos ahorros acrecentarán la Subcuenta Excedentes ANI. Cualquier controversia que surgiere entre las Partes con ocasión del cambio de Especificaciones Técnicas referido en el presente literal, será sometida a la decisión de los Amigables Componedores.
 
 (g)    Es responsabilidad del Concesionario detectar y corregir los errores que pudieran contener los Apéndices Técnicos, relativos tanto al cumplimiento de la normativa aplicable como en relación con la sustentabilidad de la infraestructura y la prestación de los servicios a cargo del Concesionario, en los términos de la Sección 4.12 de esta Parte General.
-Página 140 de 288
 
 (h)   Las controversias que surjan relacionadas con lo previsto en la presente Sección 4.11, serán resueltas por el Amigable Componedor.
 
@@ -3261,7 +2948,6 @@ Página 140 de 288
 (i)  Se entiende que existe contradicción entre dos Especificaciones Técnicas, cuando:
 
 (1)     El Contrato de Concesión o cualquiera de sus Anexos o Apéndices  prevén  procedimientos  diferentes  para  la realización de una misma actividad, sin que expresamente se
-Página 141 de 288
 
 haya señalado prelación entre los diferentes documentos que solucione dicha contradicción, o
 
@@ -3277,8 +2963,6 @@ haya señalado prelación entre los diferentes documentos que solucione dicha co
 
 (i)  Se entiende que existe conflicto entre las Especificaciones Técnicas y la Ley Aplicable cuando del cumplimiento de aquellas se deriva un acto o conducta prohibido por la Ley Aplicable vigente al momento de la presentación de la Oferta.
 
-
-Página 142 de 288
 
 (ii)  No existe conflicto entre las Especificaciones Técnicas y la Ley Aplicable cuando las Especificaciones Técnicas exijan una mayor calidad de una obra, equipo, bien o sistema, o un nivel de servicio más alto. En tal caso se aplicará lo previsto en las Especificaciones Técnicas.
 
@@ -3296,7 +2980,6 @@ Página 142 de 288
 4.13 Fuentes de materiales
 
 (a)    Correrán por cuenta y responsabilidad del Concesionario la obtención y conservación, durante el plazo del Contrato, de Licencias Ambientales, Licencias y Permisos y/o concesiones de explotación de las fuentes de
-Página 143 de 288
 
 materiales, de las zonas de préstamo y de las zonas de descargue de desechos, así como los costos de las servidumbres, arrendamientos o adquisición de predios, construcción, mejoramiento y conservación de las vías de acceso a las fuentes de materiales y/o depósitos de sobrantes y demás gastos necesarios para su realización y obtención (incluyendo sin limitación los impuestos, peajes o cobros de salida de playa, etc.). Todo lo anterior, de conformidad con lo establecido en el presente Contrato y sus Apéndices.
 
@@ -3311,7 +2994,6 @@ materiales, de las zonas de préstamo y de las zonas de descargue de desechos, a
 4.15 Ubicación de equipos
 
 (a)    El  Concesionario  deberá  situar  oportunamente,  en  el  lugar  de  las Intervenciones, todo el equipo que necesite para el cumplimiento oportuno, eficiente y calificado de sus obligaciones. Estará a cargo del Concesionario la adecuación de las vías y estructuras que fuesen necesarias para el transporte de
-Página 144 de 288
 
 los mismos, así como la obtención de los permisos y autorizaciones que fueren necesarios para la movilización de los equipos y maquinaria utilizados por el Concesionario o por sus Contratistas.
 
@@ -3347,7 +3029,6 @@ Durante la ejecución del Contrato, el Concesionario deberá mantener actualizad
 (a)   Verificación de las Unidades Funcionales:
 
 (i)  Para efectos de la verificación de las Intervenciones por parte del Interventor  y  la  ANI,  el  Concesionario  deberá  poner  tales Intervenciones a disposición del Interventor y de la ANI mediante el envío de una Notificación a la cual anexará copia magnética de la Memoria Técnica y planos As Built en las condiciones descritas en el
-Página 145 de 288
 
 Apéndice Técnico 2, o indicará la dirección electrónica de acceso a la misma.
 
@@ -3360,8 +3041,6 @@ Apéndice Técnico 2, o indicará la dirección electrónica de acceso a la mism
 (2)     Si el Plazo de Cura otorgado para subsanar el incumplimiento por la no terminación de las Unidades Funcionales conforme a lo señalado en la Parte Especial es inferior al veinte por ciento (20%) del plazo inicialmente previsto en la Parte Especial  para  la  terminación  de  la  Unidad  Funcional respectiva, y el plazo remanente para completar el veinte por ciento (20%) mencionado es superior a sesenta (60) Días, el Plazo de Cura del que trata esta Sección 4.17(a)(iii) podrá otorgarse hasta por la totalidad de dicho plazo remanente.
 
 
-Página 146 de 288
-
 (3)     Si el Plazo de Cura otorgado para subsanar el incumplimiento por la no terminación de las Unidades Funcionales conforme a lo señalado en la Parte Especial es inferior al veinte por ciento (20%) del plazo inicialmente previsto en la Parte Especial  para  la  terminación  de  la  Unidad  Funcional respectiva, y el plazo remanente para completar dicho veinte por ciento (20%) es inferior o igual a sesenta (60) Días, el Plazo de Cura del que trata la presente Sección 4.17(a)(iii) podrá ser hasta por un término de sesenta (60) Días.
 
 (4)     En caso de que no se haya otorgado Plazo de Cura para subsanar el incumplimiento por la no terminación de las Unidades Funcionales conforme a lo señalado en la Parte Especial, el Plazo de Cura del que trata la presente Sección 4.17(a)(iii) podrá otorgarse hasta por un término del veinte por ciento (20%) del plazo inicialmente previsto en la Parte Especial  para  la  terminación  de  la  Unidad  Funcional respectiva.
@@ -3373,7 +3052,6 @@ Página 146 de 288
 Si en la segunda revisión se verifica el cumplimiento por parte del Concesionario de: (A) las Especificaciones Técnicas del Apéndice Técnico 1 y (B) los Indicadores señalados en la Parte Especial se suscribirá el Acta de Terminación de Unidad Funcional, y no se causarán Multas a cargo del Concesionario.
 
 Si se vence el Plazo de Cura sin que el Concesionario culmine la totalidad de los ajustes o correcciones a satisfacción del Interventor o en la segunda revisión no se verifica el cumplimiento de los ajustes o correcciones de las Especificaciones Técnicas e Indicadores señalados en la Parte Especial, se impondrán Multas al Concesionario, en los términos señalados en la Parte Especial del presente Contrato, hasta que el Concesionario corrija o ajuste las Intervenciones a satisfacción del Interventor. Cuando transcurra el término señalado en la Parte Especial,
-Página 147 de 288
 
 contado desde el vencimiento del Plazo de Cura, sin que se haya subsanado el incumplimiento, la ANI podrá dar aplicación a la Sección
 11.1 de esta Parte General, sin perjuicio de los derechos de los Prestamistas. Durante este plazo el Interventor y la ANI deberán estar disponibles para hacer las verificaciones dentro de los quince (15) Días Hábiles siguientes a la Notificación que envíe el Concesionario.
@@ -3390,7 +3068,6 @@ Si el Concesionario no está de acuerdo con la segunda revisión, lo indicará a
 (vii) Cuando se cumpla con los requisitos establecidos en la Sección 14.1(a) de esta Parte General, se procederá a suscribir el Acta de Terminación Parcial de Unidad Funcional a más tardar dentro de los diez (10) Días Hábiles  siguientes,  al  vencimiento  del  plazo  para  realizar  la verificación señalado en las Secciones 4.17(a)(ii) o 4.17(a)(v), según corresponda,  y se empezará a causar y a pagar la Compensación Especial, de conformidad con este Contrato.
 
 (viii) Si pasados ciento ochenta (180) Días contados desde la suscripción del Acta de Terminación de Unidad Funcional, de conformidad con la Sección 4.17(a)(vi)(2), el Concesionario no ha cumplido a cabalidad con las Especificaciones Técnicas, salvo por lo previsto en los Apéndices Técnicos 5, 6, 7 y 8, se realizará la Retención de la totalidad de la Retribución, después de aplicado el Índice de Cumplimiento, calculado de conformidad como lo establece la Parte Especial, hasta tanto dichas obligaciones se cumplan. Adicionalmente, de ser el caso, se causarán las Multas que correspondan por el incumplimiento en las Especificaciones Técnicas, salvo por las obligaciones contenidas en los Apéndices Técnicos 5, 6, 7 y 8. Las controversias que surjan de la aplicación de lo previsto en esta Sección serán dirimidas por el
-Página 148 de 288
 
 Amigable Componedor. Se excluye de esta Sección la obligación de acreditar la totalidad de la(s) Oferta(s) Formal(es) de Compra de Predios Requeridos y la(s) solicitud(es) de Cesión o Adjudicación de Predios asociados a dicha Unidad Funcional y el cumplimiento de las obligaciones contenidas en los Apéndices Técnicos 5, 6 y 8, las cuales se regulará conforme a las siguientes Secciones.
 
@@ -3406,7 +3083,6 @@ Amigable Componedor. Se excluye de esta Sección la obligación de acreditar la 
 
 (i)  La Fase de Construcción terminará cuando se suscriba el Acta de Terminación de Unidad Funcional de la última Unidad Funcional que sea ejecutada por el Concesionario.
 
-Página 149 de 288
 
 (ii)  Cuando se suscriba el Acta de Terminación de Unidad Funcional de la última Unidad Funcional se entenderá que ha terminado la Etapa Preoperativa.
 
@@ -3421,7 +3097,6 @@ Página 149 de 288
 
 (iii) En ningún caso se entenderá que la suscripción del Acta de Terminación de Unidad Funcional, o el Acta de Terminación Parcial de Unidad Funcional si es el caso, implica la exoneración de alguna de las responsabilidades que contrae el Concesionario, con ocasión de la suscripción  del  Contrato,  especialmente  en  cuanto  a  calidad, resistencia y durabilidad de las Intervenciones.
 
-Página 150 de 288
 
 4.18 Puesta en servicio de las Unidades Funcionales
 
@@ -3432,38 +3107,6 @@ Página 150 de 288
 4.19 Construcción de túneles
 En caso de que el Proyecto incluya túneles aplicará lo dispuesto en la Parte Especial.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 151 de 288
 
 CAPÍTULO V  ETAPA PREOPERATIVA - CONTRATOS DE DISEÑO, CONSTRUCCIÓN Y OPERACIÓN
 
@@ -3482,7 +3125,6 @@ CAPÍTULO V  ETAPA PREOPERATIVA - CONTRATOS DE DISEÑO, CONSTRUCCIÓN Y OPERACI�
 
 (a)    Los requisitos de experiencia mínimos que deberá cumplir el(los) Contratista(s) encargado(s) de la ejecución del Contrato de Construcción serán los previstos en la Parte Especial.
 
-Página 152 de 288
 
 (b)    El(los) Contratista(s) de Construcción podrá(n) acreditar experiencia obtenida bajo figuras asociativas con terceros incluyendo patrimonios autónomos, siempre que la participación del Contratista en dicha figura asociativa haya sido (durante toda la vigencia del contrato que se acredita) de al menos veinte por ciento (20%), caso en el cual la experiencia adquirida se podrá acreditar por el ciento por ciento (100%).
 
@@ -3497,7 +3139,6 @@ Página 152 de 288
 (a)    Antes de proceder a su contratación, el Concesionario acreditará que los Contratistas cumplen con los requisitos previstos en la Parte Especial, mediante la remisión de una declaración juramentada en la que tanto el Concesionario como el respectivo Contratista declaren que dicho Contratista cumple con los requisitos respectivos y relacionen los proyectos ejecutados que le permite cumplir con ese perfil.
 
 (b)    La ANI aplicará el principio de la buena fe en cuanto a la información contenida en la declaración juramentada. Sin embargo, podrá requerir y verificar, a su discreción, la información que considere necesaria para corroborar lo señalado en la declaración y, de encontrarse afirmaciones que no coincidan con la realidad, la ANI iniciará las acciones legales correspondientes.
-Página 153 de 288
 
 (c)    Lo anterior no impedirá que se corrijan eventuales errores cometidos al diligenciar la declaración. De ser advertidos, el Interventor deberá enviar una Notificación al Concesionario solicitando la corrección de los mismos, dentro de los cinco (5) Días Hábiles siguientes a la fecha de entrega de la declaración por parte del Concesionario.
 
@@ -3505,52 +3146,7 @@ Página 153 de 288
 (e)    Si la declaración contiene información incorrecta o si no se presenta dentro del plazo señalado en el presente numeral, se aplicarán las sanciones por incumplimiento previstas en este Contrato.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 154 de 288
-
-CAPÍTULO VI  ETAPA PREOPERATIVA–ESTUDIOS Y DISEÑOS
+CAPÍTULO V I  ETAPA PREOPERATIVA–ESTUDIOS Y DISEÑOS
 
 6.1  Presentación de los Estudios
 
@@ -3571,7 +3167,6 @@ CAPÍTULO VI  ETAPA PREOPERATIVA–ESTUDIOS Y DISEÑOS
 (a)    El Interventor analizará los Estudios de Trazado y Diseño Geométrico y los Estudios de Detalle, para lo cual contará con un plazo máximo de cuarenta y cinco (45) Días contados a partir del Día de la entrega de los mismos.
 
 (b)    El Interventor, dentro del plazo aquí previsto, advertirá y comunicará al Concesionario y a la ANI: (i) cualquier inconsistencia entre dichos estudios y la posibilidad de obtener los resultados requeridos en el Contrato, en especial en las Especificaciones Técnicas, (ii) el evento en que, como consecuencia de modificaciones efectuadas a los Estudios de Trazado y Diseño Geométrico
-Página 155 de 288
 
 presentados por el Concesionario sobrepasen, excedan y/o se extiendan más allá del área de la Franja de Utilidad Pública, (iii) el evento en que la superación de la Franja de Utilidad Pública se extienda longitudinalmente en una distancia mayor a la definida en la Parte Especial y (iv) el resultado de sus análisis y la valoración de los riesgos a cargo de la ANI, que se estimen con los Estudios de Trazado y Diseño Geométrico presentado por el Concesionario.
 
@@ -3587,10 +3182,9 @@ presentados por el Concesionario sobrepasen, excedan y/o se extiendan más allá
 
 6.3  Modificaciones y Adecuaciones a los Estudios de Trazado y Diseño Geométrico que sobrepasen la Franja de Utilidad Pública.
 
-(a)    Siempre que las modificaciones y/o adecuaciones que realice el Concesionario a los Estudios de Trazado y Diseño Geométrico permitan que éstos se efectúen y/o se mantengan dentro del área de la Franja de Utilidad Pública, la asignación de los riesgos del Proyecto aplicará conforme a lo establecido en el CAPÍTULO XIII del presente Contrato.
+(a)    Siempre que las modificaciones y/o adecuaciones que realice el Concesionario a los Estudios de Trazado y Diseño Geométrico permitan que éstos se efectúen y/o se mantengan dentro del área de la Franja de Utilidad Pública, la asignación de los riesgos del Proyecto aplicará conforme a lo establecido en el CAPÍTULO XII I del presente Contrato.
 
 (b)    Cuando los Estudios de Trazado y Diseño Geométrico que presente el Concesionario conforme a lo establecido en las Secciones 6.1 y 6.2 de esta Parte
-Página 156 de 288
 
 General, sobrepasen, excedan y/o se extiendan más allá del área de la Franja de Utilidad Pública del Proyecto, y dicha superación de la Franja de Utilidad Pública se extienda longitudinalmente en una distancia mayor a la definida en la Parte Especial, será obligación del Concesionario asumir los efectos favorables y/o desfavorables de dichas modificaciones, en cuanto al valor base de la modificación y a la totalidad de los riesgos, entiéndase la totalidad, como la sumatoria de los riesgos y/o la porción del riesgos a cargo del Concesionario más los riesgos y/o porción de riesgos a cargo de la ANI descritos en las Secciones 13.3(a), 13.3(b) y 13.3(e) de esta Parte General, en cuanto a dicha modificación. Lo anterior salvo que dichas variaciones sean producto del trámite y/o el otorgamiento de la Licencia Ambiental solicitado por la Autoridad Estatal competente. Sin perjuicio de lo anterior, el Concesionario mantiene siempre la obligación de entregar las Intervenciones en los términos y condiciones establecidas en el Contrato, en cuanto a las Especificaciones Técnicas.
 
@@ -3603,8 +3197,6 @@ Lo anterior salvo que dichas variaciones sean producto de: (i) modificaciones po
 (d)    En caso de presentarse el evento previsto en la Sección 6.3(b) anterior, el Concesionario deberá presentar todos los soportes que la ANI le solicite dentro de los plazos y términos que la misma le establezca para tal efecto. El Concesionario deberá remitir dicha información a la Interventoría para su verificación y posterior entrega a la ANI.
 
 
-Página 157 de 288
-
 (e)    Conforme al procedimiento de revisión previsto en la Sección 6.2 de esta Parte General, en caso de presentarse modificaciones al trazado y diseño geométrico del Proyecto establecido en los Estudios de Trazado y Diseño Geométrico que impliquen que éstos sobrepasen, excedan y/o se extiendan más allá del área de la Franja de Utilidad Pública y dicha superación de la Franja de Utilidad Pública se extienda longitudinalmente en una distancia mayor a la definida en la Parte Especial, el Interventor dejará expresada esta circunstancia en la comunicación que le envíe al Concesionario y a la ANI, sin perjuicio de las formulaciones técnicas, análisis y valoraciones de los riesgos que debe presentar con el fin de asegurarse, en todo caso, que con dichas modificaciones se dé cumplimiento a los términos y condiciones establecidas en el Contrato, en cuanto a las Especificaciones Técnicas.
 
 6.4  Modificaciones y Adecuaciones a los Estudios de Trazado y Diseño Geométrico y/o los Estudios de Detalle
@@ -3615,8 +3207,6 @@ Página 157 de 288
 
 (c)    El Interventor tendrá un plazo de veinte (20) Días para pronunciarse sobre las modificaciones y efectuar las objeciones que considere procedentes, estas objeciones se realizaran siempre y cuando las modificaciones no se ajusten a las previsiones del Contrato y/o sus Apéndices, o cuando impliquen una variación desfavorable para los riesgos a cargo de la ANI. El Interventor deberá realizar las objeciones dentro del plazo previsto en la presente Sección; y cuando el Concesionario no haya efectuado los ajustes solicitados por el Interventor o no se haya logrado un acuerdo entre el Concesionario y el Interventor en relación con la pertinencia de los comentarios.
 
-
-Página 158 de 288
 
 (d)    El Interventor, dentro del plazo aquí previsto, advertirá y comunicará al Concesionario y a la ANI cualquier inconsistencia entre dichos estudios y la posibilidad de obtener los resultados requeridos en el Contrato, en especial en las Especificaciones Técnicas. Con base en dichas comunicaciones con sus respectivos soportes la ANI podrá objetar las Modificaciones y Adecuaciones a los Estudios de Trazado y Diseño Geométrico y/o los Estudios de Detalle. Dicha comunicación del Interventor, no se entenderá como aprobación o desaprobación de la modificación de los Estudios de Trazado y Diseño Geométrico o de los Estudios de Detalle y no servirá de excusa al Concesionario para  el  no  cumplimiento  de  los  resultados  requeridos  en  dichas Especificaciones Técnicas o para el no cumplimiento de cualquier otra de sus obligaciones bajo el Contrato.
 
@@ -3631,27 +3221,7 @@ Página 158 de 288
 (c)    El Interventor contará con el plazo de quince (15) Días para pronunciarse sobre las modificaciones del Concesionario presentadas conforme a lo señalado en la Sección 6.5(a) anterior.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 159 de 288
-
-CAPÍTULO VII ETAPA PREOPERATIVA - GESTIÓN PREDIAL
+CAPÍTULO VI I ETAPA PREOPERATIVA - GESTIÓN PREDIAL
 
 7.1  Generalidades de la Gestión Predial
 
@@ -3671,7 +3241,6 @@ CAPÍTULO VII ETAPA PREOPERATIVA - GESTIÓN PREDIAL
 (i) haber adquirido o, (ii) demostrar que se tiene disponibilidad –entendida como la tenencia que le permita al Concesionario acceder físicamente al Predio y realizar las actividades que impliquen su destinación al Proyecto la cual deberá ser certificada por el Interventor– del cuarenta por ciento (40%) (ya sea por (i), por (ii) o por la suma de ambos) de la longitud efectiva de los Predios necesarios para la ejecución de las Intervenciones en la respectiva Unidad Funcional. Es responsabilidad del Concesionario mantener indemne a la ANI por la existencia de demandas por daños y perjuicios en predios aledaños a la vía con motivo del desarrollo de las Intervenciones y la ejecución de las obras.
 
 (f)    Una vez suscrita el Acta de Terminación Parcial de Unidad Funcional o el Acta de Terminación de Unidad Funcional, según corresponda, la totalidad de la(s) Oferta(s) Formal(es) de Compra de Predios y de las solicitudes de Cesión de Predios o de Adjudicación de Predios de los Predios Requeridos para una
-Página 160 de 288
 
 Unidad Funcional del Proyecto deberá acreditarse a más tardar dentro del plazo señalado en la Sección 4.17(a)(ix) de esta Parte General. Si pasados ciento ochenta (180) Días contados desde la suscripción del Acta de Terminación de la Unidad Funcional o del Acta de Terminación Parcial de Unidad Funcional, según corresponda, el Concesionario no acredita la totalidad de la(s) Oferta(s) Formal(es) de Compra de Predios y de las solicitudes de Cesión de Predios o de Adjudicación de Predios de los Predios Requeridos para una Unidad Funcional, se seguirá el siguiente procedimiento:
 
@@ -3687,21 +3256,13 @@ Unidad Funcional del Proyecto deberá acreditarse a más tardar dentro del plazo
 PRequeridos𝑢
 
 
-
-
 POfertados𝑢
-
-
 
 
 PCesión 𝑢
 
 
-
 Padjudicación𝑢
-
-
-
 
 
 SMMLVℎ
@@ -3717,7 +3278,6 @@ Valor de un (1) salario mínimo mensual legal vigente en el Mes
 h, expresado en pesos corrientes
 Contador de cada una de las Unidades Funcionales del Proyecto que requieren adquisición de Predios
 Contador de Meses. Inicia en el Mes correspondiente a la Fecha de Inicio del Contrato de Concesión.
-Página 161 de 288
 
 Nota 1: En el evento en que el resultado de la ecuación 𝐷𝐼𝐶𝑃𝑢* sea negativo, el valor
 será igual a cero (0).
@@ -3737,7 +3297,6 @@ Por consiguiente, vencido este término o después de cumplida la obligación cu
 ℎ             ℎ           ℎ     ℎ      ℎ     ℎ
 𝐷𝐼𝐶𝑃𝑢            Deducción por el Índice de Cumplimiento Predial aplicable
 a la Retribución de la Unidad Funcional u medido para el
-Página 162 de 288
 
 Mes h correspondiente en el periodo de cálculo, expresado en pesos corrientes.
 
@@ -3751,16 +3310,10 @@ Padquiridos𝑢
 PE1 𝑢
 
 
-
-
 PE2 𝑢
 
 
-
-
 PE3 𝑢
-
-
 
 
 SMMLVℎ
@@ -3779,7 +3332,6 @@ Nota*: La ANI y la Interventoría deberán determinar si como consecuencia del E
 
 
 En el evento en que el Concesionario durante el plazo de doce (12) Meses previsto en la presente Sección acredite la totalidad de la(s) Oferta(s) Formal(es) de Compra de Predios y las solicitudes de Cesión de Predios o de Adjudicación de Predios de los Predios Requeridos por cada Unidad Funcional, pero no logre acreditar la adquisición, cesión o adjudicación de la totalidad de los Predios Requeridos para la Unidad Funcional, se comenzará a aplicar la Deducción por Índice de Cumplimiento Predial
-Página 163 de 288
 
 descrita en la presente Sección hasta máximo el Mes veinticuatro (24) contado desde el vencimiento del plazo señalado en la Sección 4.17(a)(ix) de esta Parte General.
 
@@ -3791,7 +3343,6 @@ Adicionalmente, en el evento en que los Meses transcurridos desde la solicitud r
 (1)     El Concesionario no acredita el cumplimiento de la totalidad de la(s) Oferta(s) Formal(es) de Compra de Predios y de las solicitudes de Cesión de Predios o de Adjudicación de Predios de los Predios Requeridos, excluyendo los Predios que hayan sido afectados por los Eventos Eximentes de Responsabilidad o Fuerza Mayor, por cada Unidad Funcional vencido el plazo previsto en la Sección 7.1(f)(i) anterior, o
 
 (2)     Transcurridos  veinticuatro  (24)  Meses  posteriores  al vencimiento del plazo señalado en la Sección 4.17(a)(ix) de esta Parte General, sin que el Concesionario demuestre la adquisición, cesión o adjudicación de la totalidad de los Predios Requeridos para la Unidad Funcional se aplicará de manera escalonada y por el plazo definido para el efecto, el porcentaje señalado a continuación, excluyendo los Predios
-Página 164 de 288
 
 que hayan sido afectados por los Eventos Eximentes de Responsabilidad o Fuerza Mayor por cada Unidad Funcional.
 
@@ -3829,10 +3380,6 @@ En caso de que la Unidad Funcional respectiva tenga más de treinta (30) Predios
 % Predios Faltantes en la UF
 
 
-
-
-
-
 Del  0%  al
 20%
 Superior   a 20% y hasta
@@ -3851,8 +3398,6 @@ Porcentaje de Retención de la Retribución o Compensación Especial UF a partir
 
 10%
 
-
-Página 165 de 288
 
 Superior   a 40% y hasta
 60%
@@ -3876,10 +3421,6 @@ En caso de que la Unidad Funcional respectiva tenga treinta (30) o menos Predios
 % Predios Faltantes en la UF
 
 
-
-
-
-
 Hasta el 60% Superior  al 60%
 Porcentaje de Retención de la Retribución o Compensación Especial UF por el primer año
 
@@ -3899,7 +3440,6 @@ El porcentaje de Predios con Oferta(s) Formal(es) de Compra de Predio(s) Requeri
 
 (2)     Para el evento al que se refiere la Sección 7.1(f)(iv)(2) anterior, dividiendo el número de Predios Adquiridos sobre el número de Predios Requeridos en cada Unidad Funcional excluyendo los Predios afectados por Eventos Eximentes de Responsabilidad, Fuerza Mayor, Fuerza Mayor Ambiental, Fuerza Mayor por Redes, Fuerza Mayor Social o Fuerza Mayor Predial reconocidas por la ANI vigentes para ese periodo y que imposibilitaron su Gestión Predial.
 
-Página 166 de 288
 
 Los  valores  objeto  de  Retención  serán  entregados  al  Concesionario periódicamente dentro de los diez (10) Días siguientes a la fecha en la que la Interventoría verifique que el Concesionario haya acreditado el avance en (1) las Oferta(s) Formal(es) de Compra de Predios y las solicitudes de Cesión de Predios o de Adjudicación de Predios o (2) adquisición, cesión o adjudicación de los Predios Requeridos, según el caso, sin incluir rendimientos financieros, en la proporción de avance del porcentaje (%) de Predios Faltantes en la Unidad Funcional. Una vez se demuestre que no hay porcentaje (%) pendiente en los eventos (1) o (2) anteriores, la totalidad de los valores retenidos por cada Unidad Funcional sin incluir rendimientos  financieros se entregará al Concesionario a más tardar dentro de los diez (10) Días siguientes a la verificación respectiva.
 
@@ -3912,7 +3452,6 @@ A partir de la ocurrencia y mientras persista cualquiera de los eventos señalad
 7.2  Recursos para la Adquisición de Predios y Compensaciones Socioeconómicas
 
 (a)    El Concesionario aportará los recursos para la adquisición de los Predios y las Compensaciones Socioeconómicas, mediante el traslado de los recursos necesarios a la Subcuenta Predios. Los recursos de la Subcuenta Predios serán utilizados única y exclusivamente para los pagos a los propietarios de los Predios, incluyendo daño emergente, lucro cesante, el pago derivado de la
-Página 167 de 288
 
 aplicación  del  Plan  de  Compensaciones  Socioeconómicas  y  demás compensaciones definidas en el Apéndice Técnico 7. Los demás gastos asociados  o  inherentes  a  la  Gestión  Predial  serán  asumidos  por  el Concesionario, a su cuenta y riesgo. La Fiduciaria, en su condición de vocera del Patrimonio Autónomo, efectuará los pagos a los propietarios de los Predios, previa instrucción del Concesionario.
 
@@ -3927,7 +3466,6 @@ aplicación  del  Plan  de  Compensaciones  Socioeconómicas  y  demás compensa
 (ii)  Si el valor correspondiere a una cuantía superior al ciento veinte por ciento (120%) y hasta el doscientos por ciento (200%) inclusive, con relación a la fracción que exceda el ciento veinte por ciento (120%) el Concesionario aportará el treinta por ciento (30%) y la ANI el setenta por ciento (70%) del Valor Estimado de Predios y Compensaciones Socioeconómicas, esta obligación se generará de manera simultánea para ambas Partes y conforme a las necesidades del Proyecto.
 
 (iii) Si el valor correspondiere a una cuantía superior al doscientos por ciento (200%), la fracción que exceda el doscientos por ciento (200%) del Valor
-Página 168 de 288
 
 Estimado de Predios y Compensaciones Socioeconómicas será a cargo de la ANI.
 
@@ -3941,7 +3479,6 @@ Sin embargo, si el Valor Estimado de Predios llegare a ser insuficiente como con
 (ii)  La cuenta de cobro deberá ser validada y  verificada por la Interventoría, la cual confirmará que los desembolsos hechos por el Concesionario  por  montos  a  cargo  de  la  ANI  correspondan estrictamente a los fines que este Contrato prevé para la Subcuenta Predios de conformidad con lo señalado en este Contrato, en particular en el Apéndice Técnico 7. La Interventoría deberá pronunciarse dentro de un término no superior a diez (10) Días, desde la presentación de la cuenta de cobro por parte del Concesionario.
 
 (iii) Una vez aprobada la cuenta de cobro por la Interventoría, la ANI dispondrá de un término máximo de treinta (30) Días para aprobar la cuenta de cobro. Dentro de este término, si la ANI no tiene objeciones, de conformidad con las normas presupuestales vigentes la ANI deberá entregarle al Concesionario un documento en el que conste de manera expresa exclusivamente lo siguiente: 1) Que se han cumplido todas las condiciones contractuales para que surja el derecho del Concesionario para  obtener  el  reembolso  de  los  recursos  aportados  por  el Concesionario durante el bimestre correspondiente y que, de acuerdo con la Sección 7.2(c) anterior, son a cargo de la ANI; 2) El valor exacto del capital del monto a reembolsar; 3) La fecha precisa en que se empezarán a causar intereses remuneratorios y la tasa aplicable, que deberán corresponder a la pactada en la Sección 3.6 de esta Parte General; 4) La fecha precisa en que se empezarán a causar intereses
-Página 169 de 288
 
 moratorios y la tasa aplicable, tasa que deberá corresponder a la pactada en la Sección 3.6 de esta Parte General; y 5) el reconocimiento expreso de que, en cumplimiento de lo previsto en el presente Contrato, la ANI pagará tanto el capital como los intereses, de causarse estos. En el evento que la ANI tenga objeciones a la cuenta de cobro aprobada por la Interventoría, se correrán de nuevo los términos establecidos en las Secciones 7.2(f)(ii) y 7.2(f)(iii).
 
@@ -3958,13 +3495,11 @@ moratorios y la tasa aplicable, tasa que deberá corresponder a la pactada en la
 Los procedimientos de adquisición predial son los que se estipulan en el Apéndice Técnico 7.
 
 
-
 7.4  Fuerza Mayor Predial
 
 (a)    Se entenderá que ha ocurrido un Evento Eximente de Responsabilidad consistente en “Fuerza Mayor Predial” cuando se presente cualquiera de los siguientes eventos:
 
 (i)  En el caso en que de conformidad con lo previsto en el Apéndice Técnico 7 proceda la expropiación por vía judicial, si transcurrieren noventa (90) Días contados desde el pago del avalúo sin que se haya obtenido la entrega efectiva del(los) Predio(s) Faltante(s).
-Página 170 de 288
 
 (ii)  Ocurran las circunstancias previstas en el Apéndice Técnico 8, identificadas en dicho Apéndice como generadoras de Fuerza Mayor.
 
@@ -3986,13 +3521,7 @@ Los términos señalados para la activación de los eventos de Fuerza Mayor Pred
 14.2 de esta Parte General.
 
 
-
-
-
-
-Página 171 de 288
-
-CAPÍTULO VIII ETAPA PREOPERATIVA - GESTIÓN SOCIAL Y AMBIENTAL, REDES, OTROS
+CAPÍTULO VII I ETAPA PREOPERATIVA - GESTIÓN SOCIAL Y AMBIENTAL, REDES, OTROS
 
 8.1  Gestión Social y Ambiental
 (a)    La totalidad de la Gestión Social y Ambiental requeridas para la ejecución de las Intervenciones estará a cargo del Concesionario, independientemente de la duración de esta actividad, quien desarrollará dicha labor atendiendo en un todo la distribución de obligaciones, responsabilidades y riesgos establecidos en los Apéndices Técnicos 6 y 8 y en el presente Contrato, de conformidad con la ley 99 de 1993 y sus decretos reglamentarios, y demás normas concordantes y vigentes en la materia, así como la Constitución Política de Colombia –y las normas que la desarrollen– en lo relativo a consultas con comunidades étnicas, de acuerdo con la Ley Aplicable. Así mismo, la totalidad de los costos requeridos para la realización de la Gestión Social y Ambiental para la ejecución de las Intervenciones del Proyecto, así como para la ejecución de los compromisos producto de los acuerdos de consultas previas protocolizadas serán asumidos por el Concesionario, independientemente de la duración de estas actividades. De igual forma, los riesgos asociados a esta obligación serán tratados de acuerdo con lo establecido en la Sección 13.2(a)(iii) de esta Parte General.
@@ -4006,7 +3535,6 @@ CAPÍTULO VIII ETAPA PREOPERATIVA - GESTIÓN SOCIAL Y AMBIENTAL, REDES, OTROS
 
 (ii)  Los recursos de la Subcuenta Compensaciones Socioambientales serán destinados exclusivamente a las Compensaciones Socioambientales. Los demás gastos asociados a la Gestión Social y Ambiental serán asumidos por el Concesionario, en su totalidad. Al finalizar la ejecución de las Compensaciones Socioambientales, el remanente de los recursos de la Subcuenta Compensaciones Socioambientales, de haberlo, será distribuido entre el Concesionario y la ANI en una proporción  cuarenta  y  cuatro  (44)/cincuenta  y  seis  (56) respectivamente. Los remanentes a favor de la ANI, serán transferidos a la Subcuenta Excedentes ANI.
 
-Página 172 de 288
 
 (iii) Si el Valor Estimado de Compensaciones Socioambientales llegare a ser  insuficiente  para  cumplir  con  las  Compensaciones Socioambientales, los recursos adicionales al cien por ciento (100%) del Valor Estimado de Compensaciones Socioambientales serán aportados, bajo un sistema de bandas para efectos de la asunción de riesgos, se dará de forma, de acuerdo con el procedimiento que se establece a continuación y en el siguiente orden:
 
@@ -4022,7 +3550,6 @@ Sin embargo, si el Valor Estimado de Compensaciones Socioambientales llegare a s
 (d)    En cualquier momento durante la ejecución del Contrato, el Concesionario deberá llevar a cabo, bajo el liderazgo de la ANI, la(s) nueva(s) consulta(s) previa(s) con las comunidades étnicas que sean certificadas por Autoridad Estatal competente o reconocidas mediante fallo judicial en firme en el área de influencia del Proyecto con posterioridad a la apertura del Proceso de Selección.
 
 Los costos que se generen como consecuencia de la Gestión Social y Ambiental para adelantar esta(s) nueva(s) consulta(s) previa(s) serán asumidos en su totalidad por el Concesionario. Los compromisos derivados de dichos acuerdos que sean protocolizados, serán asumidos por las Partes, bajo un sistema de bandas, de acuerdo con el procedimiento que se establece a continuación y en el siguiente orden:
-Página 173 de 288
 
 (i)  Si  el  valor  de  los  compromisos  derivados  de  los  acuerdos correspondiere a una cuantía entre el cero por ciento (0%) y el veinte por ciento (20%) inclusive, del Valor Estimado de Nuevas Consultas Previas conforme lo establecido en la Parte Especial, el Concesionario asumirá la totalidad de estos costos.
 
@@ -4037,7 +3564,6 @@ Lo anterior, siempre y cuando no se originen con ocasión de lo previsto en la S
 (f)    El Concesionario deberá informar a la ANI y al Interventor inmediatamente se haya ejecutado el noventa por ciento (90%) del Valor Estimado para Compensaciones Socioambientales. Lo anterior sin perjuicio que, como mínimo trimestralmente, el Concesionario presente a la Interventoría y a la ANI los informes establecidos en las Secciones 4.2(gg), 4.5(ff) y 9.2(z) de esta Parte General acerca del comportamiento de la ejecución de los recursos de la Subcuenta Compensaciones Socioambientales.
 
 (g)    Además de las disposiciones especiales señaladas en el Apéndice Técnico 6, el Concesionario deberá tener en cuenta que, en la solicitud y trámite que se efectúe ante la Autoridad Ambiental para la obtención de cualquier licencia, permiso o concesión ambiental, la ANI tendrá derecho de hacerse partícipe del trámite como tercero interviniente de manera que se le notifiquen todas las actuaciones de la Autoridad Ambiental y pueda interponer los recursos de ley en caso de no estar de acuerdo con la decisión, para lo cual el Concesionario
-Página 174 de 288
 
 deberá informarle con al menos diez (10) Días Hábiles de anticipación al inicio del trámite. La intervención de la ANI en este tipo de trámites se coordinará, en lo posible, con el Concesionario. En el caso que el trámite de Licencia Ambiental haya quedado en cabeza de ANI ante la Autoridad Ambiental, la ANI podrá unilateralmente tomar decisiones encaminadas a la obtención de la Licencia Ambiental, sin que por esta circunstancia se modifiquen las obligaciones  de  Gestión  Social  y  Ambiental  del  Concesionario.  La participación de la ANI en el trámite mencionado no implica que el riesgo de Gestión Social y Ambiental se convierta en un riesgo compartido o a cargo de la ANI.
 
@@ -4052,7 +3578,6 @@ deberá informarle con al menos diez (10) Días Hábiles de anticipación al ini
 (iv) Tan pronto sea emitida la Licencia Ambiental, el Concesionario deberá iniciar las Intervenciones de la Unidad Funcional respectiva y culminarlas dentro del plazo acordado, según la revisión del Plan de Obras a que se refiere la Sección 14.2(d), y una vez concluidas se empezará a causar la Retribución asociada a la Unidad Funcional correspondiente en los términos y condiciones previstos en el presente Contrato.
 
 (v)  Si la Fuerza Mayor Ambiental de que trata la Sección 8.1(h)(i) anterior genera la necesidad de realizar erogaciones adicionales bajo los conceptos señalados en la Sección 1.34 de esta Parte General, el riesgo
-Página 175 de 288
 
 de dichos costos se manejará de conformidad con lo previsto en la Sección 8.1(c) de esta Parte General.
 
@@ -4069,7 +3594,6 @@ de dichos costos se manejará de conformidad con lo previsto en la Sección 8.1(
 (v)  Tan pronto sea emitida la Licencia Ambiental, el Concesionario deberá iniciar las Intervenciones de la Unidad Funcional respectiva y culminarlas dentro del plazo acordado, según la revisión del Plan de Obras a que se refiere la Sección 14.2(d), y una vez concluidas se empezará a causar la Retribución asociada a la Unidad Funcional correspondiente en los términos y condiciones previstos en el presente Contrato.
 
 (j)    Si la Autoridad Ambiental sujeta el trámite y/o el otorgamiento de la Licencia Ambiental a modificaciones en los Estudios de Trazado y Diseño Geométrico o a la ejecución de obras no previstas en el Apéndice Técnico 1, se procederá
-Página 176 de 288
 
 como sigue, siempre que la condición impuesta por la Autoridad Ambiental no se deba a causas imputables al Concesionario:
 
@@ -4086,7 +3610,6 @@ como sigue, siempre que la condición impuesta por la Autoridad Ambiental no se 
 (b)    Al momento de efectuar los Estudios de Trazado y Diseño Geométrico, el Concesionario deberá analizar la pertinencia de afectar Redes existentes aplicando los criterios previstos en el Artículo 47, numeral 1, de la Ley 1682 de 2013.
 
 (c)    El Concesionario deberá asumir los costos del traslado, protección y/o intervención de las Redes (salvo cuando dichos costos deban ser asumidos por
-Página 177 de 288
 
 los titulares de las Redes o por otro tercero, de conformidad con cualquier convenio suscrito entre ANI y dicho tercero o de conformidad con la Ley Aplicable), mediante el traslado de los recursos necesarios al Patrimonio Autónomo (Cuenta Proyecto- Subcuenta Redes).
 
@@ -4104,7 +3627,6 @@ Sin embargo, si el Valor Estimado de Redes llegare a ser insuficiente como conse
 
 (f)    La totalidad de los montos a cargo de la ANI, de conformidad con lo previsto en la Sección 8.2(e) anterior, serán aportados por el Concesionario y pagados
 
-Página 178 de 288
 
 por la ANI, para lo cual se aplicará mutatis mutandi el mismo procedimiento previsto en las Secciones 7.2(e) y 7.2(f) de esta Parte General.
 
@@ -4121,7 +3643,6 @@ por la ANI, para lo cual se aplicará mutatis mutandi el mismo procedimiento pre
 (iii) Cuando ocurra una Fuerza Mayor por Redes, de ser el caso, se aplicará lo previsto en la Sección 14.2 de esta Parte General.
 
 (iv) Si la Fuerza Mayor por Redes genera la necesidad de incurrir en costos adicionales para el traslado, protección y/o intervención de las Redes, el riesgo de dichos costos, se manejará de conformidad con lo previsto en las Secciones 8.2(c), 8.2(d), 8.2(e), 8.2(f), 8.2(g), 8.2(h) 13.2(a)(v) y 13.3(e) de esta Parte General.
-Página 179 de 288
 
 (v)  Cualquier conflicto que surja con ocasión de la aplicación de la presente Sección 8.2(i) podrá ser llevado al Amigable Componedor.
 
@@ -4137,7 +3658,6 @@ Página 179 de 288
 (iv) Vencido este término, si no tiene objeciones, la ANI deberá entregarle al Concesionario un documento en el que conste de manera expresa exclusivamente lo siguiente: (1) Que se han cumplido todas las condiciones contractuales para que surja el derecho del Concesionario para cubrir esta obligación con cargo a los recursos disponibles de que trata la Sección 13.4 de esta Parte General, y (2) El valor de los sobrecostos adicionales por implementación de nuevas tecnologías para recaudo electrónico de Peajes a cargo de la ANI.
 
 (b)    Si la ANI no aprueba el informe de los sobrecostos adicionales por implementación de nuevas tecnologías para recaudo electrónico de Peajes a cargo de la ANI en los términos aquí previstos y/o no expide el documento al que se refiere la Sección 8.3(a)(i) anterior, se entenderá suspendida la obligación del Concesionario de seguir haciendo desembolsos por las
-Página 180 de 288
 
 obligaciones que son a cargo de la ANI hasta tanto se apruebe el informe y se expida el documento correspondiente, sin que se afecte la obligación de garantizar el Recaudo de Peaje manual en las Estaciones de Peaje.
 
@@ -4149,40 +3669,7 @@ obligaciones que son a cargo de la ANI hasta tanto se apruebe el informe y se ex
 (f)    La totalidad de los montos a cargo de la ANI, de conformidad con lo previsto en la Sección 8.3(b) anterior, serán aportados por el Concesionario y pagados por la ANI, para lo cual se aplicará mutatis mutandi el mismo procedimiento previsto en las Secciones 7.2(e) y 7.2(f) de esta Parte General.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 181 de 288
-
-CAPÍTULO IX  ETAPA DE OPERACIÓN Y MANTENIMIENTO Y ETAPA
+CAPÍTULO I X  ETAPA DE OPERACIÓN Y MANTENIMIENTO Y ETAPA
 DE REVERSIÓN
 
 9.1  Condiciones Precedentes para el Inicio de la Etapa de Operación y Mantenimiento
@@ -4202,9 +3689,8 @@ DE REVERSIÓN
 (e)    Implementar las acciones establecidas en los Apéndices Técnicos 6 y 8, así como las medidas ambientales y sociales definidas en el Estudio de Impacto Ambiental, el Plan de Manejo Ambiental y Social, la Licencia Ambiental y demás Licencias y Permisos, para la Etapa de Operación y Mantenimiento, con los requerimientos impuestos por las Autoridades Ambientales para esta etapa y preparar todos los estudios que le solicite la Autoridad Ambiental.
 
 (f)    En caso de ser necesario, tramitar, por su cuenta y riesgo, ante la Autoridad Estatal y/o la Autoridad Ambiental y obtener todos las Licencias y Permisos, Licencias  Ambientales,  autorizaciones  y  concesiones  para  el  uso  y aprovechamiento de recursos naturales y para las zonas de depósito de material.
-Página 182 de 288
 
-(g)    Adelantar la adquisición de Predios, cuando exista justificación de orden técnico refrendada por el Interventor, por efectos de emergencias ocasionadas en el Corredor del Proyecto, aplicando –en lo que corresponda– los procedimientos establecidos en el CAPÍTULO VII de esta Parte General y en el Apéndice Técnico 7. Para estos efectos, el Concesionario deberá haber obtenido autorización previa de la ANI respecto de la disponibilidad de los recursos necesarios para la atención de la emergencia en cuanto a la adquisición de los Predios requeridos.
+(g)    Adelantar la adquisición de Predios, cuando exista justificación de orden técnico refrendada por el Interventor, por efectos de emergencias ocasionadas en el Corredor del Proyecto, aplicando –en lo que corresponda– los procedimientos establecidos en el CAPÍTULO VI I de esta Parte General y en el Apéndice Técnico 7. Para estos efectos, el Concesionario deberá haber obtenido autorización previa de la ANI respecto de la disponibilidad de los recursos necesarios para la atención de la emergencia en cuanto a la adquisición de los Predios requeridos.
 
 (h)    Evitar la revocatoria, por causas que sean imputables al Concesionario, de cualquiera de las Licencias y Permisos o cualquiera otra aprobación gubernamental requerida para la ejecución del Contrato.
 
@@ -4218,7 +3704,6 @@ Página 182 de 288
 
 (m)   Presentar a la ANI y al Interventor los estados financieros auditados del Concesionario y del Patrimonio Autónomo (incluyendo los del Patrimonio Autónomo-Deuda, si lo hubiere), a 31 de diciembre y de 30 de junio de cada año calendario, dentro de los primeros diez (10) Días de los Meses de septiembre y marzo de cada año y no auditados en forma trimestral, dentro de los quince (15) Días siguientes al vencimiento de cada trimestre. La auditoría de dichos estados financieros deberá ser efectuada por un auditor externo reconocida reputación que preste sus servicios a nivel internacional, es decir que preste sus servicios de auditoría en por lo menos dos (2) países diferentes a Colombia. Adicionalmente, el Concesionario deberá mantener en su contabilidad claramente identificados los ingresos y egresos correspondientes a cada Unidad Funcional y deberá presentar a la ANI y al Interventor un informe mensual (dentro de los primeros quince (15) Días del Mes) suscrito por
 
-Página 183 de 288
 
 su auditor sobre los criterios empleados por el Concesionario para contabilizar la acumulación de los ingresos y egresos por Unidad Funcional.
 
@@ -4233,7 +3718,6 @@ su auditor sobre los criterios empleados por el Concesionario para contabilizar 
 
 (r)    Llevar y mantener actualizado un registro sobre las actividades y gestiones efectuadas ante la Autoridades Estatales que sean necesarias para el cumplimiento de las obligaciones a su cargo contenidas en el presente Contrato. Este registro podrá ser consultado por la ANI y/o el Interventor en cualquier
 
-Página 184 de 288
 
 momento, para lo cual darán aviso al Concesionario con dos (2) Días Hábiles de antelación a la fecha de la consulta.
 
@@ -4241,7 +3725,7 @@ momento, para lo cual darán aviso al Concesionario con dos (2) Días Hábiles d
 (t)    Implementar y aplicar el manual de buen gobierno corporativo y los planes de responsabilidad ambiental y social y el plan de contingencia y emergencia.
 (u)    Atender oportunamente y de manera completa los requerimientos de las Autoridades  Estatales,  incluyendo  los  requerimientos  de  la  Autoridad Ambiental, y responder por las medidas o acciones a las que se obligue a la ANI por decisiones de la Autoridad Ambiental u otras relacionadas, así como informar inmediatamente a la ANI, para que pueda hacer uso del derecho de defensa y de los recursos de ley dentro del proceso a que haya lugar.
 
-(v)    Obtener y mantener en vigor las garantías de que trata el CAPÍTULO XII de esta Parte General.
+(v)    Obtener y mantener en vigor las garantías de que trata el CAPÍTULO XI I de esta Parte General.
 
 (w)   El Concesionario deberá además cumplir con todas las demás obligaciones correspondientes a esta Etapa de Operación y Mantenimiento, así como las que se desprendan de la naturaleza de las obligaciones de la Etapa de Operación y Mantenimiento, que se encuentren incluidas en los diferentes Apéndices, y en las demás Secciones y Capítulos del Contrato.
 
@@ -4250,7 +3734,6 @@ momento, para lo cual darán aviso al Concesionario con dos (2) Días Hábiles d
 (y)    Adicionalmente, el Concesionario, deberá mantener en su contabilidad claramente identificados y detallados los ingresos y egresos debidamente soportados correspondientes a cada Unidad Funcional y deberá presentar a la ANI y al Interventor un informe mensual (dentro de los primeros quince (15) Días del Mes) suscrito por su auditor sobre los criterios empleados por el Concesionario para contabilizar la acumulación de los ingresos y egresos por Unidad Funcional.
 
 (z)    El Concesionario deberá entregar un informe como mínimo trimestralmente, de proyección de ingresos y egresos de las Subcuentas asociadas a los riesgos de sobrecostos a cargo de la ANI de acuerdo con el procedimiento interno de la ANI.
-Página 185 de 288
 
 (aa)   Sin perjuicio de lo establecido en los otros apartes de este Contrato, toda la información relacionada con el Proyecto en sus diferentes Fases o Etapas deberá estar disponible para su entrega de manera oportuna y con calidad cuando la ANI así lo requiera a través de las herramientas y/o medios tecnológicos que sean definidas en cada caso. Lo anterior también incluye la obligación de interoperar los diferentes sistemas de información, ITS, herramientas tecnológicas y demás relacionadas que tengan las Partes, el Interventor, la Fiduciaria y/o el Amigable Componedor mediante los estándares definidos por la ANI.
 
@@ -4276,10 +3759,6 @@ Página 185 de 288
 (a)    Durante la Etapa de Operación y Mantenimiento el Concesionario mantendrá las Intervenciones ejecutadas durante la Fase de Construcción y las demás obras y bienes del Proyecto de tal manera que cumplan siempre con los Indicadores, y deberá dar cumplimiento a las demás obligaciones especificadas para la Etapa de Operación y Mantenimiento en los Apéndices Técnicos 2 y 4 del presente Contrato.
 
 
-
-
-Página 186 de 288
-
 (b)    El Interventor verificará el cumplimiento de las Obras de Mantenimiento con lo previsto en el Apéndice Técnico 2 y en particular verificará el cumplimiento de los Indicadores conforme a lo previsto en el Apéndice Técnico 4.
 
 (c)    Todas las obras y actividades que deba ejecutar el Concesionario durante la Etapa de Operación y Mantenimiento para asegurar el cumplimiento de los Indicadores y demás obligaciones contenidas en este Contrato –en especial en el Apéndice Técnico 4–, sin importar su magnitud, tipología, características o alcances, serán por cuenta y riesgo exclusivo del Concesionario, salvo cuando se establezcan, de manera expresa en este Contrato, cubrimientos de riesgos a cargo de la ANI o se trate de un Evento Eximente de Responsabilidad.
@@ -4298,7 +3777,6 @@ Página 186 de 288
 
 (e)    Aunque el cumplimiento del Manual de Operación y Mantenimiento es obligatorio para el Concesionario, ello no lo exime del cumplimiento de ninguna de las obligaciones de resultado previstas en este Contrato y sus Apéndices, por lo cual dicho Manual debe ser complementado y/o corregido por propia iniciativa del Concesionario o por solicitud de la ANI o el Interventor, cuando se advierta que el mismo no contempla todos los mecanismos necesarios para el cumplimiento de dichas obligaciones de resultado.
 
-Página 187 de 288
 
 (f)    Una vez expedido, el Manual de Operación y Mantenimiento podrá ser objeto de actualizaciones, revisiones o modificaciones, para lo cual el Concesionario podrá acoger o no las recomendaciones formuladas por el Interventor antes de que la respectiva actualización, revisión o modificación, inicie su aplicación en el Proyecto.
 
@@ -4319,7 +3797,6 @@ Página 187 de 288
 
 (d)   El procedimiento para la Reversión incluirá:
 
-Página 188 de 288
 
 (i)  La actualización del Inventario de Activos de la Concesión que incluirá todos los bienes muebles, todos los bienes inmuebles por adhesión y destinación y en general todos aquellos bienes que (1) hayan sido adquiridos por el Concesionario y se encuentren destinados a las actividades de Operación, lo cual en ningún caso incluirá maquinaria de construcción, (2) hayan sido entregados por la ANI, y
 (3) que hubieren sido de particulares que hayan sido requeridos por el Proyecto. En todo caso este listado incluirá –como mínimo– el listado de bienes revertibles que aparece en el Apéndice Técnico 2. Así mismo, al momento de la actualización del Inventario de Activos de la Concesión se verificará que los Predios adquiridos se encuentran libres de toda ocupación ilegal.
@@ -4337,8 +3814,6 @@ Página 188 de 288
 (vii) El Concesionario deberá realizar la entrega de los activos relacionados con la propiedad, planta y equipo de acuerdo con el procedimiento contable para el reconocimiento y revelación de hechos relacionados con las propiedades, planta y equipo, contemplado en el Régimen de Contabilidad Pública y en la doctrina contable pública.
 
 
-Página 189 de 288
-
 (viii) El Concesionario deberá realizar la entrega de los activos intangibles de acuerdo con el procedimiento contable para el reconocimiento y revelación de los activos intangibles, contemplado en el Régimen de Contabilidad Pública y en la doctrina contable pública.
 
 (ix) El Concesionario deberá hacer la entrega de los bienes, construcciones e inmuebles que fueron entregados al Concesionario en el momento de la suscripción del Contrato de acuerdo con lo establecido en la Resolución 237 de 2010 de la Contaduría General de la Nación (o las normas que la modifiquen, complementen o sustituyan).
@@ -4353,59 +3828,11 @@ Página 189 de 288
 
 (f)    Durante la Etapa de Reversión, el Concesionario deberá continuar con las labores de Operación y Mantenimiento y tendrá derecho a recibir el porcentaje del Recaudo de Peaje (%RP) que se establece en la Parte Especial ponderado por el Índice de Cumplimiento aplicable a cada Mes, conforme lo establecido en la Sección 3.4(f), siempre que se cuente con Recaudo de Peaje en la totalidad de las estaciones que hacen parte del Proyecto. El Concesionario no tendrá derecho a Retribución durante este periodo.
 
-Página 190 de 288
 
 (g)   Los Indicadores deberán cumplir con lo previsto en el Apéndice Técnico 4 para el recibo del Proyecto.
 
 (h)    El no cumplimiento de los Indicadores previstos para la Reversión o el no cumplimiento de cualquiera otra obligación del Concesionario prevista en este Contrato para hacer efectiva la Reversión, no retrasará el Plazo Máximo de la Etapa de Reversión, ni impedirá la suscripción del Acta de Reversión. De los eventuales incumplimientos se dejará constancia en el Acta de Reversión. Las sanciones y demás consecuencias que de acuerdo con este contrato y la Ley Aplicable tengan los incumplimientos serán objeto de aplicación mediante el Acta de Liquidación del Contrato.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 191 de 288
 
 CAPÍTULO X  SANCIONES Y ESQUEMAS DE APREMIO
 
@@ -4430,7 +3857,6 @@ CAPÍTULO X  SANCIONES Y ESQUEMAS DE APREMIO
 (2)     Graves: si afectan la funcionalidad del proyecto y no existe reincidencia, o no afectan la funcionalidad del Proyecto, pero sí existe reincidencia. Cuando se trate de incumplimientos graves, la Multa o Sanción deberá ser mayor o igual al treinta y cinco por ciento (35%) y menor o igual al setenta por ciento (70%) de los SMLMV máximos establecidos en la Parte Especial para dicho incumplimiento.
 
 (3)     Muy Graves: si afectan la funcionalidad del Proyecto y además hay reincidencia. Cuando se trate de incumplimientos
-Página 192 de 288
 
 muy graves, la Multa o Sanción deberá ser mayor al setenta por ciento (70%) de los SMLMV máximos establecidos en la Parte Especial para dicho incumplimiento.
 
@@ -4448,10 +3874,6 @@ muy graves, la Multa o Sanción deberá ser mayor al setenta por ciento (70%) de
 
 (a)    Las Multas y las Sanciones deberán ser pagadas por el Concesionario dentro de los Diez (10) Días siguientes a la firmeza del acto administrativo mediante el cual se imponen.
 
-
-
-
-Página 193 de 288
 
 (b)    Vencido el plazo de diez (10) Días a que se refiere la Sección anterior, comenzarán a correr intereses moratorios a cargo del Concesionario en los términos de la Sección 3.6(a) de esta Parte General.
 
@@ -4473,12 +3895,11 @@ Los valores de las Multas y Sanciones que estén señalados en salarios mínimos
 10.6 Cláusula Penal
 
 (a)    En caso de declaratoria de Terminación Anticipada del Contrato previstas en la Sección 17.2(a) de esta Parte General, se causará una pena pecuniaria a cargo del Concesionario por los montos que se establecen en la Parte Especial, los cuales deberán ser actualizados a la fecha de dicha declaratoria de acuerdo con lo previsto en la Sección 3.9(b) de esta Parte General.
-Página 194 de 288
 
 (b)   El monto de esta Cláusula Penal podrá ser deducido directamente de cualquier saldo adeudado al Concesionario.
 
 (c)    La Cláusula Penal atenderá el principio de proporcionalidad de que trata el artículo 1596 del Código Civil.
-CAPÍTULO XI  CLÁUSULAS EXCEPCIONALES AL DERECHO COMÚN
+CAPÍTULO X I  CLÁUSULAS EXCEPCIONALES AL DERECHO COMÚN
 11.1 Caducidad
 (a)    Si se presenta algún incumplimiento de las obligaciones a cargo del Concesionario establecidas en el Contrato, que afecte de manera grave y directa la ejecución del mismo, de manera tal que evidencie que pueda conducir a su paralización o se presentan las causales previstas en las leyes 40 de 1993, 80 de 1993, 418 de 1997 prorrogada por la Ley 1738 de 2014 , 610 de 2000 y demás normas aplicables, la ANI, por medio de acto administrativo debidamente motivado, podrá decretar la caducidad del Contrato y ordenar su liquidación en el estado en que se encuentre, salvo que los Prestamistas ejerzan su derecho de Toma de Posesión regulado en la Sección 3.12 de esta Parte General.
 
@@ -4493,7 +3914,6 @@ CAPÍTULO XI  CLÁUSULAS EXCEPCIONALES AL DERECHO COMÚN
 (c)    Ocurrida una causal de caducidad, se llevará a cabo el procedimiento previsto en la Sección 10.4 de esta Parte General para garantizar el derecho de defensa del Concesionario.
 
 (d)    Si después de surtido el procedimiento, no se ha desvirtuado la ocurrencia de la causal de caducidad a juicio de la ANI, el Concesionario contará con un plazo
-Página 195 de 288
 
 de veinte (20) Días Hábiles para corregir el incumplimiento a satisfacción de la ANI o para entregar a la ANI el Plan Remedial.
 
@@ -4508,7 +3928,6 @@ de veinte (20) Días Hábiles para corregir el incumplimiento a satisfacción de
 (iii) se venció el plazo máximo de corrección del incumplimiento contenido en el Acta de Plan Remedial, la ANI enviará la Notificación Derecho de Toma a los Prestamistas para efectos de lo previsto en la Sección 3.12 de esta Parte General. Si, de acuerdo con los términos de dicha Sección, los Prestamistas no Toman Posesión del Proyecto, ya sea porque no manifiestan su voluntad de hacerlo o porque la ANI no aprueba la toma de posesión, la ANI podrá declarar la caducidad de manera inmediata.
 
 (j)    En caso de que la ANI declare la caducidad del Contrato, mediante el respectivo acto administrativo motivado, se procederá a la Reversión del Proyecto, sin que sea procedente plazo adicional alguno para corregir el incumplimiento. Si el Concesionario no hiciera la entrega, la ANI podrá tomar posesión del Proyecto para lo cual levantará un acta en la cual deberá quedar relacionado un inventario de la obra realizada, los equipos y demás elementos dispuestos por el Concesionario, así como los aspectos que considere pertinente la propia ANI. Esta acta estará suscrita por el Líder de Proyecto de la ANI, por el Interventor y por un representante del Concesionario, si así lo quisiese. Si fuere del caso,
-Página 196 de 288
 
 una vez recibido o tomado el Proyecto, la ANI procederá de inmediato a la liquidación del Contrato.
 
@@ -4525,18 +3944,7 @@ una vez recibido o tomado el Proyecto, la ANI procederá de inmediato a la liqui
 (b)    Interpretación unilateral. Si surgieren discrepancias entre las Partes sobre la interpretación de alguna de las estipulaciones del Contrato que puedan conducir a la paralización o a la afectación del servicio, la ANI, si no se lograra acuerdo, previo cumplimiento de los requisitos establecidos en la Ley Aplicable, podrá interpretar en acto administrativo debidamente motivado, las estipulaciones objeto de la diferencia.
 
 
-
-
-
-
-
-
-
-
-
-Página 197 de 288
-
-CAPÍTULO XII  GARANTÍAS Y MECANISMOS DE COBERTURA DE
+CAPÍTULO XI I  GARANTÍAS Y MECANISMOS DE COBERTURA DE
 RIESGOS
 
 12.1  Garantías como Requisito de Inicio del Contrato y de sus Fases o Etapas
@@ -4560,7 +3968,6 @@ RIESGOS
 
 (d)    De tratarse de garantías diferentes de la póliza de seguro, estas incorporarán las mismas coberturas previstas para las pólizas de seguros en este Contrato y en el  Apéndice  Financiero  3,  sin  que  sea  posible  añadir  exclusiones, condicionamientos o requisitos adicionales para que las mismas se hagan efectivas. En todo caso, las garantías bancarias deberán permitir su cobro a primer requerimiento de la ANI una vez ocurrido el siniestro.
 
-Página 198 de 288
 
 12.3 Reglas Generales Aplicables a las Garantías
 
@@ -4577,7 +3984,6 @@ Página 198 de 288
 (f)    En cualquier caso de modificación del Contrato, el Concesionario se obliga a obtener una certificación de la compañía aseguradora o de la entidad emisora de la garantía, en la que conste que dicha compañía conoce y acepta la modificación del Contrato y la variación del estado del riesgo que la misma suponga, si ese es el caso. Si la modificación del Contrato implica la modificación de las garantías, el Concesionario deberá enviar a la ANI el original de la modificación de la póliza o garantía otorgada dentro del plazo que para ello señale la ANI, mediante Notificación.
 
 (g)    Por tratarse de un contrato estatal, las obligaciones adquiridas por el Concesionario  mediante  el  Contrato  de  Concesión  deben  permanecer garantizadas, sin que sea admisible ningún tipo de revocatoria por parte de la entidad emisora de la garantía y/o el Concesionario, hasta la liquidación del Contrato y la prolongación de sus efectos. Por lo tanto, en el evento en que se venza el plazo de la garantía sin que sea posible su renovación por su emisor y siempre que se haya dado el aviso de no renovación de que trata el numeral 3
-Página 199 de 288
 
 del Artículo 2.2.1.2.3.1.3. del Decreto 1082 de 2015, el Concesionario deberá obtener del emisor la certificación respectiva de su declinación a la renovación de la garantía y deberá sustituir a su costo la garantía, por una de las clases permitidas, con el alcance, valor garantizado y vigencia correspondientes.
 
@@ -4599,7 +4005,6 @@ del Artículo 2.2.1.2.3.1.3. del Decreto 1082 de 2015, el Concesionario deberá 
 (iv) La calificación de riesgo del banco garante con domicilio en el extranjero, de su deuda de largo plazo debe corresponder a “grado de inversión” en la escala internacional, sin que se acepten escalas locales aplicables en el país del domicilio del banco emisor de la garantía.
 
 (v)  La calificación mínima para bancos con domicilio en Colombia debe ser, según escala local de las calificadoras aprobadas por la
-Página 200 de 288
 
 Superintendencia Financiera AA según BRC Investor Services, Fitch Ratings Colombia S.A., Value and Risk Rating S.A, o su equivalente si se trata de otra firma calificadora.
 
@@ -4618,8 +4023,6 @@ Superintendencia Financiera AA según BRC Investor Services, Fitch Ratings Colom
 
 (c)    Si las Garantías entregadas por el Concesionario no cumplen con los requisitos señalados, la ANI solicitará la corrección de las mismas y señalará para ello un plazo que no podrá ser superior a cinco (5) Días Hábiles. En caso de que dentro de dicho plazo el Concesionario no entregue las garantías debidamente modificadas a satisfacción de la ANI o si los términos y condiciones de las correcciones y/o modificaciones no satisfacen las observaciones formuladas por la ANI, la ANI no aprobará las garantías aportadas por el Concesionario, impondrá la Multa correspondiente y podrá declarar la caducidad del Contrato si la Garantía Única de Cumplimiento no está vigente.
 
-
-Página 201 de 288
 
 (d)    Si la Garantía Única de Cumplimiento no fuera aceptada, la ANI hará exigible la Garantía de Seriedad de la Propuesta y podrá declarar la caducidad del Contrato.
 
@@ -4649,7 +4052,6 @@ La Garantía Única de Cumplimiento contendrá los siguientes amparos
 
 (a)    Cumplimiento: El amparo de cumplimiento garantizará las obligaciones del Concesionario en razón de la ejecución o liquidación del Contrato, incluyendo el pago de la Cláusula Penal y de las Multas y demás sanciones que se causen
 
-Página 202 de 288
 
 durante cada una de las fases y etapas del Contrato según se describe a continuación.
 
@@ -4670,8 +4072,6 @@ durante cada una de las fases y etapas del Contrato según se describe a continu
 
 (d)    Calidad de Bienes y Equipos Suministrados: Este amparo cubrirá a la ANI de los perjuicios imputables al Concesionario, derivados de la mala calidad o deficiencias  técnicas  de  los  bienes  o  equipos  suministrados  por  el Concesionario, de acuerdo con las Especificaciones Técnicas establecidas en el Contrato o por el incumplimiento de los parámetros o normas técnicas establecidas para el respectivo bien o equipo.
 
-
-Página 203 de 288
 
 (i)  Este amparo deberá tener una vigencia de cinco (5) años contados a partir de la fecha de suscripción de cada Acta de Terminación de Unidad Funcional.
 
@@ -4695,7 +4095,6 @@ Página 203 de 288
 (ii)  El valor de esta garantía será el que se señale en la Parte Especial.
 
 (iii) Ninguna cobertura podrá ser inferior al valor asegurado mínimo requerido, excepto los amparos de responsabilidad civil patronal y vehículos propios y no propios que no podrán ser inferiores por evento, al cincuenta por ciento (50%) del valor asegurado mínimo. No se
-Página 204 de 288
 
 aceptará ningún otro tipo de sublímites ni de limitación al valor asegurado por cada una de las coberturas de la Garantía de Responsabilidad Extracontractual.
 
@@ -4718,7 +4117,6 @@ aceptará ningún otro tipo de sublímites ni de limitación al valor asegurado 
 (iv) Una vez suscrita y aprobada la póliza todo riesgo obras civiles ANI, no se aceptan cambios de asegurador durante la Fase de Construcción ni antes de finalizar la Etapa Preoperativa. En la Etapa de Operación y Mantenimiento la póliza podrá expedirse por anualidades y con otros aseguradores.
 
 (v)  Como requisito para la suscripción de cada Acta de Terminación de Unidad Funcional, el objeto de este seguro deberá ampliarse para cubrir las Intervenciones y el valor asegurable de esta garantía deberá aumentarse en un valor equivalente al valor total del Contrato de
-Página 205 de 288
 
 Construcción aplicable(s) a la Unidad Funcional correspondiente, incluyendo los materiales, mano de obra, fletes, derechos de aduana, impuestos y materiales o rubros en los que haya incurrido el Concesionario, adicionales al Contrato de Construcción. El valor asegurado podrá establecerse con base en un estudio de pérdida máxima  probable  (PML)  que  deberá  ser  contratado  por  el Concesionario con una persona de reconocida idoneidad y experiencia en labores similares que demuestre haber elaborado al menos tres (3) estudios similares para proyectos de igual o mayor valor al del Proyecto, ya sea en Colombia o en el exterior. Si no se acude a la figura de PML esta condición no aplica.
 
@@ -4736,67 +4134,13 @@ Construcción aplicable(s) a la Unidad Funcional correspondiente, incluyendo los
 
 12.9 Actualización de los valores de las garantías
 
-Página 206 de 288
 
 (a)    Los valores de las garantías serán indexados al momento de su constitución aplicando la fórmula señalada en la Sección 3.9(b) de esta Parte General.
 
 (b)    Dentro de los quince (15) primeros Días del Mes de Enero de cada año, se ajustará el valor de la totalidad de las garantías, para lo cual se aplicará la fórmula señalada en la Sección 3.9(b) de esta Parte General.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 207 de 288
-
-CAPÍTULO XIII ECUACIÓN CONTRACTUAL Y ASIGNACIÓN DE
+CAPÍTULO XII I ECUACIÓN CONTRACTUAL Y ASIGNACIÓN DE
 RIESGOS
 
 13.1 Ecuación Contractual
@@ -4808,13 +4152,12 @@ La ecuación contractual del presente Contrato estará conformada por los siguie
 
 (c)    La ANI asume el costo de los riesgos expresamente asignados a la ANI, y del cumplimiento de las obligaciones a su cargo, en los términos previstos en el Contrato.
 
-Página 208 de 288
 
 13.2 Riesgos asignados al Concesionario
 
 (a)    Salvo en los aspectos previstos en la Parte Especial, los siguientes son los riesgos asignados al Concesionario, además de los que le sean asignados en otras partes del Contrato (incluyendo sus Apéndices) o de los que por su naturaleza deban ser asumidos por el Concesionario. Se exceptúa el documento denominado matriz de riesgos del Proyecto, publicado en el SECOP, el cual es de referencia, no hace parte del Contrato de Concesión no tiene carácter vinculante y no servirá de criterio de interpretación del presente Contrato:
 
-(i)  Los efectos favorables y/o desfavorables derivados de los costos y las demoras en la Gestión Predial, toda vez que es obligación de resultado del Concesionario gestionar y adquirir en representación de la ANI, en los términos del CAPÍTULO VII de esta Parte General, los Predios necesarios para adelantar las Intervenciones, y cumplir al respecto con la Ley Aplicable.
+(i)  Los efectos favorables y/o desfavorables derivados de los costos y las demoras en la Gestión Predial, toda vez que es obligación de resultado del Concesionario gestionar y adquirir en representación de la ANI, en los términos del CAPÍTULO VI I de esta Parte General, los Predios necesarios para adelantar las Intervenciones, y cumplir al respecto con la Ley Aplicable.
 
 (ii)  Salvo por las coberturas a cargo de la ANI expresamente previstas en el presente Contrato, los efectos favorables  y/o desfavorables derivados de las variaciones en el Valor Estimado de Predios (incluyendo expropiación) y Compensaciones Socioeconómicas.
 
@@ -4823,7 +4166,6 @@ Página 208 de 288
 (iv) Salvo por las coberturas a cargo de la ANI expresamente previstas en el  presente  Contrato,  los  efectos  favorables  y/o  desfavorables derivados  de  las  variaciones  en  el  valor  estimado  de  las Compensaciones Socioambientales, en los términos de esta Parte General, toda vez que es obligación de resultado del Concesionario efectuar la Gestión Social y Ambiental y cumplir al respecto con la Ley Aplicable.
 
 (v)  Los efectos desfavorables correspondientes a pérdidas, daños, gastos, cargos o expensas en que tenga que incurrir el Concesionario con ocasión de la invasión del Corredor del Proyecto por parte de terceros, en tanto es obligación del Concesionario tomar las medidas necesarias
-Página 209 de 288
 
 previstas en la Ley Aplicable para la defensa y protección del Corredor del Proyecto ante las Autoridades Estatales competentes en la debida forma y oportunidad. Lo anterior se entiende sin perjuicio de A) lo previsto en este Contrato en cuanto a la financiación del Plan de Reasentamientos, B) las compensaciones aplicables, en el caso en que ocurra un Evento Eximente de Responsabilidad, en los términos previstos en la Sección 14.2(h) de esta Parte General y C) la compensación a cargo de la ANI cuando ocurra la circunstancia prevista en la Sección 14.2(i) de esta Parte General.
 
@@ -4838,7 +4180,6 @@ previstas en la Ley Aplicable para la defensa y protección del Corredor del Pro
 (x)  Salvo por las coberturas a cargo de la ANI expresamente previstas en el presente Contrato, los efectos favorables  y/o desfavorables derivados de la variación en los costos asociados a las cantidades de obra para la realización de túneles con soporte parcial por riesgo geológico.
 
 (xi) Salvo por las coberturas a cargo de la ANI expresamente previstas en el presente Contrato, los efectos favorables y/o desfavorables de la
-Página 210 de 288
 
 variación en los costos asociados a las cantidades de obras requeridas para la prevención o solución de eventos geológicos. Se entenderá por eventos geológicos, el conjunto de amenazas o peligros para la infraestructura, recursos y las actividades humanas, provocados por la ejecución de las Intervenciones en desarrollo del Proyecto, que afecten la dinámica de diversos procesos geológicos naturales.
 
@@ -4849,7 +4190,6 @@ variación en los costos asociados a las cantidades de obras requeridas para la 
 (xiv) Los efectos favorables y/o desfavorables derivados de las condiciones de la Entrega de la Infraestructura correspondiente al Proyecto, en el estado en que sea entregado por la ANI, en tanto sus obligaciones de resultado no se reducirán ni para la entrega de las Intervenciones, ni para la Operación y Mantenimiento en ninguna de las Etapas del Contrato. Este riesgo comprende la variación de costos debido a las condiciones de Entrega de la Infraestructura.
 
 (xv) Los efectos favorables y/o desfavorables derivados de las variaciones en las cantidades de obra que resulten necesarias para adelantar las obras de Mantenimiento y actividades de Operación y de las cantidades de obra que resulten necesarias para la consecución de los resultados previstos para las obras de Mantenimiento y actividades de Operación para cumplir con las obligaciones contractuales. No existirán cubrimientos o compensaciones de parte de la ANI como consecuencia de la variación de cualquier estimación inicial de las cantidades de obra para las obras de Mantenimiento y actividades de Operación frente a lo realmente ejecutado, o por la variación entre cualquier estimación de cantidades inicialmente efectuada para las obras e insumos necesarios para la ejecución de las obras de
-Página 211 de 288
 
 Mantenimiento y actividades de Operación y los que en realidad existieron en el mercado o fueron negociados por el Concesionario al momento de la ejecución de las obras de Mantenimiento y actividades de Operación.
 
@@ -4866,8 +4206,6 @@ Mantenimiento y actividades de Operación y los que en realidad existieron en el
 (xxi) Los efectos desfavorables de la no obtención del financiamiento total requerido para la financiación del Proyecto.
 
 
-Página 212 de 288
-
 (xxii)  Los efectos favorables  y/o desfavorables  derivados de  las condiciones de financiación y/o costos de la liquidez que resulten de sus condiciones iniciales o de la variación en las variables de mercado o condiciones del Proyecto.
 
 (xxiii)  Los efectos favorables y/o desfavorables derivados de la variación del tráfico durante la vida del Proyecto, respecto a la liquidez del recaudo del peaje únicamente.
@@ -4883,10 +4221,9 @@ Página 212 de 288
 
 (xxix)  Salvo por las coberturas a cargo de la ANI expresamente previstas en el presente Contrato, los efectos favorables y/o desfavorables derivados del impacto económico generado por un Cambio Tributario, en los términos previstos de esta Parte General.
 
-(xxx)  Los  efectos  favorables  y/o  desfavorables  derivados  del acaecimiento de eventos cubiertos por las pólizas previstas en el CAPÍTULO XII de esta Parte General.
+(xxx)  Los  efectos  favorables  y/o  desfavorables  derivados  del acaecimiento de eventos cubiertos por las pólizas previstas en el CAPÍTULO XI I de esta Parte General.
 
 (xxxi)  Los efectos desfavorables derivados de todos y cualesquiera daños, perjuicios o pérdidas de los bienes de su propiedad causados por
-Página 213 de 288
 
 terceros diferentes de la ANI, sin perjuicio de su facultad de exigir a terceros diferentes de la ANI la reparación o indemnización de los daños y perjuicios directos y/o subsecuentes cuando a ello haya lugar.
 
@@ -4904,7 +4241,6 @@ Salvo que la Parte Especial prevea otra cosa, los siguientes son los riesgos asi
 (c)    Los costos asociados a la realización de Obras Menores no previstas en este Contrato, solicitadas por la ANI o requeridas por la Autoridad Estatal, posteriores a la expedición de la Licencia Ambiental o parcialmente el producto de los costos que se generen derivados de los acuerdos de la(s) nueva(s) consulta(s) previa(s) protocolizadas durante la ejecución del Proyecto, de acuerdo con lo establecido en la Sección 8.1(d) de esta Parte General, y como consecuencia de nuevas comunidades étnicas en el área de influencia del Proyecto y por razones no imputables al Concesionario, de conformidad con lo establecido en esta Parte General.
 
 (d)    Los efectos desfavorables derivados de que, por razones no imputables al Concesionario, se haga imposible la instalación de las Estaciones de Peaje nuevas indicadas en el Apéndice Técnico 1, o en general, se haga imposible el Recaudo de Peaje en cualquiera de las Estaciones de Peaje, o en el evento de
-Página 214 de 288
 
 cambios en la ubicación de las Estaciones de Peaje existentes cuando dicha modificación sea impuesta por la ANI o por cualquier Autoridad Estatal con capacidad para ordenar tal modificación o reubicación.
 
@@ -4921,7 +4257,6 @@ cambios en la ubicación de las Estaciones de Peaje existentes cuando dicha modi
 (j)    Los efectos favorables y/o desfavorables derivados de las variaciones en los ingresos generados por la diferencia entre la fecha de Entrega de la Infraestructura (que incluye Estaciones de Peaje) establecida en el Contrato, y la fecha real de Entrega de la Infraestructura (que incluye Estaciones de Peaje).
 
 (k)    La insuficiencia del valor estimado de los recursos que debe aportar el Concesionario  a  las  Subcuentas  Soporte  Contractual  y  la  Subcuenta Interventoría y Coordinación, para hacer los pagos a que se compromete la ANI, en los casos en que no hubiere incurrido el Concesionario en
-Página 215 de 288
 
 incumplimiento con su obligación de realizar aportes a dichas subcuentas. En la medida en que la asunción de este riesgo conlleva, exclusivamente la obligación de la ANI de pagar al Concesionario en las condiciones establecidas en el presente Contrato, el fondeo faltante efectuado por el Concesionario, para la cobertura de este riesgo.
 
@@ -4941,7 +4276,6 @@ incumplimiento con su obligación de realizar aportes a dichas subcuentas. En la
 
 (s)    Parcialmente los efectos desfavorables derivados de la ocurrencia de un evento eximente de responsabilidad cuando el mismo genere costos ociosos por mayor permanencia en obra, en tanto que la asunción de este riesgo conlleva, exclusivamente, el reconocimiento de los mismos en los términos de la Sección 14.2(h) esta Parte General.
 
-Página 216 de 288
 
 (t)    Parcialmente los efectos favorables y/o desfavorables derivados de los eventos de Fuerza Mayor Ambiental, relacionadas con las demoras en la expedición de las Licencias y Permisos y/o conceptos ambientales, de conformidad con lo establecido en las Secciones 8.1(h)(i) y 8.1(h)(ii) de esta Parte General.
 
@@ -4961,7 +4295,6 @@ Página 216 de 288
 13.4 Cascada de Pagos para cobertura de Riesgos a cargo de la ANI
 
 Cuando se trate de obligaciones contingentes a cargo de la Nación y se determinen los valores que deban ser pagados por parte de la ANI al Concesionario como resultado del acaecimiento de un riesgo asignado total o parcialmente a cargo de la ANI, de acuerdo con lo establecido en la Ley 448 de 1998 y el Decreto 1068 de 2015 del Ministerio de
-Página 217 de 288
 
 Hacienda y Crédito Público o aquellas normas que los modifiquen, sustituyan o complementen y en el presente Contrato, deberá seguirse como se señala a continuación:
 
@@ -4975,40 +4308,7 @@ Hacienda y Crédito Público o aquellas normas que los modifiquen, sustituyan o 
 (c)    De ser dichos recursos insuficientes, la ANI deberá gestionar la inclusión en su propio presupuesto de los recursos necesarios, previo el agotamiento de los requisitos de Ley.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 218 de 288
-
-CAPÍTULO XIV TERMINACIÓN PARCIAL DE UNIDAD FUNCIONAL, EVENTO EXIMENTE DE RESPONSABILIDAD E INDEMNIDADES
+CAPÍTULO XI V TERMINACIÓN PARCIAL DE UNIDAD FUNCIONAL, EVENTO EXIMENTE DE RESPONSABILIDAD E INDEMNIDADES
 
 14.1 Imposibilidad de Terminación por Eventos Eximentes de Responsabilidad o por razones imputables a la ANI
 (a)    Si, vencido el plazo previsto en el Plan de Obras para la terminación de una Unidad Funcional, ésta no se hubiere completado por Eventos Eximentes de Responsabilidad o por razones imputables a la ANI, se suscribirá por las Partes un Acta de Terminación Parcial de Unidad Funcional y se pondrán en servicio las Intervenciones que se hayan realizado, siempre que se cumplan todas y cada una de las siguientes condiciones:
@@ -5024,7 +4324,6 @@ CAPÍTULO XIV TERMINACIÓN PARCIAL DE UNIDAD FUNCIONAL, EVENTO EXIMENTE DE RESPO
 (v)  El procedimiento de verificación para la suscripción del Acta de Terminación Parcial de Unidad Funcional será el descrito en la Sección 4.17 de esta Parte General, en todo aquello que no se encuentre regulado en las Secciones 14.1 y 14.2 de esta Parte General, según corresponda.
 
 (b)    A partir del Acta de Terminación Parcial de Unidad Funcional comenzará a pagarse la Compensación Especial equivalente a una parte de la Retribución
-Página 219 de 288
 
 que se hubiese causado de haberse completado totalmente la Unidad Funcional, la cual corresponderá al porcentaje que represente la proporción entre la inversión realizada efectivamente y la que corresponde a la totalidad de la Unidad  Funcional,  multiplicado  por  la  fracción  que  corresponda,  de conformidad con la siguiente tabla:
 
@@ -5043,7 +4342,6 @@ El porcentaje de la inversión efectivamente realizada aquí aludido será defin
 4.17 de esta Parte General.
 
 (e)    Si se vence el nuevo Plan de Obras modificado al que se refiere la Sección 14.1(d) anterior, o si transcurrieren al menos quinientos cuarenta (540) Días contados desde el vencimiento del plazo originalmente previsto para la terminación de la Unidad Funcional afectada –lo que primero ocurra– sin que
-Página 220 de 288
 
 se logren culminar las Intervenciones correspondientes por un Evento Eximente de Responsabilidad o por causa imputable a la ANI, las Partes de buena fe revisarán el alcance del Contrato para determinar si resulta viable modificar el alcance de las Intervenciones, incluyendo la posibilidad de modificar o desafectar la Unidad Funcional respectiva, previo recálculo de la Retribución que refleje las modificaciones realizadas, que se hará por el mutuo acuerdo de las Partes o por el Amigable Componedor. Si no es viable modificar el alcance de las Intervenciones, cualquiera de las Partes podrá solicitar la Terminación Anticipada del Contrato.
 
@@ -5058,7 +4356,6 @@ No obstante lo anterior, una vez acaecido y reconocido cualquier Evento Eximente
 (b)    La ocurrencia de un Evento Eximente de Responsabilidad eximirá a la Parte respectiva del cumplimiento de las obligaciones que se les imponen bajo el Contrato en la extensión prevista en la Ley Aplicable, salvo por las obligaciones de pago de dinero (sin perjuicio de lo previsto en la Sección 3.9(e) de esta Parte General).
 
 (c)    La ocurrencia de un Evento Eximente de Responsabilidad que afecte una Unidad Funcional con posterioridad a la suscripción de Acta de Terminación de Unidad Funcional o del Acta de Terminación Parcial de Unidad Funcional, según corresponda, no suspenderá el desembolso de la Retribución o Compensación Especial por dicha Unidad Funcional al Concesionario, sin perjuicio de la posibilidad de solicitar la Terminación Anticipada del Contrato, conforme a lo previsto en la Sección 17.2(b)(i), caso este último en que sólo
-Página 221 de 288
 
 procederá el pago del valor de la liquidación que corresponda de acuerdo con lo previsto en la Sección 18.3 de esta Parte General.
 
@@ -5073,7 +4370,6 @@ procederá el pago del valor de la liquidación que corresponda de acuerdo con l
 (ii)  En caso en que la Parte afectada fuere el Concesionario, en el informe del que trata la Sección 14.2(d)(i)(4) anterior deberá indicar el impacto del Evento Eximente de Responsabilidad en el Plan de Obras, el tiempo que considere necesario para su ampliación, así como, justificar técnicamente las razones de este requerimiento. Adicionalmente deberá presentar la modificación respectiva en el documento Apéndice Financiero 1: Información Financiera, en el mismo momento en que se remite la Notificación de la que trata esta Sección. En este evento, el  Concesionario  deberá  remitir  copia  de  la  Notificación  al representante de los Prestamistas y al Interventor.
 
 (iii) El plazo descrito para la Notificación podrá ser mayor, cuando el hecho generador del Evento Eximente de Responsabilidad sea continuo y permanente a lo largo del tiempo y su efecto sólo pueda ser
-Página 222 de 288
 
 dimensionado con posterioridad a su ocurrencia, lo cual será verificado por la Parte receptora y la Interventoría, según corresponda, al momento del análisis de la solicitud. Lo anterior también será aplicable cuando  el  Evento  Eximente  de  Responsabilidad  impida  la comunicación entre las Partes.
 
@@ -5088,7 +4384,6 @@ En todo caso, la Parte receptora o la Interventoría podrán solicitar de confor
 
 
 (v)  Si la Parte receptora o la Interventoría considera que la información suministrada por la Parte afectada se encuentra incompleta, no es suficiente, o por cualquier otra causa estima insuficiente el término inicialmente previsto en la Sección 14.2(d)(iv) anterior, según corresponda, para resolver la solicitud, así se lo hará saber a la Parte Afectada mediante comunicación que deberá ser remitida con al menos diez (10) Días Hábiles de antelación al vencimiento de su plazo inicial, según corresponda, para pronunciarse sobre la Notificación, evento en el cual se entenderá que la Parte afectada: 1) deberá enviar la información solicitada en el término que se establezca por la Parte receptora o la Interventoría  para el efecto y/o 2) acepta el término adicional indicado por la Parte receptora para tramitar la solicitud; a menos que expresamente la Parte afectada manifieste su desacuerdo dentro de los cinco (5) Días siguientes al recibo de la comunicación aquí referida. En caso de que la comunicación no se remita por la Parte
-Página 223 de 288
 
 receptora con la antelación señalada en la presente Sección o que la Parte afectada manifieste su desacuerdo con enviar información adicional o extender el término respectivo para analizar la solicitud de declaratoria del Evento Eximente de Responsabilidad correspondiente y, de ser el caso, analizar las razones aducidas para la ampliación del plazo del Plan de Obras de la Unidad Funcional afectada, la Parte receptora deberá adelantar su análisis con la información disponible, dentro del plazo inicialmente previsto en las Secciones 14.2(d)(iv) o 14.2(d)(v) anterior, según corresponda.
 
@@ -5099,7 +4394,6 @@ receptora con la antelación señalada en la presente Sección o que la Parte af
 Si las Partes no logran concertar los términos en que se suscribirá el Acta de Reconocimiento de EER dentro del plazo señalado, el asunto podrá ser resuelto por el Amigable Componedor.
 
 (viii) Una vez suscrita el Acta de Reconocimiento de EER, si la ANI y el Interventor encuentran procedentes las razones aducidas por parte del Concesionario para la ampliación del Plan de Obras por una extensión mayor al Periodo Especial, el Concesionario procederá a modificar el Plan de Obras de la Unidad Funcional afectada a más tardar dentro de los treinta (30) Días Hábiles siguientes a la fecha de suscripción del Acta de Reconocimiento de EER. De existir acuerdo entre la ANI y la Interventoría, acerca de la modificación del Plan de Obras, se dará alcance al Acta de Reconocimiento de EER señalando el plazo de ampliación del Plan de Obras de la Unidad Funcional afectada. De la misma manera, se podrá ajustar el Plan de Adquisición de Predios,
-Página 224 de 288
 
 siempre que el mismo se vea afectado por un Evento Eximente de Responsabilidad.
 
@@ -5113,7 +4407,6 @@ siempre que el mismo se vea afectado por un Evento Eximente de Responsabilidad.
 
 (xiii) Una vez recibida la Notificación de la que trata la Sección anterior, la Parte receptora manifestará su acuerdo o desacuerdo sobre la fecha propuesta por la Parte afectada para reanudar el cumplimiento de las obligaciones suspendidas dentro de los tres (3) Días Hábiles siguientes al recibo de la Notificación aquí referida. En caso de existir objeción, la Parte receptora le comunicará a la Parte afectada la fecha de reanudación que considera aceptable. En caso de subsistir controversia sobre la fecha de reanudación, cualquiera de las Partes podrá acudir al Amigable Componedor.
 
-Página 225 de 288
 
 (xiv) Si con posterioridad a la suscripción del Acta de Reconocimiento de EER de la que trata la Sección 14.2(d)(vii), el Concesionario solicita a la ANI y el Interventor la ampliación del Plan de Obras, en una extensión mayor a la del Periodo Especial, se dará aplicación al procedimiento establecido en la Sección 4.9 de esta Parte General.
 
@@ -5127,7 +4420,6 @@ Página 225 de 288
 
 (ii)  Si los hechos constitutivos de un Evento Eximente de Responsabilidad no impiden la ejecución de la totalidad de las obligaciones de la etapa en la cual se encuentre el Contrato en su ejecución, sino sólo la de alguna o algunas de las obligaciones emanadas del mismo, las Partes convendrán si tales circunstancias suponen o no la suspensión del plazo contractual, atendidas las condiciones fácticas correspondientes y el grado de importancia de las obligaciones suspendidas. Los desacuerdos sobre este punto serán resueltos por el Amigable Componedor.
 
-Página 226 de 288
 
 (iii) En caso de suspensión del Contrato por un Evento Eximente de Responsabilidad,  el  Concesionario  deberá  tomar  las  medidas conducentes, a su costo, para que la vigencia de las Garantías y Mecanismos de Cobertura del presente Contrato sean extendidos de conformidad con el período de suspensión.
 
@@ -5145,8 +4437,6 @@ Página 226 de 288
 (vi) Determinado  el  valor  del  reconocimiento,  la  ANI  pagará  al Concesionario el monto correspondiente, para lo cual podrá autorizar el uso de los recursos de la Subcuenta Excedentes ANI para atender dicha obligación o, como último recurso, atender los pagos con cargo a su propio presupuesto, previo agotamiento de los requisitos previstos en la Ley Aplicable, dentro de los plazos y en las condiciones previstas en la Sección 3.6 de esta Parte General.
 
 
-Página 227 de 288
-
 (vii) Tales reconocimientos se incluirán en los Informes de Interventoría correspondientes a los períodos en que se presenten los Eventos Eximentes de Responsabilidad ya referidos.
 
 (i)   Reparaciones Necesarias por Evento Eximente de Responsabilidad.
@@ -5163,7 +4453,6 @@ Página 227 de 288
 (4)     Cualquier otro evento para el que, al momento de su ocurrencia, no se ofrezca seguro que ampare a estos bienes, obras y/o equipos del riesgo acaecido, en condiciones razonables de mercado, de acuerdo con la Ley Aplicable. En caso de desacuerdo entre las Partes la controversia será definida por el Amigable Componedor.
 
 (iii) Para que proceda el reembolso a que se refiere la Sección 14.2(i)(ii) anterior se requerirá que el Concesionario haya dado aviso a la ANI y al Interventor sobre la ocurrencia de tales eventos en un plazo que no supere diez (10) Días Hábiles desde su ocurrencia, de conformidad con la Sección 14.2(d)(i). La evaluación de tales hechos, las causas que los
-Página 228 de 288
 
 motivaron y las actividades que el Concesionario realizó ante ellos, se harán constar dentro de los treinta (30) Días siguientes a la fecha en que cesen dichas causas, en actas suscritas por el Interventor y el Concesionario, que se someterán a la aprobación de la ANI.
 
@@ -5179,7 +4468,6 @@ motivaron y las actividades que el Concesionario realizó ante ellos, se harán 
 (j)    Si se vence el nuevo Plan de Obras modificado al que se refiere la Sección 4.9 o 14.2(d), según corresponda, de esta Parte General, o si transcurrieren al menos quinientos cuarenta (540) Días contados desde el vencimiento del plazo originalmente previsto para el cumplimiento de la obligación afectada – lo que primero ocurra– sin que se logren culminar las Intervenciones correspondientes por un Evento Eximente de Responsabilidad, las Partes de buena fe revisarán el alcance del Contrato para determinar si resulta viable modificar el alcance de las Intervenciones, incluyendo la posibilidad de modificar o desafectar la Unidad Funcional respectiva, previo recálculo de la Retribución que refleje las modificaciones realizadas, que se hará por el mutuo acuerdo de las Partes o por el Amigable Componedor. Si no es viable modificar el alcance de las Intervenciones, cualquiera de las Partes podrá solicitar la Terminación Anticipada del Contrato.
 
 No obstante lo anterior, una vez acaecido y reconocido cualquier Evento Eximente de Responsabilidad, las Partes de común acuerdo podrán proceder de manera inmediata con la revisión y modificación del alcance del Proyecto conforme a lo señalado en el párrafo anterior, siempre que el Evento Eximente
-Página 229 de 288
 
 de Responsabilidad que se presente sea de tal magnitud e impacto que afecte de forma irremediable e insubsanable la ejecución del Plan de Obras inicialmente previsto para la Unidad Funcional respectiva.
 
@@ -5202,7 +4490,6 @@ de Responsabilidad que se presente sea de tal magnitud e impacto que afecte de f
 
 (ii)  El Concesionario pagará –a nombre de la ANI– las sumas necesarias para cumplir con cualquier condena, o incluso para atender los embargos o el requerimiento de pólizas u otras medidas provisionales que emitan las autoridades, dentro de los treinta (30) Días Hábiles
 
-Página 230 de 288
 
 contados desde la solicitud en ese sentido hecha por la ANI, soportada por una copia de la orden correspondiente de las autoridades.
 
@@ -5211,50 +4498,7 @@ contados desde la solicitud en ese sentido hecha por la ANI, soportada por una c
 (v)  Todo lo anterior se entiende sin perjuicio de la utilización de los instrumentos procesales que resulten aplicables, por cualquiera de las Partes.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 231 de 288
-
-CAPÍTULO XV SOLUCIÓN DE CONTROVERSIAS
+CAPÍTULO X V SOLUCIÓN DE CONTROVERSIAS
 
 Lo establecido en el presente Capítulo no obsta para que las Partes puedan resolver directamente y en cualquier tiempo toda controversia patrimonial y conciliable entre ellas, surgida del presente Contrato. A los mecanismos de solución de controversias se les aplicará lo previsto en la Ley 1563 de 2012 y el artículo 14 de la ley 1682 de 2013, así como las demás normas que los modifiquen, complementen o deroguen.
 
@@ -5271,7 +4515,6 @@ Lo establecido en el presente Capítulo no obsta para que las Partes puedan reso
 (1) Amigable Componedor, de la lista que le remitió la parte contraria, para lo cual remitirá comunicación a su contraparte, así como al profesional designado informando la selección efectuada. Si no lo hiciere dentro de dicho término, la parte remitente de la respectiva lista hará la selección respectiva.
 
 (iii) Aceptación,  revelación  y  traslado:  Una  vez  informado  de  su designación, el amigable componedor seleccionado comunicará dentro de los cinco (5) Días Hábiles siguientes su aceptación y a su vez hará una declaración de independencia e imparcialidad respecto de las Partes y manifestará no tener ninguna inhabilidad o incompatibilidad de conformidad con lo exigido por la Ley aplicable. Dentro de los
-Página 232 de 288
 
 cinco (5) Días Hábiles siguientes al vencimiento del plazo anterior, si alguna de las partes manifestare por escrito dudas justificadas acerca de la imparcialidad o independencia del miembro del Panel y su deseo de relevarlo con fundamento en la información suministrada por este y según lo establecido en la Sección 15.1(c)(x) siguiente, se procederá a su reemplazo en la forma prevista en las Secciones 15.1(c)(i), 15.1(c)(ii) y 15.1(c)(iii).
 
@@ -5287,7 +4530,6 @@ cinco (5) Días Hábiles siguientes al vencimiento del plazo anterior, si alguna
 
 (ix) Si durante el curso del Contrato se llegare a establecer que alguno de los integrantes del Amigable Componedor no reveló información que debía suministrar al momento de aceptar su designación, los restantes miembros del Panel evaluarán la circunstancia no revelada y decidirán sobre la separación o continuidad del miembro respectivo en un término no mayor a veinte (20) Días.
 
-Página 233 de 288
 
 A falta de unanimidad, el miembro respectivo será reemplazado conforme  la  Sección  15.1(c)(xv)  siguiente.  En  todo  caso,  el impedimento o la recusación del integrante del Amigable Componedor no afectará la validez de las decisiones adoptadas con anterioridad.
 
@@ -5302,7 +4544,6 @@ De igual forma, ningún miembro del Amigable Componedor podrá ser empleado, soc
 (xi) Los integrantes del Panel de Amigables Componedores no tendrán relación laboral alguna con las Partes. Su vinculación al Proyecto se enmarca y limita estrictamente a las funciones que para la figura del Panel de Amigables Componedores prevé la Ley Aplicable.
 
 (xii) El Panel de Amigables Componedores permanecerá activo desde el momento de la designación de sus miembros y hasta la fecha en que se suscriba el Acta de Reversión, término durante el cual sus integrantes estarán obligados –y así lo reconocerán expresamente al aceptar su designación– a conocer en detalle las características del Contrato de Concesión y de todos sus Apéndices, así como las normas nacionales e internacionales que sean aplicables. Igualmente, los integrantes del Amigable Componedor estarán en la obligación de conocer detalladamente todos los aspectos de la ejecución del
-Página 234 de 288
 
 Contrato, sus modificaciones y cualquier otro aspecto relevante frente a su desarrollo, de tal manera que estén en capacidad de dar una respuesta rápida e informada en todos los casos que se sometan a su conocimiento.
 
@@ -5314,7 +4555,6 @@ A dichos efectos, las Partes estarán obligadas en todo momento de ejecución co
 En caso que la intención sea la de NO ratificar alguno de sus miembros, la Parte que designó al integrante del Panel, podrá manifestar la voluntad de no ratificación, y deberá comunicar tal postura a la otra dentro de los 3 Meses anteriores al vencimiento del período de dos años indicado anteriormente o cualquiera de sus prórrogas, y de igual manera informar de dicha determinación a los Amigables Componedores y al Centro de Arbitraje y Conciliación de la Cámara de Comercio de Bogotá; en cuyo caso, se entenderá removido y se realizará una nueva designación, de conformidad con lo previsto en la Sección 15.1(c)(xv) siguiente.
 
 En relación con los miembros del Panel que fueron sorteados por el Centro de Arbitraje y Conciliación de la Cámara de Comercio de Bogotá, si alguna de las partes, dentro de los tres (3) Meses anteriores al vencimiento del período de dos años inicial o sus prórrogas, manifiesta a la otra su intención de NO ratificarlo, la otra Parte podrá manifestar su aceptación para la NO ratificación del integrante del
-Página 235 de 288
 
 Panel o denegar tal manifestación. La otra Parte tendrá diez (10) Días para pronunciarse sobre la manifestación realizada y, en caso de guardar silencio, se entenderá que accede a la NO ratificación. En caso de acuerdo expreso o ficto para la NO ratificación del miembro del Amigable, se entenderá removido y se realizará una nueva designación de conformidad con lo previsto en la Sección 15.1(c)(xv) siguiente.
 
@@ -5332,7 +4572,6 @@ El  término  de  ratificación  para  quien  sustituye  al  Amigable Componedor
 
 (iii) La remuneración de cada uno de los integrantes del Panel de Amigables Componedores corresponderá únicamente a la dedicación invertida en atender las controversias del Contrato de Concesión que hayan sido puestas a su consideración.
 
-Página 236 de 288
 
 (iv) Para estos efectos, las partes convienen que el valor de los honorarios por cada controversia que conozcan será de sesenta (60) salarios mínimos mensuales legales vigentes incluido IVA por cada integrante del Panel de Amigables Componedores. Eventualmente y en razón a la complejidad de la controversia y/o del tiempo requerido para su solución, el Amigable Componedor podrá solicitar a las Partes, en cualquier momento luego de su formulación y antes de emitir decisión, para que de común acuerdo autoricen una remuneración mayor al límite inicialmente previsto en este numeral, siempre y cuando se cuente con dichos recursos en la Subcuenta MASC; sin perjuicio de lo anterior, dicha suma no podrá superar el cincuenta por ciento (50%) de la remuneración inicialmente pactada. En todo caso, el valor por concepto de honorarios se causará una vez concluido el trámite.
 
@@ -5345,7 +4584,6 @@ Página 236 de 288
 (ii)  El Amigable Componedor tendrá un plazo máximo de noventa (90) Días Hábiles para definir la controversia, los cuales se contarán a partir del día siguiente a la celebración de la Audiencia de Apertura. Este plazo podrá ampliarse a solicitud del Panel por una sola vez y hasta por un término de treinta (30) Días Hábiles, siempre que esa solicitud sea aceptada por las Partes. Vencido el plazo establecido para definir la controversia sin decisión del Amigable Componedor, este perderá su competencia para dirimir la controversia específica, la cual podrá ser  sometida  por  cualquiera  de  las  partes  ante  Tribunal  de Arbitramento, según lo dispuesto en las Secciones 15.2 y 15.3 siguientes. Si durante el transcurso de algún trámite que se encontrare en curso llegase a faltar alguno de los miembros del Panel con ocasión a lo previsto en la Sección 15.1(c)(xv) anterior, el término para adoptar la decisión se encontrará suspendido desde la renuncia, la no ratificación, falta absoluta o ausencia de dicho integrante, hasta el momento en que el Panel se encuentre constituido nuevamente, para lo cual las partes entienden que las actuaciones que se hayan surtido con anterioridad a su ausencia tendrán plena validez.
 
 (iii) Sin perjuicio de adoptar el Procedimiento de Amigable Composición de conformidad con el reglamento del Centro de Arbitraje y Conciliación de la Cámara de Comercio de Bogotá relativo a Amigable Composición según lo indicado en la Sección 15.1(e)(i) anterior, las Partes acuerdan que, la Parte convocada contará con un término de treinta (30) Días Hábiles para emitir su respectivo pronunciamiento
-Página 237 de 288
 
 y/o contestación a la solicitud o controversia planteada por la parte que la convoca, los cuales se contarán a partir del día siguiente a la celebración de la audiencia de apertura.
 
@@ -5368,8 +4606,6 @@ y/o contestación a la solicitud o controversia planteada por la parte que la co
 
 15.2 Arbitraje Nacional
 
-
-Página 238 de 288
 
 (a)    Las controversias que surjan entre las Partes con ocasión del presente Contrato, que no sean de conocimiento del Panel de Amigables Componedores, serán resueltas por un Tribunal de Arbitramento nacional de conformidad con la ley 1563 de 2012, en armonía con las normas de procedimiento aplicables a la controversia y el artículo 14 de la Ley 1682 de 2013, o en las normas que los modifiquen, complementen o sustituyan y las reglas que a continuación se establecen.
 
@@ -5395,7 +4631,6 @@ HONORARIOS MÁXIMOS POR ÁRBITRO
 
 10   Salarios   Mínimos Legales  Diarios  Vigentes (smldv)
 3.25% de la cuantía 2.25% de la cuantía 2% de la cuantía
-Página 239 de 288
 
 Más de 848 e igual a 1696  1.75% de la cuantía Mayor a 1696        1.5% de la cuantía
 En todo caso, respecto del pago de honorarios de árbitros y demás gastos que se causen con ocasión de la convocatoria del Tribunal de Arbitramento, la ANI cubrirá exclusivamente la porción a su cargo, incluida la práctica de pruebas, de conformidad con lo dispuesto en la Sección 3.14(h)(vii)(3) de la Parte General de este Contrato.
@@ -5409,7 +4644,6 @@ En todo caso, ningún árbitro podrá ser empleado, socio y/o contratista del Co
 
 (j)    Las Partes acuerdan que en el evento en que se convoque el Tribunal de Arbitramento, los efectos de la cláusula compromisoria serán extensivos a aquellas empresas, sociedades o personas naturales que hayan presentado
 
-Página 240 de 288
 
 conjuntamente la Oferta, en la medida que dichos sujetos expresaron su consentimiento al momento de la presentación de la Oferta.
 
@@ -5431,7 +4665,6 @@ conjuntamente la Oferta, en la medida que dichos sujetos expresaron su consentim
 (iii) La ley aplicable al Contrato será la ley colombiana vigente al momento de la celebración del Contrato, así como las normas de procedimiento de la ley aplicables a la controversia.
 
 (iv) El tribunal será designado por las Partes con base en una lista elaborada conjuntamente o, supletivamente, por el Centro Internacional escogido, quien tendrá en cuenta las observaciones de idoneidad y experiencia
-Página 241 de 288
 
 informadas por las Partes. En el evento en que las Partes no lleguen a un acuerdo el Centro será el encargado de hacer la designación de todos los árbitros de conformidad con su reglamento.
 
@@ -5454,68 +4687,12 @@ informadas por las Partes. En el evento en que las Partes no lleguen a un acuerd
 (h)    Salvo pacto en contrario, desde el mismo momento en que se presente la solicitud o Notificación de Arbitraje por cualquiera de las Partes, el trámite arbitral gozará de confidencialidad, sin perjuicio de una orden judicial o disposición legal que la limite o restrinja.
 
 
-
-Página 242 de 288
-
 15.4 Continuidad en la ejecución
 
 La intervención del panel de Amigables Componedores o del Tribunal de Arbitramento no suspenderá la ejecución del Contrato, salvo respecto de aquellas obligaciones y/o actividades que de mutuo acuerdo las Partes consideren necesario suspender su ejecución para garantizar el éxito del Proyecto.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 243 de 288
-
-CAPÍTULO XVI ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL
+CAPÍTULO XV I ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL
 
 16.1 Personal del Concesionario
 
@@ -5528,7 +4705,6 @@ CAPÍTULO XVI ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL
 (d)    En todo caso, será obligación del Concesionario asegurarse que todo el personal que utilice, con relación laboral o sin ella, esté debidamente vinculado al régimen de seguridad social previsto en la Ley Aplicable y se realicen las respectivas cotizaciones en salud, pensiones y riesgos laborales durante la vigencia de la relación laboral o contractual y de manera oportuna. El incumplimiento de esta obligación y de las demás previstas en este Capítulo, se entenderá como incumplimiento del Contrato y será objeto de Multas, sin perjuicio de los efectos previstos en la Ley Aplicable, incluyendo la declaratoria de caducidad del Contrato.
 
 (e)    Mensualmente, el Concesionario deberá exigir a los Contratistas y a cualquiera de los subcontratistas del Concesionario, que le demuestren que han efectuado de manera puntual y en cuantía completa los pagos de salarios, sueldos, prestaciones legales o extralegales, cotizaciones al sistema de seguridad social
-Página 244 de 288
 
 y aportes parafiscales de sus empleados. Esta obligación también será aplicable respecto de los contratistas independientes – personas naturales-, caso en el cual se acreditará que dichos contratistas independientes han efectuado los pagos de que trata el presente literal que les correspondan.
 
@@ -5540,36 +4716,7 @@ Será responsabilidad del Concesionario el diseño del programa de higiene y seg
 El Contrato no crea relación alguna de asociación, asociación de riesgo compartido (Joint Venture), sociedad o agencia o relación laboral entre las Partes o entre la ANI los empleados, agentes, proveedores, Contratistas y subcontratistas del Concesionario, ni impone obligación o responsabilidad de índole societaria a ninguna de ellas. Ninguna de las Partes tendrá derecho, facultad o compromiso alguno, ni para actuar en nombre de la otra Parte, ni para ser su agente o representante, ni para comprometerla en forma alguna. Ninguna de las disposiciones del Contrato podrá interpretarse en el sentido de crear una relación distinta entre las Partes a la de la vinculación negocial en los términos del Contrato y de la Ley Aplicable, en particular, lo reglado sobre asociaciones público privadas en la Ley 1508 de 2012. Las Partes no pretenden crear ningún derecho ni otorgar ninguna acción a ningún tercer beneficiario del Contrato.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 245 de 288
-
-CAPÍTULO XVII    TERMINACIÓN DEL CONTRATO
+CAPÍTULO XVI I    TERMINACIÓN DEL CONTRATO
 
 17.1 Ocurrencia
 
@@ -5595,7 +4742,6 @@ El presente Contrato terminará de manera anticipada en los siguientes casos:
 (ii)  Por declaratoria de Terminación Unilateral con base en la aplicación del numeral 1º del artículo 17 de la Ley 80 de 1993.
 
 (iii) Por solicitud de cualquiera de las Partes ante la ocurrencia del evento previsto en la Sección 14.1(e) de esta Parte General.
-Página 246 de 288
 
 (iv) Cuando se profiera cualquier decisión en firme que declare la terminación anticipada del Contrato proveniente de una Autoridad Estatal que tenga competencia para ello, de acuerdo con la Ley Aplicable, y tal decisión señale que la causa de la misma fue distinta de las señaladas en las Secciones 17.2(a)(iv) o 17.2(c)(ii)de este Contrato.
 
@@ -5620,69 +4766,11 @@ Página 246 de 288
 17.3 Efectos de la Ocurrencia de una Causal de Terminación Anticipada por causas imputables al Concesionario
 
 (a)    Ocurrida una causal de Terminación Anticipada de las previstas en la Sección 17.2(a) anterior, la ANI enviará una Notificación de Derecho de Toma a los Prestamistas e iniciará el procedimiento previsto en la Sección 3.12 de esta Parte General. Si los Prestamistas toman posesión del Contrato éstos
-Página 247 de 288
 
 continuarán su ejecución. Si los Prestamistas deciden no continuar con su ejecución se dará inicio a la Etapa de Reversión al Día siguiente a la declaratoria de la Terminación Anticipada del Contrato.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 248 de 288
-
-CAPÍTULO XVIII   LIQUIDACIÓN DEL CONTRATO
+CAPÍTULO XVII I   LIQUIDACIÓN DEL CONTRATO
 
 18.1 Término
 
@@ -5697,7 +4785,6 @@ Para determinar la destinación de los recursos de las cuentas y subcuentas del 
 
 (ii)  Con recursos de la Subcuenta Predios, Subcuenta Compensaciones Socioambientales y Subcuenta Redes, se podrán realizar pagos a terceros distintos de i) el Concesionario, ii) sus socios, iii) los Beneficiarios Reales del Concesionario, o iv) cualquier otra persona en la cual el Concesionario, sus socios o los Beneficiarios Reales del Concesionario,  tengan  cualquier  participación  o  compartan  de cualquier manera los resultados de su actividad económica. Para la realización de estos pagos se deberá verificar que la obligación de pago respectiva se haya causado con anterioridad a la fecha de la Reversión y que tengan estricta y directa relación con las finalidades de esas Subcuentas, según se define en este Contrato.
 
-Página 249 de 288
 
 (iii) Con recursos de la Subcuenta Interventoría y Coordinación, Subcuenta de Soporte Contractual y la Subcuenta MASC, se podrán efectuar pagos al Interventor y al Equipo de Coordinación y Seguimiento del Contrato o a los miembros del Amigable Componedor, según corresponda, ordenados por la ANI.
 
@@ -5714,7 +4801,6 @@ Si luego de dar aplicación a lo previsto en la Sección 18.4(b) siguiente conti
 (iii) Los  excedentes  de  la  Subcuenta  Tiquetes  Prepagados  serán transferidos de conformidad con lo establecido en la Sección 3.14(h)(xii) de esta Parte General.
 
 (d)    Una vez se haya realizado la liquidación bilateral o unilateral del Contrato, de conformidad con lo señalado en los artículos 60 de la Ley 80 de 1993 (modificado por el artículo 217 del Decreto 019 de 2012) y 11 de la Ley 1150
-Página 250 de 288
 
 de 2007, la ANI enviará a la Fiduciaria, copia del Acta de Liquidación del Contrato, en la cual se señalará la destinación que la Fiduciaria deberá dar a los recursos disponibles en el Patrimonio Autónomo. La Fiduciaria deberá cumplir a cabalidad con lo dispuesto en el Acta de Liquidación del Contrato dentro de un término no mayor a noventa (90) Días contados desde la fecha de recibo del Acta de Liquidación del Contrato correspondiente.
 
@@ -5732,7 +4818,6 @@ de 2007, la ANI enviará a la Fiduciaria, copia del Acta de Liquidación del Con
 
 Si se produce la Terminación Anticipada del Contrato con anterioridad al inicio de la Fase de Construcción, se procederá a establecer el valor de la liquidación del Contrato de Concesión, mediante la aplicación de la siguiente fórmula:
 𝑉𝐿₍𝑝𝑐₎ = ∆ − (𝐷𝑦𝑀𝑚₊𝑙 + 𝐶𝑃𝑚₊𝑙 ) + 𝑂𝐴𝑁𝐼𝑚₊𝑙
-Página 251 de 288
 
 Siendo
 
@@ -5740,14 +4825,7 @@ Siendo
 VL(pc)
 
 
-
-
-
-
 ∆
-
-
-
 
 
 DyMm+l
@@ -5760,7 +4838,6 @@ Es el valor de las Deducciones, así como de las Multas y Sanciones, otros Descu
 
 
 CPm+l
-
 
 
 𝑚
@@ -5795,7 +4872,6 @@ Costos durante el Mes h asociados con las actividades que haya realizado el Conc
 Las  actividades  reconocidas  incluyen  exclusivamente  aquellas relacionadas con las obligaciones del Concesionario con anterioridad al inicio de la Fase de Construcción.
 
 En el evento en que durante la Etapa de Reversión proceda el pago definido en la Sección 3.4(h), la variable ARh tomará el valor de cero
-Página 252 de 288
 
 (0) para los Meses h correspondientes a la Etapa de Reversión (es decir, para cualquier periodo posterior a m). En otro caso se incluirán también en el ARh las actividades desarrolladas durante la Etapa de Reversión.
 Para los Meses h posteriores a la Fecha de Inicio se reconocerán exclusivamente los costos asociados con las siguientes actividades, previa verificación por parte del Interventor:
@@ -5812,15 +4888,11 @@ Para los Meses h anteriores a la Fecha de Inicio se reconocerán exclusivamente 
 •  Valor efectivamente desembolsado por concepto de primas de seguros y comisiones para la obtención de i) la Garantía Única de  Cumplimiento,  ii)  la  póliza  de  responsabilidad extracontractual a que se refiere la Sección 12.7 de esta Parte General, y iii) el seguro de daños contra todo riesgo a que se refiere la Sección 12.8 de esta Parte General, en el Mes h. Lo anterior, siempre que las pólizas hubieren sido aprobadas en los términos de la Sección 12.1(a) de esta Parte General; de lo contrario, no se reconocerán estos costos.
 
 
-Página 253 de 288
-
 •  Valor de los aportes que haya realizado el Concesionario a las Subcuentas de la Cuenta ANI, así como la Subcuenta Predios, Subcuenta Compensaciones Ambientales, Subcuenta Redes, y Subcuenta de Policía de Carreteras en el Mes h.
 •  Valor de la Comisión de Éxito efectivamente desembolsada al Estructurador en el Mes h.
 El valor reconocido por estas actividades se definirá con base en el procedimiento descrito en la Sección 18.6 de esta Parte General, el cual corresponderá al valor reconocido para el Mes h en las Actas Semestrales de Cálculo de ARh que se encuentren en firme.
 
 Rh        Corresponde al valor de la Retribución ajustada en el Mes h, en Pesos corrientes, calculada de acuerdo con la siguiente fórmula:
-
-
 
 
 Donde:
@@ -5847,17 +4919,11 @@ y = Número de Unidades Funcionales para las que fue medido el Índice de Cumpli
 
 Nota 1: En el evento en que no se tenga(n) Unidad(es) Funcional(es) de Operación y Mantenimiento (Unidad Funcional 0) la variable Rh tomará el valor de cero (0).
 
-Página 254 de 288
 
 Nota 2: El pago definido en la Sección 3.4(h) no se entenderá como Retribución para efectos de esta fórmula.
 
 
 Sh
-
-
-
-
-
 
 
 IPCh
@@ -5878,7 +4944,6 @@ Número de Meses transcurridos desde el Mes de terminación del Contrato hasta e
 𝐼𝑃𝐶𝑚₊𝑙
 
 
-
 Donde,
 𝐹 = ∑ [𝐸ℎ ∗ (
 ℎ=1
@@ -5890,18 +4955,10 @@ Eh          Valor de los Giros de Equity expresados en Pesos corrientes, siempre
 El factor FAE podrá ser modificado siempre y cuando exista una certificación por parte de los Prestamistas en la cual se establezca y justifique dicha modificación conforme a la estructura de financiación asociada al Cierre Financiero. Para esto deberá presentarse una solicitud y la respectiva certificación de los Prestamistas en los plazos definidos para la presentación del Cierre Financiero de acuerdo con lo establecido en la Sección 3.8(a) de esta Parte General.
 
 Nota: El valor acumulado hasta el Mes h, podrá superar el valor que resulte de multiplicar la suma del total de los montos mínimos de los Giros de Equity previstos en la Parte Especial por el factor FAE que se establece en la Parte Especial, única y exclusivamente cuando el Concesionario demuestre que con posterioridad a la presentación del Cierre Financiero, se presentó un evento que haga indispensable la financiación del proyecto vía aportes de capital.
-Página 255 de 288
-
-
-
-
-
 
 
 IPCm+l IPCh
 Sprov
-
-
 
 
 ℎ
@@ -5920,22 +4977,16 @@ Número de Meses transcurridos desde el Mes de terminación del Contrato hasta e
 Si se produce la Terminación Anticipada del Contrato durante la Fase de Construcción, se procederá a establecer el valor de la liquidación del Contrato de Concesión, mediante la aplicación de la siguiente fórmula:
 
 
-
 Donde, VL(c)
 
 
 ∆
 
 
-
-
 DyMm+l
 
 
-
-
 CPm+l
-
 
 
 𝑚
@@ -5952,7 +5003,6 @@ Es el valor de las Deducciones, así como de las Multas y Sanciones, otros Descu
 Cláusula Penal, si es del caso su aplicación conforme a la Sección 10.6 de esta Parte General, siempre que no haya sido pagada por el Concesionario, expresada en Pesos del Mes m+l.
 Mes en que ocurre la Terminación Anticipada del Contrato.
 Número de Meses transcurridos desde el Mes de terminación del Contrato hasta el Mes en que se suscriba el Acta de Liquidación del Contrato.
-Página 256 de 288
 
 OANIm+l    Obligaciones dinerarias pendiente de pago a cargo de la ANI, causadas hasta el momento de terminación del Contrato de Concesión, expresadas en Pesos del Mes m+l.
 
@@ -5990,7 +5040,6 @@ Para los Meses h posteriores a la Fecha de Inicio se reconocerán exclusivamente
 •  Valor efectivamente desembolsado por concepto de primas de seguros y comisiones para la obtención y el mantenimiento de i) la  Garantía  Única  de  Cumplimiento,  ii)  la  póliza  de responsabilidad extracontractual a que se refiere la Sección 12.7 de esta Parte General, y iii) el seguro de daños contra todo riesgo a que se refiere la Sección 12.8 de esta Parte General, en el Mes h.
 •  Valor de los aportes que haya realizado el Concesionario a las Subcuentas de la Cuenta ANI, así como la Subcuenta Predios, Subcuenta Compensaciones Socioambientales, Subcuenta Redes y Subcuenta de Policía de Carreteras, en el Mes h, hasta el monto establecido en la Parte Especial más los aportes que de conformidad con las Secciones 7.2(d), 8.1(c)(iii) y 8.2(e) de la Parte General, hayan sido efectivamente requeridos. No se
 
-Página 257 de 288
 
 reconocerán dentro del ARh los montos que el Concesionario haya aportado a dichas Subcuentas en exceso de lo anterior.
 •  Valor de la Comisión de Éxito efectivamente desembolsada al Estructurador en el Mes h.
@@ -6010,11 +5059,6 @@ El valor reconocido por estas actividades se definirá con base en el procedimie
 Rh        Corresponde al valor de la Retribución (incluyendo la Compensación Especial, cuando sea aplicable) ajustada en el Mes h, en Pesos corrientes, calculada de acuerdo con la siguiente fórmula:
 
 
-
-Página 258 de 288
-
-
-
 Donde:
 1
 𝑅ℎ = (𝑅𝑒𝑡𝑟𝑖𝑏𝑢𝑐𝑖ó𝑛ℎ) ∗ 𝐼𝐶
@@ -6023,9 +5067,6 @@ Rh = Retribución ajustada para el Mes h.
 Retribuciónh = Valor de la Retribución (incluyendo Compensación Especial, cuando sea aplicable) recibida por el Concesionario en el Mes h.
 Dh = Descuentos realizados a la Retribuciónh.
 ICh = Índice de Cumplimiento Ponderado aplicado a la Retribuciónh de acuerdo con la siguiente fórmula:
-
-
-
 
 
 Donde,
@@ -6049,11 +5090,6 @@ Nota: El pago definido en la Sección 3.4(h) no se entenderá como Retribución 
 Sh
 
 
-
-
-
-
-
 IPCh
 IPCm+l TE
 
@@ -6066,7 +5102,6 @@ Tasa de descuento real expresada en términos efectivo mensual y que para efecto
 Mes en que ocurre la Terminación Anticipada del Contrato.
 Número de Meses transcurridos desde el Mes de terminación del Contrato hasta el Mes en que se suscriba el Acta de Liquidación del Contrato.
 
-Página 259 de 288
 
 𝑧
 
@@ -6101,7 +5136,6 @@ Donde,
 F       Valor acumulado de las fuentes de recursos admisibles, expresado en Pesos corrientes del Mes en que se suscriba el Acta de Liquidación del Contrato.
 Eh        Valor de los Giros de Equity expresados en Pesos corrientes, siempre que hayan sido efectivamente desembolsados por parte del Concesionario en las condiciones que establece el Contrato. El valor acumulado hasta el Mes h, no podrá superar el valor que resulte de multiplicar la suma total de los montos mínimos de los Giros de Equity previstos en la Parte Especial por el factor FAE que se establece en la Parte Especial.
 El factor FAE podrá ser modificado siempre y cuando exista una certificación por parte de los Prestamistas en la cual se establezca y justifique dicha modificación conforme a la estructura de financiación asociada al Cierre Financiero. Para esto deberá presentarse una solicitud y la respectiva certificación de los Prestamistas en los plazos definidos
-Página 260 de 288
 
 para la presentación del Cierre Financiero de acuerdo con lo establecido en la Sección 3.8(a) de esta Parte General.
 
@@ -6114,25 +5148,13 @@ Uh        Valor de los montos de deuda efectivamente desembolsados por parte de 
 Inth
 
 
-
-
-
-
 Amorth
-
-
-
-
-
 
 
 Divh
 Valor de los montos de intereses de Deuda pagados a los Prestamistas registrados salvo que los recursos provengan de una fuente externa al Proyecto, es decir que sean distintos a los recursos de la Retribución y/o Recursos de Patrimonio y/o Recursos de Deuda, en el Mes h, de acuerdo con las certificaciones expedidas por la Fiduciaria que administra el Patrimonio Autónomo y la verificación de la interventoría, expresados en pesos corrientes del Mes h
 Valor de los montos de amortizaciones de capital de la Deuda efectivamente pagados a los Prestamistas registrados salvo que los recursos provengan de una fuente externa al Proyecto, es decir que sean distintos a los recursos de la Retribución y/o Recursos de Patrimonio y/o Recursos de Deuda, en el Mes h, de acuerdo con las certificaciones expedidas por la Fiduciaria que administra el Patrimonio Autónomo y la verificación de la interventoría, expresados en pesos corrientes del Mes h.
 Valor de las transferencias o pagos realizados en el Mes h, asociados a pagos de dividendos, repago de la deuda subordinada (capital e intereses) o cualquier otro repago asociado a los mecanismos de aportes de capital, expresados en pesos corrientes del Mes h. En caso de no contar con soportes suficientes aportados por la Fiduciaria que administra el Patrimonio Autónomo, esta variable tomará el siguiente valor para cada Mes h:
-
-
-
 
 
 Donde
@@ -6142,19 +5164,14 @@ Donde
 
 ∗ 𝐹𝐷𝑖𝑣
 𝐸𝑘: Valor de los Giros de Equity expresados en Pesos corrientes, siempre que  hayan  sido  efectivamente  desembolsados  por  parte  del
-Página 261 de 288
 
 Concesionario en las condiciones que establece el Contrato. El valor acumulado hasta el Mes k, no podrá superar el valor que resulte de multiplicar la suma total de los montos mínimos de los Giros de Equity previstos en la Parte Especial por el factor FAE que se establece en la Parte Especial.
 k = Cada uno de los Meses desde la suscripción del Contrato.
 
 
-
-
 IPCm+l IPCh TE
 
 SProv
-
-
 
 
 ℎ
@@ -6177,9 +5194,7 @@ Número de Meses transcurridos desde el Mes de Suscripción del Acta de Reversi�
 Si se produce la Terminación Anticipada del Contrato durante la Etapa de Operación y Mantenimiento, se procederá a establecer el valor de la liquidación del Contrato de Concesión, mediante la aplicación de la siguiente fórmula:
 
 
-
 Donde, VL(om)
-
 
 
 ∆
@@ -6193,15 +5208,10 @@ Valor bruto de la liquidación a cargo de la ANI que se calculará de acuerdo co
 Las fórmulas de cálculo de C y F se definen a continuación en esta Sección. Si ∆ es menor a cero (0), entonces ∆= 𝑐𝑒𝑟𝑜(0)
 
 
-Página 262 de 288
-
 DyMm+l
 
 
-
-
 CPm+l
-
 
 
 𝑚
@@ -6235,7 +5245,6 @@ Siendo,
 ∗ 𝐹𝑈𝑆𝐷′ℎ)]
 
 
-
 𝐶
 
 
@@ -6248,7 +5257,6 @@ Las  actividades  reconocidas  incluyen  exclusivamente  aquellas relacionadas c
 En el evento en que durante la Etapa de Reversión proceda el pago definido en la Sección 3.4(h), la variable ARh tomará el valor de cero (0) para los Meses h correspondientes a la Etapa de Reversión (es decir, para cualquier periodo posterior a m). En otro caso se incluirán también en el ARh las actividades desarrolladas durante la Etapa de Reversión.
 Para los Meses h posteriores a la Fecha de Inicio se reconocerán exclusivamente los costos asociados con las siguientes actividades, previa verificación por parte del Interventor:
 •  Valor efectivamente desembolsado por concepto de primas de seguros y comisiones para la obtención y el mantenimiento de i) la  Garantía  Única  de  Cumplimiento,  ii)  la  póliza  de responsabilidad extracontractual a que se refiere la Sección 12.7
-Página 263 de 288
 
 de esta Parte General, y iii) el seguro de daños contra todo riesgo a que se refiere la Sección 12.8 de esta Parte General, en el Mes h.
 •  Valor de los aportes que haya realizado el Concesionario a las Subcuentas de la Cuenta ANI, así como la Subcuenta Predios, Subcuenta Compensaciones Socioambientales, Subcuenta Redes y Subcuenta de Policía de Carreteras, en el Mes h, hasta el monto establecido en la Parte Especial más los aportes que de conformidad con las Secciones 7.2(d), 8.1(c)(iii) y 8.2(e) de la Parte General, hayan sido efectivamente requeridos. No se reconocerán dentro del ARh los montos que el Concesionario haya aportado a dichas Subcuentas en exceso de lo anterior.
@@ -6267,13 +5275,9 @@ En todos los Meses h anteriores a la Fecha de Inicio se reconocerán solamente l
 •  Valor de la Comisión de Éxito efectivamente desembolsada al Estructurador en el Mes h.
 
 
-Página 264 de 288
-
 El valor reconocido por estas actividades se definirá con base en el procedimiento descrito en la Sección 18.6 de esta Parte General, el cual corresponderá al valor reconocido para el Mes h en las Actas Semestrales de Cálculo de ARh que se encuentren en firme.
 
 Rh        Corresponde al valor de la Retribución (incluyendo la Compensación Especial, cuando sea aplicable) ajustada en el Mes h, calculada de acuerdo con la siguiente fórmula:
-
-
 
 
 Donde:
@@ -6299,15 +5303,7 @@ u = Contador de cada una de las Unidades Funcionales para las que fue medido el 
 y = Número de Unidades Funcionales para las que fue medido el Índice de Cumplimiento en el periodo h.
 
 
-
-
-
 Sh
-
-
-
-
-
 
 
 IPCh
@@ -6317,7 +5313,6 @@ Corresponde al valor en Pesos corrientes pagado en el Mes h por parte de la ANI 
 
 IPCm+l
 IPC correspondiente al Mes inmediatamente anterior al Mes m+l
-Página 265 de 288
 
 TE      Tasa de descuento real expresada en términos efectivo mensual y que para efectos de esta fórmula será la que se incluye en la Parte Especial.
 ℎ     Cada uno de los Meses desde la suscripción del Contrato de Concesión hasta el Mes m+l.
@@ -6365,61 +5360,16 @@ y =   Contador de cada uno de los Meses desde la suscripción del Contrato de Co
 Donde,
 
 
-Página 266 de 288
-
 F
 
 
 Eh
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Uh
 
 
-
-
 Inth
-
-
-
-
 
 
 Amorth
@@ -6433,14 +5383,9 @@ Sin perjuicio de lo anterior, el Concesionario deberá entregar un certificado d
 Valor de los montos de deuda efectivamente desembolsados por parte de los Prestamistas registrados, en el Mes h expresados en pesos corrientes del mismo Mes, de acuerdo con las certificaciones expedidas por la Fiduciaria que administra el Patrimonio Autónomo. Valor de los montos de intereses de Deuda pagados a los Prestamistas registrados salvo que los recursos provengan de una fuente externa al Proyecto, es decir que sean distintos a los recursos de la Retribución y/o Recursos de Patrimonio y/o Recursos de Deuda, en el Mes h, de acuerdo con las certificaciones expedidas por la Fiduciaria que administra  el  Patrimonio  Autónomo  y  la  verificación  de  la interventoría, expresados en pesos corrientes del Mes h.
 Valor de los montos de amortizaciones de capital de la Deuda efectivamente pagados a los Prestamistas registrados salvo que los recursos provengan de una fuente externa al Proyecto, es decir que sean distintos a los recursos de la Retribución y/o Recursos de Patrimonio y/o Recursos de Deuda, en el Mes h, de acuerdo con las certificaciones  expedidas  por  la  Fiduciaria  que  administra  el Patrimonio Autónomo y la verificación de la Interventoría, expresados en pesos corrientes del Mes h.
 
-Página 267 de 288
 
 Divh
 Valor de las transferencias o pagos realizados en el Mes h, asociados a pagos de dividendos, repago de la deuda subordinada (capital e intereses) o cualquier otro repago asociado a los mecanismos de aportes de capital, expresados en pesos corrientes del Mes h. En caso de no contar con soportes suficientes aportados por la Fiduciaria que administra el Patrimonio Autónomo, esta variable tomará el siguiente valor para cada Mes h:
-
-
-
-
 
 
 Donde,
@@ -6457,8 +5402,6 @@ correspondientes a Etapa Preoperativa, 𝐹𝐷𝑖𝑣 tomará el valor de 0.
 
 IPCm+l IPCh TE
 SProv
-
-
 
 
 ℎ
@@ -6478,7 +5421,6 @@ Número de Meses transcurridos desde el Mes de Suscripción del Acta de Reversi�
 
 Si se produce la Terminación Anticipada del Contrato por decisión unilateral de la ANI, de conformidad con lo autorizado por el Artículo 32 de la Ley 1508 de 2012, en cualquier
 
-Página 268 de 288
 
 etapa de ejecución del Contrato, se procederá a establecer el valor de la liquidación del Contrato de Concesión, mediante la aplicación de la siguiente fórmula:
 
@@ -6489,13 +5431,6 @@ Donde,
 
 
 VL(rec)
-
-
-
-
-
-
-
 
 
 Ingresosm+l
@@ -6516,33 +5451,14 @@ De no existir información histórica suficiente o en el caso en que el modelo e
 
 3. Aportes ANI
 
-Página 269 de 288
 
 El valor de los Aportes ANI faltantes corresponderá al definido en la oferta económica realizada por el Concesionario para cada uno de los Meses faltantes de ejecución del contrato del plazo previsto.
-
-
-
 
 
 Costos futuros m+l
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 DyMm+l
-
-
 
 
 OANIm+l
@@ -6570,7 +5486,6 @@ En el evento que la Terminación Anticipada del presente Contrato se dé con oca
 18.4 Pago de las sumas por concepto de Liquidación
 
 (a)    Si el resultado del cálculo de valor de la liquidación del Contrato de Concesión (VL, VL(pc), VL(c), VL(om)  o VL(rec)  según corresponda) es positivo, el desembolso de los recursos estará a cargo de la ANI y a favor del
-Página 270 de 288
 
 Concesionario. Si el cálculo de valor de la liquidación del Contrato de Concesión es negativo, el desembolso de los recursos estará a cargo del Concesionario y a favor de la ANI.
 
@@ -6586,8 +5501,6 @@ Concesionario. Si el cálculo de valor de la liquidación del Contrato de Conces
 𝑝
 𝑉𝐿𝑚₊𝑙₊𝑝 = ∑(𝑉𝐿𝑚₊𝑙 − 𝑉𝐿𝑆𝑚₊𝑙) ∗ (𝐼𝑔)
 𝑔=1
-Página 271 de 288
-
 
 
 Donde,
@@ -6600,14 +5513,10 @@ Donde,
 VLm+l+p P
 
 
-
 VLm+l VLSm+l
 
 
 I
-
-
-
 
 
 FUSD´m
@@ -6635,7 +5544,6 @@ TRM del último Día Hábil del Mes inmediatamente anterior al Mes m+l
 certificada por la Superintendencia Financiera.
 Mes en que ocurre la Terminación Anticipada del Contrato
 Número de Meses transcurridos desde el Mes de terminación del Contrato hasta el Mes en que se suscriba el Acta de Liquidación del Contrato.
-Página 272 de 288
 
 g        Contador de cada uno de los Meses desde el Mes en que se suscribe el Acta de Liquidación del Contrato hasta el Mes en el que ocurre efectivamente el pago del saldo de las sumas a cargo de la ANI
 
@@ -6651,7 +5559,6 @@ g        Contador de cada uno de los Meses desde el Mes en que se suscribe el Ac
 
 En el evento en que no haya acuerdo entre la ANI y el Concesionario en relación con los montos de la liquidación del Contrato, se harán los pagos de los montos que no se encuentren en disputa. Sobre lo demás las Partes podrán acudir a los Mecanismos Alternativos de Solución de Controversias previstos en las Secciones 15.1, 15.2 y 15.3 anteriores. Los pagos y/o devoluciones producto de
 
-Página 273 de 288
 
 la decisión del Amigable Componedor serán cancelados en los mismos plazos y condiciones establecidos en la Sección 18.4 anterior.
 
@@ -6666,7 +5573,6 @@ la decisión del Amigable Componedor serán cancelados en los mismos plazos y co
 (d)   Acta Semestral de Cálculo del ARh
 
 (i)  Para determinar el valor de reconocimiento por concepto de AR para cada uno de los Meses h comprendidos dentro del periodo que abarca cada semestre de ejecución del Contrato, el Concesionario presentará al Interventor y a la ANI, con la misma periodicidad y a más tardar dentro de los diez (10) Días Hábiles siguientes al plazo establecido para  la  presentación  de  los  estados  financieros  auditados  del Patrimonio Autónomo de acuerdo con lo señalado en las Secciones 4.2(r), 4.5(q) y 9.2(m) de esta Parte General, o con corte a la fecha del Acta de Reversión si se trata de la última Acta en caso de haberse declarado la Terminación Anticipada del Contrato, un documento que proyecte los valores mensuales incurridos por el Concesionario y su consolidación semestral, conforme a sus registros con base en los soportes financieros, contables, comerciales y/o contractuales que permitan verificar el cumplimiento de los criterios establecidos en la Sección 18.6(a) para el reconocimiento de cada erogación relacionada
-Página 274 de 288
 
 con el ARh, esta información será entregada por el Concesionario bajo gravedad de juramento. El estado de costos, gastos y fondeos reportado en este documento deberá atender lo establecido en las Secciones 2.6(a)(ix) y 2.6(a)(x) de esta Parte General.
 En ningún caso se entenderá que este documento establece el valor definitivo que se reconocerá al Concesionario por concepto de ARh.
@@ -6687,7 +5593,6 @@ En ningún caso se entenderá que este documento establece el valor definitivo q
 Sin perjuicio de la consolidación semestral, cada Acta deberá discriminar el valor correspondiente a cada Mes h que comprende el periodo objeto del Acta, para efectos de la aplicación de las fórmulas contenidas en las Secciones 18.3(c), 18.3(d) y/o 18.3(e), según corresponda.
 
 (iv) El Interventor contará con un término de treinta (30) Días para llevar a cabo la verificación del documento que proyecte la consolidación
-Página 275 de 288
 
 semestral. En el evento en que el Interventor no apruebe la información presentada o considere necesario efectuar ajustes y/o correcciones a la misma, informará esta situación al Concesionario y, en caso de requerirlo, solicitará los documentos e información adicional que considere pertinente. Para el efecto, el Interventor deberá otorgar al Concesionario un plazo prudente para responder dicha solicitud, que en todo caso no podrá ser superior a treinta (30) Días.
 
@@ -6696,55 +5601,12 @@ Una vez recibida la información requerida junto con el documento que proyecte l
 (vi) Vencido el término máximo de tres (3) Meses, los valores que no hayan sido objetados, ni hayan recibido comentarios y/u observaciones por parte de la ANI se entenderán en firme.
 
 (vii) En caso que subsistan controversias sobre alguno o todos los valores consignados en el Acta Semestral del Cálculo del ARh., o la ANI no se pronuncie en el término previsto en la Sección 18.6(d)(vi) sobre las salvedades presentadas por el Concesionario, las Partes podrán acudir
-Página 276 de 288
 
 al Amigable Componedor. Una vez emitida la decisión del Amigable Componedor, los valores sobre los cuales existan controversias quedarán en firme de conformidad con la decisión emitida por este. En ese sentido, el valor del ARh que la ANI tomará como base para aplicar las fórmulas establecidas en la Sección 18.3 de esta Parte General, corresponderá a aquellos valores que estén consignados en las Actas Semestrales de Cálculo del ARh en firme o las resultantes de la decisión emitida por el Amigable Componedor.
 En el evento que la Terminación Anticipada del presente Contrato se dé con ocasión de una de las causales establecidas en el parágrafo 1 del artículo 32 de la Ley 1508 de 2012 (modificado por el artículo 20 de la Ley 1882 de 2018) o cualquier norma que la sustituya, modifique o adicione, se entenderá que los valores de las Acta Semestrales de Cálculo del ARh perderán su firmeza y, por lo tanto, la ANI podrá realizar comentarios, observaciones y/u objeciones sobres estos.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 277 de 288
-
-CAPÍTULO XIX VARIOS
+CAPÍTULO XI X VARIOS
 
 19.1 Obras Menores
 
@@ -6760,7 +5622,6 @@ CAPÍTULO XIX VARIOS
 
 (iv) Dentro de los sesenta (60) Días Hábiles siguientes al concepto favorable de la Interventoría, las Partes deberán llegar a un acuerdo sobre los precios unitarios, incluyendo A.I.U., para cada uno de los ítems típicos de esta clase de obras o a precios de mercado por actividades diferentes a obras. En caso, en que las Partes no lleguen a un acuerdo, la Interventoría procederá a calcular el valor de las Obras Menores, así como su Operación y Mantenimiento, de acuerdo lo establecido en la Parte Especial. Si el Concesionario se encuentra en desacuerdo  con  el  cálculo  de  la  Interventoría  se  aplicará  el procedimiento previsto en la Sección 19.1(c) de esta Parte General,
 
-Página 278 de 288
 
 (v)  Los precios unitarios serán indexados con el IPC desde el momento en que se hayan acordado, hasta el momento en que se acuerde la ejecución de una obra menor determinada.
 
@@ -6781,7 +5642,6 @@ Página 278 de 288
 (vi) El Concesionario estará en la obligación de supervisar la ejecución de las obras ejecutadas por el contratista, teniendo en cuenta que, independientemente de la responsabilidad de ese tercero frente al Concesionario, el Concesionario responderá frente a la ANI, por la calidad y estabilidad de las obras ejecutadas.
 
 (vii) Sin perjuicio de que el contrato con el tercero pueda incluir las actividades de Operación y Mantenimiento de las obras construidas bajo la supervisión del Concesionario, será el Concesionario, por su cuenta y riesgo, el único responsable frente a la ANI de las obligaciones  de  resultado  incluyendo  el  cumplimiento  de  los Indicadores, correspondientes a dichas actividades de Operación y
-Página 279 de 288
 
 Mantenimiento, en las condiciones dispuestas en el presente Contrato hasta la suscripción del Acta de Reversión.
 
@@ -6802,7 +5662,6 @@ Mantenimiento, en las condiciones dispuestas en el presente Contrato hasta la su
 (d)    El Contratista únicamente ejecutará las Obras Complementarias previa suscripción de la correspondiente adición al presente Contrato, considerando las limitaciones en cuanto a su monto y objeto de acuerdo con la Ley Aplicable. En ningún caso el Concesionario ejecutará Obras Complementarias sin la previa suscripción de la respectiva adición.
 
 (e)    La contratación de las Obras Complementarias estará sujeta a la existencia de recursos suficientes para solventarlas y requerirá el agotamiento de los requisitos presupuestales aplicables.
-Página 280 de 288
 
 (f)    El valor de las Obras Complementarias y su forma de pago se determinarán por mutuo acuerdo de las Partes de conformidad con lo establecido en el contrato adicional que entre las partes suscriban.
 
@@ -6822,8 +5681,6 @@ Página 280 de 288
 (iii) Impartida la autorización por parte de la ANI, el Concesionario podrá proceder a la ejecución de la Obra Voluntaria.
 
 
-Página 281 de 288
-
 (c)    La ejecución de Obras Voluntarias no podrá afectar negativamente el cumplimiento de Indicadores, de las Especificaciones Técnicas ni de ninguna otra obligación a cargo del Concesionario. En ningún caso la aprobación de las Obras Voluntarias impartida por la ANI será considerada como un eximente de responsabilidad.
 
 (d)    La ANI directamente, a través del Interventor o a través de un interventor seleccionado específicamente para la vigilancia y control de la Obra Voluntaria en atención a su magnitud o calidad, vigilará el cumplimiento de las condiciones técnicas de la Obra Voluntaria de conformidad con el proyecto que fuera aprobado por ésta y, de ser el caso, impondrá las sanciones previstas en este Contrato por el incumplimiento de las condiciones de la aprobación impartida. El Concesionario deberá cubrir en todo caso los valores adicionales que se deban fondear en la Subcuenta de Interventoría y Coordinación para el seguimiento y control de la obra voluntaria aprobada.
@@ -6840,7 +5697,6 @@ Durante la ejecución del presente Contrato la ANI podrá decidir que se ejecute
 (a)    El Concesionario podrá subcontratar la ejecución del Contrato con personas naturales o jurídicas o con estructuras plurales conformadas por personas que tengan la idoneidad y capacidad para desarrollar la actividad subcontratada, incluyendo a los Contratistas. No obstante lo anterior, el Concesionario continuará siendo el único responsable ante la ANI por el cumplimiento de las obligaciones del Contrato.
 
 (b)    El Concesionario es el único responsable ante la ANI de la celebración de contratos y subcontratos. En todo caso, la ANI se reserva el derecho a solicitar al Concesionario la sustitución del (los) subcontratista(s) incluyendo los Contratistas, cuando, a su juicio, éste(os) no cumpla(n) con las calidades mínimas necesarias para la ejecución del (las) labor (es) subcontratadas.
-Página 282 de 288
 
 19.6 Cesión
 
@@ -6859,7 +5715,6 @@ Página 282 de 288
 (3)     Los cesionarios cumplan con la obligación de información establecida en el artículo 23 de la Ley 1508 de 2012 y las demás establecidas en la Ley Aplicable,
 
 (4)     En caso en que el cedente sea el Líder que acreditó y obtuvo el  puntaje  adicional  por  el  factor  de  ponderación  de trabajadores en condición de discapacidad en el Proceso de Selección, la vinculación de personal en condición de
-Página 283 de 288
 
 discapacidad sea acreditada y cumplida por el cesionario o cualquiera de los miembros del Concesionario o por el personal del Concesionario de acuerdo con los términos y condiciones establecidos en el Pliego de Condiciones o, en su defecto, de acuerdo con la normativa vigente y aplicable a la materia al momento de la solicitud de autorización de cesión, y
 
@@ -6868,7 +5723,6 @@ discapacidad sea acreditada y cumplida por el cesionario o cualquiera de los mie
 Sin perjuicio de lo anterior, si se ha obtenido el Cierre Financiero en los términos establecidos en la Sección 3.8(a) de esta Parte General, se permitirá el retiro del Líder siempre que la nueva composición accionaria cuente con al menos un accionista que como mínimo acredite el 25% de participación y que cumpla con los Requisitos Habilitantes establecidos en la Invitación a Precalificar o el Pliego de Condiciones, que fueron evaluados por la ANI, durante la Precalificación o el Proceso de Selección para considerar hábil al Líder cedente, para lo cual, la ANI tendrá en cuenta los Requisitos Habilitantes de la Invitación a Precalificar o el Pliego de Condiciones, que podrán ser acreditados con base en información disponible al último periodo contable. Este accionista dentro de la composición accionaria será considerado como nuevo Líder.
 
 (iii) A partir del vencimiento del primer año de la Etapa de Operación y Mantenimiento y hasta la terminación del Contrato, los accionistas del Concesionario que hayan sido Líderes o, que sin serlo, hayan acreditado Capacidad Financiera (según estos términos se definen en la Invitación a Precalificar o en el Proceso de Selección, según corresponda)  deberán  permanecer  como  accionistas  del Concesionario, salvo que la ANI autorice el cambio de accionista, autorización que en todo caso se dará cuando las garantías del contrato no se disminuyan con ocasión de la cesión, y previa verificación del cumplimiento por parte del cesionario de: (A) los Requisitos Habilitantes establecidos en la Invitación a Precalificar o en el Proceso de Selección, según corresponda y que le fueron evaluados por la ANI, para considerar hábil al cedente –salvo por el requisito de experiencia en inversión (como el mismo se define en la Invitación a Precalificar o en la Oferta, según corresponda), cuyo cumplimiento no será necesario para que proceda la cesión–, y (B) la obligación de información establecida en el artículo 23 de la Ley 1508 de 2012 y las demás establecidas en la Ley Aplicable. Adicionalmente para efectos de que la ANI autorice el cambio de accionista, en caso en que el cedente sea el Líder que acreditó y obtuvo el puntaje adicional por el factor de ponderación de trabajadores en condición de discapacidad en el Proceso de Selección, la vinculación de personal en condición de discapacidad deberá ser acreditada y cumplida por el cesionario o cualquiera de los miembros del Concesionario o por el personal del
-Página 284 de 288
 
 Concesionario de acuerdo con los términos y condiciones establecidos en el Pliego de Condiciones o, en su defecto, de acuerdo con la normativa vigente y aplicable a la materia al momento de la solicitud de autorización de cesión.
 
@@ -6890,7 +5744,6 @@ Con la suscripción del Contrato, el Concesionario declara bajo la gravedad del 
 
 19.9 Idioma del Contrato
 
-Página 285 de 288
 
 Para todos los efectos el idioma oficial del presente Contrato es el Castellano. En caso de existir traducciones a otro idioma, para efectos de interpretación de cualquiera de los Capítulos o Secciones, prevalecerá el documento en idioma Castellano.
 
@@ -6941,7 +5794,7 @@ En todo caso, los documentos que hacen parte del presente Contrato deberán inte
 
 #### Parágrafo:
 
-La **matriz de riesgos del Proyecto** publicada en el SECOP en ningún caso será vinculante, aplicándose exclusivamente lo señalado en el **CAPÍTULO XIII** y demás Secciones de este Contrato.
+La **matriz de riesgos del Proyecto** publicada en el SECOP en ningún caso será vinculante, aplicándose exclusivamente lo señalado en el **CAPÍTULO XII I** y demás Secciones de este Contrato.
 
 19.16 Información Financiera
 
@@ -6949,12 +5802,10 @@ El Apéndice Financiero 1, debidamente diligenciado conforme a sus instrucciones
 
 19.17 Directrices Ambientales y Sociales
 
-Sin perjuicio de lo previsto en el CAPÍTULO VIII de esta Parte General, las actividades de las Etapas Preoperativa y Operativa deben ser consistentes con los estándares y directrices ambientales y sociales a los cuales se refieren los Principios del Ecuador (Exhibit III) en tanto no controviertan la Ley Aplicable. Los estándares y directrices se pueden    consultar    en    el    siguiente    link:    http://www.equator- principles.com/resources/equator_principles_III.pdf.
+Sin perjuicio de lo previsto en el CAPÍTULO VII I de esta Parte General, las actividades de las Etapas Preoperativa y Operativa deben ser consistentes con los estándares y directrices ambientales y sociales a los cuales se refieren los Principios del Ecuador (Exhibit III) en tanto no controviertan la Ley Aplicable. Los estándares y directrices se pueden    consultar    en    el    siguiente    link:    http://www.equator- principles.com/resources/equator_principles_III.pdf.
 
 19.18 Notificaciones
 
-
-Página 287 de 288
 
 Las Notificaciones a cada una de las Partes se realizarán en los lugares indicados para tal efecto en la Parte Especial. Las Notificaciones a la Fiduciaria se realizarán en el lugar indicado en el Contrato de Fiducia Mercantil.
 
@@ -6964,40 +5815,6 @@ El Concesionario se obliga a entregar reportes trimestrales con información est
 19.20 Manejo de Información
 
 Sin perjuicio de lo establecido en otros apartes de este Contrato, toda la información relacionada con el Proyecto deberá ser intercambiada entre las Partes, el Interventor, la Fiduciaria y/o el Amigable Componedor, también, a través de los programas Office 365 y Project Online, o versiones posteriores.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 288 de 288
 
 
 ---

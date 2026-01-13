@@ -64,28 +64,13 @@ Para consultar las **reglas generales** del contrato → Ver [Parte General](1_P
 ## 2. CONTENIDO DEL CONTRATO
 
 
-
-
-
-
-
-
-
-
-
-REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [•] DE [•] DEL
+CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [VARIABLE] DE [VARIABLE] DEL
 Entre:
 
 
 Concedente:
-Agencia Nacional de Infraestructura
 
-Concesionario: [•]
+Concesionario: Autopista Magdalena Medio S.A.S.
 
 CONTRATO PARTE ESPECIAL [•] - [•]
 
@@ -132,10 +117,9 @@ REGLAS DE INTERPRETACIÓN DE ESTE DOCUMENTO
 
 (a)   De conformidad con lo previsto en la Sección 19.15 de la Parte General, la presente Parte Especial del Contrato de Concesión prima en lo expresamente regulado en su contenido, sobre cualquier otro documento que haga parte del Contrato.
 (b)   A la Parte Especial le serán aplicables las definiciones contenidas en la Parte General.
-(c)   En el CAPÍTULO II de la Parte Especial del Contrato de Concesión se incluye una tabla en la cual se identifican, en la primera columna, las Secciones de la Parte General que se desarrollan, complementan, modifican o eliminan.
+(c)   En el CAPÍTULO I I de la Parte Especial del Contrato de Concesión se incluye una tabla en la cual se identifican, en la primera columna, las Secciones de la Parte General que se desarrollan, complementan, modifican o eliminan.
 (d)   La segunda columna de la tabla contiene el desarrollo, la complementación, modificación o eliminación correspondiente, o la identificación de la Sección de la Parte Especial en que esa información aparece.
 (e)   En el caso en que la Parte Especial modifique el contenido de algún aparte de la Parte General de manera expresa o tácita, se atenderá a lo señalado en la Parte Especial.
-
 
 
 Sección  de  la Parte General 1.18
@@ -150,29 +134,6 @@ Sección  de  la Parte General 1.18
 1.49
 
 1.57
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 1.58
@@ -199,30 +160,6 @@ S.A. e IKON Banca de Inversión S.A.S.
 
 1.113
 1.118
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 1.128
@@ -281,7 +218,6 @@ Cuando cada variante esté terminada e inicie su operación, el Paso Poblado cor
 - INVÍAS de acuerdo con el procedimiento de reversión establecido en esta Parte Especial y este dejará de hacer parte de la Concesión.
 
 
-
 2.1
 
 2.2(a)
@@ -295,19 +231,8 @@ Cuando cada variante esté terminada e inicie su operación, el Paso Poblado cor
 2.3(b)(xi)
 
 
-
 2.4(b)(i)
 2.4(b)(ii)
-
-
-
-
-
-
-
-
-
-
 
 
 2.5(b)
@@ -355,7 +280,6 @@ Para este Proyecto no se contemplan otras fuentes para la Retribución.
 3.2(a)
 
 
-
 3.2(b)
 
 3.3(a)
@@ -371,10 +295,7 @@ Para este Proyecto no se contemplan otras fuentes para la Retribución.
 3.3(f)
 
 
-
 3.3(g)(iii)
-
-
 
 
 3.3(g)(iv)
@@ -392,23 +313,12 @@ Para este Proyecto en la fase de estructuración se contemplaron las vías inclu
 Transversal Cisneros – Puerto Berrío – Cruce Ruta 45 RN 6206, Transversal del Carare (Puerto Araujo – Landázuri) RN 6207, Gran Vía Yuma Cruce Ruta 45, Ruta del Cacao Barrancabermeja – La Lizama RN 6601, Ruta del Cacao La Fortuna – Lebrija RN 6602 y Troncal del Magdalena (Sabana de Torres – Curumaní) RN4513 – 4514 – 4515 que a su vez tuvo en cuenta los corredores Troncal Central (Río Negro – San Alberto) RN45A08, Acceso a Cúcuta y Venezuela (Aguaclara – Río de Oro) RN7007, Acceso Troncal del Magdalena (Aguaclara – Circunvalar de Aguachica) RN45CS04, Transversal Depresión Momposina (Tamalameque – El Burro) RN7806, Troncal del Carbón (San Roque – La Paz) RN4901 y Ruta del Sol Sector 3 (San Roque – Ye de Ciénaga y Carmen de Bolívar – Bosnia – Valledupar), las cuales se entienden excluidas del concepto de Elusión.
 
 
-
-
-
-
-
-
-
-
 3.3(h)(i)(3)
 
 
-
-
 3.4(a)
 
 3.4(a)
-
 
 
 3.4(b)
@@ -446,7 +356,6 @@ Para este Proyecto el %RP será del VEINTINUEVE PUNTO CINCUENTA Y SEIS POR CIENT
 3.8(a)(iv) 3.8(b)
 
 
-
 3.8(e)(viii) 3.8(j)
 3.9(a)
 
@@ -455,14 +364,12 @@ Para este Proyecto el %RP será del VEINTINUEVE PUNTO CINCUENTA Y SEIS POR CIENT
 3.9(e)
 
 
-
 3.14(a)
 
 
 3.14(e)
 
 3.14(e)
-
 
 
 3.14(f)
@@ -558,8 +465,6 @@ Para este Proyecto no aplica.
 4.2(f)
 
 
-
-
 4.2(m)
 
 4.2(o)
@@ -587,8 +492,6 @@ Para este Proyecto no aplica.
 
 
 4.10(c)
-
-
 
 
 4.10(d)
@@ -620,43 +523,22 @@ Las Deducciones y el Límite de las mismas se regulan en las Secciones 4.3(c) y 
 4.17(a)(iii)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 4.17(a)(iii)(1)
-
 
 
 4.17(a)(iii)(1)
 
 4.17(a)(iii)(2)
-
 
 
 4.17(a)(iii)(2)
 
 4.17(a)(iii)(3)
-
 
 
 4.17(a)(iii)(3)
 
 4.17(a)(iii)(4)
-
 
 
 4.17(a)(iii)(4)
@@ -685,39 +567,10 @@ los valores mínimos de aceptación para los Indicadores E1 al E22, O1 al O6 de 
 Para la Unidad Funcional 0 -UF0 se deberán cumplir los siguientes valores, en los plazos señalados en la referencia 1.206 de esta Tabla:
 
 
-
-
-
-
-
-
-
-
-
-
-
 4.17(a)(v)
 
 
 4.17(a)(vi)(1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 4.17(a)(viii)
@@ -755,24 +608,13 @@ La Deducción Máxima y el Límite de las Deducciones se encuentran en las Secci
 6.2(b)
 
 
-
-
-
 6.3(b)
-
-
-
 
 
 6.3 (e)
 
 
-
-
-
 7.1(f)(iv)
-
-
 
 
 8.1(d)(i)
@@ -789,7 +631,7 @@ Corresponde a la Resolución No. 20217020013455 de 2021, por medio de la cual se
 Corresponde a la Resolución No. 20217020013455 de 2021, por medio de la cual se declaró de utilidad pública e interés social el área de la franja de terreno del corredor vial del Proyecto. Cuando la superación de la Franja de Utilidad Pública se extienda longitudinalmente en más de Tres (3) kilómetros de la longitud efectiva de construcción del Proyecto.
 Corresponde a la Resolución No. 20217020013455 de 2021, por medio de la cual se declaró de utilidad pública e interés social el área de la franja de terreno del corredor vial del Proyecto. Cuando la superación de la Franja de Utilidad Pública se extienda longitudinalmente en más de Tres (3) kilómetros de la longitud efectiva de construcción del Proyecto.
 La metodología para el cálculo de la Retribución y sus Deducciones se encuentra regulada en las Secciones 4.3(b), 4.3(c) y 4.3(d) de esta Parte Especial.
-Las Multas por el incumplimiento de las obligaciones se regulan en el CAPÍTULO VI CAPÍTULO VI de esta Parte Especial.
+Las Multas por el incumplimiento de las obligaciones se regulan en el CAPÍTULO V I CAPÍTULO V I de esta Parte Especial.
 El valor de referencia para Nuevas Consultas Previas corresponderá a TRES MIL MILLONES DE PESOS del Mes de Referencia ($3.000.000.000.oo).
 El valor de referencia para Nuevas Consultas Previas corresponderá a TRES MIL MILLONES DE PESOS del Mes de Referencia ($3.000.000.000.oo).
 
@@ -815,12 +657,7 @@ El valor de referencia para Nuevas Consultas Previas corresponderá a TRES MIL M
 10.2 (a)
 
 
-
-
-
-
 10.2(b)
-
 
 
 10.2(c)
@@ -829,20 +666,19 @@ El valor de referencia para Nuevas Consultas Previas corresponderá a TRES MIL M
 10.3(e)
 
 
-
 10.6(a)
 
 11.1(b)(i)
 El valor de referencia para Nuevas Consultas Previas corresponderá a TRES MIL MILLONES DE PESOS del Mes de Referencia ($3.000.000.000.oo).
 La información relacionada con eventos de cambio climático, para efectos de este Proyecto, deberá ser presentada cada noventa (90) Días.
 Para este Proyecto el %RP será del VEINTINUEVE PUNTO CINCUENTA Y SEIS POR CIENTO (29.56%).
-Las Multas y Sanciones se regulan en el CAPÍTULO VI de esta Parte Especial.
-El monto máximo de salarios mínimos legales mensuales vigentes para las Multas o Sanciones se encuentran descritos en el CAPÍTULO VI de esta Parte Especial, respectivamente.
-El monto máximo de salarios mínimos legales mensuales vigentes para las Multas o Sanciones se encuentran descritos en el CAPÍTULO VI de esta Parte Especial, respectivamente.
-El monto máximo de salarios mínimos legales mensuales vigentes para las Multas o Sanciones se encuentran descritos en el CAPÍTULO VI de esta Parte Especial, respectivamente.
+Las Multas y Sanciones se regulan en el CAPÍTULO V I de esta Parte Especial.
+El monto máximo de salarios mínimos legales mensuales vigentes para las Multas o Sanciones se encuentran descritos en el CAPÍTULO V I de esta Parte Especial, respectivamente.
+El monto máximo de salarios mínimos legales mensuales vigentes para las Multas o Sanciones se encuentran descritos en el CAPÍTULO V I de esta Parte Especial, respectivamente.
+El monto máximo de salarios mínimos legales mensuales vigentes para las Multas o Sanciones se encuentran descritos en el CAPÍTULO V I de esta Parte Especial, respectivamente.
 Para efectos del Evento Generador de Multa previsto en la Sección 6.1(c) de esta Parte Especial, entiéndase modificada la Sección 10.2(a) de la Parte General en el sentido que el Plazo de Cura para sanear el incumplimiento por la no terminación de las Unidades Funcionales podrá ser hasta del veinte por ciento (20%) del plazo previsto en la Sección 5.2 de esta Parte Especial para el inicio de la Operación de cada Unidad Funcional.
 Los plazos de las Fases de la Etapa Preoperativa se encuentran en la Sección 3.8(a) de esta Parte Especial. Los Plazos Máximos de ejecución de las Intervenciones en cada Unidad Funcional se regulan en la Sección 5.2 de esta Parte Especial.
-Los términos máximos para dar aplicación a la Sección 11.1 de la Parte General, se detallan en el CAPÍTULO VI CAPÍTULO VI de esta Parte Especial.
+Los términos máximos para dar aplicación a la Sección 11.1 de la Parte General, se detallan en el CAPÍTULO V I CAPÍTULO V I de esta Parte Especial.
 El límite máximo total del valor de las Multas y Sanciones que pueden ser impuestas al Concesionario, para efectos de este Proyecto, será de DOS PUNTO SETENTA Y SEIS POR CIENTO (2.76%) del Valor del Contrato.
 Los valores de la Cláusula Penal se describen en la Sección 6.3 de esta Parte Especial.
 El límite máximo total del valor de las Multas y Sanciones que pueden ser impuestas al Concesionario, para efectos de este Proyecto, será de DOS PUNTO SETENTA Y SEIS POR CIENTO (2.76%) del Valor del Contrato.
@@ -877,12 +713,7 @@ El límite máximo total del valor de las Multas y Sanciones que pueden ser impu
 13.2(a)(xi)
 
 
-
-
-
 13.2(a)(xiii)
-
-
 
 
 13.2(a)(xvii)
@@ -907,12 +738,8 @@ El riesgo de los efectos de las variaciones en los costos de construcción gener
 13.3(j)
 
 
-
-
 13.3 (z)
 14.1(a)(ii)
-
-
 
 
 14.1(a)(iii)
@@ -966,43 +793,6 @@ Las fechas y montos de los Giros de Equity se establecen en la Sección 4.4 de e
 
 
 18.3(d)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 18.3(d)
@@ -1067,18 +857,7 @@ CUATRO CINCUENTA Y CINCO POR CIENTO (0.7455%).
 18.3(f)
 
 
-
-
-
-
-
-
-
-
-
 19.1(b)(iv)
-
-
 
 
 19.18
@@ -1113,32 +892,13 @@ El objeto del Contrato corresponde a la financiación, elaboración de estudios 
 El Proyecto se divide en catorce (14) Unidades Funcionales, incluida una Unidad Funcional de Operación y Mantenimiento, las cuales se describen a continuación:
 
 
-
-
 UF
-
-
-
-
 
 
 UF0(2)
 
 
-
-
-
-
-
-
-
-
-
-
 UF1
-
-
-
 
 
 UF2
@@ -1147,19 +907,10 @@ UF2
 Sector
 
 
-
-
-
 Puerto Salgar - Barrancabermeja
 
 
-
-
-
-
 El Trique – Dos y Medio
-
-
 
 
 Batallón Bárbula – PR52
@@ -1167,11 +918,9 @@ Batallón Bárbula – PR52
 Origen (nombre, abscisa, coordenadas)⁽¹⁾
 
 
-
 Puerto Salgar PK34+040 RN 4510
 (935484.39-
 1096379.05)
-
 
 
 Variante El Trique PK84+400 RN 4510
@@ -1188,7 +937,6 @@ Río Sogamoso PK09+800 RN 4513
 1283507.47)
 
 
-
 Variante Dos y Medio PK94+310
 RN 4510
 (945679.26-
@@ -1199,20 +947,10 @@ PR 52-Ruta Nacional 4511 PK51+100 (988240.27-
 Longitud aproximad a origen destino⁽¹⁾
 
 
-
-
 259.61
 
 
-
-
-
-
-
 9.83
-
-
-
 
 
 59,85
@@ -1220,19 +958,10 @@ Longitud aproximad a origen destino⁽¹⁾
 Longitud de intervención (km-calzada)
 
 
-
-
 UF0-D=214.68 km UF0-T=152.94 km UF0-P = 6.62 km
 
 
-
-
-
-
 9.83
-
-
-
 
 
 25.47
@@ -1240,9 +969,7 @@ UF0-D=214.68 km UF0-T=152.94 km UF0-P = 6.62 km
 Intervención prevista
 
 
-
 Operación y mantenimiento. Adicionalmente, Puesta a Punto de los tramos UF0-D y UF0-P
-
 
 
 Construcción de calzada nueva, operación y mantenimiento
@@ -1264,9 +991,6 @@ Destino (nombre, abscisa,
 coordenadas)
 
 
-
-
-
 (1)
 Longitud aproximad a origen destino⁽¹⁾
 Longitud de intervención (km-calzada)
@@ -1278,46 +1002,22 @@ Observación
 Intercambiador Puerto Berrío.
 
 
-
-
-
 UF3
-
-
 
 
 UF4
 
 
-
-
-
-
-
 UF5
-
-
-
-
-
-
 
 
 UF6
 
 
-
-
-
 UF7
 
 
-
-
 UF8
-
-
-
 
 
 UF9
@@ -1326,34 +1026,19 @@ UF9
 PR 52 – Puerto Araujo
 
 
-
 Puerto Araujo - Cimitarra
-
-
-
-
-
 
 
 Puerto Salgar - Cimitarra
 
 
-
-
-
-
-
 Puerto Parra - Aguas Negras
-
-
 
 
 Aguas Negras – Puerto Nuevo
 
 
-
 Puerto Nuevo - PR107+000 RN 4511
-
 
 
 PR107+000 RN 4511
@@ -1423,40 +1108,22 @@ Campo 23 PK117+690 RN 4511
 13. 55
 
 
-
-
 10.0
-
-
 
 
 124.76
 
 
-
-
-
 5.04
-
-
-
 
 
 8.57
 
 
-
-
-
 13.78
 
 
-
-
 10.00
-
-
-
 
 
 10.69
@@ -1465,40 +1132,22 @@ Campo 23 PK117+690 RN 4511
 13.61
 
 
-
-
 10.98
-
-
 
 
 65.87
 
 
-
-
-
 5.04
-
-
-
 
 
 8.57
 
 
-
-
-
 15.02
 
 
-
-
 10.00
-
-
-
 
 
 11.74
@@ -1527,7 +1176,6 @@ Construcción de una calzada adicional en los centros poblados de PR52 y Puerto 
 Construcción Variante Palmas de Guayabito.
 
 
-
 Vía existente que requiere mejorar condiciones geométricas (ampliación de calzada)
 
 
@@ -1537,10 +1185,7 @@ Vía existente de una calzada que operará como calzada sencilla de doble sentid
 -
 
 
-
 Construcción Variante Aguas Negras y el Puente sobre el Río Opón.
-
-
 
 
 -
@@ -1549,25 +1194,13 @@ Construcción Variante Aguas Negras y el Puente sobre el Río Opón.
 Construcción Variante Campo 23 y el Puente sobre el Río La Colorada.
 
 
-
-
-
-
 UF10
-
-
-
-
 
 
 UF11
 
 
-
 Campo 23 - Rancho Camacho
-
-
-
 
 
 Puerto Parra - Barrancabermeja
@@ -1591,32 +1224,19 @@ Río Sogamoso PK09+800 RN 4513
 1283507.47)
 
 
-
-
 10.31
-
-
-
-
 
 
 84.63
 
 
-
-
 10.31
-
-
-
-
 
 
 82.01
 
 
 Construcción de calzada nueva, operación y mantenimiento
-
 
 
 Mejoramiento de la calzada actual, operación y mantenimiento.
@@ -1627,13 +1247,9 @@ Vía existente que requiere mejorar condiciones geométricas (ampliación de cal
 UF
 
 
-
-
 UF12
 
 Sector
-
-
 
 
 Barrancabermeja - La Lizama
@@ -1647,17 +1263,12 @@ coordenadas)
 La Lizama PK149+110 RN 4511
 
 
-
-
-
 (1)
 Longitud aproximad a origen destino⁽¹⁾
 
 
-
 21.11
 Longitud de intervención (km-calzada)
-
 
 
 21.10
@@ -1670,8 +1281,6 @@ Construcción de calzada nueva, operación y
 Observación
 
 
-
-
 -
 
 1041009.53-
@@ -1679,8 +1288,6 @@ Observación
 (1050813.22-
 1278537.32)
 mantenimiento
-
-
 
 
 UF13
@@ -1723,19 +1330,10 @@ Entrega y reversión anticipada de la Infraestructura
 Código de vía (nomenclatura)
 
 
-
-
-
 4510
 
 
-
-
-
-
 4511
-
-
 
 
 4513
@@ -1743,19 +1341,10 @@ Código de vía (nomenclatura)
 Ente Competente
 
 
-
-
-
 INVÍAS
 
 
-
-
-
-
 INVÍAS
-
-
 
 
 INVÍAS
@@ -1781,7 +1370,6 @@ N= 1278537.32
 Destino (Nombre – PR)
 
 
-
 Río Ermitaño
 PK 134+328
 (PR 134-470)
@@ -1802,18 +1390,10 @@ N= 1283507.47
 Longitud (Km)
 
 
-
-
 100.29
 
 
-
-
-
-
 149.07
-
-
 
 
 10.25
@@ -1827,7 +1407,7 @@ Vía  primaria  bidireccional pavimentada, con condiciones bajas desde el punto 
 Nota: Las coordenadas y los PR incluidos son de referencia y podrán ser ajustados en campo al momento de la entrega de la infraestructura.
 (c)   El Concesionario no podrá incluir ningún tipo de reserva, condicionamiento, objeción u observación, al momento de la Entrega de la Infraestructura ni en momento alguno de la ejecución del Contrato, relacionada con el estado de la infraestructura entregada, en tanto es obligación del Concesionario recibirla en el estado en que se encuentre.
 (d)   En relación con la infraestructura identificada en la Sección 3.5(b) anterior, el Concesionario se obliga a cumplir con todas y cada una de las Especificaciones Técnicas de Operación y Mantenimiento contenidas en los Apéndices Técnicos 1, 2 y 4 del presente Contrato.
-(e)   Cuando en desarrollo de sus propias actividades el Concesionario efectúe obras o haga trabajos necesarios para la prestación del servicio público y/o para el cumplimiento de los Indicadores que reemplacen total o parcialmente las obras y los trabajos garantizados por las pólizas de calidad y estabilidad de obra correspondientes a los sectores señalados anteriormente, se entenderá que el Concesionario deberá responder por las correspondientes obras o trabajos en los mismos términos de la infraestructura no intervenida. Le corresponde al Concesionario asumir la responsabilidad derivada de la falta de mantenimiento y/o intervenciones a las mismas. Así mismo, deberá adelantar oportunamente las notificaciones sobre el estado y/o intervenciones realizadas al riesgo, a los terceros interesados que sean parte de las pólizas, con el objeto de que dichos terceros puedan adelantar las modificaciones de las pólizas vigentes que correspondan. El incumplimiento de esta obligación generará las Multas a que haya lugar, de conformidad con lo establecido en el CAPÍTULO VI de esta Parte Especial.
+(e)   Cuando en desarrollo de sus propias actividades el Concesionario efectúe obras o haga trabajos necesarios para la prestación del servicio público y/o para el cumplimiento de los Indicadores que reemplacen total o parcialmente las obras y los trabajos garantizados por las pólizas de calidad y estabilidad de obra correspondientes a los sectores señalados anteriormente, se entenderá que el Concesionario deberá responder por las correspondientes obras o trabajos en los mismos términos de la infraestructura no intervenida. Le corresponde al Concesionario asumir la responsabilidad derivada de la falta de mantenimiento y/o intervenciones a las mismas. Así mismo, deberá adelantar oportunamente las notificaciones sobre el estado y/o intervenciones realizadas al riesgo, a los terceros interesados que sean parte de las pólizas, con el objeto de que dichos terceros puedan adelantar las modificaciones de las pólizas vigentes que correspondan. El incumplimiento de esta obligación generará las Multas a que haya lugar, de conformidad con lo establecido en el CAPÍTULO V I de esta Parte Especial.
 
 (f)   La obligación de la ANI en relación con la entrega de la infraestructura descrita en la Sección 3.5(b) anterior, se limita a la entrega de los predios y las obras existentes en el estado en el que se encuentren, y en ningún caso, conlleva la obligación por parte de la ANI de entregar la totalidad de los predios correspondientes a las Fajas del Proyecto, ni de entregar las obras existentes o predios en un estado material o jurídico determinado.
 (g)   El desarrollo de las obligaciones ambientales pendientes de cumplimiento y obligaciones por ejecutar establecidas en el Apéndice Técnico 6, deberá iniciar desde la suscripción del Acta de Inicio o la expedición de la Orden de Inicio
@@ -1939,7 +1519,7 @@ Plazos de las Fases de la Etapa Preoperativa
 Plazo de la Etapa de Operación y Mantenimiento
 
 (a)   La Etapa de Operación y Mantenimiento iniciará con la suscripción de la última Acta de Terminación de Unidad Funcional y se extenderá en los términos dispuestos en la Sección 2.4(b) de la Parte General.
-Para la Unidad Funcional 0, la Operación y Mantenimiento comenzará a partir de la Fecha de Inicio, en las condiciones descritas en la Sección 3.5 de esta Parte Especial y se acogerá a lo descrito en la “Tabla de referencias a la Parte General” Sección 1.206, relacionada en el CAPÍTULO II de esta Parte Especial.
+Para la Unidad Funcional 0, la Operación y Mantenimiento comenzará a partir de la Fecha de Inicio, en las condiciones descritas en la Sección 3.5 de esta Parte Especial y se acogerá a lo descrito en la “Tabla de referencias a la Parte General” Sección 1.206, relacionada en el CAPÍTULO I I de esta Parte Especial.
 
 ASPECTOS ECONÓMICOS DEL CONTRATO
  Porcentaje de Participación de las Unidades Funcionales.
@@ -2264,14 +1844,10 @@ Como máximo, al quinto (5) día hábil del mes de enero siguiente a la Fecha de
 𝐼𝑃𝐶𝑡−2     𝑇
 
 
-
 TarifaSRt
 
 
-
-
 𝑇𝑎𝑟𝑖𝑓𝑎 𝑡−₁
-
 
 
 𝐼𝑃𝐶𝑡−₁
@@ -2279,7 +1855,6 @@ TarifaSRt
 𝐼𝑃𝐶𝑡−₂
 
 𝐼𝑇
-
 
 
 T
@@ -2298,7 +1873,6 @@ Año de Actualización de la tarifa
 Donde,
 
 
-
 𝑇𝑎𝑟𝑖𝑓𝑎𝑈𝑠𝑢𝑎𝑟𝑖𝑜𝑡
 
 
@@ -2310,7 +1884,6 @@ Valor actualizado de la tarifa para el año n, de acuerdo con la ecuación defin
 𝐹𝑆𝑉𝑡
 
 
-
 𝑅𝑒𝑑𝑜𝑛𝑑𝑒𝑜 100
 
 
@@ -2319,8 +1892,6 @@ Es el valor del aporte al Fondo de Seguridad Vial para el año t vigente al mome
 Función que redondea un número al múltiplo de 100 más cercano. Redondea hacia la centena superior, si el residuo de dividir el número entre cien (100) es mayor o igual a cincuenta (50). Redondea hacia la centena inferior, si el residuo de dividir el número entre cien (100) es menor que cincuenta (50)
 Año de Actualización de la tarifa
 (h)   A partir del año siguiente al año en que se realiza el incremento T2 dispuesto en la Sección 4.2(c) anterior, la actualización de las tarifas para esta estructura tarifaria para cada una de las Estaciones de Peaje se calculará con base en la fórmula que se encuentra a continuación:
-
-
 
 
 Donde,
@@ -2336,7 +1907,6 @@ Donde,
 
 
 𝑇𝑎𝑟𝑖𝑓𝑎 𝑡−₁
-
 
 
 𝐼𝑃𝐶𝑡−₁
@@ -2382,8 +1952,6 @@ h         h       h     h          ℎ
 Donde,
 
 
-
-
 Rhu
 
 
@@ -2391,7 +1959,6 @@ Retribución correspondiente a la Unidad Funcional u en el Mes h
 𝐴𝑝𝑜𝑟𝑡𝑒𝑠𝑢 = 𝐴𝑝𝑜𝑟𝑡𝑒𝑠𝐷𝑢 ∗ 𝐼𝐶𝑃𝑢
 ℎ         ℎ     ℎ
 Donde,
-
 
 
 Aporteshu
@@ -2405,17 +1972,7 @@ Donde,
 ℎ        ℎ    ℎ
 
 
-
-
-
 Peajeshu
-
-
-
-
-
-
-
 
 
 EC ᵘ
@@ -2423,25 +1980,6 @@ PeajesEhu = Recaudo de Peaje correspondiente al Mes h consignado en la subcuenta
 IChu = Es el Índice de Cumplimiento de la Unidad Funcional u medido para el Mes h.
 𝐸𝐶𝑢 = 𝐸𝐶𝐸𝑢 ∗ 𝐼𝐶𝑢
 ℎ     ℎ    ℎ
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 𝐷𝐼𝐶𝑃𝑢
@@ -2470,11 +2008,9 @@ Terminación de Unidad Funcional –o Acta de Terminación Parcial de Unidad Fun
 𝐴𝑝𝑜𝑟𝑡𝑒𝑠𝑢 = 𝐴𝑝𝑜𝑟𝑡𝑒𝑠 ∗ (𝐼𝑃𝐶𝑡) ∗ Pᵘ
 
 
-
 Donde,
 𝑡        𝑡
 𝐼𝑃𝐶𝑟
-
 
 
 𝐴𝑝𝑜𝑟𝑡𝑒𝑠𝑢
@@ -2485,7 +2021,6 @@ Aportest
 IPCr IPCt
 
 Pu
-
 
 
 𝑡
@@ -2500,12 +2035,10 @@ Contador de cada uno de los Años correspondientes a los Aportes ANI de la Secci
 (f)   La fórmula a la que se refiere la Sección 3.1(f)(iv) de la Parte General, es la siguiente:
 
 
-
 Donde,
 𝐷𝑖𝑓𝑒𝑟𝑒𝑛𝑐𝑖𝑎ℎ
 = (𝑉𝑇 − 𝑉𝑆𝐶) ∗ (𝐼𝑃𝐶ℎ) ∗ (1 + 𝑇𝐷𝐼)ℎ−𝑡
 𝐼𝑃𝐶𝑡
-
 
 
 Diferenciah
@@ -2534,17 +2067,13 @@ Giros de Equity
 Giro Inicial
 
 
-
 Giro 1
-
 
 
 Giro 2
 
 
-
 Giro 3
-
 
 
 Giro 4
@@ -2566,17 +2095,13 @@ Fecha máxima del Aporte
 Al momento de Constitución del Patrimonio Autónomo
 
 
-
 180 Días desde la Fecha de Inicio
-
 
 
 360 Días desde la Fecha de Inicio
 
 
-
 720 Días desde la Fecha de Inicio
-
 
 
 1080 Días desde la Fecha de Inicio
@@ -2604,15 +2129,10 @@ Aporte a la Subcuenta Predios
 Aporte Inicial
 
 
-
-
 Aporte 1
 
 
-
-
 Aporte 2
-
 
 
 Aporte 3
@@ -2634,14 +2154,10 @@ Fecha Máxima del Aporte
 Constitución del Patrimonio Autónomo
 
 
-
 180 Días desde la Fecha de Inicio
 
 
-
-
 360 Días desde la Fecha de Inicio
-
 
 
 720 Días desde la Fecha de Inicio
@@ -2667,24 +2183,16 @@ Aporte a la Subcuenta Compensaciones Socioambientales
 Aporte Inicial
 
 
-
 Aporte 1
-
 
 
 Aporte 2
 
 
-
-
 Aporte 3
 
 
-
-
 Aporte 4
-
-
 
 
 Aporte 5
@@ -2707,7 +2215,6 @@ PESOS DEL Mes de Referencia ($1.220.146.464)
 Fecha Máxima del Aporte
 
 
-
 Constitución del Patrimonio Autónomo
 
 
@@ -2717,13 +2224,10 @@ Constitución del Patrimonio Autónomo
 360 Días desde la Fecha de Inicio
 
 
-
 720 Días desde la Fecha de Inicio
 
 
-
 1.080 Días desde la Fecha de Inicio
-
 
 
 1.440 Días desde Fecha de Inicio
@@ -2744,17 +2248,10 @@ Aporte a la Subcuenta Redes
 Aporte Inicial
 
 
-
-
 Aporte 1
 
 
-
-
-
 Aporte 2
-
-
 
 
 Aporte 3
@@ -2776,13 +2273,10 @@ Fecha Máxima del Aporte
 Constitución del Patrimonio Autónomo
 
 
-
 180 Días desde la Fecha de Inicio
 
 
-
 360 Días desde la Fecha de Inicio
-
 
 
 720 Días desde la Fecha de Inicio
@@ -2858,13 +2352,6 @@ ETAPA PREOPERATIVA
 ETAPA DE OPERACIÓN Y MANTENIMIENTO
 
 
-
-
-
-
-
-
-
 Valor Mes
 FASE PRECONSTRUCCIÓN
 
@@ -2912,8 +2399,6 @@ Aporte
 Aporte Anual
 
 
-
-
 Aporte Semestral
 Monto
 TRESCIENTOS SETENTA Y SIETE MILLONES DE
@@ -2936,56 +2421,34 @@ Aporte a la Subcuenta Policía de Carreteras
 Aporte 1
 
 
-
-
 Aporte 2
-
-
 
 
 Aporte 3
 
 
-
-
 Aporte 4
-
-
 
 
 Aporte 5
 
 
-
-
 Aporte 6
-
-
 
 
 Aporte 7
 
 
-
-
 Aporte 8
-
-
 
 
 Aporte 9
 
 
-
-
 Aporte 10
 
 
-
-
 Aporte 11
-
-
 
 
 Aporte 12
@@ -3020,60 +2483,37 @@ PESOS DEL Mes de Referencia ($1.903.535.208)
 Fecha Máxima del Aporte
 
 
-
 Constitución del Patrimonio Autónomo
-
-
 
 
 360 Días desde la Fecha de Inicio
 
 
-
-
 720 Días desde la Fecha de Inicio
-
-
 
 
 1.080 Días desde la Fecha de Inicio
 
 
-
-
 1.440 Días desde la Fecha de Inicio
-
-
 
 
 1.800 Días desde la Fecha de Inicio
 
 
-
-
 2.160 Días desde la Fecha de Inicio
-
-
 
 
 2.520 Días desde la Fecha de Inicio
 
 
-
-
 2.880 Días desde la Fecha de Inicio
-
-
 
 
 3.240 Días desde la Fecha de Inicio
 
 
-
-
 3.600 Días desde la Fecha de Inicio
-
-
 
 
 3.960 Días desde la Fecha de Inicio
@@ -3084,56 +2524,34 @@ Aporte a la Subcuenta Policía de Carreteras
 Aporte 13
 
 
-
-
 Aporte 14
-
-
 
 
 Aporte 15
 
 
-
-
 Aporte 16
-
-
 
 
 Aporte 17
 
 
-
-
 Aporte 18
-
-
 
 
 Aporte 19
 
 
-
-
 Aporte 20
-
-
 
 
 Aporte 21
 
 
-
-
 Aporte 22
 
 
-
-
 Aporte 23
-
-
 
 
 Aporte 24
@@ -3168,60 +2586,37 @@ PESOS DEL Mes de Referencia ($1.903.535.208)
 Fecha Máxima del Aporte
 
 
-
 4.320 Días desde la Fecha de Inicio
-
-
 
 
 4.680 Días desde la Fecha de Inicio
 
 
-
-
 5.040 Días desde la Fecha de Inicio
-
-
 
 
 5.400 Días desde la Fecha de Inicio
 
 
-
-
 5.760 Días desde la Fecha de Inicio
-
-
 
 
 6.120 Días desde la Fecha de Inicio
 
 
-
-
 6.480 Días desde la Fecha de Inicio
-
-
 
 
 6.840 Días desde la Fecha de Inicio
 
 
-
-
 7.200 Días desde la Fecha de Inicio
-
-
 
 
 7.560 Días desde la Fecha de Inicio
 
 
-
-
 7.920 Días desde la Fecha de Inicio
-
-
 
 
 8.280 Días desde la Fecha de Inicio
@@ -3237,7 +2632,6 @@ MIL NOVECIENTOS TRES MILLONES QUINIENTOS TREINTA Y CINCO MIL DOSCIENTOS OCHO
 PESOS DEL Mes de Referencia ($1.903.535.208)
 
 Fecha Máxima del Aporte
-
 
 
 8.640 Días desde la Fecha de Inicio
@@ -3257,9 +2651,7 @@ Aporte 1
 Aporte 2
 
 
-
 Aporte 3
-
 
 
 Aporte 4
@@ -3665,7 +3057,6 @@ Aprovechamiento forestal
 Resolución 1471 del 13/08/2013        No
 
 
-
 Corpoboyacá
 Aprovechamiento
 forestal tramo 2 Resolución  482  del
@@ -3673,7 +3064,6 @@ forestal tramo 2 Resolución  482  del
 Rio Ermitaño)
 
 Resolución 2494 de 23 de julio 2018
-
 
 
 Corpoboyacá
@@ -3696,7 +3086,6 @@ Sector
 Levantamiento de Veda Levantamiento de Veda Levantamiento de Veda Levantamiento de Veda Levantamiento de Veda Sustracción de Reserva Sustracción de Reserva Sustracción de Reserva Sustracción de Reserva Sustracción de Reserva
 
 
-
 Sustracción de Reserva
 309 del 16/03/2012
 1253 del 04/08/2014
@@ -3708,8 +3097,6 @@ Sustracción de Reserva
 1634 del 25/11/2013
 172 del 04/02/2014
 1704 del 13/10/2016
-
-
 
 
 1022 del 23/06/2016
@@ -3728,7 +3115,6 @@ Objeto
 Sustracción de Reserva
 
 
-
 Levantamiento de Veda
 
 
@@ -3736,7 +3122,6 @@ Levantamiento de Veda Levantamiento de Veda
 Levantamiento de Veda Sustracción de Reserva
 Resolución
 0861 del 11/05/2011
-
 
 
 1808 del 10/10/2012
@@ -3777,7 +3162,6 @@ Marzo 21 de 2014
 Res. 0960
 Agosto 22 de 2014
 Expediente
-
 
 
 LAM5671

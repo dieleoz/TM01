@@ -148,7 +148,6 @@ PÓLIZA DE SEGURO DE RESPONSABILIDAD CIVIL EXTRACONTRACTUAL
 
 
 Entre: Concedente:
-Agencia Nacional de Infraestructura
 
 
 Concesionario:

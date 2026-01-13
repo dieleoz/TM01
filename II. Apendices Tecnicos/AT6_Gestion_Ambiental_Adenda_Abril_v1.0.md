@@ -27,46 +27,23 @@
 ## 2. CONTENIDO DEL DOCUMENTO
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-
-
 CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No. [ • ]
 
 
 Concedente:
 
-AGENCIA NACIONAL DE INFRAESTRUCTURA
 
 Concesionario:
 
 [ • ]
 
 
-
 APÉNDICE TÉCNICO 6 GESTIÓN AMBIENTAL
 
 TABLA DE CONTENIDO
 CAPÍTULO I - DEFINICIONES                                 3
-CAPÍTULO II - INTRODUCCIÓN                                6
-CAPÍTULO III - OBLIGACIONES GENERALES                       8
+CAPÍTULO I I - INTRODUCCIÓN                                6
+CAPÍTULO II I - OBLIGACIONES GENERALES                       8
 3.1    Obligaciones Generales del Concesionario                         8
 3.2    Obligaciones del Concesionario relacionadas con la Autoridad Ambiental       11
 3.3    Obligaciones del Concesionario relacionadas con la Interventoría y la ANI       12
@@ -74,7 +51,7 @@ CAPÍTULO III - OBLIGACIONES GENERALES                       8
 3.5    Gestión del Riesgo de Desastres                             15
 3.6    Incumplimiento                                      15
 3.7    Indemnidad                                        16
-CAPÍTULO IV - COMPENSACIONES SOCIOAMBIENTALES              17
+CAPÍTULO I V - COMPENSACIONES SOCIOAMBIENTALES              17
 4.1    Ítems que serán objeto de reconocimiento con cargo a la subcuenta           17
 4.2    Ítems que no serán objeto de reconocimiento con cargo a la subcuenta         17
 4.3    Aspectos Generales                                    18
@@ -90,7 +67,7 @@ CAPÍTULO V - OBLIGACIONES DURANTE LA FASE DE PRECONSTRUCCIÓN   21
 5.7    Manejo de fauna                                      27
 5.8    Programa de Aporte Sostenible – Mitigación del Cambio Climático           27
 5.9    Plan de Gestión Integral                                  28
-CAPÍTULO VI - OBLIGACIONES DURANTE LA FASE DE CONSTRUCCIÓN     29
+CAPÍTULO V I - OBLIGACIONES DURANTE LA FASE DE CONSTRUCCIÓN     29
 6.1    Obligaciones generales durante la Fase de Construcción                 29
 6.2    Manejo de fauna                                      29
 6.3    Programa de Aporte Sostenible – Mitigación del Cambio Climático           30
@@ -98,46 +75,19 @@ CAPÍTULO VI - OBLIGACIONES DURANTE LA FASE DE CONSTRUCCIÓN     29
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 6.4    Cierre Ambiental                                     31
-CAPÍTULO  VII  -  OBLIGACIONES  DURANTE  LA  ETAPA  DE  OPERACIÓN  Y MANTENIMIENTO                            35
+CAPÍTULO  VI I  -  OBLIGACIONES  DURANTE  LA  ETAPA  DE  OPERACIÓN  Y MANTENIMIENTO                            35
 7.1    Obligaciones durante la Etapa de Operación y Mantenimiento              35
 7.2    Para las unidades funcionales que cuente con las Licencias Ambientales cerradas o con PAGAS diseñados para la Fase de Construcción                          35
 7.3    Cierre de expedientes ambientales                            36
 7.4    Manejo de fauna                                      36
 7.5    Programa de Aporte Sostenible - Mitigación Al Cambio Climático           37
-CAPÍTULO VIII - OBLIGACIONES PARA LA ETAPA DE REVERSIÓN DEL CONTRATO DE CONCESIÓN                             39
-CAPÍTULO IX - CONSIDERACIONES ESPÉCÍFICAS                   40
+CAPÍTULO VII I - OBLIGACIONES PARA LA ETAPA DE REVERSIÓN DEL CONTRATO DE CONCESIÓN                             39
+CAPÍTULO I X - CONSIDERACIONES ESPÉCÍFICAS                   40
 9.1    Cesión de Licencia y Permisos Ambientales a cargo de la ANI             40
 9.2    Cesión de permisos otorgados por las Corporaciones Autónomas Regionales      41
 9.3    Cesión de permisos otorgados por el Ministerio de Ambiente y Desarrollo Sostenible  41
 9.4    Cesión de Licencias Ambientales otorgadas por la Autoridad Nacional de Licencias Ambientales – ANLA                                        43
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 2 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -165,9 +115,6 @@ CAPÍTULO I - DEFINICIONES
 (i)  Emergencia. Escenario o situación de afectación a una comunidad sus bienes, medios de vida, servicios y su entorno, causado por un evento natural y antrópico, que puede ser resuelto por los recursos locales.
 
 
-
-Página 3 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -185,7 +132,6 @@ Troncal del Magdalena Medio
 
 (r)  Licencia Ambiental: Es la autorización que otorga la autoridad ambiental competente para la ejecución de un proyecto, obra o actividad, que de acuerdo con la ley y los reglamentos pueda producir deterioro grave a los recursos naturales renovables o al medio ambiente o introducir
 
-Página 4 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -208,17 +154,11 @@ modificaciones considerables o notorias al paisaje; la cual sujeta al beneficiar
 (z)  Vulnerabilidad climática. Son las variaciones en el estado medio y otros datos estadísticos del clima en todas las escalas temporales y espaciales (como las desviaciones típicas, las ocurrencias de fenómenos extremos, como el Niño y la Niña, etc), más allá de fenómenos meteorológicos determinados. La variabilidad se puede deber a procesos internos naturales dentro del sistema climático (variabilidad interna), o a variaciones en los forzamientos externos antropogénicos (variabilidad externa). República de Colombia. Ley 1931 del 27 de julio de 2018.
 
 
-
-
-
-
-Página 5 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
 
-CAPÍTULO II - INTRODUCCIÓN
+CAPÍTULO I I - INTRODUCCIÓN
 
 (a)  De conformidad con lo previsto en la Sección 8.1 de la Parte General del Contrato, el presente Apéndice contiene las obligaciones del Concesionario en lo relacionado con el componente Ambiental del Proyecto más no con la Gestión Social la cual se regulará en el Apéndice Técnico 8.
 
@@ -249,8 +189,6 @@ CAPÍTULO II - INTRODUCCIÓN
 (xi)  Ocupación de zonas para obras o almacenamientos provisionales.
 
 
-Página 6 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -277,26 +215,11 @@ Troncal del Magdalena Medio
 (xxiv) Estudios para identificar las dinámicas de atropellamiento de fauna silvestre en el corredor vial e implementar medidas para su manejo y gestión.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 7 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
 
-CAPÍTULO III - OBLIGACIONES GENERALES
+CAPÍTULO II I - OBLIGACIONES GENERALES
 
 3.1 Obligaciones Generales del Concesionario
 (a)  Para la ejecución del contrato y adelantar la gestión ambiental del proyecto, el Concesionario como mínimo debe contar con el siguiente personal con una dedicación del 100%:
@@ -325,7 +248,6 @@ Fase de Operación y Mantenimiento:
 
 (d)  El Concesionario, a su cuenta y riesgo, deberá realizar todas las gestiones necesarias para el cumplimiento de la Ley Aplicable vigente en materia ambiental, incluyendo el trámite y obtención de las Licencias Ambientales y/o de los licencias, permisos, concesiones y autorizaciones ambientales y de las modificaciones de los mismos, que resulten necesarios para
 
-Página 8 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -344,7 +266,6 @@ la ejecución del Proyecto. Sin perjuicio de lo establecido en la Sección 8.1 d
 
 (k)  En el evento en que el Proyecto utilice fuentes naturales de agua para consumo o cualquier otra de las actividades previstas por la Ley Aplicable adicionales a las contenidas en las Licencias Ambientales cedidas a las que hace referencia el numeral 9.4 de este Apéndice, el Concesionario deberá cumplir a su costa y riesgo con lo establecido en el Decreto 2099 de 2016
 
-Página 9 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -365,8 +286,6 @@ El Concesionario será responsable de la administración de los inmuebles requer
 (r)  El Concesionario deberá adelantar, por su cuenta y riesgo, todas las actuaciones administrativas y/o judiciales para las cuales esté legitimado –de acuerdo con la Ley Aplicable– encaminadas
 
 
-Página 10 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -380,14 +299,13 @@ a evitar, mitigar o detener cualquier acto de un tercero que afecte las condicio
 (iii)  Establecer la vigencia de los permisos, concesiones y autorizaciones ambientales e identificar la necesidad de tramitar nuevos, o de modificar los que estén vigentes.
 (b)  El Concesionario tiene a su costo y riesgo la obligación de determinar la necesidad, o no, de acuerdo con la Ley Aplicable, de adelantar los trámites que resulten necesarios para obtener y/o modificar las Licencias Ambientales y los permisos, concesiones y autorizaciones ambientales requeridos para el desarrollo del Proyecto ante la Autoridad Ambiental Competente. En consecuencia, será obligación del Concesionario establecer:
 (i)  La naturaleza de las Licencias Ambientales y los permisos, concesiones y autorizaciones ambientales necesarios para desarrollar el Proyecto.
-(ii)  El alcance de las mismas, en lo pertinente a determinar si son solicitadas para el desarrollo de todo el Proyecto, o de una o varias Unidades Funcionales, o para una o varias Intervenciones. Lo anterior, no excusa al Concesionario de su obligación de contar con todas las Licencias Ambientales y los permisos, concesiones y autorizaciones ambientales que se requieran para la ejecución de todo el Proyecto. En consecuencia, en el caso en que las Licencias Ambientales y permisos, concesiones y autorizaciones ambientales sean obtenidos para varias Intervenciones, una o varias Unidades Funcionales o para el Proyecto; la referencia a Intervención que se hace en las obligaciones contenidas en el CAPÍTULO III del presente Apéndice, deberá entenderse con respecto a éstas.
+(ii)  El alcance de las mismas, en lo pertinente a determinar si son solicitadas para el desarrollo de todo el Proyecto, o de una o varias Unidades Funcionales, o para una o varias Intervenciones. Lo anterior, no excusa al Concesionario de su obligación de contar con todas las Licencias Ambientales y los permisos, concesiones y autorizaciones ambientales que se requieran para la ejecución de todo el Proyecto. En consecuencia, en el caso en que las Licencias Ambientales y permisos, concesiones y autorizaciones ambientales sean obtenidos para varias Intervenciones, una o varias Unidades Funcionales o para el Proyecto; la referencia a Intervención que se hace en las obligaciones contenidas en el CAPÍTULO II I del presente Apéndice, deberá entenderse con respecto a éstas.
 
 (c)  El Concesionario deberá adelantar, por su cuenta y riesgo, los estudios o documentos requeridos por las Autoridades Ambientales Competentes para el trámite de obtención de las Licencias Ambientales y de los permisos, concesiones y autorizaciones ambientales y/o las modificaciones a que haya lugar con el nivel detalle y alcance establecido en los términos de referencia y en los requerimientos que de estas se deriven.
 (d)  El Concesionario deberá gestionar y pagar a su cuenta y riesgo todos los trámites administrativos ante la(s) Autoridad(es) Ambiental(es) Competente(s)y las tazas que se requieran para el desarrollo del Proyecto. En este sentido, el Concesionario asume entera responsabilidad de su interacción con la Autoridad Ambiental competente para cada tipo de trámite gestionado.
 
 (e)  El Concesionario deberá obtener a su cuenta y riesgo todas las Licencias Ambientales y permisos, concesiones y autorizaciones ambientales, sin limitarse a estos, que de acuerdo con la normativa ambiental resulten necesarios para el desarrollo del Proyecto de acuerdo con los alcances y cronogramas establecidos en el Contrato. En consecuencia, el Concesionario deberá
 
-Página 11 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -406,9 +324,6 @@ estudiar, evaluar y desarrollar todas las medidas y procedimientos requeridos pa
 (b)  El Concesionario remitirá copia del radicado de todos los documentos remitidos por las Autoridades Ambientales y enviados a las Autoridades Ambientales, a la Interventoría y a la ANI dentro de los cinco (5) días calendario siguientes a su recepción o radicación, según aplique.
 (c)  El Concesionario elaborará y mantendrá actualizada, en la herramienta tecnológica o el formato que disponga la Agencia Nacional de Infraestructura, la matriz legal ambiental la cual contendrá la relación de todas las obligaciones tanto contractuales de carácter ambiental, como las asociadas a las Licencias Ambientales y los permisos, concesiones y autorizaciones ambientales proferidos por las Autoridades Ambientales Competentes para los fines del proyecto, incluyendo Actos Administrativos de seguimiento y de imposición de medidas adicionales; la matriz deberá ser validada con la Interventoría y presentada como anexo en los
 
-
-
-Página 12 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -429,8 +344,6 @@ informes trimestrales sobre el componente ambiental a los que se hace referencia
 (j)   En caso de que el Concesionario ceda, total o parcialmente, alguno de los permisos, concesiones y autorizaciones ambientales a un tercero, le deberá informar a la ANI y a la Interventoría previamente y además les remitirá para observación el documento de cesión antes de  que  sea  radicado  ante  la  Autoridad  Ambiental  Competente.  Sin  embargo, independientemente de que los Permisos o Licencias Ambientales hayan sido cedidos a un tercero, ante la ANI y la Interventoría el Concesionario continuará siendo responsable de los
 
 
-Página 13 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -439,7 +352,6 @@ mismos, por lo que está obligado a remitir la información y atender los requer
 
 (a)  El Concesionario deberá presentar al Interventor y la ANI, dentro de los cinco (5) primeros Días de cada trimestre, contados desde la Fecha de Inicio del Contrato de Concesión, un informe relativo al cumplimiento de las obligaciones relacionadas con el componente ambiental del Proyecto, que incluya un aparte con lo correspondiente a los tramos objeto de Licencia Ambiental y otro aparte que incluya lo correspondiente a los tramos objeto de PAGA
 (b) Dichos informes deberán indicar de forma detallada las actividades llevadas a cabo durante el trimestre en relación con el cumplimiento de las obligaciones de carácter ambiental y contractual del Contrato y de las Licencias Ambientales y de los permisos, concesiones y autorizaciones ambientales. Entre otros, el informe deberá contener:
-
 
 
 (i)   La matriz de obligaciones ambientales a la que se hace referencia este Apéndice.
@@ -453,8 +365,6 @@ o Reportes de avistamientos, atropellamiento e incidentes con fauna silvestre en
 o Reportar las acciones adelantadas y la metodología utilizada para las labores de rescate y reubicación de nidos, madrigueras e individuos de fauna silvestre, identificados en las fases de pre-construcción y construcción.
 o Valoración de los indicadores de efectividad de medidas adoptados para evaluar la prevención de incidentes con fauna y eventos de atropellamiento en el proyecto,
 
-
-Página 14 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -481,8 +391,6 @@ El Concesionario como actor de la Gestión del Riesgo de Desastres en el sector 
 El incumplimiento de las obligaciones relacionadas con el componente ambiental dará lugar, además de las previstas por la Ley Aplicable, a las consecuencias previstas en la Parte Especial y demás disposiciones concordantes del Contrato de Concesión.
 
 
-Página 15 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -491,55 +399,10 @@ Troncal del Magdalena Medio
 El Concesionario deberá mantener indemne a la ANI por (i) las obligaciones ambientales que adquiere en virtud de la celebración del Contrato y de los demás instrumentos de gestión ambiental aplicables, ante la(s) Autoridad(es) Ambiental(es) Competente(s); y (ii) de cualquier sanción que llegare a imponer la Autoridad Ambiental a la ANI o al Ministerio de Transporte durante la ejecución del presente Contrato por causas imputables a éste.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 16 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
-CAPÍTULO IV - COMPENSACIONES SOCIOAMBIENTALES
+CAPÍTULO I V - COMPENSACIONES SOCIOAMBIENTALES
 
 4.1 Ítems que serán objeto de reconocimiento con cargo a la subcuenta
 (a)  Para efectos de este Contrato las Compensaciones Socioambientales que se definen en la Parte General corresponderán, exclusivamente a los requerimientos establecidos dentro de Resoluciones, Autos y Acuerdos (corporaciones) emitidos por las Autoridades y Entidades Ambientales Competentes en donde taxativamente fijan como medida de manejo las obligaciones de compensación, definidas como tal en la ley vigente y aplicable para el proyecto en el marco de:
@@ -560,11 +423,6 @@ CAPÍTULO IV - COMPENSACIONES SOCIOAMBIENTALES
 (e)  Medidas derivadas de la inversión forzosa de no menos del 1%.
 
 
-
-
-
-Página 17 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -584,10 +442,6 @@ Troncal del Magdalena Medio
 
 (e)  Una vez se cuente con la aprobación de los Planes de Compensación por parte de la(s) Autoridad(es) Ambiental(es), el Concesionario deberá iniciar dentro del mes siguiente a la aprobación las actividades de establecimiento o preliminares según la propuesta aprobada y actualizar el cronograma y costos del Acta de Terminación.
 
-
-
-
-Página 18 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -613,8 +467,6 @@ Troncal del Magdalena Medio
 (ix)  Soportar cada una de las actividades descritas en el numeral precedente con evidencias (documentales, imágenes, entre otros) que sirvan para demostrar la implementación de las actividades para dar cumplimiento a la medida compensatoria.
 
 
-Página 19 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -632,16 +484,8 @@ En caso de no obtener respuesta por parte de la Autoridad Ambiental el Concesion
 (iv)  La Interventoría establecerá un programa de seguimiento y control sobre el cronograma que presente el Concesionario que en todo caso deberá estar dentro de los plazos de su contrato.
 
 
-
-
-
-
-
-Página 20 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
-
 
 
 CAPÍTULO V - OBLIGACIONES DURANTE LA FASE DE PRECONSTRUCCIÓN
@@ -663,8 +507,6 @@ El Concesionario, dentro de lo siguientes quince (15) días hábiles después de
 
 (a)  El Plan de Trámites Ambientales es el documento que el Concesionario elaborará y presentará al Interventor y la ANI en el plazo definido en la Parte Especial discriminado por componente (ambiental y social) y por unidad funcional, el cual contendrá la descripción de las formas, mecanismos y el cronograma de radicación de los estudios, documentos y solicitudes de pronunciamiento ante Autoridades Ambientales, Entidades competentes e Interventoría para el trámite y obtención de las Licencias Ambientales y permisos, concesiones y autorizaciones ambientales, modificaciones de los existentes, trámites de conceptos de modificaciones
 
-
-Página 21 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -689,7 +531,6 @@ menores o de ajuste normal dentro del giro ordinario, PAGA´s, trámites necesar
 (vi) En caso de ser ajustado, el Concesionario deberá, de manera simultánea, presentar a la ANI y al Interventor el nuevo Plan de Obras con la actualización del cronograma detallado de elaboración y entrega de estudios y trámites ambientales, así como la elaboración y presentación de los PAGA únicamente para las unidades funcionales afectadas.
 (vii) En el Plan de Trámites Ambientales se debe incluir un diagnóstico que contenga lo siguiente:
 
-Página 22 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -713,8 +554,6 @@ Troncal del Magdalena Medio
 (g)  El PAGA y los permisos, concesiones y autorizaciones ambientales deberán permanecer actualizados de acuerdo con los proyectos, obras y actividades en ejecución; por lo que dicho documento debe contar con la No Objeción de la Interventoría independientemente de que las
 
 
-Página 23 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -736,7 +575,6 @@ versiones anteriores hayan sido No Objetadas y de la etapa o de la fase en la qu
 (ii)  Elaborar todos los análisis, estudios y trámites ambientales con el alcance establecido en los términos de referencia adoptados por las Autoridades Ambientales con el fin de satisfacer los requisitos establecidos en la Ley Aplicable.
 (b)  Correrán a cargo del Concesionario todas las tasas, contribuciones y, en general, cualquier suma de dinero que se requiera para el cumplimiento de sus obligaciones relacionadas con la Gestión Ambiental del proyecto, incluyendo las que sean necesarias para que la Autoridad Ambiental dé inicio, prosiga con las diferentes etapas del trámite y expida la Licencia
 
-Página 24 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -753,10 +591,6 @@ Ambiental o la modificación de la existente. Así también, tendrá la responsa
 (v)  Dicha mesa de trabajo no podrá tener una duración superior a cinco (5) días.
 (vi)  En caso de desacuerdo entre el Concesionario y el Interventor en cualquier momento de la etapa de revisión del EIA El Concesionario podrá acudir al Amigable Componedor.
 
-
-
-
-Página 25 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -779,9 +613,6 @@ Troncal del Magdalena Medio
 (i)  El Concesionario deberá -previo a la presentación del DAA a la Autoridad Ambiental-, remitir dicho documento a la Interventoría.
 (i)   La Interventoría contará con quince (15) días desde la presentación del DAA para presentar sus observaciones al mismo enmarcadas en las Metodologías para la elaboración de Estudios Ambientales y los términos de referencia que sean fijados por las Autoridades y que sean aplicables al alcance del proyecto.
 
-
-
-Página 26 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -806,8 +637,6 @@ Troncal del Magdalena Medio
 (c)  Para el desarrollo del documento, el Concesionario podrá tener como referencia la normatividad nacional ambiental incluyendo la Ley 99 de 1993, como a su vez la Ley 1523 de 2012, el Plan de Adaptación al Cambio Climático para el sector transporte del INVIAS y la Ley 1931 del 27 de julio de 2018 sobre cambio climático, así como la siguiente información de referencia:
 
 
-Página 27 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -828,30 +657,10 @@ Troncal del Magdalena Medio
 Dentro del plan de gestión integral del cual trata el Apéndice Técnico 2, se deberán prever los mecanismos de cumplimiento de la normatividad ambiental vigente en temas de medio ambiente y comunidad. Así mismo, éste deberá obligar a garantizar que todos los profesionales, contratistas y/o subcontratistas del Concesionario cuenten con la experiencia, idoneidad y capacidad para realizar las diversas actividades del Proyecto, cumpliendo la normatividad y estándares antes mencionados, así como las buenas prácticas nacionales e internacionales del subsector vial.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 28 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
-CAPÍTULO VI - OBLIGACIONES DURANTE LA FASE DE CONSTRUCCIÓN
+CAPÍTULO V I - OBLIGACIONES DURANTE LA FASE DE CONSTRUCCIÓN
 
 6.1 Obligaciones generales durante la Fase de Construcción
 (a)  Correrán a cargo del Concesionario todas las tasas, contribuciones y, en general, cualquier suma que se requiera para el cumplimiento de sus obligaciones relacionadas con la Gestión Ambiental del proyecto incluyendo los recursos técnicos, logísticos y económicos necesarios para el seguimiento ambiental que realicen las Autoridades Gubernamentales Competentes y cumplir con los requerimientos derivados de dicho seguimiento.
@@ -867,8 +676,6 @@ CAPÍTULO VI - OBLIGACIONES DURANTE LA FASE DE CONSTRUCCIÓN
 (i)   Implementar las medidas de manejo y acciones necesarias para mitigar los impactos que afecten la fauna silvestre, de acuerdo con la información levantada en la Fase de Preconstrucción; así como las establecidas por la(s) Autoridad(es) Ambiental(es) Competente(s).
 (ii)  Realizar el monitoreo continuo del impacto de atropellamiento de fauna silvestre e implementar las medidas necesarias para prevenir, mitigar y corregir dicho impacto. La información deberá remitirse a la Interventoría y a la ANI en los formatos y formas indicados por la ANI como anexo a los informes ambientales trimestrales.
 
-
-Página 29 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -891,9 +698,6 @@ Troncal del Magdalena Medio
 
 (ii)  Incorporar las consideraciones y medidas de adaptación y mitigación al cambio climático más pertinentes en la planificación, diseño, construcción y operación de las vías, dando prioridad a los tramos más vulnerables (puntos críticos) por Unidad Funcional.
 
-
-
-Página 30 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -918,7 +722,6 @@ _de_adaptacion_vias-c_c/descargar.php?id=4755
 
 (b)  Dentro de los dos (2) meses siguientes a que se concluyan las Intervenciones en cada una de las Unidades Funcionales del Proyecto, el Concesionario realizará el cierre ambiental total de la misma en caso de que no queden requerimientos ambientales pendientes de ejecutar o terminar. Para el efecto, el Concesionario evaluará y confirmará que ha cumplido con lo estipulado en las Licencias Ambientales y en los permisos, concesiones y autorizaciones ambientales, Planes de Compensación y demás requerimientos proferidos por la(s) Autoridad(es) Ambiental(es) para la Unidad Funcional objeto de cierre.
 
-Página 31 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -937,8 +740,6 @@ Troncal del Magdalena Medio
 (g)  El Concesionario, la Interventoría y la ANI, establecerán en el Acta de Inicio de la Etapa de Operación y Mantenimiento los lineamientos para dar cumplimiento a los requerimientos y compensaciones y demás obligaciones ambientales pendientes por ejecutar.
 (h)  En concordancia con lo señalado en los literales (a) o (b) del presente numeral, el Concesionario elaborará y entregará a la Interventoría y a la ANI un documento completo y explicito describiendo la forma en que ha cumplido o cumplirá -según sea el caso de cierre ambiental total o parcial, el cual deberá atender las siguientes condiciones:
 
-
-Página 32 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -965,7 +766,6 @@ i.  Los formatos diligenciados que adopte la ANI para los fines.
 a.  La Interventoría deberá pronunciarse dentro de los diez (10) días siguientes en relación con la existencia de observaciones relativas al alcance del contenido del documento y a la descripción de las actividades que lo soportan.
 b.  En caso de que existan observaciones por parte de la Interventoría, el Concesionario deberá responderlas y/o hacer las correcciones respectivas dentro de los quince (15) días siguientes a la recepción de las mismas.
 
-Página 33 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -976,50 +776,11 @@ e.  Una vez aprobado por la Interventoría, el Informe será remitido a la ANI d
 f.  El Concesionario deberá atender las observaciones de la ANI dentro de los tres (3) días siguientes a su comunicación, lo cual deberá ser verificado por la Interventoría dentro de los dos (2) días siguientes al vencimiento del plazo anterior.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 34 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
 
-
-CAPÍTULO VII - OBLIGACIONES DURANTE LA ETAPA DE OPERACIÓN Y MANTENIMIENTO
+CAPÍTULO VI I - OBLIGACIONES DURANTE LA ETAPA DE OPERACIÓN Y MANTENIMIENTO
 
 7.1 Obligaciones durante la Etapa de Operación y Mantenimiento
 
@@ -1037,9 +798,6 @@ CAPÍTULO VII - OBLIGACIONES DURANTE LA ETAPA DE OPERACIÓN Y MANTENIMIENTO
 
 (c)  En este sentido, el Concesionario tiene la obligación de elaborar los estudios ambientales a que haya lugar considerando la información disponible y la que deba generar para satisfacer los requisitos establecidos en la Ley Aplicable, así como diseñar y aplicar las medidas adicionales a las exigidas por la guía, que considere necesarias, las cuales serán asumidas por el Concesionario.
 
-
-
-Página 35 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -1064,7 +822,6 @@ Troncal del Magdalena Medio
 
 7.4 Manejo de fauna
 
-Página 36 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -1089,9 +846,6 @@ Troncal del Magdalena Medio
 (v)  Medición de indicadores de sustentabilidad por ejes (residuos, uso del agua, calidad del aire, ruido, uso del suelo, flora, fauna, afectación social, uso de energía no convencionales) de conformidad con la normatividad ambiental vigente.
 
 
-
-Página 37 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
@@ -1111,20 +865,10 @@ Troncal del Magdalena Medio
 (iii)  Dicha mesa de trabajo no podrá tener una duración superior a cinco (5) Días, dentro de los cuales como resultado se procurará la obtención de la No Objeción del Documento.
 
 
-
-
-
-
-
-
-
-
-Página 38 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
-CAPÍTULO VIII - OBLIGACIONES PARA LA ETAPA DE REVERSIÓN DEL CONTRATO DE CONCESIÓN
+CAPÍTULO VII I - OBLIGACIONES PARA LA ETAPA DE REVERSIÓN DEL CONTRATO DE CONCESIÓN
 
 (a)  Al inicio de la Etapa de Reversión del Contrato el Concesionario deberá presentar a la ANI un documento donde describa y relacione la metodología, actividades y documentos que adelantará y aportará a la Interventoría y a la ANI para los fines de cierre ambiental; en el documento se deberá incluir dentro de otros aspectos la ruta crítica, cronogramas y los demás insumos que le sean solicitados por la Interventoría y/o la ANI para los fines. Dicho documento quedará supeditado a concepto de No Objeción por parte de la Interventoría.
 
@@ -1143,20 +887,10 @@ CAPÍTULO VIII - OBLIGACIONES PARA LA ETAPA DE REVERSIÓN DEL CONTRATO DE CONCES
 (i)  Las medidas propuestas en el documento al que hace referencia el literal (a) de este apartado será de obligatorio cumplimiento por parte del Concesionario, y su incumplimiento dará lugar las multas y sanciones previstas en el Contrato.
 
 
-
-
-
-
-
-
-
-
-Página 39 de 45
-
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
-CAPÍTULO IX - CONSIDERACIONES ESPÉCÍFICAS
+CAPÍTULO I X - CONSIDERACIONES ESPÉCÍFICAS
 
 9.1 Cesión de Licencia y Permisos Ambientales a cargo de la ANI
 
@@ -1172,8 +906,6 @@ CAPÍTULO IX - CONSIDERACIONES ESPÉCÍFICAS
 (g) La ANI no será responsable de la posibilidad, o no, de que los trámites se puedan ceder de acuerdo con la Ley Aplicable o que dicha cesión sea aceptada por la Autoridad Ambiental respectiva o de que la información de la tabla sea suficiente o completa.
 (h) El costo del trámite de cesión de las Licencias Ambientales será a cuenta y riesgo del Concesionario.
 
-
-Página 40 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
@@ -1218,7 +950,6 @@ Acto Administrativo
 Resol 0861 2011_05_11
 
 
-
 Resol 0309 2012_03_16
 Título
 
@@ -1232,28 +963,20 @@ Tipo de Cesión
 Parcial
 
 
-
-
 Total
 
-Página 41 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
 
-
 Objeto
-
-
-
 
 
 Sustracción de Reserva
 
 
 Levantamiento de Veda
-
 
 
 Levantamiento de Veda
@@ -1277,13 +1000,10 @@ Levantamiento de Veda
 Acto Administrativo
 
 
-
-
 Resol 0318 2012_03_16
 
 
 Resol 1808 2012_10_10
-
 
 
 Resol 1478 2013_10_29
@@ -1321,24 +1041,16 @@ Por la cual se efectúa un levantamiento parcial de veda y se toman otras determ
 Tipo de Cesión
 
 
-
-
-
 Total
-
 
 
 Parcial
 
 
-
-
 Parcial
 
 
-
 Total
-
 
 
 Total
@@ -1347,11 +1059,6 @@ Total
 Parcial
 
 
-
-Total
-
-
-
 Total
 
 
@@ -1361,11 +1068,11 @@ Total
 Total
 
 
-Página 42 de 45
+Total
+
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
-
 
 
 Objeto
@@ -1403,7 +1110,6 @@ Tipo de Cesión
 
 
 Total
-
 
 
 Total
@@ -1457,15 +1163,12 @@ Cesión Parcial
 
 
 Cesión Parcial Cesión Total Cesión Total
-Página 43 de 45
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
 
-
 Acto Administrativo
-
 
 
 Res. 1372
@@ -1478,8 +1181,6 @@ Marzo 21 de 2014
 Res. 0960
 Agosto 22 de 2014
 Expediente
-
-
 
 
 LAM6298
@@ -1500,51 +1201,13 @@ Variante Palmas de Guayabito
 Tipo de Cesión
 
 
-
-
-Cesión Total
-
-
-
 Cesión Total
 
 
 Cesión Total
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 44 de 45
+Cesión Total
 
 
 ---

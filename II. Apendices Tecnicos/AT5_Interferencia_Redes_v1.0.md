@@ -29,115 +29,39 @@
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [•] DE [•]
+CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [VARIABLE] DE [VARIABLE]
 Entre:
 
 
 Concedente:
-Agencia Nacional de Infraestructura
 
 
-Concesionario: [•]
-
+Concesionario: Autopista Magdalena Medio S.A.S.
 
 
 APENDICE TÉCNICO 5
 INTERFERENCIAS CON REDES
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 1 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 
 Contenido
 CAPÍTULO I  Introducción                               3
-CAPÍTULO II Identificación de Redes potencialmente afectadas por el Proyecto 4
+CAPÍTULO I I Identificación de Redes potencialmente afectadas por el Proyecto 4
 2.1   Generalidades                                    4
-CAPÍTULO III Obligaciones del Concesionario con respecto a las Redes afectadas por el Proyecto 24
+CAPÍTULO II I Obligaciones del Concesionario con respecto a las Redes afectadas por el Proyecto 24
 3.1   Afectación o interferencia de las Redes                      24
 3.2   Obligaciones del Concesionario con relación a las Redes que se puedan afectar por el Proyecto                                       24
 3.2.1.   En la Fase de Pre - Construcción                      24
 3.2.2.   En la Fase de Construcción                         33
 3.2.3.   En la Etapa de Operación y Mantenimiento                35
-CAPÍTULO IV REDES DE HIDROCARBUROS                  36
+CAPÍTULO I V REDES DE HIDROCARBUROS                  36
 4.2   Tipos de interferencias con proyectos viales                   36
 4.3   Actividades de traslado y/o manejo de Redes afectadas             40
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 2 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
 
 
 CAPÍTULO I   Introducción
@@ -147,54 +71,10 @@ CAPÍTULO I   Introducción
 (b)    La aplicación de este Apéndice deberá ser efectuada en concordancia con lo establecido en la Parte General, la Parte Especial, y en la Ley Aplicable, en especial, en la Ley 1682 de 2013. En todo caso, de presentarse alguna contradicción entre lo previsto en este Apéndice y los demás documentos contractuales, se atenderá a lo previsto en el numeral 19.15 de la Parte General.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 3 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-
-CAPÍTULO II   Identificación de Redes potencialmente afectadas por el
+CAPÍTULO I I   Identificación de Redes potencialmente afectadas por el
 Proyecto
 2.1  Generalidades
 
@@ -205,49 +85,15 @@ Proyecto
 (c)    En todo caso, al llevar a cabo las actividades descritas en la Sección 8.2(a) de la Parte General y en la Sección 3.2.1 de este Apéndice, el Concesionario deberá realizar la identificación e inventario de todas las Redes que existan en el Corredor del Proyecto.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 4 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Tabla 1 - Redes identificadas por la Unidad Funcional
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF05 UF02 UF02 UF07 UF09 UF09 UF09 UF09 UF10 UF10 UF10 UF10 UF13 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05
@@ -294,21 +140,14 @@ PACIFIC STRATUS ECOPETROL ECOPETROL ECOPETROL ECOPETROL ECOPETROL ECOPETROL ECOP
 EBSA EBSA EBSA EBSA EBSA EBSA EBSA EBSA EBSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA
 Transversal Interseccion Transversal Transversal Oblicua Transversal Transversal Oblicua Transversal Transversal Transversal Transversal Transversal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
-Página 5 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF05 UF02 UF02
@@ -354,21 +193,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 6 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02
@@ -414,21 +245,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 7 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02
@@ -474,21 +297,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 8 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF02 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03
@@ -536,21 +351,13 @@ Longitudinal Transversal Transversal Transversal
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 9 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03
@@ -596,21 +403,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 10 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF03 UF04 UF04
@@ -658,21 +457,13 @@ Longitudinal Transversal Transversal
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Transversal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 11 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04
@@ -718,21 +509,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 12 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04
@@ -778,21 +561,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 13 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF04 UF04 UF04 UF04 UF04 UF04 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF06 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07
@@ -840,21 +615,13 @@ Longitudinal Transversal Transversal
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 14 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07
@@ -900,21 +667,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Transversal Longitudinal
 
 
-Página 15 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07
@@ -960,21 +719,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 16 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF07 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08
@@ -1020,21 +771,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Transversal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 17 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF08 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF09 UF10
@@ -1080,21 +823,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 18 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF10 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12
@@ -1141,21 +876,13 @@ Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Lo
 Longitudinal Transversal Transversal
 
 
-Página 19 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF12 UF13 UF13 UF13 UF13 UF13 UF13 UF13
@@ -1201,21 +928,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 20 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13 UF13
@@ -1261,21 +980,13 @@ ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA ESSA 
 Longitudinal Longitudinal Transversal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal Longitudinal
 
 
-Página 21 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
 
 
 UF ABSCISA
 TIPO DE RED CON QUE ENTRA EN CONFLICTO
 ENTIDAD PROPIETARIA
 TIPO DE CRUCE
-
-
 
 
 UF13 UF13 UF13 UF13 UF13 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF04 UF07
@@ -1316,21 +1027,9 @@ Transversal Transversal Transversal Transversal Transversal Transversal Transver
 Nota: La información presentada es referencial y es parte de las obligaciones del Concesionario realizar la identificación e inventario de todas las Redes que existan en el Corredor del Proyecto, como parte de la realización de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico a cargo de este.
 
 
-
-
-
-
-
-
-
-
-
-Página 22 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Tabla 2 – Redes de Fibra óptica identificadas por la Unidad Funcional
-
 
 
 UF  HITO
@@ -1353,47 +1052,9 @@ Nota 1: La información presentada corresponden a la fibra óptica para telecomu
 Nota 2: La información presentada es referencial y es parte de las obligaciones del Concesionario realizar la identificación e inventario de todas las Redes que existan en el Corredor del Proyecto, como parte de la realización de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico a cargo de este
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 23 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
-CAPÍTULO III  Obligaciones del Concesionario con respecto a las Redes
+CAPÍTULO II I  Obligaciones del Concesionario con respecto a las Redes
 afectadas por el Proyecto
 
 
@@ -1420,10 +1081,6 @@ El Concesionario deberá realizar de manera permanente la vigilancia del Corredo
 En la elaboración de los Estudios de Trazado y Diseño Geométrico el Concesionario deberá evaluar la pertinencia de proteger, trasladar o reubicar las redes o de conservar o modificar el trazado del Proyecto siguiendo lo dispuesto por el numeral 1 del artículo 47 de la Ley 1682.
 
 
-
-
-Página 24 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Inventario de Redes
@@ -1449,7 +1106,6 @@ Inventario de Redes
 
 (iii)   Entre otras actividades, el Concesionario deberá realizar todos los recorridos de campo que se requieran para el desarrollo del inventario.
 
-Página 25 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -1472,7 +1128,6 @@ A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 (v)   Así mismo, en el acta deberá incluirse un instrumento de resumen denominado ficha de identificación de Redes de acuerdo con el Anexo que la ANI provea para tal efecto, diligenciado por Unidad Funcional, por tipo de Red y por interferencia, de acuerdo con las siguientes instrucciones:
 
-Página 26 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -1513,8 +1168,6 @@ A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 (19)   Tipo de servidumbre donde se ubica la red (i.e. continuas, discontinuas, prediales o personales, aparentes o no aparentes, positivas o negativas, legales o voluntarias).
 
 
-Página 27 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 (20)   Características y especificaciones técnicas de la Red tales como tipo, material, diámetro, entre otros.
@@ -1543,8 +1196,6 @@ A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 (viii)  En el caso que existan observaciones sobre el acta y/o sus soportes, el Concesionario contará con (15) Días para dar respuesta a las mismas.
 
 
-Página 28 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 (ix)   Una vez la Interventoría de por no objetada el acta, esta será suscrita por ésta y el Concesionario dentro de los tres (3) Días siguientes a la no objeción de dicho documento.
@@ -1564,10 +1215,6 @@ Gestiones con las empresas titulares de las Redes
 (xiv)  El Concesionario deberá adelantar, con los propietarios, gestores y/o administradores – según sea el caso- de cada una de las Redes, a su cuenta y riesgo, todos los procesos de gestión requeridos por la Ley Aplicable para acordar y aplicar, mediante los instrumentos respectivos, las condiciones relativas al diseño definitivo, costeo, pago e implementación de la soluciones respectivas, entre ellos, los requeridos en la Sección 3.2.1(e)En la Fase de Pre - Construcción de este Apéndice.
 
 
-
-
-Página 29 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 (xv)   Siempre que en la ejecución del inventario del cual trata la Sección 3.2.1(c) de este Apéndice el Concesionario identifique la potencial afectación de una Red, éste deberá seguir el procedimiento establecido en los artículos 47 y siguientes de la Ley 1682 de 2013.
@@ -1586,7 +1233,6 @@ Plan de Redes
 
 (1)    Diseños definitivos de la solución: Un análisis del tipo de solución sobre la Red para mitigar el impacto de la interferencia o afectación, así como incluir el diseño de la solución seleccionada con detalles constructivos. Este diseño deberá  estar  aprobado  por  la  empresa  propietaria  o administradora de la Red objeto del estudio el cual deberá
 
-Página 30 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -1602,7 +1248,6 @@ i)las actividades constructivas a realizarse de acuerdo con los diseños  aproba
 
 (6)    Plan de contingencias: En este plan se encontrarán los procedimientos acordados con la empresa titular de las Redes para la atención de emergencias generadas por daños en las Redes que ocurran durante toda la ejecución del Contrato el cual deberá mantenerse actualizado, corregido y con mejoras constantes. Además, deberá contemplar los
 
-Página 31 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -1631,10 +1276,6 @@ lineamientos y protocolos de las empresas propietarias y/o administradoras de la
 (xxi)  Este plan deberá ser presentado a la Interventoría dentro del plazo previsto en la Parte Especial del Contrato.
 
 
-
-
-Página 32 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 (xxii)  El Interventor revisará el plan y presentará sus observaciones al mismo dentro de los quince (15) Días siguientes a su recepción. En lo relacionado con el presupuesto de las actividades de traslado y/o manejo y/o protección de redes, el Interventor deberá verificar que el valor consignado corresponde a condiciones normales de mercado vigentes para ese momento.
@@ -1657,7 +1298,6 @@ Inventario del estado de las Redes
 
 (i)   Con un frecuencia bimestral y de forma parcial, y posteriormente acumulativa y total, hasta los treinta (30) Días anteriores a la finalización de la Fase de Construcción establecidos en el Plan de Obras por cada
 
-Página 33 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -1685,8 +1325,6 @@ Lo anterior deberá presentarse por Unidad Funcional.
 (v)   De  existir  observaciones  por  parte  del  Interventor,  el Concesionario contará con diez (10) Días para darles respuesta, luego de lo cual, el Interventor deberá pronunciarse sobre su no objeción del informe
 
 
-Página 34 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 en un término no mayor a tres (3) Días. Se seguirá este procedimiento para la respuesta a las observaciones formuladas por la ANI.
@@ -1701,43 +1339,9 @@ El Concesionario deberá realizar de manera permanente la vigilancia del Corredo
 En el caso en que con ocasión a las Obras de Mantenimiento durante la Etapa de Operación y Mantenimiento sea necesario adelantar actividades de traslado y/o protección de Redes ubicadas en el Corredor del Proyecto el Concesionario deberá adelantar todas las actividades descritas en las Secciones 3.2.1(b), 3.2.1(d) y 3.2.1(e) del presente Apéndice en los plazos determinados para tal efecto por el Interventor.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 35 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
-CAPÍTULO IV REDES DE HIDROCARBUROS
+CAPÍTULO I V REDES DE HIDROCARBUROS
 
 (a)   Aunque durante la etapa de estructuración no se identificaron redes de hidrocarburos, para efectos de la identificación de afectaciones o interferencias del Proyecto con de Redes de hidrocarburos que pudiesen ser identificadas, así como para determinar la necesidad de realizar actividades de traslado y/o manejo sobre las mismas, el Concesionario deberá tener en cuenta lo dispuesto en el presente Capítulo.
 
@@ -1758,29 +1362,14 @@ CAPÍTULO IV REDES DE HIDROCARBUROS
 
 (b)   En todo caso, es obligación del Concesionario junto con el titular, gestor o administrador de la Red de hidrocarburos –según sea el caso- evaluar si casos no previstos en esta Sección podrían generar afectaciones a las Redes que requieran el desarrollo de actividades de traslado y/o manejo. En todo caso, todas las actividades de traslado y/o manejo de Redes de hidrocarburos serán realizadas por el Concesionario a su cuenta y riesgo, siendo este el único responsable por la efectividad de las mismas.
 
-Página 36 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 
 (c)  Cruces
 
 (i)   Son  intersecciones  de  la  infraestructura  de  la  cadena  de hidrocarburos y los Derechos de Vía de la infraestructura vial.
 (ii)   Cruces perpendiculares: Son cruces identificados con ángulos de incidencia al eje de la vía (Rango 90°- 60° API 1102) y sobre los cuales se presentan las siguientes variables:
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 (iii)   Cruce enterrado: Son los cruces que se proyectan entre la vía y la tubería, en el cual, la tubería queda debajo de la vía.
@@ -1791,61 +1380,16 @@ A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 ▪   Ø Mayores de 1,5 m: Son aquellos cruces que tiene una distancia vertical mayor a 1,5m desde la corona del tubo hasta la cota negra (Rasante de la vía pavimentada) y por lo tanto cumplen con la normatividad de cruces enterrados.
 
 
-
-
-
-
-
-
-Página 37 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (iv)   Cruce aéreo: Son cruces que cambian de medio aéreo en que se encuentra la tubería a medio enterrado, ocasionándose un cambio de esfuerzos mecánicos y los efectos de corrosión de estructuras enterradas.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 (v)   Cruces diagonales: Son cruces identificados con ángulos de incidencia al eje de la vía menores de 60° (API 1102). Este tipo de cruce no está permitido, considerando que el área de interferencia es mayor. Dichos cruces pueden contar con las siguientes modalidades:
 
 (1)    Cruce enterrado: Son los cruces que se proyectan entre la vía y la tubería, en el cual, la tubería queda debajo de
 
-
-Página 38 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -1869,13 +1413,6 @@ la  vía.  Sobre  los  mismos  se  pueden  presentar  dos circunstancias:
 
 (i)   En el caso de cercanía de obras de infraestructura especiales (box culverts, puentes, túneles y cualquier infraestructura de concreto necesaria) se deben presentar un análisis de esfuerzos dinámicos que garantice la integridad de la infraestructura petrolera y que permita su coexistencia de ambas (estructura civil y red de transporte de hidrocarburos).
 
-
-
-
-
-
-
-Página 39 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
@@ -1903,8 +1440,6 @@ A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 1 Además de las soluciones y alternativas que se encuentran en esta sección se encuentra la normatividad aplicable a los trabajos en infraestructura petrolera relacionada con infraestructuras viales. Adicionalmente, Se debe aplicar la normatividad vigente de procedimientos de excavación en trabajos de mantenimiento de la entidad prestadora del servicio.
 
 
-Página 40 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 paralelamente a la operación de la tubería existente. Posterior a esto se programará con él la conexión de la nueva variante. Esta conexión con el sistema existente tiene dos alternativas:
@@ -1920,234 +1455,40 @@ paralelamente a la operación de la tubería existente. Posterior a esto se prog
 (e)  Los casos de paralelismos y/o acercamientos donde se presentan interferencias puntuales con respecto a las obras de arte y chaflanes del terraplén de la vía, (Ej. Salidas de Box Culvert, canales bases de terraplenes etc.), se deben evaluar de manera particular, ya que por ser pequeñas intervenciones es posible tener otras alternativas de solución.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Página 41 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Ilustración 1 Acercamientos críticos con estructuras civiles (Puentes) e infraestructura petrolera
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Ilustración 2 Acercamientos críticos con estructuras viales (Puentes) e infraestructura petrolera
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-Página 42 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Ilustración 3 Paralelismo con calzada
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Ilustración 4 Paralelismo con calzada (Solución por corrección de trazado geométrico vial)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Ilustración 5 Paralelismo con DDV
 
 
-
-
-
-
-Página 43 de 45
-
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Ilustración 6 Paralelismo con DDV (ALTERNATIVA DE SOLUCIÓN)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Ilustración 7 Variantes verticales
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Ilustración 8 Variantes verticales (DETALLE SUR)
 
-Página 44 de 45
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Ilustración 9 Variantes verticales (DETALLE NORTE)
@@ -2155,31 +1496,6 @@ Ilustración 9 Variantes verticales (DETALLE NORTE)
 Sin perjuicio de la obligación a cargo del Concesionario de cumplir con lo dispuesto en los Capítulos anteriores de este Apéndice en el desarrollo de la identificación, inventario, manejo, protección y/o traslado de todas las Redes que sean afectadas por el Proyecto, para efectos de las Redes a cargo de Ecopetrol S.A. que transporten hidrocarburos (o a cargo de cualquier filial Y subsidiaria de aquella sociedad) - siempre que no vaya en contra de lo dispuesto en este Contrato y en la Ley Aplicable-, el Concesionario podrá a su cuenta y riesgo, tomar en cuenta el contenido del documento denominado “tipos de interferencia y Costo” elaborado por Ecopetrol y que se relacione como anexo 1 al presente documento.
 
 En todo caso, lo dispuesto en la sección 4.1 anterior no liberará al Concesionario del cumplimiento de todas y cada una en las obligaciones contenidas en este Apéndice, el Contrato, en la Ley 1682 de 2013 y/o, en general, la Ley Aplicable.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 45 de 45
 
 
 ---

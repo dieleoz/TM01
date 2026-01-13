@@ -74,47 +74,6 @@ b) Hasta         a las 00:00 horas
 EL PAGO DE LA PRIMA CORRERÁ A CARGO DEL CONTRATISTA TOMADOR DEL SEGURO. LA PRIMA Y LOS CERTIFICADOS O ANEXOS QUE SE EXPIDAN CON FUNDAMENTO EN LA PÓLIZA,  DEBERAN  PAGARSE  AL  MOMENTO  DE  LA  ENTREGA  DE  LA  MISMA  AL CONTRATISTA ASEGURADO Y NO HABRÁ, POR LO TANTO, LUGAR A LA TERMINACIÓN AUTOMÁTICA DEL CONTRATO DE SEGURO POR MORA EN EL PAGO DE LA MISMA.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 2
 
 ANEXO CARÁTULA
@@ -180,9 +139,6 @@ Deducible:
 
 ENDOSOS
 Especificar los endosos que aplican definiendo sus límites, deducibles, etc.
-
-
-
 
 
 4
@@ -277,56 +233,7 @@ SECCION VI - CONDICIONES GENERALES
 24.  DOMICILIO
 
 
-
-
-
 7
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 8
@@ -387,9 +294,6 @@ AVENIDA,  INUNDACIÓN,  DESBORDAMIENTO,  ALZA  EN  EL  NIVEL  DE  LAS  AGUAS, EN
 4. LUCRO CESANTE POR RETRASOS Y/ O ENTORPECIMIENTOS EN EL COMIENZO DE LAS OPERACIONES DE LOS BIENES ASEGURADOS BAJO LA PRESENTE SECCIÓN
 
 SUJETO A QUE EL ASEGURADO HAYA DECLARADO LA SUMA ASEGURADA PARA ESTA COBERTURA Y LA MISMA SE HAYA CONSIGNADO EN LA CARÁTULA DE LA PÓLIZA, TAMBIÉN SE AMPARA LA PÉRDIDA DE BENEFICIO BRUTO EFECTIVAMENTE SUFRIDA Y DEBIDA A LA REDUCCIÓN DEL VOLUMEN DE NEGOCIO Y/O AL INCREMENTO DE LOS COSTOS DE EXPLOTACIÓN TAL COMO SE DEFINE EN LA SECCIÓN VI, CONDICIÓN 11.4 DE LA PÓLIZA, SI EN ALGÚN MOMENTO DEL PERÍODO DE VIGENCIA DEL SEGURO, DE ACUERDO CON LA RESPECTIVA DEFINICIÓN, ALGUNO O TODOS LOS BIENES AMPARADOS POR LA SECCIÓN II SON AFECTADOS POR UN SINIESTRO ASEGURADO DE DAÑOS MATERIALES, CAUSANDO POR ELLO UN ENTORPECIMIENTO EN LOS TRABAJOS DE CONSTRUCCIÓN, REPARACIÓN, REHABILITACIÓN Y/O MEJORAMIENTO, EL  CUAL GENERE COMO RESULTADO UN RETRASO Y/O ENTORPECIMIENTO EN EL COMIENZO EN LAS OPERACIONES DE EL ASEGURADO, DENOMINADO A CONTINUACIÓN “EL RETRASO”.
-
-
-
 
 
 11
@@ -469,9 +373,6 @@ NO OBSTANTE LO PREVISTO EN LA SECCIÓN V, NUMERAL 1, LITERAL B), LA ASEGURADORA 
 1.1.1. HUELGA
 
 LA SUSPENSIÓN COLECTIVA Y TEMPORAL DEL TRABAJO, EFECTUADA POR LOS TRABAJADORES DE UN ESTABLECIMIENTO O EMPRESA CON FINES ECONÓMICOS Y PROFESIONALES.
-
-
-
 
 
 15
@@ -583,7 +484,6 @@ G)   LAS MULTAS O SANCIONES DEL CONTRATO POR DEMORA, RETENCIÓN O PÉRDIDA DE US
 H)   DAÑOS O DEFECTOS DE LOS BIENES ASEGURADOS, EXISTENTES AL INICIARSE LA VIGENCIA DEL SEGURO.
 
 
-
 20
 
 I)    EL DAÑO PREEXISTENTE, GRADUAL, PAULATINO Y CONTINUADO QUE EL AGUA, LA TIERRA O CUAQUIER OTRO ELEMENTO OCASIONE SOBRE LOS BIENES EXPUESTOS A LA INTEMPERIE.
@@ -624,7 +524,6 @@ A)   AERONAVES, NAVES FLUVIALES O MARÍTIMAS DE CUALQUIER NATURALEZA Y A CUALQUI
 B)   VEHÍCULOS A MOTOR CON LICENCIA PARA CIRCULAR EN VÍAS PÚBLICAS;
 
 
-
 22
 
 C)   PLANOS, A MENOS QUE SE HAYA ASEGURADO SU REPOSICIÓN BAJO LA SECCIÓN IV, NUMERAL 2.7., CROQUIS, DISEÑOS, DIBUJOS, PATRONES, MOLDES Y MODELOS, SELLOS,  ESCRITURAS,  ARCHIVOS,  DINERO,  TÍTULOS  VALORES,  CHEQUES, EXPLOSIVOS;
@@ -644,9 +543,6 @@ A)   DAÑOS MECÁNICOS Y ELÉCTRICOS DE LOS BIENES ASEGURADOS, EXCEPTO POR LOS B
 B)   EL ERROR U OMISIÓN DE DISEÑO Y CONSTRUCCIÓN, ASÍ COMO LA DEFICIENCIA EN CÁLCULOS O CONSTRUCCIÓN DE SECCIONES, DIMENSIONES, ESPECIFICACIONES Y CANTIDAD Y CALIDAD DE MATERIALES DE LOS BIENES ASEGURADOS.
 
 C)   DAÑOS DE CUALQUIER CLASE RESULTANTES DE CUALQUIER OTRA CAUSA DISTINTA DE LAS PREVISTAS EN LA CONDICIÓN PRIMERA DE LA SECCIÓN I – RIESGOS AMPARADOS, EXCEPTO POR LOS BIENES A QUE SE REFIERE EL NUMERAL 1.7 DE DICHA SECCIÓN.
-
-
-
 
 
 23
@@ -683,8 +579,6 @@ E)   PÉRDIDA  O  DAÑO  QUE  SUFRA  EL  EQUIPO  Y  MAQUINARIA  QUE  ESTÉ FUNCI
 F)   PÉRDIDA O DAÑO OCASIONADOS POR INMERSIÓN TOTAL O PARCIAL EN AGUA DE MAREA.
 G)   PÉRDIDA DURANTE EL  TRANSPORTE MARÍTIMO,  FLUVIAL  O  AÉREO  DE  LA MAQUINARIA Y EQUIPO ASEGURADOS.
 H)   PÉRDIDA O DAÑO QUE SEAN RESPONSABILIDAD DEL PROVEEDOR O FABRICANTE, CONFORME A LA LEY O SEGÚN EL CONTRATO.
-
-
 
 
 25
@@ -725,7 +619,6 @@ La responsabilidad de LA ASEGURADORA, no excederá en ningún caso de la suma as
 3.1. VALOR DE REPOSICIÓN
 
 Para los efectos de esta póliza se entiende como valor de reposición a nuevo el costo que exigiría la construcción o adquisición de un bien nuevo de la misma clase, calidad y capacidad, incluyendo el costo de transporte, montaje, materiales, salarios, impuestos y derechos de aduana si los hubiere.
-
 
 
 27
@@ -782,9 +675,6 @@ Cuando EL ASEGURADO no cumpla con estas obligaciones LA ASEGURADORA sólo podrá
 Para efectos de agilizar la atención de los siniestros,  LA ASEGURADORA propondrá a EL ASEGURADO una lista de ajustadores para atender los siniestros que puedan presentarse durante la vigencia de la póliza, para cada una de las secciones solicitadas, en estas condiciones para ofertar. EL ASEGURADO seleccionará por lo menos tres entre ellos con el fin de que bajo la responsabilidad del proponente, le presten sus servicios ante la presencia de un evento, sin que se comprometa por tal razón la libertad de EL ASEGURADO para aceptar o impugnar ante la compañía su gestión o sus dictámenes.
 
 
-
-
-
 30
 
 9. INSPECCIÓN DEL DAÑO
@@ -804,9 +694,6 @@ Las indemnizaciones pagadas por LA ASEGURADORA durante la vigencia de la present
 LA ASEGURADORA, a solicitud de EL ASEGURADO, puede reajustar las sumas aseguradas reducidas, contra el acuerdo de pago a prorrata por parte de EL ASEGURADO de la prima adicional respectiva. Si la póliza comprendiere varios incisos, la reducción o reajuste se aplicará al inciso o incisos afectados.
 
 
-
-
-
 31
 
 11.1. PÉRDIDA PARCIAL
@@ -823,7 +710,6 @@ LA ASEGURADORA no cubre los costos por cambios, adiciones o mejoras.  En consecu
 Si las reparaciones son efectuadas en los talleres de EL ASEGURADO, LA ASEGURADORA pagará el costo de la mano de obra y materiales empleados más un porcentaje sobre los salarios, para cubrir los gastos de administración justificables.
 
 Si las partes o piezas necesarias para una reparación no se fabrican o no se consiguen en el mercado, LA ASEGURADORA pagará a EL ASEGURADO el valor de las mismas según las últimas cotizaciones que se puedan obtener, con cuyo proceder habrá cumplido válidamente su obligación de indemnizar.
-
 
 
 32
@@ -1017,11 +903,6 @@ Para los efectos del presente contrato cualquier notificación deberá consignar
 Sin perjuicio de las disposiciones procesales, para los efectos relacionados con el presente contrato se fija como domicilio de las partes la ciudad de Bogotá D.C., República de Colombia.
 
 
-
-
-
-
-
 41
 
 ENDOSOS
@@ -1063,7 +944,6 @@ Queda entendido y convenido que, sujeto a los términos, exclusiones, cláusulas
 Sin embargo, si son probadas y/o puestas en operación o recibidas por el propietario solamente una parte de la planta o una o varias máquinas, la cobertura para dicha parte de la planta o máquina, así como cualquier responsabilidad resultante de ello, cesará y la cobertura continuará únicamente para las partes restantes a las cuales no es aplicable lo dicho anteriormente.
 
 
-
 43
 
 Si se trata de partidas usadas, el seguro por las mismas terminará, sin embargo, inmediatamente en el momento de comenzar las operaciones de pruebas.
@@ -1083,9 +963,6 @@ Queda entendido y convenido que, sujeto a los términos, exclusiones, cláusulas
 - la pérdida de bentonita, suspensiones u otros agentes o sustancias que se empleen para apoyar la excavación o como agente de tratamiento del suelo.
 En caso de ocurrir pérdidas o daños indemnizables, la indemnización máxima a resarcir por la presente póliza estará delimitada a los costes a desembolsar para restituir el bien asegurado en el estándar o estado técnico que tuviera inmediatamente antes de ocurrir el siniestro. Sin embargo, la indemnización máxima no deberá ser superior al porcentaje abajo indicado del coste original medio por metro de coste de construcción del recinto directamente afectado.
 Porcentaje máximo a indemnizar:    %
-
-
-
 
 
 44
@@ -1128,7 +1005,6 @@ Las aberturas para pozos de elevadores, ductos de servicios y otros espacios abi
 - aplicación de asfalto caliente,
 O cualesquiera otros trabajos que desarrollen calor.
 En trabajos con riesgo de incendio, deberá estar presente, cuando menos, una persona entrenada en el combate de incendios provista de un extintor.
-
 
 
 46
@@ -1195,33 +1071,6 @@ c.  que ya no puedan seguir utilizándose a causa de equipos de hincado o entuba
 
 6. para restituir los perfiles o dimensiones.
 Este endoso no tendrá aplicación para pérdidas o daños causados por fuerzas de la naturaleza. Incumbe a EL ASEGURADO aportar la prueba de que tales pérdidas o daños estén amparados por la póliza.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 49

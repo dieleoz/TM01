@@ -109,35 +109,13 @@ El proyecto consiste en... [Contenido detallado del alcance general]
 ## 2. CONTENIDO DEL DOCUMENTO
 
 
-
-
-
-
-
-
-
-
-
-
-REPÚBLICA DE COLOMBIA MINISTERIO DE TRANSPORTE
-AGENCIA NACIONAL DE INFRAESTRUCTURA
-
-
-
-
-
 CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [*] de [*]
 Entre: Concedente:
-Agencia Nacional de Infraestructura
 
 Concesionario: [*]
 
 
-
 APENDICE TÉCNICO 1 ALCANCE DEL PROYECTO
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 CAPÍTULO 1 Introducción
@@ -145,15 +123,6 @@ CAPÍTULO 1 Introducción
 De conformidad con lo previsto en la Sección 2.1 del Contrato Parte General, el presente Apéndice contiene el alcance y las condiciones técnicas que regirán el Proyecto. Sin perjuicio de la obligación del Concesionario de llevar a cabo las Intervenciones establecidas en este Apéndice, este será responsable del cumplimiento de las obligaciones de resultado que se derivan del mismo y del Contrato.
 
 La aplicación de este Apéndice deberá ser efectuada en concordancia con lo establecido en la Parte General y en la Parte Especial del Contrato. En todo caso, de presentarse alguna contradicción entre lo previsto en este Apéndice y los demás documentos contractuales, se atenderá a lo previsto en el numeral 19.15 de la Parte General del Contrato.
-
-
-
-
-
-Página 2 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 CAPÍTULO 2  Descripción del Proyecto
@@ -176,39 +145,10 @@ La localización general del Proyecto PUERTO SALGAR – BARRANCABERMEJA se prese
 Figura 1 y en la Figura 2.
 
 
-
-
-Página 3 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 Figura 1 - Localización general del Proyecto
 
 
-
-
-
-Página 4 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
 Figura 2 - Localización general del Proyecto y Unidades Funcionales de Intervención
-
-
-
-
-
-
-
-Página 5 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 Sección de diseño
@@ -217,18 +157,6 @@ Sección típica de diseño
 La sección típica final del proyecto, una vez terminadas las intervenciones, se muestra en la Figura 3.
 
 Figura 3 - Sección de la Vía Típica
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Excepciones a la sección típica de diseño
@@ -240,11 +168,6 @@ Las intersecciones en las cuales se reduce el separador central para que la vía
 De todas formas, el diseño geométrico de la vía en esos sitios debe garantizar la velocidad de diseño de 100 km/h. con la siguiente excepción:
 -  Intersección Vía Yuma. Intersección que no hace parte del proyecto. Obra realizada por INVIAS. K127+985 (PR128+150 Ruta Nacional 4511). En donde el separador se reduce a 2 m y la velocidad de diseño se reduce a 80 km/h donde se debe contemplar el diseño y la construcción de las adecuadas transiciones y los correspondientes carriles de aceleración y desaceleración.
 Los pasos poblados en los cuales se reduce el separador central para que la doble calzada pase por la población son PR 52, RN 4511, y Puerto Araujo, (PR 63+000 RN 4511).
-
-Página 6 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 Vías existentes comprendidas en el Proyecto
@@ -310,12 +233,7 @@ Longitud (Km)
 100.33
 
 
-
-
-
 149.14
-
-
 
 
 9.80
@@ -332,16 +250,9 @@ Vía primaria bidireccional pavimentada, con condiciones bajas desde el punto de
 Nota: Las coordenadas y los PR incluidos son de referencia y podrán ser ajustados en campo al momento de la entrega de la infraestructura.
 
 
-
 Estaciones de Peaje
 
 Actualmente este proyecto cuenta con la(s) Estación(es) de Peaje que se relaciona(n) en la siguiente tabla, la(s) cual(es) será(n) será(n) entregada(s) conforme al procedimiento previsto en el numeral 3.6 (b) del Contrato Parte Especial; sobre los recursos de dichos peajes se deberá hacer la cesión de que trata el numeral 3.3 (a) del Contrato Parte General.
-
-
-Página 7 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 **Tabla 2 - Estaciones de Peaje actualmente Existentes**
@@ -397,12 +308,6 @@ La Unidad Funcional 0 se subdivide de la siguiente manera:
 Unidad Funcional de Operación y Mantenimiento Definitiva” o UF0-D: Corresponde a una subdivisión de la Unidad Funcional de Operación y Mantenimiento establecida en la Parte General y está compuesta por los tramos transitables al inicio del Proyecto que no requieren intervenciones de Mejoramiento o Rehabilitación de conformidad con lo establecido en el Apéndice Técnico 1. Para estos tramos el Concesionario deberá cumplir, en un plazo máximo de ciento ochenta (180) días contados a partir de la Fecha de Inicio, con los Indicadores que se establecen en la Tabla - Indicadores Mínimos, del Apéndice Técnico 4. Adicionalmente, el Concesionario deberá efectuar, los trabajos necesarios (Puesta a Punto de Tramos UF0-D) para lograr que todos estos tramos cumplan los Valores Mínimos
 
 
-Página 10 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 de Aceptación de los Indicadores incluidos en el Apéndice Técnico 4, los cuales iniciaran su medición, vencido el Mes treinta y seis (36), contados desde la Fecha de Inicio.
 
 
@@ -423,13 +328,6 @@ En las siguientes tablas (Tabla 4 a Tabla 7) se desglosan, para efectos ilustrat
 -  PA y PB: paso por poblaciones (pasos poblados)
 
 En la Tabla 8 se incluye un resumen de las Unidades Funcionales y en la Tabla 9 se presente el resumen de tramos correspondientes a la etapa de operación.
-
-
-
-Página 11 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 Las longitudes mostradas en los cuadros son de referencia; el Concesionario será responsable de ejecutar las obras correspondientes en la longitud real, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico, para cada Unidad Funcional de acuerdo con su descripción particular.
@@ -966,16 +864,9 @@ NO
 UF05 UF02
 
 TRAMO RECTO TRAMO RECTO
-Página 12 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 
 
 UNIDADES FUNCIONALES CALZADA SENTIDO NORTE
-
 
 
 RUTA NACIONAL
@@ -1579,16 +1470,8 @@ VARIANTE
 
 AGUAS NEGRAS
 
-Página 13 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
-
 
 UNIDADES FUNCIONALES CALZADA SENTIDO NORTE
-
 
 
 RUTA NACIONAL
@@ -1941,17 +1824,7 @@ UF0 UF0 UF0 UF0 UF0 UF0 UF0 UF0 UF0 UF0 UF0 UF5 UF5 UF5 UF1
 TRAMO RECTO TRAMO RECTO TRAMO RECTO TRAMO RECTO VARIANTE VARIANTE VARIANTE TRAMO RECTO TRAMO RECTO TRAMO RECTO TRAMO RECTO TRAMO RECTO VARIANTE VARIANTE VARIANTE
 
 
-
-
-
-
-
 PUERTO LIBRE PUERTO LIBRE PUERTO LIBRE
-
-
-
-
-
 
 
 EL TRIQUE EL TRIQUE EL TRIQUE
@@ -1987,11 +1860,6 @@ INVIAS
 SI  UF-D
 UF0
 TRAMO RECTO
-Página 14 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
 
 
 UNIDADES FUNCIONALES CALZADA SENTIDO SUR
@@ -2342,11 +2210,6 @@ PASO POBLADO
 
 
 PK 52
-Página 15 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
 
 
 UNIDADES FUNCIONALES CALZADA SENTIDO SUR
@@ -2644,14 +2507,7 @@ UF13
 TRAMO RECTO
 
 
-
 Tabla 6 – Desglose de las unidades funcionales – Calzada Única Bidireccional
-Página 16 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 
 
 CONCESIÓN N°1 - UNIDADES FUNCIONALES CALZADA ÚNICA BIDIRECCIONAL
@@ -2692,7 +2548,6 @@ UF0-D
 UF5
 
 Tramo inicial PUERTO SALGAR
-
 
 
 Tabla 7 – Pasos poblados bidireccionales de uso provisional
@@ -3532,11 +3387,6 @@ No aplica.
 |:----------|:------------------------------------------|:--------------------------------------------|:--------------------------|:----------------------|:------------------|:----------------|
 | **12** | Barrancabermeja<br>PK128+000 RN 4511<br>(1041009.53-1260099.05) | La Lizama<br>PK149+110 RN 4511<br>(1050813.22-1278537.32) | 21.10 | Construcción de calzada nueva, operación y mantenimiento | - | - |
 
-Página 39 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
 
 Nota (1): Cantidad de estructuras especiales de acuerdo con los Estudios y Diseños presentados por la entidad. Las longitudes y coordenadas son de referencia, el Concesionario será responsable de ejecutar las obras correspondientes en la longitud efectiva, definida en los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico.
 
@@ -3973,7 +3823,6 @@ Sin perjuicio de la obligación del Concesionario de construir y/o intervenir to
 El Concesionario deberá instalar como mínimo los siguientes puentes peatonales que deben cumplir con especificaciones que garanticen el cruce adecuado de peatones, incluyendo acceso para personas con movilidad restringida-, sin interferir con el diseño vial propuesto para el desarrollo del Proyecto. Para estos efectos, El Concesionario realizará una propuesta de tipo y ubicación considerando las necesidades de movilidad de cada población y del resultado de una interacción con las autoridades locales, la cual hará parte de los Diseños de Detalle.
 
 
-
 **Tabla 54 – Puentes Peatonales**
 
 | No. | Unidad Funcional | Ruta | Ubicación Aproximada |
@@ -4017,12 +3866,6 @@ Estaciones de Peaje a ser reubicadas
 A continuación, se indican las Estaciones de Peaje que, durante la Fase de Construcción, el Concesionario deberá reubicar y ampliar a doble calzada, para garantizar la operación cumpliendo lo establecido en la sección
 3.3.4 del Apéndice Técnico 2 – Condiciones para la Operación y Mantenimiento:
 
-Página 54 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 
 **Tabla 55 – Nuevas Estaciones de Peaje que reemplazan estaciones existentes**
 
@@ -4040,39 +3883,6 @@ El Concesionario deberá instalar cómo mínimo veinticinco (25) paneles LED en 
 Los paneles LED deberán instalarse alternadamente sobre las bermas externas, a lado y lado de la vía y de forma simultánea mientras se realizan las Obras de Construcción de una vía nueva.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 55 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 CAPÍTULO 4 Obligaciones durante la Etapa Preoperativa
 
 Durante la Etapa Preoperativa, el Concesionario deberá adelantar todas las Intervenciones y actividades necesarias para el cumplimiento de lo establecido en las secciones 2.4, 2.5 y el Capítulo III del presente Apéndice Técnico, en el Apéndice Técnico 4 y demás Especificaciones Técnicas.
@@ -4087,16 +3897,6 @@ Las Intervenciones mencionadas en la Sección anterior tendrán el alcance que s
 (iii)  Rehabilitación: Son las Intervenciones en las cuales, el Concesionario deberá ejecutar un conjunto de obras tendientes a llevar la vía a sus condiciones iniciales de construcción, con el propósito que se cumplan las Especificaciones Técnicas para las que se diseñó. La Rehabilitación comprende la ejecución de una o más de las siguientes actividades:
 
 
-
-
-
-
-Página 56 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 (1)     Construcción de obras de drenaje, reparaciones de estructuras de pavimento o capa de rodadura, obras de estabilización, otras obras que permitan restituir las condiciones de diseño original del proyecto, etc.
 (2)      Para la Intervención de Rehabilitación, se garantizará que el Concesionario deberá realizar actividades de Mejoramiento en los sitios críticos identificados en los Estudios y Diseños, bien sea por accidentalidad, geometría o cambio climático, por lo que dichos sitios críticos deberán ser mejorados para ofrecer un nivel de servicio homogéneo, de calidad y seguro en la vía.
 (iv)  Puesta a punto de tramos UF0-D para cumplir los Valores Mínimos de Aceptación de los Indicadores incluidos en el Apéndice Técnico 4: Son las actividades que el Concesionario deberá adelantar en los tramos UF0-D, de acuerdo con el estado de la técnica, durante los primeros treinta y seis (36) meses a partir del Acta de Inicio o la expedición de la Orden de Inicio, distribuidos así: Durante los primeros seis (6) meses de este período adelantará actividades prioritarias para que a partir de los 180 días contados a partir del Acta de Inicio o la expedición de la Orden de Inicio, cumpla con los Indicadores mínimos del Apéndice Técnico 4, y posteriormente el Concesionario adelantará las actividades para el cumplimiento de los Valores Mínimos de Aceptación de los Indicadores incluidos en el Apéndice Técnico 4 una vez vencido el mes treinta y seis (36), en los tramos transitables al inicio del proyecto que están clasificados como UF0-D en el desglose de las unidades funcionales, numeral 2.5.3 y sus tablas asociadas (Tabla 4 a Tabla 6).
@@ -4107,12 +3907,6 @@ Concesión PUERTO SALGAR – BARRANCABERMEJA
 (4)     Mantenimiento de drenajes y cunetas
 (5)     Rocería
 (vi)  Intervenciones Prioritarias: Son las actividades que el Concesionario deberá adelantar de acuerdo con el estado de la técnica durante los primeros seis (6) meses a partir del Acta de Inicio o la expedición de la Orden de Inicio, cumplimiento de los Indicadores mínimos para la
-
-
-Página 57 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 operación de la vía durante la Etapa Preoperativa, establecidos en el Apéndice Técnico 4, los cuales incluirán, entre otras, las siguientes:
@@ -4137,12 +3931,6 @@ Mantenimiento se refiere a la realización de las actividades necesarias para pe
 Operación es la provisión de los servicios a cargo del concesionario establecidos en el Apéndice Técnico 2.
 
 
-Página 58 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 En todo caso, el Concesionario deberá ejecutar todas las actividades necesarias para el cumplimiento de sus obligaciones de acuerdo con las Especificaciones Técnicas, aun cuando tales actividades no se encuentren relacionadas dentro de los conceptos descritos anteriormente.
 Alcance de las obligaciones en la Etapa Preoperativa
 
@@ -4153,10 +3941,6 @@ Sin perjuicio de lo establecido en la Parte General del Contrato y en las Especi
 (iii)  Realización de todas las actividades necesarias para la explotación de materiales pétreos bien sea en minas, a cielo abierto o en la explotación de material de río. Estas actividades incluyen el adelantamiento de la Gestión Predial y Gestión Social y Ambiental requeridos para la realización de estas actividades, así como, la realización de diseños, solicitud de permisos ambientales, compra de Predios, servidumbres, vías de acceso, drenajes, obras de estabilización y compactación. La adquisición de los Predios requeridos para las obras aquí mencionadas no se realizará con los recursos previstos en la Subcuenta Predios, y los mismos no revertirán a la Agencia.
 (iv)  La Construcción de las diversas actividades complementarias necesarias para el cumplimiento de este Apéndice como son: las vías de acceso, plataformas, campamentos, puestos de control, botaderos, equipos electromecánicos, almacenes y demás instalaciones, infraestructuras o equipamientos necesarios, tanto durante el proceso constructivo, como durante la Operación y Mantenimiento del Proyecto para garantizar su correcto funcionamiento. Incluye entre otras actividades los diseños, compra de Predios, permisos ambientales, Gestión Predial y gestión Social y Ambiental.
 (v)  La realización de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico, así como la Construcción Rehabilitación, repotenciación o Mantenimiento de las obras de estabilización, revegetalización y mantenimiento de taludes, conservación de la “cerca viva” y muros de contención que comprenda, en general, toda la infraestructura necesaria para garantizar la estabilidad de la obra. Debe garantizarse la estabilidad geotécnica de todos los taludes y cortes durante la Construcción, Operación y Mantenimiento. Dentro de todas las Intervenciones se
-Página 59 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 incluyen para todo el Proyecto, todas las soluciones en ingeniería que se deban implementar para el tratamiento y estabilización geotécnica de taludes.
@@ -4169,28 +3953,6 @@ incluyen para todo el Proyecto, todas las soluciones en ingeniería que se deban
 (xii) El Concesionario es el responsable de los métodos, la forma y programación en que adelante los procedimientos para intervenir la vía, pero siempre se debe cumplir como mínimo las Especificaciones Técnicas, de acuerdo con las normas vigentes y que le permitan obtener los resultados previstos en este Apéndice Técnico, el Apéndice Técnico 4 y demás Especificaciones Técnicas. Igualmente, el Concesionario en sus distintas Intervenciones debe dar cumplimiento a las obligaciones impuestas por las Licencias y Permisos.
 
 El Concesionario deberá ejecutar dando cumplimiento a los plazos y condiciones señalados en el Contrato de Concesión, las obras de Construcción, Rehabilitación, Mejoramiento y/o Obras de Mantenimiento, en las condiciones establecidas en las Especificaciones Técnicas.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Página 60 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
 
 
 CAPÍTULO 5 Alcance de obligaciones técnicas particulares y específicas adicionales del
@@ -4211,16 +3973,6 @@ De ser ofertada esta obra adicional, las obligaciones procedentes de la misma qu
 
 Construcción de carriles de acceso a Estaciones de pesaje.
 El Concesionario deberá ejecutar la construcción de carriles de acceso con una longitud mínima de 1,0 Km, en cada una de las calzadas de la estación de pesaje fija localizada en el PR4+0100 de la Ruta Nacional 4513. Los carriles de acceso deberán cumplir las siguientes especificaciones
-
-
-
-
-Página 61 de 62
-
-Apéndice Técnico 1 – Alcance
-Concesión PUERTO SALGAR – BARRANCABERMEJA
-
-
 
 
 Requisitos Técnicos

@@ -355,15 +355,11 @@ Adicionalmente, el Concesionario deberá contar como mínimo con una (1) Cama ba
 
 Adicionalmente, en cada Base de Operación, el Concesionario deberá contar con los siguientes equipos para la realización de rescates y la atención de incidentes:.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 Tabla 2 - Elementos Mínimos de Rescate Frente a Accidentes
 
 
 ELEMENTO
-
-
 
 
 FUENTE DE
@@ -379,36 +375,15 @@ A gasolina, 4 tiempos, superior o igual a 2.5 HP.
 PODER
 
 
-
-
-
-
-
-
 HERRAMIENTA COMBINADA
-
-
-
-
-
-
-
-
-
 
 
 RAM
 
 
-
-
-
-
-
 CORTAPEDALES O MINI CUTTER
 
 CARRETE CON MANGUERA HIDRÁULICA
-
 
 
 CADENAS
@@ -451,8 +426,6 @@ puntas
 
 Estos equipos deberán ser reemplazados cada cinco (5) años, o antes, cuando sea necesario por las condiciones propias del uso.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 El Concesionario deberá contar con el personal calificado y capacitado para el adecuado manejo de estos equipos cuando se requiera su uso. La Interventoría verificará la presencia de los equipos, el personal y su idoneidad.
 
@@ -476,7 +449,6 @@ Para proporcionar los servicios de atención médica, el Concesionario dispondr�
 
 Los servicios de atención médica deberán trasladar a los heridos al centro de salud más próximo que cuente con servicios adecuados para reponer los signos vitales del herido y que pueda
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 monitorearlos. Todas las ambulancias deberán contar con los medios para prestar servicios de Traslado Asistencial Medicalizado (TAM) para atender a heridos cuyo estado potencial y/o real sea de riesgo y requiera equipamiento, material y personal médico durante la atención y el transporte.
 
@@ -581,7 +553,6 @@ EQUIPO
 •  Frascos con jabón quirúrgico, solución yodada y alcohol
 Además, deberán contar con medicamentos e insumos de uso médico para administración vía parenteral del tipo: analgésicos, antiácidos, cristaloides, carbón activado, anestésicos locales, antihistamínicos,  anticonvulsivantes,  cardiovasculares,  diuréticos,  digestivos,  electrolitos, broncodilatadores, corticoides y relajantes musculares.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Adicionalmente, cada vehículo empleado como ambulancia en el que se ofrezca el TAM debe cumplir con especificaciones mínimas en carrocería, luces exteriores, sistemas de comunicación y sistema eléctrico.
 
@@ -630,7 +601,6 @@ El Concesionario deberá crear una página web, disponible para todos los Usuari
 
 Como parte del diseño y la operación de la página web, el Concesionario deberá incluir un módulo informativo al usuario en el cual se indiquen, entre otros: Los tiempos de viaje, sectores con trabajos, interrupciones de tráfico, situaciones a considerar en pasos urbanos y poblaciones vecinas que puedan afectar las condiciones de operación y seguridad de la vía y otras situaciones que puedan afectar la transitabilidad de la vía, servicio que deberá estar disponible las 24 horas del Día.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 La página también deberá ofrecer información acerca de todas las posibles formas de comunicación entre los Usuarios y el Concesionario, la ANI y la Policía de Carreteras, así como ofrecer un espacio para que los Usuarios manifiesten cualquier asunto de su interés. La página web será un componente del Programa Comunicar descrito con mayor detalle en el Apéndice de Gestión Social y Predial.
 
@@ -705,7 +675,6 @@ Los libros de registro deberán estar disponibles permanentemente en el Centro d
 
 Las Áreas de Servicio proporcionarán como mínimo los siguientes servicios complementarios de atención al Usuario:
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 •  Suministro de bienes para operación de vehículos (taller mecánico).
 • Servicios sanitarios
@@ -760,7 +729,6 @@ Además del equipamiento de cobro y control, el Concesionario deberá dotar a la
 
 El Concesionario está obligado al pago del consumo de los servicios públicos en los puntos donde cuenta con instalaciones tales como: agua, energía, alcantarillado, gas, teléfono, Internet y otros. Cuando proceda, también estará obligado al pago del suministro de combustible para el funcionamiento de la planta eléctrica de emergencia. En caso de no contar con dichos servicios públicos, o que los mismos se encentraran temporalmente suspendidos, el Concesionario es el responsable de proveerse de tales servicios y de asumir los costos asociados a dicho aprovisionamiento, así como de tramitar obtener y administrar los permisos necesarios para el suministro de combustible para el funcionamiento de la planta eléctrica de emergencia caso.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 El Concesionario realizará la demarcación de piso de los resaltos y del carril en la zona de recaudo y la zona de transición de la Estación de Peaje, y dispondrá la fabricación e instalación de la señalización vertical informativa y de aproximación a la Estación de Peaje, conforme lo estipula el Manual de Señalización adoptado por la Resolución 1885 del 17 de junio de 2015 del Ministerio de Transporte o por las normas que la sustituya(n), adicione(n) o derogue(n) durante la ejecución del Contrato.
 .
@@ -831,7 +799,6 @@ Los carriles de cobro automático deberán contar con una barrera que impida que
 El Concesionario podrá incorporar un cargo inicial al usuario como contraprestación por la entrega de los equipos o dispositivos necesarios para la interacción del sistema y/o por el alta en el mismo. En todo caso, el Concesionario deberá presentar a la ANI el valor de este cargo inicial y la justificación del mismo, al momento de presentar su propuesta tecnológica.
 Los carriles de cobro automático serán de uso exclusivo, para los vehículos portadores de esa tecnología, y deberán cumplir con las Resoluciones 4303 de 2015, 5708 de 2016, 546 de 2018, la
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 883 de 2019 y la 509 de marzo de 2020 del Ministerio de Transporte o la(s) que la sustituya(n), modifique(n), adicione(n) o derogue(n) durante la ejecución del Contrato, según lo dispuesto en el literal 4.11 de la Parte General del Contrato.. Así mismo, El concesionario deberá cumplir con la disponibilidad del sistema, compensación al intermediador y el envío de la documentación, a las que hace referencia las anteriores resoluciones.
 
@@ -984,7 +951,6 @@ Los registros diarios deberán ser presentados a la Interventoría en informes m
 
 El transporte de cargas con dimensiones extraordinarias o sobrepesos estará regulado conforme a Resolución 4959 de 2006 del Ministerio de Transporte o la(s) resolución(es) vigente(s) que la sustituya(n), adicione(n) o derogue(n) durante la ejecución del Contrato.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 El transportador interesado se dirigirá al INVIAS con la documentación exigida, referente al transporte que desee realizar. A su vez la ANI solicitará al Concesionario el análisis técnico pertinente para establecer las condiciones bajo las cuales se deberá realizar el transporte y la tarifa que se cobrará. El Concesionario presentará su concepto a la ANI, a más tardar dentro de los tres
 (3) Días siguientes a la fecha en que haya recibido la solicitud por parte de la ANI, la ANI se lo remitirá al INVIAS. De aprobarse la solicitud por parte del INVIAS, la ANI oficializará el permiso de tránsito, por lo que el Concesionario garantizará el apoyo material, humano y logístico necesario para acompañar la Operación. En caso de no aprobarse se dará el tratamiento consignado en la Resolución 4959 de 2006 del Ministerio de Transporte o la(s) resolución(es) vigente(s) o por la(s) que la sustituya(n), modifique(n), adicione(n) o derogue(n) durante la ejecución del Contrato.
@@ -1032,7 +998,6 @@ El Concesionario deberá identificar los sectores de la vía donde se presenta l
 
 Estas mismas consideraciones deben ser tenidas en cuenta cuando la vía atraviese pasos urbanos y áreas pobladas, lo que dará lugar a introducir medidas de tránsito calmado para que los flujos vehiculares que se desplazan por la carretera se ajusten a las nuevas condiciones de circulación en zonas urbanizadas, a una velocidad diseñada para el entorno y para los usuarios más vulnerables. Para esto el Concesionario debe poner en práctica el sistema de gestión de seguridad vial y aplicar
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 las técnicas proactivas y buenas prácticas para adelantarse a los sucesos y prevenir la ocurrencia de siniestros viales o las estrategias reactivas en la eventualidad que éstos ocurran.
 
@@ -1048,7 +1013,6 @@ Como parte del Manual de Operación y Mantenimiento, el Concesionario deberá pr
 
 En el evento que el Concesionario adelante la instalación de una nueva Estación de Pesaje, deberá elaborar un estudio de localización e implantación de la Estación de Pesaje nueva, como parte de los Estudios de Detalle y Estudios de Trazado y Diseño Geométrico a presentar a la Interventoría durante la Fase de Preconstrucción, para lo cual tendrá en cuenta lo previsto en el Apéndice 1 en cuanto a reposición e instalación de Estaciones de Pesaje. Dado que el control del pesaje es de especial interés para el Concesionario para cumplir con los Indicadores contractuales, podrá proponer cuantas estaciones fijas o móviles considere necesarias, siempre y cuando minimice el impacto en el tráfico y garantice que como mínimo se contará con estaciones definidas en los Apéndices Técnicos. A pesar de lo anterior, el Concesionario podrá proponer a la Interventoría la reubicación de las Estaciones de Pesaje actuales si considera que este cambio le permite mejorar el control de los pesos. Durante la Etapa de Operación y Mantenimiento, el Concesionario podrá instalar a su costo nuevas básculas para pesaje, siempre que informe a la Interventoría al menos un mes antes de empezar a construirlas y ésta emita la no objeción a los diseños.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Las Estaciones de Pesajes deberán realizar controles de pesaje en los dos sentidos de circulación del tránsito. La infraestructura por sentido de la estación de pesaje debe estar en la margen derecha del flujo de los vehículos.
 
@@ -1117,7 +1081,6 @@ Desde la Fecha de Inicio de la Concesión, el Concesionario deberá ejercer func
 
 Las imágenes captadas por los circuitos cerrados de TV, tanto en las Estaciones de Peaje como en los carriles, deberán ser visualizadas permanentemente y grabadas a diario en bases de datos que se conservarán por un plazo no inferior a una (1) semana.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Junto a los operadores, deberán ser provistas instalaciones para la Policía de Carreteras, y con posibilidad de comunicación con los puestos de control bien como control de tráfico o bien como policía de seguridad en el Sector.
 
@@ -1157,7 +1120,6 @@ Imágenes de todas las cámaras de video instaladas en las vías (entendiendo po
 
 Información de accidentes identificados o reportados en la(s) vía(s), dando una tipificación del accidente y el km donde se reporta el mismo, esta información se reportará mínimo una vez por hora (24 reportes al Día) y un consolidado diario.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Información sobre las condiciones meteorológicas en la(s) vía(s), por Unidad Funcional, así como en las estaciones de peaje y el Centro de Control de Operaciones esta información se reportará mínimo una vez por hora (24 reportes al Día) y un consolidado diario.
 
@@ -1404,7 +1366,6 @@ Presentación de planos:
 
 No se admite la entrega de planos doblados, sólo podrán entregarse enrollados, máximo 30 planos por rollo, en tubo de papel Kraft sin ningún material metálico o enrollado en papel ph neutro, con un rótulo de identificación que contenga la siguiente información:
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 •  Nombre del proyecto
 •  Número del contrato
@@ -1445,8 +1406,6 @@ Todos los equipos entregados deberán contar con una vida residual de por lo men
 En caso de que el Concesionario contrate servicios de terceros (como ambulancias, auxilio mecánico, etc.) al final de la Concesión está obligado a revertir a la ANI los vehículos necesarios para prestar estos servicios. Si no es propietario de este tipo de vehículos, en algún momento deberá adquirirlos para poder revertirlos a la ANI al final de la concesión.
 
 Teniendo en cuenta lo anterior, si alguno(s) de los equipos, vehículos o cualquier otro activo que sea objeto de reversión está bajo la modalidad de leasing, cuando se llegue el momento de reversión el Concesionario deberá haber ejercido la opción de compra de tales bienes para efectuar su reversión a la ANI.
-
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
 ## 6. MANTENIMIENTO
@@ -1525,7 +1484,6 @@ Para cumplir con los Indicadores a que se refiere el Apéndice Técnico 4, el Co
 6.3.1.1. Reparación de Baches y Asentamientos
 El Concesionario se obliga a mantener, en todo momento, la superficie de rodadura y las bermas libres de baches y deformaciones como ahuellamientos, hundimientos, desplazamientos de borde, afloramientos, etc., para lo cual efectuará las reparaciones de acuerdo con los procedimientos y especificaciones descritos en su Manual de Operación y Mantenimiento y en los plazos indicados en el Apéndice Técnico 4. Para ello deberá disponer de personal calificado que deberá realizar recorridos rutinarios con el propósito de detectar y clasificar los defectos, con la periodicidad mínima indicada en el Apéndice 4. Además, seleccionará y suministrará los materiales y equipos
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 adecuados para cada una de las operaciones necesarias para la reparación de baches en afirmado y parcheo en pavimento en la corona.
 
@@ -1546,7 +1504,6 @@ Bacheo (carreteras pavimentadas):
 DESCRIPCIÓN
 Reparación localizada en la estructura de la calzada, tapando los huecos por medio de reconstrucción de capas inferiores con material granular compactado, sin incluir la capa de rodadura (ver Especificaciones Técnicas de INVIAS).
 Tareas ejecutadas en la superficie de rodadura de la corona (calzada y bermas) de carreteras pavimentadas
-
 
 
 257
@@ -1577,7 +1534,6 @@ Relleno de fisuras abiertas (grietas) con emulsión asfáltica
 6.3.1.3. Reparación de pavimento rígido
 El Concesionario se obliga a mantener, en todo momento, la superficie del pavimento rígido y las bermas libres de fisuras, escalonamientos, perdida de sellos, etc., para lo cual efectuará las reparaciones de acuerdo con los procedimientos y especificaciones descritos en su Manual de
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 Operación y Mantenimiento y en los plazos indicados en el Apéndice Técnico 4. Para ello dispondrá de personal calificado que deberá realizar recorridos rutinarios con el propósito de detectar y clasificar los defectos, con la periodicidad mínima indicada en el Apéndice 4. Además, seleccionará y suministrará los materiales y equipos adecuados para cada una de las operaciones necesarias.
 Las tareas incluidas en las actividades de Mantenimiento de un pavimento rígido se presentan en la Tabla 9.
 Tabla 9 - Tareas ejecutadas en la superficie de rodadura de la corona (calzada y bermas) de carreteras pavimentadas
@@ -1586,20 +1542,14 @@ Tabla 9 - Tareas ejecutadas en la superficie de rodadura de la corona (calzada y
 CÓDIGO
 
 
-
-
 500
 ACTIVIDAD
-
-
 
 
 Sellado de juntas y fisuras
 DESCRIPCIÓN
 Reparación del sello de las juntas mediante la remoción del sello deteriorado y la colocación de un nuevo material sellante que cumpla con las características de calidad, elongación y factor de forma, que permita evitar el ingreso de agua por las juntas. En el caso de sellado de fisuras, se debe preparar la cavidad y realizar el mismo procedimiento de sellado, con las mismas características de calidad, elongación y factor de forma que el sellado de las juntas.
 Tareas ejecutadas en la estructura de la corona (calzada y berma) de carreteras pavimentadas
-
-
 
 
 501
@@ -1610,19 +1560,13 @@ Reparación de la porción superficial de una losa de concreto, que consiste en 
 Tareas ejecutadas en la estructura de la corona (calzada y berma) de carreteras pavimentadas
 
 
-
-
-
 502
-
 
 
 Reparación a Profundidad Total
 Reparación de todo el espesor de la losa de concreto hasta exponer el material de base. Se utiliza para reparar daños en la base, segmentaciones de losas, fisuras de gran severidad que atraviesen todo el espesor de la losa. Dependiendo del tipo y causa del daño, se debe restituir total o parcialmente el sistema de soporte de la losa, el sistema de transferencia de carga en las juntas y/o el sistema de amarre.
 
 Tareas ejecutadas en la estructura de la corona (calzada y berma) de carreteras pavimentadas
-
-
 
 
 503
@@ -1632,21 +1576,13 @@ Reparación de la porción superficial de una losa de concreto, que consiste en 
 
 Tareas ejecutadas en la estructura de la corona (calzada y berma) de carreteras pavimentadas
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 CÓDIGO
 ACTIVIDAD
 DESCRIPCIÓN
 
 
-
-
-
-
 504
-
-
 
 
 Costura de fisuras
@@ -1662,13 +1598,7 @@ las juntas. Consiste en la inserción en el concreto endurecido, mediante el cor
 Tareas ejecutadas en la estructura de la corona (calzada y berma) de carreteras pavimentadas
 
 
-
-
-
-
 506
-
-
 
 
 Fresado superficial
@@ -1691,7 +1621,6 @@ Tareas ejecutadas en la estructura de la corona (calzada y berma) de carreteras 
 
 El Concesionario deberá realizar los trabajos de limpieza periódica, de al menos una vez al mes, conservación, y reparación necesarios para cumplir en todo caso con lo estipulado en esta Sección y, además, asegurar el cumplimiento de lo especificado para los Indicadores, incluidos en el Apéndice Técnico 4 y lo definido en el numeral 4.3 (viii) del Apéndice Técnico 1.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Tabla 10-Indicadores de Señalización Vertical y Señalización Horizontal
 
@@ -1736,8 +1665,6 @@ La evaluación se efectuará respecto al estado físico de las líneas demarcada
 
 La demarcación horizontal provisional que sea necesaria se indicará durante el tiempo que tome la ejecución de las labores de mantenimiento u obras dentro de la(s) vía(s), y se borrará cuando éstas terminen. Las líneas de demarcación deberán señalar claramente el pavimento temporal (carriles, línea de berma) con el fin de reducir índices de accidentalidad. Al igual que en el caso anterior, la demarcación temporal debe considerar las condiciones de visibilidad más desfavorables.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 En caso de que en la(s) vía(s) que formen parte de este Contrato, no tengan completos y continuos todos los delineadores de piso o elevados obligatorios (tachas, etc.), el Concesionario deberá reponerlos en los plazos establecidos en el Apéndice Técnico 4.
 
@@ -1762,7 +1689,6 @@ divulgado por la Corporación Fondo de Seguridad Vial en septiembre de 2012 o po
 Los postes y las conexiones de las defensas metálicas deberán estar en perfecto estado y exentos de oxidación. De acuerdo con criterios internacionales de empleo de barreras metálicas, los postes de las barreras que se repongan no podrán ser de perfil en I , sino en U.
 Las barreras de hormigón deberán estar libres de desprendimientos y bien alineadas, ancladas y diseñadas conforme a tipos y formas debidamente probadas. La colocación de amortiguadores de
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 impacto deberá obedecer a un diseño técnico de necesidad, tipo, ubicación y control de mantenimiento.
 
@@ -1788,7 +1714,6 @@ E14     Iluminación
 
 En caso de que se presenten deficiencias en el funcionamiento de la iluminación, el Concesionario deberá corregir o remplazar las lámparas defectuosas, administración en los tiempos establecidos en el Apéndice Técnico 4.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 6.3.5.  Drenaje
 
@@ -1826,7 +1751,6 @@ Limpieza de canales revestidos y en tierra.
 Limpieza de obras (Alcantarillas y box de todos los tamaños) Limpieza de zanjas colectoras, canales, cámaras
 Las tareas de limpieza deben realizarse dentro del Corredor del Proyecto e incluso fuera de él cuando se prevean problemas de drenaje o estabilidad de estructuras.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 6.3.5.2.   Reconstrucción de cunetas y zanjas de coronación
 El Concesionario se obliga a realizar todas las actividades tendientes a garantizar el adecuado drenaje de las aguas de escorrentía para mantener y preservar la estabilidad de la(s) vía(s) con la reparación y/o reconstrucción de las cunetas y zanjas de coronación de acuerdo con los procedimientos y especificaciones descritos en las Especificaciones Técnicas. Estas labores deberán realizarse en el momento en que se detecte su necesidad, para lo cual el Concesionario deberá disponer del personal calificado, la maquinaria y el equipo que sean necesarios para su pronta ejecución.
@@ -1853,7 +1777,6 @@ Cuando existan estos obstáculos el Concesionario deberá limpiar, mantener y re
 
 Este trabajo comprende la limpieza general del separador central, los márgenes de la calzada y las zonas aledañas y complementarias a la(s) vía(s), tales como áreas de servicio, zonas de parqueo, maniobras, accesos inmediatos a la carretera concesionada y rocería en los taludes en corte. Incluye
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 todas las labores necesarias para mantener dichas zonas libres de basura y obstáculos, ramas, troncos, piedras, animales muertos, señales, avisos, vallas y demás objetos que impidan la visibilidad, el tránsito y el drenaje de la(s) vía(s), o que generen peligro para la seguridad del tránsito, sin límite de cuantía en lo referido al volumen y su acarreo.
 
@@ -1871,8 +1794,6 @@ Sin perjuicio de la obligación del Concesionario de cumplir lo previsto en el I
 El producto de la poda deberá ser retirado en un término máximo de 48 horas después de realizada, y deberá disponer en una ubicación aprobada para este tipo de material conforme a la Ley Aplicable.
 
 Para respaldar las inspecciones, el Concesionario controlará al menos semanalmente y de forma visual la condición de estas zonas y comprobará la inexistencia de peligros para el tránsito o que disminuyan la seguridad vial. Para este concepto no se permitirá ningún kilómetro afectado. En caso de que uno o varios de estos peligros para el tránsito se encuentren en las zonas laterales del Sector, el Concesionario dispondrá del plazo que, de manera razonable y de acuerdo con la afectación indique la Interventoría, para mejorar la condición del Corredor del Proyecto de la carretera. En cuanto a los árboles ubicados en las zonas laterales, se considerará el diámetro de su tronco para determinar si se considera como obstáculo para tala, traslado o protección, lo cual será el criterio para definir su inclusión en las medidas que se determinen en la aplicación del SGSV.
-
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
 Todas las labores de rocería, paisajismo y mantenimiento de plantaciones deberán realizarse según lo establecido en el Manual de Operación y Mantenimiento y lo previsto respecto del plan para las Obras de Mantenimiento, para lo cual el Concesionario deberá disponer de las cuadrillas de personal necesarias, así como de la maquinaria y el equipo idóneos para su pronta ejecución.
@@ -1900,7 +1821,6 @@ E15     Puentes y Estructuras
 6.3.8.1.   Directrices Generales de Mantenimiento
 El Concesionario deberá mantener y reparar todos los componentes de las estructuras, tanto de la superestructura como de la infraestructura, durante el plazo del Contrato de Concesión.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 Las estructuras incluyen los puentes, muros de acompañamiento, muros de contención, alcantarillas de cajón, alcantarillas, cunetas, bordillos, barreras y barandas para tráfico vehicular, peatonal o de bicicletas.
 
@@ -1922,7 +1842,6 @@ Evaluación de la resistencia: Las estructuras existentes se deberán evaluar ut
 
 Evaluación de la durabilidad: Las estructuras se sujetarán a una inspección detallada para detectar fisuras, carbonatación, corrosión o cualquier otro signo que indique la posibilidad de reducción de
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 su vida útil. Se harán todos los ensayos requeridos para evaluar los deterioros y diseñar las reparaciones o reforzamientos que eventualmente sean necesarios, como, por ejemplo: ensayos de permeabilidad, velocidad e intensidad de la corrosión, profundidad de la carbonatación, resistencia in situ de los materiales, ultrasonido, medición de flechas y deformaciones, vibraciones excesivas y radiografía de soldaduras en elementos metálicos para efectuar las correcciones correspondientes.
 
@@ -1943,8 +1862,6 @@ Pérdida del revestimiento y superficies afectadas por carbonatación. Toda pér
 
 Estado de las cimentaciones, asentamientos y socavación Estado de la carpeta asfáltica
 Estado de las estructuras de concreto reforzado. Verificación de fisuras, deflexiones, carbonatación y corrosión del acero de refuerzo, fisuras y daños en la superficie, existencia de aceros a la vista.
-
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 
 Estado de los apoyos de neopreno. Los aparatos de apoyo deberán ser mantenidos en perfecto estado operativo. Todo apoyo que presente daños o degradación deberá ser reemplazado.
@@ -1969,8 +1886,6 @@ En caso necesario, el cauce deberá rectificarse con el tipo de maquinaria aprop
 
 Las estructuras que presenten cabeceos o deslizamientos por empuje de tierras o fallas de la cimentación deberán ser recalzadas y restituidas total o parcialmente, según se requiera para un perfecto alineamiento final. En ese caso, se deberán elaborar los estudios requeridos, diseñar y construir los recalces, las protecciones y demás obras necesarias para el buen funcionamiento de las cimentaciones de las estructuras.
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
-
 
 Se deberán elaborar los estudios, diseños y obras requeridas para la corrección de fallas en las estructuras debidas a la cimentación, tales como asentamientos excesivos, asentamientos diferenciales u otros daños.
 
@@ -1994,7 +1909,6 @@ El Concesionario deberá ejecutar diseños libres de obstáculos mediante la col
 
 Las tareas de mantenimiento específico que deberá desarrollar el Concesionario deberán obedecer a un protocolo que deberá incluir y considerar las siguientes periodicidades de intervención:
 
-Apéndice Técnico 2 – Operación y Mantenimiento Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 PA   - Plurianual (cada varios años) A   - Anual (cada año)
 S   - Semestral
