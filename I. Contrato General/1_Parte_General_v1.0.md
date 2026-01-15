@@ -1,6 +1,11 @@
 ﻿# CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP
 ## PROYECTO PUERTO SALGAR - BARRANCABERMEJA
 ### PARTE GENERAL
+> [!IMPORTANT]
+> **Actualización Normativa 2024**: De conformidad con la Adenda 6 y la fecha de cierre, toda referencia a normas técnicas en este documento se entenderá remitida a la regulación vigente en 2024, incluyendo:
+> - **Manual de Señalización Vial 2024** (en sustitución del Manual 2015).
+> - **RETIE 2024** (Resolución 40117).
+> - **Recaudo Electrónico**: Resolución 20213040035125 de 2021 (IP/REV, COLPASS), ISO 18000-63 y seguridad AES-256.
 
 **República de Colombia**  
 **Ministerio de Transporte**  
@@ -17,7 +22,7 @@
 | **Concesionario** | [Según Parte Especial] |
 | **Esquema** | APP (Asociación Público Privada) |
 | **Páginas totales** | 288 |
-| **Fecha** | [Fecha de suscripción] |
+| **Fecha** | [DATO_PENDIENTE] |
 | **Versión** | v1.0 |
 | **Estado** | ✅ Vigente |
 | **Archivo fuente** | PARTE GENERAL PUBLICAS TRONCAL SIN MARCAS.txt |
@@ -47,10 +52,10 @@
 | **XIII** | [Ecuación Contractual y Asignación de Riesgos](#capítulo-xiii---ecuación-contractual-y-riesgos) | 208 |
 | **XIV** | [Circunstancias de Terminación](#capítulo-xiv---circunstancias-de-terminación) | 212 |
 | **XV** | [Solución de Controversias](#capítulo-xv---solución-de-controversias) | 230 |
-| **XVI** | [Supervisión, Inspección, Control](#capítulo-xvi---supervisión-inspección-control) | 239 |
-| **XVII** | [Facultades de la ANI](#capítulo-xvii---facultades-de-la-ani) | 255 |
-| **XVIII** | [Entrega de la Infraestructura y Reversión](#capítulo-xviii---entrega-infraestructura-reversión) | 260 |
-| **XIX** | [Disposiciones Finales](#capítulo-xix---disposiciones-finales) | 271 |
+| **XVI** | [Asuntos Laborales y de Seguridad Industrial](#capítulo-xvi---asuntos-laborales-y-de-seguridad-industrial) | 244 |
+| **XVII** | [Terminación del Contrato](#capítulo-xvii---terminación-del-contrato) | 246 |
+| **XVIII** | [Liquidación del Contrato](#capítulo-xviii---liquidación-del-contrato) | 249 |
+| **XIX** | [Varios](#capítulo-xix---varios) | 278 |
 
 ---
 
@@ -282,7 +287,7 @@ CAPÍTULO I  Definiciones                               13
 1.204  “VPIP”                                       47
 1.205  “VPIPm”                                      47
 1.206 Las demás establecidas en el Parte Especial.                   48
-CAPÍTULO I I ASPECTOS GENERALES DEL CONTRATO          49
+CAPÍTULO II ASPECTOS GENERALES DEL CONTRATO          49
 2.1   Objeto                                        49
 2.2   Valor del Contrato y Aportes Presupuestales                   49
 
@@ -332,7 +337,7 @@ CAPÍTULO V  ETAPA  PREOPERATIVA  -  CONTRATOS  DE  DISEÑO, CONSTRUCCIÓN Y OPE
 5.1   Generalidades                                   152
 5.2   Contratistas                                    152
 5.3   Certificación y Verificación                           153
-CAPÍTULO V I ETAPA PREOPERATIVA–ESTUDIOS Y DISEÑOS     155
+CAPÍTULO VI ETAPA PREOPERATIVA–ESTUDIOS Y DISEÑOS     155
 6.1   Presentación de los Estudios                           155
 6.2   Revisión de los Estudios de Trazado y Diseño Geométrico y los Estudios de Detalle 155
 6.3   Modificaciones y Adecuaciones a los Estudios de Trazado y Diseño Geométrico que sobrepasen la Franja de Utilidad Pública                      156
@@ -392,22 +397,22 @@ CAPÍTULO XV SOLUCIÓN DE CONTROVERSIAS               232
 15.2  Arbitraje Nacional                                238
 15.3  Arbitraje Internacional                              241
 15.4  Continuidad en la ejecución                           243
-CAPÍTULO XV I ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL 244
+CAPÍTULO XVI ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL 244
 16.1  Personal del Concesionario                            244
 16.2  Seguridad e Higiene Industrial                          245
 16.3  Relación entre las Partes                             245
-CAPÍTULO XVI I  TERMINACIÓN DEL CONTRATO             246
+CAPÍTULO XVII TERMINACIÓN DEL CONTRATO             246
 17.1  Ocurrencia                                     246
 17.2  Causales de Terminación Anticipada del Contrato               246
 17.3  Efectos de la Ocurrencia de una Causal de Terminación Anticipada por causas imputables al Concesionario                               247
-CAPÍTULO XVII I  LIQUIDACIÓN DEL CONTRATO             249
+CAPÍTULO XVIII LIQUIDACIÓN DEL CONTRATO             249
 18.1  Término                                      249
 18.2  Obligaciones de la Fiduciaria en la Liquidación                249
 18.3  Fórmulas de Liquidación del Contrato                     251
 18.4  Pago de las sumas por concepto de Liquidación                270
 18.5  Pagos en caso de controversia                          273
 18.6  Cálculo del ARh                                 274
-CAPÍTULO XI X  VARIOS                              278
+CAPÍTULO XIX VARIOS                              278
 19.1  Obras Menores                                  278
 19.2  Obras Complementarias                             280
 
@@ -454,7 +459,7 @@ Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la
 1.5   “Acta de Liquidación del Contrato”
 
 
-Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la ANI, el Vicepresidente Ejecutivo de la ANI o quien haga sus veces, según corresponda, el Gerente de Proyecto de la ANI, el Interventor y el Concesionario, de acuerdo con lo señalado en este Contrato, en especial en el CAPÍTULO XVII I de esta Parte General, para los efectos previstos en el Artículo 60 de la Ley 80 de 1993 (modificado por el Artículo 217 del Decreto 19 de 2012) y en el Artículo 11 de la Ley 1150 de 2007, y las normas que los modifiquen, complementen o sustituyan.
+Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la ANI, el Vicepresidente Ejecutivo de la ANI o quien haga sus veces, según corresponda, el Gerente de Proyecto de la ANI, el Interventor y el Concesionario, de acuerdo con lo señalado en este Contrato, en especial en el CAPÍTULO XVIII de esta Parte General, para los efectos previstos en el Artículo 60 de la Ley 80 de 1993 (modificado por el Artículo 217 del Decreto 19 de 2012) y en el Artículo 11 de la Ley 1150 de 2007, y las normas que los modifiquen, complementen o sustituyan.
 
 1.6  “Acta de Reconocimiento de EER”
 Es el documento que suscribirán el Vicepresidente de Gestión Contractual de la ANI, el Vicepresidente Ejecutivo de la ANI o quien haga sus veces, según corresponda, el Gerente del Proyecto de la ANI, el Interventor y el Concesionario en el que se consignará la declaratoria de un Evento Eximente de Responsabilidad y se indicarán las obligaciones afectadas, el Período Especial y los demás elementos inherentes a dicha declaratoria, aplicando el procedimiento descrito en la Sección 14.2(d) de esta Parte General.
@@ -819,7 +824,7 @@ Es el conjunto de obligaciones a cargo del Concesionario relacionadas con el cum
 
 1.91 “Giro de Equity”
 
-Es el valor mínimo correspondiente a los giros que deba hacer el Concesionario al Patrimonio Autónomo (Cuenta Proyecto) en los términos y condiciones previstos en este Contrato, en especial en la Sección 3.9 de esta Parte General. El Giro de Equity podrá ser deuda subordinada de socios al Proyecto; sin embargo, en ningún caso esta deuda podrá estar al mismo nivel de la deuda de los Prestamistas y por lo tanto, el pago de la deuda subordinada de socios estará subordinado al pago de la deuda del Proyecto, en ningún caso se podrá pagar primero la deuda subordinada, excepto si media acuerdo escrito en contrario de los Prestamistas. No habrá Giro de Equity en especie.
+Es el valor mínimo correspondiente a los giros que deba hacer el Concesionario al Patrimonio Autónomo (Cuenta Proyecto) en los términos y condiciones previstos en este Contrato, en especial en la Sección 3.9 de esta Parte General. El Giro de Equity podrá ser deuda subordinada de socios al Proyecto; sin embargo, en ningún caso esta deuda podrá estar al mismo nivel de la deuda de los Prestamistas y por lo tanto, el pago de la deuda subordinada de socios estará subordinado al pago de la deuda del Proyecto, en ningún caso se podrá pagar primero la deuda subordinada, excepto si media acuerdo escrito en contrario de los Prestamistas. No habrá Giro de Equity en especie. Los montos y fechas específicos se definen en la Parte Especial.
 
 1.92 “Indicadores”
 
@@ -1283,7 +1288,7 @@ Es la actividad o conjunto de actividades de excavación, sostenimiento, revesti
 
 Es la suma señalada en la Parte Especial que corresponde al presupuesto estimado de inversión en los términos de la Ley 1508 de 2012 y el Artículo 2.2.2.1.4.3. del Decreto 1082 de 2015 y tendrá el significado y los efectos señalados expresamente en la Ley 1508 de 2012 y en sus decretos reglamentarios, además de los que se señalen de manera expresa en este Contrato, en particular –pero sin limitarse a ellos-, los previstos en la Sección 2.2 de esta Parte General.
 
-1.198 “ 𝑉𝑆𝐼𝑖 ”
+1.198 “VSIi”
 Corresponde al valor de referencia que se utilizará para efectos de cálculo del Soporte de Ingresos, cuyos montos se establecen en la Parte Especial.
 
 1.199 “Valor Estimado de Compensaciones Socioambientales”
@@ -1314,7 +1319,11 @@ Es el valor presente del Recaudo de Peaje calculado a la Fecha de Inicio del Con
 
 Es el valor presente del Recaudo de Peaje calculado desde la Fecha de Inicio expresado en pesos del Mes de Referencia efectivamente observado en el Proyecto acumulado hasta cualquier Mes de la ejecución del presente Contrato (el Mes “m”), incluyendo las eventuales compensaciones por Soporte de Ingresos.
 
-1.206 Las demás establecidas en el Parte Especial.
+1.206 “Factor de Ajuste del Equity” o “FAE”
+
+Corresponde al factor de ajuste aplicable a los Giros de Equity, cuyo valor (1,55) y condiciones de aplicación se definen exclusivamente en la Parte Especial.
+
+1.207 Las demás establecidas en el Parte Especial.
 
 
 CAPÍTULO I I  ASPECTOS GENERALES DEL CONTRATO
@@ -1667,7 +1676,7 @@ PeajesEi = Valor del Recaudo de Peaje durante el Mes i, en Pesos corrientes incl
 
 TDI
 IPCr = IPC correspondiente al Mes de Referencia IPCi = IPC correspondiente al Mes i
-Tasa de descuento real de los ingresos expresada en términos efectivo mensual y que para efectos de esta fórmula será la que se incluye en la Parte Especial.
+Tasa de descuento real de los ingresos expresada en términos efectivo mensual y que para efectos de esta fórmula será la que se incluye en la Parte Especial (0.6865% mes vencido).
 
 
 i
@@ -2112,7 +2121,7 @@ No obstante, en cualquier momento la ANI podrá solicitar la remoción de la Fid
 
 (d)    El Comité Fiduciario será responsable por definir las inversiones que haga la Fiduciaria de los recursos de la Subcuenta Aportes ANI, siempre que dichas inversiones i) sean admisibles, de acuerdo con el Decreto 1068 de 2015, ii) el emisor, deudor y/o destinatario de las inversiones no sea el Concesionario, ni sus socios, ni los Beneficiarios Reales del Concesionario, ni cualquier otra persona en la cual el Concesionario, sus socios o los Beneficiarios Reales del Concesionario, tengan cualquier participación o compartan de cualquier manera los resultados de su actividad económica y iii) busquen, de manera prioritaria, generar operaciones de cobertura de tasa de cambio para la porción en dólares de los Aportes ANI.
 
-(e)    En el evento en que el Concesionario incumpla la obligación de realizar los fondeos en los plazos y montos previstos en la Parte Especial, respecto de las Subcuentas establecidas en los siguientes literales, se deberá realizar el cálculo para reajustar el valor del fondeo considerando la tasa de descuento real de los ingresos - TDI expresada en términos efectivo mensual que se incluye en la Parte Especial, esto sin perjuicio de la actualización del valor con el IPC del Mes anterior y de los intereses moratorios a cargo del Concesionario sobre monto impagado desde el Día siguiente a la fecha prevista para el aporte a la tasa señalada en la Sección 3.63.6 de esta Parte General hasta que la Fiduciaria verifique el pago.
+(e)    En el evento en que el Concesionario incumpla la obligación de realizar los fondeos en los plazos y montos previstos en la Parte Especial, respecto de las Subcuentas establecidas en los siguientes literales, se deberá realizar el cálculo para reajustar el valor del fondeo considerando la tasa de descuento real de los ingresos - TDI expresada en términos efectivo mensual que se incluye en la Parte Especial, esto sin perjuicio de la actualización del valor con el IPC del Mes anterior y de los intereses moratorios a cargo del Concesionario sobre monto impagado desde el Día siguiente a la fecha prevista para el aporte a la tasa señalada en la Sección 3.6 de esta Parte General hasta que la Fiduciaria verifique el pago.
 
 (f)    Si el Concesionario fondea en exceso los montos previstos en la Parte Especial, respecto de las Subcuentas de la Cuenta Proyecto y Cuenta ANI, la ANI no reconocerá sobre el monto en exceso, intereses remuneratorios ni moratorios en los términos establecidas en la Sección 3.6 de esta Parte General.
 
@@ -2398,7 +2407,7 @@ terminare de manera anticipada, por cualquier causa, todas las sumas  disponible
 (4)     Los recursos remanentes de la Subcuenta Obras Sociales que no fueron necesarios para los pagos derivados de la presente Sección deberán ser transferidos a la Subcuenta Excedentes ANI, previa instrucción expresa y escrita de la ANI.
 (xii) Subcuenta Tiquetes Prepagados.
 
-(1)     La  Subcuenta  Tiquetes  Prepagados  se  creará  con  la suscripción del Contrato de Fiducia Mercantil y se fondeará con los recursos que aporten los usuarios de la vía a través de la compra o recarga de tarjetas o tiquetes prepagados emitidas por el Concesionario o cualquier otra modalidad de medio de pago prepagado que permita a los usuarios abonar sumas de dinero para sufragar en el futuro las tarifas de peaje establecidas en cada Estación de Peaje. Se incluyen entre estas las modalidades “prepago simple” y “prepago con cargo recurrente”  contempladas  en  el  Anexo  Técnico  de  la Resolución 4303 de 2015 del Ministerio de Transporte, o la Resolución que la modifique, complemente o sustituya.
+(1)     La  Subcuenta  Tiquetes  Prepagados  se  creará  con  la suscripción del Contrato de Fiducia Mercantil y se fondeará con los recursos que aporten los usuarios de la vía a través de la compra o recarga de tarjetas o tiquetes prepagados emitidas por el Concesionario o cualquier otra modalidad de medio de pago prepagado que permita a los usuarios abonar sumas de dinero para sufragar en el futuro las tarifas de peaje establecidas en cada Estación de Peaje. Se incluyen entre estas las modalidades “prepago simple” y “prepago con cargo recurrente” contempladas en el Anexo Técnico de la Resolución 20213040035125 de 2021 del Ministerio de Transporte, o la Resolución que la modifique, complemente o sustituya.
 
 (2)     El beneficiario único de la Subcuenta Tiquetes Prepagados será la ANI.
 
@@ -2974,6 +2983,8 @@ haya señalado prelación entre los diferentes documentos que solucione dicha co
 (f)   Estudio de la Solicitud por Parte de la ANI
 
 (i)  La ANI dispondrá de un plazo máximo de veinte (20) Días para analizar y dar respuesta al documento presentado por el Concesionario en el que se sustente técnicamente la existencia de una contradicción, incompatibilidad, imposibilidad de cumplimiento de una obligación de resultado, o conflicto con la Ley Aplicable, los cuales serán contados desde la presentación de la solicitud de modificación a la ANI –con copia al Interventor–. En el caso que la ANI guarde silencio dentro de este plazo, se entenderá negada la solicitud.
+> [!NOTE]
+> **Armonización de Conflictos Técnicos**: En caso de que nuevas normas (ej. Manual de Señalización 2024) eleven las cantidades de obra o especificaciones (ej. Paneles LED) respecto a lo previsto inicialmente, se aplicará el mecanismo de la Sección 4.11(f), garantizando que la ANI cubrirá los mayores costos derivados del cambio de Ley Aplicable si la modificación es requerida por la ANI o necesaria para el cumplimiento normativo.
 
 (ii)  Si la solicitud no es aprobada por la ANI y se tratare de una especificación que el Concesionario considera esencial modificar, con el fin de solucionar contradicciones, incompatibilidades y en todo caso, cumplir con las condiciones establecidas en el Contrato y sus Apéndices y en la Ley Aplicable, éste podrá acudir al Amigable Componedor, el cual tomará su decisión teniendo en cuenta los criterios señalados en la presente Sección 4.12.
 
@@ -3221,7 +3232,7 @@ Lo anterior salvo que dichas variaciones sean producto de: (i) modificaciones po
 (c)    El Interventor contará con el plazo de quince (15) Días para pronunciarse sobre las modificaciones del Concesionario presentadas conforme a lo señalado en la Sección 6.5(a) anterior.
 
 
-CAPÍTULO VI I ETAPA PREOPERATIVA - GESTIÓN PREDIAL
+CAPÍTULO VII ETAPA PREOPERATIVA - GESTIÓN PREDIAL
 
 7.1  Generalidades de la Gestión Predial
 
@@ -3521,7 +3532,7 @@ Los términos señalados para la activación de los eventos de Fuerza Mayor Pred
 14.2 de esta Parte General.
 
 
-CAPÍTULO VII I ETAPA PREOPERATIVA - GESTIÓN SOCIAL Y AMBIENTAL, REDES, OTROS
+CAPÍTULO VIII ETAPA PREOPERATIVA - GESTIÓN SOCIAL Y AMBIENTAL, REDES, OTROS
 
 8.1  Gestión Social y Ambiental
 (a)    La totalidad de la Gestión Social y Ambiental requeridas para la ejecución de las Intervenciones estará a cargo del Concesionario, independientemente de la duración de esta actividad, quien desarrollará dicha labor atendiendo en un todo la distribución de obligaciones, responsabilidades y riesgos establecidos en los Apéndices Técnicos 6 y 8 y en el presente Contrato, de conformidad con la ley 99 de 1993 y sus decretos reglamentarios, y demás normas concordantes y vigentes en la materia, así como la Constitución Política de Colombia –y las normas que la desarrollen– en lo relativo a consultas con comunidades étnicas, de acuerdo con la Ley Aplicable. Así mismo, la totalidad de los costos requeridos para la realización de la Gestión Social y Ambiental para la ejecución de las Intervenciones del Proyecto, así como para la ejecución de los compromisos producto de los acuerdos de consultas previas protocolizadas serán asumidos por el Concesionario, independientemente de la duración de estas actividades. De igual forma, los riesgos asociados a esta obligación serán tratados de acuerdo con lo establecido en la Sección 13.2(a)(iii) de esta Parte General.
@@ -4498,7 +4509,7 @@ contados desde la solicitud en ese sentido hecha por la ANI, soportada por una c
 (v)  Todo lo anterior se entiende sin perjuicio de la utilización de los instrumentos procesales que resulten aplicables, por cualquiera de las Partes.
 
 
-CAPÍTULO X V SOLUCIÓN DE CONTROVERSIAS
+CAPÍTULO XV SOLUCIÓN DE CONTROVERSIAS
 
 Lo establecido en el presente Capítulo no obsta para que las Partes puedan resolver directamente y en cualquier tiempo toda controversia patrimonial y conciliable entre ellas, surgida del presente Contrato. A los mecanismos de solución de controversias se les aplicará lo previsto en la Ley 1563 de 2012 y el artículo 14 de la ley 1682 de 2013, así como las demás normas que los modifiquen, complementen o deroguen.
 
@@ -4692,7 +4703,7 @@ informadas por las Partes. En el evento en que las Partes no lleguen a un acuerd
 La intervención del panel de Amigables Componedores o del Tribunal de Arbitramento no suspenderá la ejecución del Contrato, salvo respecto de aquellas obligaciones y/o actividades que de mutuo acuerdo las Partes consideren necesario suspender su ejecución para garantizar el éxito del Proyecto.
 
 
-CAPÍTULO XV I ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL
+CAPÍTULO XVI ASUNTOS LABORALES Y DE SEGURIDAD INDUSTRIAL
 
 16.1 Personal del Concesionario
 
@@ -4716,7 +4727,7 @@ Será responsabilidad del Concesionario el diseño del programa de higiene y seg
 El Contrato no crea relación alguna de asociación, asociación de riesgo compartido (Joint Venture), sociedad o agencia o relación laboral entre las Partes o entre la ANI los empleados, agentes, proveedores, Contratistas y subcontratistas del Concesionario, ni impone obligación o responsabilidad de índole societaria a ninguna de ellas. Ninguna de las Partes tendrá derecho, facultad o compromiso alguno, ni para actuar en nombre de la otra Parte, ni para ser su agente o representante, ni para comprometerla en forma alguna. Ninguna de las disposiciones del Contrato podrá interpretarse en el sentido de crear una relación distinta entre las Partes a la de la vinculación negocial en los términos del Contrato y de la Ley Aplicable, en particular, lo reglado sobre asociaciones público privadas en la Ley 1508 de 2012. Las Partes no pretenden crear ningún derecho ni otorgar ninguna acción a ningún tercer beneficiario del Contrato.
 
 
-CAPÍTULO XVI I    TERMINACIÓN DEL CONTRATO
+CAPÍTULO XVII TERMINACIÓN DEL CONTRATO
 
 17.1 Ocurrencia
 
@@ -4770,7 +4781,7 @@ El presente Contrato terminará de manera anticipada en los siguientes casos:
 continuarán su ejecución. Si los Prestamistas deciden no continuar con su ejecución se dará inicio a la Etapa de Reversión al Día siguiente a la declaratoria de la Terminación Anticipada del Contrato.
 
 
-CAPÍTULO XVII I   LIQUIDACIÓN DEL CONTRATO
+CAPÍTULO XVIII LIQUIDACIÓN DEL CONTRATO
 
 18.1 Término
 
@@ -5606,7 +5617,7 @@ al Amigable Componedor. Una vez emitida la decisión del Amigable Componedor, lo
 En el evento que la Terminación Anticipada del presente Contrato se dé con ocasión de una de las causales establecidas en el parágrafo 1 del artículo 32 de la Ley 1508 de 2012 (modificado por el artículo 20 de la Ley 1882 de 2018) o cualquier norma que la sustituya, modifique o adicione, se entenderá que los valores de las Acta Semestrales de Cálculo del ARh perderán su firmeza y, por lo tanto, la ANI podrá realizar comentarios, observaciones y/u objeciones sobres estos.
 
 
-CAPÍTULO XI X VARIOS
+CAPÍTULO XIX VARIOS
 
 19.1 Obras Menores
 
@@ -5766,7 +5777,7 @@ Cuando el presente Contrato señale que el Interventor solicita correcciones o a
 
 ### 19.15 Prelación de Documentos
 
-El siguiente será el orden de prelación de los documentos que hacen parte del presente Contrato, el cual hará referencia a lo expresamente regulado en el contenido de cada uno de dichos documentos:
+El siguiente será el orden de prelación de los documentos que hacen parte del presente Contrato, el cual hará referencia a lo expresamente regulado en el contenido de cada uno de dichos documentos. **La Parte Especial PRIMA sobre la Parte General**. Cualquier fórmula de liquidación, retribución o definición económica contenida en esta Parte General (incluyendo variables como FAE, TDI, %RP) se entenderá subordinada a los valores y definiciones específicos establecidos en la Parte Especial.
 
 | Nivel | Documento | Descripción | Archivo |
 |:-----:|:----------|:------------|:--------|
@@ -5774,7 +5785,7 @@ El siguiente será el orden de prelación de los documentos que hacen parte del 
 | **2** | **Parte General** | Segunda jerarquía | `1_Parte_General_v1.0.md` |
 | **3** | Oferta del Concesionario | Propuesta técnica y económica adjudicada | [Según proceso] |
 | **4** | Apéndice Técnico 1 | Alcance del Proyecto | `AT1_Alcance_Proyecto_v1.0.md` |
-| **5** | Apéndice Técnico 9 | Plan de Obras | [Por definir] |
+| **5** | Apéndice Técnico 9 | Plan de Obras | Apendice Tecnico 9 Plan de Obras Autopistas Magdalena Medio.pdf |
 | **6** | Apéndice Técnico 4 | Indicadores de Desempeño | `AT4_Indicadores_v1.0.md` |
 | **7** | Apéndice Técnico 2 | Condiciones de Operación y Mantenimiento | `AT2_Operacion_Mantenimiento_v1.0.md` |
 | **8** | Apéndice Técnico 5 | Interferencia con Redes | `AT5_Interferencia_Redes_v1.0.md` |

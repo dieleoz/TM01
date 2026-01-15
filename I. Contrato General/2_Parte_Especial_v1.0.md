@@ -20,12 +20,13 @@
 |:------|:------|
 | **Tipo de documento** | Parte Especial del Contrato de Concesión |
 | **Concedente** | Agencia Nacional de Infraestructura (ANI) |
-| **Concesionario** | [Por definir en Sección 3.1(b)] |
+| **Concesionario** | Autopista Magdalena Medio S.A.S. |
+
 | **Corredor** | Troncal del Magdalena Medio |
 | **Esquema** | APP (Asociación Público Privada) |
 | **Páginas totales** | ~60 |
 | **Adenda** | Adenda 6 (última versión) |
-| **Fecha** | [Fecha de suscripción] |
+| **Fecha** | [DATO_PENDIENTE] |
 | **Versión** | v1.0 |
 | **Estado** | ✅ Vigente |
 | **Archivo fuente** | PARTE ESPECIAL C1 ADENDA 6 SIN MARCAS.txt |
@@ -64,7 +65,8 @@ Para consultar las **reglas generales** del contrato → Ver [Parte General](1_P
 ## 2. CONTENIDO DEL CONTRATO
 
 
-CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No [VARIABLE] DE [VARIABLE] DEL
+CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP No. 002 DE 2022
+
 Entre:
 
 
@@ -72,7 +74,8 @@ Concedente:
 
 Concesionario: Autopista Magdalena Medio S.A.S.
 
-CONTRATO PARTE ESPECIAL [•] - [•]
+CONTRATO PARTE ESPECIAL
+
 
 REGLAS DE INTERPRETACIÓN DE ESTE DOCUMENTO  4
 TABLA DE REFERENCIAS A LA PARTE GENERAL     5
@@ -122,7 +125,12 @@ REGLAS DE INTERPRETACIÓN DE ESTE DOCUMENTO
 (e)   En el caso en que la Parte Especial modifique el contenido de algún aparte de la Parte General de manera expresa o tácita, se atenderá a lo señalado en la Parte Especial.
 
 
-Sección  de  la Parte General 1.18
+Sección de la Parte General 1.18
+
+Para todos los efectos técnicos, operativos y legales, se aplicarán las siguientes normas actualizadas:
+- **Manual de Señalización**: Manual de Señalización Vial 2024 (o la norma que lo modifique o sustituya). *Nota: En caso de conflicto sobre cantidades (ej. Paneles LED), aplicar Sección 4.11(f) de Parte General.*
+- **Normas Eléctricas**: Reglamento Técnico de Instalaciones Eléctricas (RETIE) actualizado según Resolución 40117 de 2024.
+- **Recaudo e Interoperabilidad**: Resolución 20213040035125 de agosto de 2021 (IP/REV, COLPASS), incluyendo estándares ISO 18000-63 y seguridad AES-256. *Nota: Toda referencia a 'Certificación' de actores se entenderá como 'Habilitación'.*
 
 
 1.19
@@ -866,22 +874,20 @@ La tasa de descuento real (TDI) expresada en términos efectivos mensuales, para
 En el evento de requerirse, el precio de las Obras Menores incluirá el valor de los diseños, adquisición de los Predios, el traslado y/o intervención  de  Redes,  y  las  Compensaciones  Sociales  y Ambientales, necesarios para su ejecución, así como los costos adicionales de la Gestión Predial, Social y/o Ambiental que demuestre el Concesionario o el tercero que se generen con ocasión de la realización de esas Obras Menores.
 Para efectos de este Contrato, el cálculo del valor de los precios unitarios y AIU de las Obras Menores se realizará teniendo en cuenta los Análisis de Precios Unitarios-APU del INVÍAS. Las demás actividades se calcularán teniendo en cuenta los precios del mercado.
 Las Notificaciones a las Partes se deberán realizar en los siguientes lugares:
-a) A la ANI Dirección: Ciudad:
+a) A la ANI Dirección: [DATO_PENDIENTE] Ciudad: [DATO_PENDIENTE]
 
-b) Al Concesionario Dirección: Ciudad:
-Correo Electrónico: [●]
+b) Al Concesionario Dirección: [DATO_PENDIENTE] Ciudad: [DATO_PENDIENTE]
+Correo Electrónico: notificaciones@autopistamagdalenamedio.com.co
+
 
 ASPECTOS GENERALES
 
 
 Identificación de las Partes
 
-(a)   La ANI, representada en este acto por           , identificado con cédula de ciudadanía No.            expedida en     en su calidad de
-de   la   AGENCIA   NACIONAL   DE
-INFRAESTRUCTURA  –  ANI,  nombrado  mediante  y posesionado mediante            -
-(b)   El Concesionario es la sociedad de objeto único                  , identificada  con  NIT         ,  conformada  por
-            ,  sociedad  constituida  bajo  las  leyes  de  Colombia,
-            , representada en este acto por                 , en su calidad de          .
+(a)   La ANI, representada en este acto por  [DATO_PENDIENTE], identificado con cédula de ciudadanía No. [DATO_PENDIENTE] expedida en [DATO_PENDIENTE] en su calidad de [DATO_PENDIENTE] de la AGENCIA NACIONAL DE INFRAESTRUCTURA – ANI, nombrado mediante [DATO_PENDIENTE] y posesionado mediante [DATO_PENDIENTE]
+(b)   El Concesionario es la sociedad de objeto único Autopista Magdalena Medio S.A.S., identificada con NIT [DATO_PENDIENTE], conformada por [DATO_PENDIENTE], sociedad constituida bajo las leyes de Colombia, representada en este acto por [DATO_PENDIENTE], en su calidad de Representante Legal.
+
 
 
 Alcance del Proyecto
@@ -1768,7 +1774,8 @@ Nota (1): Meses contados desde la fecha de inicio
 
 Estructura Tarifaria
 
-(a)   Para efectos de lo dispuesto en la Sección 1.164 de la Parte General, y de acuerdo con lo establecido por la Resolución No. 20213040039935 del 08 de septiembre de 2021, la estructura tarifaria que regirá el Proyecto, sin incluir las tasas correspondientes al Fondo de Seguridad Vial, es la que se relaciona en los literales siguientes.
+(a)   Para efectos de lo dispuesto en la Sección 1.164 de la Parte General, y de acuerdo con lo establecido por la Resolución No. 20213040035125 del 11 de agosto de 2021 (o la norma que la modifique o sustituya), la estructura tarifaria que regirá el Proyecto, sin incluir las tasas correspondientes al Fondo de Seguridad Vial, es la que se relaciona en los literales siguientes.
+
 (b)   A manera de referencia, a continuación, se presentan las tarifas vigentes de las Estaciones de Peaje “Zambito” y “Aguas Negras”, de acuerdo con lo establecido en la Circular Externa No. 001 del 13 de enero de 2021, expedida por el Instituto Nacional de Vías - INVÍAS, expresadas en pesos del Mes de Referencia, sin valor FOSEVI las cuales continuarán vigentes una vez dichas Estaciones entren en operación en el marco del presente Contrato de Concesión, en las condiciones establecidas en la Sección 3.6(a) y 3.6(b) de esta Parte Especial, y durante todo el plazo contractual, conforme se establece en la Sección 4.2(c) siguiente:
 
 Tarifas Vigentes
@@ -2308,10 +2315,10 @@ Aporte a la Subcuenta Aportes ANI 1
 15
 16
 Vigencias en Pesos del Mes de Referencia
-[Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario]
-[Valor ofertado por el adjudicatario]
-[Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario]
-[Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario]
+[DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE]
+[DATO_PENDIENTE]
+[DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE]
+[DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE]
 
 Fecha Máxima del Aporte
 
@@ -2336,7 +2343,7 @@ Aporte a la Subcuenta Aportes ANI 17
 18
 Total
 Vigencias en Pesos del Mes de Referencia
-[Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario] [Valor ofertado por el adjudicatario]
+[DATO_PENDIENTE] [DATO_PENDIENTE] [DATO_PENDIENTE]
 
 Fecha Máxima del Aporte
 
@@ -2383,8 +2390,7 @@ Durante la vigencia del contrato y como parte de las obligaciones a su cargo, el
 Aporte
 
 Aportes anuales
-Monto TRESCIENTOS CINCUENTA Y SEIS MILLONES DE PESOS
-DEL Mes de Referencia ($356,000,000).
+Monto MIL NOVECIENTOS TRES MILLONES QUINIENTOS TREINTA Y CINCO MIL DOSCIENTOS OCHO PESOS DEL Mes de Referencia ($1.903.535.208).
 Fecha Máxima del Aporte
 Dentro de los primeros treinta (30) Días de cada año contados a partir de la constitución del Patrimonio Autónomo.
 
@@ -2842,6 +2848,10 @@ Eventos Generadores de Imposición de Sanciones.
 
 Para efectos de lo previsto en la Sección 10.1(a) de la Parte General, en los eventos en que el Concesionario incurra en algún incumplimiento de sus obligaciones contractuales que no sea susceptible de subsanar o superar y que, por tanto, no proceda la imposición de Multa como mecanismo conminatorio, sin que dicho incumplimiento afecte de manera grave y directa la total ejecución del Contrato de Concesión, la ANI impondrá al Concesionario una Sanción de hasta mil (1.000) salarios mínimos mensuales legales vigentes, teniendo en cuenta los principios de razonabilidad y de proporcionalidad de las penas.
 En estos casos, para dar inicio al respectivo procedimiento administrativo sancionatorio no será procedente el otorgamiento del Plazo de Cura previsto en este Contrato.
+
+6.3 Límite del Valor de las Multas
+El valor acumulado de las Multas que se impongan al Concesionario durante la vigencia del Contrato no podrá superar el dos punto setenta y seis por ciento (2.76%) del Valor del Contrato.
+
 Valor de la Cláusula Penal
 
 (a)   El valor de la Cláusula Penal será el uno punto nueve por ciento (1.9%) del Valor del Contrato, si la Terminación Anticipada del Contrato se presenta dentro del período comprendido entre la fecha de suscripción del Contrato y la fecha de suscripción de la Orden de Inicio de la Fase de Construcción. Dicho valor deberá ser actualizado conforme con la fórmula definida en el numeral 3.9(b) del Contrato Parte General.
@@ -3217,7 +3227,7 @@ Cesión Total
 
 | Versión | Fecha | Descripción | Aprobado por |
 |:-------:|:------|:------------|:-------------|
-| v1.0 | [Fecha suscripción] | Versión inicial Parte Especial (Adenda 6) | ANI / Concesionario |
+| v1.0 | [DATO_PENDIENTE] | Versión inicial Parte Especial (Adenda 6) | ANI / Concesionario |
 | v1.1 | 16/10/2025 | Conversión a Markdown con Metodología Punto 42 | Administrador Contractual EPC |
 
 ---
