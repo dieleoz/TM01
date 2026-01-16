@@ -22,7 +22,7 @@
 |:------|:------|
 | **Sistema** | Energía Eléctrica - Distribución y Respaldo |
 | **Alcance** | 3 subestaciones + 45 transformadores + UPS + generadores |
-| **CAPEX** | **USD $4,832,500** |
+| **CAPEX** | **USD $4,449,400** |
 
 ---
 
@@ -125,7 +125,7 @@
 | Tableros + protecciones | global | - | $1,200,000 |
 | Instalación | global | - | $1,500,000 |
 | Otros | - | - | $740,000 |
-| **TOTAL** | - | - | **$4,832,500** |
+| **TOTAL** | - | - | **$4,449,400** |
 
 ---
 

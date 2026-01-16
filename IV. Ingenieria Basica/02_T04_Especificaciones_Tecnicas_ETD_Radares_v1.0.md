@@ -31,8 +31,8 @@
 | **Nombre del sistema** | ETD (Estaciones de Toma de Datos) + Radares Sancionatorios |
 | **Categoría** | ITS (Intelligent Transportation Systems) - Control de Tráfico |
 | **Código interno** | T04-ETD-RAD-002-v1.0 |
-| **Cantidad total** | **15 unidades** |
-| **CAPEX estimado** | **USD $615,000** (41,000 USD/unidad) |
+| **Cantidad total** | **15 unidades** (13 ETD + 2 Radares) |
+| **CAPEX estimado** | **USD $1,650,000** ($110,000/equipo instalado - Solución Completa) |
 | **Documentos base** | T01 v1.0 MVP, T03 v1.0, Validación v1.0, Layout v1.0 |
 
 ### 1.2 Distinción Funcional
@@ -684,7 +684,7 @@ Pórtico:
 
 **Precio unitario promedio:** $27,284 USD/equipo instalado
 
-> **Nota:** El presupuesto actualizado contempla **16 equipos** (14 ETD + 2 RADAR-ANPR) con un total de $436,548 USD. Los ETD proporcionan monitoreo estadístico y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
+> **Nota:** El presupuesto actualizado contempla **15 equipos** (13 ETD + 2 RADAR-ANPR) con un total de **$1,650,000 USD**. Los ETD proporcionan monitoreo estadístico y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
 
 ### 12.2 Desglose por Tipo (Propuesta Ajustada)
 

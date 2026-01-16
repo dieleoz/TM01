@@ -32,7 +32,7 @@
 | **Código interno** | T04-WIM-005-v1.0 |
 | **Configuración** | **1 estación bidireccional** |
 | **Componentes** | **2 plataformas WIM + 2 plataformas estáticas** |
-| **CAPEX estimado** | **USD $2,286,400** |
+| **CAPEX estimado** | **USD $523,539** |
 | **Documentos base** | T01 v1.1, T03 v1.0, Validación v1.0 |
 
 ### 1.2 Ubicación de la Estación
@@ -398,9 +398,9 @@ Elementos comunes:
 | 12 | Repuestos iniciales | global | 1 | $50,000 | $50,000 |
 | | | | | **SUBTOTAL** | **$1,230,000** |
 | | | | | **Contingencia 10%** | $123,000 |
-| | | | | **TOTAL** | **$1,353,000** |
+| | | | | **TOTAL** | **$523,539** |
 
-> **Nota:** El presupuesto del proyecto contempla $2,286,400 USD. La diferencia puede incluir infraestructura adicional, mejoramiento de accesos, señalización completa del área.
+> **Nota:** El presupuesto se ha alineado a la Ingeniería de Detalle (T05) con un valor de **$523,539 USD**.
 
 ### 8.2 CAPEX por Componente
 
@@ -569,5 +569,5 @@ Elementos comunes:
 **✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
 - Ubicación confirmada: PR4+0100 RN 4513
 - Configuración: 1 estación bidireccional
-- CAPEX mantenido: $2,286,400 USD
+- CAPEX actualizado: $523,539 USD (Alineado T05)
 - Metodología PKD lineal aplicada

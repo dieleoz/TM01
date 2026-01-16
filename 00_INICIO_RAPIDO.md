@@ -163,12 +163,12 @@ El proyecto TM01 Troncal Magdalena está **completamente operativo** con:
 ### Sistemas Validados
 
 - **Postes SOS:** 88 unidades
-- **ETD/RADAR:** 16 equipos
-- **CCTV:** 45 cámaras
-- **PMV:** 12 unidades
+- **ETD/RADAR:** 15 equipos
+- **CCTV:** 30 cámaras
+- **PMV:** 28 unidades
 - **Estaciones Meteorológicas:** 3 unidades
 - **WIM:** 1 estación
-- **Fibra Óptica:** 252 km
+- **Fibra Óptica:** 283 km
 
 ### Presupuesto
 
@@ -261,7 +261,10 @@ Antes de empezar, verifica:
 **Siguiente paso recomendado:** Explora el sistema web en https://dieleoz.github.io/TM01/
 
 ---
+- **Telecomunicaciones (Fibra+Activos):** $7,983,646 USD (293km Backbone + 95 Switches)
+- **Energía (Respaldo+Grid):** $4,449,400 USD (5 Generadores, UPS, Acometidas)
 
-**Última actualización:** 31 de octubre de 2025  
-**Versión:** 4.0  
-**Estado:** ✅ Sistema completo y operativo
+**Última actualización:** 15 de enero de 2026  
+**Versión:** 4.1  
+**Estado:** ✅ **SISTEMA CERTIFICADO (FASE 0.5 PUNTO 42)**
+```

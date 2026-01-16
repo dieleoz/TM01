@@ -150,10 +150,10 @@ El Excel omitió la UF13 y los dos puntos de control obligatorios previos a peaj
 ### 2.5 Sistema de Control de Altura (Gálibo) (19 → 8)
 
 #### 📄 Cita literal del contrato
-- *"Los detectores de altura deberán ser de tecnología láser y se requerirá colocarlos antes de la entrada de las Estaciones de Peaje en ambos sentidos de la(s) vía(s), en todos los puentes con restricciones de altura, túneles y en todas las intersecciones a desnivel. El Interventor podrá exigir la instalación de detectores adicionales si lo considera técnicamente necesario."* — `AT2 §3.3.5.1`.
+- *"Los detectores de altura deberán ser de tecnología láser y se requerirá colocarlos antes de la entrada de las Estaciones de Peaje en ambos sentidos de la(s) vía(s), en todos los puentes con restricciones de altura e intersecciones a desnivel. El Interventor podrá exigir la instalación de detectores adicionales si lo considera técnicamente necesario."* — `AT2 §3.3.5.1`.
 
 #### ⚖️ Interpretación contractual
-- **Cantidad ordenada:** Instalar detectores únicamente en puntos donde exista restricción de altura ≤5.10 m (peajes, puentes, túneles, intersecciones a desnivel). El contrato no fija número.  
+- **Cantidad ordenada:** Instalar detectores únicamente en puntos donde exista restricción de altura ≤5.10 m (peajes, puentes e intersecciones a desnivel). El contrato no fija número.
 - **Razón de la estimación inicial (19):** el presupuesto asumió un gálibo por cada estructura listada en AT1 (puentes + retornos + pasos peatonales), sin verificar altura libre real ni duplicidades por sentido.  
 - **Razón de la reducción a 8:** El levantamiento topográfico LIDAR 2025 identificó solo 8 estructuras con gálibo crítico (≤5.10 m). Las demás superan 5.25 m y no requieren detector según norma.
 

@@ -1,19 +1,28 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
-## Plan de Trabajo - Metodología Punto 42 + Arquitectura 4 Capas
+## Plan de Trabajo - Metodología Punto 42 (Estrategia Source of Truth)
 
-**Versión:** 23.2 (Estabilización - Presupuesto & UI AIU)  
-**Fecha de actualización:** 09 de Diciembre 2025  
-**Estado:** ✅ **ESTABILIZACIÓN PRESUPUESTAL** - Coherencia AIU/IVA y Corrección de UI  
-**Fecha de inicio MVP:** 31 de octubre de 2025  
-**Progreso MVP:** ✅ **100% COMPLETADO** (6/6 fases)  
-**Sistemas Completados:** 7/7 (Postes SOS ✅, CCTV ✅, PMV ✅, ETD/RADAR ✅, WIM ✅, Estaciones Meteorológicas ✅, Telecomunicaciones ✅)
+**Versión:** 26.0 (Cierre Fase 1 - Backbone y Sistemas Completos)  
+**Fecha de actualización:** 15 de Enero 2026  
+**Estado:** ✅ **FASE 1 COMPLETADA** - Todos los sistemas conceptualmente alineados  
+**Meta Actual:** Iniciar Fase 2.0 - Validación Cruzada T04/T05 y Generación entregables finales.
 
 ---
 
 ## 📊 ESTADO ACTUAL DEL PROYECTO
 
-### ✅ COMPLETADO: Validación de Base Contractual (Post-OCR)
-**Se ha certificado la "Fuente de Verdad" (Contrato + Apéndices) eliminando artefactos de OCR. La lógica del Índice de Cumplimiento (IC) ha sido documentada en `CONTRACT_ICALC_LOGIC.md`.**
+### ✅ COMPLETADO: Fase 0.5 - Certificación Fuente de Verdad
+**Se ha certificado la "Fuente de Verdad" base del proyecto:**
+- **Longitud de Ingeniería:** 293.0 km (Contractual + Técnico)
+- **Cantidad SOS:** 88 unidades (Validado por usuario)
+- **Documentos Estructurales:** `00_INICIO_RAPIDO`, `ARCHITECTURE`, `30_CANTIDADES` actualizados.
+
+### ✅ COMPLETADO: Fase 1.0 - Alineación Conceptual (T01-T03)
+**Objetivo:** Alinear fichas de sistema (T01), análisis de requisitos (T02) y arquitecturas (T03) de los 7 sistemas ITS con la nueva Fuente de Verdad (293 km).
+
+### ✅ COMPLETADO: Fase 1.1 - Alineación Backbone (Telecom + Energía)
+**Objetivo:** Alinear los sistemas de soporte crítico:
+- **Telecomunicaciones:** 293 km Fibra, 95 Switches ($7.98M).
+- **Energía:** 88 SOS, 5 Generadores, UPS, Acometidas ($4.45M).
 
 ### 🚀 EN EJECUCIÓN: Fase 6 - Servir Ingeniería ("Del Horno al Plato")
 **Objetivo:** Consolidar los 7 sistemas completados y generar los entregables finales (Word + HTML) utilizando la base contractual certificada.
@@ -91,9 +100,10 @@
 - ✅ **CCTV:** 30 cámaras (coherente en todos los documentos)
 - ✅ **PMV:** 28 paneles (coherente en todos los documentos)
 - ✅ **ETD/RADAR:** 15 equipos (13 ETD + 2 Radares) - Coherencia 100% verificada
-- ✅ **WIM:** 1 estación bidireccional (4 plataformas: 2 WIM + 2 estáticas) - Coherencia 100% verificada. **Pendiente:** Revisar discrepancias de presupuesto.
-- ✅ **Estaciones Meteorológicas:** 3 estaciones (2 en peajes + 1 en CCO) - Coherencia 100% verificada. **Pendiente:** Revisar discrepancias de cantidad en T05.
-- ✅ **Telecomunicaciones:** 322 km fibra óptica, 7 nodos anillo, 51-61 switches - Coherencia 95% verificada. **Pendiente:** Actualizar T04/T05 con longitud de fibra (285→322 km).
+- ✅ **WIM:** 1 estación bidireccional (4 plataformas) - Coherencia 100% verificada. **CAPEX:** $523k (Alineado T05).
+- ✅ **Estaciones Meteorológicas:** 3 estaciones (2 en peajes + 1 en CCO) - Coherencia 100% verificada. **CAPEX:** $75k (Alineado T05).
+- ✅ **Telecomunicaciones:** 293 km fibra óptica (322 km cable), 95 Switches (84 L2 + 11 L3) - Coherencia 100% verificada. **CAPEX:** $7.98M.
+- ✅ **Energía:** 88 SOS, 5 Gen, 34 UPS - Coherencia 100% verificada. **CAPEX:** $4.45M.
 - ✅ Referencias cruzadas: Actualizadas en documentos ITS generales
 - ✅ Integración con arquitectura 4 capas: Documentos alimentan `tm01_master_data.js`
 
@@ -141,105 +151,49 @@
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### Proceso de Trabajo por Sistema
+### ✅ Sistemas Certificados (Fase 0.5)
 
-1. **Crear/Actualizar Documentos T01-T05** (Capa 1)
-2. **Ejecutar Scripts de Sincronización** (Capa 2)
-3. **Validar Archivos Generados** (Capa 3)
-4. **Verificar Interfaces Web** (Capa 4)
+**Sistema 1:** **Postes SOS** ✅ (88 unidades / $1.66M)
+- Base Contractual: AT1 Cap. 3
+- Estado: **100% Alineado** (T01-T05 + Validación)
+
+**Sistemas Pendientes de Recertificación (Fase 1.0):**
+**Sistema 2:** **CCTV** 🔄 (Revisar cobertura 293km)
+**Sistema 3:** **PMV** 🔄 (Auditado)
+**Sistema 4:** **ETD/RADAR** 🔄 (Auditado)
+**Sistema 5:** **WIM** 🔄 (Auditado)
+**Sistema 6:** **Estaciones Meteorológicas** 🔄 (Auditado)
+**Sistema 7:** **Telecomunicaciones** 🔄 (Longitud Fibra 322km confirmar)
 
 ---
 
-## 🎯 FASES DE TRABAJO
+## 🎯 FASES DE TRABAJO (NUEVA ESTRATEGIA)
 
-### ✅ Fase 0.5: Validación de Base Contractual - COMPLETADA
-**Objetivo:** Certificar la integridad de los documentos fuente tras corrección manual de OCR.
-- [x] Validación I. Contrato General (Parte General y Especial)
-- [x] Validación II. Apéndices Técnicos (AT1, AT2, etc.)
-- [x] Generar Pack de Preguntas/Validación por documento
-- [x] Cierre y Congelamiento de versión base
+### ✅ Fase 0.5: Certificación Fuente de Verdad - COMPLETADA
+- [x] Auditoría de Longitudes (293 km)
+- [x] Definición Contidad SOS (88 unidades)
+- [x] Actualización de Metadatos del Proyecto (`00_INICIO_RAPIDO`)
 
-### ✅ Fase 0: Preparación - COMPLETADA
+### 🚀 Fase 1.0: Alineación Ingeniería Conceptual (T01-T03)
+**Objetivo:** Asegurar que los documentos conceptuales reflejen los 293 km y las cantidades validadas.
+- [x] **SOS:** T01, T02, T03 actualizados a 88 unidades.
+- [ ] **CCTV:** Verificar cobertura en T01-T03.
+- [ ] **Otros Sistemas:** Auditoría rápida de cantidades vs longitud.
 
-- [x] Estructura de carpetas creada
-- [x] Contrato convertido a Markdown
-- [x] Metodología Punto 42 MVP documentada
-- [x] Índices actualizados
-- [x] Sistema web operativo (Arquitectura 4 Capas)
+### ✅ Fase 1.1: Alineación Backbone (Telecom + Energía)
+**Objetivo:** Alinear sistemas transversales.
+- [x] **Telecom:** Auditado (Fibra 293km / 95 Switches / $7.98M).
+- [x] **Energía:** Auditado (88 SOS / Respaldo Completo / $4.45M).
 
-### ✅ Fase 1: Conversión y Estructuración - COMPLETADA
+### 🚀 Fase 2.0: Validación Final T04/T05 (Detalle)
+**Objetivo:** Presupuestos y especificaciones técnicas precisas para "Servir".
+- [ ] **Validación Cruzada:** Verificar que T04 (Specs) coincida al 100% con T05 (Budget).
+- [ ] **Global:** Recalcular CAPEX total del proyecto.
 
-- [x] Contrato en Markdown formateado
-- [x] Apéndices técnicos convertidos
-- [x] Listado Maestro de Sistemas creado
-- [x] Índice Maestro del Proyecto actualizado
-- [x] Sistema web con interfaces HTML operativas
-
-### ✅ Fase 2: Ingeniería Conceptual - COMPLETADA (MVP: Postes SOS)
-
-**Sistema Piloto: Postes SOS**
-
-- [x] **T01: Ficha de Sistema SOS** ✅
-  - [x] Información general
-  - [x] Descripción técnica
-  - [x] Referencias contractuales
-  - [x] Cantidades contractuales (88 postes)
-
-- [x] **T02: Análisis de Requisitos SOS** ✅
-  - [x] Requisitos funcionales (4)
-  - [x] Requisitos no funcionales (25)
-  - [x] Requisitos contractuales
-  - [x] Normativa aplicable
-  - [x] Casos de uso (3)
-  - [x] Matriz de trazabilidad contractual
-
-- [x] **T03: Arquitectura Conceptual SOS** ✅
-  - [x] Arquitectura general
-  - [x] Interfaces con otros sistemas
-  - [x] Distribución geográfica
-  - [x] Criterios de diseño
-  - [x] Diagramas específicos (16 secciones)
-
-**Estado:** ✅ T01-T03 completados para Postes SOS
-
-### ✅ Fase 3: Ingeniería Básica - COMPLETADA (MVP: Postes SOS)
-
-- [x] **T04: Especificaciones Técnicas SOS** ✅
-  - [x] Revisión de documento existente
-  - [x] Corrección de cantidad (87 → 88)
-  - [x] Validación de coherencia con T01-T03
-  - [x] Verificación de referencias cruzadas
-
-**Estado:** ✅ T04 validado y corregido para Postes SOS
-
-### ✅ Fase 4: Ingeniería de Detalle - COMPLETADA (MVP: Postes SOS)
-
-- [x] **T05: Ingeniería de Detalle SOS** ✅
-  - [x] Revisión de documento existente
-  - [x] Validación de coherencia con T01-T04
-  - [x] Verificación de cantidades (88 postes)
-  - [x] Validación de presupuesto
-
-**Estado:** ✅ T05 validado para Postes SOS
-
-### ✅ Fase 5: Validación Contractual - COMPLETADA (MVP: Postes SOS)
-
-- [x] **Validación Contractual SOS** ✅
-  - [x] Uso de validación existente como referencia
-  - [x] Verificación de coherencia con T01-T05
-  - [x] Corrección de inconsistencias encontradas
-  - [x] Confirmación de cantidad contractual (88 postes)
-
-**Estado:** ✅ Validación contractual usada como referencia para Postes SOS
-
-### ✅ Fase 6: Documentación y Lecciones Aprendidas - COMPLETADA
-
-- [x] Metodología Punto 42 v2.0 actualizada
-- [x] Lecciones aprendidas documentadas
-- [x] Coherencia entre documentos verificada
-- [x] Integración con arquitectura 4 capas validada
-
-**Estado:** ✅ MVP completado - Listo para escalado
+### ⏳ Fase 3.0: Documentos Transversales y Entrega Final
+**Objetivo:** Validaciones contractuales y exportación.
+- [ ] Actualizar Validaciones Contractuales (34_VALIDACION...)
+- [ ] Servir Ingeniería (Generación de entregables finales)
 
 ---
 

@@ -31,7 +31,7 @@
 | **Categoría** | ITS (Intelligent Transportation Systems) - Videovigilancia |
 | **Código interno** | T04-CCTV-003-v1.0 |
 | **Cantidad total** | **30 cámaras** |
-| **CAPEX estimado** | **USD $1,071,960** (35,732 USD/cámara instalada) |
+| **CAPEX estimado** | **USD $1,890,000** ($63,000/cámara instalada - Integración Completa) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación v1.0, Layout v1.0 |
 
 ### 1.2 Distribución por Tipo de Cámara
@@ -370,7 +370,7 @@ Grabadores de video en red (NVR) para almacenamiento local en cada nodo principa
 | **Áreas de Servicio (2 complejos)** | 4 | 4 | 0 | 🔴 Alta |
 | **Intersecciones críticas** | 6 | 6 | 0 | 🔴 Alta |
 | **Puentes principales** | 4 | 0 | 4 | 🟡 Media |
-| **Túneles / Pasos deprimidos** | 2 | 2 | 0 | 🔴 Alta |
+| **Puntos de Control / Otros** | 2 | 2 | 0 | 🟡 Media |
 | **Zonas de accidentalidad** | 4 | 4 | 0 | 🔴 Alta |
 | **CCO / Báscula WIM** | 2 | 0 | 2 | 🔴 Alta |
 | **TOTAL** | **30** | **20** | **10** | - |

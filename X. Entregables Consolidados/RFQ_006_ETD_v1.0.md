@@ -13,7 +13,7 @@
 
 | Campo | Valor |
 |:------|:------|
-| **Longitud corredor** | 259.6 km |
+| **Longitud corredor** | 293 km |
 | **Unidades Funcionales (UF)** | 13 UFs (cada una requiere medición de velocidad promedio) |
 | **Tipo de proyecto** | Concesión vial 4G |
 | **Cliente final** | ANI |

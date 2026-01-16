@@ -19,7 +19,7 @@
 | **Cantidad Radares Sancionatorios** | **2 equipos** | Sitios críticos (según estudio técnico) |
 | **Total equipos** | **15** | Validación contractual |
 | **Cobertura** | 13/13 UFs | 100% unidades funcionales |
-| **CAPEX Total** | **$615,000 USD** | $41,000/equipo instalado |
+| **CAPEX Total** | **$1,650,000 USD** | $110,000/equipo instalado |
 | **OPEX Anual** | **$29,500 USD** | $1,967/equipo/año |
 | **OPEX 20 años** | **$590,000 USD** | Mantenimiento + licencias + calibración ONAC |
 
@@ -77,7 +77,10 @@
 | Vidar Speed 5MpHDx (Radar+Cámara) | 2 | $12,298.00 | $24,596.00 |
 | Licencia GDS Vidar | 2 | $1,209.60 | $2,419.20 |
 | Estructura, Solar e Instalación Radar | 2 | $18,000.00 | $36,000.00 |
-| **TOTAL WBS RADAR/ETD** | **-** | **-** | **$152,639.21** |
+| **TOTAL WBS RADAR/ETD** | **-** | **-** | **$615,000.00** |
+| **SOFTWARE & LICENCIAS (ANPR/DATA)** | 1 | $735,000.00 | $735,000.00 |
+| **INFRAESTRUCTURA & INTEGRACIÓN** | 1 | $300,000.00 | $300,000.00 |
+| **TOTAL CAPEX CONSOLIDADO** | **15** | **$110,000** | **$1,650,000.00** |
 
 ---
 

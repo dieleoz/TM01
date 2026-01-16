@@ -25,7 +25,7 @@
 | **Total Switches L3** | 11 unidades (7 nodos×1 + 2 STACKs×2) | Core de red |
 | **Firewalls** | 2 unidades | Alta disponibilidad en CCO |
 | **Nodos L3** | 7 ubicaciones | CCO, 2 Peajes, 2 AS, 2 Bunkers |
-| **Anillo troncal** | 283 km fibra | Cerrado, redundante |
+| **Anillo troncal** | 293 km fibra | Cerrado, redundante |
 | **Regla crítica 80 km** | ✅ 100% cumplimiento | SFP 10G-ZR validados |
 | **CAPEX Total L3** | **$139,326 USD** | Switches + Firewalls + SFPs |
 | **Stock Repuestos** | **$30,370 USD** | 25% equipos críticos |
@@ -545,7 +545,7 @@ interface TenGigabitEthernet1/1/2
 | **CCO → ITS** | VLAN 1 | VLANs 10-50 | ALLOW (monitoreo) |
 | **ITS → CCO** | VLANs 10-50 | VLAN 1 | ALLOW (datos) |
 | **ITS → Internet** | VLANs 10-50 | WAN | DENY (salvo excepciones) |
-| **VPN ANI** | WAN (VPN) | VLAN 1 | ALLOW (túnel IPsec) |
+| **VPN ANI** | WAN (VPN) | VLAN 1 | ALLOW (conexión segura) |
 
 ---
 

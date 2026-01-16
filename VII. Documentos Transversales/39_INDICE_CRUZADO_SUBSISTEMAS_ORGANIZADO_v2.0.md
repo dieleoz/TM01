@@ -92,7 +92,7 @@ Cada subsistema cuenta con:
 #### 📊 Datos Contractuales:
 - **Cantidad:** 25 unidades (estimación preliminar)
 - **Base Legal:** AT2 §3.3.4.6 "Sistemas de Control de Altura"
-- **Criterio:** Puntos críticos (peajes, puentes, túneles)
+- **Criterio:** Puntos críticos (peajes, puentes, intersecciones)
 - **Costo Estimado:** $4,300,000,000 COP
 - **Distribución:** Estratégica en infraestructura crítica
 

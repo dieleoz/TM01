@@ -46,7 +46,7 @@ El contrato **NO especifica cantidades exactas** para:
 | **PMV Adicional** | Solo exige mínimo en peajes | ⚠️ Adicionales a criterio técnico |
 | **Áreas de Servicio Adicionales** | "Como mínimo adecuar 1 existente" | ⚠️ NO exige construir adicionales |
 | **Estaciones de Pesaje Adicionales** | "Como mínimo adecuar 1 existente" | ⚠️ NO exige construir adicionales |
-| **Detectores de Gálibo** | "Antes de peajes, puentes con restricción, túneles" | ⚠️ Contar puentes con restricción |
+| **Detectores de Gálibo** | "Antes de peajes, puentes con restricción e intersecciones" | ⚠️ Contar puentes con restricción |
 | **Estaciones Meteorológicas** | "Según Res. 546/2018 + IDEAM" | ✅ Remite a normativa externa |
 | **Radares de Velocidad** | Menciona existencia, no cantidad | ⚠️ A criterio técnico |
 

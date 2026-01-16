@@ -947,18 +947,6 @@ Sin embargo, si son probadas y/o puestas en operación o recibidas por el propie
 43
 
 Si se trata de partidas usadas, el seguro por las mismas terminará, sin embargo, inmediatamente en el momento de comenzar las operaciones de pruebas.
-5-  Endoso 101.  Condiciones Especiales relativas a la Construcción de Túneles y Galerías así como de Obras o Instalaciones Subterráneas Provisionales o Permanentes
-
-Queda entendido y convenido que, sujeto a los términos, exclusiones, cláusulas y condiciones contenidos en la Póliza o a ella endosados, LA ASEGURADORA no indemnizará a EL ASEGURADO los costes que se originen por:
-- los cambios en el método de construcción o modificaciones que sean necesarias a causa de condiciones geológicas imprevistas u otros impedimentos,
-
-- las medidas que sean necesarias para mejorar o estabilizar las condiciones del subsuelo o para impermeabilizar el suelo contra la penetración de agua, a no ser que se trate de medidas necesarias en orden a subsanar pérdidas o daños indemnizables,
-- la retirada de material excavado o de excavación excesiva que sobrepase la sección transversal teórica y/o el relleno de huecos que de ello se deriven,
-- medidas relativas al desagüe de fundación, a no ser que sean necesarias para subsanar pérdidas o daños indemnizables,
-
-- pérdidas o daños por fallar el desagüe de fundación, si hubiera sido posible prevenir tales pérdidas o daños mediante reservas suficientes,
-
-- el abandono o salvamento de máquinas perforadoras de túneles,
 
 - la pérdida de bentonita, suspensiones u otros agentes o sustancias que se empleen para apoyar la excavación o como agente de tratamiento del suelo.
 En caso de ocurrir pérdidas o daños indemnizables, la indemnización máxima a resarcir por la presente póliza estará delimitada a los costes a desembolsar para restituir el bien asegurado en el estándar o estado técnico que tuviera inmediatamente antes de ocurrir el siniestro. Sin embargo, la indemnización máxima no deberá ser superior al porcentaje abajo indicado del coste original medio por metro de coste de construcción del recinto directamente afectado.

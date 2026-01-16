@@ -1314,8 +1314,8 @@ Método de Medida
 
 
 Se considerará que un Kilómetro se encuentra disponible cuando resulta posible la Circulación de vehículos de todas las categorías a lo largo de la totalidad del kilómetro.
-No se consideran interrupciones de la disponibilidad de la vía aquellas generadas por interrupciones en la circulación de vehículos derivadas de la indisponibilidad de túneles, y puentes.
-No se consideran interrupciones a la disponibilidad de la vía aquellos eventos en los que la circulación de vehículos se  interrumpe  por  Eventos  Eximentes  de Responsabilidad.
+No se consideran interrupciones de la disponibilidad de la vía aquellas generadas por interrupciones en la circulación de vehículos derivadas de la indisponibilidad de puentes y estructuras.
+No se consideran interrupciones a la disponibilidad de la vía aquellos eventos en los que la circulación de vehículos se interrumpe por Eventos Eximentes de Responsabilidad.
 Conteo mensual del número de víctimas fatales en el Corredor del Proyecto, incluyendo peatones atropellados, como consecuencia de accidentes de tránsito ocurridos dentro del Corredor del Proyecto
 
 Este cálculo se efectuará solamente en los tramos críticos establecidos conjuntamente entre el Concesionario y la Interventoría identificados mediante el Análisis de Concentración de Accidentes (ACTA) establecido en el Apéndice Técnico 3. Índice de Mortalidad Im (mes i) = N° víctimas fatales en tramos críticos * 100.000 / (Tráfico durante el mes (estación de peaje con menor tráfico) x Longitud de la Concesión (km))
@@ -2331,12 +2331,11 @@ Donde:
 
 Kmc Kmt
 R
-Pc Pt Ic It Tc Tt Ec Et Ac At
+Pc Pt Ic It Ec Et Ac At
 Kilómetros, vía y ciclorruta, en los que se ha superado el Valor de Aceptación Kilómetros Totales, vía y ciclorruta, de la Unidad Funcional
 Resultado del Indicador. Será igual a cero cuando se incumpla el Indicador y será 1 en caso de cumplimiento.
 Numero de Puentes y Estructuras en los que se ha superado el Valor de Aceptación Numero de Puentes y Estructuras totales de la Unidad Funcional
 Incidentes atendidos en los tiempos previstos en los Indicadores. Incidentes totales mensuales
-Numero de túneles que han superado el Valor de Aceptación Numero de túneles Totales de la Unidad Funcional
 Eventos atendidos en los tiempos previstos en los Indicadores. Eventos totales mensuales
 Accidentes atendidos en los tiempos previstos en los Indicadores. Accidentes totales
 

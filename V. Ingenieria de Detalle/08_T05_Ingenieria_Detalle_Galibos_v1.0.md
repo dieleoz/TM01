@@ -290,7 +290,7 @@
 | **OPEX (20 años)** | $96,000 | 35.9% |
 | **TOTAL 20 AÑOS** | **$267,760** | **100%** |
 
-**CAPEX/km:** $171,760 / 259.6 km = **$662 USD/km** (8 puntos críticos)
+**CAPEX/km:** $171,760 / 293 km = **$586 USD/km** (8 puntos críticos)
 
 ---
 

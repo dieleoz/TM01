@@ -22,7 +22,7 @@
 |:------|:------|
 | **Sistema** | Estaciones Meteorológicas |
 | **Cantidad** | **3 Davis Pro2** (2 peajes + 1 CCO) |
-| **CAPEX** | **COP $19.5M** (~USD $4,875) |
+| **CAPEX** | **USD $75,000** |
 | **Función** | Informar condiciones meteorológicas al CCO |
 
 ---
@@ -100,7 +100,7 @@
 | Davis Pro2 Plus | 3 | $15,000,000 |
 | Instalación | 3 | $2,250,000 |
 | Software integración | 1 | $2,250,000 |
-| **TOTAL** | - | **$19,500,000** |
+| **TOTAL** | - | **$75,000 USD** |
 
 ---
 
@@ -111,5 +111,5 @@
 **✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
 - Cantidad actualizada: 3 estaciones meteorológicas
 - Ubicaciones: 2 peajes + 1 CCO La Lizama PK 4+300
-- CAPEX actualizado: COP $19.5M (~USD $4,875)
+- CAPEX actualizado: $75,000 USD
 - Metodología PKD lineal aplicada

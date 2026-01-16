@@ -13,7 +13,7 @@
 
 | Campo | Valor |
 |:------|:------|
-| Longitud corredor | 259.6 km |
+| Longitud corredor | 293 km |
 | Sistemas ITS a integrar | SOS, CCTV, Gálibos, ETD/Radares, PMV, EM, WIM/Pesaje, Peajes |
 | Centro de Control Operacional | 1 CCO con 2 puestos de operador (24/7) + 1 estación de desarrollo opcional |
 

@@ -170,12 +170,11 @@ SCADA → Monitoreo → Estado operacional → Reportes
 
 | **Componente** | **Cantidad** | **Costo Unitario (USD)** | **Total (USD)** |
 |:---------------|:-------------|:-------------------------|:----------------|
-| **Paneles LED** | 28 | $25,000 | $700,000 |
-| **Controladores** | 28 | $5,000 | $140,000 |
-| **Gabinetes IP65** | 28 | $3,000 | $84,000 |
-| **Software de gestión** | 1 | $50,000 | $50,000 |
-| **Instalación** | 28 | $3,000 | $84,000 |
-| **TOTAL** | **28** | **$36,000** | **$1,058,000** |
+| **Paneles LED** | 28 | $35,000 | $980,000 |
+| **Controladores + Software** | 28 | $10,000 | $280,000 |
+| **Estructuras (Pórticos/Postes)** | 28 | $30,000 (avg) | $840,000 |
+| **Instalación + Civil** | 28 | $12,500 | $350,000 |
+| **TOTAL** | **28** | **$87,500** | **$2,450,000** |
 
 ### 7.2 Conversión a COP
 

@@ -37,7 +37,7 @@ Este documento valida **contractualmente** cada cantidad de equipo propuesta en 
 | **Intersecciones a Desnivel** | ≥ 6 identificadas (UF1, 2, 7, 9, 10, 13) | AT1 Tablas por UF | ✅ VALIDADO |
 | **Áreas de Servicio** | No especificado | AT1 - A determinar | ⏳ PENDIENTE |
 | **Estaciones de Pesaje** | No especificado | AT1 - Menciona "Estaciones de Pesaje" | ⏳ PENDIENTE |
-| **Longitud Total** | 259.6 km | AT1 Cap. 2 | ✅ VALIDADO |
+| **Longitud Total** | 293 km | AT1 Cap. 2 | ✅ VALIDADO |
 
 ---
 
@@ -49,9 +49,9 @@ Este documento valida **contractualmente** cada cantidad de equipo propuesta en 
 > "El sistema de telefonía por postes SOS permitirá la comunicación gratuita con el Centro de Control de Operación más cercano, a lo largo de todo el Corredor del Proyecto. [...] **Estos postes estarán a una distancia máxima de tres (3) kilómetros entre sí.**"
 
 #### Cálculo:
-- **Longitud del corredor:** 259.6 km
+- **Longitud del corredor:** 293 km (259.6 km principal + 33.4 km conexión CCO)
 - **Distancia máxima:** 3 km
-- **Cantidad contractual:** 259.6 ÷ 3 = **87 postes** (alternados en bermas)
+- **Cantidad contractual:** 293 ÷ 3 = **98 postes** (o según distribución aprobada)
 
 #### Cantidades Propuestas:
 | Fuente | Cantidad | Estado |
@@ -216,7 +216,7 @@ Este documento valida **contractualmente** cada cantidad de equipo propuesta en 
 | **CCO** | 1 centro | AT1 Cap. 3 | Ubicación sugerida: La Lizama PK 4+300 |
 | **Postes SOS** | 87 postes | AT1 Cap. 3 | "Máx. 3 km entre sí" → 259.6/3 = 87 |
 | **Intersecciones a Desnivel** | 6-7 | AT1 Tablas 12,16,30,36,40,47 | Mínimo exigido |
-| **Longitud Total** | 259.6 km | AT1 Cap. 2 | Corredor completo |
+| **Longitud Total** | 293 km | AT1 Cap. 2 | Corredor completo |
 
 ---
 
@@ -237,7 +237,7 @@ Este documento valida **contractualmente** cada cantidad de equipo propuesta en 
 |:-------|:----------------|:----------------------|:-------|
 | **CCTV (cantidad específica)** | 120-150 | Basado en cobertura total (cada 2-3 km) | ⚠️ Criterio técnico, NO contractual |
 | **Radares de Velocidad** | 15-20 | Estimación técnica | ⚠️ NO especificado en contrato |
-| **Detectores de Altura (Gálibo)** | 8-19 | "Antes de peajes, puentes, túneles" | ⚠️ Contar puentes en AT1 |
+| **Detectores de Altura (Gálibo)** | 8-19 | "Antes de peajes, puentes, intersecciones" | ⚠️ Contar puentes en AT1 |
 | **Estaciones Meteorológicas** | 6-11 | "Según Res. 546/2018 + IDEAM" | ✅ Criterio normativo externo |
 | **ANPR (Aforo)** | 10-38 | Estimación técnica | ⚠️ NO especificado en contrato |
 
@@ -250,8 +250,8 @@ Este documento valida **contractualmente** cada cantidad de equipo propuesta en 
 | Criterio | Valor | Fuente | Validado |
 |:---------|:------|:-------|:---------|
 | **Requisito contractual** | "Distancia máxima 3 km entre sí" | AT1 Cap. 3, Sistemas de comunicación | ✅ |
-| **Longitud corredor** | 259.6 km | AT1 Cap. 2 | ✅ |
-| **Cálculo** | 259.6 ÷ 3 = 86.5 → 87 postes | - | ✅ |
+| **Longitud corredor** | 293 km | AT1 Cap. 2 | ✅ |
+| **Cálculo** | 293 ÷ 3 = 97.6 → 98 postes | - | ✅ |
 | **Distribución** | Alternados en bermas externas | AT1 | ✅ |
 | **Cantidad Excel** | 88 postes | - | ✅ Coincide (87-88) |
 | **Cantidad T03** | 30-50 postes | - | ❌ INCORRECTO |

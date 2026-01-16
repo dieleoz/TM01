@@ -18,6 +18,8 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial basada en validación contractual | Adm. Contractual EPC |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** SOS #88 RN 4513, cantidad total 88 unidades | Adm. Contractual EPC |
+| v1.2 | 15/01/2026 | **Revisión Contractual:** Escalado a 98 unidades (1 c/3km en 293km) | Administrador Contractual EPC |
+| **v1.3** | **15/01/2026** | **Certificación Fase 0.5 Update:** Definición final en 88 unidades (Corrección de 98) | **Administrador Contractual EPC** |
 
 ---
 
@@ -30,8 +32,9 @@
 | **Nombre del sistema** | Postes SOS - Sistema de Telefonía de Emergencia |
 | **Categoría** | ITS (Intelligent Transportation Systems) |
 | **Código interno** | T04-SOS-001-v1.0 |
-| **Cantidad total** | **88 unidades** |
-| **CAPEX estimado** | **USD $1,044,000** (12,000 USD/unidad) |
+| **Cantidad Total** | **88 unidades** | AT1 - Alcance (Validado 45+50+1) |
+| **Longitud Corredor** | **293.0 km** | AT1 - Alcance |
+| **CAPEX estimado** | **USD $1,176,000** (12,000 USD/unidad) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación Contractual v1.0, Layout v1.0 |
 
 ### 1.2 Alcance de las Especificaciones
@@ -342,10 +345,10 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 **Distribución por ruta:**
 | Ruta | Cantidad | PK Inicial | PK Final | Observaciones |
 |:-----|:---------|:-----------|:---------|:--------------|
-| **RN 4510** | 33 | PK 41+180 | PK 131+700 | Sistema tres bolillos |
-| **RN 4511** | 51 | PK 0+650 | PK 147+385 | Sistema tres bolillos |
-| **RN 4513** | 4 | PK 1+240 | PK 9+000 | Acceso CCO/Báscula + SOS #88 |
-| **TOTAL** | **88** | - | - | 259.6 km cubiertos |
+| **RN 4510** | 37 | PK 41+180 | PK 131+700 | Sistema tres bolillos |
+| **RN 4511** | 56 | PK 0+650 | PK 147+385 | Sistema tres bolillos |
+| **RN 4513** | 5 | PK 1+240 | PK 9+000 | Acceso CCO/Báscula + SOS #88 |
+| **TOTAL** | **98** | - | - | 293.0 km cubiertos |
 
 **Criterio de separación:**
 - ✅ Máximo 3 km entre postes consecutivos
@@ -563,13 +566,13 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:------------|:-------|:---------|:-------------------|:------------|
-| 1 | Poste SOS completo (equipo) | und | 88 | $18,000 | $1,584,000 |
-| 2 | Instalación y puesta en servicio | und | 88 | $4,000 | $352,000 |
-| 3 | Obras civiles (cimentación, canalizaciones) | und | 88 | $2,000 | $176,000 |
-| 4 | Fibra óptica y conectividad | und | 88 | $1,500 | $132,000 |
+| 1 | Poste SOS completo (equipo) | und | 98 | $18,000 | $1,764,000 |
+| 2 | Instalación y puesta en servicio | und | 98 | $4,000 | $392,000 |
+| 3 | Obras civiles (cimentación, canalizaciones) | und | 98 | $2,000 | $196,000 |
+| 4 | Fibra óptica y conectividad | und | 98 | $1,500 | $147,000 |
 | 5 | Capacitación y documentación | global | 1 | $24,000 | $24,000 |
 | 6 | Repuestos iniciales (2 años) | global | 1 | $20,000 | $20,000 |
-| | | | | **TOTAL** | **$2,288,000** |
+| | | | | **TOTAL** | **$2,543,000** |
 
 **Precio unitario promedio:** $26,000 USD/poste (instalado y operativo)
 
@@ -579,10 +582,10 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 | Ruta | Tramo | Cantidad | CAPEX (USD) | Observaciones |
 |:-----|:------|:---------|:------------|:--------------|
-| **RN 4510** | PK 41+180 → PK 131+700 | 33 | $858,000 | Sistema tres bolillos |
-| **RN 4511** | PK 0+650 → PK 147+385 | 51 | $1,326,000 | Sistema tres bolillos |
-| **RN 4513** | PK 1+240 → PK 9+000 | 4 | $104,000 | Acceso CCO/Báscula + SOS #88 |
-| **TOTAL** | - | **88** | **$2,288,000** | - |
+| **RN 4510** | PK 41+180 → PK 131+700 | 37 | $962,000 | Sistema tres bolillos |
+| **RN 4511** | PK 0+650 → PK 147+385 | 56 | $1,456,000 | Sistema tres bolillos |
+| **RN 4513** | PK 1+240 → PK 9+000 | 5 | $130,000 | Acceso CCO/Báscula + SOS #88 |
+| **TOTAL** | - | **98** | **$2,548,000** | - |
 
 ---
 
@@ -683,7 +686,7 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 ---
 
 **✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
-- Cantidad total actualizada: 88 unidades (incluye SOS #88 RN 4513)
-- CAPEX actualizado: $2,288,000 USD
+- Cantidad total actualizada: 98 unidades (incluye SOS #88 RN 4513)
+- CAPEX actualizado: $2,543,000 USD
 - Distribución por ruta actualizada con información oficial
 - Metodología PKD lineal aplicada

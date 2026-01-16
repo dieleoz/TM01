@@ -1409,9 +1409,9 @@ la  vía.  Sobre  los  mismos  se  pueden  presentar  dos circunstancias:
 
 (2)    Identificadas entre el Derecho de la Vía nueva y el DDV de la tubería existente y comparten longitudes (en este caso se toma como referencia el Derecho de vía de la carretera y la tubería).
 
-(e)   Aproximaciones con obras de infraestructuras especiales (box culverts, puentes, túneles, muros):
+(e)   Aproximaciones con obras de infraestructuras especiales (box culverts, puentes, muros):
 
-(i)   En el caso de cercanía de obras de infraestructura especiales (box culverts, puentes, túneles y cualquier infraestructura de concreto necesaria) se deben presentar un análisis de esfuerzos dinámicos que garantice la integridad de la infraestructura petrolera y que permita su coexistencia de ambas (estructura civil y red de transporte de hidrocarburos).
+(i)   En el caso de cercanía de obras de infraestructura especiales (box culverts, puentes y cualquier infraestructura de concreto necesaria) se deben presentar un análisis de esfuerzos dinámicos que garantice la integridad de la infraestructura petrolera y que permita su coexistencia de ambas (estructura civil y red de transporte de hidrocarburos).
 
 
 A.T. 5 – Interferencia Redes Concesión PUERTO SALGAR - BARRANCABERMEJA
@@ -1448,7 +1448,7 @@ paralelamente a la operación de la tubería existente. Posterior a esto se prog
 
 (2)    Empalme con Hot-tap, el cual permite realizarla conexión  de  la  variante  sin  detener  el  transporte  del hidrocarburo, afectándose en menor grado la operación (se deben reducir presiones). En los dos casos se deben realizar los  ensayos  de  campo  (Holiday,  espesores,  adhesión, ultrasonido y demás pruebas necesarias para garantizar el libre mantenimiento del sistema) y cambio de recubrimiento que sea necesario además de cumplir con toda la normatividad de instalación de tubería enterrada, adicionalmente es necesario realizar un estudio geotécnico de la variante nueva, para garantizar la estabilidad de los dos proyectos (hidrocarburos y vial).
 
-(d)  Aproximaciones Con Obras De Infraestructuras Especiales (Box Culverts, Puentes, Túneles, Muros):
+(d)  Aproximaciones Con Obras De Infraestructuras Especiales (Box Culverts, Puentes, Muros):
 
 (i)   Las soluciones técnicas de esta tipología de interferencias especiales son poco comunes y se dificulta estandarizarlas, por lo tanto, se deben analizar caso por caso y estudiar singularmente cada escenario, sin embargo, la entidad prestadora del servicio dará lineamientos para este tipo de circunstancias particulares.
 

@@ -70,7 +70,7 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │  • index.html (login → redirige a docs/WBS_Menu_Principal.html) │
 │  • docs/WBS_Menu_Principal.html (entrada principal)            │
 │  • docs/wbs.html (WBS interactiva - 24 items)                 │
-│  • docs/layout.html (layout filtrable - 52+ equipos)           │
+│  • docs/layout.html (layout filtrable - 140+ equipos)           │
 │  • docs/presupuesto.html (dashboard presupuestal)             │
 │  • docs/cronograma.html (cronograma por UF)                   │
 │  • docs/reporte_gerencial.html (reporte ejecutivo)            │
@@ -446,7 +446,7 @@ scripts/modules/
 ### **Interfaces Web:**
 - **8 interfaces HTML** operativas
 - **24 items WBS** estructurados
-- **52+ equipos** georreferenciados
+- **52+ equipos** georreferenciados (Escalando a 140+ SOS/ITS)
 - **Presupuesto dinámico** con cálculos automáticos
 
 ---

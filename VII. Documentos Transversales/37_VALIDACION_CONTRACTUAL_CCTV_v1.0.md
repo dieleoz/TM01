@@ -62,7 +62,7 @@
 | **Áreas de Servicio** | 2 | PTZ | 🔴 Alta |
 | **Intersecciones Críticas** | 8 | PTZ | 🔴 Alta |
 | **Puentes Principales** | 6 | Fijas | 🟡 Media |
-| **Túneles** | 2 | PTZ | 🔴 Alta |
+| **Otros Puntos Críticos** | 2 | PTZ | 🟡 Media |
 | **Zonas de Accidentalidad** | 6 | PTZ | 🔴 Alta |
 | **Puntos de Control** | 2 | Fijas | 🟡 Media |
 | **TOTAL** | **30** | - | - |
@@ -75,12 +75,12 @@
 | **UF1** | 2 | Peaje Zambito + 1 intersección |
 | **UF2** | 2 | 1 puente + 1 zona crítica |
 | **UF3** | 2 | 1 intersección + 1 zona crítica |
-| **UF4** | 2 | 1 puente + 1 túnel |
+| **UF4** | 2 | 2 puentes principais |
 | **UF5** | 2 | 1 intersección + 1 zona crítica |
 | **UF6** | 2 | 1 puente + 1 zona crítica |
 | **UF7** | 2 | 1 intersección + 1 zona crítica |
 | **UF8** | 2 | 1 puente + 1 zona crítica |
-| **UF9** | 2 | 1 puente + 1 túnel |
+| **UF9** | 2 | 2 puentes principais |
 | **UF10** | 2 | 1 intersección + 1 zona crítica |
 | **UF11** | 2 | 1 puente + 1 zona crítica |
 | **UF12** | 2 | 1 intersección + 1 zona crítica |
@@ -256,7 +256,7 @@ Grabación local → NVR → Almacenamiento → Archivo
 - CCO ubicado en La Lizama PK 4+300 (RN 4513)
 - Distribución actualizada por UF con información oficial
 - Peajes específicos: Zambito, Aguas Negras
-- Red troncal: 322 km fibra óptica
+- Red troncal: 293 km fibra óptica
 - Metodología PKD lineal aplicada
 
 ---

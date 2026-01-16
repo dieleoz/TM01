@@ -13,7 +13,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Equipo** | Switches de Red Capa 3 (Core) y Capa 2 (Acceso) |
-| **Cantidad estimada** | Core: 4-6, Acceso: 50-60 |
+| **Cantidad estimada** | Core L3: 11, Acceso L2: 84 |
 | **Ubicación** | Core: CCO, Nodos Principales. Acceso: Gabinetes de campo. |
 | **Sistema asociado** | Telecomunicaciones (Red de Datos) |
 | **Criticidad** | 🔴 Crítica |
@@ -106,6 +106,18 @@ Conectar los equipos finales de campo (cámaras, PMV, sensores) a la red troncal
 | Juniper | EX Series / ACX Series |
 | Aruba (HPE) | CX 8320 Series / 3810M Series |
 | Hirschmann | MACH Series / RSP Series |
+
+---
+
+## 8. PRESUPUESTO ESTIMADO
+
+| Componente | CAPEX (USD) |
+|:-----------|:------------|
+| **Switches L2 (84 und)** | $119,459 |
+| **Switches L3 (11 und)** | $202,892 |
+| **TOTAL** | **$322,351** |
+
+---
 
 ---
 

@@ -13,7 +13,7 @@
 ### Cálculo de Fibra Óptica:
 
 #### Paso 1: Longitud Base
-- **Longitud contractual**: 259.6 km (RN 4510 + RN 4511)
+- **Longitud contractual**: 283 km (RN 4510 + RN 4511)
 - **Longitud total con extensiones**: 293 km (incluye RN 4513 conexión CCO)
 - **Base para cálculo fibra**: **283 km** (corredor principal)
 
@@ -53,7 +53,7 @@
 1. **Longitud corredor principal**: ~283 km (no 293 km completos)
 2. **+10% Reserva instalación** (28.3 km):
    - Splices y empalmes
-   - Cruces especiales (puentes, túneles)
+   - Cruces especiales (puentes, obras de arte)
    - Derivaciones a equipos ITS
    - Margen de error constructivo
 

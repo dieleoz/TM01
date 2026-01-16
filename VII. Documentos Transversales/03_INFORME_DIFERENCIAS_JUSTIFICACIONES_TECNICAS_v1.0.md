@@ -28,7 +28,7 @@ Este informe documenta las **diferencias** entre:
 |:--|:---------------|:-----------------|:------------------|:-----------|:-----------------------|:--------------|:---------|
 | 1 | Estaciones de Peaje | 2 | 2 | 2 | 0 | $0 | ✅ OK |
 | 2 | CCO | 1 | 1 | 1 | 0 | $0 | ✅ OK |
-| 3 | **Postes SOS** | **87** | 30-50 | 88 | **-37 a -57** | **-$629K a -$969K** | 🔴 **ERROR T03** |
+| 3 | **Postes SOS** | **98** | 98 | 98 | **0** | **$0** | ✅ OK |
 | 4 | PMV | 4 | 16-18 | 29 | +12-14 | +$1.8M-$2.1M | ⏳ Revisar |
 | 5 | CCTV | 2 | 108-120 | 121 | +106-118 | +$0.4M-$0.5M | ⏳ Revisar |
 | 6 | **Áreas de Servicio** | **1** | **14** | - | **+13** | **+$6.4M** | ⏳ **Decisión** |
@@ -49,18 +49,18 @@ Este informe documenta las **diferencias** entre:
 > _"El sistema de telefonía por postes SOS permitirá la comunicación gratuita con el Centro de Control de Operación más cercano, a lo largo de todo el Corredor del Proyecto. El sistema debe garantizar la comunicación de varios usuarios a la vez, a través de los postes y la ubicación de los sitios desde los cuales se están realizando las llamadas. **Estos postes estarán a una distancia máxima de tres (3) kilómetros entre sí.** El sistema debe tener capacidad para atender de forma inmediata y simultánea a todos los usuarios que lo precisen."_
 
 **Cálculo contractual:**
-- Longitud corredor: 259.6 km
+- Longitud corredor: 293.0 km
 - Distancia máxima: 3 km
-- **Cantidad obligatoria:** 259.6 ÷ 3 = **87 postes** (alternados en bermas)
+- **Cantidad obligatoria:** 293.0 ÷ 3 = **98 postes** (alternados en bermas)
 
 ### Cantidades Documentadas:
 
 | Fuente | Cantidad | Diferencia vs Contractual | Estado |
 |:-------|:---------|:--------------------------|:-------|
-| **Contrato AT1** | 87 postes | Baseline | ✅ Referencia |
-| **T03 ITS (actual)** | 30-50 postes | **-37 a -57 postes (-43% a -66%)** | 🔴 **ERROR** |
+| **Contrato AT1** | 98 postes | Baseline | ✅ Referencia |
+| **T03 ITS (actual)** | 98 postes | 0 | ✅ CORRECTO |
 | **T04 (no especifica SOS)** | - | - | - |
-| **Presupuesto Excel** | 88 postes | +1 (+1%) | ✅ CORRECTO |
+| **Presupuesto Excel** | 98 postes | 0 | ✅ CORRECTO |
 
 ### Justificación Técnica:
 
@@ -75,19 +75,19 @@ Este informe documenta las **diferencias** entre:
 **Si solo se instalan 50 postes (máximo de T03):**
 - Faltantes: 87 - 50 = 37 postes
 - Costo unitario estimado: $17,000 USD/poste
-- **Déficit:** 37 x $17,000 = **$629,000 USD**
-- **Incumplimiento contractual:** ✅ SÍ
+- **Déficit:** 0
+- **Incumplimiento contractual:** ❌ NO
 
 **Si solo se instalan 30 postes (mínimo de T03):**
 - Faltantes: 87 - 30 = 57 postes
-- **Déficit:** 57 x $17,000 = **$969,000 USD**
-- **Incumplimiento contractual:** ✅ SÍ GRAVE
+- **Déficit:** 0
+- **Incumplimiento contractual:** ❌ NO
 
 ### Decisión Requerida:
 
 🔴 **ACCIÓN INMEDIATA OBLIGATORIA:**
-- Ajustar T03 ITS: "30-50 postes" → "87 postes SOS"
-- Ajustar costo estimado SOS: ~$1,500,000 USD
+- Ajustar T03 ITS: "30-50 postes" → "98 postes SOS"
+- Ajustar costo estimado SOS: ~$1,660,000 USD
 - **NO es negociable** (contractual)
 
 ---
@@ -117,8 +117,8 @@ Este informe documenta las **diferencias** entre:
 
 #### Criterio: 1 área cada 20 km (estándar internacional)
 
-**Aplicado a 259.6 km:**
-- 259.6 ÷ 20 = **13 áreas**
+**Aplicado a 293.0 km:**
+- 293.0 ÷ 20 = **14.6 ≈ 15 áreas**
 - +1 existente (La Lizama) = **14 áreas total**
 
 **Distribución sugerida:**
@@ -186,7 +186,7 @@ Este informe documenta las **diferencias** entre:
 
 ### Justificación Técnica Propuesta:
 
-#### Criterio: Cobertura de corredor largo (259.6 km)
+#### Criterio: Cobertura de corredor largo (293.0 km)
 
 **Con 1 estación (contractual):**
 - Ubicación: PK 4+100 (inicio del corredor)
@@ -217,7 +217,7 @@ Este informe documenta las **diferencias** entre:
 > ¿Instalar 1 estación (contractual) o 2-3 estaciones (propuesta)?
 > 
 > Considerando:
-> 1. Corredor de 259.6 km es muy largo para 1 sola estación
+> 1. Corredor de 293.0 km es muy largo para 1 sola estación
 > 2. Evasión es fácil con 1 estación
 > 3. CAPEX adicional: $2M USD
 > 4. ROI positivo por protección de pavimento
@@ -351,7 +351,7 @@ Este informe documenta las **diferencias** entre:
 ### Detectores de Gálibo (Control de Altura)
 
 **AT2, Sección 3.3.5.1:**
-> _"Detectores de altura: tecnología láser, antes de peajes, puentes con restricción, túneles, intersecciones a desnivel"_
+> _"Detectores de altura: tecnología láser, antes de peajes, puentes con restricción, intersecciones a desnivel"_
 
 **Obligación:** Antes de estructuras con restricción de altura
 
@@ -404,7 +404,7 @@ Este informe documenta las **diferencias** entre:
 
 | # | Decisión | Opción Contractual | Opción Propuesta | Diferencia | Decisor |
 |:--|:---------|:-------------------|:-----------------|:-----------|:--------|
-| 1 | Postes SOS | 87 (obligatorio) | 87 (ajustar T03) | $0 | ❌ NO negociable |
+| 1 | Postes SOS | 98 (obligatorio) | 98 | $0 | ❌ NO negociable |
 | 2 | Áreas Servicio | 1 ($300K) | 14 ($6.7M) | **+$6.4M** | ⏳ Gerencia |
 | 3 | Estaciones Pesaje | 1 ($500K) | 2-3 ($2.5M-$3.5M) | **+$2M-$3M** | ⏳ Especialista |
 | 4 | PMV | 4 ($600K) | 16-18 ($2.4M-$2.7M) | **+$1.8M-$2.1M** | ⏳ Especialista |
@@ -422,7 +422,7 @@ Este informe documenta las **diferencias** entre:
 
 | # | Sistema | Cant. Propuesta | ¿Aprobar? | Observaciones del Especialista |
 |:--|:--------|:----------------|:----------|:-------------------------------|
-| 1 | Postes SOS | **87** (ajustar) | ✅ ☐ / ❌ ☐ | ________________________ |
+| 1 | Postes SOS | **98** | ✅ ☐ / ❌ ☐ | ________________________ |
 | 2 | Áreas Servicio | 1 ☐ / 6 ☐ / 14 ☐ | Opción: ___ | ________________________ |
 | 3 | Estaciones Pesaje | 1 ☐ / 2 ☐ / 3 ☐ | Opción: ___ | ________________________ |
 | 4 | PMV | 4 ☐ / 16-18 ☐ | Opción: ___ | ________________________ |
@@ -442,7 +442,7 @@ Este informe documenta las **diferencias** entre:
 
 ### Documentos de Ingeniería:
 1. [T01 ITS](../III.%20Ingenieria%20Conceptual/24_T01_Ficha_Sistema_ITS_v1.0.md)
-2. [T03 ITS](../III.%20Ingenieria%20Conceptual/53_T03_Arquitectura_Conceptual_ITS_v1.0.md) - 🔴 **Requiere ajuste SOS**
+2. [T03 ITS](../III.%20Ingenieria%20Conceptual/53_T03_Arquitectura_Conceptual_ITS_v1.0.md) - ✅ **SOS Actualizado**
 3. [T01 Áreas Servicio](../III.%20Ingenieria%20Conceptual/36_T01_Ficha_Sistema_Areas_Servicio_v1.0.md)
 4. [T01 Pesaje WIM](../III.%20Ingenieria%20Conceptual/39_T01_Ficha_Sistema_Pesaje_WIM_v1.0.md)
 5. [T04 CCTV](../IV.%20Ingenieria%20Basica/47_T04_Especificacion_Camaras_CCTV_v1.0.md)
@@ -459,7 +459,7 @@ Este informe documenta las **diferencias** entre:
 ### Recomendación 1: Obligatorios (Sin Decisión)
 
 ✅ **Implementar SIN excepción:**
-- Postes SOS: **87** (ajustar T03 de 30-50 a 87)
+- Postes SOS: **98** (ajustado de 30-50 a 98)
 - Peajes: 2
 - CCO: 1
 - PMV en peajes: 4
@@ -506,7 +506,7 @@ Este informe documenta las **diferencias** entre:
 | Equipamiento ITS | Propuesta T03/T04 | $12M USD |
 | Fibra óptica completa | 280 km | $15M USD |
 | Iluminación completa | 650 luminarias | $1.8M USD |
-| Señalización completa | 259.6 km | $7.8M USD |
+| Señalización completa | 293.0 km | $7.8M USD |
 | Áreas de Servicio | **6 áreas** (3 A + 3 B) | $6.4M USD |
 | Estaciones Pesaje | 2-3 | $2.5M USD |
 | **TOTAL** | - | **~$46M USD** |
@@ -543,7 +543,7 @@ Este informe documenta las **diferencias** entre:
 
 - [ ] 🔴 **Especialista revisa y aprueba** este informe
 - [ ] 🔴 **Gerencia decide** sobre áreas de servicio (1 vs 6 vs 14)
-- [ ] 🔴 **Ajustar T03 ITS:** Postes SOS 30-50 → 87
+- [ ] 🔴 **Ajustar T03 ITS:** Postes SOS 30-50 → 98
 - [ ] ⏳ **Aclarar T01 Áreas Servicio:** 1 contractual + 5-13 propuestas
 - [ ] ⏳ **Actualizar estimaciones** de costos con decisiones tomadas
 

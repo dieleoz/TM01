@@ -131,7 +131,7 @@ mediante Resolución 000803 de 2009 del Ministerio de Transporte.
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
 METODOLOGÍA GENERAL PARA LA PRESENTACIÓN DE ESTUDIOS
-AMBIENTALES, expedida por el Ministerio de Ambiente, Vivienda y Desarrollo Territorial conforme Resolución 1503 del 4 de agosto de 2010. Se debe tener presente, que se encuentra en revisión de ANLA la Metodología Versión 2020, por lo que el Estudio de Impacto Ambiental deberá elaborarse conforme la metodología que se encuentre vigente al momento de su radicación para evaluación de la Autoridad Ambiental; complementariamente se deberán tener en cuenta los términos de referencia fijados para la elaboración de estudios de impacto ambiental en proyectos de construcción de carreteras y túneles, que estén vigentes para el momento de la radicación del EIA.
+AMBIENTALES, expedida por el Ministerio de Ambiente, Vivienda y Desarrollo Territorial conforme Resolución 1503 del 4 de agosto de 2010. Se debe tener presente, que se encuentra en revisión de ANLA la Metodología Versión 2020, por lo que el Estudio de Impacto Ambiental deberá elaborarse conforme la metodología que se encuentre vigente al momento de su radicación para evaluación de la Autoridad Ambiental; complementariamente se deberán tener en cuenta los términos de referencia fijados para la elaboración de estudios de impacto ambiental en proyectos de construcción de carreteras, que estén vigentes para el momento de la radicación del EIA.
 Criterios para el diseño geométrico y paisajístico de la franja de aislamiento y la calzada de desaceleración establecidos en los decretos 3600 de 2007 y 4066 de 2008.
 Decreto 1079 del 26 de mayo de 2015 expedido por el Ministerio de Transporte “Por medio del cual se expide el Decreto Único Reglamentario del Sector Transporte”.
 Ley 105 de diciembre 30 de 1993, por la cual se dictan disposiciones básicas sobre el transporte, se redistribuyen competencias y recursos entre la Nación y las Entidades Territoriales, se reglamenta la planeación en el sector transporte y se dictan otras disposiciones.
@@ -265,7 +265,7 @@ AMBIENTALES, expedida por el Ministerio de Ambiente, Vivienda y Desarrollo Terri
 
 Apéndice Técnico 3 - Especificaciones Generales Concesión PUERTO SALGAR - BARRANCABERMEJA
 
-debe tener presente, que se encuentra en revisión de ANLA la Metodología Versión 2020, por lo que el Estudio de Impacto Ambiental deberá elaborarse conforme la metodología que se encuentre vigente al momento de su radicación para evaluación de la Autoridad Ambiental; complementariamente se deberán tener en cuenta los términos de referencia fijados para la elaboración de estudios de impacto ambiental en proyectos de construcción de carreteras y túneles, que estén vigentes para el momento de la radicación del EIA.
+debe tener presente, que se encuentra en revisión de ANLA la Metodología Versión 2020, por lo que el Estudio de Impacto Ambiental deberá elaborarse conforme la metodología que se encuentre vigente al momento de su radicación para evaluación de la Autoridad Ambiental; complementariamente se deberán tener en cuenta los términos de referencia fijados para la elaboración de estudios de impacto ambiental en proyectos de construcción de carreteras, que estén vigentes para el momento de la radicación del EIA.
 
 3.2  Intervenciones
 

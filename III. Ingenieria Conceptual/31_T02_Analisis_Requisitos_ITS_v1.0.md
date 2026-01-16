@@ -198,13 +198,13 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km princ
 ### 2.8 Detección de Altura de Vehículos
 
 **ID:** RF-008  
-**Descripción:** El sistema debe detectar vehículos con altura excesiva antes de peajes, puentes y túneles  
+**Descripción:** El sistema debe detectar vehículos con altura excesiva antes de peajes y puentes  
 **Prioridad:** 🔴 Alta  
 **Fuente:** AT2, Sección 3.3.5.1  
 
 **Criterios de Aceptación:**
 - Tecnología láser obligatoria
-- Ubicación antes de: peajes (ambos sentidos), puentes con restricción, túneles, intercambios a desnivel
+- Ubicación antes de: peajes (ambos sentidos), puentes con restricción, intercambios a desnivel  
 - Precisión de medición: ±5 cm
 - Alarma visual y sonora si excede altura permitida
 - Activación automática de PMV (mensaje de advertencia)
@@ -618,8 +618,8 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km princ
 - CCO operativo
 
 **Flujo Normal:**
-1. Vehículo se aproxima a detector de altura (antes de peaje/puente/túnel)
-2. Detector láser mide altura del vehículo
+1. Vehículo se aproxima a detector de altura (antes de peaje/puente)
+621: 2. Detector láser mide altura del vehículo
 3. Si altura > límite permitido:
    - Activar alarma visual (luces de advertencia)
    - Activar PMV con mensaje "ALTURA EXCEDIDA - DETENERSE"
@@ -736,8 +736,8 @@ Este análisis cubre los **10 subsistemas del ITS** a lo largo de 259.6 km princ
 
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
-| **v1.0** | 16/10/2025 | Administrador Contractual EPC | Análisis inicial de requisitos del sistema ITS |
-| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes, CCO La Lizama, cantidades actualizadas, criterios de aceptación |
+| v1.1 | 22/10/2025 | Administrador Contractual EPC | Revisión con información oficial: Longitudes, CCO La Lizama, cantidades actualizadas, criterios de aceptación |
+| **v1.2** | **15/01/2026** | **Administrador Contractual EPC** | **Certificación Fase 0.5 Update:** Corrección a 88 SOS (Validación Distribución) |
 
 ---
 

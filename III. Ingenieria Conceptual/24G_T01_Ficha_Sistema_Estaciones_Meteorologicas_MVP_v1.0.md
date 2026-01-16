@@ -171,9 +171,9 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 | **Integración SCADA avanzada** | 1 | $15,000 | $15,000 |
 | **Obras civiles y cimentación** | 3 | $8,000 | $24,000 |
 | **Instalación y comisionamiento** | 3 | $7,000 | $21,000 |
-| **TOTAL CAPEX** | **3 estaciones** | **$60,000/estación** | **$180,000** |
+| **TOTAL CAPEX** | **3 estaciones** | **$25,000/estación** | **$75,000** |
 
-**Nota sobre actualización (05/12/2025):** El CAPEX fue ajustado de $20,000 a $180,000 USD para reflejar estaciones meteorológicas profesionales completas (no solo equipos básicos), incluyendo: torres meteorológicas de 10m de altura, sensores adicionales de visibilidad y radiación solar, sistema de comunicación redundante, integración SCADA avanzada con reportes automáticos a ANI/Policía, y obras civiles de cimentación. Este ajuste incorpora requisitos de Resolución 546/2018 (IP/REV) y lecciones aprendidas.
+**Nota sobre actualización (15/01/2026):** El CAPEX se ajustó a **$75,000 USD** para 3 estaciones, promediando $25k/estación para equipos profesionales (Davis Vantage Pro2 Plus o equivalente) incluyendo torres de 10m y sistema de integración SCADA.
 
 ### 6.2 OPEX (Operación y Mantenimiento)
 
@@ -189,7 +189,7 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 
 ### 6.3 Costo Total del Ciclo de Vida (20 años)
 
-**CAPEX + OPEX:** $180,000 + $54,000 = **$234,000 USD**
+**CAPEX + OPEX:** $75,000 + $54,000 = **$129,000 USD**
 
 ---
 

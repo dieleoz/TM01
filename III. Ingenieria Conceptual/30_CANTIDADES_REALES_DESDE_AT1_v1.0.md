@@ -12,7 +12,7 @@
 
 | Parámetro | Valor | Fuente |
 |:----------|:------|:-------|
-| **Longitud Total** | 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513) | AT1, Página 8 |
+| **Longitud Total** | 293.0 km (259.6 km principales + 33.4 km adicionales) | AT1, Página 8 |
 | **Departamentos** | Cundinamarca, Boyacá, Santander | AT1 |
 | **Unidades Funcionales** | 14 (UF0 a UF13) | Parte Especial, Sección 3.3 |
 | **Estaciones de Peaje Existentes** | 2 (Zambito + Aguas Negras) | Parte Especial, Sección 3.6 |
@@ -42,7 +42,7 @@
 | **UF11** | Puerto Parra - Río Sogamoso | TBD | Construcción + O&M | ~0-3% |
 | **UF12** | Barrancabermeja - La Lizama | TBD | Construcción + O&M | ~2-5% |
 | **UF13** | La Lizama - Río Sogamoso | TBD | Construcción + O&M | ~4-7% |
-| | **TOTAL** | **259.6 km** | | **100%** |
+| | **TOTAL** | **293.0 km** | | **100%** |
 
 **NOTA:** Los porcentajes de participación varían según el período (meses 1-12, 13-24, 25-36, etc.)
 
@@ -100,9 +100,9 @@
 | **CCTV** | 100-150 cámaras | **100-130 cámaras** | 1 cada 2-3 km (87-130) + peajes (4-8) + áreas servicio |
 | **WIM** | 5-10 estaciones | **8-10 estaciones** | 1 cada 30 km (8-9) |
 | **Estaciones Meteo** | 8-12 estaciones | **10-12 estaciones** | 1 cada 25 km (10-11) |
-| **Teléfonos SOS** | 50-80 unidades | **65-85 unidades** | 1 cada 3-4 km (65-87) |
+| **Teléfonos SOS** | 50-80 unidades | **88 unidades** | 1 c/3 km máx (Distribución: 45+50+1 = 88) |
 | **Radares Velocidad** | 15-25 unidades | **15-20 unidades** | Zonas críticas (por definir con Policía) |
-| **Detectores Altura** | 20-30 unidades | **20-25 unidades** | Peajes (4-6) + puentes + túneles |
+| **Detectores Altura** | 20-30 unidades | **20-25 unidades** | Peajes (4-6) + puentes con restricción |
 
 ### Sistema de Peajes - Cantidades Actualizadas
 
@@ -195,7 +195,7 @@
 - [ ] Leer sección completa de AT1 para extraer:
   - [ ] Ubicaciones exactas de Áreas de Servicio (numeral 3.8)
   - [ ] Detalles de cada UF (UF3 a UF10)
-  - [ ] Cantidades de puentes, túneles, intercambios
+  - [ ] Cantidades de puentes e intercambios
   - [ ] Longitudes exactas por UF
 
 - [ ] Actualizar Listado Maestro de Sistemas con cantidades reales
@@ -239,7 +239,7 @@
 - [ ] AT1, Numeral 2.5.2: Detalle UF0
 - [ ] AT1, Numeral 3.8: Áreas de Servicio
 - [ ] AT1, Tablas de UF3 a UF10: Detalles de cada UF
-- [ ] AT1: Cantidades de puentes, túneles, intercambios
+- [ ] AT1: Cantidades de puentes e intercambios
 
 ---
 
@@ -274,7 +274,8 @@
 | Versión | Fecha | Descripción |
 |:--------|:------|:------------|
 | v1.0 | 16/10/2025 | Creación inicial de cantidades reales desde AT1 |
-| **v1.1** | **22/10/2025** | **Revisión con información oficial:** Longitudes 259.6 km + 33.4 km, rutas RN 4510, RN 4511, RN 4513 |
+| v1.1 | 22/10/2025 | Revisión con información oficial: Longitudes 259.6 km + 33.4 km |
+| **v1.2** | **15/01/2026** | **Certificación Fuente de Verdad:** Corrección final a 88 SOS (Validación Usuario) |
 
 ---
 

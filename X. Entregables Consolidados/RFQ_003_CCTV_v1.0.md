@@ -13,7 +13,7 @@
 
 | Campo | Valor |
 |:------|:------|
-| **Longitud corredor** | 259.6 km |
+| **Longitud corredor** | 293 km |
 | **Distribución** | 13 Unidades Funcionales (UFs) |
 | **Tipo de proyecto** | Concesión vial 4G |
 | **Cliente final** | ANI |

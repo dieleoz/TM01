@@ -1,11 +1,11 @@
-﻿# AT6 - APP PUERTO SALGAR - BARRANCABERMEJA
+﻿# AT6-Adenda-Abril - APP PUERTO SALGAR - BARRANCABERMEJA
 ## Proyecto Vehicular - Concesion APP
 
 **Fecha de actualizacion:** 16/10/2025  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Contrato:** Concesion APP  
-**Documento:** AT6  
-**Tipo:** Apendice Tecnico  
+**Documento:** AT6-Adenda-Abril  
+**Tipo:** Apendice Tecnico - Adenda  
 **Estado:** Contenido completo  
 
 ---
@@ -18,8 +18,8 @@
 | **Proyecto** | APP Puerto Salgar - Barrancabermeja |
 | **Contrato** | Concesion APP |
 | **Responsable** | Administrador Contractual EPC |
-| **Tipo** | Apendice Tecnico |
-| **Numero** | AT6 |
+| **Tipo** | Apendice Tecnico - Adenda |
+| **Numero** | AT6-Adenda-Abril |
 | **Estado** | Contenido completo |
 
 ---
@@ -55,7 +55,7 @@ CAPÍTULO I V - COMPENSACIONES SOCIOAMBIENTALES              17
 4.1    Ítems que serán objeto de reconocimiento con cargo a la subcuenta           17
 4.2    Ítems que no serán objeto de reconocimiento con cargo a la subcuenta         17
 4.3    Aspectos Generales                                    18
-4.4    Pagos que requieren de la aprobación de la ANI                     18
+4.4    Pagos que requieren de la aprobación de la ANI                     19
 4.5    Informe de Subcuenta de Compensaciones Socioambientales              19
 CAPÍTULO V - OBLIGACIONES DURANTE LA FASE DE PRECONSTRUCCIÓN   21
 5.1    Obligaciones generales durante la Fase de Preconstrucción               21
@@ -85,8 +85,8 @@ CAPÍTULO VII I - OBLIGACIONES PARA LA ETAPA DE REVERSIÓN DEL CONTRATO DE CONCE
 CAPÍTULO I X - CONSIDERACIONES ESPÉCÍFICAS                   40
 9.1    Cesión de Licencia y Permisos Ambientales a cargo de la ANI             40
 9.2    Cesión de permisos otorgados por las Corporaciones Autónomas Regionales      41
-9.3    Cesión de permisos otorgados por el Ministerio de Ambiente y Desarrollo Sostenible  42
-9.4    Cesión de Licencias Ambientales otorgadas por la Autoridad Nacional de Licencias Ambientales – ANLA                                        44
+9.3    Cesión de permisos otorgados por el Ministerio de Ambiente y Desarrollo Sostenible  41
+9.4    Cesión de Licencias Ambientales otorgadas por la Autoridad Nacional de Licencias Ambientales – ANLA                                        43
 
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
@@ -415,42 +415,40 @@ CAPÍTULO I V - COMPENSACIONES SOCIOAMBIENTALES
 
 (a)  Los costos de los estudios requeridos por las Autoridades Ambientales para expedir los permisos,  concesiones  y  autorizaciones  ambientales,  instrumentos  ambientales  de aprovechamiento forestal y levantamiento de veda, o para determinar la viabilidad de las Compensaciones Socioambientales. Dichos documentos se enmarcan en las obligaciones de gestión que tiene a cargo el Concesionario y que se relacionan con el cumplimiento oportuno y eficaz de la Ley en materia ambiental aplicable al Proyecto.
 
-(b)  Correrán por cuenta y responsabilidad del Concesionario el pago de cualesquiera de los costos de explotación de las fuentes de materiales, los derechos de uso de zonas de préstamo y de sus correspondientes servidumbres y el derecho de explotación de las mismas, la construcción y conservación de zonas de desechos o zonas/sitios de disposición de materiales sobrantes de excavación y de sus vías de acceso, que no estén incluidas dentro de las licencias ambientales cedidas.
+(b)  Correrán por cuenta y responsabilidad del Concesionario el pago de cualesquiera de los costos de explotación de las fuentes de materiales, los derechos de uso de zonas de préstamo y de sus correspondientes servidumbres y el derecho de explotación de las mismas, la construcción y conservación de zonas de desechos o zonas/sitios de disposición de materiales sobrantes de excavación y de sus vías de acceso. Pese a lo anterior, con cargo a la subcuenta de compensaciones socioambientales serán objeto de reconocimiento los ítems descritos en el numeral 4.1 de los Zodmes, fuentes de materiales y vías industriales incluidos en las licencias ambientales a las que hace referencia el numeral 9.4 del presente apéndice.
 
 (c)  El transporte de los materiales.
 
 (d)  Tazas por uso y aprovechamiento de recursos naturales.
-
 (e)  Medidas derivadas de la inversión forzosa de no menos del 1%.
-(f)  El impacto negativo y/o sobrecosto que el cambio en los diseños pueda generar sobre las Compensaciones Socioambientales en los términos establecidos en la Sección 13.2 del Contrato Parte General.
 
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
+(f)  El impacto negativo y/o sobrecosto que el cambio en los diseños pueda generar sobre las Compensaciones Socioambientales en los términos establecidos en la Sección 13.2 del Contrato Parte General.
 (g)  Cuando la compra de predios sea fijada o aprobado como una medida de compensación por la Autoridad Ambiental Competente en los actos administrativos, el Concesionario deberá surtir los procedimientos previsto en el Apéndice Técnico Predial, aclarando que los valores del costo del predio, la escrituración, el registro y los derechos notariales estarán a cargo de la subcuenta de compensaciones socioambientales, lo demás será parte de la gestión predial que está a cargo, costo y riesgo del Concesionario.
 
 (h)  Los recursos económicos de la subcuenta están destinados a las compensaciones por los recursos naturales descritos en el numeral 4.1 que realmente hayan sido intervenidos u aprovechados por el Proyecto, en el evento en que no se intervengan o aprovechen todos los recursos naturales autorizados en el Permiso o Licencia Ambiental y/o que el área intervenida sea menor a la autorizada El Concesionario podrá tramitar ante la Autoridad Ambiental Competente la modificación/reducción de la obligación de la compensación establecida, o, en su defecto, asumir a su cuenta y riesgo el costo asociado a las compensaciones de los recursos naturales autorizados que no hayan sido intervenidos u aprovechados.
+
 4.3 Aspectos Generales
 
 (a)  El Concesionario podrá contemplar para la ejecución de las Compensaciones Socioambientales la implementación de Bancos de Hábitat constituidos y avalados por la Autoridad Ambiental competente, para la conservación a través de acciones de preservación, restauración, uso sostenible de los ecosistemas y su biodiversidad, de acuerdo con lo establecido en la Resolución 1051 de 2017, o aquella que la reglamente, modifique, complemente o derogue.
-
 (b)  Las actividades ejecutadas con ocasión a las Compensaciones Socioambientales deberán llevarse a cabo en los precisos términos y tiempos fijados por la Autoridad Ambiental en las Licencias Ambientales y/o en los permisos, concesiones y autorizaciones ambientales y/o la Ley Aplicable; su ejecución depende de la gestión ambiental a cargo del Concesionario, razón por la cual no estará limitada al desembolso de la subcuenta socioambiental.
+
 (c)  Las compensaciones socioambientales, en su totalidad, serán objeto de verificación, seguimiento y control por parte de la ANI y la Interventoría, por lo cual el Concesionario deberá entregar la información adicional con el alcance que le sea requerido por la ANI y la Interventoría dentro de los términos establecidos.
 
 (d)  La programación e implementación de las actividades de compensación deberán atender criterios de priorización desde el momento que se hace uso de los Licencias Ambientales y/o de los permisos, concesiones y autorizaciones ambientales asociados al avance de la ejecución de las obras para cada de las unidades funcionales y la disponibilidad de recursos.
 
 (e)  Una vez se cuente con la aprobación de los Planes de Compensación por parte de la(s) Autoridad(es) Ambiental(es), el Concesionario deberá iniciar dentro del mes siguiente a la aprobación las actividades de establecimiento o preliminares según la propuesta aprobada y actualizar el cronograma y costos del Acta de Terminación.
 
-4.4 Pagos que requieren de la aprobación de la ANI
-
-(a)  Las compensaciones que se relacionen dentro de la solicitud de previa aprobación por la ANI, serán solo las obligaciones taxativamente impuestas en los pronunciamientos de las Autoridades o Entidades Ambientales que otorgan las Licencias Ambientales y/o los permisos,
-
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
-concesiones y autorizaciones ambientales y que se encuentren entre las necesidades de Compensaciones Socioambientales que superan el ciento veinte por ciento (120%) del valor estimado de Compensaciones Socioambientales según el contrato.
+4.4 Pagos que requieren de la aprobación de la ANI
+
+(a)  Las compensaciones que se relacionen dentro de la solicitud de previa aprobación por la ANI, serán solo las obligaciones taxativamente impuestas en los pronunciamientos de las Autoridades o Entidades Ambientales que otorgan las Licencias Ambientales y/o los permisos, concesiones y autorizaciones ambientales y que se encuentren entre las necesidades de Compensaciones Socioambientales que superan el ciento veinte por ciento (120%) del valor estimado de Compensaciones Socioambientales según el contrato.
 (b)  Una vez no objetado por la Interventoría el informe que cita el numeral 4.5 literal (c ) de este Apéndice, el Concesionario deberá solicitar mediante comunicación dirigida a la Agencia, el comité para la previa aprobación por la ANI de los aportes a realizar, el cual se ejecutará acorde a lo establecido en el procedimiento del sistema de gestión de la Entidad.
 
 (c)  El Concesionario presentará como soporte para el desembolsó de la subcuenta compensaciones socioambientales, el Acto Administrativo donde conste que la compensación fue aceptada por la Autoridad Ambiental Competente que impuso la obligación.
@@ -467,13 +465,13 @@ concesiones y autorizaciones ambientales y que se encuentren entre las necesidad
 (vii)  Presentar el cronograma de ejecución de actividades, su ruta crítica, traslapos, hitos y fecha de terminación, teniendo en cuenta tanto los tiempos que fije la Autoridad Ambiental en el acto administrativo, como la fecha de finalización de la fase constructiva de la unidad funcional.
 (viii) Soportar los valores de las actividades de las compensaciones que se pretenden ejecutar con precios regionales, preferiblemente entregados por las autoridades regionales con jurisdicción en el área.
 (ix)  Soportar cada una de las actividades descritas en el numeral precedente con evidencias (documentales, imágenes, entre otros) que sirvan para demostrar la implementación de las actividades para dar cumplimiento a la medida compensatoria.
-(x)  Con la sumatoria de todas las actividades anteriormente descritas, señalar el costo de la actividad.
-(xi)  Valor total a cancelar
 
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
+(x)  Con la sumatoria de todas las actividades anteriormente descritas, señalar el costo de la actividad.
+(xi)  Valor total a cancelar
 (xii)  Monto cobrado con cargo a la subcuenta socioambiental durante el periodo de evaluación, discriminado por acto administrativo y obligación de compensación a la que se está dando cumplimiento.
 (xiii) Monto cobrado, con cargo a la subcuenta socioambiental, acumulado en los periodos de evaluación precedentes discriminado por acto administrativo y obligación de compensación a la que se está dando cumplimiento.
 
@@ -920,113 +918,52 @@ El Concesionario deberá aceptar en cesión total los permisos ambientales que s
 
 Corporación
 CAR
-Cundinamarca
-CAR
-Cundinamarca
-CAR
-Cundinamarca
-CAR
 Cundinamarca Corpoboyacá
 Objeto
 Permiso de Ocupación de Cauce Puente Río Montecristo
-Permiso de Ocupación de Cauce Puente Río Negrito
-Permiso de Ocupación de Cauce Puente Río Korán
-Aprovechamiento forestal tramo 1 (Pto. Salgar - Pto Libre)
 Concesión de aguas superficiales y permiso de ocupación de cauce
 Acto Administrativo
-Resolución 1695 del 25/07/2012 Resolución 2601
-del 23/11/20 Resolución 533 del 11/03/2014
-Resolución 105 del 23/01/2012 Resolución 1256 del 24/07/2013
 
+Resolución 1695 del 25/07/2012 Resolución 1256 del 24/07/2013
+
+Corpoboyacá Corpoboyacá
 Corpoboyacá
-
-Corpoboyacá Corpoboyacá Corpoboyacá
-Corpoboyacá
-
-
-Corpoboyacá
-
-CAS CAS
 Aprovechamiento forestal
 
-Permiso de Ocupación de Cauce para obras en la Quebrada Velázquez
-Aprovechamiento forestal tramo 1 (Pto Libre - Caño Alegre)
 Aprovechamiento forestal tramo 2 (Caño Alegre - Rio Ermitaño)
-Concesiones de agua y Permiso de Ocupación de Cauce 24 obras hidráulicas
 Permiso de Ocupación de Cauce para demolición obras en concreto en la Quebrada Velázquez
-Permiso de Ocupación de Cauce Rio San Juan K 45+100, RN 4511
-Permiso de Ocupación de Cauce Rio Opón
-Resolución 1471 del 13/08/2013
-Resolución 1735 del 10/06/2011 Resolución 938 del 19/04/2012 Resolución 482 del 25/03/2014
-Resolución 464 del 21/03/2014 Resolvió recurso en contra Resolución 1256del 2013
-
+Resolución 1471 del 13/08/2013 Resolución 482 del 25/03/2014
 Resolución 3716 del 15/11/2016
 
-Resolución 826 del 03/08/2011 Resolución 987 del 12/10/2011
-
-A.T. 6 – Gestión Ambiental                               Concesión C1
-Troncal del Magdalena Medio
-
-
-Corporación
-
-
-CAS
-
-
-CAS CAS
-
-CAS
-
-
-CAS
-
-
-CAS
-Objeto
-
-Aprovechamiento forestal tramo 2 (Río Ermitaño -Pto Araujo), tramo 4 (La Lizama - Río Lebrija)
-Aprovechamiento forestal tramo 3 (Pto. Araujo
-- La Lizama
-Permiso de Ocupación de Cauce para 4 Puentes y 91 obras menores tramo 4 (La Lizama - Rio Lebrija)
-Permiso de Ocupación de Cauce para 9 Puente y 59 obras menores tramo 2 (Rio Ermitaño - Pto. Araujo) y 64 obras tramo 4 (La Lizama Río
-- Lebrija)
-Concesiones de agua 9 fuentes hídricas tramo 3 (Pto. Araujo - La Lizama)
-Permiso de Ocupación de Cauce para 2 Puente y 58 obras menores tramo 2 (Rio Ermitaño - Pto. Araujo) y 64 obras tramo 4 (La Lizama Río
-- Lebrija)
-Acto Administrativo
-Resolución 0049 del 21/01/2014, prorrogada por la Resolución 00557 del 13/06/2016
-Resolución 516 del 24/06/2014 Resolución 796 del 14/08/2015
-
-Resolución 1000 del 13/10/2013
-
-
-Resolución 1086 del 25/11/2013
-
-
-Resolución 1087 del 25/11/2013
-Nota. En caso de que la Autoridad Ambiental Regional no acepte o realice la subrogación de los permisos, concesiones y/o autorizaciones ambientales a la ANI para que estos sean cedidos, o de que los haya cerrado o archivado, le corresponderá al Concesionario el trámite y obtención de los mismos de acuerdo con las necesidades del proyecto y a las disposiciones contenidas en el presente Apéndice Técnico. Este hecho no dará lugar a presentar reclamación alguna por parte del Concesionario.
-
-
 9.3 Cesión de permisos otorgados por el Ministerio de Ambiente y Desarrollo Sostenible
-
 El Concesionario deberá aceptar en cesión total o parcial (Según corresponda) los levantamientos de veda y sustracciones de reserva los permisos ambientales que se relacionan a continuación, en el estado en el que se encuentren:
 
 
 Objeto
 
 Otorga LA y determina la Sustracción de Reserva
+
+
+Levantamiento de Veda
 Acto Administrativo
 
 Resol 0861 2011_05_11
+
+
+Resol 0309 2012_03_16
 Título
 
 
 Por la cual se otorga una licencia ambiental y se toman otras determinaciones
+
+Por el cual se efectúa un levantamiento temporal y parcial de la veda de las especies de epífitas vasculares y no vasculares, para el proyecto Ruta del Sol Sector 2 Construcción de la Variante Puerto Libre, en jurisdicción de los municipios de Puerto Salgar en el departamento de
 Tipo de Cesión
 
 
 Parcial
+
+
+Total
 
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
@@ -1036,9 +973,6 @@ Troncal del Magdalena Medio
 Objeto
 
 
-Levantamiento de Veda
-
-
 Sustracción de Reserva
 
 
@@ -1058,12 +992,12 @@ Levantamiento de Veda
 
 Sustracción de Reserva
 
+
+Levantamiento de Veda
+Levantamiento de Veda
 
 Levantamiento de Veda
 Acto Administrativo
-
-
-Resol 0309 2012_03_16
 
 
 Resol 0318 2012_03_16
@@ -1087,9 +1021,12 @@ Resol 0172 2014_02_04
 
 
 Resol 1253 2014_08_04
+Resol 0437 2015_02_26
+
+Resol 1700 2015_07_17
 Título
 
-Por el cual se efectúa un levantamiento temporal y parcial de la veda de las especies de epífitas vasculares y no vasculares, para el proyecto Ruta del Sol Sector 2 Construcción de la Variante Puerto Libre, en jurisdicción de los municipios de Puerto Salgar en el departamento de Cundinamarca y Puerto Boyacá en el departamento de Boyacá y se toman otras determinaciones
+Cundinamarca y Puerto Boyacá en el departamento de Boyacá y se toman otras determinaciones
 Por medio de la cual se sustrae definitivamente un área de la Reserva Forestal del Río Magdalena establecida mediante Ley 2da de 1959 y se toman otras determinaciones
 Por el cual se efectúa un levantamiento temporal y parcial de veda de especies epífitas vasculares y no vasculares para el proyecto "Ruta del Sol 2 - Construcción de los Tramos viales 2, 3, 4 y 7 y se toman otras determinaciones
 Por la cual se efectúa un levantamiento de veda en el marco del Proyecto Nacional Ruta del Sol Sector II (Puerto Boyacá -San Roque) - áreas de extracción de materiales y se toman otras determinaciones
@@ -1098,15 +1035,15 @@ Por medio de la cual se sustrae temporalmente un área de la Reserva Forestal de
 Por la cual se efectúa un levantamiento parcial de veda y se toman otras determinaciones
 Por medio de la cual se realiza una sustracción definitiva de un área de reserva forestal del río Magdalena establecida en la Ley 2da de 1959, para la construcción del paso vial ruta del tramo 3, sector 2 Puerto Salgar - San Roque y se toman otras determinaciones
 Por la cual se otorga un levantamiento parcial de veda y se toman otras determinaciones
+Por la cual se otorga un levantamiento parcial de veda y se toman otras determinaciones
+
+Por la cual se efectúa un levantamiento parcial de veda y se toman otras determinaciones
 Tipo de Cesión
 
 
 Total
 
 
-Total
-
-
 Parcial
 
 
@@ -1120,6 +1057,12 @@ Total
 
 
 Parcial
+
+
+Total
+
+
+Total
 
 
 Total
@@ -1134,9 +1077,6 @@ Troncal del Magdalena Medio
 
 Objeto
 
-Levantamiento de Veda
-
-Levantamiento de Veda
 
 Sustracción de Reserva
 
@@ -1150,10 +1090,6 @@ Levantamiento de Veda
 Levantamiento de Veda
 Acto Administrativo
 
-Resol 0437 2015_02_26
-
-Resol 1700 2015_07_17
-
 Resol 1022 2016_06_23
 
 
@@ -1165,20 +1101,12 @@ Resol 495 2013_04_01
 Resol 497 2014_04_01_
 Título
 
-Por la cual se otorga un levantamiento parcial de veda y se toman otras determinaciones
-
-Por la cual se efectúa un levantamiento parcial de veda y se toman otras determinaciones
 Por medio de la cual se sustrae temporalmente un área de 32.88 hectáreas de la Reserva Forestal del Río Magdalena establecida en la Ley 2da de 1959, y se toman otras determinaciones
 Por medio de la cual se sustrae temporalmente un área de la Reserva Forestal del Río Magdalena establecida en la Ley 2da de 1959, y se toman otras determinaciones
 Por la cual se levanta de manera parcial la veda de especies de la flora silvestre y se toman otras determinaciones
 Por la cual se levanta de manera parcial la veda de especies de la flora silvestre y se toman otras determinaciones
 Por la cual se levanta de manera parcial la veda de especies de la flora silvestre y se toman otras determinaciones
 Tipo de Cesión
-
-Total
-
-
-Total
 
 
 Total
@@ -1203,30 +1131,45 @@ El Concesionario aceptará en cesión total y/o parcial (según corresponda) la 
 
 Acto Administrativo
 Res 0997
+Noviembre 30 de
+2012
+Res 0861
+Mayo 11 de 2011
+Res. 0439
+Junio 6 de 2012
+Res. 0295
+Marzo 28 de 2014
 Expediente
+
+
+LAM5671
+
+
+LAM5228
+
+LAM5641
+
+LAV0012- 14
 Objeto
 
+Licencia Ambiental Tramo Recto
+Licencia Ambiental Tramo Recto
+Licencia Ambiental Variante Puerto Libre
 Licencia Ambiental
 Tipo de Cesión
 
-Noviembre 30 de
-2012
-LAM5671
-Tramo Recto         Cesión Parcial
 
+Cesión Parcial
+
+
+Cesión Parcial Cesión Total Cesión Total
 
 A.T. 6 – Gestión Ambiental                               Concesión C1
 Troncal del Magdalena Medio
 
 
 Acto Administrativo
-Res 0861
-Mayo 11 de 2011
-Res. 0439
-Junio 6 de 2012
 
-Res. 0295
-Marzo 28 de 2014
 
 Res. 1372
 Noviembre 11 de
@@ -1237,8 +1180,7 @@ Marzo 21 de 2014
 
 Res. 0960
 Agosto 22 de 2014
-Expediente LAM5228 LAM5641
-LAV0012- 14
+Expediente
 
 
 LAM6298
@@ -1248,10 +1190,7 @@ LAV0077- 13
 
 LAV0052 - 14
 Objeto
-
-Licencia Ambiental Tramo Recto
-Licencia Ambiental Variante Puerto Libre
-Licencia Ambiental Variante K28 y Pto.
+Variante K28 y Pto.
 Araujo
 Licencia Ambiental
 Variantes El Trique, Dos y Medio, San Pedro de la Paz
@@ -1259,8 +1198,7 @@ Licencia Ambiental
 Variantes Aguas Negras y Campo23
 Licencia Ambiental
 Variante Palmas de Guayabito
-Tipo de Cesión Cesión Parcial Cesión Total
-Cesión Total
+Tipo de Cesión
 
 
 Cesión Total

@@ -5,7 +5,7 @@
 **Versión:** 1.0  
 **Responsable:** PMO - Administrador Contractual EPC  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Longitud:** 259.6 km  
+**Longitud:** 293 km  
 **Duración:** Construcción 60 meses + O&M 25 años  
 
 ---
@@ -113,7 +113,7 @@ La WBS se vincula con:
 ### 1.6 OBRAS CIVILES (Por Unidad Funcional)
 | Código WBS | Elemento | Longitud | Responsable | AT Relacionado |
 |:-----------|:---------|:---------|:------------|:---------------|
-| **1.6.0** | **UF0: O&M + Puesta a Punto** | **259.6 km** | Gerente Construcción | AT1 |
+| **1.6.0** | **UF0: O&M + Puesta a Punto** | **293 km** | Gerente Construcción | AT1 |
 | 1.6.0.1 | UF0-D: Doble calzada | 214.68 km-calzada | Ing. Civil | AT1 |
 | 1.6.0.2 | UF0-T: Transitable | 152.94 km-calzada | Ing. Civil | AT1 |
 | 1.6.0.3 | UF0-P: Puesta a Punto | 6.62 km-calzada | Ing. Civil | AT1 |
@@ -154,7 +154,7 @@ La WBS se vincula con:
 | 1.8.3 | Cámaras Panorámicas (Peajes) | 2 | $30,000 | AT2 |
 | 1.8.4 | Estaciones WIM (Pesaje en Movimiento) | 8-10 | $1,200,000 | AT2 |
 | 1.8.5 | Estaciones Meteorológicas | 10-12 | $250,000 | AT2 (IDEAM) |
-| 1.8.6 | Teléfonos SOS | 65-85 | $227,500 | AT2 |
+| 1.8.6 | Teléfonos SOS | 98 | $230,000 | AT2 |
 | 1.8.7 | Detectores Automáticos de Incidentes (DAI) | 30-50 | $480,000 | AT2 |
 | 1.8.8 | Estaciones de Aforo Vehicular | 10-15 | $360,000 | AT2 |
 | 1.8.9 | Radares de Velocidad | 15-20 | $500,000 | AT2 |
@@ -229,7 +229,6 @@ La WBS se vincula con:
 | 1.12.1 | Iluminación Estaciones de Peaje | 2 estaciones | $150,000 | AT2 |
 | 1.12.2 | Iluminación Áreas de Servicio | 3-5 áreas | $100,000 | AT2 |
 | 1.12.3 | Iluminación Intercambios | TBD | $200,000 | AT1 |
-| 1.12.4 | Iluminación Túneles (si aplica) | TBD | $150,000 | AT1 |
 | 1.12.5 | Sistema de Control de Iluminación | 1 | $80,000 | AT2 |
 | | **SUBTOTAL ILUMINACIÓN** | | **$680,000** | |
 
@@ -251,7 +250,7 @@ La WBS se vincula con:
 | Código WBS | Elemento | Cantidad | CAPEX Estimado (USD) | AT Relacionado |
 |:-----------|:---------|:---------|:---------------------|:---------------|
 | 1.14.1 | Señalización Vertical | 1,500-2,500 señales | $800,000 | AT3 |
-| 1.14.2 | Señalización Horizontal (Demarcación) | 259.6 km | $1,200,000 | AT3 |
+| 1.14.2 | Señalización Horizontal (Demarcación) | 293 km | $1,350,000 | AT3 |
 | 1.14.3 | Defensas Metálicas | 80-120 km | $2,500,000 | AT3 |
 | 1.14.4 | Tachas Reflectivas | 50,000-80,000 | $600,000 | AT3 |
 | 1.14.5 | Amortiguadores de Impacto | 50-100 | $300,000 | AT3 |
@@ -280,7 +279,7 @@ La WBS se vincula con:
 | 1.16.5 | Vehículos de Rescate + Cama Baja | 4 | $500,000 | AT2 (3.3.3.1.2) |
 | 1.16.6 | Equipos de Rescate Vehicular | 5 juegos | $200,000 | AT2, NFPA 1936 |
 | 1.16.7 | Bases de Operación (Edificaciones) | 2 | $600,000 | AT2 |
-| 1.16.8 | Teléfonos SOS | 65-85 | $227,500 | AT2 |
+| 1.16.8 | Teléfonos SOS | 98 | $230,000 | AT2 |
 | 1.16.9 | Equipos de Comunicación | 30 radios | $75,000 | AT2 |
 | | **SUBTOTAL EMERGENCIAS** | | **$4,887,000** | |
 

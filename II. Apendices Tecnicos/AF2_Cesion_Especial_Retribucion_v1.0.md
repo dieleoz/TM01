@@ -89,7 +89,7 @@ El Concesionario deberá presentar una solicitud de cesión que contenga:
 
 ### 5.3. Aprobación y Certificación
 
-La ANI contará con un plazo de diez (10) días hábiles para:
+La ANI contará con un plazo de quince (15) días hábiles para:
 
 1. Revisar la documentación presentada
 2. Solicitar información adicional si es necesario

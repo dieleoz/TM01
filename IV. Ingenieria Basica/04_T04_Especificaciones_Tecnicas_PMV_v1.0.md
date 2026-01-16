@@ -31,7 +31,7 @@
 | **Categoría** | ITS - Información Variable al Usuario |
 | **Código interno** | T04-PMV-004-v1.0 |
 | **Cantidad total** | **28 unidades** |
-| **CAPEX estimado** | **USD $1,010,000** (36,071 USD/panel) |
+| **CAPEX estimado** | **USD $2,450,000** ($87,500/panel instalado - Solución Híbrida) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación v1.0, Layout v1.0 |
 
 ### 1.2 Distribución por Tipo de Panel

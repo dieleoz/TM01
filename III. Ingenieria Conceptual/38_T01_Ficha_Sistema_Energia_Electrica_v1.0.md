@@ -261,7 +261,7 @@ Garantizar el **suministro eléctrico continuo, confiable y seguro** a TODOS los
 | Sensores de Corriente/Voltaje | 150 | $450 | $67,500 | $270,000,000 |
 | **Instalación, Ingeniería y Puesta en Marcha** | - | - | $950,000 | $3,800,000,000 |
 | **Contingencia (10%)** | - | - | $497,500 | $1,990,000,000 |
-| **TOTAL CAPEX** | | | **$4,277,500** | **$17,110,000,000** |
+| **TOTAL CAPEX** | | | **$4,449,400** | **$17,797,600,000** |
 
 **CAPEX Total:** USD 4.28 millones | COP 17.11 mil millones
 

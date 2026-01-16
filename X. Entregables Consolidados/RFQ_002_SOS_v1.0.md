@@ -13,14 +13,14 @@
 
 ### **Datos del Proyecto:**
 - **Nombre:** APP Puerto Salgar - Barrancabermeja
-- **Longitud:** 259.6 km
+- **Longitud:** 293 km
 - **Tipo:** Autopista de Peaje
 - **Modalidad:** APP (Asociación Público Privada)
 - **Contratista:** EPC (Engineering, Procurement, Construction)
 - **Ubicación:** Colombia (Cundinamarca - Santander)
 
 ### **Objetivo de la Solicitud:**
-Cotización completa para el suministro, instalación, puesta en servicio y garantía del **Sistema de Telefonía de Emergencia (SOS)** consistente en 87 postes SOS distribuidos a lo largo del corredor vial.
+Cotización completa para el suministro, instalación, puesta en servicio y garantía del **Sistema de Telefonía de Emergencia (SOS)** consistente en 98 postes SOS distribuidos a lo largo del corredor vial.
 
 ---
 
@@ -30,16 +30,16 @@ Cotización completa para el suministro, instalación, puesta en servicio y gara
 
 | Parámetro | Especificación | Referencia |
 |:----------|:---------------|:-----------|
-| **Cantidad total** | 87 postes SOS | AT1 Cap. 3 |
+| **Cantidad total** | 98 postes SOS | AT1 Cap. 3 |
 | **Distribución** | Sistema "Tres Bolillos" alternados | Bermas externas |
 | **Separación máxima** | 3.00 km entre postes | Contractual |
-| **Cobertura** | 100% del corredor (259.6 km) | Obligatorio |
+| **Cobertura** | 100% del corredor (293 km) | Obligatorio |
 | **Tecnología** | Telefonía IP sobre fibra óptica | ITS integrado |
 | **Alimentación** | Solar + baterías (autónomo) | 24/7 operación |
 
 ### **Componentes del Sistema:**
 
-#### **1. EQUIPO POSTE SOS COMPLETO (87 unidades):**
+#### **1. EQUIPO POSTE SOS COMPLETO (98 unidades):**
 - Poste metálico galvanizado 4m altura
 - Gabinete control IP65 resistente vandalismo
 - Teléfono resistente vandalismo IP66
@@ -50,7 +50,7 @@ Cotización completa para el suministro, instalación, puesta en servicio y gara
 - Sirena 110dB + baliza LED ámbar
 - Cableado control y energía completo
 
-#### **2. OBRAS CIVILES (87 ubicaciones):**
+#### **2. OBRAS CIVILES (98 ubicaciones):**
 - Excavación y cimentación 1.0×1.0×1.2m
 - Concreto f'c=3000 PSI con acero refuerzo
 - Canalización HDPE 2" hasta fibra troncal (30m promedio)
@@ -76,29 +76,29 @@ Cotización completa para el suministro, instalación, puesta en servicio y gara
 
 | Ítem | Descripción | Cantidad | Unidad |
 |:-----|:------------|:---------|:-------|
-| **1.1** | Postes SOS completos | 87 | UND |
-| **1.2** | Postes metálicos galvanizados 4m | 87 | UND |
-| **1.3** | Gabinetes control IP65 | 87 | UND |
-| **1.4** | Teléfonos resistentes vandalismo | 87 | UND |
-| **1.5** | Paneles solares 150W | 87 | UND |
-| **1.6** | Controladores solares MPPT | 87 | UND |
-| **1.7** | Baterías 12V 100Ah | 174 | UND |
-| **1.8** | Conversores FO/Ethernet | 87 | UND |
-| **1.9** | Botones pulsadores iluminados | 87 | UND |
-| **1.10** | Sirenas 110dB | 87 | UND |
-| **1.11** | Balizas LED ámbar | 87 | UND |
+| **1.1** | Postes SOS completos | 98 | UND |
+| **1.2** | Postes metálicos galvanizados 4m | 98 | UND |
+| **1.3** | Gabinetes control IP65 | 98 | UND |
+| **1.4** | Teléfonos resistentes vandalismo | 98 | UND |
+| **1.5** | Paneles solares 150W | 98 | UND |
+| **1.6** | Controladores solares MPPT | 98 | UND |
+| **1.7** | Baterías 12V 100Ah | 196 | UND |
+| **1.8** | Conversores FO/Ethernet | 98 | UND |
+| **1.9** | Botones pulsadores iluminados | 98 | UND |
+| **1.10** | Sirenas 110dB | 98 | UND |
+| **1.11** | Balizas LED ámbar | 98 | UND |
 
 ### **OBRAS CIVILES:**
 
 | Ítem | Descripción | Cantidad | Unidad |
 |:-----|:------------|:---------|:-------|
-| **2.1** | Excavaciones cimentación | 87 | UND |
-| **2.2** | Concreto f'c=3000 PSI | 69.6 | M³ |
-| **2.3** | Acero refuerzo #4 | 2,175 | KG |
-| **2.4** | Canalización HDPE 2" | 2,610 | ML |
-| **2.5** | Cajas paso fibra óptica | 87 | UND |
-| **2.6** | Puestas a tierra | 87 | UND |
-| **2.7** | Señalización reflectiva | 87 | UND |
+| **2.1** | Excavaciones cimentación | 98 | UND |
+| **2.2** | Concreto f'c=3000 PSI | 78.4 | M³ |
+| **2.3** | Acero refuerzo #4 | 2,450 | KG |
+| **2.4** | Canalización HDPE 2" | 2,940 | ML |
+| **2.5** | Cajas paso fibra óptica | 98 | UND |
+| **2.6** | Puestas a tierra | 98 | UND |
+| **2.7** | Señalización reflectiva | 98 | UND |
 
 ---
 
@@ -157,7 +157,7 @@ Cotización completa para el suministro, instalación, puesta en servicio y gara
 ### **Excepciones Justificadas (>3km):**
 - **Tramos urbanos:** Centros poblados
 - **Puentes:** Estructuras especiales
-- **Túneles:** Pasos subterráneos
+
 - **Total excepciones:** 9 ubicaciones documentadas
 
 ### **Coordenadas Geográficas:**

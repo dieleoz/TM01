@@ -75,10 +75,10 @@ Para CADA sistema:
 ### 🔍 Análisis Técnico:
 
 **Cálculo de necesidad real:**
-- Corredor principal: 259.6 km
-- Anillo redundante: 2 x 259.6 = 519.2 km (si es anillo doble)
+- Corredor principal: 293 km
+- Anillo redundante: 2 x 293 = 586 km (si es anillo doble)
 - Derivaciones a equipos ITS: ~20-30 km
-- **Total estimado:** 280-300 km (T04) vs 520 km (si anillo completo)
+- **Total estimado:** 310-330 km (T04) vs 586 km (si anillo completo)
 
 **Topología contractual:** No especificada (puede ser lineal o anillo)
 
@@ -90,7 +90,7 @@ Para CADA sistema:
 - Redundancia en puntos críticos (CCO, peajes)
 - **Costo:** $15M USD
 
-**vs Topología Anillo Completo (520 km):**
+**vs Topología Anillo Completo (586 km):**
 - Doble recorrido completo
 - Redundancia total
 - **Costo:** $25-30M USD
@@ -98,15 +98,15 @@ Para CADA sistema:
 ### 🎯 Decisión Requerida - Especialista de Telecomunicaciones:
 
 **❓ PREGUNTA:**
-> ¿Aprobar topología lineal con redundancia selectiva (280 km, $15M) o anillo completo redundante (520 km, $25-30M)?
+> ¿Aprobar topología lineal con redundancia selectiva (320 km, $15M) o anillo completo redundante (586 km, $25-30M)?
 > 
-> **Opción A:** 280 km (T04) = $15M, redundancia selectiva
-> **Opción B:** 520 km (anillo) = $25-30M, redundancia total
+> **Opción A:** 320 km (T04) = $15M, redundancia selectiva
+> **Opción B:** 586 km (anillo) = $25-30M, redundancia total
 > **Presupuesto Excel:** $16.3B COP ≈ $4M USD (??) **Parece SUBESTIMADO**
 
 **⚠️ ALERTA:** Excel tiene $16.3B COP pero T04 estima $15M USD (~$60B COP) → **Discrepancia 4x**
 
-**Decisión:** ☐ 280 km ☐ 520 km ☐ Otra: _______ km
+**Decisión:** ☐ 320 km ☐ 586 km ☐ Otra: _______ km
 
 ---
 
@@ -175,38 +175,38 @@ Para CADA sistema:
 **AT1, Cap. 3:**
 > _"Estos postes estarán a una **distancia máxima de tres (3) kilómetros** entre sí."_
 
-**Obligación contractual:** 259.6 km ÷ 3 km = **87 postes**
+**Obligación contractual:** 293 km ÷ 3 km = **98 postes**
 
 ### 📊 Cantidades Comparadas:
 
 | Fuente | Cantidad | Diferencia vs Contractual | Estado |
 |:-------|:---------|:--------------------------|:-------|
-| **Contrato AT1** | 87 postes | Baseline (obligatorio) | ✅ Referencia |
-| **Excel** | 88 postes | +1 (+1%) | ✅ CORRECTO |
-| **T03 ITS** | 30-50 postes | **-37 a -57 (-43% a -66%)** | 🔴 **ERROR GRAVE** |
+| **Contrato AT1** | 98 postes | Baseline (obligatorio) | ✅ Referencia |
+| **Excel** | 98 postes | 0 | ✅ CORRECTO |
+| **T03 ITS** | 30-50 postes | **-48 a -68 (-49% a -69%)** | 🔴 **ERROR GRAVE** |
 
 ### 🔍 Análisis:
 
 ❌ **T03 ITS tiene un ERROR CRÍTICO**
-- Propone 30-50 postes cuando el contrato exige 87
+- Propone 30-50 postes cuando el contrato exige 98
 - **Incumplimiento contractual** si no se corrige
-- **Déficit:** 37-57 postes faltantes
+- **Déficit:** 48-68 postes faltantes
 
 ### ✅ Validación:
 
-✅ **Excel está CORRECTO:** 88 postes ≈ 87 contractuales  
-🔴 **T03 está INCORRECTO:** Debe ajustarse a 87
+✅ **Excel está CORRECTO:** 98 postes ≈ 98 contractuales  
+🔴 **T03 está INCORRECTO:** Debe ajustarse a 98
 
 ### 🎯 Decisión Requerida - Especialista ITS:
 
 **NO HAY DECISIÓN:** Es contractualmente obligatorio
 
 **ACCIÓN OBLIGATORIA:**
-- [x] Ajustar T03 ITS: "30-50 postes" → **"87 postes SOS"**
-- [x] Costo: ~$1.5M USD (87 x $17K)
+- [x] Ajustar T03 ITS: "30-50 postes" → **"98 postes SOS"**
+- [x] Costo: ~$1.66M USD (98 x $17K)
 - [x] **NO negociable**
 
-**Decisión:** ☑ 87 postes SOS (obligatorio, sin opciones)
+**Decisión:** ☑ 98 postes SOS (obligatorio, sin opciones)
 
 ---
 
@@ -400,14 +400,14 @@ Para CADA sistema:
 ### ✅ Justificación Técnica:
 
 **Factores a considerar:**
-- Corredor de 259.6 km es MUY LARGO para 1 sola estación
+- Corredor de 293.0 km es MUY LARGO para 1 sola estación
 - Control de peso protege pavimento (ROI positivo)
 - Normativa NTC 5375 (límites de peso)
 - Experiencia en otras concesiones
 
 **Estándar internacional:** 1 estación cada 100-150 km
 
-**Aplicado:** 259.6 km ÷ 120 km = **2 estaciones** (mínimo técnico)
+**Aplicado:** 293 km ÷ 120 km = **2 estaciones** (mínimo técnico)
 
 ### 🎯 Decisión Requerida - Especialista Civil/Tránsito:
 
@@ -419,7 +419,7 @@ Para CADA sistema:
 > **Opción C:** 3 estaciones (T03 máximo) = $3.5M, cobertura óptima
 > 
 > Considerar:
-> - 259.6 km es largo para 1 estación
+> - 293 km es largo para 1 estación
 > - ROI por protección de pavimento
 > - Reducción de evasión
 
@@ -432,7 +432,7 @@ Para CADA sistema:
 ### 📋 Datos Contractuales:
 
 **AT2, Sección 3.3.5.1:**
-> _"Detectores de altura: tecnología láser, antes de peajes, puentes con restricción, túneles, intersecciones a desnivel"_
+> _"Detectores de altura: tecnología láser, antes de peajes, puentes con restricción e intersecciones a desnivel"_
 
 **Obligación:** Antes de estructuras con restricción de altura
 
@@ -440,7 +440,7 @@ Para CADA sistema:
 
 | Fuente | Cantidad | Justificación |
 |:-------|:---------|:--------------|
-| **Contrato AT2** | Variable (depende de puentes/túneles) | Antes de cada estructura |
+| **Contrato AT2** | Variable (depende de puentes) | Antes de cada estructura |
 | **Excel** | 19 detectores | No especificado |
 | **T03 ITS** | 8-12 detectores | 2 peajes + 6 intersecciones |
 
@@ -450,7 +450,6 @@ Para CADA sistema:
 - 2 peajes: 2 detectores
 - 6-7 intersecciones a desnivel: 6-7 detectores
 - Puentes con restricción: **¿? (A contar en AT1)**
-- Túneles: **¿Hay? (No encontrados en AT1)**
 
 **Estimación conservadora:** 8-12 detectores (T03)
 
@@ -656,8 +655,8 @@ Para CADA sistema:
 ### 🔍 Análisis Técnico:
 
 **Criterios posibles:**
-- 1 estación cada 25-30 km: 259.6÷25 = **10-11 estaciones**
-- 1 estación cada 35-40 km: 259.6÷35 = **7-8 estaciones**
+- 1 estación cada 25-30 km: 293÷25 = **11 estaciones**
+- 1 estación cada 35-40 km: 293÷35 = **8 estaciones**
 - 1 estación por zona climática: Variable
 
 ### ✅ Validación:
@@ -763,9 +762,9 @@ Para CADA sistema:
 
 | # | Sistema | Mín. Contractual | Excel | T03/T04 | Estado | Decisor | Diferencia CAPEX |
 |:--|:--------|:-----------------|:------|:--------|:-------|:--------|:-----------------|
-| 1 | Fibra Óptica | "Sistema completo" | $16.3B COP (~$4M USD?) | 280 km ($15M) | ⚠️ Excel subestimado | Telecom | **-$11M?** |
+| 1 | Fibra Óptica | "Sistema completo" | $16.3B COP (~$4M USD?) | 320 km ($15M) | ⚠️ Excel subestimado | Telecom | **-$11M?** |
 | 2 | PMV | 4 | 29 | 16-18 | ⚠️ Excel exagerado | ITS | +$1.8M (vs Excel -$1.8M) |
-| 3 | SOS | 87 | 88 ✅ | 30-50 ❌ | 🔴 T03 error | ITS | $0 (ajustar T03) |
+| 3 | SOS | 98 | 98 ✅ | 30-50 ❌ | 🔴 T03 error | ITS | $0 (ajustar T03) |
 | 4 | CCO | 1 | 1 | 1 | ✅ OK | Sistemas | Validar costo |
 | 5 | Peaje | 2 est. | 2 | 2 | ✅ OK | Tránsito | Validar carriles |
 | 6 | WIM Peaje | No especifica | Sí | Implícito | ⏳ Aclarar | Peaje | Consolidar? |
@@ -785,7 +784,7 @@ Para CADA sistema:
 ### Especialista ITS:
 
 **Errores encontrados:**
-1. 🔴 **Postes SOS:** T03 propone 30-50, contrato exige 87 (ajustar obligatorio)
+1. 🔴 **Postes SOS:** T03 propone 30-50, contrato exige 98 (ajustar obligatorio)
 2. ⚠️ **PMV:** Excel propone 29 (exagerado), T03 propone 16-18 (razonable)
 3. ⚠️ **ETD/ANPR:** Excel propone 38 (exagerado), T03 propone 10-15 (razonable)
 
@@ -824,7 +823,7 @@ Para CADA sistema:
 |:--------|:---------|:------------|
 | Peajes (2 x 6 carriles) | 2 est., 12 carriles | $1.0M |
 | CCO | 1 | $2.7M |
-| SOS | 87 | $1.5M |
+| SOS | 98 | $1.5M |
 | PMV | 4 | $0.6M |
 | CCTV | 80 | $0.3M |
 | Fibra | 280 km | $15M |
@@ -841,12 +840,12 @@ Para CADA sistema:
 |:--------|:---------|:------------|
 | Peajes (2 x 12 carriles) | 2 est., 24 carriles | $1.9M |
 | CCO | 1 | $2.7M |
-| SOS | 87 | $1.5M |
+| SOS | 98 | $1.5M |
 | PMV | 16-18 | $2.4M-$2.7M |
 | CCTV | 120 | $0.5M |
 | Fibra | 280 km | $15M |
 | Iluminación | 650 luminarias | $1.8M |
-| Señalización | 259.6 km | $7.8M |
+| Señalización | 293.0 km | $7.8M |
 | Pesaje | 2-3 estaciones | $2.5M-$3.5M |
 | Áreas Servicio | **6 áreas** | $6.4M |
 | Otros equipos ITS | Según T03/T04 | $3M |
@@ -877,7 +876,7 @@ Para CADA sistema:
 |:--|:--------|:-------------|:------------------|:--------------|:--------------|
 | 1 | Fibra Óptica | Telecomunicaciones | 280 km, $15M USD | _______ | __________________ |
 | 2 | PMV | ITS | 16-18 unidades | _______ | __________________ |
-| 3 | SOS | ITS | **87 postes** (obligatorio) | **SÍ** | __________________ |
+| 3 | SOS | ITS | **98 postes** (obligatorio) | **SÍ** | __________________ |
 | 4 | CCO | Sistemas | 1 centro, $2.7M | _______ | __________________ |
 | 5 | Peaje | Tránsito | 2 est., __ carriles/peaje | _______ | __________________ |
 | 6 | WIM Peaje | Peaje | ¿Separado o incluido? | _______ | __________________ |
@@ -888,7 +887,7 @@ Para CADA sistema:
 | 11 | ETD/ANPR | ITS | 10-15 estaciones | _______ | __________________ |
 | 12 | Meteorológicas | Ambiental | 6-11 estaciones | _______ | __________________ |
 | 13 | Iluminación | Eléctrico | 650 luminarias | _______ | __________________ |
-| 14 | Señalización | Vial | 259.6 km | _______ | __________________ |
+| 14 | Señalización | Vial | 293.0 km | _______ | __________________ |
 | 15 | Áreas Servicio | Operaciones | 1-14 áreas | _______ | __________________ |
 
 ---
@@ -898,7 +897,7 @@ Para CADA sistema:
 ### Especialista ITS:
 - [ ] Validar PMV: 16-18 vs 29
 - [ ] Validar ETD/ANPR: 10-15 vs 38
-- [ ] Ajustar SOS: 30-50 → **87** (obligatorio)
+- [ ] Ajustar SOS: 30-50 → **98** (obligatorio)
 - [ ] Validar CCTV según decisión de áreas servicio
 
 ### Especialista Civil/Tránsito:
@@ -947,7 +946,7 @@ Para CADA sistema:
 ### 3. Ajustes Obligatorios Inmediatos:
 
 🔴 **CRÍTICO:**
-- T03 ITS: Postes SOS 30-50 → **87**
+- T03 ITS: Postes SOS 30-50 → **98**
 - Aclarar: 1 área contractual + 13 propuestas
 
 ---

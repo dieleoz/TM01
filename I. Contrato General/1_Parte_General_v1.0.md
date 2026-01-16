@@ -1,13 +1,9 @@
 ﻿# CONTRATO DE CONCESIÓN BAJO EL ESQUEMA DE APP
 ## PROYECTO PUERTO SALGAR - BARRANCABERMEJA
 ### PARTE GENERAL
-> [!IMPORTANT]
-> **Actualización Normativa 2024**: De conformidad con la Adenda 6 y la fecha de cierre, toda referencia a normas técnicas en este documento se entenderá remitida a la regulación vigente en 2024, incluyendo:
-> - **Manual de Señalización Vial 2024** (en sustitución del Manual 2015).
-> - **RETIE 2024** (Resolución 40117).
-> - **Recaudo Electrónico**: Resolución 20213040035125 de 2021 (IP/REV, COLPASS), ISO 18000-63 y seguridad AES-256.
 
-**República de Colombia**  
+**República de Colombia**
+  
 **Ministerio de Transporte**  
 **Agencia Nacional de Infraestructura (ANI)**
 
@@ -276,7 +272,7 @@ CAPÍTULO I  Definiciones                               13
 1.193  “Tribunal de Arbitramento”                            46
 1.194  “Unidad Funcional”                                46
 1.195 “Unidad Funcional de Operación y Mantenimiento” o “UF0”, “UF O y M”  46
-1.196 “Unidad Funcional de Tramos de Túneles”                   46
+1.196 [ELIMINADO]                                       46
 1.197  “Valor del Contrato”                                46
 1.198  “ VSIi ”                                       46
 1.199 “Valor Estimado de Compensaciones Socioambientales”            46
@@ -332,7 +328,7 @@ CAPÍTULO I V ETAPA PREOPERATIVA - GENERALIDADES        116
 4.16  Memoria Técnica                                 145
 4.17  Procedimiento de verificación                          145
 4.18  Puesta en servicio de las Unidades Funcionales                151
-4.19  Construcción de túneles                             151
+4.19  [ELIMINADO]                                     151
 CAPÍTULO V  ETAPA  PREOPERATIVA  -  CONTRATOS  DE  DISEÑO, CONSTRUCCIÓN Y OPERACIÓN                         152
 5.1   Generalidades                                   152
 5.2   Contratistas                                    152
@@ -1280,9 +1276,7 @@ Se refiere a cada una de las divisiones del Proyecto tal como se presentan en la
 
 Es la Unidad Funcional que implica la ejecución de actividades de Operación y Mantenimiento de infraestructura existente entregada en condiciones de Operación por la ANI al Concesionario, de acuerdo con lo establecido en la Ley Aplicable.
 
-1.196 “Unidad Funcional de Tramos de Túneles”
-
-Es la actividad o conjunto de actividades de excavación, sostenimiento, revestimiento, pavimentación, equipos e instalaciones desarrolladas en un segmento longitudinal del respectivo túnel, de acuerdo a lo establecido en la Ley Aplicable.
+1.196 [ELIMINADO]
 
 1.197 “Valor del Contrato”
 
@@ -2983,8 +2977,6 @@ haya señalado prelación entre los diferentes documentos que solucione dicha co
 (f)   Estudio de la Solicitud por Parte de la ANI
 
 (i)  La ANI dispondrá de un plazo máximo de veinte (20) Días para analizar y dar respuesta al documento presentado por el Concesionario en el que se sustente técnicamente la existencia de una contradicción, incompatibilidad, imposibilidad de cumplimiento de una obligación de resultado, o conflicto con la Ley Aplicable, los cuales serán contados desde la presentación de la solicitud de modificación a la ANI –con copia al Interventor–. En el caso que la ANI guarde silencio dentro de este plazo, se entenderá negada la solicitud.
-> [!NOTE]
-> **Armonización de Conflictos Técnicos**: En caso de que nuevas normas (ej. Manual de Señalización 2024) eleven las cantidades de obra o especificaciones (ej. Paneles LED) respecto a lo previsto inicialmente, se aplicará el mecanismo de la Sección 4.11(f), garantizando que la ANI cubrirá los mayores costos derivados del cambio de Ley Aplicable si la modificación es requerida por la ANI o necesaria para el cumplimiento normativo.
 
 (ii)  Si la solicitud no es aprobada por la ANI y se tratare de una especificación que el Concesionario considera esencial modificar, con el fin de solucionar contradicciones, incompatibilidades y en todo caso, cumplir con las condiciones establecidas en el Contrato y sus Apéndices y en la Ley Aplicable, éste podrá acudir al Amigable Componedor, el cual tomará su decisión teniendo en cuenta los criterios señalados en la presente Sección 4.12.
 
@@ -3115,8 +3107,7 @@ Amigable Componedor. Se excluye de esta Sección la obligación de acreditar la 
 
 (b)    A partir del Acta de Terminación de Unidad Funcional comenzará a reconocerse la Retribución asociada a la Unidad Funcional correspondiente, incluyendo los valores acumulados que no se hubieren causado por estar pendiente la terminación de la Unidad Funcional correspondiente, como consecuencia de lo previsto en las Secciones 4.9 y 4.10 de esta Parte General. El monto de la Retribución será variable en función del Índice de Cumplimiento y del Índice de Cumplimiento Predial, tal y como se establece en el Apéndice Técnico 4. Lo anterior sin perjuicio de los límites a las Deducciones que se establecen en la Parte Especial.
 
-4.19 Construcción de túneles
-En caso de que el Proyecto incluya túneles aplicará lo dispuesto en la Parte Especial.
+4.19 [ELIMINADO]
 
 
 CAPÍTULO V  ETAPA PREOPERATIVA - CONTRATOS DE DISEÑO, CONSTRUCCIÓN Y OPERACIÓN
@@ -5821,7 +5812,7 @@ Sin perjuicio de lo previsto en el CAPÍTULO VII I de esta Parte General, las ac
 Las Notificaciones a cada una de las Partes se realizarán en los lugares indicados para tal efecto en la Parte Especial. Las Notificaciones a la Fiduciaria se realizarán en el lugar indicado en el Contrato de Fiducia Mercantil.
 
 19.19 Información Estadística
-El Concesionario se obliga a entregar reportes trimestrales con información estadística de los costos en que efectivamente incurra en cada trimestre, así como los acumulados por Fase, Etapa y total de ejecución del Contrato, necesarios para la Gestión Predial, la Gestión Social y Ambiental, el manejo de Redes, la ejecución de Intervenciones, discriminando los costos e inversiones en grupos homogéneos de actividades (entre ellos puentes, viaductos y túneles) y los costos de Operación y Mantenimiento. La información será presentada de acuerdo con las instrucciones que provea la ANI, con el fin de que dicha información pueda consolidarse con otra del mismo tipo de otros proyectos para establecer tendencias y permitir los análisis necesarios para la planeación futura de otros proyectos a cargo de la ANI.
+El Concesionario se obliga a entregar reportes trimestrales con información estadística de los costos en que efectivamente incurra en cada trimestre, así como los acumulados por Fase, Etapa y total de ejecución del Contrato, necesarios para la Gestión Predial, la Gestión Social y Ambiental, el manejo de Redes, la ejecución de Intervenciones, discriminando los costos e inversiones en grupos homogéneos de actividades (entre ellos puentes y viaductos) y los costos de Operación y Mantenimiento. La información será presentada de acuerdo con las instrucciones que provea la ANI, con el fin de que dicha información pueda consolidarse con otra del mismo tipo de otros proyectos para establecer tendencias y permitir los análisis necesarios para la planeación futura de otros proyectos a cargo de la ANI.
 
 19.20 Manejo de Información
 

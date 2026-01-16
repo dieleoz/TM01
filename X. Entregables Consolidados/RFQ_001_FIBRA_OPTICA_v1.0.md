@@ -19,7 +19,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Proyecto** | APP Puerto Salgar - Barrancabermeja |
-| **Longitud corredor** | 259.6 km |
+| **Longitud corredor** | 293 km |
 | **Ubicación** | Puerto Salgar (Cundinamarca) - Barrancabermeja (Santander) |
 | **Tipo de proyecto** | Concesión vial 4G |
 | **Cliente final** | ANI (Agencia Nacional de Infraestructura) |
@@ -43,21 +43,21 @@ La cotización debe incluir **TODOS** los siguientes componentes:
 
 | Ítem | Descripción | Cantidad | Unidad | Especificación |
 |:-----|:------------|:---------|:-------|:---------------|
-| **1.1** | **Cable FO 48 hilos monomodo** | **314,824** | **ML** | Ver Especificación Técnica 1.1 |
+| **1.1** | **Cable FO 48 hilos monomodo** | **338,415** | **ML** | Ver Especificación Técnica 1.1 |
 | 1.1.1 | Tipo de fibra | G.652D | - | ITU-T G.652D |
 | 1.1.2 | Estructura | Tubo gel | - | - |
 | 1.1.3 | Chaqueta | PE negro | - | UV resistant |
 | 1.1.4 | Protección mecánica | Cinta acero corrugado | - | Anti-roedores |
 | 1.1.5 | Aplicación | Subterráneo (ducto) | - | - |
 | 1.1.6 | Longitud carrete | 4,000 metros | - | Estándar |
-| **1.2** | **Cable FO 12 hilos monomodo** | **10,856** | **ML** | Mismas características 48h |
-| **1.3** | **Tubería Tritubo HDPE 4"** | **298,540** | **ML** | Especificación 2.1 |
+| **1.2** | **Cable FO 12 hilos monomodo** | **12,000** | **ML** | Mismas características 48h |
+| **1.3** | **Tubería Tritubo HDPE 4"** | **322,300** | **ML** | Especificación 2.1 |
 | 1.3.1 | Tipo | HDPE corrugado | - | Norma NTC 3722 |
 | 1.3.2 | Diámetro | 4" (100mm) | - | - |
 | 1.3.3 | Color | Negro con líneas azules | - | Identificación FO |
 | 1.3.4 | Resistencia | UV + compresión | - | - |
-| **1.4** | **Cinta señalización FO** | **298,540** | **ML** | "PRECAUCIÓN FIBRA ÓPTICA" |
-| **1.5** | **Cama de arena** | **298,540** | **ML** | 10cm bajo + sobre ducto |
+| **1.4** | **Cinta señalización FO** | **322,300** | **ML** | "PRECAUCIÓN FIBRA ÓPTICA" |
+| **1.5** | **Cama de arena** | **322,300** | **ML** | 10cm bajo + sobre ducto |
 
 ---
 
@@ -143,7 +143,7 @@ La cotización debe incluir **TODOS** los siguientes componentes:
 
 | Ítem | Descripción | Cantidad | Unidad | Especificación |
 |:-----|:------------|:---------|:-------|:---------------|
-| **6.1** | **Certificación OTDR completa** | **259.6** | **KM** | Ambos sentidos del anillo |
+| **6.1** | **Certificación OTDR completa** | **293** | **KM** | Ambos sentidos del anillo |
 | 6.1.1 | Incluye | Medición OTDR, reportes, curvas | - | Por cada fibra |
 | 6.1.2 | Criterio | Atenuación ≤0.35 dB/km | - | Promedio |
 | **6.2** | **Medición de potencia óptica** | **169** | **Enlaces** | Punto a punto |
@@ -466,324 +466,6 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 | 1041 | Halado fibra Ã³ptica 48h | m | 293190 |  |  |  |  |
 | 1042 | InstalaciÃ³n fibra Ã³ptica 12h (altura/piso) | m | 9440 |  |  |  |  |
 | 1043 | Trabajos instalaciÃ³n especializada | glb | 1 |  |  |  |  |
-<!-- AUTOGEN:FO_TABLE_END -->
-
-| Ítem | Descripción | Cantidad | Unidad | Precio Ref. Unit. (USD) | Total Ref. (USD) |
-|:-----|:------------|:---------|:-------|:------------------------|:-----------------|
-| **1. MATERIALES FIBRA ÓPTICA** | | | | | **$2,051,648** |
-| 1.1 | Cable FO 48h G.652D | 314,824 | ML | $1.00 | $314,824 |
-| 1.2 | Cable FO 12h G.652D | 10,856 | ML | $1.00 | $10,856 |
-| 1.3 | Tritubo HDPE 4" | 298,540 | ML | $5.00 | $1,492,700 |
-| 1.4 | Cinta señalización | 298,540 | ML | $0.28 | $83,591 |
-| 1.5 | Cama arena | 298,540 | ML | $0.50 | $149,270 |
-| **2. CAJAS Y EMPALMES** | | | | | **$1,164,450** |
-| 2.1 | Cajas 80x80x80 IP68 | 867 | UND | $486 | $421,362 |
-| 2.2 | Cajas 60x60x60 IP68 | 120 | UND | $350 | $42,000 |
-| 2.3 | Empalmes/fusiones global | 43,872 | fusiones | $7.29 | $320,000 |
-| 2.4 | Conectores + pigtails + patch | 1 | GLB | $381,088 | $381,088 |
-| **3. OBRA CIVIL** | | | | | **$4,677,222** |
-| 3.1 | Excavación asfalto + Tritubo | 32,028 | ML | $18.17 | $581,949 |
-| 3.2 | Excavación andén + Tritubo | 16,014 | ML | $18.17 | $290,974 |
-| 3.3 | Excavación blanda + Tritubo | 198,452 | ML | $5.19 | $1,029,962 |
-| 3.4 | Cruces puentes (aéreo) | 7,254 | ML | $55.91 | $405,556 |
-| 3.5 | Cruces muros | 1,200 | ML | $55.91 | $67,092 |
-| 3.6 | Cruces Box Culvert | 2,376 | ML | $17.27 | $41,034 |
-| 3.7 | Cruces alcantarillas | 2,276 | ML | $17.27 | $39,307 |
-| **4. HALADO E INSTALACIÓN** | | | | | **$746,025** |
-| 4.1 | Halado FO 48h | 285,560 | ML | $1.19 | $340,344 |
-| 4.2 | Instalación FO 48h | 285,560 | ML | $1.42 | $405,681 |
-| **5. INFRAESTRUCTURA SOPORTE** | | | | | **$646,097** |
-| 5.1 | Racks 19" 42U | 7 | UND | $2,000 | $14,000 |
-| 5.2 | ODF 96 puertos | 10 | UND | $1,500 | $15,000 |
-| 5.3 | Patch panels 24p | 20 | UND | $120 | $2,400 |
-| 5.4 | Patch cords SC/APC | 300 | UND | $25 | $7,500 |
-| 5.5 | Bandejas organización | 100 | UND | $35 | $3,500 |
-| 5.6 | Cableado estructurado | 1 | GLB | $50,000 | $50,000 |
-| 5.7 | Puesta a tierra | 7 | UND | $800 | $5,600 |
-| 5.8 | Herramientas (fusionadora, OTDR) | 1 | GLB | $548,097 | $548,097 |
-| **6. PRUEBAS Y CERTIFICACIÓN** | | | | | **$306,390** |
-| 6.1 | Certificación OTDR | 259.6 | KM | $1,000 | $259,600 |
-| 6.2 | Medición potencia óptica | 169 | Enlaces | $150 | $25,350 |
-| 6.3 | Certificados calibración | 1 | GLB | $5,000 | $5,000 |
-| 6.4 | Documentación As-Built | 1 | GLB | $16,440 | $16,440 |
-| | | | | **SUBTOTAL DIRECTO** | **$9,591,832** |
-| | **Administración (8%)** | | | | **$767,347** |
-| | **Imprevistos (5%)** | | | | **$479,592** |
-| | **Utilidad (3%)** | | | | **$287,755** |
-| | | | | **SUBTOTAL SIN IVA** | **$11,126,526** |
-| | **IVA Servicios (0%)** | | | | **$0** |
-| | | | | **TOTAL REFERENCIAL** | **$11,126,526** |
-
-**NOTA IMPORTANTE:**
-- Presupuesto referencial basado en cotizaciones previas proyecto 220 km
-- **NO es precio techo ni precio objetivo**
-- Oferente debe presentar su mejor precio basado en sus costos reales
-- Se evaluará competitividad, calidad técnica y experiencia
-
----
-
-## 📋 **CRITERIOS DE EVALUACIÓN**
-
-### **Ponderación de Oferta:**
-
-| Criterio | Ponderación | Descripción |
-|:---------|:-----------:|:------------|
-| **Precio** | **40%** | Competitividad de la oferta |
-| **Experiencia** | **25%** | Proyectos similares (APP, concesiones viales) |
-| **Calidad Técnica** | **20%** | Cumplimiento especificaciones + certificaciones |
-| **Plazo de Entrega** | **10%** | Cronograma de ejecución propuesto |
-| **Garantía y Soporte** | **5%** | Años de garantía + soporte técnico |
-
----
-
-### **Requisitos Mínimos (Pasa/No Pasa):**
-
-| # | Requisito | Descripción |
-|:--|:----------|:------------|
-| 1 | **Experiencia mínima** | 3 proyectos de fibra óptica >200 km en últimos 5 años |
-| 2 | **Certificación fabricante** | Carta de autorización del fabricante de FO |
-| 3 | **Garantía mínima** | 25 años para cable FO, 10 años para cajas |
-| 4 | **Equipo técnico** | Mínimo 2 ingenieros especialistas FO certificados |
-| 5 | **Equipos de medición** | OTDR, medidor de potencia, fusionadora (propios o alquilados) |
-| 6 | **Plazo máximo** | 12 meses para ejecución completa |
-| 7 | **Póliza cumplimiento** | 20% del valor del contrato |
-
----
-
-## 📄 **DOCUMENTOS A PRESENTAR EN LA OFERTA**
-
-### **1. DOCUMENTOS ADMINISTRATIVOS:**
-
-- [ ] **Carta de presentación** de la oferta (firmada por representante legal)
-- [ ] **Certificado de existencia y representación legal** (≤30 días expedición)
-- [ ] **RUT** actualizado
-- [ ] **Estados financieros** auditados últimos 2 años
-- [ ] **Certificado Procuraduría** (≤30 días)
-- [ ] **Certificado Contraloría** (≤30 días)
-- [ ] **Certificado antecedentes judiciales** representante legal (≤30 días)
-
----
-
-### **2. DOCUMENTOS DE EXPERIENCIA:**
-
-- [ ] **Certificaciones de contratos ejecutados** (mínimo 3 proyectos similares)
-  - Certificaciones deben incluir:
-    - Nombre del proyecto
-    - Cliente
-    - Longitud de fibra instalada (km)
-    - Valor del contrato
-    - Fecha de ejecución
-    - Carta de satisfacción del cliente
-    - Fotografías del proyecto
-
-- [ ] **Personal clave propuesto:**
-  - Hoja de vida director del proyecto
-  - Hoja de vida ingeniero residente
-  - Certificados de capacitación en FO (Corning, AFL, etc.)
-  - Certificados de cursos OTDR
-
----
-
-### **3. DOCUMENTOS TÉCNICOS:**
-
-- [ ] **Propuesta técnica detallada** (máximo 50 páginas)
-  - Metodología de instalación
-  - Equipos a utilizar
-  - Plan de calidad
-  - Plan de pruebas
-  - Cronograma detallado
-
-- [ ] **Hojas técnicas (datasheets)** de todos los componentes principales:
-  - Cable FO 48 hilos (mínimo 5 páginas)
-  - Cable FO 12 hilos
-  - Tritubo HDPE 4"
-  - Cajas de empalme 80x80
-  - Cajas de empalme 60x60
-  - Conectores SC/APC
-  - Fusionadora (marca y modelo)
-  - OTDR (marca y modelo)
-
-- [ ] **Certificados de origen** de los materiales principales
-- [ ] **Certificados de calidad** (ISO 9001 fabricantes)
-- [ ] **Garantías** de fabricantes
-
----
-
-### **4. PROPUESTA ECONÓMICA:**
-
-- [ ] **Formulario de precios** (formato Excel adjunto)
-  - Desglose por ítem según tabla de cantidades
-  - Precios unitarios por cada ítem
-  - Subtotales por capítulo
-  - AIU claramente identificado
-  - IVA (si aplica)
-  - Total oferta en USD y COP
-
-- [ ] **Análisis de Precios Unitarios (APU)** de ítems principales (mínimo 10)
-- [ ] **Curva de inversión** mensual
-- [ ] **Condiciones comerciales:**
-  - Plazo de validez de la oferta (mínimo 90 días)
-  - Forma de pago propuesta
-  - Anticipos requeridos
-  - Plazo de entrega
-  - Lugar de entrega
-
----
-
-## 🗓️ **CRONOGRAMA DE LICITACIÓN**
-
-| Fecha | Actividad | Responsable |
-|:------|:----------|:------------|
-| **22-Oct-2025** | Emisión de RFQ | EPC |
-| **29-Oct-2025** | Visita técnica al sitio (opcional) | Oferentes |
-| **05-Nov-2025** | Fecha límite aclaraciones | Oferentes |
-| **08-Nov-2025** | Respuesta aclaraciones | EPC |
-| **12-Nov-2025** | Cierre recepción ofertas (12:00 hrs) | Oferentes |
-| **15-Nov-2025** | Apertura y evaluación ofertas | EPC |
-| **22-Nov-2025** | Adjudicación provisional | EPC |
-| **29-Nov-2025** | Adjudicación definitiva | EPC |
-| **06-Dic-2025** | Firma de contrato | EPC + Contratista |
-
----
-
-## 📍 **CONDICIONES DEL SITIO**
-
-### **Ubicación del Proyecto:**
-
-| Parámetro | Valor |
-|:----------|:------|
-| **Corredor** | Puerto Salgar (Cundinamarca) - Barrancabermeja (Santander) |
-| **Rutas** | RN 4510 + RN 4511 |
-| **Longitud total** | 259.6 km |
-| **Altitud** | 200-400 msnm |
-| **Clima** | Cálido húmedo (18-32°C) |
-| **Precipitación** | 1,500-2,500 mm/año |
-| **Acceso** | Vía pavimentada en operación |
-
----
-
-### **Distribución de Terrenos:**
-
-| Tipo de Terreno | Longitud (ML) | % |
-|:----------------|:--------------|:--|
-| Asfalto (pavimento existente) | 32,028 | 12.3% |
-| Andén/banqueta | 16,014 | 6.2% |
-| Zona blanda (lateral vía) | 198,452 | 76.5% |
-| Cruces especiales | 13,106 | 5.0% |
-| **TOTAL** | **259,600** | **100%** |
-
----
-
-### **Cruces Especiales Identificados:**
-
-| Tipo | Cantidad Aprox. | Longitud Total (ML) |
-|:-----|:---------------:|:-------------------|
-| Puentes vehiculares | 22 | 7,254 |
-| Muros de contención | TBD | 1,200 |
-| Box Culvert | TBD | 2,376 |
-| Alcantarillas | TBD | 2,276 |
-
----
-
-## 🚧 **CONDICIONES DE EJECUCIÓN**
-
-### **Restricciones Operacionales:**
-
-1. **Vía en operación:** Todos los trabajos deben permitir tráfico vehicular
-2. **Horarios:** Preferible horario nocturno en zonas de alto tráfico (21:00-05:00)
-3. **Señalización:** Según Manual de Señalización Vial INVÍAS
-4. **Seguridad:** Plan de Manejo de Tráfico (PMT) aprobado por Interventoría
-5. **Permisos:** Tramitados por el Contratista (incluir en oferta)
-
----
-
-### **Cronograma de Ejecución Requerido:**
-
-| Fase | Actividad | Duración | Mes Inicio |
-|:-----|:----------|:---------|:-----------|
-| **Fase 1** | Movilización + Replanteo | 1 mes | Mes 1 |
-| **Fase 2** | Excavación + Ducto (70%) | 6 meses | Mes 2-7 |
-| **Fase 3** | Excavación + Ducto (30%) | 3 meses | Mes 8-10 |
-| **Fase 4** | Halado e instalación FO | 2 meses | Mes 9-10 |
-| **Fase 5** | Empalmes y cajas | 2 meses | Mes 10-11 |
-| **Fase 6** | Pruebas y certificación | 1 mes | Mes 12 |
-| **TOTAL** | | **12 meses** | |
-
-**NOTA:** Fases 2-5 se ejecutan en paralelo en diferentes frentes de trabajo.
-
----
-
-## 📋 **FORMATO DE RESPUESTA**
-
-### **Estructura de la Propuesta:**
-
-La oferta debe presentarse en **2 sobres cerrados:**
-
-#### **SOBRE 1 - PROPUESTA TÉCNICA:**
-1. Documentos administrativos y legales
-2. Experiencia de la empresa
-3. Equipo de trabajo propuesto
-4. Propuesta técnica detallada
-5. Metodología de instalación
-6. Plan de calidad
-7. Cronograma de ejecución
-8. Hojas técnicas de materiales
-
-#### **SOBRE 2 - PROPUESTA ECONÓMICA:**
-1. Formulario de precios (Excel)
-2. APUs de ítems principales
-3. Curva de inversión
-4. Condiciones comerciales
-
----
-
-## 📊 **FORMULARIO DE PRECIOS (EXCEL)**
-
-**ARCHIVO ADJUNTO:** `RFQ-001_FORMULARIO_PRECIOS_FIBRA_OPTICA.xlsx`
-
-### **Instrucciones de llenado:**
-
-1. **Columna A:** Código ítem (no modificar)
-2. **Columna B:** Descripción ítem (no modificar)
-3. **Columna C:** Cantidad (no modificar)
-4. **Columna D:** Unidad (no modificar)
-5. **Columna E:** ⚠️ **LLENAR:** Precio Unitario (USD) SIN IVA
-6. **Columna F:** ⚠️ **LLENAR:** Precio Unitario (COP) SIN IVA
-7. **Columna G:** Total USD (fórmula automática)
-8. **Columna H:** Total COP (fórmula automática)
-9. **Columna I:** ⚠️ **LLENAR:** Observaciones/marca/modelo
-
-**Tasa de cambio a usar:** **4,400 COP/USD** (fija para esta licitación)
-
----
-
-### **Celdas a Completar Obligatoriamente:**
-
-| Sección | Ítems | Acción |
-|:--------|:------|:-------|
-| **1. Materiales FO** | 1.1 - 1.5 | ✅ Completar precio unitario + marca/modelo |
-| **2. Cajas y Empalmes** | 2.1 - 2.4 | ✅ Completar precio unitario + marca/modelo |
-| **3. Obra Civil** | 3.1 - 3.7 | ✅ Completar precio unitario + metodología |
-| **4. Halado/Instalación** | 4.1 - 4.2 | ✅ Completar precio unitario |
-| **5. Infraestructura** | 5.1 - 5.8 | ✅ Completar precio unitario + marca/modelo |
-| **6. Pruebas** | 6.1 - 6.4 | ✅ Completar precio unitario |
-| **AIU** | - | ✅ Desglosar % Administración, Imprevistos, Utilidad |
-| **Plazo** | - | ✅ Cronograma en meses |
-
-> Nota: Las cantidades incluidas se sincronizan con el presupuesto vigente del sistema web (`docs/presupuesto.html`). En caso de discrepancias menores, prevalecerán las cantidades de esta RFQ para la evaluación económica, sin perjuicio de ajustes en negociación.
-
----
-
-## 🎯 **INFORMACIÓN ADICIONAL**
-
-### **Documentos de Referencia (Adjuntos):**
-
-1. ✅ **Plano de trazado general** (planta corredor 259.6 km)
-2. ✅ **Tabla de ubicaciones equipos ITS** (169 puntos a conectar)
-3. ✅ **Especificaciones técnicas fibra óptica** (T04 + T05)
-4. ✅ **Layout cajas de empalme** (987 ubicaciones)
-5. ✅ **Análisis de alternativas** (Opción A, B, C)
-6. ✅ **Reglas de diseño red L2/L3** (distancias máximas)
 7. 📄 **Apéndice Técnico 2 del Contrato** (extractos relevantes)
 8. 📄 **Apéndice Técnico 3 del Contrato** (especificaciones)
 

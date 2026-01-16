@@ -67,10 +67,9 @@ El Sistema de Telecomunicaciones es el **backbone crítico** que interconecta to
 | Componente | Cantidad Contractual | Fuente |
 |:-----------|:---------------------|:-------|
 | **Fibra Óptica Monomodo** | 322 km de CABLE (12-24 hilos) | Cálculo: 293 km + 10% reserva |
-| **Switches de Acceso** | 40-50 switches | Equipos ITS distribuidos |
-| **Switches de Agregación** | 7 switches | 7 nodos principales del anillo |
-| **Switches Core** | 4 switches | CCO La Lizama |
-| **Routers WAN** | 2 routers | Conectividad ANI |
+| **Switches de Acceso** | 84 switches | Según T05 L2 (Campo) |
+| **Switches de Agregación/Core** | 11 switches | Según T05 L3 (7 Nodos + Stacks) |
+| **Firewalls** | 2 unidades | HA en CCO |
 | **Radio Bases** | 3-4 bases (OPCIONAL) | Sujeto a validación cobertura |
 | **Radios Móviles** | 20-30 radios (OPCIONAL) | Vehículos emergencia |
 | **Central Telefónica IP** | 1 PBX | CCO La Lizama |
@@ -156,11 +155,11 @@ Esta distinción es fundamental para:
 
 | Ítem | Costo Total (USD) |
 |:-----|:------------------|
-| Infraestructura Pasiva (ductos, fibra, cámaras) | $4,517,500 |
-| Equipos Activos (switches, routers, radio, VoIP) | $711,500 |
-| Instalación e Integración | $880,000 |
-| Contingencias (10%) | $610,900 |
-| **TOTAL CAPEX** | **$6,719,900** |
+| Infraestructura Pasiva (Fibra, Ductos, Civil) | $7,661,295 |
+| Equipos Activos (L2, L3, Firewalls) | $322,351 |
+| Instalación e Integración | Incluido |
+| Contingencias (10%) | Incluido |
+| **TOTAL CAPEX** | **$7,983,646** |
 
 **Conversión a COP (TRM: 4,000):** ~$26,880 millones COP
 

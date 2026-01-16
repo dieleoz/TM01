@@ -13,7 +13,7 @@
 
 | Campo | Valor |
 |:------|:------|
-| **Longitud corredor** | 259.6 km |
+| **Longitud corredor** | 293 km |
 | **Ubicación** | Puerto Salgar (Cundinamarca) – Barrancabermeja (Santander) |
 | **Tipo de proyecto** | Concesión vial 4G |
 | **Cliente final** | ANI |
@@ -27,7 +27,7 @@
 El contrato obliga al Concesionario a:
 
 - Instalar detectores de altura **de tecnología láser** antes de las Estaciones de Peaje, en ambos sentidos.
-- Instalar detectores adicionales en **puentes, túneles e intersecciones a desnivel** que presenten restricciones de altura.
+- Instalar detectores adicionales en **puentes e intersecciones a desnivel** que presenten restricciones de altura.
 - Integrar dichos detectores al **Centro de Control de Operaciones (CCO)**, garantizando transmisión en tiempo real.
 - Atender los requerimientos adicionales que la **Interventoría pueda exigir**, con base en criterios técnicos.
 

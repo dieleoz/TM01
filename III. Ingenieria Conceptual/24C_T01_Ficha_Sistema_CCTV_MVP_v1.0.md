@@ -41,7 +41,7 @@ El Sistema de Circuito Cerrado de Televisión (CCTV) tiene como objetivo **propo
 - **Longitud Principal:** 259.6 km (RN 4510 + RN 4511)
 - **Longitud Total:** ~293 km (incluyendo RN 4513 conexión CCO)
 - **Rutas:** RN 4510 (Honda-Río Ermitaño), RN 4511 (Río Ermitaño-La Lizama), RN 4513 (Conexión CCO)
-- **Ubicaciones:** Estaciones de peaje, áreas de servicio, intersecciones críticas, puentes, túneles, zonas de alta accidentalidad
+- **Ubicaciones:** Estaciones de peaje, áreas de servicio, intersecciones críticas, puentes, zonas de alta accidentalidad
 
 **Integración con:**
 - **CCO (Centro de Control Operacional):** Ubicado en La Lizama PK 4+300 (RN 4513) - Transmisión de video en tiempo real
@@ -114,7 +114,7 @@ El Concesionario deberá:
 - **Áreas de Servicio:** 2 cámaras PTZ
 - **Intersecciones Críticas:** 8 cámaras PTZ
 - **Puentes Principales:** 6 cámaras fijas
-- **Túneles:** 2 cámaras PTZ
+- **Puntos Críticos Adicionales:** 2 cámaras PTZ
 - **Zonas de Accidentalidad:** 6 cámaras PTZ
 - **Puntos de Control:** 2 cámaras fijas
 
@@ -186,12 +186,12 @@ Cámaras CCTV → Switches PoE → Red FO → Switch Core CCO → NVR/SCADA → 
 | **UF1** | 2 | Peaje Zambito + 1 intersección |
 | **UF2** | 2 | 1 puente + 1 zona crítica |
 | **UF3** | 2 | 1 intersección + 1 zona crítica |
-| **UF4** | 2 | 1 puente + 1 túnel |
+| **UF4** | 2 | 2 puentes principais |
 | **UF5** | 2 | 1 intersección + 1 zona crítica |
 | **UF6** | 2 | 1 puente + 1 zona crítica |
 | **UF7** | 2 | 1 intersección + 1 zona crítica |
 | **UF8** | 2 | 1 puente + 1 zona crítica |
-| **UF9** | 2 | 1 puente + 1 túnel |
+| **UF9** | 2 | 2 puentes principais |
 | **UF10** | 2 | 1 intersección + 1 zona crítica |
 | **UF11** | 2 | 1 puente + 1 zona crítica |
 | **UF12** | 2 | 1 intersección + 1 zona crítica |

@@ -94,7 +94,7 @@ El Concesionario deberá:
 
 **AT2, Sección 3.3.5.1:**
 - PMV alfanuméricos y gráficos
-- Detectores de altura: tecnología láser, antes de peajes, puentes con restricción, túneles, intersecciones a desnivel
+- Detectores de altura: tecnología láser, antes de peajes, puentes con restricción e intersecciones a desnivel
 - Radares: medidores de velocidad + toma de fotos de matrícula
 - CCTV: Cámara panorámica por peaje + cámaras en Áreas de Servicio + zonas críticas
 - Estaciones meteorológicas: según especificaciones IDEAM
@@ -129,7 +129,7 @@ El Concesionario deberá:
 | **Cámaras Panorámicas** | 4 unidades | Puntos críticos del corredor | Visión amplia de zonas estratégicas |
 | **WIM** (Pesaje en Movimiento) | **1 estación bidireccional** (4 plataformas: 2 WIM + 2 estáticas) | PR4+0100 RN 4513 (ambos sentidos) | Control de peso de vehículos sin detenerlos **Ver documento dedicado:** `24F_T01_Ficha_Sistema_WIM_MVP_v1.0.md` |
 | **Estaciones Meteorológicas** | **3 estaciones** | 2 en peajes + 1 en CCO | Precipitación, temperatura, viento, visibilidad **Ver documento dedicado:** `24G_T01_Ficha_Sistema_Estaciones_Meteorologicas_MVP_v1.0.md` |
-| **Teléfonos SOS** | **88 unidades** ✅ | Cada 3 km máx. (AT1) + SOS #88 RN 4513 | Comunicación de emergencias - Ver `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md` |
+| **Teléfonos SOS** | **88 unidades** ✅ | Cada 3 km máx. (AT1) | Comunicación de emergencias - Ver `24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md` |
 | **ETD/RADAR** | **15 unidades** (13 ETD + 2 Radares) | 2 Radares sancionatorios + 13 ETD monitoreo | Detección automática de accidentes/congestión **Ver documento dedicado:** `24E_T01_Ficha_Sistema_ETD_RADAR_MVP_v1.0.md` |
 | **Estaciones de Aforo** | 10-15 estaciones | Puntos representativos | Conteo y clasificación vehicular |
 | **Radares de Velocidad** | **11 unidades** | Ubicaciones estratégicas por UF | Medición velocidad + foto matrícula |
@@ -150,7 +150,7 @@ El Concesionario deberá:
 | **Sistemas de Emergencia** | Lógica | Red IP | Notificación de incidentes, activación de protocolos |
 | **ANI (SIINCO)** | Lógica | Web/API HTTPS | Reportes de tráfico, información operacional |
 | **Policía de Carreteras** | Lógica | Red IP/Web | Datos de velocidad, infracciones, incidentes |
-| **Iluminación** | Control | Red IP/Industrial | Activación automática según condiciones (túneles) |
+| **Iluminación** | Control | Red IP/Industrial | Activación automática según condiciones ambientales |
 
 ---
 
@@ -375,8 +375,9 @@ El Concesionario deberá:
 | Versión | Fecha | Autor | Descripción |
 |:-------:|:------|:------|:------------|
 | **v1.0** | 16/10/2025 | Administrador Contractual EPC | Versión inicial - Ficha de Sistema ITS creada con Template T01 |
-| **v1.1** | 20/10/2025 | Administrador Contractual EPC | **Ajuste contractual:** Postes SOS 65→87 unidades según AT1 Cap. 3 (+$77K USD) |
-| **v1.2** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Longitudes, rutas, CCO La Lizama, cantidades actualizadas |
+| v1.1 | 20/10/2025 | Administrador Contractual EPC | Ajuste contractual: Postes SOS 65→87 unidades según AT1 Cap. 3 (+$77K USD) |
+| v1.2 | 22/10/2025 | Administrador Contractual EPC | Revisión con información oficial: Longitudes, rutas, CCO La Lizama, cantidades actualizadas |
+| **v1.3** | **15/01/2026** | **Administrador Contractual EPC** | **Certificación Fase 0.5 Update:** Corrección a 88 SOS (Justificación técnica Tres Bolillos) |
 
 ---
 

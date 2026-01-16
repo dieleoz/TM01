@@ -13,7 +13,7 @@
 
 | Campo | Valor |
 |:------|:------|
-| **Longitud corredor** | 259.6 km |
+| **Longitud corredor** | 293 km |
 | **Ubicación** | Puerto Salgar (Cundinamarca) – Barrancabermeja (Santander) |
 | **Tipo de proyecto** | Concesión vial 4G |
 | **Cliente final** | Agencia Nacional de Infraestructura – ANI |

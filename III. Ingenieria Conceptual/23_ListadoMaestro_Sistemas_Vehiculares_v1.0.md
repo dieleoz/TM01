@@ -14,7 +14,7 @@
 |-------|-------|
 | **Proyecto** | APP Puerto Salgar - Barrancabermeja |
 | **Tipo de Proyecto** | Concesión Vehícular/Carretera |
-| **Longitud Estimada** | 259.6 km principales + 33.4 km adicionales (RN 4510, RN 4511, RN 4513) |
+| **Longitud Estimada** | 293.0 km (259.6 km principales + 33.4 km adicionales) |
 | **Departamentos** | Cundinamarca, Boyacá, Santander |
 | **Fuentes Contractuales** | AT1, AT2, AT3, AT4 |
 | **Estado** | ✅ Versión Preliminar v1.0 |
@@ -47,7 +47,7 @@ Este documento consolida TODOS los sistemas vehiculares identificados en los Ap�
 | **DAI** | Detectores Automáticos de Incidentes | Por definir | Puntos críticos | AT2, AT4 |
 | **Aforo** | Contadores de Tráfico | Todas las estaciones de peaje | Estaciones de peaje | AT2, AT4 |
 | **Radares** | Sistemas de Control de Velocidad | Por definir | Puntos críticos | AT2 |
-| **Detectores Altura** | Tecnología láser | Mínimo en peajes, puentes, túneles | Antes de restricciones | AT2 |
+| **Detectores Altura** | Tecnología láser | Mínimo en peajes y puentes | Antes de restricciones | AT2 |
 
 ---
 
@@ -133,7 +133,6 @@ Este documento consolida TODOS los sistemas vehiculares identificados en los Ap�
 | **Iluminación Peajes** | Sistema de alumbrado LED | Todas las estaciones | Estaciones de peaje (400m cada sentido) | AT2 |
 | **Iluminación Áreas Servicio** | Alumbrado exterior | Todas las áreas | Áreas de servicio | AT2 |
 | **Iluminación Intersecciones** | A nivel y desnivel | Por definir | Intersecciones | AT2 |
-| **Iluminación Túneles** | Sistema especial túneles | Si aplica | Túneles (si hay) | AT2 |
 | **Control Iluminación** | Sistema automático centralizado | 1 sistema | CCO + control local | AT2 |
 
 ---
@@ -195,7 +194,6 @@ Este documento consolida TODOS los sistemas vehiculares identificados en los Ap�
 |:---------|:------------|:------------------|:----------|:---------------|
 | **Calzadas** | Pavimento flexible/rígido | 259.6 km (total) | Todo el corredor | AT1, AT2, AT3 |
 | **Puentes** | Estructuras de paso | Por definir (ver AT1) | Según diseño | AT1, AT2, AT3 |
-| **Túneles** | Si aplica | Por definir (ver AT1) | Según diseño | AT1, AT2 |
 | **Intercambios** | A desnivel | Por definir (ver AT1) | Según diseño | AT1, AT3 |
 | **Intersecciones** | A nivel | Por definir (ver AT1) | Según diseño | AT1, AT3 |
 | **Drenajes** | Cunetas, alcantarillas, box culvert | Por definir | Todo el corredor | AT2, AT3 |
@@ -301,7 +299,7 @@ Este documento consolida TODOS los sistemas vehiculares identificados en los Ap�
 | ✅ **Pesaje Dinámico (WIM)** | Pesaje sin detención en carriles de peaje | Alta |
 | ✅ **TAG/Telepeaje** | Recaudo electrónico automático | Alta |
 | ✅ **Control de Velocidad (Radares)** | Monitoreo de velocidad para seguridad | Media |
-| ✅ **Detectores de Altura** | Protección de puentes y túneles | Alta |
+| ✅ **Detectores de Altura** | Protección de puentes | Alta |
 | ✅ **Sistema SGSV** | Gestión de Seguridad Vial | Alta |
 | ✅ **Emisora de Radio FM** | Información al usuario | Media |
 | ✅ **Paraderos Transporte Público** | Infraestructura para buses | Baja |
@@ -321,7 +319,7 @@ Este documento consolida TODOS los sistemas vehiculares identificados en los Ap�
 | **Estaciones Meteo** | 1 cada 30-50 km | Cobertura climática |
 | **Cajas FO** | 1 cada 0.5-1 km | Empalmes de fibra |
 
-**Total Estimado (259.6 km):**
+**Total Estimado (293.0 km):**
 - Señales verticales: ~5,000-7,500 unidades
 - CCTV: ~130-260 cámaras
 - SOS: ~90-130 postes
@@ -388,13 +386,13 @@ Este documento consolida TODOS los sistemas vehiculares identificados en los Ap�
 | 3 | **Pesaje** | Fijas, Dinámicas, Móviles | ✅ Identificado |
 | 4 | **CCO** | SCADA, Videowall, Servidores, SIG, SICC | ✅ Identificado |
 | 5 | **Telecomunicaciones** | Fibra, Radio, Datos, Telefonía IP | ✅ Identificado |
-| 6 | **Iluminación** | Peajes, Áreas, Intersecciones, Túneles | ✅ Identificado |
+| 6 | **Iluminación** | Peajes, Áreas, Intersecciones | ✅ Identificado |
 | 7 | **Señalización** | Vertical, Horizontal, Defensas, Barreras, Tachas | ✅ Identificado |
 | 8 | **Emergencias** | Ambulancias, Grúas, Carrotaller, Rescate | ✅ Identificado |
 | 9 | **Áreas de Servicio** | Talleres, Sanitarios, Restaurantes | ✅ Identificado |
 | 10 | **Información** | Web, Radio, Boletín, SICC, SIG | ✅ Identificado |
 | 11 | **Energía** | Subestaciones, UPS, Generadores | ✅ Identificado |
-| 12 | **Infraestructura** | Calzadas, Puentes, Túneles, Drenajes | ✅ Identificado |
+| 12 | **Infraestructura** | Calzadas, Puentes, Drenajes | ✅ Identificado |
 | 13 | **Edificaciones** | CCO, Peajes, Bases, CAV | ✅ Identificado |
 
 ---

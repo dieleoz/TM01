@@ -27,7 +27,7 @@
 | **Tipo principal** | PTZ Domo IP (zoom 30×) | T04 CCTV |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
 | **Almacenamiento** | 30 días×30 cámaras en NVR CCO | AT2 |
-| **CAPEX Total** | **$390,000 USD** | $13,000/cámara instalada |
+| **CAPEX Total** | **$1,890,000 USD** | $63,000/cámara instalada (Full Stack) |
 | **OPEX Anual** | **$18,000 USD** | $600/cámara/año |
 | **OPEX 20 años** | **$360,000 USD** | Mantenimiento |
 
@@ -62,11 +62,16 @@
 | Canalización a fibra | 30 | $450 | $13,500 | 3.5% |
 | Configuración y comisionamiento | 30 | $600 | $18,000 | 4.6% |
 | Pruebas y certificación | 30 | $400 | $12,000 | 3.1% |
-| **SUBTOTAL** | - | - | **$465,000** | **119.2%** |
-| **Descuento volumen (-15%)** | - | - | **-$75,000** | **-19.2%** |
-| **TOTAL CAPEX** | - | - | **$390,000** | **100%** |
+| **4. INFRAESTRUCTURA DE INTEGRACIÓN (CCO/VMS/COMMS)** | **1** | **$1,500,000** | **$1,500,000** | **79.4%** |
+| Videowall CCO (16-32 pantallas) | 1 | $200,000 | $200,000 | 10.6% |
+| Licencias VMS Enterprise (Milestone/Genetec) | 30 | $2,000 | $60,000 | 3.2% |
+| Servidores Grabación + Failover | 4 | $25,000 | $100,000 | 5.3% |
+| Storage SAN/NAS 90TB (RAID 6) | 1 | $90,000 | $90,000 | 4.8% |
+| Red Troncal FO + Switches Core 10G | 1 | $600,000 | $600,000 | 31.7% |
+| Obras Civiles Mayores (Postes/Cimentación/Ducterías) | 30 | $15,000 | $450,000 | 23.8% |
+| **TOTAL CAPEX** | - | - | **$1,890,000** | **100%** |
 
-**CAPEX/cámara:** $390,000 / 30 = **$13,000 USD/cámara** (instalada y operativa)
+**CAPEX/cámara:** $1,890,000 / 30 = **$63,000 USD/cámara** (Solución llave en mano con integración CCO y Backbone FO)
 
 ---
 

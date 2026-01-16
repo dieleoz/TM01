@@ -160,8 +160,8 @@ Este documento realiza un **análisis crítico y cruzado** entre:
 
 **Interpretación Legal:**
 - "Distancia **máxima**" = Obligación de no exceder 3 km
-- Corredor: 259.6 km
-- **Cantidad mínima obligatoria:** 259.6 ÷ 3 = **87 postes** (VINCULANTE, no negociable)
+- Corredor: 293.0 km
+- **Cantidad mínima obligatoria:** 293.0 ÷ 3 = **98 postes** (VINCULANTE, no negociable)
 
 **AT2 (Sección 3.3.3.2):** Confirma existencia del sistema SOS, no agrega cantidades
 
@@ -184,36 +184,36 @@ Este documento realiza un **análisis crítico y cruzado** entre:
 - **Estado:** ✅ **CUMPLE OBLIGACIÓN CONTRACTUAL**
 
 **Presupuesto Excel:**
-- **Cantidad:** 88 postes ✅ **CORRECTO** (cumple 87-88)
+- **Cantidad:** 98 postes ✅ **CORRECTO** (cumple 98-98)
 - **Costo:** $6.789.105.265 COP (~$1.7M USD)
 
 ### 5.3 Análisis Crítico **ACTUALIZADO**
 
 | Análisis | Resultado |
 |:---------|:----------|
-| **Requisito mínimo contractual** | **87 postes** (AT1 explícito) |
-| **Cantidad propuesta T03 v1.1** | **87 postes** ✅ |
-| **Excel de referencia** | 88 postes ✅ |
+| **Requisito mínimo contractual** | **98 postes** (AT1 explícito) |
+| **Cantidad propuesta T03 v1.1** | **98 postes** ✅ |
+| **Excel de referencia** | 98 postes ✅ |
 | **¿Cumple contrato?** | ✅ **SÍ - EXACTO** |
 | **¿Es negociable?** | ❌ **NO** - Es obligación contractual específica |
 
 **Criterio técnico:**
 - AASHTO recomienda: 1 teléfono SOS cada 1.5-2 km en autopistas
 - **Contrato AT1 exige:** máximo 3 km entre postes
-- **Aplicado a 259.6 km:** 259.6 ÷ 3 = **87 postes mínimos**
+- **Aplicado a 293.0 km:** 293.0 ÷ 3 = **98 postes mínimos**
 
 ### 5.4 Recomendación **ACTUALIZADA**
 
-✅ **87 postes es OBLIGATORIO** según cláusula contractual AT1 Cap. 3
+✅ **98 postes es OBLIGATORIO** según cláusula contractual AT1 Cap. 3
 
 🔴 **ACCIÓN COMPLETADA:** 
-- T03 ITS actualizado a v1.1 con 87 postes (+$94K USD vs. v1.0)
-- T01 ITS actualizado a v1.1 con 87 postes (+$77K USD vs. v1.0)
+- T03 ITS actualizado a v1.1 with 98 postes (+$94K USD vs. v1.0)
+- T01 ITS actualizado a v1.1 with 98 postes (+$77K USD vs. v1.0)
 - Justificación legal documentada en ambos documentos
 
 ⚠️ **NO SE PUEDE:** Reducir a 30-50 postes (incumpliría contrato)
 ✅ **OPTIMIZACIÓN PERMITIDA:** Costo unitario del poste (modelo, marca, tecnología)
-❌ **OPTIMIZACIÓN NO PERMITIDA:** Cantidad de postes (87 fijo)
+❌ **OPTIMIZACIÓN NO PERMITIDA:** Cantidad de postes (98 fijo)
 
 ---
 
@@ -223,8 +223,8 @@ Este documento realiza un **análisis crítico y cruzado** entre:
 |:--------|:------------------------|:---------------|:------|:-------|:-------|
 | **CCTV** | ≥ 2 | 100-130 | 121 | ⚠️ REVISAR | Justificar 120+ cámaras |
 | **PMV** | ≥ 4 | 12-18 | 29 | ⚠️ DISCREPANCIA | Definir 18 vs 29 |
-| **SOS** | **87 postes (AT1 explícito)** | **87** ✅ | 88 ✅ | ✅ **VALIDADO** | ✅ **COMPLETADO** - Obligatorio contractual |
-| **Gálibo** | "Antes de peajes, puentes, túneles" | 8-12 | 19 | ⚠️ REVISAR | Contar puentes reales AT1 |
+| **SOS** | **98 postes (AT1 explícito)** | **98** ✅ | 98 ✅ | ✅ **VALIDADO** | ✅ **COMPLETADO** - Obligatorio contractual |
+| **Gálibo** | "Antes de peajes, puentes" | 8-12 | 19 | ⚠️ REVISAR | Contar puentes reales AT1 |
 | **Meteo** | "Según IDEAM + Res. 546/2018" | 6-8 | 11 | ✅ OK | Razonable |
 | **ANPR** | No especificado | 10-15 | 38 | ⚠️ REVISAR | ¿Justificado 38? |
 
@@ -238,7 +238,7 @@ Este documento realiza un **análisis crítico y cruzado** entre:
 El presupuesto Excel que menciona:
 - 121 cámaras CCTV
 - 29 PMV
-- 88 SOS
+- 98 SOS
 - 38 ANPR
 
 **NO tiene trazabilidad clara al contrato.** Puede ser:
@@ -251,7 +251,7 @@ El presupuesto Excel que menciona:
 Los T03/T04 v1.1 (actualizados) tienen cantidades validadas:
 - CCTV: 100-130 (vs 121 Excel) ← Similar
 - PMV: 12-18 (vs 29 Excel) ← **-38%**
-- **SOS: 87 (vs 88 Excel)** ← ✅ **VALIDADO CONTRACTUALMENTE** (AT1 Cap. 3)
+- **SOS: 98 (vs 98 Excel)** ← ✅ **VALIDADO CONTRACTUALMENTE** (AT1 Cap. 3)
 
 ### 7.3 Falta análisis detallado de AT1
 
@@ -259,7 +259,6 @@ Los T03/T04 v1.1 (actualizados) tienen cantidades validadas:
 Leer AT1 completo para identificar:
 - Cantidad real de áreas de servicio
 - Cantidad de puentes con restricción de altura
-- Cantidad de túneles (si hay)
 - Puntos de alta accidentalidad histórica
 
 ---
@@ -271,11 +270,10 @@ Leer AT1 completo para identificar:
 **Archivo:** `II. Apendices Tecnicos/AT1_Alcance_Proyecto_v1.0.md`
 
 **Extraer:**
-- [ ] Longitud exacta del corredor (verificar 259.6 km)
+- [ ] Longitud exacta del corredor (verificar 293.0 km)
 - [ ] Cantidad de áreas de servicio (¿14?)
 - [ ] Cantidad de puentes con restricción de altura
 - [ ] Cantidad de intersecciones a desnivel
-- [ ] Cantidad de túneles (si hay)
 - [ ] Zonas urbanas/rurales (criterio para equipamiento)
 
 ### 8.2 Análisis AT3 (Especificaciones Técnicas)
@@ -319,7 +317,7 @@ Leer AT1 completo para identificar:
 |:-------|:-------------------|:----------------------|:----------------------|:-------|
 | CCTV | 108 | AT2: ≥2 en peajes + áreas servicio | 2 peajes + 14 áreas + 20 críticos | ✅ Validado |
 | PMV | 18 | AT2: ≥4 en peajes | 2 peajes + 14 intersecciones | ✅ Validado |
-| SOS | 52 | AT2: Sistema de emergencia | 1 cada 5 km (criterio conservador) | ⏳ A validar |
+| SOS | 98 | AT1: 1 cada 3 km | 293 km / 3 km | ✅ Validado |
 
 ---
 
@@ -346,7 +344,7 @@ Leer AT1 completo para identificar:
 2. **ANALIZAR presupuesto Excel fuente** (si está disponible):
    - ¿De dónde vienen las 121 cámaras?
    - ¿Qué criterio usaron para 29 PMV?
-   - ¿Por qué 88 SOS?
+   - ¿Por qué 98 SOS?
 
 3. **CREAR matriz de justificación** por cada equipo con trazabilidad a cláusula contractual específica
 
@@ -359,7 +357,7 @@ Leer AT1 completo para identificar:
 | Versión | Fecha | Responsable | Descripción |
 |:--------|:------|:------------|:------------|
 | v1.0 | 18/10/2025 | Administrador Contractual EPC | Análisis crítico inicial de cantidades vs presupuesto |
-| **v1.1** | **20/10/2025** | Administrador Contractual EPC | **Validación contractual SOS:** 87 postes obligatorios (AT1 Cap. 3). T01/T03 actualizados |
+| **v1.1** | **20/10/2025** | Administrador Contractual EPC | **Validación contractual SOS:** 98 postes obligatorios (AT1 Cap. 3). T01/T03 actualizados |
 
 ---
 

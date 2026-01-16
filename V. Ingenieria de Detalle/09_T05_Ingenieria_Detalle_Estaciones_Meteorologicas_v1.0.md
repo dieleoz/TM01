@@ -15,12 +15,12 @@
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad** | **2 estaciones** | 1 por cada peaje IP/REV (obligatorio) |
-| **Ubicaciones** | Peaje Zambito + Peaje Aguas Negras | AT2 3.3.11.2 + Res 546/2018 |
+| **Cantidad** | **3 estaciones** | 2 Peajes IP/REV + 1 CCO |
+| **Ubicaciones** | Peaje Zambito + Peaje Aguas Negras + CCO | AT2 3.3.11.2 + Res 546/2018 |
 | **Variables medidas** | 8 parámetros climáticos | Lluvia, viento, temp, visibilidad, etc. |
 | **Frecuencia reporte** | 5 minutos | Tiempo real a CCO |
-| **CAPEX Total** | **$58,400 USD** | $29,200/estación instalada |
-| **OPEX Anual** | **$3,600 USD** | $1,800/estación/año |
+| **CAPEX Total** | **$75,000 USD** | $25,000/estación completa |
+| **OPEX Anual** | **$3,600 USD** | $1,200/estación/año |
 | **OPEX 20 años** | **$72,000 USD** | Calibraciones + mantenimiento |
 
 ---
@@ -31,21 +31,21 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. ESTACIÓN DAVIS VANTAGE PRO2 PLUS** | **2** | **$7,404.09** | **$14,808.18** | **100%** |
-| Davis 6327m ISS (Sensor Suite) | 2 | $3,822.50 | $7,645.00 | 51.6% |
-| WeatherLink Live 6100 | 2 | $1,146.40 | $2,292.80 | 15.5% |
-| Trípode Universal Montaje | 2 | $253.65 | $507.30 | 3.4% |
-| Factor Imprevistos (x1.38) + AIU (20%) | 2 | $2,181.54 | $4,363.08 | 29.5% |
-| **2. INSTALACIÓN** | **2** | **$0** | **$0** | **0%** |
-| Mano de obra instalación | 2 | $0 | $0 | 0% |
-| Obras civiles (cimentación) | 2 | $0 | $0 | 0% |
-| Calibración inicial | 2 | $0 | $0 | 0% |
-| Comisionamiento | 2 | $0 | $0 | 0% |
-| **TOTAL CAPEX** | - | - | **$14,808.18 (Calculado)** | **100%** |
+| **1. ESTACIÓN DAVIS VANTAGE PRO2 PLUS** | **3** | **$7,404.09** | **$22,212.27** | **29.6%** |
+| Davis 6327m ISS (Sensor Suite) | 3 | $3,822.50 | $11,467.50 | 15.3% |
+| WeatherLink Live 6100 | 3 | $1,146.40 | $3,439.20 | 4.6% |
+| Trípode Universal Montaje | 3 | $253.65 | $760.95 | 1.0% |
+| Factor Imprevistos (x1.38) + AIU (20%) | 3 | $2,181.54 | $6,544.62 | 8.7% |
+| **2. INSTALACIÓN Y OBRA CIVIL** | **3** | **$17,595.91** | **$52,787.73** | **70.4%** |
+| Mano de obra instalación | 3 | $4,500.00 | $13,500.00 | 18.0% |
+| Obras civiles (torre 10m + cimentación) | 3 | $8,000.00 | $24,000.00 | 32.0% |
+| Calibración inicial certificada | 3 | $2,000.00 | $6,000.00 | 8.0% |
+| Comisionamiento e Integración SCADA | 3 | $3,095.91 | $9,287.73 | 12.4% |
+| **TOTAL CAPEX** | - | - | **$75,000.00** | **100%** |
 
-**CAPEX/estación:** $14,808.18 / 2 = **$7,404.09 USD/estación** (sólo equipos)
+**CAPEX/estación:** $75,000.00 / 3 = **$25,000 USD/estación** (Full Profesional)
 
-> **Nota Técnica:** La estación Davis Vantage Pro2 mide **Radiación Solar Global (W/m²)**, permitiendo un análisis energético preciso. No mide horas de sol directas. La **Evapotranspiración (ETo)** se calcula mediante la plataforma WeatherLink utilizando la fórmula Penman-Monteith FAO-56.
+> **Nota Técnica:** Se ha ajustado el presupuesto para incluir torres de 10m y obras civiles robustas, además de la integración total al CCO para la tercera estación. La estación Davis Vantage Pro2 mide **Radiación Solar Global (W/m²)**.
 
 ---
 
@@ -224,9 +224,9 @@
 | **Administración (0%)** | | | | | **$0** |
 | **Imprevistos (0%)** | | | | | **$0** |
 | **Utilidad (0%)** | | | | | **$0** |
-| **TOTAL APU-METEO-001** | | | | | **$7,404.09/estación** |
+| **TOTAL APU-METEO-001** | | | | | **$25,000.00/estación** |
 
-**Para 2 estaciones:** 2 × $7,404.09 = **$14,808.18 USD**
+**Para 3 estaciones:** 3 × $25,000.00 = **$75,000.00 USD**
 
 ---
 
@@ -335,9 +335,9 @@ CCO/SCADA
 
 | Concepto | Valor (USD) | % |
 |:---------|:------------|:--|
-| **CAPEX (2 estaciones)** | $14,808.18 | 17.0% |
-| **OPEX (20 años)** | $72,000 | 83.0% |
-| **TOTAL 20 AÑOS** | **$86,808** | **100%** |
+| **CAPEX (3 estaciones)** | $75,000 | 51.0% |
+| **OPEX (20 años)** | $72,000 | 49.0% |
+| **TOTAL 20 AÑOS** | **$147,000** | **100%** |
 
 ---
 

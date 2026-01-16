@@ -207,7 +207,7 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 **Como EPC, la obligación es instalar gálibos SOLO donde exista:**
 1. **Restricción de altura real** ≤ 5.10m (puentes vehiculares, pórticos)
 2. **Intersecciones a desnivel** con riesgo de impacto
-3. **Túneles o pasos deprimidos** (si aplica)
+3. **Intersecciones críticas**
 
 **NO es obligatorio instalar un número fijo.**
 
@@ -297,7 +297,7 @@ Berma Ext. Izq  Calzada Izq  Berma Int.  SEPARADOR  Berma Int.  Calzada Der  Ber
 
 ---
 
-> **Nota:** La longitud total incluye ambos sentidos. La longitud del corredor es 259.6 km (sentido único).
+> **Nota:** La longitud total incluye ambos sentidos. La longitud del corredor es 293 km (incluyendo conexión CCO).
 
 ---
 

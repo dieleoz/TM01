@@ -13,6 +13,8 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 22/10/2025 | Creación inicial - 87 postes SOS | Ing. ITS |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** 88 postes SOS | Ing. ITS |
+| 1.2 | 15/01/2026 | **Actualización Final:** Escalado a 98 postes SOS (293 km) | Adm. Contractual EPC |
+| **1.3** | **15/01/2026** | **Certificación Fase 0.5 Update:** Corrección final a 88 SOS | Adm. Contractual EPC |
 
 ---
 
@@ -22,13 +24,14 @@
 
 | Parámetro | Valor | Referencia Contractual |
 |:----------|:------|:-----------------------|
-| **Cantidad total** | **88 postes** | AT1 Cap. 3: "máximo 3 km entre sí" |
+| **Cantidad total** | **98 postes** | AT1 Cap. 3: "máximo 3 km entre sí" |
 | **Distribución** | Sistema "Tres Bolillos" alternados | Bermas externas Izq/Der |
 | **Separación máxima** | 3.00 km | 9 excepciones >3km (justificadas) |
-| **Longitud cubierta** | 259.6 km | Cobertura 100% del corredor |
-| **CAPEX Total** | **$2,112,000 USD** | $24,000/poste instalado |
-| **OPEX Anual** | **$52,800 USD** | $600/poste/año |
-| **OPEX 20 años** | **$1,056,000 USD** | Mantenimiento preventivo |
+| **Longitud Corredor** | **293.0 km** | AT1 - Alcance |
+| **Cantidad Postes SOS** | **88 unidades** | 1 c/3km máx (distribución real) |
+| **CAPEX Total** | **$2,352,000 USD** | $24,000/poste instalado |
+| **OPEX Anual** | **$58,800 USD** | $600/poste/año |
+| **OPEX 20 años** | **$1,176,000 USD** | Mantenimiento preventivo |
 
 ---
 
@@ -38,7 +41,7 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. EQUIPO POSTE SOS COMPLETO** | **88** | **$18,000** | **$1,584,000** | **75.0%** |
+| **1. EQUIPO POSTE SOS COMPLETO** | **98** | **$18,000** | **$1,764,000** | **75.0%** |
 | Poste metálico galvanizado 4m | 87 | $800 | $69,600 | 3.3% |
 | Gabinete control IP65 | 87 | $600 | $52,200 | 2.5% |
 | Teléfono resistente vandalismo | 87 | $1,500 | $130,500 | 6.3% |
@@ -50,17 +53,18 @@
 | Botón pulsador iluminado | 87 | $80 | $6,960 | 0.3% |
 | Sirena 110dB | 87 | $100 | $8,700 | 0.4% |
 | Baliza LED ámbar | 87 | $90 | $7,830 | 0.4% |
-| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **88** | **$4,000** | **$352,000** | **16.7%** |
-| Mano de obra instalación | 87 | $2,200 | $191,400 | 9.2% |
-| Equipos y herramientas | 87 | $800 | $69,600 | 3.3% |
-| Pruebas y comisionamiento | 87 | $600 | $52,200 | 2.5% |
-| Capacitación operadores | 87 | $400 | $34,800 | 1.7% |
-| **3. OBRAS CIVILES** | **88** | **$2,000** | **$176,000** | **8.3%** |
-| Excavación y cimentación | 87 | $800 | $69,600 | 3.3% |
-| Canalización a fibra (30m prom) | 87 | $600 | $52,200 | 2.5% |
-| Puesta a tierra (SPT) | 87 | $400 | $34,800 | 1.7% |
-| Señalización poste | 87 | $200 | $17,400 | 0.8% |
-| **TOTAL CAPEX** | - | - | **$2,112,000** | **100%** |
+| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **98** | **$4,000** | **$392,000** | **16.7%** |
+| Mano de obra instalación | 98 | $2,200 | $215,600 | 9.2% |
+| Equipos y herramientas | 98 | $800 | $78,400 | 3.3% |
+| Pruebas y comisionamiento | 98 | $600 | $58,800 | 2.5% |
+| Capacitación operadores | 98 | $400 | $39,200 | 1.7% |
+| **3. OBRAS CIVILES** | **98** | **$2,000** | **$196,000** | **8.3%** |
+| 1 | Suministro Poste SOS Solar Completo | Un | 88 | $12,500 | $1,100,000 |
+| 2 | Instalación, Cimentación y Puesta en Marcha | Un | 88 | $4,500 | $396,000 |
+| 3 | Integración con CCO La Lizama | Gl | 1 | $85,000 | $85,000 |
+| 4 | Stock de Repuestos (5%) | Gl | 1 | $79,050 | $79,050 |
+| **TOTAL CAPEX SOS** | | | | | **$1,660,050** |
+ **100%** |
 
 **CAPEX/poste:** $2,112,000 / 88 = **$24,000 USD/poste** (todo incluido)
 
@@ -136,15 +140,15 @@
 
 | Ruta | UF Principal | Cantidad | PKR Inicio | PKR Fin | Observaciones |
 |:-----|:-------------|:---------|:-----------|:--------|:--------------|
-| **RN 4510** | 0D, 1, 5.1, 5.2 | 33 | 41+180 | 131+700 | Sistema tres bolillos |
-| **RN 4511** | 0D-12 | 51 | 0+650 | 147+385 | Sistema tres bolillos |
-| **RN 4513** | 11, 13 | 3 | 1+240 | 6+050 | Acceso CCO/Báscula |
-| **TOTAL** | - | **87** | - | - | **259.6 km cubiertos** |
+| **RN 4510** | 0D, 1, 5.1, 5.2 | 37 | 41+180 | 131+700 | Sistema tres bolillos |
+| **RN 4511** | 0D-12 | 56 | 0+650 | 147+385 | Sistema tres bolillos |
+| **RN 4513** | 11, 13 | 5 | 1+240 | 6+050 | Acceso CCO/Báscula |
+| **TOTAL** | - | **98** | - | - | **293.0 km cubiertos** |
 
 **Distribución por calzada (Sistema Tres Bolillos):**
-- Calzada Izquierda (berma externa): ~44 postes (SOS impares)
-- Calzada Derecha (berma externa): ~43 postes (SOS pares)
-- **Total:** 87 postes alternados
+- Calzada Izquierda (berma externa): ~49 postes (SOS impares)
+- Calzada Derecha (berma externa): ~49 postes (SOS pares)
+- **Total:** 98 postes alternados
 
 ---
 
@@ -405,11 +409,11 @@ Cable UTP Cat6 → Teléfono VoIP
 
 | Concepto | Valor (USD) | % |
 |:---------|:------------|:--|
-| **CAPEX (87 postes)** | $2,088,000 | 66.7% |
-| **OPEX (20 años)** | $1,044,000 | 33.3% |
-| **TOTAL 20 AÑOS** | **$3,132,000** | **100%** |
+| **CAPEX (98 postes)** | $2,352,000 | 66.7% |
+| **OPEX (20 años)** | $1,176,000 | 33.3% |
+| **TOTAL 20 AÑOS** | **$3,528,000** | **100%** |
 
-**CAPEX/km:** $2,088,000 / 259.6 km = **$8,046 USD/km**
+**CAPEX/km:** $2,352,000 / 293.0 km = **$8,027 USD/km**
 
 ---
 
@@ -443,8 +447,8 @@ Cable UTP Cat6 → Teléfono VoIP
 ---
 
 **✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
-- Cantidad actualizada: 88 postes SOS
-- CAPEX actualizado: USD $2,112,000
-- OPEX actualizado: USD $52,800/año
+- Cantidad actualizada: 98 postes SOS
+- CAPEX actualizado: USD $2,352,000
+- OPEX actualizado: USD $58,800/año
 - Metodología PKD lineal aplicada
-
+```

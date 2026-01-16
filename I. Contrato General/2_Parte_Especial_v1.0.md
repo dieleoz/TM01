@@ -6,59 +6,6 @@
 **Ministerio de Transporte**  
 **Agencia Nacional de Infraestructura (ANI)**
 
----
-
-## ⚠️ JERARQUÍA CONTRACTUAL
-
-> **IMPORTANTE:** Conforme a la Sección 19.15 de la Parte General, esta **Parte Especial PRIMA** sobre todos los demás documentos del contrato en lo expresamente regulado en su contenido.
-
----
-
-## INFORMACIÓN DEL DOCUMENTO
-
-| Campo | Valor |
-|:------|:------|
-| **Tipo de documento** | Parte Especial del Contrato de Concesión |
-| **Concedente** | Agencia Nacional de Infraestructura (ANI) |
-| **Concesionario** | Autopista Magdalena Medio S.A.S. |
-
-| **Corredor** | Troncal del Magdalena Medio |
-| **Esquema** | APP (Asociación Público Privada) |
-| **Páginas totales** | ~60 |
-| **Adenda** | Adenda 6 (última versión) |
-| **Fecha** | [DATO_PENDIENTE] |
-| **Versión** | v1.0 |
-| **Estado** | ✅ Vigente |
-| **Archivo fuente** | PARTE ESPECIAL C1 ADENDA 6 SIN MARCAS.txt |
-| **Fecha conversión** | 16/10/2025 |
-| **Responsable** | Administrador Contractual EPC |
-
----
-
-## RELACIÓN CON PARTE GENERAL
-
-Esta Parte Especial:
-- ✅ **Complementa** las secciones de la Parte General con datos específicos del proyecto
-- ✅ **Modifica** ciertas disposiciones de la Parte General cuando se indica expresamente
-- ✅ **Desarrolla** aspectos económicos, técnicos y operativos particulares del proyecto
-- ⚠️ **Prima** sobre la Parte General en caso de contradicción (Sección 19.15)
-
-Para consultar las **reglas generales** del contrato → Ver [Parte General](1_Parte_General_v1.0.md)
-
----
-
-## 📑 TABLA DE CONTENIDOS
-
-| Capítulo | Título | Página |
-|:---------|:-------|:------:|
-| **I** | [Reglas de Interpretación](#capítulo-i---reglas-de-interpretación) | 4 |
-| **II** | [Tabla de Referencias a la Parte General](#capítulo-ii---tabla-de-referencias) | 5 |
-| **III** | [Aspectos Generales](#capítulo-iii---aspectos-generales) | 24 |
-| **IV** | [Aspectos Económicos del Contrato](#capítulo-iv---aspectos-económicos) | 32 |
-| **V** | [Etapa Preoperativa](#capítulo-v---etapa-preoperativa) | 50 |
-| **VI** | [Sanciones y Esquemas de Apremio](#capítulo-vi---sanciones-y-apremio) | 52 |
-| **VII** | [Garantías](#capítulo-vii---garantías) | 58 |
-| **VIII** | [Cesión de Licencias y Permisos Ambientales](#capítulo-viii---cesión-licencias-ambientales) | 63 |
 
 ---
 
@@ -127,10 +74,10 @@ REGLAS DE INTERPRETACIÓN DE ESTE DOCUMENTO
 
 Sección de la Parte General 1.18
 
-Para todos los efectos técnicos, operativos y legales, se aplicarán las siguientes normas actualizadas:
-- **Manual de Señalización**: Manual de Señalización Vial 2024 (o la norma que lo modifique o sustituya). *Nota: En caso de conflicto sobre cantidades (ej. Paneles LED), aplicar Sección 4.11(f) de Parte General.*
-- **Normas Eléctricas**: Reglamento Técnico de Instalaciones Eléctricas (RETIE) actualizado según Resolución 40117 de 2024.
-- **Recaudo e Interoperabilidad**: Resolución 20213040035125 de agosto de 2021 (IP/REV, COLPASS), incluyendo estándares ISO 18000-63 y seguridad AES-256. *Nota: Toda referencia a 'Certificación' de actores se entenderá como 'Habilitación'.*
+Para todos los efectos técnicos, operativos y legales, se aplicarán las siguientes normas:
+- **Manual de Señalización**: Manual de Señalización Vial 2015 (o la norma que lo modifique o sustituya).
+- **Normas Eléctricas**: Reglamento Técnico de Instalaciones Eléctricas (RETIE) 2013 (o la norma que lo modifique o sustituya).
+- **Recaudo e Interoperabilidad**: Resolución 20213040035125 de agosto de 2021 (IP/REV, COLPASS), o la norma que la modifique, complemente o sustituya.
 
 
 1.19
@@ -952,8 +899,7 @@ PR 52-Ruta Nacional 4511 PK51+100 (988240.27-
 1209020.92)
 Longitud aproximad a origen destino⁽¹⁾
 
-
-259.61
+293.00
 
 
 9.83
@@ -3232,19 +3178,8 @@ Cesión Total
 
 ---
 
-## NOTAS FINALES
-
-**Estado del documento:** ✅ Contenido completo  
-**Última actualización:** 16/10/2025  
-**Responsable:** Administrador Contractual EPC  
-**Metodología aplicada:** Punto 42 v1.0  
-**Jerarquía:** Nivel 1 (Prima sobre todos los documentos)  
-
-**Referencia:** Ver Sección 19.15 de la Parte General para orden de prelación completo
-
 ---
 
 **Fin del documento - Parte Especial**  
 *Corredor: Troncal del Magdalena Medio*  
-*Puerto Salgar - San Roque: 259.6 km*  
-*Conversión a Markdown: 16 de octubre de 2025*
+*Puerto Salgar - Barrancabermeja: 293.0 km*  

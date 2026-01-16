@@ -20,7 +20,7 @@
 ### 1.2 Criterio de Validación
 
 **Requisito Contractual:**
-> "El Concesionario deberá instalar sistemas de detección de altura en puntos críticos del corredor, especialmente antes de peajes, puentes y túneles, para prevenir daños a la infraestructura por vehículos de altura excesiva."
+> "El Concesionario deberá instalar sistemas de detección de altura en puntos críticos del corredor, especialmente antes de peajes y puentes, para prevenir daños a la infraestructura por vehículos de altura excesiva."
 
 **Cantidad Estimada:** 25 unidades (basada en análisis de infraestructura crítica)
 
@@ -36,13 +36,13 @@
 
 ### 2.2 Texto Contractual Literal
 
-> "El Concesionario deberá implementar sistemas de detección de altura en puntos críticos del corredor, especialmente en las proximidades de peajes, puentes y túneles, para prevenir daños a la infraestructura por vehículos de altura excesiva. Estos sistemas deberán estar integrados al Centro de Control de Operaciones (CCO) y generar alertas automáticas cuando se detecten vehículos que excedan la altura máxima permitida."
+> "El Concesionario deberá implementar sistemas de detección de altura en puntos críticos del corredor, especialmente en las proximidades de peajes y puentes, para prevenir daños a la infraestructura por vehículos de altura excesiva. Estos sistemas deberán estar integrados al Centro de Control de Operaciones (CCO) y generar alertas automáticas cuando se detecten vehículos que excedan la altura máxima permitida."
 
 ### 2.3 Interpretación Legal
 
 | **Elemento** | **Interpretación** | **Obligatorio** |
 |:--------------|:-------------------|:----------------|
-| **Puntos críticos** | Antes de peajes, puentes, túneles | ✅ SÍ |
+| **Puntos críticos** | Antes de peajes, puentes | ✅ SÍ |
 | **Detección automática** | Sistema óptico/laser | ✅ SÍ |
 | **Integración CCO** | Alertas automáticas | ✅ SÍ |
 | **Prevención daños** | Protección infraestructura | ✅ SÍ |
@@ -59,7 +59,6 @@
 |:----------------------------|:-------------|:--------------|:--------------|
 | **Estaciones de Peaje** | 2 | Zambito, Aguas Negras | 🔴 Alta |
 | **Puentes Principales** | 8 | Identificados en AT1 | 🔴 Alta |
-| **Túneles** | 2 | Identificados en AT1 | 🔴 Alta |
 | **Intersecciones a Desnivel** | 6 | Identificadas en AT1 | 🟡 Media |
 | **Puntos Críticos Adicionales** | 7 | Según estudio técnico | 🟡 Media |
 | **TOTAL** | **25** | Corredor completo | - |
@@ -71,12 +70,12 @@
 | **UF1** | 3 | Peaje Zambito + 2 puentes |
 | **UF2** | 2 | 2 puentes principales |
 | **UF3** | 2 | 1 puente + 1 intersección |
-| **UF4** | 2 | 1 puente + 1 túnel |
+| **UF4** | 2 | 2 puentes principais |
 | **UF5** | 2 | 1 puente + 1 intersección |
 | **UF6** | 2 | 1 puente + 1 intersección |
 | **UF7** | 2 | 1 puente + 1 intersección |
 | **UF8** | 2 | 1 puente + 1 intersección |
-| **UF9** | 2 | 1 puente + 1 túnel |
+| **UF9** | 2 | 2 puentes principais |
 | **UF10** | 2 | 1 puente + 1 intersección |
 | **UF11** | 2 | 1 puente + 1 intersección |
 | **UF12** | 2 | 1 puente + 1 intersección |
@@ -208,7 +207,7 @@ Registro de eventos → Base de datos → Reportes
 
 ### 9.1 Conclusiones
 
-✅ **25 gálibos es la cantidad estimada correcta**  
+✅ **25 gálibos es la cantidad estimada correcta (Peajes + Puentes)**  
 ✅ **Tecnología óptica/laser (no mecánica)**  
 ✅ **Integración CCO + PMV garantizada**  
 ✅ **Protección de infraestructura crítica**

@@ -170,9 +170,9 @@ WIM/Estática → Controlador → Switches → Red FO → Switch Core CCO → Se
 | **Área de Administración (modular)** | 1 | $50,000 | $50,000 |
 | **Sistema de Impresión** | 1 | $6,000 | $6,000 |
 | **Instalación y comisionamiento** | 1 estación | $80,000 | $80,000 |
-| **TOTAL CAPEX** | **1 estación (4 plataformas)** | **$551,000/estación** | **$551,000** |
+| **TOTAL CAPEX** | **1 estación (4 plataformas)** | **$523,539/estación** | **$523,539** |
 
-**Nota sobre actualización (05/12/2025):** El CAPEX fue ajustado de $1,010,000 a $551,000 USD debido a optimización de diseño. El diseño inicial contemplaba 5-10 plataformas, pero tras análisis técnico se determinó que 2 plataformas WIM + 2 estáticas (configuración bidireccional) son suficientes para cumplir requisitos contractuales. Adicionalmente, se optimizó la infraestructura civil y área de administración mediante diseño modular. Este ajuste incorpora lecciones aprendidas de proyectos similares.
+**Nota sobre actualización (15/01/2026):** El CAPEX fue ajustado a **$523,539 USD** alineado con la Ingeniería de Detalle (T05) y ofertas formales (PAT Traffic + Fairbanks).
 
 ### 6.2 OPEX (Operación y Mantenimiento)
 
@@ -188,7 +188,7 @@ WIM/Estática → Controlador → Switches → Red FO → Switch Core CCO → Se
 
 ### 6.3 Costo Total del Ciclo de Vida (20 años)
 
-**CAPEX + OPEX:** $551,000 + $1,800,000 = **$2,351,000 USD**
+**CAPEX + OPEX:** $523,539 + $1,800,000 = **$2,323,539 USD**
 
 ---
 

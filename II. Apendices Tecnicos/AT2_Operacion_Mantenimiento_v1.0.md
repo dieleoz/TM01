@@ -904,7 +904,7 @@ Para el control del flujo vehicular, el Concesionario se obliga a instalar al me
 
 Los equipos de control de tráfico deberán ser instalados en todas las Estaciones de Peaje y en otros puntos donde se requiera monitorear el tráfico, los cuales serán definidos conjuntamente por el Concesionario y la Interventoría. Las características técnicas de cada uno de los componentes del Sistema de Control deberán ser consistentes con los objetivos del control y las obligaciones de suministro de información a la ANI. Los paneles de mensajería variable deberán ser alfanuméricos y gráficos. El Concesionario deberá definir los Sistemas de Control de Tráfico dentro del Manual de Operación y Mantenimiento, que será verificado por la Interventoría.
 
-Los detectores de altura deberán ser de tecnología láser y se requerirá colocarlos antes de la entrada de las Estaciones de Peaje en ambos sentidos de la(s) vía(s), en todos los puentes con restricciones de altura, túneles y en todas las intersecciones a desnivel. El Interventor podrá exigir la instalación de detectores adicionales si lo considera técnicamente necesario.
+Los detectores de altura deberán ser de tecnología láser y se requerirá colocarlos antes de la entrada de las Estaciones de Peaje en ambos sentidos de la(s) vía(s), en todos los puentes con restricciones de altura e intersecciones a desnivel. El Interventor podrá exigir la instalación de detectores adicionales si lo considera técnicamente necesario.
 
 Además del equipo de control de velocidad que se entregará a la Policía de Carreteras, el Concesionario debe instalar, en los sitios críticos de la vía, un sistema de monitores de velocidad que le permita evaluar, para fines informativos propios de la Policía de Carreteras y de la ANI, velocidades promedio del tránsito de la(s) vía(s). Estos equipos consistirán en medidores de cantidad y flujo de vehículos por radar y cámaras equipadas para medir velocidad y toma de fotos de matrícula vía Esta información deberá ser entregada a la ANI cuando la requiera y como parte de los informes mensuales, y servirá como base para evaluar, de forma conjunta, la necesidad de instalar señalización adicional por parte del Concesionario o de movilizar a la Policía de Carreteras a zonas donde el riesgo de accidentes esté aumentando o de realizar algún tipo de intervención
 
@@ -1155,27 +1155,21 @@ El Concesionario deberá vigilar los derechos de vía, detectar invasiones y col
 
 Los transportes especiales son los vehículos que exceden de las dimensiones o de los pesos habituales de los vehículos pesados.
 
-En el túnel aplicarán las restricciones vigentes sobre peso total, peso por eje y dimensiones de vehículos.
-
-Para el manejo de este tipo de tráfico el Concesionario deberá disponer de lugares anteriores a la entrada del túnel donde puedan detenerse los transportes y desde los que se inicien las actuaciones especiales que les permitan el paso por el túnel, para el caso de los transportes especiales.
-
-Estos puntos de detención deben estar suficientemente indicados, y disponer de medios para comunicar la presencia del vehículo de transporte especial, al Centro de Control quien autorizará su paso por el túnel.
+En el corredor vial aplicarán las restricciones vigentes sobre peso total, peso por eje y dimensiones de vehículos según la normativa nacional.
 
 El Concesionario deberá establecer como mínimo las siguientes tres categorías para el manejo de este tipo de transportes:
-- Tipos y dimensiones de los vehículos que pueden atravesar el túnel sin ninguna precaución especial (umbral inferior de los transportes especiales).
-- Tipos y dimensiones de los vehículos que pueden atravesar el túnel con actuaciones precautorias específicas (transportes especiales específicos para este túnel).
-- Tipos y dimensiones de los vehículos que no pueden circular por el túnel (umbral superior de los transportes especiales).
+- Tipos y dimensiones de los vehículos que pueden circular sin ninguna precaución especial (umbral inferior de los transportes especiales).
+- Tipos y dimensiones de los vehículos que pueden circular con actuaciones precautorias específicas (transportes especiales específicos).
+- Tipos y dimensiones de los vehículos que no pueden circular por la vía (umbral superior de los transportes especiales).
 Respecto a los transportes de cargas peligrosas, los conductores de camiones deben ser alertados, mediante señalización apropiada y suficiente, de los requerimientos de revisión de carga en caso requerido, como medida de prevención de entrada de materiales prohibidos o controlados.
 
 El transporte de explosivos debe ser restringido y en lo posible prohibido. El transporte de otros materiales peligrosos deberá ser restringido y en lo posible limitado a ciertos períodos del Día o la semana. Los transportes de materiales peligrosos, adicionalmente a los explosivos, incluyen todas las sustancias con cuya exposición se ponga en riesgo la vida humana o cuya inclusión en un accidente resulte en pérdidas materiales y/o humanas, como lo son las sustancias venenosas, tóxicas, corrosivas o de naturaleza radioactiva o nuclear, ciertos sólidos producto de refinación de hidrocarburos, gasolina, químicos orgánicos, materiales de refinación y ciertos componentes alimenticios.
 
-Dentro de este grupo se incluyen también los contenedores presurizados, debido a que los materiales componentes de estos equipos no deben exponerse a situaciones de incendio en recintos cerrados como el túnel, dada la naturaleza explosiva de los gases utilizados en dichos elementos.
-
-Los camiones transportadores de estos materiales deben ser inspeccionados en el área designada para este efecto, y esperar la llegada de otros vehículos con similares cargas, para posteriormente al despeje del tránsito en el túnel, ser escoltados por los vehículos de apoyo y de emergencia en su paso por el túnel.
+Dentro de este grupo se incluyen también los contenedores presurizados. Los camiones transportadores de estos materiales deben ser inspeccionados en el área designada para este efecto, garantizando el cumplimiento de los protocolos de seguridad.
 
 ##### 3.3.12.2. Otras Actuaciones Particulares de Operación del Proyecto
 
-Los vehículos que presenten riesgos para la operación del túnel en categoría de motocicletas, tracción animal, bicicletas, así como el tránsito peatonal, podrán sujetarse a restricciones totales o parciales, si así se justifica en los estudios de detalle y se contemplan los mecanismos de gestión de información y comunicación dentro del manual de Operación y Mantenimiento.
+Los vehículos que presenten riesgos para la operación en categoría de tracción animal, bicicletas, así como el tránsito peatonal, podrán sujetarse a restricciones totales o parciales en sectores específicos, si así se justifica en los estudios de detalle y se contemplan los mecanismos de gestión de información y comunicación dentro del manual de Operación y Mantenimiento.
 
 ---
 

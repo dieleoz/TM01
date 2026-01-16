@@ -1,11 +1,11 @@
 # T05 - INGENIERÍA DE DETALLE - FIBRA ÓPTICA
-## OPCIÓN A: FIBRA CONVENCIONAL + TRITUBO + CAJAS CADA 300M
+## OPCIÓN 1: MICROFIBRA ÓPTICA + MICRODUCTO
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** Telecomunicaciones - Red de Fibra Óptica  
 **Fecha:** 22 de octubre de 2025  
 **Versión:** 1.1  
-**Tecnología Seleccionada:** **OPCIÓN A - FIBRA CONVENCIONAL + TRITUBO**  
+**Tecnología Seleccionada:** **OPCIÓN 1 - MICROFIBRA ÓPTICA**  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**

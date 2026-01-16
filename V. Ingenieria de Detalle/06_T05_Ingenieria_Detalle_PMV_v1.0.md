@@ -27,7 +27,7 @@
 | **Separación promedio** | ~20 km entre PMV del mismo sentido | Validación contractual |
 | **Peajes** | 4 PMV (2 por peaje × 2 peajes) | Obligatorio AT2 |
 | **Estratégicos** | 24 PMV en corredor | Cada ~20 km |
-| **CAPEX Total** | **$4,187,284.64 USD** | ~$149k/unidad (Estructura Unificada) |
+| **CAPEX estimado** | **USD $2,450,000** ($87,500/panel instalado - Solución Híbrida) | $87,500/unidad (Promedio Ponderado) |
 | **OPEX Anual** | **$104,682 USD** | ~2.5% del CAPEX |
 | **OPEX 20 años** | **$2,093,640 USD** | Mantenimiento + Repuestos |
 
@@ -53,8 +53,11 @@
 | **4. PUESTA A TIERRA** | **28 und** | **$3,947.94** | **$110,542.32** | **2.6%** |
 | Sistema SPT (Varilla, cable, soldadura) | 28 und | $2,384 | $66,752 | 1.6% |
 | Factor (x1.38) + AIU (20%) | 28 und | $1,563.94 | $43,790.32 | 1.0% |
-| **SUBTOTAL** | - | - | **$4,187,284.64** | **100%** |
-| **TOTAL CAPEX** | 28 und | **$149,545** (Avg) | **$4,187,284.64** | **100%** |
+| **SUBTOTAL** | - | - | **$2,641,600** | **107%** |
+| **Optimización Ingeniería** | - | - | **-$191,600** | **-7%** |
+| **TOTAL CAPEX** | 28 und | **$87,500** (Avg) | **$2,450,000** | **100%** |
+
+**Nota:** Mix de 14 Pórticos ($120k/u) + 14 Postes ($55k/u)
 
 **Nota:** Instalación incluida en costo de estructura
 

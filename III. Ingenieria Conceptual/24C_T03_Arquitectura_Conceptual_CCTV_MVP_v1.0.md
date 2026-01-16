@@ -548,7 +548,6 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~10 cámaras
 | **Áreas de Servicio** | 2 | 2 PTZ | Seguridad |
 | **Intersecciones Críticas** | 8 | 8 PTZ | Monitoreo de tráfico |
 | **Puentes Principales** | 6 | 6 fijas | Seguridad estructural |
-| **Túneles** | 2 | 2 PTZ | Seguridad y monitoreo |
 | **Zonas de Accidentalidad** | 6 | 6 PTZ | Análisis de incidentes |
 | **Puntos de Control** | 2 | 2 fijas | Seguridad |
 | **TOTAL** | **30** | **20 PTZ + 10 fijas** | - |

@@ -13,7 +13,7 @@
 | Campo | Valor |
 |:------|:------|
 | **Equipo** | Cable de Fibra Óptica Monomodo SM OS2 |
-| **Longitud estimada** | 280-300 km (anillo redundante + derivaciones) |
+| **Longitud estimada** | 293 km (Contractual) / 322 km (Cable físico) |
 | **Ubicación** | Subterránea (ductos) a lo largo del corredor vial |
 | **Sistema asociado** | Telecomunicaciones (Backbone) |
 | **Criticidad** | 🔴 Crítica |
@@ -147,9 +147,9 @@ Topología: Anillo SONET/SDH o Metro Ethernet
 | Conectores y accesorios | - | - | $150,000 |
 | Fusiones (mano de obra) | 5,000 | $15 | $75,000 |
 | Pruebas OTDR | 280 km | $10/km | $2,800 |
-| **TOTAL** | - | - | **$15,102,800** |
+| **TOTAL** | - | - | **$7,661,295** |
 
-**Nota:** La zanja y ductos representan ~93% del costo total
+**Nota:** CAPEX alineado con T05 Ingeniería de Detalle (Microfibra).
 
 ---
 
