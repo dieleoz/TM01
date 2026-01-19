@@ -2,8 +2,8 @@
 
 Proyecto: APP Puerto Salgar – Barrancabermeja (TM01 Troncal Magdalena)  
 Entidad: Concesión APP (ruta RN4510 + RN4511 + conexión CCO RN4513)  
-Fecha: 30/10/2025  
-Versión: v1.0  
+Fecha: 16/01/2026  
+Versión: v2.0  
 Contacto técnico: diego.zuniga@grupoortiz.com  
 
 ---
@@ -112,7 +112,7 @@ Se solicita oferta para suministro, instalación, puesta en marcha y garantía d
 ## 15. Formato de respuesta y plazo
 
 - Formato: PDF + anexos técnicos (cálculos, planos, fichas, cronograma, garantías).  
-- Plazo de respuesta: 7 días calendario desde recepción.  
+- Plazo de respuesta: Hasta el 06 de febrero de 2026 (21 días calendario).  
 - Enviar a: diego.zuniga@grupoortiz.com; CC: daniel.miranda@grupoortiz.com.  
 
 ---

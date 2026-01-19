@@ -3,8 +3,8 @@
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **RFQ No.:** RFQ-003-CCTV  
-**Fecha de emisión:** 04 de noviembre de 2025  
-**Versión:** 1.0  
+**Fecha de emisión:** 16 de enero de 2026  
+**Versión:** 2.0  
 **Emitido por:** Administrador Contractual EPC  
 
 ---
@@ -183,12 +183,11 @@ Las 30 cámaras CCTV se ubicarán en los siguientes puntos kilométricos (PKD = 
 | 27 | 4+150 | RN 4513 | 279+850 | UF-11 | Separador | PTZ | - |
 | 28 | 4+400 | RN 4513 | 279+600 | UF-11 | Separador | PTZ | CCO Izquierda 4+400 - N1-CCO |
 | 29 | 9+800 | RN 4513 | 274+200 | UF-11 | Sur | PTZ | Zona CCO |
+| 30 | 41+800 | RN 4511 | 108+700 | UF-5.1 | Separador | PTZ | Cámara Recuperada (Corrección v2.0) |
 
 **Referencia:** `VII. Documentos Transversales/43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md`
 
 > **Nota:** El PKD (Punto Kilométrico de Diseño) es la distancia lineal en el anillo de fibra óptica desde el CCO (PKD 0+000). El PKR (Punto Kilométrico Real) es la progresiva kilométrica según los planos oficiales de la vía.
-
-**Observación:** 1 cámara eliminada sin justificación (fila 89 - PKR 41+800, eliminada del alcance).
 
 ---
 
@@ -425,12 +424,12 @@ Las coordenadas exactas de cada cámara se proporcionarán en el documento **Lay
 
 | Fecha | Actividad |
 |:------|:----------|
-| 04-Nov-2025 | Emisión RFQ |
-| 11-Nov-2025 | Límite consultas |
-| 14-Nov-2025 | Respuesta a consultas |
-| 21-Nov-2025 | Cierre ofertas (12:00) |
-| 24-29 Nov-2025 | Evaluación |
-| 02-Dec-2025 | Adjudicación |
+| 16-Ene-2026 | Emisión RFQ |
+| 30-Ene-2026 | Límite consultas |
+| 03-Feb-2026 | Respuesta a consultas |
+| 06-Feb-2026 | Cierre ofertas (12:00) |
+| 09-13 Feb-2026 | Evaluación |
+| 16-Feb-2026 | Adjudicación |
 
 ### **Condiciones de Pago:**
 - **Anticipo:** 30% contra garantía bancaria
@@ -511,4 +510,4 @@ Las coordenadas exactas de cada cámara se proporcionarán en el documento **Lay
 
 ---
 
-**Fin del documento – RFQ-003 CCTV v1.0**
+**Fin del documento – RFQ-003 CCTV v2.0**

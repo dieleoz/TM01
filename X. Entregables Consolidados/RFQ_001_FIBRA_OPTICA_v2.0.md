@@ -2,10 +2,10 @@
 ## FIBRA ÓPTICA - RED TRONCAL ITS
 ### Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha de emisión:** 22 de octubre de 2025  
-**Fecha límite de respuesta:** 12 de noviembre de 2025 (21 días calendario)  
-**RFQ No.:** RFQ-001-FO-2025  
-**Versión:** 1.0  
+**Fecha de emisión:** 16 de enero de 2026  
+**Fecha límite de respuesta:** 06 de febrero de 2026 (21 días calendario)  
+**RFQ No.:** RFQ-001-FO-2026  
+**Versión:** 2.0  
 **Emitido por:** Administrador Contractual EPC  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Contrato:** Concesión APP Puerto Salgar - Barrancabermeja  
@@ -116,10 +116,10 @@ La cotización debe incluir **TODOS** los siguientes componentes:
 
 | Ítem | Descripción | Cantidad | Unidad | Especificación |
 |:-----|:------------|:---------|:-------|:---------------|
-| **4.1** | **Halado fibra 48 hilos** | **285,560** | **ML** | Proyecto + 10% reserva |
+| **4.1** | **Halado fibra 48 hilos** | **322,300** | **ML** | Proyecto + 10% reserva |
 | 4.1.1 | Método | Halado con winch + lubricante | - | Velocidad ≤20 m/min |
 | 4.1.2 | Incluye | Lubricante, protección extremos, etiquetado | - | - |
-| **4.2** | **Instalación fibra 48 hilos** | **285,560** | **ML** | Proyecto + 10% reserva |
+| **4.2** | **Instalación fibra 48 hilos** | **322,300** | **ML** | Proyecto + 10% reserva |
 | 4.2.1 | Incluye | Tendido, fijación, reservas en cajas | - | Bucles 15m |
 
 ---
@@ -445,7 +445,7 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 
 <!-- AUTOGEN:FO_TABLE_START -->
 
-> Ãšltima sincronizaciÃ³n: 2025-12-12 08:27:39
+> Ãšltima sincronizaciÃ³n: 2026-01-16 16:01:32
 
 | ID   | Nombre                                       | Und | Cantidad | Precio Unit. USD | Precio Unit. COP | Total USD | Total COP |
 |------|----------------------------------------------|-----|----------|------------------|------------------|-----------|-----------|
@@ -463,9 +463,10 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 | 1033 | ExcavaciÃ³n blanda + tritubo | m | 238560 |  |  |  |  |
 | 1034 | InstalaciÃ³n cruces especiales | m | 13920 |  |  |  |  |
 | 1035 | InstalaciÃ³n cajas empalme | und | 1257 |  |  |  |  |
-| 1041 | Halado fibra Ã³ptica 48h | m | 293190 |  |  |  |  |
+| 1041 | Halado fibra Ã³ptica 48h | m | 322300 |  |  |  |  |
 | 1042 | InstalaciÃ³n fibra Ã³ptica 12h (altura/piso) | m | 9440 |  |  |  |  |
 | 1043 | Trabajos instalaciÃ³n especializada | glb | 1 |  |  |  |  |
+<!-- AUTOGEN:FO_TABLE_END -->
 7. 📄 **Apéndice Técnico 2 del Contrato** (extractos relevantes)
 8. 📄 **Apéndice Técnico 3 del Contrato** (especificaciones)
 
@@ -491,21 +492,21 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 
 ### **Procedimiento de Aclaraciones:**
 
-1. **Envío de preguntas:** Por email antes del 05-Nov-2025 (12:00 hrs)
+1. **Envío de preguntas:** Por email antes del 30-Ene-2026 (12:00 hrs)
 2. **Formato:** Documento Word/PDF con preguntas numeradas
-3. **Respuesta:** Circular para todos los oferentes (08-Nov-2025)
+3. **Respuesta:** Circular para todos los oferentes (03-Feb-2026)
 4. **Publicación:** En portal web del proyecto + email a oferentes
 
 ---
 
 ### **Visita Técnica (Opcional pero Recomendada):**
 
-- **Fecha:** 29-Oct-2025
+- **Fecha:** 23-Ene-2026
 - **Hora salida:** 07:00 hrs
 - **Punto de encuentro:** [Dirección en Puerto Salgar]
 - **Recorrido:** Tramos representativos del corredor
 - **Duración:** 2 días (incluye pernocta)
-- **Inscripción:** Antes del 25-Oct-2025 por email
+- **Inscripción:** Antes del 21-Ene-2026 por email
 
 **NOTA:** Se recomienda asistir para verificar condiciones reales del terreno.
 
@@ -664,12 +665,11 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 - ✅ Stock de repuesto 5% (14,741 ML) - **Entrega como spare parts**
 
 **Desglose de cantidad:**
-- Longitud proyecto: 259,600 ML
-- Reserva técnica (+10%): 25,960 ML
-- Spare parts (+5%): 12,980 ML
-- Pérdidas instalación (+5%): 12,980 ML
-- Cruces especiales (+1%): 2,596 ML
-- **TOTAL:** 314,116 ML (redondeado a 314,824 ML)
+- Longitud proyecto: 293,000 ML
+- Reserva técnica/Cruces (+10%): 29,300 ML
+- **Subtotal Instalado:** 322,300 ML
+- Spare parts/Merma (+5%): 16,115 ML
+- **TOTAL:** 338,415 ML
 
 **Entrega:**
 - Carretes de 4,000m máximo
@@ -970,7 +970,7 @@ El oferente deberá cotizar con **precios unitarios (USD y COP) y totales** para
 - **Formato:** PDF firmado digitalmente + Excel de precios
 - **Tamaño máximo:** 50 MB por email (usar WeTransfer si excede)
 
-**Fecha y hora límite:** **12 de noviembre de 2025 a las 12:00 hrs**
+**Fecha y hora límite:** **06 de febrero de 2026 a las 12:00 hrs**
 
 **NOTA:** Ofertas recibidas después de esta fecha NO serán consideradas.
 
@@ -1102,7 +1102,7 @@ El Contratista debe:
 ⚠️ **LIMITADA.** Se coordinará con el Contratista. Incluir costos de bodega temporal si requerida.
 
 ### **7. ¿Cuándo inicia la ejecución?**
-📅 **Estimado:** Enero 2026 (sujeto a firma de contrato y disponibilidad de frentes)
+📅 **Estimado:** Marzo 2026 (sujeto a firma de contrato y disponibilidad de frentes)
 
 ### **8. ¿Puedo subcontratar alguna actividad?**
 ✅ **SÍ.** Excavación y obra civil puede ser subcontratada. Fusiones y certificación deben ser con personal propio o certificado.
@@ -1162,9 +1162,9 @@ Para cualquier consulta relacionada con esta RFQ:
 ---
 
 **Fin del documento - RFQ-001 Fibra Óptica**  
-**Versión:** 1.0  
-**Fecha de emisión:** 22 de octubre de 2025  
-**Fecha límite:** 12 de noviembre de 2025 (12:00 hrs)  
+**Versión:** 2.0  
+**Fecha de emisión:** 16 de enero de 2026  
+**Fecha límite:** 06 de febrero de 2026 (12:00 hrs)  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Emitido por:** Administrador Contractual EPC  
 
@@ -1189,6 +1189,9 @@ Los siguientes documentos están disponibles para descarga:
 ---
 
 **IMPORTANTE:** Esta RFQ es un documento técnico-comercial oficial del proyecto. Cualquier modificación debe ser notificada por escrito a todos los oferentes.
+
+
+
 
 
 
