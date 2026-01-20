@@ -4,8 +4,8 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** WIM - Weigh-In-Motion  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
-**Basado en:** T04 WIM v1.0 + Validación Contractual WIM v1.0  
+**Versión:** 2.0 (RECONCILIACIÓN AUDIT .42)  
+**Basado en:** T04 WIM v2.0 + Validación Contractual WIM v2.0  
 
 ---
 
@@ -18,13 +18,14 @@
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad** | 1 Estación de Pesaje Completa | 4 dinámicas + 2 estáticas |
-| **Ubicación** | Troncal Magdalena 1 Y 2 | UF 13 / RN 4513 |
-| **Tecnología Dinámica** | PAT Traffic - Placas 1.55m | 4 Básculas (2 por sentido) |
-| **Tecnología Estática** | Interpesaje - Fairbanks Talon Rodan | 2 Básculas (1 por sentido) |
+| **Cantidad** | 1 Estación de Pesaje Completa | 2 dinámicas + 2 estáticas |
+| **Ubicación** | Troncal Magdalena 1 Y 2 | PR4+0100 / RN 4513 |
+| **Tecnología Dinámica** | PAT Traffic - Placas 1.55m | 2 Básculas (HS-WIM) |
+| **Tecnología Estática** | Fairbanks Talon Rodan | 2 Básculas (Full length) |
 | **CAPEX Dinámico** | **$256,353.24 USD** | Suministro + Instalación (PAT) |
-| **CAPEX Estático** | **$267,185.55 USD** | Suministro USD + Instalación COP (Conv. 4000) |
-| **CAPEX TOTAL** | **$523,538.79 USD** | Consolidados (AIU + IVA incl.) |
+| **CAPEX Estático** | **$261,889.55 USD** | Suministro + Instalación (Fairbanks) |
+| **CAPEX SPT** | **$33,182.00 USD** | Puesta a Tierra Especial |
+| **CAPEX TOTAL** | **$551,424.79 USD** | Consolidados (Audit .42) |
 
 ---
 

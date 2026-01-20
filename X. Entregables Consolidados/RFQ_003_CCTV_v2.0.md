@@ -1,8 +1,8 @@
 # SOLICITUD DE COTIZACIÓN (RFQ-003)
 ## SISTEMA CCTV (CIRCUITO CERRADO DE TELEVISIÓN) – VIDEOVIGILANCIA ITS
 
-**Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**RFQ No.:** RFQ-003-CCTV  
+## **PROYECTO: APP Puerto Salgar - Barrancabermeja (Propuesta Optimizada - 15 Cámaras)**
+RFQ-003-CCTV  
 **Fecha de emisión:** 16 de enero de 2026  
 **Versión:** 2.0  
 **Emitido por:** Administrador Contractual EPC  
@@ -42,8 +42,8 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 
 ### **Componentes del Sistema:**
 
-#### **1. CÁMARAS IP PTZ COMPLETAS (30 unidades):**
-- Cámara PTZ IP 1080p con zoom óptico 30×
+#### **1. CÁMARAS IP PTZ COMPLETAS (15 unidades):**
+- **Cámara PTZ IP 1080p (32x Zoom)**: 15 unidades (Hard Deck + Nodos Críticos).
 - Domo policarbonato anti-vandálico IK10
 - Soporte montaje poste/pared
 - Cable UTP Cat6 exterior 100m
@@ -56,7 +56,7 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 - Poste metálico 12m (15 ubicaciones remotas)
 - Abrazaderas y herrajes montaje
 - Luminaria LED 50W (iluminación IR)
-- Energía solar 100W (10 zonas remotas)
+- Energía solar 100W (10 zonas remotas / SOS integrados)
 - Baterías AGM 12V 50Ah (2×10 ubicaciones)
 - Controlador solar 10A
 - Gabinete exterior IP65
@@ -77,22 +77,22 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 
 | Ítem | Descripción | Cantidad | Unidad |
 |:-----|:------------|:---------|:-------|
-| **1.1** | Cámaras IP PTZ 1080p | 30 | UND |
-| **1.2** | Domos policarbonato IK10 | 30 | UND |
-| **1.3** | Soportes montaje poste/pared | 30 | UND |
-| **1.4** | Cables UTP Cat6 exterior | 30 | UND |
-| **1.5** | Cajas paso herméticas IP66 | 30 | UND |
-| **1.6** | Inyectores PoE+ 30W | 30 | UND |
-| **1.7** | DPS datos + energía | 30 | UND |
-| **1.8** | Accesorios montaje | 30 | UND |
+| **1.1** | Cámaras IP PTZ 1080p (32x) | 10 | UND |
+| **1.2** | Domos policarbonato IK10 | 10 | UND |
+| **1.3** | Soportes montaje poste/pared | 10 | UND |
+| **1.4** | Cables UTP Cat6 exterior | 10 | UND |
+| **1.5** | Cajas de paso herméticas | 10 | UND |
+| **1.6** | Inyectores PoE+ | 10 | UND |
+| **1.7** | Protecciones Eléctricas (DPS) | 10 | UND |
+| **1.8** | Accesorios montaje | 1 | LOTE |
 
 ### **INFRAESTRUCTURA SOPORTE:**
 
 | Ítem | Descripción | Cantidad | Unidad |
 |:-----|:------------|:---------|:-------|
-| **2.1** | Postes metálicos 12m | 15 | UND |
-| **2.2** | Abrazaderas y herrajes | 30 | UND |
-| **2.3** | Luminarias LED 50W | 30 | UND |
+| **2.1** | Poste Metálico 12m | 15 | UND |
+| Gabinete intemperie IP66 | 15 | UND |
+| Kit Energía Solar (Rural) | 8 | UND |
 | **2.4** | Paneles solares 100W | 10 | UND |
 | **2.5** | Baterías AGM 12V 50Ah | 20 | UND |
 | **2.6** | Controladores solares 10A | 10 | UND |
@@ -105,9 +105,9 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 ### **CÁMARA IP PTZ:**
 - **Resolución:** 1920×1080 (1080p Full HD) mínimo
 - **Sensor:** 1/2.8" Progressive Scan CMOS
-- **Zoom óptico:** 30× mínimo
-- **Zoom digital:** 16× adicional
+- **Zoom óptico:** 32× mínimo (Estandarización requerida para función Panorámica + Detalle)
 - **Rango IR:** 150 metros visión nocturna
+- **Función:** Dual (Panorámica en Home / Detalle en Operación)
 - **Rotación Pan:** 360° continuo
 - **Rotación Tilt:** -15° a +90°
 - **Velocidad Pan:** 0.1°-120°/s ajustable
@@ -130,12 +130,13 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 - **Seguimiento automático:** Objetos en movimiento
 - **Detección de dirección:** Flujo vehicular
 - **Alarmas configurables:** Eventos específicos
+- **Integración:** Reporte de eventos directo a Software SCADA/ITS (XML/Metadata)
 
 ### **CONECTIVIDAD Y PROTOCOLOS:**
 - **Protocolo:** IP sobre fibra óptica
 - **Ancho de banda:** 100/1000 Mbps
 - **Latencia:** <100ms al CCO
-- **Protocolos soportados:** ONVIF 2.0, RTSP, HTTP
+- **Protocolos soportados:** ONVIF Profile S/T (Mandatorio), RTSP, HTTP
 - **Cifrado:** HTTPS, TLS 1.2
 - **Autenticación:** Usuario/contraseña + certificados
 
@@ -148,42 +149,25 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 
 ---
 
-## 📍 UBICACIONES ESPECÍFICAS (PKD/PKR)
+### **UBICACIONES ESPECÍFICAS (ALCANCE OPTIMIZADO - 15 PUNTOS)**
 
-Las 30 cámaras CCTV se ubicarán en los siguientes puntos kilométricos (PKD = Punto Kilométrico de Diseño, PKR = Punto Kilométrico Real):
-
-| # | PKR | Ruta | PKD | UF | Ubicación Física | Tipo | Observaciones |
-|:--|:----|:-----|:----|:---|:----------------|:-----|:--------------|
-| 1 | 38+100 | RN 4510 | 245+100 | UF-5.2 | Unidireccional | PTZ | Inicio monitoreo |
-| 2 | 40+050 | RN 4510 | 243+150 | UF-0D | Separador | PTZ | Inter Koran - REACTIVADA |
-| 3 | 69+000 | RN 4510 | 214+100 | UF-0D | Separador | PTZ | Peatonal 68+434 |
-| 4 | 81+000 | RN 4510 | 202+100 | UF-0D | Separador | PTZ | - |
-| 5 | 85+370 | RN 4510 | 197+730 | UF-1 | Separador | PTZ | ETD integrada |
-| 6 | 87+100 | RN 4510 | 196+000 | UF-1 | Separador | PTZ | - |
-| 7 | 91+850 | RN 4510 | 191+250 | UF-5.1 | Separador | PTZ | - |
-| 8 | 93+920 | RN 4510 | 189+180 | UF-1 | Separador | PTZ | - |
-| 9 | 97+030 | RN 4510 | 186+070 | UF-0D | Separador | PTZ | Inter Pto Boyacá 96+890 |
-| 10 | 104+150 | RN 4510 | 178+950 | UF-0D | Separador | PTZ | Área Servicio Zambito 104+100 |
-| 11 | 9+100 | RN 4511 | 141+400 | UF-5.1 | Izquierda | PTZ | - |
-| 12 | 9+365 | RN 4511 | 141+135 | UF-0D | Separador | PTZ | - |
-| 13 | 13+470 | RN 4511 | 137+030 | UF-2 | Separador | PTZ | - |
-| 14 | 14+500 | RN 4511 | 136+000 | UF-2 | Separador | PTZ | - |
-| 15 | 41+150 | RN 4511 | 109+350 | UF-5.1 | Separador | PTZ | - |
-| 16 | 60+480 | RN 4511 | 90+020 | UF-5.1 | Separador | PTZ | - |
-| 17 | 61+675 | RN 4511 | 88+825 | UF-5.1 | Izquierda | PTZ | Peatonal 61+346 |
-| 18 | 63+250 | RN 4511 | 87+250 | UF-5.1 | Separador | PTZ | - |
-| 19 | 81+650 | RN 4511 | 68+850 | UF-6 | Izquierda | PTZ | - |
-| 20 | 81+900 | RN 4511 | 68+600 | UF-6 | Izquierda | PTZ | - |
-| 21 | 113+300 | RN 4511 | 37+200 | UF-9 | Separador | PTZ | A.S. Aguas Negras 113+450 |
-| 22 | 115+800 | RN 4511 | 34+700 | UF-9 | Separador | PTZ | Peatonal 113+410 |
-| 23 | 116+900 | RN 4511 | 33+600 | UF-9 | Separador | PTZ | - |
-| 24 | 128+000 | RN 4511 | 22+500 | UF-11 | Separador | PTZ | - |
-| 25 | 0+320 | RN 4513 | 2+680 | UF-11 | Separador | PTZ | Inter Lizama 0+500 |
-| 26 | 3+875 | RN 4513 | 280+125 | UF-13 | Separador | PTZ | Báscula Izquierda 3+900 - WIM |
-| 27 | 4+150 | RN 4513 | 279+850 | UF-11 | Separador | PTZ | - |
-| 28 | 4+400 | RN 4513 | 279+600 | UF-11 | Separador | PTZ | CCO Izquierda 4+400 - N1-CCO |
-| 29 | 9+800 | RN 4513 | 274+200 | UF-11 | Sur | PTZ | Zona CCO |
-| 30 | 41+800 | RN 4511 | 108+700 | UF-5.1 | Separador | PTZ | Cámara Recuperada (Corrección v2.0) |
+| # | PKR | Ruta | Ubicación | Tipo | Justificación |
+|:--|:----|:-----|:----------|:-----|:--------------|
+| 1 | 9+150 | RN 4511 | Peaje Zambito (Sentido 1) | CCTV | Mandatorio AT2 |
+| 2 | 9+250 | RN 4511 | Peaje Zambito (Sentido 2) | CCTV | Mandatorio AT2 |
+| 3 | 81+800 | RN 4511 | Peaje Aguas Negras (Sentido 1) | CCTV | Mandatorio AT2 |
+| 4 | 81+900 | RN 4511 | Peaje Aguas Negras (Sentido 2) | CCTV | Mandatorio AT2 |
+| 5 | 104+100 | RN 4510 | Área de Servicio Zambito | CCTV | Mandatorio AT2 |
+| 6 | 104+150 | RN 4510 | Área de Servicio Zambito | CCTV | Mandatorio AT2 |
+| 7 | 113+450 | RN 4511 | Área de Servicio Aguas Negras | CCTV | Mandatorio AT2 |
+| 8 | 113+500 | RN 4511 | Área de Servicio Aguas Negras | CCTV | Mandatorio AT2 |
+| 9 | 4+300 | RN 4513 | CCO La Lizama (Perímetro) | CCTV | Mandatorio AT2 |
+| 10 | 4+400 | RN 4513 | CCO La Lizama (Acceso) | CCTV | Mandatorio AT2 |
+| 11 | 40+050 | RN 4510 | Intersección El Korán | CCTV | Operativo (Alto Tráfico) |
+| 12 | 97+030 | RN 4510 | Intersección Puerto Boyacá | CCTV | Operativo (Seguridad) |
+| 13 | 0+320 | RN 4513 | Intersección La Lizama | CCTV | Operativo (Estratégico) |
+| 14 | 128+000 | RN 4511 | Intersección Yuma | CCTV | Operativo (Conexión) |
+| 15 | 3+875 | RN 4513 | Báscula / WIM | CCTV | Fiscalización Pesaje |
 
 **Referencia:** `VII. Documentos Transversales/43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md`
 
@@ -202,77 +186,47 @@ Las 30 cámaras CCTV se ubicarán en los siguientes puntos kilométricos (PKD = 
 - **Conectividad:** Fibra óptica disponible
 
 ### **Tipos de Ubicación:**
-
-#### **Zonas Urbanas (20 cámaras):**
-- **Alimentación:** Red eléctrica + PoE+
-- **Soporte:** Poste existente o nuevo
-- **Conectividad:** Fibra óptica directa
-
-#### **Zonas Rurales (10 cámaras):**
-- **Alimentación:** Sistema solar autónomo
-- **Soporte:** Poste metálico nuevo 12m
-- **Conectividad:** Fibra óptica derivación
-
-### **Coordenadas Geográficas:**
-Las coordenadas exactas de cada cámara se proporcionarán en el documento **Layout ITS** durante la fase de construcción.
+- **Zonas Urbanas/Rurales:** 10 ubicaciones estratégicas (1 c/u).
 
 ---
 
 ## 💰 **ESTRUCTURA DE COTIZACIÓN**
 
-### **FORMATO REQUERIDO:**
+### **FORMATO REQUERIDO (15 CÁMARAS)**
 
-| Código | Descripción | Cantidad | Unidad | Precio Unit. COP | Total COP | Precio Unit. USD | Total USD |
-|:-------|:------------|:---------|:-------|:-----------------|:-----------|:------------------|:-----------|
-| **CCTV-001** | Cámaras IP PTZ completas | 30 | UND | | | | |
-| **CCTV-002** | Infraestructura soporte | 30 | UND | | | | |
-| **CCTV-003** | Instalación y montaje | 30 | UND | | | | |
-| **CCTV-004** | Configuración y comisionamiento | 30 | UND | | | | |
-| **CCTV-005** | Pruebas y certificación | 30 | UND | | | | |
-| **CCTV-006** | Integración CCO | 1 | LOT | | | | |
-| **CCTV-007** | Capacitación operadores | 1 | LOT | | | | |
-| **CCTV-008** | Documentación técnica | 1 | LOT | | | | |
-| **CCTV-009** | Garantía 24 meses | 30 | UND | | | | |
-| **CCTV-010** | Transporte y logística | 1 | LOT | | | | |
-| **CCTV-011** | Seguros y responsabilidad | 1 | LOT | | | | |
-| **TOTAL** | **SISTEMA CCTV COMPLETO** | | | | | | |
+| Código | Descripción | Cantidad | Unidad |
+|:-------|:------------|:---------|:-------|
+| **CCTV-001** | Cámaras IP PTZ completas | 15 | UND |
+| **CCTV-003** | Infraestructura soporte | 30 | UND |
+| **CCTV-004** | Instalación y montaje | 10 | UND |
+| **CCTV-005** | Configuración y comisionamiento | 10 | UND |
+| **CCTV-006** | Pruebas y certificación | 10 | UND |
+| **CCTV-007** | Integración CCO | 1 | LOT |
 
-### **DESGLOSE DETALLADO REQUERIDO:**
+### **DESGLOSE DETALLADO:**
 
 #### **CCTV-001: CÁMARAS IP PTZ COMPLETAS**
-| Componente | Cantidad | Unidad | Precio Unit. COP | Total COP |
-|:------------|:---------|:-------|:-----------------|:-----------|
-| Cámara PTZ IP 1080p | 30 | UND | | |
-| Domo policarbonato IK10 | 30 | UND | | |
-| Soporte montaje poste/pared | 30 | UND | | |
-| Cable UTP Cat6 exterior | 30 | UND | | |
-| Caja paso hermética IP66 | 30 | UND | | |
-| Inyector PoE+ 30W | 30 | UND | | |
-| DPS datos + energía | 30 | UND | | |
-| Accesorios montaje | 30 | UND | | |
-| **SUBTOTAL CÁMARAS** | | | | |
+| Componente | Cantidad | Unidad |
+|:------------|:---------|:-------|
+| Cámara PTZ IP 1080p | 15 | UND |
+| Inyector PoE+ / Accesorios | 15 | UND |
 
 #### **CCTV-002: INFRAESTRUCTURA SOPORTE**
-| Componente | Cantidad | Unidad | Precio Unit. COP | Total COP |
-|:------------|:---------|:-------|:-----------------|:-----------|
-| Poste metálico 12m | 15 | UND | | |
-| Abrazaderas y herrajes | 30 | UND | | |
-| Luminaria LED 50W | 30 | UND | | |
-| Panel solar 100W | 10 | UND | | |
-| Batería AGM 12V 50Ah | 20 | UND | | |
-| Controlador solar 10A | 10 | UND | | |
-| Gabinete exterior IP65 | 30 | UND | | |
-| **SUBTOTAL INFRAESTRUCTURA** | | | | |
+| Componente | Cantidad | Unidad |
+|:------------|:---------|:-------|
+| Poste metálico / Brazo | 15 | UND |
+| Kit Solar / Energía | 10 | UND |
 
 #### **CCTV-003: INSTALACIÓN Y MONTAJE**
 | Actividad | Cantidad | Unidad | Precio Unit. COP | Total COP |
 |:----------|:---------|:-------|:-----------------|:-----------|
-| Mano de obra instalación | 30 | UND | | |
-| Obras civiles cimentación | 15 | UND | | |
-| Canalización fibra óptica | 30 | UND | | |
+| Mano de obra instalación | 15 | UND | | |
+| Obra civil cimentación | 15 | UND | | |
+| Canalización conexión fibra óptica | 15 | UND | | |
 | Montaje postes metálicos | 15 | UND | | |
 | Instalación sistema solar | 10 | UND | | |
-| Cableado eléctrico | 30 | UND | | |
+| Cableado eléctrico | 15 | UND | | |
+| Comisionamiento y pruebas | 15 | UND | | |
 | **SUBTOTAL INSTALACIÓN** | | | | |
 
 ---

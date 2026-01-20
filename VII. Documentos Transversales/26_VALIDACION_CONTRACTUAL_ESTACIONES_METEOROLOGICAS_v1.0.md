@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Documento:** Validación Contractual (Metodología Genérica Aplicada)  
 **Responsable:** Ingeniero de Telecomunicaciones  
-**Versión:** 1.1  
+**Versión:** 2.0 (RECONCILIACIÓN AUDIT .42)  
 
 ---
 
@@ -14,11 +14,11 @@
 Aplicar la **Metodología Genérica de Validación Contractual** al sistema de Estaciones Meteorológicas del proyecto APP Puerto Salgar - Barrancabermeja, garantizando cumplimiento contractual exacto y documentación sólida para Interventoría.
 
 ### 1.2 Conclusión Principal
-**El contrato NO obliga a "instalar" estaciones meteorológicas**, sino a **"informar" condiciones meteorológicas**. La obligación se cumple con:
-- **3 estaciones meteorológicas** (2 en peajes + 1 en CCO según información oficial)
-- **Integración vía API** al SCADA/CCO La Lizama PK 4+300
-- **Reportes automáticos** por UF y consolidados
-- **Costo optimizado:** $13 millones COP
+- **3 estaciones meteorológicas de grado industrial** (2 en peajes + 1 en CCO)
+- **Sensor de Visibilidad (Neblina) mandatorio** para seguridad vial (MOR en metros)
+- **Integración nativa Modbus TCP** al SCADA/CCO
+- **RECHAZO TÉCNICO:** El sensor 6450 (Radiación) NO sustituye la medición de neblina.
+- **Costo reconciliado:** $75,000 USD ($25k/unidad instalada)
 
 **Ubicación CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
 
@@ -97,15 +97,18 @@ El contrato exige **"información sobre condiciones meteorológicas"** pero NO e
 
 **Según NTC 5660 y Manual ITS INVÍAS:**
 
-| Variable | Unidad | Frecuencia | Cumple Davis Pro2 |
-|:---------|:-------|:-----------|:------------------|
-| **Temperatura del aire** | °C | Cada 5 min | ✅ -40°C a +65°C |
-| **Humedad relativa** | % | Cada 5 min | ✅ 0-100% HR |
-| **Precipitación** | mm/h | Cada 5 min | ✅ 0.2 mm resolución |
-| **Velocidad del viento** | m/s | Cada 5 min | ✅ 3-241 km/h |
-| **Dirección del viento** | grados | Cada 5 min | ✅ Grados + cardinales |
-| **Presión barométrica** | hPa | Cada 5 min | ✅ Sensor integrado |
-| **Visibilidad** | m | Cada 5 min | ❌ NO INCLUIDO |
+| Variable | Unidad | Frecuencia | Cumplimiento |
+|:---------|:-------|:-----------|:-------------|
+| **Temperatura del aire** | °C | Cada 5 min | ✅ Obligatoria |
+| **Humedad relativa** | % | Cada 5 min | ✅ Obligatoria |
+| **Precipitación** | mm/h | Cada 5 min | ✅ Obligatoria |
+| **Velocidad del viento** | m/s | Cada 5 min | ✅ Obligatoria |
+| **Dirección del viento** | grados | Cada 5 min | ✅ Obligatoria |
+| **Visibilidad (M.O.R)** | metros | Cada 5 min | 🔴 **MANDATORIA (Manual 2024)** |
+| **Radiación Solar** | W/m² | Cada 5 min | ✅ Obligatoria (ETo) |
+
+> [!IMPORTANT]
+> El Manual de Señalización Vial 2024 (9.3.3.9) y la Resolución 20213040035125 (IP/REV) exigen medir "presencia de neblina" como variable habilitante. El sistema Davis base es insuficiente sin visibilímetro óptico.
 
 ### 4.3 Solución para Visibilidad
 
@@ -137,16 +140,16 @@ El contrato exige **"información sobre condiciones meteorológicas"** pero NO e
 
 | Ubicación | Obligación | Justificación |
 |:----------|:-----------|:---------------|
-| **Peajes IP/REV** | ✅ OBLIGATORIO | Resolución 546/2018 (IP/REV) |
-| **CCO La Lizama PK 4+300** | ✅ OBLIGATORIO | Información oficial del proyecto |
-| **Otras UF** | ❌ NO OBLIGATORIO | Se cumple por consolidación |
+| **Peajes IP/REV** | ✅ OBLIGATORIO | Resolución 546/2018 (IP/REV) - Hardware Mandatorio |
+| **CCO La Lizama PK 4+300** | ✅ OBLIGATORIO | Especificación Técnica - Estación de Referencia |
+| **Otras UF** | ✅ CUMPLIDO | Cobertura mediante integración de las 3 estaciones |
 
-### 5.3 Solución Propuesta
+### 5.3 Solución Reconciliada (Audit .42)
 
-**3 Estaciones Meteorológicas:**
-- **Peaje 1:** Zambito (PK ~9.2)
-- **Peaje 2:** Aguas Negras (PK ~80)
-- **CCO:** La Lizama PK 4+300 (RN 4513)
+**3 Estaciones Meteorológicas Industriales:**
+- **Peaje 1:** Zambito (PK ~9.2) - Sensor Visibilidad incluido.
+- **Peaje 2:** Aguas Negras (PK ~80) - Sensor Visibilidad incluido.
+- **CCO:** La Lizama PK 4+300 (RN 4513) - Referencia Central.
 
 **Integración CCO:**
 - WeatherLink API → SCADA La Lizama PK 4+300
@@ -237,13 +240,12 @@ El contrato exige **"información sobre condiciones meteorológicas"** pero NO e
 
 ### 8.1 Costos de Implementación
 
-| Componente | Cantidad | Costo Unitario (COP) | Costo Total (COP) |
+| Componente | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:-----------|:---------|:---------------------|:-------------------|
-| **Davis Vantage Pro2** | 2 | $3,500,000 | $7,000,000 |
-| **WeatherLink Live** | 2 | $1,500,000 | $3,000,000 |
-| **Integración SCADA** | 1 | $2,000,000 | $2,000,000 |
-| **Instalación y configuración** | 1 | $1,000,000 | $1,000,000 |
-| **TOTAL CAPEX** | | | **$13,000,000** |
+| **Estación Industrial Compacta + Visibilidad** | 3 | $15,000 | $45,000 |
+| **Torre 10m + Obra Civil** | 3 | $6,000 | $18,000 |
+| **Integración SCADA & Comisionamiento** | 3 | $4,000 | $12,000 |
+| **TOTAL CAPEX (RECONCILIADO)** | | | **$75,000 USD** |
 
 ### 8.2 Comparación con Alternativas
 
@@ -314,11 +316,11 @@ El contrato exige **"información sobre condiciones meteorológicas"** pero NO e
 
 ### 11.1 Cumplimiento Contractual
 
-✅ **El contrato NO obliga a "instalar" estaciones meteorológicas**
-✅ **La obligación es "informar" condiciones meteorológicas**
-✅ **2 estaciones Davis Pro2 cumplen totalmente la obligación**
-✅ **Integración vía API es técnicamente válida**
-✅ **Costo optimizado vs. alternativas**
+✅ **La obligación es instalar equipamiento industrial (Res. 546/2018)**
+✅ **3 estaciones industriales cumplen totalmente la obligación**
+✅ **Sensor de Visibilidad (Neblina) es MANDATORIO (Blindaje Técnico)**
+✅ **Integración nativa Modbus TCP es técnicamente superior**
+✅ **Costo reconciliado de $75k USD está plenamente justificado**
 
 ### 11.2 Justificación Técnica
 

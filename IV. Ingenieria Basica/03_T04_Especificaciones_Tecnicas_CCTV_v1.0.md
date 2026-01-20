@@ -7,7 +7,7 @@
 **Versión:** 1.1  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
-**Referencia Validación:** 37_VALIDACION_CONTRACTUAL_CCTV_v1.0  
+**Referencia Validación:** 37_VALIDACION_CONTRACTUAL_CCTV_v1.0 (v2.0)  
 **Referencia Layout:** 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0  
 
 ---
@@ -16,8 +16,9 @@
 
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
-| 1.0 | 21/10/2025 | Creación inicial - 30 cámaras estratégicas con nota de optimización futura | Adm. Contractual EPC |
-| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada 30 cámaras | Adm. Contractual EPC |
+| 1.0 | 21/10/2025 | Creación inicial - 30 cámaras estratégicas | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | Revisión con información oficial: Cantidad confirmada 30 cámaras | Adm. Contractual EPC |
+| 1.2 | 20/01/2026 | **Ajuste Alcance Optimizado:** 15 cámaras (Hard Deck + Nodos) | Antigravity AI |
 
 ---
 
@@ -30,17 +31,16 @@
 | **Nombre del sistema** | CCTV - Sistema de Circuito Cerrado de Televisión |
 | **Categoría** | ITS (Intelligent Transportation Systems) - Videovigilancia |
 | **Código interno** | T04-CCTV-003-v1.0 |
-| **Cantidad total** | **30 cámaras** |
-| **CAPEX estimado** | **USD $1,890,000** ($63,000/cámara instalada - Integración Completa) |
-| **Documentos base** | T01 v1.2, T03 v1.0, Validación v1.0, Layout v1.0 |
+| **Cantidad total** | **15 cámaras** |
+| **CAPEX estimado** | **USD $1,634,000** (Full Stack - Reconciliado Jan 2026) |
+| **Documentos base** | T01 v1.2, T03 v1.0, Validación v2.0, Layout v1.0 |
 
 ### 1.2 Distribución por Tipo de Cámara
 
 | Tipo | Cantidad | Función | Ubicación Típica |
 |:-----|:---------|:--------|:-----------------|
-| **PTZ (Pan-Tilt-Zoom)** | 20 | Monitoreo dinámico, control remoto | Separador central, postes altos |
-| **Fijas** | 10 | Monitoreo estático específico | Peajes, áreas de servicio |
-| **TOTAL** | **30** | - | - |
+| **PTZ (Pan-Tilt-Zoom)** | 15 | Monitoreo dinámico, control remoto | Separador central, postes altos |
+| **TOTAL** | **15** | - | - |
 
 ### 1.3 Alcance de las Especificaciones
 
@@ -575,7 +575,7 @@ Separador Central  [====|====]
 |:-------|:-------|:--------|
 | T01-ITS | Ficha de Sistema ITS | v1.2 |
 | T03-ITS | Arquitectura Conceptual ITS | v1.0 |
-| VAL-CCTV | Validación Contractual CCTV | v1.0 |
+| VAL-CCTV | Validación Contractual CCTV | v2.0 |
 | LAYOUT-ITS | Layout Georreferenciado | v1.0 |
 
 ### 12.2 Normativa Citada

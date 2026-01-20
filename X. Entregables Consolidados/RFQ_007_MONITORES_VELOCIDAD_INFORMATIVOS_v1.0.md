@@ -4,7 +4,7 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **RFQ No.:** RFQ-007-MONITORES-VELOCIDAD  
 **Fecha de emisión:** 04 de noviembre de 2025  
-**Versión:** 1.0  
+**Versión:** 2.1 (Audit .42 Final)  
 **Emitido por:** Administrador Contractual EPC
 
 > **Trazabilidad contractual:** Este documento es derivado contractual del **Apéndice Técnico 2 §3.3.5.1** del Contrato APP Puerto Salgar–Barrancabermeja, con aplicación complementaria de los **Apéndices Técnicos 3 y 4**.
@@ -87,7 +87,7 @@ El oferente deberá cotizar el paquete completo, incluyendo al menos:
 ## 📊 CANTIDADES A COTIZAR
 
 - **Monitores de Velocidad Informativos - Lote 1: 2 unidades**  
-  Referencia: `IV. Ingenieria Basica/02_T04_Especificaciones_Tecnicas_ETD_Radares_v1.0.md` y `V. Ingenieria de Detalle/07_T05_Ingenieria_Detalle_RADAR_ETD_v1.0.md`.
+  Referencia: `IV. Ingenieria Basica/02_T04_Especificaciones_Tecnicas_ETD_Radares_v2.1.md` y `V. Ingenieria de Detalle/07_T05_Ingenieria_Detalle_RADAR_ETD_v2.1.md`.
 
 > **IMPORTANTE:** Estos monitores de velocidad tienen **fines informativos** para Policía de Carreteras y ANI. **NO son sistemas sancionatorios**. NO requieren homologación ONAC, autorización MinTransporte ni cumplimiento de Resolución 718/2018.
 > 
@@ -556,5 +556,5 @@ Las ubicaciones específicas serán confirmadas con base en **Estudio técnico**
 
 ---
 
-**Fin del documento – RFQ-007 Monitores de Velocidad Informativos v1.0**
+**Fin del documento – RFQ-007 Monitores de Velocidad Informativos v2.1**
 

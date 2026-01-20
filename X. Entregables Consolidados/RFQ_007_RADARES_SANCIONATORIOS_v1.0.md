@@ -4,7 +4,7 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **RFQ No.:** RFQ-007-RADAR-SAST  
 **Fecha de emisión:** 04 de noviembre de 2025  
-**Versión:** 1.0  
+**Versión:** 2.1 (Audit .42 Final)  
 **Emitido por:** Administrador Contractual EPC
 
 ---
@@ -68,7 +68,7 @@ El oferente deberá cotizar el paquete completo, incluyendo al menos:
 ## 📊 CANTIDADES A COTIZAR
 
 - **Radares Sancionatorios (SAST) - Lote 1: 2 unidades**  
-  Referencia: `IV. Ingenieria Basica/02_T04_Especificaciones_Tecnicas_ETD_Radares_v1.0.md` (Cantidad = 2 Radares) y `V. Ingenieria de Detalle/07_T05_Ingenieria_Detalle_RADAR_ETD_v1.0.md`.
+  Referencia: `IV. Ingenieria Basica/02_T04_Especificaciones_Tecnicas_ETD_Radares_v2.1.md` (Cantidad = 2 Radares) y `V. Ingenieria de Detalle/07_T05_Ingenieria_Detalle_RADAR_ETD_v2.1.md`.
 
 > **IMPORTANTE:** Los radares sancionatorios son equipos de **detección y registro de infracciones**. **REQUIEREN cámara ANPR**, certificación ONAC, habilitación ante MinTransporte y cumplimiento estricto de **Resolución 718/2018**. Deben generar evidencia legal válida para procesos sancionatorios.
 
@@ -345,5 +345,5 @@ Las ubicaciones específicas serán confirmadas con base en estudio técnico de 
 
 ---
 
-**Fin del documento – RFQ-007 Radares Sancionatorios v1.0**
+**Fin del documento – RFQ-007 Radares Sancionatorios v2.1**
 

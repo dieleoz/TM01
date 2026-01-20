@@ -249,7 +249,7 @@ Cámaras CCTV → Switches PoE → Red FO → Switch Core CCO → NVR/SCADA → 
 - [x] ✅ Arquitectura Conceptual completada (T03)
 - [x] ✅ Especificaciones Técnicas (T04) - Ya existe, validar coherencia
 - [x] ✅ Ingeniería de Detalle (T05) - Ya existe, validar coherencia
-- [x] ✅ Validación Contractual - Ya existe (`37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md`)
+- [x] ✅ Validación Contractual - Ya existe (`37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md` -> Actualizada a v2.0)
 
 ---
 
@@ -261,7 +261,7 @@ Cámaras CCTV → Switches PoE → Red FO → Switch Core CCO → NVR/SCADA → 
 - **T03:** `24C_T03_Arquitectura_Conceptual_CCTV_MVP_v1.0.md` (Pendiente)
 - **T04:** `IV. Ingenieria Basica/03_T04_Especificaciones_Tecnicas_CCTV_v1.0.md`
 - **T05:** `V. Ingenieria de Detalle/05_T05_Ingenieria_Detalle_CCTV_v1.0.md`
-- **Validación:** `VII. Documentos Transversales/37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md`
+- **Validación:** `VII. Documentos Transversales/37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md` (v2.0)
 - **T01 ITS General:** `24_T01_Ficha_Sistema_ITS_v1.0.md` (Referencia para contexto)
 
 ### 10.2 Documentos Contractuales

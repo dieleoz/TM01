@@ -41,7 +41,7 @@ Esta arquitectura cubre el **Sistema de CCTV** a lo largo de 259.6 km principale
 - **T04:** `03_T04_Especificaciones_Tecnicas_CCTV_v1.0.md`
 - **T05:** `05_T05_Ingenieria_Detalle_CCTV_v1.0.md`
 - **T03 ITS:** `53_T03_Arquitectura_Conceptual_ITS_v1.0.md` (contexto general)
-- **Validación:** `37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md`
+- **Validación:** `37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md` (Ver v2.0)
 - **AT2:** Apéndice Técnico 2, Sección 3.3.4.7 "Sistemas de Videovigilancia"
 - **AT3:** Apéndice Técnico 3, Capítulo IV "Sistemas ITS"
 
@@ -707,7 +707,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~10 cámaras
 - [T04 - Especificaciones Técnicas CCTV](IV.%20Ingenieria%20Basica/03_T04_Especificaciones_Tecnicas_CCTV_v1.0.md)
 - [T05 - Ingeniería de Detalle CCTV](V.%20Ingenieria%20de%20Detalle/05_T05_Ingenieria_Detalle_CCTV_v1.0.md)
 - [T03 - Arquitectura Conceptual ITS](53_T03_Arquitectura_Conceptual_ITS_v1.0.md) (contexto general)
-- [Validación Contractual CCTV](VII.%20Documentos%20Transversales/37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md)
+- [Validación Contractual CCTV](VII.%20Documentos%20Transversales/37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md) (Actualizado v2.0)
 
 ### 16.2 Documentos Contractuales
 

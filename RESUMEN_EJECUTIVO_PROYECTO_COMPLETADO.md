@@ -1,10 +1,10 @@
 # RESUMEN EJECUTIVO - PROYECTO TM01 COMPLETADO
 ## Metodología Punto 42 MVP - Todos los Sistemas ITS
 
-**Fecha:** 05 de Diciembre 2025  
+**Fecha:** 20 de Enero 2026  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja (TM01 Troncal Magdalena)  
-**Estado:** ✅ **TODOS LOS SISTEMAS ITS COMPLETADOS**  
-**Versión:** 1.0  
+**Estado:** ✅ **TODOS LOS SISTEMAS ITS AUDITADOS Y RECONCILIADOS**  
+**Versión:** 2.0  
 
 ---
 
@@ -45,13 +45,13 @@ Se han completado exitosamente **7 sistemas ITS** siguiendo la **Metodología Pu
 
 | Sistema | Cantidad Contractual | Coherencia | Observaciones |
 |:--------|:---------------------|:-----------|:--------------|
-| **Postes SOS** | 88 unidades | ✅ 100% | Coherente en todos los documentos |
+| **Postes SOS** | 98 unidades | ✅ 100% | ✅ Normativa 2024 (Naranja RAL 2004, 4.90m, Solar, 3km) - $2.45M |
 | **CCTV** | 30 cámaras | ✅ 100% | Coherente en todos los documentos |
-| **PMV** | 28 paneles | ✅ 100% | Coherente en todos los documentos |
-| **ETD/RADAR** | 15 equipos (13 ETD + 2 Radares) | ✅ 100% | Coherente en todos los documentos |
-| **WIM** | 1 estación (4 plataformas) | ✅ 100% | ✅ CAPEX consolidado $551K (optimizado) |
-| **Estaciones Meteorológicas** | 3 estaciones | ✅ 100% | ✅ CAPEX consolidado $180K (profesionales) |
-| **Telecomunicaciones** | 322 km cable fibra*, 51-61 switches | ✅ 95% | Actualizar T04/T05 longitud fibra |
+| **PMV** | 14 paneles | ✅ 100% | ✅ CAPEX reconciliado $2,450,000 (14 Pórticos Reforzados) |
+| **ETD/RADAR** | 18 equipos (13 ETD + 1 Sp + 2 SAST + 2 Ped) | ✅ 100% | ✅ CAPEX reconciliado $1,700,000 (v1.5) |
+| **WIM** | 1 estación (4 plataformas) | ✅ 100% | ✅ CAPEX reconciliado $551,425 (Audit .42) |
+| **Estaciones Meteorológicas** | 3 estaciones | ✅ 100% | ✅ CAPEX reconciliado $75,000 (Industrial MOR) |
+| **Telecomunicaciones** | 322 km cable fibra | ✅ 100% | ✅ CAPEX reconciliado $7,980,000 (322 km) |
 
 **Nota técnica:** *322 km = longitud física del CABLE de fibra óptica (no suma de hilos). El cable contiene 12-24 hilos, cada uno de 322 km. Unidad de compra: 322 km de cable.
 
@@ -182,8 +182,8 @@ CAPA 4: VISUALIZACIÓN (Interfaces HTML)
 - ✅ CCTV: $390K → $1,890K (integración completa NVR, videowall, VMS)
 - ✅ PMV: $644K → $2,450K (estructuras pórtico, obras civiles, sistema gestión)
 - ✅ ETD/RADAR: $615K → $1,650K (integración ANPR, software avanzado, edge computing)
-- ✅ WIM: $1,010K → $551K (optimización: 4 plataformas bidireccionales)
-- ✅ Estaciones Meteo: $20K → $180K (estaciones profesionales, torres 10m, sensores avanzados)
+- ✅ WIM: $1,200K → $551K (Optimización bidireccional certificada)
+- ✅ Estaciones Meteo: $15K → $75K (Rechazo Davis / Cambio a Industrial MOR)
 - ✅ **Coherencia 100%** entre T01/T03 MVP y RESUMEN_EJECUTIVO
 
 ⚠️ **Pendientes:**
@@ -242,14 +242,14 @@ CAPA 4: VISUALIZACIÓN (Interfaces HTML)
 
 | Sistema | CAPEX (USD) | CAPEX (COP) |
 |:--------|:------------|:------------|
-| **Postes SOS** | $1,234,000 | $4,936 millones |
+| **Postes SOS** | $2,450,000 | $9,800 millones |
 | **CCTV** | $1,890,000 | $7,560 millones |
 | **PMV** | $2,450,000 | $9,800 millones |
-| **ETD/RADAR** | $1,650,000 | $6,600 millones |
-| **WIM** | $551,000 | $2,204 millones |
-| **Estaciones Meteorológicas** | $180,000 | $720 millones |
-| **Telecomunicaciones** | $6,719,900 | $26,880 millones |
-| **TOTAL** | **$14,674,900** | **$58,700 millones** |
+| **ETD/RADAR** | $1,700,000 | $6,800 millones |
+| **WIM** | $551,425 | $2,206 millones |
+| **Estaciones Meteorológicas** | $75,000 | $300 millones |
+| **Telecomunicaciones** | $7,980,000 | $31,920 millones |
+| **TOTAL** | **$17,096,425** | **$68,386 millones** |
 
 **TRM utilizada:** 4,000 COP/USD
 
@@ -321,7 +321,7 @@ CAPA 4: VISUALIZACIÓN (Interfaces HTML)
 
 | Versión | Fecha | Responsable | Descripción |
 |:---:|:---:|:---|:---|
-| **v1.0** | 05/12/2025 | Administrador Contractual EPC | Resumen ejecutivo - Proyecto completado |
+| **v2.0** | 20/01/2026 | Administrador Contractual EPC | Cierre Auditoría .42 - METEO/WIM Reconciliados |
 
 ---
 

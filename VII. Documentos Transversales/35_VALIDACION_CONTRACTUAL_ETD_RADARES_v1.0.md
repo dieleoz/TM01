@@ -1,11 +1,11 @@
 # VALIDACIÓN CONTRACTUAL - ETD Y RADARES (ESTACIONES DE TOMA DE DATOS)
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21/10/2025  
-**Sistema:** ETD (Estaciones de Toma de Datos) + Radares Sancionatorios  
+**Fecha:** 22/10/2025  
+**Sistema:** ETD (Estaciones de Toma de Datos) + Radares Sancionatorios (Manual 2024)  
 **Responsable:** Administrador Contractual EPC  
-**Versión:** 1.0  
-**Estado:** ✅ Validación Contractual Completada
+**Versión:** 2.0  
+**Estado:** ✅ Auditoría Metodología .42 Completada
 
 ---
 
@@ -13,10 +13,11 @@
 
 ### 1.1 Obligación Contractual Validada
 
-**Cantidad Obligatoria:** 
-- **13 ETD** (una por Unidad Funcional UF0-UF13)
-- **2 Radares sancionatorios** (en sitios críticos)
-- **Total: 15 equipos**
+**Cantidad Operativa Validada (Hard Deck):** 
+- **14 ETD** (13 UF + 1 Spare / AT4 Indicators)
+- **2 Radares SAST** (Sancionatorios / Res. 718)
+- **2 Radares Pedagógicos** (Informativos / AT2 §3.3.5.1)
+- **Total Lote EPC: 18 equipos** (Reconciliación Audit .42)
 
 **Base Legal:** 
 - Apéndice Técnico 2 - Condiciones de O&M (Adenda 2)
@@ -39,7 +40,11 @@
 
 > "Independientemente del sistema de recaudos que adopte, el Concesionario deberá implantar un sistema de identificación de violaciones que registre la imagen de los vehículos infractores […] cumpliendo con la Resolución 0718 de 2018 del Ministerio de Transporte."
 
-#### 2.1.2 Apéndice Técnico 4 - Indicadores de Nivel de Servicio
+#### 2.1.2 Apéndice Técnico 2 - Sección 3.3.5.1 (Pedagogical)
+
+> "El Concesionario debe instalar, en los sitios críticos de la vía, un sistema de monitores de velocidad que le permita evaluar velocidades promedio... servirá como base para evaluar la necesidad de instalar señalización adicional o movilizar a la Policía..."
+
+#### 2.1.3 Apéndice Técnico 4 - Indicadores de Nivel de Servicio
 
 > "La velocidad operativa promedio deberá ser medida por Unidad Funcional […] mediante equipos automáticos de medición (ETD)."
 
@@ -75,9 +80,10 @@
 
 | **Tipo de Equipo** | **Cantidad** | **Función** | **Base Legal** |
 |:-------------------|:-------------|:------------|:---------------|
-| **ETD** | 13 | Medición velocidad promedio por UF | AT4 Indicadores |
-| **Radares** | 2 | Detección infracciones en sitios críticos | AT2 §3.3.4.5 |
-| **TOTAL** | **15** | Monitoreo completo del corredor | Contrato completo |
+| **ETD** | 14 | Medición velocidad promedio (13 UF + 1 Spare) | AT4 Indicadores |
+| **SAST** | 2 | Detección infracciones en sitios críticos | AT2 §3.3.4.5 |
+| **Pedagógicos** | 2 | Información colectiva y prevención | AT2 §3.3.5.1 |
+| **TOTAL** | **18** | Cobertura Contractual & Repuestos | Contrato EPC |
 
 ---
 
@@ -113,23 +119,24 @@
 
 #### 4.2.1 Características Mínimas Exigibles
 
-| **Componente** | **Especificación Contractual** | **Fuente** |
+| **Componente** | **Especificación 2024 / Res. 718** | **Fuente** |
 |:---------------|:-------------------------------|:-----------|
-| **Sensor radar** | Multipista (>3 carriles), rango ≥150 m | AT2 §3.3.4.5 |
-| **Precisión** | ±2 km/h | AT2 §3.3.4.5 |
-| **Cámara ANPR** | Resolución ≥1920x1080 px, reconocimiento ≥95% | AT2 §3.3.4.5 |
-| **Procesamiento** | Edge computing, almacenamiento ≥30 días | AT3 Cap. IV |
-| **Certificación** | ONAC metrológica / Resolución 718/2018 | Normativa |
-| **Autorización** | Ministerio de Transporte | Resolución 718/2018 |
+| **Tipo ETD** | No Intrusivo (Radar/Microondas) | Proyecto Optimizado |
+| **Precisión ETD** | ±3 km/h (Estadístico) | AT3 Cap. IV |
+| **Tipo SAST** | Radar + Cámara ANPR (Full Matrix) | Res. 718/2018 |
+| **Certificación** | ONAC (Solo SAST) / ISO TC-204 (Todos)| Metrología |
+| **Integración** | SICC (ANI) + CCO | AT4 / Indicador O7 |
 
 #### 4.2.2 Funciones Operativas
-
 - **Detección infracciones:** Exceso velocidad, contrasentido, invasión carril
-- **Registro fotográfico:** Evidencia con superposición de datos
-- **Almacenamiento:** Local + transmisión CCO
-- **Integración SIMIT:** Capacidad técnica (no obligatoria)
+- **Certificación:** ONAC (OBLIGATORIA para SAST)
 
----
+### 4.3 Radares Pedagógicos (SI-27B)
+**Propósito:** Informativo / Educativo.
+- **Señal:** SI-27B (Velocidad Registrada).
+- **Display:** Matriz LED Ámbar/Bicolor.
+- **Requisito:** AT2 §3.3.5.1.
+- **Certificación:** NO requiere ONAC (fines informativos).
 
 ## 5. OBLIGACIONES NORMATIVAS
 
@@ -228,10 +235,10 @@
 
 ### 9.1 Conclusiones
 
-✅ **15 equipos totales (13 ETD + 2 Radares)**  
-✅ **ETD: Monitoreo estadístico sin cámara**  
-✅ **Radares: Control sancionatorio con cámara ANPR**  
-✅ **Integración CCO + SICC garantizada**
+✅ **18 equipos totales (14 ETD + 2 SAST + 2 Pedagógicos)**  
+✅ **ETD: Monitoreo estadístico con LPR (Compliance AT2)**  
+✅ **SAST: Control sancionatorio con cámara ANPR + ONAC**  
+✅ **Pedagógicos: Señal SI-27B Preventiva**
 
 ### 9.2 Acciones Requeridas
 

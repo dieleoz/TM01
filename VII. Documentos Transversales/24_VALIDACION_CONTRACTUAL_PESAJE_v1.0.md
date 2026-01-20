@@ -1,8 +1,8 @@
 # VALIDACIÓN CONTRACTUAL: ESTACIONES DE PESAJE
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21 de octubre de 2025  
-**Versión:** 1.0  
+**Fecha:** 20 de enero de 2026  
+**Versión:** 2.0 (RECONCILIACIÓN AUDIT .42)  
 **Criticidad:** 🔴 ALTA  
 
 ---
@@ -12,8 +12,8 @@
 ### **Obligaciones Contractuales Identificadas:**
 
 **AT1 - Alcance del Proyecto (Adenda 4, páginas 46-47):**
-- ✅ **1 estación de pesaje** en PR4+0100 RN 4513
-- ✅ **Funcionamiento bidireccional** (ambos sentidos del flujo vehicular)
+- ✅ **1 estación de pesaje** en PKR 3+875 RN 4513 (Alineado con Layout/CCO)
+- ✅ **Funcionamiento bidireccional** (2 WIM + 2 Estáticas)
 - ✅ **Adecuar, operar y mantener** la estación existente
 - ✅ **Especificaciones arquitectónicas** y operativas mínimas
 
@@ -44,10 +44,11 @@
 | Parámetro | Valor |
 |:---------|:------|
 | **Capacidad máxima** | ≥ 100 toneladas |
-| **Error máximo** | ≤ 1% |
-| **Integración** | CCO y sistema ITS |
-| **Calibración** | Anual obligatoria |
-| **Normas aplicables** | INVÍAS/NTC 5371/OIML R134 |
+| **Error máximo (WIM)** | Clase 5-10 OIML R134 (Res. 100/2024) |
+| **Error máximo (Estática)** | Clase III NTC 2031 |
+| **Integración** | CCO y sistema ITS (Modbus/JSON) |
+| **Calibración** | Anual obligatoria (ONAC) |
+| **Normas principales** | **Resolución 100/2024**, NTC 2031, OIML R134 |
 
 ---
 
@@ -55,11 +56,10 @@
 
 ### **Diseño Actual vs. Contractual:**
 
-| Concepto | Diseño Actual | Contractual | Diferencia |
+| Concepto | Diseño Inicial | Reconciliado (Audit .42) | Diferencia |
 |:---------|:--------------|:------------|:-----------|
-| **WIM** | 5-10 estaciones | 2 plataformas | **-3 a -8 estaciones** |
-| **WIM (costo)** | 8 estaciones | 2 plataformas | **-6 estaciones** |
-| **CAPEX WIM** | $1,200,000 | $300,000 | **-$900,000** |
+| **Configuración** | 8-10 Estaciones | 1 Estación (4 Plat) | **-7 Estaciones** |
+| **CAPEX WIM** | $1,600,000 | $551,425 | **-$1,048,575** |
 
 ### **Análisis de la Diferencia:**
 
@@ -79,11 +79,10 @@
 
 ### **Ahorro por Optimización:**
 
-| Concepto | Diseño Actual | Contractual | Ahorro |
+| Concepto | Diseño Inicial | Reconciliado | Ahorro |
 |:---------|:--------------|:------------|:-------|
-| **WIM (8 estaciones)** | $1,200,000 | $300,000 | **-$900,000** |
-| **Infraestructura asociada** | $200,000 | $50,000 | **-$150,000** |
-| **TOTAL** | $1,400,000 | $350,000 | **-$1,050,000** |
+| **Sistema Pesaje** | $1,600,000 | $551,425 | **-$1,048,575** |
+| **TOTAL** | $1,600,000 | $551,425 | **-$1,048,575** |
 
 ### **Costo Unitario Estimado:**
 - **WIM:** $150,000 USD por plataforma

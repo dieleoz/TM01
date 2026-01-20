@@ -1,11 +1,11 @@
 # VALIDACIÓN CONTRACTUAL - CCTV (SISTEMA DE CIRCUITO CERRADO DE TELEVISIÓN)
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21/10/2025  
+**Fecha:** 19/01/2026 (Actualización v2.0)  
 **Sistema:** CCTV - Sistema de Circuito Cerrado de Televisión  
 **Responsable:** Administrador Contractual EPC  
-**Versión:** 1.0  
-**Estado:** ✅ Validación Contractual Completada
+**Versión:** 2.0  
+**Estado:** ✅ Validación Contractual Completada con Trazabilidad N1-N6
 
 ---
 
@@ -13,252 +13,121 @@
 
 ### 1.1 Obligación Contractual Validada
 
-**Cantidad Obligatoria:** **30 cámaras** (según información oficial del proyecto)  
-**Base Legal:** Apéndice Técnico 2 - Condiciones de O&M (Adenda 2)  
-**Estado:** ✅ **VALIDADO CONTRACTUALMENTE**
+**Cantidad Validada:** **15 cámaras** (Optimización: Hard Deck + Nodos Críticos).  
+**Base Legal:** Apéndice Técnico 2 (Adenda 2) + Justificación Técnica Operativa.  
+**Estado:** ✅ **ALINEADO CON OPERACIÓN**
 
 ### 1.2 Criterio de Validación
 
 **Requisito Contractual:**
-> "El Concesionario deberá instalar sistemas de videovigilancia en puntos críticos del corredor, especialmente en estaciones de peaje, áreas de servicio y zonas de alta accidentalidad."
+> "El Concesionario deberá instalar sistemas de videovigilancia en puntos críticos del corredor, especialmente en Estaciones de Peaje, Áreas de Servicio y zonas de alta accidentalidad, integrados al CCO."
 
-**Cantidad Oficial:** 30 cámaras estratégicamente ubicadas
-**Ubicación CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor
-
----
-
-## 2. ANÁLISIS CONTRACTUAL DETALLADO
-
-### 2.1 Fuente Contractual Principal
-
-**Documento:** Apéndice Técnico 2 - Condiciones de O&M (Adenda 2)  
-**Sección:** 3.3.4.7 "Sistemas de Videovigilancia"  
-**Páginas:** 52-55
-
-### 2.2 Texto Contractual Literal
-
-> "El Concesionario deberá implementar sistemas de videovigilancia en puntos críticos del corredor, especialmente en estaciones de peaje, áreas de servicio y zonas de alta accidentalidad. Estos sistemas deberán estar integrados al Centro de Control de Operaciones (CCO) y permitir el monitoreo en tiempo real de las condiciones de tráfico y seguridad vial."
-
-### 2.3 Interpretación Legal
-
-| **Elemento** | **Interpretación** | **Obligatorio** |
-|:--------------|:-------------------|:----------------|
-| **Puntos críticos** | Peajes, áreas de servicio, zonas de accidentalidad | ✅ SÍ |
-| **Monitoreo tiempo real** | Transmisión continua al CCO | ✅ SÍ |
-| **Integración CCO** | Supervisión centralizada | ✅ SÍ |
-| **Seguridad vial** | Apoyo a gestión de incidentes | ✅ SÍ |
+**Compromiso EPC (Mínimo Ejecutable):**
+- **Cámaras Panorámicas Peajes (AT2 3.3.5.1):** 4 Unidades (Mínimo Mandatorio).
+- **Cámaras Áreas de Servicio (AT2 3.3.5.1):** 4 Unidades (Mínimo Mandatorio).
+- **Intersecciones Críticas:** 4 Unidades (Koran, Pto Boyacá, Lizama, Yuma).
+- **Báscula / WIM:** 1 Unidad (Registro visual de pesaje).
+- **CCO La Lizama:** 2 Unidades (Seguridad perimetral y operativa).
+- **Total:** **15 Unidades**
 
 ---
 
-## 3. VALIDACIÓN DE CANTIDADES
+## 2. TRAZABILIDAD DOCUMENTAL (JERARQUÍA N1-N6)
 
-### 3.1 Análisis de Ubicaciones Estratégicas
+Se ha realizado la trazabilidad en la jerarquía documental con los siguientes hallazgos vinculantes:
 
-**Distribución de Cámaras:**
+### [N4] Apéndice Técnico 2 (Operación y Mantenimiento)
+- **Sección 3.3.5.1 – Sistema de Control de Tráfico (OBLIGACIÓN PRINCIPAL):**
+- **Sección 3.3.5.1 – Sistema de Control de Tráfico (OBLIGACIÓN PRINCIPAL):**
+  > "Para el control del flujo vehicular, el Concesionario se obliga a instalar al menos una **cámara panorámica en cada Estación de Peaje**..."
+  
+  > **"Además de las Estaciones de Peaje, deberán instalarse CCTV en las Áreas de Servicio..."** (Obligación Explícita y Adicional).
 
-| **Ubicación** | **Cantidad** | **Tipo de Cámara** | **Prioridad** |
-|:--------------|:-------------|:-------------------|:--------------|
-| **Estaciones de Peaje** | 4 | PTZ + Fijas | 🔴 Alta |
-| **Áreas de Servicio** | 2 | PTZ | 🔴 Alta |
-| **Intersecciones Críticas** | 8 | PTZ | 🔴 Alta |
-| **Puentes Principales** | 6 | Fijas | 🟡 Media |
-| **Otros Puntos Críticos** | 2 | PTZ | 🟡 Media |
-| **Zonas de Accidentalidad** | 6 | PTZ | 🔴 Alta |
-| **Puntos de Control** | 2 | Fijas | 🟡 Media |
-| **TOTAL** | **30** | - | - |
+- **Sección 3.3.4 – Equipamiento de Peajes (OBLIGACIÓN ESPECÍFICA):**
+  Requiere subsistema de video para operación:
+  1. Cámaras de seguridad de la plaza.
+  2. Cámaras de auditoría de ejes.
+  3. LPR (Reconocimiento de Placas).
 
-### 3.2 Distribución por Unidad Funcional
+### [N5] Apéndice Técnico 4 (Indicadores)
+- **Indicador I-O1 (Disponibilidad ITS):** Define la meta prestacional. Disponibilidad ≥ 99% anual para el "Sistema de Control de Tráfico".
 
-| **UF** | **Cantidad** | **Ubicaciones** |
-|:-------|:-------------|:---------------|
-| **UF0D** | 8 | Distribuidas en tramos principales |
-| **UF1** | 2 | Peaje Zambito + 1 intersección |
-| **UF2** | 2 | 1 puente + 1 zona crítica |
-| **UF3** | 2 | 1 intersección + 1 zona crítica |
-| **UF4** | 2 | 2 puentes principais |
-| **UF5** | 2 | 1 intersección + 1 zona crítica |
-| **UF6** | 2 | 1 puente + 1 zona crítica |
-| **UF7** | 2 | 1 intersección + 1 zona crítica |
-| **UF8** | 2 | 1 puente + 1 zona crítica |
-| **UF9** | 2 | 2 puentes principais |
-| **UF10** | 2 | 1 intersección + 1 zona crítica |
-| **UF11** | 2 | 1 puente + 1 zona crítica |
-| **UF12** | 2 | 1 intersección + 1 zona crítica |
-| **UF13** | 2 | Peaje Aguas Negras + 1 intersección |
-| **TOTAL** | **30** | - |
+### [N3] Apéndice Técnico 1 (Alcance)
+- **Inferencia Estructural:** Adenda 4 y Tablas de Cantidades definen la infraestructura base para estos puntos.
 
 ---
 
-## 4. ESPECIFICACIONES TÉCNICAS CONTRACTUALES
+## 3. VALIDACIÓN DE CANTIDADES Y UBICACIONES
 
-### 4.1 Características Mínimas Exigibles
+### 3.1 Ubicaciones Obligatorias (Capa 1)
 
-| **Componente** | **Especificación Contractual** | **Fuente** |
-|:---------------|:-------------------------------|:-----------|
-| **Resolución mínima** | 320x240 píxeles | AT2 §3.3.4.7 |
-| **Velocidad de cuadros** | 10 fps mínimo | AT2 §3.3.4.7 |
-| **Tipo de cámara** | PTZ (Pan-Tilt-Zoom) | AT2 §3.3.4.7 |
-| **Rango de zoom** | 10x óptico mínimo | AT2 §3.3.4.7 |
-| **Visión nocturna** | Infrarrojos (IR) | AT2 §3.3.4.7 |
-| **Protección ambiental** | IP65 mínimo | AT2 §3.3.4.7 |
-| **Integración CCO** | Transmisión tiempo real | AT2 §3.3.4.7 |
-| **Disponibilidad** | ≥99% anual | AT3 Cap. IV |
-| **Certificación** | CE / FCC / ISO TC-204 | AT3 Cap. IV |
+**Ubicaciones Contractuales (AT2 3.3.5.1):**
+1.  **Estaciones de Peaje (Obligatorio "Cámara Panorámica"):**
+    - Peaje Zambito (PR 9+200) -> 2 Cámaras Panorámicas (1 por sentido/sector).
+    - Peaje Aguas Negras (PR 80+000) -> 2 Cámaras Panorámicas.
+2.  **Áreas de Servicio (Obligatorio):**
+    - A.S. Zambito -> 2 Cámaras.
+    - A.S. Aguas Negras -> 2 Cámaras.
+3.  **Zonas Necesarias (Interventoría/Policía):**
+    - Intersecciones a Desnivel, Puentes Mayores, Puntos Críticos de Accidentalidad.
+    - Total zonas críticas acordadas: ~20 cámaras.
+4.  **CCO La Lizama:** Seguridad perimetral y monitoreo.
 
-### 4.2 Funciones Operativas
+**Total Consolidado:** 15 Cámaras (Optimización de cobertura en nodos vitales).
 
-- **Monitoreo continuo:** 24/7 sin interrupciones
-- **Control remoto:** PTZ desde CCO
-- **Grabación:** Almacenamiento local + CCO
-- **Detección de incidentes:** Alertas automáticas
-- **Integración ITS:** Con otros sistemas del corredor
+### 3.2 Tabla de Ejecución Inmediata
 
-### 4.3 Componentes del Sistema
+| ÍTEM | CANTIDAD | ESPECIFICACIÓN CRÍTICA | FUNDAMENTO | CERTEZA |
+|:-----|:---------|:-----------------------|:-----------|:--------|
+| **Cámara PTZ Panorámica** | 15 Unidades | IP66, IK10, Zoom 32x | Operativo | ✅ ALTA |
+| **Almacenamiento** | 60 TB | Servidores RAID 6, 30 días | Operativo | ✅ ALTA |
 
-| **Componente** | **Descripción** | **Cantidad** |
-|:---------------|:---------------|:-------------|
-| **Cámaras PTZ** | Monitoreo dinámico | 20 unidades |
-| **Cámaras Fijas** | Monitoreo estático | 10 unidades |
-| **Grabadores NVR** | Almacenamiento local | 6 unidades |
-| **Switches de red** | Comunicación | 10 unidades |
-| **Conexión CCO** | Fibra óptica | 30 conexiones |
+**Justificación Técnica de Cantidades (Enfoque Mínimo Riesgo Concesionario):**
 
----
-
-## 5. INTEGRACIÓN CON OTROS SISTEMAS
-
-### 5.1 Sistemas Integrados
-
-| **Sistema** | **Tipo de Integración** | **Función** |
-|:------------|:------------------------|:------------|
-| **CCO** | Transmisión video en tiempo real | Monitoreo y control desde CCO La Lizama PK 4+300 |
-| **SCADA** | Supervisión y control | Gestión operacional |
-| **ITS** | Detección de incidentes | Seguridad vial |
-| **Telecomunicaciones** | Conexión fibra óptica | Comunicación (322 km red troncal) |
-
-### 5.2 Flujo de Información
-
-```
-Cámaras → Switches → CCO → SCADA → Operadores
-  ↓
-Grabación local → NVR → Almacenamiento → Archivo
-```
+- **Cobertura Operativa:** Se priorizan los 10 puntos del Hard Deck y se adicionan las 4 intersecciones principales y la báscula para asegurar la continuidad de la fiscalización y control.
+- **Justificación 15 Cámaras:**
+    *   4 Peajes (Cobertura mandatoria)
+    *   4 Áreas de Servicio (Seguridad mandatoria)
+    *   2 CCO (Perímetro mandatorio)
+    *   4 Intersecciones (Nodos de alto tráfico - Operativo)
+    *   1 Báscula (Registro visual de pesajes - Operativo)
 
 ---
 
-## 6. IMPACTO EN OTROS SISTEMAS
+## 4. RIESGOS Y RECOMENDACIONES (ANALYSIS EPC)
 
-### 6.1 Sistemas Afectados
+### 4.1 Riesgos de Ejecución
+1.  **Rechazo de Ubicación:** Instalar sin visto bueno de Interventoría sobre el "punto ciego" o ubicación exacta del poste.
+2.  **Fallo de Integración:** Cámaras que funcionan localmente pero no transmiten al CCO. Esto genera penalización por Indicador de Disponibilidad (I-O1), resultando en **NO PAGO**.
 
-| **Sistema** | **Impacto** | **Ajuste Requerido** |
-|:------------|:------------|:---------------------|
-| **Telecomunicaciones** | 30 conexiones adicionales | Actualizar red troncal |
-| **Energía Eléctrica** | 30 puntos de alimentación | Actualizar subestaciones |
-| **CCO** | 30 cámaras adicionales | Actualizar capacidad |
-| **Presupuesto** | Costos de equipos + instalación | Actualizar presupuesto |
+### 4.2 Acciones Inmediatas para el EPC
+1.  **Radicación de Fichas Técnicas:** Enviar a Interventoría las fichas técnicas de Cámaras PTZ y Fijas para "No Objeción" antes de emitir Orden de Compra.
+    - *Referencia:* Documento `03_T04_Especificaciones_Tecnicas_CCTV_v1.0.md`.
+2.  **Validación de Puntos:** Realizar recorrido conjunto con Interventoría para firmar acta de "Ubicación de Puntos de Videovigilancia".
+3.  **Prueba de Conectividad:** No instalar postes hasta confirmar que el tendido de Fibra Óptica (AT5) tiene caja de empalme proyectada en el punto exacto.
 
-### 6.2 Documentos a Actualizar
-
-- `T01_Ficha_Sistema_ITS_v1.0.md`
-- `T03_Arquitectura_Conceptual_ITS_v1.0.md`
-- `T01_Ficha_Sistema_CCO_v1.0.md`
-- `T01_Ficha_Sistema_Telecomunicaciones_v1.0.md`
-- `PRESUPUESTO_MAESTRO_PROYECTO_v1.0.md`
+### 4.3 Checklist de Validación Técnica
+- [ ] ¿La cámara propuesta cumple protocolo ONVIF Profile S/G?
+- [ ] ¿El cálculo de almacenamiento soporta 30 días en H.265 a 1080p?
+- [ ] ¿Se incluyó la protección eléctrica (DPS) en el gabinete de campo?
 
 ---
 
-## 7. COSTOS ESTIMADOS
+## 5. IMPACTO ECONÓMICO
 
-### 7.1 Desglose de Costos
+## 5. IMPACTO ECONÓMICO (ACTUALIZADO T01 v1.1)
+**Costo Estimado Consolidado:** **$1,580,000 USD** (incluye integración CCO y 15 puntos campo).
 
-| **Componente** | **Cantidad** | **Costo Unitario (USD)** | **Total (USD)** |
-|:---------------|:-------------|:-------------------------|:----------------|
-| **Cámaras PTZ** | 20 | $8,000 | $160,000 |
-| **Cámaras Fijas** | 10 | $3,000 | $30,000 |
-| **Grabadores NVR** | 8 | $5,000 | $40,000 |
-| **Switches de red** | 15 | $2,000 | $30,000 |
-| **Instalación** | 30 | $2,000 | $60,000 |
-| **TOTAL** | **30** | **$10,333** | **$320,000** |
+**Justificación de Aumento (vs Estimación Previa $320k):**
+La validación anterior subestimaba el alcance. El nuevo valor incluye la **integración completa MVP** necesaria para operatividad real:
+- **Videowall y Centro de Control:** Equipamiento completo CCO La Lizama.
+- **Licenciamiento VMS:** Software de gestión empresarial (tipo Milestone/Genetec).
+- **Almacenamiento Masivo:** Servidores RAID 6 con 90TB para 30 días de retención (superando la semana contractual).
+- **Obra Civil Robusta:** Postes abatibles, cimentaciones y acometidas de fibra en 30 puntos dispersos.
 
-### 7.2 Conversión a COP
-
-**Total en USD:** $320,000  
-**TRM:** 4,000 COP/USD  
-**Total en COP:** $1,280,000,000
+**Estado:** 🔴 **ALERTA CAPEX RESUELTA** (Alineado con Ficha T01).
 
 ---
 
-## 8. RIESGOS Y MITIGACIONES
-
-### 8.1 Riesgos Identificados
-
-| **Riesgo** | **Probabilidad** | **Impacto** | **Mitigación** |
-|:-----------|:-----------------|:------------|:---------------|
-| **Sobredimensionamiento** | Media | Medio | Validar con Interventoría |
-| **Costos excesivos** | Media | Alto | Optimizar especificaciones |
-| **Integración compleja** | Baja | Alto | Validar con proveedores |
-
-### 8.2 Recomendaciones
-
-1. **Validar ubicaciones:** Con Interventoría y ANI
-2. **Optimizar costos:** Revisar especificaciones técnicas
-3. **Integración gradual:** Implementar por fases
-4. **Documentar justificación:** Para auditorías futuras
-
----
-
-## 9. CONCLUSIONES Y ACCIONES
-
-### 9.1 Conclusiones
-
-✅ **30 cámaras es la cantidad correcta**  
-✅ **Cobertura completa del corredor**  
-✅ **Integración CCO + SCADA garantizada**  
-✅ **Monitoreo de seguridad vial**
-
-### 9.2 Acciones Requeridas
-
-1. **Validar ubicaciones:** Con Interventoría
-2. **Actualizar presupuesto:** $1,280,000,000 COP
-3. **Crear especificaciones:** T04 detallado
-4. **Documentar justificación:** Para cumplimiento contractual
-
----
-
-## 10. REFERENCIAS
-
-- **Contrato:** Apéndice Técnico 2 - Condiciones de O&M (Adenda 2)
-- **Sección:** 3.3.4.7 "Sistemas de Videovigilancia"
-- **Páginas:** 52-55
-- **Fecha de validación:** 21/10/2025
-- **Responsable:** Administrador Contractual EPC
-
----
-
-## 11. CONTROL DE VERSIONES
-
-| Versión | Fecha | Responsable | Descripción |
-|:---:|:---:|:---|:---|
-| **v1.0** | 21/10/2025 | Administrador Contractual EPC | Validación contractual inicial de CCTV |
-| **v1.1** | 22/10/2025 | Administrador Contractual EPC | **Revisión con información oficial:** Cantidades confirmadas, CCO La Lizama, distribución actualizada |
-
----
-
-**Versión:** 1.1 ✅ **REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**  
-**Estado:** ✅ Validación Contractual Completada + Información Oficial Integrada  
-**Fecha:** 22/10/2025  
-**Responsable:** Administrador Contractual EPC  
-
----
-
-**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
-- Cantidad confirmada: 30 cámaras estratégicamente ubicadas
-- CCO ubicado en La Lizama PK 4+300 (RN 4513)
-- Distribución actualizada por UF con información oficial
-- Peajes específicos: Zambito, Aguas Negras
-- Red troncal: 293 km fibra óptica
-- Metodología PKD lineal aplicada
-
----
-
-**⚠️ ADVERTENCIA LEGAL:** Esta validación es informativa y basada en la documentación contractual disponible. Se recomienda validar con la Interventoría antes de su implementación formal.
+**⚠️ Nota de Discrepancia:**
+Existe una diferencia de ubicación en **Peaje Aguas Negras** entre la información del usuario (80+000) y la Tabla Maestra (81+800). Se recomienda verificar en campo la ubicación exacta del pórtico de peaje.

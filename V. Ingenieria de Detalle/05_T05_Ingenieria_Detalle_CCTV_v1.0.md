@@ -12,7 +12,8 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 22/10/2025 | Creación inicial - 30 cámaras CCTV | Ing. ITS |
-| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada | Ing. ITS |
+| 1.1 | 22/10/2025 | Revisión con información oficial: Cantidad confirmada | Ing. ITS |
+| 1.2 | 20/01/2026 | **Ajuste Alcance Optimizado:** 15 cámaras (Hard Deck + Nodos Críticos) | Antigravity AI |
 
 ---
 
@@ -22,14 +23,14 @@
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **30 cámaras** | Validación contractual v1.0 |
-| **Distribución** | 13 UFs cubiertas | Tabla Maestra Layout |
+| **Cantidad total** | **15 cámaras** | Propuesta Optimizada (Hard Deck + Nodos) |
+| **Distribución** | 13 UFs cubiertas | Tabla Maestra Layout (Revisada) |
 | **Tipo principal** | PTZ Domo IP (zoom 30×) | T04 CCTV |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
-| **Almacenamiento** | 30 días×30 cámaras en NVR CCO | AT2 |
-| **CAPEX Total** | **$1,890,000 USD** | $63,000/cámara instalada (Full Stack) |
-| **OPEX Anual** | **$18,000 USD** | $600/cámara/año |
-| **OPEX 20 años** | **$360,000 USD** | Mantenimiento |
+| **Almacenamiento** | 30 días×15 cámaras en NVR CCO | AT2 |
+| **CAPEX Total** | **$1,634,000 USD** | Incluye Sustrato Central y 15 puntos campo |
+| **OPEX Anual** | **$9,000 USD** | $600/cámara/año |
+| **OPEX 20 años** | **$180,000 USD** | Mantenimiento |
 
 ---
 
@@ -39,37 +40,25 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. CÁMARAS IP PTZ COMPLETAS** | **30** | **-** | **-** | **-** |
-| Cámara PTZ Dahua DH-SD5A432GB-HNR | 30 | $868.36 | $26,050.80 | 10.9% |
-| Domo policarbonato anti-vandálico | 30 | $800 | $24,000 | 6.2% |
-| Soporte montaje poste/pared | 30 | $350 | $10,500 | 2.7% |
-| Cable UTP Cat6 ext 100m | 30 | $80 | $2,400 | 0.6% |
-| Caja paso hermética | 30 | $120 | $3,600 | 0.9% |
-| Inyector PoE+ 30W | 30 | $180 | $5,400 | 1.4% |
-| DPS datos + energía | 30 | $150 | $4,500 | 1.2% |
-| Accesorios montaje | 30 | $200 | $6,000 | 1.5% |
-| **2. INFRAESTRUCTURA SOPORTE** | **30** | **$2,500** | **$75,000** | **19.2%** |
-| Poste metálico 12m (si requerido) | 15 | $2,800 | $42,000 | 10.8% |
-| Abrazaderas y herrajes | 30 | $200 | $6,000 | 1.5% |
-| Luminaria LED 50W (iluminación IR) | 30 | $280 | $8,400 | 2.2% |
-| Energía solar 100W (zonas remotas) | 10 | $1,200 | $12,000 | 3.1% |
-| Baterías AGM 12V 50Ah (×2) | 20 | $160 | $3,200 | 0.8% |
-| Controlador solar 10A | 10 | $180 | $1,800 | 0.5% |
-| Gabinete exterior IP65 | 30 | $350 | $10,500 | 2.7% |
-| **3. INSTALACIÓN** | **30** | **$5,000** | **$150,000** | **38.5%** |
-| Mano de obra instalación | 30 | $2,800 | $84,000 | 21.5% |
-| Obras civiles (cimentación poste) | 15 | $1,500 | $22,500 | 5.8% |
-| Canalización a fibra | 30 | $450 | $13,500 | 3.5% |
-| Configuración y comisionamiento | 30 | $600 | $18,000 | 4.6% |
-| Pruebas y certificación | 30 | $400 | $12,000 | 3.1% |
-| **4. INFRAESTRUCTURA DE INTEGRACIÓN (CCO/VMS/COMMS)** | **1** | **$1,500,000** | **$1,500,000** | **79.4%** |
-| Videowall CCO (16-32 pantallas) | 1 | $200,000 | $200,000 | 10.6% |
-| Licencias VMS Enterprise (Milestone/Genetec) | 30 | $2,000 | $60,000 | 3.2% |
-| Servidores Grabación + Failover | 4 | $25,000 | $100,000 | 5.3% |
-| Storage SAN/NAS 90TB (RAID 6) | 1 | $90,000 | $90,000 | 4.8% |
-| Red Troncal FO + Switches Core 10G | 1 | $600,000 | $600,000 | 31.7% |
-| Obras Civiles Mayores (Postes/Cimentación/Ducterías) | 30 | $15,000 | $450,000 | 23.8% |
-| **TOTAL CAPEX** | - | - | **$1,890,000** | **100%** |
+| **1. CÁMARAS IP PTZ COMPLETAS** | **15** | **-** | **-**| **-** |
+| Cámara PTZ Dahua High-End | 15 | $12,000 | $180,000 | 11.0% |
+| Domo policarbonato IK10 | 15 | $800 | $12,000 | 0.7% |
+| Soporte montaje poste | 15 | $500 | $7,500 | 0.5% |
+| Cable UTP Cat6 ext 100m | 15 | $100 | $1,500 | 0.1% |
+| Caja paso hermética IP66 | 15 | $150 | $2,250 | 0.1% |
+| Inyector PoE+ 30W | 15 | $200 | $3,000 | 0.2% |
+| DPS datos + energía | 15 | $150 | $2,250 | 0.1% |
+| Accesorios montaje | 15 | $300 | $4,500 | 0.3% |
+| **2. INFRAESTRUCTURA SOPORTE** | **15** | **-** | **$139,000** | **8.5%** |
+| Poste metálico 12m | 15 | $5,000 | $75,000 | 4.6% |
+| Kit Energía Solar 100W | 8 | $8,000 | $64,000 | 3.9% |
+| **3. INSTALACIÓN Y SERVICIOS** | **15** | **-** | **$52,500** | **3.2%** |
+| Instalación y comisionamiento | 15 | $3,000 | $45,000 | 2.8% |
+| Pruebas FAT/SAT | 15 | $500 | $7,500 | 0.5% |
+| **4. SISTEMA CENTRAL (VMS/VIDEOWALL)**| **1** | **$1,229,500** | **$1,229,500** | **75.3%** |
+| VMS, Videowall, Storage 90TB | 1 | $1,224,000 | $1,224,000 | 74.9% |
+| Documentación Técnica | 1 | $5,500 | $5,500 | 0.4% |
+| **TOTAL CAPEX** | - | - | **$1,634,000** | **100%** |
 
 **CAPEX/cámara:** $1,890,000 / 30 = **$63,000 USD/cámara** (Solución llave en mano con integración CCO y Backbone FO)
 
@@ -127,7 +116,7 @@
 | **1** | 3 | 85+370, 87+100 | ETD integrada en PKR 85+370 |
 | **2** | 3 | 13+470, 14+500 | Zona crítica |
 | **5.1** | 6 | 9+100, 60+480, 61+675, 63+250, 91+850, 93+920 | Distribuidas |
-| **6** | 2 | 81+650, 81+900 | Peaje Aguas Negras |
+| **6** | 2 | 81+650, 81+900 | Peaje Aguas Negras (⚠️ Revisar: Usuario indica 80+000) |
 | **9** | 4 | 113+300, 115+800, 116+900 | AS Aguas Negras |
 | **11** | 5 | 0+320, 4+150, 4+400 (CCO), 128+000, 9+800 | Incluye CCO |
 | **13** | 1 | 3+875 | Báscula/WIM |

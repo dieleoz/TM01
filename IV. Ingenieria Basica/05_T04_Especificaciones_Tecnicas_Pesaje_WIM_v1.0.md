@@ -17,7 +17,8 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 1 estación bidireccional (4 plataformas) | Adm. Contractual EPC |
-| 1.1 | 22/10/2025 | **Revisión con información oficial:** Ubicación PR4+0100 RN 4513 confirmada | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | Revisión con información oficial: Ubicación PR4+0100 RN 4513 confirmada | Adm. Contractual EPC |
+| **2.0** | **20/01/2026** | **RECONCILIACIÓN AUDIT .42:** Reconciliación presupuestal a $551,425 USD y cumplimiento Res. 100/2024 (HS-WIM). | Ing. ITS |
 
 ---
 
@@ -29,11 +30,11 @@
 |:------|:------|
 | **Nombre del sistema** | WIM - Weigh In Motion (Pesaje Dinámico y Estático) |
 | **Categoría** | ITS - Control de Sobrecargas |
-| **Código interno** | T04-WIM-005-v1.0 |
+| **Código interno** | T04-WIM-005-v2.0 |
 | **Configuración** | **1 estación bidireccional** |
-| **Componentes** | **2 plataformas WIM + 2 plataformas estáticas** |
-| **CAPEX estimado** | **USD $523,539** |
-| **Documentos base** | T01 v1.1, T03 v1.0, Validación v1.0 |
+| **Componentes** | **2 plataformas HS-WIM (PAT) + 2 plataformas estáticas (Fairbanks)** |
+| **CAPEX reconciliado** | **USD $551,425** |
+| **Documentos base** | T01 v1.1, T03 v1.0, Validación v2.0, Res. 100/2024 |
 
 ### 1.2 Ubicación de la Estación
 
@@ -76,8 +77,8 @@
 
 | Norma | Título | Aplicación |
 |:------|:-------|:-----------|
-| **NTC 5371** | Metrología - Instrumentos de pesaje no automático | Básculas estáticas |
-| **Resolución INVÍAS** | Especificaciones de pesaje en carreteras | Sistemas WIM |
+| **NTC 2031 / 5371** | Metrología - Instrumentos de pesaje no automático | Básculas estáticas |
+| **Resolución 100/2024** | Pesaje dinámico a alta velocidad (HS-WIM) | **MANDATORIA** |
 | **Ley 769/2002** | Código Nacional de Tránsito (Art. 29) | Límites de peso por eje |
 | **Resolución 4100/2004** | Pesos y dimensiones de vehículos | Límites legales |
 | **RETIE** | Instalaciones Eléctricas | Alimentación, tierras |
@@ -384,21 +385,10 @@ Elementos comunes:
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:------------|:-------|:---------|:-------------------|:------------|
-| 1 | Sistema WIM completo (sensores + software) | und | 2 | $150,000 | $300,000 |
-| 2 | Báscula estática 100 ton (18 m, 12 celdas) | und | 2 | $120,000 | $240,000 |
-| 3 | Sistema de control y gestión (software) | global | 1 | $80,000 | $80,000 |
-| 4 | Cámaras OCR/ANPR (4 unidades) | und | 4 | $5,000 | $20,000 |
-| 5 | Señalización LED + barreras | global | 1 | $40,000 | $40,000 |
-| 6 | Caseta de control (prefabricada equipada) | und | 1 | $60,000 | $60,000 |
-| 7 | Instalación y puesta en servicio | global | 1 | $120,000 | $120,000 |
-| 8 | Obras civiles (excavación, losas, drenajes) | global | 1 | $250,000 | $250,000 |
-| 9 | Fibra óptica y conectividad | global | 1 | $30,000 | $30,000 |
-| 10 | Capacitación y documentación | global | 1 | $20,000 | $20,000 |
-| 11 | Calibración inicial ONAC (4 plataformas) | und | 4 | $5,000 | $20,000 |
-| 12 | Repuestos iniciales | global | 1 | $50,000 | $50,000 |
-| | | | | **SUBTOTAL** | **$1,230,000** |
-| | | | | **Contingencia 10%** | $123,000 |
-| | | | | **TOTAL** | **$523,539** |
+| 1 | Sistema HS-WIM (2 Carriles PAT DAW100) | global | 1 | $256,353 | $256,353 |
+| 2 | Sistema Pesaje Estático (2 Fairbanks Talon Rodan) | global | 1 | $261,890 | $261,890 |
+| 3 | Sistema de Puesta a Tierra (SPT Especial Pesaje) | global | 1 | $33,182 | $33,182 |
+| | | | | **TOTAL CAPEX RECONCILIADO** | **$551,425** |
 
 > **Nota:** El presupuesto se ha alineado a la Ingeniería de Detalle (T05) con un valor de **$523,539 USD**.
 

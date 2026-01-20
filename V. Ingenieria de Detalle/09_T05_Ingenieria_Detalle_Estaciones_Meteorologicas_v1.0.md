@@ -16,34 +16,34 @@
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
 | **Cantidad** | **3 estaciones** | 2 Peajes IP/REV + 1 CCO |
-| **Ubicaciones** | Peaje Zambito + Peaje Aguas Negras + CCO | AT2 3.3.11.2 + Res 546/2018 |
-| **Variables medidas** | 8 parámetros climáticos | Lluvia, viento, temp, visibilidad, etc. |
-| **Frecuencia reporte** | 5 minutos | Tiempo real a CCO |
-| **CAPEX Total** | **$75,000 USD** | $25,000/estación completa |
-| **OPEX Anual** | **$3,600 USD** | $1,200/estación/año |
-| **OPEX 20 años** | **$72,000 USD** | Calibraciones + mantenimiento |
+| **Ubicaciones** | Peaje Zambito + Peaje Aguas Negras + CCO | AT2 3.3.11.2 + Res 2021 |
+| **Variables medidas** | 8 parámetros climáticos | Incluye Visibilidad (Neblina) mandatorio |
+| **Frecuencia reporte** | 5 minutos | Protocolo Modbus TCP al CCO |
+| **CAPEX Total** | **$75,000 USD** | $25,000/estación industrial |
+| **OPEX Anual** | **$4,500 USD** | $1,500/estación/año |
+| **OPEX 20 años** | **$90,000 USD** | Calibraciones + mantenimiento industrial |
 
 ---
 
-## 💰 **PRESUPUESTO DETALLADO**
+## 💰 **PRESUPUESTO RECONCILIADO - AUDIT .42**
 
 ### **CAPEX POR COMPONENTE:**
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. ESTACIÓN DAVIS VANTAGE PRO2 PLUS** | **3** | **$7,404.09** | **$22,212.27** | **29.6%** |
-| Davis 6327m ISS (Sensor Suite) | 3 | $3,822.50 | $11,467.50 | 15.3% |
-| WeatherLink Live 6100 | 3 | $1,146.40 | $3,439.20 | 4.6% |
-| Trípode Universal Montaje | 3 | $253.65 | $760.95 | 1.0% |
-| Factor Imprevistos (x1.38) + AIU (20%) | 3 | $2,181.54 | $6,544.62 | 8.7% |
-| **2. INSTALACIÓN Y OBRA CIVIL** | **3** | **$17,595.91** | **$52,787.73** | **70.4%** |
-| Mano de obra instalación | 3 | $4,500.00 | $13,500.00 | 18.0% |
-| Obras civiles (torre 10m + cimentación) | 3 | $8,000.00 | $24,000.00 | 32.0% |
-| Calibración inicial certificada | 3 | $2,000.00 | $6,000.00 | 8.0% |
-| Comisionamiento e Integración SCADA | 3 | $3,095.91 | $9,287.73 | 12.4% |
-| **TOTAL CAPEX** | - | - | **$75,000.00** | **100%** |
+| **1. ESTACIÓN INDUSTRIAL COMPACTA** | **3** | **$15,000.00** | **$45,000.00** | **60.0%** |
+| Sensor All-in-One + Visibilímetro Óptico | 3 | $9,000.00 | $27,000.00 | 36.0% |
+| Datalogger Industrial + Modem/Switch | 3 | $3,500.00 | $10,500.00 | 14.0% |
+| Gabinete IP66 + Protección Eléctrica | 3 | $2,500.00 | $7,500.00 | 10.0% |
+| **2. INFRAESTRUCTURA Y OBRA CIVIL** | **3** | **$6,000.00** | **$18,000.00** | **24.0%** |
+| Torre meteorológica 10m (Mástil) | 3 | $3,500.00 | $10,500.00 | 14.0% |
+| Cimentación y Puesta a Tierra | 3 | $2,500.00 | $7,500.00 | 10.0% |
+| **3. INTEGRACIÓN Y SERVICIOS** | **3** | **$4,000.00** | **$12,000.00** | **16.0%** |
+| Ingeniería de integración SCADA | 1 | $6,000.00 | $6,000.00 | 8.0% |
+| Comisionamiento y FAT/SAT | 3 | $2,000.00 | $6,000.00 | 8.0% |
+| **TOTAL CAPEX METEO** | - | - | **$75,000.00** | **100%** |
 
-**CAPEX/estación:** $75,000.00 / 3 = **$25,000 USD/estación** (Full Profesional)
+**CAPEX/estación:** $75,000.00 / 3 = **$25,000 USD/estación** (Grado Industrial)
 
 > **Nota Técnica:** Se ha ajustado el presupuesto para incluir torres de 10m y obras civiles robustas, además de la integración total al CCO para la tercera estación. La estación Davis Vantage Pro2 mide **Radiación Solar Global (W/m²)**.
 

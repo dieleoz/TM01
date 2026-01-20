@@ -1,14 +1,14 @@
 # T04: ESPECIFICACIONES TÉCNICAS - ETD Y RADARES (ESTACIONES DE TOMA DE DATOS)
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21/10/2025  
-**Sistema:** ETD (Estaciones de Toma de Datos) + Radares Sancionatorios  
+**Fecha:** 20/01/2026  
+**Sistema:** ETD (Estaciones de Toma de Datos) + Radares Sancionatorios (Manual 2024)  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.2  
+**Versión:** 1.5  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
-**Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
-**Referencia Validación:** 35_VALIDACION_CONTRACTUAL_ETD_RADARES_v1.0  
-**Referencia Layout:** 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0  
+**Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.2  
+**Referencia Validación:** 35_VALIDACION_CONTRACTUAL_ETD_RADARES_v2.0  
+**Referencia Layout:** 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v2.0  
 
 ---
 
@@ -17,8 +17,11 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - Separación ETD vs Radares según función | Adm. Contractual EPC |
-| 1.1 | 22/10/2025 | **Revisión con información oficial:** 16 equipos (14 ETD + 2 Radares), CAPEX actualizado | Adm. Contractual EPC |
-| 1.2 | 31/10/2025 | **Corrección según validación contractual:** 15 equipos (13 ETD + 2 Radares), CAPEX actualizado | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | Revisión con información oficial: 16 equipos | Adm. Contractual EPC |
+| 1.2 | 31/10/2025 | Corrección según validación contractual: 15 equipos | Adm. Contractual EPC |
+| 1.3 | 22/10/2025 | **Alineación .42:** 13 ETD + 2 SAST. Tecnología No Intrusiva (Radar/Doppler). | Adm. Contractual EPC |
+| 1.4 | 20/01/2026 | **Inclusión Radares Pedagógicos:** Adición de 2 Monitores de Velocidad (SI-27B). | Adm. Contractual EPC |
+| **1.5** | **20/01/2026** | **Reconciliación Final:** 18 unidades (13 ETD + 1 Spare + 2 SAST + 2 Pedagógicos) y $1.7M CAPEX. | **Adm. Contractual EPC** |
 
 ---
 
@@ -28,22 +31,24 @@
 
 | Campo | Valor |
 |:------|:------|
-| **Nombre del sistema** | ETD (Estaciones de Toma de Datos) + Radares Sancionatorios |
+| **Nombre del sistema** | ETD (Estaciones de Toma de Datos) + Radares (SAST/Pedagógicos) |
 | **Categoría** | ITS (Intelligent Transportation Systems) - Control de Tráfico |
-| **Código interno** | T04-ETD-RAD-002-v1.0 |
-| **Cantidad total** | **15 unidades** (13 ETD + 2 Radares) |
-| **CAPEX estimado** | **USD $1,650,000** ($110,000/equipo instalado - Solución Completa) |
+| **Código interno** | T04-ETD-RAD-002-v2.2 |
+| **Cantidad total** | **18 unidades** (14 ETD + 2 SAST + 2 Pedagógicos) |
+| **CAPEX estimado** | **USD $1,700,000** |
 | **Documentos base** | T01 v1.0 MVP, T03 v1.0, Validación v1.0, Layout v1.0 |
 
 ### 1.2 Distinción Funcional
 
 | Tipo | Cantidad | Función Principal | Certificación |
 |:-----|:---------|:------------------|:--------------|
-| **ETD (Monitoreo)** | 13 | Velocidad promedio, flujo, clasificación (una por UF) | ISO TC-204 |
-| **Radares (Sancionatorios)** | 2 | Detección infracciones, registro fotográfico | Res. 718/2018 + ONAC |
-| **TOTAL** | **15** | - | - |
+| **ETD (Monitoreo)** | 13 | Velocidad promedio por UF (AT4) | ISO TC-204 / SICC |
+| **Radares (SAST)** | 2 | Detección infracciones (Sancionatorio) | Res. 718/2018 + ONAC |
+| **Radares (Pedagógicos)**| 2 | Informativo al conductor (SI-27B) | Preventivo / AT2 |
+| **Spare (ETD)** | 1 | Repuesto / Unidad de prueba | No operativa en línea |
+| **TOTAL PROYECTO** | **18** | - | - |
 
-> **Nota Crítica:** El proyecto contempla **15 equipos** (13 ETD + 2 Radares) que cubren todas las Unidades Funcionales del corredor. Los ETD proporcionan monitoreo estadístico (una por cada UF1-UF13) y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
+> **Nota Crítica:** El proyecto contempla **17 equipos operativos** y **1 repuesto crítico**, optimizando la inversión a $1,700,000 USD.
 
 ### 1.3 Alcance de las Especificaciones
 
@@ -169,7 +174,7 @@
 
 #### 4.1.1 Descripción General
 
-Equipo de medición automática para monitoreo continuo de velocidad promedio, flujo vehicular, densidad y clasificación de tráfico por Unidad Funcional. **NO requiere cámara ANPR** (solo sensor radar o microondas).
+Equipo de medición automática para monitoreo continuo de velocidad promedio, flujo vehicular, densidad y clasificación de tráfico por Unidad Funcional. **Incluye Cámara LPR de Identificación** para cumplimiento de **AT2 §3.3.4.5** (toma de fotos de matrícula), pero de grado no sancionatorio (sin certificación ONAC).
 
 #### 4.1.2 Especificaciones Técnicas del Sensor
 
@@ -326,6 +331,41 @@ Equipo de detección automática de infracciones de tránsito (exceso de velocid
 
 ---
 
+### 4.3 RADAR PEDAGÓGICO - Monitores de Velocidad Informativos (SI-27B)
+
+#### 4.3.1 Descripción General
+
+Sistema de advertencia preventiva compuesto por un radar Doppler y un panel de mensajes dinámico (LED) que proyecta en tiempo real la velocidad de los vehículos al conductor. Cumple con la señal informativa **SI-27B** del Manual de Señalización Vial.
+
+#### 4.3.2 Especificaciones del Display LED
+
+| Parámetro | Especificación Mínima | Observaciones |
+|:----------|:---------------------|:--------------|
+| **Tecnología** | Matriz de LED (Ámbar o Bicolor) | Alta visibilidad solar |
+| **Altura de caracteres** | ≥300 mm | Lectura a ≥150 m |
+| **Rango de visualización** | Velocidades de 10 a 199 km/h | - |
+| **Alertas Visuales** | Flash o cambio de color por exceso | Configurable según límite PK |
+| **Protección Frontal** | Policarbonato con filtro UV y antirreflejo | - |
+| **Ajuste Brillo** | Automático (sensor de luz ambiental) | - |
+
+#### 4.3.3 Especificaciones del Radar Doppler
+
+| Parámetro | Especificación Mínima | Precisión |
+|:----------|:---------------------|:----------|
+| **Frecuencia** | Banda K (24.150 GHz) | - |
+| **Alcance** | ≥200 m | - |
+| **Precisión** | ±1 km/h | Alta confiabilidad informativa |
+| **Ángulo apertura** | 12° x 25° típicamente | Cobertura carril específico |
+
+#### 4.3.4 Fabricantes de Referencia (Pedagógicos)
+
+1. **Radarsign** (USA)
+2. **TraffiCalm Systems** (USA)
+3. **Sierzega** (Austria)
+4. **O equivalente** que cumpla con señal SI-27B y protección IP65.
+
+---
+
 ## 5. INTEGRACIÓN Y COMPATIBILIDAD
 
 ### 5.1 Integración con Sistema Central (CCO)
@@ -381,7 +421,7 @@ Equipo de detección automática de infracciones de tránsito (exceso de velocid
 
 ### 6.1 Componentes MÍNIMOS por Tipo
 
-#### **ETD (Monitoreo) - 14 unidades**
+#### **ETD (Monitoreo) - 13 unidades**
 
 | Componente | Obligatorio | Observaciones |
 |:-----------|:------------|:--------------|
@@ -390,7 +430,7 @@ Equipo de detección automática de infracciones de tránsito (exceso de velocid
 | Gabinete IP65 | ✅ Sí | Protección exterior |
 | UPS ≥4 horas | ✅ Sí | Respaldo energía |
 | Comunicación fibra | ✅ Sí | TCP/IP, SNMP, API |
-| **Cámara ANPR** | ❌ **NO** | **NO requerida para monitoreo estadístico** |
+| **Cámara LPR** | ✅ **SÍ** | **Cumplimiento AT2 §3.3.4.5 (Identificación)** |
 
 #### **Radares Sancionatorios (SAST) - 2 unidades**
 
@@ -413,19 +453,16 @@ Equipo de detección automática de infracciones de tránsito (exceso de velocid
 
 **Referencia:** `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md`
 
-**Distribución actual (12 RADAR-ANPR en proyecto real):**
+**Distribución por Tipo (17 equipos):**
 
-| Ruta | Cantidad | PK Ejemplo | Tipo | Observaciones |
-|:-----|:---------|:-----------|:-----|:--------------|
-| **RN 4510** | 2 pares | PK 54+000, PK 116+200 | Bidireccional | Pórticos sobre ambas calzadas |
-| **RN 4511** | 5 pares | PK 37+400, PK 46+900, PK 65+900, PK 95+800, PK 143+900 | Bidireccional | Pórticos sobre ambas calzadas |
-| **TOTAL** | **12 unidades** | - | 6 pares | - |
+| Ruta | Cantidad | Tipo | Observaciones |
+|:-----|:---------|:-----|:--------------|
+| **RN 4510 / 4511 / 4513** | 13 | ETD | 1 por UF (Monitoreo LPR) |
+| **RN 4510 / 4511** | 2 | SAST | Puntos Críticos (Sancionatorio) |
+| **Peajes (RN 4511)** | 2 | Pedagógico | PK 9+150 / PK 81+800 (Informativo SI-27B) |
+| **TOTAL** | **17 unidades** | - | - |
 
-**⚠️ Nota contractual:** El contrato requiere **15 equipos (13 ETD + 2 Radares)**. El proyecto real tiene 12 RADAR-ANPR. **Faltan 3 equipos** o justificación técnica.
-
-**Propuesta de ajuste:**
-- **Opción 1:** Agregar 3 ETD (sin cámara) en UFs faltantes
-- **Opción 2:** Justificar que 12 RADAR-ANPR cubren las 13 UFs (algunos cubren 2 UFs)
+**⚠️ Nota contractual:** El proyecto contempla **17 equipos operativos**. Esta configuración cubre el 100% de las obligaciones de medición de velocidad por UF (AT4), control de puntos críticos (AT2) y monitores preventivos (AT2 §3.3.5.1).
 
 ### 7.2 Configuración Bidireccional
 
@@ -669,43 +706,25 @@ Pórtico:
 
 ### 12.1 Resumen de Cantidades (Proyecto Real)
 
-| Ítem | Descripción | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
-|:-----|:------------|:-------|:---------|:-------------------|:------------|
-| 1 | ETD completo (sensor + procesador) | und | 14 | $7,470 | $104,580 |
-| 2 | RADAR-ANPR completo (sensor + cámara + procesador) | und | 2 | $32,484 | $64,968 |
-| 3 | Pórtico metálico galvanizado (típico 16 m) | und | 8 | $8,000 | $64,000 |
-| 4 | Instalación y puesta en servicio | und | 16 | $5,000 | $80,000 |
-| 5 | Obras civiles (cimentaciones, canalizaciones) | und | 8 | $6,000 | $48,000 |
-| 6 | Fibra óptica y conectividad | und | 8 | $3,000 | $24,000 |
-| 7 | Capacitación y documentación | global | 1 | $15,000 | $15,000 |
-| 8 | Repuestos iniciales (2 años) | global | 1 | $30,000 | $30,000 |
-| 9 | Calibración ONAC (2 radares, primer año) | und | 2 | $3,000 | $6,000 |
-| | | | | **TOTAL** | **$436,548** |
+| 1 | Suministros Hardware ETD (13 DeepBlue VIA + 1 Spare) | global | 1 | $455,000 | $455,000 |
+| 2 | Suministros Hardware SAST (2 Vidar Speed + Licencias) | global | 1 | $63,015 | $63,015 |
+| 3 | Suministros Hardware Pedagógico (2 SI-27B) | global | 1 | $50,000 | $50,000 |
+| 4 | Software Central de Tráfico & Analíticos | global | 1 | $650,000 | $650,000 |
+| 5 | Infraestructura, Integración & Comisionamiento | global | 1 | $481,985 | $481,985 |
+| | | | | **TOTAL CAPEX** | **$1,700,000** |
 
-**Precio unitario promedio:** $27,284 USD/equipo instalado
+**Precio unitario promedio:** ~$100,000 USD/equipo instalado (Solución Completa v2.1)
 
-> **Nota:** El presupuesto actualizado contempla **15 equipos** (13 ETD + 2 RADAR-ANPR) con un total de **$1,650,000 USD**. Los ETD proporcionan monitoreo estadístico y los 2 radares sancionatorios se habilitarán con el Ministerio de Transporte.
+> **Nota:** El presupuesto actualizado contempla **17 equipos operativos** (13 ETD + 2 SAST + 2 Pedagógicos) con un total de **$1,700,000 USD**.
 
-### 12.2 Desglose por Tipo (Propuesta Ajustada)
+#### **Configuración Unificada (17 Equipos Operativos)**
 
-**Si se ajusta a contrato (16 equipos: 14 ETD + 2 Radares):**
-
-| Tipo | Cantidad | Precio Unit. (USD) | Total (USD) | Función |
-|:-----|:---------|:-------------------|:------------|:--------|
-| **ETD (sin cámara)** | 14 | $7,470 | $104,580 | Monitoreo estadístico por UF |
-| **RADAR-ANPR** | 2 | $32,484 | $64,968 | Detección infracciones |
-| **Instalación ETD** | 14 | $14,000 | $196,000 | Pórticos, cimentaciones, fibra |
-| **TOTAL** | **16** | - | **$365,548** | - |
-
-### 12.3 Desglose por Ruta (Proyecto Real - 12 equipos)
-
-**Ver:** `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md` (detalle completo con PKs exactos)
-
-| Ruta | Tramo | Cantidad | CAPEX (USD) | Observaciones |
-|:-----|:------|:---------|:------------|:--------------|
-| **RN 4510** | PK 54+000, PK 116+200 | 4 | $142,928 | 2 pares bidireccionales |
-| **RN 4511** | PKs distribuidos | 8 | $285,856 | 4 pares bidireccionales |
-| **TOTAL** | - | **12** | **$428,784** | 6 pares total |
+| Tipo de Equipo | Cantidad | Función | Estándar |
+|:---------------|:---------|:--------|:---------|
+| **ETD** | 13 | Monitoreo Estadístico UF | ISO TC-204 |
+| **SAST** | 2 | Control Sancionatorio | Res. 718 |
+| **Pedagógicos** | 2 | Informativo Preventivo | SI-27B |
+| **TOTAL** | **17** | - | - |
 
 ---
 
@@ -744,7 +763,8 @@ Pórtico:
 **Componentes:**
 - ✅ Sensor radar o microondas
 - ✅ Unidad de procesamiento
-- ❌ **NO requiere cámara ANPR**
+- ✅ **Cámara LPR Identificación** (Para AT2 Compliance)
+- ❌ **NO requiere certificación ONAC** (No sancionatorio)
 
 **Normativa:**
 - ISO TC-204 (ITS)
@@ -766,6 +786,21 @@ Pórtico:
 - Ley 1581/2012 (Protección datos)
 - Homologación ONAC (OBLIGATORIA)
 - Calibración anual (OBLIGATORIA)
+
+#### **Radares Pedagógicos (SI-27B)**
+
+**Propósito:** Advertencia preventiva al conductor.  
+**Función:** Proyectar velocidad en tiempo real para disuasión.  
+**Componentes:**
+- ✅ Sensor radar Doppler (precisión ±1 km/h)
+- ✅ **Display LED SI-27B** (Ámbar/Bicolor)
+- ✅ Gabinete exterior IP65
+- ❌ **NO requiere certificación ONAC** (Fines informativos)
+- ❌ **NO registra infracciones**
+
+**Normativa:**
+- Manual de Señalización Vial (SI-27B)
+- AT2 §3.3.5.1
 
 ### 14.2 Interoperabilidad SIMIT
 
@@ -876,12 +911,12 @@ Pórtico:
 
 ---
 
-**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS ETD Y RADARES v1.1**
+**FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS ETD Y RADARES v2.1**
 
 ---
 
-**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
-- Cantidad total actualizada: 16 unidades (14 ETD + 2 Radares)
-- CAPEX actualizado: $436,548 USD
-- Distribución funcional actualizada según información oficial
-- Metodología PKD lineal aplicada
+**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO - AUDIT .42**
+- Cantidad total operativa: **17 unidades** (13 ETD + 2 SAST + 2 Pedagógicos).
+- CAPEX consolidado: **$1,700,000 USD**.
+- Tecnología: Radares No Intrusivos Doppler (Manual 2024).
+- Alineación 100% con AT2, AT3 y AT4.

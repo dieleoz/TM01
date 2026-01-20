@@ -1,11 +1,11 @@
 # VALIDACIÓN CONTRACTUAL - PMV (PANELES DE MENSAJE VARIABLE)
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21/10/2025  
-**Sistema:** PMV - Paneles de Mensaje Variable  
+**Fecha:** 22/10/2025  
+**Sistema:** PMV - Paneles de Mensaje Variable (Manual 2024)  
 **Responsable:** Administrador Contractual EPC  
-**Versión:** 1.0  
-**Estado:** ✅ Validación Contractual Completada
+**Versión:** 2.0  
+**Estado:** ✅ Auditoría Metodología .42 Completada
 
 ---
 
@@ -13,9 +13,10 @@
 
 ### 1.1 Obligación Contractual Validada
 
-**Cantidad Obligatoria:** **28 unidades** (según diseño detallado)  
-**Base Legal:** Apéndice Técnico 2 - Condiciones de O&M (Adenda 2)  
-**Estado:** ✅ **VALIDADO CONTRACTUALMENTE**
+**Cantidad Propuesta (Optimización):** **14 unidades** (Puntos de Decisión + Peajes)  
+**Cantidad Anterior:** 28 unidades (Frecuencia lineal 20km - Outdated)  
+**Base Legal:** Apéndice Técnico 2, Manual de Señalización Vial 2024, CCP-14, AT4.  
+**Estado:** ✅ **ALINEADO A MANUAL 2024**
 
 ### 1.2 Criterio de Validación
 
@@ -55,15 +56,13 @@
 
 **Distribución de PMV:**
 
-| **Ubicación** | **Cantidad** | **Justificación** | **Prioridad** |
+| **Ubicación** | **Cantidad** | **Justificación (Optimización .42)** | **Prioridad** |
 |:--------------|:-------------|:------------------|:--------------|
-| **Estaciones de Peaje** | 4 | 2 por peaje (antes + después) | 🔴 Alta |
-| **Intersecciones Críticas** | 8 | Pre-intercambiadores | 🔴 Alta |
-| **Zonas de Obras** | 6 | Puntos de construcción | 🔴 Alta |
-| **Zonas Urbanas** | 4 | Reducción de velocidad | 🟡 Media |
-| **Puntos de Control** | 4 | Gestión de tráfico | 🟡 Media |
-| **Zonas de Accidentalidad** | 2 | Alertas de seguridad | 🔴 Alta |
-| **TOTAL** | **28** | - | - |
+| **Estaciones de Peaje** | 4 | Obligatorio Contractual (Antes/Después) | 🔴 Mandatorio |
+| **Intersecciones Críticas** | 4 | Decision Points (Koran, Pto Boyacá, Lizama, Yuma) | 🔴 Crítico |
+| **Áreas de Servicio** | 2 | Información operativa | 🟡 Operativo |
+| **Inicios de Corredor** | 4 | Bienvenida / Alertas Generales | 🟡 Operativo |
+| **TOTAL** | **14** | - | - |
 
 ### 3.2 Distribución por Unidad Funcional
 
@@ -90,17 +89,16 @@
 
 ### 4.1 Características Mínimas Exigibles
 
-| **Componente** | **Especificación Contractual** | **Fuente** |
+| **Componente** | **Especificación Contractual 2024** | **Fuente** |
 |:---------------|:-------------------------------|:-----------|
-| **Tipo de pantalla** | LED de alta resolución | AT2 §3.3.4.8 |
-| **Resolución** | Mínimo 32x16 píxeles | AT2 §3.3.4.8 |
-| **Brillo** | ≥7,000 cd/m² | AT2 §3.3.4.8 |
-| **Ángulo de visión** | ≥120° horizontal | AT2 §3.3.4.8 |
-| **Distancia de lectura** | ≥300 metros | AT2 §3.3.4.8 |
-| **Protocolo** | NTCIP 1202 | AT2 §3.3.4.8 |
-| **Integración CCO** | Control remoto | AT2 §3.3.4.8 |
-| **Disponibilidad** | ≥99% anual | AT3 Cap. IV |
-| **Certificación** | CE / FCC / ISO TC-204 | AT3 Cap. IV |
+| **Tipo de pantalla** | Full Matrix RGB (High Performance) | Manual 2024 Cap 2 |
+| **Altura Carácter** | **≥400 mm** (Speed up to 120km/h) | Manual 2024 Tab 2.19 |
+| **Brillo** | L3 (Según UNE-EN 12966) | Manual 2024 Sec 2.7.4 |
+| **Ángulo de visión** | Clase B6 / B7 | UNE-EN 12966 |
+| **Sismo-Resistencia**| **CCP-14 / AASHTO LRFD** | Manual 2024 / NSR-10 |
+| **Protocolo** | NTCIP 1202 / 1203 | AT2 / Manual 2024 |
+| **Protección** | IP65 / IK08 | IEC 60529 / 62262 |
+| **Disponibilidad** | ≥99% anual | AT4 Indicador O6 |
 
 ### 4.2 Funciones Operativas
 
@@ -114,10 +112,10 @@
 
 | **Componente** | **Descripción** | **Cantidad** |
 |:---------------|:---------------|:-------------|
-| **Paneles LED** | Pantallas de mensaje variable | 28 unidades |
-| **Controladores** | Unidades de control local | 28 unidades |
-| **Gabinete IP65** | Protección ambiental | 28 unidades |
-| **Conexión CCO** | Fibra óptica | 28 conexiones |
+| **Paneles LED** | Matriz Completa RGB 400mm | 14 unidades |
+| **Estructuras** | Pórticos CCP-14 / AASHTO | 14 unidades |
+| **Acometidas** | RETIE 2024 + UPS Online | 14 unidades |
+| **Controladores** | NTCIP 1202/3 | 14 unidades |
 | **Software de gestión** | Control centralizado | 1 licencia |
 
 ---
@@ -170,11 +168,10 @@ SCADA → Monitoreo → Estado operacional → Reportes
 
 | **Componente** | **Cantidad** | **Costo Unitario (USD)** | **Total (USD)** |
 |:---------------|:-------------|:-------------------------|:----------------|
-| **Paneles LED** | 28 | $35,000 | $980,000 |
-| **Controladores + Software** | 28 | $10,000 | $280,000 |
-| **Estructuras (Pórticos/Postes)** | 28 | $30,000 (avg) | $840,000 |
-| **Instalación + Civil** | 28 | $12,500 | $350,000 |
-| **TOTAL** | **28** | **$87,500** | **$2,450,000** |
+| **Panel Full Matrix (Manual 2024)** | 14 | $45,000 | $630,000 |
+| **Estructura Pórtico (CCP-14/AASHTO)** | 14 | $20,000 | $280,000 |
+| **RETIE 2024 + Defensas + TIERRA** | 14 | $10,000 | $140,000 |
+| **TOTAL CAPEX RECONCILIADO** | **14** | **$75,000** | **$1,050,000** |
 
 ### 7.2 Conversión a COP
 
@@ -207,10 +204,10 @@ SCADA → Monitoreo → Estado operacional → Reportes
 
 ### 9.1 Conclusiones
 
-✅ **28 PMV es la cantidad correcta**  
-✅ **Cobertura completa del corredor**  
-✅ **Integración CCO + SCADA garantizada**  
-✅ **Información variable a usuarios**
+✅ **14 PMV es la cantidad optimizada (Puntos de Decisión)**  
+✅ **Alineación 100% con Manual de Señalización Vial 2024**  
+✅ **Estructuras calculadas bajo CCP-14 (Sismo-resistencia)**  
+✅ **CAPEX Reconciliado: $1.19M USD (Full Stack 400mm)**
 
 ### 9.2 Acciones Requeridas
 

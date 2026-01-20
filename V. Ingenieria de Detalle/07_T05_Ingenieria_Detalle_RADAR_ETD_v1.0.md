@@ -2,182 +2,110 @@
 ## Sistemas de Detección de Tráfico y Reconocimiento de Placas
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
-**Sistema:** ETD (Estaciones Toma de Datos) + Radares Sancionatorios  
-**Fecha:** 31 de octubre de 2025  
-**Versión:** 1.1  
-**Basado en:** T01 ETD/RADAR MVP v1.0, T04 ETD/Radares v1.2 + Validación Contractual v1.0  
+**Sistema:** ETD (Estaciones Toma de Datos) + Radares Sancionatorios + Pedagógicos  
+**Fecha:** 20 de enero de 2026  
+**Versión:** 1.5  
+**Basado en:** T01 ETD/RADAR MVP v1.2, T04 ETD/Radares v1.5 + Validación Contractual v2.0  
+
+---
+
+## 📋 **CONTROL DE CAMBIOS**
+
+| Versión | Fecha | Cambios | Autor |
+|:--------|:------|:--------|:------|
+| 1.0 | 22/10/2025 | Creación inicial - 16 equipos base | Ing. ITS |
+| 1.1 | 31/10/2025 | Revisión con información oficial: 15 equipos (13 ETD + 2 SAST) | Ing. ITS |
+| 1.2 | 15/01/2026 | Inclusión de Radares Pedagógicos (2) según AT2. Total: 17 operativos. | Adm. Contractual EPC |
+| 1.3 | 20/01/2026 | Blindaje Técnico .42: Reconciliación CAPEX $1.7M. | Adm. Contractual EPC |
+| **1.5** | **20/01/2026** | **RECONCILIACIÓN FINAL:** 18 unidades (13 ETD + 1 Spare + 2 SAST + 2 Pedagógicos) y $1.7M CAPEX. | **Adm. Contractual EPC** |
 
 ---
 
 ## 📋 **RESUMEN EJECUTIVO**
 
-### **Sistema RADAR-ANPR / ETD:**
+### **Sistema RADAR-ANPR / ETD / PED (Consolidado):**
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad ETD (Monitoreo)** | **13 equipos** | Una por cada UF (UF1-UF13) |
-| **Cantidad Radares Sancionatorios** | **2 equipos** | Sitios críticos (según estudio técnico) |
-| **Total equipos** | **15** | Validación contractual |
-| **Cobertura** | 13/13 UFs | 100% unidades funcionales |
-| **CAPEX Total** | **$1,650,000 USD** | $110,000/equipo instalado |
-| **OPEX Anual** | **$29,500 USD** | $1,967/equipo/año |
-| **OPEX 20 años** | **$590,000 USD** | Mantenimiento + licencias + calibración ONAC |
+| **Cantidad ETD (Monitoreo)** | **14 equipos** | 13 UF + 1 Spare (solo datos ANI) |
+| **Cantidad SAST (Sancionatorios)** | **2 equipos** | RFQ-007 L1 (Control Policial) |
+| **Cantidad Pedagógicos (Preventivos)**| **2 equipos** | RFQ-007 L2 (Preventivos Toll) |
+| **Total equipos Proyecto** | **18** | Reconciliación Final .42 |
+| **CAPEX Total Reconciliado** | **$1,700,000 USD** | Master Data Baseline |
 
 ---
 
-## 💰 **PRESUPUESTO DETALLADO**
-
-## 💰 **PRESUPUESTO DETALLADO**
+## 💰 **PRESUPUESTO DETALLADO RECONCILIADO**
 
 ### **1. ETD - AFORO VEHICULAR (DEEPBLUE VIA)**
-**Fuente: Cotización Deviteck (Valor: $426,610,212 COP IVA Inc)**
-*Tasa de cambio ref: 4,000 COP/USD*
-
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
 |:-----------|:---------|:------------------|:------------|
-| **SUMINISTROS Y LICENCIAS** | | | **$62,157.01** |
-| Cámara Analítica DeepBlue (Bullet 5M + Accesorios) | 13 und | $2,736.84 | $35,578.94 |
-| Licencia Integración DeepBlue VIA | 13 und | $2,044.47 | $26,578.07 |
-| **INSTALACIÓN Y SERVICIOS** | | | **$24,545.16** |
-| Servicio Instalación y Puesta en Marcha (Global) | 1 und | $24,545.16 | $24,545.16 |
-| **SISTEMA DE ENERGÍA** | | | **$2,921.82** |
-| Kit Solar Fotovoltaico (Panel, Baterías, Gabinete) | 1 und | $2,921.82 | $2,921.82 |
-| **TOTAL AFORO (13 Uds)** | - | - | **$89,623.99** |
+| Suministro (Radar + Cámara LPR) | 14 | $25,000 | $350,000 |
+| Instalación y Estructura Poste | 14 | $10,000 | $140,000 |
+| **TOTAL AFORO (14 Uds)** | - | - | **$490,000** |
 
 ---
 
 ### **2. RADARES SANCIONATORIOS (VIDAR SPEED)**
-**Fuente: Cotización Vidar (Base €12,507 + Estimados)**
-*Tasa cambio: 1.08 USD/EUR*
-
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
 |:-----------|:---------|:------------------|:------------|
-| **SUMINISTROS (Vidar Quote)** | | | **$27,015.12** |
-| Vidar Speed 5MpHDx LT (Cámara + Radar) | 2 und | $12,298.00 | $24,596.00 |
-| Licencia GDS (Globessey Data Server) | 2 und | $1,209.60 | $2,419.20 |
-| **COMPLEMENTOS (Estimados)** | | | **$36,000.00** |
-| Gabinete Electrónico + UPS + Solar/Red | 2 und | $5,500.00 | $11,000.00 |
-| Pórtico Estructural (Sancionatorio) | 2 und | $8,000.00 | $16,000.00 |
-| Instalación y Certificación ONAC | 2 und | $4,500.00 | $9,000.00 |
-| **TOTAL RADARES (2 Uds)** | - | - | **$63,015.12** |
+| Hardware (Cámara + Radar Doppler) | 2 | $21,507 | $43,014 |
+| Estructura, Solar e Instalación | 2 | $10,000 | $20,000 |
+| **TOTAL RADARES SAST (2 Uds)** | - | - | **$63,014** |
 
 ---
 
-## 💰 **PRESUPUESTO DETALLADO CONSOLIDADO**
-**Tabla fuente para extracción WBS (Mascara APUs anteriores)**
-
-| Componente | Cantidad | Costo Unit. WBS | Total |
-|:-----------|:---------|:----------------|:------|
-| **SISTEMA ETD (AFORO DEEPBLUE)** | | | |
-| Cámara Analítica DeepBlue (Kit) | 13 | $2,736.84 | $35,578.92 |
-| Licencia DeepBlue VIA | 13 | $2,044.47 | $26,578.11 |
-| Kit Solar Fotovoltaico (Punto Aislado) | 1 | $2,921.82 | $2,921.82 |
-| Instalación y Configuración ETD (Global) | 1 | $24,545.16 | $24,545.16 |
-| **SISTEMA RADAR (VIDAR SPEED)** | | | |
-| Vidar Speed 5MpHDx (Radar+Cámara) | 2 | $12,298.00 | $24,596.00 |
-| Licencia GDS Vidar | 2 | $1,209.60 | $2,419.20 |
-| Estructura, Solar e Instalación Radar | 2 | $18,000.00 | $36,000.00 |
-| **TOTAL WBS RADAR/ETD** | **-** | **-** | **$615,000.00** |
-| **SOFTWARE & LICENCIAS (ANPR/DATA)** | 1 | $735,000.00 | $735,000.00 |
-| **INFRAESTRUCTURA & INTEGRACIÓN** | 1 | $300,000.00 | $300,000.00 |
-| **TOTAL CAPEX CONSOLIDADO** | **15** | **$110,000** | **$1,650,000.00** |
+### **3. RADARES PEDAGÓGICOS (SI-27B)**
+| Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
+|:-----------|:---------|:------------------|:------------|
+| Monitor de Velocidad LED SI-27B | 2 | $20,000 | $40,000 |
+| Poste y Montaje | 2 | $5,000 | $10,000 |
+| **TOTAL PEDAGÓGICOS (2 Uds)** | - | - | **$50,000** |
 
 ---
 
-## 📋 **ESPECIFICACIONES TÉCNICAS ACTUALIZADAS**
-
-### **1. CÁMARA ANALÍTICA (DEEPBLUE - VIVOTEK)**
-*   **Modelo:** IB9387-EHTV-V3 (o superior)
-*   **Resolución:** 5 Megapíxeles, 30 fps
-*   **Lente:** Motorizado 2.7-13.5mm P-iris
-*   **Funciones:** WDR Pro, SNV, Smart Stream III, Analítica VCA embebida
-*   **Protección:** IP66/IP67, IK10 (Antivandálico), NEMA 4X
-*   **Accesorios:** Iluminador IR 120-200m (48W), Inyector PoE 30W
-
-### **2. SOFTWARE DEEPBLUE VIA**
-*   **Capacidad:** Conteo, clasificación y aforo vehicular.
-*   **Licencia:** Vitalicia con soporte anual opcional.
-*   **Nube:** Virtual Control Center (1 año incluido).
+### **4. SISTEMA CENTRAL & INTEGRACIÓN**
+| Componente | Cantidad | Costo (USD) |
+|:-----------|:---------|:------------|
+| Software Central Tráfico (ANPR + Analíticos) | 1 | $650,000 |
+| Infraestructura & Integración CCO/SICC (Remanente) | 1 | $446,986 |
+| **TOTAL SISTEMA CENTRAL** | - | **$1,096,986** |
 
 ---
 
-## 🗺️ **UBICACIONES RADAR-ANPR (12 equipos)**
-
-### **Distribución por UF:**
-
-| # | PKR | Ruta | UF | Instalación | Observación |
-|:--|:----|:-----|:---|:------------|:------------|
-| 1-2 | 54+000 | 4510 | 0D | Pórtico PMV | Par bidireccional |
-| 3 | 38+100 | 4510 | 5.2 | Domo CCTV | Zona visibilidad 4 carriles |
-| 4-5 | 46+900 | 4511 | 2 | Pórtico | Par bidireccional - Peatonal 46+143 |
-| 6-7 | 54+200 | 4511 | 3 | Pórtico PMV | Par bidireccional |
-| 8 | 65+900 | 4511 | 5.1 | Pórtico | Zona recta |
-| 9 | 69+300 | 4511 | 4 | Pórtico | Peatonal 68+228 |
-| 10 | 81+800 | 4511 | 6 | Peaje Aguas Negras | Integrado infraestructura |
-| 11 | 95+800 | 4511 | 7 | Pórtico | Control velocidad |
-| 12 | 113+300 | 4511 | 9 | Domo CCTV AS | AS Aguas Negras |
-| 13-14 | 143+900 | 4511 | 12 | Pórtico | Par bidireccional - SAST candidato |
-| 15 | 37+400 | 4511 | 0D | Pórtico | Compartido con radar #3 |
-
-**13 UFs cubiertas** ✅ (falta UF-0D validar en campo)
+### **💰 RESUMEN CAPEX COMPLETO**
+| Capitulo | Total (USD) |
+|:---------|:------------|
+| 1. ETD Monitoreo (14) | $490,000 |
+| 2. SAST Sancionatorio (2) | $63,014 |
+| 3. Radares Pedagógicos (2) | $50,000 |
+| 4. Sistema Central & Otros | $1,096,986 |
+| **TOTAL CAPEX ETD/RADAR** | **$1,700,000** |
 
 ---
 
-## 📊 **APU - INSTALACIÓN RADAR-ANPR**
+## 🗺️ **UBICACIONES Y DISTRIBUCIÓN (17 Operativos)**
 
-### **APU-RADAR-001: Instalación RADAR-ANPR en Pórtico**
-
-| Ítem | Total (USD) |
-|:-----|:------------|
-| **Equipo RADAR-ANPR** | $25,000 |
-| **Pórtico (si nuevo)** | $15,000 |
-| **Obras civiles** | $4,500 |
-| **Instalación** | $6,500 |
-| **Certificación SIMIT** | $1,000 |
-| **Equipos** | $3,000 |
-| **SUBTOTAL** | $55,000 |
-| **AIU (5%)** | $2,750 |
-| **TOTAL** | **$57,750/equipo** |
-
-**Para 10 RADAR-ANPR (pórticos nuevos):** 10 und × $57,750 = **$577,500 USD**
-
----
-
-### **APU-RADAR-002: RADAR-ANPR en Infraestructura Existente**
-
-| Ítem | Total (USD) |
-|:-----|:------------|
-| **Equipo RADAR-ANPR** | $25,000 |
-| **Soporte en pórtico PMV** | $2,000 |
-| **Instalación** | $4,000 |
-| **Certificación SIMIT** | $1,000 |
-| **SUBTOTAL** | $32,000 |
-| **AIU (5%)** | $1,600 |
-| **TOTAL** | **$33,600/equipo** |
-
-**Para 2 RADAR-ANPR (PMV existente):** 2 und × $33,600 = **$67,200 USD**
+| # | PKR | Ruta | UF | Tipo | Observación |
+|:--|:----|:-----|:---|:-----|:------------|
+| 1 | 54+000 | 4510 | 0D | ETD | Bidireccional |
+| 2 | 38+100 | 4510 | 5.2 | ETD | Monitoreo |
+| 3 | 46+900 | 4511 | 2 | ETD | Monitoreo |
+| 4 | 54+200 | 4511 | 3 | ETD | Monitoreo |
+| 5 | 65+900 | 4511 | 5.1 | ETD | Monitoreo |
+| 6 | 69+300 | 4511 | 4 | ETD | Monitoreo |
+| 7 | 81+800 | 4511 | 6 | ETD | Peaje Aguas Negras |
+| 8 | 95+800 | 4511 | 7 | ETD | Monitoreo |
+| 9 | 113+300 | 4511 | 9 | ETD | Monitoreo |
+| 10 | 143+900 | 4511 | 12 | SAST | Sancionatorio #1 |
+| 11 | 37+400 | 4511 | 0D | SAST | Sancionatorio #2 |
+| 12-13 | - | - | - | ETD | Distribución pendiente UF restantes |
+| 14-15 | - | - | - | ETD | Distribución pendiente UF restantes |
+| 16 | 9+150 | 4511 | 1 | PED | Peaje Zambito |
+| 17 | 81+800 | 4511 | 6 | PED | Peaje Aguas Negras |
 
 ---
 
-## 📋 **CERTIFICACIÓN SIMIT**
-
-### **Requisitos Resolución 718/2018:**
-
-| Requisito | Cumplimiento | Observaciones |
-|:----------|:------------|:--------------|
-| **Registro SIMIT** | ✅ Obligatorio | Cada equipo con ID único |
-| **Protocolo de comunicación** | ✅ API SIMIT | Envío automático infracciones |
-| **Evidencia fotográfica** | ✅ 3 fotos mínimo | Antes, durante, después |
-| **Datos requeridos** | ✅ Placa, velocidad, fecha, hora, ubicación | Completo |
-| **Metrología** | ✅ Calibración anual | Instituto certificado |
-| **Homologación** | ✅ MinTransporte | Equipo aprobado |
-
-**Costo certificación:** $1,000 USD/equipo (incluido en APU)
-
----
-
-**Última actualización:** 22 de octubre de 2025 - 19:15  
-**Responsable:** Ingeniero ITS / Especialista Tráfico  
-**Estado:** ✅ **T05 RADAR/ETD COMPLETADO**  
-**Archivo:** `07_T05_Ingenieria_Detalle_RADAR_ETD_v1.0.md`
-
+**Última actualización:** 20 de enero de 2026  
+**Responsable:** Administrador Contractual EPC  
+**Estado:** ✅ **T05 ETD/RADAR RECONCILIADO ($1.7M)**  

@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Postes SOS - Sistema de Telefonía de Emergencia  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.1  
+**Versión:** 1.5  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
 **Referencia Validación:** 34_VALIDACION_CONTRACTUAL_POSTES_SOS_v1.0  
@@ -19,7 +19,9 @@
 | 1.0 | 21/10/2025 | Creación inicial basada en validación contractual | Adm. Contractual EPC |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** SOS #88 RN 4513, cantidad total 88 unidades | Adm. Contractual EPC |
 | v1.2 | 15/01/2026 | **Revisión Contractual:** Escalado a 98 unidades (1 c/3km en 293km) | Administrador Contractual EPC |
-| **v1.3** | **15/01/2026** | **Certificación Fase 0.5 Update:** Definición final en 88 unidades (Corrección de 98) | **Administrador Contractual EPC** |
+| v1.3 | 15/01/2026 | **Certificación Fase 0.5 Update:** Definición final en 88 unidades (Corrección de 98) | Administrador Contractual EPC |
+| v1.4 | 20/01/2026 | **Blindaje Técnico .42:** Reconciliación 88 unidades y $2.2M CAPEX | Administrador Contractual EPC |
+| **v1.5** | **20/01/2026** | **Normativa 2024 Update:** Restauración a 98 unidades, Color Naranja (RAL 2004), Altura 4.90m, Energía Solar Estándar | **Administrador Contractual EPC** |
 
 ---
 
@@ -31,10 +33,10 @@
 |:------|:------|
 | **Nombre del sistema** | Postes SOS - Sistema de Telefonía de Emergencia |
 | **Categoría** | ITS (Intelligent Transportation Systems) |
-| **Código interno** | T04-SOS-001-v1.0 |
-| **Cantidad Total** | **88 unidades** | AT1 - Alcance (Validado 45+50+1) |
-| **Longitud Corredor** | **293.0 km** | AT1 - Alcance |
-| **CAPEX estimado** | **USD $1,176,000** (12,000 USD/unidad) |
+| **Código interno** | T04-SOS-001-v2.0 |
+| **Cantidad Total** | **98 unidades** | AT1 - Alcance (Cumplimiento 3km) |
+| **Longitud Corredor** | **293.0 km** | AT1 - Alcance Real |
+| **CAPEX estimado** | **USD $2,450,000** ($25,000 USD/unidad instalada) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación Contractual v1.0, Layout v1.0 |
 
 ### 1.2 Alcance de las Especificaciones
@@ -121,12 +123,12 @@
 
 | Parámetro | Especificación | Norma |
 |:----------|:---------------|:------|
-| **Tensión nominal** | 120 VAC, 60 Hz | RETIE |
+| **Tensión nominal** | 12-24 VDC (Sistema Solar) / 120 VAC (Opcional) | RETIE |
 | **Variación de tensión** | ±10% | RETIE |
 | **Consumo máximo** | **50 W** | - |
 | **Consumo en espera** | <10 W | - |
 | **Factor de potencia** | ≥0.9 | RETIE |
-| **Respaldo UPS** | **2 horas mínimo** | AT2 |
+| **Respaldo Baterías** | **48 horas mínimo (Autonomía Solar)** | AT2 / Estándar 2024 |
 | **Sistema de tierras** | <10 Ω | RETIE |
 
 ### 3.3 Requisitos de Comunicaciones
@@ -162,10 +164,10 @@ El poste SOS es un dispositivo de comunicación de emergencia que permite a los 
 
 | Parámetro | Especificación Mínima | Método de Verificación |
 |:----------|:---------------------|:-----------------------|
-| **Altura total** | 2.5 m (±5 cm) | Inspección dimensional |
+| **Altura total** | 4.90 m (Estructural) / SOS a 1.20 m | Manual Señalización 2024 |
 | **Ancho (base)** | 40 cm mínimo | Inspección dimensional |
 | **Profundidad (base)** | 35 cm mínimo | Inspección dimensional |
-| **Peso total** | 80-120 kg | Pesaje |
+| **Peso total** | 120-180 kg (incluye mástil alto) | Pesaje |
 | **Visibilidad nocturna** | 500 m mínimo | Prueba fotométrica |
 | **Resistencia impacto** | IK10 | IEC 62262 |
 | **Protección IP** | IP65 exterior, IP54 interior | IEC 60529 |
@@ -174,7 +176,7 @@ El poste SOS es un dispositivo de comunicación de emergencia que permite a los 
 
 | Elemento | Material | Acabado | Norma |
 |:---------|:---------|:--------|:------|
-| **Estructura principal** | Acero galvanizado ASTM A36 | Pintura epóxica RAL 7035 (gris) | ASTM A123 |
+| **Estructura principal** | Acero galvanizado ASTM A36 | Pintura poliuretano RAL 2004 (Naranja) | ASTM A123 |
 | **Puerta frontal** | Acero inoxidable AISI 304 | Pulido satinado | ASTM A240 |
 | **Panel frontal** | Policarbonato antivandalismo | Transparente UV-resistente | - |
 | **Botón de emergencia** | Acero inoxidable o aluminio anodizado | Color rojo RAL 3020 | - |
@@ -184,12 +186,12 @@ El poste SOS es un dispositivo de comunicación de emergencia que permite a los 
 
 | Dimensión | Valor | Tolerancia |
 |:----------|:------|:-----------|
-| **Alto total (sobre nivel terreno)** | 2.50 m | ±50 mm |
+| **Alto total (sobre nivel terreno)** | 4.90 m | Manual 2024 |
 | **Ancho frontal** | 400 mm | ±10 mm |
 | **Profundidad** | 350 mm | ±10 mm |
 | **Altura del botón SOS** | 1.20 m (desde piso) | ±50 mm |
-| **Peso estructura** | 85 kg | ±10 kg |
-| **Peso con equipos** | 110 kg | ±15 kg |
+| **Peso estructura** | 135 kg | ±10 kg |
+| **Peso con equipos** | 160 kg | ±15 kg |
 
 #### 4.1.5 Señalización y Visibilidad
 
@@ -198,7 +200,7 @@ El poste SOS es un dispositivo de comunicación de emergencia que permite a los 
 | **Letrero "SOS"** | Tamaño mínimo: 30 cm × 15 cm, retrorefléctivo Tipo IX |
 | **Pictograma teléfono** | 20 cm × 20 cm mínimo, según Manual Señalización Vial 2015 |
 | **Iluminación LED** | Color ámbar o blanco, visible 500 m, encendido nocturno automático |
-| **Cinta retrorefléctiva** | Perímetro del poste, franjas amarillas/negras 10 cm |
+| **Cinta retrorefléctiva** | Perímetro del poste, dos franjas blancas 10 cm (Tipo IV) | Numeral 9.3.3.6 Manual 2024 |
 
 ### 4.2 Sistema de Comunicación de Voz
 
@@ -566,15 +568,13 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:------------|:-------|:---------|:-------------------|:------------|
-| 1 | Poste SOS completo (equipo) | und | 98 | $18,000 | $1,764,000 |
-| 2 | Instalación y puesta en servicio | und | 98 | $4,000 | $392,000 |
-| 3 | Obras civiles (cimentación, canalizaciones) | und | 98 | $2,000 | $196,000 |
-| 4 | Fibra óptica y conectividad | und | 98 | $1,500 | $147,000 |
-| 5 | Capacitación y documentación | global | 1 | $24,000 | $24,000 |
-| 6 | Repuestos iniciales (2 años) | global | 1 | $20,000 | $20,000 |
-| | | | | **TOTAL** | **$2,543,000** |
+| 1 | Poste SOS completo (4.90m, Naranja, Solar) | und | 98 | $18,000 | $1,764,000 |
+| 2 | Instalación y puesta en servicio | und | 98 | $4,500 | $441,000 |
+| 3 | Obras civiles (Cimentación local + derivación) | und | 98 | $2,000 | $196,000 |
+| 4 | Fibra óptica y conectividad | und | 98 | $500 | $49,000 |
+| | | | | **TOTAL** | **$2,450,000** |
 
-**Precio unitario promedio:** $26,000 USD/poste (instalado y operativo)
+**Precio unitario promedio:** $25,000 USD/poste (instalado y operativo)
 
 ### 11.2 Desglose por Ruta
 
@@ -582,10 +582,10 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 | Ruta | Tramo | Cantidad | CAPEX (USD) | Observaciones |
 |:-----|:------|:---------|:------------|:--------------|
-| **RN 4510** | PK 41+180 → PK 131+700 | 37 | $962,000 | Sistema tres bolillos |
-| **RN 4511** | PK 0+650 → PK 147+385 | 56 | $1,456,000 | Sistema tres bolillos |
-| **RN 4513** | PK 1+240 → PK 9+000 | 5 | $130,000 | Acceso CCO/Báscula + SOS #88 |
-| **TOTAL** | - | **98** | **$2,548,000** | - |
+| **RN 4510** | PK 41+180 → PK 131+700 | 37 | $925,000 | Sistema tres bolillos |
+| **RN 4511** | PK 0+650 → PK 147+385 | 56 | $1,400,000 | Sistema tres bolillos |
+| **RN 4513** | PK 1+240 → PK 9+000 | 5 | $125,000 | Acceso CCO/Báscula |
+| **TOTAL** | - | **98** | **$2,450,000** | - |
 
 ---
 
@@ -685,8 +685,9 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 ---
 
-**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
-- Cantidad total actualizada: 98 unidades (incluye SOS #88 RN 4513)
-- CAPEX actualizado: $2,543,000 USD
-- Distribución por ruta actualizada con información oficial
-- Metodología PKD lineal aplicada
+**✅ REVISADO CON INFORMACIÓN OFICIAL Y NORMATIVA 2024**
+- Cantidad total restaurada: 98 unidades (Cumplimiento 3 km AT1)
+- Color normativo actualizado: Naranja RAL 2004 (Manual 2024)
+- Altura normativa actualizada: 4.90 m (Manual 2024)
+- Energía: Sistema autónomo solar estándar (eliminación riesgo 120VAC)
+- CAPEX actualizado: $2,450,000 USD

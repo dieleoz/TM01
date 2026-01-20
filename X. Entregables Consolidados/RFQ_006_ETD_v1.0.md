@@ -4,7 +4,7 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **RFQ No.:** RFQ-006-ETD  
 **Fecha de emisión:** 04 de noviembre de 2025  
-**Versión:** 1.0  
+**Versión:** 2.1 (Audit .42 Final)  
 **Emitido por:** Administrador Contractual EPC
 
 ---
@@ -22,7 +22,7 @@
 
 ## 🎯 OBJETIVO DE LA COTIZACIÓN
 
-Solicitar oferta integral para el suministro, instalación, configuración, integración al CCO y puesta en marcha del **Sistema de Estaciones de Toma de Datos (ETD)** para monitoreo no intrusivo de tráfico, conforme a T04/T05 de ETD y validación contractual vigente. El sistema debe entregar **velocidad promedio por Unidad Funcional** según lo exigido por el pliego contractual.
+Solicitar oferta integral para el suministro, instalación, configuración, integración al CCO y puesta en marcha del **Sistema de Estaciones de Toma de Datos (ETD) Duales**, conforme a T04/T05. El sistema debe entregar **velocidad promedio por Unidad Funcional** y **fotos de matrícula de los vehículos** según lo exigido por el AT2 del contrato.
 
 ---
 
@@ -57,7 +57,9 @@ El oferente deberá cotizar el paquete completo, incluyendo al menos:
 ## 📊 CANTIDADES A COTIZAR
 
 - **ETD de monitoreo (Lote 1): 14 unidades**  
-  Referencia: `IV. Ingenieria Basica/02_T04_Especificaciones_Tecnicas_ETD_Radares_v1.0.md` (Cantidad = 14 ETD) y `V. Ingenieria de Detalle/07_T05_Ingenieria_Detalle_RADAR_ETD_v1.0.md`.
+  - **13 Unidades de Proyecto** (Una por cada UF1-UF13).
+  - **1 Unidad de Repuesto (Spare)** para redundancia operativa.
+  Referencia: `IV. Ingenieria Basica/02_T04_Especificaciones_Tecnicas_ETD_Radares_v2.1.md`.
 
 > **IMPORTANTE:** Los ETD son equipos de **monitoreo estadístico NO sancionatorios**. **NO requieren cámara ANPR** ni certificación ONAC. Solo sensores de medición automática que entreguen velocidad promedio, volumen y clasificación vehicular.
 
@@ -140,7 +142,7 @@ Basadas en T04/T05 y validación contractual (AT3 Cap. IV, AT4 Indicadores):
 
 | Código | Descripción | Cantidad | Unidad | Precio Unit. COP | Total COP | Precio Unit. USD | Total USD |
 |:-------|:------------|:---------|:-------|:-----------------|:-----------|:------------------|:-----------|
-| **ETD-001** | ETD completo (sensor+control+gabinete+DPS+UPS) | 14 | UND | | | | |
+| **ETD-001** | ETD Dual (Radar+Cámara LPR+Control+Gabinete+UPS) | 14 | UND | | | | |
 | **ETD-002** | Integración CCO/SCADA (transmisión datos tiempo real) | 14 | UND | | | | |
 | **ETD-003** | Integración SICC (reporte indicadores ANI) | 14 | UND | | | | |
 | **ETD-004** | Canalización FO/energía + caja derivación FO | 14 | UND | | | | |
@@ -241,5 +243,5 @@ Las ubicaciones específicas serán confirmadas con base en `T05 ETD` y la `Tabl
 
 ---
 
-**Fin del documento – RFQ-006 ETD v1.0**
+**Fin del documento – RFQ-006 ETD v2.1**
 

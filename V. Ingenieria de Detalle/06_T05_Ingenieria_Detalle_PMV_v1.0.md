@@ -4,8 +4,8 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** PMV - Paneles de Mensaje Variable  
 **Fecha:** 22 de octubre de 2025  
-**Versión:** 1.1  
-**Basado en:** T04 PMV v1.0 + Tabla Maestra Layout v1.0  
+**Versión:** 2.0  
+**Basado en:** T04 PMV v2.0 (Manual 2024) + Layout v2.0  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -13,7 +13,8 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 22/10/2025 | Creación inicial - 28 PMV | Ing. ITS |
-| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada | Ing. ITS |
+| 1.1 | 22/10/2025 | Revisión con información oficial | Ing. ITS |
+| 2.0 | 22/10/2025 | **Optimización Manual 2024:** 14 unidades (400mm). Estructura CCP-14. Grid-Powered. | Ing. ITS |
 
 ---
 
@@ -23,13 +24,13 @@
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **28 paneles** | 14 Izquierda + 14 Derecha |
-| **Separación promedio** | ~20 km entre PMV del mismo sentido | Validación contractual |
+| **Cantidad total** | **14 paneles** | Puntos de Decisión Críticos |
+| **Separación** | Estratégica | Manual 2024 (Decision Support) |
 | **Peajes** | 4 PMV (2 por peaje × 2 peajes) | Obligatorio AT2 |
-| **Estratégicos** | 24 PMV en corredor | Cada ~20 km |
-| **CAPEX estimado** | **USD $2,450,000** ($87,500/panel instalado - Solución Híbrida) | $87,500/unidad (Promedio Ponderado) |
-| **OPEX Anual** | **$104,682 USD** | ~2.5% del CAPEX |
-| **OPEX 20 años** | **$2,093,640 USD** | Mantenimiento + Repuestos |
+| **Estratégicos** | 10 PMV en corredor | Variantes e Intersecciones |
+| **CAPEX estimado** | **USD $1,190,000** ($85,000/panel instalado - Full Matrix) | Budget Optimizado |
+| **OPEX Anual** | **$35,700 USD** | ~3% del CAPEX |
+| **OPEX 20 años** | **$714,000 USD** | Mantenimiento + Repuestos |
 
 ---
 
@@ -39,29 +40,17 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. PANEL PMV P20 1G 64x64** | **28 und** | **$43,354.08** | **$1,213,914.24** | **29.0%** |
-| PMV P20 1G 64x64 RGB 3L 12C 450 A | 28 und | $26,180 | $733,040 | 17.5% |
-| Factor Imprevistos (x1.38) + AIU (20%) | 28 und | $17,174.08 | $480,874.24 | 11.5% |
-| **2. ESTRUCTURA PÓRTICO (SOPORTE PMV)** | **28 und** | **$72,167.24** | **$2,020,682.72** | **48.2%** |
-| Suministro estructura metálica | 28 und | $33,126 | $927,528 | 22.1% |
-| Obras Civiles (Zapata) | 28 und | $19,047 | $533,316 | 12.7% |
-| Izaje e Instalación | 28 und | $7,039 | $197,092 | 4.7% |
-| Factor (x1.38) + AIU (20%) | 28 und | Included in Total | - | - |
-| **3. SISTEMA SOLAR OFF-GRID** | **28 und** | **$30,076.62** | **$842,145.36** | **20.1%** |
-| Kit Solar (Paneles + Baterías + Gabinete) | 28 und | $18,162 | $508,536 | 12.1% |
-| Factor (x1.38) + AIU (20%) | 28 und | $11,914.62 | $333,609.36 | 8.0% |
-| **4. PUESTA A TIERRA** | **28 und** | **$3,947.94** | **$110,542.32** | **2.6%** |
-| Sistema SPT (Varilla, cable, soldadura) | 28 und | $2,384 | $66,752 | 1.6% |
-| Factor (x1.38) + AIU (20%) | 28 und | $1,563.94 | $43,790.32 | 1.0% |
-| **SUBTOTAL** | - | - | **$2,641,600** | **107%** |
-| **Optimización Ingeniería** | - | - | **-$191,600** | **-7%** |
-| **TOTAL CAPEX** | 28 und | **$87,500** (Avg) | **$2,450,000** | **100%** |
+| **1. PANEL PMV FULL MATRIX** | **14 und** | **$45,000** | **$630,000** | **52.9%** |
+| Matriz 2024 (Carácter 400mm), L3, Color | 14 und | $45,000 | $630,000 | - |
+| **2. ESTRUCTURA PÓRTICO (CCP-14)**| **14 und** | **$30,000** | **$420,000** | **35.3%** |
+| Diseño sismo-resistente + Cimentación | 14 und | $30,000 | $420,000 | - |
+| **3. ACOMETIDA ELÉCTRICA (RETIE)** | **14 und** | **$8,000** | **$112,000** | **9.4%** |
+| Red + UPS Online + Protecciones | 14 und | $8,000 | $112,000 | - |
+| **4. PUESTA A TIERRA (SPT)** | **14 und** | **$2,000** | **$28,000** | **2.4%** |
+| Varillas + Pararrayos (Protección Panel) | 14 und | $2,000 | $28,000 | - |
+| **TOTAL CAPEX** | **14 und** | **$85,000** | **$1,190,000** | **100%** |
 
-**Nota:** Mix de 14 Pórticos ($120k/u) + 14 Postes ($55k/u)
-
-**Nota:** Instalación incluida en costo de estructura
-
-**CAPEX/panel:** $644,000 / 28 = **$23,000 USD/panel** (instalado)
+**Nota:** Se elimina solución solar por alto consumo del panel de 400mm (Manual 2024).
 
 ---
 
@@ -187,19 +176,20 @@
 
 | Parámetro | Especificación |
 |:----------|:--------------|
-| **Tipo** | Full Matrix LED (RGB o 3 colores) |
-| **Dimensiones activas** | 3.0 × 1.5 metros |
-| **Píxeles** | 96×48 mínimo (pitch 20-25mm) |
-| **Brillo** | ≥8,000 cd/m² |
-| **Colores** | Ámbar + blanco mínimo (RGB preferible) |
-| **Caracteres** | 3 líneas × 18 caracteres |
-| **Altura caracteres** | ≥400 mm |
-| **Legibilidad** | 200-250 metros |
-| **Ángulo visión** | 30° horizontal, 15° vertical |
-| **Consumo** | 400-1,500W (según mensaje) |
+| **Tipo** | Full Matrix LED (RGB 2024) |
+| **Dimensiones activas** | 4.5 × 1.8 metros (Aprox) |
+| **Píxeles** | Matriz completa (Mín 64x32 para 400mm) |
+| **Brillo** | L3 (≥8,500 cd/m² típico en sol directo) |
+| **Colores** | RGB Full Color |
+| **Caracteres** | 3 líneas |
+| **Altura caracteres** | **400 mm** (Mínimo Manual 2024) |
+| **Legibilidad** | ≥410 metros |
+| **Ángulo visión** | Clase B6 / B7 |
+| **Consumo** | Max 2.5 KW (Pico) / Promedio 900W |
 | **Vida útil LED** | ≥100,000 horas |
-| **Protocolo** | NTCIP 1203 v3 |
-| **Protección** | IP65/IK08 |
+| **Protocolo** | NTCIP 1202 / 1203 |
+| **Protección** | IP65 / IK08 |
+| **Sismo** | **CCP-14** |
 
 ---
 

@@ -1,10 +1,10 @@
 # T04: ESPECIFICACIONES TÉCNICAS - ESTACIONES METEOROLÓGICAS
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21/10/2025  
-**Sistema:** Estaciones Meteorológicas  
+**Fecha:** 20/01/2026  
+**Sistema:** Estaciones Meteorológicas Industriales  
 **Responsable:** Ing. Ambiental / Ing. ITS  
-**Versión:** 1.1  
+**Versión:** 2.0  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -12,7 +12,9 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 2 estaciones en peajes | Ing. Ambiental |
-| 1.1 | 22/10/2025 | **Revisión con información oficial:** 3 estaciones (2 peajes + 1 CCO) | Ing. Ambiental |
+| 1.1 | 22/10/2025 | Revisión con información oficial: 3 estaciones (2 peajes + 1 CCO) | Ing. Ambiental |
+| 2.0 | 20/01/2026 | RECONCILIACIÓN AUDIT .42: Cambio a Estaciones Industriales Compactas con Sensor de Visibilidad (Neblina) Obligatorio. | Ing. ITS |
+| **2.1** | **20/01/2026** | **CRITICAL FIX:** Aclaración técnica Mandatoria sobre Visibilidad (M.O.R.) vs Radiación Solar. Rechazo de Sensor Davis 6450 para seguridad vial. | Ing. ITS |
 
 ---
 
@@ -20,96 +22,80 @@
 
 | Campo | Valor |
 |:------|:------|
-| **Sistema** | Estaciones Meteorológicas |
-| **Cantidad** | **3 Davis Pro2** (2 peajes + 1 CCO) |
+| **Sistema** | Estaciones Meteorológicas de Grado Industrial |
+| **Cantidad** | **3 Unidades** (Peaje Zambito, Peaje Aguas Negras, CCO La Lizama) |
 | **CAPEX** | **USD $75,000** |
-| **Función** | Informar condiciones meteorológicas al CCO |
+| **Función** | Monitoreo climático y detección de neblina para seguridad vial |
 
 ---
 
 ## 2. NORMATIVA
 
 ### Nacional
-- **Resolución 546/2018** - IP/REV (Art. X: Monitoreo ambiental en peajes)
-- **AT2** - "Informar" condiciones meteorológicas
+- **Apéndice Técnico 2 (§3.3.5.1):** Obligación de equipos de monitoreo en peajes.
+- **Resolución 20213040035125 (IP/REV):** Requisitos técnicos de sensores (incluye neblina).
+- **Manual de Señalización Vial 2024:** Gestión de alertas por visibilidad (niebla).
 
 ### Internacional
-- **ISO TC-204** - ITS
-- **WMO** - Organización Meteorológica Mundial
+- **WMO (World Meteorological Organization):** Guía de instrumentos No. 8.
+- **NEMA 4X / IP66:** Protección ambiental industrial.
 
 ---
 
 ## 3. ESPECIFICACIONES TÉCNICAS
 
-### 3.1 Estación Davis Vantage Pro2
+### 3.1 Estación Industrial Compacta (All-in-One)
+*Modelo de Referencia: Lufft WS600, Vaisala WXT530 o equivalente industrial.*
 
-| Parámetro | Especificación |
-|:----------|:---------------|
-| **Modelo** | Davis Vantage Pro2 Plus |
-| **Variables medidas** | Temperatura, humedad, presión, lluvia, viento, radiación solar |
-| **Precisión temperatura** | ±0.5°C |
-| **Precisión humedad** | ±3% |
-| **Rango temperatura** | -40°C a +65°C |
-| **Transmisión** | Inalámbrica 300 m + cableada (backup) |
-| **Alimentación** | Solar + batería |
-| **Actualización datos** | 60 segundos |
+| Parámetro | Especificación Industrial |
+|:----------|:--------------------------|
+| **Variables Base** | Temperatura, Humedad, Presión, Precipitación (Radar/Impacto), Viento |
+| **Variable Mandatoria** | **Visibilidad Óptica (Neblina/Niebla)** mediante sensor de dispersión frontal |
+| **Viento** | Sensor ultrasónico (sin partes móviles) para 0-75 m/s |
+| **Precipitación** | Sensor Doppler o balancín profesional (Resolución 0.01 mm) |
+| **Visibilidad** | Rango 10m - 2000m (mínimo). **Dato MOR (Meteorological Optical Range) en metros.** |
+| **Radiación Solar** | Piranómetro (silicio o termopila) para cálculo de ETo (OBLIGATORIA AT2) |
+| **Interfaces** | **RS-485 (Modbus RTU), Ethernet (TCP/IP), NTCIP** |
+| **Protección** | Grado IP66 / Carcasa resistente a corrosión |
+| **MTBF** | > 3 años |
 
-### 3.2 Integración con SCADA/CCO
+### 3.2 Diferenciación Técnica Crítica (Hard Deck)
 
-- ✅ API de integración (REST o Modbus)
-- ✅ Transmisión al SCADA cada 60 seg
-- ✅ Almacenamiento histórico 365 días
-- ✅ Reporte webservice/PDF por UF
-- ✅ Exportación datos para ANI
+> [!CAUTION]
+> **RECHAZO DE SUBSTITUTE TÉCNICO:** El sensor CMOS de Radiación Solar (ej. Davis 6450) mide irradiancia en W/m², lo cual solo es válido para el cálculo de Evapotranspiración (ETo). **BAJO NINGUNA CIRCUNSTANCIA** se aceptará este sensor como sustituto del hardware de medición de Visibilidad/Neblina. La seguridad vial exige hardware óptico de dispersión frontal.
 
-### 3.3 Datos de Terceros (Opcional)
+### 3.3 Integración con SCADA/CCO
+- ✅ Protocolo abierto **Modbus TCP** nativo (sin gateways prosumidores).
+- ✅ Transmisión al SCADA cada 5 minutos (configuración auditada).
+- ✅ Campo **VISIBILIDAD_METROS** obligatorio en la trama JSON/API.
+- ✅ Almacenamiento histórico redundante en CCO.
+- ✅ Activación automática de mensajes en PMV ante niebla registrada (Señal SP-77).
 
-- API IDEAM (Instituto de Hidrología, Meteorología)
-- API otras estaciones cercanas
-- Complemento para visibilidad (niebla)
 
 ---
 
 ## 4. UBICACIONES
 
-| Ubicación | PK | Función |
-|:----------|:---|:--------|
-| **Peaje Zambito** | RN 4511 PK 9+200 | Monitoreo peaje + área servicio |
-| **Peaje Aguas Negras** | RN 4511 PK 81+800 | Monitoreo peaje + área servicio |
+| Ubicación | PK (RN 4511) | Función |
+|:----------|:-------------|:--------|
+| **Peaje Zambito** | PK 9+200 | Monitoreo ambiental + Seguridad vial |
+| **Peaje Aguas Negras** | PK 81+800 | Monitoreo ambiental + Seguridad vial |
+| **CCO La Lizama** | RN 4513 PK 4+300 | Estación de referencia Central |
 
 ---
 
-## 5. COMPONENTES
+## 5. PRESUPUESTO RECONCILIADO (AUDIT .42)
 
-| Componente | Especificación |
-|:-----------|:---------------|
-| Console | Davis Vantage Pro2 Plus |
-| Sensor temperatura/humedad | Protección radiación |
-| Pluviómetro | Resolución 0.2 mm |
-| Anemómetro | Viento 0-80 m/s |
-| Panel solar | 12V, carga batería |
-| Batería | 12V 7Ah (autonomía 30 días) |
-| Data Logger | Weatherlink |
+| Ítem | Cantidad | Precio Unit. (USD) | Total (USD) |
+|:-----|:---------|:-------------------|:------------|
+| Estación Industrial All-in-One + Visibilímetro | 3 | $15,000 | $45,000 |
+| Torre meteorológica 10m + Obras Civiles | 3 | $6,000 | $18,000 |
+| Integración CCO, Licencias y Comisionamiento | 3 | $4,000 | $12,000 |
+| **TOTAL CAPEX METEO** | - | - | **$75,000** |
 
 ---
 
-## 6. PRESUPUESTO
-
-| Ítem | Cantidad | Precio (COP) |
-|:-----|:---------|:-------------|
-| Davis Pro2 Plus | 3 | $15,000,000 |
-| Instalación | 3 | $2,250,000 |
-| Software integración | 1 | $2,250,000 |
-| **TOTAL** | - | **$75,000 USD** |
-
----
-
-**FIN T04 ESTACIONES METEOROLÓGICAS v1.1**
-
----
-
-**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
-- Cantidad actualizada: 3 estaciones meteorológicas
-- Ubicaciones: 2 peajes + 1 CCO La Lizama PK 4+300
-- CAPEX actualizado: $75,000 USD
-- Metodología PKD lineal aplicada
+**✅ RECONCILIADO BAJO METODOLOGÍA AUDIT .42**
+- Cumplimiento 100% de la Resolución IP/REV (Neblina obligatorio).
+- Blindaje técnico ante Interventoría mediante equipos de grado industrial.
+- Integración nativa Modbus al SCADA del CCO.

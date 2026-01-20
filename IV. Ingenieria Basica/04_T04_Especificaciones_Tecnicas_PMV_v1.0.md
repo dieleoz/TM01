@@ -1,14 +1,14 @@
 # T04: ESPECIFICACIONES TÉCNICAS - PMV (PANELES DE MENSAJE VARIABLE)
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 21/10/2025  
-**Sistema:** PMV - Paneles de Mensaje Variable (Dynamic Message Signs - DMS)  
+**Fecha:** 22/10/2025  
+**Sistema:** PMV - Paneles de Mensaje Variable (Manual de Señalización Vial 2024)  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.1  
+**Versión:** 2.0  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
-**Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.0  
-**Referencia Validación:** 38_VALIDACION_CONTRACTUAL_PMV_v1.0  
-**Referencia Layout:** 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0  
+**Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.2  
+**Referencia Validación:** 38_VALIDACION_CONTRACTUAL_PMV_v2.0  
+**Referencia Layout:** 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v2.0  
 
 ---
 
@@ -17,7 +17,8 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 28 PMV (2 por peaje + separación 20 km) | Adm. Contractual EPC |
-| 1.1 | 22/10/2025 | **Revisión con información oficial:** Cantidad confirmada 28 PMV | Adm. Contractual EPC |
+| 1.1 | 22/10/2025 | Revisión con información oficial: 28 PMV | Adm. Contractual EPC |
+| 2.0 | 22/10/2025 | **Alineación Manual 2024:** Optimización a 14 unidades (Decision Points). Carácter 400mm. Estructura CCP-14. Tiempos de respuesta AT4. | Adm. Contractual EPC |
 
 ---
 
@@ -29,18 +30,18 @@
 |:------|:------|
 | **Nombre del sistema** | PMV - Paneles de Mensaje Variable |
 | **Categoría** | ITS - Información Variable al Usuario |
-| **Código interno** | T04-PMV-004-v1.0 |
-| **Cantidad total** | **28 unidades** |
-| **CAPEX estimado** | **USD $2,450,000** ($87,500/panel instalado - Solución Híbrida) |
-| **Documentos base** | T01 v1.2, T03 v1.0, Validación v1.0, Layout v1.0 |
+| **Código interno** | T04-PMV-004-v2.0 |
+| **Cantidad total** | **14 unidades** (Optimizado a Puntos de Decisión) |
+| **CAPEX estimado** | **USD $1,190,000** ($85,000/panel instalado - Full Matrix 400mm) |
+| **Documentos base** | Manual 2024, CCP-14, AT2, AT4 |
 
 ### 1.2 Distribución por Tipo de Panel
 
 | Tipo | Cantidad | Descripción | Ubicación Típica |
 |:-----|:---------|:------------|:-----------------|
-| **PMV Fijo (Pórtico)** | 14 | Color completo, tipo PASA-VÍAS | Antes/después peajes, estratégicos |
+| **PMV Fijo (Pórtico)** | 14 | Full Matrix 2024, Carácter 400mm, Pórtico | Puntos de Decisión / Peajes |
 | **PMV Móvil (Remolque)** | 0 | No contemplado en diseño | - |
-| **TOTAL** | **28** | - | - |
+| **TOTAL** | **14** | - | - |
 
 ### 1.3 Alcance de las Especificaciones
 
@@ -74,20 +75,19 @@
 
 | Norma | Título | Aplicación |
 |:------|:-------|:-----------|
+| **Manual Señalización 2024** | Manual de Señalización Vial 2024 (Cap. 2 - Sec. 2.7.4) | **NORMA RECTORA** - PMV |
+| **CCP-14** | Norma Colombiana de Diseño de Puentes LRFD 2014 | **OBLIGATORIO** - Estructura Pórtico |
+| **RETIE 2024** | Reglamento Técnico de Instalaciones Eléctricas | Conexión, protecciones |
 | **Resolución 546/2018** | Interoperabilidad de Peajes (IP/REV) | Información a usuarios |
-| **Manual Señalización Vial 2015** | Dispositivos uniformes | Diseño de pictogramas |
-| **RETIE** | Reglamento Técnico Instalaciones Eléctricas | Alimentación, tierras |
-| **Decreto 1079/2015** | Sector Transporte | Requisitos de información vial |
 
 #### Normativa Internacional
 
 | Norma | Título | Aplicación |
 |:------|:-------|:-----------|
-| **NTCIP 1202** | Object Definitions for Dynamic Message Signs | **OBLIGATORIO** - Protocolo estándar |
-| **NTCIP 1203** | Object Definitions for DMS (v3) | Versión extendida (opcional) |
-| **ISO TC-204** | Intelligent Transport Systems | Sistemas ITS |
-| **IEC 60529** | IP Code | Protección IP65 mínimo |
-| **IEEE 802.3** | Ethernet | Comunicaciones |
+| **UNE-EN 12966** | Paneles de Mensaje Variable - Rendimiento visual | **L3 Luminancia**, Color, Ángulo |
+| **NTCIP 1202/1203** | Dynamic Message Signs Standard | **OBLIGATORIO** - Protocolo |
+| **IEC 60529 / 62262** | IP Code / IK Code | **IP65 / IK08** |
+| **AASHTO LRFD (Signs)** | Structural Supports for Highway Signs | Diseño estructural |
 
 ### 2.3 Certificaciones Requeridas
 
@@ -168,13 +168,13 @@ Panel de mensaje variable tipo PASA-VÍAS, montado sobre pórtico que cruza la v
 
 | Parámetro | Especificación Mínima | Método de Verificación |
 |:----------|:---------------------|:-----------------------|
-| **Distancia de lectura** | **≥300 m** a 100 km/h | Prueba de campo |
-| **Altura de carácter** | Mínimo 300 mm | Medición en imagen |
-| **Ancho de carácter** | Proporcional (ratio 5:7 típico) | Configuración software |
-| **Espaciado entre caracteres** | Mínimo 50 mm | Configuración software |
+| **Distancia de lectura** | **≥410 m** (Calculado para 400mm ch.) | Prueba de campo |
+| **Altura de carácter** | **Mínimo 400 mm** (Manual 2024 Speed 120) | Medición en imagen |
+| **Ancho de carácter** | Proporcional (ratio 5:7 o 7:9) | Configuración software |
+| **Espaciado entre car.** | Mínimo 60 mm | Configuración software |
 | **Líneas de texto** | Mínimo 3 líneas | Configuración software |
-| **Caracteres por línea** | Mínimo 8-10 caracteres | Configuración software |
-| **Pictogramas** | Biblioteca ≥50 símbolos estándar | Verificación software |
+| **Caracteres por línea** | Mínimo 12-15 caracteres (Full Matrix) | Configuración software |
+| **Pictogramas** | Biblioteca Manual 2024 / UNE-EN 12966 | Verificación software |
 
 #### 4.1.4 Controlador del Panel
 
@@ -295,24 +295,29 @@ Panel de mensaje variable tipo PASA-VÍAS, montado sobre pórtico que cruza la v
 
 ---
 
-## 7. REQUISITOS DE INSTALACIÓN
+## 7. REQUISITOS DE INSTALACIÓN Y OPERACIÓN
 
-### 7.1 Ubicaciones Exactas
+### 7.1 Ubicaciones Estratégicas (Puntos de Decisión)
 
-**Referencia:** `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md`
+**Referencia:** `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v2.0.md`
 
-**Distribución de 28 PMV:**
+**Optimización a 14 PMV:**
+1.  **Entradas al Proyecto (2):** Puerto Salgar (N), Río Sogamoso (S).
+2.  **Peajes (4):** Zambito (2), Aguas Negras (2) - Antes/Después.
+3.  **Intersecciones de Decisión (4):** Puerto Berrío, Puerto Araujo, Cimitarra, La Lizama.
+4.  **Variantes Críticas (4):** San Pedro de la Paz, Palmas de Guayabito.
 
-| Ubicación | Cantidad | PK Ejemplo | Justificación |
-|:----------|:---------|:-----------|:--------------|
-| **Peaje Zambito (antes/después)** | 2 | PK 4+200 RN 4511 | Obligatorio contractual |
-| **Peaje Aguas Negras (antes/después)** | 2 | PK 86+800 RN 4511 | Obligatorio contractual |
-| **Estratégicos (separación ~20 km)** | 24 | Distribuidos | Cobertura continua |
-| **TOTAL** | **28** | - | - |
+### 7.2 Parámetros Operativos (AT2 / AT4)
 
-**Separación promedio:** 18.96 km entre PMV consecutivos por sentido
+| Parámetro | Requisito Mínimo | Referencia |
+|:----------|:-----------------|:-----------|
+| **Berma (Shoulder)** | **2.50 metros** mínimo | AT1 / Diseño Geométrico |
+| **Respuesta Señalización** | **20 minutos** | AT4 Indicador O5 |
+| **Respuesta Ambulancia** | **30 minutos** | AT4 Indicador O5 |
+| **Respuesta Grúa** | **60 minutos** | AT4 Indicador O5 |
+| **Disponibilidad SICC** | **99.0%** | AT4 Indicador O6 |
 
-### 7.2 Montaje Típico - PMV en Pórtico
+### 7.3 Montaje Típico - PMV en Pórtico (CCP-14)
 
 **Configuración:**
 

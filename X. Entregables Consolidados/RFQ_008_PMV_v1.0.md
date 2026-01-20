@@ -57,7 +57,7 @@ El oferente deberá cotizar el paquete completo, que comprende como mínimo:
 
 ## 📊 CANTIDADES A COTIZAR
 
-- **Paneles PMV completos:** 28 unidades (con especificaciones full-matrix)  
+- **Paneles PMV completos:** 14 unidades (con especificaciones full-matrix Manual 2024)  
   Referencia: `IV. Ingenieria Basica/04_T04_Especificaciones_Tecnicas_PMV_v1.0.md` y `V. Ingenieria de Detalle/05_T05_Ingenieria_Detalle_PMV_v1.0.md`.
 - **Sistema central de gestión de mensajes:** 1 sistema (licencia perpetua + redundancia)
 - **Documentación y capacitación:** 1 lote
@@ -108,19 +108,12 @@ Los 28 PMV se localizan a lo largo de las rutas RN 4510 / RN 4511 / RN 4513 con 
 
 ## 🧩 ESTRUCTURA DEL FORMULARIO DE PRECIOS
 
-| Código | Descripción | Cantidad | Unidad | Precio Unit. COP | Total COP | Precio Unit. USD | Total USD |
-|:-------|:------------|:---------|:-------|:-----------------|:-----------|:------------------|:-----------|
-| **PMV-001** | Panel LED full-matrix 3×1.5 m (incluye fuente redundante) | 28 | UND | | | | |
-| **PMV-002** | Controlador local + gabinete IP65 + DPS | 28 | UND | | | | |
-| **PMV-003** | Conversor FO/Ethernet + switch industrial capa 2 | 28 | UND | | | | |
-| **PMV-004** | Fuente alimentación 24 VDC 15 A + cargador inteligente | 28 | UND | | | | |
-| **PMV-005** | Accesorios estructurales / herrajes / cables | 28 | UND | | | | |
-| **PMV-006** | Instalación, canalizaciones y obras civiles menores | 28 | UND | | | | |
-| **PMV-007** | Pruebas FAT/SAT, comisionamiento e integración CCO | 28 | UND | | | | |
-| **PMV-008** | Sistema central CMS + licencias y API | 1 | SISTEMA | | | | |
-| **PMV-009** | Documentación As-Built + capacitación | 1 | LOT | | | | |
-| **PMV-010** | Garantías (equipos 24 m / instalación 12 m) | 1 | LOT | | | | |
-| **TOTAL** | SISTEMA PMV – LOTE ÚNICO | | | | | | |
+| **PMV-001** | Panel LED full-matrix 3×2.0 m (Manual 2024) | 14 | UND | | | | |
+| **PMV-002** | Estructura Pórtico (CCP-14 / AASHTO) | 14 | UND | | | | |
+| **PMV-003** | RETIE 2024 + Obra Civil + Defensas | 14 | UND | | | | |
+| **PMV-004** | Integración CCO + Puesta en Servicio | 14 | UND | | | | |
+| **PMV-005** | CMS Central + Licencias | 1 | SIS | | | | |
+| **TOTAL** | SISTEMA PMV – LOTE ÚNICO (Optimizado) | | | | | | |
 
 Notas para diligenciamiento:
 - Presentar precios en **COP y USD**, aplicando tasa de referencia **4,400 COP/USD**.  
