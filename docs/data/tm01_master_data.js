@@ -3,6 +3,7 @@
 
 class TM01MasterData {
     // NORMATIVA: ResoluciÃ³n 20213040035125 (IP/REV) Vigente
+    // NORMATIVA: Res. 40117 (RETIE 2024) Compliant
     constructor() {
         this.data = {
             wbs: [],
@@ -115,10 +116,10 @@ class TM01MasterData {
                 id: '10',
                 sistema: 'Peajes',
                 cantidad: 2,
-                capexUSD: 980161,
-                capexCOP: 4312708400,
-                capexUnitarioUSD: 490081,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                capexUSD: 1890218.94,
+                capexCOP: 8316963336,
+                capexUnitarioUSD: 945109.47,
+                descripcion: 'Forensic v2.1 (2 Stations - Includes WIM-DAC Integration)',
                 estado: 'Validado'
             },
             ccoSummary: {
@@ -228,10 +229,10 @@ class TM01MasterData {
                 id: '10',
                 sistema: 'Peajes',
                 cantidad: 2,
-                capexUSD: 980161,
-                capexCOP: 4312708400,
-                capexUnitarioUSD: 490081,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                capexUSD: 1890218.94,
+                capexCOP: 8316963336,
+                capexUnitarioUSD: 945109.47,
+                descripcion: 'Forensic v2.1 (2 Stations - Includes WIM-DAC Integration)',
                 estado: 'Validado'
             },
             {
