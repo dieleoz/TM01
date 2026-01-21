@@ -75,11 +75,11 @@ class TM01MasterData {
             sosSummary: {
                 id: '6',
                 sistema: 'SOS',
-                cantidad: 98,
-                capexUSD: 2450000,
-                capexCOP: 10780000000,
+                cantidad: 88,
+                capexUSD: 2200000,
+                capexCOP: 9680000000,
                 capexUnitarioUSD: 25000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                descripcion: 'Forensic v2.1 (88 Units - 1 every 3km)',
                 estado: 'Validado'
             },
             meteoSummary: {
