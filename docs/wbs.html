@@ -673,27 +673,41 @@
         function mostrarSubtotales() {
             const subtotalesSection = document.getElementById('subtotalesSection');
             const subtotalesGrid = document.getElementById('subtotalesGrid');
-            const subtotales = {};
-            filteredData.forEach(item => {
-                if (item.nivel === 3 && item.sistema) {
-                    if (!subtotales[item.sistema]) { subtotales[item.sistema] = { cantidad: 0, costoTotalUSD: 0, costoTotalCOP: 0, items: 0 }; }
-                    const cantidad = parseFloat((item.cantidad || '').toString().replace(/,/g, '')) || 0;
-                    const costoUSD = parseFloat((item.total || '').toString().replace(/,/g, '')) || 0;
-                    const costoCOP = parseFloat((item.totalCOP || '').toString().replace(/,/g, '')) || 0;
-                    subtotales[item.sistema].cantidad += cantidad;
-                    subtotales[item.sistema].costoTotalUSD += costoUSD;
-                    subtotales[item.sistema].costoTotalCOP += costoCOP;
-                    subtotales[item.sistema].items += 1;
+
+            // Use master data summaries instead of summing individual items
+            const masterSummaries = {
+                'CCTV': tm01Data?.data?.cctvSummary,
+                'PMV': tm01Data?.data?.pmvSummary,
+                'ETD/RADAR': tm01Data?.data?.etdRadarSummary,
+                'SAST (Sancionatorio)': tm01Data?.data?.sastSummary,
+                'RADAR PEDAGÓGICO': tm01Data?.data?.pedagogicalRadarSummary,
+                'SOS': tm01Data?.data?.sosSummary,
+                'METEO': tm01Data?.data?.meteoSummary,
+                'WIM': tm01Data?.data?.wimSummary,
+                'Telecomunicaciones': tm01Data?.data?.telecomSummary,
+                'Peajes': tm01Data?.data?.peajesSummary,
+                'Centro de Control (CCO)': tm01Data?.data?.ccoSummary,
+                'RADIO FM': tm01Data?.data?.radioFMSummary
+            };
+
+            let html = '';
+            let totalGeneralUSD = 0, totalGeneralCOP = 0;
+
+            Object.keys(masterSummaries).forEach(sistema => {
+                const summary = masterSummaries[sistema];
+                if (summary && summary.capexUSD) {
+                    const cantidad = summary.cantidad || 0;
+                    const costoUSD = summary.capexUSD || 0;
+                    const costoCOP = summary.capexCOP || 0;
+
+                    html += `<div class="subtotal-item"><div class="subtotal-label">${sistema}</div><div class="subtotal-value">${cantidad} unidades<br><strong>USD: $${costoUSD.toLocaleString()}</strong><br><strong>COP: $${costoCOP.toLocaleString()}</strong></div></div>`;
+
+                    totalGeneralUSD += costoUSD;
+                    totalGeneralCOP += costoCOP;
                 }
             });
-            let html = '';
-            Object.keys(subtotales).forEach(sistema => {
-                const subtotal = subtotales[sistema];
-                html += `<div class="subtotal-item"><div class="subtotal-label">${sistema}</div><div class="subtotal-value">${subtotal.items} items | ${subtotal.cantidad} unidades<br><strong>USD: $${subtotal.costoTotalUSD.toLocaleString()}</strong><br><strong>COP: $${subtotal.costoTotalCOP.toLocaleString()}</strong></div></div>`;
-            });
-            let totalGeneralUSD = 0, totalGeneralCOP = 0, totalItems = 0, totalUnidades = 0;
-            Object.values(subtotales).forEach(s => { totalGeneralUSD += s.costoTotalUSD; totalGeneralCOP += s.costoTotalCOP; totalItems += s.items; totalUnidades += s.cantidad; });
-            html += `<div class="subtotal-item" style="border: 3px solid #e74c3c; background: #fff5f5;"><div class="subtotal-label" style="color: #e74c3c; font-size: 1.2em;">✅ TOTAL GENERAL</div><div class="subtotal-value" style="color: #e74c3c; font-size: 1.1em;">${totalItems} items | ${totalUnidades} unidades<br><strong>USD: $${totalGeneralUSD.toLocaleString()}</strong><br><strong>COP: $${totalGeneralCOP.toLocaleString()}</strong></div></div>`;
+
+            html += `<div class="subtotal-item" style="border: 3px solid #e74c3c; background: #fff5f5;"><div class="subtotal-label" style="color: #e74c3c; font-size: 1.2em;">✅ TOTAL GENERAL</div><div class="subtotal-value" style="color: #e74c3c; font-size: 1.1em;"><strong>USD: $${totalGeneralUSD.toLocaleString()}</strong><br><strong>COP: $${totalGeneralCOP.toLocaleString()}</strong></div></div>`;
             subtotalesGrid.innerHTML = html;
             subtotalesSection.style.display = 'block';
         }
