@@ -89,7 +89,7 @@ class TM01MasterData {
                 capexUSD: 105000,
                 capexCOP: 462000000,
                 capexUnitarioUSD: 35000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                descripcion: 'Estaciones Meteorológicas (3 Unidades - Contractual)',
                 estado: 'Validado'
             },
             wimSummary: {
@@ -99,7 +99,7 @@ class TM01MasterData {
                 capexUSD: 551425,
                 capexCOP: 2426273000,
                 capexUnitarioUSD: 551425,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                descripcion: 'Reconciliación Audit .42: Nivelación CAPEX $551k',
                 estado: 'Validado'
             },
             telecomSummary: {
@@ -109,7 +109,7 @@ class TM01MasterData {
                 capexUSD: 7980000,
                 capexCOP: 35112000000,
                 capexUnitarioUSD: 24782,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                descripcion: '322 km (293 Troncal + Holgura) - Audit 5.0 confirmed',
                 estado: 'Validado'
             },
             peajesSummary: {
