@@ -1,10 +1,11 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo - Metodología Punto 42 (Estrategia Source of Truth)
 
-**Versión:** 30.5 (AUDIT 5.0 PASSED - CLEAN DATA)
+**Versión:** 30.6 (AUDIT 5.0 PASSED - FINAL DELIVERY READY)
 **Fecha de actualización:** 21 de Enero 2026
-**Estado:** 🟢 **APTO PARA CONSTRUCCIÓN** - Data Sanitization & RETIE 2024 Compliant
-**Meta Actual:** Fase 6.0 - Servir Ingeniería y Entrega Final de Documentación.
+**Estado:** 🟢 **APTO PARA CONSTRUCCIÓN** - All Phases Complete (1-27)
+**Meta Actual:** ✅ PROYECTO COMPLETADO - Listo para Entrega al Cliente
+
 
 ---
 
@@ -444,8 +445,169 @@
 
 ---
 
-**Versión:** 30.0 (PROJECT CLOSURE)  
-**Estado:** ✅ **SISTEMAS BLINDADOS** - Todos los subsistemas ITS auditados, reconciliados y sincronizados.
-**Fecha:** 21 de Enero 2026  
-**Sistemas Completados:** 8/8 (Listos para empaquetado final)  
-**Próximo paso:** Fase 6.0: Servir Ingeniería y Cierre Administrativo.
+## ✅ FASE 26: WBS HTML DATA SYNCHRONIZATION (COMPLETADA)
+
+**Objetivo:** Sincronizar todas las fuentes de datos WBS con los valores "Hard Deck" de Audit 5.0.
+
+**Fecha:** 21 de Enero 2026
+
+### Acciones Completadas:
+
+1. **Actualización de Items Individuales** (`datos_wbs_TM01_items.js`)
+   - ✅ SOS: 98 → 88 unidades
+   - ✅ PMV: 28 → 39 unidades (25 mainline + 14 toll)
+   - ✅ Recalculación de totales USD/COP
+   - **Commit:** `7525798`
+
+2. **Refactorización de Lógica HTML** (`wbs.html`)
+   - ✅ Modificada función `mostrarSubtotales()` para leer de `tm01MasterData.data.summaries`
+   - ✅ Eliminada lógica de suma de items individuales (causaba inflación)
+   - **Commit:** `2ab2350`
+
+3. **Corrección de Master Data Summary** (`tm01_master_data.js`)
+   - ✅ `sosSummary.cantidad`: 98 → 88 units
+   - ✅ `sosSummary.capexUSD`: $2,450,000 → $2,200,000
+   - ✅ `sosSummary.capexCOP`: $10,780,000,000 → $9,680,000,000
+   - **Commit:** `3fc3fd4`
+
+### Verificación:
+- ✅ Browser test (Hard Refresh): Todos los subtotales correctos
+- ✅ PMV: 39 unidades, $2,360,000 USD
+- ✅ SOS: 88 unidades, $2,200,000 USD
+- ✅ WIM: $551,425 USD
+- ✅ Peajes: $1,890,218.94 USD
+
+**Estado:** ✅ **COMPLETADA** - Todas las fuentes de datos sincronizadas
+
+---
+
+## ✅ FASE 27: REPOSITORY CLEANUP AND ORGANIZATION (COMPLETADA)
+
+**Objetivo:** Organizar el repositorio para entrega final al cliente, archivando archivos deprecated.
+
+**Fecha:** 21 de Enero 2026
+
+### Estructura `/legacy` Creada:
+
+```
+legacy/
+├── README.md                    # Documentación del archivo
+├── deprecated_wbs/              # 3 archivos WBS v1.0
+├── old_consolidados/            # Carpeta X. Entregables antigua
+├── temp_files/                  # 6 archivos temporales
+├── old_reports/                 # 4 reportes completados
+└── deprecated_engineering/      # 1 documento T05 obsoleto
+```
+
+### Archivos Archivados (15 items):
+
+**WBS Deprecated (3):**
+- ✅ `WBS_COMPLETA_TM01_Troncal_Magdalena_v1.0.md`
+- ✅ `WBS_COMPLETA_VEHICULAR_v1.0.md`
+- ✅ `WBS_Preliminar_v1.0.md`
+
+**Consolidados Antiguos (1 carpeta):**
+- ✅ `X. Entregables Consolidados/` (reemplazada por `X_ENTREGABLES_CONSOLIDADOS/`)
+
+**Archivos Temporales (6):**
+- ✅ `temp_wbs_output.html`
+- ✅ `tm01_master_data_CORRECTO.js`
+- ✅ `detalle_completo_telecom.txt`
+- ✅ `tabla_telecom.csv`
+- ✅ `repair_at1_tables.py`
+- ✅ `ica0.0 FORMATOS PARA IA && git status --short`
+
+**Reportes Antiguos (4):**
+- ✅ `PLAN_ACCION_PROXIMOS_PASOS.md`
+- ✅ `PLAN_COHERENCIA_DOCUMENTOS_MVP.md`
+- ✅ `REPORTE_COHERENCIA_CAPEX_COMPLETADO.md`
+- ✅ `RESUMEN_EJECUTIVO_PROYECTO_COMPLETADO.md`
+
+**Ingeniería Deprecated (1):**
+- ✅ `12_T05_Ingenieria_Detalle_Pesaje_Dinamico_Peaje_v1.0.md`
+
+### Git Operations:
+- **Commit:** `5c00c3f` - "chore: Archive deprecated files to /legacy"
+- **Files Changed:** 14 files
+- **Status:** ✅ Pushed to `main`
+
+**Estado:** ✅ **COMPLETADA** - Repositorio limpio y organizado
+
+---
+
+## 🏆 ESTADO FINAL DEL PROYECTO
+
+### Fases Completadas (1-27):
+
+| Fase | Nombre | Estado |
+|:-----|:-------|:-------|
+| 1-9 | Initial Reconciliation | ✅ Complete |
+| 11-12 | Contractual Blindaje | ✅ Complete |
+| 13-15 | PMV Reconciliation | ✅ Complete |
+| 16-20 | Forensic Audit "Hard Deck" | ✅ Complete |
+| 21-23 | Data Sanitization v2.1 | ✅ Complete |
+| 24-25 | Executive Files & Documentation | ✅ Complete |
+| 6.0 | Servir Ingeniería | ✅ Complete |
+| 26 | WBS HTML Data Synchronization | ✅ Complete |
+| 27 | Repository Cleanup | ✅ Complete |
+
+### Métricas Finales:
+
+| Métrica | Valor | Estado |
+|:--------|:------|:-------|
+| **Total Documentos** | 85+ files (T01-T05) | ✅ Complete |
+| **Sistemas Validados** | 13/13 (100%) | ✅ Validated |
+| **CAPEX Total ITS** | $7.87M USD | ✅ Certified |
+| **Client Deliverables** | 12 files (6 Word + 6 HTML) | ✅ Generated |
+| **Git Commits** | 50+ commits | ✅ Synchronized |
+| **Repository Status** | Clean, Organized | ✅ Ready |
+
+### Normative Compliance:
+- ✅ **RETIE 2024** (Res. 40117): All electrical designs compliant
+- ✅ **IP/REV 2021** (Res. 20213040035125): Toll systems interoperable
+- ✅ **Obsolete Standards Removed**: Res. 546/2018, RETIE 2013
+
+### Git Status:
+- **Branch:** `main`
+- **Last Commit:** `5c00c3f` - Repository cleanup
+- **Status:** ✅ Synchronized with GitHub
+- **Working Tree:** Clean
+
+---
+
+## 🚀 PRÓXIMOS PASOS (POST-DELIVERY)
+
+### Immediate Actions:
+1. **Close PR #1**: Audit PR fully integrated, branch can be deleted
+2. **Package Deliverables**: Compress `X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/`
+3. **Client Review**: Submit package to Interventoría
+
+### Post-Delivery:
+1. **Feedback Integration**: Address any client comments
+2. **Construction Phase**: Transition to procurement and installation
+3. **O&M Documentation**: Prepare operational handoff (Phase VI)
+
+### Outstanding Items (Low Priority):
+- [ ] **Radio FM System**: Budget pending (~$150k-$200k)
+- [ ] **Sistema_Validacion_Web/**: Evaluate if still needed or archive
+
+---
+
+## 🎯 DECLARACIÓN FINAL DE CIERRE
+
+> **El proyecto TM01 "Troncal Magdalena" ha completado TODAS las fases de ingeniería (1-27).**
+>
+> **Todos los sistemas ITS están validados, reconciliados y sincronizados con Audit 5.0 "Hard Deck".**
+>
+> **El repositorio está limpio, organizado y listo para entrega al cliente.**
+>
+> **Estado Final:** 🟢 **APTO PARA CONSTRUCCIÓN**
+
+---
+
+**Versión:** 30.6 (FINAL DELIVERY READY)
+**Estado:** ✅ **PROYECTO COMPLETADO** - All Phases (1-27) Complete
+**Fecha:** 21 de Enero 2026
+**Sistemas Completados:** 13/13 (100%)
+**Próximo paso:** Entrega al Cliente y Cierre Administrativo
+
