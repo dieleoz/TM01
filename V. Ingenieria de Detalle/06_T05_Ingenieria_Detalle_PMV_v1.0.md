@@ -4,8 +4,8 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** PMV - Paneles de Mensaje Variable  
 **Fecha:** 21 de Enero 2026  
-**Versión:** 1.5 MVP (Alineado Normativa 2024)  
-**Basado en:** T04 PMV v1.5 (Manual 2024) + Layout v3.0  
+**Versión:** 2.0 (FORENSIC VALIDATION .42)  
+**Basado en:** T04 PMV v1.5 + Requerimiento Peajes IP/REV  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -15,6 +15,7 @@
 | 1.0 | 22/10/2025 | Creación inicial - 28 PMV | Ing. ITS |
 | 1.1 | 22/10/2025 | Revisión con información oficial | Ing. ITS |
 | 2.0 | 22/10/2025 | **Optimización Manual 2024:** 14 unidades (400mm). Estructura CCP-14. Grid-Powered. | Ing. ITS |
+| 2.1 | 21/01/2026 | **Forensic Update:** Total 39 Unds (25 Mainline + 14 Toll). RGB Full. | Ing. Forensic |
 
 ---
 
@@ -24,13 +25,13 @@
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **14 paneles** | Puntos de Decisión Críticos |
-| **Separación** | Estratégica | Manual 2024 (Decision Support) |
-| **Peajes** | 4 PMV (2 por peaje × 2 peajes) | Obligatorio AT2 |
-| **Estratégicos** | 10 PMV en corredor | Variantes e Intersecciones |
-| **CAPEX estimado** | **USD $1,190,000** ($85,000/panel instalado - Full Matrix) | Budget Optimizado |
-| **OPEX Anual** | **$35,700 USD** | ~3% del CAPEX |
-| **OPEX 20 años** | **$714,000 USD** | Mantenimiento + Repuestos |
+| **Cantidad total** | **39 paneles** | 25 Mainline + 14 Toll Lanes (IP/REV) |
+| **Separación** | 20 km por sentido | Requisito AT1 |
+| **Peajes** | 14 PMV (1 por carril) | Obligatorio AT2 (Tarifa/Usuario) |
+| **Estratégicos** | 25 PMV en corredor | Puntos de Decisión + Blindaje |
+| **CAPEX estimado** | **USD $2,360,000** | Reconciliado Phase 19 |
+| **OPEX Anual** | **$33,600 USD** | ~1.3% del CAPEX |
+| **OPEX 20 años** | **$672,000 USD** | Mantenimiento + Repuestos |
 
 ---
 
@@ -40,15 +41,15 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. PANEL PMV FULL MATRIX** | **14 und** | **$45,000** | **$630,000** | **52.9%** |
-| Matriz 2024 (Carácter 400mm), L3, Color | 14 und | $45,000 | $630,000 | - |
-| **2. ESTRUCTURA PÓRTICO (CCP-14)**| **14 und** | **$30,000** | **$420,000** | **35.3%** |
-| Diseño sismo-resistente + Cimentación | 14 und | $30,000 | $420,000 | - |
-| **3. ACOMETIDA ELÉCTRICA (RETIE)** | **14 und** | **$8,000** | **$112,000** | **9.4%** |
-| Red + UPS Online + Protecciones | 14 und | $8,000 | $112,000 | - |
-| **4. PUESTA A TIERRA (SPT)** | **14 und** | **$2,000** | **$28,000** | **2.4%** |
-| Varillas + Pararrayos (Protección Panel) | 14 und | $2,000 | $28,000 | - |
-| **TOTAL CAPEX** | **14 und** | **$85,000** | **$1,190,000** | **100%** |
+| **1. PANEL PMV FULL MATRIX (Mainline)** | **25 und** | **$45,000** | **$1,125,000** | **47.6%** |
+| Matriz 2024 (Carácter 400mm), L3, RGB | 25 und | $45,000 | $1,125,000 | - |
+| **2. PANEL PMV PEAJE (Canopy)** | **14 und** | **$5,000** | **$70,000** | **3.0%** |
+| Tarifario/Mensaje (1x1m aprox), RGB | 14 und | $5,000 | $70,000 | - |
+| **3. ESTRUCTURA (Pórticos Mainline)**| **25 und** | **$35,000** | **$875,000** | **37.1%** |
+| Diseño sismo-resistente + Cimentación | 25 und | $35,000 | $875,000 | - |
+| **4. ACOMETIDA Y GESTIÓN** | **1 glb** | **$290,000** | **$290,000** | **12.3%** |
+| Red + UPS + Software Central | 1 glb | $290,000 | $290,000 | - |
+| **TOTAL CAPEX** | **39 und** | **Prom. $60.5k** | **$2,360,000** | **100%** |
 
 **Nota:** Se elimina solución solar por alto consumo del panel de 400mm (Manual 2024).
 
@@ -66,7 +67,7 @@
 | **Pitch** | 20 mm | - |
 | **Resolución** | 256×72 px (Texto) / 64x64 px (Gráfico) | - |
 | **Líneas/Caracteres** | 3 líneas de 12 caracteres (H: 450 mm) | - |
-| **Colores** | Ámbar (Texto) + RGB (16.7M Grafico) | - |
+| **Colores** | FULL RGB (16.7M Total) | - |
 | **Brillo** | Luminosidad L3 (Según EN 12966) | - |
 | **Ángulo Visión** | Clase B6 | - |
 | **Peso** | 810 KG | Requiere estructura reforzada |

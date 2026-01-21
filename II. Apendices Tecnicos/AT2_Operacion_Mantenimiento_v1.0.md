@@ -13,6 +13,10 @@ status: Contenido completo
 # AT2 - OPERACIÓN Y MANTENIMIENTO
 ## APP PUERTO SALGAR - BARRANCABERMEJA
 
+> ⚠️ **ACTUALIZACIÓN NORMATIVA:** Toda referencia a la Res. 546/2018 se entiende reemplazada por la **Resolución 20213040035125 (IP/REV)** vigente.
+> ⚠️ **ALCANCE:** Incluye suministro e instalación de Pesaje Dinámico (WIM) en **TODOS** los carriles de cobro (AT2 Sección 3.3.4.3).
+> ⚠️ **ARQUITECTURA CRÍTICA:** Se exige que el SICC (Sistema Inteligente de Control de Tránsito) sea **CENTRALIZADO** en el CCO principal. Se requiere arquitectura de red L2/L3 robusta y anillos de fibra óptica redundantes para soportar la transmisión de video y datos en tiempo real.
+
 ### INFORMACIÓN DEL DOCUMENTO
 
 | **Campo**                | **Valor**                          |
@@ -753,6 +757,10 @@ El diseño y la construcción de los sistemas de cobro y dimensionamiento del ca
 
 Adicionalmente, el Concesionario deberá instalar en todos los carriles de cobro de la Estación de peaje, un sistema de pesaje dinámico que cumpla con las disposiciones de la sección 3.3.9 del presente documento.
 
+> [!WARNING]
+> **RIESGO DE ALCANCE (WIM EN PEAJES):**
+> Se advierte que este requisito exige sensores WIM de clasificación en los **14 carriles de peaje** (Zambito y Aguas Negras), independientemente de la Estación de Pesaje de la UF13. La ingeniería debe asegurar que este costo está consolidado en la [Ficha de Peajes (T01)](file:///d:/onedrive/gdrive/TM1/0.1%20ingenieria%20basica/0.0%20FORMATOS%20PARA%20IA/III.%20Ingenieria%20Conceptual/25_T01_Ficha_Sistema_Peajes_v1.0.md).
+
 ##### 3.3.4.3. Tecnología de Cobro y Control del Tráfico
 
 Para los peajes a su cargo, el Concesionario es el único responsable del control de los recaudos por cabina, por turno de trabajo y por agente recaudador, de la seguridad de la circulación de valores y su transferencia y del control y vigilancia sobre los equipos, personal y propiedades.
@@ -763,7 +771,11 @@ En la Operación se consideran tres modalidades de cobro básicas: 1) manual; 2)
 
 Para garantizar el nivel de servicio solicitado, el Concesionario será responsable de definir el número de carriles de cada tecnología que resulten necesarios en cada Estación de Peaje.
 
-Bajo los anteriores principios de funcionalidad de las casetas de peaje con cobro automático y semiautomático, el Concesionario deberá proponer una tecnología que permita la interoperabilidad de sus Estaciones de Peaje con las de vías administradas por la ANI y el INVIAS, sujeto a verificación de la Interventoría, cumpliendo con las Resoluciones 4303 de 2015, 5708 de 2016, 546 de 2018, la 883 de 2019 y la 509 de marzo 2020 del Ministerio de Transporte o la(s) que la sustituya(n), modifique(n), adicione(n) o derogue(n) durante la ejecución del Contrato, según lo dispuesto en el literal 4.11 de la Parte General del Contrato.
+Bajo los anteriores principios de funcionalidad de las casetas de peaje con cobro automático y semiautomático, el Concesionario deberá proponer una tecnología que permita la interoperabilidad de sus Estaciones de Peaje con las de vías administradas por la ANI y el INVIAS, sujeto a verificación de la Interventoría, cumpliendo con las Resoluciones 4303 de 2015, 5708 de 2016, 546 de 2018, la 883 de 2019 y la 509 de marzo 2020 del Ministerio de Transporte o la(s) que la sustituya(n), adicione(n) o derogue(n) durante la ejecución del Contrato, según lo dispuesto en el literal 4.11 de la Parte General del Contrato.
+
+> [!IMPORTANT]
+> **ALERTA DE VIGENCIA NORMATIVA (COLPASS):**
+> La Resolución 546 citada arriba ha sido superada y derogada por la **Resolución 20213040035125 de agosto de 2021 (ColPass)**. El diseño de los peajes electrónicos y la interoperabilidad debe ceñirse estrictamente al Anexo 3 de esta nueva resolución.
 
 Cobro manual
 Se desarrolla mediante las siguientes funciones:

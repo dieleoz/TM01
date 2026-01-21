@@ -4,7 +4,7 @@
 **Fecha:** 22/10/2025  
 **Sistema:** PMV - Paneles de Mensaje Variable (Manual de Señalización Vial 2024)  
 **Responsable:** Ing. ITS / Administrador Contractual EPC  
-**Versión:** 2.0  
+**Versión:** 2.1 (RECONCILIACIÓN NODOS)  
 **Referencia T01:** T01_Ficha_Sistema_ITS_v1.2  
 **Referencia T03:** T03_Arquitectura_Conceptual_ITS_v1.2  
 **Referencia Validación:** 38_VALIDACION_CONTRACTUAL_PMV_v2.0  
@@ -19,6 +19,7 @@
 | 1.0 | 21/10/2025 | Creación inicial - 28 PMV (2 por peaje + separación 20 km) | Adm. Contractual EPC |
 | 1.1 | 22/10/2025 | Revisión con información oficial: 28 PMV | Adm. Contractual EPC |
 | 2.0 | 22/10/2025 | **Alineación Manual 2024:** Optimización a 14 unidades (Decision Points). Carácter 400mm. Estructura CCP-14. Tiempos de respuesta AT4. | Adm. Contractual EPC |
+| 2.1 | 22/10/2025 | **RECONCILIACIÓN NODOS:** Validación con Backbone 322 km y RETIE 2024. Confirmación RGB Full Color. | Adm. Contractual EPC |
 
 ---
 
@@ -34,6 +35,9 @@
 | **Cantidad total** | **14 unidades** (Optimizado a Puntos de Decisión) |
 | **CAPEX estimado** | **USD $1,190,000** ($85,000/panel instalado - Full Matrix 400mm) |
 | **Documentos base** | Manual 2024, CCP-14, AT2, AT4 |
+
+> ⚠️ **RECONCILIACIÓN NODOS:** Diseño compatible con Backbone de Fibra Óptica de 322 km (T04 Telecom v30.0).
+> ⚠️ **RETIE 2024:** Todo componente eléctrico debe contar con Dictamen de Inspección bajo Resolución 40117/2024 vigente.
 
 ### 1.2 Distribución por Tipo de Panel
 

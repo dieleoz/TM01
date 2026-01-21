@@ -13,6 +13,10 @@ status: Contenido completo
 # AT3 - ESPECIFICACIONES GENERALES
 ## APP PUERTO SALGAR - BARRANCABERMEJA
 
+> ⚠️ **ACTUALIZACIÓN NORMATIVA ELÉCTRICA (2024):**
+> Toda referencia al **RETIE 2013** se entiende reemplazada por el **Nuevo RETIE (Resolución 40117 de 2024)**.
+> Es obligatorio que todos los diseños, materiales, e inspecciones cumplan con el nuevo esquema de certificación y dictámenes vigentes a la fecha de construcción.
+
 ### INFORMACIÓN DEL DOCUMENTO
 
 | **Campo**                | **Valor**                          |
@@ -316,6 +320,10 @@ CAPÍTULO I V   OTRAS ESPECIFICACIONES Y NORMATIVAS APLICABLES A SISTEMAS Y EQUI
 4.2  Sistema Inteligente de Transporte (ITS)
 
 Para el desarrollo de las actividades establecidas en las Secciones anteriores, el Concesionario deberá cumplir con lo dispuesto en las especificaciones y/o normas técnicas que se listan a continuación:
+
+> [!IMPORTANT]
+> **PARÁMETROS AMBIENTALES IP/REV (VISIBILIDAD):**
+> El monitoreo meteorológico exige cumplimiento de parámetros ambientales IP/REV. Es **OBLIGATORIO** incluir sensores de **Visibilidad (Neblina)** de grado industrial. Se prohíbe el uso de equipos domésticos/prosumer (tipo Davis) que no alcancen estos KPIs de seguridad vial.
 
 El sistema Eléctrico y el sistema de tierra debe cumplir lo consagrado en el Reglamento Técnico de Instalaciones Eléctricas – RETIE y seguir las recomendaciones del Código Eléctrico Colombiano.
 PLAN NACIONAL DE SEGURIDAD VIAL 2011-2021, Resolución 2273 de

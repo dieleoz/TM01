@@ -13,6 +13,8 @@ status: En revisión
 # AT1 - ALCANCE DEL PROYECTO
 ## APP PUERTO SALGAR - BARRANCABERMEJA
 
+> ⚠️ **ADVERTENCIA GEOGRÁFICA:** El Peaje Aguas Negras NO se construye en el PR 83. Por efecto de la Variante y reubicación contractual, su sitio definitivo para ingeniería es el **PR 80+000 / 88+090**.
+
 ### INFORMACIÓN DEL DOCUMENTO
 
 | **Campo**                | **Valor**                          |
@@ -210,6 +212,10 @@ El Concesionario recibirá las estaciones descritas en la **Tabla 2**, conforme 
 |:------------------|:----------------------|:---------|:-----------------|:--------------|
 | **Peaje Zambito** | PR 9+200 - Ruta Nacional 4511 | Puerto Boyacá – Puerto Araujo | Bidireccional | Estación existente en operación |
 | **Peaje Aguas Negras*** | PR 83+900 - Ruta Nacional 4511 | Puerto Araujo – La Lizama | Bidireccional | *El peaje de Aguas Negras deberá ser reubicado al PR 80+000 RN 4511 de acuerdo a la sección 3.7 del presente anexo técnico. |
+
+> [!WARNING]
+> **⚠️ CAMBIO DE UBICACIÓN:**
+> El Peaje Aguas Negras NO se mantiene en el PR 83. Debe construirse en el **PR 80+000** según nota al pie del Apéndice Técnico 1.
 
 **Total:** 2 estaciones de peaje existentes
 **Tabla 3 - Unidades Funcionales del Proyecto**

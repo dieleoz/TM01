@@ -168,9 +168,9 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 | **Torres meteorológicas (10m altura)** | 3 | $6,000 | $18,000 |
 | **Sensores de Visibilidad Óptica (Neblina)** | 3 | $4,000 | $12,000 |
 | **Obras civiles y cimentación** | 3 | $0 | $0 |
-| **TOTAL CAPEX** | **3 estaciones** | **$25,000/estación** | **$75,000** |
+| **TOTAL CAPEX** | **3 estaciones** | **$35,000/estación** | **$105,000** |
 
-**Nota sobre actualización (15/01/2026):** El CAPEX se ajustó a **$75,000 USD** para 3 estaciones, promediando $25k/estación para equipos profesionales (Davis Vantage Pro2 Plus o equivalente) incluyendo torres de 10m y sistema de integración SCADA.
+**Nota sobre actualización (21/01/2026):** El CAPEX se ajustó a **$105,000 USD** para 3 estaciones de **Grado Industrial** (Lufft/Vaisala o equivalente), incluyendo Visibilímetro Óptico (10m-2000m), Piranómetro (ETo) y sensor de Horas de Sol (Brillo Solar), mandatarios para cumplimiento AT2 y Blindaje Contractual.
 
 ### 6.2 OPEX (Operación y Mantenimiento)
 
@@ -180,13 +180,13 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 | **Mantenimiento correctivo** | 3 estaciones | $200 | $600 |
 | **Calibración anual** | 3 estaciones | $200 | $600 |
 | **Licencias WeatherLink** | 3 estaciones | $100 | $300 |
-| **TOTAL OPEX ANUAL** | **3 estaciones** | **$900/estación/año** | **$2,700** |
+| **TOTAL OPEX ANUAL** | **3 estaciones** | **$1,500/estación/año** | **$4,500** |
 
-**OPEX 20 años:** $2,700 × 20 = **$54,000 USD**
+**OPEX 20 años:** $4,500 × 20 = **$90,000 USD**
 
 ### 6.3 Costo Total del Ciclo de Vida (20 años)
 
-**CAPEX + OPEX:** $75,000 + $54,000 = **$129,000 USD**
+**CAPEX + OPEX:** $105,000 + $90,000 = **$195,000 USD**
 
 ---
 
@@ -241,8 +241,9 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 | **Velocidad del viento** | m/s | Cada 5 min | Anemómetro |
 | **Dirección del viento** | grados | Cada 5 min | Veleta |
 | **Presión barométrica** | hPa | Cada 5 min | Sensor integrado |
-| **Radiación solar** | W/m² | Cada 5 min | Piranómetro |
-| **Visibilidad** | m | Cada 5 min | Sensor Óptico Dedicado |
+| **Radiación solar** | W/m² | Cada 5 min | Piranómetro (ETo) |
+| **Visibilidad (Neblina)** | m | Cada 5 min | Sensor Óptico (10m-2000m) |
+| **Horas de Sol** | h | Diaria | Brillo Solar (>120 W/m²) |
 
 ---
 

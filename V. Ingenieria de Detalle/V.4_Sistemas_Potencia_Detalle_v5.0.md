@@ -22,6 +22,10 @@
 | **CAPEX Estimado** | **$4,277,500 USD** | T01 Energía Section 6.1 |
 | **OPEX Anual** | **$1,385,000 USD** | Incluye consumo y mantenimiento |
 
+> [!IMPORTANT]
+> **CUMPLIMIENTO RETIE 2024 (Res. 40117):**
+> Todo equipo de potencia (Transformadores, UPS, Tableros, Plantas) suministrado debe contar con **Dictamen de Inspección** y Certificado de Conformidad de Producto bajo la nueva Resolución 40117 de 2024. No se admiten equipos bajo norma 2013 salvo régimen de transición probado.
+
 ---
 
 ## 🔌 ARQUITECTURA DEL SISTEMA VIAL

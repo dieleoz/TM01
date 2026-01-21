@@ -4,8 +4,8 @@
 **Fecha:** 24 de octubre de 2025  
 **Proyecto:** TM01 - Troncal Magdalena (APP Puerto Salgar - Barrancabermeja)  
 **Contrato:** APP Puerto Salgar - Barrancabermeja  
-**Versión:** 2.0 - **WBS COMPLETA EPC PROFESIONAL**  
-**CAPEX Total:** $7,787,632 USD
+**Versión:** 3.0 - **WBS RECONCILIADA (FORENSIC AUDIT 4.0)**  
+**CAPEX Total:** $7,871,632 USD (Incluye Ajuste Peaje +$84k)
 
 ---
 
@@ -34,8 +34,8 @@ Esta WBS completa sigue estándares PMI (Project Management Institute) y mejores
 
 ##### **1.1.1 DISEÑO DE CIMENTACIONES**
 - 1.1.1.1 Análisis geotécnico por sistema
-- 1.1.1.2 Cálculo de cargas SOS (87 unidades)
-- 1.1.1.3 Cálculo de cargas PMV (28 unidades)
+- 1.1.1.2 Cálculo de cargas SOS (88 unidades - Regla 3km AT2)
+- 1.1.1.3 Cálculo de cargas PMV (39 unidades - 25 Vía + 14 Peaje)
 - 1.1.1.4 Cálculo de cargas ETD/RADAR (15 unidades)
 - 1.1.1.5 Cálculo de cargas CCTV (30 unidades)
 - 1.1.1.6 Cálculo de cargas WIM (4 plataformas)
@@ -130,7 +130,7 @@ Esta WBS completa sigue estándares PMI (Project Management Institute) y mejores
 **CAPEX:** $155,753 USD
 
 ##### **1.4.1 DISEÑO DE RED FIBRA ÓPTICA**
-- 1.4.1.1 Diseño de red backbone
+- 1.4.1.1 Diseño de red backbone (322 km - Incluye 10% Holgura Técnica)
 - 1.4.1.2 Diseño de red de acceso
 - 1.4.1.3 Diseño de equipos activos
 - 1.4.1.4 Diseño de equipos pasivos

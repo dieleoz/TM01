@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Gálibos - Sistema de Control de Altura  
 **Responsable:** Ing. Civil / Ing. ITS  
-**Versión:** 1.1  
+**Versión:** 2.0 (RECONCILIACIÓN NODOS)  
 **Referencia Validación:** 36_VALIDACION_CONTRACTUAL_GALIBOS_v1.0  
 ---
 
@@ -14,6 +14,7 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 25 unidades estimadas | Ing. Civil |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** 8 unidades confirmadas | Ing. Civil |
+| 2.0 | 22/10/2025 | **RECONCILIACIÓN NODOS:** Validación con Backbone 322 km y RETIE 2024 | Ing. ITS |
 
 ---
 
@@ -25,6 +26,9 @@
 | **Cantidad** | **8 unidades** |
 | **CAPEX** | **USD $280,000** (35,000 USD/unidad) |
 | **Tecnología** | **Óptica/Láser** (NO mecánica) |
+
+> ⚠️ **RECONCILIACIÓN NODOS:** Diseño compatible con Backbone de Fibra Óptica de 322 km (T04 Telecom v30.0).
+> ⚠️ **RETIE 2024:** Todo componente eléctrico debe contar con Dictamen de Inspección bajo Resolución 40117/2024 vigente.
 
 ---
 

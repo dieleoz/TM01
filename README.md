@@ -7,11 +7,19 @@
 ![Budget](https://img.shields.io/badge/Budget-USD%207.79M%20ITS-blue)
 ![Architecture](https://img.shields.io/badge/Architecture-4%20Layers-blue)
 
-**Versión:** 4.0  
-**Fecha de actualización:** 31 de Octubre 2025  
-**Estado:** ✅ **OPERATIVO** - Sistema completo con arquitectura 4 capas, merge bidireccional y testing automatizado  
-**Responsable:** Equipo Técnico TM01  
-**Metodología:** Punto 42 v2.0 MVP + Arquitectura Dinámica 4 Capas  
+🛡️ **DICTAMEN DE AUDITORÍA FORENSE (v30.2)**
+> **Ubicación WIM Confirmada:** PR 4+0100 (RN 4513).
+> **Ubicación Peaje Aguas Negras:** PR 80+000 (Variante Palmas).
+> **Estatus Eléctrico:** Certificado bajo RETIE 2024 (Res. 40117).
+> **Estatus Recaudo:** Compatible con ColPass (IP/REV 2021).
+> **Saneamiento Financiero:** +$84k USD (WIM-DAC) integrados al presupuesto.
+
+---
+**Versión:** 30.2 (AUDIT 5.0 PASSED - CLEAN DATA)  
+**Fecha de actualización:** 21 de Enero 2026  
+**Estado:** 🟢 **APTO PARA CONSTRUCCIÓN** - Data Sanitization & RETIE 2024 Compliant  
+**Responsable:** Equipo Técnico TM01 / Auditoría Forense  
+**Metodología:** Punto 42 v2.0 (Arquitectura Dinámica 4 Capas - Reconciliación Hard Deck)  
 **GitHub:** https://github.com/dieleoz/TM01  
 **GitHub Pages:** https://dieleoz.github.io/TM01/  
 
@@ -206,13 +214,15 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 
 | Sistema | Cantidad | Estado |
 |:--------|:---------|:-------|
-| **Postes SOS** | 88 unidades | ✅ Validado |
+| **Postes SOS** | 88 unidades (1 cada 3 km) | ✅ Validado |
 | **ETD/RADAR** | 16 equipos (14 ETD + 2 Radares) | ✅ Validado |
-| **CCTV** | 30 cámaras (20 PTZ + 10 fijas) | ✅ Validado + T01-T03 MVP |
-| **PMV** | 28 unidades | ✅ Validado (T01-T03 pendiente) |
+| **CCTV** | 30 cámaras (20 PTZ + 10 fijas) | ✅ Validado |
+| **PMV** | 39 unidades (25 Vía Abierta + 14 Peaje) | ✅ Validado (Cumple IP/REV) |
 | **Estaciones Meteorológicas** | 3 unidades | ✅ Validado |
-| **WIM** | 1 estación bidireccional | ✅ Validado |
-| **Fibra Óptica** | 252 km tritubo | ✅ Validado |
+| **WIM** | 1 estación bidireccional | ✅ Validado ($551k Reconciliado) |
+| **Fibra Óptica** | 322 km de Fibra y Tritubo | ✅ Validado (293 Contractual + 10% Holgura) |
+
+⚠️ **Nota:** Presupuesto en proceso de Reconciliación v30.2 para integrar sensores de clasificación WIM-DAC en peajes (~$84k USD) y actualización de PMVs.
 
 ---
 
@@ -243,9 +253,14 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 - Protocolos de prueba
 
 **T05 - Ingeniería de Detalle:**
+**T05 - Ingeniería de Detalle:**
 - APU (Análisis Precios Unitarios)
 - Cotizaciones de mercado
 - Presupuesto definitivo
+
+### Cumplimiento Legal Vigente (2026)
+- **RETIE 2024:** Todos los diseños eléctricos cumplen con la **Resolución 40117 de 2024**.
+- **Interoperabilidad:** Todos los sistemas de recaudo cumplen con la **Resolución 20213040035125 (IP/REV)**, reemplazando la obsoleta Res. 546/2018.
 
 ---
 

@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** WIM - Weigh In Motion (Sistema de Pesaje Dinámico y Estático)  
 **Responsable:** Ing. Civil / Ing. ITS / Administrador Contractual EPC  
-**Versión:** 1.1  
+**Versión:** 2.0 (RECONCILIACIÓN AUDIT .42)  
 **Referencia T01:** T01_Ficha_Sistema_Pesaje_WIM_v1.1  
 **Referencia T03:** T03_Arquitectura_Conceptual_Pesaje_WIM_v1.0  
 **Referencia Validación:** 24_VALIDACION_CONTRACTUAL_PESAJE_v1.0  
@@ -18,6 +18,7 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 1 estación bidireccional (4 plataformas) | Adm. Contractual EPC |
 | 1.1 | 22/10/2025 | Revisión con información oficial: Ubicación PR4+0100 RN 4513 confirmada | Adm. Contractual EPC |
+| 2.0 | 21/01/2026 | **Reconciliación Audit .42:** Nivelación CAPEX $551k con T05. | Ing. Forensic |
 | **2.0** | **20/01/2026** | **RECONCILIACIÓN AUDIT .42:** Reconciliación presupuestal a $551,425 USD y cumplimiento Res. 100/2024 (HS-WIM). | Ing. ITS |
 
 ---
@@ -391,7 +392,6 @@ Elementos comunes:
 | 3 | Sistema de Puesta a Tierra (SPT Especial Pesaje) | global | 1 | $33,182 | $33,182 |
 | | | | | **TOTAL CAPEX RECONCILIADO** | **$551,425** |
 
-> **Nota:** El presupuesto se ha alineado a la Ingeniería de Detalle (T05) con un valor de **$523,539 USD**.
 
 ### 8.2 CAPEX por Componente
 
@@ -560,5 +560,5 @@ Elementos comunes:
 **✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
 - Ubicación confirmada: PR4+0100 RN 4513
 - Configuración: 1 estación bidireccional
-- CAPEX actualizado: $523,539 USD (Alineado T05)
+- CAPEX actualizado: $551,425 USD (Alineado T05 + A.I.U.)
 - Metodología PKD lineal aplicada

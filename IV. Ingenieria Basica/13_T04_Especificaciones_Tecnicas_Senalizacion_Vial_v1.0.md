@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Señalización Vial (Vertical, Horizontal, Defensas)  
 **Responsable:** Ing. Vial / Ing. Tránsito  
-**Versión:** 1.1  
+**Versión:** 2.0 (RECONCILIACIÓN NODOS)  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -13,6 +13,7 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 259.6 km | Ing. Vial |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** 259.6 km + 33.4 km | Ing. Vial |
+| 2.0 | 22/10/2025 | **RECONCILIACIÓN NODOS:** Validación con Backbone 322 km (Geometría) | Ing. Vial |
 
 ---
 
@@ -23,6 +24,8 @@
 | **Sistema** | Señalización Vial Integral |
 | **Alcance** | **259.6 km principales + 33.4 km adicionales** |
 | **CAPEX** | **USD $2,800,000** |
+
+> ⚠️ **RECONCILIACIÓN NODOS:** Cantidades alineadas con longitud geométrica total (293 km + accesos) y fibra óptica (322 km).
 
 ---
 

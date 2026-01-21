@@ -1,3 +1,6 @@
+# ⚠️ DOCUMENTO OBSOLETO / DEPRECATED
+> **VER:** `11_T05_Ingenieria_Detalle_Peaje_v1.0.md` para la ingeniería vigente del sistema de pesaje en peajes.
+
 # T05 - INGENIERÍA DE DETALLE - PESAJE DINÁMICO (PEAJE)
 ## Subsistema de Pesaje Dinámico en Carriles de Cobro
 

@@ -8,21 +8,30 @@ GUÍA COMPLETA CONTRACTUAL APP PUERTO SALGAR - BARRANCABERMEJA (TM 01)
 
 ---
 
-## TABLA DE CONTENIDOS
+### 🟢 INFORME DE INCONSISTENCIAS Y RIESGOS (AUDITORÍA 2026 - DETALLE TÉCNICO)
 
-1. [Información General del Proyecto](#1-información-general-del-proyecto)
-2. [Jerarquía Documental Detallada](#2-jerarquía-documental-detallada)
-3. [Guía de Interpretación por Rol](#3-guía-de-interpretación-por-rol)
-4. [Casos Prácticos Extendidos](#4-casos-prácticos-extendidos)
-5. [Matriz de Decisión Rápida](#5-matriz-de-decisión-rápida)
-6. [Procedimientos Operativos por Rol](#6-procedimientos-operativos-por-rol)
-7. [Ejemplos de Redacción de Oficios](#7-ejemplos-de-redacción-de-oficios)
-8. [Obligaciones Contractuales Clave](#8-obligaciones-contractuales-clave)
-9. [Plazos Críticos del Proyecto](#9-plazos-críticos-del-proyecto)
-10. [Indicadores de Desempeño](#10-indicadores-de-desempeño)
-11. [Riesgos Contractuales Identificados](#11-riesgos-contractuales-identificados)
-12. [Normativa Colombiana Aplicable](#12-normativa-colombiana-aplicable)
-13. [Glosario de Términos Técnicos](#13-glosario-de-términos-técnicos)
+> [!CAUTION]
+> **REUBICACIÓN PEAJE AGUAS NEGRAS (AT1):**
+> La ubicación definitiva para ingeniería es el **PR 80+000**. Ignorar referencias a PR 83+900 para evitar glosas por diseños fuera de sitio.
+
+> [!IMPORTANT]
+> **ESPECIFICACIÓN PMV (AT2/AT4):**
+> - **Capacidad Gráfica:** Los paneles DEBEN ser alfanuméricos y gráficos (RGB Full Matrix) para cumplir con el Manual de Señalización.
+> - **Distribución en Peajes:** Mínimo 2 PMV por área bidireccional y 1 por unidireccional (Integración Radio FM obligatoria).
+> - **Separación Máxima:** 20 km por sentido (AT1).
+
+> [!WARNING]
+> **ESTACIONES METEOROLÓGICAS (AT2):**
+> Obligatorio medir: **Precipitación, Temperatura, Horas de Sol y Evapotranspiración Potencial (ETo)**. Equipos Davis genéricos NO CUMPLEN; requiere grado Industrial con Piranómetro.
+
+> [!IMPORTANT]
+> **INDICADORES ITS (AT4 - RIESGO DE GLOSA):**
+> - **TMC (Tiempo Máximo de Corrección):** Las fallas en ITS activan descuentos si no se corrigen en 4-24h (dependiendo del equipo).
+> - **Ponderación Day-1:** Un solo PMV o Poste SOS dañado afecta el 100% del indicador E11/E12 desde el primer día de operación.
+
+> [!TIP]
+> **ESTRATEGIA DE BLINDAJE "NO COMPRA" (AT2 3.3.5):**
+> Para Estaciones de Pesaje, la lista de equipos es taxativa. Si un equipo (ej. PMV o METEO) no está en el numeral 3.3.5, debe argumentarse su exclusión por "Silencio Positivo" del contrato.
 
 ---
 
@@ -2634,8 +2643,6 @@ Este documento debe actualizarse en los siguientes casos:
 ---
 
 **FIN DEL DOCUMENTO**
-
-**Guía Completa Contractual APP Puerto Salgar - Barrancabermeja (TM 01)**
 
 ---
 

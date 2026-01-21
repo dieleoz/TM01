@@ -4,7 +4,9 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Energía Eléctrica  
 **Responsable:** Ing. Eléctrico  
-**Versión:** 1.1  
+**Versión:** 1.2 (AUDIT 5.0 - RETIE 2024)  
+
+> ⚠️ **NORMATIVA CRÍTICA:** Todo diseño y prueba DEBE cumplir con el **RETIE Resolución 40117 de 2024**. Las referencias a RETIE 2013 se consideran derogadas.
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**

@@ -14,7 +14,7 @@
 | 1.0 | 21/10/2025 | Creación inicial - 2 estaciones en peajes | Ing. Ambiental |
 | 1.1 | 22/10/2025 | Revisión con información oficial: 3 estaciones (2 peajes + 1 CCO) | Ing. Ambiental |
 | 2.0 | 20/01/2026 | RECONCILIACIÓN AUDIT .42: Cambio a Estaciones Industriales Compactas con Sensor de Visibilidad (Neblina) Obligatorio. | Ing. ITS |
-| **2.1** | **20/01/2026** | **CRITICAL FIX:** Aclaración técnica Mandatoria sobre Visibilidad (M.O.R.) vs Radiación Solar. Rechazo de Sensor Davis 6450 para seguridad vial. | Ing. ITS |
+| **2.1** | **21/01/2026** | **CRITICAL FIX (FORENSIC AUDIT):** Rechazo explícito de sensor Davis 6450. Especificación mandatoria de Transmisómetro de Visibilidad Óptica para Alerta de Neblina (Manual 2024). | Ing. ITS |
 
 ---
 
@@ -24,7 +24,7 @@
 |:------|:------|
 | **Sistema** | Estaciones Meteorológicas de Grado Industrial |
 | **Cantidad** | **3 Unidades** (Peaje Zambito, Peaje Aguas Negras, CCO La Lizama) |
-| **CAPEX** | **USD $75,000** |
+| **CAPEX** | **USD $105,000** |
 | **Función** | Monitoreo climático y detección de neblina para seguridad vial |
 
 ---
@@ -62,7 +62,9 @@
 ### 3.2 Diferenciación Técnica Crítica (Hard Deck)
 
 > [!CAUTION]
-> **RECHAZO DE SUBSTITUTE TÉCNICO:** El sensor CMOS de Radiación Solar (ej. Davis 6450) mide irradiancia en W/m², lo cual solo es válido para el cálculo de Evapotranspiración (ETo). **BAJO NINGUNA CIRCUNSTANCIA** se aceptará este sensor como sustituto del hardware de medición de Visibilidad/Neblina. La seguridad vial exige hardware óptico de dispersión frontal.
+> **RECHAZO DE SUBSTITUTE TÉCNICO (FORENSIC HARD DECK):**
+> Se rechaza explícitamente el uso de estaciones tipo **Davis Vantage Pro2 (o sensor 6450)** propuesto en anexos anteriores. Este equipo es una estación agrometeorológica que mide radiación solar, NO Visibilidad Óptica (Neblina).
+> **REQUISITO MANDATORIO:** El sistema debe incluir un **Sensor de Visibilidad Óptica (Transmisómetro o Dispersión Frontal)** con rango 10m-2000m para activar las alertas de neblina exigidas por el Manual de Señalización Vial 2024 y la Resolución 20213040035125.
 
 ### 3.3 Integración con SCADA/CCO
 - ✅ Protocolo abierto **Modbus TCP** nativo (sin gateways prosumidores).
@@ -79,7 +81,7 @@
 | Ubicación | PK (RN 4511) | Función |
 |:----------|:-------------|:--------|
 | **Peaje Zambito** | PK 9+200 | Monitoreo ambiental + Seguridad vial |
-| **Peaje Aguas Negras** | PK 81+800 | Monitoreo ambiental + Seguridad vial |
+| **Peaje Aguas Negras** | PK 80+000 | Monitoreo ambiental + Seguridad vial |
 | **CCO La Lizama** | RN 4513 PK 4+300 | Estación de referencia Central |
 
 ---
@@ -88,10 +90,10 @@
 
 | Ítem | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:---------|:-------------------|:------------|
-| Estación Industrial All-in-One + Visibilímetro | 3 | $15,000 | $45,000 |
+| Estación Industrial All-in-One + Visibilímetro + ETo | 3 | $25,000 | $75,000 |
 | Torre meteorológica 10m + Obras Civiles | 3 | $6,000 | $18,000 |
 | Integración CCO, Licencias y Comisionamiento | 3 | $4,000 | $12,000 |
-| **TOTAL CAPEX METEO** | - | - | **$75,000** |
+| **TOTAL CAPEX METEO** | - | - | **$105,000** |
 
 ---
 

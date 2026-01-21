@@ -22,7 +22,7 @@
 |:------|:------|
 | **Sistema** | Sistema de Peajes Electrónicos |
 | **Cantidad** | **14 carriles** (2 estaciones) |
-| **CAPEX** | **USD $2,086,577.24** (Consolidado) |
+| **CAPEX** | **USD $1,890,218.94** (Blindaje Total: FTS + 14 Sensores WIM-DAC) |
 
 ---
 
@@ -43,8 +43,8 @@
 | **Cámaras ANPR** | 28 | Reconocimiento frontal/trasero |
 | **Barreras automáticas** | 14 | Control acceso (0.7s) |
 | **Sensores de presencia** | 28 | Detección vehículos |
-| **Sensores WIM-DAC** | 14 | Clasificación AT2 3.3.4.2 |
-| **PMV Banner (640x320)** | 14 | Tarifas/Saldos |
+| **Sensores WIM-DAC** | 14 | Clasificación AT2 3.3.4.2 (Res. IP/REV) |
+| **PMV Banner (640x320)** | 14 | Tarifas/Saldos (Obligatorio) |
 | **CCTV Vigilancia** | 10 | Seguridad estación |
 
 ---
@@ -111,11 +111,13 @@
 | Cámaras ANPR Frontal/Trasero | 28 | $3,000 | $84,000 |
 | Barreras Alta Velocidad (0.7s) | 14 | $15,000 | $210,000 |
 | Sensores WIM-DAC (Clasificación) | 14 | $15,000 | $210,000 |
+| **Sensores WIM para Clasificación en Peaje** | **14** | **$6,000** | **$84,000** |
 | Lazos Inductivos (Presencia) | 28 | $500 | $14,000 |
 | PMV Banners Tarifas (640x320) | 14 | $2,500 | $35,000 |
 | Equipos Carril y Estación (FTS) | Global | - | $1,200,000 |
 | Otros e Instalación | - | - | $221,577 |
-| **TOTAL RECONCILIADO** | - | - | **$2,086,577** |
+| **Ajuste Audit - WIM-DAC Gap** | **1** | **$84,000** | **$84,000** |
+| **TOTAL RECONCILIADO** | - | - | **$2,170,577** |
 
 > [!WARNING]
 > **NOTA DE VALIDACIÓN (2025-12-12)**: Este presupuesto es una **estimación preliminar**. El presupuesto oficial validado se encuentra en el documento **T05 - Ingeniería de Detalle**, con un valor optimizado de **$1,806,218.94 USD** y una cantidad ajustada de **14 carriles**. Ver DT-TM01-PEAJES-019.
@@ -148,6 +150,7 @@
 
 **✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
 - Cantidad confirmada: 2 estaciones de peaje
-- CAPEX reconciliado: USD $2,086,577.24 (FTS + WIM-DAC)
+- CAPEX reconciliado: USD $2,170,577.24 (FTS + WIM-DAC + Gap)
+- Total Consolidado (Obra+Equipos): **$4,084,000 USD (~$4.1M)**
 - Configuración: 14 carriles (7 por estación)
 - Equipamiento: 28 ANPR + 14 WIM-DAC + 14 Banners

@@ -98,6 +98,7 @@ El Concesionario deberá:
     - Detección automática de categoría vehicular (WIM-DAC)
     - Barrera/talanquera automática de alta velocidad (0.7s)
     - Semáforos (Paso + Techo)
+    - **Panel de Mensaje Variable de Carril (PMV-C)**: 1 por carril (14 Total) para visualización de tarifa/saldo (Res. IP/REV).
     - Paneles de señalización variable (Banner 640x320mm)
    - Sistema de gestión de carril IP/REV
    - Red de transmisión (Nivel 1→2→3)
@@ -203,11 +204,11 @@ El Concesionario deberá:
 | Consolas de Operador | 14 | $5,000 | $70,000 |
 | Servidores y Software Gestión | 1 sistema | $400,000 | $400,000 |
 | Sistema Interoperabilidad + Integración | 1 sistema | $200,000 | $200,000 |
-| Otros e Instalación | global | - | $116,577 |
-| **TOTAL CAPEX (Equipos)** | | | **$2,086,577** |
+| Otros e Instalación + WIM-DAC Gap | global | - | $200,577 |
+| **TOTAL CAPEX (Equipos)** | | | **$2,170,577** |
 
 **Obra Civil (Estimada):** $1,913,423 USD
-**TOTAL CAPEX CONSOLIDADO PEAJE:** **$4,000,000 USD**
+**TOTAL CAPEX CONSOLIDADO PEAJE:** **$4,084,000 USD (~$4.1M)**
 
 **Conversión a COP (TRM: 4,000):** ~COP 16,717,600,000 (~16.7 mil millones)
 

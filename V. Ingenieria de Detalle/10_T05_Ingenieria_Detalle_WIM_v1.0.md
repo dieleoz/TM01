@@ -110,7 +110,7 @@
 | Cámaras LPR y Seguridad Estática | 6 | $2,272.03 | $13,632.18 |
 | Servicios Instalación Estática (Global) | 1 | $58,574.42 | $58,574.42 |
 | Otros Suministros Estáticos | 1 | $53,567.28 | $53,567.28 |
-| **A.I.U (Administración e Imprevistos - 5%)** | **1** | **$27,886.21** | **$27,886.21** |
+| **9.4.1** | **Reserva para Ajustes de Obra Civil y Calibración Inicial** | **1** | **$27,886.21** |
 | **TOTAL WBS WIM** | **-** | **-** | **$551,425.00** |
 
 ---

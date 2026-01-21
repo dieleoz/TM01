@@ -4,7 +4,7 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Centro de Control Operacional  
 **Responsable:** Ing. ITS / Ing. Sistemas  
-**Versión:** 1.1  
+**Versión:** 2.0 (RECONCILIACIÓN NODOS)  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -13,6 +13,7 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - PK 130 | Ing. ITS |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** La Lizama PK 4+300 | Ing. ITS |
+| 2.0 | 22/10/2025 | **RECONCILIACIÓN NODOS:** Validación con Backbone 322 km y RETIE 2024 | Ing. ITS |
 
 ---
 
@@ -23,6 +24,9 @@
 | **Sistema** | Centro de Control Operacional (CCO) |
 | **Ubicación** | La Lizama PK 4+300 (RN 4513) |
 | **CAPEX** | **USD $1,286,050** (COP $5,144,199,115) |
+
+> ⚠️ **RECONCILIACIÓN NODOS:** Diseño compatible con Backbone de Fibra Óptica de 322 km (T04 Telecom v30.0).
+> ⚠️ **RETIE 2024:** Todo componente eléctrico debe contar con Dictamen de Inspección bajo Resolución 40117/2024 vigente.
 
 ---
 
@@ -150,7 +154,7 @@
 | **11.41** | Control Acceso | 1 | $27,647,687 | $27,647,687 | $6,912 |
 | **11.42** | Integración SCADA | 1 | $230,000,000 | $230,000,000 | $57,500 |
 | **11.43** | Caja Empalme Fibra | 5 | $2,764,769 | $13,823,845 | $3,456 |
-| **11.44** | Cajas Red Troncal | 10 | $1,382,384 | $13,823,840 | $3,456 |
+| **11.44** | Cajas Red Troncal | Global | $1,382,384 | $13,823,840 | $3,456 |
 | **11.45** | Caja Reserva | 2 | $691,192 | $1,382,384 | $346 |
 | **11.46** | Canalización Ducto | 100 | $138,239 | $13,823,900 | $3,456 |
 | **11.47** | Empalmes Fibra | 20 | $691,192 | $13,823,840 | $3,456 |

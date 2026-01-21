@@ -70,7 +70,7 @@ El Concesionario deberá:
 
 3. **Garantizar disponibilidad** de equipos: **≥99% anual mínimo** (AT4)
 
-4. **Cumplir protocolo NTCIP 1202** (obligatorio según AT3)
+4. **Cumplir protocolo NTCIP 1203 / 1204** (obligatorio según AT3 para interoperabilidad de gráficos y meteorología)
 
 5. **Distribución:** Separación máxima de **20 km por sentido** (AT1)
 
@@ -88,7 +88,9 @@ El Concesionario deberá:
 - Separación máxima: 20 km por sentido
 - Instalación: Alternada en bermas externas (lado A/lado B)
 - Tipo: PASA-VÍAS (pórtico sobre calzada) o poste unidireccional
-- **2 PMV por peaje:** 1 antes + 1 después (obligatorio)
+- **Peajes Bidireccionales:** Mínimo 2 PMV por área (1 antes + 1 después)
+- **Peajes Unidireccionales:** Mínimo 1 PMV por área
+- **Separación Máxima:** 20 km por sentido (AT1)
 
 **AT2, Sección 3.3.4.8:**
 - Información variable sobre: condiciones de tráfico, obras, eventos especiales
@@ -97,7 +99,7 @@ El Concesionario deberá:
 - Coordinación con Policía de Carreteras (prioridad a mensajes de seguridad vial)
 
 **AT3, Capítulo IV:**
-- Protocolo NTCIP 1202 (obligatorio)
+- Protocolo NTCIP 1203/1204 (obligatorio para soporte gráfico y meteorológico)
 - Interoperabilidad con sistema ITS
 
 **AT4 (Indicadores):**
@@ -109,9 +111,9 @@ El Concesionario deberá:
 
 | Componente | Cantidad | Ubicación | Función |
 |:-----------|:---------|:----------|:--------|
-| **Paneles PMV Fijos (Pórtico)** | **7 unidades** | Antes/después peajes, estratégicos | Información bidireccional sobre calzada |
-| **Paneles PMV Fijos (Poste)** | **7 unidades** | Intersecciones, zonas críticas | Información unidireccional |
-| **TOTAL PMV** | **14 unidades** | Distribuidos estratégicamente | Cobertura optimizada (Manual 2024) |
+| **Paneles PMV Fijos (Pórtico)** | **14 unidades** | Peajes (2 por área) + Estratégicos | Información bidireccional / Full Matrix RGB |
+| **Paneles PMV Fijos (Poste)** | **14 unidades** | Intersecciones / Desvíos | Información unidireccional / Alfanumérico+Gráfico |
+| **TOTAL PMV** | **28 unidades** | Cobertura Estricta (Blindaje Contractual) | 20 km por sentido (AT1) |
 | **Controladores PMV** | 14 unidades | Gabinete en cada panel | Gestión de mensajes y comunicación |
 | **Estructuras soporte** | 14 unidades | Pórticos y postes | Soporte físico de paneles |
 | **Conexión a red FO** | 14 puntos | Integración con red de telecomunicaciones | Comunicación con CCO |

@@ -4,7 +4,9 @@
 **Fecha:** 21/10/2025  
 **Sistema:** Iluminación Vial LED  
 **Responsable:** Ing. Eléctrico / Ing. Iluminación  
-**Versión:** 1.1  
+**Versión:** 2.0 (RECONCILIACIÓN NODOS)  
+
+> ⚠️ **NORMATIVA CRÍTICA:** Todo diseño y prueba DEBE cumplir con el **RETIE Resolución 40117 de 2024**. Las referencias a RETIE 2013 se consideran derogadas.
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -13,6 +15,7 @@
 |:--------|:------|:--------|:------|
 | 1.0 | 21/10/2025 | Creación inicial - 572 luminarias | Ing. Eléctrico |
 | 1.1 | 22/10/2025 | **Revisión con información oficial:** 410 luminarias | Ing. Eléctrico |
+| 2.0 | 22/10/2025 | **RECONCILIACIÓN NODOS:** Validación con Backbone 322 km y RETIE 2024 | Ing. ITS |
 
 ---
 
@@ -23,6 +26,9 @@
 | **Sistema** | Iluminación Vial LED |
 | **Cantidad** | **410 luminarias** |
 | **CAPEX** | **USD $1,339,240** |
+
+> ⚠️ **RECONCILIACIÓN NODOS:** Diseño compatible con Backbone de Fibra Óptica de 322 km (T04 Telecom v30.0).
+> ⚠️ **RETIE 2024:** Todo componente eléctrico debe contar con Dictamen de Inspección bajo Resolución 40117/2024 vigente.
 
 ---
 

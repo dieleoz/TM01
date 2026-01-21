@@ -32,17 +32,13 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. ESTACIÓN INDUSTRIAL COMPACTA** | **3** | **$15,000.00** | **$45,000.00** | **60.0%** |
-| Sensor All-in-One + Visibilímetro Óptico | 3 | $9,000.00 | $27,000.00 | 36.0% |
-| Datalogger Industrial + Modem/Switch | 3 | $3,500.00 | $10,500.00 | 14.0% |
-| Gabinete IP66 + Protección Eléctrica | 3 | $2,500.00 | $7,500.00 | 10.0% |
-| **2. INFRAESTRUCTURA Y OBRA CIVIL** | **3** | **$6,000.00** | **$18,000.00** | **24.0%** |
-| Torre meteorológica 10m (Mástil) | 3 | $3,500.00 | $10,500.00 | 14.0% |
-| Cimentación y Puesta a Tierra | 3 | $2,500.00 | $7,500.00 | 10.0% |
-| **3. INTEGRACIÓN Y SERVICIOS** | **3** | **$4,000.00** | **$12,000.00** | **16.0%** |
-| Ingeniería de integración SCADA | 1 | $6,000.00 | $6,000.00 | 8.0% |
-| Comisionamiento y FAT/SAT | 3 | $2,000.00 | $6,000.00 | 8.0% |
-| **TOTAL CAPEX METEO** | - | - | **$75,000.00** | **100%** |
+| **1. ESTACIÓN INDUSTRIAL COMPACTA** | **3** | **$25,000.00** | **$75,000.00** | **71.4%** |
+| All-in-One + Visibilímetro + Piranómetro | 3 | $20,000.00 | $60,000.00 | - |
+| Datalogger Industrial + Modem/Switch | 3 | $3,500.00 | $10,500.00 | - |
+| Gabinete IP66 + Protección (ETo) | 3 | $1,500.00 | $4,500.00 | - |
+| **2. INFRAESTRUCTURA + MONTAJE** | **3** | **$10,000.00** | **$30,000.00** | **28.6%** |
+| Torre 10m + Cimentación + SAT | 3 | $10,000.00 | $30,000.00 | - |
+| **TOTAL CAPEX METEO** | - | - | **$105,000.00** | **100%** |
 
 **CAPEX/estación:** $75,000.00 / 3 = **$25,000 USD/estación** (Grado Industrial)
 
@@ -274,6 +270,8 @@ CCO/SCADA
 | **Presión barométrica** | 870-1084 hPa | hPa | 5 min |
 | **Visibilidad** | 10-75,000m | m | 5 min |
 | **Radiación solar** | 0-1500 W/m² | W/m² | 5 min |
+| **Evapotranspiración (ETo)** | Cálculo Penman-Monteith | mm/día | Diaria |
+| **Horas de Sol** | Brillo Solar (>120 W/m²) | Horas | Diaria |
 | **Temperatura pavimento** | -40 a +80°C | °C | 5 min |
 | **Estado pavimento** | Seco/Húmedo/Mojado/Hielo | - | 5 min |
 

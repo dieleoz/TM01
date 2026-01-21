@@ -2388,7 +2388,30 @@ f)  Si la ANI encontrare fundadas las razones esgrimidas por el Concesionario, o
 Los Indicadores no serán afectados en ningún caso por la realización de rutinas de Mantenimiento Programado que sean reportadas por el Concesionario mediante una declaración de acción preventiva, tal como se establece en el numeral 4.3.3 de este Apéndice.
 
 
+
 ---
+
+## 8. INDICADOR DE DISPONIBILIDAD (SISTEMAS ITS) - ADICIÓN FORENSE
+
+### Tabla 4 - Indicador de Disponibilidad O6 (Sistemas ITS)
+
+| Nombre del Indicador | **Disponibilidad de Sistemas ITS (O6)** |
+|:--- |:--- |
+| **Identificador** | **O6** |
+| **Concepto de Medición** | Porcentaje de tiempo que los sistemas ITS (Peaje, Pesaje, CCO, Video, PMV, SOS, Radio, METEO) operan correctamente según sus especificaciones funcionales. |
+| **Normatividad** | Manual de Diseño ITS (ANI), Resolución 546/2018 (IP/REV) y Res 20213040035125. |
+| **Frecuencia** | Mensual |
+| **Unidad de Medición** | % (Porcentaje) |
+| **Método de Medida** | $$ D = \frac{HT - (TI + TM)}{HT} \times 100 $$ <br> Donde: <br> HT = Horas Totales del mes <br> TI = Tiempo de Indisponibilidad (Falla) <br> TM = Tiempo de Mantenimiento Programado Autorizado |
+| **Valor de Aceptación** | **≥ 99.5%** (Para Peaje y Pesaje) <br> ≥ 98% (Para otros subsistemas) |
+| **Tiempo Máximo Corrección** | Inmediato (Redundancia) / 4 horas (Falla crítica) |
+
+> [!IMPORTANT]
+> **NOTA DE GLOSA BINARIA (O6):**
+> La disponibilidad se mide de forma **BINARIA** para cada activo. Si un equipo (ej. PMV o Cámara) no comunica o no cumple su función principal durante el periodo de evaluación, **se pierde el 100% de la disponibilidad de ese activo** para el cálculo del día. No existen disponibilidades parciales. Cualquier valor inferior al Valor de Aceptación genera Glosa Administrativa automática.
+
+---
+
 
 ## 3. CONTROL DE VERSIONES
 
