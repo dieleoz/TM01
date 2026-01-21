@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** Estaciones Meteorológicas - Sistema de Monitoreo Climático  
 **Responsable:** Ingeniero Ambiental / Arquitecto de Sistemas  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Completado y Actualizado (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Reconciliado Industrial Class)  
+**Estado:** ✅ Arquitectura Validada y Reconciliada (Versión Industrial)
 
 ---
 
@@ -128,9 +128,9 @@ Esta arquitectura cubre el **Sistema de Estaciones Meteorológicas** en 3 ubicac
 
 | Componente | Función | Cantidad | Especificación |
 |:-----------|:--------|:---------|:---------------|
-| **Estaciones Meteorológicas Davis Pro2** | Medición de variables climáticas | **3 unidades** | Sensores integrados, precisión según NTC 5660, WeatherLink API |
-| **WeatherLink Live** | Comunicación y almacenamiento | 3 unidades | API REST, almacenamiento nube, sincronización local |
-| **Sistema de Integración SCADA** | Gestión y procesamiento | 1 unidad | Integración con SCADA, generación de reportes |
+| **Estaciones Meteo Industriales** | Medición multivariable | **3 unidades** | Compacta, ultrasonido viento, visibilímetro óptico |
+| **Gateway de Comunicación** | Modbus/SNMP over IP | 3 unidades | Conversión a red troncal, IP66 |
+| **Sistema de Integración SCADA** | Gestión y procesamiento | 1 unidad | Integración nativa, base de datos local |
 | **Servidores Gestión Meteorología** | Control y gestión | 2-3 unidades | Alta disponibilidad, VM |
 | **Servidores SCADA** | Monitoreo y gestión | 2-3 unidades | Alta disponibilidad, VM |
 | **Estaciones Operador** | Control y monitoreo | 2-4 puestos | Monitores, software de gestión |

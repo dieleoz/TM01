@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 31/10/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** Postes SOS - Sistema de Telefonía de Emergencia  
 **Responsable:** Ingeniero de Sistemas ITS / Administrador Contractual EPC  
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Completado
+**Versión:** 1.5 MVP (Alineado Manual 2024)  
+**Estado:** ✅ Reconciliado
 
 ---
 
@@ -27,10 +27,10 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 Este análisis cubre el **Sistema de Postes SOS** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
-- **Cantidad:** 88 postes SOS
+- **Cantidad:** 98 postes SOS (Alineación AT1 3km max)
 - **Distribución:** Alternados en bermas externas (derecha/izquierda)
 - **Distancia máxima:** 3 km entre postes (obligatorio contractual)
-- **Cobertura geográfica:** 100% del corredor (RN 4510, RN 4511, RN 4513)
+- **Cobertura geográfica:** 100% del corredor (293.0 km técnicos)
 - **Integración:** CCO La Lizama PK 4+300 (RN 4513)
 
 ### 1.3 Referencias
@@ -105,12 +105,12 @@ Este análisis cubre el **Sistema de Postes SOS** a lo largo de 259.6 km princip
 - ✅ Longitud de sobreancho: 10 metros
 - ✅ Instalación simultánea con obras de construcción
 - ✅ Cobertura 100% del corredor (259.6 km principales + 33.4 km adicionales)
-- ✅ Total: 88 postes SOS (validado contractualmente)
+- ✅ Total: 98 postes SOS (validado contractualmente para cumplir 3km)
 
 **Distribución geográfica:**
-- **RN 4510:** ~134 km → ~45 postes
-- **RN 4511:** ~149 km → ~50 postes
-- **RN 4513:** ~10 km → 1 poste (SOS #88, conexión CCO)
+- **RN 4510:** ~134 km → 37 postes
+- **RN 4511:** ~149 km → 56 postes
+- **RN 4513:** ~10 km → 5 postes (SOS #88-#92, conexión CCO/Acceso)
 
 ---
 
@@ -532,9 +532,8 @@ Este análisis cubre el **Sistema de Postes SOS** a lo largo de 259.6 km princip
 
 ---
 
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Análisis de Requisitos Completado  
-**Fecha:** 31/10/2025  
+**Versión:** 1.5 MVP  
+**Estado:** ✅ Análisis de Requisitos Reconciliado (98 Unid)  
+**Fecha:** 21/01/2026  
 **Responsable:** Ingeniero de Sistemas ITS / Administrador Contractual EPC  
-**Próximo paso:** T03 - Arquitectura Conceptual SOS
-
+**Próximo paso:** T03 - Arquitectura Conceptual SOS v1.5

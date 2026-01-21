@@ -3,9 +3,9 @@
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** PMV - Paneles de Mensaje Variable  
-**Fecha:** 22 de octubre de 2025  
-**Versión:** 2.0  
-**Basado en:** T04 PMV v2.0 (Manual 2024) + Layout v2.0  
+**Fecha:** 21 de Enero 2026  
+**Versión:** 1.5 MVP (Alineado Normativa 2024)  
+**Basado en:** T04 PMV v1.5 (Manual 2024) + Layout v3.0  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -112,28 +112,35 @@
 
 ---
 
-## 📊 **APU DETALLADO - PMV BIDIRECCIONAL**
+### **APU-PMV-001: PMV Bidireccional (Pórtico)**
 
-### **APU-PMV-001: PMV en Pórtico Tipo Bandera**
+| Componente | Total (USD) |
+|:-----------|:------------|
+| **Panel PMV P20** | $45,000.00 |
+| **Estructura Pórtico** | $40,000.00 |
+| **Sistema de Energía y Enlace** | $15,000.00 |
+| **TOTAL APU-PMV-001 (Pórtico)** | **$100,000.00/panel** |
 
-| Componente | Cantidad | Costo Unit. | Total |
-|:-----------|:---------|:------------|:------|
-| **A. PANEL PMV P20** | | | **$43,354.08** |
-| PMV P20 1G 64x64 (Suministro, Incluye IVA) | 1.0 und | $26,180.00 | $26,180.00 |
-| Factor Imprevistos + AIU (Panel) (x1.38 + 20% AIU) | 1.0 und | $17,174.08 | $17,174.08 |
-| **B. ESTRUCTURA PÓRTICO (A)** | | | **$72,167.24** |
-| Suministro y Montaje Estructura (Según cotización x1.38 + AIU) | 1.0 und | $72,167.24 | $72,167.24 |
-| **C. SISTEMA SOLAR OFF-GRID** | | | **$30,076.62** |
-| Kit Solar 16 Paneles + 5 Baterías (Según cotización) | 1.0 und | $18,162.00 | $18,162.00 |
-| Factor Imprevistos + AIU (Solar) (x1.38 + 20% AIU) | 1.0 und | $11,914.62 | $11,914.62 |
-| **D. PUESTA A TIERRA** | | | **$3,947.94** |
-| Sistema SPT completo (Según cotización) | 1.0 und | $2,384.00 | $2,384.00 |
-| Factor Imprevistos + AIU (SPT) (x1.38 + 20% AIU) | 1.0 und | $1,563.94 | $1,563.94 |
-| **SUBTOTAL COSTO BASE** | | | **$149,545.88** |
-| **Administración (0%)** | | | **$0** |
-| **Imprevistos (0%)** | | | **$0** |
-| **Utilidad (0%)** | | | **$0** |
-| **TOTAL APU-PMV-001 (Pórtico)** | | | **$149,545.88/panel** |
+**Para 7 PMV bidireccionales:** 7 × $100,000 = **$700,000 USD**
+
+---
+
+### **APU-PMV-002: PMV Unidireccional (Poste)**
+
+| Componente | Total (USD) |
+|:-----------|:------------|
+| **Panel PMV P20** | $35,000.00 |
+| **Estructura Poste** | $15,000.00 |
+| **Sistema de Energía y Enlace** | $10,000.00 |
+| **TOTAL APU-PMV-002 (Poste)** | **$60,000.00/panel** |
+
+**Para 7 PMV unidireccionales:** 7 × $60,000 = **$420,000 USD**
+
+---
+
+### **Gestión Centralizada e Integración**
+- **Sistema de Gestión e Integración:** **$70,000 USD**
+- **TOTAL SISTEMA PMV** | **-** | **-** | **$1,190,000.00** |
 
 ---
 
@@ -150,23 +157,7 @@
 | Factor Imprevistos + AIU (SPT) | 28 | $1,563.94 | $43,790.32 |
 | **TOTAL SISTEMA PMV** | **-** | **-** | **$4,187,284.64** |
 
-**Para 14 PMV bidireccionales:** 14 × $149,545.88 = **$2,093,642.32 USD**
 
----
-
-### **APU-PMV-002: PMV Unidireccional (Poste 8m)**
-
-| Componente | Total (USD) |
-|:-----------|:------------|
-| **Panel PMV P20** | $43,354.08 |
-| **Estructura Poste (Estimada)** | $28,866.90 |
-| **Sistema Solar** | $30,076.62 |
-| **Puesta a Tierra** | $3,947.94 |
-| **SUBTOTAL** | $106,245.54 |
-| **AIU (0%)** | $0 |
-| **TOTAL APU-PMV-002 (Poste)** | **$106,245.54/panel** |
-
-**Para 14 PMV unidireccionales:** 14 × $106,245.54 = **$1,487,437.56 USD**
 
 ---
 
@@ -208,51 +199,24 @@
 
 ---
 
-## 🗺️ **UBICACIONES SEGÚN TABLA MAESTRA**
+### **Distribución de Paneles (14 unidades):**
 
-### **PMV Izquierda (14 unidades):**
-
-| # | PKR | Ruta | UF | PKD | Separación (km) | Switch L2 | Tipo |
-|:--|:----|:-----|:---|:----|:----------------|:----------|:-----|
-| 1 | 41+200 | 4510 | 0D | 242+000 | 0.00 | L2-242 | Peaje (bidireccional) |
-| 2 | 57+350 | 4510 | 0D | 225+750 | 16.15 | L2-226 | Estratégico |
-| 3 | 77+350 | 4510 | 0D | 205+750 | 20.00 | L2-206 | Estratégico |
-| 4 | 97+250 | 4510 | 0D | 185+850 | 19.90 | L2-186 | Estratégico |
-| 5 | 117+250 | 4510 | 0D | 165+850 | 20.00 | L2-166 | Estratégico |
-| 6 | 2+790 | 4511 | 5.1 | 147+710 | 19.57 | L2-148 | Estratégico |
-| 7 | 14+200 | 4511 | 2 | 136+300 | 11.41 | L2-136 | Estratégico |
-| 8 | 34+200 | 4511 | 0D | 116+300 | 20.00 | L2-116 | Estratégico |
-| 9 | 54+200 | 4511 | 3 | 96+300 | 20.00 | L2-096 | Estratégico |
-| 10 | 74+200 | 4511 | 4 | 76+300 | 20.00 | L2-076 | Estratégico |
-| 11 | 86+800 | 4511 | 7 | 63+700 | 12.60 | L2-064 | Estratégico |
-| 12 | 106+580 | 4511 | 8 | 43+920 | 19.78 | L2-044 | **ETD integrada** |
-| 13 | 126+580 | 4511 | 10 | 23+920 | 20.00 | L2-024 | **ETD integrada** |
-| 14 | 146+580 | 4511 | 12 | 3+920 | 20.00 | L2-004 | Final ruta |
-
-**Promedio separación:** 19.05 km ✅ (cumple ~20 km)
-
----
-
-### **PMV Derecha (14 unidades):**
-
-| # | PKR | Ruta | UF | PKD | Separación (km) | Switch L2 | Tipo |
-|:--|:----|:-----|:---|:----|:----------------|:----------|:-----|
-| 1 | 41+000 | 4510 | 0D | 242+100 | 0.00 | L2-242 | Peaje (bidireccional) |
-| 2 | 58+950 | 4510 | 0D | 224+150 | 17.95 | L2-224 | Estratégico |
-| 3 | 78+950 | 4510 | 0D | 204+150 | 20.00 | L2-204 | Estratégico |
-| 4 | 98+750 | 4510 | 0D | 184+350 | 19.80 | L2-184 | Estratégico |
-| 5 | 118+660 | 4510 | 0D | 164+440 | 19.91 | L2-164 | Estratégico |
-| 6 | 4+200 | 4511 | 0D | 146+300 | 19.57 | L2-146 | Estratégico |
-| 7 | 22+300 | 4511 | 0D | 128+200 | 18.10 | L2-128 | Estratégico |
-| 8 | 42+300 | 4511 | 5.1 | 108+200 | 20.00 | L2-108 | Estratégico |
-| 9 | 60+480 | 4511 | 5.1 | 90+020 | 18.18 | L2-090 | Estratégico |
-| 10 | 77+350 | 4511 | 11 | 73+150 | 16.87 | L2-073 | Estratégico |
-| 11 | 97+200 | 4511 | 11 | 53+300 | 19.85 | L2-053 | Estratégico |
-| 12 | 117+200 | 4511 | 11 | 33+300 | 20.00 | L2-033 | Estratégico |
-| 13 | 136+750 | 4511 | 11 | 13+750 | 19.55 | L2-014 | Estratégico |
-| 14 | 5+900 | 4513 | 11 | 278+100 | 18.14 | L2-278 | Final ruta |
-
-**Promedio separación:** 18.70 km ✅
+| # | PKR | Ruta | UF | Ubicación | Tipo |
+|:--|:----|:-----|:---|:----------|:-----|
+| 1 | 9+200 | 4510 | 1 | Peaje Zambito | Pórtico |
+| 2 | 11+000 | 4510 | 1 | Peaje Zambito | Poste |
+| 3 | 40+000 | 4510 | 2 | Estratégico | Pórtico |
+| 4 | 70+000 | 4510 | 3 | Estratégico | Poste |
+| 5 | 80+200 | 4510 | 4 | Peaje Aguas Negras | Pórtico |
+| 6 | 82+000 | 4510 | 4 | Peaje Aguas Negras | Poste |
+| 7 | 110+000 | 4510 | 5 | Estratégico | Pórtico |
+| 8 | 10+000 | 4511 | 6 | Estratégico | Poste |
+| 9 | 40+000 | 4511 | 7 | Estratégico | Pórtico |
+| 10 | 70+000 | 4511 | 8 | Estratégico | Poste |
+| 11 | 100+000 | 4511 | 9 | Estratégico | Pórtico |
+| 12 | 130+000 | 4511 | 10 | Centro de Control | Poste |
+| 13 | 146+580 | 4511 | 12 | Final Ruta | Pórtico |
+| 14 | 5+900 | 4513 | 11 | Conexión CCO | Poste |
 
 ---
 
@@ -346,9 +310,9 @@
 
 | Concepto | Valor (USD) |
 |:---------|:------------|
-| **CAPEX (28 paneles)** | $4,187,284.64 | 91.0% |
-| **OPEX (20 años)** | $418,728 | 9.0% |
-| **TOTAL 20 AÑOS** | **$4,606,012.64** | **100%** |
+| **CAPEX (14 paneles)** | $1,190,000.00 | 78.0% |
+| **OPEX (20 años)** | $336,000.00 | 22.0% |
+| **TOTAL 20 AÑOS** | **$1,526,000.00** | **100%** |
 
 ---
 

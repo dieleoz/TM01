@@ -1,10 +1,10 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo - Metodología Punto 42 (Estrategia Source of Truth)
 
-**Versión:** 28.0 (RECONCILIACIÓN FINAL SOS/ETD/TELECOM)  
-**Fecha de actualización:** 20 de Enero 2026  
-**Estado:** ✅ **RECONCILIACIÓN TOTAL COMPLETADA** - Todos los subsistemas ITS blindados  
-**Meta Actual:** Fase 6.0 - Servir Ingeniería y Cierre Administrativo.
+**Versión:** 30.0 (PROJECT CLOSURE - ALL SYSTEMS RECONCILED)  
+**Fecha de actualización:** 21 de Enero 2026  
+**Estado:** ✅ **RECONCILIACIÓN TOTAL COMPLETADA** - Todos los subsistemas ITS (8/8) blindados  
+**Meta Actual:** Fase 6.0 - Servir Ingeniería y Entrega Final de Documentación.
 
 ---
 
@@ -36,8 +36,9 @@
 **Sistema 5:** **WIM** ✅  
 **Sistema 6:** **Estaciones Meteorológicas** ✅  
 **Sistema 7:** **Telecomunicaciones** ✅  
+**Sistema 8:** **Peaje y Recaudo** ✅ (Reconciliado 14 carriles / $2.08M Equipos)  
 **Metodología:** `VIII. Documentos Maestros y Metodologia/00_METODOLOGIA_PUNTO_42_MVP_v2.0.md`  
-**Estado:** ✅ **7 SISTEMAS COMPLETADOS** - Todos los sistemas ITS finalizados
+**Estado:** ✅ **8 SISTEMAS COMPLETADOS** - Todos los sistemas ITS/Peaje finalizados
 
 **Documentos Completados - Postes SOS:**
 - ✅ T01: Ficha de Sistema SOS (`24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md`)
@@ -88,12 +89,14 @@
 - ✅ Validación Contractual Meteorológicas (v2.0 - Citación Manual 2024)
 
 **Documentos Completados - Telecomunicaciones:**
-- ✅ T01: Ficha de Sistema Telecomunicaciones (`27H_T01_Ficha_Sistema_Telecomunicaciones_MVP_v1.0.md`)
-- ✅ T02: Análisis de Requisitos Telecomunicaciones (`27H_T02_Analisis_Requisitos_Telecomunicaciones_MVP_v1.0.md`)
-- ✅ T03: Arquitectura Conceptual Telecomunicaciones (`27H_T03_Arquitectura_Conceptual_Telecomunicaciones_MVP_v1.0.md`)
-- ✅ T04: Especificaciones Técnicas Telecomunicaciones (validado - actualizar longitud fibra 285→322 km)
-- ✅ T05: Ingeniería de Detalle Telecomunicaciones (validado - actualizar longitud fibra 285→322 km)
+...
 - ✅ Validación Contractual Telecomunicaciones (usada como referencia)
+
+**Documentos Completados - Peaje y Recaudo:**
+- ✅ T01: Ficha de Sistema Peajes (`25_T01_Ficha_Sistema_Peajes_v1.0.md`)
+- ✅ T04: Especificaciones Técnicas Peajes (v1.2 - 14 Carriles / 28 ANPR)
+- ✅ T05: Ingeniería de Detalle Peaje (v1.5 - $2.08M Consolidado)
+- ✅ Integración WIM-DAC Contractual (AT2 3.3.4.2)
 
 **Coherencia Verificada:**
 - ✅ **SOS:** 98 postes (Manual 2024 compliance)
@@ -156,12 +159,13 @@
 - Estado: **100% Alineado** (T01-T05 + Validación)
 
 **Sistemas Pendientes de Recertificación (Fase 1.0):**
-**System 2:** **CCTV** ✅ (30 PTZ / $1.89M - Alineado 100%)
-**Sistema 3:** **PMV** ✅ (Auditado y Reconciliado $2.45M)
+**System 2:** **CCTV** ✅ (15 PTZ / $1.63M - Alineado 100%)
+**Sistema 3:** **PMV** ✅ (Auditado y Reconciliado $1.19M)
 **Sistema 4:** **ETD/RADAR** ✅ (Auditado y Reconciliado $1.7M)
-**Sistema 5:** **WIM** ✅ (Auditado y Reconciliado $551k)
-**Sistema 6:** **Estaciones Meteorológicas** ✅ (Auditado y Reconciliado $75k)
+**Sistema 5:** **WIM** ✅ (Auditado y Reconciliado $551,425 - Manual 2024)
+**Sistema 6:** **Estaciones Meteorológicas** ✅ (Auditado y Reconciliado $75,000 - Industrial)
 **Sistema 7:** **Telecomunicaciones** ✅ (Longitud Fibra 322km / $7.98M)
+**Sistema 8:** **Peaje y Recaudo** ✅ (14 Carriles / $2.08M)
 
 ---
 
@@ -175,8 +179,8 @@
 ### 🚀 Fase 1.0: Alineación Ingeniería Conceptual (T01-T03)
 **Objetivo:** Asegurar que los documentos conceptuales reflejen los 293 km y las cantidades validadas.
 - [x] **SOS:** T01-T05 actualizados a 98 unidades y $2.45M (Normativa 2024).
-- [ ] **CCTV:** Verificar cobertura en T01-T03.
-- [ ] **Otros Sistemas:** Auditoría rápida de cantidades vs longitud.
+- [x] **CCTV:** Coherencia 15 cámaras / $1.63M.
+- [x] **Otros Sistemas:** Auditoría completa de cantidades vs longitud (322 km).
 
 ### ✅ Fase 1.1: Alineación Backbone (Telecom + Energía)
 **Objetivo:** Alinear sistemas transversales.
@@ -208,6 +212,7 @@
 5. **WIM (Sistema de Pesaje)** ✅ **COMPLETADO ($551k)**
 6. **Estaciones Meteorológicas** ✅ **COMPLETADO ($75k)**
 7. **Telecomunicaciones (Fibra Óptica)** ✅ **COMPLETADO ($7.98M)**
+8. **Peaje y Recaudo** ✅ **COMPLETADO ($2.08M Equipos / $4.0M Consolidado)**
 
 ### 🔄 Fase 8: Sincronización y Validación Final
 
@@ -233,7 +238,7 @@
    - [x] ✅ **COMPLETADO 20/01/2026:** WIM: CAPEX actualizado $1,200K → $551K (Optimización Adenda 4)
    - [x] ✅ **COMPLETADO 20/01/2026:** Estaciones Meteo: CAPEX actualizado $15K → $75K (Visibilímetro Industrial Mandatorio)
    - [x] ✅ **COMPLETADO:** Actualización T04/T05 con CAPEX consolidado (7 sistemas)
-   - [x] ✅ **COMPLETADO:** Telecomunicaciones: Longitud fibra (322 km) y CAPEX ($7.98M) validados.
+   - [x] ✅ **COMPLETADO:** Telecomunicaciones: Longitud fibra (322 km) y CAPEX ($7.98M) validados y sincronizados en WBS.
 
 ---
 
@@ -439,8 +444,8 @@
 
 ---
 
-**Versión:** 27.0 (Cierre Auditoría .42)  
-**Estado:** ✅ **SISTEMAS BLINDADOS** - Todos los subsistemas ITS auditados y reconciliados  
-**Fecha:** 20 de Enero 2026  
-**Sistemas Completados:** 7/7 (Listos para empaquetado final)  
-**Próximo paso:** Actualizar Telecomunicaciones (Fibra 322km) y generar el entregable final del Capítulo 4.
+**Versión:** 30.0 (PROJECT CLOSURE)  
+**Estado:** ✅ **SISTEMAS BLINDADOS** - Todos los subsistemas ITS auditados, reconciliados y sincronizados.
+**Fecha:** 21 de Enero 2026  
+**Sistemas Completados:** 8/8 (Listos para empaquetado final)  
+**Próximo paso:** Fase 6.0: Servir Ingeniería y Cierre Administrativo.

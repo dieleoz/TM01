@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 31/10/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** CCTV - Sistema de Circuito Cerrado de Televisión  
 **Responsable:** Ingeniero de Sistemas ITS / Administrador Contractual EPC  
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Análisis de Requisitos Completado (Piloto MVP)
+**Versión:** 1.5 MVP (Reconciliado 15 Cámaras)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -26,7 +26,7 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 ### 1.2 Alcance
 
-Este análisis se enfoca exclusivamente en el sistema de **30 cámaras CCTV** (20 PTZ + 10 fijas) distribuidas estratégicamente a lo largo del corredor vial (293 km de cobertura total), incluyendo su equipamiento de comunicación, almacenamiento, visualización y su integración con el Centro de Control Operacional (CCO) y la red de telecomunicaciones.
+Este análisis se enfoca exclusivamente en el sistema de **15 cámaras CCTV (PTZ)** distribuidas estratégicamente a lo largo del corredor vial (293 km de cobertura total), incluyendo su equipamiento de comunicación, almacenamiento, visualización y su integración con el Centro de Control Operacional (CCO) y la red de telecomunicaciones.
 
 **Ubicación del CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor.
 
@@ -181,7 +181,7 @@ Este análisis se enfoca exclusivamente en el sistema de **30 cámaras CCTV** (2
 | **RNF-CCTV-007** | Resolución de video | La resolución mínima del video capturado. | 1920×1080 (1080p) | AT3 (mínimo 320×240, recomendado 1080p) |
 | **RNF-CCTV-008** | Ancho de banda por cámara | El ancho de banda requerido para transmisión de video. | 4-8 Mbps (H.265) | Transmisión eficiente |
 | **RNF-CCTV-009** | Tiempo de respuesta PTZ | El tiempo desde comando hasta movimiento de cámara. | ≤ 2 segundos | Control remoto efectivo |
-| **RNF-CCTV-010** | Capacidad de almacenamiento | Capacidad total de almacenamiento para 30 días de grabación. | ≥ 90 TB (30 cámaras × 30 días) | AT2 (30 días mínimo) |
+| **RNF-CCTV-010** | Capacidad de almacenamiento | Capacidad total de almacenamiento para 30 días de grabación. | ≥ 45 TB (15 cámaras × 30 días) | AT2 (30 días mínimo) |
 
 ### 3.3 Requisitos de Seguridad
 
@@ -240,7 +240,7 @@ Este análisis se enfoca exclusivamente en el sistema de **30 cámaras CCTV** (2
 - Estado operativo de cámaras
 - Alarmas y eventos
 **Frecuencia:** Continuo (video), por evento (control, alarmas).  
-**Ancho de banda:** 4-8 Mbps por cámara (H.265), total ~120-240 Mbps para 30 cámaras.
+**Ancho de banda:** 4-8 Mbps por cámara (H.265), total ~60-120 Mbps para 15 cámaras.
 
 ---
 

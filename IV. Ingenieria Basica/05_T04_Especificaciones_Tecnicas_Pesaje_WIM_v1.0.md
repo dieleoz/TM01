@@ -30,11 +30,11 @@
 |:------|:------|
 | **Nombre del sistema** | WIM - Weigh In Motion (Pesaje Dinámico y Estático) |
 | **Categoría** | ITS - Control de Sobrecargas |
-| **Código interno** | T04-WIM-005-v2.0 |
-| **Configuración** | **1 estación bidireccional** |
-| **Componentes** | **2 plataformas HS-WIM (PAT) + 2 plataformas estáticas (Fairbanks)** |
+| **Código interno** | T04-WIM-005-v1.5 |
+| **Configuración** | **1 estación bidireccional (4 plataformas)** |
+| **Componentes** | **PAT DAW100 (Din) + Fairbanks Talon (Est) + PMVs + LPR** |
 | **CAPEX reconciliado** | **USD $551,425** |
-| **Documentos base** | T01 v1.1, T03 v1.0, Validación v2.0, Res. 100/2024 |
+| **Documentos base** | T01 v1.5, Res. 100/2024, Manual 2024 |
 
 ### 1.2 Ubicación de la Estación
 
@@ -170,7 +170,7 @@ Plataformas de pesaje dinámico (Weigh In Motion) que permiten pesar vehículos 
 | **Sensores de velocidad** | Lazo inductivo o radar Doppler |
 | **Sensores de eje** | Tubos neumáticos o piezoeléctricos |
 | **Clasificador vehicular** | Por número de ejes y separación |
-| **Cámara OCR (opcional)** | Captura de placa (verificación) |
+| **Cámara LPR Evidencia** | Captura de placa en báscula estática (Mandatorio Manual 2024) |
 
 ### 4.2 Básculas Estáticas - 2 unidades
 
@@ -324,9 +324,10 @@ Elementos comunes:
 | **Plataforma WIM** | 1 | 2 | Pre-selección dinámica |
 | **Báscula Estática** | 1 | 2 | Verificación y sanción |
 | **Lazo detector** | 2 | 4 | Activación WIM |
-| **Señalización LED "PARE"** | 1 | 2 | Control de paso |
-| **Barrera automática** | 1 | 2 | Control de acceso (opcional) |
-| **Cámara OCR/ANPR** | 2 | 4 | Captura de placa |
+| **Módulo Aspa-Flecha (600x600mm)** | 1 | 2 | Control de carril (M2024) |
+| **PMV SMV Instrucciones** | 1 | 2 | Instrucción SIGA / ENTRA (Texto 200mm) |
+| **Barrera automática (0.7s)** | 1 | 2 | Control de acceso (opcional) |
+| **Cámara LPR Evidencia** | 2 | 4 | Captura de placa (Manual 2024) |
 
 ### 6.3 Obras Civiles Requeridas
 

@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** PMV - Paneles de Mensaje Variable (Dynamic Message Signs - DMS)  
 **Responsable:** Ingeniero de Sistemas ITS / Arquitecto de Redes  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Completado y Actualizado (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Alineado Normativa 2024)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -29,7 +29,7 @@ Este documento define la **arquitectura conceptual** del Sistema de Paneles de M
 
 Esta arquitectura cubre el **Sistema de PMV** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
-- **Cantidad:** 28 paneles PMV (14 pórticos + 14 postes)
+- **Cantidad:** 14 paneles PMV (7 pórticos + 7 postes)
 - **Distribución:** Estratégicamente ubicados cada ~20 km por sentido
 - **Cobertura geográfica:** 100% del corredor (RN 4510, RN 4511, RN 4513)
 - **Integración:** CCO La Lizama PK 4+300 (RN 4513)
@@ -109,9 +109,9 @@ Esta arquitectura cubre el **Sistema de PMV** a lo largo de 259.6 km principales
 
 | Componente | Función | Cantidad | Especificación |
 |:-----------|:--------|:---------|:---------------|
-| **Paneles PMV Pórtico** | Información bidireccional | **14 unidades** | LED matriz 3×1.5m, RGB, IP65, NTCIP 1202 |
-| **Paneles PMV Poste** | Información unidireccional | **14 unidades** | LED matriz 3×1.5m, RGB, IP65, NTCIP 1202 |
-| **Controladores PMV** | Gestión de mensajes | 28 unidades | NTCIP 1202, Ethernet, IP65 |
+| **Paneles PMV Pórtico** | Información bidireccional | **7 unidades** | LED matriz 3×1.5m, RGB, IP65, NTCIP 1202 |
+| **Paneles PMV Poste** | Información unidireccional | **7 unidades** | LED matriz 3×1.5m, RGB, IP65, NTCIP 1202 |
+| **Controladores PMV** | Gestión de mensajes | 14 unidades | NTCIP 1202, Ethernet, IP65 |
 | **Estructuras soporte** | Pórticos y postes | 28 unidades | Metálicas, resistentes a viento 120 km/h |
 | **Switches de Acceso** | Conectividad local | 10-15 unidades | Gigabit, IP66, VLAN ITS |
 | **Red Troncal FO** | Backbone de comunicaciones | 283 km | Fibra monomodo G.652.D, anillo redundante |
@@ -287,10 +287,10 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~9 PMV
 
 | Tipo de Tráfico | Ancho de Banda por Panel | Total (28 paneles) | Prioridad |
 |:----------------|:-------------------------|:-------------------|:-----------|
-| **Control NTCIP 1202** | <100 kbps | <2.8 Mbps | 🔴 Alta (QoS) |
-| **Monitoreo SNMP** | <10 kbps | <280 kbps | 🟡 Media |
-| **Actualización firmware** | <1 Mbps (ocasional) | <28 Mbps (ocasional) | 🟡 Media |
-| **TOTAL (pico)** | ~1 Mbps | **~28 Mbps** | - |
+| **Control NTCIP 1202** | <100 kbps | <1.4 Mbps | 🔴 Alta (QoS) |
+| **Monitoreo SNMP** | <10 kbps | <140 kbps | 🟡 Media |
+| **Actualización firmware** | <1 Mbps (ocasional) | <14 Mbps (ocasional) | 🟡 Media |
+| **TOTAL (pico)** | ~1 Mbps | **~14 Mbps** | - |
 
 **Dimensionamiento de red:**
 - **Por panel:** 100 Mbps (Ethernet) → Margen 99%
@@ -556,7 +556,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~9 PMV
 | **Zonas Urbanas** | 4 | 2 pórticos + 2 postes | Reducción de velocidad |
 | **Puntos de Control** | 4 | 2 pórticos + 2 postes | Gestión de tráfico |
 | **Zonas de Accidentalidad** | 2 | 1 pórtico + 1 poste | Alertas de seguridad |
-| **TOTAL** | **28** | **14 pórticos + 14 postes** | - |
+| **TOTAL** | **14** | **7 pórticos + 7 postes** | - |
 
 ### 10.2 Ubicaciones Específicas Principales
 
@@ -626,7 +626,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~9 PMV
 - Requiere integración entre componentes
 - Gestión de múltiples proveedores
 
-**Costo estimado:** $2,450,000 USD (incluye estructuras pórtico, obras civiles, sistema de gestión)
+**Costo estimado:** $1,190,000 USD (incluye estructuras pórtico, obras civiles, sistema de gestión)
 
 **Justificación de selección:**
 - ✅ Cumple con todos los requisitos contractuales (AT1, AT2, AT3, AT4)

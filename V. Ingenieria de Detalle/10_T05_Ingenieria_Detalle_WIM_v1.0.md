@@ -20,12 +20,10 @@
 |:----------|:------|:-----------|
 | **Cantidad** | 1 Estación de Pesaje Completa | 2 dinámicas + 2 estáticas |
 | **Ubicación** | Troncal Magdalena 1 Y 2 | PR4+0100 / RN 4513 |
-| **Tecnología Dinámica** | PAT Traffic - Placas 1.55m | 2 Básculas (HS-WIM) |
-| **Tecnología Estática** | Fairbanks Talon Rodan | 2 Básculas (Full length) |
-| **CAPEX Dinámico** | **$256,353.24 USD** | Suministro + Instalación (PAT) |
-| **CAPEX Estático** | **$261,889.55 USD** | Suministro + Instalación (Fairbanks) |
-| **CAPEX SPT** | **$33,182.00 USD** | Puesta a Tierra Especial |
-| **CAPEX TOTAL** | **$551,424.79 USD** | Consolidados (Audit .42) |
+| **Tecnología Dinámica** | PAT Traffic - Placas 1.55m | HS-WIM Res 100/2024 |
+| **Señalización (M2024)** | Aspa-Flecha (600x600) + PMV | Manual Señalización 2024 |
+| **Evidencia LPR** | Cámaras dedicadas por sentido | Registro fotográfico mandatorio |
+| **CAPEX TOTAL** | **$551,425 USD** | Reconciliado (Audit .42) |
 
 ---
 
@@ -45,7 +43,8 @@
 | Cámara OCR báscula (22m) | 2 und | $5,109.72 | $10,219.43 |
 | Cámara OCR fuga (22m) | 2 und | $4,800.00 | $9,600.01 |
 | Tablero protecciones | 2 und | $1,048.15 | $2,096.30 |
-| Señal Doble Aspa-Cruz | 4 und | $1,858.08 | $7,432.31 |
+| Señal Aspa-Flecha (600x600) | 4 und | $1,858.08 | $7,432.31 |
+| PMV SMV (Instrucciones) | 2 und | $3,500.00 | $7,000.00 |
 | Switch PoE 8 puertos | 2 und | $681.29 | $1,362.58 |
 | Computador Aplicación (Rack) | 2 und | $3,982.95 | $7,965.91 |
 | Periféricos (Monitor/Teclado/Mouse) | 2 und | $558.44 | $1,116.88 |
@@ -111,7 +110,8 @@
 | Cámaras LPR y Seguridad Estática | 6 | $2,272.03 | $13,632.18 |
 | Servicios Instalación Estática (Global) | 1 | $58,574.42 | $58,574.42 |
 | Otros Suministros Estáticos | 1 | $53,567.28 | $53,567.28 |
-| **TOTAL WBS WIM** | **-** | **-** | **$523,538.79** |
+| **A.I.U (Administración e Imprevistos - 5%)** | **1** | **$27,886.21** | **$27,886.21** |
+| **TOTAL WBS WIM** | **-** | **-** | **$551,425.00** |
 
 ---
 

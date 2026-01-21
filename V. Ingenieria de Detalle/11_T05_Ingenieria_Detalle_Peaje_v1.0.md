@@ -27,7 +27,28 @@
 | Equipos CCO Centralizados | 1 | $121,250.00 | $121,250.00 |
 | **OTROS COSTOS** | | | |
 | Imprevistos e Instalaciones Parciales (20%) | 1 | $301,036.49 | $301,036.49 |
-| **TOTAL WBS PEAJE** | **-** | **-** | **$1,806,218.94** |
+| **TOTAL WBS PEAJE (FTS)** | **-** | **-** | **$1,806,218.94** |
+
+### **2. INTEGRACIÓN WIM-DAC (AT2 3.3.4.2)**
+**Fuente de Costos: T05 Pesaje Dinámico (System ID: 9)**
+*Nota: Se integra presupuestalmente al Peaje para asegurar cumplimiento contractual.*
+
+| Componente | Cantidad | Costo Unit. WBS | Total |
+|:-----------|:---------|:----------------|:------|
+| Kit Pista Pesaje (Placas+Bastidor) | 14 | $14,778.86 | $206,904.04 |
+| Controlador WIM (1 cada 2 carriles) | 7 | $4,045.18 | $28,316.26 |
+| Materiales e Integración | 1 | $45,138.00 | $45,138.00 |
+| **TOTAL WIM-DAC** | **-** | **-** | **$280,358.30** |
+
+---
+
+### **3. RESUMEN CONSOLIDADO SUBSISTEMA PEAJE**
+
+| Concepto | Valor (USD) |
+|:---------|:------------|
+| Equipamiento Recaudo (FTS) | $1,806,218.94 |
+| Pesaje Dinámico Carril (WIM-DAC) | $280,358.30 |
+| **TOTAL CAPEX PEAJE RECONCILIADO** | **$2,086,577.24** |
 
 ---
 

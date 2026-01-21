@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 31/10/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** PMV - Paneles de Mensaje Variable (Dynamic Message Signs - DMS)  
 **Responsable:** Ingeniero de Sistemas ITS / Administrador Contractual EPC  
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Análisis de Requisitos Completado (Piloto MVP)
+**Versión:** 1.5 MVP (Alineado Normativa 2024)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -26,7 +26,7 @@ Este documento presenta el **análisis detallado de requisitos** del Sistema de 
 
 ### 1.2 Alcance
 
-Este análisis se enfoca exclusivamente en el sistema de **28 paneles PMV** distribuidos estratégicamente a lo largo del corredor vial (293 km de cobertura total), incluyendo su equipamiento de comunicación, control, estructuras soporte y su integración con el Centro de Control Operacional (CCO) y la red de telecomunicaciones.
+Este análisis se enfoca exclusivamente en el sistema de **14 paneles PMV** distribuidos estratégicamente a lo largo del corredor vial (293 km de cobertura total), incluyendo su equipamiento de comunicación, control, estructuras soporte y su integración con el Centro de Control Operacional (CCO) y la red de telecomunicaciones.
 
 **Ubicación del CCO:** La Lizama PK 4+300 (RN 4513) - Centro de control del corredor.
 
@@ -239,7 +239,7 @@ Este análisis se enfoca exclusivamente en el sistema de **28 paneles PMV** dist
 - Confirmación de recepción de mensajes
 - Alarmas y eventos
 **Frecuencia:** Por evento (control), cada 5 minutos (monitoreo).  
-**Ancho de banda:** < 1 Mbps por panel (total ~28 Mbps para 28 paneles).
+**Ancho de banda:** < 1 Mbps por panel (total ~14 Mbps for 14 paneles).
 
 ---
 

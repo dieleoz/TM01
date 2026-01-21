@@ -23,8 +23,8 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Telecomunicaciones - Backbone Fibra Óptica + Red de Datos |
-| **Alcance** | **~322 km fibra óptica** + switches + equipos |
-| **CAPEX** | **USD $6,050,511.28** |
+| **Alcance** | **322 km fibra óptica** + switches + equipos |
+| **CAPEX** | **USD $7,980,000.00** |
 | **Topología** | **Anillo redundante L3** + **Sub-anillos L2** |
 | **Nodos L3** | **7 nodos** (4 edificaciones + 2 STACKS + 2 bunkers) |
 
@@ -67,17 +67,17 @@
 
 | PKD | Nodo | Switch L3 | Tipo | Ruta Real | PKR Real | Dist. → Siguiente |
 |:----|:-----|:----------|:-----|:----------|:---------|:------------------|
-| **PKD 0+000** | **CCO + WIM** | **C9200-48T-A STACK** + L2 | Core + Báscula | R4513 | 4+350 | 39.45 km → |
+| PKD 0+000 | **CCO + WIM** | **C9200-48T-A STACK** + L2 | Core + Báscula | R4513 | 4+350 | 39.45 km → |
 | **PKD 39+450** | **Peaje Zambito** | C9200-48T-A | Peaje | R4511 | 9+170 | 31.00 km → |
 | **PKD 70+450** | **BUNKER 01** | C9200-24T-A | Regeneración | R4511 | ~40+000 | 42.00 km → |
 | **PKD 112+450** | **Peaje Aguas Negras** | **C9200-48T-A STACK** | Peaje más lejano | R4511 | 81+800 | 31.65 km → |
 | **PKD 144+100** | **AS Aguas Negras** | C9200-24T-A | Área Servicio | R4511 | 113+450 | 39.20 km → |
-| **PKD 183+300** | **AS Zambito** | C9200-24T-A | Área Servicio | R4510 | 104+000 | 99.65 km → CCO |
-| **PKD 283+000** | **→ cierra en CCO** | (anillo cerrado) | - | - | - | **ANILLO COMPLETO** |
+| **PKD 183+300** | **AS Zambito** | C9200-24T-A | Área Servicio | R4510 | 104+000 | 138.70 km → CCO |
+| **PKD 322+000** | **→ cierra en CCO** | (anillo cerrado) | - | - | - | **ANILLO COMPLETO** |
 
 **RESUMEN:**
 - **7 nodos L3** en secuencia: N1 → N2 → N4 → N6 → N7 → N5 → N3 → N1
-- **Anillo total:** 283 km de fibra óptica
+- **Anillo total:** 322 km de fibra óptica (incluyendo derivaciones)
 - **2 STACKS:** N1 (CCO) y N7 (BUNKER 02) - puntos de convergencia
 - **Redundancia dual-path:** Dos caminos independientes desde N1 hasta N7
 
@@ -92,7 +92,7 @@
 | **N7** | **PKD 233+150** | ~150+000 | R4510 | **BUNKER 02** | **C9200-24T-A STACK** | N6 → N7 | 49.85 km | ✅ |
 | **N5** | **PKD 144+100** | 113+450 | R4511 | **AS Aguas Negras** | C9200-24T-A | N7 → N5 | 39.20 km | ✅ |
 | **N3** | **PKD 70+450** | ~40+000 | R4511 | **BUNKER 01** | C9200-24T-A | N5 → N3 | 31.65 km | ✅ |
-| **N1** | **PKD 283+000** | 4+350 | R4513 | **CCO (cierre)** | - | N3 → N1 | 70.45 km | ✅ |
+| **N1** | **PKD 322+000** | 4+350 | R4513 | **CCO (cierre)** | - | N3 → N1 | 109.45 km | ✅ |
 
 **✅ OPTIMIZACIÓN:** 
 - **WIM (120 m del CCO)** conectado con switch **L2** (Advantech EKI-7710E)
@@ -238,7 +238,7 @@ N7 (BUNKER 02) ←──────→ N5 (AS Aguas Negras) ←─────�
 
 ```
 ═══════════════════════════════════════════════════════════════════════════════
-                    ANILLO L3 - TOPOLOGÍA REAL (283 km)
+                    ANILLO L3 - TOPOLOGÍA REAL (322 km)
 ═══════════════════════════════════════════════════════════════════════════════
 
 N1 (STACK) → N2 → N4 → N6 → N7 (STACK) → N5 → N3 → N1 (STACK)
@@ -261,7 +261,7 @@ N7 (BUNKER 02) [STACK]
 N5 (AS Aguas Negras)
     ↓ 31.65 km
 N3 (BUNKER 01)
-    ↓ 70.45 km
+    ↓ 109.45 km
 N1 (CCO) [CIERRE]
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -270,7 +270,7 @@ STACKS:
 - N1: CCO + WIM (inicio del anillo)
 - N7: BUNKER 02 (punto medio del anillo)
 
-TOTAL: 7 nodos L3 | 283 km de fibra
+TOTAL: 7 nodos L3 | 322 km de fibra (inc. derivaciones)
 ✅ TODAS LAS DISTANCIAS ≤73 KM (dentro de límite de 80 km)
 
 ═══════════════════════════════════════════════════════════════════════════════
@@ -509,14 +509,11 @@ Validación:
 
 | Ítem | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:-------|:---------|:-------------------|:------------|
-| Fibra óptica 12 hilos | km | 283 | $8,000 | $2,264,000 |
-| Ductos + canalizaciones | km | 283 | $5,000 | $1,415,000 |
-| Equipos L3 (Cisco + FortiGate + SFPs + Accesorios) | global | - | - | $166,571.28 |
-| Equipos L2 Advantech | global | 289 | - | $75,940 |
-| ODFs | und | 15 | $2,000 | $30,000 |
-| Instalación + pruebas | global | 1 | $1,500,000 | $1,500,000 |
-| Otros | - | - | - | $599,000 |
-| **TOTAL** | - | - | - | **$6,050,511.28** |
+| Fibra óptica 48h (Microfibra) | km | 322 | $10,000 | $3,220,000 |
+| Ductos + canalizaciones | km | 322 | $8,000 | $2,576,000 |
+| Equipos Red L2/L3 + Firewalls HA | global | 1 | $785,000 | $785,000 |
+| Instalación + Pruebas + AIU | global | 1 | $1,399,000 | $1,399,000 |
+| **TOTAL** | - | - | - | **$7,980,000.00** |
 
 ---
 
@@ -547,5 +544,5 @@ Validación:
 - Longitud fibra óptica actualizada: ~322 km
 - Topología mantenida: Anillo redundante L3 + Sub-anillos L2
 - Nodos L3 confirmados: 7 nodos
-- CAPEX mantenido: USD $6,050,511.28
+- CAPEX mantenido: USD $7,980,000.00
 - Metodología PKD lineal aplicada

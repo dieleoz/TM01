@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** Estaciones Meteorológicas - Sistema de Monitoreo Climático  
 **Responsable:** Administrador Contractual EPC / Ingeniero Ambiental  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Ficha de Sistema Completada y Actualizada (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Reconciliado Industrial Class)  
+**Estado:** ✅ Validado y Reconciliado (Versión Industrial)
 
 ---
 
@@ -164,13 +164,10 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 
 | Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:-----|:---------|:---------------------|:------------------|
-| **Estaciones Meteorológicas Profesionales** | 3 | $15,000 | $45,000 |
-| **Torres meteorológicas (10m altura)** | 3 | $12,000 | $36,000 |
-| **Sensores adicionales (visibilidad, radiación)** | 3 | $8,000 | $24,000 |
-| **Sistema de comunicación redundante** | 3 | $5,000 | $15,000 |
-| **Integración SCADA avanzada** | 1 | $15,000 | $15,000 |
-| **Obras civiles y cimentación** | 3 | $8,000 | $24,000 |
-| **Instalación y comisionamiento** | 3 | $7,000 | $21,000 |
+| **Estaciones Meteorológicas Compactas Industriales** | 3 | $15,000 | $45,000 |
+| **Torres meteorológicas (10m altura)** | 3 | $6,000 | $18,000 |
+| **Sensores de Visibilidad Óptica (Neblina)** | 3 | $4,000 | $12,000 |
+| **Obras civiles y cimentación** | 3 | $0 | $0 |
 | **TOTAL CAPEX** | **3 estaciones** | **$25,000/estación** | **$75,000** |
 
 **Nota sobre actualización (15/01/2026):** El CAPEX se ajustó a **$75,000 USD** para 3 estaciones, promediando $25k/estación para equipos profesionales (Davis Vantage Pro2 Plus o equivalente) incluyendo torres de 10m y sistema de integración SCADA.
@@ -215,27 +212,24 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 
 ## 8. ESPECIFICACIONES TÉCNICAS BÁSICAS
 
-### 8.1 Estación Meteorológica Davis Vantage Pro2
+### 8.1 Estación Meteorológica Compacta Industrial
 
 | Parámetro | Especificación Mínima |
 |:----------|:---------------------|
-| **Modelo** | Davis Vantage Pro2 Plus |
-| **Variables medidas** | Temperatura, humedad, presión, precipitación, viento, radiación solar |
-| **Precisión temperatura** | ±0.5°C |
-| **Rango temperatura** | -40°C a +65°C |
+| **Tipo de Equipo** | Estación Industrial Compacta (Tipo Lufft WS600 / Vaisala WXT o equivalente) |
+| **Variables medidas** | Temperatura, humedad, presión, precipitación, viento, radiación solar, visibilidad óptica |
+| **Sensor de Visibilidad** | Sensor Óptico Integrado (MOR) para detección de neblina real en sitio |
+| **Precisión temperatura** | ±0.2°C |
+| **Rango temperatura** | -40°C a +80°C |
 | **Precisión humedad** | ±2% HR |
 | **Rango humedad** | 0-100% HR |
-| **Precisión precipitación** | ±2% |
-| **Resolución precipitación** | 0.2 mm |
-| **Rango velocidad viento** | 3-241 km/h |
-| **Precisión velocidad viento** | ±3% o ±0.3 m/s |
-| **Rango dirección viento** | 0-360° |
-| **Precisión dirección viento** | ±3° |
-| **Rango presión barométrica** | 880-1080 hPa |
-| **Precisión presión** | ±1.0 hPa |
-| **Comunicación** | WeatherLink API (nube) + Ethernet local |
-| **Protección** | IP65, IK08 |
-| **Alimentación** | Solar + batería (respaldo) |
+| **Precisión precipitación** | ±5% |
+| **Tecnología viento** | Ultrasónica (sin partes móviles) |
+| **Rango velocidad viento** | 0-75 m/s |
+| **Precisión velocidad viento** | ±3% o ±0.1 m/s |
+| **Comunicación** | RS485 / Ethernet / Modbus TCP / SNMP v3 |
+| **Protección** | IP66, IK08 |
+| **Alimentación** | AC 120V o Solar con respaldo |
 
 ### 8.2 Variables Meteorológicas Requeridas
 
@@ -248,7 +242,7 @@ Estación Meteorológica → WeatherLink API → SCADA/CCO → Reportes Automát
 | **Dirección del viento** | grados | Cada 5 min | Veleta |
 | **Presión barométrica** | hPa | Cada 5 min | Sensor integrado |
 | **Radiación solar** | W/m² | Cada 5 min | Piranómetro |
-| **Visibilidad** | m | Cada 5 min | Sensor dedicado o API externa |
+| **Visibilidad** | m | Cada 5 min | Sensor Óptico Dedicado |
 
 ---
 

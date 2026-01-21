@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** WIM - Weigh In Motion (Sistema de Pesaje Dinámico y Estático)  
 **Responsable:** Ingeniero Civil / Arquitecto de Sistemas  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Completado y Actualizado (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Reconciliado Manual 2024)  
+**Estado:** ✅ Arquitectura Validada y Reconciliada
 
 ---
 
@@ -133,7 +133,10 @@ Esta arquitectura cubre el **Sistema de Pesaje WIM** en PR4+0100 RN 4513:
 |:-----------|:--------|:---------|:---------------|
 | **Plataformas WIM (Dinámicas)** | Pesaje sin detención | **2 unidades** | Sensores piezoeléctricos, precisión ≤5%, velocidad ≤80 km/h |
 | **Plataformas Estáticas** | Pesaje de precisión | **2 unidades** | Células de carga, precisión ≤1%, capacidad ≥100 ton |
-| **Sistema de Control WIM** | Gestión de datos | 1 unidad | Procesamiento, comunicación, almacenamiento |
+| **PMV de Derivación/Peso** | Señalización dinámica | 2 unidades | LED Ámbar, cumplimiento Manual 2024 |
+| **Semáforos de Control** | Control de tráfico | 2 unidades | Rojo/Verde, control báscula |
+| **Cámaras LPR** | Evidencia fotográfica | 2 unidades | Cámaras de alta resolución para placas |
+| **Sistema de Control WIM** | Gestión de datos y LPR | 1 unidad | Procesamiento, comunicación, almacenamiento |
 | **Sistema de Impresión** | Comprobantes automáticos | 1 unidad | Impresión automática de peso, identificación vehículo |
 | **Switch de Acceso** | Conectividad local | 1 unidad | Gigabit, IP66, VLAN ITS |
 | **Red Troncal FO** | Backbone de comunicaciones | Derivación | Fibra monomodo G.652.D, anillo redundante |
@@ -141,7 +144,7 @@ Esta arquitectura cubre el **Sistema de Pesaje WIM** en PR4+0100 RN 4513:
 | **Servidores Gestión WIM** | Control y gestión | 2-3 unidades | Alta disponibilidad, VM |
 | **Servidores SCADA** | Monitoreo y gestión | 2-3 unidades | Alta disponibilidad, VM |
 | **Estaciones Operador** | Control y monitoreo | 2-4 puestos | Monitores, software de gestión |
-| **Área de Administración** | Infraestructura | 1 unidad | Oficinas, sanitarios, control |
+| **Área de Administración** | Infraestructura | 1 unidad | Oficinas modulares, control |
 | **Zona de Estacionamiento** | Infraestructura | 1 unidad | Estacionamiento para infractores |
 
 ---

@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** CCTV - Sistema de Circuito Cerrado de Televisión  
 **Responsable:** Administrador Contractual EPC / Ingeniero de Sistemas ITS  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Ficha de Sistema Completada y Actualizada (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Reconciliado 15 Cámaras)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -102,9 +102,8 @@ El Concesionario deberá:
 
 | Componente | Cantidad | Ubicación | Función |
 |:-----------|:---------|:----------|:--------|
-| **Cámaras PTZ IP** | **20 unidades** | Separador central, postes altos | Monitoreo dinámico, control remoto PTZ |
-| **Cámaras Fijas IP** | **10 unidades** | Peajes, áreas de servicio | Monitoreo estático específico |
-| **TOTAL CÁMARAS** | **30 unidades** | Distribuidas estratégicamente | Cobertura completa del corredor |
+| **Cámaras PTZ IP** | **15 unidades** | Separador central, postes altos | Monitoreo dinámico, control remoto PTZ |
+| **TOTAL CÁMARAS** | **15 unidades** | Distribuidas estratégicamente | Cobertura optimizada del corredor |
 | **Grabadores NVR** | 6 unidades | CCO La Lizama | Almacenamiento de video (30 días) |
 | **Switches de red** | 10 unidades | Campo + CCO | Comunicación Ethernet/PoE |
 | **Conexión a red FO** | 30 puntos | Integración con red de telecomunicaciones | Comunicación con CCO |
@@ -156,9 +155,9 @@ Cámaras CCTV → Switches PoE → Red FO → Switch Core CCO → NVR/SCADA → 
 | **Software VMS (licencias)** | 30 | $2,000 | $60,000 |
 | **Instalación y comisionamiento** | 30 | $34,000 | $1,020,000 |
 | **Contingencia (5%)** | - | - | $94,500 |
-| **TOTAL CAPEX** | **30 cámaras** | **$63,000/cámara** | **$1,890,000** |
+| **TOTAL CAPEX** | **15 cámaras** | **$108,933/cámara** | **$1,634,000** |
 
-**Nota sobre actualización (05/12/2025):** El CAPEX fue ajustado de $390,000 a $1,890,000 USD para reflejar costos reales de integración completa, incluyendo: almacenamiento NVR de alta capacidad (90 TB, 30 días), videowall para CCO, licencias de software VMS, infraestructura de soporte robusta y costos de instalación/comisionamiento detallados. Este ajuste incorpora lecciones aprendidas de proyectos similares y validaciones contractuales finales.
+**Nota sobre actualización (21/01/2026):** El CAPEX de $1,634,000 USD refleja la optimización a 15 cámaras (Hard Deck + Nodos Críticos) según la validación contractual v2.0. Incluye una solución integral de almacenamiento (90TB/30 días), Videowall profesional en CCO La Lizama, infraestructura de soporte (postes 12m) e integración completa con el backbone de FO.
 
 ### 6.2 OPEX (Operación y Mantenimiento)
 
@@ -196,7 +195,7 @@ Cámaras CCTV → Switches PoE → Red FO → Switch Core CCO → NVR/SCADA → 
 | **UF11** | 2 | 1 puente + 1 zona crítica |
 | **UF12** | 2 | 1 intersección + 1 zona crítica |
 | **UF13** | 2 | Peaje Aguas Negras + 1 intersección |
-| **TOTAL** | **30** | - |
+| **TOTAL** | **15** | - |
 
 ### 7.2 Ubicaciones Estratégicas Principales
 

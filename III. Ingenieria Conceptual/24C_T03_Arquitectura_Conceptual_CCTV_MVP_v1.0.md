@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** CCTV - Sistema de Circuito Cerrado de Televisión  
 **Responsable:** Ingeniero de Sistemas ITS / Arquitecto de Redes  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Completado y Actualizado (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Reconciliado 15 Cámaras)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -29,7 +29,7 @@ Este documento define la **arquitectura conceptual** del Sistema de Circuito Cer
 
 Esta arquitectura cubre el **Sistema de CCTV** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
-- **Cantidad:** 30 cámaras (20 PTZ + 10 fijas)
+- **Cantidad:** 15 cámaras PTZ IP High-End
 - **Distribución:** Estratégicamente ubicadas en puntos críticos
 - **Cobertura geográfica:** 100% del corredor (RN 4510, RN 4511, RN 4513)
 - **Integración:** CCO La Lizama PK 4+300 (RN 4513)
@@ -109,8 +109,7 @@ Esta arquitectura cubre el **Sistema de CCTV** a lo largo de 259.6 km principale
 
 | Componente | Función | Cantidad | Especificación |
 |:-----------|:--------|:---------|:---------------|
-| **Cámaras PTZ IP** | Monitoreo dinámico | **20 unidades** | 1080p, 30× zoom, IP66/IK10, PoE+ |
-| **Cámaras Fijas IP** | Monitoreo estático | **10 unidades** | 1080p, IP66/IK10, PoE+ |
+| **Cámaras PTZ IP** | Monitoreo dinámico | **15 unidades** | 1080p, 30× zoom, IP66/IK10, PoE+ |
 | **Switches de Acceso** | Conectividad local | 10 unidades | Gigabit PoE, IP66, VLAN ITS |
 | **Red Troncal FO** | Backbone de comunicaciones | 283 km | Fibra monomodo G.652.D, anillo redundante |
 | **Switches Core (CCO)** | Agregación y routing | 4 unidades | 10 Gbps, redundante N+1 |
@@ -268,13 +267,13 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~10 cámaras
 
 ### 4.3 Ancho de Banda y Dimensionamiento
 
-| Tipo de Tráfico | Ancho de Banda por Cámara | Total (30 cámaras) | Prioridad |
+| Tipo de Tráfico | Ancho de Banda por Cámara | Total (15 cámaras) | Prioridad |
 |:----------------|:-------------------------|:-------------------|:----------|
-| **Video tiempo real (H.265)** | 4-8 Mbps | 120-240 Mbps | 🔴 Alta (QoS) |
-| **Control PTZ** | <1 kbps | <30 kbps | 🟡 Media |
-| **Monitoreo SNMP** | <1 kbps | <30 kbps | 🟡 Media |
-| **Grabación (streaming)** | 4-8 Mbps | 120-240 Mbps | 🔴 Alta |
-| **TOTAL (pico)** | ~16 Mbps | **~480 Mbps** | - |
+| **Video tiempo real (H.265)** | 4-8 Mbps | 60-120 Mbps | 🔴 Alta (QoS) |
+| **Control PTZ** | <1 kbps | <15 kbps | 🟡 Media |
+| **Monitoreo SNMP** | <1 kbps | <15 kbps | 🟡 Media |
+| **Grabación (streaming)** | 4-8 Mbps | 60-120 Mbps | 🔴 Alta |
+| **TOTAL (pico)** | ~16 Mbps | **~240 Mbps** | - |
 
 **Dimensionamiento de red:**
 - **Por cámara:** 100 Mbps (Ethernet) → Margen 84-96%
@@ -621,7 +620,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~10 cámaras
 - Requiere integración entre componentes
 - Gestión de múltiples proveedores
 
-**Costo estimado:** $1,890,000 USD (incluye integración completa, NVR, videowall, VMS)
+**Costo estimado:** $1,634,000 USD (incluye integración completa, NVR, videowall, VMS)
 
 **Justificación de selección:**
 - ✅ Cumple con todos los requisitos contractuales (AT2, AT3, AT4)

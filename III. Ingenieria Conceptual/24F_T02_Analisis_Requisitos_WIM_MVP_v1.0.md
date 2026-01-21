@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 31/10/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** WIM - Weigh In Motion (Sistema de Pesaje Dinámico y Estático)  
 **Responsable:** Ingeniero Civil / Administrador Contractual EPC  
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Análisis de Requisitos Completado (Piloto MVP)
+**Versión:** 1.5 MVP (Reconciliado Manual 2024)  
+**Estado:** ✅ Requisitos Validados y Reconciliados
 
 ---
 
@@ -169,6 +169,32 @@ Este análisis se enfoca en el sistema de **1 estación bidireccional** (4 plata
 - Almacenamiento de datos históricos (≥5 años)
 - Generación de reportes técnicos
 - Generación de reportes económicos
+
+---
+
+### 2.8 Señalización Variable de la Estación (Manual 2024)
+
+**ID:** RF-WIM-008  
+**Descripción:** El sistema debe disponer de señalización dinámica para dirigir vehículos y mostrar resultados según el Manual de Señalización 2024 (9.3.3.3).  
+**Prioridad:** 🔴 Crítica  
+**Fuente:** Manual de Señalización Vial 2024  
+**Criterios de Aceptación:**
+- 1 PMV de Derivación: Indica quién entra a la báscula.
+- 1 PMV de Confirmación: Muestra el peso en la báscula estática.
+- Semáforos de control: Control de avance/detención.
+
+---
+
+### 2.9 Cámaras de Evidencia LPR
+
+**ID:** RF-WIM-009  
+**Descripción:** El sistema debe contar con cámaras de identificación automática de placas (LPR) para el registro fotográfico de infracciones.  
+**Prioridad:** 🔴 Crítica  
+**Fuente:** Manual de Señalización Vial 2024  
+**Criterios de Aceptación:**
+- Identificación automática de placa (OCR).
+- Captura de fotografía de evidencia asociada al tiquete de peso.
+- Independencia del sistema de vigilancia CCTV general.
 
 ---
 

@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 31/10/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** Estaciones Meteorológicas - Sistema de Monitoreo Climático  
 **Responsable:** Ingeniero Ambiental / Administrador Contractual EPC  
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Análisis de Requisitos Completado (Piloto MVP)
+**Versión:** 1.5 MVP (Reconciliado Industrial Class)  
+**Estado:** ✅ Requisitos Validados y Reconciliados
 
 ---
 
@@ -56,9 +56,8 @@ Este análisis se enfoca en el sistema de **3 estaciones meteorológicas** (2 en
 
 | Término | Definición |
 |:--------|:-----------|
-| **Estación Meteorológica** | Sistema de sensores para medir variables climáticas |
-| **Davis Pro2** | Modelo de estación meteorológica (Davis Vantage Pro2 Plus) |
-| **WeatherLink** | Sistema de comunicación y almacenamiento de datos meteorológicos |
+| **Estación Industrial** | Estación Meteorológica Compacta (Lufft/Vaisala o equiv) |
+| **Visibilímetro** | Sensor óptico dedicado para medición de neblina (MOR) |
 | **CCO** | Centro de Control Operacional |
 | **ITS** | Intelligent Transportation Systems (Sistemas Inteligentes de Transporte) |
 | **IP/REV** | Interoperabilidad de Peajes con Recaudo Electrónico Vehicular |
@@ -82,15 +81,15 @@ Este análisis se enfoca en el sistema de **3 estaciones meteorológicas** (2 en
 **Prioridad:** 🔴 Crítica  
 **Fuente:** AT2 Sección 3.3.11.2, NTC 5660  
 **Criterios de Aceptación:**
-- Medición de temperatura del aire (rango: -40°C a +65°C, precisión: ±0.5°C)
+- Medición de temperatura del aire (rango: -40°C a +80°C, precisión: ±0.2°C)
 - Medición de humedad relativa (rango: 0-100% HR, precisión: ±2% HR)
-- Medición de precipitación (resolución: 0.2 mm, precisión: ±2%)
-- Medición de velocidad del viento (rango: 3-241 km/h, precisión: ±3% o ±0.3 m/s)
+- Medición de precipitación (precisión: ±5%)
+- Medición de velocidad del viento (Tecnología Ultrasónica, rango: 0-75 m/s, precisión: ±3%)
 - Medición de dirección del viento (rango: 0-360°, precisión: ±3°)
-- Medición de presión barométrica (rango: 880-1080 hPa, precisión: ±1.0 hPa)
+- Medición de presión barométrica (precisión: ±0.5 hPa)
 - Medición de radiación solar (W/m²)
-- Medición de visibilidad (opcional: sensor dedicado o API externa)
-- Frecuencia de medición: Cada 2.5 segundos (mínimo)
+- Medición de visibilidad (Sensor Óptico dedicado en sitio, mandatorio por norma)
+- Frecuencia de medición: Cada 1 segundo (mínimo)
 - Transmisión al CCO: Cada 5 minutos (mínimo)
 
 ---
@@ -175,14 +174,13 @@ Este análisis se enfoca en el sistema de **3 estaciones meteorológicas** (2 en
 ### 2.7 Monitoreo Ambiental en Peajes
 
 **ID:** RF-METEO-007  
-**Descripción:** El sistema debe disponer de equipos de monitoreo ambiental en las estaciones de peaje según Resolución 546/2018 (IP/REV).  
+**Descripción:** El sistema debe disponer de equipos de monitoreo ambiental en las estaciones de peaje según Resolución 20213040035125 (IP/REV).  
 **Prioridad:** 🔴 Crítica  
-**Fuente:** Resolución 546/2018 (IP/REV)  
+**Fuente:** Resolución 20213040035125 (IP/REV)  
 **Criterios de Aceptación:**
-- Instalación de estación meteorológica en cada peaje IP/REV
-- Medición de condiciones climáticas y de operación
-- Información disponible para usuarios y CCO
-- Cumplimiento con especificaciones técnicas de Resolución 546/2018
+- Instalación de estación meteorológica industrial en cada peaje IP/REV
+- Medición obligatoria de neblina mediante sensor óptico local
+- Información disponible para usuarios y CCO en tiempo real
 
 ---
 

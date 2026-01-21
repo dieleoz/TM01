@@ -21,8 +21,8 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Sistema de Peajes Electrónicos |
-| **Cantidad** | **2 estaciones** (Zambito, Aguas Negras) |
-| **CAPEX** | **USD $2,400,000** |
+| **Cantidad** | **14 carriles** (2 estaciones) |
+| **CAPEX** | **USD $2,086,577.24** (Consolidado) |
 
 ---
 
@@ -32,19 +32,20 @@
 
 | Ubicación | PK | Carriles | Tipo |
 |:----------|:---|:---------|:------|
-| **Peaje Zambito** | RN 4511 PK 9+200 | 4 bidireccionales | Principal |
-| **Peaje Aguas Negras** | RN 4511 PK 80+000 | 4 bidireccionales | Principal |
+| **Peaje Zambito** | RN 4511 PK 9+200 | 7 (3+1+3) | Principal |
+| **Peaje Aguas Negras** | RN 4511 PK 80+000 | 7 (3+1+3) | Principal |
 
 ### 2.2 Equipos por Estación
 
 | Equipo | Cantidad/Estación | Función |
 |:-------|:------------------|:---------|
-| **Antenas TAG** | 8 | Lectura automática |
-| **Cámaras ANPR** | 8 | Reconocimiento placas |
-| **Barreras automáticas** | 8 | Control acceso |
-| **Sensores de presencia** | 16 | Detección vehículos |
-| **PMV informativos** | 2 | Mensajes usuarios |
-| **CCTV vigilancia** | 10 | Seguridad |
+| **Antenas TAG** | 14 | Lectura automática |
+| **Cámaras ANPR** | 28 | Reconocimiento frontal/trasero |
+| **Barreras automáticas** | 14 | Control acceso (0.7s) |
+| **Sensores de presencia** | 28 | Detección vehículos |
+| **Sensores WIM-DAC** | 14 | Clasificación AT2 3.3.4.2 |
+| **PMV Banner (640x320)** | 14 | Tarifas/Saldos |
+| **CCTV Vigilancia** | 10 | Seguridad estación |
 
 ---
 
@@ -74,8 +75,8 @@
 
 | Parámetro | Especificación |
 |:----------|:---------------|
-| **Tiempo apertura** | ≤3 segundos |
-| **Tiempo cierre** | ≤3 segundos |
+| **Tiempo apertura** | ≤0.7 segundos |
+| **Tiempo cierre** | ≤0.7 segundos |
 | **Resistencia viento** | 120 km/h |
 | **Protección** | IP65 |
 | **Control** | Automático + manual |
@@ -106,17 +107,15 @@
 
 | Ítem | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:---------|:-------------------|:------------|
-| Antenas TAG | 16 | $8,000 | $128,000 |
-| Cámaras ANPR | 16 | $3,000 | $48,000 |
-| Barreras automáticas | 16 | $15,000 | $240,000 |
-| Sensores presencia | 32 | $500 | $16,000 |
-| PMV informativos | 4 | $25,000 | $100,000 |
-| CCTV vigilancia | 20 | $2,000 | $40,000 |
-| Switch L3 por estación | 2 | $25,000 | $50,000 |
-| Software gestión | 2 | $50,000 | $100,000 |
-| Instalación | global | - | $1,200,000 |
-| Otros | - | - | $478,000 |
-| **TOTAL (ESTIMADO)** | - | - | **$2,400,000** |
+| Antenas TAG RFID | 14 | $8,000 | $112,000 |
+| Cámaras ANPR Frontal/Trasero | 28 | $3,000 | $84,000 |
+| Barreras Alta Velocidad (0.7s) | 14 | $15,000 | $210,000 |
+| Sensores WIM-DAC (Clasificación) | 14 | $15,000 | $210,000 |
+| Lazos Inductivos (Presencia) | 28 | $500 | $14,000 |
+| PMV Banners Tarifas (640x320) | 14 | $2,500 | $35,000 |
+| Equipos Carril y Estación (FTS) | Global | - | $1,200,000 |
+| Otros e Instalación | - | - | $221,577 |
+| **TOTAL RECONCILIADO** | - | - | **$2,086,577** |
 
 > [!WARNING]
 > **NOTA DE VALIDACIÓN (2025-12-12)**: Este presupuesto es una **estimación preliminar**. El presupuesto oficial validado se encuentra en el documento **T05 - Ingeniería de Detalle**, con un valor optimizado de **$1,806,218.94 USD** y una cantidad ajustada de **14 carriles**. Ver DT-TM01-PEAJES-019.
@@ -149,6 +148,6 @@
 
 **✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
 - Cantidad confirmada: 2 estaciones de peaje
-- Ubicaciones: Zambito PK 9+200, Aguas Negras PK 80+000
-- CAPEX mantenido: USD $2,400,000
-- Metodología PKD lineal aplicada
+- CAPEX reconciliado: USD $2,086,577.24 (FTS + WIM-DAC)
+- Configuración: 14 carriles (7 por estación)
+- Equipamiento: 28 ANPR + 14 WIM-DAC + 14 Banners

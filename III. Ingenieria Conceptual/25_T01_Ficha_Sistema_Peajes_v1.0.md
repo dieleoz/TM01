@@ -53,8 +53,8 @@ El Sistema de Peajes tiene como objetivo **controlar el acceso, cobrar las tarif
 - Rutas: RN 4510 (Honda-Río Ermitaño), RN 4511 (Río Ermitaño-La Lizama), RN 4513 (Conexión CCO)
 - Estaciones de Peaje: **2 estaciones existentes** (Zambito + Aguas Negras)
 - Ubicaciones:
-  - **Peaje Zambito:** PK 9+200 RN 4511 (Bidireccional)
-  - **Peaje Aguas Negras:** PK 80+000 RN 4511 (Bidireccional, reubicación desde PK 83+900)
+  - **Peaje Zambito:** PK 9+200 RN 4511 (Bidireccional, 7 carriles)
+  - **Peaje Aguas Negras:** PK 80+000 RN 4511 (Bidireccional, 7 carriles)
 - Departamentos: Cundinamarca, Boyacá, Santander
 - Instalación en: Estaciones de Peaje + Áreas de Servicio + CCO La Lizama PK 4+300
 
@@ -91,14 +91,14 @@ El Concesionario deberá:
    - Peanas de detección de ejes
 
 4. **Equipos para carriles IP/REV (TAG):**
-   - Unidad de lectura TAG RFID
-   - Reconocimiento de número de placa
-   - Cámara para grabación de ejes
-   - Cámaras de seguridad
-   - Detección automática de categoría vehicular
-   - Barrera/talanquera automática
-   - Semáforos
-   - Paneles de señalización variable
+    - Unidad de lectura TAG RFID
+    - Reconocimiento de número de placa (LPR)
+    - Cámara para grabación de ejes
+    - Cámaras de seguridad
+    - Detección automática de categoría vehicular (WIM-DAC)
+    - Barrera/talanquera automática de alta velocidad (0.7s)
+    - Semáforos (Paso + Techo)
+    - Paneles de señalización variable (Banner 640x320mm)
    - Sistema de gestión de carril IP/REV
    - Red de transmisión (Nivel 1→2→3)
    - Instalaciones eléctricas + respaldo
@@ -150,20 +150,18 @@ El Concesionario deberá:
 
 | Componente | Cantidad Actualizada | Ubicación | Función |
 |:-----------|:---------------------|:----------|:--------|
-| **Estaciones de Peaje** | **2 estaciones** | Zambito (PK 9+200) + Aguas Negras (PK 80+000) | Recaudo de tarifas |
-| **Carriles Manuales** | 6-8 carriles | 3-4 por estación | Cobro con operador |
-| **Carriles Semiautomáticos** | 2-4 carriles | 1-2 por estación | Tarjetas débito/crédito/prepago |
-| **Carriles Automáticos (TAG)** | 2-4 carriles | 1-2 por estación | Telepeaje sin detención |
-| **Casetas de Recaudo** | 10-14 casetas | Zambito + Aguas Negras | Operador + equipos |
-| **Lectores TAG RFID** | 2-4 unidades | Carriles automáticos | Lectura de tags vehiculares |
-| **Cámaras Reconocimiento Placas** | 12-18 cámaras | Todos los carriles | OCR de matrículas |
-| **Cámaras de Ejes** | 12-18 cámaras | Todos los carriles | Grabación de ejes (clasificación) |
-| **Cámaras de Seguridad** | 20-30 cámaras | Áreas de peaje | Vigilancia y anti-evasión |
-| **Sensores de Clasificación** | 12-18 sensores | Todos los carriles | Detección automática de categoría |
-| **Barreras Automáticas** | 12-18 barreras | Todos los carriles | Control de paso |
-| **Paneles de Señalización LED** | 8-12 paneles | Ambas estaciones | Información de tarifas y carriles |
-| **Semáforos** | 12-18 unidades | Carriles | Control de flujo |
-| **Básculas de Pesaje** | 2-3 básculas | Zambito + Aguas Negras | Pesaje estático de vehículos de carga |
+| **Estaciones de Peaje** | **2 estaciones** | Zambito + Aguas Negras | Recaudo de tarifas |
+| **Total de Carriles** | **14 carriles** | 7 por estación | Capacidad total recaudo |
+| **Carriles Automáticos (TAG)** | 4 carriles | 2 por estación | Telepeaje 100% (High speed) |
+| **Carriles Mixtos** | 4 carriles | 2 por estación | Manual + Telepeaje |
+| **Carriles Reversibles** | 2 carriles | 1 por estación | Contraflujo |
+| **Lectores TAG RFID** | 14 unidades | Todos los carriles | Lectura de tags vehiculares |
+| **Cámaras Reconocimiento Placas** | 28 cámaras | Frontal + Trasera | OCR de matrículas |
+| **Cámaras de Ejes** | 14 cámaras | Todos los carriles | Grabación de ejes (clasificación) |
+| **Sensores WIM-DAC** | 14 unidades | Todos los carriles | Clasificación automática (AT2 3.3.4.2) |
+| **Barreras Automáticas 0.7s** | 14 barreras | Todos los carriles | Control de paso alta velocidad |
+| **PMV Banners (640x320)** | 14 paneles | Todos los carriles | Información tarifas/saldo |
+| **Semáforos (Doble)** | 14 unidades | Todos los carriles | Control de flujo |
 | **Consolas de Operador** | 10-14 unidades | Casetas | Interface del operador |
 | **Servidores Locales** | 2 servidores | Cada estación | Gestión local del peaje |
 | **UPS** | 2 sistemas | Cada estación | Energía de respaldo |
@@ -193,30 +191,23 @@ El Concesionario deberá:
 
 | Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:-----|:---------|:---------------------|:------------------|
-| **Reubicación Peaje Aguas Negras** | 1 estación | $300,000 | $300,000 |
-| **Adecuación/Modernización Zambito** | 1 estación | $200,000 | $200,000 |
-| Lectores TAG RFID | 3 | $8,000 | $24,000 |
-| Cámaras Reconocimiento Placas (OCR) | 15 | $6,000 | $90,000 |
-| Cámaras de Ejes | 15 | $4,000 | $60,000 |
-| Cámaras de Seguridad | 25 | $3,500 | $87,500 |
-| Sensores de Clasificación | 15 | $5,000 | $75,000 |
-| Barreras Automáticas | 15 | $8,000 | $120,000 |
-| Paneles de Señalización LED | 10 | $12,000 | $120,000 |
-| Semáforos | 15 | $2,500 | $37,500 |
-| ~~Básculas de Pesaje Estático~~ | ~~2~~ | ~~$80,000~~ | ~~$160,000~~ **ELIMINADO** |
-| Consolas de Operador | 12 | $5,000 | $60,000 |
-| Casetas de Recaudo (obra civil menor) | 4 | $15,000 | $60,000 |
-| Servidores Locales | 2 | $25,000 | $50,000 |
-| Software de Gestión de Peajes | 1 sistema | $300,000 | $300,000 |
-| Sistema de Interoperabilidad TAG | 1 sistema | $200,000 | $200,000 |
-| UPS (por estación) | 2 | $20,000 | $40,000 |
-| Instalación y Puesta en Marcha | - | - | $150,000 |
-| Integración con CCO y ANI | 1 sistema | $120,000 | $120,000 |
-| Contingencias (10%) | - | - | $225,400 |
-| **TOTAL CAPEX (Equipos)** | | | **$2,319,400** |
+| **Reubicación/Adecuación Estaciones** | 2 estaciones | $250,000 | $500,000 |
+| Lectores TAG RFID | 14 | $8,000 | $112,000 |
+| Cámaras ANPR Frontal + Trasero | 28 | $3,000 | $84,000 |
+| Cámaras de Ejes | 14 | $4,000 | $56,000 |
+| Sensores WIM-DAC (Clasificación) | 14 | $15,000 | $210,000 |
+| Barreras Alta Velocidad (0.7s) | 14 | $15,000 | $210,000 |
+| Displays de Carril (640x320mm) | 14 | $2,500 | $35,000 |
+| PMV Informativos de Aproximación | 4 | $12,000 | $48,000 |
+| Semáforos (Paso + Marquesina) | 28 | $1,250 | $35,000 |
+| Consolas de Operador | 14 | $5,000 | $70,000 |
+| Servidores y Software Gestión | 1 sistema | $400,000 | $400,000 |
+| Sistema Interoperabilidad + Integración | 1 sistema | $200,000 | $200,000 |
+| Otros e Instalación | global | - | $116,577 |
+| **TOTAL CAPEX (Equipos)** | | | **$2,086,577** |
 
-**Obra Civil (estimada, pendiente T03):** $1,860,000 USD  
-**TOTAL CAPEX COMPLETO:** **$4,179,400 USD**
+**Obra Civil (Estimada):** $1,913,423 USD
+**TOTAL CAPEX CONSOLIDADO PEAJE:** **$4,000,000 USD**
 
 **Conversión a COP (TRM: 4,000):** ~COP 16,717,600,000 (~16.7 mil millones)
 

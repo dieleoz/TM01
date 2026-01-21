@@ -3,8 +3,9 @@
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** Estaciones Meteorológicas ITS  
-**Fecha:** 22 de octubre de 2025  
-**Versión:** 1.0  
+**Fecha:** 21 de Enero 2026  
+**Versión:** 1.5 MVP (Reconciliado Industrial Class)  
+**Estado:** ✅ Validado y Reconciliado (Versión Industrial)  
 **Basado en:** T04 Estaciones Meteorológicas v1.0 + Tabla Maestra Layout v1.0  
 
 ---
@@ -45,7 +46,7 @@
 
 **CAPEX/estación:** $75,000.00 / 3 = **$25,000 USD/estación** (Grado Industrial)
 
-> **Nota Técnica:** Se ha ajustado el presupuesto para incluir torres de 10m y obras civiles robustas, además de la integración total al CCO para la tercera estación. La estación Davis Vantage Pro2 mide **Radiación Solar Global (W/m²)**.
+> **Nota Técnica:** Se ha ajustado el presupuesto para incluir estaciones industriales (Lufft/Vaisala) con visibilímetro óptico mandatorio por norma IP/REV, torres de 10m y obras civiles robustas. Se descartan equipos prosumidores (Davis) por no cumplir con medición de neblina para seguridad vial.
 
 ---
 
@@ -101,13 +102,11 @@
 
 | Parámetro | Especificación |
 |:----------|:--------------|
-| **Velocidad - Rango** | 0-75 m/s (0-270 km/h) |
-| **Velocidad - Precisión** | ±0.3 m/s o 3% |
-| **Velocidad - Resolución** | 0.1 m/s |
+| **Velocidad - Rango** | 0-75 m/s |
+| **Velocidad - Precisión** | ±3% |
+| **Tecnología** | Ultrasónica (Sin partes móviles) |
 | **Dirección - Rango** | 0-360° |
 | **Dirección - Precisión** | ±3° |
-| **Dirección - Resolución** | 1° |
-| **Tipo** | Cazoletas + veleta |
 
 ---
 
@@ -143,13 +142,13 @@
 
 **Obligación EPC:** AT2 3.3.11.2 + Resolución 546/2018 (IP/REV)
 - **Ubicaciones obligatorias:** 1 estación por cada peaje IP/REV
-- **Total obligatorio:** 2 estaciones (Zambito + Aguas Negras)
+- **Total obligatorio:** 2 estaciones (Zambito + Aguas Negras) + 1 Referencia CCO
 - **Documento validación:** `VII/26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0.md`
 
 **Interpretación clave:**
-- Contrato exige **"informar"** condiciones meteorológicas (no "instalar")
-- Resolución 546/2018 exige **"equipos de monitoreo ambiental en peajes"**
-- 2 estaciones Davis Pro2 cumplen obligación contractual completamente
+- Resolución 20213040035125 exige monitoreo de neblina.
+- Equipos industriales compactos cumplen con exactitud y robustez.
+- 3 estaciones industriales cubren el 100% del requerimiento normativo y de seguridad.
 
 ---
 
@@ -189,8 +188,10 @@
 
 | Ítem | Descripción | Unidad | Cantidad | Precio Unit. | Total |
 |:-----|:------------|:-------|:---------|:-------------|:------|
-| **A. EQUIPO ESTACIÓN** | | | | | **$7,404.09** |
-| Davis Vantage Pro2 Plus Wireless | Incluye consola y trípode | UND | 1.0 | $7,404.09 | $7,404.09 |
+| **A. EQUIPO ESTACIÓN** | | | | | **$15,000.00** |
+| Estación Industrial All-in-One | Lufft WS600 / Vaisala o equiv | UND | 1.0 | $9,000.00 | $9,000.00 |
+| Visibilímetro Óptico Integrado | Sensor MOR Mandatorio | UND | 1.0 | $4,000.00 | $4,000.00 |
+| Gateway / Datalogger Ind. | Integración Modbus | UND | 1.0 | $2,000.00 | $2,000.00 |
 | **B. OBRAS CIVILES** | | | | | **$0** |
 | Excavación cimentación | 1.2×1.2×1.5m | M³ | 2.2 | $0 | $0 |
 | Concreto f'c=3000 PSI | Fundación mástil | M³ | 1.5 | $0 | $0 |

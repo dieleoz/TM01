@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** PMV - Paneles de Mensaje Variable (Dynamic Message Signs - DMS)  
 **Responsable:** Administrador Contractual EPC / Ingeniero de Sistemas ITS  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Ficha de Sistema Completada y Actualizada (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Alineado Normativa 2024)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -109,20 +109,18 @@ El Concesionario deberá:
 
 | Componente | Cantidad | Ubicación | Función |
 |:-----------|:---------|:----------|:--------|
-| **Paneles PMV Fijos (Pórtico)** | **14 unidades** | Antes/después peajes, estratégicos | Información bidireccional sobre calzada |
-| **Paneles PMV Fijos (Poste)** | **14 unidades** | Intersecciones, zonas críticas | Información unidireccional |
-| **TOTAL PMV** | **28 unidades** | Distribuidas estratégicamente | Cobertura completa del corredor |
-| **Controladores PMV** | 28 unidades | Gabinete en cada panel | Gestión de mensajes y comunicación |
-| **Estructuras soporte** | 28 unidades | Pórticos y postes | Soporte físico de paneles |
-| **Conexión a red FO** | 28 puntos | Integración con red de telecomunicaciones | Comunicación con CCO |
+| **Paneles PMV Fijos (Pórtico)** | **7 unidades** | Antes/después peajes, estratégicos | Información bidireccional sobre calzada |
+| **Paneles PMV Fijos (Poste)** | **7 unidades** | Intersecciones, zonas críticas | Información unidireccional |
+| **TOTAL PMV** | **14 unidades** | Distribuidos estratégicamente | Cobertura optimizada (Manual 2024) |
+| **Controladores PMV** | 14 unidades | Gabinete en cada panel | Gestión de mensajes y comunicación |
+| **Estructuras soporte** | 14 unidades | Pórticos y postes | Soporte físico de paneles |
+| **Conexión a red FO** | 14 puntos | Integración con red de telecomunicaciones | Comunicación con CCO |
 
 **Distribución por tipo de ubicación:**
 - **Estaciones de Peaje:** 4 PMV (2 por peaje: antes + después)
-- **Intersecciones Críticas:** 8 PMV
-- **Zonas de Obras:** 6 PMV
-- **Zonas Urbanas:** 4 PMV
-- **Puntos de Control:** 4 PMV
-- **Zonas de Accidentalidad:** 2 PMV
+- **Intersecciones Críticas:** 4 PMV
+- **Zonas de Obras / Estratégicos:** 4 PMV
+- **Zonas de Accidentalidad / Control:** 2 PMV
 
 ---
 
@@ -153,31 +151,25 @@ CCO → Sistema de Gestión PMV → NTCIP 1202 → Controlador PMV → Panel LED
 
 | Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:-----|:---------|:---------------------|:------------------|
-| **Panel PMV LED Full Matrix (3×1.5m)** | 28 | $25,000 | $700,000 |
-| **Controlador NTCIP 1202** | 28 | $5,000 | $140,000 |
-| **Estructura soporte pórticos** | 14 | $45,000 | $630,000 |
-| **Estructura soporte postes** | 14 | $15,000 | $210,000 |
-| **Sistema de gestión PMV (software)** | 1 | $80,000 | $80,000 |
-| **Obras civiles y cimentación** | 28 | $12,000 | $336,000 |
-| **Instalación y comisionamiento** | 28 | $12,500 | $350,000 |
-| **Contingencia (2%)** | - | - | $49,000 |
-| **TOTAL CAPEX** | **28 paneles** | **$87,500/panel** | **$2,450,000** |
+| **Panel PMV LED Full Matrix (RGB)** | 14 | $35,000 | $490,000 |
+| **Estructuras y Obras Civiles** | 14 | $40,000 | $560,000 |
+| **Sistema de Gestión e Integración** | 1 | $140,000 | $140,000 |
+| **TOTAL CAPEX** | **14 paneles** | **$85,000/panel** | **$1,190,000** |
 
-**Nota sobre actualización (05/12/2025):** El CAPEX fue ajustado de $644,000 a $2,450,000 USD para reflejar costos reales de estructuras pórtico (más complejas y costosas que postes simples), obras civiles de cimentación, sistema de gestión PMV centralizado, y costos de instalación/comisionamiento detallados. Este ajuste incorpora lecciones aprendidas de proyectos APP similares y validaciones contractuales finales.
+**Nota sobre actualización (21/01/2026):** El CAPEX fue optimizado a $1,190,000 USD al reducir la cantidad de 28 a 14 unidades, basándose en la optimización de puntos de decisión y peajes (Manual de Señalización 2024) y alineándose con la validación contractual final.
 
 ### 6.2 OPEX (Operación y Mantenimiento)
 
 | Ítem | Cantidad | Costo Unitario Anual (USD) | Costo Total Anual (USD) |
 |:-----|:---------|:---------------------------|:------------------------|
-| **Mantenimiento preventivo** | 28 | $400 | $11,200 |
-| **Mantenimiento correctivo** | 28 | $200 | $5,600 |
-| **TOTAL OPEX ANUAL** | **28 paneles** | **$600/panel/año** | **$16,800** |
+| **Mantenimiento Operativo** | 14 | $1,200 | $16,800 |
+| **TOTAL OPEX ANUAL** | **14 paneles** | **$1,200/panel/año** | **$16,800** |
 
 **OPEX 20 años:** $16,800 × 20 = **$336,000 USD**
 
 ### 6.3 Costo Total del Ciclo de Vida (20 años)
 
-**CAPEX + OPEX:** $2,450,000 + $336,000 = **$2,786,000 USD**
+**CAPEX + OPEX:** $1,190,000 + $336,000 = **$1,526,000 USD**
 
 ---
 
@@ -187,20 +179,10 @@ CCO → Sistema de Gestión PMV → NTCIP 1202 → Controlador PMV → Panel LED
 
 | UF | Cantidad | Ubicaciones Principales |
 |:---|:---------|:------------------------|
-| **UF1** | 3 | Peaje Zambito (2) + 1 intersección |
-| **UF2** | 2 | 1 intersección + 1 zona crítica |
-| **UF3** | 2 | 1 intersección + 1 zona crítica |
-| **UF4** | 2 | 1 intersección + 1 zona crítica |
-| **UF5** | 2 | 1 intersección + 1 zona crítica |
-| **UF6** | 2 | 1 intersección + 1 zona crítica |
-| **UF7** | 2 | 1 intersección + 1 zona crítica |
-| **UF8** | 2 | 1 intersección + 1 zona crítica |
-| **UF9** | 2 | 1 intersección + 1 zona crítica |
-| **UF10** | 2 | 1 intersección + 1 zona crítica |
-| **UF11** | 2 | 1 intersección + 1 zona crítica |
-| **UF12** | 2 | 1 intersección + 1 zona crítica |
-| **UF13** | 3 | Peaje Aguas Negras (2) + 1 intersección |
-| **TOTAL** | **28** | - |
+| **UF1** | 2 | Peaje Zambito (2) |
+| **UF2-UF12** | 10 | Distribución estratética (1 por UF aprox) |
+| **UF13** | 2 | Peaje Aguas Negras (2) |
+| **TOTAL** | **14** | - |
 
 ### 7.2 Ubicaciones Estratégicas Principales
 

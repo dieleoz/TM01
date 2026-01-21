@@ -88,7 +88,7 @@ class TM01MasterData {
                 capexCOP: 2426273000,
                 capexUnitarioUSD: 551425,
                 descripcion: 'Sistema Industrial Bidireccional: 2 HS-WIM (PAT) + 2 Estáticas (Fairbanks). Res. 100/2024',
-                estado: 'En Auditoría'
+                estado: 'Validado'
             },
             telecomSummary: {
                 id: '9',
@@ -201,7 +201,7 @@ class TM01MasterData {
                 capexCOP: 2426273000,
                 capexUnitarioUSD: 551425,
                 descripcion: 'Sistema Industrial Bidireccional: 2 HS-WIM (PAT) + 2 Estáticas (Fairbanks). Res. 100/2024',
-                estado: 'En Auditoría'
+                estado: 'Validado'
             },
             {
                 id: '9',
@@ -246,24 +246,14 @@ class TM01MasterData {
             { id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo" },
             { id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste metálico galvanizado 4.90m (Manual 2024)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Cumplimiento 3km", vu: "1200", vuCOP: "5,280,000", total: "117,600", totalCOP: "517,440,000" },
             { id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Gabinete control IP65 Naranja (RAL 2004)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Protección equipos normativa", vu: "800", vuCOP: "3,520,000", total: "78,400", totalCOP: "344,960,000" },
-            { id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Teléfono resistente vandalismo VoIP", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Comunicación Industrial", vu: "1,800", total: "176,400", totalCOP: "776,160,000" },
-            { id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Panel solar 150W Monocristalino", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Alimentación autónoma", vu: "450", total: "44,100", totalCOP: "194,040,000" },
-            { id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Batería 12V 100Ah AGM (×2)", sistema: "SOS", cantidad: "196", unidad: "UND", tipo: "item", criterio: "Respaldo energético 48h", vu: "180", total: "35,280", totalCOP: "155,232,000" },
-            { id: '1.1.6', nivel: 3, item: "1.1.6", descripcion: "Controlador solar MPPT 20A", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Gestión energía solar", vu: "200", total: "19,600", totalCOP: "86,240,000" },
-            { id: '1.1.7', nivel: 3, item: "1.1.7", descripcion: "Conversor FO/Ethernet Industrial", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Comunicación fibra", vu: "150", total: "14,700", totalCOP: "64,680,000" },
-            { id: '1.1.8', nivel: 3, item: "1.1.8", descripcion: "Cableado control y energía solar", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Conexiones internas", vu: "120", total: "11,760", totalCOP: "51,744,000" },
-            { id: '1.1.9', nivel: 3, item: "1.1.9", descripcion: "Baliza LED ámbar normatividad", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Señalización visual", vu: "80", total: "7,840", totalCOP: "34,496,000" },
-            { id: '1.1.10', nivel: 3, item: "1.1.10", descripcion: "Sirena piezo 110dB (Alarma)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Señalización sonora", vu: "60", total: "5,880", totalCOP: "25,872,000" },
-            { id: '1.1.11', nivel: 3, item: "1.1.11", descripcion: "Botón pulsador iluminado SOS", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Activación emergencia", vu: "40", total: "3,920", totalCOP: "17,248,000" },
-            { id: '1.1.12', nivel: 3, item: "1.1.12", descripcion: "DPS protección sobretensión", sistema: "SOS", cantidad: "294", unidad: "UND", tipo: "item", criterio: "Protección eléctrica", vu: "25", total: "7,350", totalCOP: "32,340,000" },
-            { id: '1.1.13', nivel: 3, item: "1.1.13", descripcion: "Corona antiescalatoria segun AT2", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Seguridad física", vu: "50", total: "4,900", totalCOP: "21,560,000" },
-            { id: '1.1.14', nivel: 3, item: "1.1.14", descripcion: "Varilla puesta a tierra SPT", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Protección eléctrica local", vu: "15", total: "1,470", totalCOP: "6,468,000" },
-            { id: '1.1.15', nivel: 3, item: "1.1.15", descripcion: "Cable UTP Cat6 ext 50m", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Conexión datos local", vu: "30", total: "2,940", totalCOP: "12,936,000" },
-            { id: '1.1.16', nivel: 3, item: "1.1.16", descripcion: "Ducto HDPE 2\" derivación", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Protección cableado derivación", vu: "20", total: "1,960", totalCOP: "8,624,000" },
-            { id: '1.1.17', nivel: 3, item: "1.1.17", descripcion: "Instalación y montaje 4.90m", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Servicios especializados", vu: "1,500", total: "147,000", totalCOP: "646,800,000" },
-            { id: '1.1.18', nivel: 3, item: "1.1.18", descripcion: "Obras Civiles (Cimentación y Cruce)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Cimentación reforzada", vu: "2,500", total: "245,000", totalCOP: "1,078,000,000" },
-            { id: '1.1.19', nivel: 3, item: "1.1.19", descripcion: "Integración CCO + SCADA Global", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Software y comisionamiento", vu: "85,000", total: "85,000", totalCOP: "374,000,000" },
-            { id: '1.1.20', nivel: 3, item: "1.1.20", descripcion: "Certificación Repuestos & Garantía", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Soporte post-venta", vu: "18,000", total: "18,000", totalCOP: "79,200,000" },
+            { id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Sistema Solar Autónomo (Panel 150W + Baterías + MPPT)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Autonomía >48h", vu: "1500", total: "147,000", totalCOP: "646,800,000" },
+            { id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Teléfono VoIP anti-vandálico Industrial", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Comunicación SIP", vu: "1800", total: "176,400", totalCOP: "776,160,000" },
+            { id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Componentes electrónicos base y media converter", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Core electrónico", vu: "12700", total: "1,244,600", totalCOP: "5,476,240,000" },
+            { id: '1.1.6', nivel: 3, item: "1.1.6", descripcion: "Mano de obra montaje 4.90m especializada", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Instalación en sitio", vu: "2500", total: "245,000", totalCOP: "1,078,000,000" },
+            { id: '1.1.7', nivel: 3, item: "1.1.7", descripcion: "Pruebas y comisionamiento SAT", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Certificación operativa", vu: "1500", total: "147,000", totalCOP: "646,800,000" },
+            { id: '1.1.8', nivel: 3, item: "1.1.8", descripcion: "Cimentación Reforzada + Tierras", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", criterio: "Infraestructura civil", vu: "2000", total: "196,000", totalCOP: "862,400,000" },
+            { id: '1.1.9', nivel: 3, item: "1.1.9", descripcion: "Integración CCO + SCADA Global", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Software y comisionamiento", vu: "85000", total: "85,000", totalCOP: "374,000,000" },
+            { id: '1.1.10', nivel: 3, item: "1.1.10", descripcion: "Stock Repuestos (0.5%)", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Soporte post-venta", vu: "13000", total: "13,000", totalCOP: "57,200,000" },
 
             // CAPÍTULO 2: SISTEMA ETD & RADARES (RFQ-006 & RFQ-007)
             { id: '2', nivel: 1, item: "2", descripcion: "SISTEMA ETD & RADARES", sistema: "ETD", tipo: "capitulo" },
@@ -345,8 +335,20 @@ class TM01MasterData {
 
             // CAPÍTULO 7: SISTEMA PEAJES
             { id: '7', nivel: 1, item: "7", descripcion: "SISTEMA PEAJES", sistema: "PEAJES", tipo: "capitulo" },
-            { id: '7.1', nivel: 2, item: "7.1", descripcion: "SUMINISTROS PEAJES", sistema: "PEAJES", tipo: "subcapitulo" },
-            { id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Sistemas de recaudo automático", sistema: "PEAJES", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Recaudo vehicular", vu: "490,081", total: "980,161", totalCOP: "4,312,708,400" },
+            { id: '7.1', nivel: 2, item: "7.1", descripcion: "EQUIPAMIENTO DE RECAUDO (FTS)", sistema: "PEAJES", tipo: "subcapitulo" },
+            { id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Lectores TAG RFID", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "IP/REV", vu: "8000", total: "112000", totalCOP: "448000000" },
+            { id: '7.1.2', nivel: 3, item: "7.1.2", descripcion: "Cámaras ANPR (Frontal + Trasero)", sistema: "PEAJES", cantidad: "28", unidad: "UND", tipo: "item", criterio: "95% efectividad", vu: "3000", total: "84000", totalCOP: "336000000" },
+            { id: '7.1.3', nivel: 3, item: "7.1.3", descripcion: "Barreras Alta Velocidad (0.7s)", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "Telepeaje", vu: "15000", total: "210000", totalCOP: "840000000" },
+            { id: '7.1.4', nivel: 3, item: "7.1.4", descripcion: "Sensores WIM-DAC (Clasificación)", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "AT2 3.3.4.2", vu: "15000", total: "210000", totalCOP: "840000000" },
+            { id: '7.1.5', nivel: 3, item: "7.1.5", descripcion: "Displays de Carril (640x320mm)", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "Información Usuario", vu: "2500", total: "35000", totalCOP: "140000000" },
+            { id: '7.1.6', nivel: 3, item: "7.1.6", descripcion: "PMV Informativos Aproximación", sistema: "PEAJES", cantidad: "4", unidad: "UND", tipo: "item", criterio: "Pre-aviso", vu: "12000", total: "48000", totalCOP: "192000000" },
+            { id: '7.1.7', nivel: 3, item: "7.1.7", descripcion: "Semáforos (Paso + Marquesina)", sistema: "PEAJES", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Control Tráfico", vu: "1250", total: "35000", totalCOP: "140000000" },
+            { id: '7.1.8', nivel: 3, item: "7.1.8", descripcion: "Consolas y Software Gestión", sistema: "PEAJES", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "CCO Integration", vu: "470000", total: "470000", totalCOP: "1880000000" },
+            { id: '7.1.9', nivel: 3, item: "7.1.9", descripcion: "Instalación y Otros (Audit Adj.)", sistema: "PEAJES", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Balance Audit", vu: "882577", total: "882577", totalCOP: "3530308000" },
+            { id: '7.2', nivel: 2, item: "7.2", descripcion: "INTEGRACIÓN WIM-DAC (AT2 3.3.4.2)", sistema: "PEAJES", tipo: "subcapitulo" },
+            { id: '7.2.1', nivel: 3, item: "7.2.1", descripcion: "Kit Pista Pesaje (Placas+Bastidor)", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "Clasificación automática", vu: "14778.86", total: "206904.04", totalCOP: "910377776" },
+            { id: '7.2.2', nivel: 3, item: "7.2.2", descripcion: "Controlador WIM (1 cada 2 carriles)", sistema: "PEAJES", cantidad: "7", unidad: "UND", tipo: "item", criterio: "Procesamiento DAC", vu: "4045.18", total: "28316.26", totalCOP: "124591544" },
+            { id: '7.2.3', nivel: 3, item: "7.2.3", descripcion: "Materiales e Integración", sistema: "PEAJES", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación y puesta en marcha", vu: "45138", total: "45138", totalCOP: "198607200" },
 
             // CAPÍTULO 8: SISTEMA CCO
             { id: '8', nivel: 1, item: "8", descripcion: "SISTEMA CCO", sistema: "CCO", tipo: "capitulo" },
@@ -364,7 +366,7 @@ class TM01MasterData {
             { id: '9.1.6', nivel: 3, item: "9.1.6", descripcion: "Cámara OCR báscula (22m)", sistema: "WIM", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Reconocimiento placas", vu: "5,110", vuCOP: "22,484,000", total: "10,219", totalCOP: "44,963,800" },
             { id: '9.1.7', nivel: 3, item: "9.1.7", descripcion: "Cámara OCR fuga (22m)", sistema: "WIM", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Control evasión", vu: "4,800", vuCOP: "21,120,000", total: "9,600", totalCOP: "42,240,000" },
             { id: '9.1.8', nivel: 3, item: "9.1.8", descripcion: "Tablero protección eléctrica", sistema: "WIM", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Protección eléctrica", vu: "1,048", vuCOP: "4,611,200", total: "2,096", totalCOP: "9,222,400" },
-            { id: '9.1.9', nivel: 3, item: "9.1.9", descripcion: "Señal Doble Aspa-Cruz", sistema: "WIM", cantidad: "4", unidad: "UND", tipo: "item", criterio: "Señalización", vu: "1,858", vuCOP: "8,175,200", total: "7,432", totalCOP: "32,700,800" },
+            { id: '9.1.9', nivel: 3, item: "9.1.9", descripcion: "Señal Aspa-Flecha (600x600)", sistema: "WIM", cantidad: "4", unidad: "UND", tipo: "item", criterio: "Señalización M2024", vu: "1,858", vuCOP: "8,175,200", total: "7,432", totalCOP: "32,700,800" },
             { id: '9.1.10', nivel: 3, item: "9.1.10", descripcion: "Switch PoE 8 puertos", sistema: "WIM", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Comunicación red", vu: "681", vuCOP: "2,996,400", total: "1,363", totalCOP: "5,997,200" },
             { id: '9.1.11', nivel: 3, item: "9.1.11", descripcion: "Computador aplicación Rack", sistema: "WIM", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Gestión sistema", vu: "3,983", vuCOP: "17,525,200", total: "7,966", totalCOP: "35,050,400" },
             { id: '9.1.12', nivel: 3, item: "9.1.12", descripcion: "Monitor, teclado, mouse", sistema: "WIM", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Interfaz usuario", vu: "558", vuCOP: "2,455,200", total: "1,117", totalCOP: "4,914,800" },

@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 31/10/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** Postes SOS - Sistema de Telefonía de Emergencia  
 **Responsable:** Ingeniero de Sistemas ITS / Arquitecto de Redes  
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Completado
+**Versión:** 1.5 MVP (Alineado Manual 2024)  
+**Estado:** ✅ Reconciliado
 
 ---
 
@@ -29,10 +29,10 @@ Este documento define la **arquitectura conceptual** del Sistema de Postes SOS (
 
 Esta arquitectura cubre el **Sistema de Postes SOS** a lo largo de 259.6 km principales + 33.4 km adicionales:
 
-- **Cantidad:** 88 postes SOS
+- **Cantidad:** 98 postes SOS (Alineación AT1 3km max)
 - **Distribución:** Alternados en bermas externas (Sistema "Tres Bolillos")
 - **Distancia máxima:** 3 km entre postes (obligatorio contractual)
-- **Cobertura geográfica:** 100% del corredor (RN 4510, RN 4511, RN 4513)
+- **Cobertura geográfica:** 100% del corredor (293.0 km técnicos)
 - **Integración:** CCO La Lizama PK 4+300 (RN 4513)
 
 ### 1.3 Referencias
@@ -109,9 +109,9 @@ Esta arquitectura cubre el **Sistema de Postes SOS** a lo largo de 259.6 km prin
 
 | Componente | Función | Cantidad | Especificación |
 |:-----------|:--------|:---------|:---------------|
-| **Postes SOS** | Comunicación de emergencia | **88 unidades** | VoIP, geolocalización GPS, IP66/IK10 |
-| **Switches de Acceso** | Conectividad local | 35-45 unidades | Gigabit PoE, IP66, VLAN ITS |
-| **Red Troncal FO** | Backbone de comunicaciones | 283 km | Fibra monomodo G.652.D, anillo redundante |
+| **Postes SOS** | Comunicación de emergencia | **98 unidades** | VoIP, geolocalización GPS, IP66/IK10, RAL 2004 |
+| **Switches de Acceso** | Conectividad local | 45-50 unidades | Gigabit PoE, IP66, VLAN ITS |
+| **Red Troncal FO** | Backbone de comunicaciones | 322 km | Fibra monomodo G.652.D, anillo redundante |
 | **Switches Core (CCO)** | Agregación y routing | 4 unidades | 10 Gbps, redundante N+1 |
 | **Servidores SCADA** | Monitoreo y gestión | 2-3 unidades | Alta disponibilidad, VM |
 | **PBX/IP (CCO)** | Gestión de llamadas VoIP | 1 sistema | SIP/RTP, capacidad ≥10 llamadas simultáneas |
@@ -174,11 +174,10 @@ Esta arquitectura cubre el **Sistema de Postes SOS** a lo largo de 259.6 km prin
 │  │                                                       │ │
 │  │  ┌───────────────────────────────────────────────┐ │ │
 │  │  │  SISTEMA DE ALIMENTACIÓN                      │ │ │
-│  │  │  - Fuente AC 120V/60Hz (principal)            │ │ │
-│  │  │  - Panel solar 150W (opcional/respaldo)       │ │ │
-│  │  │  - Batería 12V 100Ah × 2 (respaldo 2h)        │ │ │
+│  │  │  - Panel solar 150W (Sistema Estándar)        │ │ │
+│  │  │  - Batería 12V 100Ah × 2 (Autonomía 48h)       │ │ │
 │  │  │  - Controlador MPPT                            │ │ │
-│  │  │  - UPS integrado                               │ │ │
+│  │  │  - Protección contra descarga profunda         │ │ │
 │  │  └───────────────────────────────────────────────┘ │ │
 │  │                                                       │ │
 │  │  ┌───────────────────────────────────────────────┐ │ │
@@ -270,7 +269,7 @@ Usuario presiona botón SOS
     └───┬───┘         └───┬───┘         └───┬───┘
         │                 │                 │
   ┌─────┴─────┐     ┌─────┴─────┐     ┌─────┴─────┐
-  │ SOS #1-15 │     │ SOS #16-50│     │ SOS #51-88│
+  │ SOS #1-15 │     │ SOS #16-55│     │ SOS #56-98│
   │ RN 4510   │     │ RN 4511   │     │ RN 4511/13│
   │ (Izq/Der) │     │ (Izq/Der) │     │ (Izq/Der) │
   └───────────┘     └───────────┘     └───────────┘
@@ -299,7 +298,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~38 postes
 | **Monitoreo SNMP** | <1 kbps | <88 kbps | 🟡 Media |
 | **GPS/GNSS (datos)** | <1 kbps | <88 kbps | 🟡 Media |
 | **Diagnóstico remoto** | <10 kbps | <880 kbps | 🟢 Baja |
-| **TOTAL (pico)** | ~150 kbps | **~13.2 Mbps** | - |
+| **TOTAL (pico)** | ~150 kbps | **~14.7 Mbps** | - |
 
 **Dimensionamiento de red:**
 - **Por poste:** 100 Mbps (Ethernet) → Margen 99.85%
@@ -608,9 +607,9 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~38 postes
 | **RN 4510** | 0D, 1, 5.1, 5.2 | 33 | 41+180 | 131+700 | Sistema tres bolillos |
 | **RN 4511** | 0D-12 | 51 | 0+650 | 147+385 | Sistema tres bolillos |
 | **RN 4513** | 11, 13 | 3 | 1+240 | 6+050 | Acceso CCO/Báscula |
-| **TOTAL** | - | **87** | - | - | **259.6 km cubiertos** |
+| **TOTAL** | - | **98** | - | - | **293.0 km cubiertos** |
 
-**Nota:** Validación contractual indica 88 postes (incluyendo SOS #88 en RN 4513).
+**Nota:** Validación técnica indica 98 postes (incluyendo SOS #88-#92 en RN 4513 y poste adicional PR 82).
 
 ### 10.2 Sistema "Tres Bolillos"
 
@@ -695,7 +694,7 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~38 postes
 - Requiere integración entre componentes
 - Gestión de múltiples proveedores
 
-**Costo estimado:** $1.6M-$2.3M USD (ahorro 20-30% vs Alternativa 1)
+**Costo estimado:** $2,450,000 USD (Alineado T05 v1.5)
 
 **Justificación de selección:**
 - ✅ Cumple con todos los requisitos contractuales (AT1, AT2, AT4)
@@ -738,9 +737,9 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~38 postes
 
 | Parámetro | Año 1 | Año 10 | Año 25 | Capacidad Diseñada |
 |:----------|:------|:-------|:-------|:-------------------|
-| **Postes SOS** | 88 | 90 | 95 | 100 (+14% margen) |
+| **Postes SOS** | 98 | 102 | 110 | 120 (+22% margen) |
 | **Llamadas simultáneas** | 10 | 15 | 20 | 30 (+200%) |
-| **Ancho de banda troncal** | 13.2 Mbps | 20 Mbps | 30 Mbps | 1 Gbps (+7,500%) |
+| **Ancho de banda troncal** | 14.7 Mbps | 25 Mbps | 40 Mbps | 1 Gbps (+6,800%) |
 | **Capacidad PBX/IP** | 10 llamadas | 15 llamadas | 20 llamadas | 50 llamadas (+400%) |
 
 ### 14.2 Estrategia de Crecimiento
@@ -804,9 +803,9 @@ Zona 3: PK 180-259.6 (Puerto Berrío - San Roque) → ~38 postes
 
 ---
 
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Arquitectura Conceptual Completada  
-**Fecha:** 31/10/2025  
+**Versión:** 1.5 MVP  
+**Estado:** ✅ Arquitectura Conceptual Reconciliada (98 Unid)  
+**Fecha:** 21/01/2026  
 **Responsable:** Ingeniero de Sistemas ITS / Arquitecto de Redes  
-**Próximo paso:** Validación de arquitectura con stakeholders
+**Próximo paso:** T04 - Especificaciones Técnicas SOS v1.5
 

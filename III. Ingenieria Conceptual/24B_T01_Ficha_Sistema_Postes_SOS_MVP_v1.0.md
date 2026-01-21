@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 31/10/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** Postes SOS - Sistema de Telefonía de Emergencia  
 **Responsable:** Administrador Contractual EPC  
-**Versión:** 1.0 MVP  
-**Estado:** 🔄 En desarrollo
+**Versión:** 1.5 MVP (Alineado Normativa 2024)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -45,9 +45,10 @@ El Sistema de Postes SOS tiene como objetivo **permitir la comunicación gratuit
 - ✅ Alimentación eléctrica (red o solar según ubicación)
 
 **Cobertura geográfica:**
-- **Corredor principal:** 259.6 km (RN 4510 + RN 4511)
+- **Corredor principal:** 259.6 km principales + 33.4 km adicionales
 - **Conexión CCO:** RN 4513 (~10 km adicionales)
-- **Total:** ~293 km de cobertura
+- **Total:** ~293 km de cobertura técnica (322 km FO backbone)
+- **Cantidad Total:** **98 unidades** (Alineado AT1 y Manual 2024)
 - **Distribución:** Alternada en bermas externas (derecha/izquierda)
 
 **Integración con:**
@@ -104,17 +105,17 @@ El Sistema de Postes SOS tiene como objetivo **permitir la comunicación gratuit
 
 | Componente | Cantidad | Ubicación | Función |
 |:-----------|:---------|:----------|:--------|
-| **Postes SOS** | **88 unidades** | Distribuidos a lo largo del corredor (máx. 3 km entre sí) | Comunicación de emergencia |
-| **Equipamiento de comunicación** | 88 unidades | Integrado en cada poste | Transmisión de voz y datos |
-| **Sistema de localización** | 88 unidades | GPS/GNSS en cada poste | Identificación de ubicación |
-| **Alimentación eléctrica** | 88 unidades | Red eléctrica o solar según ubicación | Suministro de energía |
-| **Conexión a red FO** | 88 puntos | Integración con red de telecomunicaciones | Comunicación con CCO |
+| **Postes SOS** | **98 unidades** | Distribuidos a lo largo del corredor (máx. 3 km entre sí) | Comunicación de emergencia |
+| **Equipamiento de comunicación** | 98 unidades | Integrado en cada poste | Transmisión de voz y datos |
+| **Sistema de localización** | 98 unidades | GPS/GNSS en cada poste | Identificación de ubicación |
+| **Alimentación eléctrica** | 98 unidades | Sistema Solar Fotovoltaico Autónomo | Suministro de energía |
+| **Conexión a red FO** | 98 puntos | Integración con red de telecomunicaciones | Comunicación con CCO |
 
 **Distribución geográfica:**
-- **RN 4510:** ~134 km → ~45 postes
-- **RN 4511:** ~149 km → ~50 postes
-- **RN 4513:** ~10 km → 1 poste (SOS #88, conexión CCO)
-- **Total:** **88 postes** (cumple criterio de máximo 3 km entre sí)
+- **RN 4510:** ~134 km → 37 postes
+- **RN 4511:** ~149 km → 56 postes
+- **RN 4513:** ~10 km → 5 postes (Acceso CCO/Báscula)
+- **Total:** **98 postes** (Cumple criterio 3 km e incluye poste adicional PR 82)
 
 ---
 
@@ -141,11 +142,10 @@ Usuario → Poste SOS → Red FO → Switch L2/L3 → CCO La Lizama
 
 | Ítem | Cantidad | Costo Unitario (USD) | Costo Total (USD) |
 |:-----|:---------|:---------------------|:------------------|
-| **Poste SOS completo** | 88 | $15,000 - $20,000 | $1,320,000 - $1,760,000 |
-| **Instalación y montaje** | 88 | $2,000 - $3,000 | $176,000 - $264,000 |
-| **Conexión a red FO** | 88 | $500 - $1,000 | $44,000 - $88,000 |
-| **Alimentación eléctrica** | 88 | $1,000 - $2,000 | $88,000 - $176,000 |
-| **TOTAL CAPEX** | | | **$1,628,000 - $2,288,000** |
+| **Poste SOS completo (Naranja/4.9m)** | 98 | $18,000 | $1,764,000 |
+| **Instalación y montaje (Solar)** | 98 | $4,000 | $392,000 |
+| **Obras Civiles e Integración** | 98 | $3,000 | $294,000 |
+| **TOTAL CAPEX** | | | **$2,450,000** |
 
 **Nota:** Estimación preliminar. Requiere validación con cotizaciones reales en T05.
 
@@ -179,7 +179,7 @@ Usuario → Poste SOS → Red FO → Switch L2/L3 → CCO La Lizama
 
 | Indicador ID | Descripción | Valor Mínimo Aceptación | Frecuencia Medición |
 |:-------------|:------------|:------------------------|:--------------------|
-| **Disponibilidad SOS** | % de postes SOS operativos | ≥ 95% | Mensual |
+| **Disponibilidad SOS** | % de postes SOS operativos | ≥ 99% | Mensual |
 | **Tiempo de respuesta** | Tiempo desde llamada hasta atención CCO | ≤ 30 segundos | Por evento |
 | **Cobertura geográfica** | % del corredor con cobertura SOS | 100% | Trimestral |
 
@@ -233,14 +233,14 @@ Usuario → Poste SOS → Red FO → Switch L2/L3 → CCO La Lizama
 ### 11.2 Validaciones Contractuales Existentes
 
 - `VII. Documentos Transversales/34_VALIDACION_CONTRACTUAL_POSTES_SOS_v1.0.md`
-- **Cantidad validada:** 88 postes SOS ✅
-- **Estado:** Validado contractualmente
+- **Cantidad validada:** 98 postes SOS ✅
+- **Estado:** Validado y Reconciliado (Normativa 2024)
 
 ---
 
-**Versión:** 1.0 MVP  
-**Estado:** ✅ Ficha de Sistema Completada  
-**Fecha:** 31/10/2025  
+**Versión:** 1.5 MVP  
+**Estado:** ✅ Ficha de Sistema Reconciliada (98 Unid / $2.45M)  
+**Fecha:** 21/01/2026  
 **Responsable:** Administrador Contractual EPC  
 **Próximo paso:** Validación de arquitectura con stakeholders  
 **T02 disponible:** `24B_T02_Analisis_Requisitos_Postes_SOS_MVP_v1.0.md`  

@@ -2,11 +2,11 @@
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 ## MVP - Metodología Punto 42
 
-**Fecha:** 05/12/2025  
+**Fecha:** 21 de Enero 2026  
 **Sistema:** WIM - Weigh In Motion (Sistema de Pesaje Dinámico y Estático)  
 **Responsable:** Administrador Contractual EPC / Ingeniero Civil  
-**Versión:** 1.1 MVP  
-**Estado:** ✅ Ficha de Sistema Completada y Actualizada (CAPEX Consolidado)
+**Versión:** 1.5 MVP (Reconciliado Manual 2024)  
+**Estado:** ✅ Validado y Reconciliado
 
 ---
 
@@ -112,7 +112,8 @@ El Concesionario deberá:
 - Calibración anual (todas las básculas calibradas máximo cada año)
 
 **AT2, Sección 3.3.4.2:**
-- **Pesaje dinámico en peajes:** Instalar en todos los carriles de cobro de la Estación de peaje
+- **Pesaje dinámico en peajes:** Instalar en todos los carriles de cobro de la Estación de peaje.
+- **Nota de Alcance:** El pesaje dinámico de los carriles de peaje (clasificación vehicular) se cotiza y ejecuta en la Ficha del Sistema de Peajes (Peaje DAC), no en esta ficha WIM de control de sobrepeso.
 
 ---
 
@@ -120,10 +121,14 @@ El Concesionario deberá:
 
 | Componente | Cantidad | Ubicación | Función |
 |:-----------|:---------|:----------|:--------|
-| **Plataformas WIM (Dinámicas)** | **2 unidades** | PR4+0100 RN 4513 (1 por sentido) | Pesaje sin detención, pre-selección de vehículos sobrecargados |
-| **Plataformas Estáticas** | **2 unidades** | PR4+0100 RN 4513 (1 por sentido) | Pesaje de precisión, verificación y sanción |
+| **Plataformas WIM (Dinámicas)** | **2 unidades** | PR4+0100 RN 4513 (1 por sentido) | Pesaje sin detención, pre-selección |
+| **Plataformas Estáticas** | **2 unidades** | PR4+0100 RN 4513 (1 por sentido) | Pesaje de precisión, verification y sanción |
 | **TOTAL PLATAFORMAS** | **4 unidades** | PR4+0100 RN 4513 | 1 estación bidireccional |
-| **Sistema de Control** | 1 unidad | Gabinete en estación | Gestión de datos y comunicación |
+| **PMV de Derivación (LED Ámbar)** | 1 unidad | Antes de la báscula | Indica vehículo que debe entrar (Manual 2024 9.3.3.3) |
+| **PMV de Peso (Confirmación)** | 1 unidad | En báscula estática | Muestra peso y señal de cumplimiento |
+| **Semáforos de Control** | 2 unidades | Punto de triaje y báscula | Control de flujo (Pare/Siga) |
+| **Cámaras LPR de Evidencia** | 2 unidades | Básculas | Registro fotográfico automático de placas para sanción |
+| **Sistema de Control** | 1 unidad | Gabinete en estación | Gestión de datos y LPR (independiente de CCTV) |
 | **Sistema de Impresión** | 1 unidad | Área de administración | Comprobantes automáticos de peso |
 | **Conexión a red FO** | 1 punto | Integración con red de telecomunicaciones | Comunicación con CCO |
 | **Área de Administración** | 1 unidad | Estación de pesaje | Oficinas, sanitarios, control |
@@ -165,12 +170,13 @@ WIM/Estática → Controlador → Switches → Red FO → Switch Core CCO → Se
 |:-----|:---------|:---------------------|:------------------|
 | **Plataformas WIM (Dinámicas optimizadas)** | 2 | $80,000 | $160,000 |
 | **Plataformas Estáticas (optimizadas)** | 2 | $60,000 | $120,000 |
+| **PMV + Semáforos (Manual 2024)** | 1 set | $35,000 | $35,000 |
+| **Cámaras LPR + Software Evidencia** | 1 set | $15,000 | $15,000 |
 | **Sistema de Control y Comunicaciones** | 1 | $35,000 | $35,000 |
-| **Infraestructura Civil (optimizada)** | 1 estación | $100,000 | $100,000 |
-| **Área de Administración (modular)** | 1 | $50,000 | $50,000 |
-| **Sistema de Impresión** | 1 | $6,000 | $6,000 |
-| **Instalación y comisionamiento** | 1 estación | $80,000 | $80,000 |
-| **TOTAL CAPEX** | **1 estación (4 plataformas)** | **$523,539/estación** | **$523,539** |
+| **Infraestructura Civil (optimizada)** | 1 estación | $102,539 | $102,539 |
+| **Área de Administración (modular)** | 1 | $80,000 | $80,000 |
+| **Sistema de Impresión** | 1 | $3,886 | $3,886 |
+| **TOTAL CAPEX** | **1 estación (4 plataformas)** | **$551,425/estación** | **$551,425** |
 
 **Nota sobre actualización (15/01/2026):** El CAPEX fue ajustado a **$523,539 USD** alineado con la Ingeniería de Detalle (T05) y ofertas formales (PAT Traffic + Fairbanks).
 
