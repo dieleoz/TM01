@@ -108,7 +108,31 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 📁 Estructura del Sistema Web
+### ⚠️ REGLA CRÍTICA: SINCRONIZACIÓN OBLIGATORIA
+
+> **� IMPORTANTE: Después de modificar CUALQUIER archivo fuente, DEBES ejecutar el script de sincronización**
+>
+> **Archivos fuente que requieren sincronización:**
+> - ✏️ Documentos `.md` en `V. Ingenieria de Detalle/` (T05)
+> - ✏️ `docs/data/tm01_master_data.js` (modificaciones manuales)
+> - ✏️ Cualquier archivo en Capas 1 o 2
+>
+> **Script obligatorio:**
+> ```powershell
+> powershell -ExecutionPolicy Bypass -File "scripts/sync_wbs_tm01.ps1"
+> ```
+>
+> **¿Por qué?**
+> - `presupuesto.html` y otros dashboards cargan desde `datos_wbs_TM01_items.js` (Capa 3)
+> - Este archivo es **GENERADO AUTOMÁTICAMENTE** por el script
+> - Si no ejecutas el script, los dashboards mostrarán **valores desactualizados**
+>
+> **Ejemplo del error:**
+> - PR #1 actualizó `tm01_master_data.js` con Peajes = $1.89M ✅
+> - PR #1 NO ejecutó `sync_wbs_tm01.ps1` ❌
+> - Resultado: `presupuesto.html` seguía mostrando $2.08M (datos viejos)
+
+### �📁 Estructura del Sistema Web
 
 ```
 📁 Sistema_Validacion_Web/
@@ -124,7 +148,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 ├── REPORTES_VALIDACION_TM01_Troncal_Magdalena.html # 📈 Reportes automáticos
 └── data/
     ├── tm01_master_data.js                       # 🗄️ Fuente única de verdad
-    └── datos_wbs_TM01_items.js                   # 📊 Datos WBS estructurados
+    └── datos_wbs_TM01_items.js                   # 📊 Datos WBS estructurados (GENERADO - NO EDITAR)
 ```
 
 ### 🔐 Sistema de Acceso Seguro
