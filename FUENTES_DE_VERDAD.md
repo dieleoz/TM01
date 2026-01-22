@@ -48,6 +48,22 @@ Estos documentos contienen los **precios definitivos** y **componentes detallado
 
 ```
 V. Ingenieria de Detalle/
+...
+
+> **Nota de Procesamiento (2026):**
+> La extracción de datos desde T05 se realiza mediante **Parser Inteligente** (`sync_wbs_tm01.ps1`).
+> - Ignora tablas de despiece ("Componentes").
+> - Captura tablas de resumen ("Tipos" o "Items").
+> - Esto asegura que el presupuesto WBS coincida con la estructura de contratación (Llave en Mano).
+
+## 🔄 FLUJO DE DATOS (DATA PIPELINE)
+1. **Fuentes:** `tm01_master_data.js` (Cantidades Maestras) + `Documentos T05` (Detalles).
+2. **Procesador:** `sync_wbs_tm01.ps1` (Script PowerShell).
+   - Aplica reglas de negocio (ej. Tipo A = Suministro).
+   - Ignora tablas detalladas.
+3. **Salida:** `datos_wbs_TM01_items.js` (Consumido por la Web/Presupuesto).
+   - *Este archivo se regenera automáticamente; no editar manualmente.*
+
 ├── 04_T05_Ingenieria_Detalle_Postes_SOS_v1.0.md          # 💰 Precios SOS
 ├── 05_T05_Ingenieria_Detalle_CCTV_v1.0.md                # 💰 Precios CCTV
 ├── 06_T05_Ingenieria_Detalle_PMV_v1.0.md                 # 💰 Precios PMV

@@ -26,7 +26,7 @@
 
 | Parámetro | Valor | Referencia Contractual / Normativa |
 |:----------|:------|:-----------------------------------|
-| **Cantidad total** | **98 postes** | AT1 compliance (3 km max spacing) |
+| **Cantidad total** | **88 postes** | Según solicitud cliente (Riesgo gap >3km) |
 | **Color del poste** | **Naranja (RAL 2004)** | Manual de Señalización Vial 2024 |
 | **Altura estructural** | **4.90 m** | Manual de Señalización Vial 2024 |
 | **Energía** | **Solar Fotovoltaica** | Autonomía >48h (Independiente BT) |
@@ -43,17 +43,17 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. EQUIPO POSTE SOS NORMATIVO** | **98** | **$18,000** | **$1,764,000** | **72.0%** |
-| Poste metálico galvanizado 4.9m | 98 | $1,200 | $117,600 | 4.8% |
-| Gabinete control IP65 Naranja | 98 | $800 | $78,400 | 3.2% |
-| Sistema Solar (150W + 200Ah) | 98 | $1,500 | $147,000 | 6.0% |
-| Teléfono VoIP anti-vandálico | 98 | $1,800 | $176,400 | 7.2% |
-| Componentes electrónicos base | 98 | $12,700 | $1,244,600 | 50.8% |
-| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **98** | **$4,000** | **$392,000** | **16.0%** |
-| Mano de obra montaje 4.9m | 98 | $2,500 | $245,000 | 10.0% |
-| Pruebas y comisionamiento SAT | 98 | $1,500 | $147,000 | 6.0% |
-| **3. OBRAS CIVILES & INTEGRACIÓN** | **98** | **$3,000** | **$294,000** | **12.0%** |
-| Cimentación Reforzada + Tierras | 98 | $2,000 | $196,000 | 8.0% |
+| **1. EQUIPO POSTE SOS NORMATIVO** | **88** | **$18,000** | **$1,584,000** | **72.0%** |
+| Poste metálico galvanizado 4.9m | 88 | $1,200 | $105,600 | 4.8% |
+| Gabinete control IP65 Naranja | 88 | $800 | $70,400 | 3.2% |
+| Sistema Solar (150W + 200Ah) | 88 | $1,500 | $132,000 | 6.0% |
+| Teléfono VoIP anti-vandálico | 88 | $1,800 | $158,400 | 7.2% |
+| Componentes electrónicos base | 88 | $12,700 | $1,117,600 | 50.8% |
+| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **88** | **$4,000** | **$352,000** | **16.0%** |
+| Mano de obra montaje 4.9m | 88 | $2,500 | $220,000 | 10.0% |
+| Pruebas y comisionamiento SAT | 88 | $1,500 | $132,000 | 6.0% |
+| **3. OBRAS CIVILES & INTEGRACIÓN** | **88** | **$3,000** | **$264,000** | **12.0%** |
+| Cimentación Reforzada + Tierras | 88 | $2,000 | $176,000 | 8.0% |
 | Integración CCO + SCADA | 1 | $85,000 | $85,000 | 3.5% |
 | Stock Repuestos (0.5%) | 1 | $13,000 | $13,000 | 0.5% |
 | **TOTAL CAPEX SOS** | | | | **$2,450,000** |
@@ -71,7 +71,7 @@
 | **RN 4510** | Magdalena | 37 | 41+180 | 131+700 | 2.43 km |
 | **RN 4511** | Puerto Salgar | 56 | 0+650 | 147+385 | 2.62 km |
 | **RN 4513** | Acceso CCO | 5 | 1+240 | 6+050 | 0.96 km |
-| **TOTAL** | - | **98** | - | - | **< 3.00 km** ✅ |
+| **TOTAL** | - | **88** | - | - | **> 3.00 km** ⚠️ |
 
 **Nota sobre el gap en PR 84+805 (RN 4511):** Se han redistribuido las 10 unidades adicionales (respecto a la v1.4) para eliminar espaciamientos superiores a 3 km. Se adiciona un poste en PR 82+400 para cerrar la brecha detectada en la auditoría.
 

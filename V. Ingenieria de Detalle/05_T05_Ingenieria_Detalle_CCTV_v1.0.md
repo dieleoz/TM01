@@ -17,13 +17,27 @@
 
 ---
 
+## 1. 📜 **ALCANCE Y TRAZABILIDAD CONTRACTUAL**
+Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
+
+1.  **AT1 - Alcance del Proyecto:**
+    *   **Fuente:** `AT1_Alcance_Proyecto_v1.0.md`
+    *   **Requisito:** Cobertura de seguridad en Nodos Críticos y cumplimiento de normativa IP/REV.
+    *   **Justificación de Cantidad:** El diseño contempla **20 Cámaras** (15 Tipo A + 5 Tipo C) seleccionadas para cubrir el 100% de los puntos de interés definidos en el alcance contractual (Peajes, Intersecciones, Pasos Urbanos).
+
+2.  **AT3 - Especificaciones Generales:**
+    *   **Fuente:** `AT3_Especificaciones_Generales_v1.0.md` (Cap. 4.2 ITS)
+    *   **Cumplimiento:** Visibilidad, integración IP/REV, y estándares de montaje.
+
+---
+
 ## 📋 **RESUMEN EJECUTIVO**
 
 ### **Sistema CCTV:**
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **15 cámaras** | Propuesta Optimizada (Hard Deck + Nodos) |
+| **Cantidad total** | **20 cámaras** | 15 Tipo A + 5 Tipo C |
 | **Distribución** | 13 UFs cubiertas | Tabla Maestra Layout (Revisada) |
 | **Tipo principal** | PTZ Domo IP (zoom 30×) | T04 CCTV |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
@@ -36,6 +50,7 @@
 
 ## 💰 **PRESUPUESTO DETALLADO**
 
+<!--
 ### **CAPEX POR COMPONENTE:**
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
@@ -55,9 +70,19 @@
 | **3. INSTALACIÓN Y SERVICIOS** | **15** | **-** | **$52,500** | **3.2%** |
 | Instalación y comisionamiento | 15 | $3,000 | $45,000 | 2.8% |
 | Pruebas FAT/SAT | 15 | $500 | $7,500 | 0.5% |
-| **4. SISTEMA CENTRAL (VMS/VIDEOWALL)**| **1** | **$1,229,500** | **$1,229,500** | **75.3%** |
-| VMS, Videowall, Storage 90TB | 1 | $1,224,000 | $1,224,000 | 74.9% |
+| **4. SISTEMA CENTRAL (VMS/VIDEOWALL)**| **-** | **-** | **MOVIDO A CCO** | **-** |
 | Documentación Técnica | 1 | $5,500 | $5,500 | 0.4% |
+-->
+
+...
+
+| Tipo | Cantidad | Costo Unit. | Subtotal |
+|:-----|:---------|:------------|:---------|
+| **Tipo A** (Poste nuevo 12m + Solar/Red + PTZ) | 15 | $23,550.00 | $353,250.00 |
+| **Tipo C** (Separador 8m) | 5 | $9,327.09 | $46,635.45 |
+| **TOTAL CAPEX DETALLADO** | **20** | - | **$399,885.45** |
+| **Descuento volumen (-15%)** | - | - | **-$59,982.82** |
+| **TOTAL AJUSTADO** | - | - | **$339,902.63 USD** |
 | **TOTAL CAPEX** | - | - | **$1,634,000** | **100%** |
 
 **CAPEX/cámara:** $1,890,000 / 30 = **$63,000 USD/cámara** (Solución llave en mano con integración CCO y Backbone FO)
@@ -271,11 +296,10 @@
 | Tipo | Cantidad | Costo Unit. | Subtotal |
 |:-----|:---------|:------------|:---------|
 | **Tipo A** (Poste nuevo 12m) | 15 | $12,863.09 | $192,946.35 |
-| **Tipo B** (Infraestructura existente) | 10 | $6,831.09 | $68,310.90 |
 | **Tipo C** (Separador 8m) | 5 | $9,327.09 | $46,635.45 |
-| **TOTAL CAPEX DETALLADO** | **30** | - | **$307,892.70** |
-| **Descuento volumen (-15%)** | - | - | **-$46,183.90** |
-| **TOTAL AJUSTADO** | - | - | **$261,708.80 USD** |
+| **TOTAL CAPEX DETALLADO** | **20** | - | **$239,581.80** |
+| **Descuento volumen (-15%)** | - | - | **-$35,937.27** |
+| **TOTAL AJUSTADO** | - | - | **$203,644.53 USD** |
 
 **✅ VALIDADO vs. PRESUPUESTO_ITS_PURO ($240,000 equipos + $150,000 instalación = $390,000)**
 

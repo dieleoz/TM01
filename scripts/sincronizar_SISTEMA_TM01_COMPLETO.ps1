@@ -8,24 +8,24 @@ $ErrorActionPreference = 'Stop'
 
 # Importar módulos
 $modulesPath = Join-Path -Path (Split-Path -Parent $PSCommandPath) -ChildPath 'modules'
-$logger     = Join-Path $modulesPath 'Logger.psm1'
-$snapshotter= Join-Path $modulesPath 'Snapshotter.psm1'
-$cachebuster= Join-Path $modulesPath 'CacheBuster.psm1'
-$validator  = Join-Path $modulesPath 'ValidadorContractual.psm1'
-$t05parser  = Join-Path $modulesPath 'T05Parser.psm1'
+$logger = Join-Path $modulesPath 'Logger.psm1'
+$snapshotter = Join-Path $modulesPath 'Snapshotter.psm1'
+$cachebuster = Join-Path $modulesPath 'CacheBuster.psm1'
+$validator = Join-Path $modulesPath 'ValidadorContractual.psm1'
+$t05parser = Join-Path $modulesPath 'T05Parser.psm1'
 $rfqUpdater = Join-Path $modulesPath 'RFQUpdater.psm1'
 $dataMapper = Join-Path $modulesPath 'DataMapper.psm1'
-$encValidator= Join-Path $modulesPath 'EncodingValidator.psm1'
-if (Test-Path $logger)     { Import-Module $logger -Force; Initialize-Logger -LogPrefix 'sincronizacion' }
-if (Test-Path $snapshotter){ Import-Module $snapshotter -Force }
-if (Test-Path $cachebuster){ Import-Module $cachebuster -Force }
-if (Test-Path $validator)  { Import-Module $validator -Force }
-if (Test-Path $t05parser)  { Import-Module $t05parser -Force }
+$encValidator = Join-Path $modulesPath 'EncodingValidator.psm1'
+if (Test-Path $logger) { Import-Module $logger -Force; Initialize-Logger -LogPrefix 'sincronizacion' }
+if (Test-Path $snapshotter) { Import-Module $snapshotter -Force }
+if (Test-Path $cachebuster) { Import-Module $cachebuster -Force }
+if (Test-Path $validator) { Import-Module $validator -Force }
+if (Test-Path $t05parser) { Import-Module $t05parser -Force }
 if (Test-Path $rfqUpdater) { Import-Module $rfqUpdater -Force }
 if (Test-Path $dataMapper) { Import-Module $dataMapper -Force }
-if (Test-Path $encValidator){ Import-Module $encValidator -Force }
+if (Test-Path $encValidator) { Import-Module $encValidator -Force }
 
-function Write-Log([string]$msg){
+function Write-Log([string]$msg) {
     $ts = (Get-Date).ToString('yyyy-MM-dd HH:mm:ss')
     Write-Host "[$ts] $msg"
 }
@@ -42,9 +42,11 @@ function New-SyncLock {
         $fs.Write($bytes, 0, $bytes.Length)
         $fs.Flush(); $fs.Close()
         return $true
-    } catch [System.IO.IOException] {
+    }
+    catch [System.IO.IOException] {
         return $false
-    } catch {
+    }
+    catch {
         return $false
     }
 }
@@ -57,11 +59,11 @@ if (Get-Command Test-ContractCompliance -ErrorAction SilentlyContinue) {
     if (-not $val.IsValid) {
         $incongruencias += $val.Issues
         $repoRoot = Split-Path -Parent $PSCommandPath
-        $logsDir  = Join-Path $repoRoot 'logs'
+        $logsDir = Join-Path $repoRoot 'logs'
         if (-not (Test-Path -LiteralPath $logsDir)) { New-Item -ItemType Directory -Path $logsDir -Force | Out-Null }
         $logJson = Join-Path $logsDir ("incongruencias_{0}.jsonl" -f (Get-Date -Format 'yyyyMMdd'))
         if (Get-Command Write-JsonLog -ErrorAction SilentlyContinue) {
-            foreach($i in $val.Issues){ Write-JsonLog -Path $logJson -Message 'ValidacionContrato' -Level 'ERROR' -Data @{ issue=$i } }
+            foreach ($i in $val.Issues) { Write-JsonLog -Path $logJson -Message 'ValidacionContrato' -Level 'ERROR' -Data @{ issue = $i } }
         }
         if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
             Write-LogEntry -Level 'ERROR' -Message 'Validación contractual falló' -Context @{ Issues = $incongruencias; LogFile = $logJson }
@@ -92,32 +94,32 @@ function Get-FiberQuantities {
     }
     Write-Log "CSV no encontrado. Usando respaldo embebido."
     @(
-        @{ID='1021';Nombre='Cable fibra óptica 48h';Und='m';Cantidad=314824}
-        @{ID='1022';Nombre='Cable fibra óptica 12h';Und='m';Cantidad=10856}
-        @{ID='1024';Nombre='Cajas empalme 80×80';Und='und';Cantidad=65}
-        @{ID='1025';Nombre='Cajas empalme 60×60';Und='und';Cantidad=1192}
-        @{ID='1026';Nombre='Cruces especiales puentes';Und='m';Cantidad=4132}
-        @{ID='1027';Nombre='Cruces especiales muros';Und='m';Cantidad=236}
-        @{ID='1028';Nombre='Cruces especiales box culvert';Und='m';Cantidad=6732}
-        @{ID='1029';Nombre='Cruces especiales alcantarillas';Und='m';Cantidad=2006}
-        @{ID='10210';Nombre='Empalmes y conectores globales';Und='glb';Cantidad=1}
-        @{ID='1031';Nombre='Excavación asfalto + tritubo';Und='m';Cantidad=27140}
-        @{ID='1032';Nombre='Excavación andén + tritubo';Und='m';Cantidad=13570}
-        @{ID='1033';Nombre='Excavación blanda + tritubo';Und='m';Cantidad=238560}
-        @{ID='1034';Nombre='Instalación cruces especiales';Und='m';Cantidad=13920}
-        @{ID='1035';Nombre='Instalación cajas empalme';Und='und';Cantidad=1257}
-        @{ID='1041';Nombre='Halado fibra óptica 48h';Und='m';Cantidad=293190}
-        @{ID='1042';Nombre='Instalación fibra óptica 12h (altura/piso)';Und='m';Cantidad=9440}
-        @{ID='1043';Nombre='Trabajos instalación especializada';Und='glb';Cantidad=1}
+        @{ID = '1021'; Nombre = 'Cable fibra óptica 48h'; Und = 'm'; Cantidad = 314824 }
+        @{ID = '1022'; Nombre = 'Cable fibra óptica 12h'; Und = 'm'; Cantidad = 10856 }
+        @{ID = '1024'; Nombre = 'Cajas empalme 80×80'; Und = 'und'; Cantidad = 65 }
+        @{ID = '1025'; Nombre = 'Cajas empalme 60×60'; Und = 'und'; Cantidad = 1192 }
+        @{ID = '1026'; Nombre = 'Cruces especiales puentes'; Und = 'm'; Cantidad = 4132 }
+        @{ID = '1027'; Nombre = 'Cruces especiales muros'; Und = 'm'; Cantidad = 236 }
+        @{ID = '1028'; Nombre = 'Cruces especiales box culvert'; Und = 'm'; Cantidad = 6732 }
+        @{ID = '1029'; Nombre = 'Cruces especiales alcantarillas'; Und = 'm'; Cantidad = 2006 }
+        @{ID = '10210'; Nombre = 'Empalmes y conectores globales'; Und = 'glb'; Cantidad = 1 }
+        @{ID = '1031'; Nombre = 'Excavación asfalto + tritubo'; Und = 'm'; Cantidad = 27140 }
+        @{ID = '1032'; Nombre = 'Excavación andén + tritubo'; Und = 'm'; Cantidad = 13570 }
+        @{ID = '1033'; Nombre = 'Excavación blanda + tritubo'; Und = 'm'; Cantidad = 238560 }
+        @{ID = '1034'; Nombre = 'Instalación cruces especiales'; Und = 'm'; Cantidad = 13920 }
+        @{ID = '1035'; Nombre = 'Instalación cajas empalme'; Und = 'und'; Cantidad = 1257 }
+        @{ID = '1041'; Nombre = 'Halado fibra óptica 48h'; Und = 'm'; Cantidad = 293190 }
+        @{ID = '1042'; Nombre = 'Instalación fibra óptica 12h (altura/piso)'; Und = 'm'; Cantidad = 9440 }
+        @{ID = '1043'; Nombre = 'Trabajos instalación especializada'; Und = 'glb'; Cantidad = 1 }
     ) | ForEach-Object { [PSCustomObject]$_ }
 }
 
 function Render-MarkdownTable {
     param([object[]]$Items)
     $header = "| ID   | Nombre                                       | Und | Cantidad | Precio Unit. USD | Precio Unit. COP | Total USD | Total COP |"
-    $sep    = "|------|----------------------------------------------|-----|----------|------------------|------------------|-----------|-----------|"
+    $sep = "|------|----------------------------------------------|-----|----------|------------------|------------------|-----------|-----------|"
     $lines = @($header, $sep)
-    foreach($r in $Items){
+    foreach ($r in $Items) {
         $lines += "| $($r.ID) | $($r.Nombre) | $($r.Und) | $($r.Cantidad) |  |  |  |  |"
     }
     return ($lines -join "`n")
@@ -128,19 +130,19 @@ function Update-RFQFiberTable_Inline {
     if (-not (Test-Path -LiteralPath $RfqPath)) { throw "No existe RFQ: $RfqPath" }
     $content = Get-Content -LiteralPath $RfqPath -Raw -Encoding UTF8
     $startTag = '<!-- AUTOGEN:FO_TABLE_START -->'
-    $endTag   = '<!-- AUTOGEN:FO_TABLE_END -->'
+    $endTag = '<!-- AUTOGEN:FO_TABLE_END -->'
     $start = $content.IndexOf($startTag)
-    $end   = $content.IndexOf($endTag)
+    $end = $content.IndexOf($endTag)
     if ($start -lt 0 -or $end -lt 0 -or $end -le $start) { throw "Marcadores AUTOGEN no encontrados en $RfqPath" }
     $before = $content.Substring(0, $start + $startTag.Length)
-    $after  = $content.Substring($end)
-    $table  = Render-MarkdownTable -Items $Items
-    $note   = "`n> Última sincronización: " + (Get-Date).ToString('yyyy-MM-dd HH:mm:ss') + "`n`n"
+    $after = $content.Substring($end)
+    $table = Render-MarkdownTable -Items $Items
+    $note = "`n> Última sincronización: " + (Get-Date).ToString('yyyy-MM-dd HH:mm:ss') + "`n`n"
     $newContent = $before + "`n" + $note + $table + "`n" + $after
     Set-Content -LiteralPath $RfqPath -Value $newContent -Encoding UTF8
 }
 
-try{
+try {
     # Acquire lock
     if (-not (New-SyncLock)) {
         if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'WARN' -Message 'Sincronizacion bloqueada por lockfile' -Context @{ Lock = $lockPath } }
@@ -149,7 +151,7 @@ try{
     Write-Log "Sincronizacion TM01 iniciada"
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion iniciada' }
     # Snapshot pre-sincronización
-    $masterFile = "Sistema_Validacion_Web/data/tm01_master_data.js"
+    $masterFile = "docs/data/tm01_master_data.js"
     if ((Test-Path -LiteralPath $masterFile) -and (Get-Command New-DataSnapshot -ErrorAction SilentlyContinue)) {
         Write-LogEntry -Level 'INFO' -Message 'Creando snapshot pre-sync' -Context @{ File = $masterFile }
         New-DataSnapshot -SourceFile $masterFile -Description "Pre-sync $(Get-Date -Format 'yyyy-MM-dd HH:mm')" | Out-Null
@@ -162,11 +164,12 @@ try{
         if (-not $syncResult) {
             if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Sincronizacion bidireccional fallo (conflictos o error)' }
             Write-Host "`nSINCRONIZACION DETENIDA POR CONFLICTOS" -ForegroundColor Red
-            Write-Host "Ver: Sistema_Validacion_Web/data/tm01_master_data.conflicts.json" -ForegroundColor Yellow
+            Write-Host "Ver: docs/data/tm01_master_data.conflicts.json" -ForegroundColor Yellow
             exit 1
         }
         if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion bidireccional completada exitosamente' }
-    } else {
+    }
+    else {
         # Fallback: sync T05 tradicional (solo si DataMapper no está disponible)
         Write-Log "DataMapper no disponible, usando sync T05 tradicional"
         $syncT05 = Join-Path -Path (Split-Path -Parent $PSCommandPath) -ChildPath 'sync_master_from_T05.ps1'
@@ -177,7 +180,8 @@ try{
     $foItems = if (Get-Command Get-T05FiberQuantitiesFromRFQCsv -ErrorAction SilentlyContinue) { Get-T05FiberQuantitiesFromRFQCsv } else { Get-FiberQuantities }
     if (Get-Command Update-RFQFiberTable -ErrorAction SilentlyContinue) {
         Update-RFQFiberTable -Items $foItems
-    } else {
+    }
+    else {
         Update-RFQFiberTable_Inline -Items $foItems
     }
     # Validacion declarativa por reglas YAML
@@ -192,10 +196,12 @@ try{
                 if (-not $decl.IsValid) {
                     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'ERROR' -Message 'Validacion declarativa fallo' -Context @{ Issues = $decl.Issues } }
                     throw ("Validacion declarativa fallo: " + ($decl.Issues -join '; '))
-                } else {
+                }
+                else {
                     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Validacion declarativa OK' }
                 }
-            } catch {
+            }
+            catch {
                 throw $_
             }
         }
@@ -211,8 +217,8 @@ try{
         $version = (Get-Date).ToUniversalTime().ToString('yyyyMMddHHmmss')
         $htmlTargets = @()
         if (Test-Path -LiteralPath 'docs') { $htmlTargets += Get-ChildItem 'docs' -Filter '*.html' -Recurse -ErrorAction SilentlyContinue }
-        if (Test-Path -LiteralPath 'Sistema_Validacion_Web') { $htmlTargets += Get-ChildItem 'Sistema_Validacion_Web' -Filter '*.html' -Recurse -ErrorAction SilentlyContinue }
-        foreach($f in $htmlTargets){
+        if (Test-Path -LiteralPath 'docs') { $htmlTargets += Get-ChildItem 'docs' -Filter '*.html' -Recurse -ErrorAction SilentlyContinue }
+        foreach ($f in $htmlTargets) {
             try { Add-CacheBusting -HtmlFile $f.FullName -Version $version } catch { 
                 if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'WARN' -Message "Cache-busting fallo para $($f.Name)" }
             }
@@ -242,14 +248,16 @@ try{
     # }
     
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) { Write-LogEntry -Level 'INFO' -Message 'Sincronizacion finalizada OK' }
-}catch{
+}
+catch {
     $errorMsg = $_ | Out-String
     if (Get-Command Write-LogEntry -ErrorAction SilentlyContinue) {
         try { Write-LogEntry -Level 'ERROR' -Message 'Sincronizacion fallo' -Context @{ error = $errorMsg } } catch { }
     }
     Write-Error $errorMsg
     exit 1
-}finally{
+}
+finally {
     Remove-SyncLock
 }
 # SCRIPT MAESTRO ...

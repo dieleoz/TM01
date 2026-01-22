@@ -52,8 +52,21 @@ function Extract-T05Components {
             $lines = Get-Content $filePath -Encoding UTF8
             
             $currentSistema = $defaultSistema
+            $ignoreCurrentTable = $false
             
             foreach ($line in $lines) {
+                if ($line -match '\|\s*Componente\s*\|') { 
+                    $ignoreCurrentTable = $true 
+                    Write-Log "  -> Ignorando tabla detallada: Componentes"
+                    continue
+                }
+                if ($line -match '\|\s*(Tipo|Item)\s*\|') { 
+                    $ignoreCurrentTable = $false 
+                    Write-Log "  -> Procesando tabla resumen: Tipos/Items"
+                    continue
+                }
+                if ($ignoreCurrentTable) { continue }
+
                 if ($file -match "07_T05_Ingenieria_Detalle_RADAR_ETD") {
                     if ($line -match "###.*1\.\s+ETD") { $currentSistema = "ETD/RADAR" }
                     elseif ($line -match "###.*2\.\s+RADARES SANCIONATORIOS") { $currentSistema = "SAST (Sancionatorio)" }
@@ -145,7 +158,10 @@ function Start-WBSSyncV2 {
                 $totalCOP = [math]::Round([double]$total * 4000).ToString()
                 
                 $desc = $c.Componente -replace "'", ""
-                $AllWBSItems += "{ item: '$itemId', descripcion: '$desc', id: '$itemId', nivel: 3, cantidad: '$($c.Cantidad)', vuCOP: '$vuCOP', criterio: 'T05', unidad: 'UND', vu: '$vu', sistema: '$sysName', totalCOP: '$totalCOP', tipo: 'item', total: '$total' }"
+                $tipoPresupuesto = if ($desc -match "Tipo A") { "SUMINISTRO" } else { "" }
+                $propertyTipo = if ($tipoPresupuesto) { ", tipo_presupuesto: '$tipoPresupuesto'" } else { "" }
+                
+                $AllWBSItems += "{ item: '$itemId', descripcion: '$desc', id: '$itemId', nivel: 3, cantidad: '$($c.Cantidad)', vuCOP: '$vuCOP', criterio: 'T05', unidad: 'UND', vu: '$vu', sistema: '$sysName', totalCOP: '$totalCOP', tipo: 'item', total: '$total'$propertyTipo }"
             }
         }
         else {

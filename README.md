@@ -200,7 +200,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 - ✅ **Estructura robusta:** Basada en arquitectura de 4 capas
 
 ### 2. Scripts de Sincronización Automática
-- ✅ **sync_wbs_tm01.ps1**: Sincronización WBS (24 items)
+- ✅ **sync_wbs_tm01.ps1**: Sincronización WBS Inteligente (Ignora detalles, captura Tipos)
 - ✅ **sincronizar_layout.ps1**: Layout georreferenciado (52+ equipos)
 - ✅ **sincronizar_presupuesto.ps1**: Presupuesto dinámico con cálculos AIU/IVA
 - ✅ **sincronizar_SISTEMA_TM01_COMPLETO.ps1**: Script maestro con validación contrato-first
@@ -238,9 +238,9 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 
 | Sistema | Cantidad | Estado |
 |:--------|:---------|:-------|
-| **Postes SOS** | 88 unidades (1 cada 3 km) | ✅ Validado |
+| **Postes SOS** | 88 unidades (1 cada 3 km) | ✅ Validado (Riesgo gap >3km) |
 | **ETD/RADAR** | 16 equipos (14 ETD + 2 Radares) | ✅ Validado |
-| **CCTV** | 30 cámaras (20 PTZ + 10 fijas) | ✅ Validado |
+| **CCTV** | 20 cámaras (15 Tipo A + 5 Tipo C) | ✅ Validado (Optimizado 2026) |
 | **PMV** | 39 unidades (25 Vía Abierta + 14 Peaje) | ✅ Validado (Cumple IP/REV) |
 | **Estaciones Meteorológicas** | 3 unidades | ✅ Validado |
 | **WIM** | 1 estación bidireccional | ✅ Validado ($551k Reconciliado) |
