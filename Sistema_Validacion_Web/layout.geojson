@@ -2539,6 +2539,1286 @@
                                                           ],
                                           "type":  "Point"
                                       }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_01",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_02",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_03",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_04",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_05",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_06",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_07",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_AUTO_08",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril AutomÃ¡tico (Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_AUTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_01",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_02",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_03",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_04",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_05",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_06",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_07",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MIXTO_08",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Mixto (Manual - Telepeaje) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MIXTO",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_01",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_02",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_03",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_04",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_05",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_06",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_07",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_MANUAL_08",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Manual SemiautomÃ¡tico - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_MANUAL",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_REV_01",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Manual Reversible (Doble) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_REV",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_REV_02",
+                                            "latitud":  7.42,
+                                            "nombre":  "Carril Manual Reversible (Doble) - EstaciÃ³n 1",
+                                            "pk":  45,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_REV",
+                                            "longitud":  -73.28,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.28,
+                                                              7.42
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_REV_03",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Manual Reversible (Doble) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_REV",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "PEAJE_REV_04",
+                                            "latitud":  7.62,
+                                            "nombre":  "Carril Manual Reversible (Doble) - EstaciÃ³n 2",
+                                            "pk":  155,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "PEAJE_REV",
+                                            "longitud":  -73.08,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.08,
+                                                              7.62
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_01",
+                                            "latitud":  7.415,
+                                            "nombre":  "CÃ¡mara CCTV PK 20",
+                                            "pk":  20,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.285,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.285,
+                                                              7.415
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_02",
+                                            "latitud":  7.4300000000000006,
+                                            "nombre":  "CÃ¡mara CCTV PK 40",
+                                            "pk":  40,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.27,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.27,
+                                                              7.4300000000000006
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_03",
+                                            "latitud":  7.445,
+                                            "nombre":  "CÃ¡mara CCTV PK 60",
+                                            "pk":  60,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.255,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.255,
+                                                              7.445
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_04",
+                                            "latitud":  7.46,
+                                            "nombre":  "CÃ¡mara CCTV PK 80",
+                                            "pk":  80,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.24,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.24,
+                                                              7.46
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_05",
+                                            "latitud":  7.4750000000000005,
+                                            "nombre":  "CÃ¡mara CCTV PK 100",
+                                            "pk":  100,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.225,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.225,
+                                                              7.4750000000000005
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_06",
+                                            "latitud":  7.49,
+                                            "nombre":  "CÃ¡mara CCTV PK 120",
+                                            "pk":  120,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.21,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.21,
+                                                              7.49
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_07",
+                                            "latitud":  7.5050000000000008,
+                                            "nombre":  "CÃ¡mara CCTV PK 140",
+                                            "pk":  140,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.195,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.195,
+                                                              7.5050000000000008
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_08",
+                                            "latitud":  7.5200000000000005,
+                                            "nombre":  "CÃ¡mara CCTV PK 160",
+                                            "pk":  160,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.179999999999993,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.179999999999993,
+                                                              7.5200000000000005
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_09",
+                                            "latitud":  7.535,
+                                            "nombre":  "CÃ¡mara CCTV PK 180",
+                                            "pk":  180,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.164999999999992,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.164999999999992,
+                                                              7.535
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_10",
+                                            "latitud":  7.5500000000000007,
+                                            "nombre":  "CÃ¡mara CCTV PK 200",
+                                            "pk":  200,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.149999999999991,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.149999999999991,
+                                                              7.5500000000000007
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_11",
+                                            "latitud":  7.565,
+                                            "nombre":  "CÃ¡mara CCTV PK 220",
+                                            "pk":  220,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.134999999999991,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.134999999999991,
+                                                              7.565
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_12",
+                                            "latitud":  7.58,
+                                            "nombre":  "CÃ¡mara CCTV PK 240",
+                                            "pk":  240,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.11999999999999,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.11999999999999,
+                                                              7.58
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_13",
+                                            "latitud":  7.5950000000000006,
+                                            "nombre":  "CÃ¡mara CCTV PK 260",
+                                            "pk":  260,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.105,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.105,
+                                                              7.5950000000000006
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_14",
+                                            "latitud":  7.61,
+                                            "nombre":  "CÃ¡mara CCTV PK 280",
+                                            "pk":  280,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "CCTV_15",
+                                            "latitud":  7.625,
+                                            "nombre":  "CÃ¡mara CCTV PK 300",
+                                            "pk":  300,
+                                            "sistema":  "CCTV",
+                                            "tipo":  "CCTV",
+                                            "longitud":  -73.075,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.075,
+                                                              7.625
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_01",
+                                            "latitud":  7.492,
+                                            "nombre":  "ETD PK 15",
+                                            "pk":  15,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.168,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.168,
+                                                              7.492
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_02",
+                                            "latitud":  7.5040000000000004,
+                                            "nombre":  "ETD PK 30",
+                                            "pk":  30,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.156,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.156,
+                                                              7.5040000000000004
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_03",
+                                            "latitud":  7.516,
+                                            "nombre":  "ETD PK 45",
+                                            "pk":  45,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.144,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.144,
+                                                              7.516
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_04",
+                                            "latitud":  7.5280000000000005,
+                                            "nombre":  "ETD PK 60",
+                                            "pk":  60,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.132,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.132,
+                                                              7.5280000000000005
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_05",
+                                            "latitud":  7.54,
+                                            "nombre":  "ETD PK 75",
+                                            "pk":  75,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.12,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.12,
+                                                              7.54
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_06",
+                                            "latitud":  7.5520000000000005,
+                                            "nombre":  "ETD PK 90",
+                                            "pk":  90,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.108,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.108,
+                                                              7.5520000000000005
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_07",
+                                            "latitud":  7.564,
+                                            "nombre":  "ETD PK 105",
+                                            "pk":  105,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.096,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.096,
+                                                              7.564
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_08",
+                                            "latitud":  7.5760000000000005,
+                                            "nombre":  "ETD PK 120",
+                                            "pk":  120,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.084,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.084,
+                                                              7.5760000000000005
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_09",
+                                            "latitud":  7.588,
+                                            "nombre":  "ETD PK 135",
+                                            "pk":  135,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.072,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.072,
+                                                              7.588
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_10",
+                                            "latitud":  7.6000000000000005,
+                                            "nombre":  "ETD PK 150",
+                                            "pk":  150,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.06,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.06,
+                                                              7.6000000000000005
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_11",
+                                            "latitud":  7.612,
+                                            "nombre":  "ETD PK 165",
+                                            "pk":  165,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.048,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.048,
+                                                              7.612
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_12",
+                                            "latitud":  7.6240000000000006,
+                                            "nombre":  "ETD PK 180",
+                                            "pk":  180,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.036,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.036,
+                                                              7.6240000000000006
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_13",
+                                            "latitud":  7.636,
+                                            "nombre":  "ETD PK 195",
+                                            "pk":  195,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.024,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.024,
+                                                              7.636
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "ETD_14",
+                                            "latitud":  7.6480000000000006,
+                                            "nombre":  "ETD PK 210",
+                                            "pk":  210,
+                                            "sistema":  "ETD/RADAR",
+                                            "tipo":  "ETD",
+                                            "longitud":  -73.012,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.012,
+                                                              7.6480000000000006
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "WIM_CTRL_01",
+                                            "latitud":  7.61,
+                                            "nombre":  "Controlador WIM #1",
+                                            "pk":  150,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "WIM",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "WIM_CTRL_02",
+                                            "latitud":  7.61,
+                                            "nombre":  "Controlador WIM #2",
+                                            "pk":  150,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "WIM",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "WIM_CTRL_03",
+                                            "latitud":  7.61,
+                                            "nombre":  "Controlador WIM #3",
+                                            "pk":  150,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "WIM",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "WIM_CTRL_04",
+                                            "latitud":  7.61,
+                                            "nombre":  "Controlador WIM #4",
+                                            "pk":  150,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "WIM",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "WIM_CTRL_05",
+                                            "latitud":  7.61,
+                                            "nombre":  "Controlador WIM #5",
+                                            "pk":  150,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "WIM",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "WIM_CTRL_06",
+                                            "latitud":  7.61,
+                                            "nombre":  "Controlador WIM #6",
+                                            "pk":  150,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "WIM",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
+                     },
+                     {
+                         "properties":  {
+                                            "id":  "WIM_CTRL_07",
+                                            "latitud":  7.61,
+                                            "nombre":  "Controlador WIM #7",
+                                            "pk":  150,
+                                            "sistema":  "Peajes",
+                                            "tipo":  "WIM",
+                                            "longitud":  -73.09,
+                                            "estado":  "Validado"
+                                        },
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "coordinates":  [
+                                                              -73.09,
+                                                              7.61
+                                                          ],
+                                          "type":  "Point"
+                                      }
                      }
                  ],
     "type":  "FeatureCollection"

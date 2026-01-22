@@ -679,8 +679,9 @@
 
                 // Calcular presupuesto
                 const presupuesto = tm01Data.data.presupuesto || [];
-                const totalUSD = presupuesto.reduce((sum, item) => sum + (parseFloat(item.total) || 0), 0);
-                const totalCOP = totalUSD * 4400; // Tasa de cambio aproximada
+                // Usamos capexUSD reconciliado con Audit 5.0
+                const totalUSD = presupuesto.reduce((sum, item) => sum + (parseFloat(item.capexUSD) || 0), 0);
+                const totalCOP = presupuesto.reduce((sum, item) => sum + (parseFloat(item.capexCOP) || 0), 0);
 
                 // Calcular estadísticas WBS
                 const wbs = tm01Data.data.wbs || [];

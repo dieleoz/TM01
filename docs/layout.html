@@ -376,7 +376,8 @@
 
         <div class="footer">
             <p>&copy; 2025 TM01 Troncal Magdalena | Sistema WBS Interactivo v1.0</p>
-            <p style="margin-top: 5px; font-size: 12px; opacity: 0.8;">Layout generado desde tm01_master_data.js</p>
+            <p style="margin-top: 5px; font-size: 12px; opacity: 0.8;">Layout generado desde architecture GeoJSON
+                (layout.geojson) | AUDIT 5.0 READY</p>
         </div>
     </div>
 
@@ -393,13 +394,13 @@
         async function initLayout() {
             try {
                 console.log('📋 Iniciando carga de layout desde GeoJSON...');
-                
+
                 // Fetch GeoJSON instead of loading global scripts
                 const response = await fetch('../Sistema_Validacion_Web/layout.geojson');
                 if (!response.ok) {
                     throw new Error('No se pudo cargar layout.geojson');
                 }
-                
+
                 const geojsonData = await response.json();
                 console.log('✅ GeoJSON cargado:', geojsonData.features.length, 'elementos');
 
@@ -431,7 +432,7 @@
             } catch (error) {
                 console.error('❌ Error cargando layout:', error);
                 mostrarError('Error al cargar datos GeoJSON: ' + error.message);
-                
+
                 // Fallback a tm01_master_data.js si falla el fetch (legacy support)
                 console.log('⚠️ Intentando fallback a master_data.js...');
                 loadLegacyData();
