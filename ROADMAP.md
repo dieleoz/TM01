@@ -1,10 +1,10 @@
 # ROADMAP: PROYECTO TM01 TRONCAL MAGDALENA
 ## Plan de Trabajo - Metodología Punto 42 (Estrategia Source of Truth)
 
-**Versión:** 30.6 (AUDIT 5.0 PASSED - FINAL DELIVERY READY)
-**Fecha de actualización:** 21 de Enero 2026
-**Estado:** 🟢 **APTO PARA CONSTRUCCIÓN** - All Phases Complete (1-27)
-**Meta Actual:** ✅ PROYECTO COMPLETADO - Listo para Entrega al Cliente
+**Versión:** 31.0 (GEOJSON ARCHITECTURE + AUDIT 5.0 RECONCILED)
+**Fecha de actualización:** 22 de Enero 2026
+**Estado:** 🟢 **LISTO PARA DESPLIEGUE CONTINUO** - Phase 6.1 Integrated
+**Meta Actual:** 🚀 VALIDACIÓN LIVE VERCEL + ENTREGABLES GEOJSON
 
 
 ---
@@ -25,8 +25,16 @@
 - **Telecomunicaciones:** 322 km Fibra, 95 Switches ($7.98M).
 - **Energía:** 98 SOS (Fotovoltaicos), 5 Generadores, UPS, Acometidas ($4.45M).
 
-### 🚀 EN EJECUCIÓN: Fase 6 - Servir Ingeniería ("Del Horno al Plato")
-**Objetivo:** Consolidar los 7 sistemas completados y generar los entregables finales (Word + HTML) utilizando la base contractual certificada.
+### ✅ COMPLETADO: Fase 6.0 - Servir Ingeniería ("Del Horno al Plato")
+**Objetivo:** Consolidar entregables finales (Word + HTML).
+- [x] Generación de Decisiones Técnicas (DTs) verificadas.
+- [x] Consolidación de 8 sistemas ITS/Peaje.
+
+### ✅ COMPLETADO: Fase 6.1 - Mejora Arquitectónica y Despliegue
+**Objetivo:** Migrar a estándares industriales de datos y nube.
+- [x] **GeoJSON Migration**: Layout de 191 equipos migrado de estáticos JS a `layout.geojson`.
+- [x] **Vercel Deployment**: Configuración `vercel.json` y despliegue activo en `tm-01-pi.vercel.app`.
+- [x] **Dynamic Web**: Dashboard interactivo ahora consume datos vía `fetch` asíncrono.
 
 ### ✅ Sistemas Completados
 
@@ -174,8 +182,9 @@
 
 ### ✅ Fase 0.5: Certificación Fuente de Verdad - COMPLETADA
 - [x] Auditoría de Longitudes (293 km)
-- [x] Definición Contidad SOS (88 unidades)
+- [x] Definición Cantidad SOS (88 unidades - Audit 5.0 Reconciled)
 - [x] Actualización de Metadatos del Proyecto (`00_INICIO_RAPIDO`)
+- [x] Peajes CAPEX Certificado: $1,890,218.94 (Audit 5.0 Verified)
 
 ### 🚀 Fase 1.0: Alineación Ingeniería Conceptual (T01-T03)
 **Objetivo:** Asegurar que los documentos conceptuales reflejen los 293 km y las cantidades validadas.
@@ -587,9 +596,11 @@ legacy/
 2. **Construction Phase**: Transition to procurement and installation
 3. **O&M Documentation**: Prepare operational handoff (Phase VI)
 
-### Outstanding Items (Low Priority):
-- [ ] **Radio FM System**: Budget pending (~$150k-$200k)
-- [ ] **Sistema_Validacion_Web/**: Evaluate if still needed or archive
+### Post-Delivery & Expansion:
+1. **GeoJSON Enhancement**: Implementar visualización de calor (heatmaps) y clusters espaciales.
+2. **Backbone Monitoring**: Integrar telemetría básica de los 95 switches en el dashboard web.
+3. **Radio FM System**: Definición técnica y presupuesto final (~$150k-$200k).
+4. **Despliegue de Producción**: Migración de `tm-01-pi.vercel.app` a dominio corporativo final.
 
 ---
 
