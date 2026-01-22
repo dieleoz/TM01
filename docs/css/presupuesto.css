@@ -1,0 +1,215 @@
+/* WBS Presupuestal - TM01 Troncal Magdalena */
+/* Estilos extraídos de presupuesto.html */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    padding: 28px;
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.header p {
+    opacity: .95;
+    font-size: 14px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.controls {
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+}
+
+.btn-success {
+    background: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.filter-group {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-group label {
+    font-size: 13px;
+    color: #495057;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.stats {
+    padding: 18px 20px;
+    background: #d1ecf1;
+    border-bottom: 1px solid #bee5eb;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.stat {
+    background: #fff;
+    border-left: 4px solid #17a2b8;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.stat .label {
+    color: #6c757d;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.stat .value {
+    margin-top: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e3c72;
+}
+
+.table-container {
+    padding: 18px 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #1e3c72;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 13px;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge-sistema {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.right {
+    text-align: right;
+}
+
+.footer {
+    background: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .filter-group {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .filter-group select,
+    .filter-group input {
+        flex: 1;
+    }
+}
