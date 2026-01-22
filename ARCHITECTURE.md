@@ -466,6 +466,7 @@ scripts/modules/
 ## 📚 REFERENCIAS
 
 ### **Documentos Relacionados:**
+- `FUENTES_DE_VERDAD.md` - ⭐ **Jerarquía de fuentes y workflow de validación**
 - `README.md` - Documentación principal del proyecto
 - `ROADMAP.md` - Plan de trabajo y cronograma
 - `INDICE_MAESTRO_PROYECTO.md` - Índice completo del proyecto

@@ -291,6 +291,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 ## 🔗 ENLACES RÁPIDOS
 
 ### Documentos Esenciales
+- [FUENTES_DE_VERDAD.md](FUENTES_DE_VERDAD.md) - ⭐ **Jerarquía de fuentes de verdad y workflow de validación**
 - [ROADMAP.md](ROADMAP.md) - Plan de trabajo y cronograma
 - [INDICE_MAESTRO_PROYECTO.md](INDICE_MAESTRO_PROYECTO.md) - Índice completo del proyecto
 - [00_INICIO_RAPIDO.md](00_INICIO_RAPIDO.md) - Guía de inicio rápido

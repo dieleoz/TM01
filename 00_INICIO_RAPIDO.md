@@ -210,6 +210,7 @@ powershell -ExecutionPolicy Bypass -File "scripts/Fix-HtmlEncoding.ps1"
 ## 📞 SOPORTE Y REFERENCIAS
 
 ### Documentación Principal
+- [FUENTES_DE_VERDAD.md](FUENTES_DE_VERDAD.md) - ⭐ **Jerarquía de fuentes y workflow obligatorio**
 - [README.md](README.md) - Visión general completa
 - [ROADMAP.md](ROADMAP.md) - Plan de trabajo detallado
 - [INDICE_MAESTRO_PROYECTO.md](INDICE_MAESTRO_PROYECTO.md) - Índice completo
