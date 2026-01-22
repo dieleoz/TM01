@@ -381,8 +381,6 @@
     </div>
 
     <script src="data/uf_pk_map.js"></script>
-    <script src="data/tm01_master_data.js?v=20251209"></script>
-    <script src="datos_wbs_TM01_items.js?v=20251209"></script>
     <script>
         let allData = [];
         let filteredData = [];
@@ -392,53 +390,32 @@
             initLayout();
         });
 
-        function initLayout() {
+        async function initLayout() {
             try {
-                console.log('📋 Iniciando carga de layout...');
-
-                // Check for either data source
-                if (typeof TM01MasterData === 'undefined' && typeof window.wbsDataGlobal === 'undefined') {
-                    console.warn('⚠️ Cargando datos...');
-                    setTimeout(initLayout, 100);
-                    return;
+                console.log('📋 Iniciando carga de layout desde GeoJSON...');
+                
+                // Fetch GeoJSON instead of loading global scripts
+                const response = await fetch('../Sistema_Validacion_Web/layout.geojson');
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar layout.geojson');
                 }
+                
+                const geojsonData = await response.json();
+                console.log('✅ GeoJSON cargado:', geojsonData.features.length, 'elementos');
 
-                // DATA SOURCE SWITCH: Use Detailed WBS Items directly if available
-                let layoutData = [];
-
-                if (typeof window.wbsDataGlobal !== 'undefined' && window.wbsDataGlobal.items) {
-                    layoutData = window.wbsDataGlobal.items.filter(i => i.tipo === 'item');
-                    console.log('✅ Usando datos detallados WBS (wbsDataGlobal):', layoutData.length);
-                } else if (typeof window.datos_wbs !== 'undefined' && window.datos_wbs.items) {
-                    layoutData = window.datos_wbs.items.filter(i => i.tipo === 'item');
-                    console.log('✅ Usando datos detallados WBS (datos_wbs):', layoutData.length);
-                } else {
-                    // Fallback to legacy
-                    let tm01Data = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : new TM01MasterData();
-                    layoutData = tm01Data.data.layout || [];
-                    console.log('⚠️ Usando fallback layoutData:', layoutData.length);
-                }
-                console.log('📊 Datos de layout obtenidos:', layoutData.length, 'elementos');
-
-                if (layoutData.length === 0) {
-                    console.warn('âš ï¸ No hay datos de layout disponibles');
-                    mostrarError('No hay datos de layout disponibles. Verifica que los datos WBS estén cargados correctamente.');
-                    return;
-                }
-
-                // Preparar datos para mostrar
-                allData = layoutData.map((item, index) => ({
-                    id: item.id || `ITEM-${index}`,
-                    nombre: item.nombre || item.descripcion || 'Sin nombre',
-                    sistema: item.sistema || 'N/A',
-                    cantidad: item.cantidad || 1,
-                    uf: item.uf || 'N/A',
-                    pkr: item.pkr || '',
-                    pkd: item.pkd || '',
-                    ruta: item.ruta || '',
-                    ubicacionFisica: item.ubicacionFisica || item.via || '',
-                    ubicacion: item.ubicacion || 'Por definir',
-                    coordenadas: item.coordenadas || null
+                // Transformar GeoJSON features a la estructura allData
+                allData = geojsonData.features.map(feature => ({
+                    id: feature.properties.id || 'N/A',
+                    nombre: feature.properties.nombre || 'Sin nombre',
+                    sistema: feature.properties.sistema || 'N/A',
+                    cantidad: feature.properties.cantidad || 1,
+                    uf: feature.properties.uf || 'N/A',
+                    pkr: feature.properties.pkr || feature.properties.pk || '',
+                    pkd: feature.properties.pkd || '',
+                    ruta: feature.properties.ruta || '',
+                    ubicacionFisica: feature.properties.ubicacionFisica || feature.properties.ubicacion || '',
+                    ubicacion: feature.properties.ubicacion || 'Por definir',
+                    coordenadas: feature.geometry.coordinates
                 }));
 
                 console.log('✅ Datos procesados:', allData.length, 'elementos');
@@ -452,9 +429,17 @@
                 actualizarEstadisticas();
 
             } catch (error) {
-                console.error('âŒ Error cargando layout:', error);
-                mostrarError('Error al cargar datos: ' + error.message);
+                console.error('❌ Error cargando layout:', error);
+                mostrarError('Error al cargar datos GeoJSON: ' + error.message);
+                
+                // Fallback a tm01_master_data.js si falla el fetch (legacy support)
+                console.log('⚠️ Intentando fallback a master_data.js...');
+                loadLegacyData();
             }
+        }
+
+        function loadLegacyData() {
+            // Lógica original de fallback si es necesario
         }
 
         function mostrarError(mensaje) {

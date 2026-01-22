@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "tm01-troncal-magdalena",
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "docs/**", "use": "@vercel/static" },
+    { "src": "Sistema_Validacion_Web/**", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "cleanUrls": true
+}

@@ -7,6 +7,7 @@
 param(
     [string]$SourcePath = "Sistema_Validacion_Web/data/tm01_master_data.js",
     [string]$TargetPath = "Sistema_Validacion_Web/layout_datos.js",
+    [string]$GeoJSONPath = "Sistema_Validacion_Web/layout.geojson",
     [switch]$Verbose = $false,
     [switch]$DryRun = $false
 )
@@ -427,6 +428,52 @@ if (typeof module !== 'undefined' && module.exports) {
     }
 }
 
+# Función para generar el archivo GeoJSON
+function Generate-GeoJSONFile {
+    param(
+        [array]$LayoutData,
+        [string]$GeoJSONPath
+    )
+    
+    try {
+        Write-Log "Generando archivo GeoJSON en: $GeoJSONPath"
+        
+        $Features = @()
+        foreach ($Equipo in $LayoutData) {
+            $Properties = $Equipo.Clone()
+            $Properties.Remove("latitud")
+            $Properties.Remove("longitud")
+            
+            $Feature = @{
+                type = "Feature"
+                geometry = @{
+                    type = "Point"
+                    coordinates = @($Equipo.longitud, $Equipo.latitud)
+                }
+                properties = $Properties
+            }
+            $Features += $Feature
+        }
+        
+        $GeoJSON = @{
+            type = "FeatureCollection"
+            features = $Features
+        }
+        
+        $JsonContent = $GeoJSON | ConvertTo-Json -Depth 10
+        
+        if (!$DryRun) {
+            Set-Content -Path $GeoJSONPath -Value $JsonContent -Encoding UTF8
+            Write-Log "Archivo GeoJSON generado exitosamente: $GeoJSONPath"
+        }
+        
+        return $true
+    } catch {
+        Write-Log "Error al generar archivo GeoJSON: $($_.Exception.Message)" "ERROR"
+        return $false
+    }
+}
+
 # Función principal
 function Start-LayoutSync {
     Write-Log "=== INICIANDO SINCRONIZACIÓN LAYOUT TM01 ===" "INFO"
@@ -454,10 +501,17 @@ function Start-LayoutSync {
         return $false
     }
     
-    # Generar archivo de layout
+    # Generar archivo de layout JS
     $Success = Generate-LayoutFile -LayoutData $LayoutData -TargetPath $TargetPath
     if (!$Success) {
-        Write-Log "No se pudo generar el archivo de layout" "ERROR"
+        Write-Log "No se pudo generar el archivo de layout JS" "ERROR"
+        return $false
+    }
+
+    # Generar archivo GeoJSON
+    $SuccessGeo = Generate-GeoJSONFile -LayoutData $LayoutData -GeoJSONPath $GeoJSONPath
+    if (!$SuccessGeo) {
+        Write-Log "No se pudo generar el archivo GeoJSON" "ERROR"
         return $false
     }
     
