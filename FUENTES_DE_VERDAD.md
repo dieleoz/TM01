@@ -297,6 +297,194 @@ powershell -ExecutionPolicy Bypass -File "scripts/sync_wbs_tm01.ps1"
 
 ---
 
+## 📁 CARPETAS ADICIONALES - PROPÓSITO Y RELACIÓN
+
+### **VII. Documentos Transversales (74 documentos)**
+
+Esta carpeta contiene **análisis, validaciones y decisiones técnicas** que NO alimentan el sistema web directamente, pero son **críticos para entregas al cliente**.
+
+#### **Contenido:**
+
+**1. Validaciones Contractuales (34 documentos)**
+```
+34_VALIDACION_CONTRACTUAL_POSTES_SOS_v1.0.md
+35_VALIDACION_CONTRACTUAL_ETD_RADARES_v1.0.md
+37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md
+38_VALIDACION_CONTRACTUAL_PMV_v1.0.md
+...
+```
+
+**Propósito:**
+- ✅ Documentar que cada sistema cumple con AT1-AT4
+- ✅ Justificar diferencias entre propuesta y contrato
+- ✅ Servir como evidencia en auditorías
+
+**¿Los usas para el sistema web?** ❌ NO  
+**¿Son importantes?** ✅ SÍ, para entregas al cliente
+
+---
+
+**2. Análisis Técnicos (20 documentos)**
+```
+38_ANALISIS_ALTERNATIVAS_FIBRA_OPTICA_v1.0.md
+25_ANALISIS_COBERTURA_CELULAR_vs_RADIO_VHF_v1.0.md
+22_ANALISIS_IMPACTO_ARQUITECTONICO_CCTV_v1.0.md
+```
+
+**Propósito:**
+- ✅ Documentar decisiones técnicas
+- ✅ Justificar alternativas elegidas
+- ✅ Análisis de riesgos y mitigaciones
+
+**¿Los usas para el sistema web?** ❌ NO  
+**¿Son importantes?** ✅ SÍ, para defensa técnica
+
+---
+
+**3. Decisiones Técnicas - DTs/ (32 archivos)**
+```
+DT-TM01-SOS-001.md
+DT-TM01-PMV-002.md
+DT-TM01-PEAJES-003.md
+```
+
+**Propósito:**
+- ✅ Event sourcing (historial inmutable)
+- ✅ Trazabilidad de cambios
+- ✅ Auditoría completa
+
+**¿Los usas para el sistema web?** ❌ NO directamente  
+**¿Son importantes?** ✅ SÍ, para trazabilidad
+
+---
+
+### **X. Entregables Consolidados (17 documentos)**
+
+Esta carpeta contiene **documentos finales** para entregar al cliente o proveedores.
+
+#### **Contenido:**
+
+**1. Presupuestos Consolidados (2 archivos)**
+```
+PRESUPUESTO_ITS_PURO_v1.0.md
+PRESUPUESTO_ITS_PURO_v2.0.md
+```
+
+**Propósito:**
+- ✅ Resumen ejecutivo del presupuesto total
+- ✅ Documento para entregar al cliente
+- ✅ Se genera DESDE los datos de T05
+
+**Relación con el sistema web:**
+- 🔄 Flujo: `T05 → sync_wbs_tm01.ps1 → presupuesto.html → Exportar → PRESUPUESTO_ITS_PURO_v2.0.md`
+- ✅ El sistema web **GENERA** estos documentos (botón "Exportar Excel", "Acta de Obra")
+- ❌ Estos documentos **NO alimentan** el sistema web
+
+---
+
+**2. RFQs - Request for Quotation (12 archivos)**
+```
+RFQ_001_FIBRA_OPTICA_v2.0.md
+RFQ_002_SOS_Postes_v2.0.md
+RFQ_003_CCTV_v2.0.md
+RFQ_006_ETD_v1.0.md
+RFQ_008_PMV_v1.0.md
+...
+```
+
+**Propósito:**
+- ✅ Solicitudes de cotización a proveedores
+- ✅ Especificaciones técnicas detalladas
+- ✅ Cantidades exactas y criterios de evaluación
+
+**Relación con el sistema web:**
+- ❌ NO alimentan el sistema web
+- ✅ Se generan DESDE T04 (especificaciones) + T05 (precios)
+- ⚠️ Algunos tienen bloques `<!-- AUTOGEN -->` actualizables con scripts
+
+---
+
+**3. Solicitudes de Compra (2 archivos)**
+```
+SOLICITUD_COMPRA_EQUIPOS_L2_v1.0.md
+SOLICITUD_COMPRA_EQUIPOS_L3_v1.0.md
+```
+
+**Propósito:**
+- ✅ Órdenes de compra para equipos de red
+- ✅ Switches L2 (Advantech) y L3 (Cisco)
+- ✅ Listas para procurement
+
+---
+
+## 🔄 FLUJO COMPLETO DE DATOS
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  NIVEL 1: CONTRATO (I-II)                                      │
+│  AT1-AT4 → Cantidades, normativas, requisitos                  │
+└────────────────────────┬────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  NIVEL 2-4: INGENIERÍA (III-V)                                 │
+│  T01-T03 → Contexto                                            │
+│  T04 → Especificaciones técnicas                               │
+│  T05 → PRECIOS Y COMPONENTES ⭐                                 │
+└────────────────────────┬────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  SCRIPT: sync_wbs_tm01.ps1                                     │
+│  Lee T05 → Genera datos_wbs_TM01_items.js                     │
+└────────────────────────┬────────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  SISTEMA WEB (docs/*.html)                                     │
+│  presupuesto.html, wbs.html, layout.html                       │
+└────────────┬────────────────────────────────┬───────────────────┘
+             ↓                                ↓
+┌────────────────────────┐    ┌──────────────────────────────────┐
+│  VII. TRANSVERSALES    │    │  X. ENTREGABLES CONSOLIDADOS     │
+│  (Validaciones, DTs)   │    │  (RFQs, Presupuestos)            │
+│  Para auditorías       │    │  Para cliente/proveedores        │
+└────────────────────────┘    └──────────────────────────────────┘
+```
+
+---
+
+## 📊 TABLA RESUMEN DE CARPETAS
+
+| Carpeta | Propósito | ¿Editas? | ¿Alimenta Web? | ¿Para Cliente? | ¿Para Sistema Web? |
+|:--------|:----------|:---------|:---------------|:---------------|:-------------------|
+| **I-II** | Contrato + AT | ❌ No | ❌ No | ✅ Sí (referencia) | ❌ No |
+| **III** | T01/T02/T03 | ✅ Sí | ❌ No | ✅ Sí (contexto) | ❌ No |
+| **IV** | T04 (specs) | ✅ Sí | ❌ No | ✅ Sí (técnico) | ❌ No |
+| **V** | T05 (precios) | ✅ Sí | ✅ **SÍ** ⭐ | ✅ Sí (presupuesto) | ✅ **SÍ** ⭐ |
+| **VII** | Validaciones | ❌ No | ❌ No | ✅ Sí (auditoría) | ❌ No |
+| **X** | Entregables | ❌ No* | ❌ No | ✅ **SÍ** ⭐ | ❌ No (los genera) |
+
+*Algunos RFQs tienen bloques AUTOGEN actualizables con scripts
+
+---
+
+## 💡 ANALOGÍA COMPLETA DEL PROYECTO
+
+Imagina que estás construyendo una casa:
+
+- **I-II (Contrato)**: Contrato firmado con el cliente (lo que prometiste)
+- **III-V (Ingeniería)**: Planos arquitectónicos y de construcción
+  - **T05**: Planos con precios detallados ⭐ (lo que usas para construir)
+- **VII (Transversales)**: Bitácora de obra (decisiones, validaciones, cambios)
+- **X (Entregables)**: Documentos finales para el cliente
+  - Presupuesto consolidado
+  - Órdenes de compra para materiales (RFQs)
+  - Actas de entrega
+
+**Para construir (sistema web)**, usas principalmente **T05** (planos con precios).
+
+**Para entregas al cliente**, usas **VII** (bitácora) y **X** (documentos consolidados).
+
+---
+
 ## 🎯 RESUMEN EJECUTIVO
 
 ### **Fuentes de Verdad por Tipo de Dato:**
