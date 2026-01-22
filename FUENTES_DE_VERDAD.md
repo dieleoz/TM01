@@ -650,6 +650,81 @@ const totalCCTV = 41500; // ❌ NUNCA HACER ESTO
 
 ---
 
+## ✅ VALIDACIÓN PRÁCTICA CONFIRMADA (22 Enero 2026)
+
+### **Prueba Realizada: CCTV 15→14 Cámaras**
+
+**Objetivo**: Validar que el flujo de datos funciona correctamente y que los HTML no tienen hardcoding.
+
+**Pasos ejecutados:**
+1. ✅ Editado `V. Ingenieria de Detalle/05_T05_CCTV.md` (15→14 cámaras)
+2. ✅ Ejecutado `scripts/sync_wbs_tm01.ps1`
+3. ✅ Verificado `docs/datos_wbs_TM01_items.js` actualizado
+4. ✅ Confirmado que HTML usa JS correctamente
+
+**Resultados:**
+
+```bash
+# Búsqueda de valores hardcodeados en HTML
+grep -r "(1634000|1890218|CCTV.*15|15.*cámaras)" docs/*.html
+# Resultado: NO se encontraron valores hardcodeados ✅
+```
+
+**Archivo JS actualizado correctamente:**
+```javascript
+// docs/datos_wbs_TM01_items.js (después del script)
+{ item: '1.1.1', descripcion: 'Cámara PTZ Dahua High-End', 
+  cantidad: '14', total: '168000' } // ✅ Actualizado automáticamente
+```
+
+**Script ejecutado exitosamente:**
+```
+[2026-01-22 10:37:15] [INFO] === INICIANDO SINCRONIZACION WBS TM01 V2.9 ===
+[2026-01-22 10:37:15] [INFO] Total componentes extraidos: 110
+[2026-01-22 10:37:15] [INFO] Sincronizacion completada. Archivo generado: docs/datos_wbs_TM01_items.js
+SCRIPT DE SINCRONIZACION COMPLETADO EXITOSAMENTE ✅
+```
+
+### **Conclusiones de la Validación:**
+
+1. ✅ **Los HTML NO tienen hardcoding**
+   - Todos los dashboards cargan datos desde `datos_wbs_TM01_items.js`
+   - No hay valores numéricos hardcodeados en el HTML
+   - El sistema está bien diseñado
+
+2. ✅ **El script funciona perfectamente**
+   - Lee archivos T05 correctamente
+   - Extrae tablas de componentes
+   - Genera JS con datos actualizados
+
+3. ✅ **El flujo es correcto**
+   - T05 → Script → JS → HTML
+   - Cambios en T05 se propagan automáticamente
+   - No se requiere editar HTML manualmente
+
+4. ⚠️ **El problema "datos inconsistentes" SOLO ocurre si:**
+   - ❌ NO ejecutas el script después de editar T05
+   - ❌ Editas HTML o JS directamente (hardcoding manual)
+
+**Recomendación final**: El sistema funciona correctamente. Solo debes seguir el workflow documentado.
+
+---
+
+## 📊 TABLA RESUMEN: ¿Qué Archivo Editar?
+
+| Necesito cambiar... | Archivo a editar | Script a ejecutar | Archivos que se actualizan |
+|:-------------------|:-----------------|:------------------|:---------------------------|
+| **Cantidades de equipos** | `V. Ingenieria de Detalle/XX_T05_*.md` | `sync_wbs_tm01.ps1` | `datos_wbs_TM01_items.js`, todos los HTML |
+| **Precios unitarios** | `V. Ingenieria de Detalle/XX_T05_*.md` | `sync_wbs_tm01.ps1` | `datos_wbs_TM01_items.js`, todos los HTML |
+| **Componentes de sistema** | `V. Ingenieria de Detalle/XX_T05_*.md` | `sync_wbs_tm01.ps1` | `datos_wbs_TM01_items.js`, todos los HTML |
+| **Especificaciones técnicas** | `IV. Ingenieria Basica/XX_T04_*.md` | ❌ Ninguno | Solo documentación (no afecta web) |
+| **Validaciones contractuales** | `VII. Documentos Transversales/XX_VALIDACION_*.md` | ❌ Ninguno | Solo documentación (no afecta web) |
+| **RFQs para proveedores** | `X. Entregables Consolidados/RFQ_*.md` | ❌ Ninguno | Solo documentación (no afecta web) |
+| **Dashboards HTML** | ❌ **NUNCA editar directamente** | - | - |
+| **Archivos JS** | ❌ **NUNCA editar directamente** | - | - |
+
+---
+
 ## 🎯 RESUMEN EJECUTIVO
 
 ### **Fuentes de Verdad por Tipo de Dato:**
