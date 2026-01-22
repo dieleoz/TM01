@@ -485,6 +485,171 @@ Imagina que estás construyendo una casa:
 
 ---
 
+## 🎯 EJEMPLO PRÁCTICO COMPLETO: Cambiar CCTV de 30 a 20 Cámaras
+
+### **Escenario:**
+Necesitas reducir el sistema CCTV de 30 a 20 cámaras para optimizar costos.
+
+### **Paso 1: Verificar Contrato (AT1)**
+
+```bash
+# Abrir y verificar
+II. Apendices Tecnicos/AT1_Alcance_Tecnico.md
+```
+
+**Pregunta**: ¿El contrato permite esta cantidad?
+- Si AT1 dice "30 cámaras exactas" → ❌ Requiere aprobación cliente
+- Si AT1 dice "mínimo 20 cámaras" → ✅ Puedes proceder
+
+---
+
+### **Paso 2: Editar T05 (Fuente de Precios)** ⭐ **ÚNICO LUGAR A EDITAR**
+
+```bash
+# Editar archivo
+V. Ingenieria de Detalle/05_T05_Ingenieria_Detalle_CCTV_v1.0.md
+```
+
+**Cambiar tabla de componentes:**
+
+```markdown
+ANTES:
+| Componente | Cantidad | Precio Unit (USD) | Total (USD) |
+|:-----------|:---------|:------------------|:------------|
+| Cámara PTZ | 20 | $2,500 | $50,000 |
+| Cámara Fija | 10 | $800 | $8,000 |
+| **TOTAL** | **30** | | **$58,000** |
+
+DESPUÉS:
+| Componente | Cantidad | Precio Unit (USD) | Total (USD) |
+|:-----------|:---------|:------------------|:------------|
+| Cámara PTZ | 15 | $2,500 | $37,500 |
+| Cámara Fija | 5 | $800 | $4,000 |
+| **TOTAL** | **20** | | **$41,500** |
+```
+
+**Guardar el archivo.**
+
+---
+
+### **Paso 3: Ejecutar Script de Sincronización** ⚠️ **OBLIGATORIO**
+
+```powershell
+# Desde la raíz del proyecto
+powershell -ExecutionPolicy Bypass -File "scripts/sync_wbs_tm01.ps1" -Verbose
+```
+
+**¿Qué hace?**
+1. ✅ Lee `V. Ingenieria de Detalle/05_T05_CCTV.md`
+2. ✅ Extrae tabla de componentes
+3. ✅ Genera `docs/datos_wbs_TM01_items.js` (datos para HTML)
+4. ✅ Actualiza `docs/data/tm01_master_data.js` (summaries)
+
+**Si NO ejecutas este script:**
+- ❌ `presupuesto.html` mostrará valores viejos ($58,000)
+- ❌ `wbs.html` mostrará 30 cámaras
+- ❌ Datos inconsistentes en todos los dashboards
+
+---
+
+### **Paso 4: Verificar Dashboards**
+
+```powershell
+# Abrir localmente
+start docs/presupuesto.html
+```
+
+**Verificar:**
+- ✅ Total CCTV = $41,500 (no $58,000)
+- ✅ Cantidad = 20 cámaras (no 30)
+- ✅ Todos los dashboards muestran lo mismo
+
+---
+
+### **Paso 5: Actualizar Documentos Relacionados** (Opcional pero recomendado)
+
+**Para mantener consistencia en toda la documentación:**
+
+1. **T04 (Especificaciones)**
+   ```bash
+   IV. Ingenieria Basica/03_T04_CCTV.md
+   ```
+   - Cambiar "30 cámaras" → "20 cámaras"
+
+2. **Validación Contractual**
+   ```bash
+   VII. Documentos Transversales/37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md
+   ```
+   - Actualizar justificación
+
+3. **RFQ para Proveedores**
+   ```bash
+   X. Entregables Consolidados/RFQ_003_CCTV_v2.0.md
+   ```
+   - Actualizar cantidad y presupuesto
+
+---
+
+### **Paso 6: Commit y Push**
+
+```bash
+git add "V. Ingenieria de Detalle/05_T05_CCTV.md"
+git add "docs/datos_wbs_TM01_items.js"
+git add "docs/data/tm01_master_data.js"
+git commit -m "feat(cctv): reduce cameras from 30 to 20 units
+
+- Updated T05 with new quantities (15 PTZ + 5 Fixed)
+- Ran sync_wbs_tm01.ps1 to regenerate data files
+- New CAPEX: $41,500 (was $58,000)
+- Savings: $16,500"
+git push origin main
+```
+
+---
+
+## 🚨 PROBLEMA COMÚN: "Actualicé un HTML y otro muestra datos viejos"
+
+### **❌ Lo que NO debes hacer:**
+
+```javascript
+// Editando presupuesto.html directamente
+const totalCCTV = 41500; // ❌ NUNCA HACER ESTO
+```
+
+**Resultado:**
+- `presupuesto.html` muestra $41,500 ✅
+- `wbs.html` muestra $58,000 ❌ (carga desde datos_wbs_TM01_items.js)
+- `layout.html` muestra 30 cámaras ❌
+- **Datos inconsistentes en todo el sistema**
+
+### **✅ Lo que SÍ debes hacer:**
+
+1. Editar **SOLO** el archivo T05
+2. Ejecutar `sync_wbs_tm01.ps1`
+3. Los HTML se actualizan automáticamente
+
+**Resultado:**
+- Todos los dashboards muestran $41,500 ✅
+- Todos muestran 20 cámaras ✅
+- **Datos consistentes en todo el sistema** ✅
+
+---
+
+## 📋 CHECKLIST UNIVERSAL PARA CUALQUIER CAMBIO
+
+```markdown
+[ ] 1. Verificar AT1 (¿El contrato lo permite?)
+[ ] 2. Editar T05 correspondiente (V. Ingenieria de Detalle/XX_T05_*.md)
+[ ] 3. Ejecutar sync_wbs_tm01.ps1 ⚠️ OBLIGATORIO
+[ ] 4. Verificar dashboards localmente
+[ ] 5. Actualizar T04 si es necesario (opcional)
+[ ] 6. Actualizar validaciones (opcional)
+[ ] 7. Actualizar RFQs (opcional)
+[ ] 8. Commit y push
+```
+
+---
+
 ## 🎯 RESUMEN EJECUTIVO
 
 ### **Fuentes de Verdad por Tipo de Dato:**
