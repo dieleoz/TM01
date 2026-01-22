@@ -54,6 +54,8 @@ function Extract-T05Components {
             $currentSistema = $defaultSistema
             $ignoreCurrentTable = $false
             
+            $typesTableProcessed = $false
+            
             foreach ($line in $lines) {
                 if ($line -match '\|\s*Componente\s*\|') { 
                     $ignoreCurrentTable = $true 
@@ -61,8 +63,14 @@ function Extract-T05Components {
                     continue
                 }
                 if ($line -match '\|\s*(Tipo|Item)\s*\|') { 
+                    if ($typesTableProcessed) {
+                        $ignoreCurrentTable = $true
+                        Write-Log "  -> Ignorando tabla duplicada de Tipos"
+                        continue
+                    }
                     $ignoreCurrentTable = $false 
-                    Write-Log "  -> Procesando tabla resumen: Tipos/Items"
+                    $typesTableProcessed = $true
+                    Write-Log "  -> Procesando tabla resumenPrincipal: Tipos/Items"
                     continue
                 }
                 if ($ignoreCurrentTable) { continue }
@@ -79,14 +87,18 @@ function Extract-T05Components {
                     $costo = $Matches[3].Trim() -replace ',', ''
                     $total = $Matches[4].Trim() -replace ',', ''
 
-                    if ($compName -notmatch "SUBTOTAL|TOTAL|CAPEX|OPEX|% del Total|Item" -and $compName.Length -gt 2 -and $compName -notmatch "^\d+\.\d+") {
-                        $allComponents += @{
-                            Sistema    = $currentSistema
-                            Componente = $compName
-                            Cantidad   = $cant
-                            CostoUnit  = $costo
-                            Total      = $total
-                            Archivo    = $file
+                    if ($compName -notmatch "SUBTOTAL|TOTAL|CAPEX|OPEX|% del Total|Item" -and $compName.Length -gt 2 -and $compName -notmatch "^\d+\.\d+" -and $compName -notmatch "^(UND|GLB|ML|M3|KG|HH|M2)$") {
+                        # Deduplication Check
+                        $exists = $allComponents | Where-Object { $_.Sistema -eq $currentSistema -and $_.Componente -eq $compName }
+                        if (-not $exists) {
+                            $allComponents += @{
+                                Sistema    = $currentSistema
+                                Componente = $compName
+                                Cantidad   = $cant
+                                CostoUnit  = $costo
+                                Total      = $total
+                                Archivo    = $file
+                            }
                         }
                     }
                 }

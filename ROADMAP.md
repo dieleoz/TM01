@@ -9,6 +9,12 @@
 
 ---
 
+## 🔄 ÚLTIMAS ACTUALIZACIONES (Enero 2026)
+- ✅ **CCTV:** Optimización a 20 cámaras (15 Tipo A + 5 Tipo C). Presupuesto saneado (~$421k USD).
+- ✅ **SOS:** Validación de cantidad (88 postes).
+- ❌ **Radio FM:** Eliminado del alcance (Ver DT-TM01-002).
+- 📝 **Automatización:** Script de presupuesto sincronizado con Fuente Maestra.
+
 ## 📊 ESTADO ACTUAL DEL PROYECTO
 
 ### ✅ COMPLETADO: Fase 0.5 - Certificación Fuente de Verdad

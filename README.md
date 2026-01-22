@@ -244,6 +244,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 | **PMV** | 39 unidades (25 Vía Abierta + 14 Peaje) | ✅ Validado (Cumple IP/REV) |
 | **Estaciones Meteorológicas** | 3 unidades | ✅ Validado |
 | **WIM** | 1 estación bidireccional | ✅ Validado ($551k Reconciliado) |
+| **Radio FM** | 0 unidades (Eliminado) | ❌ Eliminado (Ver DT-TM01-002) |
 | **Fibra Óptica** | 322 km de Fibra y Tritubo | ✅ Validado (293 Contractual + 10% Holgura) |
 
 ⚠️ **Nota:** Presupuesto en proceso de Reconciliación v30.2 para integrar sensores de clasificación WIM-DAC en peajes (~$84k USD) y actualización de PMVs.

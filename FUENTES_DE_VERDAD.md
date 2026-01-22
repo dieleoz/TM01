@@ -64,6 +64,13 @@ V. Ingenieria de Detalle/
 3. **Salida:** `datos_wbs_TM01_items.js` (Consumido por la Web/Presupuesto).
    - *Este archivo se regenera automáticamente; no editar manualmente.*
 
+## 📄 DOCUMENTOS DE CAMBIO (DTs)
+*La ingeniería se ajusta mediante estos documentos:*
+- **[DT-TM01-001]**: Traslado Servidores VMS a CCO.
+- **[DT-TM01-002]**: Eliminación Sistema Radio FM ($0).
+
+## 📂 ESTRUCTURA DE ARCHIVOS T05
+
 ├── 04_T05_Ingenieria_Detalle_Postes_SOS_v1.0.md          # 💰 Precios SOS
 ├── 05_T05_Ingenieria_Detalle_CCTV_v1.0.md                # 💰 Precios CCTV
 ├── 06_T05_Ingenieria_Detalle_PMV_v1.0.md                 # 💰 Precios PMV

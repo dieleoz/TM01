@@ -35,12 +35,12 @@ class TM01MasterData {
             radioSummary: {
                 id: '12',
                 sistema: 'RADIO FM',
-                cantidad: 1,
-                capexUSD: 200000,
-                capexCOP: 880000000,
-                capexUnitarioUSD: 200000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
+                cantidad: 0,
+                capexUSD: 0,
+                capexCOP: 0,
+                capexUnitarioUSD: 0,
+                descripcion: 'Eliminado alcance (Ver DT-TM01-002)',
+                estado: 'Eliminado'
             },
             etdRadarSummary: {
                 id: '3',
@@ -483,9 +483,9 @@ class TM01MasterData {
             // CAPÃTULO 11: EMISORA DE RADIO FM
             { id: '11', nivel: 1, item: "11", descripcion: "SISTEMA RADIO FM", sistema: "RADIO", tipo: "capitulo" },
             { id: '11.1', nivel: 2, item: "11.1", descripcion: "ESTACIÃ“N BASE Y COBERTURA", sistema: "RADIO", tipo: "subcapitulo" },
-            { id: '11.1.1', nivel: 3, item: "11.1.1", descripcion: "EstaciÃ³n Transmisora Base CCO", sistema: "RADIO", cantidad: "1", unidad: "UND", tipo: "item", criterio: "MinTIC Licencia", vu: "45000", total: "45000", totalCOP: "198000000" },
-            { id: '11.1.2', nivel: 3, item: "11.1.2", descripcion: "Repetidoras / Gap-fillers Corredor", sistema: "RADIO", cantidad: "5", unidad: "UND", tipo: "item", criterio: "Cobertura 293km", vu: "25000", total: "125000", totalCOP: "550000000" },
-            { id: '11.1.3', nivel: 3, item: "11.1.3", descripcion: "TrÃ¡mites Licencias y Puesta en Marcha", sistema: "RADIO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "GestiÃ³n MinTIC", vu: "30000", total: "30000", totalCOP: "132000000" },
+            { id: '11.1.1', nivel: 3, item: "11.1.1", descripcion: "EstaciÃ³n Transmisora Base CCO", sistema: "RADIO", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Eliminado DT-002", vu: "45000", total: "0", totalCOP: "0" },
+            { id: '11.1.2', nivel: 3, item: "11.1.2", descripcion: "Repetidoras / Gap-fillers Corredor", sistema: "RADIO", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Eliminado DT-002", vu: "25000", total: "0", totalCOP: "0" },
+            { id: '11.1.3', nivel: 3, item: "11.1.3", descripcion: "TrÃ¡mites Licencias y Puesta en Marcha", sistema: "RADIO", cantidad: "0", unidad: "GLB", tipo: "item", criterio: "Eliminado DT-002", vu: "30000", total: "0", totalCOP: "0" },
 
         ];
 
