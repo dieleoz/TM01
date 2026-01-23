@@ -216,8 +216,6 @@
             <div>
                 <button class="btn btn-secondary"
                     onclick="window.location.href='WBS_Menu_Principal.html'">Volver</button>
-                <button class="btn btn-secondary"
-                    onclick="window.location.href='WBS_Menu_Principal.html'">Volver</button>
                 <button class="btn" onclick="abrirModalNuevoItem()">➕ Agregar Ítem</button>
                 <button class="btn" style="background-color: #10b981;" onclick="exportarExcel()">📊 Exportar
                     Excel</button>
@@ -436,6 +434,48 @@
                 cambios[id][campo] = parseFloat(valor);
             }
             renderTable();
+        }
+
+        function abrirModalNuevoItem() {
+            document.getElementById('modalNuevoItem').style.display = 'flex';
+        }
+
+        function guardarNuevoItem() {
+            const sistema = document.getElementById('newSistema').value;
+            const desc = document.getElementById('newDesc').value;
+            const specs = document.getElementById('newSpecs').value;
+            const cant = parseFloat(document.getElementById('newCant').value) || 0;
+            const precio = parseFloat(document.getElementById('newPrecio').value) || 0;
+
+            if (!desc) { alert("Falta descripción"); return; }
+
+            const id = `NEW-${new Date().getTime().toString().slice(-6)}`;
+
+            const newItem = {
+                id: id,
+                descripcion: desc,
+                sistema: sistema,
+                cantidad: 0,
+                vuCOP: "0",
+                unidad: "UND",
+                tipo: "item",
+                isNew: true
+            };
+
+            wbsData.push(newItem);
+
+            cambios[id] = {
+                cant: cant,
+                precio: precio,
+                nota: specs
+            };
+
+            document.getElementById('modalNuevoItem').style.display = 'none';
+            document.getElementById('newDesc').value = '';
+            document.getElementById('newSpecs').value = '';
+
+            renderTable();
+            alert(`Ítem creado: ${id}`);
         }
 
         function abrirModalSpecs(id) {
