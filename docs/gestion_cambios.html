@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Cambios TM01 - Generador DT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --success: #22c55e;
+            --danger: #ef4444;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            margin: 0;
+            padding: 20px;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            background: var(--surface);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #0f172a;
+        }
+
+        .controls {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            background: var(--surface);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        select,
+        input {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .table-container {
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #475569;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr.modified {
+            background-color: #f0fdf4;
+        }
+
+        input.editable {
+            width: 80px;
+            padding: 4px 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            text-align: right;
+        }
+
+        input.editable:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--secondary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+        }
+
+        .btn-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            color: var(--secondary);
+            transition: all 0.2s;
+        }
+
+        .btn-icon:hover {
+            background-color: #e2e8f0;
+            color: var(--primary);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            width: 600px;
+            max-width: 90%;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            margin: 16px 0;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: monospace;
+            resize: vertical;
+        }
+
+        .diff-badge {
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+
+        .diff-up {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .diff-down {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>⚡ Gestor de Cambios & DT Generator</h1>
+                <p style="color: var(--secondary); margin-top: 4px;">Edita cantidades/precios y genera el Markdown para
+                    el agente.</p>
+            </div>
+            <div>
+                <button class="btn btn-secondary"
+                    onclick="window.location.href='WBS_Menu_Principal.html'">Volver</button>
+                <button class="btn btn-secondary"
+                    onclick="window.location.href='WBS_Menu_Principal.html'">Volver</button>
+                <button class="btn" style="background-color: #10b981;" onclick="exportarExcel()">📊 Exportar
+                    Excel</button>
+                <button class="btn btn-success" onclick="generarDT()">📝 Generar DT (.md)</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div>
+                <label>Sistema:</label>
+                <select id="filtroSistema" onchange="renderTable()">
+                    <option value="ALL">Todos</option>
+                </select>
+            </div>
+            <div style="flex-grow: 1;">
+                <label>Buscar:</label>
+                <input type="text" id="filtroTexto" placeholder="Buscar ítem..." oninput="renderTable()"
+                    style="width: 300px;">
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripción (Click 📝 para editar)</th>
+                        <th>Sistema</th>
+                        <th>Cant. Actual</th>
+                        <th>Nueva Cant.</th>
+                        <th>VU COP Actual</th>
+                        <th>Nuevo VU COP</th>
+                        <th>Delta Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaItems">
+                    <!-- Dinámico -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal DT -->
+    <div id="modalDT" class="modal">
+        <div class="modal-content">
+            <h2>Markdown Generado (DT)</h2>
+            <div style="margin-bottom: 15px;">
+                <label style="display:block; margin-bottom:5px; font-weight:600;">Motivo / Justificación
+                    Técnica:</label>
+                <input type="text" id="txtMotivo" placeholder="Ej: Ajuste por cambio de tecnología a Dahua 4MP..."
+                    style="width:100%; padding:8px;">
+            </div>
+            <p>Copia esto y pégalo en el chat para aplicar los cambios.</p>
+            <textarea id="txtMarkdown"></textarea>
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button class="btn btn-secondary" onclick="cerrarModal()">Cerrar</button>
+                <button class="btn" onclick="copiarMarkdown()">Copiar al Portapapeles</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edición de Especificaciones -->
+    <div id="modalSpecs" class="modal">
+        <div class="modal-content" style="width: 700px;">
+            <h2 id="modalSpecsTitle">Editar Especificaciones Técnicas</h2>
+            <p style="color:var(--secondary); font-size:0.9em;">Puedes pegar aquí las nuevas características, modelo o
+                justificación específica para este ítem.</p>
+            <textarea id="txtSpecsItem" placeholder="Ej: Nueva referencia Dahua DH-SD5A432GB-HNR..."></textarea>
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button class="btn btn-secondary"
+                    onclick="document.getElementById('modalSpecs').style.display='none'">Cancelar</button>
+                <button class="btn btn-success" onclick="guardarSpecs()">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carga de Datos -->
+    <script src="data/tm01_master_data.js"></script>
+    <script>
+        let wbsData = [];
+        let cambios = {}; // Mapa de ID -> { cant, precio, nota }
+        let currentEditingId = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cargar datos desde la instancia global creada por tm01_master_data.js
+            if (window.tm01MasterData && window.tm01MasterData.data) {
+                wbsData = window.tm01MasterData.data.wbs.filter(i => i.tipo === 'item');
+                initFiltros();
+                renderTable();
+            } else {
+                alert("Error cargando Master Data. Verifica tm01_master_data.js");
+            }
+        });
+
+        function initFiltros() {
+            const sistemas = [...new Set(wbsData.map(i => i.sistema))];
+            const select = document.getElementById('filtroSistema');
+            sistemas.forEach(sis => {
+                const opt = document.createElement('option');
+                opt.value = sis;
+                opt.innerText = sis;
+                select.appendChild(opt);
+            });
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('tablaItems');
+            tbody.innerHTML = '';
+
+            const sistema = document.getElementById('filtroSistema').value;
+            const texto = document.getElementById('filtroTexto').value.toLowerCase();
+
+            wbsData.forEach(item => {
+                // Filtros
+                if (sistema !== 'ALL' && item.sistema !== sistema) return;
+                if (texto && !item.descripcion.toLowerCase().includes(texto) && !item.id.includes(texto)) return;
+
+                const id = item.id;
+                const cambio = cambios[id] || {};
+
+                const cantOriginal = parseFloat(item.cantidad || 0);
+                const precioOriginal = parseFloat((item.vuCOP || "0").replace(/,/g, '')); // Asumiendo string con comas
+
+                const cantNueva = cambio.cant !== undefined ? cambio.cant : cantOriginal;
+                const precioNuevo = cambio.precio !== undefined ? cambio.precio : precioOriginal;
+                const nota = cambio.nota || "";
+
+                const isModified = cantNueva !== cantOriginal || precioNuevo !== precioOriginal || nota.length > 0;
+
+                // Calculo Delta
+                const totalOriginal = cantOriginal * precioOriginal;
+                const totalNuevo = cantNueva * precioNuevo;
+                const delta = totalNuevo - totalOriginal;
+
+                const tr = document.createElement('tr');
+                if (isModified) tr.classList.add('modified');
+
+                tr.innerHTML = `
+                    <td>${item.id}</td>
+                    <td style="display:flex; align-items:center; gap:8px;">
+                        <button class="btn-icon" title="Editar Specs/Nota" onclick="abrirModalSpecs('${id}')">📝</button>
+                        <div>
+                            <div>${item.descripcion}</div>
+                            ${nota ? `<div style="font-size:0.8em; color:var(--primary); font-style:italic;">Cambio: ${nota.substring(0, 50)}...</div>` : ''}
+                        </div>
+                    </td>
+                    <td><span style="font-size:0.8em; background:#e2e8f0; padding:2px 6px; border-radius:4px;">${item.sistema}</span></td>
+                    <td>${cantOriginal}</td>
+                    <td>
+                        <input type="number" class="editable" value="${cantNueva}" 
+                            onchange="registrarCambio('${id}', 'cant', this.value)">
+                    </td>
+                    <td>$${precioOriginal.toLocaleString()}</td>
+                    <td>
+                        <input type="number" class="editable" value="${precioNuevo}" 
+                            onchange="registrarCambio('${id}', 'precio', this.value)">
+                    </td>
+                    <td style="color: ${delta > 0 ? 'var(--danger)' : (delta < 0 ? 'var(--success)' : 'inherit')}; font-weight:bold;">
+                        ${delta !== 0 ? (delta > 0 ? '+' : '') + '$' + delta.toLocaleString() : '-'}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function registrarCambio(id, campo, valor) {
+            if (!cambios[id]) cambios[id] = {};
+
+            if (campo === 'nota') {
+                cambios[id].nota = valor;
+            } else {
+                cambios[id][campo] = parseFloat(valor);
+            }
+            renderTable();
+        }
+
+        function abrirModalSpecs(id) {
+            currentEditingId = id;
+            const item = wbsData.find(i => i.id === id);
+            const notaActual = cambios[id] ? (cambios[id].nota || "") : "";
+
+            document.getElementById('modalSpecsTitle').innerText = `Editar Specs: ${item.descripcion}`;
+            document.getElementById('txtSpecsItem').value = notaActual;
+            document.getElementById('modalSpecs').style.display = 'flex';
+        }
+
+        function guardarSpecs() {
+            if (currentEditingId) {
+                const nota = document.getElementById('txtSpecsItem').value;
+                registrarCambio(currentEditingId, 'nota', nota);
+                document.getElementById('modalSpecs').style.display = 'none';
+                currentEditingId = null;
+            }
+        }
+
+        function generarDT() {
+            const idsConCambios = Object.keys(cambios);
+            let motivo = document.getElementById('txtMotivo').value;
+
+            // Permitir generar si hay AL MENOS UN cambio o si hay Motivo General
+            if (idsConCambios.length === 0 && !motivo) {
+                alert("Por favor realiza algún cambio en la tabla o escribe un Motivo/Justificación general.");
+                return;
+            }
+
+            if (!motivo) {
+                motivo = "Ajuste de cantidades y precios según requerimiento técnico.";
+            }
+
+            let markdown = `# SOLICITUD DE CAMBIO (DT GENERADO)\n`;
+            markdown += `**Fecha:** ${new Date().toLocaleString()}\n`;
+            markdown += `**Justificación:** ${motivo}\n\n`;
+            markdown += `| ID | Ítem | Valor Ant. | Valor Nuevo | Delta COP |\n`;
+            markdown += `|:---|:-----|:-----------|:------------|:----------|\n`;
+
+            idsConCambios.forEach(id => {
+                const item = wbsData.find(i => i.id === id);
+                const cambio = cambios[id];
+
+                const cantOriginal = parseFloat(item.cantidad || 0);
+                const precioOriginal = parseFloat((item.vuCOP || "0").replace(/,/g, ''));
+
+                const cantNueva = cambio.cant !== undefined ? cambio.cant : cantOriginal;
+                const precioNuevo = cambio.precio !== undefined ? cambio.precio : precioOriginal;
+                const notaItem = cambio.nota || "";
+
+                if (cantNueva !== cantOriginal) {
+                    markdown += `| **${id}** | ${item.descripcion} (Cant) | ${cantOriginal} | **${cantNueva}** | ${(cantNueva - cantOriginal) * precioOriginal} |\n`;
+                }
+                if (precioNuevo !== precioOriginal) {
+                    markdown += `| **${id}** | ${item.descripcion} (VU) | $${precioOriginal.toLocaleString()} | **$${precioNuevo.toLocaleString()}** | ${(precioNuevo - precioOriginal) * cantNueva} |\n`;
+                }
+                if (notaItem) {
+                    markdown += `\n**Nota Técnica para Item ${id}:**\n> ${notaItem.replace(/\n/g, '\n> ')}\n`;
+                }
+            });
+
+            markdown += `\n**Instrucción para Agente:** Por favor aplica estos cambios en el archivo \`tm01_master_data.js\` (incluyendo specs/descripciones) y recalcula los totales.`;
+
+            document.getElementById('txtMarkdown').value = markdown;
+            document.getElementById('modalDT').style.display = 'flex';
+        }
+
+
+        function cerrarModal() {
+            document.getElementById('modalDT').style.display = 'none';
+        }
+
+        function copiarMarkdown() {
+            const txt = document.getElementById('txtMarkdown');
+            txt.select();
+            document.execCommand('copy');
+            txt.select();
+            document.execCommand('copy');
+            alert("Markdown copiado. Pégalo en el chat.");
+        }
+
+        function exportarExcel() {
+            let csvContent = "\uFEFFID;Sistema;Descripción;Cant. Actual;Nueva Cant.;VU COP Actual;Nuevo VU COP;Delta Total;Nota Técnica\n";
+
+            wbsData.forEach(item => {
+                const id = item.id;
+                const cambio = cambios[id] || {};
+
+                const cantOriginal = parseFloat(item.cantidad || 0);
+                const precioOriginal = parseFloat((item.vuCOP || "0").replace(/,/g, ''));
+
+                const cantNueva = cambio.cant !== undefined ? cambio.cant : cantOriginal;
+                const precioNuevo = cambio.precio !== undefined ? cambio.precio : precioOriginal;
+                const nota = cambio.nota || "";
+
+                const totalOriginal = cantOriginal * precioOriginal;
+                const totalNuevo = cantNueva * precioNuevo;
+                const delta = totalNuevo - totalOriginal;
+
+                const row = [
+                    id,
+                    item.sistema,
+                    `"${item.descripcion.replace(/"/g, '""')}"`,
+                    cantOriginal,
+                    cantNueva,
+                    precioOriginal,
+                    precioNuevo,
+                    delta,
+                    `"${nota.replace(/"/g, '""').replace(/\n/g, ' ')}"`
+                ];
+
+                csvContent += row.join(";") + "\n";
+            });
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", `WBS_Control_Cambios_${new Date().toISOString().slice(0, 10)}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+
+</html>
