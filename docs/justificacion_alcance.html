@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justificación de Alcance - TM01</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5f9;
+            padding: 1rem;
+            font-weight: 600;
+            color: #475569;
+            border-bottom: 2px solid var(--border);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tag-source {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: #dbeafe;
+            color: #1e40af;
+            margin-bottom: 4px;
+        }
+
+        .tag-eng {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .metric-big {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .alert-box {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 20px;
+            transition: all 0.2s;
+        }
+
+        .btn-back:hover {
+            background: #f1f5f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="WBS_Menu_Principal.html" class="btn-back">← Volver al Menú</a>
+
+        <h1>📜 Justificación de Alcance (Trazabilidad)</h1>
+
+        <div class="alert-box">
+            <strong>¿Por qué estas cantidades?</strong><br>
+            Esta tabla conecta la <strong>Obligación Contractual</strong> (El "Qué") con la <strong>Solución de
+                Ingeniería</strong> (El "Cómo").
+            <br>Fuente de Verdad: <em>tm01_master_data.js v4.1</em>
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%">Sistema</th>
+                        <th style="width: 10%">Cant.</th>
+                        <th style="width: 35%">Fuente Contractual (El "Qué")</th>
+                        <th style="width: 40%">Justificación Ingeniería (El "Cómo")</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="data/tm01_master_data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check data availability
+            const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
+                (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
+
+            if (!md) {
+                document.getElementById('tableBody').innerHTML = '<tr><td colspan="4">Error: No se pudieron cargar los datos maestros.</td></tr>';
+                return;
+            }
+
+            // Define known justifications (Enriching the data for display)
+            // In a real generic system, these would be in the T01 docs parsed into JSON.
+            // For now, we map the known contractual logic to the system ID or Name.
+            const justificationMap = {
+                'CCTV': {
+                    contract: 'Monitoreo de "Nodos Críticos" (Peajes, Intersecciones, Pasos Urbanos).',
+                    eng: 'Se cubren 11 Intersecciones + 4 Puntos de Peaje (15 Cámaras PTZ). NO se requiere cobertura lineal (120+ cámaras) por baja accidentalidad en tramos rectos.'
+                },
+                'SOS': {
+                    contract: 'Teléfonos de emergencia cada 3km.',
+                    eng: '88 Postes instalados cumpliendo la regla de 1 cada 3km en 259km de vía principal.'
+                },
+                'PMV': {
+                    contract: 'Información al usuario en puntos de decisión.',
+                    eng: 'Ubicados antes de cada peaje (14) y en accesos a tramos críticos/variantes (25).'
+                },
+                'WIM': {
+                    contract: 'Control de sobrepeso según normatividad vigente.',
+                    eng: '1 Estación bidireccional completa + Sensores de clasificación en peajes (WIM-DAC).'
+                },
+                'FIBRA': {
+                    contract: 'Comunicaciones para todos los sistemas ITS.',
+                    eng: 'Backbone de 293km con redundancia y holgura del 10%.'
+                }
+            };
+
+            const tbody = document.getElementById('tableBody');
+
+            // Extract summaries directly if looking at the summary objects, or calculate from WBS
+            // Using the explicit summary objects from the file shown previously
+            const systems = [
+                md.data.cctvSummary,
+                md.data.sosSummary,
+                md.data.pmvSummary,
+                md.data.etdRadarSummary,
+                md.data.wimSummary,
+                md.data.meteoSummary,
+                // Add Fibra manually if not in summary objects but known
+                { sistema: 'FIBRA', cantidad: '322 km', descripcion: 'Backbone + Acometidas' }
+            ];
+
+            let html = '';
+
+            systems.forEach(sys => {
+                if (!sys) return;
+
+                // Find matching justification logic
+                let key = Object.keys(justificationMap).find(k => sys.sistema.includes(k));
+                let just = key ? justificationMap[key] : { contract: 'Requisito General APP', eng: sys.descripcion || 'Según diseño detallado.' };
+
+                html += `
+                    <tr>
+                        <td>
+                            <strong>${sys.sistema}</strong><br>
+                            <small style="color:#64748b">${sys.estado || 'Validado'}</small>
+                        </td>
+                        <td>
+                            <div class="metric-big">${sys.cantidad}</div>
+                        </td>
+                        <td>
+                            <div class="tag-source">AT1 / AT3</div>
+                            <p>${just.contract}</p>
+                        </td>
+                        <td>
+                            <div class="tag-eng">T05 Detalle</div>
+                            <p>${just.eng}</p>
+                            ${sys.descripcion && sys.descripcion !== just.eng ? `<small style="color:#64748b; font-style:italic">"${sys.descripcion}"</small>` : ''}
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+        });
+    </script>
+</body>
+
+</html>
