@@ -218,6 +218,7 @@
                     onclick="window.location.href='WBS_Menu_Principal.html'">Volver</button>
                 <button class="btn btn-secondary"
                     onclick="window.location.href='WBS_Menu_Principal.html'">Volver</button>
+                <button class="btn" onclick="abrirModalNuevoItem()">➕ Agregar Ítem</button>
                 <button class="btn" style="background-color: #10b981;" onclick="exportarExcel()">📊 Exportar
                     Excel</button>
                 <button class="btn btn-success" onclick="generarDT()">📝 Generar DT (.md)</button>
@@ -293,11 +294,53 @@
         </div>
     </div>
 
+    <!-- Modal Nuevo Item -->
+    <div id="modalNuevoItem" class="modal">
+        <div class="modal-content" style="width: 700px;">
+            <h2>Agregar Nuevo Ítem</h2>
+
+            <label style="display:block; margin-top:10px;">Sistema:</label>
+            <select id="newSistema" style="width:100%; padding:8px;">
+                <option value="CCTV">CCTV</option>
+                <option value="PMV">PMV</option>
+                <option value="SOS">SOS</option>
+                <option value="FIBRA">Telecomunicaciones (Fibra)</option>
+                <option value="PEAJES">Peaje</option>
+                <option value="WIM">WIM / Pesaje</option>
+            </select>
+
+            <label style="display:block; margin-top:10px;">Descripción Corta (Tabla):</label>
+            <input type="text" id="newDesc" placeholder="Ej: Gabinete Especial Tipo X" style="width:100%;">
+
+            <label style="display:block; margin-top:10px;">Descripción Técnica / Compras:</label>
+            <textarea id="newSpecs" style="height:100px; margin:5px 0;"
+                placeholder="Pegar especificaciones completas, modelo, marca..."></textarea>
+
+            <div style="display:flex; gap:10px;">
+                <div style="flex:1;">
+                    <label>Cantidad:</label>
+                    <input type="number" id="newCant" value="1" style="width:100%;">
+                </div>
+                <div style="flex:1;">
+                    <label>Precio Unit (COP):</label>
+                    <input type="number" id="newPrecio" value="0" style="width:100%;">
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top:20px;">
+                <button class="btn btn-secondary"
+                    onclick="document.getElementById('modalNuevoItem').style.display='none'">Cancelar</button>
+                <button class="btn btn-success" onclick="guardarNuevoItem()">Guardar Ítem</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Carga de Datos -->
     <script src="data/tm01_master_data.js"></script>
     <script>
         let wbsData = [];
         let cambios = {}; // Mapa de ID -> { cant, precio, nota }
+        let nuevosItems = []; // Array de nuevos items creados
         let currentEditingId = null;
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -344,7 +387,9 @@
                 const precioNuevo = cambio.precio !== undefined ? cambio.precio : precioOriginal;
                 const nota = cambio.nota || "";
 
-                const isModified = cantNueva !== cantOriginal || precioNuevo !== precioOriginal || nota.length > 0;
+                // Si es nuevo item, siempre mostrar
+                const isNew = id.startsWith('NEW-');
+                const isModified = cantNueva !== cantOriginal || precioNuevo !== precioOriginal || nota.length > 0 || isNew;
 
                 // Calculo Delta
                 const totalOriginal = cantOriginal * precioOriginal;
@@ -355,12 +400,12 @@
                 if (isModified) tr.classList.add('modified');
 
                 tr.innerHTML = `
-                    <td>${item.id}</td>
+                    <td>${item.id} ${isNew ? '<span style="background:var(--success); color:white; font-size:0.7em; padding:2px 4px; border-radius:4px;">NUEVO</span>' : ''}</td>
                     <td style="display:flex; align-items:center; gap:8px;">
                         <button class="btn-icon" title="Editar Specs/Nota" onclick="abrirModalSpecs('${id}')">📝</button>
                         <div>
                             <div>${item.descripcion}</div>
-                            ${nota ? `<div style="font-size:0.8em; color:var(--primary); font-style:italic;">Cambio: ${nota.substring(0, 50)}...</div>` : ''}
+                            ${nota ? `<div style="font-size:0.8em; color:var(--primary); font-style:italic;">${isNew ? 'Specs: ' : 'Cambio: '}${nota.substring(0, 50)}...</div>` : ''}
                         </div>
                     </td>
                     <td><span style="font-size:0.8em; background:#e2e8f0; padding:2px 6px; border-radius:4px;">${item.sistema}</span></td>
@@ -434,7 +479,10 @@
 
             idsConCambios.forEach(id => {
                 const item = wbsData.find(i => i.id === id);
+                if (!item) return; // Safety check
+
                 const cambio = cambios[id];
+                const isNew = id.startsWith('NEW-');
 
                 const cantOriginal = parseFloat(item.cantidad || 0);
                 const precioOriginal = parseFloat((item.vuCOP || "0").replace(/,/g, ''));
@@ -443,18 +491,25 @@
                 const precioNuevo = cambio.precio !== undefined ? cambio.precio : precioOriginal;
                 const notaItem = cambio.nota || "";
 
-                if (cantNueva !== cantOriginal) {
-                    markdown += `| **${id}** | ${item.descripcion} (Cant) | ${cantOriginal} | **${cantNueva}** | ${(cantNueva - cantOriginal) * precioOriginal} |\n`;
-                }
-                if (precioNuevo !== precioOriginal) {
-                    markdown += `| **${id}** | ${item.descripcion} (VU) | $${precioOriginal.toLocaleString()} | **$${precioNuevo.toLocaleString()}** | ${(precioNuevo - precioOriginal) * cantNueva} |\n`;
-                }
-                if (notaItem) {
-                    markdown += `\n**Nota Técnica para Item ${id}:**\n> ${notaItem.replace(/\n/g, '\n> ')}\n`;
+                if (isNew) {
+                    markdown += `| **${id}** | [NUEVO] ${item.descripcion} | - | **Cant: ${cantNueva} x $${precioNuevo.toLocaleString()}** | +$${(cantNueva * precioNuevo).toLocaleString()} |\n`;
+                    if (notaItem) {
+                        markdown += `> **Specs:** ${notaItem.replace(/\n/g, ' ')}\n`;
+                    }
+                } else {
+                    if (cantNueva !== cantOriginal) {
+                        markdown += `| **${id}** | ${item.descripcion} (Cant) | ${cantOriginal} | **${cantNueva}** | ${(cantNueva - cantOriginal) * precioOriginal} |\n`;
+                    }
+                    if (precioNuevo !== precioOriginal) {
+                        markdown += `| **${id}** | ${item.descripcion} (VU) | $${precioOriginal.toLocaleString()} | **$${precioNuevo.toLocaleString()}** | ${(precioNuevo - precioOriginal) * cantNueva} |\n`;
+                    }
+                    if (notaItem) {
+                        markdown += `\n**Nota Técnica para Item ${id}:**\n> ${notaItem.replace(/\n/g, '\n> ')}\n`;
+                    }
                 }
             });
 
-            markdown += `\n**Instrucción para Agente:** Por favor aplica estos cambios en el archivo \`tm01_master_data.js\` (incluyendo specs/descripciones) y recalcula los totales.`;
+            markdown += `\n**Instrucción para Agente:** Por favor aplica estos cambios en el archivo \`tm01_master_data.js\` (incluyendo specs/descripciones). Para los items NUEVOS, agrégalos a la lista.`;
 
             document.getElementById('txtMarkdown').value = markdown;
             document.getElementById('modalDT').style.display = 'flex';
