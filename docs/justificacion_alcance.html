@@ -260,49 +260,71 @@
                 <h2 id="mTitle">Sistema</h2>
                 <button class="modal-close" onclick="closeModalDirect()">×</button>
             </div>
+            <!-- TABS NAVIGATION -->
+            <div class="modal-tabs">
+                <div class="tab active" onclick="switchTab('tab-contract')">⚖️ Contractual & Legal</div>
+                <div class="tab" onclick="switchTab('tab-technical')">🛠️ Ingeniería (Técnico)</div>
+                <div class="tab" onclick="switchTab('tab-financial')">💰 Financiero</div>
+            </div>
+
+            <!-- TAB CONTENT -->
             <div class="modal-body">
 
-                <!-- 1. HEADER METRICS -->
-                <div class="detail-section" style="background: white;">
-                    <div class="info-grid">
-                        <div>
-                            <div class="detail-title">📦 Cantidad Validada</div>
-                            <div class="detail-content" style="font-size:1.5rem; font-weight:700; color:var(--accent);"
-                                id="mQty">-</div>
-                        </div>
-                        <div>
-                            <div class="detail-title">💰 CAPEX Estimado</div>
-                            <div class="detail-content" style="font-size:1.5rem; font-weight:700;" id="mCapex">-</div>
-                        </div>
+                <!-- TAB 1: CONTRACTUAL & LEGAL -->
+                <div id="tab-contract" class="tab-content active">
+                    <div class="detail-section">
+                        <div class="detail-title">📜 Fuente Contractual (AT1 - Alcance)</div>
+                        <div class="detail-content" id="mContract">-</div>
+                    </div>
+                    <div class="detail-section" style="background: #fffbeb;">
+                        <div class="detail-title">⚖️ Supuestos de Interpretación Legal</div>
+                        <div class="legal-box" id="mLegal">-</div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-title">⚠️ Matriz de Riesgos & Exclusiones</div>
+                        <div class="detail-content" id="mRisks">-</div>
                     </div>
                 </div>
 
-                <!-- 2. CONTRACT VS ENGINEERING -->
-                <div class="detail-section">
-                    <div class="info-grid">
-                        <div>
-                            <div class="detail-title">📄 Obligación Contractual (AT1)</div>
-                            <div class="detail-content" id="mContract">-</div>
+                <!-- TAB 2: TECHNICAL -->
+                <div id="tab-technical" class="tab-content">
+                    <div class="detail-section">
+                        <div class="info-grid">
+                            <div>
+                                <div class="detail-title">📦 Cantidad & Distribución</div>
+                                <div class="detail-content" style="font-size:1.2rem; font-weight:700;" id="mQty">-</div>
+                            </div>
+                            <div>
+                                <div class="detail-title">🔧 Tipo de Implementación</div>
+                                <div class="detail-content" id="mTechType">-</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="detail-title">🛠️ Solución Ingeniería (T05)</div>
-                            <div class="detail-content" id="mEng">-</div>
-                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-title">⚙️ Especificaciones Técnicas (Resumen)</div>
+                        <div class="detail-content" id="mEng">-</div>
                     </div>
                 </div>
 
-                <!-- 3. LEGAL ASSUMPTIONS -->
-                <div class="detail-section" style="background: #fafafa;">
-                    <div class="detail-title">⚖️ Supuestos & Restricciones (Validación Legal)</div>
-                    <div class="legal-box">
-                        <div class="detail-content" id="mLegal">-</div>
+                <!-- TAB 3: FINANCIAL -->
+                <div id="tab-financial" class="tab-content">
+                    <div class="detail-section">
+                        <div class="info-grid">
+                            <div>
+                                <div class="detail-title">💵 CAPEX Total</div>
+                                <div class="detail-content" style="font-size:1.5rem; font-weight:700; color:#166534;"
+                                    id="mCapex">-</div>
+                            </div>
+                            <div>
+                                <div class="detail-title">📉 Costo Unitario Promedio</div>
+                                <div class="detail-content" style="font-size:1.2rem;" id="mUnit">-</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- 4. RISKS -->
-                <div class="detail-section">
-                    <div class="detail-title">⚠️ Riesgos Asociados</div>
-                    <div class="detail-content" id="mRisks">-</div>
+                    <div class="detail-section">
+                        <div class="detail-title">📊 Estructura de Costos (Pareto)</div>
+                        <div class="detail-content" id="mFinDetails">-</div>
+                    </div>
                 </div>
 
             </div>
@@ -314,24 +336,33 @@
         const JDATA = {
             'CCTV': {
                 icon: '📹',
-                contract: 'El Concesionario deberá implementar un sistema de videovigilancia que permita el monitoreo en tiempo real de los "Nodos Críticos" definidos como: Intersecciones a desnivel, Peajes y Pasos Urbanos Mayores. (Ref: AT1 Sec 4.2).',
-                eng: 'Diseño optimizado mediante 15 cámaras PTZ tipo Domo (Axis/Dahua). Se cubren 11 intersecciones priorizadas por flujo vehicular y 4 estaciones de peaje con visión 360°. No se implementa videovigilancia lineal en tramos rectos.',
-                legal: '<ul><li>**Hitos de Pago:** La instalación se certifica por unidad funcional operativa, no por cámara individual.</li><li>**Permisos:** Se asume uso de infraestructura existente (postes de energía) en peajes; postes nuevos en intersecciones requieren permiso predial.</li><li>**Criterio de Exclusión:** Se excluyen vías terciarias aledañas del alcance de vigilancia.</li></ul>',
-                risks: 'Riesgo de vandalismo en cámaras remotas (Mitigado: Instalación a 12m de altura y gabinetes antivandálicos).'
+                qty: '15 Cámaras PTZ (Validado)',
+                techType: 'Tipo A (Poste 12m) y Tipo C (Separador)',
+                contract: '<p><strong>Obligación AT1:</strong> "El Concesionario deberá implementar un sistema de videovigilancia que permita el monitoreo en tiempo real de los Nodos Críticos definidos como: Intersecciones a desnivel, Peajes y Pasos Urbanos Mayores." (Ref: AT1 Sec 4.2).</p><p><strong>Justificación de Cantidad:</strong> El diseño contempla 15 cámaras seleccionadas para cubrir el 100% de los puntos de interés. <em>Nota: No se requiere cobertura lineal (1 cámara cada 2.5km) debido a la baja accidentalidad reportada en tramos rectos.</em></p>',
+                eng: '<ul><li>**Cámara:** PTZ Domo IP (tipo Dahua SD5A/Axis Q60), Zoom 30x, 1080p, IR 150m.</li><li>**Infraestructura:** Poste metálico galvanizado de 12m con cimentación 1x1x1.5m.</li><li>**Energía:** Sistema solar autónomo (Panel 540W + Baterías Litio) para autonomía de 3 días.</li><li>**Comunicaciones:** Fibra óptica monomodo (VLAN de video dedicada) hacia CCO.</li></ul>',
+                legal: '<ul><li><strong>Hitos de Pago:</strong> La instalación se certifica por unidad funcional operativa, no por cámara individual.</li><li><strong>Permisos Prediales:</strong> Se asume que todas las intersecciones están dentro del derecho de vía (DDV). Si se requiere predio privado, es excluyente.</li><li><strong>Infraestructura Existente:</strong> El uso de postes de energía en peajes está sujeto a aprobación de la electrificadora (riesgo de terceros).</li></ul>',
+                risks: '<ul><li><strong>Vandalismo:</strong> Alto riesgo en cámaras remotas (Mitigación: Gabinete antivandálico y altura 12m).</li><li><strong>Sombra Celular:</strong> 3 puntos críticos sin cobertura 4G para backup (Mitigación: Fibra es canal primario).</li></ul>',
+                finDetails: '<table style="width:100%; font-size:0.9rem;"><tr><td><strong>1. Suministro PTZ</strong></td><td>$14,835</td></tr><tr><td><strong>2. Infraestructura (Postes/Energía)</strong></td><td>$67,650 (Mayor costo)</td></tr><tr><td><strong>3. Instalación y Obra Civil</strong></td><td>$27,960</td></tr><tr><td style="border-top:1px solid #ccc; font-weight:bold;">TOTAL DIRECTO</td><td style="border-top:1px solid #ccc; font-weight:bold;">~$110,445</td></tr></table>'
             },
             'SOS': {
                 icon: '📞',
-                contract: 'Sistema de Postes S.O.S. instalados cada 3 kilómetros a lo largo del corredor concesionado (259 km), con comunicación directa al CCO.',
-                eng: 'Despliegue de 88 postes SOS con tecnología VoIP sobre fibra óptica. Incluye panel solar autónomo para redundancia energética. Distribución homogénea ajustada a la geometría de la vía.',
-                legal: '<ul><li>**Disponibilidad del Servicio:** El contrato exige 99.8% de disponibilidad.</li><li>**Tecnología:** Se permite uso de red celular como backup, pero la primaria debe ser fibra óptica propia.</li></ul>',
-                risks: 'Falta de cobertura celular en "zonas de sombra" podría afectar el backup (Mitigado: Fibra óptica es el canal principal).'
+                qty: '88 Postes SOS',
+                techType: 'Poste SOS IP/VoIP sobre Fibra',
+                contract: '<p><strong>Obligación AT1:</strong> "Sistema de Postes S.O.S. instalados cada 3 kilómetros a lo largo del corredor concesionado (259 km), con comunicación directa al CCO."</p>',
+                eng: '<ul><li>**Tecnología:** VoIP Nativo (SIP), Audio Full Duplex, Cancelación de ruido.</li><li>**Gabinete:** Acero Inoxidable o Policarbonato de alto impacto, color Naranja RAL 2004.</li><li>**Accesibilidad:** Botón único de llamada a altura reglamentaria (1.2m).</li></ul>',
+                legal: '<ul><li><strong>Disponibilidad:</strong> El contrato exige 99.8% de disponibilidad anual.</li><li><strong>Redundancia:</strong> Se acepta red celular como respaldo, pero no como medio principal.</li></ul>',
+                risks: 'Robo de paneles solares en zonas aisladas.',
+                finDetails: 'Costo unitario optimizado por compra en volumen.'
             },
             'PMV': {
                 icon: '📟',
-                contract: 'Paneles de Mensajería Variable (PMV) ubicados en puntos de decisión críticos (antes de peajes, variantes y accesos a ciudades).',
-                eng: 'Total de 39 PMVs (14 en Peajes + 25 en Línea). Tecnología Full Color P16. Integración con software de gestión de tráfico para mensajes automáticos de incidentes.',
-                legal: '<ul><li>**Ubicación:** Deben estar mínimo a 500m antes del punto de decisión.</li><li>**Estructura:** Requiere licencia de intervención de espacio público para los pórticos nuevos.</li></ul>',
-                risks: 'Retrasos en la importación de matrices LED por temas aduaneros.'
+                qty: '39 Paneles',
+                techType: 'Pórtico Full Color P16',
+                contract: '<p><strong>Obligación AT1:</strong> "Paneles de Mensajería Variable (PMV) ubicados en puntos de decisión críticos (antes de peajes, variantes y accesos a ciudades)."</p>',
+                eng: '<ul><li>**Matriz:** LED RGB P16mm, Brillo > 9000 nits.</li><li>**Estructura:** Tipo Bandera (Lateral) o Pórtico completo según ancho de vía.</li><li>**Gestión:** Protocolo NTCIP 1203 obligatorio.</li></ul>',
+                legal: '<ul><li><strong>Licencias:</strong> Requiere permiso de intervención de espacio público para cimentación profunda.</li></ul>',
+                risks: 'Tiempos de importación (Lead time > 12 semanas).',
+                finDetails: 'Alto impacto de la estructura metálica en el precio final.'
             }
         };
 
@@ -342,17 +373,11 @@
             if (!md) return;
 
             const tbody = document.getElementById('tableBody');
-            const items = md.data.wbs?.items || [];
-
-            // Group relevant systems
-            const systemKeys = ['CCTV', 'SOS', 'PMV', 'WIM', 'METEO'];
+            const systemKeys = ['CCTV', 'SOS', 'PMV', 'WIM', 'METEO']; // Reduced list for demo
             let html = '';
 
             systemKeys.forEach(sysKey => {
-                // Find summary data if exists, else aggregate
-                // Try to find matching summary object directly from data properties
                 let summaryObj = null;
-                // A bit of heuristic matching (e.g. cctvSummary)
                 Object.keys(md.data).forEach(k => {
                     if (k.toLowerCase().includes(sysKey.toLowerCase()) && k.includes('Summary')) {
                         summaryObj = md.data[k];
@@ -363,10 +388,8 @@
 
                 const details = JDATA[sysKey] || {
                     icon: '⚙️',
-                    contract: 'Requerimientos según AT1/AT3.',
-                    eng: 'Diseño estándar de ingeniería.',
-                    legal: '<ul><li>Pendiente validación específica.</li></ul>',
-                    risks: 'N/A'
+                    contract: 'Datos no cargados.',
+                    qty: summaryObj.cantidad
                 };
 
                 html += `
@@ -384,13 +407,13 @@
                         <span style="font-size:1.1rem; font-weight:700;">${summaryObj.cantidad}</span>
                     </td>
                      <td>
-                        <div style="color:var(--text-main); font-size:0.9rem;">${details.contract.substring(0, 80)}...</div>
+                        <div style="color:var(--text-main); font-size:0.9rem;">Ver Detalle Completo...</div>
                     </td>
                     <td>
-                        <div class="tag tag-warn">Requiere Firma</div>
+                         <div class="tag tag-warn">Pendiente</div>
                     </td>
                     <td style="text-align:right;">
-                        <span class="expand-hint">Ver Detalle ↗</span>
+                        <span class="expand-hint">Abrir ↗</span>
                     </td>
                 </tr>
                 `;
@@ -413,18 +436,53 @@
             });
 
             document.getElementById('mTitle').innerHTML = `${details.icon} ${summaryObj ? summaryObj.sistema : sysKey}`;
-            document.getElementById('mQty').textContent = summaryObj ? summaryObj.cantidad : '-';
 
-            // Format Money
+            // Populate Fields
+            document.getElementById('mQty').textContent = details.qty || summaryObj.cantidad;
+            document.getElementById('mTechType').textContent = details.techType || '-';
+
             const usd = summaryObj ? summaryObj.capexUSD : 0;
-            document.getElementById('mCapex').textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(usd);
+            const formattedUSD = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(usd);
+            document.getElementById('mCapex').textContent = formattedUSD;
 
-            document.getElementById('mContract').textContent = details.contract;
-            document.getElementById('mEng').textContent = details.eng;
+            if (summaryObj && summaryObj.cantidad > 0) {
+                const unit = usd / summaryObj.cantidad;
+                document.getElementById('mUnit').textContent = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(unit) + ' / unidad';
+            } else {
+                document.getElementById('mUnit').textContent = '-';
+            }
+
+            document.getElementById('mContract').innerHTML = details.contract;
+            document.getElementById('mEng').innerHTML = kramed(details.eng || '-'); // Simple markdown parse if we had it, strictly HTML for now
             document.getElementById('mLegal').innerHTML = details.legal;
-            document.getElementById('mRisks').textContent = details.risks;
+            document.getElementById('mRisks').innerHTML = kramed(details.risks || '-');
+            document.getElementById('mFinDetails').innerHTML = details.finDetails || 'Ver desglose en hoja de presupuesto.';
+
+            // Reset Tab
+            switchTab('tab-contract');
 
             document.getElementById('modalOverlay').style.display = 'flex';
+        }
+
+        function switchTab(tabId) {
+            // Hide all content
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Deactivate all tabs
+            document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+
+            // Activate selected content
+            const content = document.getElementById(tabId);
+            if (content) content.classList.add('active');
+
+            // Activate selected tab trigger
+            // Simple mapping based on index order which matches the layout
+            const tabs = ['tab-contract', 'tab-technical', 'tab-financial', 'tab-doc'];
+            const index = tabs.indexOf(tabId);
+
+            const triggers = document.querySelectorAll('.tab');
+            if (index >= 0 && triggers[index]) {
+                triggers[index].classList.add('active');
+            }
         }
 
         function closeModal(e) {
@@ -436,7 +494,58 @@
             document.getElementById('modalOverlay').style.display = 'none';
         }
 
+
+        // Mini markdown parser helper just in case
+        function kramed(str) {
+            if (!str) return '';
+            return str
+                .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                .replace(/\n/gim, '<br>');
+        }
+
         document.addEventListener('DOMContentLoaded', renderTable);
+    </script>
+    <!-- Load Generated Content -->
+    <script src="data/validaciones_content.js"></script>
+    <script>
+        // Override openModal to check for full content
+        const originalOpenModal = openModal;
+        openModal = function (sysKey) {
+            // Call original to set up structure
+            originalOpenModal(sysKey);
+
+            // Check if we have full content
+            const fullContent = (window.validacionesData && window.validacionesData[sysKey]) ? window.validacionesData[sysKey] : null;
+
+            if (fullContent) {
+                // Add or Enable "Expediente" Tab
+                let tabContainer = document.querySelector('.modal-tabs');
+                if (!document.getElementById('tab-doc-trigger')) {
+                    const newTab = document.createElement('div');
+                    newTab.className = 'tab';
+                    newTab.id = 'tab-doc-trigger';
+                    newTab.innerText = '📂 Expediente (Full MD)';
+                    newTab.onclick = () => switchTab('tab-doc');
+                    tabContainer.appendChild(newTab);
+
+                    const newContent = document.createElement('div');
+                    newContent.id = 'tab-doc';
+                    newContent.className = 'tab-content';
+                    newContent.innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(fullContent)}</div></div>`;
+                    document.querySelector('.modal-body').appendChild(newContent);
+                } else {
+                    // Update content
+                    document.getElementById('tab-doc').innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(fullContent)}</div></div>`;
+                }
+
+                // Auto switch to it? Maybe not, strict users want it.
+                // switchTab('tab-doc'); 
+            }
+        };
     </script>
 </body>
 

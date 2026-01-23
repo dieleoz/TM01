@@ -200,8 +200,49 @@ $JoinedItems
     Write-Log "Sincronizacion completada. Archivo generado: $TargetPath"
 }
 
+function Extract-ValidationDocs {
+    param([string]$ValidationPath = "VII. Documentos Transversales")
+    $OutputPath = "docs/data/validaciones_content.js"
+    Write-Log "Iniciando extraccion de documentos de validacion desde: $ValidationPath"
+
+    $validations = @{}
+    
+    # Mapping heuristic based on filename
+    $files = Get-ChildItem -Path $ValidationPath -Filter "*VALIDACION*.md"
+    
+    foreach ($file in $files) {
+        $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
+        # Escape for JS String
+        $cleanContent = $content -replace "\\", "\\\\" -replace "`r`n", "\n" -replace "`n", "\n" -replace "'", "\'" -replace '"', '\"'
+        
+        $sysKey = ""
+        if ($file.Name -match "CCTV") { $sysKey = "CCTV" }
+        elseif ($file.Name -match "SOS") { $sysKey = "SOS" }
+        elseif ($file.Name -match "PMV") { $sysKey = "PMV" }
+        elseif ($file.Name -match "WIM" -or $file.Name -match "PESAJE") { $sysKey = "WIM" }
+        elseif ($file.Name -match "METEO") { $sysKey = "METEO" }
+        elseif ($file.Name -match "FIBRA" -or $file.Name -match "TELECOM") { $sysKey = "FIBRA" }
+        
+        if ($sysKey) {
+            $validations[$sysKey] = $cleanContent
+        }
+    }
+
+    $jsLines = @()
+    $jsLines += "window.validacionesData = {"
+    foreach ($key in $validations.Keys) {
+        $val = $validations[$key]
+        $jsLines += "    '$key': ` $val `,"
+    }
+    $jsLines += "};"
+    
+    Set-Content -Path $OutputPath -Value ($jsLines -join "`n") -Encoding UTF8
+    Write-Log "Validaciones extraidas a: $OutputPath"
+}
+
 try {
     Start-WBSSyncV2
+    Extract-ValidationDocs
     Write-Host "SCRIPT DE SINCRONIZACION COMPLETADO EXITOSAMENTE" -ForegroundColor Green
 }
 catch {
