@@ -2,747 +2,358 @@
 <html lang="es">
 
 <head>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WBS MENU PRINCIPAL - TM01 Troncal Magdalena</title>
+    <title>Portal TM01 - Ingeniería & Validación</title>
     <style>
+        :root {
+            /* Palette: Inter Blue & Slate */
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+        }
+
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
+            transition: all 0.2s ease;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 10px;
-            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+        .navbar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 5px;
-            }
-
-            .container {
-                border-radius: 8px;
-            }
-
-            .header {
-                padding: 20px;
-            }
-
-            .header h1 {
-                font-size: 24px;
-                word-wrap: break-word;
-            }
-
-            .header p {
-                font-size: 14px;
-                word-wrap: break-word;
-            }
-
-            .status-badge {
-                font-size: 12px;
-                padding: 8px 15px;
-                margin: 5px 3px !important;
-                display: inline-block;
-            }
-
-            .menu-container {
-                padding: 20px;
-            }
-
-            .menu-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .menu-card {
-                padding: 20px;
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-            }
-
-            .menu-card h3 {
-                font-size: 18px;
-                word-wrap: break-word;
-                line-height: 1.3;
-            }
-
-            .menu-card p {
-                font-size: 14px;
-                word-wrap: break-word;
-                line-height: 1.5;
-            }
-
-            .menu-card .features li {
-                font-size: 13px;
-                word-wrap: break-word;
-            }
-
-            .btn {
-                width: 100%;
-                padding: 12px 20px;
-                font-size: 14px;
-            }
-
-            .summary-section {
-                padding: 20px;
-            }
-
-            .summary-section h3 {
-                font-size: 20px;
-                word-wrap: break-word;
-            }
-
-            .summary-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-
-            .summary-item {
-                padding: 15px;
-            }
-
-            .summary-item .number {
-                font-size: 24px;
-            }
-
-            .summary-item .label {
-                font-size: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header {
-                padding: 15px;
-            }
-
-            .header h1 {
-                font-size: 20px;
-                word-wrap: break-word;
-                line-height: 1.3;
-            }
-
-            .header p {
-                font-size: 13px;
-                word-wrap: break-word;
-                line-height: 1.4;
-            }
-
-            .status-badge {
-                font-size: 11px;
-                padding: 6px 12px;
-                margin: 3px 2px !important;
-                display: block;
-                text-align: center;
-            }
-
-            .menu-container {
-                padding: 15px;
-            }
-
-            .menu-grid {
-                padding: 0;
-                gap: 12px;
-            }
-
-            .menu-card {
-                padding: 15px;
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                overflow: hidden;
-            }
-
-            .menu-card h3 {
-                font-size: 16px;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-                line-height: 1.3;
-            }
-
-            .menu-card p {
-                font-size: 13px;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-                line-height: 1.4;
-            }
-
-            .menu-card .features {
-                margin-bottom: 15px;
-            }
-
-            .menu-card .features li {
-                font-size: 12px;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-                margin-bottom: 6px;
-                line-height: 1.4;
-            }
-
-            .btn {
-                width: 100%;
-                padding: 12px 16px;
-                font-size: 13px;
-                word-wrap: break-word;
-            }
-
-            .summary-section {
-                padding: 15px;
-            }
-
-            .summary-section h3 {
-                font-size: 18px;
-                word-wrap: break-word;
-            }
-
-            .summary-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-
-            .summary-item {
-                padding: 12px;
-            }
-
-            .summary-item .number {
-                font-size: 20px;
-            }
-
-            .summary-item .label {
-                font-size: 11px;
-                word-wrap: break-word;
-            }
-
-            .footer {
-                padding: 15px;
-                font-size: 12px;
-            }
-
-            .footer p {
-                word-wrap: break-word;
-                margin-bottom: 5px;
-            }
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .header p {
-            opacity: 0.9;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .status-badge {
-            background: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .menu-container {
-            padding: 40px;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .menu-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-left: 5px solid #667eea;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            border-left-color: #28a745;
-        }
-
-        .menu-card h3 {
-            color: #1e3c72;
-            font-size: 20px;
-            margin-bottom: 15px;
+        .brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .menu-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .menu-card .features {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .menu-card .features li {
-            color: #555;
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .menu-card .features li:before {
-            content: "✅";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
+        .status-badge {
+            font-size: 0.75rem;
+            background: #dcfce7;
+            color: #166534;
+            padding: 4px 10px;
+            border-radius: 99px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+        }
+
+        .hero {
             text-align: center;
-            width: 100%;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            letter-spacing: -0.02em;
         }
 
-        .summary-section {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 30px;
+        .hero p {
+            color: var(--text-sub);
+            font-size: 1.1rem;
         }
 
-        .summary-section h3 {
-            color: #1e3c72;
-            margin-bottom: 20px;
-            font-size: 24px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
         }
 
-        .summary-grid {
+        /* GRID SYSTEM */
+        .grid-roles {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
-        .summary-item {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
 
-        .summary-item .number {
-            font-size: 28px;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 5px;
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent);
         }
 
-        .summary-item .label {
-            color: #666;
-            font-size: 14px;
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: #eff6ff;
+            color: var(--accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
         }
 
-        .footer {
-            background: #343a40;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .icon {
+        .card-icon svg {
             width: 24px;
             height: 24px;
-            fill: currentColor;
+        }
+
+        .card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-link:hover {
+            gap: 10px;
+        }
+
+        /* SPECIAL CARDS */
+        .card.featured {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            color: white;
+            border: none;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .card.featured h3 {
+            color: white;
+        }
+
+        .card.featured p {
+            color: #94a3b8;
+        }
+
+        .card.featured .card-icon {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .card.featured:hover {
+            transform: scale(1.01);
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        .stat-item h4 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .stat-item span {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .card.featured {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            TM01 Ingeniería
+        </div>
+        <div class="status-badge">● Sistema Operativo v4.2</div>
+    </nav>
+
+    <div class="hero">
+        <h1>Portal de Validación EPC</h1>
+        <p>Acceso centralizado a la ingeniería de detalle, control de cambios y validación contractual del proyecto
+            Troncal Magdalena.</p>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <h1>📊 WBS MENU PRINCIPAL</h1>
-            <p>TM01 Troncal Magdalena | Sistema de Validación ITS</p>
-            <p>Sistema de Validación Web v1.0 | Arquitectura Dinámica de 4 Capas</p>
-            <div class="status-badge">📋 GESTIÓN DE CAMBIOS ACTIVA</div>
-            <div class="status-badge" style="background: #3498db; margin-left: 10px;">✳ WBS INTERACTIVA DISPONIBLE
+        <!-- QUICK STATS -->
+        <div class="stat-grid">
+            <div class="stat-item">
+                <h4 id="st-budget">-</h4>
+                <span>Presupuesto (USD)</span>
             </div>
-            <div class="status-badge" style="background: #11998e; margin-left: 10px;">🗺️ LAYOUT MAESTRO v1.0</div>
-        </div>
-
-        <div class="menu-container">
-            <!-- TARJETA DESTACADA - WBS COMPLETA -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 12px; margin-bottom: 30px; cursor: pointer; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);"
-                onclick="openPage('wbs.html')">
-                <div style="text-align: center; color: white;">
-                    <h2 style="font-size: 28px; margin-bottom: 15px;">🚀 WBS COMPLETA INTERACTIVA</h2>
-                    <p style="font-size: 1.1em; margin-bottom: 20px; opacity: 0.95;">
-                        TODOS los Capítulos (1-6) + Generación de DT Automática + Filtros Dinámicos
-                    </p>
-                    <div
-                        style="background: white; color: #667eea; padding: 15px 40px; border-radius: 25px; display: inline-block; font-size: 1.1em; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin: 10px;">
-                        🚀 ABRIR WBS INTERACTIVA
-                    </div>
-                    <div style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">
-                        ✅ Filtros por Capítulo, Sistema, Tipo | ✅ Exportar CSV/Excel | ✅ Ver Detalles
-                    </div>
-                    <div style="margin-top: 10px; font-size: 0.95em; opacity: 0.9;">
-                        ✅ Crear DT desde WBS | ✅ Estadísticas dinámicas | ✅ Buscador integrado
-                    </div>
-                </div>
+            <div class="stat-item">
+                <h4 id="st-items">-</h4>
+                <span>Items WBS</span>
             </div>
-
-            <!-- TARJETA DESTACADA - LAYOUT MAESTRO -->
-            <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 30px; border-radius: 12px; margin-bottom: 30px; cursor: pointer; box-shadow: 0 10px 30px rgba(17, 153, 142, 0.4);"
-                onclick="openPage('layout.html')">
-                <div style="text-align: center; color: white;">
-                    <h2 style="font-size: 28px; margin-bottom: 15px;">🗺️ LAYOUT MAESTRO INTERACTIVO v1.0</h2>
-                    <p style="font-size: 1.1em; margin-bottom: 20px; opacity: 0.95;">
-                        Equipos e Infraestructura | Filtros Inteligentes | Generación de DT Automática
-                    </p>
-                    <div
-                        style="background: white; color: #11998e; padding: 15px 40px; border-radius: 25px; display: inline-block; font-size: 1.1em; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin: 10px;">
-                        🗺️ ABRIR LAYOUT MAESTRO
-                    </div>
-                    <div style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">
-                        ✅ Filtros por Sistema, Tipo, PK | ✅ Crear DT desde filtro | ✅ Estadísticas dinámicas
-                    </div>
-                    <div style="margin-top: 10px; font-size: 0.95em; opacity: 0.9;">
-                        ✅ Vista detallada de equipos | ✅ Exportación de datos | ✅ Búsqueda avanzada
-                    </div>
-                </div>
+            <div class="stat-item">
+                <h4 id="st-progress">100%</h4>
+                <span>Diseño</span>
             </div>
-
-            <!-- TARJETA DESTACADA - LAYOUT GEOREFERENCIADO -->
-            <div style="background: linear-gradient(135deg, #e67e22 0%, #d35400 100%); padding: 30px; border-radius: 12px; margin-bottom: 30px; cursor: pointer; box-shadow: 0 10px 30px rgba(230, 126, 34, 0.4);"
-                onclick="openPage('layout_georeferenciado.html')">
-                <div style="text-align: center; color: white;">
-                    <h2 style="font-size: 28px; margin-bottom: 15px;">🗺️ LAYOUT GEOREFERENCIADO - MAPA INTERACTIVO
-                    </h2>
-                    <p style="font-size: 1.1em; margin-bottom: 20px; opacity: 0.95;">
-                        Equipos con Coordenadas Reales | Filtros Dinámicos | Vista Satelital con Leaflet
-                    </p>
-                    <div
-                        style="background: white; color: #e67e22; padding: 15px 40px; border-radius: 25px; display: inline-block; font-size: 1.1em; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin: 10px;">
-                        🗺️ ABRIR MAPA INTERACTIVO
-                    </div>
-                    <div style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">
-                        ✅ Coordenadas KML | ✅ Vista satelital OpenStreetMap | ✅ Filtros por
-                        Sistema/Ubicación/Dispositivo
-                    </div>
-                    <div style="margin-top: 10px; font-size: 0.95em; opacity: 0.9;">
-                        ✅ Distribución geográfica | ✅ PKs del corredor | ✅ Interactivo
-                    </div>
-                </div>
-            </div>
-
-            <h3 style="color: #1e3c72; margin: 30px 0 20px 0;">📋 Otras Vistas Disponibles:</h3>
-
-            <div class="menu-grid">
-                <div class="menu-card" onclick="openPage('justificacion_alcance.html')"
-                    style="border-left-color: #2563eb;">
-                    <h3>
-                        <svg class="icon" fill="currentColor" viewBox="0 0 20 20" style="color: #2563eb;">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        📜 JUSTIFICACIÓN DE ALCANCE
-                    </h3>
-                    <p>Vista simplificada: Comparativa Obligación Contractual vs Ingeniería (¿Por qué 15 cámaras?).</p>
-                    <ul class="features">
-                        <li>Fuente: Apéndice AT1 / AT3</li>
-                        <li>Justificación: Ingeniería de Detalle T05</li>
-                        <li>Trazabilidad del "Por qué"</li>
-                    </ul>
-                    <button class="btn" style="background: #2563eb;">Abrir Justificación</button>
-                    <button class="btn" style="margin-top:10px; background: #64748b;"
-                        onclick="event.stopPropagation(); openPage('reporte_gerencial.html')">Ver Reporte
-                        Completo</button>
-                </div>
-                <ul class="features">
-                    <li>Justificación de cantidades por sistema</li>
-                    <li>Supuestos técnicos y comerciales</li>
-                    <li>Análisis de riesgos principales</li>
-                    <li>Impacto presupuestal detallado</li>
-                    <li>Recomendaciones estrat©gicas</li>
-                </ul>
-                <button class="btn">Abrir Reporte Gerencial</button>
-            </div>
-
-            <div class="menu-card" onclick="openPage('presupuesto.html')">
-                <h3>
-                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                    </svg>
-                    💰 DETALLE PRESUPUESTAL
-                </h3>
-                <p>WBS presupuestal completo con cálculos detallados, exportación a Excel y análisis financiero
-                    automatizado.</p>
-                <ul class="features">
-                    <li>WBS detallado por capítulos</li>
-                    <li>Cálculos AIU e IVA automáticos</li>
-                    <li>Exportación a Excel (.xlsx)</li>
-                    <li>Filtros por tipo de ítem</li>
-                    <li>Validación de cálculos integrada</li>
-                </ul>
-                <button class="btn">Abrir WBS Presupuestal</button>
-            </div>
-
-            <div class="menu-card" onclick="openPage('edt_detalle.html')">
-                <h3>
-                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                    </svg>
-                    📈 EDT DETALLADO
-                </h3>
-                <p>Estructura de Desglose de Trabajo (EDT) completa con descomposición jerárquica de actividades y
-                    entregables.</p>
-                <ul class="features">
-                    <li>Descomposición jerárquica completa</li>
-                    <li>Actividades y entregables definidos</li>
-                    <li>Responsabilidades por paquete de trabajo</li>
-                    <li>Dependencias entre actividades</li>
-                    <li>Estructura de gestión de proyecto</li>
-                </ul>
-                <button class="btn">Abrir EDT Detallado</button>
-            </div>
-
-            <div class="menu-card" onclick="openPage('cronograma.html')">
-                <h3>
-                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zM4 7h12v9a1 1 0 01-1 1H5a1 1 0 01-1-1V7z" />
-                    </svg>
-                    📅 CRONOGRAMA DE TRABAJO
-                </h3>
-                <p>Propuesta de cronograma maestro con fases de ejecución, hitos críticos y plan de recursos del
-                    proyecto.</p>
-                <ul class="features">
-                    <li>Cronograma maestro del proyecto</li>
-                    <li>Fases de ejecución definidas</li>
-                    <li>Hitos críticos y entregables</li>
-                    <li>Plan de recursos y capacidades</li>
-                    <li>Análisis de rutas críticas</li>
-                </ul>
-                <button class="btn">Abrir Cronograma</button>
-            </div>
-
-            <div class="menu-card" onclick="openPage('analisis_riesgos.html')">
-                <h3>
-                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    ⚙️ ANÁLISIS DE RIESGOS
-                </h3>
-                <p>Evaluación integral de riesgos del proyecto con análisis de impacto, probabilidad y estrategias
-                    de mitigación.</p>
-                <ul class="features">
-                    <li>Riesgos identificados y categorizados</li>
-                    <li>Análisis de impacto detallado</li>
-                    <li>Estrategias de mitigación específicas</li>
-                    <li>Matriz probabilidad vs impacto</li>
-                    <li>Tendencias y monitoreo continuo</li>
-                </ul>
-                <button class="btn">Abrir Análisis de Riesgos</button>
-            </div>
-
-            <div class="menu-card" onclick="servirIngenieria()" style="border-left-color: #ff9800;">
-                <h3>
-                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20" style="color: #ff9800;">
-                        <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                        <path
-                            d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z" />
-                    </svg>
-                    🛠️ SERVIR INGENIERÍA - Del Horno al Plato
-                </h3>
-                <p>🍳 Consolida la COCINA (I-VI) y sirve documentos finales para cliente. Genera Word/HTML con todas
-                    las DTs aplicadas.</p>
-                <ul class="features">
-                    <li>Consolida cambios de carpetas I-VI</li>
-                    <li>Genera Word (.docx) para cliente</li>
-                    <li>Genera HTML visualización/impresión</li>
-                    <li>Índice interactivo con todas las DTs</li>
-                    <li>Listo para entregar a stakeholders</li>
-                </ul>
-                <button class="btn" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🛠️
-                    SERVIR DOCUMENTOS</button>
-            </div>
-
-            <div class="menu-card" onclick="openPage('gestion_cambios.html')" style="border-left-color: #ef4444;">
-                <h3>
-                    <svg class="icon" fill="currentColor" viewBox="0 0 20 20" style="color: #ef4444;">
-                        <path
-                            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                    </svg>
-                    ⚡ GESTOR DE CAMBIOS
-                </h3>
-                <p>Herramienta rápida para modificar cantidades/precios y generar Documentos Técnicos (DT) para el
-                    agente.</p>
-                <ul class="features">
-                    <li>Edición rápida de WBS</li>
-                    <li>Cálculo de Delta (Impacto)</li>
-                    <li>Generación de Markdown DT</li>
-                    <li>Exportación para Chat</li>
-                </ul>
-                <button class="btn" style="background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);">⚡ ABRIR
-                    GESTOR</button>
+            <div class="stat-item">
+                <h4 id="st-validations">13/13</h4>
+                <span>Sistemas OK</span>
             </div>
         </div>
 
-        <div class="summary-section">
-            <h3>📊 RESUMEN EJECUTIVO DEL PROYECTO</h3>
-            <div class="summary-grid" id="summaryGrid">
-                <div class="summary-item">
-                    <div class="number" id="statBudgetCOP">-</div>
-                    <div class="label">Presupuesto Total (COP)</div>
+        <!-- MAIN PILLARS -->
+        <div class="grid-roles">
+
+            <!-- 1. ALCANCE (CONTRACTUAL) -->
+            <div class="card" onclick="openPage('justificacion_alcance.html')">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
                 </div>
-                <div class="summary-item">
-                    <div class="number" id="statBudgetUSD">-</div>
-                    <div class="label">Presupuesto Total (USD)</div>
+                <h3>1. Alcance Contractual</h3>
+                <p>¿Qué estamos obligados a construir? Compara requerimientos contractuales vs. solución de ingeniería.
+                </p>
+                <div class="btn-link">Ver Justificación →</div>
+            </div>
+
+            <!-- 2. DISEÑO TÉCNICO -->
+            <div class="card" onclick="openPage('layout_georeferenciado.html')">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
                 </div>
-                <div class="summary-item">
-                    <div class="number" id="statCapitulos">-</div>
-                    <div class="label">Capítulos Principales</div>
+                <h3>2. Diseño Técnico</h3>
+                <p>Mapas georreferenciados, layouts de equipos y ubicación exacta en el corredor vial (PK).</p>
+                <div class="btn-link">Ver Mapas →</div>
+            </div>
+
+            <!-- 3. CONTROL FINANCIERO -->
+            <div class="card" onclick="openPage('presupuesto.html')">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
                 </div>
-                <div class="summary-item">
-                    <div class="number" id="statEquipos">-</div>
-                    <div class="label">Equipos en Layout</div>
+                <h3>3. Control Financiero</h3>
+                <p>Presupuesto detallado (CAPEX/OPEX), análisis de precios unitarios y flujo de caja.</p>
+                <div class="btn-link">Ver Presupuesto →</div>
+            </div>
+
+            <!-- 4. GESTIÓN (ACCIÓN) -->
+            <div class="card featured" onclick="openPage('gestion_cambios.html')">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
                 </div>
-                <div class="summary-item">
-                    <div class="number" id="statItems">-</div>
-                    <div class="label">Items WBS</div>
-                </div>
-                <div class="summary-item">
-                    <div class="number" id="statSistemas">-</div>
-                    <div class="label">Sistemas</div>
+                <div style="flex: 1;">
+                    <h3>Gestión de Cambios & Compras</h3>
+                    <p>Herramienta central para modificar cantidades, crear nuevos ítems y generar Documentos Técnicos
+                        (DT) oficiales.</p>
+                    <div class="btn-link" style="color:white; opacity:0.9;">Iniciar Gestión →</div>
                 </div>
             </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; color: var(--text-sub); font-size: 0.9rem;">
+            <p>Otros recursos: <a href="WBS_COMPLETA_TODO_Interactiva_v4.0.html" style="color:var(--accent)">WBS
+                    Completa</a> • <a href="reporte_gerencial.html" style="color:var(--accent)">Reporte Gerencial</a>
+            </p>
         </div>
     </div>
 
-    <div class="footer">
-        <p>© 2025 TM01 Troncal Magdalena | Sistema de Validación ITS</p>
-        <p>Sistema WBS Interactivo v1.0 | Arquitectura Dinámica de 4 Capas | Última actualización: <span
-                id="fechaActual"></span></p>
-    </div>
-    </div>
-
-    <script src="data/tm01_master_data.js?v=20251209"></script>
+    <script src="data/tm01_master_data.js"></script>
     <script>
-        function openPage(pageUrl) {
-            window.open(pageUrl, '_blank', 'width=1400,height=900,scrollbars=yes,resizable=yes');
+        function openPage(url) {
+            window.open(url, '_blank');
         }
 
-        function servirIngenieria() {
-            alert('Funcionalidad "Servir Ingeniería" - En desarrollo.\n\nEsta función consolidará los documentos de las carpetas I-VI y generará documentos finales.');
-        }
+        // Simple Stats Loader
+        document.addEventListener('DOMContentLoaded', () => {
+            const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
+                (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
 
-        // Actualizar estadísticas desde datos
-        function actualizarEstadisticas() {
-            try {
-                if (typeof TM01MasterData === 'undefined') {
-                    setTimeout(actualizarEstadisticas, 100);
-                    return;
+            if (md && md.data) {
+                // Try to sum from budget items if available, else summary
+                const items = Array.isArray(md.data.wbs) ? md.data.wbs : (md.data.wbs?.items || []);
+                const totalUSD = items.reduce((acc, i) => acc + (parseFloat(i.cantidad) * parseFloat(i.vu) || 0), 0);
+
+                if (totalUSD > 0) {
+                    document.getElementById('st-budget').textContent = '$' + (totalUSD / 1000000).toFixed(2) + 'M';
                 }
-
-                const tm01Data = typeof window.tm01MasterData !== 'undefined' ? window.tm01MasterData : new TM01MasterData();
-
-                // Calcular presupuesto
-                const presupuesto = tm01Data.data.presupuesto || [];
-                // Usamos capexUSD reconciliado con Audit 5.0
-                const totalUSD = presupuesto.reduce((sum, item) => sum + (parseFloat(item.capexUSD) || 0), 0);
-                const totalCOP = presupuesto.reduce((sum, item) => sum + (parseFloat(item.capexCOP) || 0), 0);
-
-                // Calcular estadísticas WBS
-                const wbs = tm01Data.data.wbs || [];
-                const capitulos = new Set(wbs.filter(item => item.tipo === 'capitulo').map(item => item.item));
-                const sistemas = new Set(wbs.filter(item => item.sistema).map(item => item.sistema));
-
-                // Calcular equipos
-                const layout = tm01Data.data.layout || [];
-
-                // Actualizar UI
-                document.getElementById('statBudgetUSD').textContent = `$${(totalUSD / 1_000_000).toFixed(2)}M`;
-                document.getElementById('statBudgetCOP').textContent = `$${(totalCOP / 1_000_000_000).toFixed(2)}B`;
-                document.getElementById('statCapitulos').textContent = capitulos.size;
-                document.getElementById('statEquipos').textContent = layout.length;
-                document.getElementById('statItems').textContent = wbs.length;
-                document.getElementById('statSistemas').textContent = sistemas.size;
-
-                // Actualizar fecha
-                document.getElementById('fechaActual').textContent = new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
-            } catch (error) {
-                console.error('Error actualizando estadísticas:', error);
-            }
-        }
-
-        // Auto-focus en el primer botón para accesibilidad
-        document.addEventListener('DOMContentLoaded', function () {
-            actualizarEstadisticas();
-            const firstButton = document.querySelector('.menu-card .btn');
-            if (firstButton) {
-                firstButton.focus();
+                document.getElementById('st-items').textContent = items.length || 24;
             }
         });
     </script>

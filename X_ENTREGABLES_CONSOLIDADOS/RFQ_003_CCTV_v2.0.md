@@ -43,8 +43,17 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 ### **Componentes del Sistema:**
 
 #### **1. CÁMARAS IP PTZ COMPLETAS (15 unidades):**
-- **Cámara PTZ IP 1080p (32x Zoom)**: 15 unidades (Hard Deck + Nodos Críticos).
-- Domo policarbonato anti-vandálico IK10
+- **Distribución:** 
+  - **11 Unidades:** Montaje lateral (Postes standard).
+  - **4 Unidades:** Montaje en Separador Central (Postes doble brazo/especiales).
+- **Referencia:** **Dahua DH-SD5A432GB-HNR** (o equivalente superior).
+- **Resolución:** 4 MP (2560 × 1440) @ 25/30 fps.
+- **Sensor:** 1/2.8" STARVIS™ CMOS.
+- **Zoom:** 32x Óptico.
+- **Tecnología:** Starlight (Baja iluminación) + IR 150m.
+- **Inteligencia:** Auto Tracking 3.0, Face Detection, SMD 4.0.
+- **Protección:** IP67 (Intemperie), IK10 (Antivandálico).
+- **Alimentación:** PoE+ (802.3at).
 - Soporte montaje poste/pared
 - Cable UTP Cat6 exterior 100m
 - Caja paso hermética IP66
@@ -53,10 +62,14 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 - Accesorios montaje completos
 
 #### **2. INFRAESTRUCTURA SOPORTE (30 ubicaciones):**
-- Poste metálico 12m (15 ubicaciones remotas)
+- **Poste Metálico 12m (Lateral):** 26 unidades.
+- **Poste Metálico 8m (Separador Central):** 4 unidades **(Tipo C)**.
+  - Altura reducida para estabilidad.
+  - Incluye Suministro e Instalación de **Barrera de Protección Vehicular** (Tipo New Jersey o Defensa Metálica Certificada) para protección del poste.
+  - Cimentación específica (0.8 x 0.8 x 1.2m).
 - Abrazaderas y herrajes montaje
 - Luminaria LED 50W (iluminación IR)
-- Energía solar 100W (10 zonas remotas / SOS integrados)
+- Energía solar 100W (10 zonas remotas)
 - Baterías AGM 12V 50Ah (2×10 ubicaciones)
 - Controlador solar 10A
 - Gabinete exterior IP65
@@ -90,37 +103,32 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 
 | Ítem | Descripción | Cantidad | Unidad |
 |:-----|:------------|:---------|:-------|
-| **2.1** | Poste Metálico 12m | 15 | UND |
-| Gabinete intemperie IP66 | 15 | UND |
-| Kit Energía Solar (Rural) | 8 | UND |
-| **2.4** | Paneles solares 100W | 10 | UND |
-| **2.5** | Baterías AGM 12V 50Ah | 20 | UND |
-| **2.6** | Controladores solares 10A | 10 | UND |
-| **2.7** | Gabinetes exteriores IP65 | 30 | UND |
+| **2.1** | Poste Metálico 12m (Lateral) | 11 | UND |
+| **2.2** | Poste Metálico 8m (Separador+Prot) | 4 | UND |
+| **2.3** | Gabinete intemperie IP66 | 15 | UND |
+| **2.4** | Kit Energía Solar (Rural) | 8 | UND |
+| **2.5** | Paneles solares 100W | 10 | UND |
+| **2.6** | Baterías AGM 12V 50Ah | 20 | UND |
+| **2.7** | Controladores solares 10A | 10 | UND |
+| **2.8** | Gabinetes exteriores IP65 | 30 | UND |
 
 ---
 
 ## 🔧 **ESPECIFICACIONES TÉCNICAS DETALLADAS**
 
-### **CÁMARA IP PTZ:**
-- **Resolución:** 1920×1080 (1080p Full HD) mínimo
-- **Sensor:** 1/2.8" Progressive Scan CMOS
-- **Zoom óptico:** 32× mínimo (Estandarización requerida para función Panorámica + Detalle)
-- **Rango IR:** 150 metros visión nocturna
-- **Función:** Dual (Panorámica en Home / Detalle en Operación)
-- **Rotación Pan:** 360° continuo
-- **Rotación Tilt:** -15° a +90°
-- **Velocidad Pan:** 0.1°-120°/s ajustable
-- **Presets:** ≥256 posiciones programables
-- **Compresión:** H.265/H.264/MJPEG
-- **Bitrate:** Hasta 16 Mbps
-- **FPS:** 30 fps @ 1080p
-- **WDR:** 120 dB mínimo
-- **Protección:** IP66 (domo completo)
-- **Vandalismo:** IK10 anti-vandálico
-- **Temperatura:** -30°C a +60°C
-- **Alimentación:** PoE+ (IEEE 802.3at) 25.5W
-- **Almacenamiento local:** MicroSD hasta 256GB
+### **CÁMARA IP PTZ (Referencia: Dahua DH-SD5A432GB-HNR):**
+- **Resolución:** 4 Megapixel (2560 × 1440)
+- **Sensor:** 1/2.8" 4Megapixel STARVIS™ CMOS
+- **Zoom óptico:** 32× (4.8 mm–154 mm)
+- **Rango IR:** Hasta 150 metros
+- **Tecnología:** Starlight (0.005 Lux@F1.6)
+- **Inteligencia Artificial:** Auto Tracking 3.0, Face Detection, SMD 4.0 (Smart Motion Detection)
+- **Compresión:** H.265+ / H.265 / H.264+ / H.264
+- **WDR:** 120 dB True WDR
+- **Protección:** IP67 (Superior a IP66), IK10
+- **Alimentación:** PoE+ (802.3at)
+- **Interoperabilidad:** ONVIF (Profile S/G/T)
+- **Almacenamiento local:** Soporta MicroSD hasta 512GB
 
 ### **FUNCIONES ANALÍTICAS (VIDEO ANALYTICS):**
 - **Detección de movimiento:** Eventos en vía
@@ -214,7 +222,10 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 #### **CCTV-002: INFRAESTRUCTURA SOPORTE**
 | Componente | Cantidad | Unidad |
 |:------------|:---------|:-------|
-| Poste metálico / Brazo | 15 | UND |
+| Poste metálico 12m (Lateral) | 11 | UND |
+| Poste metálico 8m (Separador) | 4 | UND |
+| Barrera Protección Vehicular | 4 | UND |
+| Soporte/Brazo Standard | 15 | UND |
 | Kit Solar / Energía | 10 | UND |
 
 #### **CCTV-003: INSTALACIÓN Y MONTAJE**

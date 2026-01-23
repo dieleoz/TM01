@@ -37,7 +37,7 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **20 cámaras** | 15 Tipo A + 5 Tipo C |
+| **Cantidad total** | **15 cámaras** | 15 Tipo A (Cobertura optimizada) |
 | **Distribución** | 13 UFs cubiertas | Tabla Maestra Layout (Revisada) |
 | **Tipo principal** | PTZ Domo IP (zoom 30×) | T04 CCTV |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
@@ -51,27 +51,28 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 ## 💰 **PRESUPUESTO DETALLADO**
 
 <!--
-### **CAPEX POR COMPONENTE:**
+### **CAPEX POR COMPONENTE (DETALLADO):**
 
-| Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
-|:-----------|:---------|:------------------|:------------|:------------|
+| Item | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
+|:---|:---------|:------------------|:------------|:------------|
 | **1. CÁMARAS IP PTZ COMPLETAS** | **15** | **-** | **-**| **-** |
-| Cámara PTZ Dahua High-End | 15 | $12,000 | $180,000 | 11.0% |
-| Domo policarbonato IK10 | 15 | $800 | $12,000 | 0.7% |
-| Soporte montaje poste | 15 | $500 | $7,500 | 0.5% |
-| Cable UTP Cat6 ext 100m | 15 | $100 | $1,500 | 0.1% |
-| Caja paso hermética IP66 | 15 | $150 | $2,250 | 0.1% |
-| Inyector PoE+ 30W | 15 | $200 | $3,000 | 0.2% |
-| DPS datos + energía | 15 | $150 | $2,250 | 0.1% |
-| Accesorios montaje | 15 | $300 | $4,500 | 0.3% |
-| **2. INFRAESTRUCTURA SOPORTE** | **15** | **-** | **$139,000** | **8.5%** |
-| Poste metálico 12m | 15 | $5,000 | $75,000 | 4.6% |
-| Kit Energía Solar 100W | 8 | $8,000 | $64,000 | 3.9% |
-| **3. INSTALACIÓN Y SERVICIOS** | **15** | **-** | **$52,500** | **3.2%** |
-| Instalación y comisionamiento | 15 | $3,000 | $45,000 | 2.8% |
-| Pruebas FAT/SAT | 15 | $500 | $7,500 | 0.5% |
+| Cámara PTZ Dahua DH-SD5A432GB-HNR (4MP 32x) | 15 | $989 | $14,835 | 11.0% |
+| Domo policarbonato IK10 | 0 | $0 | $0 | 0.0% |
+| Soporte montaje poste | 15 | $500 | $7,500 | 5.5% |
+| Cable UTP Cat6 ext 100m | 15 | $100 | $1,500 | 1.1% |
+| Caja paso hermética IP66 | 15 | $150 | $2,250 | 1.6% |
+| Inyector PoE+ 30W | 15 | $200 | $3,000 | 2.2% |
+| DPS datos + energía | 15 | $150 | $2,250 | 1.6% |
+| Accesorios montaje | 15 | $300 | $4,500 | 3.3% |
+| **2. INFRAESTRUCTURA SOPORTE** | **15** | **-** | **$67,650** | **49.5%** |
+| Poste metálico 12m | 15 | $410 | $6,150 | 4.5% |
+| Kit Energía Solar 540W (Panel+Bat+MPPT) | 15 | $2,000 | $30,000 | 22.0% |
+| Gabinete Integración Outdoor IP66 | 15 | $340 | $5,100 | 3.7% |
+| **3. INSTALACIÓN Y SERVICIOS** | **15** | **-** | **$27,960** | **20.5%** |
+| Instalación y comisionamiento | 15 | $1,364 | $20,460 | 15.0% |
+| Pruebas FAT/SAT | 15 | $500 | $7,500 | 5.5% |
 | **4. SISTEMA CENTRAL (VMS/VIDEOWALL)**| **-** | **-** | **MOVIDO A CCO** | **-** |
-| Documentación Técnica | 1 | $5,500 | $5,500 | 0.4% |
+| Documentación Técnica | 1 | $5,500 | $5,500 | 4.0% |
 -->
 
 ...

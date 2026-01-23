@@ -106,7 +106,28 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 │                                                                 │
 │  ✅ Sistema operativo con propagación automática de cambios     │
 └─────────────────────────────────────────────────────────────────┘
+└─────────────────────────────────────────────────────────────────┘
+      │                                                           ↑
+      │                                                           │
+      ▼                                                           │
+┌─────────────────┐                                     ┌─────────┴─────────┐
+│  USUARIO FINAL  │ ─── (5) Propone Cambios ──────────► │  GESTOR CAMBIOS   │
+└─────────────────┘     (gestion_cambios.html)          │  (Genera DT.md)   │
+                                                        └───────────────────┘
+                                                                  │
+                                                                  │ (6) Aplica cambio
+                                                                  ▼
+                                                        ┌───────────────────┐
+                                                        │  V. DETALLE (T05) │
+                                                        └───────────────────┘
 ```
+
+### 🔄 CIERRE DEL CICLO (Feedback Loop)
+El sistema no es solo de lectura. La **Herramienta de Gestión** permite:
+1. Visualizar datos actuales (Capa 4).
+2. Simular cambios de cantidades/precios.
+3. **Generar DTs (Markdowns)** automáticamente.
+4. Estos DTs se aplican a la **Capa 1 (T05)** para reiniciar el ciclo de sincronización.
 
 ### ⚠️ REGLA CRÍTICA: SINCRONIZACIÓN OBLIGATORIA
 

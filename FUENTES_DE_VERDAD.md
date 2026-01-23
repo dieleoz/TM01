@@ -64,6 +64,12 @@ V. Ingenieria de Detalle/
 3. **Salida:** `datos_wbs_TM01_items.js` (Consumido por la Web/Presupuesto).
    - *Este archivo se regenera automáticamente; no editar manualmente.*
 
+## 🛠️ HERRAMIENTA DE GESTIÓN (NUEVO)
+**`docs/gestion_cambios.html`** actúa como la interfaz de "Frontend" para la ingeniería:
+1. Permite modificar cantidades/precios y **Crear Nuevos Ítems**.
+2. **Genera Automáticamente** el Documento Técnico (DT) en Markdown.
+3. El DT generado debe aplicarse a **T05** para completar el ciclo.
+
 ## 📄 DOCUMENTOS DE CAMBIO (DTs)
 *La ingeniería se ajusta mediante estos documentos:*
 - **[DT-TM01-001]**: Traslado Servidores VMS a CCO.
@@ -163,6 +169,7 @@ Si la modificación afecta precios o componentes:
    |:-----------|:---------|:------------------|:------------|
    | Poste SOS  | 88       | $25,000          | $2,200,000  |
    ```
+   > **Tip:** Usa `gestion_cambios.html` para calcular los deltas y generar el texto del cambio automáticamante.
 
 3. **Verificar que el TOTAL coincida con el target:**
    - Ejemplo: Peajes debe sumar **$1,890,218.94**
