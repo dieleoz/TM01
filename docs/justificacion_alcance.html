@@ -452,8 +452,9 @@
                 document.getElementById('mUnit').textContent = '-';
             }
 
+            // Use hardcoded as fallback only
             document.getElementById('mContract').innerHTML = details.contract;
-            document.getElementById('mEng').innerHTML = kramed(details.eng || '-'); // Simple markdown parse if we had it, strictly HTML for now
+            document.getElementById('mEng').innerHTML = kramed(details.eng || '-');
             document.getElementById('mLegal').innerHTML = details.legal;
             document.getElementById('mRisks').innerHTML = kramed(details.risks || '-');
             document.getElementById('mFinDetails').innerHTML = details.finDetails || 'Ver desglose en hoja de presupuesto.';
@@ -512,38 +513,49 @@
     <!-- Load Generated Content -->
     <script src="data/validaciones_content.js"></script>
     <script>
-        // Override openModal to check for full content
+        // Override openModal to use extracted sections
         const originalOpenModal = openModal;
         openModal = function (sysKey) {
             // Call original to set up structure
             originalOpenModal(sysKey);
 
-            // Check if we have full content
-            const fullContent = (window.validacionesData && window.validacionesData[sysKey]) ? window.validacionesData[sysKey] : null;
+            // Check if we have validation data
+            const valData = (window.validacionesData && window.validacionesData[sysKey]) ? window.validacionesData[sysKey] : null;
 
-            if (fullContent) {
-                // Add or Enable "Expediente" Tab
+            if (valData) {
+                // Replace hardcoded content with extracted sections
+                if (valData.contractual) {
+                    document.getElementById('mContract').innerHTML = kramed(valData.contractual);
+                }
+                if (valData.technical) {
+                    document.getElementById('mEng').innerHTML = kramed(valData.technical);
+                }
+                if (valData.financial) {
+                    document.getElementById('mFinDetails').innerHTML = kramed(valData.financial);
+                }
+                if (valData.risks) {
+                    document.getElementById('mRisks').innerHTML = kramed(valData.risks);
+                }
+
+                // Add or Enable "Expediente" Tab for full document
                 let tabContainer = document.querySelector('.modal-tabs');
                 if (!document.getElementById('tab-doc-trigger')) {
                     const newTab = document.createElement('div');
                     newTab.className = 'tab';
                     newTab.id = 'tab-doc-trigger';
-                    newTab.innerText = '📂 Expediente (Full MD)';
+                    newTab.innerText = '📂 Expediente Completo';
                     newTab.onclick = () => switchTab('tab-doc');
                     tabContainer.appendChild(newTab);
 
                     const newContent = document.createElement('div');
                     newContent.id = 'tab-doc';
                     newContent.className = 'tab-content';
-                    newContent.innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(fullContent)}</div></div>`;
+                    newContent.innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(valData.full)}</div></div>`;
                     document.querySelector('.modal-body').appendChild(newContent);
                 } else {
                     // Update content
-                    document.getElementById('tab-doc').innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(fullContent)}</div></div>`;
+                    document.getElementById('tab-doc').innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(valData.full)}</div></div>`;
                 }
-
-                // Auto switch to it? Maybe not, strict users want it.
-                // switchTab('tab-doc'); 
             }
         };
     </script>

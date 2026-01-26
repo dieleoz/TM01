@@ -1,8 +1,8 @@
 # SCRIPT DE SINCRONIZACION WBS TM01 CON EXTRACCION AUTOMATICA T05
 # Archivo: scripts/sync_wbs_tm01.ps1
 # Proposito: Sincronizar datos WBS + extraer componentes detallados de documentos T05
-# Fecha: 21 de Enero 2026 (Updated)
-# Version: 2.9 (ASCII only Matching)
+# Fecha: 23 de Enero 2026 (Updated - Role-based extraction)
+# Version: 3.0
 
 param(
     [string]$SourcePath = "docs/data/tm01_master_data.js",
@@ -110,7 +110,7 @@ function Extract-T05Components {
 }
 
 function Start-WBSSyncV2 {
-    Write-Log "=== INICIANDO SINCRONIZACION WBS TM01 V2.9 ==="
+    Write-Log "=== INICIANDO SINCRONIZACION WBS TM01 V3.0 ==="
     
     if (!(Test-Path $SourcePath)) {
         throw "No se encuentra el archivo de datos maestro: $SourcePath"
@@ -190,7 +190,7 @@ function Start-WBSSyncV2 {
 window.wbsDataGlobal = window.datos_wbs = {
     "fecha_actualizacion": "$Fecha",
     "total_items": $TotalCount,
-    "version": "2.9",
+    "version": "3.0",
     "items": [
 $JoinedItems
     ]
@@ -206,14 +206,10 @@ function Extract-ValidationDocs {
     Write-Log "Iniciando extraccion de documentos de validacion desde: $ValidationPath"
 
     $validations = @{}
-    
-    # Mapping heuristic based on filename
     $files = Get-ChildItem -Path $ValidationPath -Filter "*VALIDACION*.md"
     
     foreach ($file in $files) {
         $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
-        # Escape for JS String
-        $cleanContent = $content -replace "\\", "\\\\" -replace "`r`n", "\n" -replace "`n", "\n" -replace "'", "\'" -replace '"', '\"'
         
         $sysKey = ""
         if ($file.Name -match "CCTV") { $sysKey = "CCTV" }
@@ -224,20 +220,76 @@ function Extract-ValidationDocs {
         elseif ($file.Name -match "FIBRA" -or $file.Name -match "TELECOM") { $sysKey = "FIBRA" }
         
         if ($sysKey) {
-            $validations[$sysKey] = $cleanContent
+            # Extract sections using simple string matching
+            $contractual = Get-SectionByKeyword $content 'CONTRACTUAL|OBLIGACION|TRAZABILIDAD'
+            $technical = Get-SectionByKeyword $content 'ESPECIFICACIONES|UBICACIONES|ARQUITECTURA|COMPONENTES'
+            $financial = Get-SectionByKeyword $content 'PRESUPUESTO|COSTOS|CAPEX|APU|ECONOMICO'
+            $risks = Get-SectionByKeyword $content 'RIESGOS|MITIGACIONES|DEFENSA|RECOMENDACIONES'
+            
+            # Simple JS escape
+            $fullEsc = $content -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'" 
+            $contrEsc = $contractual -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
+            $techEsc = $technical -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
+            $finEsc = $financial -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
+            $riskEsc = $risks -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
+            
+            $validations[$sysKey] = @{
+                full        = $fullEsc
+                contractual = $contrEsc
+                technical   = $techEsc
+                financial   = $finEsc
+                risks       = $riskEsc
+            }
         }
     }
 
-    $jsLines = @()
-    $jsLines += "window.validacionesData = {"
+    $jsContent = "window.validacionesData = {`n"
     foreach ($key in $validations.Keys) {
-        $val = $validations[$key]
-        $jsLines += "    '$key': ` $val `,"
+        $v = $validations[$key]
+        $jsContent += "  '$key': {`n"
+        $jsContent += "    full: '$($v.full)',`n"
+        $jsContent += "    contractual: '$($v.contractual)',`n"
+        $jsContent += "    technical: '$($v.technical)',`n"
+        $jsContent += "    financial: '$($v.financial)',`n"
+        $jsContent += "    risks: '$($v.risks)'`n"
+        $jsContent += "  },`n"
     }
-    $jsLines += "};"
+    $jsContent += "};`n"
     
-    Set-Content -Path $OutputPath -Value ($jsLines -join "`n") -Encoding UTF8
+    Set-Content -Path $OutputPath -Value $jsContent -Encoding UTF8
     Write-Log "Validaciones extraidas a: $OutputPath"
+}
+
+function Get-SectionByKeyword {
+    param([string]$Content, [string]$Pattern)
+    
+    $lines = $Content -split "`n"
+    $result = @()
+    $capturing = $false
+    $headerLevel = 0
+    
+    for ($i = 0; $i -lt $lines.Count; $i++) {
+        $line = $lines[$i]
+        
+        if ($line -match '^(#{1,4})\s+(.+)$') {
+            $level = $Matches[1].Length
+            $title = $Matches[2]
+            
+            if ($title -match $Pattern) {
+                $capturing = $true
+                $headerLevel = $level
+                $result += $line
+            }
+            elseif ($capturing -and $level -le $headerLevel) {
+                break
+            }
+        }
+        elseif ($capturing) {
+            $result += $line
+        }
+    }
+    
+    return ($result -join "`n")
 }
 
 try {

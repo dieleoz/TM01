@@ -1,7 +1,7 @@
 ﻿window.wbsDataGlobal = window.datos_wbs = {
-    "fecha_actualizacion": "2026-01-23",
+    "fecha_actualizacion": "2026-01-26",
     "total_items": 49,
-    "version": "2.9",
+    "version": "3.0",
     "items": [
 { item: '1', descripcion: 'SISTEMA CCTV', id: '1', nivel: 1, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'CCTV', totalCOP: '', tipo: 'capitulo', total: '' },
 { item: '1.1', descripcion: 'SUMINISTROS CCTV', id: '1.1', nivel: 2, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'CCTV', totalCOP: '', tipo: 'subcapitulo', total: '' },
