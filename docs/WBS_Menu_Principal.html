@@ -228,110 +228,114 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
-            TM01 Ingeniería
+            TM01 Portal
         </div>
-        <div class="status-badge">● Sistema Operativo v4.2</div>
+        <div class="status-badge">● Sistema Operativo v5.0</div>
     </nav>
 
     <div class="hero">
-        <h1>Portal de Validación EPC</h1>
-        <p>Acceso centralizado a la ingeniería de detalle, control de cambios y validación contractual del proyecto
-            Troncal Magdalena.</p>
+        <h1>Portal de Validación por Roles</h1>
+        <p>Selecciona tu perfil para acceder a la información relevante del proyecto Troncal Magdalena.</p>
     </div>
 
     <div class="container">
         <!-- QUICK STATS -->
         <div class="stat-grid">
             <div class="stat-item">
-                <h4 id="st-budget">-</h4>
-                <span>Presupuesto (USD)</span>
+                <h4 id="st-validations">13/13</h4>
+                <span>Sistemas OK</span>
             </div>
             <div class="stat-item">
-                <h4 id="st-items">-</h4>
-                <span>Items WBS</span>
+                <h4 id="st-budget">-</h4>
+                <span>CAPEX Total</span>
             </div>
             <div class="stat-item">
                 <h4 id="st-progress">100%</h4>
-                <span>Diseño</span>
+                <span>Validado</span>
             </div>
             <div class="stat-item">
-                <h4 id="st-validations">13/13</h4>
-                <span>Sistemas OK</span>
+                <h4 style="color:#2563eb;">v5.0</h4>
+                <span>Versión</span>
             </div>
         </div>
 
         <!-- MAIN PILLARS -->
         <div class="grid-roles">
 
-            <!-- 1. ALCANCE (CONTRACTUAL) -->
-            <div class="card" onclick="openPage('justificacion_alcance.html')">
-                <div class="card-icon">
+            <!-- 1. ABOGADO / CONTRACTUAL -->
+            <div class="card" onclick="openPage('justificacion_alcance.html')" style="border-left: 5px solid #ef4444;">
+                <div class="card-icon" style="color: #ef4444; background: #fee2e2;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
                 </div>
-                <h3>1. Alcance Contractual</h3>
-                <p>¿Qué estamos obligados a construir? Compara requerimientos contractuales vs. solución de ingeniería.
+                <h3>Gerencia Contractual</h3>
+                <p>Verifica el cumplimiento de obligaciones, adendas y riesgos legales. Acceso al <strong>Expediente de
+                        Validación</strong>.</p>
+                <div class="btn-link" style="color:#ef4444;">Auditoría Contractual →</div>
+            </div>
+
+            <!-- 2. INGENIERO / TECNICO -->
+            <div class="card" onclick="openPage('layout_georeferenciado_tm01.html')"
+                style="border-left: 5px solid #3b82f6;">
+                <div class="card-icon" style="color: #3b82f6; background: #eff6ff;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 20h.01" />
+                        <path d="M7 20v-4" />
+                        <path d="M12 20v-8" />
+                        <path d="M17 20V8" />
+                        <path d="M22 4v16" />
+                    </svg>
+                </div>
+                <h3>Ingeniería Técnica</h3>
+                <p>Consulta especificaciones, mapas georreferenciados (Layouts) y detalles de instalación de equipos.
                 </p>
-                <div class="btn-link">Ver Justificación →</div>
+                <div class="btn-link" style="color:#3b82f6;">Ver Planos y Specs →</div>
             </div>
 
-            <!-- 2. DISEÑO TÉCNICO -->
-            <div class="card" onclick="openPage('layout_georeferenciado.html')">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path
-                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                        </path>
-                    </svg>
-                </div>
-                <h3>2. Diseño Técnico</h3>
-                <p>Mapas georreferenciados, layouts de equipos y ubicación exacta en el corredor vial (PK).</p>
-                <div class="btn-link">Ver Mapas →</div>
-            </div>
-
-            <!-- 3. CONTROL FINANCIERO -->
-            <div class="card" onclick="openPage('presupuesto.html')">
-                <div class="card-icon">
+            <!-- 3. FINANCIERO / CFO -->
+            <div class="card" onclick="openPage('presupuesto.html')" style="border-left: 5px solid #10b981;">
+                <div class="card-icon" style="color: #10b981; background: #d1fae5;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="12" y1="1" x2="12" y2="23"></line>
                         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                     </svg>
                 </div>
-                <h3>3. Control Financiero</h3>
-                <p>Presupuesto detallado (CAPEX/OPEX), análisis de precios unitarios y flujo de caja.</p>
-                <div class="btn-link">Ver Presupuesto →</div>
+                <h3>Control Financiero</h3>
+                <p>Supervisa el CAPEX, flujos de caja y análisis de precios unitarios (APU). Reportes de ahorro.</p>
+                <div class="btn-link" style="color:#10b981;">Panel Financiero →</div>
             </div>
 
-            <!-- 4. GESTIÓN (ACCIÓN) -->
+            <!-- 4. COMPRAS / GESTION -->
             <div class="card featured" onclick="openPage('gestion_cambios.html')">
                 <div class="card-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        <path d="M20 7h-9"></path>
+                        <path d="M14 17H5"></path>
+                        <circle cx="17" cy="17" r="3"></circle>
+                        <circle cx="7" cy="7" r="3"></circle>
                     </svg>
                 </div>
                 <div style="flex: 1;">
                     <h3>Gestión de Cambios & Compras</h3>
-                    <p>Herramienta central para modificar cantidades, crear nuevos ítems y generar Documentos Técnicos
-                        (DT) oficiales.</p>
+                    <p>Herramienta para gestión de insumos, creación de nuevos ítems y control de cambios (DT).</p>
                     <div class="btn-link" style="color:white; opacity:0.9;">Iniciar Gestión →</div>
                 </div>
             </div>
 
         </div>
 
-        <div style="text-align: center; margin-top: 4rem; color: var(--text-sub); font-size: 0.9rem;">
-            <p>Otros recursos: <a href="WBS_COMPLETA_TODO_Interactiva_v4.0.html" style="color:var(--accent)">WBS
-                    Completa</a> • <a href="reporte_gerencial.html" style="color:var(--accent)">Reporte Gerencial</a>
-            </p>
+        <div style="background: #f1f5f9; padding: 20px; border-radius: 12px; margin-top: 2rem;">
+            <h4 style="margin-top:0; color:#64748b;">📚 Recursos Generales</h4>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="WBS_COMPLETA_TODO_Interactiva_v4.0.html" class="btn-link" style="color:#64748b;">WBS
+                    Maestra</a>
+                <a href="reporte_gerencial.html" class="btn-link" style="color:#64748b;">Reporte Gerencial</a>
+                <a href="cronograma.html" class="btn-link" style="color:#64748b;">Cronograma</a>
+                <a href="analisis_riesgos.html" class="btn-link" style="color:#64748b;">Matriz de Riesgos</a>
+            </div>
         </div>
+
     </div>
 
     <script src="data/tm01_master_data.js"></script>
@@ -349,11 +353,15 @@
                 // Try to sum from budget items if available, else summary
                 const items = Array.isArray(md.data.wbs) ? md.data.wbs : (md.data.wbs?.items || []);
                 const totalUSD = items.reduce((acc, i) => acc + (parseFloat(i.cantidad) * parseFloat(i.vu) || 0), 0);
+                const systemsCount = Object.keys(md.data).filter(k => k.includes('Summary')).length;
 
                 if (totalUSD > 0) {
                     document.getElementById('st-budget').textContent = '$' + (totalUSD / 1000000).toFixed(2) + 'M';
                 }
-                document.getElementById('st-items').textContent = items.length || 24;
+
+                if (systemsCount > 0) {
+                    document.getElementById('st-validations').textContent = systemsCount + '/' + systemsCount;
+                }
             }
         });
     </script>

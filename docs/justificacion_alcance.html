@@ -373,44 +373,76 @@
             if (!md) return;
 
             const tbody = document.getElementById('tableBody');
-            const systemKeys = ['CCTV', 'SOS', 'PMV', 'WIM', 'METEO']; // Reduced list for demo
+
+            // DYNAMICALLY GET KEYS FROM MASTER DATA
+            // Look for keys ending in 'Summary' e.g. 'cctvSummary' -> 'CCTV'
+            let systemEntries = [];
+            Object.keys(md.data).forEach(k => {
+                if (k.includes('Summary')) {
+                    const obj = md.data[k];
+                    // Normalize Key: 'cctvSummary' -> 'CCTV' or use obj.sistema
+                    // Prefer using the system code derived from obj.sistema or the key prefix
+                    const sysCode = obj.sistema ? obj.sistema.split(' ')[0].toUpperCase() : k.replace('Summary', '').toUpperCase();
+                    // Fix specific mapping if needed (e.g. 'ETD/RADAR' -> 'ETD')
+
+                    systemEntries.push({
+                        key: k,
+                        sysCode: sysCode, // Used for matching validations
+                        label: obj.sistema,
+                        qty: obj.cantidad,
+                        status: obj.estado,
+                        obj: obj
+                    });
+                }
+            });
+
+            // Ensure validations are loaded
+            const validations = window.validacionesData || {};
             let html = '';
 
-            systemKeys.forEach(sysKey => {
-                let summaryObj = null;
-                Object.keys(md.data).forEach(k => {
-                    if (k.toLowerCase().includes(sysKey.toLowerCase()) && k.includes('Summary')) {
-                        summaryObj = md.data[k];
-                    }
-                });
+            systemEntries.forEach(entry => {
+                const sysKey = entry.sysCode;
+                // Flexible Match for Validations
+                // Try exact match, or if key contains sysKey
+                let valKey = Object.keys(validations).find(k => k.includes(sysKey) || sysKey.includes(k));
 
-                if (!summaryObj) return;
+                const hasValidation = !!valKey;
+                const statusTag = hasValidation
+                    ? `<div class="tag tag-ok">✅ Documentado</div>`
+                    : `<div class="tag tag-warn">⚠️ Pendiente</div>`;
 
-                const details = JDATA[sysKey] || {
-                    icon: '⚙️',
-                    contract: 'Datos no cargados.',
-                    qty: summaryObj.cantidad
+                // Icon mapping
+                const iconMap = {
+                    'CCTV': '📹', 'PMV': '📟', 'SOS': '📞', 'WIM': '⚖️', 'METEO': '🌦️',
+                    'FIBRA': '🔌', 'PEAJE': '🛑', 'RADIO': '📻', 'ETD': '📡', 'CO': '🏢'
                 };
+                let icon = iconMap[sysKey] || '⚙️';
+                if (entry.label.includes('FIBRA')) icon = '⚡';
+                if (entry.label.includes('PEAJE')) icon = '🛂';
+
+                // Skip "Eliminado" unless requested? Let's show all but greyed out if eliminated
+                const isDeleted = entry.status === 'Eliminado';
+                const opacity = isDeleted ? '0.5' : '1';
 
                 html += `
-                <tr onclick="openModal('${sysKey}')">
+                <tr onclick="openModal('${valKey || sysKey}')" style="opacity:${opacity}">
                     <td>
                         <div style="display:flex; align-items:center; gap:10px;">
-                            <span style="font-size:1.5rem; background:#eff6ff; padding:8px; border-radius:8px;">${details.icon}</span>
+                            <span style="font-size:1.5rem; background:#eff6ff; padding:8px; border-radius:8px;">${icon}</span>
                             <div>
-                                <div style="font-weight:700; color:var(--primary);">${summaryObj.sistema}</div>
-                                <small style="color:var(--text-light)">${summaryObj.estado || 'Activo'}</small>
+                                <div style="font-weight:700; color:var(--primary);">${entry.label}</div>
+                                <small style="color:var(--text-light)">${entry.status || 'Activo'}</small>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <span style="font-size:1.1rem; font-weight:700;">${summaryObj.cantidad}</span>
+                        <span style="font-size:1.1rem; font-weight:700;">${entry.qty}</span>
                     </td>
                      <td>
-                        <div style="color:var(--text-main); font-size:0.9rem;">Ver Detalle Completo...</div>
+                        <div style="color:var(--text-main); font-size:0.9rem;">${hasValidation ? 'Ver Expediente por Roles (Abogado/Ing/Financiero)' : 'Sin validación cargada'}</div>
                     </td>
                     <td>
-                         <div class="tag tag-warn">Pendiente</div>
+                        ${statusTag}
                     </td>
                     <td style="text-align:right;">
                         <span class="expand-hint">Abrir ↗</span>
@@ -496,16 +528,124 @@
         }
 
 
-        // Mini markdown parser helper just in case
+                <style>
+                    /* Markdown Styles Injection */
+                    .markdown-body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size: 14px; line-height: 1.6; color: #24292e; }
+                    .markdown-body h1 { border-bottom: 1px solid #eaecef; padding-bottom: .3em; font-size: 2em; margin-top: 0; }
+                    .markdown-body h2 { border-bottom: 1px solid #eaecef; padding-bottom: .3em; font-size: 1.5em; margin-top: 24px; }
+                    .markdown-body h3 { font-size: 1.25em; margin-top: 24px; }
+                    .markdown-body table { display: block; width: 100%; overflow: auto; margin-top: 0; margin-bottom: 16px; border-spacing: 0; border-collapse: collapse; }
+                    .markdown-body table tr { background-color: #fff; border-top: 1px solid #c6cbd1; }
+                    .markdown-body table tr:nth-child(2n) { background-color: #f6f8fa; }
+                    .markdown-body table th, .markdown-body table td { padding: 6px 13px; border: 1px solid #dfe2e5; }
+                    .markdown-body table th { font-weight: 600; }
+                    .markdown-body blockquote { padding: 0 1em; color: #6a737d; border-left: 0.25em solid #dfe2e5; margin: 0; }
+                    .markdown-body code { padding: .2em .4em; margin: 0; font-size: 85%; background-color: rgba(27,31,35,.05); border-radius: 3px; font-family: SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace; }
+                    .markdown-body pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: #f6f8fa; border-radius: 3px; }
+                    .markdown-body ul { padding-left: 2em; }
+                    .markdown-body li { margin-bottom: 0.25em; }
+                    .full-doc-view { max-height: 80vh; overflow-y: auto; }
+                </style>
+                <div class="full-doc-view" style="padding: 24px; background: #fff;">
+                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 12px; border-radius: 6px; margin-bottom: 24px; font-size: 13px;">
+                        <strong>✅ Documento de Validación Oficial</strong><br>
+                        Mostrando expediente completo unificado. Las tablas y formatos se han renderizado para lectura.
+                    </div>
+                    <div class="markdown-body">
+                        ${kramed(valData.full)}
+                    </div>
+                </div>
+        `;
+            } else {
+                // Fallback for systems without validation data
+                 if(tabContainer) tabContainer.style.display = 'flex'; 
+            }
+        };
+
+        // Improved Markdown Parser
         function kramed(str) {
             if (!str) return '';
-            return str
-                .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                .replace(/\*(.*?)\*/g, '<em>$1</em>')
-                .replace(/\n/gim, '<br>');
+            
+            // 1. Normalize Newlines (Handle escaped \n from JSON)
+            let text = str.replace(/\\n/g, '\n').replace(/\r/g, '');
+
+            // 2. Escape HTML (basic)
+            text = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            // 3. Block Elements
+            // Headers
+            text = text.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+            text = text.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+            text = text.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+            
+            // Horizontal Rules
+            text = text.replace(/^---$/gim, '<hr>');
+
+            // Blockquotes
+            text = text.replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>');
+
+            // Tables (Simple Parser)
+            // Look for table header: | Col | Col |
+            // Then separator: |---|---|
+            // Then rows
+            // We use a simplified approach: Replace specific table patterns or lines
+            
+            // Convert Table Rows (Lines starting with |)
+            // Handle Header Row vs Normal Row? difficult with regex one-pass.
+            // Strategy: Convert any line starting with | to a TR TD sequence, then wrap in TABLE
+            
+            // Regex to match a table block? Difficult. 
+            // Better: Line-by-line processing for tables is cleaner in simple scripts, 
+            // but for replace-chain:
+            
+            // Naive Table: 
+            // 1. | ... | -> <tr><td>...</td></tr>
+            // 2. |---| -> remove (or convert to header logic)
+            
+            // Let's protect code blocks first? (Skip for now, minimal risk in these docs)
+
+            // Convert separator lines |:--|--:| to empty (cleanup)
+            text = text.replace(/^\|[-:| ]+\|$/gim, ''); 
+
+            // Convert data rows: | cell | cell |
+            text = text.replace(/^\|(.*)\|$/gim, function(match, content) {
+                const cells = content.split('|').map(c => `< td > ${ c.trim() }</td > `).join('');
+                return `< tr > ${ cells }</tr > `;
+            });
+
+            // Wrap contiguous TRs in TABLE
+            // This is tricky with regex. 
+            // Hack: If we have multiple <tr> lines, they are probably a table. 
+            // Browser auto-closes tables if we just dump TRs? No.
+            // We need a wrapper. 
+            // Let's wrap EVERY set of TRs in a table block.
+            text = text.replace(/(<tr>.*?<\/tr>\n?)+/gim, '<table>$&</table>');
+            
+            // Fix Header Cells: Check if a table row comes before a separator line? 
+            // Too complex for this regex. We just render all as TDs. CSS styles will handle borders.
+            // Maybe make the first row TH?
+            // text = text.replace(/<table>\s*<tr>/i, '<table><thead><tr>').replace(/<\/tr>/i, '</tr></thead><tbody>'); // Only first one? risky.
+
+            // Lists
+            text = text.replace(/^\s*-\s+(.*$)/gim, '<li>$1</li>');
+            text = text.replace(/(<li>.*<\/li>\n?)+/gim, '<ul>$&</ul>');
+
+            // 4. Inline Elements
+            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            text = text.replace(/`([^ `]+)` / g, '<code>$1</code>');
+
+        // 5. Final Cleanup
+        text = text.replace(/\n/g, '<br>'); // Convert remaining newlines to BR
+        // Remove BRs inside tables/lists to prevent weird spacing
+        text = text.replace(/<\/ul><br>/g, '</ul>');
+        text = text.replace(/<\/table><br>/g, '</table>');
+        text = text.replace(/<\/h1><br>/g, '</h1>');
+        text = text.replace(/<\/h2><br>/g, '</h2>');
+        text = text.replace(/<\/h3><br>/g, '</h3>');
+        text = text.replace(/<\/blockquote><br>/g, '</blockquote>');
+
+        return text;
         }
 
         document.addEventListener('DOMContentLoaded', renderTable);
@@ -513,49 +653,70 @@
     <!-- Load Generated Content -->
     <script src="data/validaciones_content.js"></script>
     <script>
-        // Override openModal to use extracted sections
-        const originalOpenModal = openModal;
-        openModal = function (sysKey) {
-            // Call original to set up structure
-            originalOpenModal(sysKey);
+        // Override openModal to show FULL DOCUMENT directly
+        // Ensure we capture the original function only once
+        if (typeof window.originalOpenModalRef === 'undefined') {
+            window.originalOpenModalRef = openModal;
+        }
 
-            // Check if we have validation data
+        openModal = function (sysKey) {
+            // Use the stored reference
+            const baseOpenModal = window.originalOpenModalRef;
+
+            // Call original to set up basic header structure
+            // If sysKey not in JDATA (dynamic), we manually set basic headers
+            if (!JDATA[sysKey]) {
+                const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : { data: {} };
+                const summaryEntry = Object.values(md.data).find(v => (v.sistema && v.sistema.includes(sysKey)) || (v.id && v.id === sysKey));
+
+                document.getElementById('mTitle').innerHTML = summaryEntry ? summaryEntry.sistema : sysKey;
+                document.getElementById('mQty').textContent = summaryEntry ? summaryEntry.cantidad : '-';
+                document.getElementById('mCapex').textContent = summaryEntry ? '$' + (summaryEntry.capexUSD || 0).toLocaleString() : '-';
+                document.getElementById('modalOverlay').style.display = 'flex';
+            } else {
+                if (typeof baseOpenModal === 'function') {
+                    baseOpenModal(sysKey);
+                } else {
+                    // Fallback if baseOpenModal is lost for some reason
+                    console.error("Base originalOpenModal ref lost, defining minimal setup.");
+                    document.getElementById('mTitle').innerText = JDATA[sysKey].title;
+                    document.getElementById('modalOverlay').style.display = 'flex';
+                }
+            }
+
+            // JOIN DATA: Check if we have extracted validation data
             const valData = (window.validacionesData && window.validacionesData[sysKey]) ? window.validacionesData[sysKey] : null;
 
+            // UI SIMPLIFICATION:
+            // Instead of populating distinct tabs (Contract/Legal/Etc), we overload the main container 
+            // to show the FULL DOCUMENT.
+
+            const tabContainer = document.querySelector('.modal-tabs');
+            const bodyContainer = document.querySelector('.modal-body');
+
             if (valData) {
-                // Replace hardcoded content with extracted sections
-                if (valData.contractual) {
-                    document.getElementById('mContract').innerHTML = kramed(valData.contractual);
-                }
-                if (valData.technical) {
-                    document.getElementById('mEng').innerHTML = kramed(valData.technical);
-                }
-                if (valData.financial) {
-                    document.getElementById('mFinDetails').innerHTML = kramed(valData.financial);
-                }
-                if (valData.risks) {
-                    document.getElementById('mRisks').innerHTML = kramed(valData.risks);
-                }
+                // 1. Hide the confusing role-tabs if they exist
+                if (tabContainer) tabContainer.style.display = 'none';
 
-                // Add or Enable "Expediente" Tab for full document
-                let tabContainer = document.querySelector('.modal-tabs');
-                if (!document.getElementById('tab-doc-trigger')) {
-                    const newTab = document.createElement('div');
-                    newTab.className = 'tab';
-                    newTab.id = 'tab-doc-trigger';
-                    newTab.innerText = '📂 Expediente Completo';
-                    newTab.onclick = () => switchTab('tab-doc');
-                    tabContainer.appendChild(newTab);
-
-                    const newContent = document.createElement('div');
-                    newContent.id = 'tab-doc';
-                    newContent.className = 'tab-content';
-                    newContent.innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(valData.full)}</div></div>`;
-                    document.querySelector('.modal-body').appendChild(newContent);
-                } else {
-                    // Update content
-                    document.getElementById('tab-doc').innerHTML = `<div class="detail-section"><div class="detail-content" style="white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; background:#f8fafc; padding:20px;">${kramed(valData.full)}</div></div>`;
-                }
+                // 2. Clear current body content (which has the tab-content divs)
+                // and replace with a Single View Container
+                bodyContainer.innerHTML = `
+                    <div class="full-doc-view" style="padding: 20px; background: #fff;">
+                        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 10px; border-radius: 6px; margin-bottom: 20px;">
+                            <strong>✅ Documento de Validación Oficial</strong><br>
+                            Mostrando expediente completo para revisión transversal (Legal + Técnica + Financiera).
+                        </div>
+                        <div class="markdown-body" style="font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #334155;">
+                            ${kramed(valData.full)}
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Fallback for systems without validation data: Show standard tabs or "No Info"
+                if (tabContainer) tabContainer.style.display = 'flex'; // Restore tabs if hidden
+                // Force switch to first tab if we reverted structure (complex to revert innerHTML, 
+                // requires reload usually, but for this specific flow it's ok as we check valData first)
+                // If no valData, we just leave the default originalOpenModal behavior or show a warning.
             }
         };
     </script>

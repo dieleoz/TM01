@@ -218,20 +218,34 @@ function Extract-ValidationDocs {
         elseif ($file.Name -match "WIM" -or $file.Name -match "PESAJE") { $sysKey = "WIM" }
         elseif ($file.Name -match "METEO") { $sysKey = "METEO" }
         elseif ($file.Name -match "FIBRA" -or $file.Name -match "TELECOM") { $sysKey = "FIBRA" }
+        elseif ($file.Name -match "PEAJE") { $sysKey = "PEAJES" }
+        elseif ($file.Name -match "CCO" -or $file.Name -match "CENTRO CONTROL") { $sysKey = "CCO" }
+        elseif ($file.Name -match "RADIO") { $sysKey = "RADIO" }
+        elseif ($file.Name -match "GALIBO") { $sysKey = "GALIBOS" }
+        elseif ($file.Name -match "ETD" -or $file.Name -match "RADAR") { $sysKey = "ETD" }
+        elseif ($file.Name -match "ILUMINACION") { $sysKey = "ILUMINACION" }
+        elseif ($file.Name -match "SENALIZACION") { $sysKey = "SENALIZACION" }
+        elseif ($file.Name -match "ENERGIA") { $sysKey = "ENERGIA" }
         
         if ($sysKey) {
-            # Extract sections using simple string matching
-            $contractual = Get-SectionByKeyword $content 'CONTRACTUAL|OBLIGACION|TRAZABILIDAD'
-            $technical = Get-SectionByKeyword $content 'ESPECIFICACIONES|UBICACIONES|ARQUITECTURA|COMPONENTES'
-            $financial = Get-SectionByKeyword $content 'PRESUPUESTO|COSTOS|CAPEX|APU|ECONOMICO'
+            # Extract sections using stricter patterns to avoid matching the Definition Title (Level 1)
+            # We target specific chapters usually found at Level 2
+            $contractual = Get-SectionByKeyword $content 'RESUMEN|ANÁLISIS CONTRACTUAL|FUENTE CONTRACTUAL|OBLIGACI'
+            $technical = Get-SectionByKeyword $content 'VALIDACIÓN DE CANTIDADES|ESPECIFICACIONES|UBICACIONES|ARQUITECTURA|COMPONENTES'
+            $financial = Get-SectionByKeyword $content 'IMPACTO ECONÓMICO|PRESUPUESTO|COSTOS|CAPEX|APU'
             $risks = Get-SectionByKeyword $content 'RIESGOS|MITIGACIONES|DEFENSA|RECOMENDACIONES'
             
-            # Simple JS escape
-            $fullEsc = $content -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'" 
-            $contrEsc = $contractual -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
-            $techEsc = $technical -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
-            $finEsc = $financial -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
-            $riskEsc = $risks -replace '\\', '\\' -replace "`n", '\n' -replace "'", "\\'"
+            # Robust JS escape for single-quoted strings
+            # 1. Escape backslashes first (so we don't double escape later)
+            # 2. Remove CR
+            # 3. Escape Newline
+            # 4. Escape Single Quotes
+            
+            $fullEsc = $content -replace "\\", "\\\\" -replace "`r", "" -replace "`n", "\\n" -replace "'", "\'"
+            $contrEsc = $contractual -replace "\\", "\\\\" -replace "`r", "" -replace "`n", "\\n" -replace "'", "\'"
+            $techEsc = $technical -replace "\\", "\\\\" -replace "`r", "" -replace "`n", "\\n" -replace "'", "\'"
+            $finEsc = $financial -replace "\\", "\\\\" -replace "`r", "" -replace "`n", "\\n" -replace "'", "\'"
+            $riskEsc = $risks -replace "\\", "\\\\" -replace "`r", "" -replace "`n", "\\n" -replace "'", "\'"
             
             $validations[$sysKey] = @{
                 full        = $fullEsc
@@ -266,25 +280,37 @@ function Get-SectionByKeyword {
     $lines = $Content -split "`n"
     $result = @()
     $capturing = $false
-    $headerLevel = 0
+    $captureLevel = 0
     
     for ($i = 0; $i -lt $lines.Count; $i++) {
-        $line = $lines[$i]
+        $line = $lines[$i].TrimEnd()
         
-        if ($line -match '^(#{1,4})\s+(.+)$') {
+        # Detect Header
+        if ($line -match '^(#{1,6})\s+(.+)$') {
             $level = $Matches[1].Length
             $title = $Matches[2]
             
+            # If we are already capturing...
+            if ($capturing) {
+                # Stop if we hit a header of same or higher importance (smaller level number)
+                # Example: If we started at ## (2), stop at ## (2) or # (1).
+                # Note: We ALLOW subsections (###) to be captured.
+                if ($level -le $captureLevel) {
+                    break
+                }
+            }
+            
+            # Check if this header matches our target pattern
             if ($title -match $Pattern) {
                 $capturing = $true
-                $headerLevel = $level
+                $captureLevel = $level
+                # Add the header itself to context
                 $result += $line
-            }
-            elseif ($capturing -and $level -le $headerLevel) {
-                break
+                continue
             }
         }
-        elseif ($capturing) {
+        
+        if ($capturing) {
             $result += $line
         }
     }
