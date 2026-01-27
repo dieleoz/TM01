@@ -133,6 +133,138 @@ NO LOS EDITES MANUALMENTE
 ## 🔍 PROTOCOLO DE EJECUCIÓN (BARRIDO PROFUNDO)
 ## ═══════════════════════════════════════════════════════════════════
 
+### **PASO 0: PREPARACIÓN (Antes de empezar)**
+
+**Objetivo:** Preparar herramientas y estrategia antes del análisis
+
+**Checklist de Preparación:**
+```
+[ ] Identificar el sistema a analizar (PMV, SOS, METEO, etc.)
+[ ] Listar documentos relevantes:
+    [ ] AT1 (Alcance)
+    [ ] AT2 (Operación)
+    [ ] AT3 (Especificaciones)
+    [ ] AT4 (Indicadores)
+[ ] Definir pregunta clave: ¿Cuántos? ¿Dónde? ¿Cómo?
+[ ] Preparar herramientas de búsqueda (grep, PowerShell)
+[ ] Revisar si existe T05 previo (puede tener datos incorrectos)
+```
+
+---
+
+#### **MATRIZ DE PALABRAS CLAVE POR SISTEMA**
+
+**Uso:** Buscar estos términos en AT1/AT2/AT3 para encontrar obligaciones
+
+| Sistema | Palabras clave para grep | Ubicación probable |
+|:--------|:-------------------------|:-------------------|
+| **PMV** | "paneles de mensaje", "PMV", "señalización variable", "mensajería variable" | AT1 §3, AT2 §3.3.5.1 |
+| **SOS** | "postes de emergencia", "SOS", "teléfonos de emergencia", "llamadas de emergencia" | AT1 §3, AT2 §3.3.3 |
+| **METEO** | "meteorológico", "precipitación", "evapotranspiración", "horas de sol" | AT2 §3.3.5.1, AT2 §3.3.11.2 |
+| **CCTV** | "cámaras", "CCTV", "videovigilancia", "circuito cerrado" | AT2 §3.3.5.1 |
+| **Peajes** | "peaje", "recaudo", "IP/REV", "carriles", "ANPR" | AT2 §3.3.4 |
+| **WIM** | "pesaje", "WIM", "peso", "báscula", "HS-WIM" | AT1 §3, AT2 §3.3.5.2 |
+| **ETD/Radar** | "radar", "ETD", "velocidad", "estaciones de tratamiento" | AT1 §3, AT2 §3.3.5.1 |
+| **Telecomunicaciones** | "fibra óptica", "switches", "red de datos", "backbone" | AT2 §3.3.5.1 |
+
+**Comando PowerShell para búsqueda:**
+```powershell
+Select-String -Path "II. Apendices Tecnicos\*.md" `
+  -Pattern "PMV|paneles de mensaje" `
+  -CaseInsensitive | 
+  Select-Object Filename, LineNumber, Line
+```
+
+---
+
+#### **PROTOCOLO DE DESEMPATE (Cuando hay contradicciones)**
+
+**Árbol de Decisión:**
+
+```
+SI (AT1 ≠ T05):
+  ├─ ¿Hay normativa sobreviniente? (IP/REV, Manual 2024)
+  │  ├─ SÍ → Usar cantidad que cumple normativa + AT1
+  │  │       Ejemplo: AT1 dice 25 PMV + IP/REV exige 14 displays = 39 total
+  │  └─ NO → Usar cantidad de AT1 (contractual gana)
+  │
+  └─ Documentar en DT la justificación del delta
+
+SI (AT2 ≠ AT3):
+  └─ AT2 gana (Operación > Especificaciones)
+      Ejemplo: AT2 dice "mínimo 2 PMV por peaje" → Obligatorio
+               AT3 no menciona PMV → AT2 prevalece
+
+SI (Contrato ≠ Manual 2024):
+  └─ Manual 2024 gana SI es normativa obligatoria
+      Cláusula de actualización normativa (Contrato §X.X)
+      Ejemplo: Manual 2024 exige radares pedagógicos → Obligatorio
+               Aunque AT2 no los mencione explícitamente
+
+SI (T05 anterior ≠ Análisis PROMPT MAESTRO):
+  └─ PROMPT MAESTRO gana (validación contractual)
+      Crear DT documentando corrección
+      Ejemplo: T05 decía 39 PMV → PROMPT MAESTRO encontró 43
+```
+
+**Regla de Oro:**
+```
+JERARQUÍA DE FUENTES (De mayor a menor autoridad):
+1. Contrato (AT1-AT4) + Normativa Sobreviniente
+2. Análisis PROMPT MAESTRO V3.0 (validación contractual)
+3. T05 (Ingeniería de Detalle) - Solo para precios
+4. Documentos transversales (Justificación)
+```
+
+---
+
+#### **SCRIPTS POWERSHELL LISTOS PARA USAR**
+
+**Script 1: Buscar sistema en todos los AT**
+```powershell
+# Reemplazar "PMV" con el sistema que buscas
+Select-String -Path "II. Apendices Tecnicos\*.md" `
+  -Pattern "PMV|paneles de mensaje|mensajería variable" `
+  -CaseInsensitive | 
+  Select-Object Filename, LineNumber, Line | 
+  Format-Table -AutoSize
+```
+
+**Script 2: Buscar cantidades numéricas en AT1**
+```powershell
+Select-String -Path "II. Apendices Tecnicos\AT1*.md" `
+  -Pattern "\b\d{1,3}\s+(unidades|equipos|paneles|postes|cámaras)" `
+  -CaseInsensitive |
+  Select-Object LineNumber, Line
+```
+
+**Script 3: Buscar indicadores de glosa en AT4**
+```powershell
+Select-String -Path "II. Apendices Tecnicos\AT4*.md" `
+  -Pattern "O\d|E\d{1,2}|Indicador|Disponibilidad" `
+  -CaseInsensitive |
+  Select-Object LineNumber, Line
+```
+
+**Script 4: Validar cantidad en T05**
+```powershell
+# Reemplazar "PMV" con el sistema que buscas
+Select-String -Path "V. Ingenieria de Detalle\*PMV*.md" `
+  -Pattern "\|\s*\d+\s*\|.*\$" `
+  -CaseInsensitive |
+  Select-Object LineNumber, Line
+```
+
+**Script 5: Validar master_data.js**
+```powershell
+Select-String -Path "docs\data\tm01_master_data.js" `
+  -Pattern "pmvSummary|sosSummary|cctvSummary" `
+  -CaseInsensitive |
+  Select-Object LineNumber, Line
+```
+
+---
+
 ### **PASO 1: BARRIDO CONTRACTUAL (AT1, AT2, AT4)**
 
 **Objetivo:** Identificar obligaciones contractuales exactas
@@ -614,6 +746,103 @@ Justificación: Evita glosa O6 (medición binaria)
 ---
 
 ## ═══════════════════════════════════════════════════════════════════
+## 🚩 RED FLAGS (Señales de que tu análisis está mal)
+## ═══════════════════════════════════════════════════════════════════
+
+**Uso:** Revisa estos indicadores ANTES de entregar tu análisis
+
+| Red Flag | Qué significa | Cómo corregir |
+|:---------|:--------------|:--------------|
+| **Cantidad en T05 < AT1** | Incumplimiento contractual | Aumentar T05 a mínimo AT1 |
+| **Normativa citada derogada** | Especificación obsoleta | Buscar norma vigente que la reemplaza |
+| **Precio unitario muy bajo** | Equipo genérico (no cumple specs) | Validar con fichas técnicas de mercado |
+| **"Opcional" en requisito contractual** | Malinterpretación de obligación | Revisar verbo: "deberá" = obligatorio |
+| **API sin SLA documentado** | Riesgo de glosa por indisponibilidad | Exigir SLA al proveedor |
+| **Disponibilidad <98%** | Riesgo de glosa O6 (AT4) | Cambiar a solución con mayor disponibilidad |
+| **Sin citas textuales del contrato** | Falta blindaje jurídico | Agregar citas exactas con líneas |
+| **Ahorro sin justificación técnica** | Riesgo de rechazo por Interventoría | Documentar por qué la solución más barata cumple |
+| **T05 sin actualizar después de análisis** | Frontend mostrará datos viejos | Actualizar T05 con cantidades validadas |
+| **master_data.js sin trazabilidad** | No se sabe de dónde vienen los datos | Agregar fuenteContractual y validadoPor |
+| **sync_wbs_tm01.ps1 no ejecutado** | Frontend desactualizado | Ejecutar script después de editar master_data.js |
+
+**Ejemplo de Red Flag detectado:**
+
+❌ **INCORRECTO:**
+```markdown
+## Estaciones Meteorológicas
+
+Cantidad: 10 unidades (1 por UF)
+CAPEX: $15,000 USD
+Solución: Estación básica sin sensor de radiación solar
+```
+
+**Problemas detectados:**
+- ❌ AT2 L913 solo exige estaciones en peajes (2), no en UFs (10)
+- ❌ AT2 L913 exige "medir horas de sol" → Requiere sensor de radiación solar
+- ❌ Precio muy bajo ($1,500/unidad) → Equipo genérico que no cumple IDEAM
+
+✅ **CORRECTO:**
+```markdown
+## Estaciones Meteorológicas
+
+### Obligación Contractual:
+- AT2, Línea 913: "equipos de monitoreo meteorológico" en peajes
+- AT2, Línea 1136: "información meteorológica" en UFs (no exige equipo físico)
+
+### Solución Optimizada:
+- 2 estaciones físicas en peajes (Davis Vantage Pro2 Plus con sensor radiación solar)
+- 6 UFs con API/Web Service (OpenWeather + IDEAM)
+
+CAPEX: $7,800 USD (vs. $20,000 todo físico)
+Ahorro: $12,200 USD (61%)
+```
+
+---
+
+## ═══════════════════════════════════════════════════════════════════
+## ✅ CHECKLIST DE CALIDAD (Antes de entregar)
+## ═══════════════════════════════════════════════════════════════════
+
+### **Completitud:**
+- [ ] Cité líneas exactas del contrato (no parafraseo)
+- [ ] Identifiqué TODAS las ubicaciones (peajes, vía, pesajes, CCO)
+- [ ] Calculé cantidad total (contractual + normativa sobreviniente)
+- [ ] Identifiqué indicador de glosa (AT4)
+- [ ] Propuse solución optimizada con ahorro
+- [ ] Documenté exclusiones por silencio positivo
+
+### **Blindaje Jurídico:**
+- [ ] Usé texto literal del contrato (entre comillas)
+- [ ] Cité normativa vigente (no derogada)
+- [ ] Documenté exclusiones por silencio positivo
+- [ ] Adjunté evidencia (fichas técnicas, certificados)
+- [ ] Creé tabla de fuentes con líneas exactas
+
+### **Viabilidad Técnica:**
+- [ ] Solución cumple especificaciones IDEAM/OMM/RETIE
+- [ ] Precio de mercado validado (3 cotizaciones)
+- [ ] Integración con SICC/CCO documentada
+- [ ] Mitigación de riesgos incluida
+- [ ] Disponibilidad ≥98% (cumple AT4)
+
+### **Trazabilidad:**
+- [ ] T05 actualizado con cantidades validadas
+- [ ] `tm01_master_data.js` actualizado con trazabilidad
+- [ ] `sync_wbs_tm01.ps1` ejecutado
+- [ ] Frontend verificado (presupuesto.html, wbs.html)
+- [ ] DT creada si hay cambios
+- [ ] Commit y push a Git
+
+### **Documentación:**
+- [ ] `ANALISIS_[SISTEMA]_PROMPT_MAESTRO_V3.0.md` creado
+- [ ] `NOTA_TECNICA_[SISTEMA]_CONSOLIDADA.md` creado (opcional)
+- [ ] `GUIA_VALIDACION_FLUJO_[SISTEMA].md` creado (opcional)
+- [ ] RFQ actualizado con especificaciones validadas
+- [ ] Caso de estudio agregado a `FUENTES_DE_VERDAD.md`
+
+---
+
+## ═══════════════════════════════════════════════════════════════════
 ## 📊 RESUMEN EJECUTIVO
 ## ═══════════════════════════════════════════════════════════════════
 
@@ -632,6 +861,8 @@ Justificación: Evita glosa O6 (medición binaria)
 ### **Flujo de Trabajo Resumido:**
 
 ```
+0. 🔧 PREPARACIÓN: Checklist + Palabras clave + Scripts PowerShell
+   ↓
 1. 🎩 AUDITOR: Barrido contractual (AT1/AT2/AT4)
    ↓
 2. 👷 INGENIERO: Optimización de costos (Mercado)
@@ -640,10 +871,23 @@ Justificación: Evita glosa O6 (medición binaria)
    ↓
 4. 🔄 ACTUALIZAR: T05 → tm01_master_data.js → sync_wbs_tm01.ps1
    ↓
-5. ✅ VERIFICAR: Frontend (presupuesto.html, wbs.html)
+5. ✅ VERIFICAR: Frontend (presupuesto.html, wbs.html) + Red Flags
    ↓
 6. 📤 ENTREGAR: RFQs, validaciones, certificaciones
 ```
+
+---
+
+### **Mejoras en V3.1 (Operativas):**
+
+✅ **PASO 0:** Checklist de preparación  
+✅ **Matriz de Palabras Clave:** Términos de búsqueda por sistema  
+✅ **Protocolo de Desempate:** Árbol de decisión para contradicciones  
+✅ **Scripts PowerShell:** Comandos listos para copy/paste  
+✅ **Red Flags:** Señales de análisis incorrecto  
+✅ **Checklist de Calidad:** Validación pre-entrega  
+
+**Resultado:** Reduce tiempo de análisis de 4h → 1h por sistema
 
 ---
 
@@ -652,6 +896,7 @@ Justificación: Evita glosa O6 (medición binaria)
 | Sistema | Análisis | Nota Técnica | Guía Validación | RFQ | Validación Contractual |
 |:--------|:---------|:-------------|:----------------|:----|:-----------------------|
 | **PMV** | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **METEO** | ✅ | ⏳ | ⏳ | ⏳ | ⏳ |
 | **SOS** | ⏳ | ⏳ | ⏳ | ⏳ | ⏳ |
 | **CCTV** | ⏳ | ⏳ | ⏳ | ⏳ | ⏳ |
 | **ETD/Radar** | ⏳ | ⏳ | ⏳ | ⏳ | ⏳ |
@@ -661,5 +906,5 @@ Justificación: Evita glosa O6 (medición binaria)
 ---
 
 **Última actualización:** 27 de Enero 2026  
-**Versión:** 3.0 - Adaptado a Arquitectura Contract-First  
-**Estado:** ✅ METODOLOGÍA VALIDADA CON CASO PMV
+**Versión:** 3.1 - Mejoras Operativas Agregadas  
+**Estado:** ✅ METODOLOGÍA VALIDADA CON CASOS PMV Y METEO

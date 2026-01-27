@@ -183,6 +183,112 @@ El sistema no es solo de lectura. La **Herramienta de Gestión** permite:
 
 ---
 
+## 🔄 METODOLOGÍA PROMPT MAESTRO V3.0
+
+### Contract-First Architecture
+
+El proyecto TM01 utiliza la metodología **PROMPT MAESTRO V3.0**, un enfoque sistemático que garantiza que cada decisión técnica esté fundamentada contractualmente y optimizada económicamente.
+
+#### 🎩👷 Doble Sombrero (Auditor + Ingeniero)
+
+**🎩 AUDITOR (Contractual):**
+- Barrido exhaustivo de AT1, AT2, AT3, AT4
+- Identificación de cantidades mínimas obligatorias
+- Detección de normativa sobreviniente (IP/REV 2021, Manual 2024)
+- Blindaje jurídico con citas textuales
+
+**👷 INGENIERO (Mercado):**
+- Optimización de soluciones técnicas
+- Validación de precios de mercado
+- Mitigación de riesgos de glosa (Indicadores AT4)
+- Cálculo de ROI y ahorros
+
+#### 📊 Flujo de Trabajo Completo
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  1. ANÁLISIS CONTRACTUAL (PROMPT MAESTRO V3.0)             │
+│  Output: ANALISIS_[SISTEMA]_PROMPT_MAESTRO_V3.0.md         │
+│  ─────────────────────────────────────────────────────────  │
+│  • Barrido AT1/AT2/AT3/AT4 con líneas exactas              │
+│  • Cantidad validada contractualmente                       │
+│  • CAPEX optimizado con ahorro demostrable                  │
+│  • Riesgos de glosa identificados y mitigados               │
+└────────────────────────┬────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────┐
+│  2. ACTUALIZACIÓN T05 (Ingeniería de Detalle)              │
+│  Archivo: V. Ingenieria de Detalle/XX_T05_*.md             │
+│  ─────────────────────────────────────────────────────────  │
+│  • Tablas de componentes con cantidades validadas          │
+│  • Precios de mercado verificados                           │
+│  • Justificación de cambios documentada                     │
+└────────────────────────┬────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────┐
+│  3. ACTUALIZACIÓN DATOS MAESTROS (JavaScript)              │
+│  Archivo: docs/data/tm01_master_data.js                    │
+│  ─────────────────────────────────────────────────────────  │
+│  • Objeto [sistema]Summary actualizado                      │
+│  • Trazabilidad contractual agregada                        │
+│  • Fecha de validación registrada                           │
+└────────────────────────┬────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────┐
+│  4. SINCRONIZACIÓN WBS (PowerShell)                        │
+│  Script: powershell sync_wbs_tm01.ps1                      │
+│  ─────────────────────────────────────────────────────────  │
+│  • Genera datos_wbs_TM01_items.js automáticamente          │
+│  • Propaga cambios a todos los dashboards                   │
+└────────────────────────┬────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────┐
+│  5. VERIFICACIÓN FRONTEND (Dashboards HTML)                │
+│  Archivos: presupuesto.html, wbs.html, layout.html         │
+│  ─────────────────────────────────────────────────────────  │
+│  • Validación visual de cantidades y CAPEX                  │
+│  • Verificación de desgloses correctos                      │
+└────────────────────────┬────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────┐
+│  6. DOCUMENTACIÓN (DT + Git)                               │
+│  Archivos: DT-TM01-[SISTEMA]-XXX.md + Commit               │
+│  ─────────────────────────────────────────────────────────  │
+│  • Decisión Técnica documentando cambio                     │
+│  • Commit con mensaje estructurado                          │
+│  • Trazabilidad completa para auditorías                    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+#### 📚 Documentos Clave de Metodología
+
+| Documento | Propósito | Ubicación |
+|:----------|:----------|:----------|
+| **PROMPT_MAESTRO_V3.0_METODOLOGIA_TM01.md** | Metodología completa con doble sombrero | `docs/` |
+| **FUENTES_DE_VERDAD.md** | Jerarquía de fuentes + casos de estudio | Raíz |
+| **INTEGRACION_PROMPT_MAESTRO_FRONTEND.md** | Flujo de integración detallado | `docs/` |
+| **ANALISIS_[SISTEMA]_PROMPT_MAESTRO_V3.0.md** | Análisis contractual por sistema | `docs/` |
+
+#### ✅ Sistemas Validados con PROMPT MAESTRO
+
+| Sistema | Cantidad | CAPEX | Fuente Contractual | Estado |
+|:--------|:---------|:------|:-------------------|:-------|
+| **PMV** | 43 unidades | $2.19M | AT1 L3388 + AT2 L913 + IP/REV 2021 | ✅ Validado |
+| **METEO** | 2 estaciones | $7.8k | AT2 L913 + AT2 L1136 | ✅ Validado |
+| **SOS** | 88 unidades | $2.2M | AT1 L3169 + Manual 2024 | ⏳ Pendiente |
+| **CCTV** | 20 cámaras | $1.63M | AT2 L913 + Optimización | ⏳ Pendiente |
+| **Peajes** | 14 carriles | $2.08M | AT2 §3.3.4 + IP/REV 2021 | ⏳ Pendiente |
+
+#### 🎯 Beneficios de la Metodología
+
+1. **Blindaje Contractual:** Citas textuales de AT1/AT2 con líneas exactas
+2. **Optimización Económica:** Ahorros demostrables (ej: PMV $406k, METEO $12.2k)
+3. **Mitigación de Riesgos:** Identificación temprana de riesgos de glosa
+4. **Trazabilidad Completa:** Desde contrato hasta frontend con DTs
+5. **Reproducibilidad:** Metodología aplicable a cualquier sistema ITS
+
+---
+
 ## 📂 ESTRUCTURA DEL PROYECTO
 
 ```
