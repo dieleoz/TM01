@@ -108,14 +108,24 @@ Select-String -Path "III. Ingenieria Conceptual/24D_T01_Ficha_Sistema_PMV_MVP_v1
 **✅ VALIDACIÓN:**
 - [ ] Especificaciones técnicas detalladas (tamaño, brillo, protocolos)
 - [ ] Cumplimiento con Manual de Señalización 2024
-- [ ] Protocolos NTCIP 1202/1203
+- [ ] **Protocolos de comunicación:** NTCIP 1202/1203 **O** compatibilidad DATEX II (UNE-EN 16157-4)
 - [ ] Altura de carácter ≥400 mm (Manual 2024)
 - [ ] Brillo L3 (UNE-EN 12966)
+- [ ] **Norma de rendimiento visual:** UNE-EN 12966 (Clase L3, R3)
+
+> ⚠️ **ALERTA CRÍTICA - PROTOCOLO:**
+> El Manual de Señalización 2024 se inclina hacia estándares **europeos** (UNE-EN 12966, DATEX II) 
+> en lugar de solo NTCIP (estándar americano). La especificación T04 debe permitir:
+> - **Opción 1:** NTCIP 1202/1203 (estándar americano)
+> - **Opción 2:** DATEX II según UNE-EN 16157-4 (estándar europeo)
+> - **Opción 3:** Compatibilidad dual (preferible)
+> 
+> **Justificación:** No restringir tecnología y cumplir Manual 2024 (normativa sobreviniente).
 
 **Comando para verificar:**
 ```powershell
 # Buscar normativa en T04
-Select-String -Path "IV. Ingenieria Basica/04_T04_Especificaciones_Tecnicas_PMV_v1.0.md" -Pattern "Manual 2024|NTCIP|400 mm"
+Select-String -Path "IV. Ingenieria Basica/04_T04_Especificaciones_Tecnicas_PMV_v1.0.md" -Pattern "Manual 2024|NTCIP|UNE-EN|DATEX"
 ```
 
 ---
@@ -155,7 +165,36 @@ Select-String -Path "IV. Ingenieria Basica/04_T04_Especificaciones_Tecnicas_PMV_
 | **TOTAL PMV** | **39** | | **$2,596,000** |
 ```
 
----
+> 📊 **JUSTIFICACIÓN DEL SALTO 25 → 39 UNIDADES:**
+> 
+> **Cantidad Contractual Original (AT1):** 25 unidades mínimo
+> 
+> **Cantidad Real para Construcción 2026:** 39 unidades
+> 
+> **Desglose:**
+> - **25 PMV de Vía** (Contractual AT1): Paneles grandes en pórticos/banderolas para información de tráfico
+> - **+14 Displays de Carril** (IP/REV 2021): Pantallas alfanuméricas LED obligatorias por carril de peaje
+> 
+> **Fundamento Legal:**
+> - **Resolución 20213040035125 (IP/REV 2021), Art 2.9.9:**
+>   "Los carriles IP/REV del peaje deben contar con pantallas de información 
+>   alfanuméricas LED... (al menos uno por cada carril de peaje)."
+> 
+> **Cálculo:**
+> - Peaje Zambito: 4 carriles automáticos + 4 carriles mixtos = 8 displays
+> - Peaje Aguas Negras: 3 carriles automáticos + 3 carriles mixtos = 6 displays
+> - **Total displays de carril:** 14 unidades
+> 
+> **Precio Unitario Promedio:**
+> - $2,596,000 ÷ 39 = **$66,564 USD/unidad**
+> - Este promedio refleja el mix de equipos:
+>   - PMV grandes (pórtico): ~$75,000 USD/unidad
+>   - Displays de carril (peaje): ~$45,000 USD/unidad
+> 
+> ⚠️ **CRÍTICO:** Si se forzara el número "25" del contrato original, el proyecto 
+> **incumpliría la Resolución IP/REV 2021** (normativa sobreviniente obligatoria).
+
+
 
 ## ✅ PASO 5: VALIDAR DATOS MAESTROS (CAPA 3)
 
