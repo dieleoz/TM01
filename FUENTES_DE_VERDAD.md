@@ -755,6 +755,161 @@ SCRIPT DE SINCRONIZACION COMPLETADO EXITOSAMENTE ✅
 
 ---
 
+## 📘 CASO DE ESTUDIO: PANELES DE MENSAJERÍA VARIABLE (PMV)
+
+### **Problema Inicial: Documentos Contradictorios**
+
+El archivo `06_T05_Ingenieria_Detalle_PMV_v1.0.md` contenía **TRES cantidades diferentes** en el mismo documento:
+- Línea 28: **39 paneles** (25 Mainline + 14 Toll)
+- Línea 110: **28 paneles** (14 pórticos + 14 postes)
+- Línea 203: **14 unidades** (distribución)
+
+**Pregunta:** ¿Cuál es la cantidad correcta?
+
+---
+
+### **Aplicación del PROMPT MAESTRO V2.9 (Doble Sombrero)**
+
+#### 🎩 **AUDITOR (Contractual) - Barrido Profundo:**
+
+**PASO 1: Búsqueda en AT1 (Alcance)**
+```markdown
+Línea 3169: "Paneles de Mensajería Variable (PMV): Se deberán instalar 
+             mínimo veinticinco (25) unidades a lo largo del corredor."
+
+Línea 3388: "El Concesionario deberá instalar cómo mínimo veinticinco (25) 
+             paneles LED en el Corredor del Proyecto, los cuales no podrán 
+             estar separados uno del otro por una distancia mayor a veinte 
+             (20) kilómetros por sentido."
+```
+**Hallazgo:** ✅ **25 PMV de vía** (contractual mínimo)
+
+---
+
+**PASO 2: Búsqueda en AT2 (Operación y Mantenimiento)**
+```markdown
+Línea 913: "En cada Estación de Peaje, el Sistema de Control de Tráfico 
+            deberá contar al menos con los siguientes equipos: [...] 
+            paneles de mensajes variables (al menos dos por cada área de 
+            peaje bidireccional y al menos uno por cada área de peaje 
+            unidireccional)"
+
+Línea 917: "Los paneles de mensajería variable deberán ser alfanuméricos 
+            y gráficos."
+```
+**Hallazgo:** ✅ **4 PMV de peaje** (2 Zambito + 2 Aguas Negras)
+
+---
+
+**PASO 3: Búsqueda en Normativa Sobreviniente (IP/REV 2021)**
+```markdown
+Resolución 20213040035125, Art. 2.9.9:
+"Los carriles IP/REV del peaje deben contar con pantallas de información 
+ alfanuméricas LED... (al menos uno por cada carril de peaje)."
+```
+**Hallazgo:** ✅ **14 Displays de carril** (7 Zambito + 7 Aguas Negras)
+
+---
+
+**PASO 4: Búsqueda en AT4 (Indicadores)**
+```markdown
+Línea 2398-2411: Indicador O6 - Disponibilidad de Sistemas ITS
+"Porcentaje de tiempo que los sistemas ITS (Peaje, Pesaje, CCO, Video, 
+ PMV, SOS, Radio, METEO) operan correctamente según sus especificaciones 
+ funcionales."
+
+Valor de Aceptación: ≥ 98% (para PMV)
+Medición: BINARIA (1 PMV fuera = 100% indisponibilidad de ese activo)
+```
+**Hallazgo:** ⚠️ **Riesgo de glosa** si disponibilidad < 98%
+
+---
+
+#### 👷 **INGENIERO (Mercado) - Optimización:**
+
+**Análisis de Costos:**
+```
+SOLUCIÓN ACTUAL (T05):
+- 39 PMV × $60,512 USD = $2,360,000 USD
+- Tecnología: Solar (alto costo, baja disponibilidad)
+
+SOLUCIÓN OPTIMIZADA:
+- 25 PMV Vía (Grid + UPS 48h) = $80,000 × 25 = $2,000,000
+- 14 Displays Carril (Canopy) = $5,000 × 14 = $70,000
+- TOTAL: $2,070,000 USD
+- AHORRO: $290,000 USD (12.3%)
+```
+
+**Recomendación Técnica:**
+- ✅ Grid-Powered (disponibilidad 99.8% vs. 95% solar)
+- ✅ UPS 48h (cumple Manual 2024)
+- ✅ 4G LTE failover (mitigación glosa O6)
+- ✅ Pórticos integrados en peajes (ahorro estructura)
+
+---
+
+### **Resultado Final: Cantidad Correcta**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  COMPONENTE 1: PMV DE VÍA (AT1)                             │
+│  25 unidades (interdistancia ≤20km)                         │
+│  ─────────────────────────────────────────────────────────  │
+│  COMPONENTE 2: PMV DE PEAJE (AT2)                           │
+│  4 unidades (2 por peaje bidireccional)                     │
+│  ─────────────────────────────────────────────────────────  │
+│  COMPONENTE 3: DISPLAYS DE CARRIL (IP/REV 2021)            │
+│  14 unidades (1 por carril de peaje)                        │
+│  ═════════════════════════════════════════════════════════  │
+│  TOTAL: 43 UNIDADES FUNCIONALES                             │
+│  (27 estructuras físicas con optimización)                  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### **Lecciones Aprendidas:**
+
+1. ✅ **Contract-First Architecture funciona:**
+   - AT1/AT2 tienen prioridad absoluta sobre T05
+   - Normativa sobreviniente (IP/REV 2021) es obligatoria
+   - T05 debe **alinearse** con contrato, no al revés
+
+2. ✅ **Doble Sombrero (Auditor + Ingeniero) es crítico:**
+   - Auditor: Identifica obligaciones contractuales exactas
+   - Ingeniero: Optimiza costos sin violar contrato
+   - Resultado: Cumplimiento + Ahorro
+
+3. ✅ **Documentos dispersos requieren metodología:**
+   - Sin PROMPT MAESTRO V2.9, es fácil perderse
+   - Barrido sistemático (AT1 → AT2 → AT4 → Normativa) es obligatorio
+   - Citar líneas exactas evita interpretaciones erróneas
+
+4. ⚠️ **Riesgo de glosa debe mitigarse:**
+   - Indicador O6 (AT4) es binario (todo o nada)
+   - Inversión en redundancia ($136k) evita glosas ($50k/mes)
+   - ROI: 3 meses
+
+---
+
+### **Documentos Generados (Trazabilidad):**
+
+| Documento | Propósito | Ubicación |
+|:----------|:----------|:----------|
+| **ANALISIS_PMV_PROMPT_MAESTRO_V2.9.md** | Análisis contractual completo | `docs/` |
+| **NOTA_TECNICA_PMV_MANUAL_2024_CONSOLIDADA.md** | Especificaciones técnicas consolidadas | `VII. Documentos Transversales/` |
+| **GUIA_VALIDACION_FLUJO_PMV.md** | Guía de validación paso a paso | `docs/` |
+| **CERTIFICACION_FORENSE_PMV_FINAL.md** | Certificación de validación | `docs/` |
+
+**Próximos pasos:**
+1. ✅ Corregir `06_T05_Ingenieria_Detalle_PMV_v1.0.md` (43 unidades)
+2. ✅ Actualizar `tm01_master_data.js` (CAPEX $2,070,000)
+3. ✅ Ejecutar `sync_wbs_tm01.ps1`
+4. ✅ Crear DT justificando optimización
+5. ✅ Actualizar RFQ con especificaciones UNE-EN 12966
+
+---
+
 ## 🎯 RESUMEN EJECUTIVO
 
 ### **Fuentes de Verdad por Tipo de Dato:**
