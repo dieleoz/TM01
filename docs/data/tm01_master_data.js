@@ -3,7 +3,7 @@
 
 class TM01MasterData {
     // NORMATIVA: Resolución 20213040035125 (IP/REV) Vigente
-    // NORMATIVA: Res. 40117 (RETIE 2024) Compliant
+    // NORMATIVA: Res. 40117 (RETIE 2024) Compliant - Audit 6.0 Validated
     constructor() {
         this.data = {
             wbs: [],

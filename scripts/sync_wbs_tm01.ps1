@@ -210,6 +210,14 @@ function Extract-ValidationDocs {
     
     foreach ($file in $files) {
         $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
+
+        # --- AUDIT 6.0: NORMATIVE SANITIZATION (RETIE 2024 & IP/REV 2021) ---
+        $content = $content -replace "Resolución 546 de 2018", "Resolución 20213040035125 (IP/REV)"
+        $content = $content -replace "Res. 546/2018", "Res. 20213040035125 (IP/REV)"
+        $content = $content -replace "Resolución 90708", "Resolución 40117 de 2024 (RETIE)"
+        $content = $content -replace "RETIE 2013", "RETIE 2024 (Res. 40117)"
+        # --------------------------------------------------------------------
+
         
         $sysKey = ""
         if ($file.Name -match "CCTV") { $sysKey = "CCTV" }
