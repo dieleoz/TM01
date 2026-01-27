@@ -91,7 +91,7 @@ class TM01MasterData {
 
                 // Trazabilidad contractual
                 fuenteContractual: "AT1 L3525 (98 postes) + AT1 L3175 (Espaciamiento ≤3km)",
-                validadoPor: "ANALISIS_SOS_PROMPT_MAESTRO_V3.1.md",
+                validadoPor: "docs/old/ANALISIS_SOS_PROMPT_MAESTRO_V3.1.md",
                 fechaValidacion: "2026-01-27",
                 versionT05: "v1.6"
             },

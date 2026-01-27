@@ -182,7 +182,7 @@ powershell -ExecutionPolicy Bypass -File "scripts\sync_wbs_tm01.ps1"
 
 | Documento | Descripción | Ubicación |
 |:----------|:------------|:----------|
-| **ANALISIS_SOS_PROMPT_MAESTRO_V3.1.md** | Análisis contractual completo | `docs/` |
+| **ANALISIS_SOS_PROMPT_MAESTRO_V3.1.md** | Análisis contractual completo | `docs/old/` |
 | **04_T05_Ingenieria_Detalle_Postes_SOS_v1.0.md** | T05 actualizado (v1.6) | `V. Ingenieria de Detalle/` |
 | **tm01_master_data.js** | Datos maestros actualizados | `docs/data/` |
 | **AT1_Alcance_Proyecto_v1.0.md** | Fuente contractual (L3525) | `II. Apendices Tecnicos/` |
