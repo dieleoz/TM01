@@ -206,12 +206,18 @@ function Extract-ValidationDocs {
     Write-Log "Iniciando extraccion de documentos de validacion desde: $ValidationPath"
 
     $validations = @{}
-    $files = Get-ChildItem -Path $ValidationPath -Filter "*VALIDACION*.md"
+    $files = Get-ChildItem -Path $ValidationPath -Recurse -Filter "*.md" | Where-Object { $_.Name -match "VALIDACION" -or $_.Name -match "DT-" }
     
     foreach ($file in $files) {
         $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
+        if ($file.Name -match "RADIO") { 
+            $script:debugMode = $true 
+            Add-Content -Path "debug_radio.txt" -Value "Processing RADIO file: $($file.Name)"
+        }
+        else { 
+            $script:debugMode = $false 
+        }
 
-        # --- AUDIT 6.0: NORMATIVE SANITIZATION (RETIE 2024 & IP/REV 2021) ---
         $content = $content -replace "Resolución 546 de 2018", "Resolución 20213040035125 (IP/REV)"
         $content = $content -replace "Res. 546/2018", "Res. 20213040035125 (IP/REV)"
         $content = $content -replace "Resolución 90708", "Resolución 40117 de 2024 (RETIE)"
@@ -238,9 +244,11 @@ function Extract-ValidationDocs {
         if ($sysKey) {
             # Extract sections using stricter patterns to avoid matching the Definition Title (Level 1)
             # We target specific chapters usually found at Level 2
-            $contractual = Get-SectionByKeyword $content 'RESUMEN|ANÁLISIS CONTRACTUAL|FUENTE CONTRACTUAL|OBLIGACI'
-            $technical = Get-SectionByKeyword $content 'VALIDACIÓN DE CANTIDADES|ESPECIFICACIONES|UBICACIONES|ARQUITECTURA|COMPONENTES'
-            $financial = Get-SectionByKeyword $content 'IMPACTO ECONÓMICO|PRESUPUESTO|COSTOS|CAPEX|APU'
+            # Added "Justificación Técnica" and "Decisión" for DT documents
+            # UPDATED: Use regex dots for accented chars to avoid encoding issues
+            $contractual = Get-SectionByKeyword $content 'RESUMEN|AN.LISIS CONTRACTUAL|FUENTE CONTRACTUAL|OBLIGACI|Decisi.n|Justificaci.n T.cnica|DESCRIPCI.N|INFORMACI.N'
+            $technical = Get-SectionByKeyword $content 'VALIDACI.N DE CANTIDADES|ESPECIFICACIONES|UBICACIONES|ARQUITECTURA|COMPONENTES|Justificaci.n T.cnica'
+            $financial = Get-SectionByKeyword $content 'IMPACTO ECON.MICO|PRESUPUEST|COSTOS|CAPEX|APU|Impacto Financiero'
             $risks = Get-SectionByKeyword $content 'RIESGOS|MITIGACIONES|DEFENSA|RECOMENDACIONES'
             
             # Robust JS escape for single-quoted strings
@@ -307,7 +315,6 @@ function Get-SectionByKeyword {
                     break
                 }
             }
-            
             # Check if this header matches our target pattern
             if ($title -match $Pattern) {
                 $capturing = $true

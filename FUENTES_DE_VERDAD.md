@@ -74,6 +74,10 @@ V. Ingenieria de Detalle/
 *La ingeniería se ajusta mediante estos documentos:*
 - **[DT-TM01-001]**: Traslado Servidores VMS a CCO.
 - **[DT-TM01-002]**: Eliminación Sistema Radio FM ($0).
+- **[DT-TM01-SOS-002]**: Corrección Cantidad Postes SOS (88 nuevos).
+- **[DT-TM01-CCTV-003]**: Alcance Mínimo CCTV (9 cámaras).
+- **[DT-TM01-PEAJES-019]**: Actualización Presupuesto Peajes.
+- **[DT-TM01-PMV-004]**: Reestructuración PMV (Solar).
 
 ## 📂 ESTRUCTURA DE ARCHIVOS T05
 
