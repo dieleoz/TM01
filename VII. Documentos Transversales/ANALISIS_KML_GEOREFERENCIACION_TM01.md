@@ -475,3 +475,4 @@ node scripts/procesar_kml.js
 **¿Quieres que analice el KML específico?**  
 Copia el archivo a: `docs/data/troncal.kml` y podré analizarlo en detalle.
 
+

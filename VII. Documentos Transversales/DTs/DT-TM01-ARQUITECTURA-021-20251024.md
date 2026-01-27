@@ -109,3 +109,4 @@ scripts_ejecutar:
 1. Actualizar `06_T05_Ingenieria_Detalle_PMV_v1.0.md` con valores USD/COP corregidos
 2. Modificar scripts para preservar cambios manuales
 3. Validar que la sincronización funcione correctamente
+

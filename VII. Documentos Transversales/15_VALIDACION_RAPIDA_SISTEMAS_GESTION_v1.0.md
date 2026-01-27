@@ -127,3 +127,4 @@
 **Impacto:** +$15.8M vs. placeholders iniciales  
 **Metodología:** Punto 42 v1.0
 
+

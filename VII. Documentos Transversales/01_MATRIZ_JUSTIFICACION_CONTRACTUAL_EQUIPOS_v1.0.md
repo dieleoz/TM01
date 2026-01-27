@@ -238,7 +238,7 @@ Este documento valida **contractualmente** cada cantidad de equipo propuesta en 
 | **CCTV (cantidad específica)** | 120-150 | Basado en cobertura total (cada 2-3 km) | ⚠️ Criterio técnico, NO contractual |
 | **Radares de Velocidad** | 15-20 | Estimación técnica | ⚠️ NO especificado en contrato |
 | **Detectores de Altura (Gálibo)** | 8-19 | "Antes de peajes, puentes, intersecciones" | ⚠️ Contar puentes en AT1 |
-| **Estaciones Meteorológicas** | 6-11 | "Según Res. 546/2018 + IDEAM" | ✅ Criterio normativo externo |
+| **Estaciones Meteorológicas** | 6-11 | "Según Res. 20213040035125 (IP/REV) + IDEAM" | ✅ Criterio normativo externo |
 | **ANPR (Aforo)** | 10-38 | Estimación técnica | ⚠️ NO especificado en contrato |
 
 ---
@@ -373,4 +373,5 @@ Este documento valida **contractualmente** cada cantidad de equipo propuesta en 
 **Fin del documento - Matriz de Justificación Contractual de Equipos ITS**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+
 

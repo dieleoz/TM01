@@ -175,7 +175,7 @@ El Excel omitió la UF13 y los dos puntos de control obligatorios previos a peaj
 
 #### 📄 Cita literal del contrato
 - *"Información sobre las condiciones meteorológicas en la(s) vía(s), **por Unidad Funcional**, así como en las estaciones de peaje y el Centro de Control de Operaciones; esta información se reportará mínimo una vez por hora."* — `AT2 §3.3.11.2`.  
-- *"En cada Estación de Peaje […] el Sistema de Control de Tráfico deberá contar […] equipos de monitoreo meteorológico […] cuya características deberán cumplir con la Resolución 546 de 2018."* — `AT2 §3.3.5.1`.
+- *"En cada Estación de Peaje […] el Sistema de Control de Tráfico deberá contar […] equipos de monitoreo meteorológico […] cuya características deberán cumplir con la Resolución 20213040035125 (IP/REV 2021)."* — `AT2 §3.3.5.1`.
 
 #### ⚖️ Interpretación contractual
 - **Cantidad ordenada:** el contrato exige disponibilidad de información meteorológica por UF y en peajes, no la instalación de una estación por UF. La Resolución 546/2018 obliga sensores en peajes IP/REV.  
@@ -279,5 +279,6 @@ Conclusión: El 71.5% del ahorro proviene de corregir sobre-estimaciones crític
 | QA Ingeniería ITS | __________________ | __________________ | ____ |
 | Interventor ITS | __________________ | __________________ | ____ |
 | ANI – Equipo ITS | __________________ | __________________ | ____ |
+
 
 

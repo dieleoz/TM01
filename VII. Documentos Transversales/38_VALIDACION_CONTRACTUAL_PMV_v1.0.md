@@ -229,3 +229,4 @@ SCADA → Monitoreo → Estado operacional → Reportes
 ---
 
 **⚠️ ADVERTENCIA LEGAL:** Esta validación es informativa y basada en la documentación contractual disponible. Se recomienda validar con la Interventoría antes de su implementación formal.
+

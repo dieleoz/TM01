@@ -162,3 +162,4 @@ Este informe justifica contractualmente la optimización presupuestal implementa
 ---
 
 *Este informe constituye la justificación contractual oficial para la implementación del PRESUPUESTO_ITS_PURO_v2.0 en el proyecto TM01 - Troncal Magdalena.*
+

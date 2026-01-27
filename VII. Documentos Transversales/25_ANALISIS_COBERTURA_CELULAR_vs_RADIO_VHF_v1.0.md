@@ -261,3 +261,4 @@ Evaluar si la cobertura celular 4G/5G puede reemplazar el sistema de radio VHF p
 **Fin del documento - Análisis Cobertura Celular vs Radio VHF**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

@@ -138,3 +138,4 @@ Total:       294,626 ML
 **Fecha**: 27 de Octubre 2025  
 **Estado**: ⚠️ Hay 42 km de diferencia - Requiere decisión
 
+

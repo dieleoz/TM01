@@ -47,7 +47,7 @@ El contrato **NO especifica cantidades exactas** para:
 | **Áreas de Servicio Adicionales** | "Como mínimo adecuar 1 existente" | ⚠️ NO exige construir adicionales |
 | **Estaciones de Pesaje Adicionales** | "Como mínimo adecuar 1 existente" | ⚠️ NO exige construir adicionales |
 | **Detectores de Gálibo** | "Antes de peajes, puentes con restricción e intersecciones" | ⚠️ Contar puentes con restricción |
-| **Estaciones Meteorológicas** | "Según Res. 546/2018 + IDEAM" | ✅ Remite a normativa externa |
+| **Estaciones Meteorológicas** | "Según Res. 20213040035125 (IP/REV) + IDEAM" | ✅ Remite a normativa externa |
 | **Radares de Velocidad** | Menciona existencia, no cantidad | ⚠️ A criterio técnico |
 
 ---
@@ -376,4 +376,5 @@ El contrato **NO especifica cantidades exactas** para:
 **Fin del documento - Resumen Final de Validación Contractual**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+
 

@@ -196,3 +196,4 @@
 **Cantidad:** 4 plataformas (1 estación bidireccional)  
 **Metodología:** Punto 42 v1.0  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja
+

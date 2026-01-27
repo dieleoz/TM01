@@ -339,3 +339,4 @@
 - Cantidades de equipos ITS validadas contra información oficial
 - Metodología PKD lineal aplicada
 - Layout validado con contexto oficial del proyecto
+

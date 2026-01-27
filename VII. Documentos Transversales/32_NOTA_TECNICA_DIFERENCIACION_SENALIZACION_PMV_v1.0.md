@@ -180,3 +180,4 @@ Clarificar la diferencia entre **Señalización Vial Tradicional** y **Paneles d
 **Fin del documento - Nota Técnica Diferenciación**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

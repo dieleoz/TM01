@@ -572,3 +572,4 @@ Ambas alternativas cumplen con las especificaciones técnicas del contrato (AT3)
 **Próxima revisión:** Fase de Licitación  
 **Estado:** 🟡 Para evaluación futura
 
+

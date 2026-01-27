@@ -214,3 +214,4 @@
 **Impacto total:** +$25,500 USD (+0.04%)  
 **Metodología:** Punto 42 v1.0  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja
+

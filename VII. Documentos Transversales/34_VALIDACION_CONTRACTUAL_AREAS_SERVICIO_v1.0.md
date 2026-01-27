@@ -215,3 +215,4 @@ El contrato establece "No se consideran parte del sistema ITS" = excluido expres
 **Fin del documento - Validación Contractual Áreas de Servicio**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

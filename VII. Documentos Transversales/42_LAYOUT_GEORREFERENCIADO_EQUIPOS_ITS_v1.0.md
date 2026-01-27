@@ -1067,3 +1067,4 @@ Agregar **4 ETD puras** (sin cámara) en UFs faltantes, aprovechando infraestruc
 - Cantidades de equipos ITS validadas contra información oficial
 - Metodología PKD lineal aplicada
 - Layout georreferenciado actualizado con contexto oficial
+

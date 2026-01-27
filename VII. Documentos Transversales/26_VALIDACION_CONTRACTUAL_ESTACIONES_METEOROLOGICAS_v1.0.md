@@ -37,7 +37,7 @@ Aplicar la **Metodología Genérica de Validación Contractual** al sistema de E
 - [x] **Apéndice Técnico 4** - Sin indicadores específicos
 
 **✅ Fuentes Secundarias Revisadas:**
-- [x] **Resolución 546 de 2018** (IP/REV) - **OBLIGACIÓN ENCONTRADA**
+- [x] **Resolución 20213040035125 (IP/REV 2021)** (IP/REV) - **OBLIGACIÓN ENCONTRADA**
 - [x] **NTC 5660** - Especificaciones técnicas
 - [x] **Manual ITS INVÍAS** - Variables requeridas
 
@@ -53,9 +53,9 @@ Aplicar la **Metodología Genérica de Validación Contractual** al sistema de E
 #### 2.1.2 Apéndice Técnico 3 - Especificaciones Generales
 
 **Sección 4.2 - Sistema Inteligente de Transporte (ITS):**
-> "El Concesionario deberá cumplir con lo dispuesto en las especificaciones y/o normas técnicas que se listan a continuación: ... **Resolución 546 de 2018** 'por el cual se adecua la reglamentación del sistema de Interoperabilidad de Peajes con Recaudo Electrónico Vehicular (IP/REV)'... y la(s) resolución(es) vigente(s) que la sustituya(n), adicione(n), modifique(n) o derogue(n) durante la ejecución del Contrato."
+> "El Concesionario deberá cumplir con lo dispuesto en las especificaciones y/o normas técnicas que se listan a continuación: ... **Resolución 20213040035125 (IP/REV 2021)** 'por el cual se adecua la reglamentación del sistema de Interoperabilidad de Peajes con Recaudo Electrónico Vehicular (IP/REV)'... y la(s) resolución(es) vigente(s) que la sustituya(n), adicione(n), modifique(n) o derogue(n) durante la ejecución del Contrato."
 
-#### 2.1.3 Resolución 546 de 2018 - IP/REV
+#### 2.1.3 Resolución 20213040035125 (IP/REV 2021) - IP/REV
 
 **Anexo Técnico - Especificaciones Funcionales y Técnicas:**
 > "El Sistema ITS en las estaciones de peaje deberá disponer de **sensores y equipos de monitoreo ambiental y de tráfico**, que permitan la observación de condiciones climáticas y de operación, con el fin de informar a los usuarios y al Centro de Control de Operaciones."
@@ -80,7 +80,7 @@ AT2 3.3.11.2 → "Informar condiciones meteorológicas"
     ↓
 AT3 4.2 → Cumplir Resolución 546/2018 (IP/REV)
     ↓
-Res. 546/2018 → "Equipos de monitoreo ambiental en peajes"
+Res. 20213040035125 (IP/REV) → "Equipos de monitoreo ambiental en peajes"
     ↓
 Interpretación EPC → "Informar" ≠ "Instalar"
 ```
@@ -213,7 +213,7 @@ El contrato exige **"información sobre condiciones meteorológicas"** pero NO e
 | **Reporte horario (24/día)** | AT2 3.3.11.2 | ✅ Automatizado SCADA |
 | **Consolidado diario** | AT2 3.3.11.2 | ✅ Generación automática |
 | **Información por UF** | AT2 3.3.11.2 | ✅ Consolidación SCADA |
-| **Monitoreo ambiental en peajes** | Res. 546/2018 | ✅ Davis Pro2 en cada peaje |
+| **Monitoreo ambiental en peajes** | Res. 20213040035125 (IP/REV) | ✅ Davis Pro2 en cada peaje |
 | **Difusión emisora (4/h)** | AT2 3.3.3.2.3 | ✅ PDF automático |
 | **Informe mensual** | AT2 4.2.2 | ✅ Exportación SICC |
 
@@ -316,7 +316,7 @@ El contrato exige **"información sobre condiciones meteorológicas"** pero NO e
 
 ### 11.1 Cumplimiento Contractual
 
-✅ **La obligación es instalar equipamiento industrial (Res. 546/2018)**
+✅ **La obligación es instalar equipamiento industrial (Res. 20213040035125 (IP/REV))**
 ✅ **3 estaciones industriales cumplen totalmente la obligación**
 ✅ **Sensor de Visibilidad (Neblina) es MANDATORIO (Blindaje Técnico)**
 ✅ **Integración nativa Modbus TCP es técnicamente superior**
@@ -329,7 +329,7 @@ La solución propuesta cumple:
 - **AT2 3.3.3.2.3:** Difusión confiable por emisora
 - **AT2 4.2.2:** Informes mensuales con meteorología
 - **AT3 4.2:** Cumplimiento Resolución 546/2018 (IP/REV)
-- **Res. 546/2018:** Monitoreo ambiental en peajes
+- **Res. 20213040035125 (IP/REV):** Monitoreo ambiental en peajes
 
 ### 11.3 Recomendación Final
 
@@ -357,3 +357,4 @@ La solución propuesta cumple:
 **Fin del documento - Validación Contractual Estaciones Meteorológicas**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

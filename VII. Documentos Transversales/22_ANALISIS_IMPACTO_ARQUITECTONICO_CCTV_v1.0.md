@@ -201,3 +201,4 @@ CCTV según diseño inicial real - 30 ubicaciones estratégicas con infraestruct
 **Sistemas Afectados:** 4 sistemas  
 **Metodología:** Punto 42 v1.0  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja
+

@@ -195,3 +195,4 @@
 ---
 
 **⚠️ ADVERTENCIA LEGAL:** Esta validación es informativa y basada en la documentación contractual disponible. Se recomienda validar con la Interventoría y el equipo jurídico antes de su implementación formal.
+

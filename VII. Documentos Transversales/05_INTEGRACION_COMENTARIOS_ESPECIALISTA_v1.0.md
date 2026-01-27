@@ -551,7 +551,7 @@ Los comentarios del especialista **confirman** nuestros hallazgos:
 5. ⏳ Reunión Peajes (detalle de reubicación)
 6. ⏳ Inspección Pesaje (estado equipos)
 7. ⏳ Reunión CCO (optimización)
-8. ⏳ Consultar IDEAM (Res. 546/2018)
+8. ⏳ Consultar IDEAM (Res. 20213040035125 (IP/REV))
 
 ---
 
@@ -579,4 +579,5 @@ Los comentarios del especialista **confirman** nuestros hallazgos:
 **Fin del documento - Integración Comentarios Especialista vs. Validación Contractual**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+
 

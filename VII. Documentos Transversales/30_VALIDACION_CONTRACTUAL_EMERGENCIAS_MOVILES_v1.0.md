@@ -140,3 +140,4 @@ El contrato establece "El Concesionario deberá" = SPV/Operador, no EPC. El cont
 **Fin del documento - Validación Contractual Emergencias Móviles**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

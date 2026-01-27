@@ -92,3 +92,4 @@ Los **10.86 km de fibra 12 hilos** se justifican por:
 **Validado por**: Project Manager  
 **Estado**: ✅ CONFIRMADO - La fibra 12 hilos es derivación estimada, no parte del corredor
 
+

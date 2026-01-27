@@ -131,3 +131,4 @@ La validación anterior subestimaba el alcance. El nuevo valor incluye la **inte
 
 **⚠️ Nota de Discrepancia:**
 Existe una diferencia de ubicación en **Peaje Aguas Negras** entre la información del usuario (80+000) y la Tabla Maestra (81+800). Se recomienda verificar en campo la ubicación exacta del pórtico de peaje.
+

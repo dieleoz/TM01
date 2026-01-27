@@ -667,7 +667,7 @@ Para CADA sistema:
 ### 🎯 Decisión Requerida - Especialista Ambiental/ITS:
 
 **❓ PREGUNTA:**
-> ¿Cuántas estaciones meteorológicas según normativa IDEAM y Res. 546/2018?
+> ¿Cuántas estaciones meteorológicas según normativa IDEAM y Res. 20213040035125 (IP/REV)?
 > 
 > **Opción A:** 6-8 estaciones (conservador)
 > **Opción B:** 11 estaciones (Excel, 1 cada 24 km)
@@ -811,7 +811,7 @@ Para CADA sistema:
 ### Especialista Ambiental:
 
 **Decisiones normativas:**
-1. ⏳ **Meteorológicas:** 6-8 vs 11 - Validar con IDEAM y Res. 546/2018
+1. ⏳ **Meteorológicas:** 6-8 vs 11 - Validar con IDEAM y Res. 20213040035125 (IP/REV)
 
 ---
 
@@ -987,4 +987,5 @@ Firma: ________________________
 *Para revisión multidisciplinaria*  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+
 

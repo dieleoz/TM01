@@ -151,3 +151,4 @@ El contrato establece "podrán comunicarse con el CCO" = facultativo, no obligat
 **Fin del documento - Validación Contractual Energía Edificaciones**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

@@ -642,3 +642,4 @@ Donde:
 - Metodología PKD lineal aplicada
 - Tabla maestra actualizada con contexto oficial
 
+

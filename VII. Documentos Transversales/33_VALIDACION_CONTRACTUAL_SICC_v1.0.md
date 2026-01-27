@@ -152,3 +152,4 @@ El contrato establece "El Concesionario deberá" = SPV/Operador, no EPC. Por tan
 **Fin del documento - Validación Contractual SICC**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

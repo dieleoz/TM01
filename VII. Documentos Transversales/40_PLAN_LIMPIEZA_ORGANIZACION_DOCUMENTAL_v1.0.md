@@ -191,3 +191,4 @@ Remove-Item "VII. Documentos Transversales\28_INDICE_CRUZADO_VALIDACIONES_CONTRA
 ---
 
 **⚠️ ADVERTENCIA:** Esta limpieza es crítica para evitar problemas futuros. Se recomienda ejecutar inmediatamente antes de continuar con el desarrollo del proyecto.
+

@@ -132,3 +132,4 @@ Según el contrato (Parte Especial, Tabla de UFs):
 **Fecha:** 27 de Octubre 2025  
 **Estado:** ✅ Documentado según contrato oficial
 
+

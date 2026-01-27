@@ -109,3 +109,4 @@
 **TRM**: 4,400 COP/USD  
 **Estado**: ✅ Correcto según correcciones aplicadas
 
+

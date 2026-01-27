@@ -379,3 +379,4 @@ Cada tramo entre dos nodos L3 se divide en **2 sub-anillos**:
 
 **FIN DEL DOCUMENTO**
 
+

@@ -68,3 +68,4 @@ Según T05, Pág. 281-286:
 **Confirmado por**: Project Manager  
 **Estado**: ✅ Correcto - 252.48 km según T05
 
+

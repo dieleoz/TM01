@@ -158,3 +158,4 @@ El contrato establece "deberá implementar" y "supervisar y controlar" = obligat
 **Fin del documento - Validación Contractual PMV**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+

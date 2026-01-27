@@ -225,7 +225,7 @@ Este documento realiza un **análisis crítico y cruzado** entre:
 | **PMV** | ≥ 4 | 12-18 | 29 | ⚠️ DISCREPANCIA | Definir 18 vs 29 |
 | **SOS** | **98 postes (AT1 explícito)** | **98** ✅ | 98 ✅ | ✅ **VALIDADO** | ✅ **COMPLETADO** - Obligatorio contractual |
 | **Gálibo** | "Antes de peajes, puentes" | 8-12 | 19 | ⚠️ REVISAR | Contar puentes reales AT1 |
-| **Meteo** | "Según IDEAM + Res. 546/2018" | 6-8 | 11 | ✅ OK | Razonable |
+| **Meteo** | "Según IDEAM + Res. 20213040035125 (IP/REV)" | 6-8 | 11 | ✅ OK | Razonable |
 | **ANPR** | No especificado | 10-15 | 38 | ⚠️ REVISAR | ¿Justificado 38? |
 
 ---
@@ -373,4 +373,5 @@ Leer AT1 completo para identificar:
 **Fin del documento - Validación Contractual vs. Presupuesto**  
 *Metodología Punto 42 v1.0*  
 *Proyecto APP Puerto Salgar - Barrancabermeja*
+
 

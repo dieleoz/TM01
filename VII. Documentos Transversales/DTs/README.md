@@ -43,3 +43,4 @@ DTs/
 - **Responsable**: Equipo Técnico TM01
 - **Fecha creación**: 24 de octubre de 2025
 - **Versión**: 1.0
+

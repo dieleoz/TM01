@@ -120,3 +120,4 @@ Factor de compra: **1.111** (11.1% adicional sobre lo instalado)
 **Fuente**: T05 Ingeniería de Detalle, Pág. 194  
 **Estado**: ✅ Verificado y correcto
 
+

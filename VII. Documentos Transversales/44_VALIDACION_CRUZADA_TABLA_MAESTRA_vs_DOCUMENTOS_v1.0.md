@@ -254,3 +254,4 @@ Para cada subsistema ITS, validar:
 - Metodología PKD lineal aplicada
 - Validación cruzada actualizada con contexto oficial
 
+
