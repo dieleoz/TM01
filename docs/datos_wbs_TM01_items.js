@@ -1,12 +1,11 @@
 ﻿window.wbsDataGlobal = window.datos_wbs = {
     "fecha_actualizacion": "2026-01-27",
-    "total_items": 37,
+    "total_items": 36,
     "version": "3.0",
     "items": [
 { item: '1', descripcion: 'SISTEMA CCTV', id: '1', nivel: 1, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'CCTV', totalCOP: '', tipo: 'capitulo', total: '' },
 { item: '1.1', descripcion: 'SUMINISTROS CCTV', id: '1.1', nivel: 2, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'CCTV', totalCOP: '', tipo: 'subcapitulo', total: '' },
-{ item: '1.1.1', descripcion: '**Tipo A - PTZ** (Poste nuevo 12m + Solar/Red + PTZ 32X)', id: '1.1.1', nivel: 3, cantidad: '20', vuCOP: '51600000', criterio: 'T05', unidad: 'UND', vu: '12900.00', sistema: 'CCTV', totalCOP: '1032000000', tipo: 'item', total: '258000.00', tipo_presupuesto: 'SUMINISTRO' },
-{ item: '1.1.2', descripcion: '**Tipo B - Fija** (Montaje Estructura + Bullet IP)', id: '1.1.2', nivel: 3, cantidad: '10', vuCOP: '17978520', criterio: 'T05', unidad: 'UND', vu: '4494.63', sistema: 'CCTV', totalCOP: '179785400', tipo: 'item', total: '44946.35' },
+{ item: '1.1.1', descripcion: '**Tipo A - PTZ** (Poste nuevo 12m + Solar/Red + PTZ 32X)', id: '1.1.1', nivel: 3, cantidad: '9', vuCOP: '51600000', criterio: 'T05', unidad: 'UND', vu: '12900.00', sistema: 'CCTV', totalCOP: '464400000', tipo: 'item', total: '116100.00', tipo_presupuesto: 'SUMINISTRO' },
 { item: '2', descripcion: 'SISTEMA PMV', id: '2', nivel: 1, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'PMV', totalCOP: '', tipo: 'capitulo', total: '' },
 { item: '2.1', descripcion: 'SUMINISTROS PMV', id: '2.1', nivel: 2, cantidad: '', vuCOP: '', criterio: '', unidad: '', vu: '', sistema: 'PMV', totalCOP: '', tipo: 'subcapitulo', total: '' },
 { item: '2.1.1', descripcion: 'PMV - Sistema completo', id: '2.1.1', nivel: 3, cantidad: '39', vuCOP: '12232000000', criterio: 'Validado', unidad: 'UND', vu: '99285', sistema: 'PMV', totalCOP: '12232000000', tipo: 'item', total: '2780000' },

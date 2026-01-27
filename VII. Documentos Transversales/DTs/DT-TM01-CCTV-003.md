@@ -1,50 +1,48 @@
-# DT-TM01-CCTV-003: DEFINICIÓN ALCANCE CCTV (30 UNIDADES)
+# DT-TM01-CCTV-003: DEFINICIÓN ALCANCE MÍNIMO CCTV (9 UNIDADES)
 
 **Proyecto:** TM01 Troncal Magdalena  
 **Sistema:** CCTV - Videovigilancia ITS  
 **Fecha:** 27 de Enero 2026  
 **Tipo:** Decisión Técnica (DT)  
-**Estado:** ✅ Validado por Auditoría Técnica  
-**Metodología:** PROMPT MAESTRO V3.1
+**Estado:** ✅ Validado (Alcance Mínimo)  
+**Metodología:** PROMPT MAESTRO V3.3
 
 ---
 
 ## 📋 RESUMEN EJECUTIVO
 
-**Decisión:** Implementar **30 unidades de CCTV** (20 PTZ + 10 Fijas) para el subsistema de Seguridad Vial, conforme al Dictamen de Validación Técnica. Esta cantidad satisface los requerimientos de "Visión Global" (AT2) y protección de infraestructura crítica, manteniendo estricta segregación de las cámaras de peaje (IP/REV).
+**Decisión:** Establecer el alcance del Sistema CCTV en **9 Cámaras PTZ** distribuidas estrictamente en **1 unidad por Edificación/Instalación Mayor**. Se eliminan las cámaras de vía abierta y puntos de seguridad futura, transfiriendo dicha necesidad a la fase de Operación (OPEX) según accidentalidad real.
 
-**Justificación:** La Auditoría validó la necesidad de 30 cámaras para cubrir Peajes (Panorámicas), Pesajes, CCO y Puntos Críticos (Intersecciones/Accesos), diferenciando claramente este alcance de los sensores LPR de carril.
+**Justificación:** Directriz de "Mínimo Activo": Solo se instalan cámaras donde existe infraestructura física (Edificios, Peajes, Básculas). Como la vía es nueva, los "puntos críticos" de accidentalidad se definirán empíricamente durante la operación.
 
-**Impacto CAPEX (CCTV):** **$302,946 USD** (Costo ajustado de 30 equipos de campo; infraestructura central se mantiene en Cap. 8 CCO).
-
----
-
-## 🔍 ANÁLISIS CONTRACTUAL Y NORMATIVO
-
-1.  **Peajes (AT2 3.3.5.1):** Exige "visión global de todos los flujos".
-    *   **Solución:** Cámaras PTZ en accesos y panorámicas de plaza.
-2.  **IP/REV (Res 2021...):**
-    *   **Segregación:** Las cámaras de seguridad (30) NO incluyen LPR/Ejes de carril.
-    *   **Zoom:** Se eleva especificación a **32X** (PTZ).
-    *   **Cifrado:** Se exige cifrado **AES-256** en almacenamiento (CCO).
-3.  **Manual Señalización 2024:**
-    *   Cumplimiento de protección **IP66** y uso de PTZ para patrullaje virtual.
+**Impacto CAPEX (CCTV):** **$116,100 USD** (Optimización máxima de infraestructura de inicio).
 
 ---
 
-## 📉 DISTRIBUCIÓN VALIDADA (30 UNIDADES)
+## 🔍 ESTRATEGIA DE COBERTURA (FACILITY-BASED)
 
-| Tipo | Cantidad | Uso | Ubicación Típica |
-|:---|:---:|:---|:---|
-| **Tipo A (PTZ 32X)** | 20 | Patrullaje Virtual, Incidencias | Peajes, Intersecciones, Vía |
-| **Tipo B (Fija)** | 10 | Protección Activos, Perimetral | CCO, Pesajes, Edificaciones |
+El sistema se dimensiona para proteger y visualizar **Instalaciones Fijas**, cumpliendo el mínimo contractual de tener imágenes de Peajes y Áreas de Servicio.
+
+1.  **Peajes (2):** Zambito y Aguas Negras (Cumple "Visión Panorámica" AT2).
+2.  **Áreas de Servicio (2):** Zambito y Aguas Negras (Cumple AT2).
+3.  **Básculas (2):** Seguridad perimetral de estaciones de pesaje estat/dinam.
+4.  **CCO (1):** Seguridad del Centro de Control.
+5.  **Bunkers (2):** Seguridad de nodos de comunicaciones.
+
+**Total:** 9 Ubicaciones Fijas.
 
 ---
 
-## 💰 CORRECCIÓN FINANCIERA (ELIMINACIÓN DOBLE CONTABILIDAD)
+## 📉 ANÁLISIS CONTRACTUAL DEL DIFERIMIENTO
 
-Se mantiene la corrección financiera de eliminar los costos de "Sustrato Central" ($1.1M) del presupuesto CCTV, ya que están cubiertos en el **Capítulo 8 (SISTEMA CCO)**.
+*   **AT2 (Zonas de Seguridad):** El contrato dice "zonas que el Concesionario considere necesarias".
+*   **Decisión:** Al ser vía nueva, NO se consideran necesarias cámaras en la vía *ahora*. Se instalarán bajo demanda en la etapa de O&M si la operación lo justifica.
+
+---
+
+## 💰 CORRECCIÓN FINANCIERA
 
 **Nuevo Presupuesto CCTV (Cap. 5):**
-- 30 Equipos de Campo (20 PTZ + 10 Fijas) + Instalación: **$302,946 USD**
-- Ahorro significativo vs presupuesto original ($1.6M) por saneamiento contable.
+- 9 Cámaras PTZ 32X + Postes 12m: **$116,100 USD**
+- Ahorro vs Auditoría (30 unid): **-$186,846 USD**
+- Ahorro vs Original (30 unid + CCO): **-$1,517,900 USD**

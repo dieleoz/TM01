@@ -15,6 +15,7 @@
 | 1.1 | 22/10/2025 | Revisión con información oficial: Cantidad confirmada | Ing. ITS |
 | 1.2 | 20/01/2026 | **Ajuste Alcance Optimizado:** 15 cámaras (Hard Deck + Nodos Críticos) | Antigravity AI |
 | 1.3 | 27/01/2026 | **Validación Auditoría:** Retorno a 30 cámaras (20 PTZ + 10 Fijas) con segregación Peajes | Antigravity AI |
+| 1.4 | 27/01/2026 | **Minimización Activos:** 9 cámaras (1 por Edificación/Instalación) - Diferimiento Nodos Vía | Antigravity AI |
 
 ---
 
@@ -22,11 +23,14 @@
 Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 1.  **AT1 - Alcance del Proyecto:**
-    *   **Fuente:** `AT1_Alcance_Proyecto_v1.0.md`
-    *   **Requisito:** Cobertura de seguridad en Nodos Críticos y cumplimiento de normativa IP/REV.
-    *   **Justificación de Cantidad:** El diseño contempla **20 Cámaras** (15 Tipo A + 5 Tipo C) seleccionadas para cubrir el 100% de los puntos de interés definidos en el alcance contractual (Peajes, Intersecciones, Pasos Urbanos).
+    *   **Enfoque:** Protección de Activos y Edificaciones (Building Protection).
+    *   **Justificación de Cantidad:** El diseño se limita a **9 Cámaras PTZ** (1 por instalación mayor) para cubrir CCO, Peajes, Áreas de Servicio, Básculas y Bunkers.
+    *   **Diferimiento:** La vigilancia de "Nodos Críticos" y "Tramos Viales" se transfiere a la etapa de Operación (OPEX) según se identifiquen puntos de accidentalidad real.
 
-2.  **AT3 - Especificaciones Generales:**
+2.  **AT2 - Operación y Mantenimiento:**
+    *   **Cumplimiento:** Visión panorámica en Peajes y Áreas de Servicio.
+
+3.  **AT3 - Especificaciones Generales:**
     *   **Fuente:** `AT3_Especificaciones_Generales_v1.0.md` (Cap. 4.2 ITS)
     *   **Cumplimiento:** Visibilidad, integración IP/REV, y estándares de montaje.
 
@@ -38,16 +42,16 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **30 cámaras** | 20 PTZ + 10 Fijas (Validado Audit. Forense) |
-| **Distribución** | Peajes, Pesajes, CCO, Intersecciones | Según Dictamen Técnico |
-| **Tipo principal** | PTZ (20) + Bullet Fija (10) | AT2 / Manual Señalización 2024 |
+| **Cantidad total** | **9 cámaras** | 1 por Edificación/Facility |
+| **Distribución** | CCO, Peajes(2), AS(2), Básculas(2), Bunkers(2) | Directriz Minimización |
+| **Tipo principal** | PTZ Domo IP (zoom 32×) | Tipo A (Estandarizado) |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
-| **Zoom PTZ** | **32X Mínimo** | Req. IP/REV Auditado |
+| **Zoom PTZ** | **32X Mínimo** | Req. IP/REV |
 | **Cifrado** | **AES-256** | Req. IP/REV Almacenamiento |
-| **Almacenamiento** | 30 días×30 cámaras en NVR CCO | AT2 / Estándar Seguridad |
-| **CAPEX Total** | **$302,946.35 USD** | Solo equipos de campo (VMS en Cap. 8 CCO) |
-| **OPEX Anual** | **$18,000 USD** | $600/cámara/año |
-| **OPEX 20 años** | **$360,000 USD** | Mantenimiento |
+| **Almacenamiento** | 30 días×9 cámaras en NVR CCO | AT2 / Estándar Seguridad |
+| **CAPEX Total** | **$116,100.00 USD** | Solo equipos de campo |
+| **OPEX Anual** | **$5,400 USD** | $600/cámara/año |
+| **OPEX 20 años** | **$108,000 USD** | Mantenimiento |
 
 ---
 
@@ -55,11 +59,10 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 | Tipo | Cantidad | Costo Unit. | Subtotal |
 |:-----|:---------|:------------|:---------|
-| **Tipo A - PTZ** (Poste nuevo 12m + Solar/Red + PTZ 32X) | 20 | $12,900.00 | $258,000.00 |
-| **Tipo B - Fija** (Montaje Estructura + Bullet IP) | 10 | $4,494.63 | $44,946.35 |
-| **TOTAL CAPEX** | **30** | - | **$302,946.35 USD** |
+| **Tipo A - PTZ** (Poste nuevo 12m + Solar/Red + PTZ 32X) | 9 | $12,900.00 | $116,100.00 |
+| **TOTAL CAPEX** | **9** | - | **$116,100.00 USD** |
 
-> **Nota:** La infraestructura central (Servidores/Videowall/VMS) está presupuestada en el **Capítulo 8 (SISTEMA CCO)** bajo el ítem 8.1.1.
+> **Nota:** La infraestructura central (Servidores/Videowall/VMS) está presupuestada en el **Capítulo 8 (SISTEMA CCO)**.
 
 ---
 
@@ -75,14 +78,21 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 | **Protección** | **IP66** | Manual 2024 |
 | **Seguridad** | HTTPS / 802.1x / **AES-256 (Storage)** | Ciberseguridad |
 
-### **2. CÁMARA FIJA BULLET (TIPO B)**
+---
 
-| Parámetro | Especificación Mínima | Cumplimiento |
-|:----------|:---------------------|:-------------|
-| **Resolución** | 4MP | Identificación Activos |
-| **Lente** | Varifocal Motorizado 2.8-12mm | Ajuste campo visual |
-| **WDR** | 120 dB | Contraluz |
-| **Protección** | **IP67 / IK10** | Intemperie/Vandalismo |
+## 📊 **APU DETALLADO - INSTALACIÓN CCTV**
+
+### **APU-CCTV-001: Instalación CCTV en Poste Nuevo 12m**
+
+*(Ver desglose unitario en versión anterior - Costo sostenido $12,900)*
+
+**Para 9 cámaras Tipo A:** 9 × $12,900 = **$116,100 USD**
+
+---
+
+### **APU-CCTV-002: Instalación Cámara Fija (Tipo B)**
+
+*(Eliminado por estandarización a PTZ de cobertura global)*
 
 ---
 
@@ -166,7 +176,7 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 ## 📊 **VALIDACIÓN FINAL**
 
-**TOTAL PRESUPUESTO CCTV (CAMPO): $302,946.35 USD**
+**TOTAL PRESUPUESTO CCTV (CAMPO): $116,100.00 USD**
 *(Coincide con Master Data y DT-TM01-CCTV-003)*
 
 ---
