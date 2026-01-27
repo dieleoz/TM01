@@ -653,7 +653,7 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 ### 14.2 Normativa Citada
 
 #### Nacional
-- RETIE - Reglamento Técnico de Instalaciones Eléctricas (Resolución 90708/2013)
+- RETIE - Reglamento Técnico de Instalaciones Eléctricas (Resolución 40117 de 2024)
 - Manual de Señalización Vial - Dispositivos uniformes para la regulación del tránsito (2015)
 - Resolución 2273/2014 - Plan Nacional de Seguridad Vial
 - Decreto 1079/2015 - Decreto Único Reglamentario del Sector Transporte

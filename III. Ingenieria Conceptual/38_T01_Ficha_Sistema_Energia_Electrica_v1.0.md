@@ -423,7 +423,7 @@ CAPEX actualizado tras rediseño arquitectónico:
    - Tableros: 20-25 años
 
 5. **Normativa vigente:**
-   - Se asume cumplimiento de RETIE vigente (Resolución 90708/2013 y actualizaciones)
+   - Se asume cumplimiento de RETIE vigente (Resolución 40117 de 2024)
    - RETILAP vigente (Resolución 180540/2010 y actualizaciones)
    - NTC 2050 (Código Eléctrico Colombiano)
 
@@ -458,7 +458,7 @@ CAPEX actualizado tras rediseño arquitectónico:
 1. **Restricción normativa:**
    - Cumplimiento obligatorio de RETIE y RETILAP
    - Certificaciones de instalaciones eléctricas obligatorias
-   - Personal electricista debe estar certificado (Resolución 90708/2013)
+   - Personal electricista debe estar certificado (Resolución 40117 de 2024)
 
 2. **Restricción presupuestaria:**
    - CAPEX limitado a presupuesto aprobado
