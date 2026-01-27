@@ -16,11 +16,15 @@ class TM01MasterData {
                 id: '1',
                 sistema: 'CCTV',
                 cantidad: 15,
-                capexUSD: 1634000,
-                capexCOP: 7189600000,
-                capexUnitarioUSD: 108933,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
+                capexUSD: 192946,
+                capexCOP: 848962400,
+                capexUnitarioUSD: 12863,
+                descripcion: '15 Unidades - Nodos Críticos (Peajes + Intersecciones) - VMS en Cap 8',
+                estado: 'Validado',
+                fuenteContractual: "AT2 Línea 915 (Min 4) + Ingeniería Valor",
+                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-CCTV-003.md",
+                analisisBase: "docs/ANALISIS_CCTV_PROMPT_MAESTRO_V3.2.md",
+                fechaValidacion: "2026-01-27"
             },
             pmvSummary: {
                 id: '2',

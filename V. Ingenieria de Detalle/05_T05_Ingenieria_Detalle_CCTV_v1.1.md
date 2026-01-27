@@ -42,7 +42,7 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 | **Tipo principal** | PTZ Domo IP (zoom 30×) | T04 CCTV |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
 | **Almacenamiento** | 30 días×15 cámaras en NVR CCO | AT2 |
-| **CAPEX Total** | **$192,946.35 USD** | Solo equipos de campo (VMS en Cap. 8 CCO) |
+| **CAPEX Total** | **$1,634,000 USD** | Incluye Sustrato Central y 15 puntos campo |
 | **OPEX Anual** | **$9,000 USD** | $600/cámara/año |
 | **OPEX 20 años** | **$180,000 USD** | Mantenimiento |
 
@@ -50,14 +50,152 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 ## 💰 **PRESUPUESTO DETALLADO**
 
+<!--
+### **CAPEX POR COMPONENTE (DETALLADO):**
+
+| Item | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
+|:---|:---------|:------------------|:------------|:------------|
+| **1. CÁMARAS IP PTZ COMPLETAS** | **15** | **-** | **-**| **-** |
+| Cámara PTZ Dahua DH-SD5A432GB-HNR (4MP 32x) | 15 | $989 | $14,835 | 11.0% |
+| Domo policarbonato IK10 | 0 | $0 | $0 | 0.0% |
+| Soporte montaje poste | 15 | $500 | $7,500 | 5.5% |
+| Cable UTP Cat6 ext 100m | 15 | $100 | $1,500 | 1.1% |
+| Caja paso hermética IP66 | 15 | $150 | $2,250 | 1.6% |
+| Inyector PoE+ 30W | 15 | $200 | $3,000 | 2.2% |
+| DPS datos + energía | 15 | $150 | $2,250 | 1.6% |
+| Accesorios montaje | 15 | $300 | $4,500 | 3.3% |
+| **2. INFRAESTRUCTURA SOPORTE** | **15** | **-** | **$67,650** | **49.5%** |
+| Poste metálico 12m | 15 | $410 | $6,150 | 4.5% |
+| Kit Energía Solar 540W (Panel+Bat+MPPT) | 15 | $2,000 | $30,000 | 22.0% |
+| Gabinete Integración Outdoor IP66 | 15 | $340 | $5,100 | 3.7% |
+| **3. INSTALACIÓN Y SERVICIOS** | **15** | **-** | **$27,960** | **20.5%** |
+| Instalación y comisionamiento | 15 | $1,364 | $20,460 | 15.0% |
+| Pruebas FAT/SAT | 15 | $500 | $7,500 | 5.5% |
+| **4. SISTEMA CENTRAL (VMS/VIDEOWALL)**| **-** | **-** | **MOVIDO A CCO** | **-** |
+| Documentación Técnica | 1 | $5,500 | $5,500 | 4.0% |
+-->
+
+...
+
 | Tipo | Cantidad | Costo Unit. | Subtotal |
 |:-----|:---------|:------------|:---------|
-| **Tipo A** (Poste nuevo 12m + Solar/Red + PTZ) | 15 | $12,863.09 | $192,946.35 |
-| **TOTAL CAPEX** | **15** | - | **$192,946.35 USD** |
+| **Tipo A** (Poste nuevo 12m + Solar/Red + PTZ) | 15 | $23,550.00 | $353,250.00 |
+| **Tipo C** (Separador 8m) | 5 | $9,327.09 | $46,635.45 |
+| **TOTAL CAPEX DETALLADO** | **20** | - | **$399,885.45** |
+| **Descuento volumen (-15%)** | - | - | **-$59,982.82** |
+| **TOTAL AJUSTADO** | - | - | **$339,902.63 USD** |
+| **TOTAL CAPEX** | - | - | **$1,634,000** | **100%** |
 
-> **Nota:** La infraestructura central (Servidores/Videowall/VMS) está presupuestada en el **Capítulo 8 (SISTEMA CCO)** bajo el ítem 8.1.1.
+**CAPEX/cámara:** $1,890,000 / 30 = **$63,000 USD/cámara** (Solución llave en mano con integración CCO y Backbone FO)
 
 ---
+
+## 📐 **ESPECIFICACIONES TÉCNICAS DETALLADAS**
+
+### **1. CÁMARA IP PTZ**
+
+| Parámetro | Especificación Mínima | Cumplimiento |
+|:----------|:---------------------|:-------------|
+| **Resolución** | 1920×1080 (1080p Full HD) | AT3 |
+| **Sensor** | 1/2.8" Progressive Scan CMOS | - |
+| **Zoom óptico** | 30× mínimo | T04 |
+| **Zoom digital** | 16× | - |
+| **Rango IR** | 150 metros | Visión nocturna |
+| **Rotación Pan** | 360° continuo | PTZ completo |
+| **Rotación Tilt** | -15° a +90° | - |
+| **Velocidad Pan** | 0.1°-120°/s | - |
+| **Presets** | ≥256 posiciones | Cobertura múltiple |
+| **Compresión video** | H.265/H.264/MJPEG | Eficiencia ancho de banda |
+| **Bitrate** | Hasta 16 Mbps | - |
+| **FPS** | 30 fps @ 1080p | Fluidez |
+| **WDR** | 120 dB mínimo | Condiciones luz variable |
+| **Protección** | IP66 (domo completo) | Intemperie |
+| **Vandalismo** | IK10 | Anti-vandálica |
+| **Temperatura** | -30°C a +60°C | Ambiente colombiano |
+| **Alimentación** | PoE+ (IEEE 802.3at) 25.5W | Simplifica instalación |
+| **Almacenamiento local** | MicroSD hasta 256GB | Backup |
+
+**Marcas aceptadas:** Axis, Hikvision, Dahua, Hanwha (Samsung), Bosch
+
+---
+
+### **2. FUNCIONES ANALÍTICAS (VIDEO ANALYTICS)**
+
+| Función | Aplicación ITS | Obligatoria |
+|:--------|:---------------|:------------|
+| **Detección de movimiento** | Eventos en vía | ✅ SÍ |
+| **Conteo vehicular** | Aforo básico | ✅ SÍ |
+| **Detección de ocupación** | Vehículo detenido | ⚠️ Deseable |
+| **Clasificación vehicular** | Tipo de vehículo (2-9 ejes) | ⚠️ Deseable |
+| **Detección de dirección** | Sentido circulación | ⚠️ Deseable |
+| **ANPR (reconocimiento placas)** | NO (se hace con RADAR-ANPR dedicado) | ❌ NO |
+
+---
+
+## 🗺️ **UBICACIONES SEGÚN TABLA MAESTRA**
+
+### **Distribución por Unidad Funcional:**
+
+| UF | Cantidad CCTV | PKR Ejemplos | Observaciones |
+|:---|:--------------|:-------------|:--------------|
+| **0D** | 7 | 40+050, 69+000, 81+000, 97+030, 104+150 | Mayor densidad (peajes/intersecciones) |
+| **1** | 3 | 85+370, 87+100 | ETD integrada en PKR 85+370 |
+| **2** | 3 | 13+470, 14+500 | Zona crítica |
+| **5.1** | 6 | 9+100, 60+480, 61+675, 63+250, 91+850, 93+920 | Distribuidas |
+| **6** | 2 | 81+650, 81+900 | Peaje Aguas Negras (⚠️ Revisar: Usuario indica 80+000) |
+| **9** | 4 | 113+300, 115+800, 116+900 | AS Aguas Negras |
+| **11** | 5 | 0+320, 4+150, 4+400 (CCO), 128+000, 9+800 | Incluye CCO |
+| **13** | 1 | 3+875 | Báscula/WIM |
+| **5.2** | 1 | 38+100 | Inicio monitoreo |
+| **Eliminadas** | -2 | 40+050 (reactivada), 41+800 | Fila 89 sin justificación |
+| **TOTAL** | **30** | - | **13 UFs cubiertas** |
+
+**Ver detalle completo en:** `43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md` (filas con TIPO=CCTV)
+
+---
+
+## 📐 **TIPOS DE INSTALACIÓN**
+
+### **Tipo A: Cámara en Poste Nuevo (15 unidades)**
+
+**Aplicación:** Zonas sin infraestructura existente
+
+**Componentes:**
+- Poste metálico 12m galvanizado
+- Cimentación 1.0×1.0×1.5m
+- Cámara PTZ en punta de poste
+- Gabinete equipos en base (2.5m altura)
+- Panel solar + baterías (si no hay red eléctrica)
+
+**Costo:** ~$15,000 USD/unidad
+
+---
+
+### **Tipo B: Cámara en Infraestructura Existente (10 unidades)**
+
+**Aplicación:** Pórticos PMV, postes alumbrado público, edificaciones
+
+**Componentes:**
+- Soporte metálico tipo L o U
+- Cámara PTZ
+- Gabinete equipos en base/pared
+- Sin poste nuevo
+
+**Costo:** ~$10,000 USD/unidad (ahorro 33%)
+
+---
+
+### **Tipo C: Cámara en Separador Central (5 unidades)**
+
+**Aplicación:** Separador amplio, cobertura bidireccional
+
+**Componentes:**
+- Poste metálico 8m (más corto)
+- Cimentación reducida 0.8×0.8×1.2m
+- Cámara PTZ
+- Gabinete equipos
+
+**Costo:** ~$12,000 USD/unidad
 
 ---
 

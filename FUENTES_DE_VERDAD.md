@@ -755,7 +755,17 @@ SCRIPT DE SINCRONIZACION COMPLETADO EXITOSAMENTE ✅
 
 ---
 
-## 📘 CASO DE ESTUDIO: PANELES DE MENSAJERÍA VARIABLE (PMV)
+## 📘 CASO DE ESTUDIO 2: POSTES SOS Y LA UNIDAD DE REHABILITACIÓN
+**Problema:** El contrato (AT1) exige 98 postes. La ingeniería (T05) tenía 88.
+**Análisis Inicial:** Se asumió que faltaban 10 postes.
+**Hallazgo de Campo:** Existen 10 postes en la "UF de Rehabilitación" que son funcionales.
+**Lección:**
+> No toda obligación contractual implica *obra nueva*. Siempre verificar la existencia de infraestructura en tramos de rehabilitación ("UF Rehabilitación") antes de presupuestar.
+**Resolución:** 88 postes nuevos + 10 existentes = 98 contractuales. Ahorro de $250k USD.
+
+---
+
+## 📘 CASO DE ESTUDIO 1: PANELES DE MENSAJERÍA VARIABLE (PMV)
 
 ### **Problema Inicial: Documentos Contradictorios**
 
