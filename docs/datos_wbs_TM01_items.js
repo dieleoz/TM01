@@ -1,5 +1,5 @@
 ﻿window.wbsDataGlobal = window.datos_wbs = {
-    "fecha_actualizacion": "2026-01-26",
+    "fecha_actualizacion": "2026-01-27",
     "total_items": 49,
     "version": "3.0",
     "items": [
