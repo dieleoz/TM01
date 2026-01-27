@@ -14,6 +14,7 @@
 | 1.0 | 22/10/2025 | Creación inicial - 30 cámaras CCTV | Ing. ITS |
 | 1.1 | 22/10/2025 | Revisión con información oficial: Cantidad confirmada | Ing. ITS |
 | 1.2 | 20/01/2026 | **Ajuste Alcance Optimizado:** 15 cámaras (Hard Deck + Nodos Críticos) | Antigravity AI |
+| 1.3 | 27/01/2026 | **Validación Auditoría:** Retorno a 30 cámaras (20 PTZ + 10 Fijas) con segregación Peajes | Antigravity AI |
 
 ---
 
@@ -37,14 +38,16 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **15 cámaras** | 15 Tipo A (Cobertura optimizada) |
-| **Distribución** | 13 UFs cubiertas | Tabla Maestra Layout (Revisada) |
-| **Tipo principal** | PTZ Domo IP (zoom 30×) | T04 CCTV |
+| **Cantidad total** | **30 cámaras** | 20 PTZ + 10 Fijas (Validado Audit. Forense) |
+| **Distribución** | Peajes, Pesajes, CCO, Intersecciones | Según Dictamen Técnico |
+| **Tipo principal** | PTZ (20) + Bullet Fija (10) | AT2 / Manual Señalización 2024 |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
-| **Almacenamiento** | 30 días×15 cámaras en NVR CCO | AT2 |
-| **CAPEX Total** | **$192,946.35 USD** | Solo equipos de campo (VMS en Cap. 8 CCO) |
-| **OPEX Anual** | **$9,000 USD** | $600/cámara/año |
-| **OPEX 20 años** | **$180,000 USD** | Mantenimiento |
+| **Zoom PTZ** | **32X Mínimo** | Req. IP/REV Auditado |
+| **Cifrado** | **AES-256** | Req. IP/REV Almacenamiento |
+| **Almacenamiento** | 30 días×30 cámaras en NVR CCO | AT2 / Estándar Seguridad |
+| **CAPEX Total** | **$302,946.35 USD** | Solo equipos de campo (VMS en Cap. 8 CCO) |
+| **OPEX Anual** | **$18,000 USD** | $600/cámara/año |
+| **OPEX 20 años** | **$360,000 USD** | Mantenimiento |
 
 ---
 
@@ -52,16 +55,38 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 
 | Tipo | Cantidad | Costo Unit. | Subtotal |
 |:-----|:---------|:------------|:---------|
-| **Tipo A** (Poste nuevo 12m + Solar/Red + PTZ) | 15 | $12,863.09 | $192,946.35 |
-| **TOTAL CAPEX** | **15** | - | **$192,946.35 USD** |
+| **Tipo A - PTZ** (Poste nuevo 12m + Solar/Red + PTZ 32X) | 20 | $12,900.00 | $258,000.00 |
+| **Tipo B - Fija** (Montaje Estructura + Bullet IP) | 10 | $4,494.63 | $44,946.35 |
+| **TOTAL CAPEX** | **30** | - | **$302,946.35 USD** |
 
 > **Nota:** La infraestructura central (Servidores/Videowall/VMS) está presupuestada en el **Capítulo 8 (SISTEMA CCO)** bajo el ítem 8.1.1.
 
 ---
 
+## 📐 **ESPECIFICACIONES TÉCNICAS DETALLADAS**
+
+### **1. CÁMARA IP PTZ (TIPO A)**
+
+| Parámetro | Especificación Mínima | Cumplimiento |
+|:----------|:---------------------|:-------------|
+| **Resolución** | 1920×1080 (1080p Full HD) | AT3 |
+| **Zoom óptico** | **32× mínimo** | **Req. IP/REV** |
+| **Rango IR** | 150 metros | Visión nocturna |
+| **Protección** | **IP66** | Manual 2024 |
+| **Seguridad** | HTTPS / 802.1x / **AES-256 (Storage)** | Ciberseguridad |
+
+### **2. CÁMARA FIJA BULLET (TIPO B)**
+
+| Parámetro | Especificación Mínima | Cumplimiento |
+|:----------|:---------------------|:-------------|
+| **Resolución** | 4MP | Identificación Activos |
+| **Lente** | Varifocal Motorizado 2.8-12mm | Ajuste campo visual |
+| **WDR** | 120 dB | Contraluz |
+| **Protección** | **IP67 / IK10** | Intemperie/Vandalismo |
+
 ---
 
-## 📊 **APU DETALLADO - INSTALACIÓN CCTV TIPO A**
+## 📊 **APU DETALLADO - INSTALACIÓN CCTV**
 
 ### **APU-CCTV-001: Instalación CCTV en Poste Nuevo 12m**
 
