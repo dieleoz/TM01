@@ -273,12 +273,14 @@ class TM01MasterData {
             {
                 id: '12',
                 sistema: 'RADIO FM',
-                cantidad: 1,
-                capexUSD: 200000,
-                capexCOP: 880000000,
-                capexUnitarioUSD: 200000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
+                cantidad: 0,
+                capexUSD: 0,
+                capexCOP: 0,
+                capexUnitarioUSD: 0,
+                descripcion: 'Modelo OpEx (Servicio de Difusión) - Sin Infraestructura Propia',
+                estado: 'Validado',
+                fuenteContractual: "DT-TM01-RADIO-001 (Modelo Servicio)",
+                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-RADIO-001.md"
             }
         ];
 
