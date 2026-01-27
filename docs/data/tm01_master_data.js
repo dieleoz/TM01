@@ -498,26 +498,26 @@ class TM01MasterData {
             { id: '9.3.8', nivel: 3, item: "9.3.8", descripcion: "Planos + Asesoría INTERPESAJE", sistema: "WIM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Asesoría técnica", vu: "682", vuCOP: "3,000,000", total: "682", totalCOP: "3,000,000" },
 
             // CAPÃTULO 10: TELECOMUNICACIONES ITS
-            // CAPÍTULO 10: TELECOMUNICACIONES (T05 v1.1 Microfibra)
+            // CAPÍTULO 10: TELECOMUNICACIONES (T05 v1.1 Microfibra - Audit 6.0 252km)
             { id: '10', nivel: 1, item: "10", descripcion: "TELECOMUNICACIONES ITS", sistema: "TELECOM", tipo: "capitulo" },
             { id: '10.1', nivel: 2, item: "10.1", descripcion: "SUMINISTROS FIBRA ÓPTICA", sistema: "TELECOM", tipo: "subcapitulo" },
-            { id: '10.1.1', nivel: 3, item: "10.1.1", descripcion: "Cable fibra optica 48h (Microfibra)", sistema: "TELECOM", cantidad: "322000", unidad: "ML", tipo: "item", criterio: "Microfibra", vu: "1.02", total: "328440", totalCOP: "1445136000" },
+            { id: '10.1.1', nivel: 3, item: "10.1.1", descripcion: "Cable fibra optica 48h (Microfibra)", sistema: "TELECOM", cantidad: "252000", unidad: "ML", tipo: "item", criterio: "Microfibra (Trunk)", vu: "1.02", total: "257040", totalCOP: "1130976000" },
             { id: '10.1.2', nivel: 3, item: "10.1.2", descripcion: "Cable fibra optica 12h", sistema: "TELECOM", cantidad: "10856", unidad: "ML", tipo: "item", criterio: "Ramales", vu: "0.57", total: "6188", totalCOP: "27227200" },
             { id: '10.1.3', nivel: 3, item: "10.1.3", descripcion: "Cajas empalme 80x80 (Suministro)", sistema: "TELECOM", cantidad: "65", unidad: "UND", tipo: "item", criterio: "Empalmes 80x80", vu: "381", total: "24765", totalCOP: "108966000" },
             { id: '10.1.4', nivel: 3, item: "10.1.4", descripcion: "Cajas empalme 60x60 (Suministro)", sistema: "TELECOM", cantidad: "1192", unidad: "UND", tipo: "item", criterio: "Empalmes 60x60", vu: "316.89", total: "377733", totalCOP: "1662025200" },
             { id: '10.1.5', nivel: 3, item: "10.1.5", descripcion: "Cajas reserva FO (Suministro)", sistema: "TELECOM", cantidad: "1257", unidad: "UND", tipo: "item", criterio: "Reservas", vu: "147.95", total: "185973", totalCOP: "818281200" },
-            { id: '10.1.6', nivel: 3, item: "10.1.6", descripcion: "Microducto 3 vias (Suministro)", sistema: "TELECOM", cantidad: "322000", unidad: "ML", tipo: "item", criterio: "Microducto", vu: "2.70", total: "869400", totalCOP: "3825360000" },
+            { id: '10.1.6', nivel: 3, item: "10.1.6", descripcion: "Microducto 3 vias (Suministro)", sistema: "TELECOM", cantidad: "252000", unidad: "ML", tipo: "item", criterio: "Microducto (Trunk)", vu: "2.70", total: "680400", totalCOP: "2993760000" },
             { id: '10.1.7', nivel: 3, item: "10.1.7", descripcion: "Empalmes y conectores (Global)", sistema: "TELECOM", cantidad: "62736", unidad: "UND", tipo: "item", criterio: "Accesorios", vu: "21.30", total: "1336277", totalCOP: "5879618800" },
 
             { id: '10.2', nivel: 2, item: "10.2", descripcion: "OBRA CIVIL TELECOM", sistema: "TELECOM", tipo: "subcapitulo" },
             { id: '10.2.1', nivel: 3, item: "10.2.1", descripcion: "Excavacion asfalto + tritubo", sistema: "TELECOM", cantidad: "27140", unidad: "ML", tipo: "item", criterio: "Excavación", vu: "11.89", total: "322695", totalCOP: "1419858000" },
             { id: '10.2.2', nivel: 3, item: "10.2.2", descripcion: "Excavacion anden + tritubo", sistema: "TELECOM", cantidad: "13570", unidad: "ML", tipo: "item", criterio: "Excavación", vu: "9.60", total: "130272", totalCOP: "573196800" },
-            { id: '10.2.3', nivel: 3, item: "10.2.3", descripcion: "Excavacion blanda + tritubo", sistema: "TELECOM", cantidad: "238560", unidad: "ML", tipo: "item", criterio: "Excavación", vu: "7.87", total: "1877467", totalCOP: "8260854800" },
+            { id: '10.2.3', nivel: 3, item: "10.2.3", descripcion: "Excavacion blanda + tritubo", sistema: "TELECOM", cantidad: "212000", unidad: "ML", tipo: "item", criterio: "Excavación (Adjusted)", vu: "7.87", total: "1668440", totalCOP: "7341136000" },
             { id: '10.2.4', nivel: 3, item: "10.2.4", descripcion: "Instalacion Cruces Especiales (HDD)", sistema: "TELECOM", cantidad: "13920", unidad: "ML", tipo: "item", criterio: "Cruces", vu: "90.60", total: "1261152", totalCOP: "5549068800" },
             { id: '10.2.5', nivel: 3, item: "10.2.5", descripcion: "Instalacion Cajas (48h + 12h)", sistema: "TELECOM", cantidad: "1457", unidad: "UND", tipo: "item", criterio: "Instalación", vu: "100.00", total: "145700", totalCOP: "641080000" },
 
             { id: '10.3', nivel: 2, item: "10.3", descripcion: "INSTALACIÓN Y EQUIPOS", sistema: "TELECOM", tipo: "subcapitulo" },
-            { id: '10.3.1', nivel: 3, item: "10.3.1", descripcion: "Soplado fibra 48h", sistema: "TELECOM", cantidad: "322000", unidad: "ML", tipo: "item", criterio: "Blowing", vu: "1.88", total: "605360", totalCOP: "2663584000" },
+            { id: '10.3.1', nivel: 3, item: "10.3.1", descripcion: "Soplado fibra 48h", sistema: "TELECOM", cantidad: "252000", unidad: "ML", tipo: "item", criterio: "Blowing (Trunk)", vu: "1.88", total: "473760", totalCOP: "2084544000" },
             { id: '10.3.2', nivel: 3, item: "10.3.2", descripcion: "Equipos de Red L2/L3 + Firewalls", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Activos (Switches+FW)", vu: "508578.45", total: "508578", totalCOP: "2237745180" },
 
             // CAPÍTULO 11: EMISORA DE RADIO FM

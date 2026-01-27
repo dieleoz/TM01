@@ -6,8 +6,10 @@ Esta carpeta contiene todas las Decisiones Técnicas (DTs) generadas automática
 ## Estructura
 ```
 DTs/
+├── 00_HISTORICO/                # 📂 Repositorio de DTs anteriores/supersedidas
 ├── DT-TM01-SOS-001-20251024.md    # Ejemplo: Cambio cantidad postes SOS
 ├── DT-TM01-ETD-002-YYYYMMDD.md    # Futuras DTs de ETD/RADAR
+...
 ├── DT-TM01-CCTV-003-YYYYMMDD.md   # Futuras DTs de CCTV
 ├── DT-TM01-PMV-004-YYYYMMDD.md    # Futuras DTs de PMV
 ├── DT-TM01-METEO-005-YYYYMMDD.md  # Futuras DTs de METEO
