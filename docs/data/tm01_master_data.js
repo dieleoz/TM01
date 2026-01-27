@@ -254,9 +254,9 @@ class TM01MasterData {
                 id: '10',
                 sistema: 'Peajes',
                 cantidad: 2,
-                capexUSD: 1890218.94,
-                capexCOP: 8316963336,
-                capexUnitarioUSD: 945109.47,
+                capexUSD: 2086577.24,
+                capexCOP: 8346308960,
+                capexUnitarioUSD: 1043288.62,
                 descripcion: 'Forensic v2.1 (2 Stations - Includes WIM-DAC Integration)',
                 estado: 'Validado'
             },
