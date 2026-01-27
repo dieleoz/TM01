@@ -139,57 +139,35 @@ Esta ingeniería de detalle da cumplimiento a las obligaciones establecidas en:
 | **Administración (2%)** | | | | | **$247.37** |
 | **Imprevistos (1%)** | | | | | **$123.68** |
 | **Utilidad (1%)** | | | | | **$123.68** |
-| **TOTAL APU-CCTV-001** | | | | | **$12,863.09/cámara** |
+| **TOTAL APU-CCTV-001** | | | | | **$12,900.00/cámara** |
 
-**Para 15 cámaras Tipo A:** 15 × $17,688 = **$265,320 USD**
+**Para 20 cámaras Tipo A:** 20 × $12,900 = **$258,000 USD**
 
 ---
 
-### **APU-CCTV-002: Instalación CCTV en Infraestructura Existente**
+### **APU-CCTV-002: Instalación Cámara Fija (Tipo B)**
 
 | Ítem | Descripción | Total (USD) |
 |:-----|:------------|:------------|
-| **Equipo cámara** | (igual Tipo A) | $8,000 |
-| **Soporte en estructura** | Sin poste nuevo | $400 |
-| **Obras civiles** | Solo canalización (sin cimentación) | $600 |
-| **Instalación** | Menor complejidad | $1,800 |
-| **Equipos** | Sin grúa grande | $400 |
-| **SUBTOTAL** | | $6,568.36 |
-| **AIU (4%)** | | $262.73 |
-| **TOTAL APU-CCTV-002** | | **$6,831.09/cámara** |
+| **Equipo cámara** | Bullet IP 4MP Varifocal | $850 |
+| **Soporte/Gabinete** | Montaje muro/poste | $350 |
+| **Obras civiles** | Canalización menor | $400 |
+| **Instalación** | Técnico CCTV | $1,200 |
+| **Equipos** | Herramienta menor | $200 |
+| **SUBTOTAL** | | $3,000.00 |
+| **AIU + Imprevistos** | 30% Est. | $1,494.63 |
+| **TOTAL APU-CCTV-002** | | **$4,494.63/cámara** |
 
-**Para 10 cámaras Tipo B:** 10 × $6,831.09 = **$68,310.90 USD**
-
----
-
-### **APU-CCTV-003: Instalación CCTV en Separador Central**
-
-| Ítem | Total (USD) |
-|:-----|:------------|
-| **Equipo cámara** | $8,000 |
-| **Poste 8m** | $1,800 |
-| **Obras civiles** | $1,000 |
-| **Instalación** | $2,000 |
-| **Equipos** | $800 |
-| **SUBTOTAL** | $8,968.36 |
-| **AIU (4%)** | $358.73 |
-| **TOTAL APU-CCTV-003** | **$9,327.09/cámara** |
-
-**Para 5 cámaras Tipo C:** 5 × $9,327.09 = **$46,635.45 USD**
+**Para 10 cámaras Tipo B:** 10 × $4,494.63 = **$44,946.35 USD**
 
 ---
 
-## 📊 **VALIDACIÓN DE PRESUPUESTO**
+---
 
-| Tipo | Cantidad | Costo Unit. | Subtotal |
-|:-----|:---------|:------------|:---------|
-| **Tipo A** (Poste nuevo 12m) | 15 | $12,863.09 | $192,946.35 |
-| **Tipo C** (Separador 8m) | 5 | $9,327.09 | $46,635.45 |
-| **TOTAL CAPEX DETALLADO** | **20** | - | **$239,581.80** |
-| **Descuento volumen (-15%)** | - | - | **-$35,937.27** |
-| **TOTAL AJUSTADO** | - | - | **$203,644.53 USD** |
+## 📊 **VALIDACIÓN FINAL**
 
-**✅ VALIDADO vs. PRESUPUESTO_ITS_PURO ($240,000 equipos + $150,000 instalación = $390,000)**
+**TOTAL PRESUPUESTO CCTV (CAMPO): $302,946.35 USD**
+*(Coincide con Master Data y DT-TM01-CCTV-003)*
 
 ---
 
