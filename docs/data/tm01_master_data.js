@@ -75,25 +75,28 @@ class TM01MasterData {
             sosSummary: {
                 id: '6',
                 sistema: 'SOS',
-                cantidad: 98,  // AT1 L3525: 98 postes obligatorios
-                capexUSD: 2450000,  // 98 × $25,000
-                capexCOP: 10780000000,
+                cantidad: 88,  // Postes nuevos a instalar (98 total - 10 existentes en UF Rehabilitación)
+                capexUSD: 2200000,  // 88 × $25,000
+                capexCOP: 9680000000,
                 capexUnitarioUSD: 25000,
-                descripcion: 'Postes SOS - Telefonía de Emergencia (98 unidades - AT1 compliance)',
+                descripcion: 'Postes SOS - Telefonía de Emergencia (88 nuevos + 10 existentes = 98 total)',
                 estado: 'Validado',
 
-                // Desglose detallado por ruta
+                // Desglose detallado
                 desglose: {
+                    nuevos: 88,  // A instalar
+                    existentes: 10,  // UF Rehabilitación
+                    total: 98,  // Total proyecto (cumple AT1 L3525)
                     rn4510: { cantidad: 37, capex: 925000, tramo: "Magdalena" },
-                    rn4511: { cantidad: 56, capex: 1400000, tramo: "Puerto Salgar" },
+                    rn4511: { cantidad: 46, capex: 1150000, tramo: "Puerto Salgar" },
                     rn4513: { cantidad: 5, capex: 125000, tramo: "Acceso CCO" }
                 },
 
                 // Trazabilidad contractual
-                fuenteContractual: "AT1 L3525 (98 postes) + AT1 L3175 (Espaciamiento ≤3km)",
+                fuenteContractual: "AT1 L3525 (98 total: 88 nuevos + 10 UF Rehabilitación)",
                 validadoPor: "docs/old/ANALISIS_SOS_PROMPT_MAESTRO_V3.1.md",
                 fechaValidacion: "2026-01-27",
-                versionT05: "v1.6"
+                versionT05: "v1.7"
             },
             meteoSummary: {
                 id: '7',

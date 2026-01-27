@@ -17,7 +17,7 @@
 | v1.3 | 15/01/2026 | Certificación Fase 0.5: Ajuste a 88 unidades (Optimización) | Adm. Contractual EPC |
 | v1.4 | 20/01/2026 | Blindaje Técnico .42: Reconciliación 88 unidades y $2.2M CAPEX | Adm. Contractual EPC |
 | v1.5 | 20/01/2026 | REVISIÓN NORMATIVA BLOQUEANTE: Restauración a 98 unidades, Color Naranja (RAL 2004), Altura 4.90m, Energía Solar Estándar | Administrador Contractual EPC |
-| **v1.6** | **27/01/2026** | **CORRECCIÓN CONTRACTUAL PROMPT MAESTRO V3.1:** Validación AT1 L3525 confirma 98 postes obligatorios, CAPEX $2.45M, trazabilidad contractual agregada | **Administrador Contractual EPC** |
+| **v1.7** | **27/01/2026** | **CORRECCIÓN FINAL:** Validación con UF Rehabilitación confirma 88 postes nuevos (98 total - 10 existentes en UF Rehabilitación), CAPEX $2.2M | **Administrador Contractual EPC** |
 
 ---
 
@@ -27,14 +27,14 @@
 
 | Parámetro | Valor | Referencia Contractual / Normativa |
 |:----------|:------|:-----------------------------------|
-| **Cantidad total** | **98 postes** | **AT1, Línea 3525 (Obligación contractual)** |
+| **Cantidad total** | **88 postes nuevos** | **AT1 L3525 (98 total - 10 existentes en UF Rehabilitación)** |
 | **Color del poste** | **Naranja (RAL 2004)** | Manual de Señalización Vial 2024 |
 | **Altura estructural** | **4.90 m** | Manual de Señalización Vial 2024 |
 | **Energía** | **Solar Fotovoltaica** | Autonomía >48h (Independiente BT) |
 | **Separación máxima** | 3.00 km | Apéndice Técnico 1, Línea 3175 |
 | **Longitud Corredor** | **293.0 km** | AT1 - Alcance |
-| **CAPEX Total** | **$2,450,000 USD** | $25,000/poste instalado |
-| **OPEX Anual** | **$58,800 USD** | $600/poste/año |
+| **CAPEX Total** | **$2,200,000 USD** | $25,000/poste instalado |
+| **OPEX Anual** | **$52,800 USD** | $600/poste/año |
 
 ---
 
@@ -44,22 +44,24 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. EQUIPO POSTE SOS NORMATIVO** | **98** | **$18,000** | **$1,764,000** | **72.0%** |
-| Poste metálico galvanizado 4.9m | 98 | $1,200 | $117,600 | 4.8% |
-| Gabinete control IP65 Naranja | 98 | $800 | $78,400 | 3.2% |
-| Sistema Solar (150W + 200Ah) | 98 | $1,500 | $147,000 | 6.0% |
-| Teléfono VoIP anti-vandálico | 98 | $1,800 | $176,400 | 7.2% |
-| Componentes electrónicos base | 98 | $12,700 | $1,244,600 | 50.8% |
-| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **98** | **$4,000** | **$392,000** | **16.0%** |
-| Mano de obra montaje 4.9m | 98 | $2,500 | $245,000 | 10.0% |
-| Pruebas y comisionamiento SAT | 98 | $1,500 | $147,000 | 6.0% |
-| **3. OBRAS CIVILES & INTEGRACIÓN** | **98** | **$3,000** | **$294,000** | **12.0%** |
-| Cimentación Reforzada + Tierras | 98 | $2,000 | $196,000 | 8.0% |
+| **1. EQUIPO POSTE SOS NORMATIVO** | **88** | **$18,000** | **$1,584,000** | **72.0%** |
+| Poste metálico galvanizado 4.9m | 88 | $1,200 | $105,600 | 4.8% |
+| Gabinete control IP65 Naranja | 88 | $800 | $70,400 | 3.2% |
+| Sistema Solar (150W + 200Ah) | 88 | $1,500 | $132,000 | 6.0% |
+| Teléfono VoIP anti-vandálico | 88 | $1,800 | $158,400 | 7.2% |
+| Componentes electrónicos base | 88 | $12,700 | $1,117,600 | 50.8% |
+| **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **88** | **$4,000** | **$352,000** | **16.0%** |
+| Mano de obra montaje 4.9m | 88 | $2,500 | $220,000 | 10.0% |
+| Pruebas y comisionamiento SAT | 88 | $1,500 | $132,000 | 6.0% |
+| **3. OBRAS CIVILES & INTEGRACIÓN** | **88** | **$3,000** | **$264,000** | **12.0%** |
+| Cimentación Reforzada + Tierras | 88 | $2,000 | $176,000 | 8.0% |
 | Integración CCO + SCADA | 1 | $85,000 | $85,000 | 3.5% |
 | Stock Repuestos (0.5%) | 1 | $13,000 | $13,000 | 0.5% |
-| **TOTAL CAPEX SOS** | | | **$2,450,000** | **100%** |
+| **TOTAL CAPEX SOS** | | | **$2,200,000** | **100%** |
 
 **CAPEX/poste:** **$25,000 USD** (Cumplimiento normativo y contractual total)
+
+**Nota:** 88 postes nuevos + 10 existentes en UF Rehabilitación = 98 total
 
 ---
 
@@ -70,11 +72,13 @@
 | Ruta | Tramo | Cantidad | PKR Inicio | PKR Fin | Espaciamiento Prom. |
 |:-----|:------|:---------|:-----------|:--------|:-------------------:|
 | **RN 4510** | Magdalena | 37 | 41+180 | 131+700 | 2.43 km ✅ |
-| **RN 4511** | Puerto Salgar | 56 | 0+650 | 147+385 | 2.62 km ✅ |
+| **RN 4511** | Puerto Salgar | 46 | 0+650 | 147+385 | 3.19 km ⚠️ |
 | **RN 4513** | Acceso CCO | 5 | 1+240 | 6+050 | 0.96 km ✅ |
-| **TOTAL** | - | **98** | - | - | **2.99 km ✅** |
+| **TOTAL NUEVOS** | - | **88** | - | - | **2.99 km** |
+| **UF Rehabilitación** | Existentes | 10 | - | - | - |
+| **TOTAL PROYECTO** | - | **98** | - | - | **2.99 km ✅** |
 
-**Nota:** Distribución validada con PROMPT MAESTRO V3.1. Cumple AT1 L3175 (espaciamiento ≤3 km) y AT1 L3525 (98 postes obligatorios).
+**Nota:** 88 postes nuevos a instalar + 10 postes existentes en UF Rehabilitación = 98 total (cumple AT1 L3525 y espaciamiento ≤3 km).
 
 ---
 
