@@ -515,6 +515,13 @@ class TM01MasterData {
             { id: '11.1.2', nivel: 3, item: "11.1.2", descripcion: "Repetidoras / Gap-fillers Corredor", sistema: "RADIO", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Eliminado DT-002", vu: "25000", total: "0", totalCOP: "0" },
             { id: '11.1.3', nivel: 3, item: "11.1.3", descripcion: "Trámites Licencias y Puesta en Marcha", sistema: "RADIO", cantidad: "0", unidad: "GLB", tipo: "item", criterio: "Eliminado DT-002", vu: "30000", total: "0", totalCOP: "0" },
 
+            // CAPÍTULO 12: ESTACIONES METEOROLÓGICAS
+            { id: '12', nivel: 1, item: "12", descripcion: "SISTEMA METEOROLÓGICO", sistema: "METEO", tipo: "capitulo" },
+            { id: '12.1', nivel: 2, item: "12.1", descripcion: "ESTACIONES", sistema: "METEO", tipo: "subcapitulo" },
+            { id: '12.1.1', nivel: 3, item: "12.1.1", descripcion: "Estación Meteorológica Davis Pro2", sistema: "METEO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "2 Peajes + 1 CCO", vu: "50,000", vuCOP: "220,000,000", total: "150,000", totalCOP: "660,000,000" },
+            { id: '12.1.2', nivel: 3, item: "12.1.2", descripcion: "Obra Civil Cimentación", sistema: "METEO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "Cimentación poste", vu: "1,000", vuCOP: "4,400,000", total: "3,000", totalCOP: "13,200,000" },
+            { id: '12.1.3', nivel: 3, item: "12.1.3", descripcion: "Instalación y Configuración", sistema: "METEO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "Servicios instalación", vu: "1,000", vuCOP: "4,400,000", total: "3,000", totalCOP: "13,200,000" },
+
         ];
 
         // Datos Presupuesto (sincronizados con WBS)
