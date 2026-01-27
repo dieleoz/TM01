@@ -167,6 +167,7 @@ El sistema no es solo de lectura. La **Herramienta de Gestión** permite:
 ├── MATRIZ_CUMPLIMIENTO_TM01_Troncal_Magdalena.html # ✅ Matriz contractual vs técnico
 ├── GENERADOR_DT_TM01_Troncal_Magdalena.html      # 📝 Generador Documentos Técnicos
 ├── REPORTES_VALIDACION_TM01_Troncal_Magdalena.html # 📈 Reportes automáticos
+├── justificacion_alcance.html                    # ⚖️ Dashboard Justificación Contractual
 └── data/
     ├── tm01_master_data.js                       # 🗄️ Fuente única de verdad
     └── datos_wbs_TM01_items.js                   # 📊 Datos WBS estructurados (GENERADO - NO EDITAR)
@@ -321,6 +322,7 @@ El sistema no es solo de lectura. La **Herramienta de Gestión** permite:
 ### Sistema Web
 - [GitHub Pages](https://dieleoz.github.io/TM01/) - Sistema web en producción
 - [Portal WBS](docs/WBS_Menu_Principal.html) - Menú principal del sistema
+- [Justificación Alcance](docs/justificacion_alcance.html) - ⚖️ Dashboard Contractual
 
 ### Documentos Consolidados
 - [Presupuesto ITS Puro](X.%20Entregables%20Consolidados/PRESUPUESTO_ITS_PURO_v2.0.md)

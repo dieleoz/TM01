@@ -349,8 +349,8 @@ Esta carpeta contiene **análisis, validaciones y decisiones técnicas** que NO 
 - ✅ Justificar diferencias entre propuesta y contrato
 - ✅ Servir como evidencia en auditorías
 
-**¿Los usas para el sistema web?** ❌ NO  
-**¿Son importantes?** ✅ SÍ, para entregas al cliente
+**¿Los usas para el sistema web?** ✅ SÍ (a través de `validaciones_content.js`)  
+**¿Son importantes?** ✅ SÍ, para entregas al cliente y visualización web
 
 ---
 
@@ -489,7 +489,7 @@ SOLICITUD_COMPRA_EQUIPOS_L3_v1.0.md
 | **III** | T01/T02/T03 | ✅ Sí | ❌ No | ✅ Sí (contexto) | ❌ No |
 | **IV** | T04 (specs) | ✅ Sí | ❌ No | ✅ Sí (técnico) | ❌ No |
 | **V** | T05 (precios) | ✅ Sí | ✅ **SÍ** ⭐ | ✅ Sí (presupuesto) | ✅ **SÍ** ⭐ |
-| **VII** | Validaciones | ❌ No | ❌ No | ✅ Sí (auditoría) | ❌ No |
+| **VII** | Validaciones | ❌ No | ✅ **SÍ** (Dashboard) | ✅ Sí (auditoría) | ✅ **SÍ** (Contenido) |
 | **X** | Entregables | ❌ No* | ❌ No | ✅ **SÍ** ⭐ | ❌ No (los genera) |
 
 *Algunos RFQs tienen bloques AUTOGEN actualizables con scripts
