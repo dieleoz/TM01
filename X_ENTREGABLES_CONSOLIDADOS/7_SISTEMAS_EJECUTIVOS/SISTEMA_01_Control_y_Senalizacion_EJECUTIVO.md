@@ -1,0 +1,16 @@
+﻿# SISTEMA_01_Control_y_Senalizacion_EJECUTIVO
+
+## 1. RESUMEN EJECUTIVO
+Este documento consolida la ingenieria de detalle del sistema.
+
+## 2. FUENTES DE INFORMACION
+<!-- CARGADO AUTOMATICAMENTE -->
+
+## 3. DECISIONES TECNICAS APLICADAS
+<!-- CARGADO AUTOMATICAMENTE -->
+
+## 4. CONTENIDO CONSOLIDADO
+
+
+<!-- COCINADO DESDE FUENTES: 27/01/2026 17:22 | Fuentes: 2 | DTs: 0 -->
+

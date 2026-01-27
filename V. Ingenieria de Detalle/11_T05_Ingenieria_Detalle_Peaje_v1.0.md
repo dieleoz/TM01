@@ -48,8 +48,16 @@
 |:---------|:------------|
 | Equipamiento Recaudo (FTS) | $1,806,218.94 |
 | Pesaje Dinámico Carril (WIM-DAC) | $280,358.30 |
-| **TOTAL CAPEX PEAJE RECONCILIADO** | **$2,086,577.24** |
+| **TOTAL CAPEX PEAJE RECONCILIADO** | **$2,258,577.24** |
 
 ---
+
+### **4. ACTUALIZACIÓN NORMATIVA (AUDIT 6.0)**
+*   **Item Afectado:** PMV Aproximación Peaje (4 Unidades).
+*   **Justificación:** Manual de Señalización 2024 exige PMV Gráfico RGB Solar (>90km/h).
+*   **Impacto:** Se ajusta el valor unitario de $12k a $55k.
+*   **Costo Adicional:** $172,000.00 USD.
+*   **Estado:** **INCLUIDO EN PRESUPUESTO FINAL ($2.25M)**.
+
 
 

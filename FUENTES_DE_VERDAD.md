@@ -78,6 +78,10 @@ V. Ingenieria de Detalle/
 - **[DT-TM01-CCTV-003]**: Alcance Mínimo CCTV (9 cámaras).
 - **[DT-TM01-PEAJES-019]**: Actualización Presupuesto Peajes.
 - **[DT-TM01-PMV-004]**: Reestructuración PMV (Solar).
+- **[DT-TM01-PEAJES-020]**: Sanitización Peajes (Eliminación Duplicado).
+- **[DT-TM01-PEAJES-021]**: Actualización Normativa PMV Peajes (Audit 6.0).
+- **[DT-TM01-CCO-019]**: Optimización Equipamiento CCO (User Proposal).
+- **[DT-TM01-TELECOM-024]**: Corrección Locura Fibra (Alineación T05 v1.1).
 
 ## 📂 ESTRUCTURA DE ARCHIVOS T05
 
