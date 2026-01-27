@@ -49,32 +49,36 @@ class TM01MasterData {
             etdRadarSummary: {
                 id: '3',
                 sistema: 'ETD/RADAR',
-                cantidad: 14,
-                capexUSD: 1500000,
-                capexCOP: 6600000000,
-                capexUnitarioUSD: 107143,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
+                cantidad: 0,
+                capexUSD: 0,
+                capexCOP: 0,
+                capexUnitarioUSD: 0,
+                descripcion: '0 Unidades (Diferido a O&M / Suministros Policiales / Peaje)',
+                estado: 'Validado',
+                fuenteContractual: "DT-TM01-ETD-001 (Optimización Cero Alcance)",
+                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-ETD-001.md",
+                analisisBase: "docs/ANALISIS_ETD_PROMPT_MAESTRO_V3.3.md",
+                fechaValidacion: "2026-01-27"
             },
             sastSummary: {
                 id: '4',
                 sistema: 'SAST (Sancionatorio)',
-                cantidad: 2,
-                capexUSD: 150000,
-                capexCOP: 660000000,
-                capexUnitarioUSD: 75000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
+                cantidad: 0,
+                capexUSD: 0,
+                capexCOP: 0,
+                capexUnitarioUSD: 0,
+                descripcion: 'Integrado en Dotación Policial (Suministros) - No ITS Fijo',
+                estado: 'Eliminado'
             },
             pedagogicalRadarSummary: {
                 id: '5',
                 sistema: 'RADAR PEDAGÓGICO',
-                cantidad: 2,
-                capexUSD: 50000,
-                capexCOP: 220000000,
-                capexUnitarioUSD: 25000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
+                cantidad: 0,
+                capexUSD: 0,
+                capexCOP: 0,
+                capexUnitarioUSD: 0,
+                descripcion: 'Diferido a O&M (Solo si se identifican puntos críticos)',
+                estado: 'Eliminado'
             },
             sosSummary: {
                 id: '6',
