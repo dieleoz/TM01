@@ -1,4 +1,4 @@
-﻿# RFQ_002: SOLICITUD DE COTIZACIÓN – POSTES SOS (SISTEMA DE TELEFONÍA DE EMERGENCIA)
+# RFQ_002: SOLICITUD DE COTIZACIÓN – POSTES SOS (SISTEMA DE TELEFONÍA DE EMERGENCIA)
 
 Proyecto: APP Puerto Salgar – Barrancabermeja (TM01 Troncal Magdalena)  
 Entidad: Concesión APP (ruta RN4510 + RN4511 + conexión CCO RN4513)  
@@ -142,14 +142,19 @@ Anexos recomendados:
 | **Longitud Corredor** | **293.0 km** | AT1 - Alcance |
 | **CAPEX Total** | **$2,200,000 USD** | $25,000/poste instalado |
 | **OPEX Anual** | **$52,800 USD** | $600/poste/año |
-| **1. EQUIPO POSTE SOS NORMATIVO** | **88** | **$18,000** | **$1,584,000** | **72.0%** |
-| Poste metálico galvanizado 4.9m | 88 | $1,200 | $105,600 | 4.8% |
+| **1. EQUIPO POSTE SOS NORMATIVO** | **88** | **$18,000** | **
+,584,000** | **72.0%** |
+| Poste metálico galvanizado 4.9m | 88 | 
+,200 | $105,600 | 4.8% |
 | Gabinete control IP65 Naranja | 88 | $800 | $70,400 | 3.2% |
-| Sistema Solar (150W + 200Ah) | 88 | $1,500 | $132,000 | 6.0% |
-| Teléfono VoIP anti-vandálico | 88 | $1,800 | $158,400 | 7.2% |
+| Sistema Solar (150W + 200Ah) | 88 | 
+,500 | $132,000 | 6.0% |
+| Teléfono VoIP anti-vandálico | 88 | 
+,800 | $158,400 | 7.2% |
 | **2. INSTALACIÓN Y PUESTA EN SERVICIO** | **88** | **$4,000** | **$352,000** | **16.0%** |
 | Mano de obra montaje 4.9m | 88 | $2,500 | $220,000 | 10.0% |
-| Pruebas y comisionamiento SAT | 88 | $1,500 | $132,000 | 6.0% |
+| Pruebas y comisionamiento SAT | 88 | 
+,500 | $132,000 | 6.0% |
 | **3. OBRAS CIVILES & INTEGRACIÓN** | **88** | **$3,000** | **$264,000** | **12.0%** |
 | Cimentación Reforzada + Tierras | 88 | $2,000 | $176,000 | 8.0% |
 | Integración CCO + SCADA | 1 | $85,000 | $85,000 | 3.5% |
@@ -164,10 +169,12 @@ Anexos recomendados:
 | **TOTAL PROYECTO** | - | **98** | - | - | **2.99 km ✅** |
 | Concepto | Valor (USD) | % |
 | **CAPEX (98 postes)** | $2,450,000 | 67.6% |
-| **OPEX (20 años)** | $1,176,000 | 32.4% |
+| **OPEX (20 años)** | 
+,176,000 | 32.4% |
 | **TOTAL 20 AÑOS** | **$3,626,000** | **100%** |
-> Actualizado: 2026-01-27
+> Actualizado: 2026-01-28
 <!-- BLOQUE AUTOMATICO FIN -->
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+

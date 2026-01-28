@@ -1,4 +1,4 @@
-﻿# SOLICITUD DE COTIZACIÓN (RFQ-003)
+# SOLICITUD DE COTIZACIÓN (RFQ-003)
 ## SISTEMA CCTV (CIRCUITO CERRADO DE TELEVISIÓN) – VIDEOVIGILANCIA ITS
 
 ## **PROYECTO: APP Puerto Salgar - Barrancabermeja (Propuesta Optimizada - 15 Cámaras)**
@@ -522,7 +522,8 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 | Escalerilla interior | Mantenimiento | UND | 1.0 | $180 | $180 |
 | Tapa superior | Protección lluvia | UND | 1.0 | $80 | $80 |
 | Señalización poste | Reflectiva amarilla | UND | 1.0 | $220 | $220 |
-| **C. OBRAS CIVILES** | | | | | **$1,500** |
+| **C. OBRAS CIVILES** | | | | | **
+,500** |
 | Excavación cimentación | 1.0×1.0×1.5m | M³ | 1.5 | $45.00 | $67.50 |
 | Concreto f'c=3000 PSI | Fundación | M³ | 1.2 | $180.00 | $216.00 |
 | Acero refuerzo | #5 + estribos | KG | 40.0 | $2.80 | $112.00 |
@@ -543,7 +544,8 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 | Transporte equipos | Movilización | GLB | 1.0 | $120.00 | $120.00 |
 | Señalamiento vial | Durante obras | GLB | 1.0 | $150.00 | $150.00 |
 | Certificación | Protocolo SAT | UND | 1.0 | $488.00 | $488.00 |
-| **E. EQUIPOS Y HERRAMIENTAS** | | | | | **$1,200** |
+| **E. EQUIPOS Y HERRAMIENTAS** | | | | | **
+,200** |
 | Grúa telescópica 15m | Izaje | HH | 4.0 | $120.00 | $480.00 |
 | Plataforma elevadora | Trabajo en altura | HH | 8.0 | $45.00 | $360.00 |
 | Fusionadora FO | Empalmes | HH | 4.0 | $30.00 | $120.00 |
@@ -559,10 +561,12 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 | **Equipo cámara** | Bullet IP 4MP Varifocal | $850 |
 | **Soporte/Gabinete** | Montaje muro/poste | $350 |
 | **Obras civiles** | Canalización menor | $400 |
-| **Instalación** | Técnico CCTV | $1,200 |
+| **Instalación** | Técnico CCTV | 
+,200 |
 | **Equipos** | Herramienta menor | $200 |
 | **SUBTOTAL** | | $3,000.00 |
-| **AIU + Imprevistos** | 30% Est. | $1,494.63 |
+| **AIU + Imprevistos** | 30% Est. | 
+,494.63 |
 | **TOTAL APU-CCTV-002** | | **$4,494.63/cámara** |
 | Parámetro | Especificación |
 | **Protocolo** | ONVIF Profile S/G/T |
@@ -592,15 +596,20 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 | 13 | **As-Built** | Coordenadas GPS ±3m |
 | Actividad | Frecuencia | Costo Anual (USD) |
 | **Limpieza domo** | Trimestral | $6,000 |
-| **Verificación funcional** | Mensual (remota) | $1,800 |
+| **Verificación funcional** | Mensual (remota) | 
+,800 |
 | **Ajuste presets** | Semestral | $2,400 |
-| **Revisión conexiones** | Anual | $1,800 |
-| **Actualización firmware** | Según fabricante | $1,200 |
+| **Revisión conexiones** | Anual | 
+,800 |
+| **Actualización firmware** | Según fabricante | 
+,200 |
 | **Reparaciones menores** | Según necesidad | $3,000 |
-| **Reemplazo equipos** | 1-2 cámaras/año | $1,800 |
+| **Reemplazo equipos** | 1-2 cámaras/año | 
+,800 |
 | **TOTAL OPEX** | - | **$18,000/año** |
-> Actualizado: 2026-01-27
+> Actualizado: 2026-01-28
 <!-- BLOQUE AUTOMATICO FIN -->
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+

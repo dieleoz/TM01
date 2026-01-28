@@ -1,4 +1,4 @@
-﻿# SOLICITUD DE COTIZACIÓN (RFQ-008)  
+# SOLICITUD DE COTIZACIÓN (RFQ-008)  
 ## SISTEMA DE PANELES DE MENSAJERÍA VARIABLE (PMV)
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
@@ -231,8 +231,10 @@ EPC Concesión TM01 Troncal Magdalena
 | **CAPEX estimado** | **USD $2,360,000** | Reconciliado Phase 19 |
 | **OPEX Anual** | **$33,600 USD** | ~1.3% del CAPEX |
 | **OPEX 20 años** | **$672,000 USD** | Mantenimiento + Repuestos |
-| **1. PANEL PMV FULL MATRIX (Mainline)** | **25 und** | **$45,000** | **$1,125,000** | **47.6%** |
-| Matriz 2024 (Carácter 400mm), L3, RGB | 25 und | $45,000 | $1,125,000 | - |
+| **1. PANEL PMV FULL MATRIX (Mainline)** | **25 und** | **$45,000** | **
+,125,000** | **47.6%** |
+| Matriz 2024 (Carácter 400mm), L3, RGB | 25 und | $45,000 | 
+,125,000 | - |
 | **2. PANEL PMV PEAJE (Canopy)** | **14 und** | **$5,000** | **$70,000** | **3.0%** |
 | Tarifario/Mensaje (1x1m aprox), RGB | 14 und | $5,000 | $70,000 | - |
 | **3. ESTRUCTURA (Pórticos Mainline)**| **25 und** | **$35,000** | **$875,000** | **37.1%** |
@@ -257,7 +259,7 @@ EPC Concesión TM01 Troncal Magdalena
 | **Comunicación** | Ethernet IP, ModBus RS485/TCP, NTCIP 1203 | - |
 | **Alimentación** | 110-220 VAC 60Hz | - |
 | Parámetro | Especificación |
-| **Protocolo** | NTCIP 1203 v3 (estándar ITS) |
+| **Protocolo** | NTCIP 1203 v3 **O** DATEX II (UNE-EN 16157-4) | Manual 2024 Sec 2.7.5 |
 | **Interfaz red** | Ethernet 10/100 Mbps |
 | **Gestión remota** | Web + SNMP + API REST |
 | **Mensajes almacenables** | ≥256 mensajes preprogramados |
@@ -286,7 +288,8 @@ EPC Concesión TM01 Troncal Magdalena
 | Kit Solar Off-Grid | 28 | $18,162.00 | $508,536.00 |
 | Factor Imprevistos + AIU (Solar) | 28 | $11,914.62 | $333,609.36 |
 | Sistema Puesta a Tierra (SPT) | 28 | $2,384.00 | $66,752.00 |
-| Factor Imprevistos + AIU (SPT) | 28 | $1,563.94 | $43,790.32 |
+| Factor Imprevistos + AIU (SPT) | 28 | 
+,563.94 | $43,790.32 |
 | **TOTAL SISTEMA PMV** | **-** | **-** | **$4,187,284.64** |
 | Parámetro | Especificación |
 | **Tipo** | Full Matrix LED (RGB 2024) |
@@ -357,15 +360,19 @@ EPC Concesión TM01 Troncal Magdalena
 | **Verificación LEDs** | Semestral | $4,200 |
 | **Prueba mensajes** | Mensual | $2,800 |
 | **Revisión estructural** | Anual | $2,100 |
-| **Actualización firmware** | Según fabricante | $1,400 |
+| **Actualización firmware** | Según fabricante | 
+,400 |
 | **Reparaciones** | Según necesidad | $700 |
 | **TOTAL OPEX** | - | **$16,800/año** |
 | Concepto | Valor (USD) |
-| **CAPEX (14 paneles)** | $1,190,000.00 | 78.0% |
+| **CAPEX (14 paneles)** | 
+,190,000.00 | 78.0% |
 | **OPEX (20 años)** | $336,000.00 | 22.0% |
-| **TOTAL 20 AÑOS** | **$1,526,000.00** | **100%** |
-> Actualizado: 2026-01-27
+| **TOTAL 20 AÑOS** | **
+,526,000.00** | **100%** |
+> Actualizado: 2026-01-28
 <!-- BLOQUE AUTOMATICO FIN -->
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
