@@ -152,23 +152,29 @@ Ver `DICTAMEN_AUDITORIA_FORENSE_5_CAPAS.md` para valores certificados contra T05
 ### **🟡 PRIORIDAD 3: MEDIO - Correcciones Técnicas**
 
 
-#### **A. T05 PMV - Protocolo DATEX II**
-- [ ] Actualizar `V. Ingenieria de Detalle/06_T05_Ingenieria_Detalle_PMV_v1.0.md`
-- [ ] Línea 88: Cambiar `Protocolo: NTCIP 1203 v3` → `Protocolo: NTCIP 1203 v3 **O** DATEX II (UNE-EN 16157-4)`
-- [ ] **Justificación:** Cumplimiento Manual 2024 Sec 2.7.5
-- [ ] **Impacto:** Bajo (solo documentación)
+#### **A. T05 PMV - Protocolo DATEX II** ✅ COMPLETADO
+- [x] Actualizar `V. Ingenieria de Detalle/06_T05_Ingenieria_Detalle_PMV_v1.0.md`
+- [x] Línea 88: Cambiar `Protocolo: NTCIP 1203 v3` → `Protocolo: NTCIP 1203 v3 **O** DATEX II (UNE-EN 16157-4)`
+- [x] **Justificación:** Cumplimiento Manual 2024 Sec 2.7.5
+- [x] **Impacto:** Bajo (solo documentación)
+- [x] **Commit:** f3281dd (28-Ene-2026)
 
-#### **B. T04 Peajes - Encriptación y SiGT**
-- [ ] Crear `IV. Ingenieria Basica/T04_Especificaciones_Tecnicas_Peajes_v2.0.md`
-- [ ] Agregar requisitos de encriptación AES-128/256 (IP/REV Art 2.9.7)
-- [ ] Agregar requisitos de integración SiGT (IP/REV Art 2.9.10)
-- [ ] **Justificación:** Cumplimiento IP/REV 2021
-- [ ] **Impacto:** Medio (afecta especificaciones de licitación)
+#### **B. T04 Peajes - Encriptación y SiGT** ✅ COMPLETADO
+- [x] Actualizar `IV. Ingenieria Basica/11_T04_Especificaciones_Tecnicas_Peajes_v1.0.md`
+- [x] Agregar Sección 4.3: Seguridad y Encriptación (AES-256, TLS 1.2+, SHA-256)
+- [x] Agregar Sección 4.4: Integración SiGT (JSON, RESTful API, 99.5% uptime)
+- [x] Agregar requisitos de encriptación AES-256 (IP/REV Art 2.9.7)
+- [x] Agregar requisitos de integración SiGT (IP/REV Art 2.9.10)
+- [x] **Justificación:** Cumplimiento IP/REV 2021
+- [x] **Impacto:** Medio (afecta especificaciones de licitación)
+- [x] **Commit:** f3281dd (28-Ene-2026)
 
-#### **C. Presupuesto Túneles - Cable Radiante**
-- [ ] Verificar inclusión de sistema Leaky Feeder en presupuesto de túneles
-- [ ] **Justificación:** Obligación de cobertura 100% Radio FM (AT2)
-- [ ] **Impacto:** Medio (posible costo adicional)
+#### **C. Presupuesto Túneles - Cable Radiante** ❌ NO APLICA
+- [x] ~~Verificar inclusión de sistema Leaky Feeder en presupuesto de túneles~~
+- [x] **Conclusión:** El proyecto TM01 **NO tiene túneles** en el corredor
+- [x] **Justificación:** Tarea de auditoría obsoleta, basada en supuesto incorrecto
+- [x] **Impacto:** Ninguno (no aplica al proyecto)
+- [x] **Nota:** Observación removida del DICTAMEN_AUDITORIA_FORENSE_5_CAPAS.md
 
 ### **🟢 PRIORIDAD 4: BAJO - Mejora Continua**
 
