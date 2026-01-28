@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gerencia Contractual - TM01</title>
+    <link rel="stylesheet" href="css/tm01-design-system.css">
+    <style>
+        body {
+            background: var(--bg-main);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .role-header {
+            background: linear-gradient(135deg, var(--role-contractual), var(--tm01-primary));
+            color: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .role-header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+        }
+
+        .role-header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--role-contractual);
+        }
+
+        .metric-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .metric-content {
+            flex: 1;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--role-contractual);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .metric-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--tm01-primary);
+            margin: 0 0 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all var(--transition-base);
+        }
+
+        .quick-link:hover {
+            background: var(--bg-surface);
+            border-color: var(--role-contractual);
+            transform: translateX(4px);
+        }
+
+        .quick-link-icon {
+            font-size: 1.5rem;
+        }
+
+        .quick-link-content {
+            flex: 1;
+        }
+
+        .quick-link-title {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.25rem;
+        }
+
+        .quick-link-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .quick-link-arrow {
+            color: var(--role-contractual);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .uf-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .uf-table th {
+            background: var(--tm01-primary);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .uf-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+
+        .uf-table tr:hover {
+            background: var(--bg-hover);
+        }
+
+        .status-overdue {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .status-urgent {
+            background: #fff3cd;
+            color: #856404;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .status-warning {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .status-ok {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .error {
+            text-align: center;
+            padding: 2rem;
+            color: var(--error);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="WBS_Menu_Principal.html" class="tm01-back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Volver al Inicio
+    </a>
+
+    <div class="container">
+        <div class="role-header">
+            <h1>🎯 Dashboard Gerencia Contractual</h1>
+            <p>Vista especializada para validación contractual, plazos y cumplimiento normativo</p>
+        </div>
+
+        <!-- Métricas Clave -->
+        <div class="dashboard-grid" id="metricsGrid">
+            <div class="loading">⏳ Cargando métricas...</div>
+        </div>
+
+        <!-- Plazos Contractuales Críticos -->
+        <div class="section">
+            <h2 class="section-title">⏰ Plazos Contractuales Críticos</h2>
+            <div id="plazosTable">
+                <div class="loading">⏳ Cargando plazos...</div>
+            </div>
+        </div>
+
+        <!-- Accesos Rápidos -->
+        <div class="section">
+            <h2 class="section-title">🔗 Accesos Rápidos</h2>
+            <div class="quick-links">
+                <a href="justificacion_alcance.html" class="quick-link">
+                    <div class="quick-link-icon">📋</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Justificación de Alcance</div>
+                        <div class="quick-link-desc">Validación contractual completa</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="analisis_riesgos.html" class="quick-link">
+                    <div class="quick-link-icon">⚠️</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Análisis de Riesgos</div>
+                        <div class="quick-link-desc">Matriz de riesgos del proyecto</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="gestion_cambios.html" class="quick-link">
+                    <div class="quick-link-icon">🔄</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Gestión de Cambios</div>
+                        <div class="quick-link-desc">DTs y modificaciones</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="cronograma.html" class="quick-link">
+                    <div class="quick-link-icon">📅</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Cronograma Maestro</div>
+                        <div class="quick-link-desc">Plazos y fechas críticas</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="reporte_gerencial.html" class="quick-link">
+                    <div class="quick-link-icon">📊</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Reporte Gerencial</div>
+                        <div class="quick-link-desc">Vista ejecutiva del proyecto</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="wbs.html" class="quick-link">
+                    <div class="quick-link-icon">🗂️</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">WBS Maestra</div>
+                        <div class="quick-link-desc">Estructura completa del proyecto</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/tm01_master_data.js"></script>
+    <script src="js/dashboard-common.js"></script>
+    <script>
+        // Inicializar dashboard
+        waitForData((data) => {
+            if (!data) {
+                showError('metricsGrid', 'No se pudieron cargar los datos');
+                showError('plazosTable', 'No se pudieron cargar los datos');
+                return;
+            }
+
+            renderMetrics(data);
+            renderPlazos(data);
+        });
+
+        function renderMetrics(data) {
+            const container = document.getElementById('metricsGrid');
+
+            // Calcular métricas
+            const totalUFs = data.cronogramaUF ? data.cronogramaUF.length : 0;
+            const ufsUrgentes = data.cronogramaUF ? data.cronogramaUF.filter(uf => {
+                const dias = getDaysRemaining(uf.fechaMax);
+                return dias >= 0 && dias < 90;
+            }).length : 0;
+
+            const totalSistemas = data.wbs ? new Set(data.wbs.filter(i => i.tipo === 'item').map(i => i.sistema)).size : 0;
+
+            const totalCAPEX = data.totales ? data.totales.totalUSD : 0;
+
+            // Renderizar cards
+            container.innerHTML = `
+                ${createMetricCard('UFs Totales', totalUFs, 'Unidades Funcionales', '📍')}
+                ${createMetricCard('UFs Urgentes', ufsUrgentes, 'Menos de 90 días', '⚠️')}
+                ${createMetricCard('Sistemas', totalSistemas, 'Sistemas ITS activos', '⚙️')}
+                ${createMetricCard('CAPEX Total', formatUSD(totalCAPEX), 'Inversión certificada', '💰')}
+            `;
+        }
+
+        function renderPlazos(data) {
+            const container = document.getElementById('plazosTable');
+
+            if (!data.cronogramaUF || data.cronogramaUF.length === 0) {
+                container.innerHTML = '<p class="loading">No hay datos de plazos disponibles</p>';
+                return;
+            }
+
+            // Filtrar solo UFs críticas (menos de 180 días)
+            const ufsCriticas = data.cronogramaUF
+                .map(uf => ({
+                    ...uf,
+                    diasRestantes: getDaysRemaining(uf.fechaMax)
+                }))
+                .filter(uf => uf.diasRestantes < 180)
+                .sort((a, b) => a.diasRestantes - b.diasRestantes);
+
+            if (ufsCriticas.length === 0) {
+                container.innerHTML = '<p class="loading">✅ No hay UFs críticas en este momento</p>';
+                return;
+            }
+
+            let html = '<table class="uf-table"><thead><tr>';
+            html += '<th>UF</th>';
+            html += '<th>Plazo (meses)</th>';
+            html += '<th>Fecha Máxima</th>';
+            html += '<th>Días Restantes</th>';
+            html += '<th>Estado</th>';
+            html += '</tr></thead><tbody>';
+
+            ufsCriticas.forEach(uf => {
+                const statusClass = getStatusClass(uf.diasRestantes);
+                const statusEmoji = getStatusEmoji(uf.diasRestantes);
+                const diasText = uf.diasRestantes >= 0
+                    ? `${uf.diasRestantes} días`
+                    : `${Math.abs(uf.diasRestantes)} días vencidos`;
+
+                html += '<tr>';
+                html += `<td><strong>${uf.uf}</strong></td>`;
+                html += `<td>${uf.plazoMeses} meses</td>`;
+                html += `<td>${formatDate(uf.fechaMax)}</td>`;
+                html += `<td>${diasText}</td>`;
+                html += `<td><span class="${statusClass}">${statusEmoji} ${uf.diasRestantes < 0 ? 'Vencida' : uf.diasRestantes < 90 ? 'Urgente' : 'En plazo'}</span></td>`;
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>

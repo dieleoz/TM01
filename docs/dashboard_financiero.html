@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Control Financiero - TM01</title>
+    <link rel="stylesheet" href="css/tm01-design-system.css">
+    <style>
+        body {
+            background: var(--bg-main);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .role-header {
+            background: linear-gradient(135deg, var(--role-financial), var(--tm01-primary));
+            color: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .role-header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+        }
+
+        .role-header p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--role-financial);
+        }
+
+        .metric-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .metric-content {
+            flex: 1;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--role-financial);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .metric-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--tm01-primary);
+            margin: 0 0 1.5rem 0;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .quick-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all var(--transition-base);
+        }
+
+        .quick-link:hover {
+            background: var(--bg-surface);
+            border-color: var(--role-financial);
+            transform: translateX(4px);
+        }
+
+        .quick-link-icon {
+            font-size: 1.5rem;
+        }
+
+        .quick-link-content {
+            flex: 1;
+        }
+
+        .quick-link-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .quick-link-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .quick-link-arrow {
+            color: var(--role-financial);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .pareto-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .pareto-table th {
+            background: var(--tm01-primary);
+            color: white;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .pareto-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+
+        .pareto-table tr:hover {
+            background: var(--bg-hover);
+        }
+
+        .pareto-bar {
+            height: 20px;
+            background: linear-gradient(90deg, var(--role-financial), var(--tm01-accent));
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-base);
+        }
+
+        .pareto-bar:hover {
+            transform: scaleX(1.02);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="WBS_Menu_Principal.html" class="tm01-back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Volver al Inicio
+    </a>
+
+    <div class="container">
+        <div class="role-header">
+            <h1>💰 Dashboard Control Financiero</h1>
+            <p>Vista especializada para CAPEX, análisis Pareto y control presupuestal</p>
+        </div>
+
+        <!-- Métricas Clave -->
+        <div class="dashboard-grid" id="metricsGrid">
+            <div class="loading">⏳ Cargando métricas...</div>
+        </div>
+
+        <!-- Análisis Pareto -->
+        <div class="section">
+            <h2 class="section-title">📊 Análisis Pareto - Top Sistemas por CAPEX</h2>
+            <div id="paretoTable">
+                <div class="loading">⏳ Cargando análisis...</div>
+            </div>
+        </div>
+
+        <!-- Accesos Rápidos -->
+        <div class="section">
+            <h2 class="section-title">🔗 Accesos Rápidos</h2>
+            <div class="quick-links">
+                <a href="presupuesto.html" class="quick-link">
+                    <div class="quick-link-icon">💰</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Presupuesto Detallado</div>
+                        <div class="quick-link-desc">Cantidades, precios y AIU/IVA</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="reporte_gerencial.html" class="quick-link">
+                    <div class="quick-link-icon">📊</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Reporte Gerencial</div>
+                        <div class="quick-link-desc">Vista ejecutiva financiera</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="gestion_cambios.html" class="quick-link">
+                    <div class="quick-link-icon">🔄</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Gestión de Cambios</div>
+                        <div class="quick-link-desc">Control de modificaciones presupuestales</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="wbs.html" class="quick-link">
+                    <div class="quick-link-icon">🗂️</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">WBS Maestra</div>
+                        <div class="quick-link-desc">Estructura de costos</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="cronograma.html" class="quick-link">
+                    <div class="quick-link-icon">📅</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Cronograma Maestro</div>
+                        <div class="quick-link-desc">Flujo de caja proyectado</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+
+                <a href="analisis_riesgos.html" class="quick-link">
+                    <div class="quick-link-icon">⚠️</div>
+                    <div class="quick-link-content">
+                        <div class="quick-link-title">Análisis de Riesgos</div>
+                        <div class="quick-link-desc">Riesgos financieros</div>
+                    </div>
+                    <div class="quick-link-arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/tm01_master_data.js"></script>
+    <script src="js/dashboard-common.js"></script>
+    <script>
+        waitForData((data) => {
+            if (!data) {
+                document.getElementById('metricsGrid').innerHTML = '<div class="loading">❌ Error cargando datos</div>';
+                document.getElementById('paretoTable').innerHTML = '<div class="loading">❌ Error cargando datos</div>';
+                return;
+            }
+
+            renderMetrics(data);
+            renderPareto(data);
+        });
+
+        function renderMetrics(data) {
+            const container = document.getElementById('metricsGrid');
+
+            const totalUSD = data.totales ? data.totales.totalUSD : 0;
+            const totalCOP = data.totales ? data.totales.totalCOP : 0;
+            const trmOficial = data.totales ? data.totales.TRM_OFICIAL : 0;
+
+            // Calcular AIU estimado (33% sobre items de OBRA)
+            let totalObra = 0;
+            if (data.wbs) {
+                data.wbs.filter(i => i.tipo === 'item' && i.tipoPresupuestal === 'OBRA').forEach(item => {
+                    const totalCOP = parseFloat((item.totalCOP || '0').replace(/,/g, ''));
+                    totalObra += totalCOP;
+                });
+            }
+            const aiuEstimado = totalObra * 0.33;
+
+            container.innerHTML = `
+                ${createMetricCard('CAPEX Total USD', formatUSD(totalUSD), `TRM: ${formatNumber(trmOficial)}`, '💵')}
+                ${createMetricCard('CAPEX Total COP', formatCOP(totalCOP), 'Valores certificados', '💰')}
+                ${createMetricCard('AIU Estimado', formatCOP(aiuEstimado), '33% sobre OBRA', '📈')}
+                ${createMetricCard('Sistemas', data.wbs ? new Set(data.wbs.filter(i => i.tipo === 'item').map(i => i.sistema)).size : 0, 'Líneas de inversión', '⚙️')}
+            `;
+        }
+
+        function renderPareto(data) {
+            const container = document.getElementById('paretoTable');
+
+            if (!data.wbs) {
+                container.innerHTML = '<div class="loading">No hay datos disponibles</div>';
+                return;
+            }
+
+            const topSystems = getTopSystems(data.wbs, 5);
+            const totalCAPEX = topSystems.reduce((sum, s) => sum + s.total, 0);
+
+            // Calcular porcentajes
+            let accumulated = 0;
+            topSystems.forEach(s => {
+                s.percentage = (s.total / totalCAPEX) * 100;
+                accumulated += s.percentage;
+                s.accumulated = accumulated;
+            });
+
+            let html = '<table class="pareto-table"><thead><tr>';
+            html += '<th>Sistema</th>';
+            html += '<th style="text-align: right;">CAPEX (COP)</th>';
+            html += '<th style="text-align: right;">% Individual</th>';
+            html += '<th style="text-align: right;">% Acumulado</th>';
+            html += '<th style="width: 200px;">Distribución</th>';
+            html += '</tr></thead><tbody>';
+
+            topSystems.forEach(s => {
+                html += '<tr>';
+                html += `<td><strong>${s.sistema}</strong></td>`;
+                html += `<td style="text-align: right;">${formatCOP(s.total)}</td>`;
+                html += `<td style="text-align: right;">${s.percentage.toFixed(1)}%</td>`;
+                html += `<td style="text-align: right;">${s.accumulated.toFixed(1)}%</td>`;
+                html += `<td><div class="pareto-bar" style="width: ${s.percentage}%"></div></td>`;
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
