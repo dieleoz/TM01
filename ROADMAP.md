@@ -44,7 +44,41 @@
 
 ### 🔴 PRIORIDAD ALTA
 
-#### 1. ACTUALIZAR PROMPT_MAESTRO_V3.0 CON MEJORAS OPERATIVAS
+#### 1. GENERAR DICTÁMENES PARA 12 SUBSISTEMAS RESTANTES (NUEVO)
+
+**Ubicación:** `VII. Documentos Transversales/`
+
+**Subsistemas pendientes:**
+
+| Sistema | Cantidad | CAPEX (USD) | Prioridad | Complejidad |
+|:--------|:---------|:------------|:----------|:------------|
+| SOS | 88 postes | $2,200,000 | 🔴 Alta | ⭐⭐⭐ |
+| PMV | 39 unidades | $2,360,000 | 🔴 Alta | ⭐⭐⭐ |
+| PEAJE | 2 estaciones | $1,890,219 | 🔴 Alta | ⭐⭐⭐⭐ |
+| WIM | 2 estaciones | $551,000 | 🟡 Media | ⭐⭐ |
+| FIBRA | 293 km | $1,500,000 | 🟡 Media | ⭐⭐ |
+| CCO | 1 centro | $800,000 | 🟡 Media | ⭐⭐ |
+| ENERGÍA | Solar/Red | $600,000 | 🟢 Baja | ⭐⭐ |
+| SWITCHES | 15 equipos | $450,000 | 🟢 Baja | ⭐ |
+| SEÑALIZACIÓN | Vertical | $300,000 | 🟢 Baja | ⭐ |
+| METEO | 2 estaciones | $7,800 | 🟢 Baja | ⭐ |
+| GALIBOS | 4 detectores | $120,000 | 🟢 Baja | ⭐ |
+| RADIO | 0 (eliminado) | $0 | 🟢 Baja | ⭐ |
+
+**Proceso por subsistema:**
+1. Crear `DICTAMEN_JURIDICO_[SISTEMA]_v1.0.md` con marcadores HTML
+2. Ejecutar `.\scripts\generar_validaciones_modular.ps1`
+3. Validar archivos JS y HTML generados
+4. Probar en navegador (`justificacion_alcance.html`)
+5. Commit a Git
+
+**Guía completa:** Ver `GUIA_AGENTE_DICTAMENES.md` en artifacts
+
+**Tiempo estimado:** 17.5 horas (12 subsistemas)
+
+---
+
+#### 2. ACTUALIZAR PROMPT_MAESTRO_V3.0 CON MEJORAS OPERATIVAS
 
 **Archivo:** `docs/PROMPT_MAESTRO_V3.0_METODOLOGIA_TM01.md`
 
@@ -212,20 +246,20 @@ sosSummary: {
 
 ## 🎯 PRÓXIMOS PASOS INMEDIATOS
 
-1. **HOY (27-Ene):**
-   - ✅ Actualizar PROMPT_MAESTRO_V3.0 con mejoras
-   - ✅ Actualizar README.md con metodología
-   - [ ] Validar SOS con PROMPT MAESTRO
-   - [ ] Validar CCTV con PROMPT MAESTRO
+1. **HOY (28-Ene):**
+   - ✅ Sistema de Validaciones Modular v2.0 implementado
+   - ✅ Piloto CCTV validado
+   - ✅ Guía para agente creada
+   - [ ] Generar dictámenes: SOS, PMV, PEAJE
 
-2. **MAÑANA (28-Ene):**
-   - [ ] Validar Peajes con PROMPT MAESTRO
-   - [ ] Sincronizar master_data.js
-   - [ ] Actualizar RFQs
+2. **MAÑANA (29-Ene):**
+   - [ ] Generar dictámenes: WIM, FIBRA, CCO
+   - [ ] Generar dictámenes: ENERGÍA, SWITCHES, SEÑALIZACIÓN
+   - [ ] Validar todos en navegador
 
-3. **PASADO MAÑANA (29-Ene):**
-   - [ ] Documentar casos de estudio
-   - [ ] Verificación final frontend
+3. **PASADO MAÑANA (30-Ene):**
+   - [ ] Generar dictámenes: METEO, GALIBOS, RADIO
+   - [ ] Verificación final de 13 subsistemas
    - [ ] Commit y push final
 
 ---
@@ -247,6 +281,8 @@ sosSummary: {
 
 ---
 
-**Última actualización:** 27 de Enero 2026  
+**Última actualización:** 28 de Enero 2026 - 18:30  
 **Responsable:** Equipo Técnico TM01  
-**Estado:** 🟢 **ROADMAP ACTIVO** - Focused on PROMPT MAESTRO Implementation
+**Estado:** 🟢 **ROADMAP ACTIVO** - Sistema de Validaciones Modular Implementado  
+**Session 11:** ✅ Completada - CCTV Piloto Validado + Guía para 12 Subsistemas Restantes
+
