@@ -18,7 +18,7 @@ La **Metodología Punto 42** no es solo una forma de organizar archivos; es un *
 
 ---
 
-## 🏛️ ARQUITECTURA DE 4 CAPAS (DATA PIPELINE)
+## 🏛️ ARQUITECTURA DE 5 CAPAS (DATA PIPELINE)
 
 La metodología se implementa sobre una arquitectura técnica estricta que transforma documentos legales en tableros de control vivos.
 

@@ -223,6 +223,68 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 
 ---
 
+## 🔍 VALIDACIÓN CRUZADA DE COHERENCIA
+
+### Objetivo
+Verificar que TODOS los documentos maestros tengan información coherente y actualizada, evitando inconsistencias entre fuentes.
+
+### A. Coherencia de Arquitectura
+- [ ] **README.md** menciona "5 Capas" (NO "4 Capas")
+- [ ] **ARCHITECTURE.md** menciona "5 Capas"
+- [ ] **00_METODOLOGIA_PUNTO_42_v3.0.md** título dice "ARQUITECTURA DE 5 CAPAS"
+- [ ] Todos los diagramas incluyen Layer 5 (Services)
+- [ ] **README.md** versión: 5.0 (NO 4.1 o anterior)
+
+### B. Coherencia de Datos Hard Deck (Cross-Check)
+Verificar que TODOS los documentos tengan los MISMOS valores certificados de T05:
+
+| Sistema | T05 (Fuente de Verdad) | INDICE_MAESTRO | VALIDATION_PROMPT | README | Estado |
+|:--------|:-----------------------|:---------------|:------------------|:-------|:-------|
+| **CCTV** | 9 cámaras / $116,100 | ✅ Verificar | ✅ Línea 73 | ✅ Verificar | Debe coincidir |
+| **PMV** | 39 paneles / $2,360,000 | ✅ Verificar | ✅ Línea 74 | ✅ Verificar | Debe coincidir |
+| **SOS** | 88 nuevos (98 total) / $2,200,000 | ✅ Verificar | ✅ Línea 75 | ✅ Verificar | Debe coincidir |
+| **Peajes** | 14 carriles / $1,890,219 | ✅ Verificar | ✅ Línea 76 | ✅ Verificar | Debe coincidir |
+| **WIM** | 1 estación / $551,000 | ✅ Verificar | ✅ Línea 77 | ✅ Verificar | Debe coincidir |
+
+**Fuentes de Verdad (en orden de prioridad):**
+1. **T05 (Ingeniería de Detalle)** - Carpeta `V. Ingenieria de Detalle/`
+2. **tm01_master_data.js** - Archivo `docs/data/tm01_master_data.js`
+3. **INDICE_MAESTRO_PROYECTO.md** - Sincronizado con T05
+
+### C. Coherencia de Versiones y Fechas
+- [ ] **README.md** - Versión 5.0 / Fecha: 28-Ene-2026
+- [ ] **LECCIONES_APRENDIDAS.md** - Versión 3.0 en TODAS las secciones (encabezado y footer)
+- [ ] **VALIDATION_PROMPT_AGENT_3.md** - Versión 3.1 / Fecha: 28-Ene-2026
+- [ ] **INDICE_MAESTRO_PROYECTO.md** - Fecha actualizada
+- [ ] Todos los documentos maestros tienen fecha 27-28 Ene 2026
+
+### D. Coherencia de Metodología
+- [ ] Todos mencionan "Metodología Punto 42 v3.0"
+- [ ] Todos mencionan "Contract-First Architecture"
+- [ ] Todos mencionan "5 Capas" (NO "4 Capas")
+- [ ] Todos mencionan "Layer 5 (Services)" cuando aplique
+
+### E. Coherencia de Alcance Contractual
+- [ ] **Cable Radiante (Leaky Feeder):** ❌ NO APLICA (proyecto sin túneles)
+- [ ] **DT-TM01-RADIO-001.md** incluye verificación de alcance
+- [ ] **DICTAMEN_CABLE_RADIANTE_NO_APLICA.md** existe y está actualizado
+- [ ] Todos los documentos reflejan que NO hay túneles en el proyecto
+
+### Procedimiento de Validación Cruzada
+1. **Leer T05** para obtener valores oficiales
+2. **Comparar** con INDICE_MAESTRO_PROYECTO.md
+3. **Comparar** con VALIDATION_PROMPT_AGENT_3.md (este documento)
+4. **Comparar** con README.md
+5. **Reportar** cualquier discrepancia encontrada
+6. **Corregir** usando T05 como fuente de verdad
+
+### Criterio de Aprobación
+✅ **APROBADO:** Todos los valores coinciden entre documentos  
+❌ **RECHAZADO:** Cualquier discrepancia encontrada
+
+---
+
+
 **Agent 3 Validation Protocol**  
 **Version:** 3.1 (Layer 5 + Production + Audit 6.0 Certified Values)  
 **Last Updated:** 28 de Enero 2026  

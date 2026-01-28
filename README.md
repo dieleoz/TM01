@@ -35,7 +35,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 2. **Optimización Arquitectónica:** Diseños eficientes y constructibles
 3. **Validación Rigurosa:** 100% de sistemas validados contractualmente
 4. **Metodología Sistemática:** Proceso genérico aplicable a cualquier equipo/sistema
-5. **Arquitectura unificada:** 5 capas (Fuentes de Verdad → DTs → Ingeniería → Motor Datos → Visualización/Entrega)
+5. **Arquitectura unificada:** 5 capas (Fuentes de Verdad → DTs → Ingeniería → Motor Datos → Services/Entrega)
 6. **Sistema Web Operativo:** Interfaces HTML interactivas con propagación automática
 
 ### 📊 Estado Actual del Proyecto
@@ -336,7 +336,7 @@ El proyecto TM01 utiliza la metodología **PROMPT MAESTRO V3.0**, un enfoque sis
 - ✅ **Fuente única de verdad:** `tm01_master_data.js` centraliza todos los datos
 - ✅ **Propagación automática:** Cambios se reflejan en todas las interfaces
 - ✅ **Sincronización en tiempo real:** ~3 segundos de actualización
-- ✅ **Estructura robusta:** Basada en arquitectura de 4 capas
+- ✅ **Estructura robusta:** Basada en arquitectura de 5 capas
 
 ### 2. Scripts de Sincronización Automática
 - ✅ **sync_wbs_tm01.ps1**: Sincronización WBS Inteligente (Ignora detalles, captura Tipos)
@@ -516,6 +516,15 @@ powershell -ExecutionPolicy Bypass -File "scripts/Fix-HtmlEncoding.ps1"
 
 ## 📝 HISTORIAL DE VERSIONES
 
+### v5.0 (28-Ene-2026) - Layer 5 (Services) Implementado
+- ✅ **Layer 5 (Services):** Automatización completa de entregables
+- ✅ **cocinar_rfqs.ps1:** Regeneración automática de 9 RFQs desde T05
+- ✅ **cocinar_ejecutivos.ps1:** Generación de HTMLs ejecutivos
+- ✅ **Arquitectura 5 Capas:** Metodología Punto 42 v3.0 completa
+- ✅ **Certificación Audit 6.0:** Valores Hard Deck certificados contra T05
+- ✅ **Dictamen Forense:** Cable Radiante NO APLICA (sin túneles)
+- ✅ **Coherencia de Datos:** Sincronización completa INDICE/VALIDATION/T05
+
 ### v4.1 (05-Dic-2025) - Sincronización Automática
 - ✅ **Parser automático de T01/T03:** Extrae valores CAPEX desde documentos fuente
 - ✅ **Servidor web mejorado:** Sincroniza automáticamente antes de servir
@@ -537,7 +546,7 @@ powershell -ExecutionPolicy Bypass -File "scripts/Fix-HtmlEncoding.ps1"
 
 ### v3.0 (28-Oct-2025)
 - ✅ Sistema de validación web completado
-- ✅ Arquitectura 4 capas operativa
+- ✅ Arquitectura 5 capas operativa (Layer 5: Services)
 - ✅ Scripts de sincronización automática
 
 ---
