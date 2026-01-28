@@ -17,3 +17,26 @@ Cambiar el modelo de cumplimiento del Sistema de Información al Usuario (Radio 
 
 ## Estado
 ✅ APROBADO (Estrategia "Hard Deck" / Auditoría 6.0).
+
+---
+
+## 🔍 VERIFICACIÓN DE ALCANCE (28-Ene-2026)
+
+**Pregunta de Auditoría:** ¿Se requiere Cable Radiante (Leaky Feeder) para cobertura en túneles?
+
+**Respuesta:** ❌ **NO APLICA**
+
+**Evidencia Contractual:**
+- ✅ **AT1 (Alcance):** Tablas UF1-UF13 describen "vías a cielo abierto, puentes y viaductos" - **0 menciones de túneles**
+- ✅ **AT2 (Operación):** Sección 3.3.3.2.3 requiere cobertura de radio FM - **NO menciona túneles**
+- ✅ **AT3 (Especificaciones):** Capítulo III trata "Puentes, Viaductos y Otras Estructuras" - **NO hay capítulo de túneles**
+
+**Conclusión Técnica:**
+El trazado del proyecto TM01 es **100% a cielo abierto (Open Sky)** o pasos a desnivel menores (< 50 m), por lo que:
+- ✅ La señal de radio comercial penetra naturalmente
+- ✅ **NO se requiere infraestructura de re-radiación** (Leaky Feeder, amplificadores de túnel)
+- ✅ El modelo OpEx (convenios de difusión) es **suficiente y contractualmente válido**
+
+**Fuente:** Apéndice Técnico 1, Tablas UF1-UF13 (Características Geométricas)  
+**Dictamen Forense:** Ver `DICTAMEN_CABLE_RADIANTE_NO_APLICA.md`  
+**CAPEX Cable Radiante:** **$0 USD** (NO APLICA)
