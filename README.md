@@ -27,7 +27,7 @@
 
 ## 📋 RESUMEN EJECUTIVO
 
-Este repositorio contiene la **documentación completa de ingeniería EPC** para el proyecto **TM01 Troncal Magdalena** (293 km), estructurada bajo un **Marco de Gestión de Proyectos (MGP)** alineado con las mejores prácticas del PMI y **Metodología Punto 42**, implementando un **Sistema de Validación Web con Arquitectura Dinámica de 4 Capas**.
+Este repositorio contiene la **documentación completa de ingeniería EPC** para el proyecto **TM01 Troncal Magdalena** (293 km), estructurada bajo un **Marco de Gestión de Proyectos (MGP)** alineado con las mejores prácticas del PMI y **Metodología Punto 42 v3.0**, implementando un **Sistema de Validación Web con Arquitectura Dinámica de 5 Capas** (incluyendo Layer 5: Services para automatización de entregables).
 
 ### 🎯 Objetivos Principales
 
@@ -35,7 +35,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 2. **Optimización Arquitectónica:** Diseños eficientes y constructibles
 3. **Validación Rigurosa:** 100% de sistemas validados contractualmente
 4. **Metodología Sistemática:** Proceso genérico aplicable a cualquier equipo/sistema
-5. **Arquitectura unificada:** 4 capas (Master → PS1 → JS → HTML)
+5. **Arquitectura unificada:** 5 capas (Fuentes de Verdad → DTs → Ingeniería → Motor Datos → Visualización/Entrega)
 6. **Sistema Web Operativo:** Interfaces HTML interactivas con propagación automática
 
 ### 📊 Estado Actual del Proyecto
@@ -46,7 +46,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 - ✅ **Documentación Técnica:** 85+ documentos generados
 - ✅ **Sistema Web:** 8 interfaces HTML operativas
 - ✅ **Scripts de Sincronización:** 4/4 scripts funcionando
-- ✅ **Arquitectura 4 Capas:** Implementada y operativa
+- ✅ **Arquitectura 5 Capas:** Implementada y operativa (Layer 5: Services)
 - ✅ **Merge Bidireccional:** Sistema 3-vías funcional
 - ✅ **Testing Automatizado:** Framework Pester implementado
 
@@ -61,7 +61,7 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 
 ## 🏗️ ARQUITECTURA DEL SISTEMA
 
-### Arquitectura en 4 Capas
+### Arquitectura en 5 Capas (Metodología Punto 42 v3.0)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -78,8 +78,8 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 ├─────────────────────────────────────────────────────────────────┤
 │  • tm01_master_data.js (Fuente única de datos)                 │
 │  • Scripts de sincronización automática                         │
-│  • Generadores de DTs                                           │
-│  • Módulos reutilizables                                        │
+│  • cocinar_rfqs.ps1 ⭐ LAYER 5                                  │
+│  • cocinar_ejecutivos.ps1 ⭐ LAYER 5                            │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
@@ -106,7 +106,18 @@ Este repositorio contiene la **documentación completa de ingeniería EPC** para
 │                                                                 │
 │  ✅ Sistema operativo con propagación automática de cambios     │
 └─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  CAPA 5: SERVICIOS (Del Horno al Plato) ⭐ NUEVO               │
+├─────────────────────────────────────────────────────────────────┤
+│  • RFQs auto-generados (9 documentos con bloques automáticos)  │
+│  • Ejecutivos HTML (generados desde T01)                       │
+│  • Certificación automática de compras                         │
+│  • README de regeneración (X_ENTREGABLES_CONSOLIDADOS/)        │
+│                                                                 │
+│  ✅ Automatización completa: T05 → RFQs en ~6 segundos          │
 └─────────────────────────────────────────────────────────────────┘
+```
       │                                                           ↑
       │                                                           │
       ▼                                                           │
