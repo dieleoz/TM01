@@ -301,14 +301,18 @@
     </div>
 
     <!-- MODAL TEMPLATE -->
-    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
-        <div class="modal" id="modalContent" onclick="event.stopPropagation()">
+    <div class="modal-overlay" id="validationModal" style="display:none;">
+        <div class="modal" onclick="event.stopPropagation()">
             <div class="modal-header">
-                <h2 id="mTitle">Sistema</h2>
-                <button class="modal-close" onclick="closeModal()">×</button>
+                <h2 id="modalTitle">Sistema</h2>
+                <button class="modal-close" onclick="closeValidacionModal()">×</button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" id="modalContent">
                 <!-- Dynamic Content Loads Here -->
+            </div>
+            <div class="modal-footer" id="modalActions"
+                style="padding: 16px; border-top: 1px solid var(--border); display: flex; gap: 8px; justify-content: flex-end;">
+                <!-- Action buttons load here -->
             </div>
         </div>
     </div>
@@ -316,8 +320,7 @@
     <!-- 1. Master Data -->
     <script src="data/tm01_master_data.js"></script>
 
-    <!-- 2. Validation Content (Generated from MD files) -->
-    <script src="data/validaciones_content.js"></script>
+    <!-- 2. Validation Content - Loaded dynamically per system -->
 
     <!-- 3. Libraries -->
     <script src="js/lib/kramed.js"></script>

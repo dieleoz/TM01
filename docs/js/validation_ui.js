@@ -1,10 +1,10 @@
 /**
- * validation_ui.js - Logic for Validation Dashboard
- * Dependencies: tm01_master_data.js, validaciones_content.js, kramed.js
+ * validation_ui.js v2.0 - Logic for Validation Dashboard with Dynamic Loading
+ * Dependencies: tm01_master_data.js, kramed.js
+ * Loads validation files dynamically per subsystem
  */
 
 // Static Metadata for Systems (Icons, Labels)
-// Falls back to Master Data if not present
 const SYSTEM_METADATA = {
     'CCTV': { icon: '📹', label: 'CCTV' },
     'PMV': { icon: '📟', label: 'PMV' },
@@ -21,9 +21,58 @@ const SYSTEM_METADATA = {
     'ENERGIA': { icon: '⚡', label: 'Energía' }
 };
 
+// Cache for loaded validations
+const validationCache = {};
+
 document.addEventListener('DOMContentLoaded', () => {
     renderValidationTable();
+
+    // Visual Feedback for Role
+    const urlParams = new URLSearchParams(window.location.search);
+    const role = urlParams.get('role');
+    if (role) {
+        const headerSmall = document.querySelector('.header small');
+        if (headerSmall) {
+            let roleName = role.charAt(0).toUpperCase() + role.slice(1);
+            headerSmall.innerHTML += ` <span style="background:var(--accent); color:white; padding:2px 6px; border-radius:4px; font-size:0.8em; margin-left:10px;">Vista ${roleName}</span>`;
+        }
+    }
 });
+
+/**
+ * Load validation file for a specific system dynamically
+ * @param {string} sistema - System code (e.g., 'CCTV', 'SOS')
+ * @returns {Promise<Object>} - Validation object with full, contractual, technical, financial, risks
+ */
+async function loadValidacionSistema(sistema) {
+    // Check cache first
+    if (validationCache[sistema]) {
+        return validationCache[sistema];
+    }
+
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = `data/validaciones/validaciones_${sistema}.js?v=${Date.now()}`;
+
+        script.onload = () => {
+            // The file exposes window.validaciones_[SISTEMA]
+            const validaciones = window[`validaciones_${sistema}`];
+            if (validaciones) {
+                validationCache[sistema] = validaciones;
+                resolve(validaciones);
+            } else {
+                reject(new Error(`Validation data for ${sistema} not found`));
+            }
+        };
+
+        script.onerror = () => {
+            console.warn(`No validation file found for ${sistema}`);
+            resolve(null); // Return null instead of rejecting
+        };
+
+        document.head.appendChild(script);
+    });
+}
 
 function renderValidationTable() {
     const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
@@ -42,7 +91,6 @@ function renderValidationTable() {
     Object.keys(md.data).forEach(k => {
         if (k.includes('Summary')) {
             const obj = md.data[k];
-            // Normalize Key: 'cctvSummary' -> 'CCTV' or use obj.sistema
             const sysCode = obj.sistema ? obj.sistema.split(' ')[0].toUpperCase() : k.replace('Summary', '').toUpperCase();
 
             // Map common aliases
@@ -61,127 +109,129 @@ function renderValidationTable() {
         }
     });
 
-    // 2. Load Validations
-    const validations = window.validacionesData || {};
+    // 2. Render table with "Loading..." status initially
     let html = '';
-
     systemEntries.forEach(entry => {
         const sysKey = entry.sysCode;
-
-        // Flexible Match for Validations
-        // Check if the validation object has a key that matches this system
-        // E.g. 'PEAJES' in validations matches 'PEAJE' in system
-        let valKey = Object.keys(validations).find(k =>
-            k.toUpperCase().includes(sysKey) || sysKey.includes(k.toUpperCase())
-        );
-
-        // Special override for known mismatches if needed
-        if (!valKey && sysKey === 'PEAJE') valKey = 'PEAJES';
-        if (!valKey && sysKey === 'ETD') valKey = 'ETD';
-
-        const hasValidation = !!(valKey && validations[valKey]);
-
-        const statusTag = hasValidation
-            ? `<div class="tag tag-ok">✅ Documentado</div>`
-            : `<div class="tag tag-warn">⚠️ Pendiente</div>`;
-
-        // Icon Resolution
         const meta = SYSTEM_METADATA[sysKey] || { icon: '⚙️', label: entry.originalLabel };
 
-        const isDeleted = entry.status === 'Eliminado';
-        const opacity = isDeleted ? '0.5' : '1';
-
-        // Pass the resolved Validation Key or the System Code
-        const modalKey = valKey || sysKey;
-
         html += `
-        <tr onclick="openValidationModal('${modalKey}')" style="opacity:${opacity}; cursor:pointer;">
+        <tr id="row-${sysKey}">
+            <td>${meta.icon}</td>
+            <td><strong>${meta.label}</strong></td>
+            <td>${entry.qty || 'N/A'}</td>
+            <td>$${(entry.capex || 0).toLocaleString('en-US')}</td>
+            <td><div class="tag tag-loading">⏳ Cargando...</div></td>
             <td>
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:1.5rem; background:#eff6ff; padding:8px; border-radius:8px;">${meta.icon}</span>
-                    <div>
-                        <div style="font-weight:700; color:var(--primary);">${entry.originalLabel}</div>
-                        <small style="color:var(--text-light)">${entry.status || 'Activo'}</small>
-                    </div>
-                </div>
-            </td>
-            <td>
-                <span style="font-size:1.1rem; font-weight:700;">${entry.qty}</span>
-            </td>
-            <td>
-                <div style="color:var(--text-main); font-size:0.9rem;">${hasValidation ? 'Ver Expediente Completo' : 'Sin validación cargada'}</div>
-            </td>
-            <td>
-                ${statusTag}
-            </td>
-            <td style="text-align:right;">
-                <span class="expand-hint">Abrir ↗</span>
+                <button class="btn-action" onclick="openValidacionModal('${sysKey}')" disabled>
+                    Abrir
+                </button>
             </td>
         </tr>
         `;
     });
 
     tbody.innerHTML = html;
+
+    // 3. Load validations asynchronously
+    systemEntries.forEach(async (entry) => {
+        const sysKey = entry.sysCode;
+        const row = document.getElementById(`row-${sysKey}`);
+        if (!row) return;
+
+        try {
+            const validaciones = await loadValidacionSistema(sysKey);
+            const hasValidation = !!validaciones;
+
+            // Update status tag
+            const statusCell = row.cells[4];
+            statusCell.innerHTML = hasValidation
+                ? `<div class="tag tag-ok">✅ Documentado</div>`
+                : `<div class="tag tag-warn">⚠️ Pendiente</div>`;
+
+            // Enable button if validation exists
+            const button = row.querySelector('.btn-action');
+            if (hasValidation) {
+                button.disabled = false;
+            }
+        } catch (error) {
+            console.error(`Error loading validation for ${sysKey}:`, error);
+            const statusCell = row.cells[4];
+            statusCell.innerHTML = `<div class="tag tag-warn">⚠️ Pendiente</div>`;
+        }
+    });
 }
 
-function openValidationModal(sysKey) {
-    // 1. Find Data (Validation Content)
-    const valData = (window.validacionesData && window.validacionesData[sysKey]) ? window.validacionesData[sysKey] : null;
+/**
+ * Open validation modal for a system
+ * @param {string} sistema - System code
+ */
+async function openValidacionModal(sistema) {
+    try {
+        const validaciones = await loadValidacionSistema(sistema);
 
-    // 2. Find Metadata (Master Data Summary)
-    const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : { data: {} };
-    // Try to find the MD entry that matches this key
-    const summaryEntry = Object.values(md.data).find(v => (v.sistema && v.sistema.toUpperCase().includes(sysKey.toUpperCase())));
+        if (!validaciones) {
+            alert(`No hay dictamen disponible para ${sistema}`);
+            return;
+        }
 
-    // 3. Set Header Info
-    const titleEl = document.getElementById('mTitle');
-    const systemName = summaryEntry ? summaryEntry.sistema : sysKey;
-    titleEl.innerHTML = `📄 ${systemName}`;
+        // Get role from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const role = urlParams.get('role') || 'full';
 
-    // 4. Render Content
-    const bodyContainer = document.querySelector('.modal-body');
+        // Get content for role
+        const contenido = validaciones[role] || validaciones.full;
 
-    if (valData) {
+        // Render modal
+        const modal = document.getElementById('validationModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const modalActions = document.getElementById('modalActions');
+
+        modalTitle.textContent = `Validación: ${SYSTEM_METADATA[sistema]?.label || sistema}`;
+
         // Render Markdown content
-        const markdownContent = valData.full || valData.contractual || "## Sin contenido detallado.";
-        const renderedHtml = kramed(markdownContent);
+        if (typeof marked !== 'undefined') {
+            modalContent.innerHTML = marked.parse(contenido);
+        } else {
+            modalContent.innerHTML = `<pre>${contenido}</pre>`;
+        }
 
-        bodyContainer.innerHTML = `
-            <div class="full-doc-view" style="padding: 24px; background: #fff;">
-                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 12px; border-radius: 6px; margin-bottom: 24px; font-size: 13px;">
-                    <strong>✅ Documento de Validación Oficial</strong><br>
-                    Mostrando expediente completo unificado.
-                </div>
-                <div class="markdown-body">
-                    ${renderedHtml}
-                </div>
-            </div>
+        // Add action buttons
+        modalActions.innerHTML = `
+            <button class="btn-secondary" onclick="closeValidacionModal()">Cerrar</button>
+            <button class="btn-primary" onclick="openDictamenCompleto('${sistema}')">
+                📄 Ver Dictamen Completo (HTML)
+            </button>
         `;
-    } else {
-        // Fallback for missing data
-        bodyContainer.innerHTML = `
-            <div style="padding: 40px; text-align: center; color: #64748b;">
-                <div style="font-size: 3rem; margin-bottom: 20px;">⚠️</div>
-                <h3>Información de Validación No Disponible</h3>
-                <p>No se encontró el archivo de validación para <strong>${sysKey}</strong>.</p>
-                <br>
-                <div style="text-align:left; background:#f8fafc; padding:20px; border-radius:8px; display:inline-block;">
-                    <strong>Datos Maestros:</strong><br>
-                    Cantidad: ${summaryEntry ? summaryEntry.cantidad : '-'}<br>
-                    CAPEX: ${summaryEntry ? '$' + (summaryEntry.capexUSD || 0).toLocaleString() : '-'}<br>
-                </div>
-            </div>
-        `;
+
+        modal.style.display = 'block';
+    } catch (error) {
+        console.error('Error opening modal:', error);
+        alert('Error al cargar la validación');
     }
-
-    // Show Overlay
-    document.getElementById('modalOverlay').style.display = 'flex';
 }
 
-function closeModal() {
-    document.getElementById('modalOverlay').style.display = 'none';
+/**
+ * Open complete HTML dictamen in new tab
+ * @param {string} sistema - System code
+ */
+function openDictamenCompleto(sistema) {
+    window.open(`dictamenes/DICTAMEN_JURIDICO_${sistema}.html`, '_blank');
 }
-// Expose functions globally for HTML
-window.renderValidationTable = renderValidationTable;
-window.openValidationModal = openValidationModal;
-window.closeModal = closeModal;
+
+/**
+ * Close validation modal
+ */
+function closeValidacionModal() {
+    const modal = document.getElementById('validationModal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function (event) {
+    const modal = document.getElementById('validationModal');
+    if (event.target === modal) {
+        closeValidacionModal();
+    }
+};

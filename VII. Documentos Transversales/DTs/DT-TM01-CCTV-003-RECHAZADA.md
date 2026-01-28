@@ -1,3 +1,9 @@
+# 🔴 DT-TM01-CCTV-003: [RECHAZADA / OBSOLETA]
+> **ESTADO:** 🔴 **RECHAZADA POR CONTRAVENIR OBLIGACIONES CONTRACTUALES**
+> **DICTAMEN AUDITORÍA:** La cantidad de 9 unidades fue considerada **NO CONFORME** con el Apéndice Técnico 2.
+> **ALCANCE VIGENTE:** 30 Unidades (20 PTZ + 10 Fijas) - Ver Dashboard Contractual / T05 v3.0.
+
+# (TEXTO ORIGINAL OBSOLETO A CONTINUACIÓN)
 # DT-TM01-CCTV-003: DEFINICIÓN ALCANCE MÍNIMO CCTV (9 UNIDADES)
 
 **Proyecto:** TM01 Troncal Magdalena  
