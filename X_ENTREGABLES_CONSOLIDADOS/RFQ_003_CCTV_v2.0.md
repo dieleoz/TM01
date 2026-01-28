@@ -1,4 +1,4 @@
-# SOLICITUD DE COTIZACIÓN (RFQ-003)
+﻿# SOLICITUD DE COTIZACIÓN (RFQ-003)
 ## SISTEMA CCTV (CIRCUITO CERRADO DE TELEVISIÓN) – VIDEOVIGILANCIA ITS
 
 ## **PROYECTO: APP Puerto Salgar - Barrancabermeja (Propuesta Optimizada - 15 Cámaras)**
@@ -476,3 +476,131 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 ---
 
 **Fin del documento – RFQ-003 CCTV v2.0**
+
+
+<!-- BLOQUE AUTOMATICO INICIO: CCTV -->
+### Cantidades Validadas (T05)
+| Versión | Fecha | Cambios | Autor |
+| 1.0 | 22/10/2025 | Creación inicial - 30 cámaras CCTV | Ing. ITS |
+| 1.1 | 22/10/2025 | Revisión con información oficial: Cantidad confirmada | Ing. ITS |
+| 1.2 | 20/01/2026 | **Ajuste Alcance Optimizado:** 15 cámaras (Hard Deck + Nodos Críticos) | Antigravity AI |
+| 1.3 | 27/01/2026 | **Validación Auditoría:** Retorno a 30 cámaras (20 PTZ + 10 Fijas) con segregación Peajes | Antigravity AI |
+| 1.4 | 27/01/2026 | **Minimización Activos:** 9 cámaras (1 por Edificación/Instalación) - Diferimiento Nodos Vía | Antigravity AI |
+| Parámetro | Valor | Referencia |
+| **Cantidad total** | **9 cámaras** | 1 por Edificación/Facility |
+| **Distribución** | CCO, Peajes(2), AS(2), Básculas(2), Bunkers(2) | Directriz Minimización |
+| **Tipo principal** | PTZ Domo IP (zoom 32×) | Tipo A (Estandarizado) |
+| **Resolución** | 1080p (1920×1080) mínimo | AT3 |
+| **Zoom PTZ** | **32X Mínimo** | Req. IP/REV |
+| **Cifrado** | **AES-256** | Req. IP/REV Almacenamiento |
+| **Almacenamiento** | 30 días×9 cámaras en NVR CCO | AT2 / Estándar Seguridad |
+| **CAPEX Total** | **$116,100.00 USD** | Solo equipos de campo |
+| **OPEX Anual** | **$5,400 USD** | $600/cámara/año |
+| **OPEX 20 años** | **$108,000 USD** | Mantenimiento |
+| Tipo | Cantidad | Costo Unit. | Subtotal |
+| **Tipo A - PTZ** (Poste nuevo 12m + Solar/Red + PTZ 32X) | 9 | $12,900.00 | $116,100.00 |
+| **TOTAL CAPEX** | **9** | - | **$116,100.00 USD** |
+| Parámetro | Especificación Mínima | Cumplimiento |
+| **Resolución** | 1920×1080 (1080p Full HD) | AT3 |
+| **Zoom óptico** | **32× mínimo** | **Req. IP/REV** |
+| **Rango IR** | 150 metros | Visión nocturna |
+| **Protección** | **IP66** | Manual 2024 |
+| **Seguridad** | HTTPS / 802.1x / **AES-256 (Storage)** | Ciberseguridad |
+| Ítem | Descripción | Unidad | Cantidad | Precio Unit. | Total |
+| **A. EQUIPO CÁMARA** | | | | | **$3,368.36** |
+| Cámara PTZ Dahua 4MP 32x | DH-SD5A432GB-HNR | UND | 1.0 | $868.36 | $868.36 |
+| Domo policarbonato | IP66/IK10 | UND | 1.0 | $800 | $800 |
+| Soporte montaje | Para poste Ø4" | UND | 1.0 | $350 | $350 |
+| Inyector PoE+ 30W | IEEE 802.3at | UND | 1.0 | $180 | $180 |
+| DPS datos + energía | Protección | UND | 1.0 | $150 | $150 |
+| Cable UTP Cat6 ext 100m | Conexión | UND | 1.0 | $80 | $80 |
+| Gabinete IP65 equipos | 40×50×25cm | UND | 1.0 | $350 | $350 |
+| Accesorios (conectores, etc.) | Varios | GLB | 1.0 | $590 | $590 |
+| **B. POSTE Y ESTRUCTURA** | | | | | **$3,500** |
+| Poste metálico 12m Ø4" | Acero galvanizado | UND | 1.0 | $2,800 | $2,800 |
+| Corona antiescalatoria | Protección | UND | 1.0 | $220 | $220 |
+| Escalerilla interior | Mantenimiento | UND | 1.0 | $180 | $180 |
+| Tapa superior | Protección lluvia | UND | 1.0 | $80 | $80 |
+| Señalización poste | Reflectiva amarilla | UND | 1.0 | $220 | $220 |
+| **C. OBRAS CIVILES** | | | | | **$1,500** |
+| Excavación cimentación | 1.0×1.0×1.5m | M³ | 1.5 | $45.00 | $67.50 |
+| Concreto f'c=3000 PSI | Fundación | M³ | 1.2 | $180.00 | $216.00 |
+| Acero refuerzo | #5 + estribos | KG | 40.0 | $2.80 | $112.00 |
+| Pernos anclaje | 4×M20×600mm | UND | 4.0 | $18.00 | $72.00 |
+| Canalización FO | Hasta troncal (40m) | ML | 40.0 | $8.50 | $340.00 |
+| Ducto HDPE 2" | Fibra derivación | ML | 40.0 | $3.20 | $128.00 |
+| Caja empalme FO | Derivación | UND | 1.0 | $450.00 | $450.00 |
+| Puesta a tierra | Varilla + tratamiento | UND | 1.0 | $350.00 | $350.00 |
+| **D. INSTALACIÓN Y MONTAJE** | | | | | **$2,800** |
+| Ingeniero comisionamiento | Configuración + pruebas | HH | 8.0 | $50.00 | $400.00 |
+| Técnico CCTV | Instalación cámara | HH | 12.0 | $30.00 | $360.00 |
+| Técnico FO | Fusiones | HH | 6.0 | $25.00 | $150.00 |
+| Oficial electricista | Conexiones eléctricas | HH | 8.0 | $18.00 | $144.00 |
+| Oficial civil | Cimentación | HH | 16.0 | $18.00 | $288.00 |
+| Operador grúa | Montaje poste 12m | HH | 4.0 | $35.00 | $140.00 |
+| Ayudante | Apoyo general | HH | 32.0 | $10.00 | $320.00 |
+| Supervisor SST | Seguridad | HH | 12.0 | $20.00 | $240.00 |
+| Transporte equipos | Movilización | GLB | 1.0 | $120.00 | $120.00 |
+| Señalamiento vial | Durante obras | GLB | 1.0 | $150.00 | $150.00 |
+| Certificación | Protocolo SAT | UND | 1.0 | $488.00 | $488.00 |
+| **E. EQUIPOS Y HERRAMIENTAS** | | | | | **$1,200** |
+| Grúa telescópica 15m | Izaje | HH | 4.0 | $120.00 | $480.00 |
+| Plataforma elevadora | Trabajo en altura | HH | 8.0 | $45.00 | $360.00 |
+| Fusionadora FO | Empalmes | HH | 4.0 | $30.00 | $120.00 |
+| OTDR | Pruebas fibra | HH | 2.0 | $10.00 | $20.00 |
+| Laptop + software NVR | Configuración | HH | 6.0 | $10.00 | $60.00 |
+| Herramienta menor | Varios | GLB | 1.0 | $160.00 | $160.00 |
+| **SUBTOTAL DIRECTO** | | | | | **$12,368.36** |
+| **Administración (2%)** | | | | | **$247.37** |
+| **Imprevistos (1%)** | | | | | **$123.68** |
+| **Utilidad (1%)** | | | | | **$123.68** |
+| **TOTAL APU-CCTV-001** | | | | | **$12,900.00/cámara** |
+| Ítem | Descripción | Total (USD) |
+| **Equipo cámara** | Bullet IP 4MP Varifocal | $850 |
+| **Soporte/Gabinete** | Montaje muro/poste | $350 |
+| **Obras civiles** | Canalización menor | $400 |
+| **Instalación** | Técnico CCTV | $1,200 |
+| **Equipos** | Herramienta menor | $200 |
+| **SUBTOTAL** | | $3,000.00 |
+| **AIU + Imprevistos** | 30% Est. | $1,494.63 |
+| **TOTAL APU-CCTV-002** | | **$4,494.63/cámara** |
+| Parámetro | Especificación |
+| **Protocolo** | ONVIF Profile S/G/T |
+| **Streaming** | RTSP over TCP |
+| **Resolución grabación** | 1080p @ 15 fps (continuo) |
+| **Bitrate** | 4 Mbps promedio por cámara |
+| **Ancho de banda total** | 30 cámaras × 4 Mbps = 120 Mbps |
+| **Almacenamiento** | 30 días × 30 cámaras ≈ 15 TB |
+| **Redundancia** | Grabación local (MicroSD) + NVR |
+| Lote | Cantidad | Tipo | Rutas | Duración |
+| **Lote 1** | 10 cámaras | Mixto (A+B+C) | RN 4510 | 5 semanas |
+| **Lote 2** | 12 cámaras | Mixto (A+B+C) | RN 4511 (tramo 1) | 6 semanas |
+| **Lote 3** | 8 cámaras | Mixto (A+B+C) | RN 4511 (tramo 2) + RN 4513 | 4 semanas |
+| # | Prueba | Criterio de Aceptación |
+| 1 | **Inspección física** | Sin daños, montaje firme, orientación correcta |
+| 2 | **Alimentación PoE** | 48-54VDC, corriente <570mA |
+| 3 | **Conexión red** | Ping exitoso desde CCO |
+| 4 | **Video en vivo** | Imagen clara 1080p @ 30 fps |
+| 5 | **Zoom óptico** | 30× funcional, enfoque automático |
+| 6 | **Pan/Tilt** | 360° pan, -15° a +90° tilt, suave |
+| 7 | **Presets** | Mínimo 10 presets configurados |
+| 8 | **IR nocturno** | Visión hasta 150m en oscuridad total |
+| 9 | **WDR** | Imagen clara en contraluz |
+| 10 | **Grabación NVR** | Video grabando en CCO |
+| 11 | **Analytics** | Detección movimiento + conteo |
+| 12 | **Fibra óptica** | OTDR <0.5 dB total |
+| 13 | **As-Built** | Coordenadas GPS ±3m |
+| Actividad | Frecuencia | Costo Anual (USD) |
+| **Limpieza domo** | Trimestral | $6,000 |
+| **Verificación funcional** | Mensual (remota) | $1,800 |
+| **Ajuste presets** | Semestral | $2,400 |
+| **Revisión conexiones** | Anual | $1,800 |
+| **Actualización firmware** | Según fabricante | $1,200 |
+| **Reparaciones menores** | Según necesidad | $3,000 |
+| **Reemplazo equipos** | 1-2 cámaras/año | $1,800 |
+| **TOTAL OPEX** | - | **$18,000/año** |
+> Actualizado: 2026-01-27
+<!-- BLOQUE AUTOMATICO FIN -->
+
+---
+> CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.

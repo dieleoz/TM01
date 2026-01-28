@@ -5,7 +5,7 @@
 ![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen)
 ![Validations](https://img.shields.io/badge/Validations-13%2F13-success)
 ![Budget](https://img.shields.io/badge/Budget-USD%207.79M%20ITS-blue)
-![Architecture](https://img.shields.io/badge/Architecture-4%20Layers-blue)
+![Architecture](https://img.shields.io/badge/Architecture-5%20Layers-blue)
 
 🛡️ **DICTAMEN DE AUDITORÍA FORENSE (v30.2)**
 > **Ubicación WIM Confirmada:** PR 4+0100 (RN 4513).
@@ -19,7 +19,7 @@
 **Fecha de actualización:** 27 de Enero 2026  
 **Estado:** 🟢 **APTO PARA CONSTRUCCIÓN** - Fully RETIE 2024 (Res. 40117) & IP/REV 2021 Compliant  
 **Responsable:** Equipo Técnico TM01 / Auditoría Forense  
-**Metodología:** Punto 42 v2.0 (Arquitectura Dinámica 4 Capas - Reconciliación Hard Deck)  
+**Metodología:** Punto 42 v3.0 (Arquitectura Dinámica 5 Capas - Layer 5: Services)  
 **GitHub:** https://github.com/dieleoz/TM01  
 **GitHub Pages:** https://dieleoz.github.io/TM01/  
 

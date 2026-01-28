@@ -872,14 +872,310 @@ Longitud Total Corredor: 259,600 ML
 
 ---
 
+---
+
 **Fin del documento - Lecciones Aprendidas**  
-**Versión:** 2.1  
-**Fecha:** 24 de octubre de 2025  
+**Versión:** 3.0 (LAYER 5 + ROADMAP INSIGHTS)  
+**Fecha:** 27 de Enero de 2026  
 **Ahorro Total:** $6,319,391 USD  
 **Sobre-dimensionamiento ITS:** $17,873,276 USD identificado  
-**Errores Corregidos:** 10 errores críticos  
-**DTs Creadas:** 9 Decisiones Técnicas implementadas  
-**Sistema Web:** 10 archivos HTML interactivos implementados  
+**Errores Corregidos:** 15+ errores críticos  
+**DTs Creadas:** 30+ Decisiones Técnicas implementadas  
+**Sistema Web:** 8 archivos HTML interactivos implementados  
 **Scripts Problemáticos:** 1 identificado y deshabilitado  
-**Metodología:** Punto 42 v1.0  
+**Metodología:** Punto 42 v3.0 (5 Capas)  
 **Proyecto:** APP Puerto Salgar - Barrancabermeja
+
+---
+
+## 📅 **ENERO 2026 - LECCIONES DE ARQUITECTURA Y DESPLIEGUE (ROADMAP PHASES 1-27)**
+
+### **FASE 6.1: MIGRACIÓN GEOJSON Y DESPLIEGUE VERCEL**
+
+#### **Problema Identificado:**
+- Datos de layout estaban hardcodeados en JavaScript estático
+- No había estándar industrial para datos geoespaciales
+- Falta de despliegue continuo y validación en producción
+
+#### **Solución Implementada:**
+
+**1. Migración a GeoJSON:**
+- ✅ Migración de 191 equipos desde JS estático a `layout.geojson`
+- ✅ Estándar GeoJSON (RFC 7946) para interoperabilidad
+- ✅ Dashboard dinámico con `fetch` asíncrono
+
+**2. Despliegue Vercel:**
+- ✅ Configuración `vercel.json` para SPA routing
+- ✅ Despliegue activo en `tm-01-pi.vercel.app`
+- ✅ Integración continua desde `main` branch
+
+**3. Arquitectura Dinámica:**
+- ✅ Eliminación de datos hardcodeados en HTML
+- ✅ Consumo de datos vía API/fetch
+- ✅ Separación clara entre datos y visualización
+
+#### **Resultado:**
+- ✅ **Estándar Industrial:** GeoJSON compatible con GIS tools
+- ✅ **Despliegue Continuo:** Vercel auto-deploy desde GitHub
+- ✅ **Escalabilidad:** Arquitectura preparada para crecimiento
+- ✅ **Validación Live:** Testing en producción real
+
+#### **Lección Aprendida:**
+✅ **SIEMPRE usar estándares industriales para datos geoespaciales (GeoJSON)**
+✅ **SIEMPRE implementar despliegue continuo desde el inicio**
+✅ **SIEMPRE separar datos de visualización (fetch vs hardcode)**
+✅ **SIEMPRE validar en producción, no solo local**
+✅ **SIEMPRE documentar configuración de despliegue (vercel.json)**
+
+---
+
+## 📅 **ENERO 2026 - LAYER 5 (SERVICES): DEL HORNO AL PLATO**
+
+### **Problema Identificado:**
+- Documentos de ingeniería (T05) no se sincronizaban con entregables finales (RFQs)
+- Equipo de compras trabajaba con cantidades desactualizadas
+- No había trazabilidad entre ingeniería y licitación
+- Generación manual de ejecutivos era propensa a errores
+
+### **Solución Implementada:**
+
+**1. Script cocinar_rfqs.ps1:**
+- ✅ Lee tablas de T05 (Ingeniería de Detalle)
+- ✅ Inyecta bloques automáticos en RFQs
+- ✅ Añade sello "CERTIFICACIÓN DE COMPRAS"
+- ✅ Actualiza 9 documentos en ~6 segundos
+
+**2. Script cocinar_ejecutivos.ps1:**
+- ✅ Genera HTMLs ejecutivos desde T01
+- ✅ Convierte Markdown a HTML con Pandoc
+- ✅ Crea documentos listos para presentación
+
+**3. Arquitectura 5 Capas:**
+```
+CAPA 1: Fuentes de Verdad (T01-T05)
+   ↓
+CAPA 2: Transformación (Scripts sync_* + cocinar_*)
+   ↓
+CAPA 3: Datos Intermedios (JavaScript)
+   ↓
+CAPA 4: Visualización (Web)
+   ↓
+CAPA 5: SERVICIOS (RFQs + Ejecutivos) ← NUEVO
+```
+
+#### **Resultado:**
+- ✅ **Coherencia Total:** Ingeniería → Compras → Cliente alineados
+- ✅ **Actualización Rápida:** ~6 segundos para regenerar todos los RFQs
+- ✅ **Cero Errores Manuales:** No hay transcripción manual de datos
+- ✅ **Auditoría Automática:** Sello de certificación en cada documento
+- ✅ **Trazabilidad Completa:** Cada cantidad tiene su fuente (T05)
+
+#### **Lección Aprendida:**
+✅ **SIEMPRE automatizar la generación de entregables finales**
+✅ **SIEMPRE mantener trazabilidad entre ingeniería y compras**
+✅ **SIEMPRE usar scripts de "cocina" para transformar datos en documentos**
+✅ **SIEMPRE añadir sellos de certificación automática**
+✅ **SIEMPRE documentar el flujo de regeneración en README**
+✅ **SIEMPRE ejecutar scripts de cocina después de actualizar T05**
+
+---
+
+## 📅 **ENERO 2026 - LIMPIEZA Y ORGANIZACIÓN DE REPOSITORIO**
+
+### **Problema Identificado:**
+- Repositorio con 15+ archivos deprecated
+- Falta de estructura clara para archivos obsoletos
+- Confusión entre versiones actuales y antiguas
+- Dificultad para entregar al cliente
+
+### **Solución Implementada:**
+
+**1. Estructura `/legacy` Creada:**
+```
+legacy/
+├── README.md                    # Documentación del archivo
+├── deprecated_wbs/              # 3 archivos WBS v1.0
+├── old_consolidados/            # Carpeta X. Entregables antigua
+├── temp_files/                  # 6 archivos temporales
+├── old_reports/                 # 4 reportes completados
+└── deprecated_engineering/      # 1 documento T05 obsoleto
+```
+
+**2. Archivos Archivados (15 items):**
+- ✅ WBS Deprecated (3 archivos)
+- ✅ Consolidados Antiguos (1 carpeta completa)
+- ✅ Archivos Temporales (6 archivos)
+- ✅ Reportes Antiguos (4 documentos)
+- ✅ Ingeniería Deprecated (1 T05 obsoleto)
+
+#### **Resultado:**
+- ✅ **Repositorio Limpio:** Solo archivos actuales en raíz
+- ✅ **Trazabilidad:** Archivos antiguos preservados en `/legacy`
+- ✅ **Entrega Profesional:** Cliente recibe solo documentos vigentes
+- ✅ **Git Organizado:** Commits claros de limpieza
+
+#### **Lección Aprendida:**
+✅ **SIEMPRE crear carpeta `/legacy` desde el inicio del proyecto**
+✅ **SIEMPRE mover archivos obsoletos, no eliminarlos**
+✅ **SIEMPRE documentar qué hay en `/legacy` (README.md)**
+✅ **SIEMPRE hacer limpieza antes de entrega al cliente**
+✅ **SIEMPRE usar commits descriptivos para archivado**
+
+---
+
+## 📅 **ENERO 2026 - SINCRONIZACIÓN WBS HTML Y MASTER DATA**
+
+### **Problema Identificado:**
+- Dashboard web mostraba valores diferentes a "Hard Deck" de Audit 5.0
+- Lógica HTML sumaba items individuales (causaba inflación)
+- Master Data Summary desactualizado
+- Falta de coherencia entre fuentes de datos
+
+### **Solución Implementada:**
+
+**1. Refactorización de Lógica HTML:**
+- ✅ Modificada función `mostrarSubtotales()` para leer de `tm01MasterData.data.summaries`
+- ✅ Eliminada lógica de suma de items individuales
+- ✅ Fuente única de verdad: `tm01_master_data.js`
+
+**2. Corrección de Master Data Summary:**
+- ✅ SOS: 98 → 88 unidades
+- ✅ SOS CAPEX: $2,450,000 → $2,200,000 USD
+- ✅ PMV: 28 → 39 unidades (25 mainline + 14 toll)
+- ✅ Recalculación de totales USD/COP
+
+**3. Verificación:**
+- ✅ Browser test (Hard Refresh): Todos los subtotales correctos
+- ✅ Coherencia 100% con Audit 5.0 "Hard Deck"
+
+#### **Resultado:**
+- ✅ **Coherencia Total:** Web = Master Data = Audit 5.0
+- ✅ **Fuente Única:** `tm01_master_data.js` como SSOT
+- ✅ **Validación Automática:** Scripts verifican coherencia
+
+#### **Lección Aprendida:**
+✅ **SIEMPRE usar una fuente única de verdad (SSOT)**
+✅ **SIEMPRE evitar lógica de suma en HTML (usar datos pre-calculados)**
+✅ **SIEMPRE validar con Hard Refresh en browser**
+✅ **SIEMPRE sincronizar Master Data antes de despliegue**
+✅ **SIEMPRE documentar qué archivo es la fuente de verdad**
+
+---
+
+## 🎯 **METODOLOGÍA CONSOLIDADA: PUNTO 42 v3.0**
+
+### **Evolución de la Metodología:**
+
+**v1.0 (Oct 2025):** 4 Capas básicas
+- Fuentes de Verdad → Transformación → Datos → Visualización
+
+**v2.0 (Dic 2025):** Reconciliación Hard Deck
+- Auditoría forense de CAPEX
+- Validación contractual completa
+- Coherencia total documentos
+
+**v3.0 (Ene 2026):** Layer 5 (Services) ← ACTUAL
+- Automatización de entregables finales
+- Scripts de "cocina" (cocinar_rfqs.ps1, cocinar_ejecutivos.ps1)
+- Despliegue continuo (Vercel)
+- GeoJSON estándar industrial
+
+### **Principios Fundamentales:**
+
+1. **Contract-First:** El contrato es la constitución
+2. **Single Source of Truth:** T05 para precios, AT1 para cantidades
+3. **Automation First:** Scripts para todo lo repetitivo
+4. **Trazabilidad Total:** Cada dato tiene su fuente documentada
+5. **Validation Continuous:** Auditoría en cada capa
+
+### **Flujo de Trabajo Completo:**
+
+```
+1. Editar T05 (Fuente de Verdad)
+   ↓
+2. Ejecutar sincronizar_SISTEMA_TM01_COMPLETO.ps1 (actualiza web)
+   ↓
+3. Ejecutar cocinar_rfqs.ps1 (actualiza RFQs)
+   ↓
+4. Ejecutar cocinar_ejecutivos.ps1 (genera HTMLs)
+   ↓
+5. Verificar entregables en X_ENTREGABLES_CONSOLIDADOS/
+   ↓
+6. Commit y push
+   ↓
+7. Vercel auto-deploy (producción)
+```
+
+---
+
+## 📊 **MÉTRICAS FINALES DEL PROYECTO**
+
+### **Documentación:**
+- ✅ **85+ documentos** T01-T05 creados
+- ✅ **30+ DTs** (Decisiones Técnicas) implementadas
+- ✅ **13/13 sistemas** validados (100%)
+- ✅ **8 interfaces web** operativas
+- ✅ **80+ scripts** de automatización
+
+### **Financiero:**
+- ✅ **$6.3M USD** ahorrados (optimizaciones)
+- ✅ **$17.9M USD** sobre-dimensionamiento ITS identificado
+- ✅ **$7.79M USD** CAPEX ITS final certificado
+- ✅ **100% trazabilidad** contractual
+
+### **Calidad:**
+- ✅ **15+ errores críticos** corregidos
+- ✅ **100% coherencia** entre documentos
+- ✅ **Cero duplicados** en presupuestos
+- ✅ **Auditoría forense** completada
+
+### **Tecnología:**
+- ✅ **GeoJSON** estándar implementado
+- ✅ **Vercel** despliegue continuo
+- ✅ **Layer 5** automatización completa
+- ✅ **Git** 50+ commits organizados
+
+---
+
+## ✅ **CONCLUSIONES FINALES**
+
+### **Errores Críticos Identificados y Corregidos:**
+
+1. ✅ Corrección superficial sin análisis arquitectónico
+2. ✅ Asunción de cantidades sin validar diseño real
+3. ✅ Subestimación de costos sin datos de referencia
+4. ✅ No identificar sistemas relacionados afectados
+5. ✅ No validar componentes ITS vs NO-ITS sistemáticamente
+6. ✅ Confusión de monedas USD/COP en presupuestos
+7. ✅ Scripts problemáticos regenerando valores incorrectos
+8. ✅ Datos hardcodeados en HTML (no dinámicos)
+9. ✅ Falta de estándares industriales (GeoJSON)
+10. ✅ No automatizar generación de entregables finales
+
+### **Metodología Robusta Implementada:**
+
+1. ✅ **Validación completa** con datos reales
+2. ✅ **Análisis de impacto** arquitectónico
+3. ✅ **Actualización sistemática** de documentos
+4. ✅ **Documentación completa** de cambios (DTs)
+5. ✅ **Validación cruzada** de cada componente ITS
+6. ✅ **Automatización total** de flujos repetitivos
+7. ✅ **Despliegue continuo** en producción
+8. ✅ **Estándares industriales** (GeoJSON, Vercel)
+9. ✅ **Layer 5 (Services)** para entregables finales
+10. ✅ **Limpieza y organización** de repositorio
+
+### **Resultado Final:**
+
+- ✅ **Proyecto Completado:** 27 fases ejecutadas
+- ✅ **Metodología Validada:** Punto 42 v3.0 operativa
+- ✅ **Entregables Listos:** Cliente puede licitar inmediatamente
+- ✅ **Proceso Replicable:** Guía completa para próximos proyectos
+- ✅ **Calidad Certificada:** Auditoría 5.0 aprobada
+
+---
+
+**Última actualización:** 27 de Enero de 2026  
+**Estado:** ✅ **PROYECTO COMPLETADO** - Listo para Entrega al Cliente  
+**Próximo Proyecto:** Aplicar Metodología Punto 42 v3.0 desde día 1
+

@@ -91,17 +91,25 @@ docs/
 
 ---
 
-### **X. ENTREGABLES CONSOLIDADOS**
+### **X. ENTREGABLES CONSOLIDADOS** ⭐ LAYER 5 (SERVICES)
 
 ```
 X_ENTREGABLES_CONSOLIDADOS/
-├── RFQ_001_SOS_v1.0.md           → Solicitudes de cotización
-├── RFQ_003_CCTV_v1.0.md
+├── 00_HISTORICO/                 → Versiones obsoletas archivadas
+├── 7_SISTEMAS_EJECUTIVOS/        → Resúmenes ejecutivos (Markdown)
+├── 8_DOCUMENTOS_SERVIDOS/        → HTMLs generados (cocinar_ejecutivos.ps1)
+├── RFQ_001_FIBRA_OPTICA_v2.0.md  → RFQs listos para licitar
+├── RFQ_002_SOS_Postes_v2.0.md
+├── RFQ_003_CCTV_v2.0.md
+├── RFQ_008_PMV_v1.0.md
 ├── PRESUPUESTO_ITS_PURO_v2.0.md  → Presupuesto consolidado
-└── SOLICITUD_COMPRA_*.md         → Órdenes de compra
+└── README.md                     → 🤖 Guía de regeneración automática
 ```
 
-**Regla:** Documentos para proveedores y compras.
+**Regla:** 
+- **Documentos para proveedores y compras.**
+- **🤖 AUTO-GENERADOS:** Los RFQs se actualizan con `cocinar_rfqs.ps1` desde T05.
+- **NO EDITAR MANUALMENTE:** Regenerar con scripts cuando cambien los T05.
 
 ---
 

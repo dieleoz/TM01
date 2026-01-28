@@ -1,19 +1,19 @@
 # ARQUITECTURA DEL SISTEMA TM01 TRONCAL MAGDALENA
 **Proyecto:** TM01 Troncal Magdalena - Sistema de Validación Web  
-**Versión:** 2.0 | Fecha: 31 de Octubre de 2025  
-**Estado:** ✅ IMPLEMENTADO Y OPERATIVO
+**Versión:** 3.0 | Fecha: 27 de Enero de 2026  
+**Estado:** ✅ IMPLEMENTADO Y OPERATIVO (5 CAPAS)
 
 ---
 
 ## 🎯 CONTEXTO DEL PROYECTO
 
-Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, implementando una arquitectura dinámica de 4 capas que permite validación técnica, generación de Decisiones Técnicas (DTs), y propagación automática de cambios a través de todos los documentos del proyecto.
+Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, implementando una arquitectura dinámica de **5 capas** que permite validación técnica, generación de Decisiones Técnicas (DTs), propagación automática de cambios a través de todos los documentos del proyecto, y **generación automatizada de entregables finales** (RFQs, Ejecutivos).
 
-**IMPORTANTE:** El sistema implementa propagación automática de cambios en **4 NIVELES** de documentación para mantener coherencia técnica completa.
+**IMPORTANTE:** El sistema implementa propagación automática de cambios en **5 NIVELES** de documentación para mantener coherencia técnica completa, desde el contrato hasta los documentos servidos al cliente.
 
 ---
 
-## 🏗️ ARQUITECTURA EN 4 CAPAS
+## 🏗️ ARQUITECTURA EN 5 CAPAS
 
 ### **CAPA 1: FUENTES DE VERDAD (Inmutables)**
 
@@ -40,6 +40,8 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │  • sincronizar_layout.ps1 ✅ COMPLETADO (Layout)              │
 │  • sincronizar_presupuesto.ps1 ✅ COMPLETADO (Presupuesto)    │
 │  • sincronizar_SISTEMA_TM01_COMPLETO.ps1 ✅ MAESTRO           │
+│  • cocinar_ejecutivos.ps1 ✅ LAYER 5 (Ejecutivos HTML)       │
+│  • cocinar_rfqs.ps1 ✅ LAYER 5 (RFQs Procurement)            │
 │  • 11 módulos PowerShell reutilizables                         │
 │  • Validadores de coherencia técnica (C1/AT1/AT4 bloqueantes)   │
 └─────────────────────────────────────────────────────────────────┘
@@ -77,6 +79,16 @@ Sistema de validación web interactivo para el proyecto TM01 Troncal Magdalena, 
 │  • docs/analisis_riesgos.html (análisis de riesgos)           │
 │                                                                 │
 │  ✅ Sistema operativo con propagación automática de cambios     │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  CAPA 5: SERVICIOS (Del Horno al Plato)                        │
+├─────────────────────────────────────────────────────────────────┤
+│  • cocinar_ejecutivos.ps1 (T01 → HTML Ejecutivos)             │
+│  • cocinar_rfqs.ps1 (T05 → RFQs Actualizados)                 │
+│  • X_ENTREGABLES_CONSOLIDADOS/ (Documentos Finales)            │
+│                                                                 │
+│  ✅ Generación automática de entregables listos para cliente    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 

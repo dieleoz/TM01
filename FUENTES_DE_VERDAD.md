@@ -64,6 +64,12 @@ V. Ingenieria de Detalle/
 3. **Salida:** `datos_wbs_TM01_items.js` (Consumido por la Web/Presupuesto).
    - *Este archivo se regenera automáticamente; no editar manualmente.*
 
+4. **Entregables Finales (Capa 5):**
+   - **Scripts:** `cocinar_ejecutivos.ps1` y `cocinar_rfqs.ps1`.
+   - **Input:** T01 (Concepto) + T05 (Detalle).
+   - **Output:** `X_ENTREGABLES_CONSOLIDADOS` (RFQs y Ejecutivos HTML).
+   - *Regla: El plato servido no se toca. Si requiere sal, se echa en la cocina (T05).*
+
 ## 🛠️ HERRAMIENTA DE GESTIÓN (NUEVO)
 **`docs/gestion_cambios.html`** actúa como la interfaz de "Frontend" para la ingeniería:
 1. Permite modificar cantidades/precios y **Crear Nuevos Ítems**.

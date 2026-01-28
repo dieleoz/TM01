@@ -83,6 +83,21 @@
 │  • presupuesto.html → Lee datos_wbs_TM01_items.js          │
 │  • wbs.html → Lee datos_wbs_TM01_items.js                  │
 │  • layout.html → Lee layout_datos.js                        │
+└────────────────────────┬────────────────────────────────────┘
+                         ↓
+┌─────────────────────────────────────────────────────────────┐
+│  8. LAYER 5: SERVICIOS (Del Horno al Plato)               │
+│  Ubicación: scripts/ + X_ENTREGABLES_CONSOLIDADOS/         │
+│  Tipo: 🤖 SCRIPTS DE COCINA (generan entregables finales)  │
+│  ─────────────────────────────────────────────────────────  │
+│  SCRIPTS:                                                    │
+│  • cocinar_ejecutivos.ps1 → Lee T01, genera HTMLs          │
+│  • cocinar_rfqs.ps1 → Lee T05, actualiza RFQs              │
+│                                                              │
+│  OUTPUT:                                                     │
+│  • X_ENTREGABLES_CONSOLIDADOS/7_SISTEMAS_EJECUTIVOS/*.md   │
+│  • X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/*.html │
+│  • X_ENTREGABLES_CONSOLIDADOS/RFQ_*.md (con bloques auto)  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -173,6 +188,20 @@ powershell -ExecutionPolicy Bypass -File "scripts\sync_wbs_tm01.ps1"
 git add -A
 git commit -m "feat(SOS): update to 98 posts per AT1 L3525"
 git push origin main
+
+# PASO 9: Generar RFQs actualizados (LAYER 5)
+powershell -ExecutionPolicy Bypass -File "scripts\cocinar_rfqs.ps1"
+# Esto ACTUALIZA: X_ENTREGABLES_CONSOLIDADOS/RFQ_002_SOS_Postes_v2.0.md
+# Inyecta bloque automático con cantidades desde T05
+
+# PASO 10: Generar Ejecutivos HTML (LAYER 5)
+powershell -ExecutionPolicy Bypass -File "scripts\cocinar_ejecutivos.ps1"
+# Esto GENERA: X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/*.html
+
+# PASO 11: Verificar entregables finales
+# Abrir: X_ENTREGABLES_CONSOLIDADOS/RFQ_002_SOS_Postes_v2.0.md
+# Verificar bloque automático con 98 postes
+# Verificar sello "CERTIFICACION DE COMPRAS"
 ```
 
 ---
@@ -201,6 +230,10 @@ Después de cada análisis PROMPT MAESTRO:
 - [ ] ✅ Análisis movido a `docs/old/`
 - [ ] ✅ DT creada en `VII. Documentos Transversales/DTs/`
 - [ ] ✅ Commit y push a Git
+- [ ] ✅ **LAYER 5:** `cocinar_rfqs.ps1` ejecutado
+- [ ] ✅ **LAYER 5:** `cocinar_ejecutivos.ps1` ejecutado
+- [ ] ✅ **LAYER 5:** RFQs verificados (bloques automáticos + sello)
+- [ ] ✅ **LAYER 5:** Ejecutivos HTML generados
 
 ---
 
@@ -213,6 +246,10 @@ Después de cada análisis PROMPT MAESTRO:
 **Archivos AUTO-GENERADOS (script los crea):**
 - 🤖 `docs/data/datos_wbs_TM01_items.js`
 - 🤖 `docs/data/validaciones_content.js`
+
+**Scripts de Cocina (LAYER 5):**
+- 🍳 `scripts/cocinar_rfqs.ps1` (T05 → RFQs)
+- 🍳 `scripts/cocinar_ejecutivos.ps1` (T01 → HTMLs)
 
 **Archivos TEMPORALES (se archivan después):**
 - 📄 `docs/ANALISIS_[SISTEMA]_PROMPT_MAESTRO_V3.X.md` → `docs/old/`

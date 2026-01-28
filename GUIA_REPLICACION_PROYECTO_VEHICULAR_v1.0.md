@@ -1,17 +1,18 @@
 # GUÍA DE REPLICACIÓN: DE PROYECTO FÉRREO A PROYECTO VEHÍCULAR
 ## Metodología Punto 42 Adaptada
 
-**Versión:** 1.0  
-**Fecha:** 14 de octubre de 2025  
-**Proyecto Base:** APP La Dorada-Chiriguaná (Férreo)  
+**Versión:** 2.0  
+**Fecha:** 27 de Enero de 2026  
+**Proyecto Base:** TM01 Troncal Magdalena (Vehícular)  
 **Proyecto Destino:** [NOMBRE PROYECTO VEHÍCULAR]  
 **Responsable:** Administrador Contractual EPC  
+**Metodología:** Punto 42 v3.0 (5 Capas)  
 
 ---
 
 ## 🎯 OBJETIVO DE ESTA GUÍA
 
-Replicar la estructura documental, metodología y mejores prácticas del proyecto férreo APP La Dorada-Chiriguaná para aplicarlas a un nuevo proyecto vehícular (carretero), manteniendo la misma calidad, trazabilidad y organización, pero adaptando el contenido técnico al ámbito vehícular/carretero.
+Replicar la **Metodología Punto 42 v3.0** (5 Capas) del proyecto TM01 Troncal Magdalena para aplicarla a un nuevo proyecto vehícular, manteniendo la misma calidad, trazabilidad, organización y **automatización de entregables** (Layer 5: Services).
 
 ---
 
@@ -25,8 +26,9 @@ Replicar la estructura documental, metodología y mejores prácticas del proyect
 6. [FASE 5: INGENIERÍA DE DETALLE](#fase-5-ingeniería-de-detalle)
 7. [FASE 6: OPERACIÓN Y REVERSIÓN](#fase-6-operación-y-reversión)
 8. [FASE 7: DOCUMENTOS TRANSVERSALES](#fase-7-documentos-transversales)
-9. [ADAPTACIONES ESPECÍFICAS VEHICULAR](#adaptaciones-específicas-vehicular)
-10. [CHECKLIST FINAL](#checklist-final)
+9. [FASE 8: LAYER 5 - AUTOMATIZACIÓN DE ENTREGABLES](#fase-8-layer-5---automatización-de-entregables)
+10. [ADAPTACIONES ESPECÍFICAS VEHICULAR](#adaptaciones-específicas-vehicular)
+11. [CHECKLIST FINAL](#checklist-final)
 
 ---
 

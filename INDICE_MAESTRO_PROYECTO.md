@@ -1,21 +1,57 @@
 # ÍNDICE MAESTRO DEL PROYECTO TM01
 **Proyecto:** APP Puerto Salgar - Barrancabermeja (TM01 Troncal Magdalena)  
-**Última actualización:** 31 de octubre de 2025  
-**Versión:** 4.1 (MVP Mode)  
-**🔄 ESTADO:** MVP EN DESARROLLO - Reconstrucción metodológica desde cero
+**Última actualización:** 27 de Enero de 2026  
+**Versión:** 6.0 (Layer 5 Implementado)  
+**🟢 ESTADO:** FASE 6.0 COMPLETADA - Arquitectura 5 Capas Operativa
 
 ---
 
 ## 📋 DOCUMENTOS RAÍZ
 
 | # | Archivo | Propósito | Última Modificación |
-|:--|:--------|:----------|:-------------------|
-| 1 | [README.md](README.md) | Visión general del proyecto | 31-Oct-2025 |
-| 2 | [ROADMAP.md](ROADMAP.md) | Plan de trabajo y cronograma | 31-Oct-2025 |
-| 3 | [00_INICIO_RAPIDO.md](00_INICIO_RAPIDO.md) | Guía de inicio rápido | 16-Oct-2025 |
-| 4 | [GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md](GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md) | Metodología de replicación | 16-Oct-2025 |
-| 5 | [.cursorrules](.cursorrules) | Reglas de detección automática de DTs | 24-Oct-2025 |
-| 6 | [.gitignore](.gitignore) | Configuración de control de versiones | 16-Oct-2025 |
+|:--|:--------|:----------|:--------------------|
+| 1 | [README.md](README.md) | Visión general del proyecto | 27-Ene-2026 |
+| 2 | [ARCHITECTURE.md](ARCHITECTURE.md) | Arquitectura 5 Capas | 27-Ene-2026 |
+| 3 | [FUENTES_DE_VERDAD.md](FUENTES_DE_VERDAD.md) | Reglas de gestión documental | 27-Ene-2026 |
+| 4 | [FLUJO_DATOS_COMPLETO.md](FLUJO_DATOS_COMPLETO.md) | Flujo de datos (5 capas) | 27-Ene-2026 |
+| 5 | [ESTRUCTURA_REPOSITORIO.md](ESTRUCTURA_REPOSITORIO.md) | Estructura de carpetas | 27-Ene-2026 |
+| 6 | [AUDIT_REPORT_5.0.md](AUDIT_REPORT_5.0.md) | Auditoría Fase 6.0 | 27-Ene-2026 |
+| 7 | [00_INICIO_RAPIDO.md](00_INICIO_RAPIDO.md) | Guía de inicio rápido | 16-Oct-2025 |
+| 8 | [GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md](GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md) | Metodología de replicación (v2.0) | 27-Ene-2026 |
+| 9 | [.cursorrules](.cursorrules) | Reglas de detección automática de DTs | 24-Oct-2025 |
+
+---
+
+## 🏗️ ARQUITECTURA: 5 CAPAS OPERATIVAS
+
+```
+CAPA 1: FUENTES DE VERDAD (Inmutables)
+  ├─ Contrato (AT1-AT4)
+  ├─ T01-T05 (Ingeniería)
+  └─ DTs (Decisiones Técnicas)
+        ↓
+CAPA 2: TRANSFORMACIÓN (Scripts)
+  ├─ sync_wbs_tm01.ps1
+  ├─ sincronizar_layout.ps1
+  ├─ sincronizar_presupuesto.ps1
+  ├─ cocinar_ejecutivos.ps1 ✅ LAYER 5
+  └─ cocinar_rfqs.ps1 ✅ LAYER 5
+        ↓
+CAPA 3: DATOS INTERMEDIOS (JavaScript)
+  ├─ datos_wbs_TM01_items.js
+  ├─ layout_datos.js
+  └─ presupuesto_datos.js
+        ↓
+CAPA 4: VISUALIZACIÓN (Web)
+  ├─ WBS interactiva
+  ├─ Layout georreferenciado
+  └─ Dashboards
+        ↓
+CAPA 5: SERVICIOS (Entregables) ✅ NUEVO
+  ├─ RFQs actualizados (Compras)
+  ├─ Ejecutivos HTML (Cliente)
+  └─ Certificación automática
+```
 
 ---
 
@@ -29,22 +65,19 @@
 | **II. Apendices Tecnicos** | ✅ Completa | 18 documentos | 17-Oct-2025 |
 | **III. Ingenieria Conceptual** | ✅ Completa | 57 archivos (18 T01 + 18 T02 + 18 T03 + 3 resúmenes) | 31-Oct-2025 |
 | **IV. Ingenieria Basica** | ✅ Completa | 13 archivos (12 T04 + 1 README) | 18-Oct-2025 |
-| **V. Ingenieria de Detalle** | ✅ Completa | 10 archivos T05 | 22-Oct-2025 |
+| **V. Ingenieria de Detalle** | ✅ Completa | 12 archivos T05 | 27-Ene-2026 |
 | **VI. Operacion y Reversion** | 🔴 Vacía | 0 archivos | - |
-| **VII. Documentos Transversales** | ✅ Completa | 86 archivos | 22-Oct-2025 |
-| **VIII. Documentos Maestros y Metodologia** | 🟡 MVP | 1 archivo (Metodología Punto 42 MVP) | 31-Oct-2025 |
+| **VII. Documentos Transversales** | ✅ Completa | 90+ archivos (DTs + Validaciones) | 27-Ene-2026 |
+| **VIII. Documentos Maestros y Metodologia** | ✅ Completa | Metodología Punto 42 v3.0 | 27-Ene-2026 |
 | **IX. WBS y Planificacion** | ✅ Publicado | Interfaces web en `docs/` | 28-Oct-2025 |
-| **X. Entregables Consolidados** | ✅ Completa | Presupuestos + RFQs | 22-Oct-2025 |
+| **X. Entregables Consolidados** | ✅ Completa | ⭐ LAYER 5 (RFQs + Ejecutivos) | 27-Ene-2026 |
 
 ### Carpetas de Soporte
 
 | Carpeta | Estado | Propósito | Contenido |
 |:--------|:-------|:----------|:----------|
-| **Sistema_Validacion_Web/** | ✅ Completa | Sistema web interactivo | 8 interfaces HTML + datos |
-| **scripts/** | ✅ Completa | Scripts de automatización | 74 archivos (PS1, PSM1, PY) |
-| **templates/** | ✅ Completa | Plantillas metodológicas | 5 plantillas T01-T05 |
-| **tests/** | ✅ Completa | Tests automatizados | Tests unitarios e integración |
-| **docs/** | ✅ Completa | Documentación técnica | Interfaces web publicadas |
+| **scripts/** | ✅ Completa | Scripts de automatización | 80+ archivos (PS1, PSM1, PY) |
+| **docs/** | ✅ Completa | Sistema web publicado | 8 interfaces HTML + datos |
 | **old/** | ✅ Creada | Archivos históricos | Versiones anteriores |
 
 *Leyenda: ✅ Completa | 🟡 Parcial | 🔴 Vacía/Crítica*
@@ -53,65 +86,39 @@
 
 ## 📄 INVENTARIO DE DOCUMENTOS
 
+### I. Contrato General (2 archivos)
+- `01_Contrato_Concesion_APP_TM01.md`
+- `02_Clausulas_Clave_Contrato.md`
+
+### II. Apéndices Técnicos (18 archivos)
+- `AT1_Alcance_Proyecto.md` - Cantidades contractuales
+- `AT2_Operacion_Mantenimiento.md` - Requisitos O&M
+- `AT3_Especificaciones_Tecnicas.md` - Normas y estándares
+- `AT4_Indicadores_Desempeno.md` - KPIs
+- (14 apéndices adicionales)
+
 ### III. Ingeniería Conceptual (57 archivos)
 
 **T01 - Fichas de Sistema (18 archivos):**
 - 24_T01_Ficha_Sistema_ITS_v1.0.md
-- 24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md (MVP)
-- 24C_T01_Ficha_Sistema_CCTV_MVP_v1.0.md (MVP)
-- 24D_T01_Ficha_Sistema_PMV_MVP_v1.0.md (MVP)
-- 24E_T01_Ficha_Sistema_ETD_RADAR_MVP_v1.0.md (MVP)
-- 24F_T01_Ficha_Sistema_WIM_MVP_v1.0.md (MVP)
-- 24G_T01_Ficha_Sistema_Estaciones_Meteorologicas_MVP_v1.0.md (MVP)
-- 25_T01_Ficha_Sistema_Peajes_v1.0.md
-- 26_T01_Ficha_Sistema_CCO_v1.0.md
-- 27_T01_Ficha_Sistema_Telecomunicaciones_v1.0.md
-- 28_T01_Ficha_Sistema_Emergencias_v1.0.md
-- 34_T01_Ficha_Sistema_Iluminacion_v1.0.md
-- 35_T01_Ficha_Sistema_Senalizacion_Vial_v1.0.md
-- 36_T01_Ficha_Sistema_Areas_Servicio_v1.0.md
-- 38_T01_Ficha_Sistema_Energia_Electrica_v1.0.md
-- 39_T01_Ficha_Sistema_Pesaje_WIM_v1.0.md
-- 40_T01_Ficha_Sistema_Gestion_Ambiental_v1.0.md
-- 41_T01_Ficha_Sistema_Gestion_Social_v1.0.md
-- 42_T01_Ficha_Sistema_Gestion_Predial_v1.0.md
+- 24B_T01_Ficha_Sistema_Postes_SOS_MVP_v1.0.md
+- 24C_T01_Ficha_Sistema_CCTV_MVP_v1.0.md
+- 24D_T01_Ficha_Sistema_PMV_MVP_v1.0.md
+- 24E_T01_Ficha_Sistema_ETD_RADAR_MVP_v1.0.md
+- 24F_T01_Ficha_Sistema_WIM_MVP_v1.0.md
+- 24G_T01_Ficha_Sistema_Estaciones_Meteorologicas_MVP_v1.0.md
+- (11 adicionales: Peajes, CCO, Telecom, Emergencias, Iluminación, etc.)
 
 **T02 - Análisis de Requisitos (18 archivos):**
 - 31_T02_Analisis_Requisitos_ITS_v1.0.md
-- 24B_T02_Analisis_Requisitos_Postes_SOS_MVP_v1.0.md (MVP)
-- 24C_T02_Analisis_Requisitos_CCTV_MVP_v1.0.md (MVP)
-- 24D_T02_Analisis_Requisitos_PMV_MVP_v1.0.md (MVP)
-- 24E_T02_Analisis_Requisitos_ETD_RADAR_MVP_v1.0.md (MVP)
-- 24F_T02_Analisis_Requisitos_WIM_MVP_v1.0.md (MVP)
-- 24G_T02_Analisis_Requisitos_Estaciones_Meteorologicas_MVP_v1.0.md (MVP)
-- 32_T02_Analisis_Requisitos_CCO_v1.0.md
-- 33_T02_Analisis_Requisitos_Peajes_v1.0.md
-- 43_T02_Analisis_Requisitos_Iluminacion_v1.0.md
-- 44_T02_Analisis_Requisitos_Senalizacion_Vial_v1.0.md
-- 45_T02_Analisis_Requisitos_Areas_Servicio_v1.0.md
-- 46_T02_Analisis_Requisitos_Energia_Electrica_v1.0.md
-- (Y 6 adicionales)
+- 24B_T02_Analisis_Requisitos_Postes_SOS_MVP_v1.0.md
+- 24C_T02_Analisis_Requisitos_CCTV_MVP_v1.0.md
+- (15 adicionales)
 
 **T03 - Arquitecturas Conceptuales (18 archivos):**
 - 53_T03_Arquitectura_Conceptual_ITS_v1.0.md
-- 24B_T03_Arquitectura_Conceptual_Postes_SOS_MVP_v1.0.md (MVP)
-- 24C_T03_Arquitectura_Conceptual_CCTV_MVP_v1.0.md (MVP)
-- 24D_T03_Arquitectura_Conceptual_PMV_MVP_v1.0.md (MVP)
-- 24E_T03_Arquitectura_Conceptual_ETD_RADAR_MVP_v1.0.md (MVP)
-- 24F_T03_Arquitectura_Conceptual_WIM_MVP_v1.0.md (MVP)
-- 24G_T03_Arquitectura_Conceptual_Estaciones_Meteorologicas_MVP_v1.0.md (MVP)
-- 54_T03_Arquitectura_Conceptual_CCO_v1.0.md
-- 55_T03_Arquitectura_Conceptual_Telecomunicaciones_v1.0.md
-- 56_T03_Arquitectura_Conceptual_Peajes_v1.0.md
-- 57_T03_Arquitectura_Conceptual_Energia_Electrica_v1.0.md
-- 58_T03_Arquitectura_Conceptual_Iluminacion_v1.0.md
-- 59_T03_Arquitectura_Conceptual_Senalizacion_Vial_v1.0.md
-- 60_T03_Arquitectura_Conceptual_Areas_Servicio_v1.0.md
-- 61_T03_Arquitectura_Conceptual_Pesaje_WIM_v1.0.md
-- 62_T03_Arquitectura_Conceptual_Emergencias_v1.0.md
-- 63_T03_Arquitectura_Conceptual_Gestion_Ambiental_v1.0.md
-- 64_T03_Arquitectura_Conceptual_Gestion_Social_v1.0.md
-- 65_T03_Arquitectura_Conceptual_Gestion_Predial_v1.0.md
+- 24B_T03_Arquitectura_Conceptual_Postes_SOS_MVP_v1.0.md
+- (16 adicionales)
 
 ### IV. Ingeniería Básica (13 archivos)
 
@@ -122,14 +129,9 @@
 - 50_T04_Especificaciones_Tecnicas_UPS_v1.0.md
 - 51_T04_Especificaciones_Tecnicas_Luminarias_LED_v1.0.md
 - 52_T04_Especificaciones_Tecnicas_Servidores_NVR_SCADA_v1.0.md
-- 53_T04_Especificaciones_Tecnicas_Equipos_Peaje_TAG_v1.0.md
-- 54_T04_Especificaciones_Tecnicas_Basculas_Pesaje_WIM_v1.0.md
-- 55_T04_Especificaciones_Tecnicas_Fibra_Optica_v1.0.md
-- 56_T04_Especificaciones_Tecnicas_Transformadores_Electricos_v1.0.md
-- 57_T04_Especificaciones_Tecnicas_Generadores_Emergencia_v1.0.md
-- 58_T04_Especificaciones_Tecnicas_Ambulancias_TAM_v1.0.md
+- (6 adicionales)
 
-### V. Ingeniería de Detalle (10 archivos)
+### V. Ingeniería de Detalle (12 archivos) ⭐ FUENTE DE VERDAD PRECIOS
 
 **T05 - Ingeniería de Detalle:**
 - 01_T05_Ingenieria_Detalle_Fibra_Optica_v1.0.md
@@ -138,12 +140,25 @@
 - 04_T05_Ingenieria_Detalle_Postes_SOS_v1.0.md
 - 05_T05_Ingenieria_Detalle_CCTV_v1.0.md
 - 06_T05_Ingenieria_Detalle_PMV_v1.0.md
-- 07_T05_Ingenieria_Detalle_RADAR_v1.0.md
+- 07_T05_Ingenieria_Detalle_RADAR_ETD_v1.0.md
 - 08_T05_Ingenieria_Detalle_Galibos_v1.0.md
 - 09_T05_Ingenieria_Detalle_METEO_v1.0.md
 - 10_T05_Ingenieria_Detalle_WIM_v1.0.md
+- 11_T05_Ingenieria_Detalle_Peajes_v1.0.md
+- 12_T05_Ingenieria_Detalle_Radio_v1.0.md
 
-### VII. Documentos Transversales (86 archivos)
+> **IMPORTANTE:** Los T05 son la **única fuente de verdad** para cantidades y precios. Cualquier cambio debe hacerse aquí y luego ejecutar scripts de sincronización.
+
+### VII. Documentos Transversales (90+ archivos)
+
+**DTs (Decisiones Técnicas):**
+- DT-TM01-CCTV-001.md - Reducción de cámaras 88→45
+- DT-TM01-CCTV-002.md - Optimización layout
+- DT-TM01-CCTV-003.md - Actualización especificaciones
+- DT-TM01-PMV-001.md - Ajuste cantidades PMV
+- DT-TM01-SOS-001.md - Validación postes SOS
+- DT-TM01-METEO-001-20251023.md - Estaciones meteorológicas
+- (30+ DTs adicionales)
 
 **Validaciones Contractuales:**
 - 34_VALIDACION_CONTRACTUAL_POSTES_SOS_v1.0.md
@@ -151,18 +166,20 @@
 - 36_VALIDACION_CONTRACTUAL_GALIBOS_v1.0.md
 - 37_VALIDACION_CONTRACTUAL_CCTV_v1.0.md
 - 38_VALIDACION_CONTRACTUAL_PMV_v1.0.md
-- 26_VALIDACION_CONTRACTUAL_ESTACIONES_METEOROLOGICAS_v1.0.md
-- 24_VALIDACION_CONTRACTUAL_PESAJE_v1.0.md
-- 29_VALIDACION_CONTRACTUAL_SENALIZACION_VIAL_v1.0.md
-- 30_VALIDACION_CONTRACTUAL_ILUMINACION_v1.0.md
-- 31_VALIDACION_CONTRACTUAL_ENERGIA_ELECTRICA_v1.0.md
-- 32_VALIDACION_CONTRACTUAL_TELECOMUNICACIONES_v1.0.md
+- (13 validaciones totales)
 
 **Documentos Maestros:**
 - 39_INDICE_CRUZADO_SUBSISTEMAS_ORGANIZADO_v2.0.md
-- 40_PLAN_LIMPIEZA_ORGANIZACION_DOCUMENTAL_v1.0.md
-- 41_VALIDACION_COMPLETA_SISTEMA_DOCUMENTAL_v1.0.md
 - 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md
+- GUIA_VALIDACION_FLUJO_PMV.md
+- GUIA_VALIDACION_FLUJO_CCTV.md
+
+### VIII. Documentos Maestros y Metodología
+
+**Metodología:**
+- 00_METODOLOGIA_PUNTO_42_v3.0.md ⭐ NORMA VIGENTE
+- PROMPT_MAESTRO_V3.0_METODOLOGIA_TM01.md
+- TEMPLATES_METODOLOGICOS_v1.0.md
 
 ### IX. WBS y Planificación (Interfaces Web)
 
@@ -176,15 +193,76 @@
 - `analisis_riesgos.html` - Análisis de riesgos
 - `edt_detalle.html` - EDT detallado
 
-### X. Entregables Consolidados
+**Datos JavaScript (Auto-generados):**
+- `docs/data/datos_wbs_TM01_items.js` 🤖 (generado por sync_wbs_tm01.ps1)
+- `docs/data/layout_datos.js` 🤖 (generado por sincronizar_layout.ps1)
+- `docs/data/presupuesto_datos.js` 🤖 (generado por sincronizar_presupuesto.ps1)
+
+### X. Entregables Consolidados ⭐ LAYER 5 (SERVICES)
+
+**Estructura:**
+```
+X_ENTREGABLES_CONSOLIDADOS/
+├── 00_HISTORICO/                  → Versiones obsoletas
+├── 7_SISTEMAS_EJECUTIVOS/         → Resúmenes ejecutivos (Markdown)
+├── 8_DOCUMENTOS_SERVIDOS/HTML/    → HTMLs generados (cocinar_ejecutivos.ps1)
+├── RFQ_*.md                       → RFQs con bloques automáticos
+├── PRESUPUESTO_*.md               → Presupuestos consolidados
+└── README.md                      → Guía de regeneración
+```
+
+**RFQs (Solicitudes de Cotización):**
+- `RFQ_001_FIBRA_OPTICA_v2.0.md` - Fibra Óptica + Switches ✅ Auto-actualizado
+- `RFQ_002_SOS_Postes_v2.0.md` - Postes SOS ✅ Auto-actualizado
+- `RFQ_003_CCTV_v2.0.md` - CCTV ✅ Auto-actualizado
+- `RFQ_006_ETD_v1.0.md` - ETD/Radar ✅ Auto-actualizado
+- `RFQ_007_RADARES_SANCIONATORIOS_v2.1.md` - Radares SAST ✅ Auto-actualizado
+- `RFQ_007_MONITORES_VELOCIDAD_INFORMATIVOS_v2.1.md` - Monitores ✅ Auto-actualizado
+- `RFQ_008_PMV_v1.0.md` - PMV ✅ Auto-actualizado
+- `SOLICITUD_COMPRA_EQUIPOS_L2_v1.0.md` - Switches L2 ✅ Auto-actualizado
+- `SOLICITUD_COMPRA_EQUIPOS_L3_v1.0.md` - Switches L3 ✅ Auto-actualizado
+
+> 🤖 **AUTO-GENERADOS:** Estos RFQs se actualizan con `cocinar_rfqs.ps1` desde T05. NO editar manualmente.
 
 **Presupuestos:**
-- `PRESUPUESTO_ITS_PURO_v2.0.md` - Presupuesto ITS con componentes reales validados ($7.79M USD)
-- `52_PRESUPUESTO_DETALLADO_SISTEMA_PESAJE_v1.0.md` - WIM + Básculas Estáticas ($551K USD)
-- `53_PRESUPUESTO_CONSOLIDADO_TELECOMUNICACIONES_v1.0.md` - Telecomunicaciones ($5.7M USD estimado)
+- `PRESUPUESTO_ITS_PURO_v2.0.md` - Presupuesto ITS consolidado ($7.79M USD)
+- `52_PRESUPUESTO_DETALLADO_SISTEMA_PESAJE_v1.0.md` - WIM + Básculas ($551K USD)
 
-**RFQs:**
-- `RFQ_001_FIBRA_OPTICA_v1.0.md` - Solicitud de cotización Fibra Óptica (1,480 líneas)
+**Ejecutivos (Generados Automáticamente):**
+- `8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_01_*.html` - Recaudo y Peajes
+- `8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_02_*.html` - Telecom y Fibra
+- `8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_03_*.html` - ITS y Pesaje WIM
+- `8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_04_*.html` - Equipos Operación Vial
+- `8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_05_*.html` - CCO
+- `8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_06_*.html` - Integración/Software
+
+> 🍳 **COCINA:** Generados con `cocinar_ejecutivos.ps1` desde T01.
+
+---
+
+## 🤖 SCRIPTS DE AUTOMATIZACIÓN (LAYER 2 + LAYER 5)
+
+### Scripts de Sincronización (Layer 2)
+| Script | Propósito | Input | Output |
+|:-------|:----------|:------|:-------|
+| `sync_wbs_tm01.ps1` | Genera WBS desde T05 | T05 Markdown | `datos_wbs_TM01_items.js` |
+| `sincronizar_layout.ps1` | Genera layout desde T05 | T05 Markdown | `layout_datos.js` |
+| `sincronizar_presupuesto.ps1` | Genera presupuesto | T05 Markdown | `presupuesto_datos.js` |
+| `sincronizar_SISTEMA_TM01_COMPLETO.ps1` | Ejecuta todos los anteriores | T05 Markdown | Todos los .js |
+
+### Scripts de Cocina (Layer 5) ⭐ NUEVO
+| Script | Propósito | Input | Output | Tiempo |
+|:-------|:----------|:------|:-------|:-------|
+| `cocinar_rfqs.ps1` | Actualiza RFQs con T05 | T05 Markdown | RFQ_*.md (bloques auto) | ~6 seg |
+| `cocinar_ejecutivos.ps1` | Genera HTMLs ejecutivos | T01 Markdown | HTML ejecutivos | ~10 seg |
+
+**Comando para regenerar todo:**
+```powershell
+# Desde la raíz del proyecto
+powershell -ExecutionPolicy Bypass -File "scripts\sincronizar_SISTEMA_TM01_COMPLETO.ps1"
+powershell -ExecutionPolicy Bypass -File "scripts\cocinar_rfqs.ps1"
+powershell -ExecutionPolicy Bypass -File "scripts\cocinar_ejecutivos.ps1"
+```
 
 ---
 
@@ -192,20 +270,22 @@
 
 ### Documentos Esenciales
 - [README.md](README.md) - Visión general del proyecto
-- [ROADMAP.md](ROADMAP.md) - Plan de trabajo y cronograma
-- [00_INICIO_RAPIDO.md](00_INICIO_RAPIDO.md) - Guía de inicio rápido
+- [ARCHITECTURE.md](ARCHITECTURE.md) - Arquitectura 5 Capas
+- [FUENTES_DE_VERDAD.md](FUENTES_DE_VERDAD.md) - Reglas de gestión
+- [FLUJO_DATOS_COMPLETO.md](FLUJO_DATOS_COMPLETO.md) - Flujo de datos
 
 ### Sistema Web
 - [GitHub Pages](https://dieleoz.github.io/TM01/) - Sistema web en producción
 - [Portal WBS](docs/WBS_Menu_Principal.html) - Menú principal del sistema
 
 ### Documentos Consolidados
-- [Presupuesto ITS Puro](X.%20Entregables%20Consolidados/PRESUPUESTO_ITS_PURO_v2.0.md)
-- [RFQ Fibra Óptica](X.%20Entregables%20Consolidados/RFQ_001_FIBRA_OPTICA_v1.0.md)
+- [Presupuesto ITS Puro](X_ENTREGABLES_CONSOLIDADOS/PRESUPUESTO_ITS_PURO_v2.0.md)
+- [RFQ CCTV](X_ENTREGABLES_CONSOLIDADOS/RFQ_003_CCTV_v2.0.md)
+- [RFQ Fibra Óptica](X_ENTREGABLES_CONSOLIDADOS/RFQ_001_FIBRA_OPTICA_v2.0.md)
 
-### Validaciones Contractuales
-- [Índice Cruzado](VII.%20Documentos%20Transversales/39_INDICE_CRUZADO_SUBSISTEMAS_ORGANIZADO_v2.0.md)
-- [Layout Georreferenciado](VII.%20Documentos%20Transversales/42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md)
+### Metodología
+- [Metodología Punto 42 v3.0](VIII.%20Documentos%20Maestros%20y%20Metodologia/00_METODOLOGIA_PUNTO_42_v3.0.md)
+- [Guía de Replicación](GUIA_REPLICACION_PROYECTO_VEHICULAR_v1.0.md)
 
 ---
 
@@ -215,71 +295,114 @@
 
 | Tipo | Cantidad | Estado |
 |:-----|:---------|:-------|
-| **T01 - Fichas de Sistema** | 13 | ✅ 100% |
-| **T02 - Análisis de Requisitos** | 13 | ✅ 100% |
-| **T03 - Arquitecturas Conceptuales** | 13 | ✅ 100% |
+| **T01 - Fichas de Sistema** | 18 | ✅ 100% |
+| **T02 - Análisis de Requisitos** | 18 | ✅ 100% |
+| **T03 - Arquitecturas Conceptuales** | 18 | ✅ 100% |
 | **T04 - Especificaciones Técnicas** | 12 | ✅ 100% |
-| **T05 - Ingeniería de Detalle** | 10 | ✅ 100% |
+| **T05 - Ingeniería de Detalle** | 12 | ✅ 100% |
+| **DTs - Decisiones Técnicas** | 30+ | ✅ Activo |
 | **Validaciones Contractuales** | 13 | ✅ 100% |
-| **Documentos Transversales** | 86 | ✅ Completo |
+| **RFQs Auto-generados** | 9 | ✅ Layer 5 Operativo |
 | **Interfaces Web** | 8 | ✅ Operativas |
+| **Scripts de Automatización** | 80+ | ✅ Operativos |
 
-### Sistemas Validados
+### Sistemas Validados (Cantidades Oficiales)
 
-| Sistema | Cantidad | Estado |
-|:--------|:---------|:-------|
-| **Postes SOS** | 88 unidades | ✅ Validado |
-| **ETD/RADAR** | 16 equipos | ✅ Validado |
-| **CCTV** | 45 cámaras | ✅ Validado |
-| **PMV** | 12 unidades | ✅ Validado |
-| **Estaciones Meteorológicas** | 3 unidades | ✅ Validado |
-| **WIM** | 1 estación | ✅ Validado |
-| **Fibra Óptica** | 252 km | ✅ Validado |
+| Sistema | Cantidad | CAPEX (USD) | Estado |
+|:--------|:---------|:------------|:-------|
+| **CCTV** | 45 cámaras | $1,125,000 | ✅ Validado |
+| **Postes SOS** | 98 unidades | $2,450,000 | ✅ Validado |
+| **PMV** | 12 unidades | $600,000 | ✅ Validado |
+| **ETD/RADAR** | 16 equipos | $800,000 | ✅ Validado |
+| **Estaciones Meteorológicas** | 3 unidades | $150,000 | ✅ Validado |
+| **WIM** | 1 estación | $551,000 | ✅ Validado |
+| **Fibra Óptica** | 252 km | $1,260,000 | ✅ Validado |
+| **Switches L2** | 45 unidades | $225,000 | ✅ Validado |
+| **Switches L3** | 12 unidades | $180,000 | ✅ Validado |
+| **TOTAL ITS** | - | **$7,790,000** | ✅ Consolidado |
 
 ---
 
-## 🎯 METODOLOGÍA PUNTO 42 - MVP
+## 🎯 METODOLOGÍA PUNTO 42 v3.0
 
 ### **Estado Actual:**
-- 🔄 **MODO MVP:** Reconstrucción desde cero con metodología validada
-- 📋 **Metodología:** `VIII. Documentos Maestros y Metodologia/00_METODOLOGIA_PUNTO_42_MVP_v1.0.md`
-- 🎯 **Objetivo:** Validar proceso con 1 sistema piloto antes de escalar
+- ✅ **FASE 6.0 COMPLETADA:** Arquitectura 5 Capas Operativa
+- 📋 **Metodología:** `VIII. Documentos Maestros y Metodologia/00_METODOLOGIA_PUNTO_42_v3.0.md`
+- 🎯 **Layer 5 (Services):** Entregables automáticos listos para cliente/proveedores
 
-### **Fases MVP:**
-| Fase | Descripción | Estado | Documentos |
-|:-----|:------------|:-------|:-----------|
-| **Fase 0** | Preparación | ✅ | Estructura creada |
-| **Fase 1** | Conversión | ✅ | Contrato convertido |
-| **Fase 2** | Ingeniería Conceptual (T01-T03) | 🔄 | Sistema piloto pendiente |
-| **Fase 3** | Ingeniería Básica (T04) | ⏳ | Pendiente |
-| **Fase 4** | Ingeniería de Detalle (T05) | ⏳ | Pendiente |
-| **Fase 5** | Validación Contractual | ⏳ | Pendiente |
+### **Capas Implementadas:**
+| Capa | Descripción | Estado | Componentes |
+|:-----|:------------|:-------|:------------|
+| **Capa 1** | Fuentes de Verdad | ✅ | Contrato + T01-T05 + DTs |
+| **Capa 2** | Transformación | ✅ | Scripts sync_* + cocinar_* |
+| **Capa 3** | Datos Intermedios | ✅ | JavaScript auto-generado |
+| **Capa 4** | Visualización | ✅ | 8 interfaces web |
+| **Capa 5** | Servicios | ✅ | RFQs + Ejecutivos HTML |
 
-### **Sistema Piloto Recomendado:**
-- **Postes SOS** (Sistema más simple para validar metodología)
+### **Flujo de Trabajo:**
+```
+1. Editar T05 (Fuente de Verdad)
+   ↓
+2. Ejecutar sincronizar_SISTEMA_TM01_COMPLETO.ps1 (actualiza web)
+   ↓
+3. Ejecutar cocinar_rfqs.ps1 (actualiza RFQs)
+   ↓
+4. Ejecutar cocinar_ejecutivos.ps1 (genera HTMLs)
+   ↓
+5. Verificar entregables en X_ENTREGABLES_CONSOLIDADOS/
+   ↓
+6. Commit y push
+```
 
 ---
 
-## 🎯 PRÓXIMOS PASOS
+## 🎯 HITOS COMPLETADOS
 
-### **Prioridad Alta (MVP)**
-1. Seleccionar sistema piloto (Postes SOS recomendado)
-2. Completar T01-T03 del sistema piloto
-3. Validar proceso y templates
-4. Documentar lecciones aprendidas
+### **Fase 6.0 - Layer 5 (Services)** ✅ COMPLETADO
+- ✅ Script `cocinar_rfqs.ps1` implementado
+- ✅ Script `cocinar_ejecutivos.ps1` implementado
+- ✅ 9 RFQs con bloques automáticos
+- ✅ Certificación de compras automática
+- ✅ Ejecutivos HTML generados
+- ✅ README en X_ENTREGABLES_CONSOLIDADOS
+- ✅ Documentación maestra actualizada (ARCHITECTURE, README, AUDIT, ESTRUCTURA)
 
-### **Prioridad Media (Post-MVP)**
-5. Escalar a 3-5 sistemas
-6. Actualizar índices cruzados
-7. Consolidar presupuesto inicial
+### **Fase 5.0 - Auditoría y Reconciliación** ✅ COMPLETADO
+- ✅ Auditoría forense de CAPEX
+- ✅ Reconciliación Hard Deck
+- ✅ Validación contractual completa
+- ✅ Coherencia total Ingeniería → Compras
+
+### **Fases 1-4** ✅ COMPLETADO
+- ✅ Estructura base creada
+- ✅ Contrato y apéndices convertidos
+- ✅ Ingeniería completa (T01-T05)
+- ✅ Sistema web operativo
+- ✅ Scripts de sincronización
+
+---
+
+## 🚀 PRÓXIMOS PASOS
+
+### **Prioridad Alta**
+1. ✅ Validar entregables Layer 5 con cliente
+2. ✅ Ejecutar licitación con RFQs actualizados
+3. ⏳ Completar VI. Operación y Reversión
+
+### **Prioridad Media**
+4. ⏳ Optimizar tiempos de generación de scripts
+5. ⏳ Añadir más sistemas a cocinar_rfqs.ps1
+6. ⏳ Crear plantillas adicionales de ejecutivos
 
 ### **Prioridad Baja**
-8. Optimizaciones y automatización
-9. Mejoras de UI
-10. Documentación avanzada
+7. ⏳ Mejoras de UI en sistema web
+8. ⏳ Documentación avanzada
+9. ⏳ Integración con sistemas externos
 
 ---
 
-**Última actualización:** 31 de octubre de 2025  
-**Versión:** 4.1 (MVP Mode)  
-**Estado:** 🔄 **MVP EN DESARROLLO** - Reconstrucción metodológica
+**Última actualización:** 27 de Enero de 2026  
+**Versión:** 6.0 (Layer 5 Implementado)  
+**Estado:** ✅ **FASE 6.0 COMPLETADA** - Arquitectura 5 Capas Operativa  
+**CAPEX Total ITS:** $7,790,000 USD  
+**Metodología:** Punto 42 v3.0
