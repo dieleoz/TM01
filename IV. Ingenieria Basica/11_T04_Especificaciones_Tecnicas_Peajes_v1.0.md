@@ -101,6 +101,34 @@
 | Barreras | Modbus TCP |
 | CCTV | RTSP |
 
+### 4.3 Seguridad y Encriptación
+
+| Parámetro | Especificación | Referencia |
+|:----------|:---------------|:-----------|
+| **Encriptación datos** | AES-256 | IP/REV Art 2.9.7 |
+| **Protocolo seguro** | TLS 1.2+ | - |
+| **Autenticación** | Certificados digitales | - |
+| **Integridad** | Hash SHA-256 | - |
+| **Almacenamiento** | Encriptado en reposo | - |
+
+### 4.4 Integración SiGT (Sistema de Gestión de Tráfico)
+
+| Parámetro | Especificación | Referencia |
+|:----------|:---------------|:-----------|
+| **Integración obligatoria** | SiGT Nacional | IP/REV Art 2.9.10 |
+| **Formato datos** | JSON (Taxonomía SiGT) | IP/REV 2021 |
+| **Frecuencia envío** | Tiempo real (\u003c5 min) | - |
+| **Datos compartidos** | Transacciones, flujos, eventos | - |
+| **API** | RESTful + WebSockets | - |
+| **Disponibilidad** | 99.5% uptime | - |
+
+**Datos enviados a SiGT:**
+- ✅ Volumen de tráfico por carril
+- ✅ Clasificación vehicular (WIM-DAC)
+- ✅ Tiempos de transacción
+- ✅ Eventos y alarmas
+- ✅ Estado operativo de equipos
+
 ---
 
 ## 5. PRESUPUESTO

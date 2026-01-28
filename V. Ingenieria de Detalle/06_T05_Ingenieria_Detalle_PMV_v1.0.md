@@ -85,7 +85,7 @@
 
 | Parámetro | Especificación |
 |:----------|:--------------|
-| **Protocolo** | NTCIP 1203 v3 (estándar ITS) |
+| **Protocolo** | NTCIP 1203 v3 **O** DATEX II (UNE-EN 16157-4) | Manual 2024 Sec 2.7.5 |
 | **Interfaz red** | Ethernet 10/100 Mbps |
 | **Gestión remota** | Web + SNMP + API REST |
 | **Mensajes almacenables** | ≥256 mensajes preprogramados |
