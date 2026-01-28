@@ -10,10 +10,10 @@
     <title>Reporte Gerencial - TM01 Troncal Magdalena</title>
     <style>
         :root {
-            --g1: #667eea;
-            --g2: #764ba2;
-            --h1: #1e3c72;
-            --h2: #2a5298;
+            --g1: #0f172a;
+            --g2: #1e293b;
+            --h1: #0f172a;
+            --h2: #2563eb;
             --bg: #f8f9fa;
             --card: #ffffff;
             --line: #dee2e6;
@@ -215,6 +215,7 @@
 
 <body>
     <div class="toolbar">
+        <a href="WBS_Menu_Principal.html" class="btn" style="margin-right: auto;">← Volver al Inicio</a>
         <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir</button>
         <button class="btn btn-success" onclick="exportarExcelReporte()">📊 Exportar Excel</button>
     </div>
@@ -287,7 +288,7 @@
             <div class="content cards" id="supuestosCards">
                 <div class="card">
                     <h3>Arquitectura</h3>
-                    <div class="muted">4 capas: Fuente ←’ Transformación ←’ Datos ←’ Visualización</div>
+                    <div class="muted">5 capas: Fuente → DTs → Ingeniería → Motor Datos → Services/Entrega</div>
                 </div>
                 <div class="card">
                     <h3>Comunicaciones</h3>
@@ -353,8 +354,8 @@
         function init() {
             // Unificar fuentes de datos (Soporte para TM01MasterData clase o TM01_MASTER_DATA objeto global)
             const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
-                       (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
-            
+                (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
+
             const wbsData = (typeof window.wbsDataGlobal !== 'undefined') ? window.wbsDataGlobal : null;
 
             if (!md && !wbsData) { setTimeout(init, 100); return; }
@@ -362,7 +363,7 @@
             // Determinar items y fecha de actualización
             let items = [];
             let fechaDatos = 'Desconocida';
-            
+
             if (wbsData && wbsData.items && wbsData.items.length > 0) {
                 // Prioridad: Datos detallados WBS
                 items = wbsData.items.filter(i => i.tipo === 'item');
@@ -370,10 +371,10 @@
             } else if (md && md.data) {
                 // Fallback: Master Data (puede ser simplificado o detallado)
                 // Soporte para estructura wbs.items o tm01Data.data.wbs
-                const wbsArray = Array.isArray(md.data.wbs) ? md.data.wbs : 
-                                (md.data.wbs && md.data.wbs.items) ? md.data.wbs.items : [];
+                const wbsArray = Array.isArray(md.data.wbs) ? md.data.wbs :
+                    (md.data.wbs && md.data.wbs.items) ? md.data.wbs.items : [];
                 items = wbsArray.filter(i => i && i.tipo === 'item');
-                
+
                 // Intentar obtener fecha del resumen
                 if (md.data.resumen && md.data.resumen.fechaActualizacion) {
                     fechaDatos = md.data.resumen.fechaActualizacion;
@@ -383,12 +384,12 @@
             const totalUSD = sum(items, i => n(i.cantidad) * n(i.vu));
             const totalCOP = sum(items, i => n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)));
             const sistemas = new Set(items.map(i => i.sistema).filter(Boolean));
-            
+
             document.getElementById('mUSD').textContent = fm(totalUSD, 'USD');
             document.getElementById('mCOP').textContent = fm(totalCOP, 'COP');
             document.getElementById('mItems').textContent = items.length;
             document.getElementById('mSistemas').textContent = sistemas.size;
-            
+
             // Mostrar fecha de datos + fecha actual reporte
             const fechaReporte = new Date().toLocaleString('es-CO');
             document.getElementById('fechaAct').innerHTML = `${fechaDatos} <br><small class='muted'>(Reporte: ${fechaReporte})</small>`;

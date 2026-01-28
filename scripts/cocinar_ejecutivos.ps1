@@ -35,7 +35,7 @@ $cssContent = @"
 </style>
 "@
 
-$cssFile = Join-Path $scriptPath "temp_style.css"
+$cssFile = Join-Path $scriptPath "temp_style_$(Get-Date -Format 'yyyyMMddHHmmss').css"
 $cssContent | Set-Content -LiteralPath $cssFile -Encoding UTF8
 
 $files = Get-ChildItem -LiteralPath $sourceDir -Filter "*.md"
@@ -56,36 +56,40 @@ foreach ($file in $files) {
     <p>APP Puerto Salgar - Barrancabermeja | TM01</p>
 </div>
 "@
-    $footerFile = Join-Path $scriptPath "temp_footer.html"
+    $footerFile = Join-Path $scriptPath "temp_footer_$($baseName)_$(Get-Date -Format 'HHmmss').html"
     $footerContent | Set-Content -LiteralPath $footerFile -Encoding UTF8
 
     Write-Host "🍳 Cocinando: $baseName.html..." -NoNewline
 
     try {
-        $pandocArgs = @(
-            $inputPath,
-            "-o", $outputPath,
-            "-s",
-            "--metadata", "title=$baseName",
-            "-H", $cssFile,
-            "-A", $footerFile
-        )
+        # Usar invocación directa en lugar de Start-Process para manejar correctamente rutas con espacios
+        $exitCode = 0
         
-        $process = Start-Process -FilePath "pandoc" -ArgumentList $pandocArgs -PassThru -Wait -NoNewWindow
+        # Ejecutar Pandoc y capturar salida
+        $output = & pandoc $inputPath -o $outputPath -s --metadata "title=$baseName" -H $cssFile -A $footerFile 2>&1
+        $exitCode = $LASTEXITCODE
         
-        if ($process.ExitCode -eq 0) {
+        if ($exitCode -eq 0) {
             Write-Host " [OK] ✅" -ForegroundColor Green
         }
         else {
-            Write-Host " [FAIL] ❌ (Exit Code: $($process.ExitCode))" -ForegroundColor Red
+            Write-Host " [FAIL] ❌ (Exit Code: $exitCode)" -ForegroundColor Red
+            if ($output) {
+                Write-Host "  Error: $output" -ForegroundColor Red
+            }
         }
     }
     catch {
         Write-Host " [ERROR] ❌ $_" -ForegroundColor Red
     }
+    finally {
+        # Limpiar archivo temporal de footer de esta iteración
+        Remove-Item -LiteralPath $footerFile -ErrorAction SilentlyContinue
+    }
 }
 
+
+# Limpiar archivo CSS temporal
 Remove-Item -LiteralPath $cssFile -ErrorAction SilentlyContinue
-Remove-Item -LiteralPath $footerFile -ErrorAction SilentlyContinue
 
 Write-Host "DONE."
