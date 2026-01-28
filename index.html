@@ -1,94 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto TM01 - APP Puerto Salgar - Barrancabermeja</title>
+    <link rel="stylesheet" href="docs/css/tm01-design-system.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6; color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh; padding: 20px;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, var(--tm01-primary), var(--role-technical));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
-        .container { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 60px; }
-        .header { text-align: center; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 3px solid #667eea; }
-        h1 { color: #667eea; font-size: 2.8em; margin-bottom: 15px; }
-        .subtitle { color: #666; font-size: 1.3em; margin-bottom: 20px; }
-        .status { display: inline-block; background: #4caf50; color: #fff; padding: 8px 20px; border-radius: 25px;
-            font-size: .95em; font-weight: bold; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin: 40px 0; }
-        .info-card { background: linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%); padding: 25px; border-radius: 15px;
-            border-left: 5px solid #667eea; }
-        .info-card h3 { color: #667eea; margin-bottom: 12px; font-size: 1.1em; }
-        .info-card p { color: #666; font-size: .95em; }
-        .section { margin: 40px 0; }
-        .section h2 { color: #667eea; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #e9ecef; }
-        .phase-list { background: #f8f9fa; padding: 20px; border-radius: 12px; }
-        .phase-list li { list-style: none; padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
-        .phase-list li:last-child { border-bottom: 0; }
-        .phase-list li.completed::before { content: '✅ '; }
-        .phase-list li.active::before { content: '🔄 '; }
-        .phase-list li.pending::before { content: '⏳ '; }
-        .links { margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
-        .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 28px; background: #667eea; color: #fff;
-            text-decoration: none; border-radius: 10px; font-weight: 600; }
-        .btn:hover { background: #764ba2; }
-        .btn-secondary { background: #fff; color: #667eea; border: 2px solid #667eea; }
-        .btn-secondary:hover { background: #667eea; color: #fff; }
-        .footer { margin-top: 50px; padding-top: 20px; border-top: 2px solid #e9ecef; text-align: center; color: #999; }
-        @media (max-width: 768px) { .container { padding: 30px 20px; } h1 { font-size: 2em; } .btn { width: 100%; justify-content: center; } }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-2xl);
+            padding: 2.5rem !important;
+            width: 100%;
+            max-width: 450px !important;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .logo h1 {
+            color: var(--tm01-primary);
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo p {
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .project-badge {
+            background: var(--bg-surface);
+            color: var(--tm01-accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 1rem !important;
+            border: 1px solid var(--border);
+        }
+
+        .form-group label {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem 1rem !important;
+            border: 1px solid var(--border) !important;
+            border-radius: var(--radius-lg) !important;
+            font-size: 1rem !important;
+            transition: all 0.2s;
+            background: var(--bg-main);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--tm01-accent) !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .btn-login {
+            background: var(--tm01-primary) !important;
+            color: white !important;
+            padding: 1rem !important;
+            border-radius: var(--radius-lg) !important;
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            margin-top: 1rem;
+            transition: all 0.2s;
+        }
+
+        .btn-login:hover {
+            background: var(--tm01-accent) !important;
+            transform: translateY(-1px);
+        }
+
+        .info-box {
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            padding: 1rem;
+            margin-top: 2rem !important;
+            border: 1px solid var(--border);
+        }
+
+        .info-box h3 {
+            color: var(--text-main) !important;
+            font-size: 0.9rem !important;
+            font-weight: 700 !important;
+        }
+
+        .info-box p {
+            font-size: 0.85rem !important;
+            color: var(--text-sub) !important;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ocultar elementos del portal inicialmente */
+        #portalContainer {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <!-- LOGIN FORM (copiado del ejemplo, adaptado a TM01) -->
-    <div class="login-container" id="loginContainer" style="max-width:520px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.25);padding:24px;">
-        <div class="logo" style="text-align:center;margin-bottom:12px;">
-            <h1 style="margin:0 0 6px;">🏗️ Sistema TM01</h1>
-            <p style="margin:0;color:#666;">Troncal Magdalena</p>
-            <span class="project-badge" style="display:inline-block;margin-top:6px;color:#667eea;">v3.3 | Acceso Seguro</span>
+    <div class="login-container" id="loginContainer">
+        <div class="logo" style="text-align:center;">
+            <h1>🏗️ Sistema TM01</h1>
+            <p>Troncal Magdalena</p>
+            <span class="project-badge">v3.3 | Acceso Seguro</span>
         </div>
 
         <form id="loginForm" onsubmit="return handleLogin(event)" style="display:flex;flex-direction:column;gap:12px;">
             <div class="form-group">
                 <label for="username">👤 Usuario</label>
-                <input type="text" id="username" placeholder="Ingrese su usuario" autocomplete="username" required style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;">
+                <input type="text" id="username" placeholder="Ingrese su usuario" autocomplete="username" required>
             </div>
 
             <div class="form-group">
                 <label for="password">🔒 Contraseña</label>
-                <input type="password" id="password" placeholder="Ingrese su contraseña" autocomplete="current-password" required style="padding:10px 12px;border:1px solid #e0e0e0;border-radius:8px;font-size:14px;">
+                <input type="password" id="password" placeholder="Ingrese su contraseña" autocomplete="current-password"
+                    required>
             </div>
 
-            <button type="submit" class="btn-login" style="padding:10px 14px;border:none;border-radius:8px;background:#667eea;color:#fff;font-weight:600;cursor:pointer;">Acceder al Sistema</button>
+            <button type="submit" class="btn-login">Acceder al Sistema</button>
 
-            <div class="spinner" id="spinner" style="display:none;height:18px;"></div>
-            <div class="error-message" id="errorMessage" style="display:none;color:#c0392b;font-size:13px;">❌ Usuario o contraseña incorrectos</div>
+            <div class="spinner" id="spinner" style="display:none;"></div>
+            <div class="error-message" id="errorMessage" style="display:none;">❌ Usuario o contraseña incorrectos</div>
         </form>
 
-        <div class="info-box" style="margin-top:12px;color:#666;font-size:13px;">
-            <h3 style="margin:0 0 6px;">📋 Información del Sistema</h3>
-            <p style="margin:0 0 8px;">Sistema de Validación Web TM01 con arquitectura dinámica de 4 capas, gestión de DTs y sincronización automática.</p>
-            <p style="margin:0;color:#999;">ℹ️ Solicitar credenciales a PMO</p>
+        <div class="info-box">
+            <h3>📋 Información del Sistema</h3>
+            <p style="margin-bottom: 8px;">Sistema de Validación Web TM01 con arquitectura dinámica de 4 capas, gestión
+                de DTs y sincronización automática.</p>
+            <p>ℹ️ Solicitar credenciales a PMO</p>
         </div>
 
-        <div class="version" style="margin-top:10px;text-align:center;color:#999;">Sistema v3.3 | Octubre 2025 | TM01 Troncal Magdalena</div>
+        <div class="version" style="margin-top:10px;text-align:center;color:var(--text-muted);font-size:0.8rem;">Sistema
+            v3.3 | Octubre 2025 | TM01 Troncal Magdalena</div>
     </div>
 
     <!-- PORTAL PRINCIPAL (después del login) -->
-    <div class="container" id="portalContainer" style="display:none;">
+    <div class="container" id="portalContainer">
         <div class="header">
             <h1>🚀 Proyecto TM01</h1>
             <p class="subtitle">Asociación Público-Privada (APP)<br>Puerto Salgar - Barrancabermeja</p>
             <div class="status">✅ GitHub Pages activo</div>
         </div>
         <div class="info-grid">
-            <div class="info-card"><h3>📊 Estado</h3><p>Sistema web reconstruido con arquitectura de 4 capas.</p></div>
-            <div class="info-card"><h3>📅 Inicio</h3><p>16 de Octubre 2025</p></div>
-            <div class="info-card"><h3>⏱️ Duración</h3><p>12-16 semanas</p></div>
-            <div class="info-card"><h3>📁 Documentos</h3><p>85+ documentos técnicos</p></div>
+            <div class="info-card">
+                <h3>📊 Estado</h3>
+                <p>Sistema web reconstruido con arquitectura de 4 capas.</p>
+            </div>
+            <div class="info-card">
+                <h3>📅 Inicio</h3>
+                <p>16 de Octubre 2025</p>
+            </div>
+            <div class="info-card">
+                <h3>⏱️ Duración</h3>
+                <p>12-16 semanas</p>
+            </div>
+            <div class="info-card">
+                <h3>📁 Documentos</h3>
+                <p>85+ documentos técnicos</p>
+            </div>
         </div>
         <div class="section">
             <h2>📋 Fases del Proyecto</h2>
@@ -112,7 +215,9 @@
         </div>
         <div class="footer">
             <p>TM01 Troncal Magdalena — Sistema Web dinámico con arquitectura de 4 capas.</p>
-            <p>Última actualización: <script>document.write(new Date().toLocaleString('es-CO'))</script></p>
+            <p>Última actualización:
+                <script>document.write(new Date().toLocaleString('es-CO'))</script>
+            </p>
         </div>
     </div>
 
@@ -128,7 +233,7 @@
         const TIMEOUT_SESION = 1800000; // 30 minutos
         let ultimaActividad = Date.now();
 
-        window.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('DOMContentLoaded', function () {
             const isAuthenticated = sessionStorage.getItem('authenticated') === 'true';
             const username = sessionStorage.getItem('username');
             if (isAuthenticated && username) {
@@ -197,4 +302,5 @@
         }
     </script>
 </body>
+
 </html>
