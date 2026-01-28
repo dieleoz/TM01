@@ -235,6 +235,80 @@
             color: var(--error);
             font-size: 1.1rem;
         }
+
+        /* Estilos de Validación */
+        .validation-section {
+            border-left: 5px solid var(--role-contractual);
+        }
+
+        .validation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .validation-card {
+            background: var(--bg-main);
+            padding: 1rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+        }
+
+        .validation-card h3 {
+            color: var(--text-main);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .validation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .validation-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .validation-list li:last-child {
+            border-bottom: none;
+        }
+
+        .validation-list label {
+            cursor: pointer;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .validation-list input[type="checkbox"] {
+            width: 1.2rem;
+            height: 1.2rem;
+            accent-color: var(--role-contractual);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--role-contractual);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(110%);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 
@@ -262,6 +336,53 @@
             <h2 class="section-title">⏰ Plazos Contractuales Críticos</h2>
             <div id="plazosTable">
                 <div class="loading">⏳ Cargando plazos...</div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN DE VALIDACIÓN (NUEVO) -->
+        <div class="section validation-section">
+            <h2 class="section-title">✅ Validación Contractual (Fuente de Verdad: Nivel 1)</h2>
+            <div class="validation-grid">
+                <div class="validation-card">
+                    <h3>📜 AT1 - Alcance Técnico</h3>
+                    <ul class="validation-list">
+                        <li>
+                            <input type="checkbox" id="check-at1-cantidades">
+                            <label for="check-at1-cantidades">Cantidades coinciden con <a
+                                    href="#">AT1_Alcance_Tecnico.md</a></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check-at1-equipos">
+                            <label for="check-at1-equipos">Equipos obligatorios incluidos</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="validation-card">
+                    <h3>⚖️ AT4 - Normativa</h3>
+                    <ul class="validation-list">
+                        <li>
+                            <input type="checkbox" id="check-at4-retie">
+                            <label for="check-at4-retie">Cumplimiento RETIE 2024 (Res. 40117)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="check-at4-iprev">
+                            <label for="check-at4-iprev">Cumplimiento IP/REV 2021 (Recaudo)</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="validation-card">
+                    <h3>🚨 Hard Deck</h3>
+                    <ul class="validation-list">
+                        <li>
+                            <input type="checkbox" id="check-hd-capex">
+                            <label for="check-hd-capex">CAPEX Total bajo $7.79M USD</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 1rem; text-align: right;">
+                <button class="btn-primary" onclick="alert('Validación registrada en Bitácora (Simulado)')">💾 Confirmar
+                    Validación</button>
             </div>
         </div>
 
