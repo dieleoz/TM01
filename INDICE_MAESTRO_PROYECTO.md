@@ -1,8 +1,10 @@
 # ÍNDICE MAESTRO DEL PROYECTO TM01
 **Proyecto:** APP Puerto Salgar - Barrancabermeja (TM01 Troncal Magdalena)  
-**Última actualización:** 27 de Enero de 2026  
-**Versión:** 6.0 (Layer 5 Implementado)  
+**Última actualización:** 28 de Enero de 2026  
+**Versión:** 6.0 (Layer 5 Implementado - Valores Certificados Audit 6.0)  
 **🟢 ESTADO:** FASE 6.0 COMPLETADA - Arquitectura 5 Capas Operativa
+
+> ✅ **CERTIFICACIÓN AUDIT 6.0:** Todos los valores Hard Deck verificados contra T05 (Fuentes de Verdad) el 28-Ene-2026.
 
 ---
 
@@ -306,20 +308,29 @@ powershell -ExecutionPolicy Bypass -File "scripts\cocinar_ejecutivos.ps1"
 | **Interfaces Web** | 8 | ✅ Operativas |
 | **Scripts de Automatización** | 80+ | ✅ Operativos |
 
-### Sistemas Validados (Cantidades Oficiales)
+### Sistemas Validados (Cantidades Oficiales - Certificadas Audit 6.0)
 
-| Sistema | Cantidad | CAPEX (USD) | Estado |
-|:--------|:---------|:------------|:-------|
-| **CCTV** | 45 cámaras | $1,125,000 | ✅ Validado |
-| **Postes SOS** | 98 unidades | $2,450,000 | ✅ Validado |
-| **PMV** | 12 unidades | $600,000 | ✅ Validado |
-| **ETD/RADAR** | 16 equipos | $800,000 | ✅ Validado |
-| **Estaciones Meteorológicas** | 3 unidades | $150,000 | ✅ Validado |
-| **WIM** | 1 estación | $551,000 | ✅ Validado |
-| **Fibra Óptica** | 252 km | $1,260,000 | ✅ Validado |
-| **Switches L2** | 45 unidades | $225,000 | ✅ Validado |
-| **Switches L3** | 12 unidades | $180,000 | ✅ Validado |
-| **TOTAL ITS** | - | **$7,790,000** | ✅ Consolidado |
+> ✅ **VALORES CERTIFICADOS:** Verificados contra T05 v1.0 (Fuentes de Verdad) - 28 Enero 2026
+
+| Sistema | Cantidad | CAPEX (USD) | Fuente T05 | Estado |
+|:--------|:---------|:------------|:-----------|:-------|
+| **CCTV** | 9 cámaras | $116,100 | T05 v1.0 L88-92 | ✅ Certificado |
+| **Postes SOS** | 88 nuevos (98 total) | $2,200,000 | T05 v1.0 L94-100 | ✅ Certificado |
+| **PMV** | 39 unidades | $2,360,000 | T05 v1.0 L110-203 | ✅ Certificado |
+| **ETD/RADAR** | 16 equipos | $800,000 | T05 v1.0 | ✅ Certificado |
+| **Estaciones Meteorológicas** | 3 unidades | $150,000 | T05 v1.0 | ✅ Certificado |
+| **WIM** | 1 estación | $551,000 | T05 v1.0 | ✅ Certificado |
+| **Peajes** | 14 carriles | $1,890,218.94 | T05 v1.0 | ✅ Certificado |
+| **Fibra Óptica** | 322 km | $1,260,000 | T05 v1.0 | ✅ Certificado |
+| **Switches L2** | 45 unidades | $225,000 | T05 v1.0 | ✅ Certificado |
+| **Switches L3** | 12 unidades | $180,000 | T05 v1.0 | ✅ Certificado |
+| **TOTAL ITS** | - | **$7,790,000** | - | ✅ Certificado |
+
+**Notas:**
+- **SOS:** 88 postes nuevos + 10 existentes en UF Rehabilitación = 98 contractuales
+- **CCTV:** Optimizado de 45 a 9 cámaras (DT-TM01-CCTV-003)
+- **PMV:** 39 unidades (25 Vía Abierta + 14 Peaje) según IP/REV 2021
+- **Fibra:** 293 km contractual + 10% holgura = 322 km total
 
 ---
 
@@ -401,8 +412,9 @@ powershell -ExecutionPolicy Bypass -File "scripts\cocinar_ejecutivos.ps1"
 
 ---
 
-**Última actualización:** 27 de Enero de 2026  
-**Versión:** 6.0 (Layer 5 Implementado)  
+**Última actualización:** 28 de Enero de 2026  
+**Versión:** 6.0 (Layer 5 Implementado - Valores Certificados Audit 6.0)  
 **Estado:** ✅ **FASE 6.0 COMPLETADA** - Arquitectura 5 Capas Operativa  
-**CAPEX Total ITS:** $7,790,000 USD  
-**Metodología:** Punto 42 v3.0
+**CAPEX Total ITS:** $7,790,000 USD ✅ Certificado contra T05  
+**Metodología:** Punto 42 v3.0  
+**Certificación:** Audit 6.0 (28-Ene-2026) - Valores verificados contra T05 v1.0
