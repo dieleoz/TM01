@@ -68,15 +68,15 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 ### 4. Data Integrity Audit (Hard Deck Validation)
 
 #### A. Master Data Source (`tm01_master_data.js`)
-**Verify exact values:**
-- [ ] SOS: **88 units** (not 98)
+**Verify exact values (Certified Audit 6.0 - 28-Jan-2026):**
+- [ ] SOS: **88 new units** (98 total including 10 existing)
 - [ ] SOS CAPEX: **$2,200,000 USD**
-- [ ] CCTV: **45 cameras**
-- [ ] CCTV CAPEX: **$1,125,000 USD**
-- [ ] PMV: **12 units**
-- [ ] PMV CAPEX: **$600,000 USD**
+- [ ] CCTV: **9 cameras** (optimized from 45)
+- [ ] CCTV CAPEX: **$116,100 USD**
+- [ ] PMV: **39 units** (25 Mainline + 14 Toll)
+- [ ] PMV CAPEX: **$2,360,000 USD**
 - [ ] Peaje CAPEX: **$1,890,218.94 USD**
-- [ ] WIM CAPEX: **$551,425 USD**
+- [ ] WIM CAPEX: **$551,000 USD**
 - [ ] Total ITS CAPEX: **$7,790,000 USD**
 
 #### B. Web Dashboard Verification
@@ -129,13 +129,13 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 **Use browser agent to perform:**
 - [ ] Navigate to WBS interface
 - [ ] Filter by PMV system
-- [ ] Verify PMV count: 12 units
-- [ ] Verify PMV CAPEX: $600,000 USD
+- [ ] Verify PMV count: 39 units (25 Mainline + 14 Toll)
+- [ ] Verify PMV CAPEX: $2,360,000 USD
 - [ ] Export to Excel (verify functionality)
 - [ ] Navigate to Layout interface
 - [ ] Verify geospatial data loads
 - [ ] Filter by CCTV system
-- [ ] Verify 45 cameras displayed
+- [ ] Verify 9 cameras displayed
 - [ ] Navigate to Presupuesto interface
 - [ ] Verify total ITS CAPEX: $7,790,000 USD
 
@@ -175,9 +175,9 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - ✅ All interfaces: [PASS/FAIL]
 
 ### Data Integrity
-- ✅ SOS: 88 units / $2.2M: [PASS/FAIL]
-- ✅ CCTV: 45 cameras / $1.125M: [PASS/FAIL]
-- ✅ PMV: 12 units / $600K: [PASS/FAIL]
+- ✅ SOS: 88 new (98 total) / $2.2M: [PASS/FAIL]
+- ✅ CCTV: 9 cameras / $116.1K: [PASS/FAIL]
+- ✅ PMV: 39 units / $2.36M: [PASS/FAIL]
 - ✅ Peaje: $1.89M: [PASS/FAIL]
 - ✅ Total ITS: $7.79M: [PASS/FAIL]
 
@@ -224,5 +224,6 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 ---
 
 **Agent 3 Validation Protocol**  
-**Version:** 3.0 (Layer 5 + Production)  
-**Last Updated:** 27 de Enero 2026
+**Version:** 3.1 (Layer 5 + Production + Audit 6.0 Certified Values)  
+**Last Updated:** 28 de Enero 2026  
+**Certification:** Values certified against T05 v1.0 (Audit 6.0)

@@ -1,9 +1,9 @@
 # LECCIONES APRENDIDAS - VALIDACIÓN CONTRACTUAL
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
-**Fecha:** 22 de octubre de 2025  
-**Versión:** 1.6 - VALIDACIÓN CRUZADA CRÍTICA COMPLETADA  
-**Estado:** ✅ DOCUMENTADO  
+**Fecha:** 28 de Enero de 2026  
+**Versión:** 3.0 - AUDIT 6.0 CERTIFICADO (Valores Hard Deck Verificados contra T05)  
+**Estado:** ✅ DOCUMENTADO Y CERTIFICADO  
 
 ---
 
@@ -627,10 +627,16 @@ Longitud Total Corredor: 259,600 ML
 - ✅ **Visualización georreferenciada** de 2,182 equipos
 - ✅ **Estadísticas dinámicas** en tiempo real
 
-### **Datos Integrados:**
+### **Datos Integrados (Certificados Audit 6.0 - 28-Ene-2026):**
 - ✅ **Información oficial confirmada:** 293 km, CCO La Lizama PK 4+300
-- ✅ **Cantidades reales:** 88 SOS, 16 ETD/RADAR, 3 Meteo, 70 CCTV, 28 PMV, 1 WIM
-- ✅ **Presupuesto ITS Puro:** $7.79M USD (corregido de $307B)
+- ✅ **Cantidades certificadas contra T05:**
+  - SOS: 88 nuevos (98 total - 10 existentes)
+  - ETD/RADAR: 16 equipos
+  - Meteo: 3 estaciones
+  - CCTV: 9 cámaras (optimizado de 45)
+  - PMV: 39 unidades (25 Mainline + 14 Toll)
+  - WIM: 1 estación
+- ✅ **Presupuesto ITS Puro:** $7.79M USD (certificado contra T05 v1.0)
 
 ### **Resultado:**
 - ✅ **Sistema 100% operativo** para validación externa
