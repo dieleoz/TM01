@@ -124,8 +124,10 @@ class TM01MasterData {
                 capexUSD: 551425,
                 capexCOP: 2426273000,
                 capexUnitarioUSD: 551425,
-                descripcion: 'Reconciliación Audit .42: Nivelación CAPEX $551k',
-                estado: 'Validado'
+                descripcion: 'Forensic v1.0 (1 Bidirectional Station PR4+0100: 2 Lanes + 2 Scales)',
+                estado: 'Validado',
+                fuenteContractual: "AT1 Adenda 4 + Res 100/2024 (HS-WIM)",
+                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_WIM_v1.0.md",
             },
             telecomSummary: {
                 id: '9',

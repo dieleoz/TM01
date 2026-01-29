@@ -43,6 +43,14 @@
     - **Gaps:** Riesgo de "Defensas Metálicas" (~$200k) y "Uniformidad Visual" (RAL 2004).
 - **Hard Deck:** **$2,200,000 USD** (88 Uds). Los 10 existentes son OPEX salvo obsolescencia total.
 
+### ✅ CASO 5: SISTEMA WIM (Validado)
+- **Conflicto:** WIM Peaje (Clasificación) vs WIM Pesaje (Fiscalización).
+- **Resolución:**
+    - **Alcance:** 1 Estación de Pesaje Bidireccional (PR4+0100 RN 4513).
+    - **Tecnología:** HS-WIM (Res 100/2024) + Báscula Estática (Sanción).
+    - **Segregación:** WIM Peaje ($280k) está en WBS 5.01. WIM Pesaje ($551k) está en WBS 8.01.
+- **CAPEX Validado:** **$551,425 USD** (Incluye 2 Pistas Dinámicas + 2 Básculas Estáticas).
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)
