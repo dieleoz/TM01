@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: PEAJE
-// Fecha de generación: 2026-01-29 11:05:24
+// Fecha de generación: 2026-01-29 14:30:50
 
 const validaciones_PEAJE = {
   full: '## 📋 RESUMEN EJECUTIVO\n\n**Alcance Validado:**  \nEl sistema de Peajes se compone de **2 Estaciones** (Zambito y Aguas Negras) con un total de **14 Carriles** equipados para recaudo mixto (Efectivo/Telepeaje) y control fiscal (WIM-DAC).\n\n**Segregación Crítica (Dictamen PMV):**\n- **Incluido en Peaje:** 14 Displays de Tarifas (1 por carril) y equipamiento de cobro.\n- **Excluido (Movido a ITS):** 4 PMV de Aproximación (Grandes) que ahora residen en WBS 3.01.\n\n**Datos Clave:**\n- **Estaciones:** 2 (Zambito PK 9+200, Aguas Negras PK 80+000).\n- **Carriles:** 14 (3+1+3 por estación).\n- **Integración:** WIM-DAC (Pesaje en carril) obligatorio por Resolución IP/REV.\n- **CAPEX Validado:** **$2,086,577.24 USD**.\n\n---',

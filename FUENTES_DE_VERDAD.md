@@ -71,6 +71,14 @@
     - **Longitud:** 322 km de CABLE físico.
 - **CAPEX Validado:** **$7,980,000 USD**.
 
+### ✅ CASO 7: CENTRO DE CONTROL (CCO) (Validado)
+- **Conflicto:** Modelo "Llave en Mano" ($2.4M) vs Compra Directa ($425k).
+- **Resolución:**
+    - **Estrategia:** Adquisición directa de hardware (Dell/HP) y software estándar.
+    - **Alcance:** Servidores, Storage iSCSI, Videowall 4x2.
+    - **Eliminación:** Se rechazan los sobrecostos por "integración propietaria".
+- **CAPEX Validado:** **$425,000 USD** (Ahorro Masivo: ~$1.9M USD).
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)

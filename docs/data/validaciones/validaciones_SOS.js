@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: SOS
-// Fecha de generación: 2026-01-29 11:05:24
+// Fecha de generación: 2026-01-29 14:30:50
 
 const validaciones_SOS = {
   full: '',

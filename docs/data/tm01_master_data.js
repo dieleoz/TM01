@@ -167,14 +167,17 @@ class TM01MasterData {
                 estado: 'Validado'
             },
             ccoSummary: {
-                id: '11',
+                id: '13',
                 sistema: 'Centro de Control (CCO)',
                 cantidad: 1,
-                capexUSD: 1165000,
-                capexCOP: 5126000000,
-                capexUnitarioUSD: 1165000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
+                capexUSD: 425000,
+                capexCOP: 1870000000,
+                capexUnitarioUSD: 425000,
+                descripcion: 'Hardware & Software (Server, Storage, Videowall) - Optimized DT-019',
+                estado: 'Validado',
+                fuenteContractual: "AT1 Num 3 (Centralización) + DT-TM01-CCO-019",
+                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_CCO_v1.0.md",
+                versionT05: "v2.0 (Direct Purchase Model)"
             }
         };
 

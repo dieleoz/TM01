@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: FIBRA
-// Fecha de generación: 2026-01-29 11:05:24
+// Fecha de generación: 2026-01-29 14:30:50
 
 const validaciones_FIBRA = {
   full: '## 📋 RESUMEN EJECUTIVO (HARD DECK)\n\n**Veredicto:** 🟢 **VALIDADO (ALCANCE FÍSICO)**\n\nSe certifica el alcance del **Backbone de Comunicaciones** necesario para integrar los 6 Subsistemas ITS (CCTV, SOS, PMV, Peajes, WIM, Radio).\n\n**Parámetros de Validación (Hard Deck):**\n1.  **Longitud Física:** **322 km de CABLE** (293 km Corredor + 10% Holgura/Reservas).\n2.  **Capacidad:** **48 Hilos Monomodo** (G.652.D).\n3.  **Unidad de Control:** **Metro Lineal de CABLE (ML-C)**. Se prohíbe terminantemente cotizar o pagar por "km-hilo" o "km-par", práctica que infla el presupuesto en 48x.\n\n**CAPEX Validado:** **$7,980,000 USD** (Incluye Obra Civil Pesada: Tritubo, Cámaras 80x80, Cruces Subfluviales).\n\n---',
