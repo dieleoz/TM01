@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: CCTV
-// Fecha de generación: 2026-01-29 10:35:03
+// Fecha de generación: 2026-01-29 10:51:18
 
 const validaciones_CCTV = {
   full: '## 📋 RESUMEN EJECUTIVO PARA EL ABOGADO\n\n**Pregunta Central:** ¿Qué numeral del contrato obliga al CCTV y cómo se está atendiendo?\n\n**Respuesta Directa:**  \nLa obligación de CCTV **NO se deriva de un único numeral**, sino de la **integración sistemática** de tres cláusulas del Apéndice Técnico 2 (AT2) más una norma administrativa vinculante (Resolución IP/REV 2021).\n\n**Fundamento Jurídico Principal:**  \n- **AT2 Numeral 3.3.5.1** (Sistema de Control de Tráfico) - Obligación de Resultado\n- **AT2 Numeral 3.3.11.1** (Centro de Control Operacional) - Obligación de Custodia\n- **AT2 Numeral 3.3.11.2** (Sistemas de Comunicación) - Obligación de Transmisión\n- **Resolución IP/REV 20213040035125** (Normativa Sobreviniente) - Obligación de Cumplimiento Legal\n\n**Alcance Validado:**  \n30 Cámaras CCTV (20 PTZ + 10 Fijas) distribuidas en:\n- 2 Peajes (Zambito, Aguas Negras)\n- 2 Áreas de Servicio\n- 2 Básculas (Estaciones de Pesaje)\n- 1 CCO (Centro de Control)\n- 2 Bunkers (Nodos de Comunicaciones)\n- Puntos Críticos de Seguridad\n\n**CAPEX:** $1,634,000 USD (30 unidades)',

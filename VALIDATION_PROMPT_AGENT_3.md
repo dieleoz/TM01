@@ -78,7 +78,7 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] PMV CAPEX: **$2,390,000 USD** (Segregated ITS + Tolls)
 - [ ] Peaje CAPEX: **$2,086,577.24 USD** (2 Stations, WIM-DAC Integration)
 - [ ] WIM CAPEX: **$551,425 USD** (1 Bidirectional Station: 2 Lanes + 2 Static Scales)
-- [ ] Radio CAPEX: **$85,000 USD** (Hybrid PoC/VHF Solution)
+- [ ] Radio CAPEX: **$0 USD** (Transferred to SPV/OPEX - Hybrid Model)
 - [ ] Total ITS CAPEX: **$7,790,000 USD**
 
 #### B. Web Dashboard Verification

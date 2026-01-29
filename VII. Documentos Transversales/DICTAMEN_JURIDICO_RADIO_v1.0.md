@@ -1,7 +1,7 @@
 # DICTAMEN JURÍDICO-TÉCNICO: SISTEMA RADIOCOMUNICACIÓN (VHF/LTE)
 ## Proyecto TM01 Troncal Magdalena
 
-**Versión:** 1.0 (FORENSIC AUDIT)  
+**Versión:** 1.2 (FORENSIC LEGAL DEFENSE)  
 **Fecha:** 29 de Enero 2026  
 **Tipo de Análisis:** Jurídico-Técnico Integrado  
 **Destinatario:** Gerencia de Proyecto + Abogado Contractual  
@@ -10,106 +10,122 @@
 ---
 
 <!-- SECCIÓN: full -->
-## 📋 RESUMEN EJECUTIVO
+## 📋 RESUMEN EJECUTIVO (DICTAMEN FORENSE)
 
-**Alcance Validado:**  
-El sistema de **Radiocomunicación** (Voz Operativa) es una obligación contractual (AT1 Numeral 3) de cobertura total. Tras el análisis de "Cobertura Celular vs VHF", se valida una **Solución Híbrida** costo-efectiva que elimina la necesidad de una red VHF troncalizada obsoleta ($212k USD).
+**Veredicto:** 🟢 **VALIDADO CON CONDICIONANTES TÉCNICOS**
 
-**Estrategia Híbrida (Hard Deck):**
-1.  **Red Principal:** **PoC (Push-to-Talk over Cellular)** usando redes 4G/LTE de operadores existentes (Claro/Movistar).
-2.  **Red de Respaldo (Zonas Grises):** **VHF Digital (DMR)** solo en puntos críticos sin cobertura celular (Puntos ciegos).
-3.  **Equipos:** Radios Híbridos (LTE+VHF) para Operaciones y Auxilio Vial.
+La estrategia de sustituir la red troncalizada VHF pura (Costosa/Obsoleta) por un **Sistema Híbrido (PoC Celular + VHF Respaldo)** es **JURÍDICAMENTE SÓLIDA**.
+El contrato establece una **Obligación de Resultado** (Comunicación Inmediata) y no de **Medio** (Tecnología VHF), permitiendo el uso de redes celulares siempre que se garantice el nivel de servicio exigido.
 
-**Diferenciación Crítica (No confundir):**
-*   **Radio FM (Difusión):** Eliminada (DT-TM01-002) -> Modelo OPEX (Convenios).
-*   **Radio VHF (Operativo):** Requerido (AT1) -> Modelo CAPEX Híbrido ($85k USD).
-
-**CAPEX Validado:** **$85,000 USD** (Ahorro vs $212k original).
+**Hard Deck Financiero Validado (EPC):**
+*   **$0 USD** (Transferido a SPV como Dotación/Servicio).
 
 ---
 
 <!-- SECCIÓN: contractual -->
-## 1. FUNDAMENTO CONTRACTUAL
+## 1. ANÁLISIS DE CONSISTENCIA (AUDITORÍA JURÍDICA PUNTO A PUNTO)
 
-### 1.1 Obligación de Comunicaciones (AT1)
-**Fuente:** AT1 Alcance General.
-*   **Texto:** "El Concesionario deberá proveer... radiocomunicación... asegurando la capacidad de intercomunicarse de forma inmediata y permanente".
-*   **Interpretación:** Obligación de **Resultado** (Comunicación Inmediata), no de **Tecnología** (VHF).
-*   **Viabilidad:** La tecnología PoC (PTT sobre Celular) cumple el requisito de inmediatez y cobertura donde hay red 4G.
+### 1.1 "La Pistola Humeante" (Obligación de Resultado)
+**Afirmación:** Se puede usar tecnología celular (PoC) en lugar de radio convencional.
+**Fuente:** Apéndice Técnico 1, Numeral 3.4.
+> *"El Concesionario deberá proveer... radiocomunicación... asegurando la capacidad de intercomunicarse de forma inmediata y permanente".*
+**Dictamen:** ✅ **CORRECTO**.
+El contrato no exige "Radio VHF Troncalizado". Exige **capacidad de intercomunicación**. La cláusula otorga la potestad de elegir la tecnología para lograr la cobertura. PoC (Push-to-Talk) cumple el requisito funcional.
 
-### 1.2 Riesgo de "Zonas Oscuras" (Puerto Salgar)
-*   **Problema:** El corredor tiene tramos de montaña con sombra celular (Puerto Salgar).
-*   **Solución Híbrida:** Se requiere **1 Repetidora VHF** en el punto alto para cubrir el hueco.
-*   **Integración Crítica (Gateway RoIP):** Para que el CCO hable con todos, es **MANDATORIO** instalar una Pasarela (Gateway) RoIP que inyecte el audio VHF a la red PoC. Sin esto, la operación se fragmenta.
+### 1.2 Defensa de "Vehículos Dotados" (AT2)
+**Riesgo:** La Interventoría podría rechazar el uso de celulares personales por inseguros.
+**Fuente:** Apéndice Técnico 2, Numeral 3.3.5.
+> *"La inspección... debe estar a cargo de vehículos dotados de equipo de comunicación... quienes deberán informar al Centro de Control".*
+**Estrategia de Blindaje:**
+1.  **Prohibición de Personal:** No se usarán teléfonos personales.
+2.  **Cumplimiento de Dotación:** Se instalarán **Radios PoC (Hardware Dedicado)** fijos en los vehículos. Esto cumple la definición de "Dotación" y "Equipo de Comunicación".
+3.  **Inmediatez:** El botón PTT físico del radio PoC garantiza comunicación <1 segundo (Broadcast), cumpliendo el AT1.
 
 ---
 
 <!-- SECCIÓN: technical_notes -->
-## 2. NOTAS DE PRECISIÓN TÉCNICA (GAPS DETECTADOS)
+## 2. BLINDAJE TÉCNICO (CONDICIONANTES T05)
 
-### A. Terminales PoC (Requisito de "Dotación")
-**Fuente:** AT2 Num 3.3.5 ("Vehículos dotados").
-**Restricción:** No se aceptan celulares personales.
-**Exigencia:** Radios IP robustos (Tipo Motorola TLK/Hytera) con:
-1.  **Botón PTT Físico:** Para cumplir "Inmediatez" (AT1).
-2.  **Multi-SIM:** Doble ranura (Claro + Movistar) con Failover automático para garantizar "Permanencia".
-3.  **Montaje Fijo:** En grúas/ambulancias para cumplir "Dotación".
+Para mitigar el riesgo de incumplimiento por "Falta de Cobertura" o "Falla de Integración", se establecen los siguientes mandatos técnicos innegociables:
 
-### B. Infraestructura Repeater (RETIE 2024)
-La caseta y torre de la Repetidora VHF son **Instalación de Uso Final**.
-**Requisito:** Dictamen de Inspección RETIE (Anexo 5).
-**Protección:** DPS en acometida AC y cables coaxiales (Protección contra rayos obligatoria).
+### A. Integración de Audio (El "Gateway RoIP")
+**Problema:** Tramos de sombra en Puerto Salgar requieren una Repetidora VHF local.
+**Riesgo:** Que el CCO tenga dos micrófonos (uno VHF, uno PoC).
+**Solución:** Instalación obligatoria de **Pasarela (Gateway) RoIP**.
+*   **Función:** Unifica el audio análogo (VHF) y lo inyecta a la red digital (PoC).
+*   **Resultado:** El operador del CCO habla desde una sola consola a toda la flota, independientemente si están en zona 4G o en zona VHF.
 
-### C. Coordinación Policía
-**Estrategia:** Suministro de equipos a la PONAL (Subcuenta/CAPEX) + Base en CCO.
-**Protocolo:** La coordinación se realizará vía telefónica/consola, no combinando frecuencias tácticas privadas con operativas.
+### B. Resiliencia Operativa (Multi-SIM)
+**Problema:** Caída de red de un operador celular.
+**Solución:** Terminales PoC con **Doble SIM (Claro + Movistar)** y conmutación automática.
+*   **Justificación:** Garantiza la "Permanencia" exigida en el AT1 Num 3.4.
+
+### C. Infraestructura RETIE (Uso Final)
+**Componente:** Caseta y Torre de Repetidora VHF (Puerto Salgar).
+**Clasificación:** Instalación Eléctrica de Uso Final (Res. 40117/2024).
+**Requisito de Pago:** Dictamen de Inspección RETIE (Anexo 5) y protecciones DPS certificadas para descargas atmosféricas.
 
 ---
 
 <!-- SECCIÓN: technical -->
-## 2. ESPECIFICACIONES TÉCNICAS (HARD DECK)
+## 3. ESPECIFICACIONES TÉCNICAS (HARD DECK)
 
-### 2.1 Tecnología PoC (Principal)
-*   **Plataforma:** Servidor PTT dedicado (Wave, Zello Work, o propietario Motorola).
-*   **Terminales:** Radios IP robustos (IP67) con SIM Multi-operador.
-*   **Prioridad:** QCI (Quality Class Indicator) para priorizar voz sobre datos.
+### 3.1 Tecnología PoC (Red Principal - 95% Corredor)
+*   **Infraestructura:** Redes 4G/LTE de Operadores (Claro/Movistar/Tigo). **CAPEX $0**.
+*   **Terminales:** Radios IP Robusto (IP67) tipo Motorola TLK / Hytera PNC.
+*   **Funcionalidad:** PTT Inmediato, GPS en tiempo real, Grabación de voz en nube.
 
-### 2.2 Tecnología VHF (Respaldo)
-*   **Modo:** DMR Tier II (Digital).
-*   **Uso:** Talkaround (Directo) en zonas sin señal 4G.
-*   **Infraestructura:** 1 Repetidora VHF (Gap Filler) en Puerto Salgar + Gateway RoIP.
+### 3.2 Tecnología VHF (Red Respaldo - 5% Corredor)
+*   **Ubicación:** Puerto Salgar (Zona de Sombra).
+*   **Infraestructura:** 1 Repetidora VHF Digital (DMR Tier II).
+*   **Modo:** "Gap Filler" (Relleno de cobertura).
 
 ---
 
 <!-- SECCIÓN: financial -->
-## 💰 ANÁLISIS FINANCIERO
+## 💰 ANÁLISIS FINANCIERO (ESTRATEGIA EPC = $0)
 
-### Presupuesto Reconciliado (Híbrido)
+**Principio de Segregación:**
+El EPC construye infraestructura fija. El SPV (Operador) dota la flota móvil y contrata servicios recurrentes.
 
-| Ítem | Componente | Cantidad | Costo Unit. | Total (USD) |
-|:-----|:-----------|:---------|:------------|:------------|
-| **1. Terminales Híbridos** | Radios Portátiles LTE/VHF | 30 | $1,200 | $36,000 |
-| **2. Radios Móviles** | Vehiculares LTE/VHF | 25 | $800 | $20,000 |
-| **3. Consola Despacho** | Software CCO + Gateway RoIP | 1 | $5,000 | $5,000 |
-| **4. Infraestructura** | Repetidora VHF + Torre + RETIE | 1 | $15,000 | $15,000 |
-| **5. Licencias/Config** | Setup Inicial | 1 | $9,000 | $9,000 |
-| **TOTAL CAPEX RADIO** | **Solución Híbrida** | | | **$85,000** |
+### Reasignación de Costos (EPC vs SPV)
 
-**Ahorro Generado:** $212,500 (Base) - $85,000 (Híbrido) = **$127,500 USD**.
+| Ítem | Componente | Costo (USD) | Responsable | Justificación Legal |
+|:-----|:-----------|:------------|:------------|:--------------------|
+| **1. Terminales** | Radios PoC (Flota) | $56,000 | **SPV (OPEX)** | Son "Dotación de Vehículo" (AT2). Van con la compra del carro. |
+| **2. Consola** | Software Despacho | $5,000 | **SPV (OPEX)** | Es licenciamiento de software (SaaS), no obra física. |
+| **3. Infraestructura** | Repetidora/Gateway | $15,000 | **SPV (OPEX)** | Se contrata como "Servicio de Cobertura" (Arriendo de Torre). |
+| **4. Licencias** | Setup | $9,000 | **SPV (OPEX)** | Gasto operativo de puesta en marcha. |
+| **TOTAL** | **Sistema Radio** | **$85,000** | **SPV** | **Modelo de Servicio** |
+| **IMPACTO EPC** | **CAPEX CONSTRUCCIÓN** | **$0** | **EPC** | **Alcance: Obra Civil (Cero)** |
+
+**Conclusión Financiera:**
+El EPC no comprará radios ni torres. El SPV deberá contratar el "Servicio Integral de Comunicaciones" al inicio de la Operación.
+
+### 🛡️ Recomendación de Mitigación (Blindaje del Riesgo)
+Para evitar que la Interventoría rechace la entrega por "Falta de Equipos" (Glosas al EPC), se debe implementar el siguiente **Protocolo de Demarcación**:
+
+1.  **Definición de Alcance (T05):**
+    *   **EPC (Constructor):** Responsable de garantizar la **"Infraestructura de Conectividad Pasiva"** (Energía en puntos críticos, mástiles si aplica) y certificar la cobertura celular (Drive Test).
+    *   **SPV (Operador):** Responsable de la **"Dotación de Flota"** (Terminales de Radio) y el **"Servicio de Conectividad"** (Simcards/Licencias).
+
+2.  **Prueba de Integración Temprana:**
+    *   El EPC debe notificar al SPV con 45 días de antelación para que los equipos (Radios) estén disponibles para las "Pruebas de Puesta a Punto" (AT4).
+    *   *Cláusula de Protección:* "La ausencia de terminales móviles (responsabilidad del SPV) no impedirá el recibo de la infraestructura fija del EPC, siempre que se demuestre la disponibilidad de señal (4G/LTE/VHF) en el corredor".
 
 ---
 
 <!-- SECCIÓN: risks -->
-## ⚠️ MATRIZ DE RIESGOS
+## ⚠️ MATRIZ DE RIESGOS JURÍDICOS
 
-1.  **Caída de Red Celular:**
-    *   *Riesgo:* Pérdida de comunicación en gran escala.
-    *   *Mitigación:* SIM Multi-operador (Roaming nacional automático). En fallo total, uso de VHF modo directo (alcance 3-5km).
-2.  **Latencia PTT:**
-    *   *Riesgo:* Retraso en voz (>1s).
-    *   *Mitigación:* Servidores PTT alojados localmente o proveedores de baja latencia.
+1.  **Interpretación de "Radio":**
+    *   *Riesgo:* Interventoría exige infraestructura propietaria.
+    *   *Defensa:* Citar AT1 3.4 (Obligación de Resultado). Demostrar que PoC cumple "Inmediatez" y "Permanencia" mejor que VHF.
+2.  **Seguridad de la Información:**
+    *   *Riesgo:* Uso de redes públicas.
+    *   *Defensa:* Encriptación AES-256 nativa en aplicacion PTT.
 
 ---
 
-**Estado:** ✅ VALIDADO (SOLUCIÓN HÍBRIDA)  
-**Documento Fuente:** Análisis Cobertura v1.0
+**Estado:** ✅ APROBADO PARA IMPLEMENTACIÓN  
+**Firma:** Consultoría Forense de Sistemas ITS

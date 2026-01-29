@@ -24,7 +24,7 @@
 - [x] **PEAJE:** 2 Estaciones (Integración WIM-DAC + IP/REV) - $2.09M USD
 - [x] **SOS:** 98 Postes (88 Nuevos + 10 Rehab) - $2.2M USD (Blindados)
 - [x] **WIM:** 1 Estación Bidireccional (Pesaje Fiscal) - $551k USD
-- [x] **RADIO:** Solución Híbrida PoC/VHF - $85k USD (Ahorro confirmado)
+- [x] **RADIO:** Solución Híbrida PoC/VHF - **$0 USD EPC** (Trasladado a SPV)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`
@@ -67,7 +67,7 @@
 | SEÑALIZACIÓN | Vertical | $300,000 | 🟢 Baja | ⭐ |
 | METEO | 2 estaciones | $7,800 | 🟢 Baja | ⭐ |
 | GALIBOS | 4 detectores | $120,000 | 🟢 Baja | ⭐ |
-| RADIO | 55 Radios Híbridos | $85,000 | ✅ Listo | ⭐⭐ |
+| RADIO | 0 (SPV) | $0 | ✅ Listo | ⭐⭐ |
 
 **Proceso por subsistema:**
 1. Crear `DICTAMEN_JURIDICO_[SISTEMA]_v1.0.md` con marcadores HTML

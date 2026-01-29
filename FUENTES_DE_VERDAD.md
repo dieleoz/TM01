@@ -58,9 +58,9 @@
 - **Resolución:**
     - **Radio FM:** Eliminado (Modelo OPEX/Convenios).
     - **Radio Operativo:** Solución Híbrida PoC LTE (Principal) + VHF Digital (Respaldo).
-    - **Requisito Técnico:** Radios PoC Multi-SIM (Failover) y Gateway RoIP para unificar audio.
-    - **Infraestructura:** 1 Repetidora VHF en Puerto Salgar (Requiere RETIE). Ahorro masivo en redes troncales.
-- **CAPEX Validado:** **$85,000 USD** (Ahorro de $127k vs diseño original).
+    - **Requisito Técnico:** Radios PoC Multi-SIM y Gateway RoIP (Responsabilidad SPV).
+    - **Financiero:** Se traslada el costo ($85k) al Operador (SPV) como "Dotación de Flota" y "Servicio".
+- **CAPEX Validado:** **$0 USD** (Para el EPC).
 
 ---
 

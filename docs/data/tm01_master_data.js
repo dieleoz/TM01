@@ -143,15 +143,15 @@ class TM01MasterData {
             radioSummary: {
                 id: '12',
                 sistema: 'Radio VHF/LTE',
-                cantidad: 55, // 30 Portátiles + 25 Móviles
-                capexUSD: 85000,
-                capexCOP: 374000000,
-                capexUnitarioUSD: 1545,
-                descripcion: 'Forensic v1.1 (PoC Multi-SIM + VHF Gap Filler + RoIP Gateway)',
+                cantidad: 0, // 0 para EPC (Responsabilidad SPV)
+                capexUSD: 0,
+                capexCOP: 0,
+                capexUnitarioUSD: 0,
+                descripcion: 'Forensic v1.2 (EPC Scope = $0. Transferred to SPV as Fleet Equipment/Service)',
                 estado: 'Validado',
                 fuenteContractual: "AT1 Numeral 3 (Radiocomunicación)",
                 validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_RADIO_v1.0.md",
-                versionT05: "v2.0 (REQ: RoIP Integration)"
+                versionT05: "v3.0 (Zero CAPEX Model)"
             },
             peajesSummary: {
                 id: '10',
