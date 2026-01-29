@@ -16,6 +16,7 @@ const SYSTEM_METADATA = {
     'RADIO': { icon: '📻', label: 'Radio VHF' },
     'ETD': { icon: '📡', label: 'ETD / Radares' },
     'CO': { icon: '🏢', label: 'Centro de Control' },
+    'CCO': { icon: '🖥️', label: 'Centro de Control (CCO)' },
     'ILUMINACION': { icon: '💡', label: 'Iluminación' },
     'SENALIZACION': { icon: '🛑', label: 'Señalización' },
     'ENERGIA': { icon: '⚡', label: 'Energía' }
@@ -97,6 +98,7 @@ function renderValidationTable() {
             let mappedCode = sysCode;
             if (sysCode.includes('FIBRA') || sysCode.includes('TELECOM')) mappedCode = 'FIBRA';
             if (sysCode.includes('PEAJE')) mappedCode = 'PEAJE';
+            if (sysCode.includes('CENTRO') || sysCode.includes('CCO')) mappedCode = 'CCO';
 
             systemEntries.push({
                 key: k,
