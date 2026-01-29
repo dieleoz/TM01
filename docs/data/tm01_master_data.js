@@ -205,11 +205,11 @@ class TM01MasterData {
             {
                 id: '3',
                 sistema: 'ETD/RADAR',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Scope Transferred to Tolls (Counting) & Police (Mobile Radars). Zero Fixed CAPEX.',
+                cantidad: 2,
+                capexUSD: 22500,
+                capexCOP: 99000000,
+                capexUnitarioUSD: 11250,
+                descripcion: '2 Dahua ITC431 All-in-One Units (Radar+ANPR+Counting) + DSS Pro Software.',
                 estado: 'Validado'
             },
             {

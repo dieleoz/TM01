@@ -87,13 +87,13 @@
     - **Impacto:** Ahorro >$90k USD al evitar visibilímetros.
 - **CAPEX Validado:** **$16,500 USD**.
 
-### ✅ CASO 9: ETD / RADARES (Eliminado)
-- **Conflicto:** Duplicidad con Peajes y Dotación Policial.
+### ✅ CASO 9: ETD / RADARES (Hardware Dahua)
+- **Conflicto:** Necesidad de ITS Fijo "Multifunción" eficiente.
 - **Resolución:**
-    - **Conteo:** Cubierto por Peajes (100% Tráfico).
-    - **Sanción:** Cubierto por Radares Móviles (Policía).
-    - **Impacto:** Eliminación de 18 equipos fijos innecesarios.
-- **CAPEX Validado:** **$0 USD**.
+    - **Tecnología:** "All-in-One" Dahua ITC Series (Radar + ANPR + Conteo).
+    - **Cantidad:** 2 Unidades (Puntos Críticos).
+    - **Eficiencia:** Un solo equipo reemplaza 3 subsistemas tradicionales.
+- **CAPEX Validado:** **$22,500 USD**.
 
 ---
 

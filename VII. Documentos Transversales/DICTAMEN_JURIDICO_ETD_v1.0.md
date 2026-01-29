@@ -12,16 +12,19 @@
 <!-- SECCIÓN: full -->
 ## 📋 RESUMEN EJECUTIVO (HARD DECK)
 
-**Veredicto:** 🟢 **VALIDADO (ALCANCE TRANSFERIDO / CERO CAPEX)**
+**Veredicto:** 🟢 **VALIDADO (HARDWARE UNIFICADO)**
 
-Se certifica la estrategia de **NO INSTALAR** infraestructura fija dedicada a "Toma de Datos (ETD)" ni "Radares Sancionatorios (SAST)" durante la fase de construcción, transfiriendo la obligación funcional a subsistemas ya existentes o rubros operativos.
+Se certifica la implementación de tecnología **All-in-One (Dahua ITC Series)** que unifica "Toma de Datos", "Radar Sancionatorio" y "Cámara LPR" en un solo dispositivo. Esta solución técnica "Todo en Uno" reactiva el alcance fijo pero con eficiencia costos.
 
 **Parámetros de Validación (Hard Deck):**
-1.  **Contea/Clasificación (ETD):** **CUBIERTO POR PEAJES**. El sistema de peaje (ya contratado) realiza conteo y clasificación las 24h. Instalar ETDs adicionales es duplicidad contractual.
-2.  **Radares Sancionatorios (SAST):** **TRANSFERIDO A DOTACIÓN**. La obligación del AT2 3.3.5.1 es "entregar a la Policía". Esto se cumple con Radares Móviles (Suministros), no con pórticos fijos ITS.
-3.  **Radares Pedagógicos:** **DIFERIDO A O&M**. Su instalación depende de "Puntos Críticos" de accidentalidad que no existen en una vía nueva. Se instalan bajo demanda en etapa operativa.
+1.  **Tecnología:** **Cámara ITS con Radar Integrado (Dahua ITC431/9541)**. Cumple AT2 3.3.4.5 (Flujo) y 3.3.5.1 (Velocidad).
+2.  **Cantidad:** **2 Unidades** (Ubicación: Puntos Críticos / Tramos de Alta Accidentalidad).
+3.  **Funcionalidad:** Un solo equipo realiza:
+    *   Conteo y Clasificación (ETD).
+    *   Detección de Velocidad (Radar).
+    *   Lectura de Placas (ANPR Seguridad).
 
-**CAPEX Validado:** **$0 USD** (Ahorro neto de **$1,700,000 USD**).
+**CAPEX Validado:** **$22,500 USD** (2 Sitios + Licencia DSS Pro Central).
 
 ---
 
@@ -34,40 +37,48 @@ Se certifica la estrategia de **NO INSTALAR** infraestructura fija dedicada a "T
 *   **Defensa:** La obligación es tener el **DATO** ("Monitor de Flujo"), no un equipo específico cada Km.
 *   **Solución:** Los **Peajes** (Zambito y Aguas Negras) actúan como las "Estaciones Maestras de Toma de Datos", cubriendo el conteo clasificado del 100% del tráfico pasante.
 
-### 1.2 Obligación de Control Velocidad (SAST)
-**Fuente:** Apéndice Técnico 2, Numeral 3.3.5.1.
-*   **Texto:** "...servirá como base para... movilizar a la Policía de Carreteras".
-*   **Defensa:** El contrato vincula el radar a la acción policial.
-*   **Solución:** Se dota a la Policía con **Cinemómetros Láser Portátiles (Lidar)**. Esto cumple la función de control sin construir pórticos fijos costosos que requieren trámites complejos (MinTransporte/ONAC) y muchas veces no son aprobados.
+### 1.2 Solución Técnica "Todo en Uno"
+**Fuente:** Ficha Técnica Dahua ITC Series (Usuario).
+*   **Capacidad:** El equipo integra microondas (Radar) y video en una sola carcasa IP67.
+*   **Eficiencia:** Reemplaza la necesidad de tener 1 ETD + 1 Radar + 1 Cámara LPR por separado.
+*   **Cumplimiento:** Cubre la obligación de "Sistema de Monitores de Velocidad" y base para "Movilizar a la Policía" (AT2).
 
 ---
 
 <!-- SECCIÓN: technical_notes -->
-## 2. BLINDAJE TÉCNICO
+## 2. BLINDAJE TÉCNICO (FICHA TÉCNICA DAHUA)
 
-### 2.1 Por qué NO instalar ETDs Fijos
-1.  **Redundancia:** La vía es un corredor logístico cerrado. El volumen que pasa por el Peaje Zambito es estadísticamente idéntico al de la UF adyacente. Pagar $50k USD por un radar que diga lo mismo que el peaje es ineficiente.
-2.  **Tecnología:** El Peaje usa Clasificadores de Ejes + Cámaras LPR. Es mucho más preciso que un radar Doppler de poste.
+### 2.1 Especificaciones Validadas (Dahua ITC431-RW1F)
+*   **Sensor:** 4MP Starlight CMOS (Visión nocturna).
+*   **Radar Integrado:** Detección de velocidad y flujo (hasta 4 carriles).
+*   **ANPR:** Lectura de placas integrada (Edge Computing).
+*   **Protección:** IP67 (Intemperie) + IK10 (Vandalismo).
+*   **Precio Unitario:** ~$1,500 USD (Cámara + Accesorios básicos).
 
-### 2.2 Por qué NO instalar SAST Fijos (Fase Construcción)
-1.  **Riesgo Legal:** La Resolución 718 de 2018 exige estudios de siniestralidad REAL para autorizar un punto fijo. En una vía nueva/rehabilitada, no hay estadística válida. Instalar antes del permiso es causal de hallazgo fiscal.
-2.  **Operatividad:** Los radares móviles permiten rotación según puntos negros dinámicos.
+### 2.2 Estrategia de Ubicación (2 Sitios)
+Se instalan **2 Unidades Fijas** en los "Puntos Críticos" contractuales:
+1.  **Punto A:** Acceso Zona Escolar/Urbana (Control Velocidad).
+2.  **Punto B:** Tramo Recto (Control Velocidad Máxima).
+*El resto de la cobertura estadística se mantiene con los datos de Peajes.*
 
 ---
 
 <!-- SECCIÓN: financial -->
 ## 💰 ANÁLISIS FINANCIERO
 
-### Presupuesto Validado (Estrategia Cero)
+### Presupuesto Validado (Dahua All-in-One)
 
-| Ítem | Descripción | Cantidad | Unitario (USD) | Total (USD) | Justificación |
-|:-----|:------------|:---------|:---------------|:------------|:--------------|
-| **1** | **ETD (Estaciones Fijas)** | 0 | $0 | $0 | Cubierto por Peajes |
-| **2** | **Radares SAST Fijos** | 0 | $0 | $0 | Cubierto por Dotación Policial |
-| **3** | **Radares Pedagógicos** | 0 | $0 | $0 | Diferido a O&M (Puntos Críticos) |
-| **TOTAL** | **ETD / RADARES** | | | **$0** | **Ahorro 100%** |
+| Ítem | Descripción | Cantidad | Unitario (USD) | Total (USD) | Notas |
+|:-----|:------------|:---------|:---------------|:------------|:------|
+| **1** | **Kit Dahua ITC All-in-One** | 2 | $3,500 | $7,000 | Cam ITC431 + Flash + Switch + Brazo |
+| *1.1* | *Cámara ITC431 Radar/ANPR* | *2* | *$1,427* | *(Incluido)* | ref. Cotización |
+| *1.2* | *Iluminador IR/White* | *2* | *$1,169* | *(Incluido)* | ref. Cotización |
+| *1.3* | *Switch Industrial PoE* | *2* | *$324* | *(Incluido)* | ref. Cotización |
+| **2** | **Software Central (DSS Pro)** | 1 | $11,500 | $11,500 | Base + Licencias Video/ANPR |
+| **3** | **Obra Civil/Montaje (Pórtico/Poste)** | 2 | $2,000 | $4,000 | Acometidas y Poste |
+| **TOTAL** | **ETD / RADARES** | | | **$22,500** | **Solución Completa** |
 
-**Nota:** Los costos de conteo están absorbidos en el contrato de Peajes ($1M). Los costos de radares móviles van al rubro "Dotación Policía" (fuera de CAPEX ITS).
+**Nota de Validación:** Se toma la cotización del proveedor (Dahua) como "Fuente de Verdad" financiera. El Hardware centraliza todas las funciones ITS de tráfico.
 
 ---
 
