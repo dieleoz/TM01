@@ -1,15 +1,21 @@
 # 🚀 ROADMAP TM01 - METODOLOGÍA PROMPT MAESTRO V3.0
 
-**Versión:** 33.0 (MODULAR VALIDATION SYSTEM)  
-**Fecha:** 28 de Enero 2026  
-**Estado:** 🟢 **SISTEMA DE VALIDACIONES MODULAR IMPLEMENTADO**  
-**Meta Actual:** 🎯 GENERAR DICTÁMENES PARA 12 SUBSISTEMAS RESTANTES
+**Versión:** 34.0 (TECHNICAL ENGINEERING KICKOFF)  
+**Fecha:** 29 de Enero 2026  
+**Estado:** 🟢 **VALIDACIÓN CONTRACTUAL 100% COMPLETADA**  
+**Meta Actual:** 🏗️ FASE 7: INGENIERÍA TÉCNICA (LAYOUTS, SPECS & APUz)
 
 ---
 
 ## 📊 ESTADO ACTUAL
 
 ### ✅ COMPLETADO
+
+**Fase 6.0: Validación Pre-Contractual (Hard Deck):**
+- ✅ **13/13 Subsistemas Validados Jurídicamente** (Ver `dashboard_contractual.html`)
+- ✅ **Dictámenes Generados:** Cobertura total de riesgos y alcance.
+- ✅ **CAPEX Blindado:** $8.6M USD (Consolidado Audit 5.0).
+- ✅ **Estrategias Eficiencia:** Zero CAPEX en Radio, Meteo y Fibra.
 
 **Metodología:**
 - ✅ PROMPT MAESTRO V3.0 creado y validado
@@ -52,9 +58,28 @@
 
 ### 🔴 PRIORIDAD ALTA
 
-#### 1. GENERAR DICTÁMENES PARA 12 SUBSISTEMAS RESTANTES (NUEVO)
+#### 1. FASE 7: INGENIERÍA TÉCNICA DE DETALLE (NUEVO)
 
-**Ubicación:** `VII. Documentos Transversales/`
+**Objetivo:** Generar la documentación constructiva para el Ingeniero Residente.
+
+**Entregables Clave (Dashboard Técnico):**
+- [ ] **Planos T02 (Layouts):** Ubicación exacta (KM + Coordenadas) de los 191 equipos.
+- [ ] **Fichas Técnicas T04:** Specs validadas vs oferta.
+- [ ] **APUz (Análisis de Precios):** Desglose de instalación y obra civil.
+- [ ] **Guías de Instalación:** Paso a paso para el contratista.
+
+**Subsistemas Críticos:**
+
+| Sistema | Layout (KM) | Specs (Ficha) | APU (Civil) | Estado |
+|:--------|:------------|:--------------|:------------|:-------|
+| FIBRA | 322 KM | G.652.D | Canalización | ⏳ T02 |
+| SOS | 88 Puntos | Poste SOS | Cimentación | ⏳ T04 |
+| PMV | 43 Puntos | Panel LED | Gantry | ⏳ T04 |
+| PEAJE | 2 Puntos | DAC/WIM | Losa | ⏳ T02 |
+
+---
+
+#### 2. ACTUALIZAR DASHBOARD TÉCNICO
 
 **Subsistemas pendientes:**
 
