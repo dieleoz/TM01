@@ -270,11 +270,13 @@
     <!-- Logic -->
     <script>
 
-        // --- 1. CONFIG: Technical Doc Maps (Simulated for this Phase) ---
-        // In a real scenario, these would point to specific PDF/DWG files in the repo.
+        // --- 1. CONFIG: Technical Doc Maps (Real Links for Phase 7) ---
         const TECH_DOCS = {
             'SOS': { layout: 'LAYOUT_SOS_KM0-30.pdf', spec: 'T04_SPEC_POSTE_SOS_V3.pdf' },
-            'CCTV': { layout: 'LAYOUT_CCTV_PTOS_CRITICOS.pdf', spec: 'T04_SPEC_CAMARA_PTZ.pdf' },
+            'CCTV': {
+                layout: 'LAYOUT_CCTV_PTOS_CRITICOS.pdf',
+                spec: '../IV. Ingenieria Basica/T04_SPEC_CCTV_PTZ_v1.0.md'
+            },
             'PMV': { layout: 'LAYOUT_PMV_MENSAJERIA.pdf', spec: 'T04_SPEC_PANEL_LED_RGB.pdf' },
             'Peajes': { layout: 'LAYOUT_PEAJE_RIO.pdf', spec: 'T04_SPEC_SISTEMA_RECAUDO.pdf' },
             'WIM': { layout: 'LAYOUT_WIM_PESAJE.pdf', spec: 'T04_SPEC_SENSORES_PIEZO.pdf' },
