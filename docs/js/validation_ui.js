@@ -99,6 +99,7 @@ function renderValidationTable() {
             if (sysCode.includes('FIBRA') || sysCode.includes('TELECOM')) mappedCode = 'FIBRA';
             if (sysCode.includes('PEAJE')) mappedCode = 'PEAJE';
             if (sysCode.includes('CENTRO') || sysCode.includes('CCO')) mappedCode = 'CCO';
+            if (sysCode.includes('METEO')) mappedCode = 'METEO';
 
             systemEntries.push({
                 key: k,
