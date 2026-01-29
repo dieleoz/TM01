@@ -44,19 +44,29 @@ Se certifica el alcance del **Backbone de Comunicaciones** necesario para integr
 ---
 
 <!-- SECCIÓN: technical_notes -->
-## 2. ESPECIFICACIONES TÉCNICAS (HARD DECK)
+## 2. BLINDAJE TÉCNICO (FORENSIC SPECS)
 
-### 2.1 El Cable (Backbone Trunk)
-*   **Tipo:** Monomodo G.652.D (Bajo pico de agua, estándar ITU-T).
-*   **Construcción:** Loose Tube (Tubo holgado), Gel-filled (Bloqueo de agua), Armadura metálica (Anti-roedores).
-*   **Capacidad:** **48 Hilos** (24 Pares).
-    *   *Uso:* 12 hilos ITS, 12 hilos Peaje, 12 hilos Admin/Voz, 12 Reserva Comercial (Dark Fiber).
+### 2.1 La Regla de los 48 Hilos (AT3 4.2.xiii)
+**Hallazgo Forense:** El contrato define explícitamente la capacidad mínima.
+**Mandato:** Todo cable troncal debe tener **48 Hilos**.
+*   *Restricción:* Cables de 24 o 12 hilos serán rechazados como "No Conformidad" de producto, independientemente de que "sobre capacidad".
+*   *Cita:* "La red troncal de fibra óptica deberá contar con una capacidad mínima de 48 hilos" (AT3 Numeral 4.2.xiii).
 
-### 2.2 Obra Civil (El Costo Real)
-El 85% del CAPEX no es el vidrio, es la obra civil.
-*   **Ductería:** Tritubo HDPE 4" (1 ducto para FO Proyecto, 1 ducto Rentabilidad Futura, 1 Mantenimiento).
-*   **Cámaras:** Tipo Handhole 80x80x80 (Paso) y 1.2x1.2 (Empalme) cada 500-1000m.
-*   **Cruces Especiales:** Perforación Dirigida (HDD) en ríos y adosamientos en puentes (22 estructuras).
+### 2.2 Estrategia Anti-RETIE (Cable Dieléctrico)
+**Fuente:** RETIE 2024, Art 2.3.10 (Función Dual).
+**Riesgo:** Cables con armadura metálica (acero) requieren certificación RETIE y sistemas de puesta a tierra complejos en cada empalme.
+**Solución:** Especificar **Fibra Óptica 100% Dieléctrica** (Armadura FRP/Aramida).
+*   *Beneficio:* Al no ser conductor, no aplica RETIE sobre el cable de datos, simplificando la legalización.
+
+### 2.3 Protección de Infraestructura (Obra Civil)
+Para evitar cortes por maquinaria (el mayor riesgo operativo):
+1.  **Cinta de Señalización:** Obligatoria a 30cm sobre el ducto ("PELIGRO FIBRA ÓPTICA").
+2.  **Profundidad:** Mínima 1.2m en cruces de vía / 0.8m en bermas.
+
+### 2.4 El Cable (Backbone Trunk)
+*   **Tipo:** Monomodo G.652.D (Bajo pico de agua).
+*   **Construcción:** Loose Tube, Gel-filled, **Dieléctrico**.
+*   **Capacidad:** **48 Hilos** (Mandatorio).
 
 ---
 
@@ -73,7 +83,8 @@ El 85% del CAPEX no es el vidrio, es la obra civil.
 | **4** | **Accesorios (Cámaras/ODF)** | 1 (Glb) | $349,000 | $349,000 | Cajas de empalme, Racks |
 | **TOTAL** | **BACKBONE FIBRA** | | | **$7,980,000** | **$27k / km (Promedio)** |
 
-**Validación de Mercado:** El costo de $27k USD/km es consistente con proyectos viales 4G que incluyen Tritubo y obra civil nueva (Greenfield). Reducir este valor implica riesgo de no poder construir en zonas rocosas.
+**Validación de Mercado:** El costo de $27k USD/km es consistente con proyectos viales 4G (Greenfield).
+**Nota de Compra:** La Orden de Compra debe decir explícitamente: *"Cable de Fibra Óptica Monomodo G.652.D, 48 Hilos, Dieléctrico"*. Cualquier desviación en hilos o metal es causal de rechazo.
 
 ---
 

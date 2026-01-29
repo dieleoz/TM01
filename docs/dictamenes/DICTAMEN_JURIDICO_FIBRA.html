@@ -162,19 +162,29 @@
 <p>---</p>
 <p></p>
 <p><!-- SECCIÓN: technical_notes --></p>
-<h2>2. ESPECIFICACIONES TÉCNICAS (HARD DECK)</h2>
+<h2>2. BLINDAJE TÉCNICO (FORENSIC SPECS)</h2>
 <p></p>
-<h3>2.1 El Cable (Backbone Trunk)</h3>
-<p>*   <strong>Tipo:</strong> Monomodo G.652.D (Bajo pico de agua, estándar ITU-T).</p>
-<p>*   <strong>Construcción:</strong> Loose Tube (Tubo holgado), Gel-filled (Bloqueo de agua), Armadura metálica (Anti-roedores).</p>
-<p>*   <strong>Capacidad:</strong> <strong>48 Hilos</strong> (24 Pares).</p>
-<p>    <em>   </em>Uso:* 12 hilos ITS, 12 hilos Peaje, 12 hilos Admin/Voz, 12 Reserva Comercial (Dark Fiber).</p>
+<h3>2.1 La Regla de los 48 Hilos (AT3 4.2.xiii)</h3>
+<p><strong>Hallazgo Forense:</strong> El contrato define explícitamente la capacidad mínima.</p>
+<p><strong>Mandato:</strong> Todo cable troncal debe tener <strong>48 Hilos</strong>.</p>
+<p><em>   </em>Restricción:* Cables de 24 o 12 hilos serán rechazados como "No Conformidad" de producto, independientemente de que "sobre capacidad".</p>
+<p><em>   </em>Cita:* "La red troncal de fibra óptica deberá contar con una capacidad mínima de 48 hilos" (AT3 Numeral 4.2.xiii).</p>
 <p></p>
-<h3>2.2 Obra Civil (El Costo Real)</h3>
-<p>El 85% del CAPEX no es el vidrio, es la obra civil.</p>
-<p>*   <strong>Ductería:</strong> Tritubo HDPE 4" (1 ducto para FO Proyecto, 1 ducto Rentabilidad Futura, 1 Mantenimiento).</p>
-<p>*   <strong>Cámaras:</strong> Tipo Handhole 80x80x80 (Paso) y 1.2x1.2 (Empalme) cada 500-1000m.</p>
-<p>*   <strong>Cruces Especiales:</strong> Perforación Dirigida (HDD) en ríos y adosamientos en puentes (22 estructuras).</p>
+<h3>2.2 Estrategia Anti-RETIE (Cable Dieléctrico)</h3>
+<p><strong>Fuente:</strong> RETIE 2024, Art 2.3.10 (Función Dual).</p>
+<p><strong>Riesgo:</strong> Cables con armadura metálica (acero) requieren certificación RETIE y sistemas de puesta a tierra complejos en cada empalme.</p>
+<p><strong>Solución:</strong> Especificar <strong>Fibra Óptica 100% Dieléctrica</strong> (Armadura FRP/Aramida).</p>
+<p><em>   </em>Beneficio:* Al no ser conductor, no aplica RETIE sobre el cable de datos, simplificando la legalización.</p>
+<p></p>
+<h3>2.3 Protección de Infraestructura (Obra Civil)</h3>
+<p>Para evitar cortes por maquinaria (el mayor riesgo operativo):</p>
+<p>1.  <strong>Cinta de Señalización:</strong> Obligatoria a 30cm sobre el ducto ("PELIGRO FIBRA ÓPTICA").</p>
+<p>2.  <strong>Profundidad:</strong> Mínima 1.2m en cruces de vía / 0.8m en bermas.</p>
+<p></p>
+<h3>2.4 El Cable (Backbone Trunk)</h3>
+<p>*   <strong>Tipo:</strong> Monomodo G.652.D (Bajo pico de agua).</p>
+<p>*   <strong>Construcción:</strong> Loose Tube, Gel-filled, <strong>Dieléctrico</strong>.</p>
+<p>*   <strong>Capacidad:</strong> <strong>48 Hilos</strong> (Mandatorio).</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -191,7 +201,8 @@
 <p></td><td> <strong>4</strong> </td><td> <strong>Accesorios (Cámaras/ODF)</strong> </td><td> 1 (Glb) </td><td> $349,000 </td><td> $349,000 </td><td> Cajas de empalme, Racks </td><td></p>
 <p></td><td> <strong>TOTAL</strong> </td><td> <strong>BACKBONE FIBRA</strong> </td><td> </td><td> </td><td> <strong>$7,980,000</strong> </td><td> <strong>$27k / km (Promedio)</strong> </td><td></p>
 <p></p>
-<p><strong>Validación de Mercado:</strong> El costo de $27k USD/km es consistente con proyectos viales 4G que incluyen Tritubo y obra civil nueva (Greenfield). Reducir este valor implica riesgo de no poder construir en zonas rocosas.</p>
+<p><strong>Validación de Mercado:</strong> El costo de $27k USD/km es consistente con proyectos viales 4G (Greenfield).</p>
+<p><strong>Nota de Compra:</strong> La Orden de Compra debe decir explícitamente: <em>"Cable de Fibra Óptica Monomodo G.652.D, 48 Hilos, Dieléctrico"</em>. Cualquier desviación en hilos o metal es causal de rechazo.</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -215,7 +226,7 @@
         
         <footer>
             <p><strong>Documento generado automáticamente desde:</strong> DICTAMEN_JURIDICO_FIBRA_v1.0.md</p>
-            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 10:59:41</p>
+            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 11:05:24</p>
             <p><strong>Metodología:</strong> Punto 42 v3.0 (Contract-First Architecture)</p>
         </footer>
     </div>

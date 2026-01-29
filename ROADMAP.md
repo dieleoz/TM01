@@ -25,7 +25,7 @@
 - [x] **SOS:** 98 Postes (88 Nuevos + 10 Rehab) - $2.2M USD (Blindados)
 - [x] **WIM:** 1 Estación Bidireccional (Pesaje Fiscal) - $551k USD
 - [x] **RADIO:** Solución Híbrida PoC/VHF - **$0 USD EPC** (Blindaje Contractual Validado)
-- [x] **FIBRA:** Backbone 322km (48 Hilos) - $7.98M USD (Obra Civil Incluida)
+- [x] **FIBRA:** Backbone 322km (48 Hilos G.652.D) - **$7.98M USD** (Blindaje RETIE/Obra Civil)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`

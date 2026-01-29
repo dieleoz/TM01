@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: WIM
-// Fecha de generación: 2026-01-29 10:59:42
+// Fecha de generación: 2026-01-29 11:05:24
 
 const validaciones_WIM = {
   full: '## 📋 RESUMEN EJECUTIVO\n\n**Alcance Validado:**  \nEl sistema WIM (Control de Sobrecarga) consiste en **1 Estación de Pesaje Bidireccional** ubicada en el PR4+0100 de la RN 4513 (Acceso a Aguas Negras). No se deben confundir con los sensores WIM de Peaje (Clasificación). Esta es una estación de **Fiscalización** pura.\n\n**Componentes Críticos (Hard Deck):**\n- **Ubicación:** PR4+0100 RN 4513 (Estratégico cerca a CCO).\n- **Configuración:** 2 Pistas WIM Dinámicas (HS-WIM) + 2 Básculas Estáticas (Sanción).\n- **Tecnología:** Sensores Piezoeléctricos (Cuarzo) para WIM + Celdas de Carga para Estática.\n- **Normativa:** Resolución 100/2024 (HS-WIM Obligatorio).\n- **CAPEX Validado:** **$551,425 USD**.\n\n---',

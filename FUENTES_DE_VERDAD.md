@@ -64,12 +64,12 @@
 - **CAPEX Validado:** **$0 USD** (Para el EPC).
 
 ### ✅ CASO 6: FIBRA ÓPTICA (Validado)
-- **Conflicto:** Unidad de Medida (km cable vs km hilo) y Longitud (293 vs 322).
+- **Conflicto:** Capacidad (24 vs 48 hilos) y Legalización (RETIE).
 - **Resolución:**
-    - **Longitud:** 322 km de **CABLE** (Incluye reservas técnicas).
-    - **Capacidad:** 48 Hilos Monomodo G.652.D.
-    - **Obra Civil:** Tritubo HDPE 4" a lo largo de 293 km de zanja.
-- **CAPEX Validado:** **$7,980,000 USD** (Preponderancia de Obra Civil).
+    - **Capacidad:** 48 Hilos Mandatorios (AT3 Num 4.2.xiii).
+    - **Tecnología:** Fibra Dieléctrica G.652.D (Exención RETIE Art 2.3.10).
+    - **Longitud:** 322 km de CABLE físico.
+- **CAPEX Validado:** **$7,980,000 USD**.
 
 ---
 
