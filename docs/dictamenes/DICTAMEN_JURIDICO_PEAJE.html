@@ -167,8 +167,33 @@
 <p></p>
 <p>---</p>
 <p></p>
+<p><!-- SECCIÓN: technical_notes --></p>
+<h2>2. NOTAS DE PRECISIÓN TÉCNICA (GAPS DETECTADOS)</h2>
+<p></p>
+<h3>A. Señalización Variable en Peajes (Manual 2024)</h3>
+<p><strong>Requisito:</strong> El Manual de Señalización 2024 (Cap. 9.3.3.2) y IP/REV exigen:</p>
+<p>1.  <strong>Semáforos de Marquesina:</strong> Indicador estado de carril (Abierto/Cerrado).</p>
+<p>2.  <strong>Paneles de Tarifa (Tipo 4):</strong> Banner de variación dinámica P10 Ámbar.</p>
+<p></p>
+<p><strong>Ficha Técnica "Hard Deck" (14 Unidades):</strong></p>
+<ul><li><strong>Tecnología:</strong> LED P10 Ámbar (Monocromático).</li></ul>
+<ul><li><strong>Dimensiones:</strong> 640x320mm (Módulos 320x160mm).</li></ul>
+<ul><li><strong>Dinámica:</strong> Permite Scroll horizontal (Excepción Manual 2024).</li></ul>
+<ul><li><strong>Función:</strong> Integrado a DAC (Bienvenido / Valor / Saldo Bajo).</li></ul>
+<ul><li><strong>Ubicación:</strong> Bajo semáforo de paso en isleta (Poste multifuncional).</li></ul>
+<p></p>
+<h3>B. Cumplimiento RETIE 2024 (Instalaciones Eléctricas)</h3>
+<p>Las estaciones de peaje son <strong>instalaciones de uso final</strong>.</p>
+<ul><li><strong>Exigencia:</strong> Tableros de control de carril y diseño eléctrico general deben tener <strong>Dictamen de Inspección (Anexo 5)</strong> y certificados de producto. No se aceptan tableros "hechizos".</li></ul>
+<p></p>
+<h3>C. Segregación CCTV (IP/REV vs ITS)</h3>
+<ul><li><strong>Peaje:</strong> 28 Cámaras (14 LPR + 14 Ejes) son WBS 5.01 (Transaccional).</li></ul>
+<ul><li><strong>ITS:</strong> Las cámaras de seguridad vial (Panorámicas) son WBS 3.01. <strong>NO MEZCLAR PRESUPUESTOS.</strong></li></ul>
+<p></p>
+<p>---</p>
+<p></p>
 <p><!-- SECCIÓN: technical --></p>
-<h2>2. ESPECIFICACIONES TÉCNICAS (HARD DECK)</h2>
+<h2>3. ESPECIFICACIONES TÉCNICAS (HARD DECK)</h2>
 <p></p>
 <h3>2.1 Equipamiento por Carril (14 Carriles)</h3>
 <p></td><td> Componente </td><td> Especificación </td><td> Norma </td><td></p>
@@ -177,7 +202,8 @@
 <p></td><td> <strong>Cámara ANPR</strong> </td><td> Frontal + Trasera (OCR) </td><td> >95% Precisión </td><td></p>
 <p></td><td> <strong>Clasificación</strong> </td><td> Sensor WIM (Pesaje) + Volumétrico </td><td> AT2 / IP/REV </td><td></p>
 <p></td><td> <strong>Barrera</strong> </td><td> Alta velocidad (<0.7s) </td><td> MTBF > 5M ciclos </td><td></p>
-<p></td><td> <strong>Display Tarifa</strong> </td><td> LED P10 (640x320mm) </td><td> Visible a 50m </td><td></p>
+<p></td><td> <strong>Display Tarifa</strong> </td><td> LED P10 Ámbar (640x320mm) </td><td> Manual 2024 Tipo 4 </td><td></p>
+<p></td><td> <strong>Cámaras Carril</strong> </td><td> 28 Und (14 LPR + 14 Ejes) </td><td> Exclusivo WBS Peaje </td><td></p>
 <p></p>
 <h3>2.2 Equipamiento de Estación (2 Estaciones)</h3>
 <ul><li><strong>Servidores:</strong> Redundancia local (Cluster).</li></ul>
@@ -187,7 +213,7 @@
 <p>---</p>
 <p></p>
 <p><!-- SECCIÓN: financial --></p>
-<h2>💰 ANÁLISIS FINANCIERO</h2>
+<h2>4. ANÁLISIS FINANCIERO</h2>
 <p></p>
 <h3>Presupuesto Reconciliado (USD)</h3>
 <p></p>
@@ -203,7 +229,7 @@
 <p>---</p>
 <p></p>
 <p><!-- SECCIÓN: risks --></p>
-<h2>⚠️ MATRIZ DE RIESGOS</h2>
+<h2>5. MATRIZ DE RIESGOS</h2>
 <p></p>
 <p>1.  <strong>Integración IP/REV:</strong></p>
 <p>    <em>   </em>Riesgo:* Rechazo de la homologación por el Ministerio.</p>
@@ -224,7 +250,7 @@
         
         <footer>
             <p><strong>Documento generado automáticamente desde:</strong> DICTAMEN_JURIDICO_PEAJE_v1.0.md</p>
-            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 09:29:03</p>
+            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 09:34:19</p>
             <p><strong>Metodología:</strong> Punto 42 v3.0 (Contract-First Architecture)</p>
         </footer>
     </div>

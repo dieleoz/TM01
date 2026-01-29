@@ -49,8 +49,33 @@ El sistema de Peajes se compone de **2 Estaciones** (Zambito y Aguas Negras) con
 
 ---
 
+<!-- SECCIÓN: technical_notes -->
+## 2. NOTAS DE PRECISIÓN TÉCNICA (GAPS DETECTADOS)
+
+### A. Señalización Variable en Peajes (Manual 2024)
+**Requisito:** El Manual de Señalización 2024 (Cap. 9.3.3.2) y IP/REV exigen:
+1.  **Semáforos de Marquesina:** Indicador estado de carril (Abierto/Cerrado).
+2.  **Paneles de Tarifa (Tipo 4):** Banner de variación dinámica P10 Ámbar.
+
+**Ficha Técnica "Hard Deck" (14 Unidades):**
+- **Tecnología:** LED P10 Ámbar (Monocromático).
+- **Dimensiones:** 640x320mm (Módulos 320x160mm).
+- **Dinámica:** Permite Scroll horizontal (Excepción Manual 2024).
+- **Función:** Integrado a DAC (Bienvenido / Valor / Saldo Bajo).
+- **Ubicación:** Bajo semáforo de paso en isleta (Poste multifuncional).
+
+### B. Cumplimiento RETIE 2024 (Instalaciones Eléctricas)
+Las estaciones de peaje son **instalaciones de uso final**.
+- **Exigencia:** Tableros de control de carril y diseño eléctrico general deben tener **Dictamen de Inspección (Anexo 5)** y certificados de producto. No se aceptan tableros "hechizos".
+
+### C. Segregación CCTV (IP/REV vs ITS)
+- **Peaje:** 28 Cámaras (14 LPR + 14 Ejes) son WBS 5.01 (Transaccional).
+- **ITS:** Las cámaras de seguridad vial (Panorámicas) son WBS 3.01. **NO MEZCLAR PRESUPUESTOS.**
+
+---
+
 <!-- SECCIÓN: technical -->
-## 2. ESPECIFICACIONES TÉCNICAS (HARD DECK)
+## 3. ESPECIFICACIONES TÉCNICAS (HARD DECK)
 
 ### 2.1 Equipamiento por Carril (14 Carriles)
 | Componente | Especificación | Norma |
@@ -59,7 +84,8 @@ El sistema de Peajes se compone de **2 Estaciones** (Zambito y Aguas Negras) con
 | **Cámara ANPR** | Frontal + Trasera (OCR) | >95% Precisión |
 | **Clasificación** | Sensor WIM (Pesaje) + Volumétrico | AT2 / IP/REV |
 | **Barrera** | Alta velocidad (<0.7s) | MTBF > 5M ciclos |
-| **Display Tarifa** | LED P10 (640x320mm) | Visible a 50m |
+| **Display Tarifa** | LED P10 Ámbar (640x320mm) | Manual 2024 Tipo 4 |
+| **Cámaras Carril** | 28 Und (14 LPR + 14 Ejes) | Exclusivo WBS Peaje |
 
 ### 2.2 Equipamiento de Estación (2 Estaciones)
 - **Servidores:** Redundancia local (Cluster).
@@ -69,7 +95,7 @@ El sistema de Peajes se compone de **2 Estaciones** (Zambito y Aguas Negras) con
 ---
 
 <!-- SECCIÓN: financial -->
-## 💰 ANÁLISIS FINANCIERO
+## 4. ANÁLISIS FINANCIERO
 
 ### Presupuesto Reconciliado (USD)
 
@@ -85,7 +111,7 @@ El sistema de Peajes se compone de **2 Estaciones** (Zambito y Aguas Negras) con
 ---
 
 <!-- SECCIÓN: risks -->
-## ⚠️ MATRIZ DE RIESGOS
+## 5. MATRIZ DE RIESGOS
 
 1.  **Integración IP/REV:**
     *   *Riesgo:* Rechazo de la homologación por el Ministerio.

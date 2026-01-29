@@ -30,8 +30,9 @@
 - **Conflicto:** CAPEX FTS ($1.8M) vs Requerimientos WIM-DAC ($280k) vs PMV Aproximación ($220k).
 - **Resolución:**
     - **Base:** 2 Estaciones (Zambito + Aguas Negras).
-    - **Segregación PMV:** PMV Aproximación se mueven a ITS (WBS 3.01). Displays Tarifarios se quedan en Peaje.
+    - **Segregación PMV:** PMV Aproximación se mueven a ITS (WBS 3.01). Displays Tarifarios (14 Carriles) deben ser **P10 Ámbar Tipo 4 (Manual 2024)**.
     - **Integración WIM:** Se incluye costo de integración WIM-DAC (Sensores piezoeléctricos) en Peaje para cumplir IP/REV.
+    - **RETIE 2024:** Tableros de carril requieren Dictamen de Inspección (Anexo 5).
 - **CAPEX Reconciliado:** **$2,086,577.24 USD** (FTS + WIM Integrado).
 
 ---
