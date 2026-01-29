@@ -7,16 +7,10 @@
     <title>Dashboard Ingeniería Técnica - TM01</title>
     <style>
         :root {
-            /* Palette: Technical/Construction Orange & Blue */
             --role-technical: #f59e0b;
-            /* Construction Orange */
             --role-technical-bg: #fffbeb;
             --primary: #0f172a;
-            /* Slate 900 */
             --secondary: #334155;
-            /* Slate 700 */
-            --highlight: #3b82f6;
-            /* Blue 500 */
             --bg: #f8fafc;
             --surface: #ffffff;
             --border: #e2e8f0;
@@ -37,7 +31,6 @@
             margin: 0 auto;
         }
 
-        /* HEADER */
         .header {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             color: white;
@@ -54,12 +47,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-
-        .header p {
-            margin: 0;
-            opacity: 0.8;
-            font-size: 1rem;
         }
 
         .back-link {
@@ -79,7 +66,6 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        /* METRICS GRID */
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -109,11 +95,9 @@
             margin-top: 5px;
         }
 
-        /* SYSTEMS GRID */
         .grid-tech {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            /* 3 cards per row */
             gap: 1.5rem;
         }
 
@@ -133,10 +117,10 @@
             background: var(--surface);
             border-radius: 10px;
             border: 1px solid var(--border);
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             transition: transform 0.2s;
+            overflow: hidden;
         }
 
         .tech-card:hover {
@@ -191,7 +175,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             padding-top: 1rem;
-            border-top: 1px solid var(--border-light);
+            border-top: 1px solid #f1f5f9;
             margin-top: 10px;
         }
 
@@ -204,6 +188,10 @@
             font-weight: 600;
             border: 1px solid var(--border);
             transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
 
         .btn-layout {
@@ -226,17 +214,39 @@
             background: #dcfce7;
         }
 
-        .loading,
-        .error {
-            text-align: center;
-            padding: 2rem;
-            color: #64748b;
-            width: 100%;
-            grid-column: 1/-1;
+        /* Status colors */
+        .btn-disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            background: #f1f5f9;
+            color: #94a3b8;
+            border-color: #e2e8f0;
         }
 
-        .error {
-            color: #dc2626;
+        .spec-active {
+            background-color: #dcfce7;
+            color: #15803d;
+            border-color: #86efac;
+            font-weight: 700;
+            box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+            }
+
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+            }
         }
     </style>
 </head>
@@ -244,137 +254,129 @@
 <body>
 
     <div class="container">
-        <!-- Header -->
         <header class="header">
             <a href="WBS_Menu_Principal.html" class="back-link">← Menú Principal</a>
-            <h1>👷 Dashboard Ingeniería Técnica</h1>
-            <p>Control de Planos (T02), Especificaciones (T04) y Análisis de Precios (APUz) para Ejecución.</p>
+            <h1>👷 Dashboard Ingeniería Técnica (Fase 7)</h1>
+            <p>Control de Planos (T02), Especificaciones (T04) y Análisis de Precios (APUz).</p>
+            <div id="sync-status" style="font-size:0.8rem; opacity:0.8; margin-top:5px; font-style:italic;">
+                ⏳ Esperando datos...
+            </div>
         </header>
 
-        <!-- Metrics -->
         <div class="metrics-grid" id="metrics-container">
-            <div class="loading">Calculando Métricas de Ingeniería...</div>
+            <div style="padding:20px; text-align:center;">Cargando métricas...</div>
         </div>
 
-        <h2 style="color:var(--primary); margin-bottom:1.5rem;">📁 Paquetes de Ingeniería por Subsistema</h2>
+        <h2 style="color:var(--primary); margin-bottom:1.5rem;">📁 Paquetes de Ingeniería de Detalle</h2>
 
-        <!-- Systems Grid -->
         <div class="grid-tech" id="tech-container">
-            <div class="loading">Cargando Datos Técnicos...</div>
+            <div style="padding:20px; text-align:center;">Inicializando...</div>
         </div>
     </div>
 
-    <!-- Data -->
+    <!-- 1. Master Data (Contractual & Quantities) -->
     <script src="data/tm01_master_data.js"></script>
 
-    <!-- Logic -->
-    <script>
+    <!-- 2. Technical Mapping (Generated by scripts/generar_specs_tecnicas.ps1) -->
+    <script src="data/technical_specs_map.js"></script>
 
-        // --- 1. CONFIG: Technical Doc Maps (Real Links for Phase 7) ---
-        const TECH_DOCS = {
-            'SOS': { layout: 'LAYOUT_SOS_KM0-30.pdf', spec: 'T04_SPEC_POSTE_SOS_V3.pdf' },
-            'CCTV': {
-                layout: 'LAYOUT_CCTV_PTOS_CRITICOS.pdf',
-                spec: '../IV. Ingenieria Basica/T04_SPEC_CCTV_PTZ_v1.0.md'
-            },
-            'PMV': { layout: 'LAYOUT_PMV_MENSAJERIA.pdf', spec: 'T04_SPEC_PANEL_LED_RGB.pdf' },
-            'Peajes': { layout: 'LAYOUT_PEAJE_RIO.pdf', spec: 'T04_SPEC_SISTEMA_RECAUDO.pdf' },
-            'WIM': { layout: 'LAYOUT_WIM_PESAJE.pdf', spec: 'T04_SPEC_SENSORES_PIEZO.pdf' },
-            'Telecomunicaciones': { layout: 'LAYOUT_FIBRA_BACKBONE.pdf', spec: 'T04_SPEC_CABLE_FO_G652D.pdf' },
-            'Centro de Control (CCO)': { layout: 'ARQ_CCO_PLANTA.pdf', spec: 'T04_SPEC_VIDEO_WALL.pdf' },
-            'Meteorología': { layout: 'LAYOUT_METEO_ESTACIONES.pdf', spec: 'T04_SPEC_ESTACION_DAVIS.pdf' },
-            'ETD/RADAR': { layout: 'LAYOUT_CONTEO_VEHICULAR.pdf', spec: 'T04_SPEC_RADAR_DOPPLER.pdf' }
+    <script>
+        // CONFIG: Manual Fallback for Layouts (PDFs)
+        const LAYOUT_LINKS = {
+            'SOS': 'layouts/LAYOUT_SOS_KM0-30.pdf',
+            'CCTV': 'layouts/LAYOUT_CCTV_PTOS_CRITICOS.pdf',
+            'PMV': 'layouts/LAYOUT_PMV_MENSAJERIA.pdf',
+            'Peajes': 'layouts/LAYOUT_PEAJE_RIO.pdf',
+            'WIM': 'layouts/LAYOUT_WIM_PESAJE.pdf'
         };
 
-        // --- 2. MAIN LOGIC ---
         document.addEventListener('DOMContentLoaded', () => {
-            const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
-                (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
+            // Safe Load Data
+            const md = (window.tm01MasterData || window.TM01_MASTER_DATA || {}).data;
+            const specsMap = window.TECHNICAL_SPECS_MAP || {};
 
-            if (!md || !md.data) {
-                document.getElementById('tech-container').innerHTML = '<div class="error">Error: No se pudo cargar tm01_master_data.js</div>';
+            if (!md) {
+                document.body.innerHTML = '<h3 style="color:red; text-align:center;">Error: tm01_master_data.js no encontrado.</h3>';
                 return;
             }
 
-            renderTechDashboard(md.data);
+            renderDashboard(md, specsMap);
+
+            // Update Sync Status
+            const syncTime = specsMap._metadata ? specsMap._metadata.generatedAt : 'Desconocido';
+            document.getElementById('sync-status').innerHTML = `🔄 Última "Cocina" (Conversión): <strong>${syncTime}</strong>`;
         });
 
-        function renderTechDashboard(data) {
-            const summaries = Object.keys(data)
-                .filter(key => key.includes('Summary'))
-                .map(key => data[key]);
+        function renderDashboard(data, specsMap) {
+            const summaries = Object.values(data).filter(item => item.id && item.sistema);
 
-            // A. Metrics matches Contractual but focus on physical quantities
-            const totalDevices = summaries.reduce((acc, s) => acc + (s.cantidad || 0), 0);
-            const verifiedSpecs = summaries.length;
-            // Mock metric for plans
-            const totalPlanos = Math.ceil(totalDevices / 5); // Approx 5 devices per sheet
+            // Metrics
+            const totalDocs = Object.keys(specsMap).length;
+            const totalQty = summaries.reduce((sum, item) => sum + (item.cantidad || 0), 0);
 
             document.getElementById('metrics-container').innerHTML = `
                 <div class="metric-card">
-                    <div class="metric-val">${totalDevices}</div>
-                    <div class="metric-label">Equipos a Instalar</div>
+                    <div class="metric-val">${totalQty}</div>
+                    <div class="metric-label">Total Equipos</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-val">${totalPlanos}</div>
-                    <div class="metric-label">Planos de Detalle (T02)</div>
+                    <div class="metric-val" style="color:${totalDocs > 0 ? '#166534' : '#64748b'}">${totalDocs}</div>
+                    <div class="metric-label">Specs Generadas (T04)</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-val">${verifiedSpecs}/13</div>
-                    <div class="metric-label">Fichas Técnicas (T04)</div>
-                </div>
-                 <div class="metric-card">
                     <div class="metric-val">100%</div>
-                    <div class="metric-label">Matriz Equipos</div>
+                    <div class="metric-label">Matrices Validadas</div>
                 </div>
             `;
 
-            // B. Tech Cards
+            // Cards
             let html = '';
-
-            const getIcon = (name) => {
-                if (name.includes('CCTV')) return '📹';
-                if (name.includes('SOS')) return '📞';
-                if (name.includes('PMV')) return '📟';
-                if (name.includes('Peaje')) return '🛂';
-                if (name.includes('WIM')) return '⚖️';
-                if (name.includes('Fibra') || name.includes('Tel')) return '📡';
-                if (name.includes('CCO')) return '🖥️';
-                return '🔧';
-            };
-
             summaries.forEach(sys => {
-                const docs = TECH_DOCS[sys.sistema] || TECH_DOCS[sys.sistema.split(' ')[0]] || { layout: '#', spec: '#' };
-                const layoutLink = docs.layout !== '#' ? `docs/layouts/${docs.layout}` : '#';
+                const sysKey = sys.sistema.split(' ')[0].replace(/[^a-zA-Z0-9]/g, ''); // Simple key extraction
 
-                // Tech Description cleaning
-                let techDesc = sys.descripcion;
-                if (techDesc.length > 80) techDesc = techDesc.substring(0, 80) + '...';
+                // 1. T04 Link (From Map)
+                // Normalize keys logic: 'CCTV' -> 'CCTV'. 'SOS' -> 'SOS'. 'Peajes' -> 'Peaje'? 
+                // Our script uses file naming. T04_SPEC_CCTV -> CCTV.
+                // We try exact match first, then "startWith".
+
+                let specPath = null;
+                // Try to find a key in specsMap that matches the system name
+                const mapKey = Object.keys(specsMap).find(k => sys.sistema.includes(k) || k.includes(sysKey));
+                if (mapKey) specPath = specsMap[mapKey];
+
+                const hasSpec = !!specPath;
+
+                // 2. T02 Link (Layouts)
+                const layoutPath = LAYOUT_LINKS[sysKey] || LAYOUT_LINKS[Object.keys(LAYOUT_LINKS).find(k => sys.sistema.includes(k))];
+                const hasLayout = !!layoutPath;
 
                 html += `
                 <div class="tech-card">
                     <div class="card-header">
                         <div class="sys-name">
-                            <span>${getIcon(sys.sistema)}</span> ${sys.sistema}
+                            ${getIcon(sys.sistema)} ${sys.sistema}
                         </div>
-                        <div class="sys-qty">${sys.cantidad} Units</div>
+                        <div class="sys-qty">${sys.cantidad} Und</div>
                     </div>
                     <div class="card-body">
                         <div class="tech-spec-item">
-                            <strong>Especificación Principal:</strong>
-                            ${techDesc}
-                        </div>
-                        <div class="tech-spec-item">
-                            <strong>Normativa Aplicable:</strong>
-                            RETIE / ISO 14001 / NTC
+                            <strong>Descripción Técnica:</strong>
+                            ${sys.descripcion || 'Sin descripción'}
                         </div>
                         
                         <div class="btn-group">
-                            <a href="#" onclick="alert('Abriendo Plano: ${docs.layout}')" class="btn-tech btn-layout">
-                                🗺️ Ver Plano T02
+                            <!-- Layout Button -->
+                            <a href="${hasLayout ? layoutPath : '#'}" 
+                               class="btn-tech ${hasLayout ? 'btn-layout' : 'btn-disabled'}"
+                               target="${hasLayout ? '_blank' : ''}">
+                                🗺️ ${hasLayout ? 'Ver Plano T02' : 'Sin Plano'}
                             </a>
-                            <a href="#" onclick="alert('Abriendo Ficha: ${docs.spec}')" class="btn-tech btn-spec">
-                                📝 Ver Spec T04
+                            
+                            <!-- Spec Button -->
+                            <a href="${hasSpec ? specPath : '#'}" 
+                               class="btn-tech ${hasSpec ? 'btn-spec spec-active' : 'btn-disabled'}"
+                               target="${hasSpec ? '_blank' : ''}">
+                                📝 ${hasSpec ? 'Ver Spec T04' : 'Spec Pendiente'}
                             </a>
                         </div>
                     </div>
@@ -385,6 +387,15 @@
             document.getElementById('tech-container').innerHTML = html;
         }
 
+        function getIcon(name) {
+            if (name.includes('CCTV')) return '📹';
+            if (name.includes('SOS')) return '📞';
+            if (name.includes('PMV')) return '📟';
+            if (name.includes('Peaje')) return '🛂';
+            if (name.includes('WIM')) return '⚖️';
+            if (name.includes('Fibra')) return '📡';
+            return '⚙️';
+        }
     </script>
 </body>
 
