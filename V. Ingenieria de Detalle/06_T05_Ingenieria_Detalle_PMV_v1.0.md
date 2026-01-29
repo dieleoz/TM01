@@ -3,9 +3,9 @@
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** PMV - Paneles de Mensaje Variable  
-**Fecha:** 21 de Enero 2026  
-**Versión:** 2.0 (FORENSIC VALIDATION .42)  
-**Basado en:** T04 PMV v1.5 + Requerimiento Peajes IP/REV  
+**Fecha:** 29 de Enero 2026  
+**Versión:** 2.2 (FORENSIC VALIDATION 43 UNITS)  
+**Basado en:** Manual de Señalización 2024 + Resolución IP/REV + AT1/AT2  
 ---
 
 ## 📋 **CONTROL DE CAMBIOS**
@@ -13,312 +13,78 @@
 | Versión | Fecha | Cambios | Autor |
 |:--------|:------|:--------|:------|
 | 1.0 | 22/10/2025 | Creación inicial - 28 PMV | Ing. ITS |
-| 1.1 | 22/10/2025 | Revisión con información oficial | Ing. ITS |
-| 2.0 | 22/10/2025 | **Optimización Manual 2024:** 14 unidades (400mm). Estructura CCP-14. Grid-Powered. | Ing. ITS |
-| 2.1 | 21/01/2026 | **Forensic Update:** Total 39 Unds (25 Mainline + 14 Toll). RGB Full. | Ing. Forensic |
+| 2.0 | 22/10/2025 | Optimización Manual 2024 | Ing. ITS |
+| 2.1 | 21/01/2026 | Forensic Update: 39 Unds (Incorrecto) | Ing. Forensic |
+| **2.2** | **29/01/2026** | **CORRECCIÓN FINAL:** Total 43 Unidades. Segregación ITS (29) vs Peajes (14). Segregación de Presupuestos. Cumplimiento RETIE 2024. | **Agente Validación** |
 
 ---
 
 ## 📋 **RESUMEN EJECUTIVO**
 
-### **Sistema PMV:**
+### **Sistema PMV (Total 43 Unidades):**
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad total** | **39 paneles** | 25 Mainline + 14 Toll Lanes (IP/REV) |
-| **Separación** | 20 km por sentido | Requisito AT1 |
-| **Peajes** | 14 PMV (1 por carril) | Obligatorio AT2 (Tarifa/Usuario) |
-| **Estratégicos** | 25 PMV en corredor | Puntos de Decisión + Blindaje |
-| **CAPEX estimado** | **USD $2,360,000** | Reconciliado Phase 19 |
-| **OPEX Anual** | **$33,600 USD** | ~1.3% del CAPEX |
-| **OPEX 20 años** | **$672,000 USD** | Mantenimiento + Repuestos |
+| **1. PMV Vía (ITS)** | **29 unidades** | WBS 3.01 (Gestión Tráfico) |
+| *-- Troncal (Mainline)* | 25 und | AT1 3.8 (Mínimo 25, max 20km) |
+| *-- Aproximación Peaje* | 4 und | AT2 3.3.5.1 (2 por estación) |
+| **2. PMV Peaje (IP/REV)** | **14 unidades** | WBS 5.01 (Recaudo) |
+| *-- Tarifarios Carril* | 14 und | Res. IP/REV (1 por carril) |
+| **TOTAL PROYECTO** | **43 unidades** | **Suma de Obligaciones** |
 
 ---
 
-## 💰 **PRESUPUESTO DETALLADO**
+## 💰 **PRESUPUESTO DETALLADO Y SEGREGADO**
 
-### **CAPEX POR COMPONENTE:**
+### **A. SUBSISTEMA ITS (WBS 3.01) - $2,320,000 USD**
 
-| Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
-|:-----------|:---------|:------------------|:------------|:------------|
-| **1. PANEL PMV FULL MATRIX (Mainline)** | **25 und** | **$45,000** | **$1,125,000** | **47.6%** |
-| Matriz 2024 (Carácter 400mm), L3, RGB | 25 und | $45,000 | $1,125,000 | - |
-| **2. PANEL PMV PEAJE (Canopy)** | **14 und** | **$5,000** | **$70,000** | **3.0%** |
-| Tarifario/Mensaje (1x1m aprox), RGB | 14 und | $5,000 | $70,000 | - |
-| **3. ESTRUCTURA (Pórticos Mainline)**| **25 und** | **$35,000** | **$875,000** | **37.1%** |
-| Diseño sismo-resistente + Cimentación | 25 und | $35,000 | $875,000 | - |
-| **4. ACOMETIDA Y GESTIÓN** | **1 glb** | **$290,000** | **$290,000** | **12.3%** |
-| Red + UPS + Software Central | 1 glb | $290,000 | $290,000 | - |
-| **TOTAL CAPEX** | **39 und** | **Prom. $60.5k** | **$2,360,000** | **100%** |
+| Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
+|:-----------|:---------|:------------------|:------------|
+| **1. PMV GRAN FORMATO (Vía)** | **29** | **$45,000** | **$1,305,000** |
+| Matriz Full RGB P20 (UNE-EN 12966) | 29 | $45,000 | $1,305,000 |
+| **2. ESTRUCTURA PÓRTICO** | **29** | **$35,000** | **$1,015,000** |
+| Diseño Sismo-Resistente (CCP-14) | 29 | $35,000 | $1,015,000 |
+| **TOTAL ITS** | **29** | | **$2,320,000** |
 
-**Nota:** Se elimina solución solar por alto consumo del panel de 400mm (Manual 2024).
+### **B. SUBSISTEMA PEAJES (WBS 5.01) - $70,000 USD**
 
----
+| Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
+|:-----------|:---------|:------------------|:------------|
+| **1. PMV TARIFARIO (Carril)** | **14** | **$5,000** | **$70,000** |
+| Panel P10 Ámbar/RGB (IP/REV) | 14 | $5,000 | $70,000 |
+| **TOTAL PEAJES** | **14** | | **$70,000** |
 
-## 📐 **ESPECIFICACIONES TÉCNICAS DETALLADAS**
-
-### **1. PANEL LED MATRIZ**
-
-| Parámetro | Especificación Mínima | Cumplimiento |
-|:----------|:---------------------|:------------|
-| **Dimensiones Totales** | 5.120 mm (L) × 1.440 mm (A) (Área Texto) | Modelo P20 1G |
-| **Dimensiones Gráfica** | 1.280 mm × 1.280 mm | RGB |
-| **Tecnología** | LED SMD Full Matrix RGB | - |
-| **Pitch** | 20 mm | - |
-| **Resolución** | 256×72 px (Texto) / 64x64 px (Gráfico) | - |
-| **Líneas/Caracteres** | 3 líneas de 12 caracteres (H: 450 mm) | - |
-| **Colores** | FULL RGB (16.7M Total) | - |
-| **Brillo** | Luminosidad L3 (Según EN 12966) | - |
-| **Ángulo Visión** | Clase B6 | - |
-| **Peso** | 810 KG | Requiere estructura reforzada |
-| **Consumo** | Max 1.7 KW / Promedio 720W | - |
-| **Protección** | IP65, EN 12966 | - |
-| **Temp. Operación** | -50°C a +65°C | - |
-| **Comunicación** | Ethernet IP, ModBus RS485/TCP, NTCIP 1203 | - |
-| **Alimentación** | 110-220 VAC 60Hz | - |
-
-**Marcas aceptadas:** Daktronics, SWARCO, Messagemaker, Ver-Mac, Econolite
+### **GRAN TOTAL CAPEX: $2,390,000 USD**
 
 ---
 
-### **2. CONTROLADOR PMV**
+## 📐 **ESPECIFICACIONES TÉCNICAS (HARD DECK)**
 
-| Parámetro | Especificación |
-|:----------|:--------------|
-| **Protocolo** | NTCIP 1203 v3 **O** DATEX II (UNE-EN 16157-4) | Manual 2024 Sec 2.7.5 |
-| **Interfaz red** | Ethernet 10/100 Mbps |
-| **Gestión remota** | Web + SNMP + API REST |
-| **Mensajes almacenables** | ≥256 mensajes preprogramados |
-| **Memoria** | ≥4 GB flash |
-| **Edición en tiempo real** | ✅ Desde CCO |
-| **Fuentes** | Mínimo 5 fuentes de texto |
-| **Gráficos** | Soporte de iconos/símbolos |
-| **Multilingüe** | Español + pictogramas |
-| **Alimentación** | 12-24 VDC |
-| **Protección** | Gabinete IP65 |
+### **1. PMV ITS (Tipo 1 - Gran Formato)**
+- **Norma:** UNE-EN 12966 (Certificado Obligatorio)
+- **Matriz:** Full Matrix RGB
+- **Altura Carácter:** Mínimo 400 mm (>90 km/h)
+- **Luminancia:** Clase L3
+- **Protocolo:** NTCIP 1203 v3 / DATEX II
+- **Energía:** Red AC + RETIE 2024 (Tableros Certificados, DPS, Puesta a Tierra)
 
----
-
-## 🗺️ **UBICACIONES Y DISTRIBUCIÓN**
-
-### **PMV por Sentido de Circulación:**
-
-| Sentido | Cantidad | Tipo Estructura | Observaciones |
-|:--------|:---------|:----------------|:--------------|
-| **Izquierda** | 14 | 7 bidireccionales + 7 unidireccionales | Calzada Izquierda |
-| **Derecha** | 14 | 7 bidireccionales + 7 unidireccionales | Calzada Derecha |
-| **TOTAL** | **28** | 14 pórticos + 14 postes | - |
-
-
+### **2. PMV PEAJE (Tipo 4 - Tarifario)**
+- **Ubicación:** Isleta de cobro (bajo semáforo)
+- **Función:** Tarifas, Saldo, Categoría (Transaccional)
+- **Resolución:** P10 mm
+- **Integración:** DAC (Controlador de Carril)
 
 ---
 
-### **APU-PMV-001: PMV Bidireccional (Pórtico)**
+## ⚖️ **ESTRATEGIA LEGAL (SECCIÓN 4.12)**
 
-| Componente | Total (USD) |
-|:-----------|:------------|
-| **Panel PMV P20** | $45,000.00 |
-| **Estructura Pórtico** | $40,000.00 |
-| **Sistema de Energía y Enlace** | $15,000.00 |
-| **TOTAL APU-PMV-001 (Pórtico)** | **$100,000.00/panel** |
+**Línea Base (25 Unidades):**
+- El contrato exige "mínimo 25".
+- Se instalan 25 en Troncal + 4 en Peajes para cumplimiento operativo.
+- Total Base: 29 Unidades ITS.
 
-**Para 7 PMV bidireccionales:** 7 × $100,000 = **$700,000 USD**
-
----
-
-### **APU-PMV-002: PMV Unidireccional (Poste)**
-
-| Componente | Total (USD) |
-|:-----------|:------------|
-| **Panel PMV P20** | $35,000.00 |
-| **Estructura Poste** | $15,000.00 |
-| **Sistema de Energía y Enlace** | $10,000.00 |
-| **TOTAL APU-PMV-002 (Poste)** | **$60,000.00/panel** |
-
-**Para 7 PMV unidireccionales:** 7 × $60,000 = **$420,000 USD**
+**Riesgo Manual 2024 (Variantes):**
+- Si la ANI exige cobertura en variantes (manual 2024), se requieren ~6 unidades adicionales.
+- **Acción:** Se reclamarán como **Mayor Valor** por Cambio de Ley (Sección 4.11/4.12), ya que exceden el alcance cuantitativo original.
 
 ---
-
-### **Gestión Centralizada e Integración**
-- **Sistema de Gestión e Integración:** **$70,000 USD**
-- **TOTAL SISTEMA PMV** | **-** | **-** | **$1,190,000.00** |
-
----
-
-## 📋 **PRESUPUESTO WBS CONSOLIDADO**
-
-| Componente | Cantidad | Costo Unit. | Total |
-|:-----------|:---------|:------------|:------|
-| PMV P20 1G 64x64 (Suministro) | 28 | $26,180.00 | $733,040.00 |
-| Factor Imprevistos + AIU (Panel) | 28 | $17,174.08 | $480,874.24 |
-| Estructura Pórtico (Soporte PMV) | 28 | $72,167.24 | $2,020,682.72 |
-| Kit Solar Off-Grid | 28 | $18,162.00 | $508,536.00 |
-| Factor Imprevistos + AIU (Solar) | 28 | $11,914.62 | $333,609.36 |
-| Sistema Puesta a Tierra (SPT) | 28 | $2,384.00 | $66,752.00 |
-| Factor Imprevistos + AIU (SPT) | 28 | $1,563.94 | $43,790.32 |
-| **TOTAL SISTEMA PMV** | **-** | **-** | **$4,187,284.64** |
-
-
-
----
-
-## 📐 **ESPECIFICACIONES TÉCNICAS**
-
-### **1. PANEL LED**
-
-| Parámetro | Especificación |
-|:----------|:--------------|
-| **Tipo** | Full Matrix LED (RGB 2024) |
-| **Dimensiones activas** | 4.5 × 1.8 metros (Aprox) |
-| **Píxeles** | Matriz completa (Mín 64x32 para 400mm) |
-| **Brillo** | L3 (≥8,500 cd/m² típico en sol directo) |
-| **Colores** | RGB Full Color |
-| **Caracteres** | 3 líneas |
-| **Altura caracteres** | **400 mm** (Mínimo Manual 2024) |
-| **Legibilidad** | ≥410 metros |
-| **Ángulo visión** | Clase B6 / B7 |
-| **Consumo** | Max 2.5 KW (Pico) / Promedio 900W |
-| **Vida útil LED** | ≥100,000 horas |
-| **Protocolo** | NTCIP 1202 / 1203 |
-| **Protección** | IP65 / IK08 |
-| **Sismo** | **CCP-14** |
-
----
-
-### **2. MENSAJES TIPO**
-
-| Tipo | Ejemplo | Aplicación |
-|:-----|:--------|:-----------|
-| **Advertencia** | "ATENCIÓN / ACCIDENTE / PK 85+370" | Eventos en vía |
-| **Información** | "VELOCIDAD / MÁXIMA / 80 KM/H" | Regulación tráfico |
-| **Clima** | "LLUVIA / REDUZCA / VELOCIDAD" | Condiciones meteorológicas |
-| **Desvíos** | "DESVÍO / PRÓXIMA / SALIDA" | Rutas alternas |
-| **Peajes** | "PEAJE / 15 KM / PREPÁRESE" | Antes de peaje |
-| **Genéricos** | "BUEN VIAJE / CONDUZCA / SEGURO" | Información general |
-
-**Total mensajes preprogramables:** ≥256 en biblioteca
-
----
-
-### **Distribución de Paneles (14 unidades):**
-
-| # | PKR | Ruta | UF | Ubicación | Tipo |
-|:--|:----|:-----|:---|:----------|:-----|
-| 1 | 9+200 | 4510 | 1 | Peaje Zambito | Pórtico |
-| 2 | 11+000 | 4510 | 1 | Peaje Zambito | Poste |
-| 3 | 40+000 | 4510 | 2 | Estratégico | Pórtico |
-| 4 | 70+000 | 4510 | 3 | Estratégico | Poste |
-| 5 | 80+200 | 4510 | 4 | Peaje Aguas Negras | Pórtico |
-| 6 | 82+000 | 4510 | 4 | Peaje Aguas Negras | Poste |
-| 7 | 110+000 | 4510 | 5 | Estratégico | Pórtico |
-| 8 | 10+000 | 4511 | 6 | Estratégico | Poste |
-| 9 | 40+000 | 4511 | 7 | Estratégico | Pórtico |
-| 10 | 70+000 | 4511 | 8 | Estratégico | Poste |
-| 11 | 100+000 | 4511 | 9 | Estratégico | Pórtico |
-| 12 | 130+000 | 4511 | 10 | Centro de Control | Poste |
-| 13 | 146+580 | 4511 | 12 | Final Ruta | Pórtico |
-| 14 | 5+900 | 4513 | 11 | Conexión CCO | Poste |
-
----
-
-## 📊 **INTEGRACIÓN CON RADAR/ETD**
-
-### **PMV con ETD Integrada (2 unidades):**
-
-| PKR | Ruta | Equipo | Observación |
-|:----|:-----|:-------|:------------|
-| 106+580 | 4511 | PMV Izquierda + ETD | Pórtico compartido |
-| 126+580 | 4511 | PMV Izquierda + ETD | Pórtico compartido |
-
-**Ventaja:** Ahorro en estructura (1 pórtico para 2 sistemas)  
-**Costo incremental ETD:** +$8,000 USD por pórtico (reforzamiento)
-
----
-
-## 🔧 **INSTALACIÓN Y MONTAJE**
-
-### **Proceso Tipo A (Pórtico Bidireccional):**
-
-**Duración:** 5 días/pórtico
-
-| Día | Actividad |
-|:----|:----------|
-| **1-2** | Excavación + fundición cimentación |
-| **3** | Fraguado concreto (espera) |
-| **4** | Montaje estructura pórtico (grúa) |
-| **5** | Montaje panel LED + conexiones |
-| **6** | Pruebas y comisionamiento |
-
-**Rendimiento:** 1 pórtico/semana con 1 cuadrilla  
-**Cuadrillas:** 1 cuadrilla (12 personas)  
-**Duración total:** 14 semanas para pórticos + 10 semanas para postes = **24 semanas (6 meses)**
-
----
-
-## 📋 **PRUEBAS Y CERTIFICACIÓN**
-
-### **Protocolo de Pruebas PMV:**
-
-| # | Prueba | Criterio de Aceptación |
-|:--|:-------|:-----------------------|
-| 1 | **Inspección estructura** | Vertical, estable, pintura completa |
-| 2 | **Inspección panel** | Sin píxeles muertos (<0.5%) |
-| 3 | **Brillo diurno** | ≥8,000 cd/m² (medido con luxómetro) |
-| 4 | **Legibilidad** | Legible a 200m (prueba campo) |
-| 5 | **Conexión red** | Ping desde CCO <20 ms |
-| 6 | **Protocolo NTCIP** | Comandos NTCIP 1203 funcionales |
-| 7 | **Mensajes** | Desplegar 10 mensajes tipo |
-| 8 | **Respuesta remota** | Cambio mensaje desde CCO <5s |
-| 9 | **Puesta a tierra** | <10Ω |
-| 10 | **As-Built** | Coordenadas GPS + foto |
-
----
-
-## 📝 **MENSAJES PREPROGRAMADOS (256 mínimo)**
-
-### **Categorías de Mensajes:**
-
-| Categoría | Cantidad | Ejemplos |
-|:----------|:---------|:---------|
-| **Emergencias** | 50 | Accidentes, cierres vía, ambulancias |
-| **Meteorológicas** | 30 | Lluvia, niebla, viento, deslizamientos |
-| **Regulatorias** | 40 | Velocidades, desvíos, restricciones |
-| **Informativas** | 60 | Distancias, peajes, áreas servicio |
-| **Eventos** | 40 | Obras, mantenimientos, eventos especiales |
-| **Genéricas** | 36 | Saludos, consejos, buen viaje |
-
-**Idioma:** Español + pictogramas internacionales
-
----
-
-## 🛠️ **MANTENIMIENTO**
-
-| Actividad | Frecuencia | Costo Anual |
-|:----------|:-----------|:------------|
-| **Limpieza panel** | Trimestral | $5,600 |
-| **Verificación LEDs** | Semestral | $4,200 |
-| **Prueba mensajes** | Mensual | $2,800 |
-| **Revisión estructural** | Anual | $2,100 |
-| **Actualización firmware** | Según fabricante | $1,400 |
-| **Reparaciones** | Según necesidad | $700 |
-| **TOTAL OPEX** | - | **$16,800/año** |
-
-**OPEX 20 años:** **$336,000 USD**
-
----
-
-## 📊 **RESUMEN FINANCIERO PMV**
-
-| Concepto | Valor (USD) |
-|:---------|:------------|
-| **CAPEX (14 paneles)** | $1,190,000.00 | 78.0% |
-| **OPEX (20 años)** | $336,000.00 | 22.0% |
-| **TOTAL 20 AÑOS** | **$1,526,000.00** | **100%** |
-
----
-
-**Última actualización:** 22 de octubre de 2025 - 19:00  
-**Responsable:** Ingeniero ITS / Especialista PMV  
-**Estado:** ✅ **T05 PMV COMPLETADO**  
-**Archivo:** `06_T05_Ingenieria_Detalle_PMV_v1.0.md`
-
