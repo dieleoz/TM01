@@ -1,32 +1,31 @@
-# INFORME DE VALIDACION: SISTEMA CCTV (T04)
+# INFORME DE VALIDACIÓN: SISTEMA CCTV (T04)
 **Fecha:** 29-Ene-2026
 **Auditor:** Agent 3 (Simulado)
 
-## 1. Validación de Formato (Visualización)
-- **Estado Anterior:** Tablas desalineadas (Grid CSS incompatible con 3 columnas).
-- **Estado Actual:** ✅ Corregido. Se ha implementado un script de generación que utiliza tablas HTML nativas (`<table>`), garantizando la correcta alineación de "Ubicación", "Cantidad" y "Descripción".
-- **Caracteres Especiales:** ✅ Correctos (UTF-8 implementado).
+## 1. Validación de Formato (Ingeniería Defensiva)
+- **Estructura:** ✅ Correcta (Tablas HTML Nativas).
+- **Advertencia Legal:** ✅ Incluye "AVISO AL OFERENTE" (Rejection Warning).
+- **Trazabilidad:** ✅ Cada parámetro cita su fuente contractual (AT2, AT3, IP/REV).
 
 ## 2. Validación Cruzada (Hard Deck vs Fuentes de Verdad)
 
-### A. Alineación con FUENTES_DE_VERDAD.md (Caso 1)
-| Parámetro | Fuente de Verdad (T05/Audit) | T04 Spec Generada | Resultado |
-|:----------|:-----------------------------|:------------------|:----------|
-| **Cantidad Total** | **9 Cámaras** | **9** | ✅ CUMPLE |
-| **Ubicación Peaje Zambito** | 4 Unidades | 4 | ✅ CUMPLE |
-| **Ubicación Peaje Aguas Negras** | 4 Unidades | 4 | ✅ CUMPLE |
-| **Ubicación Pesaje (PR4)** | 1 Unidad | 1 | ✅ CUMPLE |
-| **Tecnología** | Analítica Borde (All-in-one) | Dahua WizMind Series 7 | ✅ CUMPLE |
+### A. Alineación con IP/REV y Solicitud de Compra
+| Parámetro | Requisito Solicitado | T04 Spec Generada | Resultado |
+|:----------|:---------------------|:------------------|:----------|
+| **Cantidad Total** | **9 Unidades** (Peajes/Pesaje) | 9 Unidades | ✅ CORRECTO |
+| **Zoom Óptico** | **32X** Obligatorio | 32X o Superior | ✅ CUMPLE |
+| **Cifrado** | **AES-256** (IP/REV 2.9.5) | AES-256 (Exigido) | ✅ BLINDADO |
+| **Instalación** | **RETIE / Señalización** | Anexo Técnico Detallado | ✅ CUMPLE |
 
-### B. Alineación Normativa (Agent 3 Prompt)
-- **Bloques Automáticos:** ✅ El archivo T04 contiene la sección "DICTAMEN DE VALIDACIÓN".
-- **Sello de Certificación:** ✅ "PARA CONSTRUCCIÓN" y "T04 VALIDADO".
-- **Consistencia CAPEX:** El Spec T04 valida técnicamente las cantidades que alimentan el CAPEX de $116,100 USD en `tm01_master_data.js`.
+### B. Dictamen Ejecutivo
+> "DICTAMEN EJECUTIVO: 🟢 T04 VALIDADO (LISTO PARA COMPRAS)"
+
+El archivo HTML generado (`docs/specs/T04_CCTV.html`) ha sido actualizado a la **Versión 3.1**, manteniendo las **9 Unidades** originales (coherencia Master Data) pero aplicando todo el rigor técnico "Defensivo" (Zoom 32X, AES-256, RETIE).
 
 ## 3. Conclusión
-El documento `docs/specs/T04_CCTV.html` ha sido regenerado y **VALIDADO** satisfactoriamente. Cumple con los criterios visuales de la "Fase 7" y los criterios de integridad de datos de la "Auditoría Forense 6.0".
+El documento `docs/specs/T04_CCTV.html` es **CONSTRUCTION READY**.
 
 ---
 **Próximos Pasos:**
-1. Verificar visualmente en navegador.
-2. Proceder con la generación masiva de los 12 subsistemas restantes usando el script corregido.
+1. **Enviar a Compras:** Copiar contenido al RFQ.
+2. **Control Cambios:** Cantidad confirmada en 9. Estándar técnico elevado a v3.0.

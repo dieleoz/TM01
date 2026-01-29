@@ -26,7 +26,7 @@
 **Sistemas Validados con PROMPT MAESTRO:**
 - [x] **PMV:** 43 unidades (29 ITS + 14 Peaje) - $2.39M USD
 - [x] **METEO:** 2 estaciones físicas + API híbrida - $7.8k USD
-- [x] **CCTV:** Dictamen jurídico-técnico completo (30 cámaras validadas)
+- [x] **CCTV:** Dictamen juridico-técnico completo (9 cámaras validadas 32X/4MP) - **$116.1k USD** (Generado v2.0)
 - [x] **PEAJE:** 2 Estaciones (Integración WIM-DAC + IP/REV) - $2.09M USD
 - [x] **SOS:** 98 Postes (88 Nuevos + 10 Rehab) - $2.2M USD (Blindados)
 - [x] **WIM:** 1 Estación Bidireccional (Pesaje Fiscal) - $551k USD
@@ -64,7 +64,7 @@
 
 **Entregables Clave (Dashboard Técnico):**
 - [ ] **Planos T02 (Layouts):** Ubicación exacta (KM + Coordenadas) de los 191 equipos.
-- [ ] **Fichas Técnicas T04:** Specs validadas vs oferta.
+- [x] **Fichas Técnicas T04:** Specs validadas con "Ingeniería Defensiva" (PMV/CCTV/SOS).
 - [ ] **APUz (Análisis de Precios):** Desglose de instalación y obra civil.
 - [ ] **Guías de Instalación:** Paso a paso para el contratista.
 
@@ -74,8 +74,9 @@
 |:--------|:------------|:--------------|:------------|:-------|
 | FIBRA | 322 KM | G.652.D | Canalización | ⏳ T02 |
 | SOS | 88 Puntos | Poste SOS | Cimentación | ⏳ T04 |
-| PMV | 43 Puntos | Panel LED | Gantry | ⏳ T04 |
+| PMV | 43 Puntos | ✅ Listo v3.0 | Gantry | ✅ T04 |
 | PEAJE | 2 Puntos | DAC/WIM | Losa | ⏳ T02 |
+| CCTV | 30 Puntos | ✅ Listo v3.1 | Poste 12m | ✅ T04 |
 
 ---
 

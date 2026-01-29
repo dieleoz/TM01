@@ -121,6 +121,13 @@ Para que un documento sea "Compliant" con Punto 42 v3.0:
 2.  **Trazabilidad:** Debe citar explícitamente las cláusulas de AT1/AT2/AT3 que satisface.
 3.  **No Duplicidad:** Si un precio está en T05, no debe repetirse en T01. Referenciar.
 4.  **Formato Markdown:** Tablas limpias, sin HTML incrustado innecesario.
+5.  **Ingeniería Defensiva (T04):** Debe incluir "Cláusulas de Rechazo" explícitas (citas textuales de norma/contrato que justifiquen la especificación).
+
+### **ESTÁNDAR DE FICHA TÉCNICA (T04)**
+> "Una especificación sin causales de rechazo es solo una sugerencia."
+- **Encabezado:** Aviso de Advertencia al Oferente.
+- **Cuerpo:** Cada parámetro técnico debe citar su Fuente de Obligación (Manual 2024, RETIE, etc.).
+- **Blindaje:** No dejar nada a la interpretación del proveedor.
 
 ---
 

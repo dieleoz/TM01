@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T04 Spec</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Headers */
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
+        /* First column styling for parameters */
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
+        /* Badge */
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
+        /* Text */
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
+        <div class='doc-header'><h1>FICHA TÉCNICA (T04) - SISTEMA PMV (PANELES DE MENSAJERÍA VARIABLE)</h1></div>
+<strong>Proyecto:</strong> Troncal Magdalena (TM01)
+<strong>ID Especificación:</strong> T04-PMV-001
+<strong>Versión:</strong> 1.0 (Audit 6.0 Approved)
+<strong>Estado:</strong> ✅ PARA CONSTRUCCIÓN
+<br>
+<br>
+<h2>1. DESCRIPCIÓN GENERAL</h2>
+Sistema de Paneles de Mensajería Variable (PMV) tecnología LED Full Color para información al usuario en tiempo real. Certificación UNE-EN 12966 obligatoria.
+<br>
+<h2>2. REQUISITOS TÉCNICOS (HARD DECK)</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Requerida</td>
+<td>Referencia (T05)</td>
+</tr>
+</thead><tbody>
+</tbody></table></div>
+<h2>1. DESCRIPCIÓN GENERAL</h2>
+Suministro, instalación e integración de <strong>43 Sistemas de Mensajería Variable (PMV)</strong> bajo normativa <strong>UNE-EN 12966</strong> y <strong>NTCIP 1203</strong>.
+<br>
+> [!IMPORTANT]
+> <strong>AVISO AL OFERENTE:</strong> Las especificaciones marcadas con (*) se derivan de obligaciones contractuales taxativas (Manual de Señalización 2024, RETIE, Apéndices Técnicos). <strong>La omisión de estos ítems, bajo el pretexto de "optimización", será causal de RECHAZO TÉCNICO de la oferta</strong>, ya que compromete la recibibilidad de la obra por parte de la Interventoría.
+<br>
+<h2>2. REQUISITOS TÉCNICOS "DUROS" (HARD DECK)</h2>
+<br>
+<h3>2.1 Óptica y Visualización (Norma UNE-EN 12966)</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Requerida</td>
+<td>Fuente de la Obligación (Causal de Rechazo)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tecnología Vía</strong></td>
+<td>LED RGB (Full Color) P20/P16</td>
+<td><strong>Manual 2024 (2.7.4.3)</strong>: Exige capacidad gráfica.</td>
+</tr>
+<tr>
+<td><strong>Tecnología Peaje</strong></td>
+<td>LED Ámbar <strong>P10</strong> (Alta Intensidad)</td>
+<td><strong>IP/REV 2.9.9</strong>: Legibilidad a <10m (Vehículo detenido).</td>
+</tr>
+<tr>
+<td><strong>Clase Luminancia</strong></td>
+<td><strong>L3</strong> (*) o superior</td>
+<td><strong>Manual 2024</strong>: Visibilidad diurna mandatoria.</td>
+</tr>
+<tr>
+<td><strong>Clase Contraste</strong></td>
+<td><strong>R2</strong> o superior</td>
+<td><strong>Norma EN 12966</strong>: Evita "efecto fantasma".</td>
+</tr>
+<tr>
+<td><strong>Ángulo Visión</strong></td>
+<td><strong>B6</strong> (Haz Ancho)</td>
+<td><strong>Manual 2024</strong>: Geometría vial (Curvas).</td>
+</tr>
+<tr>
+<td><strong>Colorimetría</strong></td>
+<td>Coordenadas C2</td>
+<td><strong>Manual 2024 (Fig 2-2)</strong>: Fidelidad de color.</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.2 Mecánicos y Estructurales (Seguridad Pasiva)</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Requerida</td>
+<td>Fuente de la Obligación (Causal de Rechazo)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Gabinete</strong></td>
+<td>Aluminio Marino / Inox 316L (<strong>IP65</strong>)</td>
+<td><strong>Manual 2024 (2.7.3.1)</strong>: Protección intemperie total.</td>
+</tr>
+<tr>
+<td><strong>Acceso</strong></td>
+<td>Trasero (Walk-in o puertas retenidas)</td>
+<td><strong>SST</strong>: Seguridad de mantenimiento en altura.</td>
+</tr>
+<tr>
+<td><strong>Soporte</strong></td>
+<td>Pórtico/Poste Galvanizado ASTM A123</td>
+<td><strong>AASHTO LRFD</strong>: Cargas de viento 120 km/h.</td>
+</tr>
+<tr>
+<td><strong>Seguridad Pasiva</strong></td>
+<td><strong>Cinta Reflectiva Tipo IV</strong> (2.0m)</td>
+<td><strong>Manual 2024 (2.7.3.2)</strong>: "Objeto Contundente".</td>
+</tr>
+<tr>
+<td><strong>Protección Base</strong></td>
+<td><strong>Defensas Metálicas Certificadas</strong></td>
+<td><strong>ANSV</strong>: Obligatorio en Zona Despejada.</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.3 Eléctricos y Potencia (CUMPLIMIENTO RETIE 2024)</h3>
+*Advertencia: Sin Dictamen Anexo 5, la Interventoría NO autoriza la energización.*
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Especificación</td>
+<td>Fuente de la Obligación (Causal de Rechazo)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Certificación</strong></td>
+<td><strong>Dictamen de Inspección (Anexo 5)</strong></td>
+<td><strong>Res. 40117 (RETIE 2024)</strong>: Instalación Uso Final.</td>
+</tr>
+<tr>
+<td><strong>Puesta a Tierra</strong></td>
+<td>SPT < 10 Ohmios + Soldadura</td>
+<td><strong>RETIE Art. 15</strong>: Protección contra rayos (Estructura alta).</td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td><strong>DPS Clase I+II</strong> (Rotulado)</td>
+<td><strong>RETIE Art. 17</strong>: Zona de alta densidad de descargas.</td>
+</tr>
+<tr>
+<td><strong>Respaldo</strong></td>
+<td><strong>UPS Online</strong> (48h Autonomía)</td>
+<td><strong>Manual 2024 (2.7.6)</strong>: Homologación req. solar.</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.4 Controlador e Inteligencia (Compatibilidad SICC)</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Función</td>
+<td>Detalle</td>
+<td>Justificación Operativa</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Protocolo</strong></td>
+<td><strong>NTCIP 1203 v03</strong> Nativo</td>
+<td><strong>AT4 (Integración)</strong>: Evita "Vendor Lock-in" (Software propietario).</td>
+</tr>
+<tr>
+<td><strong>MIBs</strong></td>
+<td>Entrega obligatoria de archivos</td>
+<td><strong>SICC</strong>: Requisito para gestión remota sin costo extra.</td>
+</tr>
+<tr>
+<td><strong>Memoria</strong></td>
+<td>>100 Mensajes Pregr.</td>
+<td><strong>Seguridad</strong>: Autonomía ante caída de fibra óptica.</td>
+</tr>
+<tr>
+<td><strong>Watchdog</strong></td>
+<td>Hardware Reset</td>
+<td><strong>Disponibilidad</strong>: Recuperación automática 24/7.</td>
+</tr>
+</tbody></table></div>
+<br>
+<h2>3. CANTIDADES A INSTALAR (RESUMEN DE PAGO)</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ítem</td>
+<td>Ubicación</td>
+<td>Tipo (Manual 2024)</td>
+<td>Pitch</td>
+<td>Cantidad</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Vía Principal</strong></td>
+<td>Matriz Completa</td>
+<td>P20/P16</td>
+<td><strong>25</strong></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Aproximación Peaje</strong></td>
+<td>Matriz Completa</td>
+<td>P20</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Carril Peaje</strong></td>
+<td>Alfanumérico Ámbar</td>
+<td>P10</td>
+<td><strong>14</strong></td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>43</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<h2>4. ENTREGABLES PARA RECIBO (CONDICIONES DE PAGO)</h2>
+1.  <strong>Certificado UNE-EN 12966:</strong> Laboratorio acreditado (TUV/SGS). *No se aceptan cartas de fábrica.*
+2.  <strong>Certificados RETIE:</strong> Tableros, Breakers, Cables, DPS y Gabinete.
+3.  <strong>Declaración de "Binning" de LED:</strong> Certificar mismo lote de color/luminosidad.
+4.  <strong>MIBs de NTCIP:</strong> Archivos completos para integración SICC.
+5.  <strong>Planos As-Built:</strong> Firmados por ingeniero matriculado.
+<br>
+<strong>Firmado Digitalmente:</strong> Ingeniería de Detalle TM01
+<strong>Fecha:</strong> 29-Ene-2026
+<br>
+<br>
+<h2>5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.0)</h2>
+<br>
+<strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (LISTO PARA COMPRAS)</strong>
+<br>
+El documento cubre las <strong>43 Unidades</strong> requeridas y blinda la adquisición técnica.
+<br>
+<h3>Matriz de Blindaje (Risk Management)</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Riesgo Detectado</td>
+<td>Acción de Mitigación (T04)</td>
+<td>Resultado</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Rechazo por Interventoría (Visual)</strong></td>
+<td>Exigencia Certificado <strong>UNE-EN 12966</strong></td>
+<td>✅ MITIGADO</td>
+</tr>
+<tr>
+<td><strong>Rechazo por Interventoría (Eléctrico)</strong></td>
+<td>Exigencia <strong>RETIE 2024 + Anexo 5</strong></td>
+<td>✅ MITIGADO</td>
+</tr>
+<tr>
+<td><strong>Fallas de Integración</strong></td>
+<td>Exigencia <strong>NTCIP + MIBs</strong></td>
+<td>✅ MITIGADO</td>
+</tr>
+<tr>
+<td><strong>Seguridad Vial (Pasiva)</strong></td>
+<td>Exigencia <strong>Cinta Tipo IV + Defensas</strong></td>
+<td>✅ MITIGADO</td>
+</tr>
+<tr>
+<td><strong>Uniformidad Visual</strong></td>
+<td>Exigencia <strong>LED Binning</strong></td>
+<td>✅ MITIGADO</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Conclusión:</strong> ANEXO TÉCNICO CONSTRUCTIVO APROBADO. Copiar secciones 1-4 al Pliego de Licitación.
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automáticamente por Sistema de Gestión TM01. <br>
+            Fase 7 - Ingeniería de Detalle.
+        </div>
+    </div>
+</body>
+</html>

@@ -130,6 +130,13 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] README with regeneration guide exists
 - [ ] Certification seals present
 
+### 5.B. T04 Specifications (Ingeniería Defensiva)
+- [ ] **Specs Generated:** `docs/specs/T04_*.html` exist.
+- [ ] **Warning Clause:** HTML includes "AVISO AL OFERENTE" (Rejection Warning).
+- [ ] **Citations:** Technical parameters cite specific Norm/Contract paragraphs.
+- [ ] **Validation Status:** Section 5 says "LISTO PARA COMPRAS" or "VALIDADO".
+- [ ] **Visual Check:** Tables render correctly (Native HTML).
+
 ### 6. Browser Testing (Full-Stack)
 
 **Use browser agent to perform:**

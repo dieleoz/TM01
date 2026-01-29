@@ -11,15 +11,44 @@ Sistema de Circuito Cerrado de Televisión (CCTV) para monitoreo de puntos crít
 
 ## 2. REQUISITOS TÉCNICOS (HARD DECK)
 
-| Parámetro | Especificación Requerida | Referencia (T05) |
-|:----------|:-------------------------|:-----------------|
-| **Marca/Modelo** | Dahua WizMind Series 7 o superior | Item 5.01 |
-| **Resolución** | 4 Megapíxeles (2688 × 1520) | AT3 Spec |
-| **Zoom Óptico** | 40x (o superior) | Cobertura 2km |
-| **Visión Nocturna** | Starlight + IR 200m | Operación 24/7 |
-| **Protección** | IP67 (Agua/Polvo) + IK10 (Vandalismo) | Cláusula 4.2 |
-| **Analíticas** | Cruce de línea, Intrusión, Objeto abandonado | Edge AI |
-| **Alimentación** | Hi-PoE / 24VAC | Respaldo UPS |
+## 1. DESCRIPCIÓN GENERAL
+Suministro, instalación, configuración y puesta en marcha de **9 Unidades de Cámara PTZ** para monitoreo de puntos críticos (Peajes y Pesaje), cumpliendo el estándar **IP/REV**.
+
+> [!IMPORTANT]
+> **AVISO AL OFERENTE:** Las especificaciones marcadas con (*) son obligaciones contractuales taxativas (Resolución IP/REV, Manual 2024, RETIE). **El incumplimiento de cualquiera de estos parámetros será causal de RECHAZO TÉCNICO de la oferta.**
+
+## 2. REQUISITOS TÉCNICOS "DUROS" (HARD DECK)
+
+### 2.1 Cámaras PTZ (Vía y Peajes)
+| Parámetro | Especificación Requerida | Fuente de la Obligación (Causal de Rechazo) |
+|:----------|:-------------------------|:--------------------------------------------|
+| **Zoom Óptico** | **32X** (*) o superior | **IP/REV (Anexo 1, 2.9.5)**: No se aceptan de 25X. |
+| **Resolución** | 4 MP (2560 × 1440) | **IP/REV**: Calidad probatoria superior a 1080p. |
+| **Sensor** | Starlight (0.005 Lux) | **Seguridad Vial**: Visibilidad nocturna sin alumbrado. |
+| **Analítica** | WizSense / IVS / DAI | **Manual 2024**: Detección Incidentes Automática. |
+| **Compresión** | H.265+ / H.264H | **IP/REV**: Optimización ancho de banda. |
+| **Protección** | **IP67** (Inmersión) + IK10 | **Clima**: Inundabilidad y Vandalismo. |
+| **Ambiente** | **Heater/Defog** Integrado | **IP/REV**: Obligatorio anti-condensación. |
+| **Protocolo** | ONVIF (Profile S/G/T) | **Integración**: Requisito CCO. |
+
+### 2.2 Sistema de Grabación (El "Killer" Contractual)
+| Parámetro | Especificación Requerida | Fuente de la Obligación (Causal de Rechazo) |
+|:----------|:-------------------------|:--------------------------------------------|
+| **Cifrado** | **AES-256** (*) | **IP/REV 2.9.5**: Encriptación de disco/archivo obligatoria. |
+| **Retención** | **30 Días** Contínuos | **Auditoría**: Holgura superior a mínimo contractual. |
+| **Disponibilidad**| **RAID 5** o superior | **IP/REV**: Redundancia de datos mecánica. |
+| **Gestión** | Licencia VMS (DSS Pro) | **IP/REV**: Gestión centralizada sin pagos recurrentes. |
+
+### 2.3 Instalación y Obra Civil (RETIE 2024)
+| Componente | Especificación | Exigencia Normativa |
+|:-----------|:---------------|:--------------------|
+| **Gabinete** | Outdoor IP65 Metálico/Polimérico | **RETIE**: Protección intemperie certificada. |
+| **Seguridad** | Sensor Apertura + Cerradura | **Seguridad**: Alarma de intrusión al CCO. |
+| **Rotulado** | Simbolo "Riesgo Eléctrico" | **RETIE Art. 2.3.4.2**: Indeleble y visible. |
+| **Protección** | **DPS Clase I+II** (Certificado) | **RETIE**: Protección contra sobretensiones. |
+| **Puesta Tierra**| Equipotencial < 10 Ohmios | **RETIE**: Seguridad personal y de equipos. |
+| **Poste** | 12-15m Galvanizado + Corona Púas | **Cobertura**: Aprovechamiento del Zoom 32X. |
+| **Señalización** | Señal SI-35A a 200m | **Manual 2024**: "Zona de Control Tecnológico". |
 
 ## 3. CANTIDADES A INSTALAR (POR TRAMO)
 
@@ -30,10 +59,12 @@ Sistema de Circuito Cerrado de Televisión (CCTV) para monitoreo de puntos crít
 | **Estación Pesaje (PR4)** | 1 | Supervisión báscula dinámica |
 | **TOTAL** | **9** | **Coincide con Master Data** |
 
-## 4. NORMATIVA APLICABLE
-- **ONVIF:** Perfil S y G (Mandatorio).
-- **RETIE:** Certificación de producto para fuentes de poder.
-- **ISO 14001:** Gestión ambiental en instalación.
+## 4. ENTREGABLES PARA RECIBO (CONDICIÓN DE PAGO)
+1.  **Datasheet Fabricante:** Resaltando Zoom 32X y AES-256.
+2.  **Certificado ONVIF:** Verificable en web oficial.
+3.  **Certificados RETIE:** Breakers, DPS, Cables y Tablero.
+4.  **Cálculo Storage:** Demostrar 30 días en 4MP H.265.
+5.  **Garantía:** Mínimo 2 años en sitio.
 
 ---
 **Firmado Digitalmente:** Ingeniería de Detalle TM01
@@ -41,25 +72,18 @@ Sistema de Circuito Cerrado de Televisión (CCTV) para monitoreo de puntos crít
 
 ---
 
-## 5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE v2.0)
+## 5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v3.1)
 
-**Resultado:** 🟢 **VALIDADO (CUMPLE ESTÁNDAR IP/REV)**
+**Resultado:** 🟢 **T04 VALIDADO (LISTO PARA COMPRAS)**
 
-La especificación propuesta (Cámara PTZ, Zoom 32X, 4MP, IP67) es **TÉCNICAMENTE CORRECTA** y cumple con los requisitos obligatorios tanto para la Vía (AT2) como para los Peajes (Resolución 20213040035125).
+El documento mantiene las cantidades oficiales (9 Unidades) pero aplica el estándar técnico **v3.0 (Defensive)**, exigiendo **Zoom 32X** y **AES-256**.
 
-### A. Matriz de Cumplimiento "Hard Deck"
-| Requisito Técnico | Fuente (IP/REV / AT2) | Especificación TM01 | Veredicto |
-|:------------------|:----------------------|:--------------------|:----------|
-| **Zoom Óptico** | Obligatorio: 32X | 32X | ✅ CUMPLE (Crítico) |
-| **Resolución** | Mínimo 1920x1080 (2MP) | 4MP (2560×1440) | ✅ SUPERA |
-| **Sensibilidad** | Mínima 0.2 lux | 0.005 lux (Starlight) | ✅ SUPERA |
-| **Compresión** | H.264 / MPEG-4 | H.265 / H.264 | ✅ CUMPLE |
-| **Protección** | Grado IP66 | IP67 (Inmersión) | ✅ SUPERA |
-| **Disponibilidad** | MTBF > 40,000 horas | MTBF > 100,000 horas | ✅ CUMPLE |
+### Matriz de Blindaje (Risk Management)
+| Riesgo Detectado | Acción de Mitigación (T04) | Resultado |
+|:-----------------|:---------------------------|:----------|
+| **Cámaras "Ciegas"** | Exigencia Bloqueante **Zoom 32X** | ✅ MITIGADO |
+| **Ilegalidad Evidencia**| Exigencia **Cifrado AES-256** | ✅ MITIGADO |
+| **Rechazo Eléctrico** | Exigencia **DPS + Rotulado RETIE** | ✅ MITIGADO |
+| **Cantidad** | 9 Unidades (Master Data) | ✅ CONSISTENTE |
 
-### B. Alertas para Ingeniería de Detalle (T05)
-1.  **Candado Digital (AES-256):** Verifique que el VMS/NVR active el cifrado AES-256 (Req. IP/REV 2.9.5).
-2.  **Retención de Video:** Calcular almacenamiento para **30 días** (~40 TB) para cubrir holgura de auditoría (AT2 exige 1 semana, pero auditoría suele pedir más).
-3.  **Calefacción (Heater):** Confirmar que la cámara incluya función *Heater* o *Defog* para cumplir el requisito de "sistema calefactor" por normativa, aunque sea clima cálido (condensación).
-
-**Conclusión:** La especificación TM01-CCTV-SPEC-002 es VÁLIDA para construcción. Al estandarizar una cámara que cumple la norma más estricta para todo el proyecto, se simplifica el mantenimiento.
+**Conclusión:** ANEXO TÉCNICO APROBADO. El proveedor debe cotizar 9 unidades cumpliendo estricto estándar IP/REV.
