@@ -1,9 +1,9 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: SAST
-// Fecha de generación: 2026-01-29 16:30:36
+// Fecha de generación: 2026-01-29 16:42:02
 
-const validaciones_SAST = {
+var validaciones_SAST = {
   full: '',
   contractual: '',
   technical: '',

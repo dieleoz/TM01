@@ -1,9 +1,9 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: FIBRA
-// Fecha de generación: 2026-01-29 16:30:36
+// Fecha de generación: 2026-01-29 16:42:02
 
-const validaciones_FIBRA = {
+var validaciones_FIBRA = {
   full: '## 📋 RESUMEN EJECUTIVO (HARD DECK)\n\n**Veredicto:** 🟢 **VALIDADO (ALCANCE FÍSICO)**\n\nSe certifica el alcance del **Backbone de Comunicaciones** necesario para integrar los 6 Subsistemas ITS (CCTV, SOS, PMV, Peajes, WIM, Radio).\n\n**Parámetros de Validación (Hard Deck):**\n1.  **Longitud Física:** **322 km de CABLE** (293 km Corredor + 10% Holgura/Reservas).\n2.  **Capacidad:** **48 Hilos Monomodo** (G.652.D).\n3.  **Unidad de Control:** **Metro Lineal de CABLE (ML-C)**. Se prohíbe terminantemente cotizar o pagar por "km-hilo" o "km-par", práctica que infla el presupuesto en 48x.\n\n**CAPEX Validado:** **$7,980,000 USD** (Incluye Obra Civil Pesada: Tritubo, Cámaras 80x80, Cruces Subfluviales).\n\n---',
   contractual: '## 1. FUNDAMENTO CONTRACTUAL\n\n### 1.1 Obligación de Conectividad (AT1)\n**Fuente:** Apéndice Técnico 1, Alcance General.\n*   **Requisito:** "Interconexión de todos los elementos del sistema ITS con el Centro de Control de Operaciones (CCO)".\n*   **Interpretación:** La única tecnología viable para 293 km de transmisión de video HD (CCTV) y datos críticos (Peaje) es la **Fibra Óptica**. Enlaces de radio no garantizan el ancho de banda ni la estabilidad requerida.\n\n### 1.2 Aclaración Forense #1: "322 km"\n**Fuente:** Nota Técnica Aclaratoria 322KM.\n*   **Confusión:** Riesgo de interpretar 322 km como suma de hilos.\n*   **Dictamen:** Los 322 km corresponden a la **Zanja/Tendido Físico**.\n    *   Corredor: 293 km.\n    *   Reservas Técnicas (Bucles): 29 km (10%).\n    *   **Total Cable:** 322 km.\n\n---',
   technical: '',

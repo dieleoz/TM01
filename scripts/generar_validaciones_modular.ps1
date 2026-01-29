@@ -108,7 +108,7 @@ foreach ($dictamen in $dictamenes) {
 // Sistema: $sistema
 // Fecha de generación: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
 
-const validaciones_$sistema = {
+var validaciones_$sistema = {
   full: '$full',
   contractual: '$contractual',
   technical: '$technical',

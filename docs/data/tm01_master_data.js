@@ -49,16 +49,16 @@ class TM01MasterData {
             etdRadarSummary: {
                 id: '3',
                 sistema: 'ETD/RADAR',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: '0 Unidades (Diferido a O&M / Suministros Policiales / Peaje)',
+                cantidad: 2,
+                capexUSD: 22500,
+                capexCOP: 99000000,
+                capexUnitarioUSD: 11250,
+                descripcion: '2 Dahua ITC431 All-in-One Units (Radar+ANPR+Counting) + DSS Pro Software.',
                 estado: 'Validado',
-                fuenteContractual: "DT-TM01-ETD-001 (Optimización Cero Alcance)",
-                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-ETD-001.md",
+                fuenteContractual: "DT-TM01-ETD-001 (Optimización Smart CAPEX)",
+                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_ETD_v1.0.md",
                 analisisBase: "docs/ANALISIS_ETD_PROMPT_MAESTRO_V3.3.md",
-                fechaValidacion: "2026-01-27"
+                fechaValidacion: "2026-01-29"
             },
             sastSummary: {
                 id: '4',

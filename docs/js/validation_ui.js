@@ -94,15 +94,23 @@ function renderValidationTable() {
             const obj = md.data[k];
             const sysCode = obj.sistema ? obj.sistema.split(' ')[0].toUpperCase() : k.replace('Summary', '').toUpperCase();
 
-            // Map common aliases
+            // Map common aliases using FULL ORIGINAL LABEL to avoid "RADAR" split issue
             let mappedCode = sysCode;
-            if (sysCode.includes('FIBRA') || sysCode.includes('TELECOM')) mappedCode = 'FIBRA';
-            if (sysCode.includes('PEAJE')) mappedCode = 'PEAJE';
-            if (sysCode.includes('CENTRO') || sysCode.includes('CCO')) mappedCode = 'CCO';
-            if (sysCode.includes('METEO')) mappedCode = 'METEO';
-            if (sysCode.includes('ETD') || sysCode.includes('RADAR') && !sysCode.includes('PEDAG')) mappedCode = 'ETD';
-            if (sysCode.includes('SAST') || sysCode.includes('SANCIONATORIO')) mappedCode = 'SAST';
-            if (sysCode.includes('PEDAGOGICO') || sysCode.includes('PEDAGÓGICO')) mappedCode = 'PEDAGOGICO';
+            const fullLabel = obj.sistema ? obj.sistema.toUpperCase() : '';
+
+            if (fullLabel.includes('FIBRA') || fullLabel.includes('TELECOM')) mappedCode = 'FIBRA';
+            if (fullLabel.includes('PEAJE')) mappedCode = 'PEAJE';
+            if (fullLabel.includes('CENTRO') || fullLabel.includes('CCO')) mappedCode = 'CCO';
+            if (fullLabel.includes('METEO')) mappedCode = 'METEO';
+
+            // Critical: Check PEDAGOGICO first to prevent it being caught by RADAR check
+            if (fullLabel.includes('PEDAGOGICO') || fullLabel.includes('PEDAGÓGICO')) {
+                mappedCode = 'PEDAGOGICO';
+            } else if (fullLabel.includes('SAST') || fullLabel.includes('SANCIONATORIO')) {
+                mappedCode = 'SAST';
+            } else if (fullLabel.includes('ETD') || fullLabel.includes('RADAR')) {
+                mappedCode = 'ETD';
+            }
 
             systemEntries.push({
                 key: k,

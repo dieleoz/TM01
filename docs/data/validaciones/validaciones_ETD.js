@@ -1,9 +1,9 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: ETD
-// Fecha de generación: 2026-01-29 16:30:36
+// Fecha de generación: 2026-01-29 16:42:02
 
-const validaciones_ETD = {
+var validaciones_ETD = {
   full: '## 📋 RESUMEN EJECUTIVO (HARD DECK)\n\n**Veredicto:** 🟢 **VALIDADO (ESTRATEGIA SMART CAPEX)**\n\nEl documento es TÉCNICAMENTE VIABLE y CONTRACTUALMENTE SÓLIDO. La estrategia propuesta de unificar tecnologías (**Cámara ITS All-in-One**) y homologar los **Peajes como ETD Maestro** es la interpretación más eficiente del contrato, evitando la compra redundante de hardware.\n\n**Parámetros de Validación (Hard Deck):**\n1.  **Hardware Unificado:** **2 Cámaras Dahua ITC431-KW4F**. Integran Radar (60GHz), Video y ANPR. Cubren "Puntos Críticos".\n2.  **ETD Maestro:** Los **Peajes** (Zambito/Aguas Negras) proveen el dato "Duro" de conteo y clasificación para el corredor.\n3.  **Cobertura Virtual:** Se valida el uso de **APIs de Tráfico** (Waze/Google) para cumplir la obligación de "Información de Velocidad" en las UFs sin equipos físicos.\n4.  **CCTV como Sensor:** Se valida el uso de metadata de cámaras PTZ (Dahua series SD5A) para enriquecer la detección de incidentes.\n\n**CAPEX Validado:** **$22,500 USD** (2 Sitios All-in-One + Integración de Datos Software).\n\n---',
   contractual: '## 1. FUNDAMENTO CONTRACTUAL\n\n### 1.1 Obligación de Conteo (ETD)\n**Fuente:** Apéndice Técnico 2, Numeral 3.3.4.5.\n*   **Texto:** "El Concesionario deberá instalar... un sistema de monitores... de cantidad y flujo...".\n*   **Defensa:** La obligación es tener el **DATO** ("Monitor de Flujo"), no un equipo específico cada Km.\n*   **Solución:** Los **Peajes** (Zambito y Aguas Negras) actúan como las "Estaciones Maestras de Toma de Datos", cubriendo el conteo clasificado del 100% del tráfico pasante.\n\n### 1.2 Solución Técnica "Todo en Uno"\n**Fuente:** Ficha Técnica Dahua ITC Series (Usuario).\n*   **Capacidad:** El equipo integra microondas (Radar) y video en una sola carcasa IP67.\n*   **Eficiencia:** Reemplaza la necesidad de tener 1 ETD + 1 Radar + 1 Cámara LPR por separado.\n*   **Cumplimiento:** Cubre la obligación de "Sistema de Monitores de Velocidad" y base para "Movilizar a la Policía" (AT2).\n\n---',
   technical: '',
