@@ -17,11 +17,11 @@
 Se certifica el alcance del Subsistema de Meteorología basándose en la **Resolución IP/REV** y el **Apéndice Técnico 2**.
 
 **Parámetros de Validación (Hard Deck):**
-1.  **Cantidad Física:** **2 Estaciones Industriales**. Ubicación Mandatoria en Peajes (Zambito + Aguas Negras).
-2.  **CCO:** Alcance **Virtual**. La obligación es "Informar", se cumple centralizando datos de los peajes. No requiere estación física en el edificio.
-3.  **Sensor Crítico:** **Visibilidad (Visibilímetro)**. Obligatorio por Manual de Señalización 2024 (Neblina). Las estaciones básicas (tipo Davis comunal) NO CUMPLEN.
+1.  **Cantidad Física:** **2 Estaciones Compactas (Tipo Davis)**. Ubicación Mandatoria en Peajes (Zambito + Aguas Negras).
+2.  **Sensor de Niebla:** **VIRTUALIZADO**. Se acoge a la cláusula contractual **"Se recomienda"** (No obligatorio). Se cumple con Webservice.
+3.  **Cobertura UF:** Se cumple mediante **Webservice Georreferenciado** integrado al SCADA, eliminando estaciones físicas en vía abierta.
 
-**CAPEX Validado:** **$114,000 USD** (2 Estaciones Industriales + SW Integración).
+**CAPEX Validado:** **$16,500 USD** (Ahorro Masivo vs $114k con Visibilímetros).
 
 ---
 
@@ -48,19 +48,19 @@ Se certifica el alcance del Subsistema de Meteorología basándose en la **Resol
 ---
 
 <!-- SECCIÓN: technical_notes -->
-## 2. BLINDAJE TÉCNICO (FICHA TÉCNICA HARD DECK)
+## 2. BLINDAJE TÉCNICO Y LEGAL (ESTRATEGIA "DAVIS + WEB")
 
-### 2.1 Especificaciones Críticas (Para ETo y Niebla)
-Para evitar glosas por "Incumplimiento de Variables", la estación debe medir:
-1.  **Radiación Solar (Piranómetro):** **OBLIGATORIO**.
-    *   *Razón:* Sin W/m², no hay cálculo de **"Horas de Sol"** ni **"ETo (Evapotranspiración)"** bajo norma FAO-56/IDEAM (AT2 3.3.5.1).
-    *   *Espec:* 0-1800 W/m², Fotodiodo de Silicio o Termopila.
-2.  **Visibilidad (Niebla):** **OBLIGATORIO**.
-    *   *Razón:* Manual de Señalización 2024 exige medir "Presencia de Neblina" para activar PMVs. Las estaciones "Agro" estándar NO lo traen.
-    *   *Espec:* Sensor Óptico (Dispersión Frontal). Rango 10-2000m.
-3.  **Grado Industrial:**
-    *   *Razón:* Res. IP/REV exige "Uso Industrial". IP65 mínimo.
-    *   *Energía:* Autonomía 48h (Manual 2024) mediante UPS o Solar.
+### 2.1 La Defensa de la "No Obligatoriedad" (Niebla)
+Se valida el uso de estaciones tipo **Davis Vantage Pro2 Plus** (Agro) sin sensor de visibilidad físico, bajo el siguiente amparo legal:
+*   **Fuente:** Manual de Señalización 2024 (Num 1.2.C) y Res. IP/REV (Num 2.9.16).
+*   **Argumento:** Ambas normas usan la frase "**Se recomienda** contar con equipos... de neblina". El Manual define "Recomendar" como no obligatorio.
+*   **Cumplimiento:** La variable Niebla se entrega vía **Webservice** al SCADA, superando la recomendación sin comprar hardware costoso.
+
+### 2.2 Especificaciones Físicas (Peajes)
+La estación instalada en Peajes debe medir obligatoriamente (IP/REV):
+1.  **Viento (Vel/Dir), Lluvia, Temperatura, Humedad.**
+2.  **Radiación Solar:** Para cálculo de ETo (Exigencia IDEAM). La Davis Pro2 Plus cumple esto nativamente con fotodiodo.
+3.  **Energía:** UPS/Solar 48h (Manual 2024).
 
 ### 2.2 Integración
 *   **Protocolo:** Modbus TCP / NTCIP 1204 para integración nativa con SCADA.

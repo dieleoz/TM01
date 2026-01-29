@@ -135,11 +135,11 @@
 <p>Se certifica el alcance del Subsistema de Meteorología basándose en la <strong>Resolución IP/REV</strong> y el <strong>Apéndice Técnico 2</strong>.</p>
 <p></p>
 <p><strong>Parámetros de Validación (Hard Deck):</strong></p>
-<p>1.  <strong>Cantidad Física:</strong> <strong>2 Estaciones Industriales</strong>. Ubicación Mandatoria en Peajes (Zambito + Aguas Negras).</p>
-<p>2.  <strong>CCO:</strong> Alcance <strong>Virtual</strong>. La obligación es "Informar", se cumple centralizando datos de los peajes. No requiere estación física en el edificio.</p>
-<p>3.  <strong>Sensor Crítico:</strong> <strong>Visibilidad (Visibilímetro)</strong>. Obligatorio por Manual de Señalización 2024 (Neblina). Las estaciones básicas (tipo Davis comunal) NO CUMPLEN.</p>
+<p>1.  <strong>Cantidad Física:</strong> <strong>2 Estaciones Compactas (Tipo Davis)</strong>. Ubicación Mandatoria en Peajes (Zambito + Aguas Negras).</p>
+<p>2.  <strong>Sensor de Niebla:</strong> <strong>VIRTUALIZADO</strong>. Se acoge a la cláusula contractual <strong>"Se recomienda"</strong> (No obligatorio). Se cumple con Webservice.</p>
+<p>3.  <strong>Cobertura UF:</strong> Se cumple mediante <strong>Webservice Georreferenciado</strong> integrado al SCADA, eliminando estaciones físicas en vía abierta.</p>
 <p></p>
-<p><strong>CAPEX Validado:</strong> <strong>$114,000 USD</strong> (2 Estaciones Industriales + SW Integración).</p>
+<p><strong>CAPEX Validado:</strong> <strong>$16,500 USD</strong> (Ahorro Masivo vs $114k con Visibilímetros).</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -156,37 +156,53 @@
 <p>*   <strong>Mandato:</strong> "Información sobre las condiciones meteorológicas... en el Centro de Control de Operaciones".</p>
 <p>*   <strong>Interpretación:</strong> Es una obligación de <strong>INFORMACIÓN</strong>, no de INSTALACIÓN. El CCO recibe datos; no necesita un sensor en su techo si ya tiene cobertura en la vía.</p>
 <p></p>
+<h3>1.3 Exclusiones Contractuales (Blindaje Jurídico)</h3>
+<p>*   <strong>Estaciones de Pesaje (Básculas):</strong> <strong>EXCLUIDAS</strong>.</p>
+<p>    <em>   </em>Fundamento:* El Numeral 3.3.9 del AT2 (Sistemas de Pesaje) NO lista equipos meteorológicos.</p>
+<p>    <em>   </em>Defensa:* La obligación de reporte es "por Unidad Funcional" (cubierta por los Peajes), no por "sitio de pesaje".</p>
+<p>*   <strong>Torres SOS/Tramo:</strong> <strong>SUSTITUIDAS</strong>.</p>
+<p>    <em>   </em>Estrategia:* Cobertura por "Unidad Funcional" usando la data de los Peajes. Se instala en vía solo si hay "Gaps" de cobertura (Microclimas) no cubiertos por los peajes.</p>
+<p></p>
 <p>---</p>
 <p></p>
 <p><!-- SECCIÓN: technical_notes --></p>
-<h2>2. BLINDAJE TÉCNICO (FORENSIC SPECS)</h2>
+<h2>2. BLINDAJE TÉCNICO Y LEGAL (ESTRATEGIA "DAVIS + WEB")</h2>
 <p></p>
-<h3>2.1 El "Hard Deck" del Visibilímetro</h3>
-<p>El riesgo principal es instalar estaciones "Agro" (USD $2k) que solo miden lluvia y viento.</p>
-<p>*   <strong>Requisito Seguridad Vial:</strong> La vía tiene zonas de niebla. El sistema debe activar PMVs automáticamente ("NIEBLA EN LA VÍA").</p>
-<p>*   <strong>Especificación:</strong> Se requiere sensor de <strong>Visibilidad y Tiempo Presente</strong> (Tecnología Dispersión Frontal).</p>
-<p>*   <strong>Costo:</strong> Este solo sensor cuesta ~$8-12k USD, elevando el costo de la estación a nivel "Industrial".</p>
+<h3>2.1 La Defensa de la "No Obligatoriedad" (Niebla)</h3>
+<p>Se valida el uso de estaciones tipo <strong>Davis Vantage Pro2 Plus</strong> (Agro) sin sensor de visibilidad físico, bajo el siguiente amparo legal:</p>
+<p>*   <strong>Fuente:</strong> Manual de Señalización 2024 (Num 1.2.C) y Res. IP/REV (Num 2.9.16).</p>
+<p>*   <strong>Argumento:</strong> Ambas normas usan la frase "<strong>Se recomienda</strong> contar con equipos... de neblina". El Manual define "Recomendar" como no obligatorio.</p>
+<p>*   <strong>Cumplimiento:</strong> La variable Niebla se entrega vía <strong>Webservice</strong> al SCADA, superando la recomendación sin comprar hardware costoso.</p>
+<p></p>
+<h3>2.2 Especificaciones Físicas (Peajes)</h3>
+<p>La estación instalada en Peajes debe medir obligatoriamente (IP/REV):</p>
+<p>1.  <strong>Viento (Vel/Dir), Lluvia, Temperatura, Humedad.</strong></p>
+<p>2.  <strong>Radiación Solar:</strong> Para cálculo de ETo (Exigencia IDEAM). La Davis Pro2 Plus cumple esto nativamente con fotodiodo.</p>
+<p>3.  <strong>Energía:</strong> UPS/Solar 48h (Manual 2024).</p>
 <p></p>
 <h3>2.2 Integración</h3>
-<p>*   <strong>Protocolo:</strong> Modbus TCP / API Rest.</p>
-<p>*   <strong>Destino:</strong> SCADA en CCO.</p>
-<p>*   <strong>Alimentación:</strong> Autonomía 48h (Panel Solar + Baterías) si no hay red estable en el peaje.</p>
+<p>*   <strong>Protocolo:</strong> Modbus TCP / NTCIP 1204 para integración nativa con SCADA.</p>
+<p>*   <strong>Alerta Temprana:</strong> Configuración de umbrales (Viento > 40km/h, Visibilidad < 200m) para disparo automático de PMVs.</p>
 <p></p>
 <p>---</p>
 <p></p>
 <p><!-- SECCIÓN: financial --></p>
 <h2>💰 ANÁLISIS FINANCIERO</h2>
 <p></p>
-<h3>Presupuesto Validado (DT-TM01-METEO-001 v2.0)</h3>
+<h3>Presupuesto Validado (Hard Deck)</h3>
 <p></p>
-<p></td><td> Ítem </td><td> Descripción </td><td> Cantidad </td><td> Unitario (USD) </td><td> Total (USD) </td><td> Notas </td><td></p>
-<p></td><td>:-----</td><td>:------------</td><td>:---------</td><td>:---------------</td><td>:------------</td><td>:------</td><td></p>
-<p></td><td> <strong>1</strong> </td><td> <strong>Estación Meteo Industrial</strong> </td><td> 2 </td><td> $50,000 </td><td> $100,000 </td><td> Incluye Visibilímetro </td><td></p>
-<p></td><td> <strong>2</strong> </td><td> <strong>Obra Civil/Montaje</strong> </td><td> 2 </td><td> $2,000 </td><td> $4,000 </td><td> Mástiles Abatibles </td><td></p>
-<p></td><td> <strong>3</strong> </td><td> <strong>Software Integración CCO</strong> </td><td> 1 </td><td> $10,000 </td><td> $10,000 </td><td> Licencia + Config </td><td></p>
-<p></td><td> <strong>TOTAL</strong> </td><td> <strong>METEOROLOGÍA</strong> </td><td> </td><td> </td><td> <strong>$114,000</strong> </td><td> <strong>$57k / Estación</strong> </td><td></p>
+<p></td><td> Ítem </td><td> Descripción </td><td> Cantidad </td><td> Unitario (USD) </td><td> Total (USD) </td><td></p>
+<p></td><td>:-----</td><td>:------------</td><td>:---------</td><td>:---------------</td><td>:------------</td><td></p>
+<p></td><td> <strong>1</strong> </td><td> <strong>Estación Industrial Completa</strong> </td><td> 2 </td><td> $51,000 </td><td> $102,000 </td><td></p>
+<p></td><td> <em>1.1</em> </td><td> <em>Unidad Base (Viento, Lluvia, Temp, Hum)</em> </td><td> <em>2</em> </td><td> <em>$3,000</em> </td><td> <em>(Incluido)</em> </td><td></p>
+<p></td><td> <em>1.2</em> </td><td> <em>Kit Solar 48h + Gabinete IP65</em> </td><td> <em>2</em> </td><td> <em>$8,000</em> </td><td> <em>(Incluido)</em> </td><td></p>
+<p></td><td> <em>1.3</em> </td><td> <em>Sensor Radiación (ETo/Sol)</em> </td><td> <em>2</em> </td><td> <em>$1,000</em> </td><td> <em>(Incluido)</em> </td><td></p>
+<p></td><td> <em>1.4</em> </td><td> <em>Sensor Visibilidad (Niebla)</em> </td><td> <em>2</em> </td><td> <em>$39,000</em> </td><td> <em>(Incluido)</em> </td><td></p>
+<p></td><td> <strong>2</strong> </td><td> <strong>Obra Civil (Mástil Abatible)</strong> </td><td> 2 </td><td> $2,000 </td><td> $4,000 </td><td></p>
+<p></td><td> <strong>3</strong> </td><td> <strong>Integración SCADA (Driver CCO)</strong> </td><td> 1 </td><td> $8,000 </td><td> $8,000 </td><td></p>
+<p></td><td> <strong>TOTAL</strong> </td><td> <strong>METEOROLOGÍA</strong> </td><td> </td><td> </td><td> <strong>$114,000</strong> </td><td></p>
 <p></p>
-<p><strong>Validación de Mercado:</strong> El costo refleja equipos Tier-1 (Lufft/Vaisala) necesarios para certificación de neblina. Alternativas baratas (Davis) no pasan la interventoría por falta de sensor de visibilidad certificado.</p>
+<p><strong>Justificación Financiera:</strong> El alto costo unitario ($51k) se deriva principalmente del <strong>Sensor de Visibilidad Certificado</strong> y la robustez industrial requerida para 10+ años. Intentar bajar este capex con estaciones "Hobby" implica incumplir el Manual de Señalización (Niebla).</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -210,7 +226,7 @@
         
         <footer>
             <p><strong>Documento generado automáticamente desde:</strong> DICTAMEN_JURIDICO_METEO_v1.0.md</p>
-            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 15:02:34</p>
+            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 15:40:15</p>
             <p><strong>Metodología:</strong> Punto 42 v3.0 (Contract-First Architecture)</p>
         </footer>
     </div>

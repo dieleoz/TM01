@@ -79,13 +79,13 @@
     - **Potencia:** Sistema Redundante (UPS+Planta) y Certificación RETIE Plena.
 - **CAPEX Validado:** **$845,000 USD** (IT + Civil + Eléctrico).
 
-### ✅ CASO 8: METEOROLOGÍA (Validado)
-- **Conflicto:** Estaciones Agro (Baratas) vs Industriales (Visibilidad/Niebla).
+### ✅ CASO 8: METEOROLOGÍA (Optimizado Legalmente)
+- **Conflicto:** "Requisito" de Niebla (Industrial) vs "Recomendación" (Norma).
 - **Resolución:**
-    - **Cantidad:** 2 Estaciones Físicas (Peajes - Mandatorio IP/REV).
-    - **Tecnología:** Industrial con Visibilímetro (Seguridad Vial).
-    - **CCO:** Integración Virtual (No estación física).
-- **CAPEX Validado:** **$114,000 USD**.
+    - **Defensa:** El Manual 2024 define "Se recomienda" como NO OBLIGATORIO.
+    - **Solución:** 2 Estaciones Davis (Peajes) para variables básicas + Neblina Virtual (Webservice).
+    - **Impacto:** Ahorro >$90k USD al evitar visibilímetros.
+- **CAPEX Validado:** **$16,500 USD**.
 
 ---
 
