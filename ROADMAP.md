@@ -25,6 +25,7 @@
 - [x] **SOS:** 98 Postes (88 Nuevos + 10 Rehab) - $2.2M USD (Blindados)
 - [x] **WIM:** 1 Estación Bidireccional (Pesaje Fiscal) - $551k USD
 - [x] **RADIO:** Solución Híbrida PoC/VHF - **$0 USD EPC** (Blindaje Contractual Validado)
+- [x] **FIBRA:** Backbone 322km (48 Hilos) - $7.98M USD (Obra Civil Incluida)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`
@@ -60,7 +61,7 @@
 | PMV | 43 unidades | $2,390,000 | ✅ Listo | ⭐⭐⭐ |
 | PEAJE | 2 estaciones | $2,086,577 | ✅ Listo | ⭐⭐⭐⭐ |
 | WIM | 1 Estación | $551,425 | ✅ Listo | ⭐⭐ |
-| FIBRA | 293 km | $1,500,000 | 🟡 Media | ⭐⭐ |
+| COMUNICACIONES | Backbone 322km | $7,980,000 | ✅ Listo | ⭐⭐⭐⭐⭐ |
 | CCO | 1 centro | $800,000 | 🟡 Media | ⭐⭐ |
 | ENERGÍA | Solar/Red | $600,000 | 🟢 Baja | ⭐⭐ |
 | SWITCHES | 15 equipos | $450,000 | 🟢 Baja | ⭐ |

@@ -79,6 +79,7 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] Peaje CAPEX: **$2,086,577.24 USD** (2 Stations, WIM-DAC Integration)
 - [ ] WIM CAPEX: **$551,425 USD** (1 Bidirectional Station: 2 Lanes + 2 Static Scales)
 - [ ] Radio CAPEX: **$0 USD** (Transferred to SPV/OPEX - Hybrid Model)
+- [ ] Fiber Optic CAPEX: **$7,980,000 USD** (322km Cable 48H + Civil Works)
 - [ ] Total ITS CAPEX: **$7,790,000 USD**
 
 #### B. Web Dashboard Verification

@@ -137,8 +137,11 @@ class TM01MasterData {
                 capexUSD: 7980000,
                 capexCOP: 35112000000,
                 capexUnitarioUSD: 24782,
-                descripcion: '322 km (293 Troncal + Holgura) - Audit 5.0 confirmed',
-                estado: 'Validado'
+                descripcion: '322 km Cable 48H (293 Troncal + 10% Reserve). Unit: Cable-km (NOT Strand-km)',
+                estado: 'Validado',
+                fuenteContractual: "AT1 Alcance (Interconexión Total) + Nota 322KM",
+                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_FIBRA_v1.0.md",
+                versionT05: "v2.0 (Specs: G.652.D 48 Strands + Tritubo)"
             },
             radioSummary: {
                 id: '12',

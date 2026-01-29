@@ -63,6 +63,14 @@
     - **Blindaje:** Cláusula de Demarcación para evitar glosas por falta de equipos.
 - **CAPEX Validado:** **$0 USD** (Para el EPC).
 
+### ✅ CASO 6: FIBRA ÓPTICA (Validado)
+- **Conflicto:** Unidad de Medida (km cable vs km hilo) y Longitud (293 vs 322).
+- **Resolución:**
+    - **Longitud:** 322 km de **CABLE** (Incluye reservas técnicas).
+    - **Capacidad:** 48 Hilos Monomodo G.652.D.
+    - **Obra Civil:** Tritubo HDPE 4" a lo largo de 293 km de zanja.
+- **CAPEX Validado:** **$7,980,000 USD** (Preponderancia de Obra Civil).
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)
