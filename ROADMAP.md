@@ -27,6 +27,7 @@
 - [x] **RADIO:** Solución Híbrida PoC/VHF - **$0 USD EPC** (Blindaje Contractual Validado)
 - [x] **FIBRA:** Backbone 322km (48 Hilos G.652.D) - **$7.98M USD** (Blindaje RETIE/Obra Civil)
 - [x] **CCO:** Full Scope (IT + Civil + Power) - **$845k USD** (Cumple Áreas Mínimas AT1)
+- [x] **METEO:** 2 Estaciones Industriales (Peajes) + SW - **$114k USD** (Visibilidad Incluida)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`
@@ -66,6 +67,7 @@
 | CCO | Integral | $845,000 | ✅ Listo | ⭐⭐⭐⭐⭐ |
 | ENERGÍA | Solar/Red | $600,000 | 🟢 Baja | ⭐⭐ |
 | SWITCHES | 15 equipos | $450,000 | 🟢 Baja | ⭐ |
+| METEREOLOGÍA | 2 Estaciones | $114,000 | ✅ Listo | ⭐⭐ |
 | SEÑALIZACIÓN | Vertical | $300,000 | 🟢 Baja | ⭐ |
 | METEO | 2 estaciones | $7,800 | 🟢 Baja | ⭐ |
 | GALIBOS | 4 detectores | $120,000 | 🟢 Baja | ⭐ |

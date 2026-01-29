@@ -79,6 +79,14 @@
     - **Potencia:** Sistema Redundante (UPS+Planta) y Certificación RETIE Plena.
 - **CAPEX Validado:** **$845,000 USD** (IT + Civil + Eléctrico).
 
+### ✅ CASO 8: METEOROLOGÍA (Validado)
+- **Conflicto:** Estaciones Agro (Baratas) vs Industriales (Visibilidad/Niebla).
+- **Resolución:**
+    - **Cantidad:** 2 Estaciones Físicas (Peajes - Mandatorio IP/REV).
+    - **Tecnología:** Industrial con Visibilímetro (Seguridad Vial).
+    - **CCO:** Integración Virtual (No estación física).
+- **CAPEX Validado:** **$114,000 USD**.
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)

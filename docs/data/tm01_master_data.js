@@ -244,12 +244,12 @@ class TM01MasterData {
             },
             {
                 id: '7',
-                sistema: 'METEO',
-                cantidad: 3,
-                capexUSD: 105000,
-                capexCOP: 462000000,
-                capexUnitarioUSD: 35000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                sistema: 'Meteorología',
+                cantidad: 2,
+                capexUSD: 114000,
+                capexCOP: 501600000,
+                capexUnitarioUSD: 57000,
+                descripcion: '2 Industrial Stations (Tolls) with Fog Sensors (Visibility). CCO Integration.',
                 estado: 'Validado'
             },
             {
