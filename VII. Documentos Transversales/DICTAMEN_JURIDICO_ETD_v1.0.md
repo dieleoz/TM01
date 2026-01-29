@@ -48,18 +48,24 @@ Se certifica la implementación de tecnología **All-in-One (Dahua ITC Series)**
 <!-- SECCIÓN: technical_notes -->
 ## 2. BLINDAJE TÉCNICO (FICHA TÉCNICA DAHUA)
 
-### 2.1 Especificaciones Validadas (Dahua ITC431-RW1F)
-*   **Sensor:** 4MP Starlight CMOS (Visión nocturna).
-*   **Radar Integrado:** Detección de velocidad y flujo (hasta 4 carriles).
-*   **ANPR:** Lectura de placas integrada (Edge Computing).
-*   **Protección:** IP67 (Intemperie) + IK10 (Vandalismo).
-*   **Precio Unitario:** ~$1,500 USD (Cámara + Accesorios básicos).
+### 2.1 Especificaciones Validadas (Dahua ITC431-KW4F)
+**Fuente:** Datasheet Oficial (Suministrado por Usuario).
+
+| Componente | Especificación Validada |
+|:-----------|:------------------------|
+| **Modelo** | **ITC431-KW4F** - 4MP All-in-One Enforcement Camera |
+| **Radar** | Integrado **61-62 GHz** Millimeter-wave. Rango 5-180 km/h. Precisión ±2 km/h. |
+| **Cobertura** | **1-2 Carriles** por dispositivo (Requiere 1 por sentido en doble calzada). |
+| **ANPR** | Deep Learning integrado. Reconoce Placa, Color, Marca (Logo), Tipo Vehículo. |
+| **Tráfico** | Conteo, Velocidad Promedio, Ocupación, Longitud de Cola (Traffic Flow Mode). |
+| **Protección** | **IP68** (Inmersión) + **IK10** (Antivandálico). |
+| **Iluminación**| Dual (IR 850nm + Luz Cálida) integrada. |
 
 ### 2.2 Estrategia de Ubicación (2 Sitios)
-Se instalan **2 Unidades Fijas** en los "Puntos Críticos" contractuales:
+Se instalan **2 Unidades Fijas** en los "Puntos Críticos" contractuales. Dado que cada cámara cubre 1-2 carriles, se asume una configuración de **un sentido crítico por sitio** o **gudied coverage**:
 1.  **Punto A:** Acceso Zona Escolar/Urbana (Control Velocidad).
 2.  **Punto B:** Tramo Recto (Control Velocidad Máxima).
-*El resto de la cobertura estadística se mantiene con los datos de Peajes.*
+*Nota:* El equipo cumple la función de ETD (Estadística de Flujo) y SAST (Sanción/Seguridad) simultáneamente.
 
 ---
 

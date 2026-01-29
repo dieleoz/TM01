@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: ETD
-// Fecha de generación: 2026-01-29 15:58:32
+// Fecha de generación: 2026-01-29 15:59:33
 
 const validaciones_ETD = {
   full: '## 📋 RESUMEN EJECUTIVO (HARD DECK)\n\n**Veredicto:** 🟢 **VALIDADO (HARDWARE UNIFICADO)**\n\nSe certifica la implementación de tecnología **All-in-One (Dahua ITC Series)** que unifica "Toma de Datos", "Radar Sancionatorio" y "Cámara LPR" en un solo dispositivo. Esta solución técnica "Todo en Uno" reactiva el alcance fijo pero con eficiencia costos.\n\n**Parámetros de Validación (Hard Deck):**\n1.  **Tecnología:** **Cámara ITS con Radar Integrado (Dahua ITC431/9541)**. Cumple AT2 3.3.4.5 (Flujo) y 3.3.5.1 (Velocidad).\n2.  **Cantidad:** **2 Unidades** (Ubicación: Puntos Críticos / Tramos de Alta Accidentalidad).\n3.  **Funcionalidad:** Un solo equipo realiza:\n    *   Conteo y Clasificación (ETD).\n    *   Detección de Velocidad (Radar).\n    *   Lectura de Placas (ANPR Seguridad).\n\n**CAPEX Validado:** **$22,500 USD** (2 Sitios + Licencia DSS Pro Central).\n\n---',
