@@ -24,7 +24,7 @@
 - [x] **PEAJE:** 2 Estaciones (Integración WIM-DAC + IP/REV) - $2.09M USD
 - [x] **SOS:** 98 Postes (88 Nuevos + 10 Rehab) - $2.2M USD (Blindados)
 - [x] **WIM:** 1 Estación Bidireccional (Pesaje Fiscal) - $551k USD
-- [x] **RADIO:** Solución Híbrida PoC/VHF - **$0 USD EPC** (Trasladado a SPV)
+- [x] **RADIO:** Solución Híbrida PoC/VHF - **$0 USD EPC** (Blindaje Contractual Validado)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`

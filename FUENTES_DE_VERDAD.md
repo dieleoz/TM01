@@ -58,8 +58,9 @@
 - **Resolución:**
     - **Radio FM:** Eliminado (Modelo OPEX/Convenios).
     - **Radio Operativo:** Solución Híbrida PoC LTE (Principal) + VHF Digital (Respaldo).
-    - **Requisito Técnico:** Radios PoC Multi-SIM y Gateway RoIP (Responsabilidad SPV).
-    - **Financiero:** Se traslada el costo ($85k) al Operador (SPV) como "Dotación de Flota" y "Servicio".
+    - **Requisito Técnico:** Radios PoC Multi-SIM (Hardware Dedicado - No Smartphones) y Gateway RoIP.
+    - **Financiero:** Modelo $0 CAPEX para EPC mediante transferencia de dotación al SPV.
+    - **Blindaje:** Cláusula de Demarcación para evitar glosas por falta de equipos.
 - **CAPEX Validado:** **$0 USD** (Para el EPC).
 
 ---
