@@ -12,19 +12,17 @@
 <!-- SECCIÓN: full -->
 ## 📋 RESUMEN EJECUTIVO (HARD DECK)
 
-**Veredicto:** 🟢 **VALIDADO (HARDWARE UNIFICADO)**
+**Veredicto:** 🟢 **VALIDADO (ESTRATEGIA SMART CAPEX)**
 
-Se certifica la implementación de tecnología **All-in-One (Dahua ITC Series)** que unifica "Toma de Datos", "Radar Sancionatorio" y "Cámara LPR" en un solo dispositivo. Esta solución técnica "Todo en Uno" reactiva el alcance fijo pero con eficiencia costos.
+El documento es TÉCNICAMENTE VIABLE y CONTRACTUALMENTE SÓLIDO. La estrategia propuesta de unificar tecnologías (**Cámara ITS All-in-One**) y homologar los **Peajes como ETD Maestro** es la interpretación más eficiente del contrato, evitando la compra redundante de hardware.
 
 **Parámetros de Validación (Hard Deck):**
-1.  **Tecnología:** **Cámara ITS con Radar Integrado (Dahua ITC431/9541)**. Cumple AT2 3.3.4.5 (Flujo) y 3.3.5.1 (Velocidad).
-2.  **Cantidad:** **2 Unidades** (Ubicación: Puntos Críticos / Tramos de Alta Accidentalidad).
-3.  **Funcionalidad:** Un solo equipo realiza:
-    *   Conteo y Clasificación (ETD).
-    *   Detección de Velocidad (Radar).
-    *   Lectura de Placas (ANPR Seguridad).
+1.  **Hardware Unificado:** **2 Cámaras Dahua ITC431-KW4F**. Integran Radar (60GHz), Video y ANPR. Cubren "Puntos Críticos".
+2.  **ETD Maestro:** Los **Peajes** (Zambito/Aguas Negras) proveen el dato "Duro" de conteo y clasificación para el corredor.
+3.  **Cobertura Virtual:** Se valida el uso de **APIs de Tráfico** (Waze/Google) para cumplir la obligación de "Información de Velocidad" en las UFs sin equipos físicos.
+4.  **CCTV como Sensor:** Se valida el uso de metadata de cámaras PTZ (Dahua series SD5A) para enriquecer la detección de incidentes.
 
-**CAPEX Validado:** **$22,500 USD** (2 Sitios + Licencia DSS Pro Central).
+**CAPEX Validado:** **$22,500 USD** (2 Sitios All-in-One + Integración de Datos Software).
 
 ---
 
@@ -62,10 +60,36 @@ Se certifica la implementación de tecnología **All-in-One (Dahua ITC Series)**
 | **Iluminación**| Dual (IR 850nm + Luz Cálida) integrada. |
 
 ### 2.2 Estrategia de Ubicación (2 Sitios)
-Se instalan **2 Unidades Fijas** en los "Puntos Críticos" contractuales. Dado que cada cámara cubre 1-2 carriles, se asume una configuración de **un sentido crítico por sitio** o **gudied coverage**:
+Se instalan **2 Unidades Fijas** en los "Puntos Críticos" contractuales.
 1.  **Punto A:** Acceso Zona Escolar/Urbana (Control Velocidad).
 2.  **Punto B:** Tramo Recto (Control Velocidad Máxima).
-*Nota:* El equipo cumple la función de ETD (Estadística de Flujo) y SAST (Sanción/Seguridad) simultáneamente.
+
+### 2.3 Arquitectura de Datos Híbrida (La Clave del Ahorro)
+Para cumplir con la obligación de "Información por Unidad Funcional" (AT2 3.3.11.2) sin llenar la vía de equipos, se valida la siguiente arquitectura de inyección de datos al SCADA:
+
+| Variable | Fuente T05 (Estrategia) | Justificación Contractual |
+|:---------|:------------------------|:--------------------------|
+| **Volumen** | **Extrapolación Peajes** | El dato del peaje es real y auditable. Se asume flujo constante entre UFs adyacentes. |
+| **Velocidad** | **API Externa (Waze/Google)** | "Suministro de Información" no exige sensor físico. El dato virtual georreferenciado es válido. |
+| **Incidentes** | **Cámaras CCTV (PTZ)** | Uso de analítica IVS (Parking/Stopped) de las cámaras de seguridad para generar alarmas de tráfico. |
+| **Sanción** | **Dotación Policía (Móvil)** | Transferencia de operación a la autoridad con equipos portátiles (Lidar). |
+
+---
+
+<!-- SECCIÓN: t05_roadmap -->
+## 3. HOJA DE RUTA INGENIERÍA DE DETALLE (T05)
+
+### 3.1 Configuración Lógica del Software
+1.  **Virtualización de UFs:** El SCADA debe tener "Tramos Virtuales" definidos por coordenadas GPS (Inicio/Fin de cada UF).
+2.  **Mapeo de Datos:**
+    *   *Input:* Velocidad API (Google) -> *Output:* Velocidad Promedio UF5.
+    *   *Input:* Conteo Peaje (Aguas Negras) -> *Output:* Volumen Estimado UF4.
+3.  **Gestión PTZ:** Las cámaras de seguridad (Dahua SD5A) deben tener "Presets de Home" enfocando la vía para aportar conteo auxiliar cuando no están en operación manual.
+
+### 3.2 Plan B (Contingencia ante Interventoría)
+Si la Interventoría rechaza la extrapolación en alguna UF específica:
+*   **Acción:** Desplegar campañas de **Aforo Móvil** (Contadores Neumáticos) semestrales.
+*   **Costo:** Rubro OPEX (Operativo), no CAPEX (Infraestructura).
 
 ---
 

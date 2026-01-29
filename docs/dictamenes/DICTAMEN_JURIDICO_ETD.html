@@ -130,19 +130,17 @@
 <p><!-- SECCIÓN: full --></p>
 <h2>📋 RESUMEN EJECUTIVO (HARD DECK)</h2>
 <p></p>
-<p><strong>Veredicto:</strong> 🟢 <strong>VALIDADO (HARDWARE UNIFICADO)</strong></p>
+<p><strong>Veredicto:</strong> 🟢 <strong>VALIDADO (ESTRATEGIA SMART CAPEX)</strong></p>
 <p></p>
-<p>Se certifica la implementación de tecnología <strong>All-in-One (Dahua ITC Series)</strong> que unifica "Toma de Datos", "Radar Sancionatorio" y "Cámara LPR" en un solo dispositivo. Esta solución técnica "Todo en Uno" reactiva el alcance fijo pero con eficiencia costos.</p>
+<p>El documento es TÉCNICAMENTE VIABLE y CONTRACTUALMENTE SÓLIDO. La estrategia propuesta de unificar tecnologías (<strong>Cámara ITS All-in-One</strong>) y homologar los <strong>Peajes como ETD Maestro</strong> es la interpretación más eficiente del contrato, evitando la compra redundante de hardware.</p>
 <p></p>
 <p><strong>Parámetros de Validación (Hard Deck):</strong></p>
-<p>1.  <strong>Tecnología:</strong> <strong>Cámara ITS con Radar Integrado (Dahua ITC431/9541)</strong>. Cumple AT2 3.3.4.5 (Flujo) y 3.3.5.1 (Velocidad).</p>
-<p>2.  <strong>Cantidad:</strong> <strong>2 Unidades</strong> (Ubicación: Puntos Críticos / Tramos de Alta Accidentalidad).</p>
-<p>3.  <strong>Funcionalidad:</strong> Un solo equipo realiza:</p>
-<p>    *   Conteo y Clasificación (ETD).</p>
-<p>    *   Detección de Velocidad (Radar).</p>
-<p>    *   Lectura de Placas (ANPR Seguridad).</p>
+<p>1.  <strong>Hardware Unificado:</strong> <strong>2 Cámaras Dahua ITC431-KW4F</strong>. Integran Radar (60GHz), Video y ANPR. Cubren "Puntos Críticos".</p>
+<p>2.  <strong>ETD Maestro:</strong> Los <strong>Peajes</strong> (Zambito/Aguas Negras) proveen el dato "Duro" de conteo y clasificación para el corredor.</p>
+<p>3.  <strong>Cobertura Virtual:</strong> Se valida el uso de <strong>APIs de Tráfico</strong> (Waze/Google) para cumplir la obligación de "Información de Velocidad" en las UFs sin equipos físicos.</p>
+<p>4.  <strong>CCTV como Sensor:</strong> Se valida el uso de metadata de cámaras PTZ (Dahua series SD5A) para enriquecer la detección de incidentes.</p>
 <p></p>
-<p><strong>CAPEX Validado:</strong> <strong>$22,500 USD</strong> (2 Sitios + Licencia DSS Pro Central).</p>
+<p><strong>CAPEX Validado:</strong> <strong>$22,500 USD</strong> (2 Sitios All-in-One + Integración de Datos Software).</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -180,10 +178,36 @@
 <p></td><td> <strong>Iluminación</strong></td><td> Dual (IR 850nm + Luz Cálida) integrada. </td><td></p>
 <p></p>
 <h3>2.2 Estrategia de Ubicación (2 Sitios)</h3>
-<p>Se instalan <strong>2 Unidades Fijas</strong> en los "Puntos Críticos" contractuales. Dado que cada cámara cubre 1-2 carriles, se asume una configuración de <strong>un sentido crítico por sitio</strong> o <strong>gudied coverage</strong>:</p>
+<p>Se instalan <strong>2 Unidades Fijas</strong> en los "Puntos Críticos" contractuales.</p>
 <p>1.  <strong>Punto A:</strong> Acceso Zona Escolar/Urbana (Control Velocidad).</p>
 <p>2.  <strong>Punto B:</strong> Tramo Recto (Control Velocidad Máxima).</p>
-<p><em>Nota:</em> El equipo cumple la función de ETD (Estadística de Flujo) y SAST (Sanción/Seguridad) simultáneamente.</p>
+<p></p>
+<h3>2.3 Arquitectura de Datos Híbrida (La Clave del Ahorro)</h3>
+<p>Para cumplir con la obligación de "Información por Unidad Funcional" (AT2 3.3.11.2) sin llenar la vía de equipos, se valida la siguiente arquitectura de inyección de datos al SCADA:</p>
+<p></p>
+<p></td><td> Variable </td><td> Fuente T05 (Estrategia) </td><td> Justificación Contractual </td><td></p>
+<p></td><td>:---------</td><td>:------------------------</td><td>:--------------------------</td><td></p>
+<p></td><td> <strong>Volumen</strong> </td><td> <strong>Extrapolación Peajes</strong> </td><td> El dato del peaje es real y auditable. Se asume flujo constante entre UFs adyacentes. </td><td></p>
+<p></td><td> <strong>Velocidad</strong> </td><td> <strong>API Externa (Waze/Google)</strong> </td><td> "Suministro de Información" no exige sensor físico. El dato virtual georreferenciado es válido. </td><td></p>
+<p></td><td> <strong>Incidentes</strong> </td><td> <strong>Cámaras CCTV (PTZ)</strong> </td><td> Uso de analítica IVS (Parking/Stopped) de las cámaras de seguridad para generar alarmas de tráfico. </td><td></p>
+<p></td><td> <strong>Sanción</strong> </td><td> <strong>Dotación Policía (Móvil)</strong> </td><td> Transferencia de operación a la autoridad con equipos portátiles (Lidar). </td><td></p>
+<p></p>
+<p>---</p>
+<p></p>
+<p><!-- SECCIÓN: t05_roadmap --></p>
+<h2>3. HOJA DE RUTA INGENIERÍA DE DETALLE (T05)</h2>
+<p></p>
+<h3>3.1 Configuración Lógica del Software</h3>
+<p>1.  <strong>Virtualización de UFs:</strong> El SCADA debe tener "Tramos Virtuales" definidos por coordenadas GPS (Inicio/Fin de cada UF).</p>
+<p>2.  <strong>Mapeo de Datos:</strong></p>
+<p>    <em>   </em>Input:<em> Velocidad API (Google) -> </em>Output:* Velocidad Promedio UF5.</p>
+<p>    <em>   </em>Input:<em> Conteo Peaje (Aguas Negras) -> </em>Output:* Volumen Estimado UF4.</p>
+<p>3.  <strong>Gestión PTZ:</strong> Las cámaras de seguridad (Dahua SD5A) deben tener "Presets de Home" enfocando la vía para aportar conteo auxiliar cuando no están en operación manual.</p>
+<p></p>
+<h3>3.2 Plan B (Contingencia ante Interventoría)</h3>
+<p>Si la Interventoría rechaza la extrapolación en alguna UF específica:</p>
+<p>*   <strong>Acción:</strong> Desplegar campañas de <strong>Aforo Móvil</strong> (Contadores Neumáticos) semestrales.</p>
+<p>*   <strong>Costo:</strong> Rubro OPEX (Operativo), no CAPEX (Infraestructura).</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -225,7 +249,7 @@
         
         <footer>
             <p><strong>Documento generado automáticamente desde:</strong> DICTAMEN_JURIDICO_ETD_v1.0.md</p>
-            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 15:59:33</p>
+            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 16:12:31</p>
             <p><strong>Metodología:</strong> Punto 42 v3.0 (Contract-First Architecture)</p>
         </footer>
     </div>
