@@ -9,7 +9,7 @@
 
 ---
 
-<!-- SECCION: full -->
+<!-- SECCIÓN: full -->
 ## 📋 RESUMEN EJECUTIVO PARA EL ABOGADO
 
 **Pregunta Central:** ¿Qué numeral del contrato obliga al sistema PMV y cuál es la cantidad correcta para evitar glosas?
@@ -33,7 +33,7 @@ El sistema PMV tiene un alcance total validado de **43 Unidades**, segregadas ob
 
 ---
 
-<!-- SECCION: contractual -->
+<!-- SECCIÓN: contractual -->
 ## 1. FUNDAMENTO CONTRACTUAL DETALLADO
 
 ### 1.1 La Trampa de la Cantidad: "Mínimo 25" vs "Cobertura"
@@ -70,7 +70,7 @@ Estos 14 paneles (Zambito + Aguas Negras) **NO SUMAN** a los 25 de la vía. Son 
 
 ---
 
-<!-- SECCION: technical -->
+<!-- SECCIÓN: technical -->
 ## 3. APLICACIÓN DE NORMATIVAS TÉCNICAS
 
 ### 3.1 PMV ITS (Gran Formato) - Especificaciones "Hard Deck"
@@ -114,7 +114,7 @@ Aunque sean equipos de 24V, la instalación se considera de Uso Final y requiere
 
 **Total Proyecto:** $2,390,000 USD (43 Unidades).
 
-<!-- SECCION: financial -->
+<!-- SECCIÓN: financial -->
 ## 💰 IMPACTO FINANCIERO
 
 **Presupuesto Validado:** $2,390,000 USD (43 unidades)
@@ -133,7 +133,7 @@ Aunque sean equipos de 24V, la instalación se considera de Uso Final y requiere
 
 ---
 
-<!-- SECCION: risks -->
+<!-- SECCIÓN: risks -->
 ### 4.3 Riesgo Residual
 
 ⚠️ **RIESGOS IDENTIFICADOS:**

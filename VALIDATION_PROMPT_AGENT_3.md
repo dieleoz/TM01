@@ -73,8 +73,8 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] SOS CAPEX: **$2,200,000 USD**
 - [ ] CCTV: **9 cameras** (optimized from 45)
 - [ ] CCTV CAPEX: **$116,100 USD**
-- [ ] PMV: **39 units** (25 Mainline + 14 Toll)
-- [ ] PMV CAPEX: **$2,360,000 USD**
+- [ ] PMV: **43 units** (25 Mainline + 4 Toll Approach + 14 Toll Lane)
+- [ ] PMV CAPEX: **$2,390,000 USD** (Segregated ITS + Tolls)
 - [ ] Peaje CAPEX: **$1,890,218.94 USD**
 - [ ] WIM CAPEX: **$551,000 USD**
 - [ ] Total ITS CAPEX: **$7,790,000 USD**

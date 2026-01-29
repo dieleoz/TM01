@@ -29,11 +29,11 @@ class TM01MasterData {
             pmvSummary: {
                 id: '2',
                 sistema: 'PMV',
-                cantidad: 39,
-                capexUSD: 2360000,
-                capexCOP: 10384000000,
-                capexUnitarioUSD: 60512,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                cantidad: 43,
+                capexUSD: 2390000,
+                capexCOP: 10516000000,
+                capexUnitarioUSD: 55581,
+                descripcion: 'Forensic v2.2 (43 Units: 29 ITS + 14 Peaje - Strict Segregation)',
                 estado: 'Validado'
             },
             radioSummary: {
@@ -173,11 +173,11 @@ class TM01MasterData {
             {
                 id: '2',
                 sistema: 'PMV',
-                cantidad: 39,
-                capexUSD: 2780000,
-                capexCOP: 12232000000,
-                capexUnitarioUSD: 99285,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                cantidad: 43,
+                capexUSD: 2390000,
+                capexCOP: 10516000000,
+                capexUnitarioUSD: 55581,
+                descripcion: 'Forensic v2.2 (43 Units: 29 ITS + 14 Peaje - Strict Segregation)',
                 estado: 'Validado'
             },
             {
@@ -342,9 +342,9 @@ class TM01MasterData {
             // CAPÃTULO 4: SISTEMA PMV
             { id: '4', nivel: 1, item: "4", descripcion: "SISTEMA PMV", sistema: "PMV", tipo: "capitulo" },
             { id: '4.1', nivel: 2, item: "4.1", descripcion: "SUMINISTROS PMV", sistema: "PMV", tipo: "subcapitulo" },
-            { id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Panel PMV Graphic RGB (NTCIP 1203/1204)", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Blindaje Contractual (Graphic Grade)", vu: "55000", total: "1540000", totalCOP: "6776000000" },
-            { id: '4.1.2', nivel: 3, item: "4.1.2", descripcion: "Estructura Reforzada (CCP-14 / Poste)", sistema: "PMV", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Estructura sismo-resistente", vu: "35000", total: "980000", totalCOP: "4312000000" },
-            { id: '4.1.3', nivel: 3, item: "4.1.3", descripcion: "RETIE + Acometida + Software Central", sistema: "PMV", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación y gestión", vu: "290000", total: "290000", totalCOP: "1276000000" },
+            { id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Panel PMV Graphic RGB (NTCIP 1203/1204)", sistema: "PMV", cantidad: "29", unidad: "UND", tipo: "item", criterio: "Blindaje Contractual (25 Vía + 4 Peaje Aprx)", vu: "45000", total: "1305000", totalCOP: "5742000000" },
+            { id: '4.1.2', nivel: 3, item: "4.1.2", descripcion: "Estructura Reforzada (CCP-14 / Poste)", sistema: "PMV", cantidad: "29", unidad: "UND", tipo: "item", criterio: "Estructura sismo-resistente", vu: "35000", total: "1015000", totalCOP: "4466000000" },
+            { id: '4.1.3', nivel: 3, item: "4.1.3", descripcion: "RETIE + Acometida + Software Central", sistema: "PMV", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación y gestión", vu: "0", total: "0", totalCOP: "0" },
             { id: '4.1.4', nivel: 3, item: "4.1.4", descripcion: "Controlador/Switch (Incluido)", sistema: "PMV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Integrado en panel", vu: "0", total: "0", totalCOP: "0" },
             { id: '4.1.5', nivel: 3, item: "4.1.5", descripcion: "Conversor FO/Conectividad (Incluido)", sistema: "PMV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Integrado en panel", vu: "0", total: "0", totalCOP: "0" },
             { id: '4.1.6', nivel: 3, item: "4.1.6", descripcion: "Fuente/UPS (Incluida)", sistema: "PMV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Integrada en panel", vu: "0", total: "0", totalCOP: "0" },
@@ -391,7 +391,7 @@ class TM01MasterData {
             { id: '7.1.3', nivel: 3, item: "7.1.3", descripcion: "Barreras Alta Velocidad (0.7s)", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "Telepeaje", vu: "15000", total: "210000", totalCOP: "840000000" },
 
             { id: '7.1.5', nivel: 3, item: "7.1.5", descripcion: "Displays de Carril (640x320mm)", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "Información Usuario", vu: "2500", total: "35000", totalCOP: "140000000" },
-            { id: '7.1.6', nivel: 3, item: "7.1.6", descripcion: "PMV Aproximación Peaje (Gráfico RGB - Manual 2024)", sistema: "PEAJES", cantidad: "4", unidad: "UND", tipo: "item", criterio: "Manual 2024 (>90km/h)", vu: "55000", total: "220000", totalCOP: "880000000" },
+            { id: '7.1.6', nivel: 3, item: "7.1.6", descripcion: "PMV Aproximación Peaje (MOVED TO ITS)", sistema: "PMV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Integrado en WBS 3.01 (ITS)", vu: "0", total: "0", totalCOP: "0" },
             { id: '7.1.7', nivel: 3, item: "7.1.7", descripcion: "Semáforos (Paso + Marquesina)", sistema: "PEAJES", cantidad: "28", unidad: "UND", tipo: "item", criterio: "Control Tráfico", vu: "1250", total: "35000", totalCOP: "140000000" },
             { id: '7.1.8', nivel: 3, item: "7.1.8", descripcion: "Consolas y Software Gestión", sistema: "PEAJES", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "CCO Integration", vu: "470000", total: "470000", totalCOP: "1880000000" },
             { id: '7.1.9', nivel: 3, item: "7.1.9", descripcion: "Instalación e Imprevistos (Incluye Moneda Fraccionaria)", sistema: "PEAJES", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Garantía de Cambio y SAT", vu: "882577", total: "882577", totalCOP: "3530308000" },

@@ -18,9 +18,9 @@
 - ✅ **SISTEMA DE VALIDACIONES MODULAR V2.0** implementado
 
 **Sistemas Validados con PROMPT MAESTRO:**
-- ✅ **PMV:** 43 unidades (25 vía + 4 peaje + 14 IP/REV) - $2.19M USD
-- ✅ **METEO:** 2 estaciones físicas + API híbrida - $7.8k USD
-- ✅ **CCTV:** Dictamen jurídico-técnico completo (30 cámaras validadas)
+- [x] **PMV:** 43 unidades (29 ITS + 14 Peaje) - $2.39M USD
+- [x] **METEO:** 2 estaciones físicas + API híbrida - $7.8k USD
+- [x] **CCTV:** Dictamen jurídico-técnico completo (30 cámaras validadas)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`
@@ -53,7 +53,7 @@
 | Sistema | Cantidad | CAPEX (USD) | Prioridad | Complejidad |
 |:--------|:---------|:------------|:----------|:------------|
 | SOS | 88 postes | $2,200,000 | 🔴 Alta | ⭐⭐⭐ |
-| PMV | 39 unidades | $2,360,000 | 🔴 Alta | ⭐⭐⭐ |
+| PMV | 43 unidades | $2,390,000 | ✅ Listo | ⭐⭐⭐ |
 | PEAJE | 2 estaciones | $1,890,219 | 🔴 Alta | ⭐⭐⭐⭐ |
 | WIM | 2 estaciones | $551,000 | 🟡 Media | ⭐⭐ |
 | FIBRA | 293 km | $1,500,000 | 🟡 Media | ⭐⭐ |
