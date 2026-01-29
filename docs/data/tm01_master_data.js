@@ -87,7 +87,7 @@ class TM01MasterData {
                 capexUSD: 2200000,  // 88 × $25,000
                 capexCOP: 9680000000,
                 capexUnitarioUSD: 25000,
-                descripcion: 'Postes SOS - Telefonía de Emergencia (88 nuevos + 10 existentes = 98 total)',
+                descripcion: 'Forensic v1.0 (98 Total: 88 New CAPEX + 10 Rehab OPEX)',
                 estado: 'Validado',
 
                 // Desglose detallado
@@ -103,9 +103,9 @@ class TM01MasterData {
                 // Trazabilidad contractual
                 fuenteContractual: "AT1 L3525 (98 total: 88 nuevos + 10 UF Rehabilitación)",
                 validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-SOS-002.md",
-                analisisBase: "docs/old/ANALISIS_SOS_PROMPT_MAESTRO_V3.1.md",
-                fechaValidacion: "2026-01-27",
-                versionT05: "v1.7"
+                analisisBase: "VII. Documentos Transversales/DICTAMEN_JURIDICO_SOS_v1.0.md",
+                fechaValidacion: "2026-01-29",
+                versionT05: "v2.0 (GAP: Check Crash Barriers)"
             },
             meteoSummary: {
                 id: '7',

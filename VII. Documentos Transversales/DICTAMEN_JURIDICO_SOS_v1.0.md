@@ -67,7 +67,31 @@ El sistema de Postes SOS (Telefonía de Emergencia) es una obligación de result
 
 **Justificación de Defensa:**
 
-> "El alcance de 88 postes nuevos + 10 existentes en UF Rehabilitación totaliza 98 unidades, cumpliendo exactamente con la obligación contractual AT1 L3525, con un espaciamiento promedio de 2.99 km que cumple el requisito de ≤ 3 km. La segregación CAPEX/OPEX blinda al EPC de responsabilidades operativas sobre los postes existentes."
+> "El alcance de 88 postes nuevos + 10 existentes en UF Rehabilitación totaliza 98 unidades, cumpliendo exactamente con la obligación contractual AT1 L3525. La segregación CAPEX/OPEX blinda al EPC de responsabilidades operativas sobre los postes existentes."
+>
+> **OBLIGACIÓN EN UF REHABILITACIÓN:** Es una obligación de RESULTADO (Operación), no de MEDIO (Construcción). Solo si los 10 existentes son obsoletos o fallan el Manual 2024, se gatilla el CAPEX de reemplazo.
+
+---
+
+<!-- SECCIÓN: technical_notes -->
+## 2. NOTAS DE PRECISIÓN TÉCNICA (GAPS DETECTADOS)
+
+### A. Defensas Metálicas (Costo Oculto)
+**Fuente:** AT2 Sección 6.3.9.
+- **Obligación:** "Proteger la estructura con un sistema de contención vehicular adecuado."
+- **Gap:** Si el poste está en zona despejada, requiere barrera certificada (EN 1317/MASH).
+- **Impacto:** Costo adicional estimado de **$200,000 USD** (no contemplado en APU base).
+- **Acción:** Verificar si el APU de Obra Civil incluye este ítem.
+
+### B. Validación Postes Existentes (Riesgo Normativo)
+**Fuente:** Manual de Señalización 2024.
+- **Requisito:** Color Naranja RAL 2004, Altura 4.90m, Tecnología 4G/VolP.
+- **Riesgo:** Si los 10 existentes son amarillos/bajos, la Interventoría exigirá su reemplazo por "Uniformidad Visual".
+- **Mitigación:** Inspección visual inmediata. Si fallan, se debe presupuestar "Adecuación" (Pintura + Kit Electrónico) en lugar de reemplazo total.
+
+### C. Legalización RETIE 2024
+**Fuente:** Res. 40117/2024.
+- **Exigencia:** El sistema fotovoltaico (Panel + Batería) y el tablero de control requieren **Dictamen de Inspección (Anexo 5)** y rotulado "ADVERTENCIA: FUENTE FOTOVOLTAICA".
 
 ---
 
@@ -249,6 +273,19 @@ El sistema de Postes SOS (Telefonía de Emergencia) es una obligación de result
 - **Probabilidad:** Media
 - **Impacto:** Alto (retraso en puesta en servicio)
 - **Mitigación:** Coordinación estrecha entre equipos de Fibra y SOS
+
+---
+
+<!-- SECCIÓN: rehab_strategy -->
+## 5. ESTRATEGIA UF REHABILITACIÓN (OPERACIÓN VS INVERSIÓN)
+
+### 5.1 Regla de Oro
+"Si funciona y cumple norma, se mantiene (OPEX). Si falla o es obsoleto, se reemplaza (CAPEX)."
+
+### 5.2 Hoja de Ruta para Ingenieros
+1.  **Inventario:** Verificar altura y color de los 10 postes existentes.
+2.  **Adecuación:** Si son amarillos, pintar en sitio (RAL 2004). Si la electrónica es 2G, cambiar solo la placa (Retrofit).
+3.  **Defensa:** Evitar reemplazo estructural innecesario.
 
 ---
 

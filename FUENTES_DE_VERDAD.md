@@ -35,6 +35,14 @@
     - **RETIE 2024:** Tableros de carril requieren Dictamen de Inspección (Anexo 5).
 - **CAPEX Reconciliado:** **$2,086,577.24 USD** (FTS + WIM Integrado).
 
+### ✅ CASO 4: SISTEMA SOS (Validado)
+- **Conflicto:** 88 Postes (T05) vs 98 (AT1 Cobertura) vs 10 Existentes (Rehab).
+- **Resolución:**
+    - **Total:** 98 Postes (Cumple AT1 L3525).
+    - **Estrategia:** 88 Nuevos (CAPEX EPC) + 10 Existentes (OPEX/Adecuación).
+    - **Gaps:** Riesgo de "Defensas Metálicas" (~$200k) y "Uniformidad Visual" (RAL 2004).
+- **Hard Deck:** **$2,200,000 USD** (88 Uds). Los 10 existentes son OPEX salvo obsolescencia total.
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)

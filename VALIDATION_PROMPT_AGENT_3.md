@@ -70,7 +70,8 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 #### A. Master Data Source (`tm01_master_data.js`)
 **Verify exact values (Certified Audit 6.0 - 28-Jan-2026):**
 - [ ] SOS: **88 new units** (98 total including 10 existing)
-- [ ] SOS CAPEX: **$2,200,000 USD**
+- [ ] SOS CAPEX: **$2,200,000 USD** (88 New Units + 10 Rehab Integration)
+- [ ] SOS Count: **98 Total** (88 EPC + 10 Rehabilitation)
 - [ ] CCTV: **9 cameras** (optimized from 45)
 - [ ] CCTV CAPEX: **$116,100 USD**
 - [ ] PMV: **43 units** (25 Mainline + 4 Toll Approach + 14 Toll Lane)
