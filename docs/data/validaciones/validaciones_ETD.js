@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: ETD
-// Fecha de generación: 2026-01-29 16:12:31
+// Fecha de generación: 2026-01-29 16:21:44
 
 const validaciones_ETD = {
   full: '## 📋 RESUMEN EJECUTIVO (HARD DECK)\n\n**Veredicto:** 🟢 **VALIDADO (ESTRATEGIA SMART CAPEX)**\n\nEl documento es TÉCNICAMENTE VIABLE y CONTRACTUALMENTE SÓLIDO. La estrategia propuesta de unificar tecnologías (**Cámara ITS All-in-One**) y homologar los **Peajes como ETD Maestro** es la interpretación más eficiente del contrato, evitando la compra redundante de hardware.\n\n**Parámetros de Validación (Hard Deck):**\n1.  **Hardware Unificado:** **2 Cámaras Dahua ITC431-KW4F**. Integran Radar (60GHz), Video y ANPR. Cubren "Puntos Críticos".\n2.  **ETD Maestro:** Los **Peajes** (Zambito/Aguas Negras) proveen el dato "Duro" de conteo y clasificación para el corredor.\n3.  **Cobertura Virtual:** Se valida el uso de **APIs de Tráfico** (Waze/Google) para cumplir la obligación de "Información de Velocidad" en las UFs sin equipos físicos.\n4.  **CCTV como Sensor:** Se valida el uso de metadata de cámaras PTZ (Dahua series SD5A) para enriquecer la detección de incidentes.\n\n**CAPEX Validado:** **$22,500 USD** (2 Sitios All-in-One + Integración de Datos Software).\n\n---',
