@@ -26,7 +26,7 @@
 - [x] **WIM:** 1 Estación Bidireccional (Pesaje Fiscal) - $551k USD
 - [x] **RADIO:** Solución Híbrida PoC/VHF - **$0 USD EPC** (Blindaje Contractual Validado)
 - [x] **FIBRA:** Backbone 322km (48 Hilos G.652.D) - **$7.98M USD** (Blindaje RETIE/Obra Civil)
-- [x] **CCO:** Hardware y Software Optimizado - **$425k USD** (Ahorro $1.9M vs Base)
+- [x] **CCO:** Full Scope (IT + Civil + Power) - **$845k USD** (Cumple Áreas Mínimas AT1)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`
@@ -63,7 +63,7 @@
 | PEAJE | 2 estaciones | $2,086,577 | ✅ Listo | ⭐⭐⭐⭐ |
 | WIM | 1 Estación | $551,425 | ✅ Listo | ⭐⭐ |
 | COMUNICACIONES | Backbone 322km | $7,980,000 | ✅ Listo | ⭐⭐⭐⭐⭐ |
-| CCO | Hardware SW | $425,000 | ✅ Listo | ⭐⭐⭐ |
+| CCO | Integral | $845,000 | ✅ Listo | ⭐⭐⭐⭐⭐ |
 | ENERGÍA | Solar/Red | $600,000 | 🟢 Baja | ⭐⭐ |
 | SWITCHES | 15 equipos | $450,000 | 🟢 Baja | ⭐ |
 | SEÑALIZACIÓN | Vertical | $300,000 | 🟢 Baja | ⭐ |

@@ -151,43 +151,55 @@
 <p>*   <strong>Texto:</strong> "El Concesionario deberá proveer... un Centro de Control de Operaciones (CCO)... que centralice la información de los subsistemas".</p>
 <p>*   <strong>Interpretación:</strong> La obligación es <strong>funcional</strong> (centralizar y visualizar). No obliga a contratar "Suites Enterprise" ni marcas específicas. La propuesta de Hardware COTS (Commercial Off-The-Shelf) cumple legalmente.</p>
 <p></p>
-<h3>1.2 Justificación de la Reducción (Forensic)</h3>
-<p>El presupuesto anterior ($2.38M) asumía un costo de "Obra Civil Video" y "Licenciamiento Enterprise" desproporcionado.</p>
-<p>*   <strong>Corrección:</strong> El Hardware ofertado (Servidores Dell/HP, Storage iSCSI, Videowall 4x2) es suficiente para procesar las 100 cámaras y los datos SCADA del proyecto, según las cargas validadas en CCO v1.0.</p>
+<h3>1.2 "Hard Deck" de Obra Civil (AT1 3.1)</h3>
+<p><strong>Ubicación Inmutable:</strong> La Lizama PK 4+300 RN 4513. Se debe <strong>adecuar la estructura existente</strong>.</p>
+<p><strong>Áreas Mínimas Obligatorias (>400 m²):</strong></p>
+<p>*   <strong>Oficina ANI/Interventoría:</strong> 50 m² (Acceso Independiente + Terminal Espejo).</p>
+<p>*   <strong>Oficina Policía:</strong> 50 m² (Uso exclusivo).</p>
+<p>*   <strong>Cafetería Pública:</strong> 100 m² (Zona usuarios vía).</p>
+<p>*   <strong>Sala de Control:</strong> 16 m² (Mínimo, recomendamos 40 m² para Videowall + 4 Consolas).</p>
+<p>*   <strong>Parqueo:</strong> 36 espacios de 11 m² c/u.</p>
+<p>*   <strong>Impacto:</strong> Si la edificación actual no tiene estas áreas, se <strong>DEBE AMPLIAR</strong>. No es una simple remodelación cosmética.</p>
 <p></p>
 <p>---</p>
 <p></p>
 <p><!-- SECCIÓN: technical_notes --></p>
-<h2>2. ESPECIFICACIONES TÉCNICAS (HARD DECK)</h2>
+<h2>2. BLINDAJE TÉCNICO Y OPERATIVO</h2>
 <p></p>
-<h3>2.1 Equipamiento Mayor (Lista DT-019)</h3>
-<p>Se valida la siguiente arquitectura de hardware:</p>
-<p>*   <strong>Servidores SCADA (x1):</strong> Procesamiento de señales SOS, PMV, WIM, Peaje.</p>
-<p>*   <strong>Servidores Aplicaciones (x2):</strong> Base de Datos SQL, Servidor Web, ITS Core.</p>
-<p><em>   <strong>Almacenamiento (CABINA iSCSI):</strong> Capacidad de </em>Storage* centralizado para video (Retención Contractual). Sustituye a los NVRs distribuidos.</p>
-<p>*   <strong>Backup (CABINA):</strong> Respaldo de datos críticos (Cobros de Peaje + Incidentes).</p>
+<h3>2.1 Energía Crítica (RETIE 2024)</h3>
+<p>Para cumplir disponibilidad 99% (AT2) y RETIE (instalación vital):</p>
+<p>1.  <strong>Redundancia:</strong> UPS Online (5-30 min) + Planta Eléctrica (Tanque 24h).</p>
+<p>2.  <strong>Cableado:</strong> <strong>LSZH</strong> (Libre de Halógenos) obligatorio por afluencia de público (Cafetería).</p>
+<p>3.  <strong>Protección:</strong> DPS Certificados + Malla de Tierra <10 Ohm.</p>
+<p>4.  <strong>Certificación:</strong> Se requiere <strong>Certificación Plena RETIE</strong> (Diseño + Construcción + Inspección).</p>
 <p></p>
-<h3>2.2 Visualización</h3>
-<p>*   <strong>Videowall:</strong> Configuración 4x2 (8 Pantallas 70") con Controlador Gráfico Independiente. Suficiente para visualizar "Matriz de Interés" (Cámaras SOS + Túneles si hubiera + Peajes).</p>
+<h3>2.2 Integración de Software (La "Suite" CCO)</h3>
+<p>No es un solo software. Es una arquitectura de 3 capas:</p>
+<p>1.  <strong>Capa Operativa (SCADA/ITS):</strong> Gestión TR (CCTV, SOS, PMV). Protocolos ONVIF/NTCIP.</p>
+<p>2.  <strong>Capa de Negocio (Peaje + Pesaje):</strong> Back-Office IP/REV (Integración Colpass/SiGT). Cifrado AES-256.</p>
+<p>3.  <strong>Capa Auditoría (SICC):</strong> "Caja Negra" contractual (AT4) que reporta indicadores a la ANI.</p>
+<p></p>
+<h3>2.3 Visualización y Ergonomía</h3>
+<p>*   <strong>Videowall:</strong> Mínimo arreglo 2x2 o 3x2 (Monitores Industriales 24/7, bisel <3.5mm).</p>
+<p>*   <strong>Mobiliario:</strong> Consolas ergonómicas certificadas 24/7 (No escritorios de oficina).</p>
 <p></p>
 <p>---</p>
 <p></p>
 <p><!-- SECCIÓN: financial --></p>
-<h2>💰 ANÁLISIS FINANCIERO</h2>
+<h2>💰 ANÁLISIS FINANCIERO (HARDWARE + OBRA CIVIL)</h2>
 <p></p>
-<h3>Presupuesto Validado (DT-TM01-CCO-019)</h3>
+<h3>3.1 Presupuesto Validado (DT-TM01-CCO-019 + Civil)</h3>
+<p>El ahorro en servidores ($1.9M) permite cubrir la <strong>Obra Civil Pesada</strong> que se había subestimado.</p>
 <p></p>
-<p></td><td> Ítem </td><td> Descripción </td><td> Cantidad </td><td> Total Estimado (USD) </td><td></p>
-<p></td><td>:-----</td><td>:------------</td><td>:---------</td><td>:---------------------</td><td></p>
-<p></td><td> <strong>1</strong> </td><td> <strong>Servidores (SCADA + Apps)</strong> </td><td> 3 </td><td> $68,429 </td><td></p>
-<p></td><td> <strong>2</strong> </td><td> <strong>Almacenamiento (iSCSI + Backup)</strong> </td><td> 2 </td><td> $69,733 </td><td></p>
-<p></td><td> <strong>3</strong> </td><td> <strong>Video (Grabadores + VMS)</strong> </td><td> Global </td><td> $23,458 </td><td></p>
-<p></td><td> <strong>4</strong> </td><td> <strong>Visualización (Videowall + Ctrl)</strong> </td><td> 1 </td><td> $14,238 </td><td></p>
-<p></td><td> <strong>5</strong> </td><td> <strong>Licenciamiento y Virtualización</strong> </td><td> Global </td><td> $150,000 </td><td></p>
-<p></td><td> <strong>6</strong> </td><td> <strong>Mobiliario Técnico + Estaciones</strong> </td><td> Global </td><td> $99,142 </td><td></p>
-<p></td><td> <strong>TOTAL</strong> </td><td> <strong>CCO (HARDWARE + SOFT)</strong> </td><td> </td><td> <strong>$425,000</strong> </td><td></p>
+<p></td><td> Ítem </td><td> Componente </td><td> Costo Estimado (USD) </td><td> Nota Validada </td><td></p>
+<p></td><td>:-----</td><td>:-----------</td><td>:---------------------</td><td>:--------------</td><td></p>
+<p></td><td> <strong>1</strong> </td><td> <strong>Equipamiento IT (Hardware)</strong> </td><td> <strong>$425,000</strong> </td><td> DT-019 (Servidores, Storage, Video) </td><td></p>
+<p></td><td> <strong>2</strong> </td><td> <strong>Adecuación Civil (>400m²)</strong> </td><td> <strong>$250,000</strong> </td><td> Remodelación + Ampliación La Lizama </td><td></p>
+<p></td><td> <strong>3</strong> </td><td> <strong>Sistema Eléctrico (Potencia)</strong> </td><td> <strong>$120,000</strong> </td><td> Planta, UPS, Tableros, RETIE </td><td></p>
+<p></td><td> <strong>4</strong> </td><td> <strong>Mobiliario Técnico</strong> </td><td> <strong>$50,000</strong> </td><td> Consolas y sillas 24/7 </td><td></p>
+<p></td><td> <strong>TOTAL</strong> </td><td> <strong>CCO INTEGRAL</strong> </td><td> <strong>$845,000</strong> </td><td> <strong>Realista y Cumple AT1</strong> </td><td></p>
 <p></p>
-<p><strong>Nota de Validación:</strong> Este presupuesto se alinea con precios de mercado para infraestructura IT de rango medio-alto, adecuada para una concesión de esta envergadura.</p>
+<p><strong>Nota:</strong> Aunque sube vs la lista de solo hardware ($425k), sigue generando un ahorro masivo frente a los $2.4M originales, cubriendo los riesgos civiles y eléctricos.</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -210,7 +222,7 @@
         
         <footer>
             <p><strong>Documento generado automáticamente desde:</strong> DICTAMEN_JURIDICO_CCO_v1.0.md</p>
-            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 14:30:50</p>
+            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 14:45:04</p>
             <p><strong>Metodología:</strong> Punto 42 v3.0 (Contract-First Architecture)</p>
         </footer>
     </div>

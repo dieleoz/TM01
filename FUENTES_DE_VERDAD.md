@@ -72,12 +72,12 @@
 - **CAPEX Validado:** **$7,980,000 USD**.
 
 ### ✅ CASO 7: CENTRO DE CONTROL (CCO) (Validado)
-- **Conflicto:** Modelo "Llave en Mano" ($2.4M) vs Compra Directa ($425k).
+- **Conflicto:** Modelo "Llave en Mano" vs Compra Directa + Riesgo Civil Oculto.
 - **Resolución:**
-    - **Estrategia:** Adquisición directa de hardware (Dell/HP) y software estándar.
-    - **Alcance:** Servidores, Storage iSCSI, Videowall 4x2.
-    - **Eliminación:** Se rechazan los sobrecostos por "integración propietaria".
-- **CAPEX Validado:** **$425,000 USD** (Ahorro Masivo: ~$1.9M USD).
+    - **Equipamiento:** Hardware optimizado ($425k).
+    - **Obra Civil:** Adecuación OBLIGATORIA La Lizama (>400m², Cafetería 100m², Oficinas 50m²).
+    - **Potencia:** Sistema Redundante (UPS+Planta) y Certificación RETIE Plena.
+- **CAPEX Validado:** **$845,000 USD** (IT + Civil + Eléctrico).
 
 ---
 

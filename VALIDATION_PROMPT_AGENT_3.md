@@ -80,8 +80,8 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] WIM CAPEX: **$551,425 USD** (1 Bidirectional Station: 2 Lanes + 2 Static Scales)
 - [ ] Radio CAPEX: **$0 USD** (Transferred to SPV/OPEX - Hybrid Model)
 - [ ] Fiber Optic CAPEX: **$7,980,000 USD** (322km Cable 48H + Civil Works)
-- [ ] CCO CAPEX: **$425,000 USD** (Optimized Hardware List)
-- [ ] Total ITS CAPEX: **~$8.2M USD** (Review Total)
+- [ ] CCO CAPEX: **$845,000 USD** (Hardware + Civil Works >400m2 + RETIE Power)
+- [ ] Total ITS CAPEX: **~$8.6M USD** (Final Consolidated)
 
 #### B. Web Dashboard Verification
 **Navigate to WBS section and verify:**

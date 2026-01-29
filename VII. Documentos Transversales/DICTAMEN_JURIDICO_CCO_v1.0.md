@@ -33,43 +33,55 @@ Se certifica el alcance del **Centro de Control de Operaciones (CCO)** bajo la n
 *   **Texto:** "El Concesionario deberá proveer... un Centro de Control de Operaciones (CCO)... que centralice la información de los subsistemas".
 *   **Interpretación:** La obligación es **funcional** (centralizar y visualizar). No obliga a contratar "Suites Enterprise" ni marcas específicas. La propuesta de Hardware COTS (Commercial Off-The-Shelf) cumple legalmente.
 
-### 1.2 Justificación de la Reducción (Forensic)
-El presupuesto anterior ($2.38M) asumía un costo de "Obra Civil Video" y "Licenciamiento Enterprise" desproporcionado.
-*   **Corrección:** El Hardware ofertado (Servidores Dell/HP, Storage iSCSI, Videowall 4x2) es suficiente para procesar las 100 cámaras y los datos SCADA del proyecto, según las cargas validadas en CCO v1.0.
+### 1.2 "Hard Deck" de Obra Civil (AT1 3.1)
+**Ubicación Inmutable:** La Lizama PK 4+300 RN 4513. Se debe **adecuar la estructura existente**.
+**Áreas Mínimas Obligatorias (>400 m²):**
+*   **Oficina ANI/Interventoría:** 50 m² (Acceso Independiente + Terminal Espejo).
+*   **Oficina Policía:** 50 m² (Uso exclusivo).
+*   **Cafetería Pública:** 100 m² (Zona usuarios vía).
+*   **Sala de Control:** 16 m² (Mínimo, recomendamos 40 m² para Videowall + 4 Consolas).
+*   **Parqueo:** 36 espacios de 11 m² c/u.
+*   **Impacto:** Si la edificación actual no tiene estas áreas, se **DEBE AMPLIAR**. No es una simple remodelación cosmética.
 
 ---
 
 <!-- SECCIÓN: technical_notes -->
-## 2. ESPECIFICACIONES TÉCNICAS (HARD DECK)
+## 2. BLINDAJE TÉCNICO Y OPERATIVO
 
-### 2.1 Equipamiento Mayor (Lista DT-019)
-Se valida la siguiente arquitectura de hardware:
-*   **Servidores SCADA (x1):** Procesamiento de señales SOS, PMV, WIM, Peaje.
-*   **Servidores Aplicaciones (x2):** Base de Datos SQL, Servidor Web, ITS Core.
-*   **Almacenamiento (CABINA iSCSI):** Capacidad de *Storage* centralizado para video (Retención Contractual). Sustituye a los NVRs distribuidos.
-*   **Backup (CABINA):** Respaldo de datos críticos (Cobros de Peaje + Incidentes).
+### 2.1 Energía Crítica (RETIE 2024)
+Para cumplir disponibilidad 99% (AT2) y RETIE (instalación vital):
+1.  **Redundancia:** UPS Online (5-30 min) + Planta Eléctrica (Tanque 24h).
+2.  **Cableado:** **LSZH** (Libre de Halógenos) obligatorio por afluencia de público (Cafetería).
+3.  **Protección:** DPS Certificados + Malla de Tierra <10 Ohm.
+4.  **Certificación:** Se requiere **Certificación Plena RETIE** (Diseño + Construcción + Inspección).
 
-### 2.2 Visualización
-*   **Videowall:** Configuración 4x2 (8 Pantallas 70") con Controlador Gráfico Independiente. Suficiente para visualizar "Matriz de Interés" (Cámaras SOS + Túneles si hubiera + Peajes).
+### 2.2 Integración de Software (La "Suite" CCO)
+No es un solo software. Es una arquitectura de 3 capas:
+1.  **Capa Operativa (SCADA/ITS):** Gestión TR (CCTV, SOS, PMV). Protocolos ONVIF/NTCIP.
+2.  **Capa de Negocio (Peaje + Pesaje):** Back-Office IP/REV (Integración Colpass/SiGT). Cifrado AES-256.
+3.  **Capa Auditoría (SICC):** "Caja Negra" contractual (AT4) que reporta indicadores a la ANI.
+
+### 2.3 Visualización y Ergonomía
+*   **Videowall:** Mínimo arreglo 2x2 o 3x2 (Monitores Industriales 24/7, bisel <3.5mm).
+*   **Mobiliario:** Consolas ergonómicas certificadas 24/7 (No escritorios de oficina).
 
 ---
 
 <!-- SECCIÓN: financial -->
-## 💰 ANÁLISIS FINANCIERO
+## 💰 ANÁLISIS FINANCIERO (HARDWARE + OBRA CIVIL)
 
-### Presupuesto Validado (DT-TM01-CCO-019)
+### 3.1 Presupuesto Validado (DT-TM01-CCO-019 + Civil)
+El ahorro en servidores ($1.9M) permite cubrir la **Obra Civil Pesada** que se había subestimado.
 
-| Ítem | Descripción | Cantidad | Total Estimado (USD) |
-|:-----|:------------|:---------|:---------------------|
-| **1** | **Servidores (SCADA + Apps)** | 3 | $68,429 |
-| **2** | **Almacenamiento (iSCSI + Backup)** | 2 | $69,733 |
-| **3** | **Video (Grabadores + VMS)** | Global | $23,458 |
-| **4** | **Visualización (Videowall + Ctrl)** | 1 | $14,238 |
-| **5** | **Licenciamiento y Virtualización** | Global | $150,000 |
-| **6** | **Mobiliario Técnico + Estaciones** | Global | $99,142 |
-| **TOTAL** | **CCO (HARDWARE + SOFT)** | | **$425,000** |
+| Ítem | Componente | Costo Estimado (USD) | Nota Validada |
+|:-----|:-----------|:---------------------|:--------------|
+| **1** | **Equipamiento IT (Hardware)** | **$425,000** | DT-019 (Servidores, Storage, Video) |
+| **2** | **Adecuación Civil (>400m²)** | **$250,000** | Remodelación + Ampliación La Lizama |
+| **3** | **Sistema Eléctrico (Potencia)** | **$120,000** | Planta, UPS, Tableros, RETIE |
+| **4** | **Mobiliario Técnico** | **$50,000** | Consolas y sillas 24/7 |
+| **TOTAL** | **CCO INTEGRAL** | **$845,000** | **Realista y Cumple AT1** |
 
-**Nota de Validación:** Este presupuesto se alinea con precios de mercado para infraestructura IT de rango medio-alto, adecuada para una concesión de esta envergadura.
+**Nota:** Aunque sube vs la lista de solo hardware ($425k), sigue generando un ahorro masivo frente a los $2.4M originales, cubriendo los riesgos civiles y eléctricos.
 
 ---
 
