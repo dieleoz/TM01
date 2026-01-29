@@ -37,9 +37,32 @@ El sistema de **Radiocomunicación** (Voz Operativa) es una obligación contract
 *   **Interpretación:** Obligación de **Resultado** (Comunicación Inmediata), no de **Tecnología** (VHF).
 *   **Viabilidad:** La tecnología PoC (PTT sobre Celular) cumple el requisito de inmediatez y cobertura donde hay red 4G.
 
-### 1.2 Riesgo de "Zonas Oscuras"
-*   **Problema:** El corredor tiene tramos de montaña (Puerto Salgar) con sombra celular.
-*   **Solución:** Si se usa solo Celular, se incumple la "permanencia". Se requiere VHF punto a punto (Simplex/Repetidor Local) en esos tramos.
+### 1.2 Riesgo de "Zonas Oscuras" (Puerto Salgar)
+*   **Problema:** El corredor tiene tramos de montaña con sombra celular (Puerto Salgar).
+*   **Solución Híbrida:** Se requiere **1 Repetidora VHF** en el punto alto para cubrir el hueco.
+*   **Integración Crítica (Gateway RoIP):** Para que el CCO hable con todos, es **MANDATORIO** instalar una Pasarela (Gateway) RoIP que inyecte el audio VHF a la red PoC. Sin esto, la operación se fragmenta.
+
+---
+
+<!-- SECCIÓN: technical_notes -->
+## 2. NOTAS DE PRECISIÓN TÉCNICA (GAPS DETECTADOS)
+
+### A. Terminales PoC (Requisito de "Dotación")
+**Fuente:** AT2 Num 3.3.5 ("Vehículos dotados").
+**Restricción:** No se aceptan celulares personales.
+**Exigencia:** Radios IP robustos (Tipo Motorola TLK/Hytera) con:
+1.  **Botón PTT Físico:** Para cumplir "Inmediatez" (AT1).
+2.  **Multi-SIM:** Doble ranura (Claro + Movistar) con Failover automático para garantizar "Permanencia".
+3.  **Montaje Fijo:** En grúas/ambulancias para cumplir "Dotación".
+
+### B. Infraestructura Repeater (RETIE 2024)
+La caseta y torre de la Repetidora VHF son **Instalación de Uso Final**.
+**Requisito:** Dictamen de Inspección RETIE (Anexo 5).
+**Protección:** DPS en acometida AC y cables coaxiales (Protección contra rayos obligatoria).
+
+### C. Coordinación Policía
+**Estrategia:** Suministro de equipos a la PONAL (Subcuenta/CAPEX) + Base en CCO.
+**Protocolo:** La coordinación se realizará vía telefónica/consola, no combinando frecuencias tácticas privadas con operativas.
 
 ---
 
@@ -54,7 +77,7 @@ El sistema de **Radiocomunicación** (Voz Operativa) es una obligación contract
 ### 2.2 Tecnología VHF (Respaldo)
 *   **Modo:** DMR Tier II (Digital).
 *   **Uso:** Talkaround (Directo) en zonas sin señal 4G.
-*   **Infraestructura:** 0 Repetidoras Troncales (Ahorro masivo). Solo repetidoras ligeras si fuese estrictamente necesario en túneles o cortes profundos.
+*   **Infraestructura:** 1 Repetidora VHF (Gap Filler) en Puerto Salgar + Gateway RoIP.
 
 ---
 
@@ -67,8 +90,8 @@ El sistema de **Radiocomunicación** (Voz Operativa) es una obligación contract
 |:-----|:-----------|:---------|:------------|:------------|
 | **1. Terminales Híbridos** | Radios Portátiles LTE/VHF | 30 | $1,200 | $36,000 |
 | **2. Radios Móviles** | Vehiculares LTE/VHF | 25 | $800 | $20,000 |
-| **3. Consola Despacho** | Software CCO + PC | 1 | $5,000 | $5,000 |
-| **4. Infraestructura** | Instalación Repetidora "Gap Filler" | 1 | $15,000 | $15,000 |
+| **3. Consola Despacho** | Software CCO + Gateway RoIP | 1 | $5,000 | $5,000 |
+| **4. Infraestructura** | Repetidora VHF + Torre + RETIE | 1 | $15,000 | $15,000 |
 | **5. Licencias/Config** | Setup Inicial | 1 | $9,000 | $9,000 |
 | **TOTAL CAPEX RADIO** | **Solución Híbrida** | | | **$85,000** |
 

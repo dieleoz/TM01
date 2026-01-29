@@ -147,11 +147,11 @@ class TM01MasterData {
                 capexUSD: 85000,
                 capexCOP: 374000000,
                 capexUnitarioUSD: 1545,
-                descripcion: 'Forensic v1.0 (Hybrid Solution: PoC LTE + VHF Backup)',
+                descripcion: 'Forensic v1.1 (PoC Multi-SIM + VHF Gap Filler + RoIP Gateway)',
                 estado: 'Validado',
                 fuenteContractual: "AT1 Numeral 3 (Radiocomunicación)",
                 validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_RADIO_v1.0.md",
-                versionT05: "v1.0 (Hybrid Model)"
+                versionT05: "v2.0 (REQ: RoIP Integration)"
             },
             peajesSummary: {
                 id: '10',

@@ -155,9 +155,32 @@
 <p>*   <strong>Interpretación:</strong> Obligación de <strong>Resultado</strong> (Comunicación Inmediata), no de <strong>Tecnología</strong> (VHF).</p>
 <p>*   <strong>Viabilidad:</strong> La tecnología PoC (PTT sobre Celular) cumple el requisito de inmediatez y cobertura donde hay red 4G.</p>
 <p></p>
-<h3>1.2 Riesgo de "Zonas Oscuras"</h3>
-<p>*   <strong>Problema:</strong> El corredor tiene tramos de montaña (Puerto Salgar) con sombra celular.</p>
-<p>*   <strong>Solución:</strong> Si se usa solo Celular, se incumple la "permanencia". Se requiere VHF punto a punto (Simplex/Repetidor Local) en esos tramos.</p>
+<h3>1.2 Riesgo de "Zonas Oscuras" (Puerto Salgar)</h3>
+<p>*   <strong>Problema:</strong> El corredor tiene tramos de montaña con sombra celular (Puerto Salgar).</p>
+<p>*   <strong>Solución Híbrida:</strong> Se requiere <strong>1 Repetidora VHF</strong> en el punto alto para cubrir el hueco.</p>
+<p>*   <strong>Integración Crítica (Gateway RoIP):</strong> Para que el CCO hable con todos, es <strong>MANDATORIO</strong> instalar una Pasarela (Gateway) RoIP que inyecte el audio VHF a la red PoC. Sin esto, la operación se fragmenta.</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p><!-- SECCIÓN: technical_notes --></p>
+<h2>2. NOTAS DE PRECISIÓN TÉCNICA (GAPS DETECTADOS)</h2>
+<p></p>
+<h3>A. Terminales PoC (Requisito de "Dotación")</h3>
+<p><strong>Fuente:</strong> AT2 Num 3.3.5 ("Vehículos dotados").</p>
+<p><strong>Restricción:</strong> No se aceptan celulares personales.</p>
+<p><strong>Exigencia:</strong> Radios IP robustos (Tipo Motorola TLK/Hytera) con:</p>
+<p>1.  <strong>Botón PTT Físico:</strong> Para cumplir "Inmediatez" (AT1).</p>
+<p>2.  <strong>Multi-SIM:</strong> Doble ranura (Claro + Movistar) con Failover automático para garantizar "Permanencia".</p>
+<p>3.  <strong>Montaje Fijo:</strong> En grúas/ambulancias para cumplir "Dotación".</p>
+<p></p>
+<h3>B. Infraestructura Repeater (RETIE 2024)</h3>
+<p>La caseta y torre de la Repetidora VHF son <strong>Instalación de Uso Final</strong>.</p>
+<p><strong>Requisito:</strong> Dictamen de Inspección RETIE (Anexo 5).</p>
+<p><strong>Protección:</strong> DPS en acometida AC y cables coaxiales (Protección contra rayos obligatoria).</p>
+<p></p>
+<h3>C. Coordinación Policía</h3>
+<p><strong>Estrategia:</strong> Suministro de equipos a la PONAL (Subcuenta/CAPEX) + Base en CCO.</p>
+<p><strong>Protocolo:</strong> La coordinación se realizará vía telefónica/consola, no combinando frecuencias tácticas privadas con operativas.</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -172,7 +195,7 @@
 <h3>2.2 Tecnología VHF (Respaldo)</h3>
 <p>*   <strong>Modo:</strong> DMR Tier II (Digital).</p>
 <p>*   <strong>Uso:</strong> Talkaround (Directo) en zonas sin señal 4G.</p>
-<p>*   <strong>Infraestructura:</strong> 0 Repetidoras Troncales (Ahorro masivo). Solo repetidoras ligeras si fuese estrictamente necesario en túneles o cortes profundos.</p>
+<p>*   <strong>Infraestructura:</strong> 1 Repetidora VHF (Gap Filler) en Puerto Salgar + Gateway RoIP.</p>
 <p></p>
 <p>---</p>
 <p></p>
@@ -185,8 +208,8 @@
 <p></td><td>:-----</td><td>:-----------</td><td>:---------</td><td>:------------</td><td>:------------</td><td></p>
 <p></td><td> <strong>1. Terminales Híbridos</strong> </td><td> Radios Portátiles LTE/VHF </td><td> 30 </td><td> $1,200 </td><td> $36,000 </td><td></p>
 <p></td><td> <strong>2. Radios Móviles</strong> </td><td> Vehiculares LTE/VHF </td><td> 25 </td><td> $800 </td><td> $20,000 </td><td></p>
-<p></td><td> <strong>3. Consola Despacho</strong> </td><td> Software CCO + PC </td><td> 1 </td><td> $5,000 </td><td> $5,000 </td><td></p>
-<p></td><td> <strong>4. Infraestructura</strong> </td><td> Instalación Repetidora "Gap Filler" </td><td> 1 </td><td> $15,000 </td><td> $15,000 </td><td></p>
+<p></td><td> <strong>3. Consola Despacho</strong> </td><td> Software CCO + Gateway RoIP </td><td> 1 </td><td> $5,000 </td><td> $5,000 </td><td></p>
+<p></td><td> <strong>4. Infraestructura</strong> </td><td> Repetidora VHF + Torre + RETIE </td><td> 1 </td><td> $15,000 </td><td> $15,000 </td><td></p>
 <p></td><td> <strong>5. Licencias/Config</strong> </td><td> Setup Inicial </td><td> 1 </td><td> $9,000 </td><td> $9,000 </td><td></p>
 <p></td><td> <strong>TOTAL CAPEX RADIO</strong> </td><td> <strong>Solución Híbrida</strong> </td><td> </td><td> </td><td> <strong>$85,000</strong> </td><td></p>
 <p></p>
@@ -213,7 +236,7 @@
         
         <footer>
             <p><strong>Documento generado automáticamente desde:</strong> DICTAMEN_JURIDICO_RADIO_v1.0.md</p>
-            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 10:00:17</p>
+            <p><strong>Fecha de generación:</strong> 29 de enero de 2026 10:35:03</p>
             <p><strong>Metodología:</strong> Punto 42 v3.0 (Contract-First Architecture)</p>
         </footer>
     </div>
