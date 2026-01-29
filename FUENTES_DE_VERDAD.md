@@ -53,6 +53,13 @@
     - **Conectividad:** Fibra óptica obligatoria hasta el PR.
 - **CAPEX Validado:** **$551,425 USD** (Incluye 2 Pistas Dinámicas + 2 Básculas Estáticas).
 
+### ✅ CASO 6: SISTEMA RADIO VHF/LTE (Validado)
+- **Conflicto:** VHF Tradicional ($212k) vs Cobertura Celular vs Radio FM (Difusión).
+- **Resolución:**
+    - **Radio FM:** Eliminado (Modelo OPEX/Convenios).
+    - **Radio Operativo:** Solución Híbrida PoC LTE (Principal) + VHF Digital (Respaldo).
+- **CAPEX Validado:** **$85,000 USD** (Ahorro de $127k vs diseño original).
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)

@@ -140,6 +140,19 @@ class TM01MasterData {
                 descripcion: '322 km (293 Troncal + Holgura) - Audit 5.0 confirmed',
                 estado: 'Validado'
             },
+            radioSummary: {
+                id: '12',
+                sistema: 'Radio VHF/LTE',
+                cantidad: 55, // 30 Portátiles + 25 Móviles
+                capexUSD: 85000,
+                capexCOP: 374000000,
+                capexUnitarioUSD: 1545,
+                descripcion: 'Forensic v1.0 (Hybrid Solution: PoC LTE + VHF Backup)',
+                estado: 'Validado',
+                fuenteContractual: "AT1 Numeral 3 (Radiocomunicación)",
+                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_RADIO_v1.0.md",
+                versionT05: "v1.0 (Hybrid Model)"
+            },
             peajesSummary: {
                 id: '10',
                 sistema: 'Peajes',
