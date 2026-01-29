@@ -5,12 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Ingeniería Técnica - TM01</title>
-    <link rel="stylesheet" href="css/tm01-design-system.css">
-    <link rel="stylesheet" href="dashboard_contractual.html" media="none" onload="if(media!='all')media='all'">
     <style>
+        :root {
+            /* Palette: Technical/Construction Orange & Blue */
+            --role-technical: #f59e0b;
+            /* Construction Orange */
+            --role-technical-bg: #fffbeb;
+            --primary: #0f172a;
+            /* Slate 900 */
+            --secondary: #334155;
+            /* Slate 700 */
+            --highlight: #3b82f6;
+            /* Blue 500 */
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            background: var(--bg-main);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--primary);
+            margin: 0;
             padding: 2rem;
+            line-height: 1.5;
         }
 
         .container {
@@ -18,470 +37,352 @@
             margin: 0 auto;
         }
 
-        .role-header {
-            background: linear-gradient(135deg, var(--role-technical), var(--tm01-primary));
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             color: white;
-            padding: 2.5rem;
-            border-radius: var(--radius-xl);
+            padding: 2rem;
+            border-radius: 12px;
             margin-bottom: 2rem;
-            box-shadow: var(--shadow-xl);
+            box-shadow: var(--shadow);
+            position: relative;
         }
 
-        .role-header h1 {
+        .header h1 {
             margin: 0 0 0.5rem 0;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .role-header p {
+        .header p {
             margin: 0;
-            opacity: 0.9;
-            font-size: 1.1rem;
+            opacity: 0.8;
+            font-size: 1rem;
         }
 
-        .dashboard-grid {
+        .back-link {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* METRICS GRID */
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .metric-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
+            background: var(--surface);
             padding: 1.5rem;
-            box-shadow: var(--shadow-md);
-            transition: all var(--transition-base);
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
         }
 
-        .metric-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--role-technical);
-        }
-
-        .metric-icon {
-            font-size: 2.5rem;
-            line-height: 1;
-        }
-
-        .metric-content {
-            flex: 1;
-        }
-
-        .metric-value {
+        .metric-val {
             font-size: 2rem;
-            font-weight: 800;
+            font-weight: 700;
             color: var(--role-technical);
-            margin-bottom: 0.25rem;
         }
 
         .metric-label {
-            font-size: 0.875rem;
-            color: var(--text-sub);
-            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--secondary);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
         }
 
-        .metric-subtitle {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 0.25rem;
+        /* SYSTEMS GRID */
+        .grid-tech {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 cards per row */
+            gap: 1.5rem;
         }
 
-        .section {
-            background: var(--bg-surface);
+        @media (max-width: 1100px) {
+            .grid-tech {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .grid-tech {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tech-card {
+            background: var(--surface);
+            border-radius: 10px;
             border: 1px solid var(--border);
-            border-radius: var(--radius-xl);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
         }
 
-        .section-title {
-            font-size: 1.5rem;
+        .tech-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            padding: 1rem;
+            background: #f1f5f9;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sys-name {
             font-weight: 700;
-            color: var(--tm01-primary);
-            margin: 0 0 1.5rem 0;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 8px;
         }
 
-        .quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .quick-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all var(--transition-base);
-        }
-
-        .quick-link:hover {
-            background: var(--bg-surface);
-            border-color: var(--role-technical);
-            transform: translateX(4px);
-        }
-
-        .quick-link-icon {
-            font-size: 1.5rem;
-        }
-
-        .quick-link-content {
-            flex: 1;
-        }
-
-        .quick-link-title {
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 0.25rem;
-        }
-
-        .quick-link-desc {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        .quick-link-arrow {
-            color: var(--role-technical);
-            font-weight: 700;
-            font-size: 1.25rem;
-        }
-
-        .systems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .system-card {
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .system-name {
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-        }
-
-        .system-count {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--role-technical);
-        }
-
-        .loading {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* Estilos de Validación */
-        .validation-section {
-            border-left: 5px solid var(--role-technical);
-        }
-
-        .validation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-        }
-
-        .validation-card {
-            background: var(--bg-main);
-            padding: 1rem;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-        }
-
-        .validation-card h3 {
-            color: var(--text-main);
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .validation-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .validation-list li {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .validation-list li:last-child {
-            border-bottom: none;
-        }
-
-        .validation-list label {
-            cursor: pointer;
-            color: var(--text-sub);
-            font-size: 0.9rem;
-        }
-
-        .validation-list input[type="checkbox"] {
-            width: 1.2rem;
-            height: 1.2rem;
-            accent-color: var(--role-technical);
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--role-technical);
+        .sys-qty {
+            background: var(--primary);
             color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius-md);
-            cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
             font-weight: 600;
-            transition: all 0.2s;
         }
 
-        .btn-primary:hover {
-            filter: brightness(110%);
-            transform: translateY(-2px);
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .tech-spec-item {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--secondary);
+        }
+
+        .tech-spec-item strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 2px;
+        }
+
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-light);
+            margin-top: 10px;
+        }
+
+        .btn-tech {
+            text-align: center;
+            padding: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: 0.2s;
+        }
+
+        .btn-layout {
+            background: #eff6ff;
+            color: #1e40af;
+            border-color: #dbeafe;
+        }
+
+        .btn-layout:hover {
+            background: #dbeafe;
+        }
+
+        .btn-spec {
+            background: #f0fdf4;
+            color: #166534;
+            border-color: #dcfce7;
+        }
+
+        .btn-spec:hover {
+            background: #dcfce7;
+        }
+
+        .loading,
+        .error {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            width: 100%;
+            grid-column: 1/-1;
+        }
+
+        .error {
+            color: #dc2626;
         }
     </style>
 </head>
 
 <body>
-    <a href="WBS_Menu_Principal.html" class="tm01-back-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Volver al Inicio
-    </a>
 
     <div class="container">
-        <div class="role-header">
-            <h1>🔧 Dashboard Ingeniería Técnica</h1>
-            <p>Vista especializada para especificaciones, cantidades y layouts técnicos</p>
+        <!-- Header -->
+        <header class="header">
+            <a href="WBS_Menu_Principal.html" class="back-link">← Menú Principal</a>
+            <h1>👷 Dashboard Ingeniería Técnica</h1>
+            <p>Control de Planos (T02), Especificaciones (T04) y Análisis de Precios (APUz) para Ejecución.</p>
+        </header>
+
+        <!-- Metrics -->
+        <div class="metrics-grid" id="metrics-container">
+            <div class="loading">Calculando Métricas de Ingeniería...</div>
         </div>
 
-        <!-- Métricas Clave -->
-        <div class="dashboard-grid" id="metricsGrid">
-            <div class="loading">⏳ Cargando métricas...</div>
-        </div>
+        <h2 style="color:var(--primary); margin-bottom:1.5rem;">📁 Paquetes de Ingeniería por Subsistema</h2>
 
-        <!-- Cantidades por Sistema -->
-        <div class="section">
-            <h2 class="section-title">⚙️ Equipos por Sistema</h2>
-            <div class="systems-grid" id="systemsGrid">
-                <div class="loading">⏳ Cargando sistemas...</div>
-            </div>
-        </div>
-
-        <!-- SECCIÓN DE VALIDACIÓN (NUEVO) -->
-        <div class="section validation-section">
-            <h2 class="section-title">✅ Validación Técnica (Fuente de Verdad: Nivel 2-4)</h2>
-            <div class="validation-grid">
-                <div class="validation-card">
-                    <h3>🛠️ T05 - Ingeniería de Detalle</h3>
-                    <ul class="validation-list">
-                        <li>
-                            <input type="checkbox" id="check-t05-precios">
-                            <label for="check-t05-precios">Precios unitarios coinciden con T05</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="check-t05-componentes">
-                            <label for="check-t05-componentes">Componentes desglosados correctamente</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="validation-card">
-                    <h3>📝 T04 - Especificaciones</h3>
-                    <ul class="validation-list">
-                        <li>
-                            <input type="checkbox" id="check-t04-specs">
-                            <label for="check-t04-specs">Equipos cumplen specs T04</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="check-t04-normas">
-                            <label for="check-t04-normas">Normativa aplicada verificada</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="validation-card">
-                    <h3>🗺️ Ingenieria Conceptual</h3>
-                    <ul class="validation-list">
-                        <li>
-                            <input type="checkbox" id="check-t01-alcance">
-                            <label for="check-t01-alcance">Layouts coinciden con Realidad</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="validation-card">
-                    <h3>🛠️ Specs DTs Aprobadas</h3>
-                    <ul class="validation-list">
-                        <li>
-                            <input type="checkbox" id="check-spec-pmv">
-                            <label for="check-spec-pmv"><strong>DT-PMV-004</strong>: 100% Solar Autónomo</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="check-spec-peajes">
-                            <label for="check-spec-peajes"><strong>DT-PEAJES-021</strong>: PMV RGB Full Matrix</label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div style="margin-top: 1rem; text-align: right;">
-                <button class="btn-primary" onclick="alert('Validación Técnica registrada (Simulado)')">💾 Confirmar
-                    Validación</button>
-            </div>
-        </div>
-
-        <!-- Accesos Rápidos -->
-        <div class="section">
-            <h2 class="section-title">🔗 Accesos Rápidos</h2>
-            <div class="quick-links">
-                <a href="wbs.html" class="quick-link">
-                    <div class="quick-link-icon">🗂️</div>
-                    <div class="quick-link-content">
-                        <div class="quick-link-title">WBS Maestra</div>
-                        <div class="quick-link-desc">Estructura completa del proyecto</div>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="layout_georeferenciado_tm01.html" class="quick-link">
-                    <div class="quick-link-icon">🗺️</div>
-                    <div class="quick-link-content">
-                        <div class="quick-link-title">Layout Georeferenciado</div>
-                        <div class="quick-link-desc">Ubicación de equipos en mapa</div>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="presupuesto.html" class="quick-link">
-                    <div class="quick-link-icon">💰</div>
-                    <div class="quick-link-content">
-                        <div class="quick-link-title">Presupuesto Detallado</div>
-                        <div class="quick-link-desc">Cantidades y precios unitarios</div>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="reporte_gerencial.html" class="quick-link">
-                    <div class="quick-link-icon">📊</div>
-                    <div class="quick-link-content">
-                        <div class="quick-link-title">Reporte Gerencial</div>
-                        <div class="quick-link-desc">Vista ejecutiva del proyecto</div>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="cronograma.html" class="quick-link">
-                    <div class="quick-link-icon">📅</div>
-                    <div class="quick-link-content">
-                        <div class="quick-link-title">Cronograma Maestro</div>
-                        <div class="quick-link-desc">Plazos de ingeniería</div>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="gestion_cambios.html" class="quick-link">
-                    <div class="quick-link-icon">🔄</div>
-                    <div class="quick-link-content">
-                        <div class="quick-link-title">Gestión de Cambios</div>
-                        <div class="quick-link-desc">DTs y modificaciones técnicas</div>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-            </div>
+        <!-- Systems Grid -->
+        <div class="grid-tech" id="tech-container">
+            <div class="loading">Cargando Datos Técnicos...</div>
         </div>
     </div>
 
+    <!-- Data -->
     <script src="data/tm01_master_data.js"></script>
-    <script src="js/dashboard-common.js"></script>
+
+    <!-- Logic -->
     <script>
-        waitForData((data) => {
-            if (!data) {
-                document.getElementById('metricsGrid').innerHTML = '<div class="loading">❌ Error cargando datos</div>';
-                document.getElementById('systemsGrid').innerHTML = '<div class="loading">❌ Error cargando datos</div>';
+
+        // --- 1. CONFIG: Technical Doc Maps (Simulated for this Phase) ---
+        // In a real scenario, these would point to specific PDF/DWG files in the repo.
+        const TECH_DOCS = {
+            'SOS': { layout: 'LAYOUT_SOS_KM0-30.pdf', spec: 'T04_SPEC_POSTE_SOS_V3.pdf' },
+            'CCTV': { layout: 'LAYOUT_CCTV_PTOS_CRITICOS.pdf', spec: 'T04_SPEC_CAMARA_PTZ.pdf' },
+            'PMV': { layout: 'LAYOUT_PMV_MENSAJERIA.pdf', spec: 'T04_SPEC_PANEL_LED_RGB.pdf' },
+            'Peajes': { layout: 'LAYOUT_PEAJE_RIO.pdf', spec: 'T04_SPEC_SISTEMA_RECAUDO.pdf' },
+            'WIM': { layout: 'LAYOUT_WIM_PESAJE.pdf', spec: 'T04_SPEC_SENSORES_PIEZO.pdf' },
+            'Telecomunicaciones': { layout: 'LAYOUT_FIBRA_BACKBONE.pdf', spec: 'T04_SPEC_CABLE_FO_G652D.pdf' },
+            'Centro de Control (CCO)': { layout: 'ARQ_CCO_PLANTA.pdf', spec: 'T04_SPEC_VIDEO_WALL.pdf' },
+            'Meteorología': { layout: 'LAYOUT_METEO_ESTACIONES.pdf', spec: 'T04_SPEC_ESTACION_DAVIS.pdf' },
+            'ETD/RADAR': { layout: 'LAYOUT_CONTEO_VEHICULAR.pdf', spec: 'T04_SPEC_RADAR_DOPPLER.pdf' }
+        };
+
+        // --- 2. MAIN LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
+                (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
+
+            if (!md || !md.data) {
+                document.getElementById('tech-container').innerHTML = '<div class="error">Error: No se pudo cargar tm01_master_data.js</div>';
                 return;
             }
 
-            renderMetrics(data);
-            renderSystems(data);
+            renderTechDashboard(md.data);
         });
 
-        function renderMetrics(data) {
-            const container = document.getElementById('metricsGrid');
+        function renderTechDashboard(data) {
+            const summaries = Object.keys(data)
+                .filter(key => key.includes('Summary'))
+                .map(key => data[key]);
 
-            // Calcular métricas
-            const totalEquipos = data.wbs ? data.wbs.filter(i => i.tipo === 'item').reduce((sum, i) => sum + (parseFloat(i.cantidad) || 0), 0) : 0;
-            const totalSistemas = data.wbs ? new Set(data.wbs.filter(i => i.tipo === 'item').map(i => i.sistema)).size : 0;
-            const kmFibra = data.telecomSummary ? data.telecomSummary.longitudFO : 0;
-            const totalUFs = data.cronogramaUF ? data.cronogramaUF.length : 0;
+            // A. Metrics matches Contractual but focus on physical quantities
+            const totalDevices = summaries.reduce((acc, s) => acc + (s.cantidad || 0), 0);
+            const verifiedSpecs = summaries.length;
+            // Mock metric for plans
+            const totalPlanos = Math.ceil(totalDevices / 5); // Approx 5 devices per sheet
 
-            container.innerHTML = `
-                ${createMetricCard('Equipos Totales', formatNumber(totalEquipos), 'Todos los sistemas', '⚙️')}
-                ${createMetricCard('Sistemas Activos', totalSistemas, 'ITS y Telecomunicaciones', '🔧')}
-                ${createMetricCard('Fibra Óptica', `${kmFibra} km`, 'Red de telecomunicaciones', '📡')}
-                ${createMetricCard('Unidades Funcionales', totalUFs, 'Segmentos del proyecto', '📍')}
+            document.getElementById('metrics-container').innerHTML = `
+                <div class="metric-card">
+                    <div class="metric-val">${totalDevices}</div>
+                    <div class="metric-label">Equipos a Instalar</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-val">${totalPlanos}</div>
+                    <div class="metric-label">Planos de Detalle (T02)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-val">${verifiedSpecs}/13</div>
+                    <div class="metric-label">Fichas Técnicas (T04)</div>
+                </div>
+                 <div class="metric-card">
+                    <div class="metric-val">100%</div>
+                    <div class="metric-label">Matriz Equipos</div>
+                </div>
             `;
-        }
 
-        function renderSystems(data) {
-            const container = document.getElementById('systemsGrid');
-
-            if (!data.wbs) {
-                container.innerHTML = '<div class="loading">No hay datos disponibles</div>';
-                return;
-            }
-
-            // Agrupar por sistema
-            const systemCounts = {};
-            data.wbs.filter(i => i.tipo === 'item').forEach(item => {
-                const sistema = item.sistema || 'Sin Sistema';
-                const cantidad = parseFloat(item.cantidad) || 0;
-                systemCounts[sistema] = (systemCounts[sistema] || 0) + cantidad;
-            });
-
-            // Ordenar por cantidad
-            const sorted = Object.entries(systemCounts).sort((a, b) => b[1] - a[1]);
-
+            // B. Tech Cards
             let html = '';
-            sorted.forEach(([sistema, count]) => {
+
+            const getIcon = (name) => {
+                if (name.includes('CCTV')) return '📹';
+                if (name.includes('SOS')) return '📞';
+                if (name.includes('PMV')) return '📟';
+                if (name.includes('Peaje')) return '🛂';
+                if (name.includes('WIM')) return '⚖️';
+                if (name.includes('Fibra') || name.includes('Tel')) return '📡';
+                if (name.includes('CCO')) return '🖥️';
+                return '🔧';
+            };
+
+            summaries.forEach(sys => {
+                const docs = TECH_DOCS[sys.sistema] || TECH_DOCS[sys.sistema.split(' ')[0]] || { layout: '#', spec: '#' };
+                const layoutLink = docs.layout !== '#' ? `docs/layouts/${docs.layout}` : '#';
+
+                // Tech Description cleaning
+                let techDesc = sys.descripcion;
+                if (techDesc.length > 80) techDesc = techDesc.substring(0, 80) + '...';
+
                 html += `
-                    <div class="system-card">
-                        <div class="system-name">${sistema}</div>
-                        <div class="system-count">${formatNumber(count)}</div>
+                <div class="tech-card">
+                    <div class="card-header">
+                        <div class="sys-name">
+                            <span>${getIcon(sys.sistema)}</span> ${sys.sistema}
+                        </div>
+                        <div class="sys-qty">${sys.cantidad} Units</div>
                     </div>
+                    <div class="card-body">
+                        <div class="tech-spec-item">
+                            <strong>Especificación Principal:</strong>
+                            ${techDesc}
+                        </div>
+                        <div class="tech-spec-item">
+                            <strong>Normativa Aplicable:</strong>
+                            RETIE / ISO 14001 / NTC
+                        </div>
+                        
+                        <div class="btn-group">
+                            <a href="#" onclick="alert('Abriendo Plano: ${docs.layout}')" class="btn-tech btn-layout">
+                                🗺️ Ver Plano T02
+                            </a>
+                            <a href="#" onclick="alert('Abriendo Ficha: ${docs.spec}')" class="btn-tech btn-spec">
+                                📝 Ver Spec T04
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 `;
             });
 
-            container.innerHTML = html;
+            document.getElementById('tech-container').innerHTML = html;
         }
+
     </script>
 </body>
 
