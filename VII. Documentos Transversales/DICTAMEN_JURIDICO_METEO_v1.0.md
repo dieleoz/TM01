@@ -38,37 +38,53 @@ Se certifica el alcance del Subsistema de Meteorología basándose en la **Resol
 *   **Mandato:** "Información sobre las condiciones meteorológicas... en el Centro de Control de Operaciones".
 *   **Interpretación:** Es una obligación de **INFORMACIÓN**, no de INSTALACIÓN. El CCO recibe datos; no necesita un sensor en su techo si ya tiene cobertura en la vía.
 
+### 1.3 Exclusiones Contractuales (Blindaje Jurídico)
+*   **Estaciones de Pesaje (Básculas):** **EXCLUIDAS**.
+    *   *Fundamento:* El Numeral 3.3.9 del AT2 (Sistemas de Pesaje) NO lista equipos meteorológicos.
+    *   *Defensa:* La obligación de reporte es "por Unidad Funcional" (cubierta por los Peajes), no por "sitio de pesaje".
+*   **Torres SOS/Tramo:** **SUSTITUIDAS**.
+    *   *Estrategia:* Cobertura por "Unidad Funcional" usando la data de los Peajes. Se instala en vía solo si hay "Gaps" de cobertura (Microclimas) no cubiertos por los peajes.
+
 ---
 
 <!-- SECCIÓN: technical_notes -->
-## 2. BLINDAJE TÉCNICO (FORENSIC SPECS)
+## 2. BLINDAJE TÉCNICO (FICHA TÉCNICA HARD DECK)
 
-### 2.1 El "Hard Deck" del Visibilímetro
-El riesgo principal es instalar estaciones "Agro" (USD $2k) que solo miden lluvia y viento.
-*   **Requisito Seguridad Vial:** La vía tiene zonas de niebla. El sistema debe activar PMVs automáticamente ("NIEBLA EN LA VÍA").
-*   **Especificación:** Se requiere sensor de **Visibilidad y Tiempo Presente** (Tecnología Dispersión Frontal).
-*   **Costo:** Este solo sensor cuesta ~$8-12k USD, elevando el costo de la estación a nivel "Industrial".
+### 2.1 Especificaciones Críticas (Para ETo y Niebla)
+Para evitar glosas por "Incumplimiento de Variables", la estación debe medir:
+1.  **Radiación Solar (Piranómetro):** **OBLIGATORIO**.
+    *   *Razón:* Sin W/m², no hay cálculo de **"Horas de Sol"** ni **"ETo (Evapotranspiración)"** bajo norma FAO-56/IDEAM (AT2 3.3.5.1).
+    *   *Espec:* 0-1800 W/m², Fotodiodo de Silicio o Termopila.
+2.  **Visibilidad (Niebla):** **OBLIGATORIO**.
+    *   *Razón:* Manual de Señalización 2024 exige medir "Presencia de Neblina" para activar PMVs. Las estaciones "Agro" estándar NO lo traen.
+    *   *Espec:* Sensor Óptico (Dispersión Frontal). Rango 10-2000m.
+3.  **Grado Industrial:**
+    *   *Razón:* Res. IP/REV exige "Uso Industrial". IP65 mínimo.
+    *   *Energía:* Autonomía 48h (Manual 2024) mediante UPS o Solar.
 
 ### 2.2 Integración
-*   **Protocolo:** Modbus TCP / API Rest.
-*   **Destino:** SCADA en CCO.
-*   **Alimentación:** Autonomía 48h (Panel Solar + Baterías) si no hay red estable en el peaje.
+*   **Protocolo:** Modbus TCP / NTCIP 1204 para integración nativa con SCADA.
+*   **Alerta Temprana:** Configuración de umbrales (Viento > 40km/h, Visibilidad < 200m) para disparo automático de PMVs.
 
 ---
 
 <!-- SECCIÓN: financial -->
 ## 💰 ANÁLISIS FINANCIERO
 
-### Presupuesto Validado (DT-TM01-METEO-001 v2.0)
+### Presupuesto Validado (Hard Deck)
 
-| Ítem | Descripción | Cantidad | Unitario (USD) | Total (USD) | Notas |
-|:-----|:------------|:---------|:---------------|:------------|:------|
-| **1** | **Estación Meteo Industrial** | 2 | $50,000 | $100,000 | Incluye Visibilímetro |
-| **2** | **Obra Civil/Montaje** | 2 | $2,000 | $4,000 | Mástiles Abatibles |
-| **3** | **Software Integración CCO** | 1 | $10,000 | $10,000 | Licencia + Config |
-| **TOTAL** | **METEOROLOGÍA** | | | **$114,000** | **$57k / Estación** |
+| Ítem | Descripción | Cantidad | Unitario (USD) | Total (USD) |
+|:-----|:------------|:---------|:---------------|:------------|
+| **1** | **Estación Industrial Completa** | 2 | $51,000 | $102,000 |
+| *1.1* | *Unidad Base (Viento, Lluvia, Temp, Hum)* | *2* | *$3,000* | *(Incluido)* |
+| *1.2* | *Kit Solar 48h + Gabinete IP65* | *2* | *$8,000* | *(Incluido)* |
+| *1.3* | *Sensor Radiación (ETo/Sol)* | *2* | *$1,000* | *(Incluido)* |
+| *1.4* | *Sensor Visibilidad (Niebla)* | *2* | *$39,000* | *(Incluido)* |
+| **2** | **Obra Civil (Mástil Abatible)** | 2 | $2,000 | $4,000 |
+| **3** | **Integración SCADA (Driver CCO)** | 1 | $8,000 | $8,000 |
+| **TOTAL** | **METEOROLOGÍA** | | | **$114,000** |
 
-**Validación de Mercado:** El costo refleja equipos Tier-1 (Lufft/Vaisala) necesarios para certificación de neblina. Alternativas baratas (Davis) no pasan la interventoría por falta de sensor de visibilidad certificado.
+**Justificación Financiera:** El alto costo unitario ($51k) se deriva principalmente del **Sensor de Visibilidad Certificado** y la robustez industrial requerida para 10+ años. Intentar bajar este capex con estaciones "Hobby" implica incumplir el Manual de Señalización (Niebla).
 
 ---
 
