@@ -1,0 +1,22 @@
+// AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
+// NO EDITAR MANUALMENTE - Regenerar con el script
+// Sistema: PEAJE
+// Fecha de generación: 2026-01-29 09:29:03
+
+const validaciones_PEAJE = {
+  full: '## 📋 RESUMEN EJECUTIVO\n\n**Alcance Validado:**  \nEl sistema de Peajes se compone de **2 Estaciones** (Zambito y Aguas Negras) con un total de **14 Carriles** equipados para recaudo mixto (Efectivo/Telepeaje) y control fiscal (WIM-DAC).\n\n**Segregación Crítica (Dictamen PMV):**\n- **Incluido en Peaje:** 14 Displays de Tarifas (1 por carril) y equipamiento de cobro.\n- **Excluido (Movido a ITS):** 4 PMV de Aproximación (Grandes) que ahora residen en WBS 3.01.\n\n**Datos Clave:**\n- **Estaciones:** 2 (Zambito PK 9+200, Aguas Negras PK 80+000).\n- **Carriles:** 14 (3+1+3 por estación).\n- **Integración:** WIM-DAC (Pesaje en carril) obligatorio por Resolución IP/REV.\n- **CAPEX Validado:** **$2,086,577.24 USD**.\n\n---',
+  contractual: '## 1. FUNDAMENTO CONTRACTUAL\n\n### 1.1 Obligación de Recaudo (Apéndice Técnico 2)\n**Referencia:** AT2 Numeral 3.3 (Gestión de Recaudo).\n- **Obligación:** Implementar sistema de cobro en todas las estaciones existentes y nuevas.\n- **Tecnología:** IP/REV (Interoperabilidad de Peajes con Recaudo Electrónico Vehicular).\n- **Nivel de Servicio:** Disponibilidad 99.8%, Tiempo de transacción < 5 segundos.\n\n### 1.2 Integración Pesaje-Peaje (WIM-DAC)\n**Referencia:** AT2 Numeral 3.3.4.2 / Resolución IP/REV Art 2.9.\n- **Texto:** "El sistema de peaje debe integrar la información de pesaje dinámico para la clasificación vehicular automática".\n- **Impacto:** Se requiere instalar sensores WIM (Piezoeléctricos/Cuarzo) en los carriles de peaje, integrados al controlador de carril (DAC).\n- **Costo:** $280,358.30 USD (Reconciliado desde Sistema WIM).\n\n### 1.3 Segregación PMV\n**Referencia:** Dictamen PMV v2.2 (29/01/2026).\n- **Decisión:** Los PMV de aproximación (AT2 3.3.5.1) son activos ITS. Los Displays de Tarifa (Res. IP/REV) son activos de Peaje.\n- **Acción:** Presupuesto de 4 PMV ($220k) transferido a ITS. Presupuesto de 14 Displays ($35k) permanece en Peaje.\n\n---',
+  technical: '## 2. ESPECIFICACIONES TÉCNICAS (HARD DECK)\n\n### 2.1 Equipamiento por Carril (14 Carriles)\n| Componente | Especificación | Norma |\n|:-----------|:---------------|:------|\n| **Antena TAG** | ISO 18000-6C (RFID) | IP/REV |\n| **Cámara ANPR** | Frontal + Trasera (OCR) | >95% Precisión |\n| **Clasificación** | Sensor WIM (Pesaje) + Volumétrico | AT2 / IP/REV |\n| **Barrera** | Alta velocidad (<0.7s) | MTBF > 5M ciclos |\n| **Display Tarifa** | LED P10 (640x320mm) | Visible a 50m |\n\n### 2.2 Equipamiento de Estación (2 Estaciones)\n- **Servidores:** Redundancia local (Cluster).\n- **Comunicaciones:** Anillo de Fibra Óptica (L3).\n- **Energía:** UPS Online + Planta Eléctrica (Autonomía > 24h).\n\n---',
+  financial: '## 💰 ANÁLISIS FINANCIERO\n\n### Presupuesto Reconciliado (USD)\n\n| Ítem | Fuente | Valor |\n|:-----|:-------|:------|\n| **1. Equipamiento FTS (Base)** | Cotización Oficial | $1,806,218.94 |\n| **2. Integración WIM-DAC** | T05 Pesaje | $280,358.30 |\n| **3. PMV Aproximación** | *Movido a ITS* | ($220,000.00) |\n| **TOTAL CAPEX PEAJE** | **Hard Deck** | **$2,086,577.24** |\n\n**Nota:** Este valor excluye Obra Civil de casetas y marquesinas (Parte del EPC Civil), solo incluye Tecnología.\n\n---',
+  risks: '## ⚠️ MATRIZ DE RIESGOS\n\n1.  **Integración IP/REV:**\n    *   *Riesgo:* Rechazo de la homologación por el Ministerio.\n    *   *Mitigación:* Exigir al proveedor (FTS) certificado de homologación vigente antes de la compra.\n2.  **Fallas WIM-DAC:**\n    *   *Riesgo:* Discrepancias entre categoría detectada y cobrada.\n    *   *Mitigación:* Calibración trimestral según norma ONAC.\n3.  **Obra Civil:**\n    *   *Riesgo:* Retraso en entrega de islas para montaje de equipos.\n    *   *Mitigación:* Cronograma integrado Civil-ITS.\n\n---\n\n**Estado:** ✅ VALIDADO PARA COMPRA  \n**Documento Fuente:** T05 Ingeniería de Detalle v1.0'
+};
+
+// Exportar para uso en módulos
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = validaciones_PEAJE;
+}
+
+// Exponer al objeto window para uso en navegador
+if (typeof window !== 'undefined') {
+  window.validaciones_PEAJE = validaciones_PEAJE;
+}

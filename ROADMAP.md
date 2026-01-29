@@ -21,6 +21,7 @@
 - [x] **PMV:** 43 unidades (29 ITS + 14 Peaje) - $2.39M USD
 - [x] **METEO:** 2 estaciones físicas + API híbrida - $7.8k USD
 - [x] **CCTV:** Dictamen jurídico-técnico completo (30 cámaras validadas)
+- [x] **PEAJE:** 2 Estaciones (Integración WIM-DAC + IP/REV) - $2.09M USD
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`
@@ -54,7 +55,7 @@
 |:--------|:---------|:------------|:----------|:------------|
 | SOS | 88 postes | $2,200,000 | 🔴 Alta | ⭐⭐⭐ |
 | PMV | 43 unidades | $2,390,000 | ✅ Listo | ⭐⭐⭐ |
-| PEAJE | 2 estaciones | $1,890,219 | 🔴 Alta | ⭐⭐⭐⭐ |
+| PEAJE | 2 estaciones | $2,086,577 | ✅ Listo | ⭐⭐⭐⭐ |
 | WIM | 2 estaciones | $551,000 | 🟡 Media | ⭐⭐ |
 | FIBRA | 293 km | $1,500,000 | 🟡 Media | ⭐⭐ |
 | CCO | 1 centro | $800,000 | 🟡 Media | ⭐⭐ |

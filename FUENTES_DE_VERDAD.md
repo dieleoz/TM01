@@ -1,7 +1,7 @@
 # FUENTES DE VERDAD Y BASE DE CONOCIMIENTO (KNOWLEDGE BASE)
 ## Proyecto TM01 - Troncal Magdalena
 
-**Versión:** 2.0 (FORENSIC AUDIT INTEGRATED)  
+**Versión:** 2.1 (PEAJE VALIDATED)  
 **Fecha:** 29 de Enero 2026  
 **Propósito:** Centralizar las decisiones técnicas, contractuales y financieras validadas para evitar alucionaciones en el proceso de ingeniería.
 
@@ -26,6 +26,14 @@
 - **Normativa Crítica:** Certificación UNE-EN 12966 + RETIE 2024 (Dictamen Inspección Obligatorio).
 - **CAPEX Total:** $2,390,000 USD.
 
+### ✅ CASO 3: SISTEMA PEAJES (Validado)
+- **Conflicto:** CAPEX FTS ($1.8M) vs Requerimientos WIM-DAC ($280k) vs PMV Aproximación ($220k).
+- **Resolución:**
+    - **Base:** 2 Estaciones (Zambito + Aguas Negras).
+    - **Segregación PMV:** PMV Aproximación se mueven a ITS (WBS 3.01). Displays Tarifarios se quedan en Peaje.
+    - **Integración WIM:** Se incluye costo de integración WIM-DAC (Sensores piezoeléctricos) en Peaje para cumplir IP/REV.
+- **CAPEX Reconciliado:** **$2,086,577.24 USD** (FTS + WIM Integrado).
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)
@@ -35,8 +43,8 @@
 | **SOS** | 98 (88 New) | $2,200,000 | ✅ Validado | DT-SOS-002 + AT1 |
 | **CCTV** | 9 | $116,100 | ✅ Validado | DT-CCTV-003 + AT2 |
 | **PMV** | 43 | $2,390,000 | ✅ Validado | DT-PMV-001 + AT1/AT2/IPREV |
-| **Peajes** | 2 Est | $1.89M | ⏳ Pendiente | IP/REV + T04 |
-| **WIM** | 2 Pistas | $551k | ⏳ Pendiente | IP/REV + T04 |
+| **Peajes** | 2 Est | $2,086,577 | ✅ Validado | IP/REV + T05 FTS |
+| **WIM** | 2 Pistas | $551,425 | ⏳ Pendiente | IP/REV + T04 |
 
 ---
 
@@ -53,3 +61,4 @@
 
 ### C. Resolución IP/REV (Recaudo)
 - **Impacto:** Obliga a displays tarifarios en carril (adicionales a los PMV de vía).
+- **WIM:** Obliga a integración de pesaje dinámico para clasificación automática.

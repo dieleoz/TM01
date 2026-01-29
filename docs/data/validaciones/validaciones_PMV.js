@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: PMV
-// Fecha de generación: 2026-01-29 09:24:54
+// Fecha de generación: 2026-01-29 09:29:03
 
 const validaciones_PMV = {
   full: '## 📋 RESUMEN EJECUTIVO PARA EL ABOGADO\n\n**Pregunta Central:** ¿Qué numeral del contrato obliga al sistema PMV y cuál es la cantidad correcta para evitar glosas?\n\n**Respuesta Directa:**  \nEl sistema PMV tiene un alcance total validado de **43 Unidades**, segregadas obligatoriamente por función contractual:\n1. **Subsistema ITS (Vía):** 29 Unidades (25 de Troncal + 4 de Aproximación Peaje). Cumple AT1 3.8 y AT2 3.3.5.1.\n2. **Subsistema Peaje (Recaudo):** 14 Unidades (1 por carril). Cumple Resolución IP/REV (Prerrequisito de cobro).\n\n**Fundamento Jurídico Principal:**  \n- **AT1 Numeral 3.8:** "Mínimo 25 paneles... separación máxima 20 km".\n- **AT2 Numeral 3.3.5.1:** "Al menos dos por cada área de peaje".\n- **Resolución IP/REV:** Paneles de tarifa en cada carril.\n- **Sección 4.11/4.12:** Base para reclamar unidades adicionales por Manual 2024 (Variantes).\n\n**Alcance Validado (Total 43):**  \n- **29 PMV Gran Formato (ITS):** Distribución "Zig-Zag" para cumplir regla de 20 km + Aproximación Peajes.\n- **14 PMV Tarifarios (Peaje):** Instalados en isletas de cobro.\n\n**CAPEX Total:** $2,390,000 USD (Segregado: ITS $2.32M / Peaje $70k)\n\n---',
