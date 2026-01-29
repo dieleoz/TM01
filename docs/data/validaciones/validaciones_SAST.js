@@ -1,9 +1,9 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
-// Sistema: SOS
+// Sistema: SAST
 // Fecha de generación: 2026-01-29 16:30:36
 
-const validaciones_SOS = {
+const validaciones_SAST = {
   full: '',
   contractual: '',
   technical: '',
@@ -13,10 +13,10 @@ const validaciones_SOS = {
 
 // Exportar para uso en módulos
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = validaciones_SOS;
+  module.exports = validaciones_SAST;
 }
 
 // Exponer al objeto window para uso en navegador
 if (typeof window !== 'undefined') {
-  window.validaciones_SOS = validaciones_SOS;
+  window.validaciones_SAST = validaciones_SAST;
 }

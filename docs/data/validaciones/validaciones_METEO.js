@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: METEO
-// Fecha de generación: 2026-01-29 16:21:44
+// Fecha de generación: 2026-01-29 16:30:36
 
 const validaciones_METEO = {
   full: '## 📋 RESUMEN EJECUTIVO (HARD DECK)\n\n**Veredicto:** 🟢 **VALIDADO (OPTIMIZADO)**\n\nSe certifica el alcance del Subsistema de Meteorología basándose en la **Resolución IP/REV** y el **Apéndice Técnico 2**.\n\n**Parámetros de Validación (Hard Deck):**\n1.  **Cantidad Física:** **2 Estaciones Compactas (Tipo Davis)**. Ubicación Mandatoria en Peajes (Zambito + Aguas Negras).\n2.  **Sensor de Niebla:** **VIRTUALIZADO**. Se acoge a la cláusula contractual **"Se recomienda"** (No obligatorio). Se cumple con Webservice.\n3.  **Cobertura UF:** Se cumple mediante **Webservice Georreferenciado** integrado al SCADA, eliminando estaciones físicas en vía abierta.\n\n**CAPEX Validado:** **$16,500 USD** (Ahorro Masivo vs $114k con Visibilímetros).\n\n---',
