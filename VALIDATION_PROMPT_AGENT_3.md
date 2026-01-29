@@ -82,6 +82,7 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] Fiber Optic CAPEX: **$7,980,000 USD** (322km Cable 48H + Civil Works)
 - [ ] CCO CAPEX: **$845,000 USD** (Hardware + Civil Works >400m2 + RETIE Power)
 - [ ] Meteo CAPEX: **$16,500 USD** (Davis Stations + Webservice - Legal Strategy Applied)
+- [ ] ETD/RADAR CAPEX: **$0 USD** (Scope Transferred to Tolls/Police)
 - [ ] Total ITS CAPEX: **~$8.6M USD** (Final Consolidated)
 
 #### B. Web Dashboard Verification

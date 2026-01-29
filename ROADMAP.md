@@ -28,6 +28,7 @@
 - [x] **FIBRA:** Backbone 322km (48 Hilos G.652.D) - **$7.98M USD** (Blindaje RETIE/Obra Civil)
 - [x] **CCO:** Full Scope (IT + Civil + Power) - **$845k USD** (Cumple Áreas Mínimas AT1)
 - [x] **METEO:** Estaciones Davis + Webservice - **$16.5k USD** (Defensa Legal "Recomendación" vs Obligación)
+- [x] **ETD/RADAR:** Eliminado por Duplicidad (Peajes/Policía) - **$0 USD** (Ahorro $1.7M)
 
 **Sistema de Validaciones por Rol (NUEVO - Session 11):**
 - ✅ Script modular `generar_validaciones_modular.ps1`
@@ -68,6 +69,7 @@
 | ENERGÍA | Solar/Red | $600,000 | 🟢 Baja | ⭐⭐ |
 | SWITCHES | 15 equipos | $450,000 | 🟢 Baja | ⭐ |
 | METEREOLOGÍA | 2 Davis + Web | $16,500 | ✅ Listo | ⭐⭐⭐⭐⭐ |
+| ETD/RADAR | 0 Equipos | $0 | ✅ Optimizado | ⭐⭐⭐⭐⭐ |
 | SEÑALIZACIÓN | Vertical | $300,000 | 🟢 Baja | ⭐ |
 | METEO | 2 estaciones | $7,800 | 🟢 Baja | ⭐ |
 | GALIBOS | 4 detectores | $120,000 | 🟢 Baja | ⭐ |

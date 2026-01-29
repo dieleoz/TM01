@@ -87,6 +87,14 @@
     - **Impacto:** Ahorro >$90k USD al evitar visibilímetros.
 - **CAPEX Validado:** **$16,500 USD**.
 
+### ✅ CASO 9: ETD / RADARES (Eliminado)
+- **Conflicto:** Duplicidad con Peajes y Dotación Policial.
+- **Resolución:**
+    - **Conteo:** Cubierto por Peajes (100% Tráfico).
+    - **Sanción:** Cubierto por Radares Móviles (Policía).
+    - **Impacto:** Eliminación de 18 equipos fijos innecesarios.
+- **CAPEX Validado:** **$0 USD**.
+
 ---
 
 ## 📋 2. LISTA MAESTRA DE SUBSISTEMAS (HARD DECK)
