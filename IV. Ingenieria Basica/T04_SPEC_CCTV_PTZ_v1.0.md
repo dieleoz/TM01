@@ -25,9 +25,9 @@ Sistema de Circuito Cerrado de Televisión (CCTV) para monitoreo de puntos crít
 
 | Ubicación | Cantidad | Descripción |
 |:----------|:--------:|:------------|
-| **Peaje Rio** | 4 | Monitoreo carriles y tesorería |
-| **Peaje Caiman**| 4 | Monitoreo carriles y tesorería |
-| **Pesaje WIM** | 1 | Supervisión báscula dinámica |
+| **Peaje Zambito** | 4 | Monitoreo carriles y tesorería |
+| **Peaje Aguas Negras**| 4 | Monitoreo carriles y tesorería |
+| **Estación Pesaje (PR4)** | 1 | Supervisión báscula dinámica |
 | **TOTAL** | **9** | **Coincide con Master Data** |
 
 ## 4. NORMATIVA APLICABLE
@@ -41,21 +41,25 @@ Sistema de Circuito Cerrado de Televisión (CCTV) para monitoreo de puntos crít
 
 ---
 
-## 5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE)
+## 5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE v2.0)
 
-**Resultado:** 🟢 **T04 VALIDADO (CUMPLE Y SUPERA NORMA)**
+**Resultado:** 🟢 **VALIDADO (CUMPLE ESTÁNDAR IP/REV)**
 
-Basado en la auditoría cruzada entre esta especificación (Dahua DH-SD5A432GB-HNR) y los documentos contractuales (AT 2, Manual 2024, IP/REV):
+La especificación propuesta (Cámara PTZ, Zoom 32X, 4MP, IP67) es **TÉCNICAMENTE CORRECTA** y cumple con los requisitos obligatorios tanto para la Vía (AT2) como para los Peajes (Resolución 20213040035125).
 
-### A. Matriz de Cumplimiento
-1.  **Peajes (IP/REV):** ✅ **CUMPLE.** Zoom 32x y ONVIF (Req. Num 2.9.5).
-2.  **Resolución:** ✅ **SUPERA.** 4MP vs 1080p requerido (Mejora analítica DAI).
-3.  **Protección:** ✅ **SUPERA.** IP67 vs IP66 requerido (Ideal clima tropical).
-4.  **Funcionalidad:** ✅ **VALIDADO.** Auto-tracking / WizSense reduce carga operativa (AT 2).
+### A. Matriz de Cumplimiento "Hard Deck"
+| Requisito Técnico | Fuente (IP/REV / AT2) | Especificación TM01 | Veredicto |
+|:------------------|:----------------------|:--------------------|:----------|
+| **Zoom Óptico** | Obligatorio: 32X | 32X | ✅ CUMPLE (Crítico) |
+| **Resolución** | Mínimo 1920x1080 (2MP) | 4MP (2560×1440) | ✅ SUPERA |
+| **Sensibilidad** | Mínima 0.2 lux | 0.005 lux (Starlight) | ✅ SUPERA |
+| **Compresión** | H.264 / MPEG-4 | H.265 / H.264 | ✅ CUMPLE |
+| **Protección** | Grado IP66 | IP67 (Inmersión) | ✅ SUPERA |
+| **Disponibilidad** | MTBF > 40,000 horas | MTBF > 100,000 horas | ✅ CUMPLE |
 
-### B. Recomendaciones para T05 (Diseño Detallado)
-1.  **Almacenamiento:** Calcular discos para 4MP H.265 x 30 días (Blindaje vs 8 días contractuales).
-2.  **Ubicación:** Instalar en postes >12m o torres para aprovechar Zoom 32x (Evitar puntos ciegos).
-3.  **Integración:** Exigir pruebas de envío de Metadatos (no solo video) al SICC.
+### B. Alertas para Ingeniería de Detalle (T05)
+1.  **Candado Digital (AES-256):** Verifique que el VMS/NVR active el cifrado AES-256 (Req. IP/REV 2.9.5).
+2.  **Retención de Video:** Calcular almacenamiento para **30 días** (~40 TB) para cubrir holgura de auditoría (AT2 exige 1 semana, pero auditoría suele pedir más).
+3.  **Calefacción (Heater):** Confirmar que la cámara incluya función *Heater* o *Defog* para cumplir el requisito de "sistema calefactor" por normativa, aunque sea clima cálido (condensación).
 
-**Conclusión:** Especificación "A prueba de balas". Unifica inventario (Vía/Peaje) y habilita IA.
+**Conclusión:** La especificación TM01-CCTV-SPEC-002 es VÁLIDA para construcción. Al estandarizar una cámara que cumple la norma más estricta para todo el proyecto, se simplifica el mantenimiento.

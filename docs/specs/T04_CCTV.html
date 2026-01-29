@@ -5,81 +5,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T04 Spec</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #1e3a8a; border-bottom: 2px solid #f59e0b; padding-bottom: 10px; }
-        h2 { color: #1e40af; margin-top: 30px; border-left: 4px solid #f59e0b; padding-left: 10px; }
-        .row { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; border-bottom: 1px solid #e2e8f0; padding: 8px 0; }
-        .row:nth-child(even) { background: #f8fafc; }
-        .col:first-child { font-weight: bold; color: #475569; }
-        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 99px; font-size: 0.8em; font-weight: bold; }
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Headers */
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
+        /* First column styling for parameters */
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
+        /* Badge */
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
+        /* Text */
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
     </style>
 </head>
 <body>
     <div class="container">
-        <span class="status-badge">DOCUMENTACIÃ“N DE INGENIERÃA</span>
-        <div class="doc-header"><h1>FICHA TÉCNICA (T04) - SISTEMA CCTV</h1></div>
-<strong>Proyecto:</strong> Troncal Magdalena (TM01)  
-<strong>ID Especificación:</strong> T04-CCTV-001  
-<strong>Versión:</strong> 1.0 (Audit 6.0 Approved)  
-<strong>Estado:</strong> ✅ PARA CONSTRUCCIÓN  
-
----
-
-<h2>1. DESCRIPCIÓN GENERAL</h2>
+        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
+        <div class='doc-header'><h1>FICHA TÉCNICA (T04) - SISTEMA CCTV</h1></div>
+<strong>Proyecto:</strong> Troncal Magdalena (TM01)
+<strong>ID Especificación:</strong> T04-CCTV-001
+<strong>Versión:</strong> 1.0 (Audit 6.0 Approved)
+<strong>Estado:</strong> ✅ PARA CONSTRUCCIÓN
+<br>
+<br>
+<h2>1. DESCRIPCIÓN GENERAL</h2>
 Sistema de Circuito Cerrado de Televisión (CCTV) para monitoreo de puntos críticos de la concesión. Equipamiento "All-in-One" con analíticas de borde.
-
-<h2>2. REQUISITOS TÉCNICOS (HARD DECK)</h2>
-
-<div class="row"><div class="col"> Parámetro </div><div class="col"> Especificación Requerida </div><div class="col"> Referencia (T05) </div><div class="col">
-<div class="row"><div class="col">:----------</div><div class="col">:-------------------------</div><div class="col">:-----------------</div><div class="col">
-<div class="row"><div class="col"> <strong>Marca/Modelo</strong> </div><div class="col"> Dahua WizMind Series 7 o superior </div><div class="col"> Item 5.01 </div><div class="col">
-<div class="row"><div class="col"> <strong>Resolución</strong> </div><div class="col"> 4 Megapíxeles (2688 × 1520) </div><div class="col"> AT3 Spec </div><div class="col">
-<div class="row"><div class="col"> <strong>Zoom Óptico</strong> </div><div class="col"> 40x (o superior) </div><div class="col"> Cobertura 2km </div><div class="col">
-<div class="row"><div class="col"> <strong>Visión Nocturna</strong> </div><div class="col"> Starlight + IR 200m </div><div class="col"> Operación 24/7 </div><div class="col">
-<div class="row"><div class="col"> <strong>Protección</strong> </div><div class="col"> IP67 (Agua/Polvo) + IK10 (Vandalismo) </div><div class="col"> Cláusula 4.2 </div><div class="col">
-<div class="row"><div class="col"> <strong>Analíticas</strong> </div><div class="col"> Cruce de línea, Intrusión, Objeto abandonado </div><div class="col"> Edge AI </div><div class="col">
-<div class="row"><div class="col"> <strong>Alimentación</strong> </div><div class="col"> Hi-PoE / 24VAC </div><div class="col"> Respaldo UPS </div><div class="col">
-
-<h2>3. CANTIDADES A INSTALAR (POR TRAMO)</h2>
-
-<div class="row"><div class="col"> Ubicación </div><div class="col"> Cantidad </div><div class="col"> Descripción </div><div class="col">
-<div class="row"><div class="col">:----------</div><div class="col">:--------:</div><div class="col">:------------</div><div class="col">
-<div class="row"><div class="col"> <strong>Peaje Rio</strong> </div><div class="col"> 4 </div><div class="col"> Monitoreo carriles y tesorería </div><div class="col">
-<div class="row"><div class="col"> <strong>Peaje Caiman</strong></div><div class="col"> 4 </div><div class="col"> Monitoreo carriles y tesorería </div><div class="col">
-<div class="row"><div class="col"> <strong>Pesaje WIM</strong> </div><div class="col"> 1 </div><div class="col"> Supervisión báscula dinámica </div><div class="col">
-<div class="row"><div class="col"> <strong>TOTAL</strong> </div><div class="col"> <strong>9</strong> </div><div class="col"> <strong>Coincide con Master Data</strong> </div><div class="col">
-
-<h2>4. NORMATIVA APLICABLE</h2>
-- <strong>ONVIF:</strong> Perfil S y G (Mandatorio).
-- <strong>RETIE:</strong> Certificación de producto para fuentes de poder.
-- <strong>ISO 14001:</strong> Gestión ambiental en instalación.
-
----
+<br>
+<h2>2. REQUISITOS TÉCNICOS (HARD DECK)</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Requerida</td>
+<td>Referencia (T05)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Marca/Modelo</strong></td>
+<td>Dahua WizMind Series 7 o superior</td>
+<td>Item 5.01</td>
+</tr>
+<tr>
+<td><strong>Resolución</strong></td>
+<td>4 Megapíxeles (2688 × 1520)</td>
+<td>AT3 Spec</td>
+</tr>
+<tr>
+<td><strong>Zoom Óptico</strong></td>
+<td>40x (o superior)</td>
+<td>Cobertura 2km</td>
+</tr>
+<tr>
+<td><strong>Visión Nocturna</strong></td>
+<td>Starlight + IR 200m</td>
+<td>Operación 24/7</td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td>IP67 (Agua/Polvo) + IK10 (Vandalismo)</td>
+<td>Cláusula 4.2</td>
+</tr>
+<tr>
+<td><strong>Analíticas</strong></td>
+<td>Cruce de línea, Intrusión, Objeto abandonado</td>
+<td>Edge AI</td>
+</tr>
+<tr>
+<td><strong>Alimentación</strong></td>
+<td>Hi-PoE / 24VAC</td>
+<td>Respaldo UPS</td>
+</tr>
+</tbody></table></div>
+<br>
+<h2>3. CANTIDADES A INSTALAR (POR TRAMO)</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ubicación</td>
+<td>Cantidad</td>
+<td>Descripción</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Peaje Zambito</strong></td>
+<td>4</td>
+<td>Monitoreo carriles y tesorería</td>
+</tr>
+<tr>
+<td><strong>Peaje Aguas Negras</strong></td>
+<td>4</td>
+<td>Monitoreo carriles y tesorería</td>
+</tr>
+<tr>
+<td><strong>Estación Pesaje (PR4)</strong></td>
+<td>1</td>
+<td>Supervisión báscula dinámica</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>9</strong></td>
+<td><strong>Coincide con Master Data</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<h2>4. NORMATIVA APLICABLE</h2>
+<li><strong>ONVIF:</strong> Perfil S y G (Mandatorio).</li>
+<li><strong>RETIE:</strong> Certificación de producto para fuentes de poder.</li>
+<li><strong>ISO 14001:</strong> Gestión ambiental en instalación.</li>
+<br>
 <strong>Firmado Digitalmente:</strong> Ingeniería de Detalle TM01
 <strong>Fecha:</strong> 29-Ene-2026
-
----
-
-<h2>5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE)</h2>
-
-<strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (CUMPLE Y SUPERA NORMA)</strong>
-
-Basado en la auditoría cruzada entre esta especificación (Dahua DH-SD5A432GB-HNR) y los documentos contractuales (AT 2, Manual 2024, IP/REV):
-
-<h3>A. Matriz de Cumplimiento</h3>
-1.  <strong>Peajes (IP/REV):</strong> ✅ <strong>CUMPLE.</strong> Zoom 32x y ONVIF (Req. Num 2.9.5).
-2.  <strong>Resolución:</strong> ✅ <strong>SUPERA.</strong> 4MP vs 1080p requerido (Mejora analítica DAI).
-3.  <strong>Protección:</strong> ✅ <strong>SUPERA.</strong> IP67 vs IP66 requerido (Ideal clima tropical).
-4.  <strong>Funcionalidad:</strong> ✅ <strong>VALIDADO.</strong> Auto-tracking / WizSense reduce carga operativa (AT 2).
-
-<h3>B. Recomendaciones para T05 (Diseño Detallado)</h3>
-1.  <strong>Almacenamiento:</strong> Calcular discos para 4MP H.265 x 30 días (Blindaje vs 8 días contractuales).
-2.  <strong>Ubicación:</strong> Instalar en postes >12m o torres para aprovechar Zoom 32x (Evitar puntos ciegos).
-3.  <strong>Integración:</strong> Exigir pruebas de envío de Metadatos (no solo video) al SICC.
-
-<strong>Conclusión:</strong> Especificación "A prueba de balas". Unifica inventario (Vía/Peaje) y habilita IA.
-
+<br>
+<br>
+<h2>5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE v2.0)</h2>
+<br>
+<strong>Resultado:</strong> 🟢 <strong>VALIDADO (CUMPLE ESTÁNDAR IP/REV)</strong>
+<br>
+La especificación propuesta (Cámara PTZ, Zoom 32X, 4MP, IP67) es <strong>TÉCNICAMENTE CORRECTA</strong> y cumple con los requisitos obligatorios tanto para la Vía (AT2) como para los Peajes (Resolución 20213040035125).
+<br>
+<h3>A. Matriz de Cumplimiento "Hard Deck"</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Requisito Técnico</td>
+<td>Fuente (IP/REV / AT2)</td>
+<td>Especificación TM01</td>
+<td>Veredicto</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Zoom Óptico</strong></td>
+<td>Obligatorio: 32X</td>
+<td>32X</td>
+<td>✅ CUMPLE (Crítico)</td>
+</tr>
+<tr>
+<td><strong>Resolución</strong></td>
+<td>Mínimo 1920x1080 (2MP)</td>
+<td>4MP (2560×1440)</td>
+<td>✅ SUPERA</td>
+</tr>
+<tr>
+<td><strong>Sensibilidad</strong></td>
+<td>Mínima 0.2 lux</td>
+<td>0.005 lux (Starlight)</td>
+<td>✅ SUPERA</td>
+</tr>
+<tr>
+<td><strong>Compresión</strong></td>
+<td>H.264 / MPEG-4</td>
+<td>H.265 / H.264</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td>Grado IP66</td>
+<td>IP67 (Inmersión)</td>
+<td>✅ SUPERA</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>MTBF > 40,000 horas</td>
+<td>MTBF > 100,000 horas</td>
+<td>✅ CUMPLE</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>B. Alertas para Ingeniería de Detalle (T05)</h3>
+1.  <strong>Candado Digital (AES-256):</strong> Verifique que el VMS/NVR active el cifrado AES-256 (Req. IP/REV 2.9.5).
+2.  <strong>Retención de Video:</strong> Calcular almacenamiento para <strong>30 días</strong> (~40 TB) para cubrir holgura de auditoría (AT2 exige 1 semana, pero auditoría suele pedir más).
+3.  <strong>Calefacción (Heater):</strong> Confirmar que la cámara incluya función *Heater* o *Defog* para cumplir el requisito de "sistema calefactor" por normativa, aunque sea clima cálido (condensación).
+<br>
+<strong>Conclusión:</strong> La especificación TM01-CCTV-SPEC-002 es VÁLIDA para construcción. Al estandarizar una cámara que cumple la norma más estricta para todo el proyecto, se simplifica el mantenimiento.
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automáticamente por Sistema de Gestión TM01. <br>
+            Fase 7 - Ingeniería de Detalle.
+        </div>
     </div>
 </body>
 </html>
