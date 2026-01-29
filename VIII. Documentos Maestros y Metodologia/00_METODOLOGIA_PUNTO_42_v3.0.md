@@ -55,14 +55,15 @@ La ingeniería se divide en 5 tiempos lógicos:
 
 ### **CAPA 3: VALIDACIÓN Y TRANSFORMACIÓN (Scripts)**
 *Ubicación: `scripts/` y `VII. Documentos Transversales/`*
-- **`sync_wbs_tm01.ps1`:** El "Parser Inteligente". Lee los Markdown T05, extrae las tablas de precios y genera los archivos JSON (`datos_wbs_TM01_items.js`) para la web.
-- **Validaciones Contractuales:** Documentos (`34_VALIDACION_*.md`) que certifican que la ingeniería cumple con la Capa 1.
+- **`sync_wbs_tm01.ps1`:** El "Parser Inteligente". Lee los Markdown T05 y genera JSONs.
+- **`generar_specs_tecnicas.ps1` (NUEVO FASE 7):** Transforma T04 Markdown en Fichas HTML (`docs/specs/`) y genera el mapa `technical_specs_map.js` para el dashboard técnico.
+- **Validaciones Contractuales:** Documentos (`34_VALIDACION_*.md`) que certifican cumplimiento.
 
 ### **CAPA 4: VISUALIZACIÓN (Web Dashboard)**
 *Ubicación: `docs/`*
 - **`presupuesto.html`**: Tablero financiero.
 - **`wbs.html`**: Desglose estructural de trabajo.
-- **`layout.html`**: Visualización geográfica.
+- **`dashboard_tecnico.html`**: Controlador de Ingeniería (Layouts/Specs). Lee `technical_specs_map.js`.
 - **Regla:** Estos archivos son "tontos". Solo visualizan lo que la Capa 3 les entrega. **NUNCA** hardcodear datos aquí.
 
 ### **CAPA 5: SERVICIOS (DEL HORNO AL PLATO)**
