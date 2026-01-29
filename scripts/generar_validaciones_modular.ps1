@@ -82,9 +82,16 @@ foreach ($file in $dictamenFiles) {
     $markers = @("full", "contractual", "technical", "financial", "risks")
 
     foreach ($marker in $markers) {
-        $pattern = "<!-- SECCIÓN: $marker -->([\s\S]*?)(?=<!-- SECCIÓN:|$)"
+        # Try both with and without accent for compatibility
+        $pattern = "<!-- SECCION: $marker -->([\s\S]*?)(?=<!-- SECCION:|$)"
         if ($content -match $pattern) {
             $sections[$marker] = $Matches[1].Trim()
+        } else {
+            # Fallback to accented version
+            $pattern = "<!-- SECCIÓN: $marker -->([\s\S]*?)(?=<!-- SECCIÓN:|$)"
+            if ($content -match $pattern) {
+                $sections[$marker] = $Matches[1].Trim()
+            }
         }
     }
 

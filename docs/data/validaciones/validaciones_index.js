@@ -1,13 +1,13 @@
 /**
  * Índice de Validaciones Modulares - TM01
  * Generado automáticamente por generar_validaciones_modular.ps1
- * Fecha: 2026-01-29 08:10:25
+ * Fecha: 2026-01-29 08:12:00
  *
  * NO EDITAR MANUALMENTE - Este archivo se regenera automáticamente
  */
 
 const validacionesIndex = {
-  generatedAt: '2026-01-29 08:10:25',
+  generatedAt: '2026-01-29 08:12:00',
   systems: [    'CCO',
     'CCTV',
     'ENERGIA',
