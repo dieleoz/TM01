@@ -35,12 +35,12 @@ Se certifica el alcance del **Centro de Control de Operaciones (CCO)** bajo la n
 
 ### 1.2 "Hard Deck" de Obra Civil (AT1 3.1)
 **Ubicación Inmutable:** La Lizama PK 4+300 RN 4513. Se debe **adecuar la estructura existente**.
-**Áreas Mínimas Obligatorias (>400 m²):**
-*   **Oficina ANI/Interventoría:** 50 m² (Acceso Independiente + Terminal Espejo).
+**Áreas Mínimas Obligatorias (>400 m² Construidos + ~400 m² Parqueo):**
+*   **Oficina ANI/Interventoría:** 50 m² (CRÍTICO: Acceso Independiente + Terminal Espejo).
 *   **Oficina Policía:** 50 m² (Uso exclusivo).
-*   **Cafetería Pública:** 100 m² (Zona usuarios vía).
+*   **Cafetería Pública:** 100 m² (Zona usuarios vía -> Clasifica como "Alta Afluencia" RETIE).
 *   **Sala de Control:** 16 m² (Mínimo, recomendamos 40 m² para Videowall + 4 Consolas).
-*   **Parqueo:** 36 espacios de 11 m² c/u.
+*   **Parqueo Visitantes:** 36 espacios de 11 m² c/u (Impacto Urbanístico masivo).
 *   **Impacto:** Si la edificación actual no tiene estas áreas, se **DEBE AMPLIAR**. No es una simple remodelación cosmética.
 
 ---
@@ -48,11 +48,11 @@ Se certifica el alcance del **Centro de Control de Operaciones (CCO)** bajo la n
 <!-- SECCIÓN: technical_notes -->
 ## 2. BLINDAJE TÉCNICO Y OPERATIVO
 
-### 2.1 Energía Crítica (RETIE 2024)
+### 2.1 Energía y Clima Crítico (RETIE 2024)
 Para cumplir disponibilidad 99% (AT2) y RETIE (instalación vital):
-1.  **Redundancia:** UPS Online (5-30 min) + Planta Eléctrica (Tanque 24h).
-2.  **Cableado:** **LSZH** (Libre de Halógenos) obligatorio por afluencia de público (Cafetería).
-3.  **Protección:** DPS Certificados + Malla de Tierra <10 Ohm.
+1.  **Redundancia:** UPS Online (5-30 min) + Planta Eléctrica (Tanque 24h con dique de contención).
+2.  **Cableado:** **LSZH** (Libre de Halógenos) obligatorio por afluencia de público (Cafetería 100m²).
+3.  **Climatización:** Aire de Precisión/Confort Redundante (N+1) para Sala de Servidores y Operación 24/7.
 4.  **Certificación:** Se requiere **Certificación Plena RETIE** (Diseño + Construcción + Inspección).
 
 ### 2.2 Integración de Software (La "Suite" CCO)
