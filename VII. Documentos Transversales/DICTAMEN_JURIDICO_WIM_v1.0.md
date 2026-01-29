@@ -47,16 +47,39 @@ Es vital para el presupuesto NO duplicar ítems:
 
 ---
 
+<!-- SECCIÓN: technical_notes -->
+## 2. NOTAS DE PRECISIÓN TÉCNICA (GAPS DETECTADOS)
+
+### A. Obra Civil Crítica (Riesgo de Pavimento)
+**Requisito:** Sensores WIM (Cuarzo/Piezo) requieren "Cero Deformación" para mantener calibración.
+**Garantía:** Se EXIGE construir **Losa de Pavimento Rígido (Concreto)** de 50 metros antes y después del sensor.
+**Alerta:** Si se instala en asfalto (flexible), la calibración se pierde en <3 meses (Ahuellamiento). Se debe entregar el "Plano de Requisitos Civiles" al Director de Obra.
+
+### B. Integración CCO (Fibra Óptica)
+**Fuente:** AT2 Integración.
+**Requisito:** La estación en PR4+0100 (RN 4513) debe tener acometida de **Fibra Óptica Monomodo**. Sin conectividad, no hay transmisión de datos ni operación legal.
+
+### C. Cumplimiento RETIE 2024
+La estación de pesaje es una **Instalación de Uso Final**. Requiere:
+- Dictamen de Inspección (Anexo 5).
+- Certificados de producto para tableros, iluminación y acometidas.
+
+### D. Señalización de Selección
+**Requisito:** Semáforos o PMV sobre la pista para indicar "Siga" o "Entre a Báscula".
+**Acción:** Verificar inclusión de pórticos/badera con semáforos de aspa-flecha en el presupuesto.
+
+---
+
 <!-- SECCIÓN: technical -->
-## 2. ESPECIFICACIONES TÉCNICAS (HARD DECK)
+## 3. ESPECIFICACIONES TÉCNICAS (HARD DECK)
 
 ### 2.1 Configuración Estación (PR4+0100)
 - **Sentidos:** 2 (Norte y Sur).
 - **Equipamiento por Sentido:**
     1.  **Pre-selección (HS-WIM):** Sensores piezoeléctricos clase 5-10. Velocidad >80km/h.
-    2.  **Desvío:** Señalización variable (Aspa/Flecha/PMV) para camiones presuntamente sobrecargados.
-    3.  **Pesaje Estático:** Báscula camionera 100 ton (24m de largo) certificada NTC 5371.
-    4.  **Sanción:** Área de parqueo y oficina de inspección.
+    2.  **Desvío:** Señalización variable (Semáforo/PMV Mensaje "ENTRE") para selección.
+    3.  **Pesaje Estático:** Báscula camionera 100 ton (24m) certificada NTC 5371.
+    4.  **Sanción:** Área de parqueo y oficina con servicios (RETIE 2024).
 
 ### 2.2 Tecnologías Clave
 - **Sensores WIM:** Tecnología de Cuarzo (Kistler o similar) para estabilidad térmica.
@@ -66,7 +89,7 @@ Es vital para el presupuesto NO duplicar ítems:
 ---
 
 <!-- SECCIÓN: financial -->
-## 💰 ANÁLISIS FINANCIERO
+## 4. ANÁLISIS FINANCIERO
 
 ### Presupuesto Reconciliado (USD)
 
@@ -82,7 +105,7 @@ Es vital para el presupuesto NO duplicar ítems:
 ---
 
 <!-- SECCIÓN: risks -->
-## ⚠️ MATRIZ DE RIESGOS
+## 5. MATRIZ DE RIESGOS
 
 1.  **Desgaste de Sensores WIM:**
     *   *Riesgo:* Vida útil corta en pavimentos flexibles.

@@ -49,6 +49,8 @@
     - **Alcance:** 1 Estación de Pesaje Bidireccional (PR4+0100 RN 4513).
     - **Tecnología:** HS-WIM (Res 100/2024) + Báscula Estática (Sanción).
     - **Segregación:** WIM Peaje ($280k) está en WBS 5.01. WIM Pesaje ($551k) está en WBS 8.01.
+    - **Obra Civil:** Se EXIGE Losa de Concreto (50m) para garantizar calibración.
+    - **Conectividad:** Fibra óptica obligatoria hasta el PR.
 - **CAPEX Validado:** **$551,425 USD** (Incluye 2 Pistas Dinámicas + 2 Básculas Estáticas).
 
 ---
