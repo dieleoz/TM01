@@ -100,7 +100,9 @@ function renderValidationTable() {
             if (sysCode.includes('PEAJE')) mappedCode = 'PEAJE';
             if (sysCode.includes('CENTRO') || sysCode.includes('CCO')) mappedCode = 'CCO';
             if (sysCode.includes('METEO')) mappedCode = 'METEO';
-            if (sysCode.includes('ETD') || sysCode.includes('RADAR') || sysCode.includes('TRAFICO')) mappedCode = 'ETD';
+            if (sysCode.includes('ETD') || sysCode.includes('RADAR') && !sysCode.includes('PEDAG')) mappedCode = 'ETD';
+            if (sysCode.includes('SAST') || sysCode.includes('SANCIONATORIO')) mappedCode = 'SAST';
+            if (sysCode.includes('PEDAGOGICO') || sysCode.includes('PEDAGÓGICO')) mappedCode = 'PEDAGOGICO';
 
             systemEntries.push({
                 key: k,
