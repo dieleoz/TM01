@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: CCO
-// Fecha de generación: 2026-01-29 14:45:04
+// Fecha de generación: 2026-01-29 14:56:59
 
 const validaciones_CCO = {
   full: '## 📋 RESUMEN EJECUTIVO (HARD DECK)\n\n**Veredicto:** 🟢 **VALIDADO (OPTIMIZACIÓN MAYOR)**\n\nSe certifica el alcance del **Centro de Control de Operaciones (CCO)** bajo la nueva directriz de "Equipamiento Específico" (DT-TM01-CCO-019), rechazando el modelo anterior de "Solución Llave en Mano" que inflaba el costo.\n\n**Parámetros de Validación (Hard Deck):**\n1.  **Modelo de Compra:** Adquisición directa de Hardware (Servidores, Storage, Videowall) + Licencias. No "Cajas Negras".\n2.  **Optimización:** Eliminación de duplicidad en Video Central (VMS). El almacenamiento se maneja con cabinas iSCSI estándar, no con NVRs propietarios costosos.\n3.  **Ubicación:** Edificio Administrativo (Cuarto Técnico + Sala Operación).\n\n**CAPEX Validado:** **$425,000 USD** (Ahorro neto de **$1,964,000 USD** vs estimación original de $2.4M).\n\n---',
