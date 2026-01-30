@@ -2,143 +2,198 @@
 <html lang="es">
 
 <head>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WBS Completa Interactiva - TM01 Troncal Magdalena</title>
+    <title>WBS Completa - TM01 Troncal Magdalena</title>
 
-    <!-- Librerías Externas -->
+    <!-- Librerías -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/wbs.css">
     <link rel="stylesheet" href="css/tm01-design-system.css">
+    <style>
+        /* Estilos específicos WBS que complementan el Design System */
+        .wbs-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .wbs-tree {
+            font-family: var(--font-mono);
+            font-size: 0.9em;
+        }
+
+        .wbs-item {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--gray-100);
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .wbs-item:hover {
+            background-color: var(--gray-50);
+        }
+
+        .wbs-level-1 {
+            background-color: var(--bg-primary);
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .wbs-level-2 {
+            background-color: var(--gray-200);
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .wbs-level-3 {
+            padding-left: 30px;
+        }
+
+        .wbs-id {
+            min-width: 80px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .wbs-desc {
+            flex-grow: 1;
+        }
+
+        .wbs-meta {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+            min-width: 150px;
+            text-align: right;
+        }
+
+        .badge-capex {
+            background: var(--success);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="container">
-        <a href="WBS_Menu_Principal.html" class="tm01-back-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Volver al Inicio
-        </a>
-        <div class="header">
-            <h1>📋 WBS Completa Interactiva</h1>
-            <p>TM01 Troncal Magdalena - Sistema de Validación Web</p>
-            <p>Estructura de Desglose de Trabajo Completa</p>
-        </div>
+<body class="bg-gray-50">
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🏗️</span>
+                <span class="brand-text">TM01 Troncal Magdalena</span>
+            </div>
+            <div class="nav-menu">
+                <a href="WBS_Menu_Principal.html" class="nav-link">← Volver al Menú</a>
+                <span class="badge badge-success">Audit 6.0 Certified</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+
+        <!-- Header -->
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Estructura de Desglose de Trabajo (WBS)</h1>
+                <p>Fuente de Verdad: Ingeniería de Detalle (T05) + Dictámenes Jurídicos</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="exportarCSV()">📥 CSV</button>
+                <button class="btn btn-primary" onclick="exportarExcel()">📊 Excel</button>
+            </div>
+        </header>
+
+        <!-- KPI Cards -->
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number" id="totalItems">-</div>
-                <div class="stat-label">Total Items</div>
+                <div class="stat-icon">📑</div>
+                <div class="stat-info">
+                    <h3>Total Items</h3>
+                    <p class="stat-value" id="totalItems">Cargando...</p>
+                </div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="totalCapitulos">-</div>
-                <div class="stat-label">Capítulos</div>
+                <div class="stat-icon">💰</div>
+                <div class="stat-info">
+                    <h3>CAPEX Total ITS</h3>
+                    <p class="stat-value" id="costoTotal">Cargando...</p>
+                </div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="totalSistemas">-</div>
-                <div class="stat-label">Sistemas</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="costoTotal">-</div>
-                <div class="stat-label">Costo Total (USD)</div>
+                <div class="stat-icon">🔧</div>
+                <div class="stat-info">
+                    <h3>Sistemas</h3>
+                    <p class="stat-value" id="totalSistemas">Cargando...</p>
+                </div>
             </div>
         </div>
 
-        <div class="controls">
-            <h3>🔍 Filtros y Controles</h3>
-            <div class="filter-group">
-                <label for="sistemaFilter">Sistema:</label>
-                <select id="sistemaFilter">
-                    <option value="">Todos los sistemas</option>
+        <!-- Filters -->
+        <div class="card p-4 mb-4">
+            <h3 class="card-title mb-3">🔍 Filtros de Búsqueda</h3>
+            <div class="filter-group" style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <select id="sistemaFilter" class="form-control" style="flex: 1;">
+                    <option value="">Todos los Sistemas</option>
                 </select>
-                <label for="nivelFilter">Nivel:</label>
-                <select id="nivelFilter">
-                    <option value="">Todos los niveles</option>
-                    <option value="1">Capítulos</option>
-                    <option value="2">Subcapítulos</option>
-                    <option value="3">Items</option>
+                <select id="nivelFilter" class="form-control" style="flex: 1;">
+                    <option value="">Todos los Niveles</option>
+                    <option value="1">Capítulos (Nivel 1)</option>
+                    <option value="2">Subcapítulos (Nivel 2)</option>
+                    <option value="3">Items (Nivel 3)</option>
                 </select>
-                <label for="searchInput">Buscar:</label>
-                <input type="text" id="searchInput" placeholder="Buscar por descripción...">
-            </div>
-            <div class="filter-group">
-                <button class="btn btn-primary" onclick="filtrarWBS()">🔍 Aplicar Filtros</button>
-                <button class="btn btn-warning" onclick="limpiarFiltros()">🗑️ Limpiar Filtros</button>
-                <button class="btn btn-success" onclick="expandirTodo()">📈 Expandir Todo</button>
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar item..." style="flex: 2;">
+                <button class="btn btn-primary" onclick="filtrarWBS()">Filtrar</button>
+                <button class="btn btn-outline" onclick="limpiarFiltros()">Limpiar</button>
             </div>
         </div>
 
-        <div id="subtotalesSection" class="subtotal-section" style="display: none;">
-            <div class="subtotal-header">💰 Subtotales por Sistema</div>
-            <div id="subtotalesGrid" class="subtotal-grid"></div>
+        <!-- Subtotals Panel -->
+        <div id="subtotalesSection" class="card p-4 mb-4" style="display: none;">
+            <h3 class="card-title">💰 Subtotales por Sistema</h3>
+            <div id="subtotalesGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3"></div>
         </div>
 
-        <div class="subtotal-toggle">
-            <button class="btn btn-primary" onclick="toggleSubtotales()">📊 Mostrar Subtotales por Sistema</button>
+        <div class="mb-3 text-right">
+            <button class="btn btn-sm btn-secondary" onclick="toggleSubtotales()">👁️ Ver/Ocultar Subtotales</button>
         </div>
 
+        <!-- WBS Tree -->
         <div class="wbs-container">
             <div id="wbsTree" class="wbs-tree">
-                <div class="loading">📋 Cargando datos WBS...</div>
-            </div>
-            <div class="export-buttons">
-                <button class="btn btn-primary" onclick="exportarCSV()">📊 Exportar CSV</button>
-                <button class="btn btn-success" onclick="exportarExcel()">📄 Exportar Excel</button>
+                <div class="text-center p-5 text-gray-500">
+                    <div class="spinner"></div> Cargando Datos Maestros...
+                </div>
             </div>
         </div>
+
     </div>
 
-    <!-- Modal para Decisiones Técnicas (DT) -->
-    <div id="dtModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-title">📋 Crear Decisión Técnica (DT)</div>
-                <span class="close" onclick="cerrarModal()">&times;</span>
-            </div>
-            <form id="dtForm">
-                <div class="form-group"><label for="dtItem">Item WBS:</label><input type="text" id="dtItem" readonly>
-                </div>
-                <div class="form-group"><label for="dtDescripcion">Descripción:</label><input type="text"
-                        id="dtDescripcion" readonly></div>
-                <div class="form-group"><label for="dtSistema">Sistema:</label><input type="text" id="dtSistema"
-                        readonly></div>
-                <div class="form-group"><label for="dtTipo">Tipo de DT:</label>
-                    <select id="dtTipo" required>
-                        <option value="">Seleccionar tipo...</option>
-                        <option value="Cambio Técnico">Cambio Técnico</option>
-                        <option value="Optimización">Optimización</option>
-                        <option value="Gestión de Riesgo">Gestión de Riesgo</option>
-                        <option value="Verificación">Verificación</option>
-                    </select>
-                </div>
-                <div class="form-group"><label for="dtJustificacion">Justificación Técnica:</label><textarea
-                        id="dtJustificacion" placeholder="Describir la justificación técnica del cambio..."
-                        required></textarea></div>
-                <div class="form-group"><label for="dtCriterios">Criterios de Diseño:</label><textarea id="dtCriterios"
-                        placeholder="Criterios técnicos aplicables..."></textarea></div>
-                <div class="form-group"><label for="dtAlternativas">Alternativas Evaluadas:</label><textarea
-                        id="dtAlternativas" placeholder="Alternativas consideradas y descartadas..."></textarea></div>
-                <div class="form-group"><label for="dtRiesgos">Riesgos Identificados:</label><textarea id="dtRiesgos"
-                        placeholder="Riesgos asociados al cambio..."></textarea></div>
-                <div class="modal-actions">
-                    <button type="button" class="btn btn-warning" onclick="cerrarModal()">Cancelar</button>
-                    <button type="submit" class="btn btn-success">Crear DT</button>
-                </div>
-            </form>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>TM01 Troncal Magdalena</strong> - Sistema de Gestión Contractual</p>
+            <p>Metodología: Punto 42 v3.0 (Layer 5 Services)</p>
+            <p>Validación: Agent 3 (Audit 6.0)</p>
         </div>
-    </div>
+    </footer>
 
-    <!-- Datos -->
-    <script src="data/tm01_master_data.js?v=20251209"></script>
-    <script src="datos_wbs_TM01_items.js?v=20251209"></script>
+    <!-- Scripts -->
+    <script src="data/tm01_master_data.js?v=20260130"></script>
+    <script src="datos_wbs_TM01_items.js?v=20260130"></script>
 
-    <!-- Módulos de la Aplicación -->
+    <!-- Logic -->
     <script src="js/wbs-dt.js"></script>
     <script src="js/wbs-export.js"></script>
     <script src="js/wbs-main.js"></script>

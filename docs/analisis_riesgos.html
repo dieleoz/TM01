@@ -2,355 +2,279 @@
 <html lang="es">
 
 <head>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Análisis de Riesgos - TM01 Troncal Magdalena</title>
+
+  <!-- Librerías -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/tm01-design-system.css">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0
-    }
-
-    .top {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 16px;
-      background: #111827;
-      border-bottom: 1px solid #1f2937
-    }
-
-    .btn {
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: 1px solid #334155;
-      background: #0b1220;
-      color: #e5e7eb;
-      cursor: pointer
-    }
-
-    .btn-primary {
-      background: #2563eb;
-      border-color: #2563eb
-    }
-
-    .btn-success {
-      background: #16a34a;
-      border-color: #16a34a
-    }
-
-    .wrap {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 18px
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px
-    }
-
-    .metric {
-      background: #111827;
-      border: 1px solid #1f2937;
-      padding: 14px;
-      border-radius: 10px
-    }
-
-    .metric .val {
-      font-size: 22px;
-      font-weight: 800;
-      color: #93c5fd
-    }
-
-    .metric .lab {
-      font-size: 12px;
-      color: #94a3b8;
-      margin-top: 6px
-    }
-
-    .panel {
-      background: #0b1220;
-      border: 1px solid #1f2937;
-      border-radius: 12px;
-      margin-top: 16px
-    }
-
-    .panel h2 {
-      margin: 0;
-      padding: 12px 14px;
-      border-bottom: 1px solid #1f2937;
-      color: #c7d2fe;
-      font-size: 18px
-    }
-
-    .panel .content {
-      padding: 14px
-    }
-
-    .filters {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap
-    }
-
-    select,
-    input {
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid #334155;
-      background: #0b1220;
-      color: #e5e7eb
-    }
-
-    .matrix {
+    /* Estilos específicos Riesgos */
+    .risk-matrix-container {
       display: grid;
       grid-template-columns: 80px repeat(5, 1fr);
-      gap: 6px;
-      margin-top: 8px
+      gap: 4px;
+      margin-top: 15px;
     }
 
-    .cell {
-      background: #0b1220;
-      border: 1px solid #1f2937;
-      border-radius: 8px;
-      min-height: 64px;
-      padding: 6px
-    }
-
-    .cell.h {
-      background: #172554;
-      color: #93c5fd;
-      text-align: center;
-      font-weight: 700
-    }
-
-    .risk {
-      background: #111827;
-      border: 1px solid #1f2937;
+    .matrix-cell {
+      padding: 10px;
       border-radius: 6px;
-      padding: 6px;
-      margin: 4px 0;
-      font-size: 12px
+      font-size: 0.85em;
+      min-height: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
     }
 
-    .R {
-      background: #7f1d1d;
-      border-color: #ef4444
+    .matrix-header {
+      background-color: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+      font-size: 0.8em;
+      border-radius: 4px;
     }
 
-    .M {
-      background: #78350f;
-      border-color: #f59e0b
+    .zone-red {
+      background-color: #fee2e2;
+      border: 1px solid #ef4444;
     }
 
-    .B {
-      background: #064e3b;
-      border-color: #34d399
+    .zone-yellow {
+      background-color: #fefce8;
+      border: 1px solid #eab308;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #0b1220;
-      border: 1px solid #1f2937
+    .zone-green {
+      background-color: #dcfce7;
+      border: 1px solid #22c55e;
     }
 
-    th {
-      background: #0f172a;
-      color: #e2e8f0;
-      padding: 10px;
-      text-align: left;
-      font-size: 13px
+    .risk-tag {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      cursor: help;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-left: 3px solid var(--primary);
     }
 
-    td {
-      padding: 10px;
-      border-top: 1px solid #1f2937;
-      font-size: 13px;
-      color: #cbd5e1
+    .risk-badge-high {
+      background-color: #ef4444;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 0.8em;
     }
 
-    .tag {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 700
+    .risk-badge-med {
+      background-color: #eab308;
+      color: black;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 0.8em;
     }
 
-    .tR {
-      background: #fecaca;
-      color: #7f1d1d
-    }
-
-    .tM {
-      background: #fde68a;
-      color: #78350f
-    }
-
-    .tB {
-      background: #bbf7d0;
-      color: #064e3b
-    }
-
-    @media print {
-      .top {
-        display: none
-      }
-
-      body {
-        background: #fff;
-        color: #000
-      }
-
-      .panel,
-      .metric {
-        border-color: #ddd
-      }
+    .risk-badge-low {
+      background-color: #22c55e;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 0.8em;
     }
   </style>
 </head>
 
-<body>
-  <div class="top">
-    <div style="display:flex;gap:8px;align-items:center">
-      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">← Menú</button>
-      <strong>⚙️ Análisis de Riesgos</strong>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-icon">🛡️</span>
+        <span class="brand-text">Gestión de Riesgos TM01</span>
+      </div>
+      <div class="nav-menu">
+        <a href="WBS_Menu_Principal.html" class="nav-link">← Volver al Menú</a>
+        <span class="badge badge-warning">Active Monitoring</span>
+      </div>
     </div>
-    <div style="display:flex;gap:8px">
-      <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
-      <button class="btn btn-success" onclick="exportarExcel()">📊 Exportar Excel</button>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container main-content">
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="header-content">
+        <h1>Matriz de Riesgos y Oportunidades</h1>
+        <p>Análisis Consecuencia vs Probabilidad (ISO 31000)</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-secondary" onclick="window.print()">🖨️ Imprimir</button>
+        <button class="btn btn-primary" onclick="exportarExcel()">📊 Exportar Excel</button>
+      </div>
+    </header>
+
+    <!-- KPI Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📉</div>
+        <div class="stat-info">
+          <h3>Total Riesgos</h3>
+          <p class="stat-value" id="mTotal">-</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="color: #ef4444;">🔴</div>
+        <div class="stat-info">
+          <h3>Severidad Alta</h3>
+          <p class="stat-value" id="mAltos">-</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="color: #eab308;">🟡</div>
+        <div class="stat-info">
+          <h3>Severidad Media</h3>
+          <p class="stat-value" id="mMedios">-</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="color: #22c55e;">🟢</div>
+        <div class="stat-info">
+          <h3>Severidad Baja</h3>
+          <p class="stat-value" id="mBajos">-</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Filters -->
+    <div class="card p-4 mb-4">
+      <div class="filter-group" style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end;">
+        <div style="flex: 1;">
+          <label class="form-label">Severidad</label>
+          <select id="fSeveridad" onchange="aplicarFiltros()" class="form-control">
+            <option value="">Todas</option>
+            <option>ALTO</option>
+            <option>MEDIO</option>
+            <option>BAJO</option>
+          </select>
+        </div>
+        <div style="flex: 1;">
+          <label class="form-label">Categoría</label>
+          <select id="fCategoria" onchange="aplicarFiltros()" class="form-control">
+            <option value="">Todas</option>
+          </select>
+        </div>
+        <div style="flex: 2;">
+          <label class="form-label">Búsqueda</label>
+          <input id="fBuscar" placeholder="Buscar riesgo..." oninput="aplicarFiltros()" class="form-control" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Matrix Visualization -->
+    <div class="card p-4 mb-4">
+      <h3 class="card-title">📊 Mapa de Calor (Heatmap)</h3>
+      <div id="matrix" style="overflow-x: auto;"></div>
+    </div>
+
+    <!-- Detailed List -->
+    <div class="card p-4">
+      <h3 class="card-title">📋 Detalle de Riesgos</h3>
+      <table class="table" id="tabla">
+        <thead>
+          <tr>
+            <th>Riesgo</th>
+            <th>Categoría</th>
+            <th>Severidad</th>
+            <th>Probabilidad</th>
+            <th>Impacto</th>
+            <th>Plan de Mitigación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="6" class="text-center text-muted">Cargando datos...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
-  <div class="wrap">
-    <div class="grid">
-      <div class="metric">
-        <div class="val" id="mTotal">-</div>
-        <div class="lab">Riesgos</div>
-      </div>
-      <div class="metric">
-        <div class="val" id="mAltos">-</div>
-        <div class="lab">Riesgos Altos</div>
-      </div>
-      <div class="metric">
-        <div class="val" id="mMedios">-</div>
-        <div class="lab">Riesgos Medios</div>
-      </div>
-      <div class="metric">
-        <div class="val" id="mBajos">-</div>
-        <div class="lab">Riesgos Bajos</div>
-      </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p><strong>TM01 Troncal Magdalena</strong> - Sistema de Gestión de Riesgos</p>
+      <p>Metodología: PMI / ISO 31000</p>
+      <p id="lastUpdate">Actualizado: --</p>
     </div>
+  </footer>
 
-    <div class="panel">
-      <h2>🔍 Filtros</h2>
-      <div class="content filters">
-        <select id="fSeveridad" onchange="aplicarFiltros()">
-          <option value="">Todas las severidades</option>
-          <option>ALTO</option>
-          <option>MEDIO</option>
-          <option>BAJO</option>
-        </select>
-        <select id="fCategoria" onchange="aplicarFiltros()">
-          <option value="">Todas las categorías</option>
-        </select>
-        <input id="fBuscar" placeholder="Buscar riesgo" oninput="aplicarFiltros()" />
-      </div>
-    </div>
+  <!-- Scripts -->
+  <script src="data/tm01_master_data.js?v=20260130"></script>
+  <script src="data/tm01_riesgos_data.js?v=20260130"></script>
 
-    <div class="panel">
-      <h2>📊 Matriz Probabilidad vs Impacto</h2>
-      <div class="content" id="matrix"></div>
-    </div>
-
-    <div class="panel">
-      <h2>📋 Listado de Riesgos</h2>
-      <div class="content">
-        <table id="tabla">
-          <thead>
-            <tr>
-              <th>Riesgo</th>
-              <th>Categoría</th>
-              <th>Severidad</th>
-              <th>Probabilidad</th>
-              <th>Impacto</th>
-              <th>Mitigación</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="6" style="color:#94a3b8">Cargando...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
-  <script src="data/tm01_master_data.js?v=20251209"></script>
-  <script src="data/tm01_riesgos_data.js?v=20251212"></script>
   <script>
+    // Inline JS migrating logic from old file but adapting to new DOM
     let all = [], filtered = [];
 
-    // Lógica de Severidad Centralizada
     function severidad(prob, imp) {
       const s = prob * imp;
-      if (s >= 15) return 'ALTO'; // Ajustado a estandar PMI (5x3=15)
+      if (s >= 15) return 'ALTO';
       if (s >= 8) return 'MEDIO';
       return 'BAJO';
     }
 
     function init() {
-      // Cargar datos desde fuente externa
       if (typeof window.TM01_RIESGOS_DATA === 'undefined') {
-        // Reintentar si no ha cargado (race condition)
         setTimeout(init, 100);
         return;
       }
 
       const data = window.TM01_RIESGOS_DATA;
 
-      // Mapeo de datos
+      // Map data
       all = data.riesgos.map(r => ({
         ...r,
         sev: severidad(r.prob, r.imp)
       }));
+      filtered = [...all];
 
-      filtered = [...all]; // Copia inicial
-
-      // Renderizado
+      // Render
       poblarFiltros();
       renderMatriz();
       renderTabla();
       actualizarMetricas();
 
-      // Mostrar fecha actualización
-      const infoDiv = document.createElement('div');
-      infoDiv.style.textAlign = 'center';
-      infoDiv.style.color = '#64748b';
-      infoDiv.style.fontSize = '12px';
-      infoDiv.style.marginTop = '20px';
-      infoDiv.innerHTML = `Datos actualizados a: ${data.fechaActualizacion || 'Desconocida'}`;
-      document.querySelector('.wrap').appendChild(infoDiv);
+      document.getElementById('lastUpdate').textContent = `Actualizado: ${data.fechaActualizacion || 'Hoy'}`;
     }
 
     function poblarFiltros() {
       const cat = [...new Set(all.map(r => r.categoria))];
       const s = document.getElementById('fCategoria');
-      s.innerHTML = '<option value="">Todas las categorías</option>'; // Reset
-      cat.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; s.appendChild(o); });
+      s.innerHTML = '<option value="">Todas</option>';
+      cat.forEach(c => {
+        const o = document.createElement('option');
+        o.value = c;
+        o.textContent = c;
+        s.appendChild(o);
+      });
     }
 
     function aplicarFiltros() {
@@ -372,39 +296,34 @@
 
     function renderMatriz() {
       const cont = document.getElementById('matrix');
-      const labels = ['Muy Bajo', 'Bajo', 'Medio', 'Alto', 'Muy Alto']; // Etiquetas X
+      const labels = ['Muy Bajo', 'Bajo', 'Medio', 'Alto', 'Muy Alto'];
 
-      // Inicializar Grid 5x5
+      // Initialize Grid 5x5
       const grid = [];
       for (let i = 0; i < 5; i++) { grid[i] = []; for (let j = 0; j < 5; j++) { grid[i][j] = []; } }
 
-      // Poblar Grid
       filtered.forEach(r => {
-        const p = Math.max(1, Math.min(5, r.prob)) - 1; // Y (0-4)
-        const im = Math.max(1, Math.min(5, r.imp)) - 1; // X (0-4)
+        const p = Math.max(1, Math.min(5, r.prob)) - 1;
+        const im = Math.max(1, Math.min(5, r.imp)) - 1;
         grid[p][im].push(r);
       });
 
-      let html = '<div class="matrix">';
+      let html = '<div class="risk-matrix-container">';
 
-      // Header X (Impacto)
-      html += '<div class="cell h">Prob/Imp</div>';
-      labels.forEach(l => html += `<div class="cell h">${l}</div>`);
+      // Header X
+      html += '<div class="matrix-header">Prob/Imp</div>';
+      labels.forEach(l => html += `<div class="matrix-header">${l}</div>`);
 
-      // Filas (Probabilidad descendente 5->1)
+      // Rows (Prob desc 5->1)
       for (let p = 4; p >= 0; p--) {
-        html += `<div class="cell h">Prob ${p + 1}</div>`;
+        html += `<div class="matrix-header">Prob ${p + 1}</div>`;
         for (let im = 0; im < 5; im++) {
           const cel = grid[p][im];
-          // Determinar color de celda basado en el contenido o posición teórica
           const score = (p + 1) * (im + 1);
-          let bgClass = '';
-          if (score >= 15) bgClass = 'R';       // Zona Roja
-          else if (score >= 8) bgClass = 'M';   // Zona Amarilla/Naranja
-          else bgClass = 'B';                   // Zona Verde
+          let zoneClass = score >= 15 ? 'zone-red' : (score >= 8 ? 'zone-yellow' : 'zone-green');
 
-          html += `<div class="cell ${bgClass}">` +
-            cel.map(x => `<div class="risk" title="${x.mitigacion}">${x.titulo}</div>`).join('') +
+          html += `<div class="matrix-cell ${zoneClass}">` +
+            cel.map(x => `<div class="risk-tag" title="${x.mitigacion}">${x.id}</div>`).join('') +
             `</div>`;
         }
       }
@@ -414,26 +333,25 @@
 
     function renderTabla() {
       const tb = document.querySelector('#tabla tbody');
-      if (filtered.length === 0) { tb.innerHTML = '<tr><td colspan="6" style="color:#94a3b8;text-align:center">Sin resultados que coincidan con los filtros</td></tr>'; return; }
+      if (filtered.length === 0) {
+        tb.innerHTML = '<tr><td colspan="6" class="text-center text-muted">No se encontraron riesgos</td></tr>';
+        return;
+      }
 
       tb.innerHTML = filtered.map(r => {
-        const tag = r.sev === 'ALTO' ? 'tR' : r.sev === 'MEDIO' ? 'tM' : 'tB';
-        const estadoTag = r.estado === 'CERRADO' ? 'background:#334155;color:#94a3b8' : '';
+        const badgeClass = r.sev === 'ALTO' ? 'risk-badge-high' : (r.sev === 'MEDIO' ? 'risk-badge-med' : 'risk-badge-low');
 
         return `<tr>
-          <td>
-            <strong>${r.titulo}</strong><br>
-            <span style="font-size:10px;color:#64748b">${r.id}</span>
-          </td>
-          <td>${r.categoria}</td>
-          <td><span class="tag ${tag}">${r.sev}</span></td>
-          <td style="text-align:center">${r.prob}</td>
-          <td style="text-align:center">${r.imp}</td>
-          <td>
-             ${r.mitigacion}
-             ${r.estado ? `<br><span class="tag" style="margin-top:4px;font-size:9px;${estadoTag}">${r.estado}</span>` : ''}
-          </td>
-        </tr>`;
+                    <td>
+                        <strong>${r.titulo}</strong><br>
+                        <span class="text-muted small">${r.id}</span>
+                    </td>
+                    <td>${r.categoria}</td>
+                    <td><span class="${badgeClass}">${r.sev}</span></td>
+                    <td class="text-center">${r.prob}</td>
+                    <td class="text-center">${r.imp}</td>
+                    <td>${r.mitigacion}</td>
+                </tr>`;
       }).join('');
     }
 
@@ -445,22 +363,15 @@
     }
 
     function exportarExcel() {
-      if (filtered.length === 0) return alert('No hay datos para exportar');
+      if (filtered.length === 0) return alert('No hay datos');
       const rows = filtered.map(r => ({
-        ID: r.id,
-        Riesgo: r.titulo,
-        Categoria: r.categoria,
-        Severidad: r.sev,
-        Probabilidad: r.prob,
-        Impacto: r.imp,
-        Score: r.prob * r.imp,
-        Mitigacion: r.mitigacion,
-        Estado: r.estado
+        ID: r.id, Riesgo: r.titulo, Categoria: r.categoria, Severidad: r.sev,
+        Prob: r.prob, Imp: r.imp, Score: r.prob * r.imp, Mitigacion: r.mitigacion
       }));
       const ws = XLSX.utils.json_to_sheet(rows);
       const wb = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(wb, ws, 'Riesgos');
-      XLSX.writeFile(wb, 'Analisis_Riesgos_TM01.xlsx');
+      XLSX.writeFile(wb, 'Riesgos_TM01.xlsx');
     }
 
     window.addEventListener('DOMContentLoaded', init);
