@@ -18,8 +18,8 @@
 - [x] **PMV:** ✅ CERRADO (5/5 Pasos)
 - [x] **SOS:** ✅ CERRADO (5/5 Pasos)
 - [x] **WIM:** ✅ CERRADO (5/5 Pasos)
-- [/] **PEAJES:** ⚠️ Falta Paso 4 (Planos T02)
-- [/] **FIBRA:** ⚠️ Falta Paso 4 (Planos T02)
+- [x] **PEAJES:** ✅ CERRADO (5/5 Pasos)
+- [x] **FIBRA:** ✅ CERRADO (5/5 Pasos)
 
 ## 📤 FASE 7: SERVICIOS (LAYER 5)
 > Solo se inicia cuando un sistema tiene los 5 pasos de la Receta completados.
