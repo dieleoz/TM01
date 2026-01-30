@@ -82,7 +82,7 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] Fiber Optic CAPEX: **$7,980,000 USD** (322km Cable 48H + Civil Works)
 - [ ] CCO CAPEX: **$845,000 USD** (Hardware + Civil Works >400m2 + RETIE Power)
 - [ ] Meteo CAPEX: **$140,000 USD** (4 Industrial Stations Lufft/Vaisala - Safety Strategy Applied)
-- [ ] ETD/RADAR CAPEX: **$22,500 USD** (2 Dahua All-in-One Units + DSS Pro Software)
+- [ ] ETD/RADAR CAPEX: **$38,461.41 USD** (13 Dahua Nodes + Overseas Platform - Smart CAPEX Optimization)
 - [ ] Total ITS CAPEX: **~$8.6M USD** (Final Consolidated)
 
 #### B. Web Dashboard Verification
