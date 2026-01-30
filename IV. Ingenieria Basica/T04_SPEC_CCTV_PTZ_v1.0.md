@@ -69,14 +69,22 @@ Suministro, instalación, configuración y puesta en marcha de **9 Unidades de C
 | **Gabinete** | IP66 Acero Inoxidable / Poliéster | Alojamiento exclusivo baterías. |
 | **Respaldo** | Conexión híbrida (Red + Solar) | Si hay red disponible (Redundancia). |
 
-## 3. CANTIDADES A INSTALAR (POR TRAMO)
+## 3. TABLA DE UBICACIONES (GEORREFERENCIADAS)
+**Fuente: Ingeniería de Detalle (Validación en Campo)**
 
-| Ubicación | Cantidad | Descripción |
-|:----------|:--------:|:------------|
-| **Peaje Zambito** | 4 | Monitoreo carriles y tesorería |
-| **Peaje Aguas Negras**| 4 | Monitoreo carriles y tesorería |
-| **Estación Pesaje (PR4)** | 1 | Supervisión báscula dinámica |
-| **TOTAL** | **9** | **Coincide con Master Data** |
+| RUTA | UF | EJE VIAL | PK (Abscisa) | DESCRIPCIÓN SITIO |
+|:-----|:---|:---------|:-------------|:------------------|
+| 4510 | 0D | Separador | 69+000 | Peatonal / Cruce |
+| 4510 | 0D | Separador | 97+030 | Intersección Pto Boyacá |
+| 4510 | 0D | Separador | 104+150 | Área Servicio Zambito |
+| 4511 | 5.1| Izquierda | 61+675 | Peatonal |
+| 4511 | 9 | Separador | 113+300 | A.S. Aguas Negras |
+| 4511 | 9 | Separador | 115+800 | Peatonal |
+| 4513 | 11 | Separador | 0+320 | Intersección Lizama |
+| 4513 | 13 | Separador | 3+875 | Báscula Izquierda (WIM) |
+| 4513 | 11 | Separador | 4+400 | CCO Izquierda (Control) |
+
+**TOTAL: 9 UNIDADES**
 
 ## 4. ENTREGABLES PARA RECIBO (CONDICIÓN DE PAGO)
 1.  **Datasheet Fabricante:** Resaltando Zoom 32X y AES-256.
