@@ -74,29 +74,28 @@ class TM01MasterData {
             sosSummary: {
                 id: '6',
                 sistema: 'SOS',
-                cantidad: 98,  // Total Contractual (AT1 - 3km)
-                capexUSD: 2450000,  // 98 × $25,000
-                capexCOP: 10780000000,
-                capexUnitarioUSD: 25000,
-                descripcion: 'Forensic v2.0 (98 Units: Full Compliance 3km - Solar Autonomous)',
+                cantidad: 88,
+                capexUSD: 600659,  // $2,642,898,552 / 4400
+                capexCOP: 2642898552, // Subtotal COLSEIN OPOCOL-8866
+                capexUnitarioUSD: 6826,
+                descripcion: 'Oferta COLSEIN 2026 (88 Units - OPOCOL-8866)',
                 estado: 'Validado',
 
                 // Desglose detallado
                 desglose: {
-                    nuevos: 98,
+                    nuevos: 88,
                     existentes: 0,
-                    total: 98,
-                    rn4510: { cantidad: 37, capex: 925000, tramo: "Magdalena" },
-                    rn4511: { cantidad: 56, capex: 1400000, tramo: "Puerto Salgar" },
-                    rn4513: { cantidad: 5, capex: 125000, tramo: "Acceso CCO" }
+                    total: 88,
+                    rn4510: { cantidad: 35, tramo: "Magdalena" },
+                    rn4511: { cantidad: 53, tramo: "Puerto Salgar" }
                 },
 
                 // Trazabilidad contractual
-                fuenteContractual: "AT1 L3525 (98 total: 88 nuevos + 10 UF Rehabilitación)",
-                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-SOS-002.md",
-                analisisBase: "VII. Documentos Transversales/DICTAMEN_JURIDICO_SOS_v1.0.md",
-                fechaValidacion: "2026-01-29",
-                versionT05: "v2.0 (GAP: Check Crash Barriers)"
+                fuenteContractual: "Oferta COLSEIN S.A.S OPOCOL-8866 (Nov-2025)",
+                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-SOS-004.md",
+                analisisBase: "Cotización COLSEIN SOS Cielo Abierto",
+                fechaValidacion: "2026-01-30",
+                versionT05: "v3.1 (COLSEIN Reference)"
             },
             meteoSummary: {
                 id: '7',
@@ -227,10 +226,10 @@ class TM01MasterData {
                 id: '6',
                 sistema: 'SOS',
                 cantidad: 88,
-                capexUSD: 2200000,
-                capexCOP: 9680000000,
-                capexUnitarioUSD: 25000,
-                descripcion: 'Reconciliado Audit 5.0 (88 Postes SOS)',
+                capexUSD: 600659,
+                capexCOP: 2642898552,
+                capexUnitarioUSD: 6826,
+                descripcion: 'Validación COLSEIN OPOCOL-8866 (88 Postes)',
                 estado: 'Validado'
             },
             {
@@ -306,16 +305,11 @@ class TM01MasterData {
             // CAPÃTULO 1: SISTEMA SOS
             { id: '1', nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo" },
             { id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo" },
-            { id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Poste metálico galvanizado 4.90m (Manual 2024)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Cumplimiento 3km", vu: "1200", vuCOP: "5,280,000", total: "105,600", totalCOP: "464,640,000" },
-            { id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Gabinete control IP65 Naranja (RAL 2004)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Protección equipos normativa", vu: "800", vuCOP: "3,520,000", total: "70,400", totalCOP: "309,760,000" },
-            { id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Sistema Solar Autónomo (Panel 150W + Baterías + MPPT)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Autonomía >48h", vu: "1500", total: "132,000", totalCOP: "580,800,000" },
-            { id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Teléfono VoIP anti-vandálico Industrial", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Comunicación SIP", vu: "1800", total: "158,400", totalCOP: "696,960,000" },
-            { id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Componentes electrónicos base y media converter", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Core electrónico", vu: "12700", total: "1,117,600", totalCOP: "4,917,440,000" },
-            { id: '1.1.6', nivel: 3, item: "1.1.6", descripcion: "Mano de obra montaje 4.90m especializada", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Instalación en sitio", vu: "2500", total: "220,000", totalCOP: "968,000,000" },
-            { id: '1.1.7', nivel: 3, item: "1.1.7", descripcion: "Pruebas y comisionamiento SAT", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Certificación operativa", vu: "1500", total: "132,000", totalCOP: "580,800,000" },
-            { id: '1.1.8', nivel: 3, item: "1.1.8", descripcion: "Cimentación Reforzada + Tierras", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", criterio: "Infraestructura civil", vu: "2000", total: "176,000", totalCOP: "774,400,000" },
-            { id: '1.1.9', nivel: 3, item: "1.1.9", descripcion: "Integración CCO + SCADA Global", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Software y comisionamiento", vu: "85000", total: "85,000", totalCOP: "374,000,000" },
-            { id: '1.1.10', nivel: 3, item: "1.1.10", descripcion: "Stock Repuestos (0.5%)", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Soporte post-venta", vu: "13000", total: "13,000", totalCOP: "57,200,000" },
+            { id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Suministro Equipos SOS Cielo Abierto (Intercom, Protecciones, VPN)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1005", vuCOP: "4,422,956", total: "88,460", totalCOP: "389,220,181" },
+            { id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Suministro Estructuras Metálicas SOS (Poste, Gabinete, Barandas)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "3339", vuCOP: "14,692,348", total: "293,851", totalCOP: "1,292,926,654" },
+            { id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Suministro Arreglo Fotovoltaico SOS (Paneles, Baterías, Cargador)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1592", vuCOP: "7,006,832", total: "140,137", totalCOP: "616,601,265" },
+            { id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Instalación Sistema SOS Cielo Abierto (Montaje, Cableado, Hincado)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "OBRA", vu: "723", vuCOP: "3,181,182", total: "63,624", totalCOP: "279,944,070" },
+            { id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Suministro Equipos CCO (Servidores SIP, Estación Maestra)", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "14592", vuCOP: "64,206,380", total: "14,592", totalCOP: "64,206,380" },
 
             // CAPÃTULO 2: SISTEMA ETD & RADARES (RFQ-006 & RFQ-007)
             { id: '2', nivel: 1, item: "2", descripcion: "SISTEMA ETD & RADARES", sistema: "ETD", tipo: "capitulo" },
@@ -333,7 +327,7 @@ class TM01MasterData {
             { id: '2.4.3', nivel: 3, item: "2.4.3", descripcion: "Integración SICC (ANI) + CCO + Comisionamiento", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Alineación AT4", vu: "210,000", total: "210,000", totalCOP: "924,000,000" },
             { id: '2.4.4', nivel: 3, item: "2.4.4", descripcion: "Repuestos Críticos & Garantía", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Soporte", vu: "20,000", total: "20,000", totalCOP: "88,000,000" },
 
-            // CAPÃ TULO 3: SISTEMA CCTV
+            // CAPÍTULO 3: SISTEMA CCTV
             { id: '3', nivel: 1, item: "3", descripcion: "SISTEMA CCTV", sistema: "CCTV", tipo: "capitulo" },
             { id: '3.1', nivel: 2, item: "3.1", descripcion: "SUMINISTROS CCTV", sistema: "CCTV", tipo: "subcapitulo" },
             { id: '3.1.1', nivel: 3, item: "3.1.1", descripcion: "Cámara PTZ Dahua 32X + Solar + Poste 12m", sistema: "CCTV", cantidad: "9", unidad: "UND", tipo: "item", criterio: "Specs: 1/2.8\" 4MP CMOS, 32x Opt Zoom, Auto Tracking 3.0, Face Det, SMD 4.0, PoE+, IP67, IK10", vu: "12900", vuCOP: "56,760,000", total: "116,100", totalCOP: "510,840,000" },
@@ -804,28 +798,55 @@ ${dt.documentosAfectados.map(doc => `- ${doc}`).join('\n')}
 
     getTotalPorSistema(sistema) {
         const items = this.getItemsBySistema(sistema);
-        return items.reduce((sum, item) => sum + parseFloat(item.total || 0), 0);
+        return items.reduce((sum, item) => {
+            const val = String(item.total || "0").replace(/,/g, '');
+            return sum + (parseFloat(val) || 0);
+        }, 0);
     }
 
     getTotalGeneral() {
-        return this.data.wbs.reduce((sum, item) => sum + parseFloat(item.total || 0), 0);
+        return this.data.wbs.reduce((sum, item) => {
+            const val = String(item.total || "0").replace(/,/g, '');
+            return sum + (parseFloat(val) || 0);
+        }, 0);
     }
 
     getEstadisticas() {
-        const sistemas = [...new Set(this.data.wbs.map(item => item.sistema))];
+        const sistemas = [...new Set(this.data.wbs.map(item => item.sistema))].filter(Boolean);
         const estadisticas = {};
 
         sistemas.forEach(sistema => {
-            const items = this.getItemsBySistema(sistema);
+            const totalUSD = this.getTotalPorSistema(sistema);
             estadisticas[sistema] = {
-                cantidadItems: items.length,
-                totalUSD: this.getTotalPorSistema(sistema),
-                totalCOP: this.getTotalPorSistema(sistema) * 4400,
-                porcentaje: (this.getTotalPorSistema(sistema) / this.getTotalGeneral()) * 100
+                cantidadItems: this.getItemsBySistema(sistema).length,
+                totalUSD: totalUSD,
+                totalCOP: totalUSD * 4400,
+                porcentaje: 0 // Se calcula al final
             };
         });
 
+        const totalGeneral = this.getTotalGeneral();
+        Object.values(estadisticas).forEach(s => {
+            s.porcentaje = totalGeneral > 0 ? (s.totalUSD / totalGeneral) * 100 : 0;
+        });
+
         return estadisticas;
+    }
+
+    getContractualSummary() {
+        // Fuente: Summaries (Capa 2) - Hard Deck Certificado
+        const summaries = Object.keys(this.data)
+            .filter(key => key.includes('Summary'))
+            .map(key => this.data[key]);
+
+        return summaries.map(s => ({
+            id: s.id,
+            sistema: s.sistema,
+            capexUSD: s.capexUSD || 0,
+            capexCOP: s.capexCOP || 0,
+            estado: s.estado,
+            descripcion: s.descripcion
+        })).sort((a, b) => b.capexCOP - a.capexCOP);
     }
 
     // MÃ‰TODOS DE EXPORTACIÓN
@@ -863,6 +884,10 @@ window.obtenerItemWBS = function (itemId) {
 
 window.obtenerEstadisticas = function () {
     return window.tm01MasterData.getEstadisticas();
+};
+
+window.obtenerResumenContractual = function () {
+    return window.tm01MasterData.getContractualSummary();
 };
 
 window.exportarDatosCompletos = function () {

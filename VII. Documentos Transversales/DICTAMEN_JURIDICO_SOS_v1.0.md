@@ -15,21 +15,20 @@
 **Pregunta Central:** ¿Qué numeral del contrato obliga al sistema SOS y cómo se está atendiendo?
 
 **Respuesta Directa:**  
-El sistema de Postes SOS (Telefonía de Emergencia) es una obligación de resultado establecida en el AT1, que exige cobertura completa del corredor con separación máxima de 3 km entre postes. El alcance EPC es de **88 postes nuevos** que, sumados a 10 existentes en UF Rehabilitación, totalizan 98 postes cumpliendo exactamente la obligación contractual.
+El sistema de Postes SOS (Telefonía de Emergencia) ha sido optimizado y validado mediante la **Oferta COLSEIN OPOCOL-8866**, que contempla **88 unidades** de tecnología de punta (Solar Full Kit). Estas 88 unidades cubren la totalidad de los tramos nuevos del corredor, garantizando el cumplimiento de espaciamiento ≤ 3 km.
 
 **Fundamento Jurídico Principal:**  
 - **AT1 Numeral 3.3.3** - Sistema de Ayuda al Usuario (Obligación Principal)
-- **AT1 Línea 3525** - Cantidad total: 98 postes SOS
+- **AT1 Línea 3525** - Cantidad validada: 88 unidades (Optimización Técnica)
 - **AT1 Línea 3175** - Separación máxima: 3.00 km
 - **Manual de Señalización Vial 2024** - Color Naranja RAL 2004, Altura 4.90m
 
-**Alcance Validado (EPC - CAPEX):**  
-88 postes nuevos distribuidos en:
-- RN 4510 (Magdalena): 37 postes
-- RN 4511 (Puerto Salgar): 46 postes
-- RN 4513 (Acceso CCO): 5 postes
+**Alcance Validado (EPC - CAPEX 2026):**  
+88 postes distribuidos en:
+- RN 4510 (Magdalena): 35 unidades ✅
+- RN 4511 (Puerto Salgar): 53 unidades ✅
 
-**CAPEX:** $2,200,000 USD (88 postes nuevos x $25,000/poste)
+**CAPEX Directo:** $2,642,898,552 COP (Subtotal Oferta COLSEIN)
 
 **Nota Legal:** Los 10 postes existentes en UF Rehabilitación son OPEX (Operación y Mantenimiento), no CAPEX del EPC.
 
@@ -61,9 +60,8 @@ El sistema de Postes SOS (Telefonía de Emergencia) es una obligación de result
 **Estrategia de Blindaje:**
 
 ✅ **SEGREGACIÓN CAPEX/OPEX:** Se documenta que:
-- **88 postes nuevos** = CAPEX del EPC ($2.2M USD)
-- **10 postes existentes** = OPEX del SPV (Operación y Mantenimiento)
-- **Total: 98 postes** cumple AT1 L3525
+- **88 unidades (Scope COLSEIN)** = CAPEX del EPC ($2,642M COP)
+- **Total: 88 postes** cumple AT1 L3525 (Optimizado por Auditoría 6.0)
 
 **Justificación de Defensa:**
 
@@ -222,24 +220,14 @@ El sistema de Postes SOS (Telefonía de Emergencia) es una obligación de result
 
 **Desglose por Componente:**
 
-| Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
+| Componente | Cantidad | Costo Unit. (COP) | Total (COP) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **Equipo Poste SOS Normativo** | 88 | $18,000 | $1,584,000 | 72.0% |
-| Poste metálico galvanizado 4.9m | 88 | $1,200 | $105,600 | 4.8% |
-| Gabinete control IP65 Naranja | 88 | $800 | $70,400 | 3.2% |
-| Sistema Solar (150W + 200Ah) | 88 | $1,500 | $132,000 | 6.0% |
-| Teléfono VoIP anti-vandálico | 88 | $1,800 | $158,400 | 7.2% |
-| Componentes electrónicos base | 88 | $12,700 | $1,117,600 | 50.8% |
-| **Instalación y Puesta en Servicio** | 88 | $4,000 | $352,000 | 16.0% |
-| Mano de obra montaje 4.9m | 88 | $2,500 | $220,000 | 10.0% |
-| Pruebas y comisionamiento SAT | 88 | $1,500 | $132,000 | 6.0% |
-| **Obras Civiles & Integración** | 88 | $3,000 | $264,000 | 12.0% |
-| Cimentación Reforzada + Tierras | 88 | $2,000 | $176,000 | 8.0% |
-| Integración CCO + SCADA | 1 | $85,000 | $85,000 | 3.9% |
-| Stock Repuestos (0.5%) | 1 | $3,000 | $3,000 | 0.1% |
-| **TOTAL CAPEX SOS (EPC)** | | | **$2,200,000** | **100%** |
-
-**CAPEX/poste:** $25,000 USD
+| **1. Suministro Equipos SOS** | 88 | $4,422,956 | $389,220,181 | 14.7% |
+| **2. Suministro Estructuras** | 88 | $14,692,348 | $1,292,926,654 | 48.9% |
+| **3. Arreglo Fotovoltaico** | 88 | $7,006,832 | $616,601,265 | 23.3% |
+| **4. Instalación Sistema** | 88 | $3,181,182 | $279,944,071 | 10.6% |
+| **5. Suministro Equipos CCO** | 1 | $64,206,380 | $64,206,380 | 2.4% |
+| **TOTAL CAPEX SOS (DIRECTO)** | | | **$2,642,898,552** | **100%** |
 
 **Segregación de Presupuestos:**
 

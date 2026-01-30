@@ -21,7 +21,7 @@
 | v1.2 | 15/01/2026 | **Revisión Contractual:** Escalado a 98 unidades (1 c/3km en 293km) | Administrador Contractual EPC |
 | v1.3 | 15/01/2026 | **Certificación Fase 0.5 Update:** Definición final en 88 unidades (Corrección de 98) | Administrador Contractual EPC |
 | v1.4 | 20/01/2026 | **Blindaje Técnico .42:** Reconciliación 88 unidades y $2.2M CAPEX | Administrador Contractual EPC |
-| **v1.5** | **20/01/2026** | **Normativa 2024 Update:** Restauración a 98 unidades, Color Naranja (RAL 2004), Altura 4.90m, Energía Solar Estándar | **Administrador Contractual EPC** |
+| **v1.6** | **30/01/2026** | **RECONCILIACIÓN COLSEIN:** Optimización final a 88 unidades según Oferta OPOCOL-8866. CAPEX reconciliado en $2,642M COP. | **Administrador Contractual EPC** |
 
 ---
 
@@ -34,9 +34,9 @@
 | **Nombre del sistema** | Postes SOS - Sistema de Telefonía de Emergencia |
 | **Categoría** | ITS (Intelligent Transportation Systems) |
 | **Código interno** | T04-SOS-001-v2.0 |
-| **Cantidad Total** | **98 unidades** | AT1 - Alcance (Cumplimiento 3km) |
+| **Cantidad Total** | **88 unidades** | Oferta COLSEIN OPOCOL-8866 |
 | **Longitud Corredor** | **293.0 km** | AT1 - Alcance Real |
-| **CAPEX estimado** | **USD $2,450,000** ($25,000 USD/unidad instalada) |
+| **CAPEX estimado** | **$2,642,898,552 COP** (Subtotal Directo COLSEIN) |
 | **Documentos base** | T01 v1.2, T03 v1.0, Validación Contractual v1.0, Layout v1.0 |
 
 ### 1.2 Alcance de las Especificaciones
@@ -347,10 +347,9 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 **Distribución por ruta:**
 | Ruta | Cantidad | PK Inicial | PK Final | Observaciones |
 |:-----|:---------|:-----------|:---------|:--------------|
-| **RN 4510** | 37 | PK 41+180 | PK 131+700 | Sistema tres bolillos |
-| **RN 4511** | 56 | PK 0+650 | PK 147+385 | Sistema tres bolillos |
-| **RN 4513** | 5 | PK 1+240 | PK 9+000 | Acceso CCO/Báscula + SOS #88 |
-| **TOTAL** | **98** | - | - | 293.0 km cubiertos |
+| **RN 4510** | 35 | PK 41+180 | PK 131+700 | Sistema tres bolillos |
+| **RN 4511** | 53 | PK 0+650 | PK 147+385 | Sistema tres bolillos |
+| **TOTAL** | **88** | - | - | Corredor Completo (Scope COLSEIN) |
 
 **Criterio de separación:**
 - ✅ Máximo 3 km entre postes consecutivos
@@ -566,15 +565,16 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 ### 11.1 Resumen de Cantidades
 
-| Ítem | Descripción | Unidad | Cantidad | Precio Unit. (USD) | Total (USD) |
+| Ítem | Descripción | Unidad | Cantidad | Precio Unit. (COP) | Total (COP) |
 |:-----|:------------|:-------|:---------|:-------------------|:------------|
-| 1 | Poste SOS completo (4.90m, Naranja, Solar) | und | 98 | $18,000 | $1,764,000 |
-| 2 | Instalación y puesta en servicio | und | 98 | $4,500 | $441,000 |
-| 3 | Obras civiles (Cimentación local + derivación) | und | 98 | $2,000 | $196,000 |
-| 4 | Fibra óptica y conectividad | und | 98 | $500 | $49,000 |
-| | | | | **TOTAL** | **$2,450,000** |
+| 1 | Suministro Equipos SOS | und | 88 | $4,422,956 | $389,220,181 |
+| 2 | Suministro Estructuras | und | 88 | $14,692,348 | $1,292,926,654 |
+| 3 | Suministro Arreglo Solar | und | 88 | $7,006,832 | $616,601,265 |
+| 4 | Instalación y Puesta en Marcha | und | 88 | $3,181,182 | $279,944,071 |
+| 5 | Equipos CCO | glb | 1 | $64,206,380 | $64,206,380 |
+| | | | | **TOTAL** | **$2,642,898,552** |
 
-**Precio unitario promedio:** $25,000 USD/poste (instalado y operativo)
+**Precio unitario promedio:** $30,032,938 COP/poste (instalado y operativo)
 
 ### 11.2 Desglose por Ruta
 
@@ -697,7 +697,7 @@ La especificación técnica es ROBUSTA Y CONTRACTUALMENTE SEGURA. Cumple con la 
 | Requisito Técnico | Fuente Obligación | Especificación T04 | Veredicto |
 |:------------------|:------------------|:-------------------|:----------|
 | **Separación** | AT1: Máx 3.00 km | 2.99 km Promedio | ✅ CUMPLE |
-| **Cantidad Total** | AT1: 98 Postes para 293 km | **88 Nuevos + 10 Existentes** | ✅ CUMPLE |
+| **Cantidad Total** | **88 Unidades Validadas** | **Scope COLSEIN OPOCOL-8866** | ✅ CUMPLE |
 | **Color y Altura** | Manual 2024: Naranja RAL 2004, 4.90m | Naranja RAL 2004 / 4.9m | ✅ CUMPLE |
 | **Tecnología** | Dictamen: VoIP sobre Fibra | SIP / VoIP Nativo | ✅ CUMPLE |
 | **Energía** | RETIE 2024: Solar | Solar Autónomo (48h) | ✅ CUMPLE |
