@@ -32,18 +32,18 @@ class TM01MasterData {
             // CAPÍTULO 2: SISTEMA ETD & RADARES (Smart CAPEX Dahua)
             { id: '2', nivel: 1, item: "2", descripcion: "SISTEMA ETD & RADARES", sistema: "ETD", tipo: "capitulo" },
             { id: '2.1', nivel: 2, item: "2.1", descripcion: "SUMINISTROS ETD (DATOS ANI - SMART CAPEX)", sistema: "ETD", tipo: "subcapitulo" },
-            { id: '2.1.1', nivel: 3, item: "2.1.1", descripcion: "Nodo Dahua DHI-ITC431 (Radar 4MP + LPR + Flash + Acc) incl. Inst. 20%", sistema: "ETD", cantidad: "13", unidad: "UND", tipo: "item", criterio: "AT4 (Radar No Intrusivo) - Uso Infra SOS/PMV", vu: "1940.33", total: "25224.29", totalCOP: "110986876" },
-            { id: '2.1.2', nivel: 3, item: "2.1.2", descripcion: "Unidad Spare (Nodo Dahua Completo)", sistema: "ETD", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Redundancia Operativa", vu: "1616.94", total: "1616.94", totalCOP: "7114536" },
+            { id: '2.1.1', nivel: 3, item: "2.1.1", descripcion: "Nodo Dahua DHI-ITC431 All-in-One (Radar + LPR + Acc) incl. Inst.", sistema: "ETD", cantidad: "2", unidad: "UND", tipo: "item", criterio: "AT4 (Puntos Críticos) - Smart CAPEX", vu: "3500", total: "7000", totalCOP: "30800000" },
+            { id: '2.1.2', nivel: 3, item: "2.1.2", descripcion: "Unidad Spare (Nodo Dahua Completo)", sistema: "ETD", cantidad: "1", unidad: "UND", tipo: "item", criterio: "Redundancia Operativa", vu: "3500", total: "3500", totalCOP: "15400000" },
 
             { id: '2.2', nivel: 2, item: "2.2", descripcion: "SISTEMA SAST (SINCRONIZADO SMART CAPEX)", sistema: "RADAR", tipo: "subcapitulo" },
-            { id: '2.2.1', nivel: 3, item: "2.2.1", descripcion: "Equipo Sancionatorio Completo (ANPR + Doppler Certificado)", sistema: "RADAR", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Diferido / Integrado en ETD", vu: "0", total: "0", totalCOP: "0" },
+            { id: '2.2.1', nivel: 3, item: "2.2.1", descripcion: "Equipo Sancionatorio Completo (ANPR + Doppler Certificado)", sistema: "RADAR", cantidad: "0", unidad: "UND", tipo: "item", criterio: "EXCLUIDO: Ver T04_SAST (Zero CAPEX)", vu: "0", total: "0", totalCOP: "0" },
 
             { id: '2.3', nivel: 2, item: "2.3", descripcion: "INFORMATIVOS & PEDAGÓGICOS", sistema: "RADAR", tipo: "subcapitulo" },
             { id: '2.3.1', nivel: 3, item: "2.3.1", descripcion: "Monitor de Velocidad Pedagógico (SI-27B)", sistema: "RADAR", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Mensajería vía PMV", vu: "0", total: "0", totalCOP: "0" },
 
             { id: '2.4', nivel: 2, item: "2.4", descripcion: "PLATAFORMA & SERVICIOS (SMART CAPEX)", sistema: "ETD", tipo: "subcapitulo" },
-            { id: '2.4.1', nivel: 3, item: "2.4.1", descripcion: "Plataforma Gestión Overseas Dahua (Hasta 16 equipos)", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Cumplimiento Web Services ANI", vu: "10620.18", total: "10620.18", totalCOP: "46728792" },
-            { id: '2.4.2', nivel: 3, item: "2.4.2", descripcion: "Infraestructura (Postes/Pórticos)", sistema: "ETD", cantidad: "0", unidad: "UND", tipo: "item", criterio: "OPTIMIZADO: Uso sobre estructura PMV/SOS existente", vu: "0", total: "0", totalCOP: "0" },
+            { id: '2.4.1', nivel: 3, item: "2.4.1", descripcion: "Plataforma Gestión Overseas Dahua (Licencias Video/ANPR)", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Cumplimiento Web Services ANI", vu: "11500", total: "11500", totalCOP: "50600000" },
+            { id: '2.4.2', nivel: 3, item: "2.4.2", descripcion: "Obra Civil/Montaje (Global 2 Sitios)", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Acometidas y Postes Puntos Críticos", vu: "4000", total: "4000", totalCOP: "17600000" },
             { id: '2.4.3', nivel: 3, item: "2.4.3", descripcion: "Integración SICC/ANI + Comisionamiento", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Incluido en Presupuesto Central de Integración SCADA", vu: "0", total: "0", totalCOP: "0" },
             { id: '2.4.4', nivel: 3, item: "2.4.4", descripcion: "Repuestos Críticos & Garantía", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Soporte fábrica 24 meses", vu: "1000", total: "1000", totalCOP: "4400000" },
 
