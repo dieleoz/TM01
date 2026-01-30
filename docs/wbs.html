@@ -12,55 +12,50 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="css/tm01-design-system.css">
     <style>
-        /* Estilos específicos WBS que complementan el Design System */
-        .wbs-container {
-            background: white;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            padding: 24px;
-            margin-top: 24px;
-        }
-
+        /* Estilos específicos WBS */
         .wbs-tree {
-            font-family: var(--font-mono);
+            font-family: 'Segoe UI Mono', monospace;
             font-size: 0.9em;
         }
 
         .wbs-item {
-            padding: 8px 12px;
-            border-bottom: 1px solid var(--gray-100);
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 1px solid var(--border-light);
             display: flex;
             align-items: center;
-            transition: all 0.2s;
+            transition: background var(--transition-fast);
         }
 
         .wbs-item:hover {
-            background-color: var(--gray-50);
+            background-color: var(--bg-hover);
         }
 
         .wbs-level-1 {
-            background-color: var(--bg-primary);
+            background-color: var(--tm01-primary);
             color: white;
-            font-weight: bold;
-            margin-top: 10px;
-            border-radius: 4px;
+            font-weight: 700;
+            margin-top: var(--space-md);
+            border-radius: var(--radius-sm);
+            padding: var(--space-md);
         }
 
         .wbs-level-2 {
-            background-color: var(--gray-200);
-            color: var(--text-primary);
+            background-color: var(--border-light);
+            color: var(--text-main);
             font-weight: 600;
-            margin-top: 5px;
+            margin-top: var(--space-sm);
+            padding-left: var(--space-lg);
         }
 
         .wbs-level-3 {
-            padding-left: 30px;
+            padding-left: var(--space-2xl);
+            color: var(--text-sub);
         }
 
         .wbs-id {
-            min-width: 80px;
-            font-weight: bold;
-            color: var(--primary);
+            min-width: 100px;
+            font-weight: 700;
+            color: var(--tm01-accent);
         }
 
         .wbs-desc {
@@ -69,125 +64,120 @@
 
         .wbs-meta {
             font-size: 0.85em;
-            color: var(--text-secondary);
-            min-width: 150px;
+            color: var(--text-muted);
+            min-width: 180px;
             text-align: right;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            align-items: center;
         }
 
         .badge-capex {
             background: var(--success);
             color: white;
             padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8em;
+            border-radius: var(--radius-full);
+            font-size: 0.75em;
+            font-weight: 600;
         }
     </style>
 </head>
 
-<body class="bg-gray-50">
+<body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span class="brand-icon">🏗️</span>
-                <span class="brand-text">TM01 Troncal Magdalena</span>
-            </div>
-            <div class="nav-menu">
-                <a href="WBS_Menu_Principal.html" class="nav-link">← Volver al Menú</a>
-                <span class="badge badge-success">Audit 6.0 Certified</span>
-            </div>
+    <nav class="tm01-navbar">
+        <div class="tm01-brand">
+            <span style="margin-right: 8px;">🏗️</span>
+            TM01 Troncal Magdalena
+            <span class="tm01-status-badge" style="margin-left: 10px;">Audit 6.0 Verified</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Volver al Menú</a>
+            <button class="tm01-btn" onclick="exportarExcel()">📊 Exportar Excel</button>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container main-content">
+    <div class="tm01-container" style="padding-top: var(--space-xl);">
 
         <!-- Header -->
-        <header class="page-header">
-            <div class="header-content">
-                <h1>Estructura de Desglose de Trabajo (WBS)</h1>
-                <p>Fuente de Verdad: Ingeniería de Detalle (T05) + Dictámenes Jurídicos</p>
+        <div style="margin-bottom: var(--space-lg); display: flex; justify-content: space-between; align-items: end;">
+            <div>
+                <h1 style="color: var(--tm01-primary); margin-bottom: 5px;">Estructura de Desglose de Trabajo (WBS)</h1>
+                <p style="color: var(--text-sub);">Fuente de Verdad: Ingeniería de Detalle (T05) + Dictámenes Jurídicos
+                </p>
             </div>
-            <div class="header-actions">
-                <button class="btn btn-secondary" onclick="exportarCSV()">📥 CSV</button>
-                <button class="btn btn-primary" onclick="exportarExcel()">📊 Excel</button>
+            <div>
+                <button class="tm01-btn tm01-btn-primary" onclick="window.print()">🖨️ Imprimir</button>
             </div>
-        </header>
+        </div>
 
         <!-- KPI Cards -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon">📑</div>
-                <div class="stat-info">
-                    <h3>Total Items</h3>
-                    <p class="stat-value" id="totalItems">Cargando...</p>
-                </div>
+        <div class="tm01-grid-3" style="margin-bottom: var(--space-xl);">
+            <div class="tm01-stat">
+                <div class="tm01-stat-value" id="totalItems">...</div>
+                <div class="tm01-stat-label">Total Items WBS</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">💰</div>
-                <div class="stat-info">
-                    <h3>CAPEX Total ITS</h3>
-                    <p class="stat-value" id="costoTotal">Cargando...</p>
-                </div>
+            <div class="tm01-stat">
+                <div class="tm01-stat-value" id="costoTotal" style="color: var(--success);">...</div>
+                <div class="tm01-stat-label">CAPEX Total ITS (USD)</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-icon">🔧</div>
-                <div class="stat-info">
-                    <h3>Sistemas</h3>
-                    <p class="stat-value" id="totalSistemas">Cargando...</p>
-                </div>
+            <div class="tm01-stat">
+                <div class="tm01-stat-value" id="totalSistemas" style="color: var(--info);">...</div>
+                <div class="tm01-stat-label">Sistemas Activos</div>
             </div>
         </div>
 
         <!-- Filters -->
-        <div class="card p-4 mb-4">
-            <h3 class="card-title mb-3">🔍 Filtros de Búsqueda</h3>
-            <div class="filter-group" style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <select id="sistemaFilter" class="form-control" style="flex: 1;">
+        <div class="tm01-card" style="margin-bottom: var(--space-lg);">
+            <h3>🔍 Filtros de Búsqueda</h3>
+            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                <select id="sistemaFilter" class="tm01-btn"
+                    style="flex: 1; background: white; border-color: var(--border);">
                     <option value="">Todos los Sistemas</option>
                 </select>
-                <select id="nivelFilter" class="form-control" style="flex: 1;">
+                <select id="nivelFilter" class="tm01-btn"
+                    style="flex: 1; background: white; border-color: var(--border);">
                     <option value="">Todos los Niveles</option>
                     <option value="1">Capítulos (Nivel 1)</option>
                     <option value="2">Subcapítulos (Nivel 2)</option>
                     <option value="3">Items (Nivel 3)</option>
                 </select>
-                <input type="text" id="searchInput" class="form-control" placeholder="Buscar item..." style="flex: 2;">
-                <button class="btn btn-primary" onclick="filtrarWBS()">Filtrar</button>
-                <button class="btn btn-outline" onclick="limpiarFiltros()">Limpiar</button>
+                <input type="text" id="searchInput" class="tm01-btn" placeholder="Buscar item..."
+                    style="flex: 2; background: white; border-color: var(--border); cursor: text;">
+                <button class="tm01-btn tm01-btn-primary" onclick="filtrarWBS()">Filtrar</button>
+                <button class="tm01-btn" onclick="limpiarFiltros()">Limpiar</button>
             </div>
         </div>
 
         <!-- Subtotals Panel -->
-        <div id="subtotalesSection" class="card p-4 mb-4" style="display: none;">
-            <h3 class="card-title">💰 Subtotales por Sistema</h3>
-            <div id="subtotalesGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-3"></div>
+        <div id="subtotalesSection" class="tm01-section" style="display: none;">
+            <div class="tm01-section-header">💰 Subtotales por Sistema</div>
+            <div id="subtotalesGrid" class="tm01-section-content tm01-grid-4"></div>
         </div>
 
-        <div class="mb-3 text-right">
-            <button class="btn btn-sm btn-secondary" onclick="toggleSubtotales()">👁️ Ver/Ocultar Subtotales</button>
+        <div style="text-align: right; margin-bottom: var(--space-md);">
+            <button class="tm01-btn tm01-btn-link" onclick="toggleSubtotales()">👁️ Ver/Ocultar Subtotales</button>
         </div>
 
         <!-- WBS Tree -->
-        <div class="wbs-container">
-            <div id="wbsTree" class="wbs-tree">
-                <div class="text-center p-5 text-gray-500">
-                    <div class="spinner"></div> Cargando Datos Maestros...
+        <div class="tm01-card" style="padding: 0; overflow: hidden;">
+            <div id="wbsTree" class="wbs-tree" style="max-height: 800px; overflow-y: auto;">
+                <div style="padding: 40px; text-align: center; color: var(--text-muted);">
+                    <div style="margin-bottom: 10px;">⏳</div> Cargando Datos Maestros...
                 </div>
             </div>
         </div>
 
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
+        <!-- Footer -->
+        <div style="margin: var(--space-2xl) 0; color: var(--text-muted); font-size: 0.8em; text-align: center;">
             <p><strong>TM01 Troncal Magdalena</strong> - Sistema de Gestión Contractual</p>
-            <p>Metodología: Punto 42 v3.0 (Layer 5 Services)</p>
-            <p>Validación: Agent 3 (Audit 6.0)</p>
+            <p>Metodología: Punto 42 v3.0 (Layer 5 Services) | Validación: Agent 3</p>
         </div>
-    </footer>
+
+    </div>
 
     <!-- Scripts -->
     <script src="data/tm01_master_data.js?v=20260130"></script>

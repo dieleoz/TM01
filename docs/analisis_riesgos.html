@@ -21,153 +21,146 @@
     }
 
     .matrix-cell {
-      padding: 10px;
-      border-radius: 6px;
-      font-size: 0.85em;
-      min-height: 80px;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8em;
+      min-height: 100px;
       display: flex;
       flex-direction: column;
       gap: 4px;
-      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      transition: all var(--transition-fast);
+    }
+
+    .matrix-cell:hover {
+      transform: scale(1.02);
+      z-index: 10;
+      box-shadow: var(--shadow-md);
     }
 
     .matrix-header {
-      background-color: var(--primary);
+      background-color: var(--tm01-primary);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: bold;
+      font-weight: 700;
       text-align: center;
       font-size: 0.8em;
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
     }
 
+    /* Zonas de Riesgo */
     .zone-red {
       background-color: #fee2e2;
-      border: 1px solid #ef4444;
+      border-color: #fca5a5;
     }
 
     .zone-yellow {
-      background-color: #fefce8;
-      border: 1px solid #eab308;
+      background-color: #fef9c3;
+      border-color: #fde047;
     }
 
     .zone-green {
       background-color: #dcfce7;
-      border: 1px solid #22c55e;
+      border-color: #86efac;
     }
 
     .risk-tag {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.9);
       padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.9em;
+      border-radius: 3px;
+      font-size: 0.85em;
       cursor: help;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      border-left: 3px solid var(--primary);
+      border-left: 3px solid var(--tm01-primary);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
-    .risk-badge-high {
-      background-color: #ef4444;
+    .severity-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-size: 0.75em;
+      font-weight: 700;
+    }
+
+    .sev-high {
+      background: var(--error);
       color: white;
-      padding: 4px 8px;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 0.8em;
     }
 
-    .risk-badge-med {
-      background-color: #eab308;
-      color: black;
-      padding: 4px 8px;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 0.8em;
-    }
-
-    .risk-badge-low {
-      background-color: #22c55e;
+    .sev-med {
+      background: var(--warning);
       color: white;
-      padding: 4px 8px;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 0.8em;
+    }
+
+    .sev-low {
+      background: var(--success);
+      color: white;
     }
   </style>
 </head>
 
-<body class="bg-gray-50">
+<body>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-brand">
-        <span class="brand-icon">🛡️</span>
-        <span class="brand-text">Gestión de Riesgos TM01</span>
-      </div>
-      <div class="nav-menu">
-        <a href="WBS_Menu_Principal.html" class="nav-link">← Volver al Menú</a>
-        <span class="badge badge-warning">Active Monitoring</span>
-      </div>
+  <nav class="tm01-navbar">
+    <div class="tm01-brand">
+      <span style="margin-right: 8px;">🛡️</span>
+      Gestión de Riesgos TM01
+      <span class="tm01-status-badge" style="margin-left: 10px;">ISO 31000</span>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Volver al Menú</a>
+      <button class="tm01-btn tm01-btn-primary" onclick="exportarExcel()">📊 Exportar Excel</button>
     </div>
   </nav>
 
   <!-- Main Content -->
-  <div class="container main-content">
+  <div class="tm01-container" style="padding-top: var(--space-xl);">
 
     <!-- Header -->
-    <header class="page-header">
-      <div class="header-content">
-        <h1>Matriz de Riesgos y Oportunidades</h1>
-        <p>Análisis Consecuencia vs Probabilidad (ISO 31000)</p>
+    <div style="margin-bottom: var(--space-lg); display: flex; justify-content: space-between; align-items: end;">
+      <div>
+        <h1 style="color: var(--tm01-primary); margin-bottom: 5px;">Matriz de Riesgos y Oportunidades</h1>
+        <p style="color: var(--text-sub);">Análisis Consecuencia vs Probabilidad (Audit 6.0 Verified)</p>
       </div>
-      <div class="header-actions">
-        <button class="btn btn-secondary" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn btn-primary" onclick="exportarExcel()">📊 Exportar Excel</button>
+      <div>
+        <button class="tm01-btn" onclick="window.print()">🖨️ Imprimir Reporte</button>
       </div>
-    </header>
+    </div>
 
     <!-- KPI Cards -->
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-icon">📉</div>
-        <div class="stat-info">
-          <h3>Total Riesgos</h3>
-          <p class="stat-value" id="mTotal">-</p>
-        </div>
+    <div class="tm01-grid-4" style="margin-bottom: var(--space-xl);">
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mTotal">-</div>
+        <div class="tm01-stat-label">Total Riesgos</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-icon" style="color: #ef4444;">🔴</div>
-        <div class="stat-info">
-          <h3>Severidad Alta</h3>
-          <p class="stat-value" id="mAltos">-</p>
-        </div>
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mAltos" style="color: var(--error);">-</div>
+        <div class="tm01-stat-label">Severidad Alta</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-icon" style="color: #eab308;">🟡</div>
-        <div class="stat-info">
-          <h3>Severidad Media</h3>
-          <p class="stat-value" id="mMedios">-</p>
-        </div>
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mMedios" style="color: var(--warning);">-</div>
+        <div class="tm01-stat-label">Severidad Media</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-icon" style="color: #22c55e;">🟢</div>
-        <div class="stat-info">
-          <h3>Severidad Baja</h3>
-          <p class="stat-value" id="mBajos">-</p>
-        </div>
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mBajos" style="color: var(--success);">-</div>
+        <div class="tm01-stat-label">Severidad Baja</div>
       </div>
     </div>
 
     <!-- Filters -->
-    <div class="card p-4 mb-4">
-      <div class="filter-group" style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end;">
+    <div class="tm01-card" style="margin-bottom: var(--space-lg);">
+      <div style="display: flex; gap: var(--space-md); flex-wrap: wrap; align-items: end;">
         <div style="flex: 1;">
-          <label class="form-label">Severidad</label>
-          <select id="fSeveridad" onchange="aplicarFiltros()" class="form-control">
+          <label style="display: block; margin-bottom: 5px; color: var(--text-sub); font-size: 0.9em;">Severidad</label>
+          <select id="fSeveridad" onchange="aplicarFiltros()" class="tm01-btn"
+            style="width: 100%; background: white; border-color: var(--border);">
             <option value="">Todas</option>
             <option>ALTO</option>
             <option>MEDIO</option>
@@ -175,63 +168,67 @@
           </select>
         </div>
         <div style="flex: 1;">
-          <label class="form-label">Categoría</label>
-          <select id="fCategoria" onchange="aplicarFiltros()" class="form-control">
+          <label style="display: block; margin-bottom: 5px; color: var(--text-sub); font-size: 0.9em;">Categoría</label>
+          <select id="fCategoria" onchange="aplicarFiltros()" class="tm01-btn"
+            style="width: 100%; background: white; border-color: var(--border);">
             <option value="">Todas</option>
           </select>
         </div>
         <div style="flex: 2;">
-          <label class="form-label">Búsqueda</label>
-          <input id="fBuscar" placeholder="Buscar riesgo..." oninput="aplicarFiltros()" class="form-control" />
+          <label style="display: block; margin-bottom: 5px; color: var(--text-sub); font-size: 0.9em;">Búsqueda</label>
+          <input id="fBuscar" placeholder="Buscar riesgo..." oninput="aplicarFiltros()" class="tm01-btn"
+            style="width: 100%; background: white; border-color: var(--border); cursor: text;" />
         </div>
       </div>
     </div>
 
-    <!-- Matrix Visualization -->
-    <div class="card p-4 mb-4">
-      <h3 class="card-title">📊 Mapa de Calor (Heatmap)</h3>
-      <div id="matrix" style="overflow-x: auto;"></div>
+    <!-- Heatmap -->
+    <div class="tm01-section">
+      <div class="tm01-section-header">📊 Mapa de Calor (Heatmap)</div>
+      <div class="tm01-section-content">
+        <div id="matrix" style="overflow-x: auto;"></div>
+      </div>
     </div>
 
-    <!-- Detailed List -->
-    <div class="card p-4">
-      <h3 class="card-title">📋 Detalle de Riesgos</h3>
-      <table class="table" id="tabla">
-        <thead>
-          <tr>
-            <th>Riesgo</th>
-            <th>Categoría</th>
-            <th>Severidad</th>
-            <th>Probabilidad</th>
-            <th>Impacto</th>
-            <th>Plan de Mitigación</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="6" class="text-center text-muted">Cargando datos...</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Detail Table -->
+    <div class="tm01-section">
+      <div class="tm01-section-header">📋 Detalle de Riesgos</div>
+      <div class="tm01-section-content" style="padding: 0;">
+        <table class="tm01-table" id="tabla">
+          <thead>
+            <tr>
+              <th>Riesgo</th>
+              <th>Categoría</th>
+              <th style="text-align: center;">Severidad</th>
+              <th style="text-align: center;">Prob.</th>
+              <th style="text-align: center;">Imp.</th>
+              <th>Plan de Mitigación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 20px; color: var(--text-muted);">Cargando datos...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin: var(--space-2xl) 0; color: var(--text-muted); font-size: 0.8em; text-align: center;">
+      <p><strong>TM01 Troncal Magdalena</strong> - Sistema de Gestión de Riesgos</p>
+      <p>Datos actualizados: <span id="lastUpdate">--</span></p>
     </div>
 
   </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p><strong>TM01 Troncal Magdalena</strong> - Sistema de Gestión de Riesgos</p>
-      <p>Metodología: PMI / ISO 31000</p>
-      <p id="lastUpdate">Actualizado: --</p>
-    </div>
-  </footer>
 
   <!-- Scripts -->
   <script src="data/tm01_master_data.js?v=20260130"></script>
   <script src="data/tm01_riesgos_data.js?v=20260130"></script>
 
   <script>
-    // Inline JS migrating logic from old file but adapting to new DOM
+    // Inline JS Logic adapted for new DOM
     let all = [], filtered = [];
 
     function severidad(prob, imp) {
@@ -262,12 +259,13 @@
       renderTabla();
       actualizarMetricas();
 
-      document.getElementById('lastUpdate').textContent = `Actualizado: ${data.fechaActualizacion || 'Hoy'}`;
+      document.getElementById('lastUpdate').textContent = data.fechaActualizacion || 'Hoy';
     }
 
     function poblarFiltros() {
       const cat = [...new Set(all.map(r => r.categoria))];
       const s = document.getElementById('fCategoria');
+      // Keep default option
       s.innerHTML = '<option value="">Todas</option>';
       cat.forEach(c => {
         const o = document.createElement('option');
@@ -312,11 +310,11 @@
 
       // Header X
       html += '<div class="matrix-header">Prob/Imp</div>';
-      labels.forEach(l => html += `<div class="matrix-header">${l}</div>`);
+      labels.forEach(l => html += `<div class="matrix-header" style="background:var(--border-dark);color:var(--text-main);">${l}</div>`);
 
       // Rows (Prob desc 5->1)
       for (let p = 4; p >= 0; p--) {
-        html += `<div class="matrix-header">Prob ${p + 1}</div>`;
+        html += `<div class="matrix-header" style="background:var(--border-dark);color:var(--text-main);">Prob ${p + 1}</div>`;
         for (let im = 0; im < 5; im++) {
           const cel = grid[p][im];
           const score = (p + 1) * (im + 1);
@@ -334,23 +332,23 @@
     function renderTabla() {
       const tb = document.querySelector('#tabla tbody');
       if (filtered.length === 0) {
-        tb.innerHTML = '<tr><td colspan="6" class="text-center text-muted">No se encontraron riesgos</td></tr>';
+        tb.innerHTML = '<tr><td colspan="6" style="text-align:center; padding:20px; color:var(--text-muted);">No se encontraron riesgos</td></tr>';
         return;
       }
 
       tb.innerHTML = filtered.map(r => {
-        const badgeClass = r.sev === 'ALTO' ? 'risk-badge-high' : (r.sev === 'MEDIO' ? 'risk-badge-med' : 'risk-badge-low');
+        let badgeClass = r.sev === 'ALTO' ? 'sev-high' : (r.sev === 'MEDIO' ? 'sev-med' : 'sev-low');
 
         return `<tr>
                     <td>
-                        <strong>${r.titulo}</strong><br>
-                        <span class="text-muted small">${r.id}</span>
+                        <strong style="color:var(--tm01-primary);">${r.titulo}</strong><br>
+                        <span style="font-size:0.85em; color:var(--text-muted);">${r.id}</span>
                     </td>
                     <td>${r.categoria}</td>
-                    <td><span class="${badgeClass}">${r.sev}</span></td>
-                    <td class="text-center">${r.prob}</td>
-                    <td class="text-center">${r.imp}</td>
-                    <td>${r.mitigacion}</td>
+                    <td style="text-align:center"><span class="severity-badge ${badgeClass}">${r.sev}</span></td>
+                    <td style="text-align:center">${r.prob}</td>
+                    <td style="text-align:center">${r.imp}</td>
+                    <td style="font-size:0.9em;">${r.mitigacion}</td>
                 </tr>`;
       }).join('');
     }
