@@ -272,6 +272,18 @@ class TM01MasterData {
         // Datos Layout
         this.data.layout = this.generateLayoutData();
 
+        // Datos Cronograma (Plan de Obra No Objetado - Hard Deck)
+        this.data.cronograma = [
+            { fase: '0. Preparación', nombre: 'Acta de Inicio', sistema: 'PMO', inicio: '2024-11-26', fin: '2024-11-26', hito: true },
+            { fase: '1. Ingeniería', nombre: 'Ingeniería de Detalle (T05) Validada', sistema: 'PMO', inicio: '2024-12-01', fin: '2025-06-30', hito: false },
+            { fase: '2. Obra Civil', nombre: 'Obra Civil Peajes (Zambito/Aguas Negras)', sistema: 'PEAJES', inicio: '2027-03-01', fin: '2027-10-30', hito: false },
+            { fase: '2. ITS', nombre: 'Suministro e Instalación ITS (General)', sistema: 'ITS', inicio: '2028-02-01', fin: '2028-10-31', hito: false },
+            { fase: '2. ITS', nombre: 'Entrega Temprana SOS (Gradual)', sistema: 'SOS', inicio: '2025-06-01', fin: '2028-10-01', hito: false, nota: 'Operación paralela a obra' },
+            { fase: '3. Fibra', nombre: 'Tendido FO Backbone 293km', sistema: 'TELECOM', inicio: '2025-07-15', fin: '2028-08-31', hito: false },
+            { fase: '4. Hitos', nombre: 'UF 5 (Terminación Etapa Construcción)', sistema: 'PMO', inicio: '2028-10-30', fin: '2028-10-30', hito: true },
+            { fase: '4. Hitos', nombre: 'UF 0 (Cumplimiento Indicadores Mes 36)', sistema: 'PMO', inicio: '2027-11-26', fin: '2027-11-26', hito: true }
+        ];
+
         // Datos Contractuales
         this.data.contratos = this.generateContractualData();
     }

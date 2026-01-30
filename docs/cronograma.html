@@ -8,451 +8,290 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cronograma Maestro - TM01 Troncal Magdalena</title>
+
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="css/tm01-design-system.css">
+
   <style>
-    :root {
-      --g1: #667eea;
-      --g2: #764ba2;
-      --bg: #f8f9fa;
-      --card: #ffffff;
-      --line: #dee2e6;
-      --text: #212529;
-      --muted: #6c757d;
-      --h1: #1e3c72
-    }
-
-    * {
-      box-sizing: border-box
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-      margin: 0;
-      background: var(--bg);
-      color: var(--text)
-    }
-
-    .top {
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .gantt-container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 16px;
-      background: linear-gradient(135deg, var(--g1), var(--g2));
-      color: #fff;
-      border-bottom: 1px solid rgba(0, 0, 0, .06)
-    }
-
-    .btn {
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, .6);
-      background: rgba(255, 255, 255, .15);
-      color: #fff;
-      cursor: pointer
-    }
-
-    .btn-primary {
-      background: rgba(255, 255, 255, .2)
-    }
-
-    .btn-success {
-      background: #28a745;
-      border-color: #28a745
-    }
-
-    .wrap {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 18px
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px
-    }
-
-    .metric {
-      background: var(--card);
-      border: 1px solid var(--line);
-      padding: 14px;
-      border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, .06)
-    }
-
-    .metric .val {
-      font-size: 22px;
-      font-weight: 800;
-      color: #667eea
-    }
-
-    .metric .lab {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 6px
-    }
-
-    .panel {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      margin-top: 16px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, .06)
-    }
-
-    .panel h2 {
-      margin: 0;
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--line);
-      color: var(--h1);
-      font-size: 18px
-    }
-
-    .panel .content {
-      padding: 14px
-    }
-
-    .filters {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap
-    }
-
-    select,
-    input {
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--text)
-    }
-
-    table {
       width: 100%;
-      border-collapse: collapse;
-      background: var(--card);
-      border: 1px solid var(--line)
-    }
-
-    th {
-      background: var(--h1);
-      color: #fff;
-      padding: 10px;
-      text-align: left;
-      font-size: 13px;
-      position: sticky;
-      top: 54px
-    }
-
-    td {
-      padding: 10px;
-      border-top: 1px solid var(--line);
-      font-size: 13px;
-      color: var(--text)
-    }
-
-    .right {
-      text-align: right
-    }
-
-    .gantt {
-      display: flex;
-      gap: 2px
-    }
-
-    .bar {
-      height: 18px;
+      height: 24px;
+      background: var(--bg-hover);
       border-radius: 4px;
-      background: #60a5fa
+      overflow: hidden;
+      margin-top: 4px;
     }
 
-    .bar.milestone {
-      background: #fbbf24
+    .gantt-spacer {
+      flex-grow: 0;
+      flex-shrink: 0;
     }
 
-    .legend {
+    .gantt-bar {
+      flex-grow: 1;
+      background: var(--tm01-accent);
+      border-radius: 4px;
+      min-width: 4px;
+    }
+
+    .gantt-bar.milestone {
+      background: var(--warning);
+      width: 12px;
+      flex-grow: 0;
+      border-radius: 50%;
+      margin-left: -6px;
+      /* center on date */
+    }
+
+    .filters-grid {
       display: flex;
       gap: 10px;
-      align-items: center;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 8px
+      margin-bottom: 20px;
+      flex-wrap: wrap;
     }
 
-    .lg {
-      width: 18px;
-      height: 10px;
-      border-radius: 2px;
-      display: inline-block
-    }
-
-    .lg1 {
-      background: #60a5fa
-    }
-
-    .lg2 {
-      background: #fbbf24
-    }
-
-    @media print {
-      .top {
-        display: none
-      }
-
-      body {
-        background: #fff;
-        color: #000
-      }
-
-      .panel,
-      .metric {
-        border-color: #ddd
-      }
+    .filters-grid select,
+    .filters-grid input {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      min-width: 200px;
     }
   </style>
 </head>
 
 <body>
-  <div class="top">
-    <div style="display:flex;gap:8px;align-items:center">
-      <button class="btn" onclick="location.href='WBS_Menu_Principal.html'">← Menú</button>
-      <strong>📅 Cronograma Maestro</strong>
+  <!-- Navbar -->
+  <nav class="tm01-navbar">
+    <div class="tm01-brand">
+      📅 Cronograma Maestro <span class="tm01-status-badge">TM01</span>
     </div>
-    <div style="display:flex;gap:8px">
-      <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
-      <button class="btn btn-success" onclick="exportarExcel()">📊 Exportar Excel</button>
+    <div style="display:flex; gap:10px;">
+      <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Menú</a>
+      <button class="tm01-btn" onclick="window.print()">🖨️ Imprimir</button>
+      <button class="tm01-btn tm01-btn-success" onclick="exportarExcel()">📊 Excel</button>
     </div>
+  </nav>
+
+  <div class="tm01-container" style="padding-top: var(--space-xl);">
+
+    <!-- Metrics -->
+    <div class="tm01-grid-4" style="margin-bottom: var(--space-lg);">
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mDuracion">-</div>
+        <div class="tm01-stat-label">Duración (meses)</div>
+      </div>
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mHitos">-</div>
+        <div class="tm01-stat-label">Hitos Críticos</div>
+      </div>
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mFases">-</div>
+        <div class="tm01-stat-label">Fases Activas</div>
+      </div>
+      <div class="tm01-stat">
+        <div class="tm01-stat-value" id="mInicioFin" style="font-size: 1.1rem;">-</div>
+        <div class="tm01-stat-label">Rango Global</div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="tm01-section">
+      <div class="tm01-section-header">🔍 Filtros de Visualización</div>
+      <div class="tm01-section-content">
+        <div class="filters-grid">
+          <select id="fFase" onchange="aplicarFiltros()">
+            <option value="">Todas las fases</option>
+          </select>
+          <select id="fSistema" onchange="aplicarFiltros()">
+            <option value="">Todos los sistemas</option>
+          </select>
+          <input id="fBuscar" placeholder="Buscar tarea..." oninput="aplicarFiltros()" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Gantt Table -->
+    <div class="tm01-section">
+      <div class="tm01-section-header">📊 Plan de Obra No Objetado (Hard Deck)</div>
+      <div class="tm01-section-content">
+        <div style="overflow-x: auto;">
+          <table class="tm01-table" id="tabla">
+            <thead>
+              <tr>
+                <th>Fase</th>
+                <th>Actividad / Hito</th>
+                <th>Sistema</th>
+                <th>Inicio</th>
+                <th>Fin</th>
+                <th style="text-align: right;">Meses</th>
+                <th style="width: 300px;">Visualización (Gantt)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="7" style="padding: 20px; text-align:center;">Cargando Cronograma Master...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted); display:flex; gap: 15px;">
+          <div style="display:flex; align-items:center; gap:5px;"><span
+              style="width:12px; height:12px; background:var(--tm01-accent); border-radius:3px;"></span> Actividad</div>
+          <div style="display:flex; align-items:center; gap:5px;"><span
+              style="width:12px; height:12px; background:var(--warning); border-radius:50%;"></span> Hito</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="wrap">
-    <div class="grid">
-      <div class="metric">
-        <div class="val" id="mDuracion">-</div>
-        <div class="lab">Duración total (meses)</div>
-      </div>
-      <div class="metric">
-        <div class="val" id="mHitos">-</div>
-        <div class="lab">Hitos</div>
-      </div>
-      <div class="metric">
-        <div class="val" id="mFases">-</div>
-        <div class="lab">Fases</div>
-      </div>
-      <div class="metric">
-        <div class="val" id="mInicioFin">-</div>
-        <div class="lab">Rango de fechas</div>
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>🔍 Filtros</h2>
-      <div class="content filters">
-        <select id="fFase" onchange="aplicarFiltros()">
-          <option value="">Todas las fases</option>
-        </select>
-        <select id="fSistema" onchange="aplicarFiltros()">
-          <option value="">Todos los sistemas</option>
-        </select>
-        <input id="fBuscar" placeholder="Buscar tarea/hito" oninput="aplicarFiltros()" />
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>📊 Plan Maestro (Tabla tipo Gantt)</h2>
-      <div class="content">
-        <table id="tabla">
-          <thead>
-            <tr>
-              <th>Fase</th>
-              <th>Tarea / Hito</th>
-              <th>Sistema</th>
-              <th>Inicio</th>
-              <th>Fin</th>
-              <th class="right">Dur. (meses)</th>
-              <th>Gantt</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="7" style="color:var(--muted)">Cargando...</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="legend"><span class="lg lg1"></span>Actividad <span class="lg lg2"></span>Hito</div>
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>📋 Plazos Contractuales por UF (C1 Sección 5.2)</h2>
-      <div class="content" style="padding:14px">
-        <p style="margin:0 0 12px 0;color:var(--muted);font-size:13px">
-          <strong>Acta de Inicio:</strong> 26/11/2024 | <strong>Ruta Crítica:</strong> UF5 (Oct 2028) |
-          <strong>Nota:</strong> Fechas Máximas = fecha límite contractual; Fecha con Cura = +20% plazo adicional
-        </p>
-        <table id="tablaUF">
-          <thead>
-            <tr>
-              <th>UF</th>
-              <th>Plazo (meses)</th>
-              <th>Fecha Máxima</th>
-              <th>Fecha con Cura (+20%)</th>
-              <th>Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="5" style="color:var(--muted)">Cargando...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
-  <script src="data/tm01_master_data.js?v=20251209"></script>
+  <script src="data/tm01_master_data.js?v=20260128"></script>
   <script>
-    const MS_IN_DAY = 24 * 60 * 60 * 1000;
-    function parseDate(s) { const d = new Date(s); return isNaN(d) ? null : d; }
-    function diffMonths(a, b) { return Math.max(1, Math.round((b - a) / (30 * MS_IN_DAY))); }
-    function fmt(date) { return new Intl.DateTimeFormat('es-CO', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(date); }
+    const MS_DAY = 86400000;
 
-    let all = [], filtered = [];
+    let allTasks = [];
+    let filtered = [];
 
-    const defaultPlan = [
-      { fase: '0. Preparación', nombre: 'Acta de inicio firmada', sistema: 'PMO', inicio: '2024-11-26', fin: '2024-11-26', hito: true },
-      { fase: '0. Preparación', nombre: 'Plan de trabajo aprobado', sistema: 'PMO', inicio: '2024-11-27', fin: '2024-12-15', hito: false },
-      { fase: '1. Ingeniería', nombre: 'WBS completa y validada', sistema: 'PMO', inicio: '2024-12-01', fin: '2025-06-30' },
-      { fase: '1. Ingeniería', nombre: 'Especificaciones técnicas', sistema: 'PMO', inicio: '2024-12-10', fin: '2025-03-31' },
-      { fase: '2. ITS', nombre: 'Suministros ITS (SOS/ETD/CCTV/PMV/METEO/WIM/FO)', sistema: 'ITS', inicio: '2025-07-01', fin: '2025-10-31' },
-      { fase: '2. ITS', nombre: 'Obra civil y montaje ITS (canalizaciones, soportes, FO/energía)', sistema: 'ITS', inicio: '2025-08-01', fin: '2026-02-28' },
-      { fase: '3. Fibra', nombre: 'Tendido FO 48F (594 km)', sistema: 'FO', inicio: '2025-07-15', fin: '2028-08-31' },
-      { fase: '4. Puesta en Marcha', nombre: 'Pruebas integrales (FAT/SAT)', sistema: 'QA', inicio: '2028-09-01', fin: '2028-12-31' },
-      { fase: '4. Puesta en Marcha', nombre: 'Acta de recibo', sistema: 'PMO', inicio: '2029-01-31', fin: '2029-01-31', hito: true }
-    ];
+    function parseDate(s) {
+      if (!s) return null;
+      // Handle YYYY-MM-DD
+      const parts = s.split('-');
+      return new Date(parts[0], parts[1] - 1, parts[2]);
+    }
 
-    function loadData() {
-      all = defaultPlan.map(t => ({ ...t, ini: parseDate(t.inicio), fin: parseDate(t.fin), dur: (parseDate(t.fin) && parseDate(t.inicio)) ? diffMonths(parseDate(t.inicio), parseDate(t.fin)) : 0 }));
-      filtered = [...all];
-      poblarFiltros(); renderTabla(); actualizarMetricas();
+    function fmt(d) {
+      if (!d) return '-';
+      return d.toLocaleDateString('es-CO', { year: '2-digit', month: 'short', day: 'numeric' });
+    }
 
-      try {
-        const dm = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : null;
-        const hoy = new Date();
-        hoy.setHours(0, 0, 0, 0);
+    function diffMonths(start, end) {
+      if (!start || !end) return 0;
+      return ((end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + (end.getDate() - start.getDate()) / 30).toFixed(1);
+    }
 
-        // Añadir UF0 con fechas especiales (D+180 y mes 36)
-        const T0 = new Date('2024-11-26T00:00:00');
-        const addDays = (d, days) => { const r = new Date(d); r.setDate(r.getDate() + days); return r; };
-        const addMonths = (d, m) => { const r = new Date(d); r.setMonth(r.getMonth() + m); return r; };
+    function init() {
+      if (!window.tm01MasterData) { setTimeout(init, 200); return; }
 
-        let ufs = [];
-        if (dm && dm.data && Array.isArray(dm.data.cronogramaUF)) {
-          ufs = [...dm.data.cronogramaUF];
-        }
+      // Cargar desde Master Data (Source of Truth)
+      const md = window.tm01MasterData.data;
+      allTasks = (md.cronograma || []).map(t => ({
+        ...t,
+        dInicio: parseDate(t.inicio),
+        dFin: parseDate(t.fin)
+      })).sort((a, b) => a.dInicio - b.dInicio);
 
-        // Añadir UF0 con fechas especiales
-        const uf0_d180 = addDays(T0, 180);
-        const uf0_mes36 = addMonths(T0, 36);
-        ufs.push({
-          uf: 'UF0-D',
-          plazoMeses: 0,
-          fechaMax: uf0_d180.toISOString().slice(0, 10),
-          fechaCura: uf0_d180.toISOString().slice(0, 10),
-          descripcion: 'Puesta a Punto (D+180)'
-        });
-        ufs.push({
-          uf: 'UF0-M36',
-          plazoMeses: 36,
-          fechaMax: uf0_mes36.toISOString().slice(0, 10),
-          fechaCura: uf0_mes36.toISOString().slice(0, 10),
-          descripcion: 'Cumplimiento valores mínimos (mes 36)'
-        });
-
-        if (ufs.length > 0) {
-          const tbody = document.querySelector('#tablaUF tbody');
-          tbody.innerHTML = ufs
-            .sort((a, b) => {
-              if (a.uf.startsWith('UF0') && !b.uf.startsWith('UF0')) return -1;
-              if (!a.uf.startsWith('UF0') && b.uf.startsWith('UF0')) return 1;
-              return new Date(a.fechaMax) - new Date(b.fechaMax);
-            })
-            .map(r => {
-              const fechaMax = new Date(r.fechaMax);
-              fechaMax.setHours(0, 0, 0, 0);
-              const diasRestantes = Math.round((fechaMax - hoy) / (24 * 60 * 60 * 1000));
-
-              let estado = '', estadoColor = '';
-              if (r.uf === 'UF5' || r.uf === 'UF0-M36') {
-                estado = '⚠️ CRÍTICA';
-                estadoColor = '#fff3cd';
-              } else if (diasRestantes < 0) {
-                estado = 'âŒ Vencida';
-                estadoColor = '#f8d7da';
-              } else if (diasRestantes < 90) {
-                estado = '⚠️ Urgente';
-                estadoColor = '#fff3cd';
-              } else if (diasRestantes < 180) {
-                estado = '✅ En plazo';
-                estadoColor = '#d4edda';
-              } else {
-                estado = '✅ OK';
-                estadoColor = '#d1ecf1';
-              }
-
-              const fmtFecha = (f) => {
-                const d = new Date(f);
-                return new Intl.DateTimeFormat('es-CO', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
-              };
-
-              const plazoText = r.plazoMeses > 0 ? `${r.plazoMeses} meses` : (r.descripcion || 'N/A');
-              const diasText = diasRestantes >= 0 ? `${diasRestantes} días` : `${Math.abs(diasRestantes)} días vencidos`;
-
-              return `<tr style="background:${estadoColor}">
-                <td><strong>${r.uf}</strong>${r.descripcion ? `<br><small style="color:var(--muted)">${r.descripcion}</small>` : ''}</td>
-                <td>${plazoText}</td>
-                <td><strong>${fmtFecha(r.fechaMax)}</strong><br><small style="color:var(--muted)">${diasText}</small></td>
-                <td>${fmtFecha(r.fechaCura)}</td>
-                <td>${estado}</td>
-              </tr>`;
-            })
-            .join('');
-        }
-      } catch (e) {
-        console.error('Error cargando plazos UF:', e);
-        const tbody = document.querySelector('#tablaUF tbody');
-        tbody.innerHTML = `<tr><td colspan="5" style="color:#dc3545">âŒ Error: ${e.message}</td></tr>`;
+      if (allTasks.length === 0) {
+        // Fallback si no hay datos
+        console.warn("No cronograma in Master Data");
       }
+
+      poblarFiltros();
+      aplicarFiltros();
     }
 
     function poblarFiltros() {
-      const fases = [...new Set(all.map(t => t.fase))]; const sistemas = [...new Set(all.map(t => t.sistema))];
-      const fF = document.getElementById('fFase'); const fS = document.getElementById('fSistema');
-      fases.forEach(f => { const o = document.createElement('option'); o.value = f; o.textContent = f; fF.appendChild(o); });
-      sistemas.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; fS.appendChild(o); });
+      const fases = [...new Set(allTasks.map(t => t.fase))];
+      const sistemas = [...new Set(allTasks.map(t => t.sistema))];
+
+      const selF = document.getElementById('fFase');
+      const selS = document.getElementById('fSistema');
+
+      fases.forEach(f => {
+        if (f) { const o = document.createElement('option'); o.value = f; o.textContent = f; selF.appendChild(o); }
+      });
+      sistemas.forEach(s => {
+        if (s) { const o = document.createElement('option'); o.value = s; o.textContent = s; selS.appendChild(o); }
+      });
     }
 
     function aplicarFiltros() {
-      const fase = document.getElementById('fFase').value; const sist = document.getElementById('fSistema').value; const q = (document.getElementById('fBuscar').value || '').toLowerCase();
-      filtered = all.filter(t => { if (fase && t.fase !== fase) return false; if (sist && t.sistema !== sist) return false; if (q && !(t.nombre || '').toLowerCase().includes(q)) return false; return true; });
-      renderTabla(); actualizarMetricas();
+      const fF = document.getElementById('fFase').value;
+      const fS = document.getElementById('fSistema').value;
+      const q = document.getElementById('fBuscar').value.toLowerCase();
+
+      filtered = allTasks.filter(t => {
+        if (fF && t.fase !== fF) return false;
+        if (fS && t.sistema !== fS) return false;
+        if (q && !t.nombre.toLowerCase().includes(q)) return false;
+        return true;
+      });
+
+      calculateMetrics();
+      renderTable();
     }
 
-    function renderTabla() {
-      const tb = document.querySelector('#tabla tbody'); if (filtered.length === 0) { tb.innerHTML = '<tr><td colspan="7" style="color:var(--muted)">Sin resultados</td></tr>'; return; }
-      const minIni = filtered.reduce((m, t) => t.ini && (!m || t.ini < m) ? t.ini : m, null); const maxFin = filtered.reduce((m, t) => t.fin && (!m || t.fin > m) ? t.fin : m, null);
-      tb.innerHTML = filtered.map(t => { const offset = Math.round((t.ini - minIni) / (30 * MS_IN_DAY)); const span = Math.max(1, Math.round((t.fin - t.ini) / (30 * MS_IN_DAY))); const bars = `<div class="gantt">${'<span style="flex:' + offset + ' 0 0"></span>'}<span class="bar ${t.hito ? 'milestone' : ''}" style="flex:${t.hito ? 1 : span}"></span></div>`; return `<tr><td>${t.fase}</td><td>${t.nombre}</td><td>${t.sistema || ''}</td><td>${fmt(t.ini)}</td><td>${fmt(t.fin)}</td><td class="right">${t.dur}</td><td>${bars}</td></tr>`; }).join('');
+    function calculateMetrics() {
+      if (filtered.length === 0) return;
+
+      const minDate = new Date(Math.min(...filtered.map(t => t.dInicio).filter(d => d)));
+      const maxDate = new Date(Math.max(...filtered.map(t => t.dFin).filter(d => d)));
+
+      document.getElementById('mDuracion').textContent = diffMonths(minDate, maxDate);
+      document.getElementById('mHitos').textContent = filtered.filter(t => t.hito).length;
+      document.getElementById('mFases').textContent = [...new Set(filtered.map(t => t.fase))].size;
+      document.getElementById('mInicioFin').innerText = `${fmt(minDate)} \n→ ${fmt(maxDate)}`;
+
+      window._minGlobal = minDate;
+      window._maxGlobal = maxDate;
+      window._spanGlobal = maxDate - minDate;
     }
 
-    function actualizarMetricas() {
-      const minIni = all.reduce((m, t) => t.ini && (!m || t.ini < m) ? t.ini : m, null); const maxFin = all.reduce((m, t) => t.fin && (!m || t.fin > m) ? t.fin : m, null); const meses = minIni && maxFin ? Math.max(1, Math.round((maxFin - minIni) / (30 * MS_IN_DAY))) : 0; document.getElementById('mDuracion').textContent = meses; document.getElementById('mHitos').textContent = all.filter(t => t.hito).length; document.getElementById('mFases').textContent = new Set(all.map(t => t.fase)).size; document.getElementById('mInicioFin').textContent = (minIni && maxFin) ? (fmt(minIni) + ' ←’ ' + fmt(maxFin)) : '-';
+    function renderTable() {
+      const tb = document.querySelector('#tabla tbody');
+      if (filtered.length === 0) { tb.innerHTML = '<tr><td colspan="7">Sin resultados</td></tr>'; return; }
+
+      const minT = window._minGlobal ? window._minGlobal.getTime() : 0;
+      const spanT = window._spanGlobal || 1;
+
+      tb.innerHTML = filtered.map(t => {
+        const ini = t.dInicio ? t.dInicio.getTime() : minT;
+        const fin = t.dFin ? t.dFin.getTime() : ini;
+
+        const offsetPct = ((ini - minT) / spanT) * 100;
+        const widthPct = Math.max(((fin - ini) / spanT) * 100, 1); // Min 1% width
+
+        let barHtml = '';
+        if (t.hito) {
+          barHtml = `<div class="gantt-container" style="background:transparent;"><div style="width:${offsetPct}%"></div><div class="gantt-bar milestone"></div></div>`;
+        } else {
+          barHtml = `<div class="gantt-container"><div class="gantt-spacer" style="width:${offsetPct}%"></div><div class="gantt-bar" style="width:${widthPct}%"></div></div>`;
+        }
+
+        return `
+            <tr>
+                <td><span class="tm01-status-badge" style="background:#f1f5f9; color:#475569;">${t.fase}</span></td>
+                <td>
+                    <strong>${t.nombre}</strong>
+                    ${t.nota ? `<br><small style="color:var(--text-muted)">${t.nota}</small>` : ''}
+                </td>
+                <td><b>${t.sistema || '-'}</b></td>
+                <td style="font-size:0.85rem;">${fmt(t.dInicio)}</td>
+                <td style="font-size:0.85rem;">${fmt(t.dFin)}</td>
+                <td style="text-align:right;">${t.hito ? 'HITO' : diffMonths(t.dInicio, t.dFin)}</td>
+                <td>${barHtml}</td>
+            </tr>
+            `;
+      }).join('');
     }
 
-    function exportarExcel() { const rows = filtered.map(t => ({ Fase: t.fase, Tarea: t.nombre, Sistema: t.sistema, Inicio: fmt(t.ini), Fin: fmt(t.fin), DuracionMeses: t.dur })); const ws = XLSX.utils.json_to_sheet(rows); const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Cronograma'); XLSX.writeFile(wb, 'Cronograma_TM01.xlsx'); }
+    function exportarExcel() {
+      const rows = filtered.map(t => ({
+        Fase: t.fase,
+        Actividad: t.nombre,
+        Sistema: t.sistema,
+        Inicio: fmt(t.dInicio),
+        Fin: fmt(t.dFin),
+        Notas: t.nota || ''
+      }));
+      const ws = XLSX.utils.json_to_sheet(rows);
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, "Cronograma");
+      XLSX.writeFile(wb, "Cronograma_TM01_HardDeck.xlsx");
+    }
 
-    window.addEventListener('DOMContentLoaded', () => { loadData(); });
+    window.addEventListener('DOMContentLoaded', init);
   </script>
 </body>
 

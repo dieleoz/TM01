@@ -8,428 +8,329 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte Gerencial - TM01 Troncal Magdalena</title>
+
+    <!-- Librerías Externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <!-- Estilos Design System -->
+    <link rel="stylesheet" href="css/tm01-design-system.css">
+
     <style>
-        :root {
-            --g1: #0f172a;
-            --g2: #1e293b;
-            --h1: #0f172a;
-            --h2: #2563eb;
-            --bg: #f8f9fa;
-            --card: #ffffff;
-            --line: #dee2e6;
-            --text: #212529;
-            --muted: #6c757d;
-            --accent: #667eea;
+        /* Estilos específicos para este reporte si son necesarios */
+        .metric-grid {
+            margin-bottom: var(--space-xl);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-        }
-
-        .toolbar {
-            position: sticky;
-            top: 0;
-            z-index: 20;
+        .critical-alert {
+            background: var(--warning-bg);
+            border: 1px solid var(--warning);
+            color: #92400e;
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-lg);
             display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-            padding: 12px 16px;
-            background: linear-gradient(135deg, var(--g1), var(--g2));
-            border-bottom: 1px solid rgba(0, 0, 0, .06);
+            align-items: center;
+            gap: var(--space-md);
         }
 
-        .btn {
-            padding: 10px 14px;
-            border: 1px solid rgba(255, 255, 255, .6);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, .15);
-            color: #fff;
-            font-weight: 600;
-            cursor: pointer;
+        .critical-alert svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
         }
 
-        .btn-primary {
-            background: rgba(255, 255, 255, .2);
-        }
-
-        .btn-success {
-            background: #28a745;
-            border-color: #28a745;
-        }
-
-        .wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--g1), var(--g2));
-            border-radius: 14px;
-            padding: 36px 26px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
-            color: #fff;
-        }
-
-        .hero h1 {
-            font-size: 30px;
-            margin-bottom: 6px;
-        }
-
-        .hero p {
-            opacity: .95;
-            font-size: 14px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 14px;
-            margin: 18px 0;
-        }
-
-        .metric {
-            background: var(--card);
-            border: 1px solid var(--line);
-            padding: 16px;
-            border-radius: 10px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
-        }
-
-        .metric .val {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--accent);
-        }
-
-        .metric .lab {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 6px;
-        }
-
-        .section {
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            margin: 18px 0;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
-        }
-
-        .section h2 {
-            background: #ffffff;
-            color: var(--h1);
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--line);
-            font-size: 18px;
-        }
-
-        .content {
-            padding: 16px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-        }
-
-        .card {
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: 10px;
-            padding: 14px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, .05);
-        }
-
-        .card h3 {
-            font-size: 14px;
-            color: var(--h2);
-            margin-bottom: 6px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--card);
-            border: 1px solid var(--line);
-        }
-
-        th {
-            background: var(--h1);
-            color: #fff;
-            padding: 10px;
-            text-align: left;
-            font-size: 13px;
-        }
-
-        td {
-            padding: 10px;
-            border-top: 1px solid var(--line);
-            font-size: 13px;
-            color: var(--text);
-        }
-
-        .right {
-            text-align: right;
-        }
-
-        .muted {
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        @media print {
-            .toolbar {
-                display: none;
-            }
-
-            body {
-                background: #fff;
-                color: #000;
-            }
-
-            .hero,
-            .section,
-            .card,
-            .metric {
-                box-shadow: none;
-                border-color: #ddd;
-            }
-
-            th {
-                background: #333
-            }
+        .highlight-sos {
+            border-left: 4px solid var(--tm01-accent);
         }
     </style>
 </head>
 
 <body>
-    <div class="toolbar">
-        <a href="WBS_Menu_Principal.html" class="btn" style="margin-right: auto;">← Volver al Inicio</a>
-        <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn btn-success" onclick="exportarExcelReporte()">📊 Exportar Excel</button>
-    </div>
+    <!-- Navbar -->
+    <nav class="tm01-navbar">
+        <div class="tm01-brand">
+            📋 Reporte Gerencial Ejecutivo
+            <span class="tm01-status-badge">TM01 Troncal Magdalena</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Volver al Inicio</a>
+            <button class="tm01-btn" onclick="window.print()">🖨️ Imprimir</button>
+            <button class="tm01-btn tm01-btn-success" onclick="exportarExcelReporte()">📊 Exportar Excel</button>
+        </div>
+    </nav>
 
-    <div class="wrap">
-        <div class="hero">
-            <h1>📋 REPORTE GERENCIAL EJECUTIVO</h1>
-            <p>TM01 Troncal Magdalena | Sistema de Validación ITS | Últ. act.: <span id="fechaAct"></span></p>
-            <div class="grid">
-                <div class="metric">
-                    <div class="val" id="mUSD">-</div>
-                    <div class="lab">Presupuesto Total (USD)</div>
-                </div>
-                <div class="metric">
-                    <div class="val" id="mCOP">-</div>
-                    <div class="lab">Presupuesto Total (COP)</div>
-                </div>
-                <div class="metric">
-                    <div class="val" id="mItems">-</div>
-                    <div class="lab">Items WBS (tipo item)</div>
-                </div>
-                <div class="metric">
-                    <div class="val" id="mSistemas">-</div>
-                    <div class="lab">Sistemas</div>
+    <div class="tm01-container" style="padding-top: var(--space-xl);">
+
+        <!-- Header / Info -->
+        <div style="margin-bottom: var(--space-lg);">
+            <p style="color: var(--text-sub);">Sistema de Validación ITS | Última actualización: <span id="fechaAct"
+                    style="font-weight: 600;">Cargando...</span></p>
+        </div>
+
+        <!-- Métricas Principales -->
+        <div class="tm01-grid-4 metric-grid">
+            <div class="tm01-stat">
+                <div class="tm01-stat-value" id="mUSD">-</div>
+                <div class="tm01-stat-label">Presupuesto Total (USD)</div>
+            </div>
+            <div class="tm01-stat">
+                <div class="tm01-stat-value" id="mCOP">-</div>
+                <div class="tm01-stat-label">Presupuesto Total (COP)</div>
+            </div>
+            <div class="tm01-stat">
+                <div class="tm01-stat-value" id="mItems">-</div>
+                <div class="tm01-stat-label">Items WBS</div>
+            </div>
+            <div class="tm01-stat">
+                <div class="tm01-stat-value" id="mSistemas">-</div>
+                <div class="tm01-stat-label">Sistemas</div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN CRÍTICA: SOS -->
+        <div class="critical-alert highlight-sos">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <div>
+                <strong>Entrega Temprana: Sistema SOS</strong>
+                <p style="margin: 4px 0 0 0; font-size: 0.9rem;">
+                    Operación gradual y paralela al progreso de obras.
+                    El sistema estará <strong>100% operativo</strong> al inicio de la etapa de operación. Prioridad
+                    estratégica.
+                </p>
+            </div>
+        </div>
+
+        <!-- Pareto 80/20 -->
+        <div class="tm01-section">
+            <div class="tm01-section-header">📊 Pareto 80% del Presupuesto</div>
+            <div class="tm01-section-content">
+                <div style="overflow-x: auto;">
+                    <table class="tm01-table" id="tablaPareto">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Descripción</th>
+                                <th>Sistema</th>
+                                <th style="text-align: right;">Total (COP)</th>
+                                <th style="text-align: right;">Total (USD)</th>
+                                <th style="text-align: right;">% Acum.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 20px;">
+                                    Calculando Pareto...</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <div class="section">
-            <h2>📊 Pareto 80% del Presupuesto</h2>
-            <div class="content">
-                <table id="tablaPareto">
-                    <thead>
-                        <tr>
-                            <th>Ñtem</th>
-                            <th>Descripción</th>
-                            <th>Sistema</th>
-                            <th class="right">Total (COP)</th>
-                            <th class="right">Total (USD)</th>
-                            <th class="right">% Acum.</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="6" class="muted">Calculando...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>📊 Justificación de Cantidades por Sistema</h2>
-            <div class="content">
-                <table id="tablaSistemas">
-                    <thead>
-                        <tr>
-                            <th>Sistema</th>
-                            <th class="right">Cantidad Total</th>
-                            <th>Justificación Técnica</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>⚙️ Supuestos Técnicos y Comerciales</h2>
-            <div class="content cards" id="supuestosCards">
-                <div class="card">
-                    <h3>Arquitectura</h3>
-                    <div class="muted">5 capas: Fuente → DTs → Ingeniería → Motor Datos → Services/Entrega</div>
+        <div class="tm01-grid-2">
+            <!-- Justificación por Sistema -->
+            <div class="tm01-section">
+                <div class="tm01-section-header">📊 Justificación de Cantidades</div>
+                <div class="tm01-section-content">
+                    <table class="tm01-table" id="tablaSistemas">
+                        <thead>
+                            <tr>
+                                <th>Sistema</th>
+                                <th style="text-align: right;">Cant. Total</th>
+                                <th>Justificación Técnica</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-                <div class="card">
-                    <h3>Comunicaciones</h3>
-                    <div class="muted">Fibra óptica backbone; energía autónoma en equipos remotos</div>
-                </div>
-                <div class="card">
-                    <h3>Comerciales</h3>
-                    <div class="muted">AIU 33% (Adm 23% + Imp 5% + Util 5%). IVA: SUM y SERV 19%; Utilidad OBRA 19% × 5%
+            </div>
+
+            <!-- Supuestos Técnicos -->
+            <div class="tm01-section">
+                <div class="tm01-section-header">⚙️ Supuestos Técnicos y Comerciales</div>
+                <div class="tm01-section-content" style="display: flex; flex-direction: column; gap: var(--space-md);">
+                    <div class="tm01-card" style="padding: var(--space-md);">
+                        <h3>Arquitectura 5 Capas</h3>
+                        <p style="margin:0;">Fuente → DTs → Ingeniería → Motor Datos → Services/Entrega</p>
+                    </div>
+                    <div class="tm01-card" style="padding: var(--space-md);">
+                        <h3>Comunicaciones</h3>
+                        <p style="margin:0;">Fibra óptica backbone 293km; energía autónoma en sitios críticos.</p>
+                    </div>
+                    <div class="tm01-card" style="padding: var(--space-md);">
+                        <h3>Comerciales</h3>
+                        <p style="margin:0;">AIU 33%. TRM Base: 4,400 COP/USD. Utilidad Obra 5% sobre 19%.</p>
                     </div>
                 </div>
-                <div class="card">
-                    <h3>TRM</h3>
-                    <div class="muted">4,400 COP/USD</div>
+            </div>
+        </div>
+
+        <!-- Riesgos y Recomendaciones -->
+        <div class="tm01-grid-2">
+            <div class="tm01-section">
+                <div class="tm01-section-header">⚠️ Riesgos Principales</div>
+                <div class="tm01-section-content">
+                    <ul
+                        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
+                        <li style="background: var(--bg-hover); padding: 10px; border-radius: var(--radius-md);">
+                            <strong>Interoperabilidad:</strong> Integración con terceros (Peajes/Invías) requiere
+                            protocolos estrictos.
+                        </li>
+                        <li style="background: var(--bg-hover); padding: 10px; border-radius: var(--radius-md);">
+                            <strong>Disponibilidad FO:</strong> Cobertura extensa (293 km); requiere redundancia.
+                        </li>
+                        <li style="background: var(--bg-hover); padding: 10px; border-radius: var(--radius-md);">
+                            <strong>Plazos Contractuales:</strong> Ruta crítica en UF5 y UF0 (Mes 36).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tm01-section">
+                <div class="tm01-section-header">✅ Recomendaciones Estratégicas</div>
+                <div class="tm01-section-content">
+                    <div class="tm01-card"
+                        style="background: var(--success-bg); border-color: var(--success); padding: var(--space-md);">
+                        <h3 style="color: #065f46; font-size: 1rem;">Foco PMO</h3>
+                        <p style="color: #064e3b; margin:0; font-size: 0.9rem;">Supervisión intensiva a Items Pareto
+                            80%. Priorizar cierre de DTs.</p>
+                    </div>
+                    <div style="margin-top: 10px; font-size: 0.9rem; color: var(--text-sub);">
+                        <p>• <strong>QA Datos:</strong> Validar coherencia WBS vs Presupuesto en cada sincronización.
+                        </p>
+                        <p>• <strong>Plan de Obra:</strong> Mantener alineación con "Hard Deck" certificado.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="section">
-            <h2>⚙️ Riesgos Principales</h2>
-            <div class="content cards" id="riesgosCards">
-                <div class="card">
-                    <h3>Interoperabilidad</h3>
-                    <div class="muted">Integración con terceros requiere pruebas conjuntas y protocolos estándar.</div>
-                </div>
-                <div class="card">
-                    <h3>Disponibilidad FO</h3>
-                    <div class="muted">Cobertura de 293 km; asegurar suministro y redundancias.</div>
-                </div>
-                <div class="card">
-                    <h3>Suministro y Plazos</h3>
-                    <div class="muted">Cumplimiento de plazos contractuales por UF; coordinar entregas críticas (UF5,
-                        UF0-M36).</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>✅ Recomendaciones Estratégicas</h2>
-            <div class="content cards">
-                <div class="card">
-                    <h3>Foco PMO</h3>
-                    <div class="muted">Supervisión intensiva a Ñtems Pareto 80%.</div>
-                </div>
-                <div class="card">
-                    <h3>QA Datos</h3>
-                    <div class="muted">Validar coherencia WBS, Presupuesto y Layout en cada sincronización.</div>
-                </div>
-                <div class="card">
-                    <h3>DTs</h3>
-                    <div class="muted">Registrar y trazar todas las Decisiones Técnicas con impacto.</div>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <script src="data/tm01_master_data.js?v=20251209"></script>
-    <script src="datos_wbs_TM01_items.js?v=20251209"></script>
+    <!-- Scripts -->
+    <script src="data/tm01_master_data.js?v=20260128"></script>
+    <script src="datos_wbs_TM01_items.js?v=20260128"></script>
     <script>
         function n(v) { const x = parseFloat((v ?? '').toString().replace(/[^0-9.\-]/g, '')); return isNaN(x) ? 0 : x; }
         function fm(n, curr) { return new Intl.NumberFormat(curr === 'USD' ? 'en-US' : 'es-CO', { style: 'currency', currency: curr || 'COP', maximumFractionDigits: 0 }).format(n); }
         function sum(arr, fn) { return arr.reduce((s, a) => s + (fn ? fn(a) : a), 0); }
 
         function init() {
-            // Unificar fuentes de datos (Soporte para TM01MasterData clase o TM01_MASTER_DATA objeto global)
-            const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
-                (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
+            const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData : null;
 
-            const wbsData = (typeof window.wbsDataGlobal !== 'undefined') ? window.wbsDataGlobal : null;
-
-            if (!md && !wbsData) { setTimeout(init, 100); return; }
-
-            // Determinar items y fecha de actualización
-            let items = [];
-            let fechaDatos = 'Desconocida';
-
-            if (wbsData && wbsData.items && wbsData.items.length > 0) {
-                // Prioridad: Datos detallados WBS
-                items = wbsData.items.filter(i => i.tipo === 'item');
-                fechaDatos = wbsData.fecha_actualizacion || wbsData.fecha_generacion || new Date().toLocaleDateString();
-            } else if (md && md.data) {
-                // Fallback: Master Data (puede ser simplificado o detallado)
-                // Soporte para estructura wbs.items o tm01Data.data.wbs
-                const wbsArray = Array.isArray(md.data.wbs) ? md.data.wbs :
-                    (md.data.wbs && md.data.wbs.items) ? md.data.wbs.items : [];
-                items = wbsArray.filter(i => i && i.tipo === 'item');
-
-                // Intentar obtener fecha del resumen
-                if (md.data.resumen && md.data.resumen.fechaActualizacion) {
-                    fechaDatos = md.data.resumen.fechaActualizacion;
-                }
+            if (!md) {
+                console.warn("Esperando Master Data...");
+                setTimeout(init, 200);
+                return;
             }
 
-            const totalUSD = sum(items, i => n(i.cantidad) * n(i.vu));
-            const totalCOP = sum(items, i => n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)));
-            const sistemas = new Set(items.map(i => i.sistema).filter(Boolean));
+            // Usar método oficial para obtener estadísticas
+            const stats = md.getEstadisticas();
+            const resumenContractual = md.getContractualSummary();
+            const items = md.data.wbs.filter(i => i.tipo === 'item');
 
+            // Calcular totales generales
+            let totalUSD = 0, totalCOP = 0;
+            const sistemasSet = new Set();
+
+            items.forEach(i => {
+                totalUSD += n(i.total);
+                totalCOP += n(i.totalCOP);
+                if (i.sistema) sistemasSet.add(i.sistema);
+            });
+
+            // Renderizar Métricas
             document.getElementById('mUSD').textContent = fm(totalUSD, 'USD');
             document.getElementById('mCOP').textContent = fm(totalCOP, 'COP');
             document.getElementById('mItems').textContent = items.length;
-            document.getElementById('mSistemas').textContent = sistemas.size;
+            document.getElementById('mSistemas').textContent = sistemasSet.size;
 
-            // Mostrar fecha de datos + fecha actual reporte
+            // Fecha
             const fechaReporte = new Date().toLocaleString('es-CO');
-            document.getElementById('fechaAct').innerHTML = `${fechaDatos} <br><small class='muted'>(Reporte: ${fechaReporte})</small>`;
+            document.getElementById('fechaAct').innerHTML = `${new Date().toLocaleDateString()} <small class='text-muted'>(Generado: ${fechaReporte})</small>`;
 
-            const trm = window.TRM_OFICIAL || 4400;
-            const byValue = items.map(i => ({ item: i.item, desc: i.descripcion, sistema: i.sistema, cop: n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)) })).sort((a, b) => b.cop - a.cop);
-            let acc = 0; const pareto = []; const total = sum(byValue, v => v.cop);
-            for (const r of byValue) { acc += r.cop; pareto.push({ ...r, pctAcc: (acc / total) * 100 }); if (acc / total >= 0.8) break; }
-            const tbp = document.querySelector('#tablaPareto tbody');
-            tbp.innerHTML = pareto.map(r => `<tr><td>${r.item}</td><td>${r.desc}</td><td>${r.sistema || ''}</td><td class="right">${fm(r.cop, 'COP')}</td><td class="right">${fm(r.cop / trm, 'USD')}</td><td class="right">${r.pctAcc.toFixed(1)}%</td></tr>`).join('');
+            // Pareto logic
+            const trm = 4400; // Podría venir de config
+            const byValue = items.map(i => ({
+                item: i.item,
+                desc: i.descripcion,
+                sistema: i.sistema,
+                cop: n(i.totalCOP),
+                usd: n(i.total)
+            })).sort((a, b) => b.cop - a.cop);
 
-            // Use dynamic summary helper for justifications
-            const summaries = window.obtenerResumenContractual ? window.obtenerResumenContractual() : [];
-            const tbs = document.querySelector('#tablaSistemas tbody');
+            let acc = 0;
+            const pareto = [];
+            const totalPareto = sum(byValue, v => v.cop);
 
-            if (summaries.length > 0) {
-                tbs.innerHTML = summaries.map(s => `<tr><td><strong>${s.sistema}</strong></td><td class="right">${s.cantidad || '-'}</td><td>${s.descripcion || 'Validado según WBS'}</td></tr>`).join('');
-            } else {
-                tbs.innerHTML = '<tr><td colspan="3" class="muted">No se encontraron datos dinámicos.</td></tr>';
+            for (const r of byValue) {
+                acc += r.cop;
+                pareto.push({ ...r, pctAcc: (acc / totalPareto) * 100 });
+                if (acc / totalPareto >= 0.8) break;
             }
 
-            window.__reporteData = { totalUSD, totalCOP, items, pareto, summaries };
+            const tbp = document.querySelector('#tablaPareto tbody');
+            tbp.innerHTML = pareto.map(r => `
+                <tr>
+                    <td style="font-family:monospace; font-weight:bold;">${r.item}</td>
+                    <td>${r.desc}</td>
+                    <td><span class="tm01-status-badge" style="background:var(--info-bg); color:var(--tm01-accent);">${r.sistema || '-'}</span></td>
+                    <td style="text-align:right;">${fm(r.cop, 'COP')}</td>
+                    <td style="text-align:right;">${fm(r.usd, 'USD')}</td>
+                    <td style="text-align:right; font-weight:bold;">${r.pctAcc.toFixed(1)}%</td>
+                </tr>`).join('');
+
+            // Justificación por Sistema
+            const tbs = document.querySelector('#tablaSistemas tbody');
+            if (resumenContractual.length > 0) {
+                tbs.innerHTML = resumenContractual.map(s => `
+                    <tr>
+                        <td><strong>${s.sistema}</strong></td>
+                        <td style="text-align:right;">${Math.round(s.cantidad) || '-'}</td>
+                        <td style="color:var(--text-sub); font-size:0.85rem;">Validado (Hard Deck Audit 5.0)</td>
+                    </tr>`).join('');
+            } else {
+                tbs.innerHTML = '<tr><td colspan="3" class="text-muted">No se encontraron datos.</td></tr>';
+            }
+
+            // Store data for export
+            window.__reporteData = { totalUSD, totalCOP, items, pareto };
         }
 
         function exportarExcelReporte() {
             if (!window.__reporteData) { alert('Espere a que carguen los datos...'); return; }
-            const { totalUSD, totalCOP, pareto, summaries } = window.__reporteData;
-            const data = [['REPORTE GERENCIAL - TM01'], ['Fecha', new Date().toLocaleString('es-CO')], [], ['Métrica', 'Valor'], ['Total (USD)', totalUSD], ['Total (COP)', totalCOP], [], ['PARETO 80% - Ñtems'], ['Ñtem', 'Descripción', 'Sistema', 'Total (COP)', 'Total (USD)', '% Acum']];
-            pareto.forEach(p => data.push([p.item, p.desc, p.sistema, p.cop, p.cop / 4400, p.pctAcc]));
-            data.push([]); data.push(['Justificación por Sistema']); data.push(['Sistema', 'Cantidad Total', 'Criterio']);
-            Object.keys(just).sort().forEach(s => data.push([s, just[s].cant, just[s].criterio]));
-            const ws = XLSX.utils.aoa_to_sheet(data); ws['!cols'] = [{ wch: 16 }, { wch: 60 }, { wch: 18 }, { wch: 18 }, { wch: 16 }, { wch: 10 }];
-            const wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, ws, 'Reporte Gerencial');
-            const fname = 'Reporte_Gerencial_TM01_' + new Date().toISOString().split('T')[0] + '.xlsx';
-            XLSX.writeFile(wb, fname);
+            const { totalUSD, totalCOP, pareto } = window.__reporteData;
+
+            const ws_data = [
+                ['REPORTE GERENCIAL EJECUTIVO - TM01'],
+                ['Fecha Generación', new Date().toLocaleString('es-CO')],
+                [],
+                ['Métrica Global', 'Valor'],
+                ['Total Presupuesto (USD)', totalUSD],
+                ['Total Presupuesto (COP)', totalCOP],
+                [],
+                ['ANÁLISIS DE PARETO (80% DEL COSTO)'],
+                ['Item', 'Descripción', 'Sistema', 'Costo (COP)', 'Costo (USD)', '% Acumulado']
+            ];
+
+            pareto.forEach(p => ws_data.push([
+                p.item,
+                p.desc,
+                p.sistema,
+                p.cop,
+                p.usd,
+                p.pctAcc / 100
+            ]));
+
+            const ws = XLSX.utils.aoa_to_sheet(ws_data);
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, "Reporte Gerencial");
+            XLSX.writeFile(wb, "Reporte_Gerencial_TM01.xlsx");
         }
 
         window.addEventListener('DOMContentLoaded', init);
     </script>
-    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 </body>
 
 </html>
