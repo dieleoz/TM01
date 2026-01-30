@@ -164,46 +164,30 @@ function mostrarSubtotales() {
 
     if (!subtotalesGrid) return;
 
-    // Use master data summaries instead of summing individual items
-    // This assumes tm01Data is available and populated
-    const masterSummaries = {
-        'CCTV': tm01Data?.data?.cctvSummary,
-        'PMV': tm01Data?.data?.pmvSummary,
-        'ETD/RADAR': tm01Data?.data?.etdRadarSummary,
-        'SAST (Sancionatorio)': tm01Data?.data?.sastSummary,
-        'RADAR PEDAGÓGICO': tm01Data?.data?.pedagogicalRadarSummary,
-        'SOS': tm01Data?.data?.sosSummary,
-        'METEO': tm01Data?.data?.meteoSummary,
-        'WIM': tm01Data?.data?.wimSummary,
-        'Telecomunicaciones': tm01Data?.data?.telecomSummary,
-        'Peajes': tm01Data?.data?.peajesSummary,
-        'Centro de Control (CCO)': tm01Data?.data?.ccoSummary,
-        'RADIO FM': tm01Data?.data?.radioFMSummary
-    };
+    // Use dynamic summary helper
+    const summaryList = window.obtenerResumenContractual ? window.obtenerResumenContractual() : [];
 
     let html = '';
     let totalGeneralUSD = 0, totalGeneralCOP = 0;
 
-    Object.keys(masterSummaries).forEach(sistema => {
-        const summary = masterSummaries[sistema];
-        if (summary && summary.capexUSD) {
-            const cantidad = summary.cantidad || 0;
-            const costoUSD = summary.capexUSD || 0;
-            const costoCOP = summary.capexCOP || 0;
+    summaryList.forEach(summary => {
+        const sistema = summary.sistema;
+        const cantidad = summary.cantidad || 0;
+        const costoUSD = summary.capexUSD || 0;
+        const costoCOP = summary.capexCOP || 0;
 
-            html += `
-                <div class="subtotal-item">
-                    <div class="subtotal-label">${sistema}</div>
-                    <div class="subtotal-value">
-                        ${cantidad} unidades<br>
-                        <strong>USD: $${costoUSD.toLocaleString()}</strong><br>
-                        <strong>COP: $${costoCOP.toLocaleString()}</strong>
-                    </div>
-                </div>`;
+        html += `
+            <div class="subtotal-item">
+                <div class="subtotal-label">${sistema}</div>
+                <div class="subtotal-value">
+                    ${cantidad} unidades<br>
+                    <strong>USD: $${costoUSD.toLocaleString()}</strong><br>
+                    <strong>COP: $${costoCOP.toLocaleString()}</strong>
+                </div>
+            </div>`;
 
-            totalGeneralUSD += costoUSD;
-            totalGeneralCOP += costoCOP;
-        }
+        totalGeneralUSD += costoUSD;
+        totalGeneralCOP += costoCOP;
     });
 
     html += `

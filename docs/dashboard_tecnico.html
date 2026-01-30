@@ -308,7 +308,7 @@
         });
 
         function renderDashboard(data, specsMap) {
-            const summaries = Object.values(data).filter(item => item.id && item.sistema);
+            const summaries = window.obtenerResumenContractual ? window.obtenerResumenContractual() : [];
 
             // Metrics
             const totalDocs = Object.keys(specsMap).length;

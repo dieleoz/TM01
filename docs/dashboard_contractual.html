@@ -330,9 +330,7 @@
 
         function renderDashboard(data) {
             // Filter only Summary objects
-            const summaries = Object.keys(data)
-                .filter(key => key.includes('Summary'))
-                .map(key => data[key]);
+            const summaries = window.obtenerResumenContractual ? window.obtenerResumenContractual() : [];
 
             if (summaries.length === 0) {
                 document.getElementById('validation-container').innerHTML = '<div class="error">No se encontraron datos de subsistemas.</div>';

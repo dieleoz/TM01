@@ -567,16 +567,19 @@ ${dt.documentosAfectados.map(doc => `- ${doc}`).join('\n')}
                     sistema: sys,
                     capexUSD: 0,
                     capexCOP: 0,
+                    cantidad: 0,
                     estado: 'Validado', // Por defecto todos los validados en Audit 6.0
-                    descripcion: `Resumen dinámico basado en WBS`
+                    descripcion: item.descripcion // Tomamos la descripción del primer ítem como referencia
                 };
             }
 
             const totalUSD = parseFloat(String(item.total || '0').replace(/,/g, ''));
             const totalCOP = parseFloat(String(item.totalCOP || '0').replace(/,/g, ''));
+            const cantidad = parseFloat(String(item.cantidad || '0').replace(/,/g, ''));
 
             sistemasMap[sys].capexUSD += totalUSD;
             sistemasMap[sys].capexCOP += totalCOP;
+            sistemasMap[sys].cantidad += cantidad;
         });
 
         return Object.values(sistemasMap).sort((a, b) => b.capexCOP - a.capexCOP);
