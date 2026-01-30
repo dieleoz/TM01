@@ -76,6 +76,13 @@ Esta es la capa final de entrega al cliente ("El Plato Servido").
 - **Producto Final:** PDFs, HTMLs autocontenidos y RFQs validados.
 - **Regla:** Lo que sale aquí ya no se edita a mano. Si está mal, se corrige en la Capa 2 (Ingeniería) y se vuelve a "cocinar".
 
+### **2.5: ESTRATEGIA SMART CAPEX (AUDIT 6.0)**
+*Nivel: Transversal (L2-L5)*  
+Este principio rige el cierre financiero del proyecto en 2026:
+- **Zero Infrastructure**: Priorizar el uso de infraestructura propia existente (SOS/PMV) para subsistemas ligeros como Radar/ETD.
+- **Zero Civil Works**: Preferir soluciones inalámbricas y montajes superficiales (ej. Davis con trípodes) para evitar excavaciones y canalizaciones.
+- **Unified Services**: Eliminar módulos de integración redundantes; centralizar la lógica en la plataforma CCO (Software-defined ITS).
+
 ---
 
 ## 🔄 PROCESO DE GESTIÓN DE CAMBIOS (EL "LOOP")

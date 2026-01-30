@@ -394,24 +394,29 @@
             const fechaReporte = new Date().toLocaleString('es-CO');
             document.getElementById('fechaAct').innerHTML = `${fechaDatos} <br><small class='muted'>(Reporte: ${fechaReporte})</small>`;
 
-            const trm = window.TRM_OFICIAL || 4000;
+            const trm = window.TRM_OFICIAL || 4400;
             const byValue = items.map(i => ({ item: i.item, desc: i.descripcion, sistema: i.sistema, cop: n(i.totalCOP) || (n(i.cantidad) * n(i.vuCOP)) })).sort((a, b) => b.cop - a.cop);
             let acc = 0; const pareto = []; const total = sum(byValue, v => v.cop);
             for (const r of byValue) { acc += r.cop; pareto.push({ ...r, pctAcc: (acc / total) * 100 }); if (acc / total >= 0.8) break; }
             const tbp = document.querySelector('#tablaPareto tbody');
             tbp.innerHTML = pareto.map(r => `<tr><td>${r.item}</td><td>${r.desc}</td><td>${r.sistema || ''}</td><td class="right">${fm(r.cop, 'COP')}</td><td class="right">${fm(r.cop / trm, 'USD')}</td><td class="right">${r.pctAcc.toFixed(1)}%</td></tr>`).join('');
 
-            const just = {};
-            items.forEach(i => { const s = i.sistema || 'SIN SISTEMA'; if (!just[s]) just[s] = { cant: 0, criterio: i.criterio || 'Criterio técnico aplicado' }; just[s].cant += n(i.cantidad) || 0; if (i.criterio) just[s].criterio = i.criterio; });
+            // Use dynamic summary helper for justifications
+            const summaries = window.obtenerResumenContractual ? window.obtenerResumenContractual() : [];
             const tbs = document.querySelector('#tablaSistemas tbody');
-            tbs.innerHTML = Object.keys(just).sort().map(s => `<tr><td><strong>${s}</strong></td><td class="right">${just[s].cant}</td><td>${just[s].criterio}</td></tr>`).join('');
 
-            window.__reporteData = { totalUSD, totalCOP, items, pareto, just };
+            if (summaries.length > 0) {
+                tbs.innerHTML = summaries.map(s => `<tr><td><strong>${s.sistema}</strong></td><td class="right">${s.cantidad || '-'}</td><td>${s.descripcion || 'Validado según WBS'}</td></tr>`).join('');
+            } else {
+                tbs.innerHTML = '<tr><td colspan="3" class="muted">No se encontraron datos dinámicos.</td></tr>';
+            }
+
+            window.__reporteData = { totalUSD, totalCOP, items, pareto, summaries };
         }
 
         function exportarExcelReporte() {
             if (!window.__reporteData) { alert('Espere a que carguen los datos...'); return; }
-            const { totalUSD, totalCOP, pareto, just } = window.__reporteData;
+            const { totalUSD, totalCOP, pareto, summaries } = window.__reporteData;
             const data = [['REPORTE GERENCIAL - TM01'], ['Fecha', new Date().toLocaleString('es-CO')], [], ['Métrica', 'Valor'], ['Total (USD)', totalUSD], ['Total (COP)', totalCOP], [], ['PARETO 80% - Ñtems'], ['Ñtem', 'Descripción', 'Sistema', 'Total (COP)', 'Total (USD)', '% Acum']];
             pareto.forEach(p => data.push([p.item, p.desc, p.sistema, p.cop, p.cop / 4400, p.pctAcc]));
             data.push([]); data.push(['Justificación por Sistema']); data.push(['Sistema', 'Cantidad Total', 'Criterio']);

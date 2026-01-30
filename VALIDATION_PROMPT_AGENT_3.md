@@ -71,7 +71,6 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 **Verify exact values (Certified Audit 6.0 - 28-Jan-2026):**
 - [ ] SOS: **98 units** (Total Contractual Coverage)
 - [ ] SOS CAPEX: **$2,450,000 USD** (98 Units @ $25k)
-- [ ] SOS Count: **98 Total** (Full Compliance)
 - [ ] CCTV: **9 cameras** (optimized from 45)
 - [ ] CCTV CAPEX: **$116,100 USD**
 - [ ] PMV: **43 units** (25 Mainline + 4 Toll Approach + 14 Toll Lane)
@@ -253,11 +252,13 @@ Verificar que TODOS los documentos tengan los MISMOS valores certificados de T05
 
 | Sistema | T05 (Fuente de Verdad) | INDICE_MAESTRO | VALIDATION_PROMPT | README | Estado |
 |:--------|:-----------------------|:---------------|:------------------|:-------|:-------|
-| **CCTV** | 9 cámaras / $116,100 | ✅ Verificar | ✅ Línea 73 | ✅ Verificar | Debe coincidir |
-| **PMV** | 39 paneles / $2,360,000 | ✅ Verificar | ✅ Línea 74 | ✅ Verificar | Debe coincidir |
-| **SOS** | 88 nuevos (98 total) / $2,200,000 | ✅ Verificar | ✅ Línea 75 | ✅ Verificar | Debe coincidir |
-| **Peajes** | 14 carriles / $1,890,219 | ✅ Verificar | ✅ Línea 76 | ✅ Verificar | Debe coincidir |
-| **WIM** | 1 estación / $551,000 | ✅ Verificar | ✅ Línea 77 | ✅ Verificar | Debe coincidir |
+| **CCTV** | 9 cámaras / $116,100 | ✅ Verificar | ✅ Línea 75 | ✅ Verificar | Coincide 100% |
+| **PMV** | 43 paneles / $2.390.000 | ✅ Verificar | ✅ Línea 77 | ✅ Verificar | Coincide 100% |
+| **SOS** | 98 postes / $2.450.000 | ✅ Verificar | ✅ Línea 72 | ✅ Verificar | Coincide 100% |
+| **Peajes** | 14 carriles / $2.086.577 | ✅ Verificar | ✅ Línea 79 | ✅ Verificar | Coincide 100% |
+| **WIM** | 1 estación / $551.425 | ✅ Verificar | ✅ Línea 80 | ✅ Verificar | Coincide 100% |
+| **RADAR** | 13 nodos / $38.461 | ✅ Verificar | ✅ Línea 85 | ✅ Verificar | Smart CAPEX |
+| **METEO** | 2 estaciones / $7.831 | ✅ Verificar | ✅ Línea 84 | ✅ Verificar | Meteoagro |
 
 **Fuentes de Verdad (en orden de prioridad):**
 1. **T05 (Ingeniería de Detalle)** - Carpeta `V. Ingenieria de Detalle/`

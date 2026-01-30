@@ -348,18 +348,20 @@
             const md = (typeof window.tm01MasterData !== 'undefined') ? window.tm01MasterData :
                 (typeof window.TM01_MASTER_DATA !== 'undefined' ? { data: window.TM01_MASTER_DATA } : null);
 
-            if (md && md.data) {
-                // Try to sum from budget items if available, else summary
-                const items = Array.isArray(md.data.wbs) ? md.data.wbs : (md.data.wbs?.items || []);
-                const totalUSD = items.reduce((acc, i) => acc + (parseFloat(i.cantidad) * parseFloat(i.vu) || 0), 0);
-                const systemsCount = Object.keys(md.data).filter(k => k.includes('Summary')).length;
+            if (md) {
+                const summaries = window.obtenerResumenContractual ? window.obtenerResumenContractual() : [];
+                let totalUSD = 0;
+
+                summaries.forEach(s => {
+                    totalUSD += s.capexUSD || 0;
+                });
 
                 if (totalUSD > 0) {
                     document.getElementById('st-budget').textContent = '$' + (totalUSD / 1000000).toFixed(2) + 'M';
                 }
 
-                if (systemsCount > 0) {
-                    document.getElementById('st-validations').textContent = systemsCount + '/' + systemsCount;
+                if (summaries.length > 0) {
+                    document.getElementById('st-validations').textContent = summaries.length + '/' + summaries.length;
                 }
             }
         });
