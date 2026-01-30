@@ -147,3 +147,31 @@ function showError(containerId, message) {
         container.innerHTML = `<div class="error">❌ Error: ${message}</div>`;
     }
 }
+
+// Parsear montos con soporte para comas y strings
+function parseAmount(val) {
+    if (val === null || val === undefined) return 0;
+    if (typeof val === 'number') return val;
+    const n = parseFloat(String(val).replace(/[^0-9.\-]/g, ''));
+    return isNaN(n) ? 0 : n;
+}
+
+// Calcular AIU Estimado (33% sobre ítems de OBRA)
+function getAIUEstimado(wbsData) {
+    if (!wbsData || !Array.isArray(wbsData)) return 0;
+
+    let totalObra = 0;
+    wbsData.forEach(item => {
+        if (item.tipo !== 'item') return;
+
+        // Verificación dual: etiqueta explícita o inferencia por descripción
+        const isObra = item.tipoPresupuestal === 'OBRA' ||
+            (item.descripcion && /instalaci[oó]n|montaje|obra/i.test(item.descripcion));
+
+        if (isObra) {
+            totalObra += parseAmount(item.totalCOP);
+        }
+    });
+
+    return totalObra * 0.33;
+}

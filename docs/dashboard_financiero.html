@@ -762,19 +762,12 @@
 
             const trmOficial = 4400;
 
-            let totalObra = 0;
-            if (data.wbs) {
-                data.wbs.filter(i => i.tipo === 'item' && i.tipoPresupuestal === 'OBRA').forEach(item => {
-                    const val = parseFloat(String(item.totalCOP || '0').replace(/,/g, ''));
-                    totalObra += val;
-                });
-            }
-            const aiuEstimado = totalObra * 0.33;
+            const aiuEstimado = getAIUEstimado(data.wbs);
 
             container.innerHTML = `
                 ${createMetricCard('CAPEX Total USD', formatUSD(totalUSD), `Certificado Audit 6.0`, '💵')}
                 ${createMetricCard('CAPEX Total COP', formatCOP(totalCOP), `TRM: ${formatNumber(trmOficial)}`, '💰')}
-                ${createMetricCard('AIU Estimado', formatCOP(aiuEstimado), '33% de Ítems de Obra', '📈')}
+                ${createMetricCard('AIU Estimado', formatCOP(aiuEstimado), '33% de Ítems de Obra Civil', '📈')}
                 ${createMetricCard('Sistemas Validados', countSistemas, '12/12 Dictámenes OK', '⚙️')}
             `;
         }
