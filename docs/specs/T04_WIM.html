@@ -1,1715 +1,1968 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T04 Spec</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 40px;
+            background: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
         /* Headers */
-        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
-        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
-        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
-        
+        h1 {
+            color: #0f172a;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            border-bottom: 2px solid #f59e0b;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #1e40af;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            border-left: 5px solid #f59e0b;
+            padding-left: 15px;
+            background: #f8fafc;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #334155;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
         /* Tables */
-        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
-        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
-        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
-        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
-        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
-        .spec-table tbody tr:hover { background: #f1f5f9; }
+        .table-responsive {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .spec-table th,
+        .spec-table td {
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .spec-table thead tr {
+            background: #f1f5f9;
+            color: #334155;
+            font-weight: bold;
+        }
+
+        .spec-table tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .spec-table tbody tr:hover {
+            background: #f1f5f9;
+        }
+
         /* First column styling for parameters */
-        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
-        
+        .spec-table td:first-child {
+            font-weight: 600;
+            color: #475569;
+            width: 25%;
+        }
+
         /* Badge */
-        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
-        .doc-header { margin-bottom: 30px; }
-        
+        .status-badge {
+            float: right;
+            background: #dcfce7;
+            color: #166534;
+            padding: 6px 16px;
+            border-radius: 99px;
+            font-size: 0.75em;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .doc-header {
+            margin-bottom: 30px;
+        }
+
         /* Text */
-        li { margin-bottom: 5px; }
-        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+        li {
+            margin-bottom: 5px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e2e8f0;
+            margin: 30px 0;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
-        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - SISTEMA DE PESAJE WIM</h1></div>
-<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
-<br>
-<strong>Fecha:</strong> 21/10/2025
-<strong>Sistema:</strong> WIM - Weigh In Motion (Sistema de Pesaje Dinámico y Estático)
-<strong>Responsable:</strong> Ing. Civil / Ing. ITS / Administrador Contractual EPC
-<strong>Versión:</strong> 2.0 (RECONCILIACIÓN AUDIT .42)
-<strong>Referencia T01:</strong> T01_Ficha_Sistema_Pesaje_WIM_v1.1
-<strong>Referencia T03:</strong> T03_Arquitectura_Conceptual_Pesaje_WIM_v1.0
-<strong>Referencia Validación:</strong> 24_VALIDACION_CONTRACTUAL_PESAJE_v1.0
-<strong>Referencia Layout:</strong> 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0
-<br>
-<br>
-<h2>📋 **CONTROL DE CAMBIOS**</h2>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Versión</td>
-<td>Fecha</td>
-<td>Cambios</td>
-<td>Autor</td>
-</tr>
-</thead><tbody>
-<tr>
-<td>1.0</td>
-<td>21/10/2025</td>
-<td>Creación inicial - 1 estación bidireccional (4 plataformas)</td>
-<td>Adm. Contractual EPC</td>
-</tr>
-<tr>
-<td>1.1</td>
-<td>22/10/2025</td>
-<td>Revisión con información oficial: Ubicación PR4+0100 RN 4513 confirmada</td>
-<td>Adm. Contractual EPC</td>
-</tr>
-<tr>
-<td>2.0</td>
-<td>21/01/2026</td>
-<td><strong>Reconciliación Audit .42:</strong> Nivelación CAPEX $551k con T05.</td>
-<td>Ing. Forensic</td>
-</tr>
-<tr>
-<td><strong>2.0</strong></td>
-<td><strong>20/01/2026</strong></td>
-<td><strong>RECONCILIACIÓN AUDIT .42:</strong> Reconciliación presupuestal a $551,425 USD y cumplimiento Res. 100/2024 (HS-WIM).</td>
-<td>Ing. ITS</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>1. IDENTIFICACIÓN Y ALCANCE</h2>
-<br>
-<h3>1.1 Identificación del Sistema</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Campo</td>
-<td>Valor</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Nombre del sistema</strong></td>
-<td>WIM - Weigh In Motion (Pesaje Dinámico y Estático)</td>
-</tr>
-<tr>
-<td><strong>Categoría</strong></td>
-<td>ITS - Control de Sobrecargas</td>
-</tr>
-<tr>
-<td><strong>Código interno</strong></td>
-<td>T04-WIM-005-v1.5</td>
-</tr>
-<tr>
-<td><strong>Configuración</strong></td>
-<td><strong>1 estación bidireccional (4 plataformas)</strong></td>
-</tr>
-<tr>
-<td><strong>Componentes</strong></td>
-<td><strong>PAT DAW100 (Din) + Fairbanks Talon (Est) + PMVs + LPR</strong></td>
-</tr>
-<tr>
-<td><strong>CAPEX reconciliado</strong></td>
-<td><strong>USD $551,425</strong></td>
-</tr>
-<tr>
-<td><strong>Documentos base</strong></td>
-<td>T01 v1.5, Res. 100/2024, Manual 2024</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>1.2 Ubicación de la Estación</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Valor</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Ubicación</strong></td>
-<td><strong>PR4+0100 RN 4513</strong></td>
-</tr>
-<tr>
-<td><strong>Referencia</strong></td>
-<td>Cerca del CCO y Peaje Aguas Negras</td>
-</tr>
-<tr>
-<td><strong>Configuración</strong></td>
-<td>Bidireccional (2 carriles, ambos sentidos)</td>
-</tr>
-<tr>
-<td><strong>Tipo de intervención</strong></td>
-<td>Adecuar estación existente + modernizar equipos</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>1.3 Alcance de las Especificaciones</h3>
-<br>
-<strong>Este documento especifica:</strong>
-<li>✅ Características técnicas de plataformas WIM (dinámicas)</li>
-<li>✅ Características técnicas de básculas estáticas</li>
-<li>✅ Sistema de clasificación y control automático</li>
-<li>✅ Integración con CCO, SCADA, SICC</li>
-<li>✅ Normativa nacional (NTC 5371, INVÍAS) e internacional (OIML R134)</li>
-<li>✅ Procedimientos de calibración y certificación</li>
-<br>
-<strong>Este documento NO especifica:</strong>
-<li>❌ Diseño civil detallado de cimentaciones (ver T05)</li>
-<li>❌ Procedimientos operativos de sanción (ver Manual de Operación)</li>
-<br>
-<br>
-<h2>2. MARCO NORMATIVO Y CONTRACTUAL</h2>
-<br>
-<h3>2.1 Referencias Contractuales</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Documento</td>
-<td>Sección</td>
-<td>Requisito Clave</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Apéndice Técnico 1</strong></td>
-<td>Adenda 4, pág. 46-47</td>
-<td>1 estación en PR4+0100 RN 4513, bidireccional</td>
-</tr>
-<tr>
-<td><strong>Apéndice Técnico 2</strong></td>
-<td>§3.3.9 "Control de Sobrecargas"</td>
-<td>Integración CCO, calibración anual</td>
-</tr>
-<tr>
-<td><strong>Apéndice Técnico 3</strong></td>
-<td>Cap. IV "Sistemas ITS"</td>
-<td>Especificaciones técnicas mínimas</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>2.2 Normativa Aplicable</h3>
-<br>
-#### Normativa Nacional
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Norma</td>
-<td>Título</td>
-<td>Aplicación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>NTC 2031 / 5371</strong></td>
-<td>Metrología - Instrumentos de pesaje no automático</td>
-<td>Básculas estáticas</td>
-</tr>
-<tr>
-<td><strong>Resolución 100/2024</strong></td>
-<td>Pesaje dinámico a alta velocidad (HS-WIM)</td>
-<td><strong>MANDATORIA</strong></td>
-</tr>
-<tr>
-<td><strong>Ley 769/2002</strong></td>
-<td>Código Nacional de Tránsito (Art. 29)</td>
-<td>Límites de peso por eje</td>
-</tr>
-<tr>
-<td><strong>Resolución 4100/2004</strong></td>
-<td>Pesos y dimensiones de vehículos</td>
-<td>Límites legales</td>
-</tr>
-<tr>
-<td><strong>RETIE</strong></td>
-<td>Instalaciones Eléctricas</td>
-<td>Alimentación, tierras</td>
-</tr>
-</tbody></table></div>
-<br>
-#### Normativa Internacional
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Norma</td>
-<td>Título</td>
-<td>Aplicación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>OIML R134</strong></td>
-<td>Automatic instruments for weighing road vehicles in motion</td>
-<td><strong>OBLIGATORIA</strong> para WIM</td>
-</tr>
-<tr>
-<td><strong>ASTM E1318</strong></td>
-<td>Standard Specification for Highway WIM Systems</td>
-<td>Sistemas WIM</td>
-</tr>
-<tr>
-<td><strong>COST 323</strong></td>
-<td>European specification for WIM</td>
-<td>Referencia técnica</td>
-</tr>
-<tr>
-<td><strong>ISO TC-204</strong></td>
-<td>Intelligent Transport Systems</td>
-<td>Sistemas ITS</td>
-</tr>
-<tr>
-<td><strong>IEC 60529</strong></td>
-<td>IP Code</td>
-<td>Protección IP65 mínimo</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>2.3 Certificaciones Requeridas</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Certificación</td>
-<td>Organismo</td>
-<td>Obligatoria</td>
-<td>Aplicación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>OIML R134</strong></td>
-<td>Organismo metrológico</td>
-<td>✅ Sí</td>
-<td>Plataformas WIM</td>
-</tr>
-<tr>
-<td><strong>NTC 5371</strong></td>
-<td>ONAC Colombia</td>
-<td>✅ Sí</td>
-<td>Básculas estáticas</td>
-</tr>
-<tr>
-<td><strong>Calibración inicial</strong></td>
-<td>Lab. acreditado</td>
-<td>✅ Sí</td>
-<td>Todas las plataformas</td>
-</tr>
-<tr>
-<td><strong>Calibración anual</strong></td>
-<td>Lab. acreditado</td>
-<td>✅ Sí</td>
-<td>Todas las plataformas</td>
-</tr>
-<tr>
-<td><strong>CE / FCC</strong></td>
-<td>Europa / USA</td>
-<td>✅ Sí</td>
-<td>Equipos electrónicos</td>
-</tr>
-<tr>
-<td><strong>IP65</strong></td>
-<td>IEC 60529</td>
-<td>✅ Sí</td>
-<td>Gabinetes exteriores</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>3. ESPECIFICACIONES TÉCNICAS GENERALES</h2>
-<br>
-<h3>3.1 Características Ambientales</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación Mínima</td>
-<td>Referencia</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Temperatura de operación</strong></td>
-<td>-10°C a +60°C</td>
-<td>Condiciones tropicales</td>
-</tr>
-<tr>
-<td><strong>Humedad relativa</strong></td>
-<td>0-95% sin condensación</td>
-<td>IEC 60068-2-78</td>
-</tr>
-<tr>
-<td><strong>Protección (electrónica)</strong></td>
-<td>IP65 mínimo</td>
-<td>IEC 60529</td>
-</tr>
-<tr>
-<td><strong>Resistencia a lluvia</strong></td>
-<td>Operación continua bajo lluvia intensa</td>
-<td>OIML R134</td>
-</tr>
-<tr>
-<td><strong>Altitud operación</strong></td>
-<td>0-500 msnm</td>
-<td>Magdalena Medio</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>3.2 Requisitos Eléctricos</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación</td>
-<td>Norma</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Tensión nominal</strong></td>
-<td>208 VAC trifásica, 60 Hz</td>
-<td>RETIE</td>
-</tr>
-<tr>
-<td><strong>Variación de tensión</strong></td>
-<td>±10%</td>
-<td>RETIE</td>
-</tr>
-<tr>
-<td><strong>Consumo máximo (estación completa)</strong></td>
-<td><strong>5 kW</strong></td>
-<td>-</td>
-</tr>
-<tr>
-<td><strong>Factor de potencia</strong></td>
-<td>≥0.9</td>
-<td>RETIE</td>
-</tr>
-<tr>
-<td><strong>Respaldo UPS</strong></td>
-<td>4 horas mínimo</td>
-<td>AT2</td>
-</tr>
-<tr>
-<td><strong>Sistema de tierras</strong></td>
-<td><10 Ω</td>
-<td>RETIE</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>3.3 Requisitos de Comunicaciones</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación</td>
-<td>Protocolo</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Medio físico</strong></td>
-<td>Fibra óptica monomodo</td>
-<td>ITU-T G.652</td>
-</tr>
-<tr>
-<td><strong>Velocidad</strong></td>
-<td>1 Gbps</td>
-<td>IEEE 802.3</td>
-</tr>
-<tr>
-<td><strong>Protocolo de red</strong></td>
-<td>TCP/IP</td>
-<td>RFC 791, RFC 793</td>
-</tr>
-<tr>
-<td><strong>Protocolo aplicación</strong></td>
-<td>SNMP v3, API REST</td>
-<td>-</td>
-</tr>
-<tr>
-<td><strong>Disponibilidad</strong></td>
-<td>≥99% anual</td>
-<td>AT2, AT4</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>4. ESPECIFICACIONES POR COMPONENTE</h2>
-<br>
-<h3>4.1 Plataformas WIM (Dinámicas) - 2 unidades</h3>
-<br>
-#### 4.1.1 Descripción General
-<br>
-Plataformas de pesaje dinámico (Weigh In Motion) que permiten pesar vehículos en movimiento sin detenerlos, clasificarlos por tipo y detectar potenciales sobrecargas. Un sistema por sentido de circulación.
-<br>
-#### 4.1.2 Especificaciones Técnicas de la Plataforma
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación Mínima</td>
-<td>Método de Verificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Tecnología</strong></td>
-<td>Sensores piezoeléctricos o celdas de carga</td>
-<td>Inspección técnica</td>
-</tr>
-<tr>
-<td><strong>Capacidad máxima</strong></td>
-<td><strong>100 toneladas</strong> (peso bruto vehicular)</td>
-<td>Certificado fabricante</td>
-</tr>
-<tr>
-<td><strong>Precisión (Clase según OIML R134)</strong></td>
-<td><strong>Clase 5-10</strong> (±5-10% del peso real)</td>
-<td>Calibración con patrón</td>
-</tr>
-<tr>
-<td><strong>Velocidad de operación</strong></td>
-<td>5-100 km/h</td>
-<td>Prueba funcional</td>
-</tr>
-<tr>
-<td><strong>Ancho de carril</strong></td>
-<td>3.5-4.0 m</td>
-<td>Medición física</td>
-</tr>
-<tr>
-<td><strong>Longitud plataforma</strong></td>
-<td>6-8 m (suficiente para eje completo)</td>
-<td>Medición física</td>
-</tr>
-<tr>
-<td><strong>Configuración de ejes</strong></td>
-<td>Hasta 9 ejes por vehículo</td>
-<td>Configuración software</td>
-</tr>
-<tr>
-<td><strong>Temperatura de operación</strong></td>
-<td>-10°C a +60°C</td>
-<td>Certificado fabricante</td>
-</tr>
-</tbody></table></div>
-<br>
-#### 4.1.3 Sensores y Equipos Auxiliares
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Componente</td>
-<td>Especificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Sensores de peso</strong></td>
-<td>Piezoeléctricos (cuarzo) o celdas de carga (strain gauge)</td>
-</tr>
-<tr>
-<td><strong>Sensores de velocidad</strong></td>
-<td>Lazo inductivo o radar Doppler</td>
-</tr>
-<tr>
-<td><strong>Sensores de eje</strong></td>
-<td>Tubos neumáticos o piezoeléctricos</td>
-</tr>
-<tr>
-<td><strong>Clasificador vehicular</strong></td>
-<td>Por número de ejes y separación</td>
-</tr>
-<tr>
-<td><strong>Cámara LPR Evidencia</strong></td>
-<td>Captura de placa en báscula estática (Mandatorio Manual 2024)</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>4.2 Básculas Estáticas - 2 unidades</h3>
-<br>
-#### 4.2.1 Descripción General
-<br>
-Básculas estáticas de alta precisión para verificación y sanción de vehículos con sobrecarga detectada por WIM. Vehículo debe detenerse completamente. Un sistema por sentido de circulación.
-<br>
-#### 4.2.2 Especificaciones Técnicas de la Báscula
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación Mínima</td>
-<td>Método de Verificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Tecnología</strong></td>
-<td>Celdas de carga electrónicas (strain gauge)</td>
-<td>Inspección técnica</td>
-</tr>
-<tr>
-<td><strong>Capacidad máxima</strong></td>
-<td><strong>100 toneladas</strong> (peso bruto vehicular)</td>
-<td>Certificado fabricante</td>
-</tr>
-<tr>
-<td><strong>Precisión (Clase según NTC 5371)</strong></td>
-<td><strong>Clase III</strong> (±20 kg @ 100 ton)</td>
-<td>Calibración ONAC</td>
-</tr>
-<tr>
-<td><strong>Plataforma</strong></td>
-<td>Metálica, antideslizante</td>
-<td>Inspección</td>
-</tr>
-<tr>
-<td><strong>Dimensiones plataforma</strong></td>
-<td>Mínimo 3.5 m (ancho) × 18 m (largo)</td>
-<td>Medición física</td>
-</tr>
-<tr>
-<td><strong>Número de celdas</strong></td>
-<td>8-12 celdas (redundancia)</td>
-<td>Inspección</td>
-</tr>
-<tr>
-<td><strong>Indicador</strong></td>
-<td>Display digital, interfaz RS-232/485 y Ethernet</td>
-<td>Prueba funcional</td>
-</tr>
-<tr>
-<td><strong>Impresora</strong></td>
-<td>Ticket de pesaje con fecha/hora/peso/ejes</td>
-<td>Prueba de impresión</td>
-</tr>
-</tbody></table></div>
-<br>
-#### 4.2.3 Funcionalidades del Sistema
-<br>
-<li>✅ <strong>Pesaje por ejes:</strong> Individual y total</li>
-<li>✅ <strong>Clasificación vehicular:</strong> Tipo de vehículo (C2, C3, C4, C5, etc.)</li>
-<li>✅ <strong>Detección sobrecarga:</strong> Alarma automática</li>
-<li>✅ <strong>Impresión de ticket:</strong> Evidencia de pesaje</li>
-<li>✅ <strong>Transmisión a CCO:</strong> En tiempo real</li>
-<li>✅ <strong>Almacenamiento local:</strong> Mínimo 90 días de registros</li>
-<li>✅ <strong>Interfaz con semáforos:</strong> Control de paso (opcional)</li>
-<br>
-<h3>4.3 Sistema de Control y Gestión</h3>
-<br>
-#### 4.3.1 Unidad Central de Procesamiento
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Componente</td>
-<td>Especificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Procesador</strong></td>
-<td>Intel Core i5 o superior</td>
-</tr>
-<tr>
-<td><strong>Memoria RAM</strong></td>
-<td>8 GB mínimo</td>
-</tr>
-<tr>
-<td><strong>Almacenamiento</strong></td>
-<td>500 GB SSD (registros)</td>
-</tr>
-<tr>
-<td><strong>Sistema operativo</strong></td>
-<td>Windows 10/11 Pro o Linux</td>
-</tr>
-<tr>
-<td><strong>Interfaz de red</strong></td>
-<td>Ethernet 1 Gbps</td>
-</tr>
-<tr>
-<td><strong>Puertos</strong></td>
-<td>RS-232, RS-485, USB, HDMI</td>
-</tr>
-</tbody></table></div>
-<br>
-#### 4.3.2 Software de Gestión WIM
-<br>
-<strong>Funcionalidades obligatorias:</strong>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Función</td>
-<td>Descripción</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Pesaje automático</strong></td>
-<td>Detección, clasificación, registro automático</td>
-</tr>
-<tr>
-<td><strong>Base de datos</strong></td>
-<td>SQL o equivalente, exportación Excel/CSV</td>
-</tr>
-<tr>
-<td><strong>Reportes</strong></td>
-<td>Estadísticas diarias/mensuales/anuales</td>
-</tr>
-<tr>
-<td><strong>Alarmas</strong></td>
-<td>Sobrecarga, error de calibración, falla sensores</td>
-</tr>
-<tr>
-<td><strong>Interfaz gráfica</strong></td>
-<td>Visualización en tiempo real</td>
-</tr>
-<tr>
-<td><strong>Exportación SICC</strong></td>
-<td>Formato compatible con ANI</td>
-</tr>
-<tr>
-<td><strong>Gestión de usuarios</strong></td>
-<td>Roles, permisos, auditoría</td>
-</tr>
-</tbody></table></div>
-<br>
-#### 4.3.3 Fabricantes de Referencia
-<br>
-<strong>Fabricantes aceptables:</strong>
-<br>
-1. <strong>Kistler</strong> (Suiza)
-<li>Modelo: Lineas® WIM</li>
-<li>Tecnología: Sensores piezoeléctricos de cuarzo</li>
-<li>Certificación: OIML R134, COST 323</li>
-<br>
-2. <strong>Intercomp</strong> (USA)
-<li>Modelo: iWIM® LS-WIM</li>
-<li>Tecnología: Celdas de carga</li>
-<li>Certificación: ASTM E1318</li>
-<br>
-3. <strong>Cardinal Scale</strong> (USA)
-<li>Modelo: HSWR High-Speed WIM</li>
-<li>Certificación: OIML R134</li>
-<br>
-4. <strong>PAT (PFREUNDT)</strong> (Alemania)
-<li>Modelo: WIM Sensor System</li>
-<li>Tecnología: Piezoeléctrica</li>
-<br>
-5. <strong>International Road Dynamics (IRD)</strong> (Canadá)
-<li>Modelo: iSINC™ WIM</li>
-<li>Certificación: ASTM, OIML</li>
-<br>
-6. <strong>O equivalente</strong> que cumpla OIML R134 y NTC 5371
-<br>
-<br>
-<h2>5. INTEGRACIÓN Y COMPATIBILIDAD</h2>
-<br>
-<h3>5.1 Integración con Sistema Central (CCO)</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Aspecto</td>
-<td>Requisito</td>
-<td>Verificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Conexión a CCO</strong></td>
-<td>API REST o SNMP v3, fibra óptica</td>
-<td>Prueba de conectividad</td>
-</tr>
-<tr>
-<td><strong>Transmisión de datos</strong></td>
-<td>Cada pesaje en tiempo real</td>
-<td>Verificación en CCO</td>
-</tr>
-<tr>
-<td><strong>Disponibilidad</strong></td>
-<td>≥99% anual</td>
-<td>Monitoreo 30 días</td>
-</tr>
-<tr>
-<td><strong>Alarmas</strong></td>
-<td>Sobrecarga, fallas, calibración</td>
-<td>Prueba de eventos</td>
-</tr>
-<tr>
-<td><strong>Reportes automáticos</strong></td>
-<td>Diarios, semanales, mensuales</td>
-<td>Generación y recepción</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>5.2 Integración con SICC (ANI)</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Requisito</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Protocolo</strong></td>
-<td>API REST o webservice</td>
-</tr>
-<tr>
-<td><strong>Frecuencia</strong></td>
-<td>Reportes mensuales o según ANI</td>
-</tr>
-<tr>
-<td><strong>Datos reportados</strong></td>
-<td>Estadísticas de peso, sobrecargas, volumen</td>
-</tr>
-<tr>
-<td><strong>Formato</strong></td>
-<td>JSON, XML o CSV según ANI</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>5.3 Interfaz con Otros Sistemas</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Sistema</td>
-<td>Tipo de Interfaz</td>
-<td>Datos Intercambiados</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Telecomunicaciones</strong></td>
-<td>Fibra óptica</td>
-<td>Datos de pesaje, imágenes</td>
-</tr>
-<tr>
-<td><strong>Energía Eléctrica</strong></td>
-<td>Acometida 208 VAC 3Ø</td>
-<td>Alimentación</td>
-</tr>
-<tr>
-<td><strong>CCO</strong></td>
-<td>API + SNMP</td>
-<td>Pesajes, estadísticas, alarmas</td>
-</tr>
-<tr>
-<td><strong>SCADA</strong></td>
-<td>SNMP v3</td>
-<td>Estado operativo</td>
-</tr>
-<tr>
-<td><strong>Cámaras CCTV</strong></td>
-<td>Opcional</td>
-<td>Captura de placas</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>6. REQUISITOS DE INSTALACIÓN</h2>
-<br>
-<h3>6.1 Configuración de la Estación Bidireccional</h3>
-<br>
-<strong>Layout de la estación:</strong>
-<br>
-```
-Vista en Planta:
-<br>
-Sentido Norte (→):
-[Pre-selección] → [WIM Dinámico 1] → [Báscula Estática 1] → [Salida]
-↓
-[Carril detención]
-<br>
-Sentido Sur (←):
-[Pre-selección] ← [WIM Dinámico 2] ← [Báscula Estática 2] ← [Entrada]
-↓
-[Carril detención]
-<br>
-Elementos comunes:
-<li>Caseta de control (central)</li>
-<li>Cámaras CCTV (4 unidades)</li>
-<li>Señalización vertical (obligatoria)</li>
-<li>Iluminación LED (operación nocturna)</li>
-```
-<br>
-<h3>6.2 Componentes por Sentido</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Componente</td>
-<td>Cantidad/Sentido</td>
-<td>Total</td>
-<td>Función</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Plataforma WIM</strong></td>
-<td>1</td>
-<td>2</td>
-<td>Pre-selección dinámica</td>
-</tr>
-<tr>
-<td><strong>Báscula Estática</strong></td>
-<td>1</td>
-<td>2</td>
-<td>Verificación y sanción</td>
-</tr>
-<tr>
-<td><strong>Lazo detector</strong></td>
-<td>2</td>
-<td>4</td>
-<td>Activación WIM</td>
-</tr>
-<tr>
-<td><strong>Módulo Aspa-Flecha (600x600mm)</strong></td>
-<td>1</td>
-<td>2</td>
-<td>Control de carril (M2024)</td>
-</tr>
-<tr>
-<td><strong>PMV SMV Instrucciones</strong></td>
-<td>1</td>
-<td>2</td>
-<td>Instrucción SIGA / ENTRA (Texto 200mm)</td>
-</tr>
-<tr>
-<td><strong>Barrera automática (0.7s)</strong></td>
-<td>1</td>
-<td>2</td>
-<td>Control de acceso (opcional)</td>
-</tr>
-<tr>
-<td><strong>Cámara LPR Evidencia</strong></td>
-<td>2</td>
-<td>4</td>
-<td>Captura de placa (Manual 2024)</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>6.3 Obras Civiles Requeridas</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Elemento</td>
-<td>Especificación</td>
-<td>Norma</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Excavación plataforma WIM</strong></td>
-<td>Profundidad 0.30-0.50 m, ancho 4 m, largo 8 m</td>
-<td>OIML R134</td>
-</tr>
-<tr>
-<td><strong>Base de concreto WIM</strong></td>
-<td>f'c=28 MPa, espesor 20 cm</td>
-<td>INVÍAS</td>
-</tr>
-<tr>
-<td><strong>Plataforma báscula estática</strong></td>
-<td>Losa de cimentación 4×18 m, f'c=28 MPa</td>
-<td>NTC 5371</td>
-</tr>
-<tr>
-<td><strong>Profundidad losa</strong></td>
-<td>0.80 m</td>
-<td>NSR-10</td>
-</tr>
-<tr>
-<td><strong>Caseta de control</strong></td>
-<td>Estructura prefabricada 4×6 m</td>
-<td>-</td>
-</tr>
-<tr>
-<td><strong>Canalizaciones</strong></td>
-<td>HDPE Ø4" (100 mm)</td>
-<td>RETIE</td>
-</tr>
-<tr>
-<td><strong>Tierras</strong></td>
-<td>SPT <10 Ω</td>
-<td>RETIE</td>
-</tr>
-<tr>
-<td><strong>Drenajes</strong></td>
-<td>Sistema de drenaje completo</td>
-<td>INVÍAS</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>6.4 Recomendaciones Constructivas (Mitigación de Riesgo Civil)</h3>
-<strong>Advertencia para el EPC:</strong> El desempeño del WIM depende 100% de la calidad del pavimento. Se transfieren los siguientes requisitos de norma <strong>ASTM E1318</strong> al responsable de la Obra Civil:
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Requisito (ASTM E1318)</td>
-<td>Zona de Aplicación</td>
-<td>Riesgo si se ignora</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Alineación Horizontal</strong></td>
-<td>Radio de curvatura <strong>> 1.7 km</strong> (Recta)</td>
-<td>60m antes, 30m después</td>
-<td>Fuerzas centrífugas alteran el peso lateral.</td>
-</tr>
-<tr>
-<td><strong>Pendiente Longitudinal</strong></td>
-<td><strong>< 2%</strong> (Ideal < 1% para Clase IV)</td>
-<td>60m antes, 30m después</td>
-<td>Transferencia de carga entre ejes por gravedad.</td>
-</tr>
-<tr>
-<td><strong>Pendiente Transversal</strong></td>
-<td><strong>< 3%</strong> (Bombeo mínimo)</td>
-<td>60m antes, 30m después</td>
-<td>Desbalance de carga izquierda/derecha.</td>
-</tr>
-<tr>
-<td><strong>Lisura (Smoothness)</strong></td>
-<td><strong>Regla de 5m:</strong> Holgura <strong>< 3mm</strong></td>
-<td>Zona de sensores</td>
-<td>Rebote de suspensión (Dinámica vehicular).</td>
-</tr>
-<tr>
-<td><strong>Material de Rodadura</strong></td>
-<td><strong>Concreto Hidráulico (Losa)</strong></td>
-<td>50m continuos</td>
-<td>El asfalto se deforma (ahuellamiento) y descalibra el sensor.</td>
-</tr>
-</tbody></table></div>
-<br>
-> <strong>Nota:</strong> El EPC debe garantizar estas condiciones <strong>ANTES</strong> de la instalación de los sensores. Cualquier corrección posterior implicará demolición.
-<br>
-<br>
-<h2>7. PRUEBAS Y CRITERIOS DE ACEPTACIÓN</h2>
-<br>
-<h3>7.1 Pruebas en Fábrica (FAT) - WIM</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Prueba</td>
-<td>Objetivo</td>
-<td>Criterio de Aceptación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Inspección de sensores</strong></td>
-<td>Verificar sensores piezoeléctricos</td>
-<td>Sin defectos, sellado OK</td>
-</tr>
-<tr>
-<td><strong>Prueba de linealidad</strong></td>
-<td>Calibración con pesos patrón</td>
-<td>Error ≤5% (Clase 5-10 OIML)</td>
-</tr>
-<tr>
-<td><strong>Prueba de repetibilidad</strong></td>
-<td>Múltiples pesajes mismo peso</td>
-<td>Desviación estándar ≤3%</td>
-</tr>
-<tr>
-<td><strong>Prueba de temperatura</strong></td>
-<td>Operación en rango</td>
-<td>Funcionamiento -10°C a +60°C</td>
-</tr>
-<tr>
-<td><strong>Prueba de software</strong></td>
-<td>Clasificación, reportes</td>
-<td>100% funcional</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>7.2 Pruebas en Fábrica (FAT) - Báscula Estática</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Prueba</td>
-<td>Objetivo</td>
-<td>Criterio de Aceptación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Inspección de celdas</strong></td>
-<td>Verificar celdas de carga</td>
-<td>Calibración de fábrica vigente</td>
-</tr>
-<tr>
-<td><strong>Prueba de linealidad</strong></td>
-<td>Pesos patrón (0-100 ton)</td>
-<td>Error ≤0.02% (Clase III NTC 5371)</td>
-</tr>
-<tr>
-<td><strong>Prueba de repetibilidad</strong></td>
-<td>10 pesajes consecutivos</td>
-<td>Desviación ≤20 kg</td>
-</tr>
-<tr>
-<td><strong>Prueba de excentricidad</strong></td>
-<td>Peso en diferentes posiciones</td>
-<td>Error ≤0.5%</td>
-</tr>
-<tr>
-<td><strong>Prueba de histéresis</strong></td>
-<td>Carga y descarga</td>
-<td>Error ≤0.3%</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>7.3 Pruebas en Sitio (SAT)</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Prueba</td>
-<td>Objetivo</td>
-<td>Criterio de Aceptación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Calibración inicial en sitio</strong></td>
-<td>Certificación con pesos patrón</td>
-<td>Certificado ONAC o equivalente</td>
-</tr>
-<tr>
-<td><strong>Prueba con vehículos reales</strong></td>
-<td>Comparación WIM vs estática</td>
-<td>Correlación ≥90%</td>
-</tr>
-<tr>
-<td><strong>Prueba de clasificación</strong></td>
-<td>Tipos de vehículos</td>
-<td>≥95% acierto</td>
-</tr>
-<tr>
-<td><strong>Prueba de detección sobrecarga</strong></td>
-<td>Vehículos con exceso</td>
-<td>100% detección</td>
-</tr>
-<tr>
-<td><strong>Prueba de conectividad CCO</strong></td>
-<td>Transmisión datos</td>
-<td>Tiempo real, 0% pérdida</td>
-</tr>
-<tr>
-<td><strong>Prueba de reportes automáticos</strong></td>
-<td>Generación estadísticas</td>
-<td>Reportes correctos y completos</td>
-</tr>
-<tr>
-<td><strong>Prueba de UPS</strong></td>
-<td>Autonomía real</td>
-<td>≥4 horas operación</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>8. PRESUPUESTO Y CANTIDADES</h2>
-<br>
-<h3>8.1 Resumen de Cantidades</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Ítem</td>
-<td>Descripción</td>
-<td>Unidad</td>
-<td>Cantidad</td>
-<td>Precio Unit. (USD)</td>
-<td>Total (USD)</td>
-</tr>
-</thead><tbody>
-<tr>
-<td>1</td>
-<td>Sistema HS-WIM (2 Carriles PAT DAW100)</td>
-<td>global</td>
-<td>1</td>
-<td>$256,353</td>
-<td>$256,353</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Sistema Pesaje Estático (2 Fairbanks Talon Rodan)</td>
-<td>global</td>
-<td>1</td>
-<td>$261,890</td>
-<td>$261,890</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Sistema de Puesta a Tierra (SPT Especial Pesaje)</td>
-<td>global</td>
-<td>1</td>
-<td>$33,182</td>
-<td>$33,182</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>TOTAL CAPEX RECONCILIADO</strong></td>
-<td><strong>$551,425</strong></td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h3>8.2 CAPEX por Componente</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Componente</td>
-<td>CAPEX (USD)</td>
-<td>% Total</td>
-</tr>
-</thead><tbody>
-<tr>
-<td>WIM (2 plataformas)</td>
-<td>$300,000</td>
-<td>22%</td>
-</tr>
-<tr>
-<td>Básculas estáticas (2 unidades)</td>
-<td>$240,000</td>
-<td>18%</td>
-</tr>
-<tr>
-<td>Obras civiles</td>
-<td>$250,000</td>
-<td>18%</td>
-</tr>
-<tr>
-<td>Instalación</td>
-<td>$120,000</td>
-<td>9%</td>
-</tr>
-<tr>
-<td>Software y control</td>
-<td>$80,000</td>
-<td>6%</td>
-</tr>
-<tr>
-<td>Otros</td>
-<td>$363,000</td>
-<td>27%</td>
-</tr>
-<tr>
-<td><strong>TOTAL</strong></td>
-<td><strong>$1,353,000</strong></td>
-<td><strong>100%</strong></td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>9. MANTENIMIENTO</h2>
-<br>
-<h3>9.1 Mantenimiento Preventivo</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Actividad</td>
-<td>Frecuencia</td>
-<td>Responsable</td>
-<td>Tiempo Est.</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Limpieza de sensores WIM</strong></td>
-<td><strong>Semanal</strong></td>
-<td>Contratista</td>
-<td>2 horas</td>
-</tr>
-<tr>
-<td><strong>Limpieza de báscula estática</strong></td>
-<td>Semanal</td>
-<td>Contratista</td>
-<td>1 hora</td>
-</tr>
-<tr>
-<td><strong>Verificación de cero</strong></td>
-<td>Diaria</td>
-<td>Operador</td>
-<td>10 min</td>
-</tr>
-<tr>
-<td><strong>Inspección visual (sensores, cableado)</strong></td>
-<td>Semanal</td>
-<td>Contratista</td>
-<td>1 hora</td>
-</tr>
-<tr>
-<td><strong>Calibración de verificación</strong></td>
-<td><strong>Mensual</strong></td>
-<td>Contratista</td>
-<td>4 horas</td>
-</tr>
-<tr>
-<td><strong>Calibración oficial ONAC</strong></td>
-<td><strong>Anual</strong></td>
-<td>Lab. acreditado ONAC</td>
-<td>8 horas</td>
-</tr>
-<tr>
-<td><strong>Mantenimiento de báscula</strong></td>
-<td>Trimestral</td>
-<td>Fabricante autorizado</td>
-<td>4 horas</td>
-</tr>
-<tr>
-<td><strong>Actualización de software</strong></td>
-<td>Semestral</td>
-<td>Fabricante</td>
-<td>2 horas</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>9.2 Repuestos Críticos</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Componente</td>
-<td>Cantidad en Stock</td>
-<td>Plazo Entrega</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Sensor piezoeléctrico WIM</strong></td>
-<td>4 unidades</td>
-<td>60 días</td>
-</tr>
-<tr>
-<td><strong>Celda de carga (báscula)</strong></td>
-<td>2 unidades</td>
-<td>45 días</td>
-</tr>
-<tr>
-<td><strong>Indicador digital</strong></td>
-<td>1 unidad</td>
-<td>30 días</td>
-</tr>
-<tr>
-<td><strong>Impresora de tickets</strong></td>
-<td>1 unidad</td>
-<td>30 días</td>
-</tr>
-<tr>
-<td><strong>PC industrial (repuesto)</strong></td>
-<td>1 unidad</td>
-<td>30 días</td>
-</tr>
-<tr>
-<td><strong>UPS 5 kVA</strong></td>
-<td>1 unidad</td>
-<td>30 días</td>
-</tr>
-<tr>
-<td><strong>Pesos patrón (20 ton, certificados)</strong></td>
-<td>1 juego</td>
-<td>90 días</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>10. CALIBRACIÓN Y CERTIFICACIÓN</h2>
-<br>
-<h3>10.1 Calibración Inicial</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Elemento</td>
-<td>Procedimiento</td>
-<td>Responsable</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>WIM</strong></td>
-<td>Calibración con vehículo patrón o báscul portátil certificada</td>
-<td>Lab. acreditado</td>
-</tr>
-<tr>
-<td><strong>Báscula estática</strong></td>
-<td>Calibración con pesos patrón certificados (clases M1, M2)</td>
-<td>ONAC Colombia</td>
-</tr>
-<tr>
-<td><strong>Certificado</strong></td>
-<td>Emisión de certificado de calibración</td>
-<td>Lab. acreditado</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>10.2 Calibración Anual (Obligatoria)</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Elemento</td>
-<td>Frecuencia</td>
-<td>Norma</td>
-<td>Costo Estimado</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Báscula estática</strong></td>
-<td><strong>Anual</strong></td>
-<td>NTC 5371</td>
-<td>$5,000 USD/báscula</td>
-</tr>
-<tr>
-<td><strong>WIM</strong></td>
-<td>Anual</td>
-<td>OIML R134</td>
-<td>$5,000 USD/plataforma</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>11. REQUISITOS DE CAPACITACIÓN</h2>
-<br>
-<h3>11.1 Capacitación de Operación</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Tema</td>
-<td>Duración</td>
-<td>Audiencia</td>
-<td>Ubicación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Operación del sistema WIM</strong></td>
-<td>16 horas</td>
-<td>Operadores (6 personas)</td>
-<td>Estación WIM</td>
-</tr>
-<tr>
-<td><strong>Procedimientos de pesaje estático</strong></td>
-<td>8 horas</td>
-<td>Operadores</td>
-<td>Estación WIM</td>
-</tr>
-<tr>
-<td><strong>Software de gestión</strong></td>
-<td>8 horas</td>
-<td>Operadores + CCO</td>
-<td>CCO + Estación</td>
-</tr>
-<tr>
-<td><strong>Normativa de pesos y dimensiones</strong></td>
-<td>4 horas</td>
-<td>Operadores + Legal</td>
-<td>Estación</td>
-</tr>
-<tr>
-<td><strong>Procedimientos de sanción</strong></td>
-<td>4 horas</td>
-<td>Operadores + Legal</td>
-<td>Estación</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>11.2 Capacitación de Mantenimiento</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Tema</td>
-<td>Duración</td>
-<td>Audiencia</td>
-<td>Ubicación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Mantenimiento preventivo</strong></td>
-<td>8 horas</td>
-<td>Técnicos (4 personas)</td>
-<td>Estación</td>
-</tr>
-<tr>
-<td><strong>Calibración de verificación</strong></td>
-<td>8 horas</td>
-<td>Técnicos</td>
-<td>Estación</td>
-</tr>
-<tr>
-<td><strong>Diagnóstico de fallas</strong></td>
-<td>8 horas</td>
-<td>Técnicos</td>
-<td>Taller + Estación</td>
-</tr>
-<tr>
-<td><strong>Reemplazo de sensores</strong></td>
-<td>8 horas</td>
-<td>Técnicos especializados</td>
-<td>Estación</td>
-</tr>
-</tbody></table></div>
-<br>
-<br>
-<h2>12. CRONOGRAMA</h2>
-<br>
-<h3>12.1 Hitos Principales</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Hito</td>
-<td>Fecha Estimada</td>
-<td>Duración</td>
-<td>Responsable</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Aprobación T04</strong></td>
-<td>T+0</td>
-<td>-</td>
-<td>Interventoría/ANI</td>
-</tr>
-<tr>
-<td><strong>Levantamiento topográfico</strong></td>
-<td>T+0 a T+15 días</td>
-<td>2 semanas</td>
-<td>Contratista</td>
-</tr>
-<tr>
-<td><strong>Diseño civil detallado</strong></td>
-<td>T+15 a T+45 días</td>
-<td>4 semanas</td>
-<td>Ing. Civil</td>
-</tr>
-<tr>
-<td><strong>Licitación</strong></td>
-<td>T+45 días</td>
-<td>4 semanas</td>
-<td>Contratista</td>
-</tr>
-<tr>
-<td><strong>Orden de compra</strong></td>
-<td>T+75 días</td>
-<td>-</td>
-<td>Contratista</td>
-</tr>
-<tr>
-<td><strong>Fabricación</strong></td>
-<td>T+75 a T+165 días</td>
-<td>12 semanas</td>
-<td>Fabricante</td>
-</tr>
-<tr>
-<td><strong>FAT</strong></td>
-<td>T+165 a T+180 días</td>
-<td>2 semanas</td>
-<td>Fabricante/Interventoría</td>
-</tr>
-<tr>
-<td><strong>Obras civiles</strong></td>
-<td>T+90 a T+180 días</td>
-<td>12 semanas</td>
-<td>Contratista civil</td>
-</tr>
-<tr>
-<td><strong>Instalación de equipos</strong></td>
-<td>T+180 a T+210 días</td>
-<td>4 semanas</td>
-<td>Fabricante/Contratista</td>
-</tr>
-<tr>
-<td><strong>SAT</strong></td>
-<td>T+210 a T+225 días</td>
-<td>2 semanas</td>
-<td>Contratista/Interventoría</td>
-</tr>
-<tr>
-<td><strong>Calibración ONAC</strong></td>
-<td>T+225 a T+240 días</td>
-<td>2 semanas</td>
-<td>Lab. ONAC</td>
-</tr>
-<tr>
-<td><strong>Puesta en servicio</strong></td>
-<td>T+240 días</td>
-<td>-</td>
-<td>Contratista/ANI</td>
-</tr>
-</tbody></table></div>
-<br>
-<strong>Tiempo total:</strong> ~8 meses
-<br>
-<br>
-<h2>13. ANEXOS</h2>
-<br>
-<h3>Anexo A: Planos</h3>
-<li>Plano de ubicación (PR4+0100 RN 4513)</li>
-<li>Plano de layout de estación</li>
-<li>Plano de cimentaciones WIM</li>
-<li>Plano de losa báscula estática</li>
-<li>Plano de caseta de control</li>
-<li>Diagrama de flujo operativo</li>
-<br>
-<h3>Anexo B: Hojas de Datos</h3>
-<li>Datasheet sensores WIM</li>
-<li>Datasheet celdas de carga</li>
-<li>Datasheet indicador</li>
-<li>Datasheet software</li>
-<br>
-<h3>Anexo C: Protocolos</h3>
-<li>Protocolo FAT WIM</li>
-<li>Protocolo FAT báscula estática</li>
-<li>Protocolo SAT completo</li>
-<li>Formato certificado calibración</li>
-<br>
-<br>
-<h2>14. REFERENCIAS</h2>
-<br>
-<h3>14.1 Documentos del Proyecto</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Código</td>
-<td>Título</td>
-<td>Versión</td>
-</tr>
-</thead><tbody>
-<tr>
-<td>T01-WIM</td>
-<td>Ficha Sistema Pesaje WIM</td>
-<td>v1.1</td>
-</tr>
-<tr>
-<td>T03-WIM</td>
-<td>Arquitectura Conceptual</td>
-<td>v1.0</td>
-</tr>
-<tr>
-<td>VAL-WIM</td>
-<td>Validación Contractual</td>
-<td>v1.0</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>14.2 Normativa</h3>
-<br>
-<li>OIML R134 - WIM Systems</li>
-<li>NTC 5371 - Básculas no automáticas</li>
-<li>ASTM E1318 - Highway WIM</li>
-<li>Ley 769/2002 - Código de Tránsito</li>
-<li>Resolución 4100/2004 - Pesos y dimensiones</li>
-<br>
-<br>
-<strong>Elaborado por:</strong> Administrador Contractual EPC
-<strong>Revisado por:</strong> Ing. Civil / Ing. ITS
-<strong>Aprobado por:</strong> Gerente Técnico
-<br>
-<strong>Fecha de elaboración:</strong> 21/10/2025
-<br>
-<br>
-<strong>FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS WIM v1.1</strong>
-<br>
-<br>
-<h2>15. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)</h2>
-<br>
-<strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (CON ALERTA DE OBRA CIVIL)</strong>
-<br>
-La especificación es TÉCNICAMENTE ROBUSTA y CONTRACTUALMENTE SEGURA. El diseño de 1 Estación Bidireccional Híbrida (Dinámica para selección + Estática para sanción) es la única configuración que permite la operación de la Policía de Carreteras bajo la normativa actual.
-<br>
-<strong>Alerta de Frontera Presupuestal:</strong> El valor validado de <strong>$551,425 USD</strong> cubre solo la tecnología. La Losa de Concreto (50m) y las Bahías de Detención son costos civiles mayores que no están en este monto y deben verificarse en el presupuesto EPC Civil.
-<br>
-<h3>15.1 Matriz de Cumplimiento "Hard Deck"</h3>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Requisito Técnico</td>
-<td>Fuente Obligación</td>
-<td>Especificación T05 WIM</td>
-<td>Veredicto</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Ubicación</strong></td>
-<td>Adenda 4 / AT1</td>
-<td>PR 4+100 RN 4513</td>
-<td>✅ CUMPLE</td>
-</tr>
-<tr>
-<td><strong>Tecnología Selección</strong></td>
-<td>Res. 100/2024 (HS-WIM)</td>
-<td>2 Pistas HS-WIM (Cuarzo)</td>
-<td>✅ CUMPLE</td>
-</tr>
-<tr>
-<td><strong>Tecnología Sanción</strong></td>
-<td>Metrología Legal</td>
-<td>2 Básculas Estáticas</td>
-<td>✅ CUMPLE</td>
-</tr>
-<tr>
-<td><strong>Segregación Peaje</strong></td>
-<td>Res. IP/REV</td>
-<td>No incluye WIM Peaje</td>
-<td>✅ CORRECTO</td>
-</tr>
-<tr>
-<td><strong>Obra Civil Losa</strong></td>
-<td>Dictamen Jurídico</td>
-<td>Losa Concreto 50m</td>
-<td>⚠️ CRÍTICO</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>15.2 Análisis de Riesgos Técnicos (Lo que el Civil olvida)</h3>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Riesgo</td>
-<td>Descripción</td>
-<td>Acción T04</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Trampa del Asfalto</strong></td>
-<td>Sensores Piezoeléctricos fallan >5% en asfalto deformado.</td>
-<td><strong>Exigencia:</strong> Losa MR Concreto 50m (Planicidad <3mm).</td>
-</tr>
-<tr>
-<td><strong>Señalización Variable</strong></td>
-<td>Manual 2024 exige decir "SIGA" o "ENTRE".</td>
-<td><strong>Exigencia:</strong> Semáforo Pórtico o PMV de Carril.</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>15.3 Especificación de Compra Blindada (RFQ)</h3>
-*   <strong>Ítem 1 (Dinámico):</strong> 2 Sistemas HS-WIM Cuarzo (Kistler o eq). Clase B+(7).
-*   <strong>Ítem 2 (Estático):</strong> 2 Básculas Camioneras 3x21m (100 Ton). Certificación OIML R-76.
-*   <strong>Ítem 3 (Software):</strong> Integración Dinámico+Estático, Tiquete con Foto y LPR.
-*   <strong>Ítem 4 (Eléctrico):</strong> Tableros RETIE 2024 con DPS Clase I+II.
-<br>
-<strong>Conclusión:</strong> ANEXO TÉCNICO APROBADO.
-*   <strong>Acción Crítica:</strong> Enviar Plano de Losa de Concreto al Director de Obra Civil inmediatamente. Evitar pavimentación asfáltica en PR4+0100.
-<br>
-        
-        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+        <div class='doc-header'>
+            <h1>T04: ESPECIFICACIONES TÉCNICAS - SISTEMA DE PESAJE WIM</h1>
+        </div>
+        <h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+        <br>
+        <strong>Fecha:</strong> 30/01/2026
+        <strong>Sistema:</strong> WIM - Weigh In Motion (Sistema de Pesaje Dinámico y Estático)
+        <strong>Responsable:</strong> Ing. Civil / Ing. ITS / Administrador Contractual EPC
+        <strong>Versión:</strong> 2.1 (Hard Deck Verified)
+        <strong>Referencia T01:</strong> T01_Ficha_Sistema_Pesaje_WIM_v1.1
+        <strong>Referencia T03:</strong> T03_Arquitectura_Conceptual_Pesaje_WIM_v1.0
+        <strong>Referencia Validación:</strong> 24_VALIDACION_CONTRACTUAL_PESAJE_v1.0
+        <strong>Referencia Layout:</strong> 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0
+        <br>
+        <br>
+        <h2>📋 **CONTROL DE CAMBIOS**</h2>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Versión</td>
+                        <td>Fecha</td>
+                        <td>Cambios</td>
+                        <td>Autor</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.0</td>
+                        <td>21/10/2025</td>
+                        <td>Creación inicial - 1 estación bidireccional (4 plataformas)</td>
+                        <td>Adm. Contractual EPC</td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>22/10/2025</td>
+                        <td>Revisión con información oficial: Ubicación PR4+0100 RN 4513 confirmada</td>
+                        <td>Adm. Contractual EPC</td>
+                    </tr>
+                    <tr>
+                        <td>2.0</td>
+                        <td>21/01/2026</td>
+                        <td><strong>Reconciliación Audit .42:</strong> Nivelación CAPEX $551k con T05.</td>
+                        <td>Ing. Forensic</td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>30/01/2026</td>
+                        <td><strong>Verificación Final:</strong> Alineación con Hard Deck ($551,425). Ingeniería Básica
+                            Cerrada.</td>
+                        <td>Ing. ITS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>1. IDENTIFICACIÓN Y ALCANCE</h2>
+        <br>
+        <h3>1.1 Identificación del Sistema</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Campo</td>
+                        <td>Valor</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nombre del sistema</strong></td>
+                        <td>WIM - Weigh In Motion (Pesaje Dinámico y Estático)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Categoría</strong></td>
+                        <td>ITS - Control de Sobrecargas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Código interno</strong></td>
+                        <td>T04-WIM-005-v1.5</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Configuración</strong></td>
+                        <td><strong>1 estación bidireccional (4 plataformas)</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Componentes</strong></td>
+                        <td><strong>PAT DAW100 (Din) + Fairbanks Talon (Est) + PMVs + LPR</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CAPEX reconciliado</strong></td>
+                        <td><strong>USD $551,425</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Documentos base</strong></td>
+                        <td>T01 v1.5, Res. 100/2024, Manual 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>1.2 Ubicación de la Estación</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Valor</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ubicación</strong></td>
+                        <td><strong>PR4+0100 RN 4513</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Referencia</strong></td>
+                        <td>Cerca del CCO y Peaje Aguas Negras</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Configuración</strong></td>
+                        <td>Bidireccional (2 carriles, ambos sentidos)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tipo de intervención</strong></td>
+                        <td>Adecuar estación existente + modernizar equipos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>1.3 Alcance de las Especificaciones</h3>
+        <br>
+        <strong>Este documento especifica:</strong>
+        <li>✅ Características técnicas de plataformas WIM (dinámicas)</li>
+        <li>✅ Características técnicas de básculas estáticas</li>
+        <li>✅ Sistema de clasificación y control automático</li>
+        <li>✅ Integración con CCO, SCADA, SICC</li>
+        <li>✅ Normativa nacional (NTC 5371, INVÍAS) e internacional (OIML R134)</li>
+        <li>✅ Procedimientos de calibración y certificación</li>
+        <br>
+        <strong>Este documento NO especifica:</strong>
+        <li>❌ Diseño civil detallado de cimentaciones (ver T05)</li>
+        <li>❌ Procedimientos operativos de sanción (ver Manual de Operación)</li>
+        <br>
+        <br>
+        <h2>2. MARCO NORMATIVO Y CONTRACTUAL</h2>
+        <br>
+        <h3>2.1 Referencias Contractuales</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Documento</td>
+                        <td>Sección</td>
+                        <td>Requisito Clave</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Apéndice Técnico 1</strong></td>
+                        <td>Adenda 4, pág. 46-47</td>
+                        <td>1 estación en PR4+0100 RN 4513, bidireccional</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apéndice Técnico 2</strong></td>
+                        <td>§3.3.9 "Control de Sobrecargas"</td>
+                        <td>Integración CCO, calibración anual</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apéndice Técnico 3</strong></td>
+                        <td>Cap. IV "Sistemas ITS"</td>
+                        <td>Especificaciones técnicas mínimas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>2.2 Normativa Aplicable</h3>
+        <br>
+        #### Normativa Nacional
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Norma</td>
+                        <td>Título</td>
+                        <td>Aplicación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>NTC 2031 / 5371</strong></td>
+                        <td>Metrología - Instrumentos de pesaje no automático</td>
+                        <td>Básculas estáticas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resolución 100/2024</strong></td>
+                        <td>Pesaje dinámico a alta velocidad (HS-WIM)</td>
+                        <td><strong>MANDATORIA</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ley 769/2002</strong></td>
+                        <td>Código Nacional de Tránsito (Art. 29)</td>
+                        <td>Límites de peso por eje</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resolución 4100/2004</strong></td>
+                        <td>Pesos y dimensiones de vehículos</td>
+                        <td>Límites legales</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RETIE</strong></td>
+                        <td>Instalaciones Eléctricas</td>
+                        <td>Alimentación, tierras</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        #### Normativa Internacional
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Norma</td>
+                        <td>Título</td>
+                        <td>Aplicación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>OIML R134</strong></td>
+                        <td>Automatic instruments for weighing road vehicles in motion</td>
+                        <td><strong>OBLIGATORIA</strong> para WIM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ASTM E1318</strong></td>
+                        <td>Standard Specification for Highway WIM Systems</td>
+                        <td>Sistemas WIM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>COST 323</strong></td>
+                        <td>European specification for WIM</td>
+                        <td>Referencia técnica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ISO TC-204</strong></td>
+                        <td>Intelligent Transport Systems</td>
+                        <td>Sistemas ITS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IEC 60529</strong></td>
+                        <td>IP Code</td>
+                        <td>Protección IP65 mínimo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>2.3 Certificaciones Requeridas</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Certificación</td>
+                        <td>Organismo</td>
+                        <td>Obligatoria</td>
+                        <td>Aplicación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>OIML R134</strong></td>
+                        <td>Organismo metrológico</td>
+                        <td>✅ Sí</td>
+                        <td>Plataformas WIM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NTC 5371</strong></td>
+                        <td>ONAC Colombia</td>
+                        <td>✅ Sí</td>
+                        <td>Básculas estáticas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calibración inicial</strong></td>
+                        <td>Lab. acreditado</td>
+                        <td>✅ Sí</td>
+                        <td>Todas las plataformas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calibración anual</strong></td>
+                        <td>Lab. acreditado</td>
+                        <td>✅ Sí</td>
+                        <td>Todas las plataformas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CE / FCC</strong></td>
+                        <td>Europa / USA</td>
+                        <td>✅ Sí</td>
+                        <td>Equipos electrónicos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IP65</strong></td>
+                        <td>IEC 60529</td>
+                        <td>✅ Sí</td>
+                        <td>Gabinetes exteriores</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>3. ESPECIFICACIONES TÉCNICAS GENERALES</h2>
+        <br>
+        <h3>3.1 Características Ambientales</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Especificación Mínima</td>
+                        <td>Referencia</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Temperatura de operación</strong></td>
+                        <td>-10°C a +60°C</td>
+                        <td>Condiciones tropicales</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Humedad relativa</strong></td>
+                        <td>0-95% sin condensación</td>
+                        <td>IEC 60068-2-78</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Protección (electrónica)</strong></td>
+                        <td>IP65 mínimo</td>
+                        <td>IEC 60529</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resistencia a lluvia</strong></td>
+                        <td>Operación continua bajo lluvia intensa</td>
+                        <td>OIML R134</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Altitud operación</strong></td>
+                        <td>0-500 msnm</td>
+                        <td>Magdalena Medio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>3.2 Requisitos Eléctricos</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Especificación</td>
+                        <td>Norma</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tensión nominal</strong></td>
+                        <td>208 VAC trifásica, 60 Hz</td>
+                        <td>RETIE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Variación de tensión</strong></td>
+                        <td>±10%</td>
+                        <td>RETIE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consumo máximo (estación completa)</strong></td>
+                        <td><strong>5 kW</strong></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Factor de potencia</strong></td>
+                        <td>≥0.9</td>
+                        <td>RETIE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Respaldo UPS</strong></td>
+                        <td>4 horas mínimo</td>
+                        <td>AT2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sistema de tierras</strong></td>
+                        <td>
+                            <10 Ω</td>
+                        <td>RETIE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>3.3 Requisitos de Comunicaciones</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Especificación</td>
+                        <td>Protocolo</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Medio físico</strong></td>
+                        <td>Fibra óptica monomodo</td>
+                        <td>ITU-T G.652</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Velocidad</strong></td>
+                        <td>1 Gbps</td>
+                        <td>IEEE 802.3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Protocolo de red</strong></td>
+                        <td>TCP/IP</td>
+                        <td>RFC 791, RFC 793</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Protocolo aplicación</strong></td>
+                        <td>SNMP v3, API REST</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Disponibilidad</strong></td>
+                        <td>≥99% anual</td>
+                        <td>AT2, AT4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>4. ESPECIFICACIONES POR COMPONENTE</h2>
+        <br>
+        <h3>4.1 Plataformas WIM (Dinámicas) - 2 unidades</h3>
+        <br>
+        #### 4.1.1 Descripción General
+        <br>
+        Plataformas de pesaje dinámico (Weigh In Motion) que permiten pesar vehículos en movimiento sin detenerlos,
+        clasificarlos por tipo y detectar potenciales sobrecargas. Un sistema por sentido de circulación.
+        <br>
+        #### 4.1.2 Especificaciones Técnicas de la Plataforma
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Especificación Mínima</td>
+                        <td>Método de Verificación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tecnología</strong></td>
+                        <td>Sensores piezoeléctricos o celdas de carga</td>
+                        <td>Inspección técnica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Capacidad máxima</strong></td>
+                        <td><strong>100 toneladas</strong> (peso bruto vehicular)</td>
+                        <td>Certificado fabricante</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precisión (Clase según OIML R134)</strong></td>
+                        <td><strong>Clase 5-10</strong> (±5-10% del peso real)</td>
+                        <td>Calibración con patrón</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Velocidad de operación</strong></td>
+                        <td>5-100 km/h</td>
+                        <td>Prueba funcional</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ancho de carril</strong></td>
+                        <td>3.5-4.0 m</td>
+                        <td>Medición física</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Longitud plataforma</strong></td>
+                        <td>6-8 m (suficiente para eje completo)</td>
+                        <td>Medición física</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Configuración de ejes</strong></td>
+                        <td>Hasta 9 ejes por vehículo</td>
+                        <td>Configuración software</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Temperatura de operación</strong></td>
+                        <td>-10°C a +60°C</td>
+                        <td>Certificado fabricante</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        #### 4.1.3 Sensores y Equipos Auxiliares
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Componente</td>
+                        <td>Especificación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sensores de peso</strong></td>
+                        <td>Piezoeléctricos (cuarzo) o celdas de carga (strain gauge)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sensores de velocidad</strong></td>
+                        <td>Lazo inductivo o radar Doppler</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sensores de eje</strong></td>
+                        <td>Tubos neumáticos o piezoeléctricos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clasificador vehicular</strong></td>
+                        <td>Por número de ejes y separación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cámara LPR Evidencia</strong></td>
+                        <td>Captura de placa en báscula estática (Mandatorio Manual 2024)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>4.2 Básculas Estáticas - 2 unidades</h3>
+        <br>
+        #### 4.2.1 Descripción General
+        <br>
+        Básculas estáticas de alta precisión para verificación y sanción de vehículos con sobrecarga detectada por WIM.
+        Vehículo debe detenerse completamente. Un sistema por sentido de circulación.
+        <br>
+        #### 4.2.2 Especificaciones Técnicas de la Báscula
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Especificación Mínima</td>
+                        <td>Método de Verificación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tecnología</strong></td>
+                        <td>Celdas de carga electrónicas (strain gauge)</td>
+                        <td>Inspección técnica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Capacidad máxima</strong></td>
+                        <td><strong>100 toneladas</strong> (peso bruto vehicular)</td>
+                        <td>Certificado fabricante</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Precisión (Clase según NTC 5371)</strong></td>
+                        <td><strong>Clase III</strong> (±20 kg @ 100 ton)</td>
+                        <td>Calibración ONAC</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plataforma</strong></td>
+                        <td>Metálica, antideslizante</td>
+                        <td>Inspección</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dimensiones plataforma</strong></td>
+                        <td>Mínimo 3.5 m (ancho) × 18 m (largo)</td>
+                        <td>Medición física</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Número de celdas</strong></td>
+                        <td>8-12 celdas (redundancia)</td>
+                        <td>Inspección</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Indicador</strong></td>
+                        <td>Display digital, interfaz RS-232/485 y Ethernet</td>
+                        <td>Prueba funcional</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Impresora</strong></td>
+                        <td>Ticket de pesaje con fecha/hora/peso/ejes</td>
+                        <td>Prueba de impresión</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        #### 4.2.3 Funcionalidades del Sistema
+        <br>
+        <li>✅ <strong>Pesaje por ejes:</strong> Individual y total</li>
+        <li>✅ <strong>Clasificación vehicular:</strong> Tipo de vehículo (C2, C3, C4, C5, etc.)</li>
+        <li>✅ <strong>Detección sobrecarga:</strong> Alarma automática</li>
+        <li>✅ <strong>Impresión de ticket:</strong> Evidencia de pesaje</li>
+        <li>✅ <strong>Transmisión a CCO:</strong> En tiempo real</li>
+        <li>✅ <strong>Almacenamiento local:</strong> Mínimo 90 días de registros</li>
+        <li>✅ <strong>Interfaz con semáforos:</strong> Control de paso (opcional)</li>
+        <br>
+        <h3>4.3 Sistema de Control y Gestión</h3>
+        <br>
+        #### 4.3.1 Unidad Central de Procesamiento
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Componente</td>
+                        <td>Especificación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Procesador</strong></td>
+                        <td>Intel Core i5 o superior</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Memoria RAM</strong></td>
+                        <td>8 GB mínimo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Almacenamiento</strong></td>
+                        <td>500 GB SSD (registros)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sistema operativo</strong></td>
+                        <td>Windows 10/11 Pro o Linux</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interfaz de red</strong></td>
+                        <td>Ethernet 1 Gbps</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Puertos</strong></td>
+                        <td>RS-232, RS-485, USB, HDMI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        #### 4.3.2 Software de Gestión WIM
+        <br>
+        <strong>Funcionalidades obligatorias:</strong>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Función</td>
+                        <td>Descripción</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pesaje automático</strong></td>
+                        <td>Detección, clasificación, registro automático</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Base de datos</strong></td>
+                        <td>SQL o equivalente, exportación Excel/CSV</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reportes</strong></td>
+                        <td>Estadísticas diarias/mensuales/anuales</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alarmas</strong></td>
+                        <td>Sobrecarga, error de calibración, falla sensores</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interfaz gráfica</strong></td>
+                        <td>Visualización en tiempo real</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Exportación SICC</strong></td>
+                        <td>Formato compatible con ANI</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gestión de usuarios</strong></td>
+                        <td>Roles, permisos, auditoría</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        #### 4.3.3 Fabricantes de Referencia
+        <br>
+        <strong>Fabricantes aceptables:</strong>
+        <br>
+        1. <strong>Kistler</strong> (Suiza)
+        <li>Modelo: Lineas® WIM</li>
+        <li>Tecnología: Sensores piezoeléctricos de cuarzo</li>
+        <li>Certificación: OIML R134, COST 323</li>
+        <br>
+        2. <strong>Intercomp</strong> (USA)
+        <li>Modelo: iWIM® LS-WIM</li>
+        <li>Tecnología: Celdas de carga</li>
+        <li>Certificación: ASTM E1318</li>
+        <br>
+        3. <strong>Cardinal Scale</strong> (USA)
+        <li>Modelo: HSWR High-Speed WIM</li>
+        <li>Certificación: OIML R134</li>
+        <br>
+        4. <strong>PAT (PFREUNDT)</strong> (Alemania)
+        <li>Modelo: WIM Sensor System</li>
+        <li>Tecnología: Piezoeléctrica</li>
+        <br>
+        5. <strong>International Road Dynamics (IRD)</strong> (Canadá)
+        <li>Modelo: iSINC™ WIM</li>
+        <li>Certificación: ASTM, OIML</li>
+        <br>
+        6. <strong>O equivalente</strong> que cumpla OIML R134 y NTC 5371
+        <br>
+        <br>
+        <h2>5. INTEGRACIÓN Y COMPATIBILIDAD</h2>
+        <br>
+        <h3>5.1 Integración con Sistema Central (CCO)</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Aspecto</td>
+                        <td>Requisito</td>
+                        <td>Verificación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Conexión a CCO</strong></td>
+                        <td>API REST o SNMP v3, fibra óptica</td>
+                        <td>Prueba de conectividad</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transmisión de datos</strong></td>
+                        <td>Cada pesaje en tiempo real</td>
+                        <td>Verificación en CCO</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Disponibilidad</strong></td>
+                        <td>≥99% anual</td>
+                        <td>Monitoreo 30 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alarmas</strong></td>
+                        <td>Sobrecarga, fallas, calibración</td>
+                        <td>Prueba de eventos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reportes automáticos</strong></td>
+                        <td>Diarios, semanales, mensuales</td>
+                        <td>Generación y recepción</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>5.2 Integración con SICC (ANI)</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Requisito</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Protocolo</strong></td>
+                        <td>API REST o webservice</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Frecuencia</strong></td>
+                        <td>Reportes mensuales o según ANI</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Datos reportados</strong></td>
+                        <td>Estadísticas de peso, sobrecargas, volumen</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Formato</strong></td>
+                        <td>JSON, XML o CSV según ANI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>5.3 Interfaz con Otros Sistemas</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Sistema</td>
+                        <td>Tipo de Interfaz</td>
+                        <td>Datos Intercambiados</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Telecomunicaciones</strong></td>
+                        <td>Fibra óptica</td>
+                        <td>Datos de pesaje, imágenes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Energía Eléctrica</strong></td>
+                        <td>Acometida 208 VAC 3Ø</td>
+                        <td>Alimentación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CCO</strong></td>
+                        <td>API + SNMP</td>
+                        <td>Pesajes, estadísticas, alarmas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SCADA</strong></td>
+                        <td>SNMP v3</td>
+                        <td>Estado operativo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cámaras CCTV</strong></td>
+                        <td>Opcional</td>
+                        <td>Captura de placas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>6. REQUISITOS DE INSTALACIÓN</h2>
+        <br>
+        <h3>6.1 Configuración de la Estación Bidireccional</h3>
+        <br>
+        <strong>Layout de la estación:</strong>
+        <br>
+        ```
+        Vista en Planta:
+        <br>
+        Sentido Norte (→):
+        [Pre-selección] → [WIM Dinámico 1] → [Báscula Estática 1] → [Salida]
+        ↓
+        [Carril detención]
+        <br>
+        Sentido Sur (←):
+        [Pre-selección] ← [WIM Dinámico 2] ← [Báscula Estática 2] ← [Entrada]
+        ↓
+        [Carril detención]
+        <br>
+        Elementos comunes:
+        <li>Caseta de control (central)</li>
+        <li>Cámaras CCTV (4 unidades)</li>
+        <li>Señalización vertical (obligatoria)</li>
+        <li>Iluminación LED (operación nocturna)</li>
+        ```
+        <br>
+        <h3>6.2 Componentes por Sentido</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Componente</td>
+                        <td>Cantidad/Sentido</td>
+                        <td>Total</td>
+                        <td>Función</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Plataforma WIM</strong></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>Pre-selección dinámica</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Báscula Estática</strong></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>Verificación y sanción</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lazo detector</strong></td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>Activación WIM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Módulo Aspa-Flecha (600x600mm)</strong></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>Control de carril (M2024)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PMV SMV Instrucciones</strong></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>Instrucción SIGA / ENTRA (Texto 200mm)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Barrera automática (0.7s)</strong></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>Control de acceso (opcional)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cámara LPR Evidencia</strong></td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>Captura de placa (Manual 2024)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>6.3 Obras Civiles Requeridas</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Elemento</td>
+                        <td>Especificación</td>
+                        <td>Norma</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Excavación plataforma WIM</strong></td>
+                        <td>Profundidad 0.30-0.50 m, ancho 4 m, largo 8 m</td>
+                        <td>OIML R134</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Base de concreto WIM</strong></td>
+                        <td>f'c=28 MPa, espesor 20 cm</td>
+                        <td>INVÍAS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plataforma báscula estática</strong></td>
+                        <td>Losa de cimentación 4×18 m, f'c=28 MPa</td>
+                        <td>NTC 5371</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Profundidad losa</strong></td>
+                        <td>0.80 m</td>
+                        <td>NSR-10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Caseta de control</strong></td>
+                        <td>Estructura prefabricada 4×6 m</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canalizaciones</strong></td>
+                        <td>HDPE Ø4" (100 mm)</td>
+                        <td>RETIE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tierras</strong></td>
+                        <td>SPT <10 Ω</td>
+                        <td>RETIE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Drenajes</strong></td>
+                        <td>Sistema de drenaje completo</td>
+                        <td>INVÍAS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>6.4 Recomendaciones Constructivas (Mitigación de Riesgo Civil)</h3>
+        <strong>Advertencia para el EPC:</strong> El desempeño del WIM depende 100% de la calidad del pavimento. Se
+        transfieren los siguientes requisitos de norma <strong>ASTM E1318</strong> al responsable de la Obra Civil:
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Parámetro</td>
+                        <td>Requisito (ASTM E1318)</td>
+                        <td>Zona de Aplicación</td>
+                        <td>Riesgo si se ignora</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Alineación Horizontal</strong></td>
+                        <td>Radio de curvatura <strong>> 1.7 km</strong> (Recta)</td>
+                        <td>60m antes, 30m después</td>
+                        <td>Fuerzas centrífugas alteran el peso lateral.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pendiente Longitudinal</strong></td>
+                        <td><strong>
+                                < 2%</strong> (Ideal < 1% para Clase IV)</td>
+                        <td>60m antes, 30m después</td>
+                        <td>Transferencia de carga entre ejes por gravedad.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pendiente Transversal</strong></td>
+                        <td><strong>
+                                < 3%</strong> (Bombeo mínimo)</td>
+                        <td>60m antes, 30m después</td>
+                        <td>Desbalance de carga izquierda/derecha.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lisura (Smoothness)</strong></td>
+                        <td><strong>Regla de 5m:</strong> Holgura <strong>
+                                < 3mm</strong>
+                        </td>
+                        <td>Zona de sensores</td>
+                        <td>Rebote de suspensión (Dinámica vehicular).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Material de Rodadura</strong></td>
+                        <td><strong>Concreto Hidráulico (Losa)</strong></td>
+                        <td>50m continuos</td>
+                        <td>El asfalto se deforma (ahuellamiento) y descalibra el sensor.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        > <strong>Nota:</strong> El EPC debe garantizar estas condiciones <strong>ANTES</strong> de la instalación de
+        los sensores. Cualquier corrección posterior implicará demolición.
+        <br>
+        <br>
+        <h2>7. PRUEBAS Y CRITERIOS DE ACEPTACIÓN</h2>
+        <br>
+        <h3>7.1 Pruebas en Fábrica (FAT) - WIM</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Prueba</td>
+                        <td>Objetivo</td>
+                        <td>Criterio de Aceptación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Inspección de sensores</strong></td>
+                        <td>Verificar sensores piezoeléctricos</td>
+                        <td>Sin defectos, sellado OK</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de linealidad</strong></td>
+                        <td>Calibración con pesos patrón</td>
+                        <td>Error ≤5% (Clase 5-10 OIML)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de repetibilidad</strong></td>
+                        <td>Múltiples pesajes mismo peso</td>
+                        <td>Desviación estándar ≤3%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de temperatura</strong></td>
+                        <td>Operación en rango</td>
+                        <td>Funcionamiento -10°C a +60°C</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de software</strong></td>
+                        <td>Clasificación, reportes</td>
+                        <td>100% funcional</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>7.2 Pruebas en Fábrica (FAT) - Báscula Estática</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Prueba</td>
+                        <td>Objetivo</td>
+                        <td>Criterio de Aceptación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Inspección de celdas</strong></td>
+                        <td>Verificar celdas de carga</td>
+                        <td>Calibración de fábrica vigente</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de linealidad</strong></td>
+                        <td>Pesos patrón (0-100 ton)</td>
+                        <td>Error ≤0.02% (Clase III NTC 5371)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de repetibilidad</strong></td>
+                        <td>10 pesajes consecutivos</td>
+                        <td>Desviación ≤20 kg</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de excentricidad</strong></td>
+                        <td>Peso en diferentes posiciones</td>
+                        <td>Error ≤0.5%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de histéresis</strong></td>
+                        <td>Carga y descarga</td>
+                        <td>Error ≤0.3%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>7.3 Pruebas en Sitio (SAT)</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Prueba</td>
+                        <td>Objetivo</td>
+                        <td>Criterio de Aceptación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Calibración inicial en sitio</strong></td>
+                        <td>Certificación con pesos patrón</td>
+                        <td>Certificado ONAC o equivalente</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba con vehículos reales</strong></td>
+                        <td>Comparación WIM vs estática</td>
+                        <td>Correlación ≥90%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de clasificación</strong></td>
+                        <td>Tipos de vehículos</td>
+                        <td>≥95% acierto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de detección sobrecarga</strong></td>
+                        <td>Vehículos con exceso</td>
+                        <td>100% detección</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de conectividad CCO</strong></td>
+                        <td>Transmisión datos</td>
+                        <td>Tiempo real, 0% pérdida</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de reportes automáticos</strong></td>
+                        <td>Generación estadísticas</td>
+                        <td>Reportes correctos y completos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prueba de UPS</strong></td>
+                        <td>Autonomía real</td>
+                        <td>≥4 horas operación</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>8. PRESUPUESTO Y CANTIDADES</h2>
+        <br>
+        <h3>8.1 Resumen de Cantidades</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Ítem</td>
+                        <td>Descripción</td>
+                        <td>Unidad</td>
+                        <td>Cantidad</td>
+                        <td>Precio Unit. (USD)</td>
+                        <td>Total (USD)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sistema HS-WIM (2 Carriles PAT DAW100)</td>
+                        <td>global</td>
+                        <td>1</td>
+                        <td>$256,353</td>
+                        <td>$256,353</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sistema Pesaje Estático (2 Fairbanks Talon Rodan)</td>
+                        <td>global</td>
+                        <td>1</td>
+                        <td>$261,890</td>
+                        <td>$261,890</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sistema de Puesta a Tierra (SPT Especial Pesaje)</td>
+                        <td>global</td>
+                        <td>1</td>
+                        <td>$33,182</td>
+                        <td>$33,182</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>TOTAL CAPEX RECONCILIADO</strong></td>
+                        <td><strong>$551,425</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h3>8.2 CAPEX por Componente</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Componente</td>
+                        <td>CAPEX (USD)</td>
+                        <td>% Total</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>WIM (2 plataformas)</td>
+                        <td>$300,000</td>
+                        <td>22%</td>
+                    </tr>
+                    <tr>
+                        <td>Básculas estáticas (2 unidades)</td>
+                        <td>$240,000</td>
+                        <td>18%</td>
+                    </tr>
+                    <tr>
+                        <td>Obras civiles</td>
+                        <td>$250,000</td>
+                        <td>18%</td>
+                    </tr>
+                    <tr>
+                        <td>Instalación</td>
+                        <td>$120,000</td>
+                        <td>9%</td>
+                    </tr>
+                    <tr>
+                        <td>Software y control</td>
+                        <td>$80,000</td>
+                        <td>6%</td>
+                    </tr>
+                    <tr>
+                        <td>Otros</td>
+                        <td>$363,000</td>
+                        <td>27%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>$1,353,000</strong></td>
+                        <td><strong>100%</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>9. MANTENIMIENTO</h2>
+        <br>
+        <h3>9.1 Mantenimiento Preventivo</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Actividad</td>
+                        <td>Frecuencia</td>
+                        <td>Responsable</td>
+                        <td>Tiempo Est.</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Limpieza de sensores WIM</strong></td>
+                        <td><strong>Semanal</strong></td>
+                        <td>Contratista</td>
+                        <td>2 horas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Limpieza de báscula estática</strong></td>
+                        <td>Semanal</td>
+                        <td>Contratista</td>
+                        <td>1 hora</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Verificación de cero</strong></td>
+                        <td>Diaria</td>
+                        <td>Operador</td>
+                        <td>10 min</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Inspección visual (sensores, cableado)</strong></td>
+                        <td>Semanal</td>
+                        <td>Contratista</td>
+                        <td>1 hora</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calibración de verificación</strong></td>
+                        <td><strong>Mensual</strong></td>
+                        <td>Contratista</td>
+                        <td>4 horas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calibración oficial ONAC</strong></td>
+                        <td><strong>Anual</strong></td>
+                        <td>Lab. acreditado ONAC</td>
+                        <td>8 horas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mantenimiento de báscula</strong></td>
+                        <td>Trimestral</td>
+                        <td>Fabricante autorizado</td>
+                        <td>4 horas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actualización de software</strong></td>
+                        <td>Semestral</td>
+                        <td>Fabricante</td>
+                        <td>2 horas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>9.2 Repuestos Críticos</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Componente</td>
+                        <td>Cantidad en Stock</td>
+                        <td>Plazo Entrega</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sensor piezoeléctrico WIM</strong></td>
+                        <td>4 unidades</td>
+                        <td>60 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Celda de carga (báscula)</strong></td>
+                        <td>2 unidades</td>
+                        <td>45 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Indicador digital</strong></td>
+                        <td>1 unidad</td>
+                        <td>30 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Impresora de tickets</strong></td>
+                        <td>1 unidad</td>
+                        <td>30 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PC industrial (repuesto)</strong></td>
+                        <td>1 unidad</td>
+                        <td>30 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UPS 5 kVA</strong></td>
+                        <td>1 unidad</td>
+                        <td>30 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pesos patrón (20 ton, certificados)</strong></td>
+                        <td>1 juego</td>
+                        <td>90 días</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>10. CALIBRACIÓN Y CERTIFICACIÓN</h2>
+        <br>
+        <h3>10.1 Calibración Inicial</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Elemento</td>
+                        <td>Procedimiento</td>
+                        <td>Responsable</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>WIM</strong></td>
+                        <td>Calibración con vehículo patrón o báscul portátil certificada</td>
+                        <td>Lab. acreditado</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Báscula estática</strong></td>
+                        <td>Calibración con pesos patrón certificados (clases M1, M2)</td>
+                        <td>ONAC Colombia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Certificado</strong></td>
+                        <td>Emisión de certificado de calibración</td>
+                        <td>Lab. acreditado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>10.2 Calibración Anual (Obligatoria)</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Elemento</td>
+                        <td>Frecuencia</td>
+                        <td>Norma</td>
+                        <td>Costo Estimado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Báscula estática</strong></td>
+                        <td><strong>Anual</strong></td>
+                        <td>NTC 5371</td>
+                        <td>$5,000 USD/báscula</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WIM</strong></td>
+                        <td>Anual</td>
+                        <td>OIML R134</td>
+                        <td>$5,000 USD/plataforma</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>11. REQUISITOS DE CAPACITACIÓN</h2>
+        <br>
+        <h3>11.1 Capacitación de Operación</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Tema</td>
+                        <td>Duración</td>
+                        <td>Audiencia</td>
+                        <td>Ubicación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Operación del sistema WIM</strong></td>
+                        <td>16 horas</td>
+                        <td>Operadores (6 personas)</td>
+                        <td>Estación WIM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Procedimientos de pesaje estático</strong></td>
+                        <td>8 horas</td>
+                        <td>Operadores</td>
+                        <td>Estación WIM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Software de gestión</strong></td>
+                        <td>8 horas</td>
+                        <td>Operadores + CCO</td>
+                        <td>CCO + Estación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Normativa de pesos y dimensiones</strong></td>
+                        <td>4 horas</td>
+                        <td>Operadores + Legal</td>
+                        <td>Estación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Procedimientos de sanción</strong></td>
+                        <td>4 horas</td>
+                        <td>Operadores + Legal</td>
+                        <td>Estación</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>11.2 Capacitación de Mantenimiento</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Tema</td>
+                        <td>Duración</td>
+                        <td>Audiencia</td>
+                        <td>Ubicación</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mantenimiento preventivo</strong></td>
+                        <td>8 horas</td>
+                        <td>Técnicos (4 personas)</td>
+                        <td>Estación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calibración de verificación</strong></td>
+                        <td>8 horas</td>
+                        <td>Técnicos</td>
+                        <td>Estación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diagnóstico de fallas</strong></td>
+                        <td>8 horas</td>
+                        <td>Técnicos</td>
+                        <td>Taller + Estación</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reemplazo de sensores</strong></td>
+                        <td>8 horas</td>
+                        <td>Técnicos especializados</td>
+                        <td>Estación</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <h2>12. CRONOGRAMA</h2>
+        <br>
+        <h3>12.1 Hitos Principales</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Hito</td>
+                        <td>Fecha Estimada</td>
+                        <td>Duración</td>
+                        <td>Responsable</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Aprobación T04</strong></td>
+                        <td>T+0</td>
+                        <td>-</td>
+                        <td>Interventoría/ANI</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Levantamiento topográfico</strong></td>
+                        <td>T+0 a T+15 días</td>
+                        <td>2 semanas</td>
+                        <td>Contratista</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diseño civil detallado</strong></td>
+                        <td>T+15 a T+45 días</td>
+                        <td>4 semanas</td>
+                        <td>Ing. Civil</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Licitación</strong></td>
+                        <td>T+45 días</td>
+                        <td>4 semanas</td>
+                        <td>Contratista</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Orden de compra</strong></td>
+                        <td>T+75 días</td>
+                        <td>-</td>
+                        <td>Contratista</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fabricación</strong></td>
+                        <td>T+75 a T+165 días</td>
+                        <td>12 semanas</td>
+                        <td>Fabricante</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FAT</strong></td>
+                        <td>T+165 a T+180 días</td>
+                        <td>2 semanas</td>
+                        <td>Fabricante/Interventoría</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Obras civiles</strong></td>
+                        <td>T+90 a T+180 días</td>
+                        <td>12 semanas</td>
+                        <td>Contratista civil</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instalación de equipos</strong></td>
+                        <td>T+180 a T+210 días</td>
+                        <td>4 semanas</td>
+                        <td>Fabricante/Contratista</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SAT</strong></td>
+                        <td>T+210 a T+225 días</td>
+                        <td>2 semanas</td>
+                        <td>Contratista/Interventoría</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calibración ONAC</strong></td>
+                        <td>T+225 a T+240 días</td>
+                        <td>2 semanas</td>
+                        <td>Lab. ONAC</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Puesta en servicio</strong></td>
+                        <td>T+240 días</td>
+                        <td>-</td>
+                        <td>Contratista/ANI</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <strong>Tiempo total:</strong> ~8 meses
+        <br>
+        <br>
+        <h2>13. ANEXOS</h2>
+        <br>
+        <h3>Anexo A: Planos</h3>
+        <li>Plano de ubicación (PR4+0100 RN 4513)</li>
+        <li>Plano de layout de estación</li>
+        <li>Plano de cimentaciones WIM</li>
+        <li>Plano de losa báscula estática</li>
+        <li>Plano de caseta de control</li>
+        <li>Diagrama de flujo operativo</li>
+        <br>
+        <h3>Anexo B: Hojas de Datos</h3>
+        <li>Datasheet sensores WIM</li>
+        <li>Datasheet celdas de carga</li>
+        <li>Datasheet indicador</li>
+        <li>Datasheet software</li>
+        <br>
+        <h3>Anexo C: Protocolos</h3>
+        <li>Protocolo FAT WIM</li>
+        <li>Protocolo FAT báscula estática</li>
+        <li>Protocolo SAT completo</li>
+        <li>Formato certificado calibración</li>
+        <br>
+        <br>
+        <h2>14. REFERENCIAS</h2>
+        <br>
+        <h3>14.1 Documentos del Proyecto</h3>
+        <br>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Código</td>
+                        <td>Título</td>
+                        <td>Versión</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>T01-WIM</td>
+                        <td>Ficha Sistema Pesaje WIM</td>
+                        <td>v1.1</td>
+                    </tr>
+                    <tr>
+                        <td>T03-WIM</td>
+                        <td>Arquitectura Conceptual</td>
+                        <td>v1.0</td>
+                    </tr>
+                    <tr>
+                        <td>VAL-WIM</td>
+                        <td>Validación Contractual</td>
+                        <td>v1.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>14.2 Normativa</h3>
+        <br>
+        <li>OIML R134 - WIM Systems</li>
+        <li>NTC 5371 - Básculas no automáticas</li>
+        <li>ASTM E1318 - Highway WIM</li>
+        <li>Ley 769/2002 - Código de Tránsito</li>
+        <li>Resolución 4100/2004 - Pesos y dimensiones</li>
+        <br>
+        <br>
+        <strong>Elaborado por:</strong> Administrador Contractual EPC
+        <strong>Revisado por:</strong> Ing. Civil / Ing. ITS
+        <strong>Aprobado por:</strong> Gerente Técnico
+        <br>
+        <strong>Fecha de elaboración:</strong> 21/10/2025
+        <br>
+        <br>
+        <strong>FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS WIM v1.1</strong>
+        <br>
+        <br>
+        <h2>15. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)</h2>
+        <br>
+        <strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (CON ALERTA DE OBRA CIVIL)</strong>
+        <br>
+        La especificación es TÉCNICAMENTE ROBUSTA y CONTRACTUALMENTE SEGURA. El diseño de 1 Estación Bidireccional
+        Híbrida (Dinámica para selección + Estática para sanción) es la única configuración que permite la operación de
+        la Policía de Carreteras bajo la normativa actual.
+        <br>
+        <strong>Alerta de Frontera Presupuestal:</strong> El valor validado de <strong>$551,425 USD</strong> cubre solo
+        la tecnología. La Losa de Concreto (50m) y las Bahías de Detención son costos civiles mayores que no están en
+        este monto y deben verificarse en el presupuesto EPC Civil.
+        <br>
+        <h3>15.1 Matriz de Cumplimiento "Hard Deck"</h3>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Requisito Técnico</td>
+                        <td>Fuente Obligación</td>
+                        <td>Especificación T05 WIM</td>
+                        <td>Veredicto</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ubicación</strong></td>
+                        <td>Adenda 4 / AT1</td>
+                        <td>PR 4+100 RN 4513</td>
+                        <td>✅ CUMPLE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tecnología Selección</strong></td>
+                        <td>Res. 100/2024 (HS-WIM)</td>
+                        <td>2 Pistas HS-WIM (Cuarzo)</td>
+                        <td>✅ CUMPLE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tecnología Sanción</strong></td>
+                        <td>Metrología Legal</td>
+                        <td>2 Básculas Estáticas</td>
+                        <td>✅ CUMPLE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Segregación Peaje</strong></td>
+                        <td>Res. IP/REV</td>
+                        <td>No incluye WIM Peaje</td>
+                        <td>✅ CORRECTO</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Obra Civil Losa</strong></td>
+                        <td>Dictamen Jurídico</td>
+                        <td>Losa Concreto 50m</td>
+                        <td>⚠️ CRÍTICO</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>15.2 Análisis de Riesgos Técnicos (Lo que el Civil olvida)</h3>
+        <div class='table-responsive'>
+            <table class='spec-table'>
+                <thead>
+                    <tr>
+                        <td>Riesgo</td>
+                        <td>Descripción</td>
+                        <td>Acción T04</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Trampa del Asfalto</strong></td>
+                        <td>Sensores Piezoeléctricos fallan >5% en asfalto deformado.</td>
+                        <td><strong>Exigencia:</strong> Losa MR Concreto 50m (Planicidad <3mm).< /td>
+                    </tr>
+                    <tr>
+                        <td><strong>Señalización Variable</strong></td>
+                        <td>Manual 2024 exige decir "SIGA" o "ENTRE".</td>
+                        <td><strong>Exigencia:</strong> Semáforo Pórtico o PMV de Carril.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h3>15.3 Especificación de Compra Blindada (RFQ)</h3>
+        * <strong>Ítem 1 (Dinámico):</strong> 2 Sistemas HS-WIM Cuarzo (Kistler o eq). Clase B+(7).
+        * <strong>Ítem 2 (Estático):</strong> 2 Básculas Camioneras 3x21m (100 Ton). Certificación OIML R-76.
+        * <strong>Ítem 3 (Software):</strong> Integración Dinámico+Estático, Tiquete con Foto y LPR.
+        * <strong>Ítem 4 (Eléctrico):</strong> Tableros RETIE 2024 con DPS Clase I+II.
+        <br>
+        <strong>Conclusión:</strong> ANEXO TÉCNICO APROBADO.
+        * <strong>Acción Crítica:</strong> Enviar Plano de Losa de Concreto al Director de Obra Civil inmediatamente.
+        Evitar pavimentación asfáltica en PR4+0100.
+        <br>
+
+        <div
+            style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
             Documento generado automáticamente por Sistema de Gestión TM01. <br>
             Fase 7 - Ingeniería de Detalle.
         </div>
     </div>
 </body>
+
 </html>
