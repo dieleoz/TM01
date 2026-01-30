@@ -83,20 +83,20 @@ class TM01MasterData {
             sosSummary: {
                 id: '6',
                 sistema: 'SOS',
-                cantidad: 88,  // Postes nuevos a instalar (98 total - 10 existentes en UF Rehabilitación)
-                capexUSD: 2200000,  // 88 × $25,000
-                capexCOP: 9680000000,
+                cantidad: 98,  // Total Contractual (AT1 - 3km)
+                capexUSD: 2450000,  // 98 × $25,000
+                capexCOP: 10780000000,
                 capexUnitarioUSD: 25000,
-                descripcion: 'Forensic v1.0 (98 Total: 88 New CAPEX + 10 Rehab OPEX)',
+                descripcion: 'Forensic v2.0 (98 Units: Full Compliance 3km - Solar Autonomous)',
                 estado: 'Validado',
 
                 // Desglose detallado
                 desglose: {
-                    nuevos: 88,  // A instalar
-                    existentes: 10,  // UF Rehabilitación
-                    total: 98,  // Total proyecto (cumple AT1 L3525)
+                    nuevos: 98,
+                    existentes: 0,
+                    total: 98,
                     rn4510: { cantidad: 37, capex: 925000, tramo: "Magdalena" },
-                    rn4511: { cantidad: 46, capex: 1150000, tramo: "Puerto Salgar" },
+                    rn4511: { cantidad: 56, capex: 1400000, tramo: "Puerto Salgar" },
                     rn4513: { cantidad: 5, capex: 125000, tramo: "Acceso CCO" }
                 },
 
@@ -185,11 +185,11 @@ class TM01MasterData {
             {
                 id: '1',
                 sistema: 'CCTV',
-                cantidad: 15,
-                capexUSD: 1634000,
-                capexCOP: 7189600000,
-                capexUnitarioUSD: 108933,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
+                cantidad: 9,
+                capexUSD: 116100,
+                capexCOP: 510840000,
+                capexUnitarioUSD: 12900,
+                descripcion: 'Forensic v2.2 (9 Units: 1 per Toll/Weigh/CCO/Bunker)',
                 estado: 'Validado'
             },
             {
@@ -342,24 +342,24 @@ class TM01MasterData {
             { id: '2.4.3', nivel: 3, item: "2.4.3", descripcion: "Integración SICC (ANI) + CCO + Comisionamiento", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Alineación AT4", vu: "210,000", total: "210,000", totalCOP: "924,000,000" },
             { id: '2.4.4', nivel: 3, item: "2.4.4", descripcion: "Repuestos Críticos & Garantía", sistema: "ETD", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Soporte", vu: "20,000", total: "20,000", totalCOP: "88,000,000" },
 
-            // CAPÃTULO 3: SISTEMA CCTV
+            // CAPÃ TULO 3: SISTEMA CCTV
             { id: '3', nivel: 1, item: "3", descripcion: "SISTEMA CCTV", sistema: "CCTV", tipo: "capitulo" },
             { id: '3.1', nivel: 2, item: "3.1", descripcion: "SUMINISTROS CCTV", sistema: "CCTV", tipo: "subcapitulo" },
-            { id: '3.1.1', nivel: 3, item: "3.1.1", descripcion: "Cámara PTZ Dahua DH-SD5A432GB-HNR (4MP 32x Starlight IR150m)", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Specs: 1/2.8\" 4MP CMOS, 32x Opt Zoom, Auto Tracking 3.0, Face Det, SMD 4.0, PoE+, IP67, IK10", vu: "989", vuCOP: "4,351,893", total: "14,835", totalCOP: "65,278,395" },
+            { id: '3.1.1', nivel: 3, item: "3.1.1", descripcion: "Cámara PTZ Dahua 32X + Solar + Poste 12m", sistema: "CCTV", cantidad: "9", unidad: "UND", tipo: "item", criterio: "Specs: 1/2.8\" 4MP CMOS, 32x Opt Zoom, Auto Tracking 3.0, Face Det, SMD 4.0, PoE+, IP67, IK10", vu: "12900", vuCOP: "56,760,000", total: "116,100", totalCOP: "510,840,000" },
             { id: '3.1.2', nivel: 3, item: "3.1.2", descripcion: "Domo policarbonato anti-vandálico", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "ELIMINADO: Cámara PTZ ya cuenta con protección IK10/IP67 nativa", vu: "800", vuCOP: "3,520,000", total: "0", totalCOP: "0" },
-            { id: '3.1.3', nivel: 3, item: "3.1.3", descripcion: "Soporte montaje poste/pared", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Instalación robusta", vu: "500", vuCOP: "2,200,000", total: "7,500", totalCOP: "33,000,000" },
-            { id: '3.1.4', nivel: 3, item: "3.1.4", descripcion: "Cable UTP Cat6 ext 100m", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Conexión datos", vu: "100", vuCOP: "440,000", total: "1,500", totalCOP: "6,600,000" },
-            { id: '3.1.5', nivel: 3, item: "3.1.5", descripcion: "Caja paso hermética", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Protección conexiones", vu: "150", vuCOP: "660,000", total: "2,250", totalCOP: "9,900,000" },
-            { id: '3.1.6', nivel: 3, item: "3.1.6", descripcion: "Inyector PoE+ 30W", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Alimentación PoE", vu: "200", vuCOP: "880,000", total: "3,000", totalCOP: "13,200,000" },
-            { id: '3.1.7', nivel: 3, item: "3.1.7", descripcion: "DPS datos + energía", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Protección eléctrica", vu: "150", vuCOP: "660,000", total: "2,250", totalCOP: "9,900,000" },
-            { id: '3.1.8', nivel: 3, item: "3.1.8", descripcion: "Accesorios montaje", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Instalación completa", vu: "300", vuCOP: "1,320,000", total: "4,500", totalCOP: "19,800,000" },
-            { id: '3.1.9', nivel: 3, item: "3.1.9", descripcion: "Instalación y comisionamiento (Integral)", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Servicios especializados ($6M COP)", vu: "1364", vuCOP: "6,000,000", total: "20,460", totalCOP: "90,000,000" },
-            { id: '3.1.10', nivel: 3, item: "3.1.10", descripcion: "Pruebas FAT/SAT", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Validación funcional", vu: "500", vuCOP: "2,200,000", total: "7,500", totalCOP: "33,000,000" },
+            { id: '3.1.3', nivel: 3, item: "3.1.3", descripcion: "Soporte montaje poste/pared", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "500", vuCOP: "2,200,000", total: "0", totalCOP: "0" },
+            { id: '3.1.4', nivel: 3, item: "3.1.4", descripcion: "Cable UTP Cat6 ext 100m", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "100", vuCOP: "440,000", total: "0", totalCOP: "0" },
+            { id: '3.1.5', nivel: 3, item: "3.1.5", descripcion: "Caja paso hermética", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "150", vuCOP: "660,000", total: "0", totalCOP: "0" },
+            { id: '3.1.6', nivel: 3, item: "3.1.6", descripcion: "Inyector PoE+ 30W", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "200", vuCOP: "880,000", total: "0", totalCOP: "0" },
+            { id: '3.1.7', nivel: 3, item: "3.1.7", descripcion: "DPS datos + energía", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "150", vuCOP: "660,000", total: "0", totalCOP: "0" },
+            { id: '3.1.8', nivel: 3, item: "3.1.8", descripcion: "Accesorios montaje", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "300", vuCOP: "1,320,000", total: "0", totalCOP: "0" },
+            { id: '3.1.9', nivel: 3, item: "3.1.9", descripcion: "Instalación y comisionamiento (Integral)", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "1364", vuCOP: "6,000,000", total: "0", totalCOP: "0" },
+            { id: '3.1.10', nivel: 3, item: "3.1.10", descripcion: "Pruebas FAT/SAT", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "500", vuCOP: "2,200,000", total: "0", totalCOP: "0" },
             { id: '3.1.11', nivel: 3, item: "3.1.11", descripcion: "Sistema Central (VMS Ref: DT-019 CCO)", sistema: "CCTV", cantidad: "0", unidad: "SISTEMA", tipo: "item", criterio: "Integrado en CCO (DT-019)", vu: "0", vuCOP: "0", total: "0", totalCOP: "0" },
-            { id: '3.1.12', nivel: 3, item: "3.1.12", descripcion: "Documentación técnica", sistema: "CCTV", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Manuales y planos", vu: "5,500", vuCOP: "24,200,000", total: "5,500", totalCOP: "24,200,000" },
-            { id: '3.1.13', nivel: 3, item: "3.1.13", descripcion: "Postes Metálicos 12m (Nodos Críticos)", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Infraestructura Base ($1.8M COP)", vu: "410", vuCOP: "1,800,000", total: "6,150", totalCOP: "27,000,000" },
-            { id: '3.1.14', nivel: 3, item: "3.1.14", descripcion: "Kit Energía Solar 540W (Panel + Batería 200Ah + MPPT + Estructura)", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Ingeniería Detalle (1 por cámara)", vu: "2000", vuCOP: "8,800,000", total: "30,000", totalCOP: "132,000,000" },
-            { id: '3.1.15', nivel: 3, item: "3.1.15", descripcion: "Gabinete de Integración Outdoor IP66 (Acero/Poliéster)", sistema: "CCTV", cantidad: "15", unidad: "UND", tipo: "item", criterio: "Para equipos de comunicaciones y protecciones (No Solar)", vu: "340", vuCOP: "1,500,000", total: "5,100", totalCOP: "22,500,000" },
+            { id: '3.1.12', nivel: 3, item: "3.1.12", descripcion: "Documentación técnica", sistema: "CCTV", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Manuales y planos", vu: "0", vuCOP: "0", total: "0", totalCOP: "0" },
+            { id: '3.1.13', nivel: 3, item: "3.1.13", descripcion: "Postes Metálicos 12m (Nodos Críticos)", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "410", vuCOP: "1,800,000", total: "0", totalCOP: "0" },
+            { id: '3.1.14', nivel: 3, item: "3.1.14", descripcion: "Kit Energía Solar 540W (Panel + Batería 200Ah + MPPT + Estructura)", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "2000", vuCOP: "8,800,000", total: "0", totalCOP: "0" },
+            { id: '3.1.15', nivel: 3, item: "3.1.15", descripcion: "Gabinete de Integración Outdoor IP66 (Acero/Poliéster)", sistema: "CCTV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Incluido en Kit Item 3.1.1", vu: "340", vuCOP: "1,500,000", total: "0", totalCOP: "0" },
 
             // CAPÃTULO 4: SISTEMA PMV
             { id: '4', nivel: 1, item: "4", descripcion: "SISTEMA PMV", sistema: "PMV", tipo: "capitulo" },

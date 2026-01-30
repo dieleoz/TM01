@@ -1,8 +1,8 @@
 window.TECHNICAL_SPECS_MAP = {
-  "CCTV": "specs/T04_CCTV.html",
   "_metadata": {
-    "generatedAt": "2026-01-29 18:52:42",
-    "agentVersion": "Phase 7.0"
+    "agentVersion": "Phase 7.0",
+    "generatedAt": "2026-01-30 08:59:03"
   },
-  "PMV": "specs/T04_PMV.html"
+  "PMV": "specs/T04_PMV.html",
+  "CCTV": "specs/T04_CCTV.html"
 };

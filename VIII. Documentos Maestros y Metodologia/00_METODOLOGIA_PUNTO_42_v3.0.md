@@ -138,4 +138,77 @@ Para que un documento sea "Compliant" con Punto 42 v3.0:
 - **Índice de Auditoría:** `VII. Documentos Transversales/00_INDICE_AUDITORIA_6_0_ENE2026.md`.
 
 ---
-**Autoridad:** Esta metodología reemplaza y deja obsoletas a las versiones v1.0 y v2.0 MVP.
+**Autoridad:** Esta metodología reemplaza y deja obsoletas a las versiones v1.0 y v2.0 MVP, así como a los documentos dispersos de Workflow y Flujo de Datos.
+
+---
+
+# 🧬 ANEXO 1: RECETA DE REPLICACIÓN (WORKFLOW ESTÁNDAR)
+
+> **PROPÓSITO:** Guía operativa paso a paso para el ingeniero. Cómo cerrar un sistema desde cero.
+
+## 1. EL FLUJO LÓGICO (De la Ley al Plano)
+
+Para cada subsistema (CCTV, PMV, SOS...), debes seguir **estrictamente** estos 5 pasos. Si te saltas uno, generas "Deuda Técnica".
+
+### PASO 1: EL ABOGADO (Defensa Contractual)
+*   **Pregunta:** "¿Qué me obliga el contrato realmente?"
+*   **Acción:** Analizar Apéndices Técnicos (AT) + Normativa (RETIE/IP-REV).
+*   **Entregable:** `VII. Documentos Transversales/DICTAMEN_JURIDICO_[SISTEMA].md`
+*   **Resultado:** Un documento que justifica por qué usamos "X cantidad".
+
+### PASO 2: EL ESPECIFICADOR (T04 - Specs de Calidad)
+*   **Pregunta:** "¿Qué marca/modelo compro que cumpla (1 o 2 baterías)?"
+*   **Acción:** Ficha técnica "Defensiva" que define la autonomía y dimensiones.
+*   **Entregable:** `IV. Ingenieria Basica/T04_SPEC_[SISTEMA]_v1.0.md`
+*   **Regla:** Sin spec, el dibujante no sabe el tamaño del gabinete.
+
+### PASO 3: EL DIBUJANTE (T02 - Input para Planos)
+*   **Pregunta:** "¿Dónde pongo los postes y cómo los conecto?"
+*   **Acción:** Croquis de instalación (Alzado, Planta Típica, Unifilar).
+*   **Entregable:** `IV. Ingenieria Basica/02_T02_Layout_Instalacion_[SISTEMA]_v1.0.md`
+
+### PASO 4: EL FINANCIERO (T05 - Cantidades y Precios)
+*   **Pregunta:** "¿Cuánto cuesta todo lo anterior?"
+*   **Acción:** Crear la tabla de cantidades basada en Dictamen + Spec + Plano.
+*   **Entregable:** `V. Ingenieria de Detalle/XX_T05_Ingenieria_Detalle_[SISTEMA].md`
+*   **Regla:** T05 es la ÚNICA fuente de verdad para el precio final (RFQ).
+
+### PASO 5: LA WEB (Sincronización Dashboard)
+*   **Pregunta:** "¿Cómo ve el Gerente todo esto junto?"
+*   **Acción:** Actualizar la base de datos maestra (`docs/data/tm01_master_data.js`).
+*   **Script:** `scripts/sync_wbs_tm01.ps1`.
+
+---
+
+# 🧬 ANEXO 2: MAPA DE TUBERÍAS (DATA FLOW)
+
+> **PROPÓSITO:** Entender cómo viaja el dato técnicamente.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  1. CONTRATO (AT1, AT2, AT3, AT4)                          │
+│  Ubicación: II. Apendices Tecnicos/                        │
+│  Tipo: ❌ INMUTABLE (no editar)                             │
+└────────────────────────┬────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│  2. T05 - INGENIERÍA DE DETALLE                            │
+│  Ubicación: V. Ingenieria de Detalle/XX_T05_*.md           │
+│  Tipo: ✏️ EDITABLE (fuente de cantidades y precios)        │
+└────────────────────────┬────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│  3. SCRIPT SYNC (Powershell)                               │
+│  Comando: .\scripts\sync_wbs_tm01.ps1                      │
+│  Acción: Lee T05 (Markdown) -> Escribe JSON (JS)           │
+└────────────────────────┬────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│  4. WEB DASHBOARD                                           │
+│  Ubicación: docs/wbs.html                                  │
+│  Tipo: 👁️ VISUALIZACIÓN (Solo lectura)                     │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Validación de Integridad:**
+Si editas el T05 pero no corres el script, la Web mentirá. Si editas la Web a mano, el script la sobrescribirá mañana. **Respetar el flujo.**

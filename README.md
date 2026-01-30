@@ -313,6 +313,12 @@ El proyecto TM01 utiliza la metodología **PROMPT MAESTRO V3.0**, un enfoque sis
 ├── VI. Operacion y Reversion/        (Pendiente)
 ├── VII. Documentos Transversales/    (86 documentos)
 ├── VIII. Documentos Maestros y Metodologia/ (Pendiente)
+## 📚 Documentation Hierarchy
+> **SINGLE SOURCE OF TRUTH (Start Here):**
+> 📘 **[00_METODOLOGIA_PUNTO_42_v3.0.md](VIII.%20Documentos%20Maestros%20y%20Metodologia/00_METODOLOGIA_PUNTO_42_v3.0.md)**
+> *Contains: The 5-Layer Architecture, The Replication Workflow (Recipe), and The Data Pipelines.*
+
+Everything else flows from this document. If in doubt, read the Methodology.
 ├── IX. WBS y Planificacion/          (WBS + interfaces web)
 ├── X. Entregables Consolidados/      (Presupuestos + RFQs)
 │

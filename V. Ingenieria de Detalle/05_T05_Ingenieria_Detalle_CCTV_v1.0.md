@@ -287,17 +287,23 @@ CÁMARA PTZ IP
 
 ---
 
-## 📝 **DOCUMENTOS ENTREGABLES**
+## 9. � DOCUMENTACIÓN VINCULADA (TRAZABILIDAD)
+> **Estrategia de No-Dispersión:** Este documento T05 centraliza los costos, pero se apoya en los siguientes archivos para el detalle técnico y constructivo:
 
-1. ✅ Este documento (T05 CCTV)
-2. ⏳ Planos de ubicación (30 cámaras)
-3. ⏳ Planos típicos instalación (Tipos A, B, C)
-4. ⏳ Matriz de presets por cámara
-5. ⏳ Configuración VLANs y QoS
-6. ⏳ Especificación técnica de compra
-7. ⏳ Protocolo de pruebas FAT/SAT
-8. ⏳ Manual de operación (CCO)
-9. ⏳ Plan de mantenimiento preventivo
+### 📄 Calidad y Compras (Specs)
+*   **[T04 - Ficha Técnica Defensiva (Blindaje IP/REV)](../IV.%20Ingenieria%20Basica/T04_SPEC_CCTV_PTZ_v1.0.md)**
+    *   *Contiene:* Specs Cámara 32X, Kit Solar 540W, Poste 12m.
+    *   *Uso:* Anexo para el contrato de suministro.
+
+### 🗺️ Ubicación y Planos (Dibujante)
+*   **[Tabla Maestra de Ubicaciones](../VII.%20Documentos%20Transversales/43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md)**
+    *   *Contiene:* Coordenadas exactas y PKs.
+*   **[T02 - Planos Típicos de Instalación (Pendiente)](../IV.%20Ingenieria%20Basica/02_T02_Planos_Tipicos_CCTV_v1.0.md)**
+    *   *Contiene:* Detalles constructivos, isométricos de armarios y diagramas de conexión.
+
+### ⚖️ Soporte Legal
+*   **[Dictamen Jurídico](../VALIDACION_CCTV_T04.md)**
+    *   *Contiene:* Evidencia de cumplimiento IP/REV y matriz de riesgos.
 
 ---
 

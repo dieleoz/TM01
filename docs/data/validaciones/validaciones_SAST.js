@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: SAST
-// Fecha de generación: 2026-01-29 16:42:02
+// Fecha de generación: 2026-01-30 08:37:16
 
 var validaciones_SAST = {
   full: '',

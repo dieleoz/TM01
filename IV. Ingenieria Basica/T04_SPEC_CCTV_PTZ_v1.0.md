@@ -42,13 +42,32 @@ Suministro, instalación, configuración y puesta en marcha de **9 Unidades de C
 ### 2.3 Instalación y Obra Civil (RETIE 2024)
 | Componente | Especificación | Exigencia Normativa |
 |:-----------|:---------------|:--------------------|
-| **Gabinete** | Outdoor IP65 Metálico/Polimérico | **RETIE**: Protección intemperie certificada. |
+| **Gabinete** | Outdoor IP66 Metálico/Polimérico | **RETIE**: Protección intemperie certificada. |
 | **Seguridad** | Sensor Apertura + Cerradura | **Seguridad**: Alarma de intrusión al CCO. |
 | **Rotulado** | Simbolo "Riesgo Eléctrico" | **RETIE Art. 2.3.4.2**: Indeleble y visible. |
 | **Protección** | **DPS Clase I+II** (Certificado) | **RETIE**: Protección contra sobretensiones. |
 | **Puesta Tierra**| Equipotencial < 10 Ohmios | **RETIE**: Seguridad personal y de equipos. |
-| **Poste** | 12-15m Galvanizado + Corona Púas | **Cobertura**: Aprovechamiento del Zoom 32X. |
 | **Señalización** | Señal SI-35A a 200m | **Manual 2024**: "Zona de Control Tecnológico". |
+
+### 2.4 Infraestructura de Soporte (Poste 12m)
+| Parámetro | Especificación Requerida | Referencia / Justificación |
+|:----------|:-------------------------|:---------------------------|
+| **Tipo** | Poste Hexagonal/Circular 12m | Galvanizado en Caliente (ASTM A123) |
+| **Cimentación** | Concreto 3000 PSI (1x1x1.5m) | Norma NSR-10 (Sismorresistencia) |
+| **Seguridad** | Corona de Púas / Anti-escalatorio | Protección antivandálica |
+| **Acceso** | Ventana de inspección con llave | Acceso a conexiones internas |
+| **Protección** | Barrera Vehicular (New Jersey/Metálica) | Si está en Zona Despejada |
+
+### 2.5 Sistema de Energía Autónomo (Solar)
+*Aplica para puntos definidos con Kit Solar en T05.*
+
+| Parámetro | Especificación Requerida (Hard Deck) | Fuente: DT-001 (Ahorro + Eficiencia) |
+|:----------|:-------------------------------------|:-------------------------------------|
+| **Panel Solar** | **540W Monocristalino** (Alta Eficiencia) | Garantizar recarga en 4h de sol. |
+| **Batería** | **GEL 200Ah @ 12V** (Ciclo Profundo) | Autonomía > 48 horas sin sol. |
+| **Controlador** | **MPPT 40A** Industrial | Eficiencia de conversión > 98%. |
+| **Gabinete** | IP66 Acero Inoxidable / Poliéster | Alojamiento exclusivo baterías. |
+| **Respaldo** | Conexión híbrida (Red + Solar) | Si hay red disponible (Redundancia). |
 
 ## 3. CANTIDADES A INSTALAR (POR TRAMO)
 

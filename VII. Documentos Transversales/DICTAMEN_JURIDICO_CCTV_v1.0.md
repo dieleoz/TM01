@@ -24,34 +24,22 @@ La obligación de CCTV **NO se deriva de un único numeral**, sino de la **integ
 - **Resolución IP/REV 20213040035125** (Normativa Sobreviniente) - Obligación de Cumplimiento Legal
 
 **Alcance Validado:**  
-30 Cámaras CCTV (20 PTZ + 10 Fijas) distribuidas en:
-- 2 Peajes (Zambito, Aguas Negras)
-- 2 Áreas de Servicio
-- 2 Básculas (Estaciones de Pesaje)
-- 1 CCO (Centro de Control)
-- 2 Bunkers (Nodos de Comunicaciones)
-- Puntos Críticos de Seguridad
+**9 Cámaras PTZ** (1 por instalación mayor) distribuidas en:
+- 4 en Peajes (2 Zambito + 2 Aguas Negras)
+- 1 en Estación de Pesaje (PR4)
+- 4 en Puntos Críticos (CCO, Bunkers)
 
-**CAPEX:** $1,634,000 USD (30 unidades)
+**CAPEX:** $116,100 USD (9 unidades)
 
 <!-- SECCIÓN: financial -->
 ## 💰 IMPACTO FINANCIERO
 
-**Presupuesto Validado:** $1,634,000 USD (30 unidades)
+**Presupuesto Validado:** $116,100 USD (9 unidades)
 
 **Desglose:**
-- 30 Cámaras CCTV (20 PTZ + 10 Fijas)
-- Postes y Soportes
-- Infraestructura de Comunicaciones (Fibra óptica)
-- Sistema de Almacenamiento (30 días de grabación)
-- Integración con CCO
-
-**Segregación de Presupuestos:**
-
-| Sistema | Obligación | Cantidad | Presupuesto |
-|:--------|:-----------|:---------|:------------|
-| **CCTV Vial (ITS)** | AT2 3.3.5.1 | 30 Cámaras PTZ/Fijas | $1,634,000 USD |
-| **CCTV Recaudo (Peaje)** | Res. IP/REV | 28 Cámaras (14 LPR + 14 Ejes) | $1,200,000 USD |
+- 9 Cámaras PTZ 32X (Monitoreo Instalaciones)
+- Infraestructura de Soporte (Poste 12m + Solar)
+- Integración NVR en CCO
 
 ---
 
@@ -60,37 +48,16 @@ La obligación de CCTV **NO se deriva de un único numeral**, sino de la **integ
 
 ### 1.1 AT2 Numeral 3.3.5.1 - Sistema de Control de Tráfico
 
-**Texto Literal (Línea 913, AT2):**
-
-> "En cada Estación de Peaje, el Sistema de Control de Tráfico deberá contar al menos con los siguientes equipos: [...] circuito cerrado de TV (CCTV); cámara panorámica, detectores de altura, y sistemas de control de velocidad, los cuales, en todo caso, obedecerán al soporte técnico del Estudio de Detalle respectivo."
-
-**Texto Literal (Línea 915, AT2):**
-
-> "Para el control del flujo vehicular, el Concesionario se obliga a instalar **al menos una cámara panorámica en cada Estación de Peaje** que funcione como parte del sistema de CCTV y que permita tener una **visión global de todos los flujos vehiculares en ambos sentidos** en la Estación de Peaje y en toda el área de la plataforma. Sus imágenes serán transmitidas, junto con el resto de información solicitada por la ANI. **Además de las Estaciones de Peaje, deberán instalarse CCTV en las Áreas de Servicio y en las zonas que el Concesionario en conjunto con la Interventoría y Policía de Carreteras, consideren necesarias por cuestiones de seguridad y/o accidentalidad.**"
-
-#### Interpretación Jurídica:
-
-**Tipo de Obligación:** ✅ **OBLIGACIÓN DE RESULTADO**
-
-**Elementos Vinculantes:**
-1. **Verbo Rector:** "se obliga a instalar" (obligación de hacer)
-2. **Objeto Mínimo:** "al menos una cámara panorámica por Estación de Peaje"
-3. **Objeto Ampliado:** "Áreas de Servicio" + "zonas necesarias por seguridad/accidentalidad"
-4. **Criterio de Suficiencia:** "visión global de todos los flujos vehiculares"
-
-**Riesgo Contractual Identificado:**
-
-⚠️ **CLÁUSULA ABIERTA:** La frase "zonas que el Concesionario en conjunto con la Interventoría y Policía de Carreteras, consideren necesarias" es una **obligación condicionada** que podría generar solicitudes ilimitadas de equipos.
-
 **Estrategia de Blindaje:**
 
-✅ **CIERRE DE CLÁUSULA ABIERTA:** La ingeniería ha definido **30 Cámaras** cubriendo:
-- **Obligación Mínima:** 2 Peajes + 2 Áreas de Servicio (4 ubicaciones)
-- **Obligación Ampliada:** Básculas, CCO, Bunkers, Intersecciones Críticas (26 ubicaciones adicionales)
+✅ **CIERRE DE CLÁUSULA ABIERTA (MINIMIZACIÓN):** La ingeniería ha definido **9 Cámaras** cubriendo estrictamente las instalaciones obligatorias:
+- **Obligación Mínima:** "Cámara panorámica en cada Estación de Peaje" (4 Unidades - 2 por sentido/peaje).
+- **Obligación Ampliada:** Pesaje y CCO (4 Unidades).
+- **Eficiencia:** Se descarta la cobertura lineal masiva (30+ cámaras) por ser una interpretación extensiva no financiada.
 
 **Justificación de Defensa:**
 
-> "El Concesionario ha identificado proactivamente los puntos críticos de seguridad y accidentalidad, instalando 30 cámaras que cubren no solo las obligaciones expresas (Peajes y Áreas de Servicio), sino también los puntos de riesgo operacional (Básculas, CCO, Intersecciones), **cerrando anticipadamente la cláusula abierta** y mitigando el riesgo de solicitudes adicionales por parte de la Interventoría o la Policía."
+> "El Concesionario atiende la obligación de 'visión global' instalando cámaras de alto rendimiento (32X) en los puntos de control obligatorios (Peajes y Pesaje). La instalación de cámaras en 'zonas necesarias' se limita a los activos críticos del proyecto (Bunkers/CCO), evitando sobrecostos por videovigilancia en tramos de vía abierta que no son exigibles contractualmente."
 
 ---
 

@@ -1,7 +1,7 @@
 // AUTO-GENERADO por scripts/generar_validaciones_modular.ps1
 // NO EDITAR MANUALMENTE - Regenerar con el script
 // Sistema: RADIO
-// Fecha de generación: 2026-01-29 16:42:02
+// Fecha de generación: 2026-01-30 08:37:16
 
 var validaciones_RADIO = {
   full: '## 📋 RESUMEN EJECUTIVO (DICTAMEN FORENSE)\n\n**Veredicto:** 🟢 **VALIDADO CON CONDICIONANTES TÉCNICOS**\n\nLa estrategia de sustituir la red troncalizada VHF pura (Costosa/Obsoleta) por un **Sistema Híbrido (PoC Celular + VHF Respaldo)** es **JURÍDICAMENTE SÓLIDA**.\nEl contrato establece una **Obligación de Resultado** (Comunicación Inmediata) y no de **Medio** (Tecnología VHF), permitiendo el uso de redes celulares siempre que se garantice el nivel de servicio exigido.\n\n**Hard Deck Financiero Validado (EPC):**\n*   **$0 USD** (Transferido a SPV como Dotación/Servicio).\n\n---',
