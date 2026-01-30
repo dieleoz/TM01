@@ -2,168 +2,211 @@
 <html lang="es">
 
 <head>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cronograma Maestro - TM01 Troncal Magdalena</title>
+  <title>Cronograma Construcción - TM01 Troncal Magdalena</title>
 
-  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+  <!-- Librerías -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/tm01-design-system.css">
-
   <style>
-    .gantt-container {
+    /* Personalización Gantt compatible con Design System */
+    .gantt-wrapper {
       display: flex;
+      align-items: center;
       width: 100%;
-      height: 24px;
+      height: 28px;
       background: var(--bg-hover);
-      border-radius: 4px;
+      border-radius: var(--radius-md);
       overflow: hidden;
-      margin-top: 4px;
-    }
-
-    .gantt-spacer {
-      flex-grow: 0;
-      flex-shrink: 0;
+      position: relative;
     }
 
     .gantt-bar {
-      flex-grow: 1;
+      height: 100%;
       background: var(--tm01-accent);
-      border-radius: 4px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.7em;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
       min-width: 4px;
     }
 
-    .gantt-bar.milestone {
+    .gantt-milestone {
+      width: 16px;
+      height: 16px;
       background: var(--warning);
-      width: 12px;
-      flex-grow: 0;
       border-radius: 50%;
-      margin-left: -6px;
-      /* center on date */
+      border: 2px solid white;
+      box-shadow: var(--shadow-sm);
+      margin-left: -8px;
+      /* Center */
+      z-index: 2;
     }
 
-    .filters-grid {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-size: 0.75em;
+      font-weight: 700;
+      background: var(--bg-hover);
+      color: var(--text-sub);
     }
 
-    .filters-grid select,
-    .filters-grid input {
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      min-width: 200px;
+    .status-pill.construction {
+      background: var(--info-bg);
+      color: var(--info);
+    }
+
+    .status-pill.pre {
+      background: var(--warning-bg);
+      color: var(--warning);
+    }
+
+    .status-pill.transversal {
+      background: var(--success-bg);
+      color: var(--success);
     }
   </style>
 </head>
 
 <body>
+
   <!-- Navbar -->
   <nav class="tm01-navbar">
     <div class="tm01-brand">
-      📅 Cronograma Maestro <span class="tm01-status-badge">TM01</span>
+      <span style="margin-right: 8px;">📅</span>
+      Cronograma Maestro
+      <span class="tm01-status-badge" style="margin-left: 10px;">Interventoría Conciliada</span>
     </div>
-    <div style="display:flex; gap:10px;">
-      <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Menú</a>
-      <button class="tm01-btn" onclick="window.print()">🖨️ Imprimir</button>
-      <button class="tm01-btn tm01-btn-success" onclick="exportarExcel()">📊 Excel</button>
+    <div style="display: flex; gap: 10px;">
+      <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Volver al Menú</a>
+      <button class="tm01-btn tm01-btn-primary" onclick="exportarExcel()">📊 Exportar Excel</button>
     </div>
   </nav>
 
+  <!-- Main Content -->
   <div class="tm01-container" style="padding-top: var(--space-xl);">
 
-    <!-- Metrics -->
-    <div class="tm01-grid-4" style="margin-bottom: var(--space-lg);">
+    <!-- Header -->
+    <div style="margin-bottom: var(--space-lg); display: flex; justify-content: space-between; align-items: end;">
+      <div>
+        <h1 style="color: var(--tm01-primary); margin-bottom: 5px;">Plan de Construcción Unidades Funcionales (UF)</h1>
+        <p style="color: var(--text-sub);">Estimación basada en fechas contractuales oficiales (Fuente: Tabla Maestra
+          UF)</p>
+      </div>
+      <div>
+        <button class="tm01-btn" onclick="window.print()">🖨️ Informe PDF</button>
+      </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="tm01-grid-4" style="margin-bottom: var(--space-xl);">
       <div class="tm01-stat">
         <div class="tm01-stat-value" id="mDuracion">-</div>
-        <div class="tm01-stat-label">Duración (meses)</div>
+        <div class="tm01-stat-label">Duración Total (Meses)</div>
       </div>
       <div class="tm01-stat">
-        <div class="tm01-stat-value" id="mHitos">-</div>
-        <div class="tm01-stat-label">Hitos Críticos</div>
+        <div class="tm01-stat-value" id="mUFs">-</div>
+        <div class="tm01-stat-label">Unidades Funcionales</div>
       </div>
       <div class="tm01-stat">
-        <div class="tm01-stat-value" id="mFases">-</div>
-        <div class="tm01-stat-label">Fases Activas</div>
+        <div class="tm01-stat-value" id="mFinProyecto" style="font-size: 1.2rem; color: var(--tm01-primary);">-</div>
+        <div class="tm01-stat-label">Fecha Fin Proyecto</div>
       </div>
       <div class="tm01-stat">
-        <div class="tm01-stat-value" id="mInicioFin" style="font-size: 1.1rem;">-</div>
-        <div class="tm01-stat-label">Rango Global</div>
+        <div class="tm01-stat-value" id="mAvanceEstimado" style="color: var(--success);">0%</div>
+        <div class="tm01-stat-label">Avance Teórico (Hoy)</div>
       </div>
     </div>
 
     <!-- Filters -->
-    <div class="tm01-section">
-      <div class="tm01-section-header">🔍 Filtros de Visualización</div>
-      <div class="tm01-section-content">
-        <div class="filters-grid">
-          <select id="fFase" onchange="aplicarFiltros()">
-            <option value="">Todas las fases</option>
+    <div class="tm01-card" style="margin-bottom: var(--space-lg);">
+      <div style="display: flex; gap: var(--space-md); flex-wrap: wrap; align-items: end;">
+        <div style="flex: 1;">
+          <label style="display: block; margin-bottom: 5px; color: var(--text-sub); font-size: 0.9em;">Fase</label>
+          <select id="fFase" onchange="aplicarFiltros()" class="tm01-btn"
+            style="width: 100%; background: white; border-color: var(--border);">
+            <option value="">Todas las Fases</option>
           </select>
-          <select id="fSistema" onchange="aplicarFiltros()">
-            <option value="">Todos los sistemas</option>
-          </select>
-          <input id="fBuscar" placeholder="Buscar tarea..." oninput="aplicarFiltros()" />
+        </div>
+        <div style="flex: 2;">
+          <label style="display: block; margin-bottom: 5px; color: var(--text-sub); font-size: 0.9em;">Búsqueda</label>
+          <input id="fBuscar" placeholder="Buscar actividad..." oninput="aplicarFiltros()" class="tm01-btn"
+            style="width: 100%; background: white; border-color: var(--border); cursor: text;" />
         </div>
       </div>
     </div>
 
     <!-- Gantt Table -->
     <div class="tm01-section">
-      <div class="tm01-section-header">📊 Plan de Obra No Objetado (Hard Deck)</div>
-      <div class="tm01-section-content">
+      <div class="tm01-section-header">📊 Visualización Gantt</div>
+      <div class="tm01-section-content" style="padding: 0;">
         <div style="overflow-x: auto;">
           <table class="tm01-table" id="tabla">
             <thead>
               <tr>
-                <th>Fase</th>
-                <th>Actividad / Hito</th>
-                <th>Sistema</th>
-                <th>Inicio</th>
-                <th>Fin</th>
-                <th style="text-align: right;">Meses</th>
-                <th style="width: 300px;">Visualización (Gantt)</th>
+                <th style="width: 15%">Fase / Tipo</th>
+                <th style="width: 25%">Actividad (UF)</th>
+                <th style="width: 15%; text-align: center;">Fecha Fin</th>
+                <th style="width: 10%; text-align: center;">Plazo (Meses)</th>
+                <th style="width: 35%">Cronograma</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td colspan="7" style="padding: 20px; text-align:center;">Cargando Cronograma Master...</td>
+                <td colspan="5" style="text-align: center; padding: 20px; color: var(--text-muted);">Cargando
+                  Cronograma...</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted); display:flex; gap: 15px;">
-          <div style="display:flex; align-items:center; gap:5px;"><span
-              style="width:12px; height:12px; background:var(--tm01-accent); border-radius:3px;"></span> Actividad</div>
-          <div style="display:flex; align-items:center; gap:5px;"><span
-              style="width:12px; height:12px; background:var(--warning); border-radius:50%;"></span> Hito</div>
+        <!-- Legend -->
+        <div style="padding: 10px 20px; display: flex; gap: 20px; border-top: 1px solid var(--border);">
+          <div style="display: flex; align-items: center; gap: 5px; font-size: 0.85em; color: var(--text-sub);">
+            <span style="width: 12px; height: 12px; background: var(--tm01-accent); border-radius: 2px;"></span>
+            Ejecución
+          </div>
+          <div style="display: flex; align-items: center; gap: 5px; font-size: 0.85em; color: var(--text-sub);">
+            <span style="width: 12px; height: 12px; background: var(--warning); border-radius: 50%;"></span> Hito de
+            Entrega
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Footer -->
+    <div style="margin: var(--space-2xl) 0; color: var(--text-muted); font-size: 0.8em; text-align: center;">
+      <p><strong>TM01 Troncal Magdalena</strong> - Sistema de Gestión Contractual</p>
+      <p>Datos conciliados con Interventoría | Ref: Tablas Maestras</p>
+    </div>
+
   </div>
 
-  <script src="data/tm01_master_data.js?v=20260128"></script>
+  <!-- Scripts -->
+  <script src="data/tm01_master_data.js?v=20260130b"></script>
   <script>
     const MS_DAY = 86400000;
-
-    let allTasks = [];
-    let filtered = [];
+    let allTasks = [], filtered = [];
 
     function parseDate(s) {
       if (!s) return null;
-      // Handle YYYY-MM-DD
       const parts = s.split('-');
       return new Date(parts[0], parts[1] - 1, parts[2]);
     }
 
     function fmt(d) {
       if (!d) return '-';
-      return d.toLocaleDateString('es-CO', { year: '2-digit', month: 'short', day: 'numeric' });
+      return d.toLocaleDateString('es-CO', { year: 'numeric', month: 'short', day: 'numeric' });
     }
 
     function diffMonths(start, end) {
@@ -174,18 +217,15 @@
     function init() {
       if (!window.tm01MasterData) { setTimeout(init, 200); return; }
 
-      // Cargar desde Master Data (Source of Truth)
       const md = window.tm01MasterData.data;
+      // Filter only valid entries from master data cronograma
       allTasks = (md.cronograma || []).map(t => ({
         ...t,
         dInicio: parseDate(t.inicio),
         dFin: parseDate(t.fin)
       })).sort((a, b) => a.dInicio - b.dInicio);
 
-      if (allTasks.length === 0) {
-        // Fallback si no hay datos
-        console.warn("No cronograma in Master Data");
-      }
+      if (allTasks.length === 0) console.warn("No cronograma data!");
 
       poblarFiltros();
       aplicarFiltros();
@@ -193,27 +233,19 @@
 
     function poblarFiltros() {
       const fases = [...new Set(allTasks.map(t => t.fase))];
-      const sistemas = [...new Set(allTasks.map(t => t.sistema))];
-
       const selF = document.getElementById('fFase');
-      const selS = document.getElementById('fSistema');
-
+      selF.innerHTML = '<option value="">Todas las Fases</option>';
       fases.forEach(f => {
         if (f) { const o = document.createElement('option'); o.value = f; o.textContent = f; selF.appendChild(o); }
-      });
-      sistemas.forEach(s => {
-        if (s) { const o = document.createElement('option'); o.value = s; o.textContent = s; selS.appendChild(o); }
       });
     }
 
     function aplicarFiltros() {
       const fF = document.getElementById('fFase').value;
-      const fS = document.getElementById('fSistema').value;
       const q = document.getElementById('fBuscar').value.toLowerCase();
 
       filtered = allTasks.filter(t => {
         if (fF && t.fase !== fF) return false;
-        if (fS && t.sistema !== fS) return false;
         if (q && !t.nombre.toLowerCase().includes(q)) return false;
         return true;
       });
@@ -225,22 +257,32 @@
     function calculateMetrics() {
       if (filtered.length === 0) return;
 
-      const minDate = new Date(Math.min(...filtered.map(t => t.dInicio).filter(d => d)));
-      const maxDate = new Date(Math.max(...filtered.map(t => t.dFin).filter(d => d)));
+      const dates = filtered.map(t => t.dInicio).concat(filtered.map(t => t.dFin)).filter(d => d);
+      const minDate = new Date(Math.min(...dates));
+      const maxDate = new Date(Math.max(...dates));
 
       document.getElementById('mDuracion').textContent = diffMonths(minDate, maxDate);
-      document.getElementById('mHitos').textContent = filtered.filter(t => t.hito).length;
-      document.getElementById('mFases').textContent = [...new Set(filtered.map(t => t.fase))].size;
-      document.getElementById('mInicioFin').innerText = `${fmt(minDate)} \n→ ${fmt(maxDate)}`;
+      document.getElementById('mUFs').textContent = filtered.filter(t => t.nombre.startsWith('UF')).length;
+      document.getElementById('mFinProyecto').textContent = fmt(maxDate);
 
+      // Avance Teorico Simple (Tiempo transcurrido vs total)
+      const hoy = new Date();
+      const totalTime = maxDate - minDate;
+      const elapsedTime = hoy - minDate;
+      let avance = 0;
+      if (elapsedTime > 0 && totalTime > 0) {
+        avance = Math.min(100, Math.max(0, (elapsedTime / totalTime) * 100)).toFixed(1);
+      }
+      document.getElementById('mAvanceEstimado').textContent = `${avance}%`;
+
+      // Globals for Gantt
       window._minGlobal = minDate;
-      window._maxGlobal = maxDate;
-      window._spanGlobal = maxDate - minDate;
+      window._spanGlobal = totalTime;
     }
 
     function renderTable() {
       const tb = document.querySelector('#tabla tbody');
-      if (filtered.length === 0) { tb.innerHTML = '<tr><td colspan="7">Sin resultados</td></tr>'; return; }
+      if (filtered.length === 0) { tb.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:20px;">Sin resultados</td></tr>'; return; }
 
       const minT = window._minGlobal ? window._minGlobal.getTime() : 0;
       const spanT = window._spanGlobal || 1;
@@ -249,30 +291,50 @@
         const ini = t.dInicio ? t.dInicio.getTime() : minT;
         const fin = t.dFin ? t.dFin.getTime() : ini;
 
+        // Gantt Calculation
         const offsetPct = ((ini - minT) / spanT) * 100;
-        const widthPct = Math.max(((fin - ini) / spanT) * 100, 1); // Min 1% width
+        let widthPct = Math.max(((fin - ini) / spanT) * 100, 0.5);
 
-        let barHtml = '';
+        let vizHtml;
         if (t.hito) {
-          barHtml = `<div class="gantt-container" style="background:transparent;"><div style="width:${offsetPct}%"></div><div class="gantt-bar milestone"></div></div>`;
+          // Milestone
+          vizHtml = `<div class="gantt-wrapper" style="background: transparent;">
+                        <div style="width: ${offsetPct}%;"></div>
+                        <div class="gantt-milestone" title="Hito de Entrega: ${fmt(t.dFin)}"></div>
+                     </div>`;
         } else {
-          barHtml = `<div class="gantt-container"><div class="gantt-spacer" style="width:${offsetPct}%"></div><div class="gantt-bar" style="width:${widthPct}%"></div></div>`;
+          // Bar
+          vizHtml = `<div class="gantt-wrapper">
+                        <div style="width: ${offsetPct}%; flex-shrink: 0;"></div>
+                        <div class="gantt-bar" style="width: ${widthPct}%;" title="${fmt(t.dInicio)} - ${fmt(t.dFin)}"></div>
+                    </div>`;
         }
 
+        // Status Pill logic
+        let pillClass = 'construction';
+        if (t.fase.includes('0.')) pillClass = 'pre';
+        if (t.fase.includes('Fibra') || t.fase.includes('ITS')) pillClass = 'transversal';
+
         return `
-            <tr>
-                <td><span class="tm01-status-badge" style="background:#f1f5f9; color:#475569;">${t.fase}</span></td>
-                <td>
-                    <strong>${t.nombre}</strong>
-                    ${t.nota ? `<br><small style="color:var(--text-muted)">${t.nota}</small>` : ''}
-                </td>
-                <td><b>${t.sistema || '-'}</b></td>
-                <td style="font-size:0.85rem;">${fmt(t.dInicio)}</td>
-                <td style="font-size:0.85rem;">${fmt(t.dFin)}</td>
-                <td style="text-align:right;">${t.hito ? 'HITO' : diffMonths(t.dInicio, t.dFin)}</td>
-                <td>${barHtml}</td>
-            </tr>
-            `;
+                    <tr>
+                        <td style="vertical-align: middle;">
+                            <span class="status-pill ${pillClass}">${t.fase}</span>
+                        </td>
+                        <td style="vertical-align: middle;">
+                            <div style="font-weight: 600; color: var(--text-main);">${t.nombre}</div>
+                            ${t.nota ? `<div style="font-size: 0.8em; color: var(--text-muted); margin-top: 2px;">${t.nota}</div>` : ''}
+                        </td>
+                        <td style="text-align: center; vertical-align: middle; font-family: monospace;">
+                            ${fmt(t.dFin)}
+                        </td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            ${t.hito ? '<span style="color:var(--warning); font-weight:bold; font-size:0.8em;">🏁 HITO</span>' : diffMonths(t.dInicio, t.dFin)}
+                        </td>
+                        <td style="vertical-align: middle; padding: 4px 10px;">
+                            ${vizHtml}
+                        </td>
+                    </tr>
+                `;
       }).join('');
     }
 
@@ -280,15 +342,15 @@
       const rows = filtered.map(t => ({
         Fase: t.fase,
         Actividad: t.nombre,
-        Sistema: t.sistema,
         Inicio: fmt(t.dInicio),
         Fin: fmt(t.dFin),
-        Notas: t.nota || ''
+        Duracion_Meses: diffMonths(t.dInicio, t.dFin),
+        Nota: t.nota || ''
       }));
       const ws = XLSX.utils.json_to_sheet(rows);
       const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, "Cronograma");
-      XLSX.writeFile(wb, "Cronograma_TM01_HardDeck.xlsx");
+      XLSX.utils.book_append_sheet(wb, ws, "Cronograma_Conciliado");
+      XLSX.writeFile(wb, "Cronograma_TM01_Conciliado.xlsx");
     }
 
     window.addEventListener('DOMContentLoaded', init);

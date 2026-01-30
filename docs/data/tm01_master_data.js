@@ -273,15 +273,32 @@ class TM01MasterData {
         this.data.layout = this.generateLayoutData();
 
         // Datos Cronograma (Plan de Obra No Objetado - Hard Deck)
+        // Datos Cronograma (Plan de Obra No Objetado - Hard Deck)
+        // Fuente: Imagen contractual "FECHA FIN CORRECTA" (Conciliadas con Interventoría)
         this.data.cronograma = [
-            { fase: '0. Preparación', nombre: 'Acta de Inicio', sistema: 'PMO', inicio: '2024-11-26', fin: '2024-11-26', hito: true },
-            { fase: '1. Ingeniería', nombre: 'Ingeniería de Detalle (T05) Validada', sistema: 'PMO', inicio: '2024-12-01', fin: '2025-06-30', hito: false },
-            { fase: '2. Obra Civil', nombre: 'Obra Civil Peajes (Zambito/Aguas Negras)', sistema: 'PEAJES', inicio: '2027-03-01', fin: '2027-10-30', hito: false },
-            { fase: '2. ITS', nombre: 'Suministro e Instalación ITS (General)', sistema: 'ITS', inicio: '2028-02-01', fin: '2028-10-31', hito: false },
+            { fase: '0. Pre-Construcción', nombre: 'UF 0 (Mantenimento y Operación Inicial)', sistema: 'UF', inicio: '2024-11-26', fin: '2028-10-26', hito: true, nota: 'Fecha Fin: 26/10/2028' },
+            { fase: '1. Construcción', nombre: 'UF 1.1 (Variante El Trique)', sistema: 'UF', inicio: '2024-11-26', fin: '2026-10-26', hito: false, nota: 'Fecha Fin: 26/10/2026' },
+            { fase: '1. Construcción', nombre: 'UF 1.2 (Variante Dos y Medio)', sistema: 'UF', inicio: '2024-11-26', fin: '2026-10-26', hito: false, nota: 'Fecha Fin: 26/10/2026' },
+            { fase: '1. Construcción', nombre: 'UF 1 (Total)', sistema: 'UF', inicio: '2024-11-26', fin: '2026-10-26', hito: true, nota: 'Entrega Total UF1' },
+            { fase: '1. Construcción', nombre: 'UF 2.1 (Tramo 1)', sistema: 'UF', inicio: '2024-11-26', fin: '2027-06-27', hito: false, nota: 'Fecha Fin: 27/06/2027' },
+            { fase: '1. Construcción', nombre: 'UF 2.2 (Tramo 2)', sistema: 'UF', inicio: '2024-11-26', fin: '2027-06-27', hito: false, nota: 'Fecha Fin: 27/06/2027' },
+            { fase: '1. Construcción', nombre: 'UF 2.3 (Tramo 3)', sistema: 'UF', inicio: '2024-11-26', fin: '2027-06-27', hito: false, nota: 'Fecha Fin: 27/06/2027' },
+            { fase: '1. Construcción', nombre: 'UF 2 (Total)', sistema: 'UF', inicio: '2024-11-26', fin: '2027-06-27', hito: true, nota: 'Entrega Total UF2' },
+            { fase: '1. Construcción', nombre: 'UF 3', sistema: 'UF', inicio: '2024-11-26', fin: '2028-01-26', hito: false, nota: 'Fecha Fin: 26/01/2028' },
+            { fase: '1. Construcción', nombre: 'UF 4', sistema: 'UF', inicio: '2024-11-26', fin: '2028-05-27', hito: false, nota: 'Fecha Fin: 27/05/2028' },
+            { fase: '1. Construcción', nombre: 'UF 5 (Terminación Etapa Construcción)', sistema: 'UF', inicio: '2024-11-26', fin: '2028-10-26', hito: true, nota: 'Fecha Fin: 26/10/2028' },
+            { fase: '1. Construcción', nombre: 'UF 6', sistema: 'UF', inicio: '2024-11-26', fin: '2026-08-26', hito: false, nota: 'Fecha Fin: 26/08/2026' },
+            { fase: '1. Construcción', nombre: 'UF 7', sistema: 'UF', inicio: '2024-11-26', fin: '2027-06-27', hito: false, nota: 'Fecha Fin: 27/06/2027' },
+            { fase: '1. Construcción', nombre: 'UF 8', sistema: 'UF', inicio: '2024-11-26', fin: '2026-11-26', hito: false, nota: 'Fecha Fin: 26/11/2026' },
+            { fase: '1. Construcción', nombre: 'UF 9', sistema: 'UF', inicio: '2024-11-26', fin: '2027-08-26', hito: false, nota: 'Fecha Fin: 26/08/2027' },
+            { fase: '1. Construcción', nombre: 'UF 10', sistema: 'UF', inicio: '2024-11-26', fin: '2027-11-26', hito: false, nota: 'Fecha Fin: 26/11/2027' },
+            { fase: '1. Construcción', nombre: 'UF 11', sistema: 'UF', inicio: '2024-11-26', fin: '2028-10-26', hito: false, nota: 'Fecha Fin: 26/10/2028' },
+            { fase: '1. Construcción', nombre: 'UF 12', sistema: 'UF', inicio: '2024-11-26', fin: '2027-07-29', hito: false, nota: 'Fecha Fin: 29/07/2027' },
+            { fase: '1. Construcción', nombre: 'UF 13', sistema: 'UF', inicio: '2024-11-26', fin: '2028-01-27', hito: false, nota: 'Fecha Fin: 27/01/2028' },
+
+            // Hitos Transversales
             { fase: '2. ITS', nombre: 'Entrega Temprana SOS (Gradual)', sistema: 'SOS', inicio: '2025-06-01', fin: '2028-10-01', hito: false, nota: 'Operación paralela a obra' },
-            { fase: '3. Fibra', nombre: 'Tendido FO Backbone 293km', sistema: 'TELECOM', inicio: '2025-07-15', fin: '2028-08-31', hito: false },
-            { fase: '4. Hitos', nombre: 'UF 5 (Terminación Etapa Construcción)', sistema: 'PMO', inicio: '2028-10-30', fin: '2028-10-30', hito: true },
-            { fase: '4. Hitos', nombre: 'UF 0 (Cumplimiento Indicadores Mes 36)', sistema: 'PMO', inicio: '2027-11-26', fin: '2027-11-26', hito: true }
+            { fase: '3. Fibra', nombre: 'Tendido FO Backbone 293km', sistema: 'TELECOM', inicio: '2025-07-15', fin: '2028-08-31', hito: false }
         ];
 
         // Datos Contractuales
