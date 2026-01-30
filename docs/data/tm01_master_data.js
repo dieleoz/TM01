@@ -105,13 +105,16 @@ class TM01MasterData {
             { id: '5.1.18', nivel: 3, item: "5.1.18", descripcion: "Pruebas y certificación", sistema: "GALIBOS", cantidad: "8", unidad: "UND", tipo: "item", criterio: "Validación funcional", vu: "420", vuCOP: "1,848,000", total: "3,360", totalCOP: "14,784,000" },
             { id: '5.1.19', nivel: 3, item: "5.1.19", descripcion: "Documentación técnica", sistema: "GALIBOS", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Manuales y planos", vu: "1,500", vuCOP: "6,600,000", total: "1,500", totalCOP: "6,600,000" },
 
-            // CAPÃTULO 6: SISTEMA METEO
+            // CAPÍTULO 6: SISTEMA METEO (Smart CAPEX v2 - Meteoagro)
             { id: '6', nivel: 1, item: "6", descripcion: "SISTEMA METEO", sistema: "METEO", tipo: "capitulo" },
-            { id: '6.1', nivel: 2, item: "6.1", descripcion: "SUMINISTROS METEO", sistema: "METEO", tipo: "subcapitulo" },
-            { id: '6.1.1', nivel: 3, item: "6.1.1", descripcion: "Estación Compacta (Davis Pro2 - Virtual Visibility)", sistema: "METEO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Dictamen Jurídico 2026 (API Strategy)", vu: "6250", total: "12500", totalCOP: "55000000" },
-            { id: '6.1.2', nivel: 3, item: "6.1.2", descripcion: "Integración Software / API de Visibilidad", sistema: "METEO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Sustitución Sensor Físico", vu: "4000", total: "4000", totalCOP: "17600000" },
+            { id: '6.1', nivel: 2, item: "6.1", descripcion: "SUMINISTROS METEO (DAVIS PRO2)", sistema: "METEO", tipo: "subcapitulo" },
+            { id: '6.1.1', nivel: 3, item: "6.1.1", descripcion: "Estación Davis Vantage Pro2 Plus + WeatherLink Live + Trípode Universal", sistema: "METEO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Cotización Meteoagro #1357 - Wireless/Surface", vu: "3415.64", vuCOP: "15,028,800", total: "6831.27", totalCOP: "30,057,600" },
 
-            // CAPÃTULO 7: SISTEMA PEAJES
+            { id: '6.2', nivel: 2, item: "6.2", descripcion: "SERVICIOS E INSTALACIÓN (SMART CAPEX)", sistema: "METEO", tipo: "subcapitulo" },
+            { id: '6.2.1', nivel: 3, item: "6.2.1", descripcion: "Configuración y Montaje (10% Sum. Benchmark)", sistema: "METEO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación Wireless sobre Superficie", vu: "1000", vuCOP: "4,400,000", total: "1000", totalCOP: "4,400,000" },
+            { id: '6.2.2', nivel: 3, item: "6.2.2", descripcion: "Integración SCADA / CCO", sistema: "METEO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Costo 0 - Incluido en Licencia SCADA del CCO", vu: "0", total: "0", totalCOP: "0" },
+
+            // CAPÍTULO 7: SISTEMA PEAJES
             { id: '7', nivel: 1, item: "7", descripcion: "SISTEMA PEAJES", sistema: "PEAJES", tipo: "capitulo" },
             { id: '7.1', nivel: 2, item: "7.1", descripcion: "EQUIPAMIENTO DE RECAUDO (FTS)", sistema: "PEAJES", tipo: "subcapitulo" },
             { id: '7.1.1', nivel: 3, item: "7.1.1", descripcion: "Lectores TAG RFID", sistema: "PEAJES", cantidad: "14", unidad: "UND", tipo: "item", criterio: "IP/REV", vu: "8000", total: "112000", totalCOP: "448000000" },
