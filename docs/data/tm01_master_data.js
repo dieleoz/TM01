@@ -23,10 +23,10 @@ class TM01MasterData {
             // CAPÃTULO 1: SISTEMA SOS
             { id: '1', nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo" },
             { id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo" },
-            { id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Suministro Equipos SOS Cielo Abierto (Intercom, Protecciones, VPN)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1004.94", vuCOP: "4,422,956", total: "88435.24", totalCOP: "389,115,056" },
-            { id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Suministro Estructuras Metálicas SOS (Poste, Gabinete, Barandas)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "3339", vuCOP: "14,692,348", total: "293,851", totalCOP: "1,292,926,654" },
-            { id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Suministro Arreglo Fotovoltaico SOS (Paneles, Baterías, Cargador)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1592", vuCOP: "7,006,832", total: "140,137", totalCOP: "616,601,265" },
-            { id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Instalación Sistema SOS Cielo Abierto (Montaje, Cableado, Hincado)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "OBRA", vu: "723", vuCOP: "3,181,182", total: "63,624", totalCOP: "279,944,070" },
+            { id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Suministro Equipos SOS Cielo Abierto (Intercom, Protecciones, VPN)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1004.94", vuCOP: "4,422,956", total: "98484.12", totalCOP: "433,450,128" },
+            { id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Suministro Estructuras Metálicas SOS (Poste, Gabinete, Barandas)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "3339", vuCOP: "14,692,348", total: "327,222", totalCOP: "1,439,776,800" },
+            { id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Suministro Arreglo Fotovoltaico SOS (Paneles, Baterías, Cargador)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1592", vuCOP: "7,006,832", total: "156,016", totalCOP: "686,469,536" },
+            { id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Instalación Sistema SOS Cielo Abierto (Montaje, Cableado, Hincado)", sistema: "SOS", cantidad: "98", unidad: "UND", tipo: "item", tipoPresupuestal: "OBRA", vu: "723", vuCOP: "3,181,182", total: "70,854", totalCOP: "311,757,600" },
             { id: '1.1.5', nivel: 3, item: "1.1.5", descripcion: "Suministro Equipos CCO (Servidores SIP, Estación Maestra)", sistema: "SOS", cantidad: "1", unidad: "GLB", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "14592", vuCOP: "64,206,380", total: "14,592", totalCOP: "64,206,380" },
 
             // CAPÍTULO 2: SISTEMA ETD & RADARES (Smart CAPEX Dahua)
@@ -258,13 +258,6 @@ class TM01MasterData {
             { id: '11.1.2', nivel: 3, item: "11.1.2", descripcion: "Repetidoras / Gap-fillers Corredor", sistema: "RADIO", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Eliminado DT-002", vu: "25000", total: "0", totalCOP: "0" },
             { id: '11.1.3', nivel: 3, item: "11.1.3", descripcion: "Trámites Licencias y Puesta en Marcha", sistema: "RADIO", cantidad: "0", unidad: "GLB", tipo: "item", criterio: "Eliminado DT-002", vu: "30000", total: "0", totalCOP: "0" },
 
-            // CAPÍTULO 12: ESTACIONES METEOROLÓGICAS (DT-TM01-METEO-001 v2.0)
-            { id: '12', nivel: 1, item: "12", descripcion: "SISTEMA METEOROLÓGICO", sistema: "METEO", tipo: "capitulo" },
-            { id: '12.1', nivel: 2, item: "12.1", descripcion: "ESTACIONES FÍSICAS", sistema: "METEO", tipo: "subcapitulo" },
-            { id: '12.1.1', nivel: 3, item: "12.1.1", descripcion: "Estación Meteorológica Davis Pro2", sistema: "METEO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Peajes Zambito y Aguas Negras", vu: "50,000", vuCOP: "220,000,000", total: "100,000", totalCOP: "440,000,000" },
-            { id: '12.1.2', nivel: 3, item: "12.1.2", descripcion: "Obra Civil Cimentación", sistema: "METEO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Cimentación poste", vu: "1,000", vuCOP: "4,400,000", total: "2,000", totalCOP: "8,800,000" },
-            { id: '12.1.3', nivel: 3, item: "12.1.3", descripcion: "Instalación y Configuración", sistema: "METEO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Servicios instalación", vu: "1,000", vuCOP: "4,400,000", total: "2,000", totalCOP: "8,800,000" },
-            { id: '12.1.4', nivel: 3, item: "12.1.4", descripcion: "Módulo Software Integración CCO", sistema: "METEO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Integración API (DT v2.0)", vu: "10,000", vuCOP: "44,000,000", total: "10,000", totalCOP: "44,000,000" },
 
         ];
 

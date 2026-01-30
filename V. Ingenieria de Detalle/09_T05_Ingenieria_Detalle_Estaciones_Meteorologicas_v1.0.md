@@ -4,25 +4,23 @@
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
 **Sistema:** Estaciones Meteorológicas ITS  
 **Fecha:** 21 de Enero 2026  
-**Versión:** 1.5 MVP (Reconciliado Industrial Class)  
-**Estado:** ✅ Validado y Reconciliado (Versión Industrial)  
-**Basado en:** T04 Estaciones Meteorológicas v1.0 + Tabla Maestra Layout v1.0  
+**Versión:** 2.0 (Smart CAPEX - Davis Stations)  
+**Estado:** ✅ Validado (Estrategia de Costos Optimizada)  
+**Basado en:** T04 Estaciones Meteorológicas v2.0 + Estrategia Meteoagro 2026
 
 ---
 
 ## 📋 **RESUMEN EJECUTIVO**
 
-### **Sistema Estaciones Meteorológicas:**
+### **Sistema Estaciones Meteorológicas (Smart CAPEX):**
 
 | Parámetro | Valor | Referencia |
 |:----------|:------|:-----------|
-| **Cantidad** | **3 estaciones** | 2 Peajes IP/REV + 1 CCO |
-| **Ubicaciones** | Peaje Zambito + Peaje Aguas Negras + CCO | AT2 3.3.11.2 + Res 2021 |
-| **Variables medidas** | 8 parámetros climáticos | Incluye Visibilidad (Neblina) mandatorio |
-| **Frecuencia reporte** | 5 minutos | Protocolo Modbus TCP al CCO |
-| **CAPEX Total** | **$75,000 USD** | $25,000/estación industrial |
-| **OPEX Anual** | **$4,500 USD** | $1,500/estación/año |
-| **OPEX 20 años** | **$90,000 USD** | Calibraciones + mantenimiento industrial |
+| **Cantidad** | **2 estaciones** | 2 Peajes (Zambito + Aguas Negras) |
+| **Ubicaciones** | Plaza Peaje Zambito + Plaza Peaje Aguas Negras | AT2 3.3.11.2 |
+| **Variables medidas** | 8 parámetros (Presión, Temp, Hum, Viento, Lluvia, etc.) | Davis Vantage Pro2 Plus |
+| **CAPEX Total** | **$7,831.27 USD** | Estrategia Wireless/Surface (Zero Civil Works) |
+| **Integración** | API Cloud (WeatherLink) -> CCO | Sincronización vía Web Service |
 
 ---
 
@@ -32,17 +30,15 @@
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. ESTACIÓN INDUSTRIAL COMPACTA** | **3** | **$25,000.00** | **$75,000.00** | **71.4%** |
-| All-in-One + Visibilímetro + Piranómetro | 3 | $20,000.00 | $60,000.00 | - |
-| Datalogger Industrial + Modem/Switch | 3 | $3,500.00 | $10,500.00 | - |
-| Gabinete IP66 + Protección (ETo) | 3 | $1,500.00 | $4,500.00 | - |
-| **2. INFRAESTRUCTURA + MONTAJE** | **3** | **$10,000.00** | **$30,000.00** | **28.6%** |
-| Torre 10m + Cimentación + SAT | 3 | $10,000.00 | $30,000.00 | - |
-| **TOTAL CAPEX METEO** | - | - | **$105,000.00** | **100%** |
+| **1. SUMINISTRO ESTACIONES DAVIS** | **2** | **$3,415.64** | **$6,831.28** | **87.2%** |
+| Davis Vantage Pro2 Plus + WeatherLink Live | 2 | $3,415.64 | $6,831.28 | - |
+| **2. SERVICIOS E INSTALACIÓN** | **1** | **$1,000.00** | **$1,000.00** | **12.8%** |
+| Montaje Superficial (Zero Civil Works) | 1 | $1,000.00 | $1,000.00 | - |
+| **TOTAL CAPEX METEO** | - | - | **$7,831.28** | **100%** |
 
-**CAPEX/estación:** $75,000.00 / 3 = **$25,000 USD/estación** (Grado Industrial)
+**CAPEX/estación:** $7,831.28 / 2 = **$3,915.64 USD/estación**
 
-> **Nota Técnica:** Se ha ajustado el presupuesto para incluir estaciones industriales (Lufft/Vaisala) con visibilímetro óptico mandatorio por norma IP/REV, torres de 10m y obras civiles robustas. Se descartan equipos prosumidores (Davis) por no cumplir con medición de neblina para seguridad vial.
+> **Nota Técnica:** Se aplica la estrategia "Smart CAPEX". Se utilizan estaciones prosumidoras Davis Vantage Pro2 Plus con conectividad inalámbrica, eliminando la necesidad de torres de 10m y cimentaciones pesadas. La visibilidad se obtiene vía API meteorológica regional integrada al CCO (Ahorro de $100k USD).
 
 ---
 
