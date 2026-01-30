@@ -1,8 +1,18 @@
 window.TECHNICAL_SPECS_MAP = {
+  "RADAR": "specs/T04_RADAR.html",
+  "PEAJE": "specs/T04_PEAJE.html",
+  "SOS": "specs/T04_SOS.html",
+  "METEO": "specs/T04_METEO.html",
+  "GALIBO": "specs/T04_GALIBO.html",
   "_metadata": {
     "agentVersion": "Phase 7.0",
-    "generatedAt": "2026-01-30 09:12:23"
+    "generatedAt": "2026-01-30 10:08:33"
   },
+  "CCO": "specs/T04_CCO.html",
+  "TELECOM": "specs/T04_TELECOM.html",
   "PMV": "specs/T04_PMV.html",
-  "CCTV": "specs/T04_CCTV.html"
+  "ILUMINACION": "specs/T04_ILUMINACION.html",
+  "ENERGIA": "specs/T04_ENERGIA.html",
+  "CCTV": "specs/T04_CCTV.html",
+  "WIM": "specs/T04_WIM.html"
 };

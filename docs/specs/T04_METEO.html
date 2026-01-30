@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T04 Spec</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Headers */
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
+        /* First column styling for parameters */
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
+        /* Badge */
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
+        /* Text */
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - ESTACIONES METEOROLÓGICAS</h1></div>
+<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+<br>
+<strong>Fecha:</strong> 20/01/2026
+<strong>Sistema:</strong> Estaciones Meteorológicas Industriales
+<strong>Responsable:</strong> Ing. Ambiental / Ing. ITS
+<strong>Versión:</strong> 2.0
+<br>
+<h2>📋 **CONTROL DE CAMBIOS**</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Versión</td>
+<td>Fecha</td>
+<td>Cambios</td>
+<td>Autor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>1.0</td>
+<td>21/10/2025</td>
+<td>Creación inicial - 2 estaciones en peajes</td>
+<td>Ing. Ambiental</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>22/10/2025</td>
+<td>Revisión con información oficial: 3 estaciones (2 peajes + 1 CCO)</td>
+<td>Ing. Ambiental</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>20/01/2026</td>
+<td>RECONCILIACIÓN AUDIT .42: Cambio a Estaciones Industriales Compactas con Sensor de Visibilidad (Neblina) Obligatorio.</td>
+<td>Ing. ITS</td>
+</tr>
+<tr>
+<td><strong>2.1</strong></td>
+<td><strong>21/01/2026</strong></td>
+<td><strong>CRITICAL FIX (FORENSIC AUDIT):</strong> Rechazo explícito de sensor Davis 6450. Especificación mandatoria de Transmisómetro de Visibilidad Óptica para Alerta de Neblina (Manual 2024).</td>
+<td>Ing. ITS</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>1. IDENTIFICACIÓN</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Campo</td>
+<td>Valor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Sistema</strong></td>
+<td>Estaciones Meteorológicas de Grado Industrial</td>
+</tr>
+<tr>
+<td><strong>Cantidad</strong></td>
+<td><strong>4 Unidades</strong> (Ver detalle abajo)</td>
+</tr>
+<tr>
+<td><strong>CAPEX</strong></td>
+<td><strong>USD $140,000</strong> (Estimado Ajustado)</td>
+</tr>
+<tr>
+<td><strong>Función</strong></td>
+<td>Monitoreo climático y detección de neblina para seguridad vial</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>2. NORMATIVA</h2>
+<br>
+<h3>Nacional</h3>
+<li><strong>Apéndice Técnico 2 (§3.3.5.1):</strong> Obligación de equipos de monitoreo en peajes.</li>
+<li><strong>Resolución 20213040035125 (IP/REV):</strong> Requisitos técnicos de sensores (incluye neblina).</li>
+<li><strong>Manual de Señalización Vial 2024:</strong> Gestión de alertas por visibilidad (niebla).</li>
+<br>
+<h3>Internacional</h3>
+<li><strong>WMO (World Meteorological Organization):</strong> Guía de instrumentos No. 8.</li>
+<li><strong>NEMA 4X / IP66:</strong> Protección ambiental industrial.</li>
+<br>
+<br>
+<h2>3. ESPECIFICACIONES TÉCNICAS</h2>
+<br>
+<h3>3.1 Estación Industrial Compacta (All-in-One)</h3>
+*Modelo de Referencia: Lufft WS600, Vaisala WXT530 o equivalente industrial.*
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Industrial</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Variables Base</strong></td>
+<td>Temperatura, Humedad, Presión, Precipitación (Radar/Impacto), Viento</td>
+</tr>
+<tr>
+<td><strong>Variable Mandatoria</strong></td>
+<td><strong>Visibilidad Óptica (Neblina/Niebla)</strong> mediante sensor de dispersión frontal</td>
+</tr>
+<tr>
+<td><strong>Viento</strong></td>
+<td>Sensor ultrasónico (sin partes móviles) para 0-75 m/s</td>
+</tr>
+<tr>
+<td><strong>Precipitación</strong></td>
+<td>Sensor Doppler o balancín profesional (Resolución 0.01 mm)</td>
+</tr>
+<tr>
+<td><strong>Visibilidad</strong></td>
+<td>Rango 10m - 2000m (mínimo). <strong>Dato MOR (Meteorological Optical Range) en metros.</strong></td>
+</tr>
+<tr>
+<td><strong>Radiación Solar</strong></td>
+<td>Piranómetro (silicio o termopila) para cálculo de ETo (OBLIGATORIA AT2)</td>
+</tr>
+<tr>
+<td><strong>Interfaces</strong></td>
+<td><strong>RS-485 (Modbus RTU), Ethernet (TCP/IP), NTCIP</strong></td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td>Grado IP66 / Carcasa resistente a corrosión</td>
+</tr>
+<tr>
+<td><strong>MTBF</strong></td>
+<td>> 3 años</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>3.2 Diferenciación Técnica Crítica (Hard Deck)</h3>
+<br>
+> [!CAUTION]
+> <strong>RECHAZO DE SUBSTITUTE TÉCNICO (FORENSIC HARD DECK):</strong>
+> Se rechaza explícitamente el uso de estaciones tipo <strong>Davis Vantage Pro2 (o sensor 6450)</strong> propuesto en anexos anteriores. Este equipo es una estación agrometeorológica que mide radiación solar, NO Visibilidad Óptica (Neblina).
+> <strong>REQUISITO MANDATORIO:</strong> El sistema debe incluir un <strong>Sensor de Visibilidad Óptica (Transmisómetro o Dispersión Frontal)</strong> con rango 10m-2000m para activar las alertas de neblina exigidas por el Manual de Señalización Vial 2024 y la Resolución 20213040035125.
+<br>
+<h3>3.3 Integración con SCADA/CCO</h3>
+<li>✅ Protocolo abierto <strong>Modbus TCP</strong> nativo (sin gateways prosumidores).</li>
+<li>✅ Transmisión al SCADA cada 5 minutos (configuración auditada).</li>
+<li>✅ Campo <strong>VISIBILIDAD_METROS</strong> obligatorio en la trama JSON/API.</li>
+<li>✅ Almacenamiento histórico redundante en CCO.</li>
+<li>✅ Activación automática de mensajes en PMV ante niebla registrada (Señal SP-77).</li>
+<br>
+<br>
+<br>
+<h2>4. UBICACIONES</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ubicación</td>
+<td>PK</td>
+<td>Observación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Ruta 4510</strong></td>
+<td><strong>K83+250</strong> (OD Separador)</td>
+<td>Vía Principal</td>
+</tr>
+<tr>
+<td><strong>Peaje Zambito (Ref)</strong></td>
+<td><strong>K9+200</strong> (Ruta 4511 Izq)</td>
+<td>Cercano a Peaje</td>
+</tr>
+<tr>
+<td><strong>Peaje Aguas Negras (Ref)</strong></td>
+<td><strong>K81+800</strong> (Ruta 4511 Sep)</td>
+<td>Cercano a Peaje</td>
+</tr>
+<tr>
+<td><strong>Báscula / CCO (Ref)</strong></td>
+<td><strong>K4+235</strong> (Ruta 4513 Izq)</td>
+<td>Acceso CCO/Báscula</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>5. PRESUPUESTO RECONCILIADO (AUDIT .42)</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ítem</td>
+<td>Cantidad</td>
+<td>Precio Unit. (USD)</td>
+<td>Total (USD)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>Estación Industrial All-in-One + Visibilímetro + ETo</td>
+<td>4</td>
+<td>$25,000</td>
+<td>$100,000</td>
+</tr>
+<tr>
+<td>Torre meteorológica 10m + Obras Civiles</td>
+<td>4</td>
+<td>$6,000</td>
+<td>$24,000</td>
+</tr>
+<tr>
+<td>Integración CCO, Licencias y Comisionamiento</td>
+<td>4</td>
+<td>$4,000</td>
+<td>$16,000</td>
+</tr>
+<tr>
+<td><strong>TOTAL CAPEX METEO</strong></td>
+<td>-</td>
+<td>-</td>
+<td><strong>$140,000</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<strong>✅ RECONCILIADO BAJO METODOLOGÍA AUDIT .42</strong>
+<li>Cumplimiento 100% de la Resolución IP/REV (Neblina obligatorio).</li>
+<li>Blindaje técnico ante Interventoría mediante equipos de grado industrial.</li>
+<li>Integración nativa Modbus al SCADA del CCO.</li>
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automáticamente por Sistema de Gestión TM01. <br>
+            Fase 7 - Ingeniería de Detalle.
+        </div>
+    </div>
+</body>
+</html>

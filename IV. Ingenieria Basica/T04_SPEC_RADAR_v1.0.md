@@ -31,12 +31,31 @@
 
 | Campo | Valor |
 |:------|:------|
-| **Nombre del sistema** | ETD (Estaciones de Toma de Datos) + Radares (SAST/Pedagógicos) |
+| **Nombre del sistema** | ETD (Radares de Conteo y Clasificación) |
 | **Categoría** | ITS (Intelligent Transportation Systems) - Control de Tráfico |
-| **Código interno** | T04-ETD-RAD-002-v2.2 |
-| **Cantidad total** | **18 unidades** (14 ETD + 2 SAST + 2 Pedagógicos) |
-| **CAPEX estimado** | **USD $1,700,000** |
+| **Código interno** | T04-ETD-001-v2.3 |
+| **Cantidad total** | **12 unidades** (Según Ingeniería de Tránsito) |
+| **CAPEX estimado** | **USD $1,200,000** (Estimado Ajustado) |
 | **Documentos base** | T01 v1.0 MVP, T03 v1.0, Validación v1.0, Layout v1.0 |
+
+---
+
+### 7.1 Ubicaciones Exactas (Tabla Maestra)
+
+| RUTA | UF | LADO | PK | Observación |
+| :--- | :--- | :--- | :--- | :--- |
+| **4510** | OD | IZQUIERDA | **K54+000** | |
+| **4510** | OD | DERECHA | **K54+000** | |
+| **4510** | OD | IZQUIERDA | **K116+200** | |
+| **4510** | OD | DERECHA | **K116+200** | |
+| **4511** | OD | DERECHA | **K37+400** | |
+| **4511** | 2 | IZQUIERDA | **K46+900** | |
+| **4511** | 5,1 | DERECHA | **K65+900** | |
+| **4511** | 4 | IZQUIERDA | **K69+300** | |
+| **4511** | 7 | IZQUIERDA | **K95+800** | |
+| **4511** | 11 | DERECHA | **K102+200** | |
+| **4511** | 12 | DERECHA | **K143+900** | |
+| **4511** | 11 | IZQUIERDA | **K143+900** | |
 
 ### 1.2 Distinción Funcional
 

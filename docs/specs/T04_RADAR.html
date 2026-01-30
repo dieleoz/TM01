@@ -1,0 +1,2634 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T04 Spec</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Headers */
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
+        /* First column styling for parameters */
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
+        /* Badge */
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
+        /* Text */
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - ETD Y RADARES (ESTACIONES DE TOMA DE DATOS)</h1></div>
+<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+<br>
+<strong>Fecha:</strong> 20/01/2026
+<strong>Sistema:</strong> ETD (Estaciones de Toma de Datos) + Radares Sancionatorios (Manual 2024)
+<strong>Responsable:</strong> Ing. ITS / Administrador Contractual EPC
+<strong>Versión:</strong> 1.5
+<strong>Referencia T01:</strong> T01_Ficha_Sistema_ITS_v1.2
+<strong>Referencia T03:</strong> T03_Arquitectura_Conceptual_ITS_v1.2
+<strong>Referencia Validación:</strong> 35_VALIDACION_CONTRACTUAL_ETD_RADARES_v2.0
+<strong>Referencia Layout:</strong> 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v2.0
+<br>
+<br>
+<h2>📋 **CONTROL DE CAMBIOS**</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Versión</td>
+<td>Fecha</td>
+<td>Cambios</td>
+<td>Autor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>1.0</td>
+<td>21/10/2025</td>
+<td>Creación inicial - Separación ETD vs Radares según función</td>
+<td>Adm. Contractual EPC</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>22/10/2025</td>
+<td>Revisión con información oficial: 16 equipos</td>
+<td>Adm. Contractual EPC</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>31/10/2025</td>
+<td>Corrección según validación contractual: 15 equipos</td>
+<td>Adm. Contractual EPC</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>22/10/2025</td>
+<td><strong>Alineación .42:</strong> 13 ETD + 2 SAST. Tecnología No Intrusiva (Radar/Doppler).</td>
+<td>Adm. Contractual EPC</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>20/01/2026</td>
+<td><strong>Inclusión Radares Pedagógicos:</strong> Adición de 2 Monitores de Velocidad (SI-27B).</td>
+<td>Adm. Contractual EPC</td>
+</tr>
+<tr>
+<td><strong>1.5</strong></td>
+<td><strong>20/01/2026</strong></td>
+<td><strong>Reconciliación Final:</strong> 18 unidades (13 ETD + 1 Spare + 2 SAST + 2 Pedagógicos) y $1.7M CAPEX.</td>
+<td><strong>Adm. Contractual EPC</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>1. IDENTIFICACIÓN Y ALCANCE</h2>
+<br>
+<h3>1.1 Identificación del Sistema</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Campo</td>
+<td>Valor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Nombre del sistema</strong></td>
+<td>ETD (Radares de Conteo y Clasificación)</td>
+</tr>
+<tr>
+<td><strong>Categoría</strong></td>
+<td>ITS (Intelligent Transportation Systems) - Control de Tráfico</td>
+</tr>
+<tr>
+<td><strong>Código interno</strong></td>
+<td>T04-ETD-001-v2.3</td>
+</tr>
+<tr>
+<td><strong>Cantidad total</strong></td>
+<td><strong>12 unidades</strong> (Según Ingeniería de Tránsito)</td>
+</tr>
+<tr>
+<td><strong>CAPEX estimado</strong></td>
+<td><strong>USD $1,200,000</strong> (Estimado Ajustado)</td>
+</tr>
+<tr>
+<td><strong>Documentos base</strong></td>
+<td>T01 v1.0 MVP, T03 v1.0, Validación v1.0, Layout v1.0</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h3>7.1 Ubicaciones Exactas (Tabla Maestra)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>RUTA</td>
+<td>UF</td>
+<td>LADO</td>
+<td>PK</td>
+<td>Observación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>4510</strong></td>
+<td>OD</td>
+<td>IZQUIERDA</td>
+<td><strong>K54+000</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4510</strong></td>
+<td>OD</td>
+<td>DERECHA</td>
+<td><strong>K54+000</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4510</strong></td>
+<td>OD</td>
+<td>IZQUIERDA</td>
+<td><strong>K116+200</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4510</strong></td>
+<td>OD</td>
+<td>DERECHA</td>
+<td><strong>K116+200</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>OD</td>
+<td>DERECHA</td>
+<td><strong>K37+400</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>2</td>
+<td>IZQUIERDA</td>
+<td><strong>K46+900</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>5,1</td>
+<td>DERECHA</td>
+<td><strong>K65+900</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>4</td>
+<td>IZQUIERDA</td>
+<td><strong>K69+300</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>7</td>
+<td>IZQUIERDA</td>
+<td><strong>K95+800</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>11</td>
+<td>DERECHA</td>
+<td><strong>K102+200</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>12</td>
+<td>DERECHA</td>
+<td><strong>K143+900</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4511</strong></td>
+<td>11</td>
+<td>IZQUIERDA</td>
+<td><strong>K143+900</strong></td>
+<td></td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>1.2 Distinción Funcional</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tipo</td>
+<td>Cantidad</td>
+<td>Función Principal</td>
+<td>Certificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>ETD (Monitoreo)</strong></td>
+<td>13</td>
+<td>Velocidad promedio por UF (AT4)</td>
+<td>ISO TC-204 / SICC</td>
+</tr>
+<tr>
+<td><strong>Radares (SAST)</strong></td>
+<td>2</td>
+<td>Detección infracciones (Sancionatorio)</td>
+<td>Res. 718/2018 + ONAC</td>
+</tr>
+<tr>
+<td><strong>Radares (Pedagógicos)</strong></td>
+<td>2</td>
+<td>Informativo al conductor (SI-27B)</td>
+<td>Preventivo / AT2</td>
+</tr>
+<tr>
+<td><strong>Spare (ETD)</strong></td>
+<td>1</td>
+<td>Repuesto / Unidad de prueba</td>
+<td>No operativa en línea</td>
+</tr>
+<tr>
+<td><strong>TOTAL PROYECTO</strong></td>
+<td><strong>18</strong></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+> <strong>Nota Crítica:</strong> El proyecto contempla <strong>17 equipos operativos</strong> y <strong>1 repuesto crítico</strong>, optimizando la inversión a $1,700,000 USD.
+<br>
+<h3>1.3 Alcance de las Especificaciones</h3>
+<br>
+<strong>Este documento especifica:</strong>
+<li>✅ Características técnicas mínimas de ETD y radares</li>
+<li>✅ Distinción entre equipos de monitoreo vs. sancionatorios</li>
+<li>✅ Normativa nacional (Res. 718/2018, Ley 1581/2012) e internacional</li>
+<li>✅ Criterios de aceptación (FAT/SAT)</li>
+<li>✅ Interoperabilidad con SIMIT (capacidad técnica, no obligación)</li>
+<li>✅ Ubicaciones exactas (referencia a layout georreferenciado)</li>
+<br>
+<strong>Este documento NO especifica:</strong>
+<li>❌ Ubicaciones definitivas de radares sancionatorios (requiere estudio de seguridad vial)</li>
+<li>❌ Procedimientos de autorización ante MinTransporte</li>
+<li>❌ Integración operativa con SIMIT (solo capacidad técnica)</li>
+<br>
+<br>
+<h2>2. MARCO NORMATIVO Y CONTRACTUAL</h2>
+<br>
+<h3>2.1 Referencias Contractuales</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Documento</td>
+<td>Sección</td>
+<td>Requisito Clave</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Apéndice Técnico 2</strong></td>
+<td>§3.3.4.5 "Sistemas de Monitoreo"</td>
+<td>Medición velocidad, flujo, detección infracciones</td>
+</tr>
+<tr>
+<td><strong>Apéndice Técnico 3</strong></td>
+<td>Cap. IV "Sistemas ITS"</td>
+<td>Especificaciones de sensores, precisión, comunicación</td>
+</tr>
+<tr>
+<td><strong>Apéndice Técnico 4</strong></td>
+<td>"Indicadores Nivel Servicio"</td>
+<td>Velocidad promedio por UF, disponibilidad ≥99%</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.2 Normativa Aplicable</h3>
+<br>
+#### Normativa Nacional (Radares Sancionatorios)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Norma</td>
+<td>Título</td>
+<td>Aplicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Resolución 718/2018</strong></td>
+<td>Criterios técnicos para instalación y operación de SAST</td>
+<td><strong>OBLIGATORIA</strong> para radares sancionatorios</td>
+</tr>
+<tr>
+<td><strong>Resolución 20223040040565/2022</strong></td>
+<td>Complemento Res. 718 en calibración y certificación</td>
+<td>Radares sancionatorios</td>
+</tr>
+<tr>
+<td><strong>Ley 769/2002</strong></td>
+<td>Código Nacional de Tránsito</td>
+<td>Marco legal de infracciones</td>
+</tr>
+<tr>
+<td><strong>Ley 1581/2012</strong></td>
+<td>Protección de Datos Personales</td>
+<td>Tratamiento de imágenes y matrículas</td>
+</tr>
+<tr>
+<td><strong>Decreto 1079/2015</strong></td>
+<td>Reglamento del Sector Transporte</td>
+<td>Requisitos operativos</td>
+</tr>
+</tbody></table></div>
+<br>
+#### Normativa Internacional (Todos los Equipos)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Norma</td>
+<td>Título</td>
+<td>Aplicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>ISO TC-204</strong></td>
+<td>Intelligent Transport Systems</td>
+<td><strong>OBLIGATORIA</strong> para ETD y radares</td>
+</tr>
+<tr>
+<td><strong>ISO 21217</strong></td>
+<td>ITS Communications Access for Land Mobiles (CALM)</td>
+<td>Comunicaciones ITS</td>
+</tr>
+<tr>
+<td><strong>ISO 14813</strong></td>
+<td>ITS Reference Model Architecture</td>
+<td>Arquitectura de sistemas ITS</td>
+</tr>
+<tr>
+<td><strong>IEC 60529</strong></td>
+<td>Degrees of protection (IP Code)</td>
+<td>Protección <strong>IP65 mínima</strong></td>
+</tr>
+<tr>
+<td><strong>IEEE 802.3</strong></td>
+<td>Ethernet</td>
+<td>Comunicaciones por fibra óptica</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.3 Certificaciones Requeridas</h3>
+<br>
+#### Para ETD (Monitoreo)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Certificación</td>
+<td>Organismo</td>
+<td>Obligatoria</td>
+<td>Aplicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>ISO TC-204</strong></td>
+<td>ISO</td>
+<td>✅ Sí</td>
+<td>Sistemas ITS</td>
+</tr>
+<tr>
+<td><strong>CE / FCC</strong></td>
+<td>UE / USA</td>
+<td>✅ Sí</td>
+<td>Equipos electrónicos</td>
+</tr>
+<tr>
+<td><strong>IP65</strong></td>
+<td>IEC 60529</td>
+<td>✅ Sí</td>
+<td>Gabinete exterior</td>
+</tr>
+<tr>
+<td><strong>ISO 9001:2015</strong></td>
+<td>Organismo certificador</td>
+<td>✅ Sí</td>
+<td>Fabricante</td>
+</tr>
+</tbody></table></div>
+<br>
+#### Para Radares Sancionatorios (Adicionales)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Certificación</td>
+<td>Organismo</td>
+<td>Obligatoria</td>
+<td>Aplicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Homologación ONAC</strong></td>
+<td>ONAC Colombia</td>
+<td>✅ Sí</td>
+<td>Certificación metrológica</td>
+</tr>
+<tr>
+<td><strong>Resolución 718/2018</strong></td>
+<td>MinTransporte</td>
+<td>✅ Sí</td>
+<td>Autorización de operación</td>
+</tr>
+<tr>
+<td><strong>Calibración anual</strong></td>
+<td>Laboratorio acreditado</td>
+<td>✅ Sí</td>
+<td>Trazabilidad metrológica</td>
+</tr>
+</tbody></table></div>
+<br>
+> <strong>⚠️ IMPORTANTE:</strong> NO se exige IP66 ni certificaciones UL, CSA o similares. <strong>IP65 es suficiente</strong> cuando los equipos estén a la intemperie.
+<br>
+<br>
+<h2>3. ESPECIFICACIONES TÉCNICAS GENERALES</h2>
+<br>
+<h3>3.1 Características Ambientales</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Referencia</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Temperatura de operación</strong></td>
+<td>-40°C a +74°C</td>
+<td>AT3 Cap. IV</td>
+</tr>
+<tr>
+<td><strong>Humedad relativa</strong></td>
+<td>0-95% sin condensación</td>
+<td>AT3 Cap. IV</td>
+</tr>
+<tr>
+<td><strong>Protección IP</strong></td>
+<td><strong>IP65 mínimo</strong></td>
+<td>IEC 60529</td>
+</tr>
+<tr>
+<td><strong>Resistencia a lluvia</strong></td>
+<td>Hasta 5.08 cm/h (2 in/h)</td>
+<td>AT3 Cap. IV</td>
+</tr>
+<tr>
+<td><strong>Resistencia a viento</strong></td>
+<td>120 km/h</td>
+<td>Zona tropical</td>
+</tr>
+<tr>
+<td><strong>Altitud operación</strong></td>
+<td>0-500 msnm</td>
+<td>Magdalena Medio</td>
+</tr>
+<tr>
+<td><strong>Resistencia UV</strong></td>
+<td>Mín. 10 años</td>
+<td>ASTM G154</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Condiciones específicas del proyecto:</strong>
+<li>✅ Clima tropical húmedo (lluvia, niebla, polvo)</li>
+<li>✅ Cambios bruscos de temperatura</li>
+<li>✅ Cambios de iluminación (amanecer/atardecer)</li>
+<li>✅ Humedad alta constante (70-85%)</li>
+<br>
+<h3>3.2 Requisitos Eléctricos</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tensión nominal</strong></td>
+<td>120 VAC, 60 Hz</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Variación de tensión</strong></td>
+<td>±10%</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Consumo máximo</strong></td>
+<td><strong>200 W</strong> (por equipo completo)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Consumo en espera</strong></td>
+<td><50 W</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Factor de potencia</strong></td>
+<td>≥0.9</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Respaldo UPS</strong></td>
+<td><strong>4 horas mínimo</strong></td>
+<td>AT2</td>
+</tr>
+<tr>
+<td><strong>Sistema de tierras</strong></td>
+<td><10 Ω</td>
+<td>RETIE</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>3.3 Requisitos de Comunicaciones</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Protocolo</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Medio físico</strong></td>
+<td><strong>Fibra óptica monomodo 9/125 μm</strong></td>
+<td>ITU-T G.652</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>1 Gbps recomendado (100 Mbps mínimo)</td>
+<td>IEEE 802.3</td>
+</tr>
+<tr>
+<td><strong>Protocolo de red</strong></td>
+<td>TCP/IP</td>
+<td>RFC 791, RFC 793</td>
+</tr>
+<tr>
+<td><strong>Protocolo aplicación</strong></td>
+<td><strong>SNMP v3, API REST, MQTT</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td><strong>≥99% anual</strong></td>
+<td>AT2, AT4</td>
+</tr>
+<tr>
+<td><strong>Latencia máxima</strong></td>
+<td><100 ms</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Sincronización horaria</strong></td>
+<td><strong>NTP o GPS</strong> (precisión <1 seg)</td>
+<td>Res. 718/2018</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>4. ESPECIFICACIONES POR COMPONENTE</h2>
+<br>
+<h3>4.1 ETD (Estación de Toma de Datos) - Monitoreo NO Sancionatorio</h3>
+<br>
+#### 4.1.1 Descripción General
+<br>
+Equipo de medición automática para monitoreo continuo de velocidad promedio, flujo vehicular, densidad y clasificación de tráfico por Unidad Funcional. <strong>Incluye Cámara LPR de Identificación</strong> para cumplimiento de <strong>AT2 §3.3.4.5</strong> (toma de fotos de matrícula), pero de grado no sancionatorio (sin certificación ONAC).
+<br>
+#### 4.1.2 Especificaciones Técnicas del Sensor
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Método de Verificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Radar Doppler o microondas</td>
+<td>Inspección técnica</td>
+</tr>
+<tr>
+<td><strong>Cobertura</strong></td>
+<td>Multipista (≥3 carriles simultáneos)</td>
+<td>Prueba funcional</td>
+</tr>
+<tr>
+<td><strong>Rango de detección</strong></td>
+<td>≥150 m</td>
+<td>Prueba de campo</td>
+</tr>
+<tr>
+<td><strong>Precisión velocidad</strong></td>
+<td><strong>±3 km/h</strong></td>
+<td>Calibración con patrón</td>
+</tr>
+<tr>
+<td><strong>Rango de velocidad</strong></td>
+<td>10-200 km/h</td>
+<td>Prueba funcional</td>
+</tr>
+<tr>
+<td><strong>Frecuencia de actualización</strong></td>
+<td>≤1 segundo</td>
+<td>Verificación de datos</td>
+</tr>
+<tr>
+<td><strong>Clasificación vehicular</strong></td>
+<td>Livianos / Pesados (por longitud)</td>
+<td>Prueba con vehículos conocidos</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.1.3 Variables Medidas
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Variable</td>
+<td>Descripción</td>
+<td>Unidad</td>
+<td>Precisión</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Volumen</strong></td>
+<td>Cantidad de vehículos</td>
+<td>veh/hora</td>
+<td>±2%</td>
+</tr>
+<tr>
+<td><strong>Velocidad instantánea</strong></td>
+<td>Velocidad de cada vehículo</td>
+<td>km/h</td>
+<td>±3 km/h</td>
+</tr>
+<tr>
+<td><strong>Velocidad promedio</strong></td>
+<td>Promedio del período</td>
+<td>km/h</td>
+<td>±2 km/h</td>
+</tr>
+<tr>
+<td><strong>Ocupación</strong></td>
+<td>% tiempo con vehículos</td>
+<td>%</td>
+<td>±5%</td>
+</tr>
+<tr>
+<td><strong>Clasificación</strong></td>
+<td>Livianos vs Pesados</td>
+<td>-</td>
+<td>≥90% acierto</td>
+</tr>
+<tr>
+<td><strong>Tiempo entre vehículos</strong></td>
+<td>Intervalo promedio</td>
+<td>segundos</td>
+<td>±1 seg</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.1.4 Unidad de Control y Procesamiento
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Especificación Mínima</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Procesador</strong></td>
+<td>ARM Cortex-A9 o superior, 1.5 GHz</td>
+</tr>
+<tr>
+<td><strong>Memoria RAM</strong></td>
+<td>2 GB mínimo</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento</strong></td>
+<td>32 GB flash mínimo (datos históricos 90 días)</td>
+</tr>
+<tr>
+<td><strong>Sistema operativo</strong></td>
+<td>Linux embebido o equivalente</td>
+</tr>
+<tr>
+<td><strong>Interfaz de red</strong></td>
+<td>Ethernet 1 Gbps</td>
+</tr>
+<tr>
+<td><strong>Protocolos</strong></td>
+<td>TCP/IP, SNMP v3, API REST, MQTT</td>
+</tr>
+<tr>
+<td><strong>NTP/GPS</strong></td>
+<td>Sincronización horaria automática</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.1.5 Fabricantes de Referencia (ETD)
+<br>
+<strong>Fabricantes aceptables:</strong>
+<br>
+1. <strong>Wavetronix</strong> (USA)
+<li>Modelo: SmartSensor HD</li>
+<li>Tecnología: Radar Doppler</li>
+<br>
+2. <strong>Miovision</strong> (Canadá)
+<li>Modelo: Scout Video Detection</li>
+<li>Tecnología: Video analítico + radar</li>
+<br>
+3. <strong>FLIR Systems</strong> (USA)
+<li>Modelo: ThermiCam AI</li>
+<li>Tecnología: Térmico + radar</li>
+<br>
+4. <strong>Siemens Mobility</strong> (Alemania)
+<li>Modelo: SITRAFFIC® Concert</li>
+<li>Tecnología: Radar + IA</li>
+<br>
+5. <strong>O equivalente</strong> que cumpla especificaciones
+<br>
+<br>
+<h3>4.2 RADAR-ANPR (Sancionatorio) - Detección de Infracciones</h3>
+<br>
+#### 4.2.1 Descripción General
+<br>
+Equipo de detección automática de infracciones de tránsito (exceso de velocidad, contrasentido, invasión de carril) con capacidad de registro fotográfico de matrícula. Cumple <strong>Resolución 718/2018</strong> del Ministerio de Transporte.
+<br>
+#### 4.2.2 Especificaciones Técnicas del Sensor Radar
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Método de Verificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Radar Doppler o LIDAR</td>
+<td>Inspección técnica</td>
+</tr>
+<tr>
+<td><strong>Cobertura</strong></td>
+<td>Multipista (≥3 carriles simultáneos)</td>
+<td>Prueba funcional</td>
+</tr>
+<tr>
+<td><strong>Rango de detección</strong></td>
+<td>≥150 m</td>
+<td>Prueba de campo</td>
+</tr>
+<tr>
+<td><strong>Precisión velocidad</strong></td>
+<td><strong>±2 km/h</strong></td>
+<td>Calibración ONAC</td>
+</tr>
+<tr>
+<td><strong>Rango de velocidad</strong></td>
+<td>10-250 km/h</td>
+<td>Prueba funcional</td>
+</tr>
+<tr>
+<td><strong>Frecuencia de medición</strong></td>
+<td>≤0.5 segundos</td>
+<td>Verificación</td>
+</tr>
+<tr>
+<td><strong>Detección múltiple</strong></td>
+<td>Hasta 32 vehículos simultáneos</td>
+<td>Prueba con tráfico</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.2.3 Especificaciones de Cámara ANPR
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Método de Verificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Resolución</strong></td>
+<td><strong>≥1920×1080 px (Full HD)</strong></td>
+<td>Inspección de imagen</td>
+</tr>
+<tr>
+<td><strong>Tasa de captura</strong></td>
+<td>≥30 fps</td>
+<td>Verificación de video</td>
+</tr>
+<tr>
+<td><strong>Reconocimiento de placa</strong></td>
+<td><strong>≥95% acierto</strong></td>
+<td>Prueba con 100 vehículos</td>
+</tr>
+<tr>
+<td><strong>Visión nocturna</strong></td>
+<td>IR o iluminación LED, hasta 50 m</td>
+<td>Prueba nocturna</td>
+</tr>
+<tr>
+<td><strong>Velocidad de obturación</strong></td>
+<td>1/1000 seg mínimo</td>
+<td>Inspección técnica</td>
+</tr>
+<tr>
+<td><strong>Campo de visión</strong></td>
+<td>Ajustable, 3 carriles mínimo</td>
+<td>Configuración</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento local</strong></td>
+<td><strong>≥30 días</strong> de evidencias</td>
+<td>Cálculo de capacidad</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.2.4 Unidad de Procesamiento (Edge Computing)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Especificación Mínima</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Procesador</strong></td>
+<td>Intel Core i5 o superior (8ª gen mínimo)</td>
+</tr>
+<tr>
+<td><strong>Memoria RAM</strong></td>
+<td>8 GB DDR4 mínimo</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento SSD</strong></td>
+<td>512 GB mínimo (evidencias 30 días)</td>
+</tr>
+<tr>
+<td><strong>Sistema operativo</strong></td>
+<td>Linux o Windows Server</td>
+</tr>
+<tr>
+<td><strong>GPU</strong></td>
+<td>Opcional pero recomendada (procesamiento IA)</td>
+</tr>
+<tr>
+<td><strong>Interfaz de red</strong></td>
+<td>Ethernet 1 Gbps (dual NIC)</td>
+</tr>
+<tr>
+<td><strong>Sincronización horaria</strong></td>
+<td><strong>GPS integrado + NTP</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.2.5 Software de Gestión
+<br>
+<strong>Funcionalidades obligatorias:</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Función</td>
+<td>Descripción</td>
+<td>Obligatoria</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Captura de evidencias</strong></td>
+<td>Imagen con datos superpuestos (fecha, hora, velocidad, placa, PK)</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td><strong>Reconocimiento de placa (OCR)</strong></td>
+<td>Algoritmo ANPR ≥95% precisión</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td><strong>Generación de eventos</strong></td>
+<td>Infracciones automáticas con evidencia</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento encriptado</strong></td>
+<td>Hash SHA-256, firma digital</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td><strong>Transmisión a CCO</strong></td>
+<td>En tiempo real o batch</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td><strong>Módulo administración</strong></td>
+<td>Consulta, reporte, exportación</td>
+<td>✅ Sí</td>
+</tr>
+<tr>
+<td><strong>Interoperabilidad SIMIT</strong></td>
+<td><strong>Capacidad técnica</strong> (protocolo webservice)</td>
+<td>⚠️ Capacidad, no obligación</td>
+</tr>
+<tr>
+<td><strong>Auditabilidad</strong></td>
+<td>Log de eventos, accesos, cambios</td>
+<td>✅ Sí</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.2.6 Gabinete y Protección
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Elemento</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Material</strong></td>
+<td>Acero inoxidable AISI 304 o aluminio anodizado</td>
+</tr>
+<tr>
+<td><strong>Protección IP</strong></td>
+<td><strong>IP65 mínimo</strong> (exterior)</td>
+</tr>
+<tr>
+<td><strong>Control de temperatura</strong></td>
+<td>Ventilación forzada o A/A, -10°C a +50°C interior</td>
+</tr>
+<tr>
+<td><strong>Protección contra descargas</strong></td>
+<td>DPS Clase I (40 kA) + Clase II (20 kA)</td>
+</tr>
+<tr>
+<td><strong>Cerradura</strong></td>
+<td>Antivandalismo, acceso restringido</td>
+</tr>
+<tr>
+<td><strong>Dimensiones típicas</strong></td>
+<td>80×60×40 cm (alto×ancho×prof)</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.2.7 Fabricantes de Referencia (RADAR-ANPR)
+<br>
+<strong>Fabricantes aceptables:</strong>
+<br>
+1. <strong>Jenoptik</strong> (Alemania)
+<li>Modelo: VECTOR SR</li>
+<li>Certificación: Res. 718 aprobada en Colombia</li>
+<br>
+2. <strong>Vitronic</strong> (Alemania)
+<li>Modelo: PoliScan Speed</li>
+<li>Certificación: ONAC Colombia</li>
+<br>
+3. <strong>Kapsch TrafficCom</strong> (Austria)
+<li>Modelo: EcoTrafiX</li>
+<li>Certificación: Internacional</li>
+<br>
+4. <strong>Tattile</strong> (Italia)
+<li>Modelo: Vega Smart HD</li>
+<li>Certificación: ANPR líder mundial</li>
+<br>
+5. <strong>Hikvision</strong> (China)
+<li>Modelo: iDS-TCV900 Series</li>
+<li>Certificación: Homologado múltiples países</li>
+<br>
+6. <strong>O equivalente</strong> que cumpla Resolución 718/2018 y tenga homologación ONAC
+<br>
+<br>
+<h3>4.3 RADAR PEDAGÓGICO - Monitores de Velocidad Informativos (SI-27B)</h3>
+<br>
+#### 4.3.1 Descripción General
+<br>
+Sistema de advertencia preventiva compuesto por un radar Doppler y un panel de mensajes dinámico (LED) que proyecta en tiempo real la velocidad de los vehículos al conductor. Cumple con la señal informativa <strong>SI-27B</strong> del Manual de Señalización Vial.
+<br>
+#### 4.3.2 Especificaciones del Display LED
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Matriz de LED (Ámbar o Bicolor)</td>
+<td>Alta visibilidad solar</td>
+</tr>
+<tr>
+<td><strong>Altura de caracteres</strong></td>
+<td>≥300 mm</td>
+<td>Lectura a ≥150 m</td>
+</tr>
+<tr>
+<td><strong>Rango de visualización</strong></td>
+<td>Velocidades de 10 a 199 km/h</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Alertas Visuales</strong></td>
+<td>Flash o cambio de color por exceso</td>
+<td>Configurable según límite PK</td>
+</tr>
+<tr>
+<td><strong>Protección Frontal</strong></td>
+<td>Policarbonato con filtro UV y antirreflejo</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Ajuste Brillo</strong></td>
+<td>Automático (sensor de luz ambiental)</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.3.3 Especificaciones del Radar Doppler
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Precisión</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Frecuencia</strong></td>
+<td>Banda K (24.150 GHz)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Alcance</strong></td>
+<td>≥200 m</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Precisión</strong></td>
+<td>±1 km/h</td>
+<td>Alta confiabilidad informativa</td>
+</tr>
+<tr>
+<td><strong>Ángulo apertura</strong></td>
+<td>12° x 25° típicamente</td>
+<td>Cobertura carril específico</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.3.4 Fabricantes de Referencia (Pedagógicos)
+<br>
+1. <strong>Radarsign</strong> (USA)
+2. <strong>TraffiCalm Systems</strong> (USA)
+3. <strong>Sierzega</strong> (Austria)
+4. <strong>O equivalente</strong> que cumpla con señal SI-27B y protección IP65.
+<br>
+<br>
+<h2>5. INTEGRACIÓN Y COMPATIBILIDAD</h2>
+<br>
+<h3>5.1 Integración con Sistema Central (CCO)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Aspecto</td>
+<td>Requisito</td>
+<td>Verificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Conexión a CCO</strong></td>
+<td>API REST o SNMP v3, fibra óptica</td>
+<td>Prueba de conectividad</td>
+</tr>
+<tr>
+<td><strong>Tiempo de respuesta</strong></td>
+<td><5 segundos (envío evento)</td>
+<td>Prueba cronometrada</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>≥99% anual</td>
+<td>Monitoreo 30 días piloto</td>
+</tr>
+<tr>
+<td><strong>Transmisión de datos</strong></td>
+<td>Eventos en tiempo real + estadísticas horarias</td>
+<td>Verificación en CCO</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento local</strong></td>
+<td>Buffer 72 horas si falla comunicación</td>
+<td>Prueba de desconexión</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>5.2 Integración con SCADA</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Requisito</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Protocolo</strong></td>
+<td>SNMP v3 o Modbus TCP/IP</td>
+</tr>
+<tr>
+<td><strong>Variables monitoreadas</strong></td>
+<td>Estado (online/offline), eventos/hora, fallas, almacenamiento</td>
+</tr>
+<tr>
+<td><strong>Frecuencia actualización</strong></td>
+<td>60 segundos máximo</td>
+</tr>
+<tr>
+<td><strong>Alarmas</strong></td>
+<td>Falla comunicación, disco lleno, cámara fuera de servicio</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>5.3 Interoperabilidad con SIMIT (Solo Radares Sancionatorios)</h3>
+<br>
+<strong>Cláusula de Interoperabilidad:</strong>
+<br>
+> "Los equipos Radar–SAST deberán incluir <strong>capacidad técnica</strong> de conexión al sistema nacional de gestión de infracciones (SIMIT) conforme a la Resolución 718 de 2018 del Ministerio de Transporte. No obstante, la transmisión efectiva de información sancionatoria o datos personales al SIMIT <strong>no será obligatoria</strong>, y solo se efectuará si el Concesionario o la ANI lo determinan posteriormente, previo análisis de costos y responsabilidades. El contratista deberá garantizar que los equipos y software queden <strong>habilitados</strong> para dicha interoperabilidad, sin que implique su activación inmediata ni costos adicionales automáticos para el Concesionario."
+<br>
+<strong>Requisitos técnicos de capacidad:</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Requisito</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Protocolo webservice</strong></td>
+<td>SOAP o REST según especificaciones SIMIT</td>
+</tr>
+<tr>
+<td><strong>Formato de datos</strong></td>
+<td>XML o JSON según SIMIT</td>
+</tr>
+<tr>
+<td><strong>Campos obligatorios</strong></td>
+<td>Placa, fecha/hora, velocidad, foto, ubicación</td>
+</tr>
+<tr>
+<td><strong>Encriptación</strong></td>
+<td>TLS 1.2 o superior</td>
+</tr>
+<tr>
+<td><strong>Autenticación</strong></td>
+<td>Certificado digital</td>
+</tr>
+</tbody></table></div>
+<br>
+> <strong>⚠️ IMPORTANTE:</strong> La habilitación de la conexión SIMIT es <strong>opcional</strong> y queda sujeta a decisión futura del Concesionario/ANI. El costo de operación SIMIT (si se activa) NO está incluido en CAPEX.
+<br>
+<h3>5.4 Interfaz con Otros Sistemas</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Sistema</td>
+<td>Tipo de Interfaz</td>
+<td>Datos Intercambiados</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Telecomunicaciones</strong></td>
+<td>Fibra óptica (backbone)</td>
+<td>Datos de tráfico, eventos, imágenes</td>
+</tr>
+<tr>
+<td><strong>Energía Eléctrica</strong></td>
+<td>Acometida 120 VAC</td>
+<td>Alimentación eléctrica</td>
+</tr>
+<tr>
+<td><strong>CCO</strong></td>
+<td>API REST + SNMP</td>
+<td>Eventos, estadísticas, alarmas</td>
+</tr>
+<tr>
+<td><strong>SCADA</strong></td>
+<td>SNMP v3</td>
+<td>Estado operativo, variables</td>
+</tr>
+<tr>
+<td><strong>SICC (ANI)</strong></td>
+<td>API</td>
+<td>Velocidad promedio por UF, volumen</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>6. ESPECIFICACIONES DIFERENCIADAS</h2>
+<br>
+<h3>6.1 Componentes MÍNIMOS por Tipo</h3>
+<br>
+#### <strong>ETD (Monitoreo) - 13 unidades</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Obligatorio</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>Sensor radar/microondas</td>
+<td>✅ Sí</td>
+<td>Multipista, ±3 km/h</td>
+</tr>
+<tr>
+<td>Unidad de control</td>
+<td>✅ Sí</td>
+<td>Edge computing</td>
+</tr>
+<tr>
+<td>Gabinete IP65</td>
+<td>✅ Sí</td>
+<td>Protección exterior</td>
+</tr>
+<tr>
+<td>UPS ≥4 horas</td>
+<td>✅ Sí</td>
+<td>Respaldo energía</td>
+</tr>
+<tr>
+<td>Comunicación fibra</td>
+<td>✅ Sí</td>
+<td>TCP/IP, SNMP, API</td>
+</tr>
+<tr>
+<td><strong>Cámara LPR</strong></td>
+<td>✅ <strong>SÍ</strong></td>
+<td><strong>Cumplimiento AT2 §3.3.4.5 (Identificación)</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+#### <strong>Radares Sancionatorios (SAST) - 2 unidades</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Obligatorio</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>Sensor radar/LIDAR</td>
+<td>✅ Sí</td>
+<td>Multipista, ±2 km/h, homologado ONAC</td>
+</tr>
+<tr>
+<td><strong>Cámara ANPR</strong></td>
+<td>✅ <strong>SÍ</strong></td>
+<td><strong>Full HD, ≥95% reconocimiento, visión nocturna</strong></td>
+</tr>
+<tr>
+<td>Unidad procesamiento</td>
+<td>✅ Sí</td>
+<td>Edge computing, almacenamiento ≥30 días</td>
+</tr>
+<tr>
+<td>Gabinete IP65</td>
+<td>✅ Sí</td>
+<td>Control temperatura</td>
+</tr>
+<tr>
+<td>UPS ≥4 horas</td>
+<td>✅ Sí</td>
+<td>Respaldo energía</td>
+</tr>
+<tr>
+<td>Comunicación fibra</td>
+<td>✅ Sí</td>
+<td>TCP/IP, SNMP, API</td>
+</tr>
+<tr>
+<td><strong>Sincronización GPS</strong></td>
+<td>✅ <strong>SÍ</strong></td>
+<td><strong>Obligatoria para evidencia legal</strong></td>
+</tr>
+<tr>
+<td><strong>Software evidencia</strong></td>
+<td>✅ <strong>SÍ</strong></td>
+<td><strong>Encriptación, firma digital, trazabilidad</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>7. REQUISITOS DE INSTALACIÓN</h2>
+<br>
+<h3>7.1 Ubicaciones Exactas</h3>
+<br>
+<strong>Referencia:</strong> `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md`
+<br>
+<strong>Distribución por Tipo (17 equipos):</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ruta</td>
+<td>Cantidad</td>
+<td>Tipo</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>RN 4510 / 4511 / 4513</strong></td>
+<td>13</td>
+<td>ETD</td>
+<td>1 por UF (Monitoreo LPR)</td>
+</tr>
+<tr>
+<td><strong>RN 4510 / 4511</strong></td>
+<td>2</td>
+<td>SAST</td>
+<td>Puntos Críticos (Sancionatorio)</td>
+</tr>
+<tr>
+<td><strong>Peajes (RN 4511)</strong></td>
+<td>2</td>
+<td>Pedagógico</td>
+<td>PK 9+150 / PK 81+800 (Informativo SI-27B)</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>17 unidades</strong></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>⚠️ Nota contractual:</strong> El proyecto contempla <strong>17 equipos operativos</strong>. Esta configuración cubre el 100% de las obligaciones de medición de velocidad por UF (AT4), control de puntos críticos (AT2) y monitores preventivos (AT2 §3.3.5.1).
+<br>
+<h3>7.2 Configuración Bidireccional</h3>
+<br>
+<strong>Patrón típico (pórtico sobre separador central):</strong>
+<br>
+```
+Vista en Planta:
+<br>
+Calzada Izquierda  [═══════════════════════════════════════]
+↓ mide sentido Norte
+<br>
+Separador Central  [--------[PÓRTICO]--------]
+<br>
+Calzada Derecha    [═══════════════════════════════════════]
+↑ mide sentido Sur
+<br>
+Pórtico:
+<li>Altura: 6-7 m</li>
+<li>Ancho: según ancho calzadas + bermas (típicamente 15-18 m)</li>
+<li>2 radares enfrentados (1 por sentido)</li>
+<li>2 cámaras ANPR (1 por sentido)</li>
+<li>Switch central, fibra óptica</li>
+```
+<br>
+<h3>7.3 Obras Civiles Requeridas</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Elemento</td>
+<td>Especificación</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Cimentación pórtico</strong></td>
+<td>Zapatas 1.5×1.5×1.2 m, f'c=28 MPa (cada lado)</td>
+<td>NSR-10</td>
+</tr>
+<tr>
+<td><strong>Estructura pórtico</strong></td>
+<td>Acero estructural ASTM A36, galvanizado</td>
+<td>AASHTO</td>
+</tr>
+<tr>
+<td><strong>Altura libre</strong></td>
+<td>5.5 m mínimo (gálibo vial)</td>
+<td>Manual Diseño Geométrico INVIAS</td>
+</tr>
+<tr>
+<td><strong>Ancho pórtico</strong></td>
+<td>Según ancho de calzadas (típ. 16 m)</td>
+<td>Planos específicos</td>
+</tr>
+<tr>
+<td><strong>Canalizaciones</strong></td>
+<td>HDPE Ø4" (100 mm), profundidad 0.80-1.0 m</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Caja de registro</strong></td>
+<td>60×60×80 cm, tapa de concreto</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Tierras</strong></td>
+<td>SPT independiente, <10 Ω</td>
+<td>RETIE</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>7.4 Conexiones</h3>
+<br>
+#### 7.4.1 Acometida Eléctrica
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tensión</strong></td>
+<td>120 VAC, 60 Hz (monofásico)</td>
+</tr>
+<tr>
+<td><strong>Corriente máxima</strong></td>
+<td>20 A</td>
+</tr>
+<tr>
+<td><strong>Calibre conductor</strong></td>
+<td>AWG 10, THHN/THWN</td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td>Breaker 30 A + DPS Clase I (40 kA) + DPS Clase II (20 kA)</td>
+</tr>
+<tr>
+<td><strong>Ducto</strong></td>
+<td>PVC Ø1" desde acometida más cercana</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 7.4.2 Conectividad (Fibra Óptica)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Medio</strong></td>
+<td>Fibra óptica SM 9/125 μm, OS2</td>
+</tr>
+<tr>
+<td><strong>Ruta</strong></td>
+<td>Pórtico central → backbone en separador central</td>
+</tr>
+<tr>
+<td><strong>Ducto</strong></td>
+<td>HDPE Ø2" (50 mm)</td>
+</tr>
+<tr>
+<td><strong>Conectores</strong></td>
+<td>SC/APC</td>
+</tr>
+<tr>
+<td><strong>Switch en pórtico</strong></td>
+<td>Managed, 8 puertos Gigabit, PoE+ (opcional)</td>
+</tr>
+<tr>
+<td><strong>Atenuación máxima</strong></td>
+<td><3 dB total</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>8. PRUEBAS Y CRITERIOS DE ACEPTACIÓN</h2>
+<br>
+<h3>8.1 Pruebas en Fábrica (FAT) - ETD</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Prueba</td>
+<td>Objetivo</td>
+<td>Criterio de Aceptación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Inspección dimensional</strong></td>
+<td>Verificar dimensiones</td>
+<td>Dentro de tolerancias</td>
+</tr>
+<tr>
+<td><strong>Inspección visual</strong></td>
+<td>Verificar acabados</td>
+<td>Sin defectos visibles</td>
+</tr>
+<tr>
+<td><strong>Prueba de detección</strong></td>
+<td>Verificar sensor radar</td>
+<td>Detección ≥150 m, 3 carriles simultáneos</td>
+</tr>
+<tr>
+<td><strong>Prueba de precisión</strong></td>
+<td>Calibración con patrón</td>
+<td>±3 km/h</td>
+</tr>
+<tr>
+<td><strong>Prueba de clasificación</strong></td>
+<td>Vehículos livianos/pesados</td>
+<td>≥90% acierto</td>
+</tr>
+<tr>
+<td><strong>Prueba de comunicación</strong></td>
+<td>Transmisión de datos</td>
+<td>API funcional, latencia <100 ms</td>
+</tr>
+<tr>
+<td><strong>Prueba de software</strong></td>
+<td>Interfaz de administración</td>
+<td>100% funciones operativas</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>8.2 Pruebas en Fábrica (FAT) - RADAR-ANPR</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Prueba</td>
+<td>Objetivo</td>
+<td>Criterio de Aceptación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Inspección dimensional</strong></td>
+<td>Verificar dimensiones</td>
+<td>Dentro de tolerancias</td>
+</tr>
+<tr>
+<td><strong>Inspección visual</strong></td>
+<td>Verificar acabados, cámaras</td>
+<td>Sin defectos, lentes limpias</td>
+</tr>
+<tr>
+<td><strong>Prueba de detección radar</strong></td>
+<td>Verificar sensor</td>
+<td>Detección ≥150 m, ±2 km/h</td>
+</tr>
+<tr>
+<td><strong>Prueba de ANPR diurna</strong></td>
+<td>Reconocimiento de placa (día)</td>
+<td>≥95% acierto en 100 vehículos</td>
+</tr>
+<tr>
+<td><strong>Prueba de ANPR nocturna</strong></td>
+<td>Reconocimiento de placa (noche)</td>
+<td>≥95% acierto en 100 vehículos</td>
+</tr>
+<tr>
+<td><strong>Prueba de captura de evidencia</strong></td>
+<td>Imagen con datos superpuestos</td>
+<td>Datos correctos, imagen nítida</td>
+</tr>
+<tr>
+<td><strong>Prueba de almacenamiento</strong></td>
+<td>Capacidad y encriptación</td>
+<td>≥30 días, hash SHA-256 OK</td>
+</tr>
+<tr>
+<td><strong>Prueba de GPS/NTP</strong></td>
+<td>Sincronización horaria</td>
+<td>Precisión <1 segundo</td>
+</tr>
+<tr>
+<td><strong>Prueba de interoperabilidad SIMIT</strong></td>
+<td>Webservice (si aplica)</td>
+<td>Formato correcto, envío exitoso</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>8.3 Pruebas en Sitio (SAT) - Comunes</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Prueba</td>
+<td>Objetivo</td>
+<td>Criterio de Aceptación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Inspección de pórtico</strong></td>
+<td>Verificar estructura, verticalidad</td>
+<td>Vertical ±1°, sin defectos, galvanizado OK</td>
+</tr>
+<tr>
+<td><strong>Prueba de tierras</strong></td>
+<td>Verificar SPT</td>
+<td><10 Ω</td>
+</tr>
+<tr>
+<td><strong>Prueba de conectividad</strong></td>
+<td>Verificar fibra óptica</td>
+<td>Ping <100 ms, 0% pérdida paquetes</td>
+</tr>
+<tr>
+<td><strong>Prueba de detección real</strong></td>
+<td>Tráfico real del corredor</td>
+<td>Detección 100% vehículos, clasificación ≥90%</td>
+</tr>
+<tr>
+<td><strong>Prueba de precisión in situ</strong></td>
+<td>Velocidad con patrón certificado</td>
+<td>Dentro de tolerancia (±2 o ±3 km/h)</td>
+</tr>
+<tr>
+<td><strong>Prueba de ANPR in situ</strong></td>
+<td>Reconocimiento placas reales</td>
+<td>≥95% acierto en muestra 100 veh</td>
+</tr>
+<tr>
+<td><strong>Prueba de integración CCO</strong></td>
+<td>Datos en pantalla CCO</td>
+<td>Eventos visibles en tiempo real</td>
+</tr>
+<tr>
+<td><strong>Prueba de integración SCADA</strong></td>
+<td>Variables en SCADA</td>
+<td>Todas las variables actualizadas</td>
+</tr>
+<tr>
+<td><strong>Prueba de UPS</strong></td>
+<td>Autonomía con carga real</td>
+<td>≥4 horas continuidad</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>8.4 Pruebas Específicas - Radares Sancionatorios</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Prueba</td>
+<td>Objetivo</td>
+<td>Criterio</td>
+<td>Responsable</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Calibración ONAC</strong></td>
+<td>Certificación metrológica oficial</td>
+<td>Certificado vigente</td>
+<td>Laboratorio acreditado ONAC</td>
+</tr>
+<tr>
+<td><strong>Prueba de evidencia legal</strong></td>
+<td>Verificar cadena de custodia digital</td>
+<td>Hash, firma, timestamp correctos</td>
+<td>Interventoría</td>
+</tr>
+<tr>
+<td><strong>Prueba de señalización</strong></td>
+<td>Verificar señalización 500 m antes</td>
+<td>Señales visibles, retrorefléctivas</td>
+<td>Interventoría</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>9. DOCUMENTACIÓN REQUERIDA</h2>
+<br>
+<h3>9.1 Documentos del Fabricante</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Documento</td>
+<td>Descripción</td>
+<td>Idioma</td>
+<td>Cantidad</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Ficha técnica</strong></td>
+<td>Especificaciones detalladas (sensor, cámara, software)</td>
+<td><strong>Español</strong></td>
+<td>3 copias + PDF</td>
+</tr>
+<tr>
+<td><strong>Manual de instalación</strong></td>
+<td>Procedimiento, planos, conexiones</td>
+<td><strong>Español</strong></td>
+<td>2 copias + PDF</td>
+</tr>
+<tr>
+<td><strong>Manual de operación</strong></td>
+<td>Guía usuario CCO, configuración</td>
+<td><strong>Español</strong></td>
+<td>3 copias + PDF</td>
+</tr>
+<tr>
+<td><strong>Manual de mantenimiento</strong></td>
+<td>Preventivo, correctivo, calibración</td>
+<td><strong>Español</strong></td>
+<td>2 copias + PDF</td>
+</tr>
+<tr>
+<td><strong>Manual de software</strong></td>
+<td>Administración, consultas, reportes</td>
+<td><strong>Español</strong></td>
+<td>2 copias + PDF</td>
+</tr>
+<tr>
+<td><strong>Planos de montaje</strong></td>
+<td>Pórtico, gabinetes, cámaras</td>
+<td>-</td>
+<td>PDF + DWG</td>
+</tr>
+<tr>
+<td><strong>Diagramas eléctricos</strong></td>
+<td>Unifilar, esquemático</td>
+<td>-</td>
+<td>PDF + DWG</td>
+</tr>
+<tr>
+<td><strong>Lista de repuestos</strong></td>
+<td>Códigos, precios, tiempos entrega</td>
+<td><strong>Español</strong></td>
+<td>PDF</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>9.2 Certificados Requeridos</h3>
+<br>
+#### Comunes (ETD + Radares)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Certificado</td>
+<td>Emisor</td>
+<td>Vigencia</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Certificado ISO 9001:2015</strong></td>
+<td>Organismo acreditado</td>
+<td>Vigente</td>
+<td>Fabricante</td>
+</tr>
+<tr>
+<td><strong>Certificado CE</strong></td>
+<td>Laboratorio notificado</td>
+<td>-</td>
+<td>Equipos</td>
+</tr>
+<tr>
+<td><strong>Certificado FCC</strong></td>
+<td>FCC o equivalente</td>
+<td>-</td>
+<td>Equipos comunicaciones</td>
+</tr>
+<tr>
+<td><strong>Certificado IP65</strong></td>
+<td>Lab. acreditado IEC 60529</td>
+<td>-</td>
+<td>Gabinetes</td>
+</tr>
+<tr>
+<td><strong>Declaración RETIE</strong></td>
+<td>Fabricante/importador</td>
+<td>-</td>
+<td>Instalaciones eléctricas</td>
+</tr>
+</tbody></table></div>
+<br>
+#### Específicos Radares Sancionatorios
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Certificado</td>
+<td>Emisor</td>
+<td>Vigencia</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Homologación ONAC</strong></td>
+<td>ONAC Colombia</td>
+<td><strong>Anual</strong></td>
+<td><strong>OBLIGATORIA</strong> para radares</td>
+</tr>
+<tr>
+<td><strong>Certificado calibración inicial</strong></td>
+<td>Lab. acreditado ONAC</td>
+<td>Válido inicio operación</td>
+<td><strong>OBLIGATORIO</strong></td>
+</tr>
+<tr>
+<td><strong>Autorización MinTransporte</strong></td>
+<td>Ministerio de Transporte</td>
+<td>Según Res. 718/2018</td>
+<td><strong>OBLIGATORIO</strong> si se activa función sancionatoria</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>9.3 Garantías</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Elemento</td>
+<td>Garantía Mínima</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Equipos electrónicos</strong></td>
+<td><strong>24 meses</strong></td>
+<td>Desde puesta en servicio</td>
+</tr>
+<tr>
+<td><strong>Cámara ANPR</strong></td>
+<td><strong>24 meses</strong></td>
+<td>Incluye sensor y lente</td>
+</tr>
+<tr>
+<td><strong>Software</strong></td>
+<td><strong>24 meses</strong></td>
+<td>Actualizaciones incluidas</td>
+</tr>
+<tr>
+<td><strong>Estructura pórtico</strong></td>
+<td><strong>60 meses</strong></td>
+<td>Contra corrosión</td>
+</tr>
+<tr>
+<td><strong>Calibración anual</strong></td>
+<td><strong>Incluida primer año</strong></td>
+<td>Para radares sancionatorios</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>10. MANTENIMIENTO</h2>
+<br>
+<h3>10.1 Mantenimiento Preventivo</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Actividad</td>
+<td>Frecuencia</td>
+<td>Responsable</td>
+<td>Tiempo Est.</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Limpieza de lentes (cámaras)</strong></td>
+<td>Mensual</td>
+<td>Contratista</td>
+<td>30 min/und</td>
+</tr>
+<tr>
+<td><strong>Verificación funcional (ETD)</strong></td>
+<td>Semanal</td>
+<td>Contratista</td>
+<td>15 min/und</td>
+</tr>
+<tr>
+<td><strong>Inspección visual (estructura, gabinete)</strong></td>
+<td>Trimestral</td>
+<td>Contratista</td>
+<td>30 min/und</td>
+</tr>
+<tr>
+<td><strong>Limpieza interna (equipos, ventilación)</strong></td>
+<td>Semestral</td>
+<td>Contratista</td>
+<td>2 horas/und</td>
+</tr>
+<tr>
+<td><strong>Verificación de tierras</strong></td>
+<td>Anual</td>
+<td>Contratista</td>
+<td>30 min/und</td>
+</tr>
+<tr>
+<td><strong>Calibración (radares sancionatorios)</strong></td>
+<td><strong>Anual</strong></td>
+<td><strong>Lab. ONAC acreditado</strong></td>
+<td>4 horas/und</td>
+</tr>
+<tr>
+<td><strong>Actualización de software</strong></td>
+<td>Semestral o según fabricante</td>
+<td>Fabricante autorizado</td>
+<td>2 horas/und</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>10.2 Repuestos Críticos</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Cantidad Mínima en Stock</td>
+<td>Plazo de Entrega</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Batería UPS (12V 100Ah)</strong></td>
+<td>5 unidades</td>
+<td>30 días</td>
+</tr>
+<tr>
+<td><strong>Cámara ANPR completa</strong></td>
+<td>2 unidades</td>
+<td>60 días</td>
+</tr>
+<tr>
+<td><strong>Lente cámara</strong></td>
+<td>2 unidades</td>
+<td>30 días</td>
+</tr>
+<tr>
+<td><strong>Iluminación IR/LED</strong></td>
+<td>5 unidades</td>
+<td>30 días</td>
+</tr>
+<tr>
+<td><strong>Unidad de control (repuesto)</strong></td>
+<td>1 unidad</td>
+<td>60 días</td>
+</tr>
+<tr>
+<td><strong>DPS Clase I y II</strong></td>
+<td>5 juegos</td>
+<td>15 días</td>
+</tr>
+<tr>
+<td><strong>Breakers</strong></td>
+<td>10 unidades</td>
+<td>15 días</td>
+</tr>
+<tr>
+<td><strong>Switch Ethernet</strong></td>
+<td>2 unidades</td>
+<td>30 días</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>10.3 Indicadores de Mantenimiento</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Indicador</td>
+<td>Meta</td>
+<td>Medición</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>≥99%</td>
+<td>Tiempo online / Tiempo total</td>
+</tr>
+<tr>
+<td><strong>Tasa de reconocimiento ANPR</strong></td>
+<td>≥95%</td>
+<td>Placas correctas / Placas totales</td>
+</tr>
+<tr>
+<td><strong>Precisión de velocidad</strong></td>
+<td>Dentro de tolerancia</td>
+<td>Calibración anual</td>
+</tr>
+<tr>
+<td><strong>Eventos generados</strong></td>
+<td>>0 (si hay infracciones)</td>
+<td>Verificación mensual</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>11. REQUISITOS DE CAPACITACIÓN</h2>
+<br>
+<h3>11.1 Capacitación de Instalación</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tema</td>
+<td>Duración</td>
+<td>Audiencia</td>
+<td>Ubicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Instalación de pórtico</strong></td>
+<td>8 horas</td>
+<td>Técnicos estructuras</td>
+<td>Sitio</td>
+</tr>
+<tr>
+<td><strong>Instalación eléctrica</strong></td>
+<td>4 horas</td>
+<td>Electricistas</td>
+<td>Sitio</td>
+</tr>
+<tr>
+<td><strong>Instalación de fibra óptica</strong></td>
+<td>4 horas</td>
+<td>Técnicos telecom</td>
+<td>Sitio</td>
+</tr>
+<tr>
+<td><strong>Configuración de equipos</strong></td>
+<td>8 horas</td>
+<td>Técnicos ITS</td>
+<td>Sitio + CCO</td>
+</tr>
+<tr>
+<td><strong>Puesta en servicio</strong></td>
+<td>8 horas</td>
+<td>Equipo completo</td>
+<td>Sitio + CCO</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>11.2 Capacitación de Operación</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tema</td>
+<td>Duración</td>
+<td>Audiencia</td>
+<td>Ubicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Operación desde CCO</strong></td>
+<td>12 horas</td>
+<td>Operadores CCO</td>
+<td>CCO</td>
+</tr>
+<tr>
+<td><strong>Interpretación de datos de tráfico</strong></td>
+<td>8 horas</td>
+<td>Operadores CCO</td>
+<td>CCO</td>
+</tr>
+<tr>
+<td><strong>Gestión de infracciones</strong></td>
+<td>8 horas</td>
+<td>Operadores CCO + Legal</td>
+<td>CCO</td>
+</tr>
+<tr>
+<td><strong>Procedimientos de evidencia</strong></td>
+<td>4 horas</td>
+<td>Operadores CCO + Legal</td>
+<td>CCO</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>11.3 Capacitación de Mantenimiento</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tema</td>
+<td>Duración</td>
+<td>Audiencia</td>
+<td>Ubicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Mantenimiento preventivo</strong></td>
+<td>8 horas</td>
+<td>Técnicos mantenimiento</td>
+<td>Taller + Campo</td>
+</tr>
+<tr>
+<td><strong>Diagnóstico de fallas</strong></td>
+<td>12 horas</td>
+<td>Técnicos ITS</td>
+<td>Taller + Campo</td>
+</tr>
+<tr>
+<td><strong>Calibración de radares</strong></td>
+<td>8 horas</td>
+<td>Técnicos certificados</td>
+<td>Campo</td>
+</tr>
+<tr>
+<td><strong>Limpieza de cámaras y lentes</strong></td>
+<td>4 horas</td>
+<td>Técnicos mantenimiento</td>
+<td>Campo</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>11.4 Entregables de Capacitación</h3>
+<br>
+<li>✅ Presentaciones en PowerPoint (español)</li>
+<li>✅ Videos tutoriales (español, Full HD)</li>
+<li>✅ Simulador de operación CCO (software)</li>
+<li>✅ Manuales de capacitación impresos</li>
+<li>✅ Certificados de asistencia</li>
+<li>✅ Evaluaciones de aprendizaje (≥80% aprobación)</li>
+<br>
+<br>
+<h2>12. PRESUPUESTO Y CANTIDADES</h2>
+<br>
+<h3>12.1 Resumen de Cantidades (Proyecto Real)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>1</td>
+<td>Suministros Hardware ETD (13 DeepBlue VIA + 1 Spare)</td>
+<td>global</td>
+<td>1</td>
+<td>$455,000</td>
+<td>$455,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Suministros Hardware SAST (2 Vidar Speed + Licencias)</td>
+<td>global</td>
+<td>1</td>
+<td>$63,015</td>
+<td>$63,015</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Suministros Hardware Pedagógico (2 SI-27B)</td>
+<td>global</td>
+<td>1</td>
+<td>$50,000</td>
+<td>$50,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Software Central de Tráfico & Analíticos</td>
+<td>global</td>
+<td>1</td>
+<td>$650,000</td>
+<td>$650,000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Infraestructura, Integración & Comisionamiento</td>
+<td>global</td>
+<td>1</td>
+<td>$481,985</td>
+<td>$481,985</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>TOTAL CAPEX</strong></td>
+<td><strong>$1,700,000</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Precio unitario promedio:</strong> ~$100,000 USD/equipo instalado (Solución Completa v2.1)
+<br>
+> <strong>Nota:</strong> El presupuesto actualizado contempla <strong>17 equipos operativos</strong> (13 ETD + 2 SAST + 2 Pedagógicos) con un total de <strong>$1,700,000 USD</strong>.
+<br>
+#### <strong>Configuración Unificada (17 Equipos Operativos)</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tipo de Equipo</td>
+<td>Cantidad</td>
+<td>Función</td>
+<td>Estándar</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>ETD</strong></td>
+<td>13</td>
+<td>Monitoreo Estadístico UF</td>
+<td>ISO TC-204</td>
+</tr>
+<tr>
+<td><strong>SAST</strong></td>
+<td>2</td>
+<td>Control Sancionatorio</td>
+<td>Res. 718</td>
+</tr>
+<tr>
+<td><strong>Pedagógicos</strong></td>
+<td>2</td>
+<td>Informativo Preventivo</td>
+<td>SI-27B</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>17</strong></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>13. CRONOGRAMA DE SUMINISTRO E INSTALACIÓN</h2>
+<br>
+<h3>13.1 Hitos Principales</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Hito</td>
+<td>Fecha Estimada</td>
+<td>Duración</td>
+<td>Responsable</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Aprobación especificaciones T04</strong></td>
+<td>T+0</td>
+<td>-</td>
+<td>Interventoría/ANI</td>
+</tr>
+<tr>
+<td><strong>Estudio de Seguridad Vial (radares)</strong></td>
+<td>T+0 a T+60 días</td>
+<td>8 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Autorización MinTransporte (radares)</strong></td>
+<td>T+60 a T+120 días</td>
+<td>8 semanas</td>
+<td>MinTransporte</td>
+</tr>
+<tr>
+<td><strong>Licitación y adjudicación</strong></td>
+<td>T+30 días</td>
+<td>4 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Orden de compra</strong></td>
+<td>T+35 días</td>
+<td>-</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Fabricación</strong></td>
+<td>T+35 a T+125 días</td>
+<td>12 semanas</td>
+<td>Fabricante</td>
+</tr>
+<tr>
+<td><strong>FAT</strong></td>
+<td>T+125 a T+140 días</td>
+<td>2 semanas</td>
+<td>Fabricante/Interventoría</td>
+</tr>
+<tr>
+<td><strong>Transporte y entrega</strong></td>
+<td>T+140 a T+155 días</td>
+<td>2 semanas</td>
+<td>Logística</td>
+</tr>
+<tr>
+<td><strong>Instalación (lote 1: 6 equipos)</strong></td>
+<td>T+155 a T+185 días</td>
+<td>4 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Instalación (lote 2: 6 equipos)</strong></td>
+<td>T+175 a T+205 días</td>
+<td>4 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>SAT</strong></td>
+<td>T+205 a T+225 días</td>
+<td>3 semanas</td>
+<td>Contratista/Interventoría</td>
+</tr>
+<tr>
+<td><strong>Calibración ONAC (radares)</strong></td>
+<td>T+225 a T+240 días</td>
+<td>2 semanas</td>
+<td>Lab. ONAC</td>
+</tr>
+<tr>
+<td><strong>Puesta en servicio</strong></td>
+<td>T+240 días</td>
+<td>-</td>
+<td>Contratista/ANI</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Tiempo total:</strong> ~8 meses (incluyendo autorizaciones)
+<br>
+<br>
+<h2>14. CONSIDERACIONES ESPECIALES</h2>
+<br>
+<h3>14.1 Distinción ETD vs Radares</h3>
+<br>
+#### <strong>ETD (Estaciones de Toma de Datos)</strong>
+<br>
+<strong>Propósito:</strong> Monitoreo estadístico de tráfico
+<strong>Función:</strong> Medir velocidad promedio por UF para indicadores
+<strong>Componentes:</strong>
+<li>✅ Sensor radar o microondas</li>
+<li>✅ Unidad de procesamiento</li>
+<li>✅ <strong>Cámara LPR Identificación</strong> (Para AT2 Compliance)</li>
+<li>❌ <strong>NO requiere certificación ONAC</strong> (No sancionatorio)</li>
+<br>
+<strong>Normativa:</strong>
+<li>ISO TC-204 (ITS)</li>
+<li>AT3, AT4 del contrato</li>
+<li><strong>NO aplica Resolución 718/2018</strong></li>
+<br>
+#### <strong>Radares Sancionatorios (SAST)</strong>
+<br>
+<strong>Propósito:</strong> Detección y registro de infracciones
+<strong>Función:</strong> Generar evidencia legal de violaciones
+<strong>Componentes:</strong>
+<li>✅ Sensor radar de alta precisión (±2 km/h)</li>
+<li>✅ <strong>Cámara ANPR obligatoria</strong> (≥95% reconocimiento)</li>
+<li>✅ Software de evidencia (encriptación, firma digital)</li>
+<li>✅ Sincronización GPS</li>
+<br>
+<strong>Normativa:</strong>
+<li><strong>Resolución 718/2018</strong> (OBLIGATORIA)</li>
+<li>Ley 1581/2012 (Protección datos)</li>
+<li>Homologación ONAC (OBLIGATORIA)</li>
+<li>Calibración anual (OBLIGATORIA)</li>
+<br>
+#### <strong>Radares Pedagógicos (SI-27B)</strong>
+<br>
+<strong>Propósito:</strong> Advertencia preventiva al conductor.
+<strong>Función:</strong> Proyectar velocidad en tiempo real para disuasión.
+<strong>Componentes:</strong>
+<li>✅ Sensor radar Doppler (precisión ±1 km/h)</li>
+<li>✅ <strong>Display LED SI-27B</strong> (Ámbar/Bicolor)</li>
+<li>✅ Gabinete exterior IP65</li>
+<li>❌ <strong>NO requiere certificación ONAC</strong> (Fines informativos)</li>
+<li>❌ <strong>NO registra infracciones</strong></li>
+<br>
+<strong>Normativa:</strong>
+<li>Manual de Señalización Vial (SI-27B)</li>
+<li>AT2 §3.3.5.1</li>
+<br>
+<h3>14.2 Interoperabilidad SIMIT</h3>
+<br>
+<strong>Capacidad técnica vs. Obligación operativa:</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Aspecto</td>
+<td>Requisito</td>
+<td>Estado</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Capacidad técnica</strong></td>
+<td>Equipos y software habilitados para SIMIT</td>
+<td>✅ Obligatorio</td>
+</tr>
+<tr>
+<td><strong>Integración operativa</strong></td>
+<td>Transmisión activa de datos a SIMIT</td>
+<td>⚠️ Opcional (decisión futura)</td>
+</tr>
+<tr>
+<td><strong>Costo operación SIMIT</strong></td>
+<td>No incluido en CAPEX</td>
+<td>💰 A evaluar si se activa</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Justificación:</strong>
+> "La transmisión efectiva de información sancionatoria o datos personales al SIMIT no será obligatoria, y solo se efectuará si el Concesionario o la ANI lo determinan posteriormente, previo análisis de costos y responsabilidades."
+<br>
+<h3>14.3 Señalización Obligatoria (Radares Sancionatorios)</h3>
+<br>
+<strong>Según Resolución 718/2018:</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Señal</td>
+<td>Ubicación</td>
+<td>Características</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Preventiva "Control Electrónico"</strong></td>
+<td>500 m antes del radar</td>
+<td>Tamaño: 75×75 cm, retrorefléctiva Tipo IX</td>
+</tr>
+<tr>
+<td><strong>Informativa "Velocidad Máxima"</strong></td>
+<td>500 m antes del radar</td>
+<td>Tamaño según Manual Señalización Vial</td>
+</tr>
+<tr>
+<td><strong>Demarcación horizontal</strong></td>
+<td>Zona de detección</td>
+<td>Líneas amarillas, leyenda "RADAR"</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>15. ANEXOS</h2>
+<br>
+<h3>Anexo A: Planos de Referencia</h3>
+<li><strong>Plano de ubicaciones:</strong> Ver `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md`</li>
+<li><strong>Plano típico de pórtico:</strong> A suministrar por contratista (estructural)</li>
+<li><strong>Plano de cimentaciones:</strong> A suministrar por contratista (civil)</li>
+<li><strong>Plano de conexiones eléctricas:</strong> A suministrar por contratista (eléctrico)</li>
+<li><strong>Plano de conexiones fibra óptica:</strong> A suministrar por contratista (telecom)</li>
+<br>
+<h3>Anexo B: Hojas de Datos Técnicos</h3>
+<li>Datasheet sensor radar</li>
+<li>Datasheet cámara ANPR</li>
+<li>Datasheet unidad de procesamiento</li>
+<li>Datasheet UPS</li>
+<li>Datasheet switch de comunicaciones</li>
+<br>
+<h3>Anexo C: Certificaciones</h3>
+<li>Certificado ISO 9001:2015 del fabricante</li>
+<li>Certificado CE del equipo</li>
+<li>Certificado FCC del equipo</li>
+<li>Certificado IP65 del gabinete</li>
+<li><strong>Homologación ONAC (radares sancionatorios)</strong></li>
+<li><strong>Certificado calibración inicial (radares sancionatorios)</strong></li>
+<li>Declaración de conformidad RETIE</li>
+<br>
+<h3>Anexo D: Protocolos de Prueba</h3>
+<li>Formato protocolo FAT-ETD (PROTOCOLO-FAT-ETD-TEMPLATE.xlsx)</li>
+<li>Formato protocolo FAT-RADAR (PROTOCOLO-FAT-RADAR-TEMPLATE.xlsx)</li>
+<li>Formato protocolo SAT-ETD (PROTOCOLO-SAT-ETD-PKXX+XXX.xlsx)</li>
+<li>Formato protocolo SAT-RADAR (PROTOCOLO-SAT-RADAR-PKXX+XXX.xlsx)</li>
+<li>Formato protocolo calibración ONAC (PROTOCOLO-CALIBRACION-ONAC.xlsx)</li>
+<br>
+<h3>Anexo E: Documentos Normativos</h3>
+<li>Resolución 718 de 2018 (Ministerio de Transporte)</li>
+<li>Resolución 20223040040565 de 2022 (complementaria)</li>
+<li>Ley 1581 de 2012 (Protección de Datos Personales)</li>
+<li>Ley 769 de 2002 (Código Nacional de Tránsito)</li>
+<li>Formato de solicitud autorización MinTransporte</li>
+<br>
+<br>
+<h2>16. REFERENCIAS</h2>
+<br>
+<h3>16.1 Documentos del Proyecto</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Código</td>
+<td>Título</td>
+<td>Versión</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>T01-ITS</td>
+<td>Ficha de Sistema ITS</td>
+<td>v1.2</td>
+</tr>
+<tr>
+<td>T02-ITS</td>
+<td>Análisis de Requisitos ITS</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>T03-ITS</td>
+<td>Arquitectura Conceptual ITS</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>VAL-ETD-RAD</td>
+<td>Validación Contractual ETD y Radares</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>LAYOUT-ITS</td>
+<td>Layout Georreferenciado Equipos ITS</td>
+<td>v1.0</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>16.2 Normativa Citada</h3>
+<br>
+#### Nacional
+<li><strong>Resolución 718/2018</strong> - Ministerio de Transporte (Criterios SAST)</li>
+<li><strong>Resolución 20223040040565/2022</strong> - Ministerio de Transporte (Calibración)</li>
+<li><strong>Ley 769/2002</strong> - Código Nacional de Tránsito</li>
+<li><strong>Ley 1581/2012</strong> - Protección de Datos Personales</li>
+<li><strong>Decreto 1079/2015</strong> - Decreto Único Reglamentario Sector Transporte</li>
+<li><strong>RETIE</strong> - Reglamento Técnico de Instalaciones Eléctricas</li>
+<li><strong>NSR-10</strong> - Reglamento Colombiano de Construcción Sismo Resistente</li>
+<br>
+#### Internacional
+<li><strong>ISO TC-204</strong> - Intelligent Transport Systems</li>
+<li><strong>ISO 21217</strong> - ITS Communications (CALM)</li>
+<li><strong>ISO 14813</strong> - ITS Reference Model Architecture</li>
+<li><strong>IEC 60529</strong> - Degrees of protection (IP Code)</li>
+<li><strong>IEEE 802.3</strong> - Ethernet</li>
+<li><strong>ASTM A36</strong> - Carbon Structural Steel (pórticos)</li>
+<br>
+<br>
+<strong>Elaborado por:</strong> Administrador Contractual EPC
+<strong>Revisado por:</strong> Ing. ITS / Ing. Telecomunicaciones / Asesor Legal
+<strong>Aprobado por:</strong> Gerente Técnico
+<br>
+<strong>Fecha de elaboración:</strong> 21/10/2025
+<strong>Fecha de revisión:</strong> Pendiente
+<strong>Fecha de aprobación:</strong> Pendiente
+<br>
+<br>
+<strong>FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS ETD Y RADARES v2.1</strong>
+<br>
+<br>
+<strong>✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO - AUDIT .42</strong>
+<li>Cantidad total operativa: <strong>17 unidades</strong> (13 ETD + 2 SAST + 2 Pedagógicos).</li>
+<li>CAPEX consolidado: <strong>$1,700,000 USD</strong>.</li>
+<li>Tecnología: Radares No Intrusivos Doppler (Manual 2024).</li>
+<li>Alineación 100% con AT2, AT3 y AT4.</li>
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automáticamente por Sistema de Gestión TM01. <br>
+            Fase 7 - Ingeniería de Detalle.
+        </div>
+    </div>
+</body>
+</html>

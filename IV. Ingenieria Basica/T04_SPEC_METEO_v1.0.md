@@ -23,8 +23,8 @@
 | Campo | Valor |
 |:------|:------|
 | **Sistema** | Estaciones Meteorológicas de Grado Industrial |
-| **Cantidad** | **3 Unidades** (Peaje Zambito, Peaje Aguas Negras, CCO La Lizama) |
-| **CAPEX** | **USD $105,000** |
+| **Cantidad** | **4 Unidades** (Ver detalle abajo) |
+| **CAPEX** | **USD $140,000** (Estimado Ajustado) |
 | **Función** | Monitoreo climático y detección de neblina para seguridad vial |
 
 ---
@@ -78,11 +78,12 @@
 
 ## 4. UBICACIONES
 
-| Ubicación | PK (RN 4511) | Función |
-|:----------|:-------------|:--------|
-| **Peaje Zambito** | PK 9+200 | Monitoreo ambiental + Seguridad vial |
-| **Peaje Aguas Negras** | PK 80+000 | Monitoreo ambiental + Seguridad vial |
-| **CCO La Lizama** | RN 4513 PK 4+300 | Estación de referencia Central |
+| Ubicación | PK | Observación |
+|:----------|:---|:------------|
+| **Ruta 4510** | **K83+250** (OD Separador) | Vía Principal |
+| **Peaje Zambito (Ref)** | **K9+200** (Ruta 4511 Izq) | Cercano a Peaje |
+| **Peaje Aguas Negras (Ref)** | **K81+800** (Ruta 4511 Sep) | Cercano a Peaje |
+| **Báscula / CCO (Ref)** | **K4+235** (Ruta 4513 Izq) | Acceso CCO/Báscula |
 
 ---
 
@@ -90,10 +91,10 @@
 
 | Ítem | Cantidad | Precio Unit. (USD) | Total (USD) |
 |:-----|:---------|:-------------------|:------------|
-| Estación Industrial All-in-One + Visibilímetro + ETo | 3 | $25,000 | $75,000 |
-| Torre meteorológica 10m + Obras Civiles | 3 | $6,000 | $18,000 |
-| Integración CCO, Licencias y Comisionamiento | 3 | $4,000 | $12,000 |
-| **TOTAL CAPEX METEO** | - | - | **$105,000** |
+| Estación Industrial All-in-One + Visibilímetro + ETo | 4 | $25,000 | $100,000 |
+| Torre meteorológica 10m + Obras Civiles | 4 | $6,000 | $24,000 |
+| Integración CCO, Licencias y Comisionamiento | 4 | $4,000 | $16,000 |
+| **TOTAL CAPEX METEO** | - | - | **$140,000** |
 
 ---
 

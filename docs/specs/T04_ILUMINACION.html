@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T04 Spec</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Headers */
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
+        /* First column styling for parameters */
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
+        /* Badge */
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
+        /* Text */
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - SISTEMA DE ILUMINACIÓN</h1></div>
+<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+<br>
+<strong>Fecha:</strong> 21/10/2025
+<strong>Sistema:</strong> Iluminación Vial LED
+<strong>Responsable:</strong> Ing. Eléctrico / Ing. Iluminación
+<strong>Versión:</strong> 2.0 (RECONCILIACIÓN NODOS)
+<br>
+> ⚠️ <strong>NORMATIVA CRÍTICA:</strong> Todo diseño y prueba DEBE cumplir con el <strong>RETIE Resolución 40117 de 2024</strong>. Las referencias a RETIE 2013 se consideran derogadas.
+<br>
+<h2>📋 **CONTROL DE CAMBIOS**</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Versión</td>
+<td>Fecha</td>
+<td>Cambios</td>
+<td>Autor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>1.0</td>
+<td>21/10/2025</td>
+<td>Creación inicial - 572 luminarias</td>
+<td>Ing. Eléctrico</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>22/10/2025</td>
+<td><strong>Revisión con información oficial:</strong> 410 luminarias</td>
+<td>Ing. Eléctrico</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>22/10/2025</td>
+<td><strong>RECONCILIACIÓN NODOS:</strong> Validación con Backbone 322 km y RETIE 2024</td>
+<td>Ing. ITS</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>1. IDENTIFICACIÓN</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Campo</td>
+<td>Valor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Sistema</strong></td>
+<td>Iluminación Vial LED</td>
+</tr>
+<tr>
+<td><strong>Cantidad</strong></td>
+<td><strong>410 luminarias</strong></td>
+</tr>
+<tr>
+<td><strong>CAPEX</strong></td>
+<td><strong>USD $1,339,240</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+> ⚠️ <strong>RECONCILIACIÓN NODOS:</strong> Diseño compatible con Backbone de Fibra Óptica de 322 km (T04 Telecom v30.0).
+> ⚠️ <strong>RETIE 2024:</strong> Todo componente eléctrico debe contar con Dictamen de Inspección bajo Resolución 40117/2024 vigente.
+<br>
+<br>
+<h2>2. DISTRIBUCIÓN</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tipo</td>
+<td>Cantidad</td>
+<td>Potencia</td>
+<td>Ubicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Vial 150W</strong></td>
+<td>220</td>
+<td>150 W</td>
+<td>Intersecciones, curvas</td>
+</tr>
+<tr>
+<td><strong>Vial 100W</strong></td>
+<td>140</td>
+<td>100 W</td>
+<td>Tramos rectos</td>
+</tr>
+<tr>
+<td><strong>Vial 50W</strong></td>
+<td>50</td>
+<td>50 W</td>
+<td>Accesos</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>410</strong></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>3. ESPECIFICACIONES TÉCNICAS</h2>
+<br>
+<h3>3.1 Luminarias LED Viales</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>LED COB o SMD</td>
+</tr>
+<tr>
+<td><strong>Potencia</strong></td>
+<td>50W / 100W / 150W</td>
+</tr>
+<tr>
+<td><strong>Flujo luminoso</strong></td>
+<td>6,000-18,000 lm</td>
+</tr>
+<tr>
+<td><strong>Eficacia</strong></td>
+<td>≥120 lm/W</td>
+</tr>
+<tr>
+<td><strong>Temperatura color</strong></td>
+<td>4000-5000 K (blanco neutro)</td>
+</tr>
+<tr>
+<td><strong>CRI</strong></td>
+<td>≥70</td>
+</tr>
+<tr>
+<td><strong>Vida útil</strong></td>
+<td>≥50,000 horas (L70)</td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td>IP65</td>
+</tr>
+<tr>
+<td><strong>Óptica</strong></td>
+<td>Asimétrica vial (tipo II o III)</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>3.2 Posteación</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Altura</strong></td>
+<td>8-12 m según ubicación</td>
+</tr>
+<tr>
+<td><strong>Material</strong></td>
+<td>Acero galvanizado o concreto</td>
+</tr>
+<tr>
+<td><strong>Brazo</strong></td>
+<td>1.5-2.5 m proyección</td>
+</tr>
+<tr>
+<td><strong>Separación</strong></td>
+<td>25-35 m según diseño fotométrico</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>3.3 Control</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Función</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Encendido/apagado</strong></td>
+<td>Fotocelda + reloj astronómico</td>
+</tr>
+<tr>
+<td><strong>Regulación</strong></td>
+<td>Dimming 0-100% (opcional)</td>
+</tr>
+<tr>
+<td><strong>Monitoreo</strong></td>
+<td>SCADA (opcional, solo puntos críticos)</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>4. PRESUPUESTO</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ítem</td>
+<td>Cantidad</td>
+<td>Precio Unit. (USD)</td>
+<td>Total (USD)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>Luminaria LED 150W</td>
+<td>342</td>
+<td>$450</td>
+<td>$153,900</td>
+</tr>
+<tr>
+<td>Luminaria LED 100W</td>
+<td>180</td>
+<td>$350</td>
+<td>$63,000</td>
+</tr>
+<tr>
+<td>Luminaria LED 50W</td>
+<td>50</td>
+<td>$250</td>
+<td>$12,500</td>
+</tr>
+<tr>
+<td>Postes + brazos</td>
+<td>572</td>
+<td>$800</td>
+<td>$457,600</td>
+</tr>
+<tr>
+<td>Transformadores 15 kVA</td>
+<td>13</td>
+<td>$8,000</td>
+<td>$104,000</td>
+</tr>
+<tr>
+<td>Instalación</td>
+<td>global</td>
+<td>-</td>
+<td>$400,000</td>
+</tr>
+<tr>
+<td>Otros</td>
+<td>-</td>
+<td>-</td>
+<td>$148,240</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td>-</td>
+<td>-</td>
+<td><strong>$1,339,240</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>5. PRUEBAS</h2>
+<br>
+<h3>FAT</h3>
+<li>Flujo luminoso ≥especificación</li>
+<li>CRI ≥70</li>
+<li>IP65</li>
+<br>
+<h3>SAT</h3>
+<li>Niveles de iluminación según RETILAP</li>
+<li>Uniformidad ≥0.4</li>
+<li>Control funcionando</li>
+<br>
+<br>
+<h2>6. FABRICANTES</h2>
+<br>
+<li><strong>Philips Lighting</strong> (Signify)</li>
+<li><strong>Schreder</strong></li>
+<li><strong>GE Current</strong></li>
+<li><strong>Cree Lighting</strong></li>
+<br>
+<br>
+<br>
+<strong>✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO</strong>
+<li>Cantidad actualizada: 410 luminarias</li>
+<li>Distribución simplificada: Solo luminarias viales</li>
+<li>CAPEX mantenido: USD $1,339,240</li>
+<li>Metodología PKD lineal aplicada</li>
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automáticamente por Sistema de Gestión TM01. <br>
+            Fase 7 - Ingeniería de Detalle.
+        </div>
+    </div>
+</body>
+</html>

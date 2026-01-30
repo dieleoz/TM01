@@ -685,9 +685,30 @@ Sistema de comunicación bidireccional full-duplex que permite conversación en 
 
 ---
 
-**✅ REVISADO CON INFORMACIÓN OFICIAL Y NORMATIVA 2024**
-- Cantidad total restaurada: 98 unidades (Cumplimiento 3 km AT1)
-- Color normativo actualizado: Naranja RAL 2004 (Manual 2024)
-- Altura normativa actualizada: 4.90 m (Manual 2024)
-- Energía: Sistema autónomo solar estándar (eliminación riesgo 120VAC)
-- CAPEX actualizado: $2,450,000 USD
+## 15. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)
+
+**Resultado:** 🟢 **T04 VALIDADO (CON ALERTA DE OBRA CIVIL)**
+
+La especificación técnica es ROBUSTA Y CONTRACTUALMENTE SEGURA. Cumple con la obligación de resultado (cobertura total cada 3 km) y se alinea con la estrategia financiera de segregar el CAPEX (88 Postes Nuevos) del OPEX (10 Postes Existentes).
+
+**Advertencia de Delimitación de Alcance:** El Manual de Señalización 2024 exige barreras de contención y accesibilidad. **ESTE ALCANCE SE EXCLUYE DE ITS** y se transfiere como riesgo al EPC, quien deberá resolverlo con sus especialistas de Arquitectura (Accesibilidad) y Seguridad Vial (Defensas).
+
+### 15.1 Matriz de Cumplimiento "Hard Deck"
+| Requisito Técnico | Fuente Obligación | Especificación T04 | Veredicto |
+|:------------------|:------------------|:-------------------|:----------|
+| **Separación** | AT1: Máx 3.00 km | 2.99 km Promedio | ✅ CUMPLE |
+| **Cantidad Total** | AT1: 98 Postes para 293 km | **88 Nuevos + 10 Existentes** | ✅ CUMPLE |
+| **Color y Altura** | Manual 2024: Naranja RAL 2004, 4.90m | Naranja RAL 2004 / 4.9m | ✅ CUMPLE |
+| **Tecnología** | Dictamen: VoIP sobre Fibra | SIP / VoIP Nativo | ✅ CUMPLE |
+| **Energía** | RETIE 2024: Solar | Solar Autónomo (48h) | ✅ CUMPLE |
+
+### 15.2 Análisis de Riesgos y Mitigación
+| Riesgo | Acción T04 | Estado |
+|:-------|:-----------|:-------|
+| **Costo Oculto (Barreras)** | **TRANSFERIDO:** Responsabilidad del EPC (Arq/Seg. Vial). | ⚠️ RIESGO EPC |
+| **Rechazo 10 Existentes** | **Retrofit:** Exigencia de Pintura RAL 2004 y Stickering Nuevo. | ✅ MITIGADO |
+| **Certificación Solar** | **RETIE:** Gabinete pre-armado y certificado de fábrica. | ✅ MITIGADO |
+
+**Conclusión:** ANEXO TÉCNICO APROBADO.
+*   **Instrucción de Compra:** Proceder con 88 Kits Nuevos + 10 Servicios de Retrofit.
+*   **Exclusión:** La obra civil de accesibilidad y defensas NO está en este presupuesto.

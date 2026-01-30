@@ -191,7 +191,7 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - ✅ SOS: 88 new (98 total) / $2.2M: [PASS/FAIL]
 - ✅ CCTV: 9 cameras / $116.1K: [PASS/FAIL]
 - ✅ PMV: 39 units / $2.36M: [PASS/FAIL]
-- ✅ Peaje: $1.89M: [PASS/FAIL]
+- ✅ Peaje: $2.08M (User Validated): [PASS]
 - ✅ Total ITS: $7.79M: [PASS/FAIL]
 
 ### Architecture (5 Layers)

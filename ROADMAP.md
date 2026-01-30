@@ -14,15 +14,15 @@
 
 **Estado Legal (Paso 1): 100% COMPLETADO (12/12 Dictámenes Generados)**
 
-- [x] **CCTV:** ✅ CERRADO (5/5 Pasos)
-- [x] **PMV:** ✅ CERRADO (5/5 Pasos)
-- [x] **SOS:** ✅ CERRADO (5/5 Pasos)
-- [x] **WIM:** ✅ CERRADO (5/5 Pasos)
-- [x] **PEAJES:** ✅ CERRADO (5/5 Pasos)
+- [x] **CCTV:** ✅ CERRADO (T04 Validado - Smart CAPEX 9 Und)
+- [x] **PMV:** ✅ CERRADO (43 Und - ITS+Peajes)
+- [x] **SOS:** ✅ CERRADO (98 Und - Riesgo Obra Civil)
+- [x] **WIM:** ✅ CERRADO (1 Est. Bidireccional - Alerta Civil)
+- [x] **PEAJES:** ✅ CERRADO ($2.08M - Dictamen User Validado)
 - [x] **FIBRA:** ✅ CERRADO (5/5 Pasos)
 
 ## 📤 FASE 7: SERVICIOS (LAYER 5)
-> Solo se inicia cuando un sistema tiene los 5 pasos de la Receta completados.
+> **ESTADO:** 🟢 **EN EJECUCIÓN (Generando Entregables Finales)**
 
 - [ ] Generar RFQs blindados (`cocinar_rfqs.ps1`)
 - [ ] Generar Ejecutivos HTML (`cocinar_ejecutivos.ps1`)

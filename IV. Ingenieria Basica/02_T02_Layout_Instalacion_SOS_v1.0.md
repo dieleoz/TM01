@@ -11,10 +11,30 @@
 
 ## 1. UBICACIÓN EXACTA (COORDENADAS)
 
-> 📂 **Fuente:** `VII. Documentos Transversales/43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md`
-> *Filtrar por Item: SOS-001 a SOS-098*
+> 📂 **Fuente:** Detalle de Ingeniería de Tránsito (Enero 2026).
+> *Nota: Se anexa listado representativo. El dibujante debe graficar la totalidad de los 98 puntos.*
 
-**Regla de Oro (Tres Bolillos):**
+**Extracto Representativo (Inicio de Tramos):**
+
+| RUTA | UF | VIA | UBICACIÓN (PK) |
+| :--- | :--- | :--- | :--- |
+| **4510** | OD | DERECHA | K41+180 |
+| **4510** | OD | IZQUIERDA | K43+560 |
+| **4510** | OD | DERECHA | K46+550 |
+| **4510** | OD | IZQUIERDA | K49+550 |
+| **4510** | OD | DERECHA | K52+550 |
+| **4510** | OD | IZQUIERDA | K55+500 |
+| **4510** | OD | DERECHA | K58+500 |
+| **4510** | OD | IZQUIERDA | K61+500 |
+| **4511** | 5,1 | DERECHA | K64+510 |
+| **4511** | 5,1 | DERECHA | K67+000 |
+| **4511** | 12 | IZQUIERDA | K147+385 (Fin Tramo) |
+| **4513** | 11 | DERECHA | K1+240 |
+| **4513** | 13 | IZQUIERDA | K3+656 |
+| **4513** | 11 | DERECHA | K6+050 |
+| **4513** | 13 | SUR | K9+000 |
+
+**Regla de Diseño (Tres Bolillos):**
 - **SOS IMPARES:** Lado Izquierdo (Sentido N-S).
 - **SOS PARES:** Lado Derecho (Sentido S-N).
 - **Separación:** ~3 km entre postes del mismo lado (intercalados cada 1.5 km).
@@ -88,8 +108,3 @@ El dibujante debe entregar los siguientes DWG/PDF:
 | **DWG-SOS-002** | Detalle Constructivo Poste | 1:20 | Alzado, medidas, ubicación panel solar. |
 | **DWG-SOS-003** | Cimentación y Caja de Paso | 1:10 | Detalle obra civil. |
 | **DWG-SOS-004** | Diagrama de Conexión | S/E | Esquema eléctrico solar + datos. |
-
----
-
-**Aprobado por:** Ingeniería de Detalle TM01
-**Estado:** ✅ LISTO PARA DIBUJO

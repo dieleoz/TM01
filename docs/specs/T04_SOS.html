@@ -1,0 +1,2031 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T04 Spec</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Headers */
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
+        /* First column styling for parameters */
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
+        /* Badge */
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
+        /* Text */
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - POSTES SOS (SISTEMA DE TELEFONÍA DE EMERGENCIA)</h1></div>
+<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+<br>
+<strong>Fecha:</strong> 21/10/2025
+<strong>Sistema:</strong> Postes SOS - Sistema de Telefonía de Emergencia
+<strong>Responsable:</strong> Ing. ITS / Administrador Contractual EPC
+<strong>Versión:</strong> 1.5
+<strong>Referencia T01:</strong> T01_Ficha_Sistema_ITS_v1.2
+<strong>Referencia T03:</strong> T03_Arquitectura_Conceptual_ITS_v1.0
+<strong>Referencia Validación:</strong> 34_VALIDACION_CONTRACTUAL_POSTES_SOS_v1.0
+<strong>Referencia Layout:</strong> 42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0
+<br>
+<br>
+<h2>📋 **CONTROL DE CAMBIOS**</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Versión</td>
+<td>Fecha</td>
+<td>Cambios</td>
+<td>Autor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>1.0</td>
+<td>21/10/2025</td>
+<td>Creación inicial basada en validación contractual</td>
+<td>Adm. Contractual EPC</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>22/10/2025</td>
+<td><strong>Revisión con información oficial:</strong> SOS #88 RN 4513, cantidad total 88 unidades</td>
+<td>Adm. Contractual EPC</td>
+</tr>
+<tr>
+<td>v1.2</td>
+<td>15/01/2026</td>
+<td><strong>Revisión Contractual:</strong> Escalado a 98 unidades (1 c/3km en 293km)</td>
+<td>Administrador Contractual EPC</td>
+</tr>
+<tr>
+<td>v1.3</td>
+<td>15/01/2026</td>
+<td><strong>Certificación Fase 0.5 Update:</strong> Definición final en 88 unidades (Corrección de 98)</td>
+<td>Administrador Contractual EPC</td>
+</tr>
+<tr>
+<td>v1.4</td>
+<td>20/01/2026</td>
+<td><strong>Blindaje Técnico .42:</strong> Reconciliación 88 unidades y $2.2M CAPEX</td>
+<td>Administrador Contractual EPC</td>
+</tr>
+<tr>
+<td><strong>v1.5</strong></td>
+<td><strong>20/01/2026</strong></td>
+<td><strong>Normativa 2024 Update:</strong> Restauración a 98 unidades, Color Naranja (RAL 2004), Altura 4.90m, Energía Solar Estándar</td>
+<td><strong>Administrador Contractual EPC</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>1. IDENTIFICACIÓN Y ALCANCE</h2>
+<br>
+<h3>1.1 Identificación del Sistema</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Campo</td>
+<td>Valor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Nombre del sistema</strong></td>
+<td>Postes SOS - Sistema de Telefonía de Emergencia</td>
+</tr>
+<tr>
+<td><strong>Categoría</strong></td>
+<td>ITS (Intelligent Transportation Systems)</td>
+</tr>
+<tr>
+<td><strong>Código interno</strong></td>
+<td>T04-SOS-001-v2.0</td>
+</tr>
+<tr>
+<td><strong>Cantidad Total</strong></td>
+<td><strong>98 unidades</strong></td>
+<td>AT1 - Alcance (Cumplimiento 3km)</td>
+</tr>
+<tr>
+<td><strong>Longitud Corredor</strong></td>
+<td><strong>293.0 km</strong></td>
+<td>AT1 - Alcance Real</td>
+</tr>
+<tr>
+<td><strong>CAPEX estimado</strong></td>
+<td><strong>USD $2,450,000</strong> ($25,000 USD/unidad instalada)</td>
+</tr>
+<tr>
+<td><strong>Documentos base</strong></td>
+<td>T01 v1.2, T03 v1.0, Validación Contractual v1.0, Layout v1.0</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>1.2 Alcance de las Especificaciones</h3>
+<br>
+<strong>Este documento especifica:</strong>
+<li>✅ Características técnicas mínimas de postes SOS</li>
+<li>✅ Requisitos de desempeño y disponibilidad</li>
+<li>✅ Normativa nacional e internacional aplicable</li>
+<li>✅ Criterios de aceptación (FAT/SAT)</li>
+<li>✅ Procedimientos de prueba y certificación</li>
+<li>✅ Ubicaciones exactas (referencia a layout georreferenciado)</li>
+<br>
+<strong>Este documento NO especifica:</strong>
+<li>❌ Detalles constructivos de cimentaciones (ver T05)</li>
+<li>❌ Cronograma detallado de instalación (ver Plan de Obra)</li>
+<li>❌ Proveedores específicos (referencias orientativas únicamente)</li>
+<br>
+<br>
+<h2>2. MARCO NORMATIVO Y CONTRACTUAL</h2>
+<br>
+<h3>2.1 Referencias Contractuales</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Documento</td>
+<td>Sección</td>
+<td>Requisito Clave</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Apéndice Técnico 1</strong></td>
+<td>Capítulo 3 "Sistemas de comunicación y postes SOS" (pág. 48-50)</td>
+<td>Distancia máxima 3 km, alternados en bermas externas</td>
+</tr>
+<tr>
+<td><strong>Apéndice Técnico 2</strong></td>
+<td>Sección 3.3.4.5 "Sistemas ITS"</td>
+<td>Integración con CCO, comunicación gratuita</td>
+</tr>
+<tr>
+<td><strong>Apéndice Técnico 3</strong></td>
+<td>Capítulo IV "Sistemas ITS"</td>
+<td>Especificaciones mínimas de equipos</td>
+</tr>
+<tr>
+<td><strong>Apéndice Técnico 4</strong></td>
+<td>Indicadores de Nivel de Servicio</td>
+<td>Disponibilidad ≥99%, tiempo de respuesta <3 segundos</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.2 Normativa Aplicable</h3>
+<br>
+#### Normativa Nacional
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Norma</td>
+<td>Título</td>
+<td>Aplicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>RETIE</strong></td>
+<td>Reglamento Técnico de Instalaciones Eléctricas</td>
+<td>Alimentación eléctrica, tierras, protecciones</td>
+</tr>
+<tr>
+<td><strong>Resolución 2273/2014</strong></td>
+<td>Plan Nacional de Seguridad Vial</td>
+<td>Dispositivos de seguridad en carreteras</td>
+</tr>
+<tr>
+<td><strong>Manual de Señalización Vial 2015</strong></td>
+<td>Dispositivos uniformes de regulación del tránsito</td>
+<td>Señalización de postes SOS</td>
+</tr>
+<tr>
+<td><strong>Decreto 1079/2015</strong></td>
+<td>Decreto Único Reglamentario del Sector Transporte</td>
+<td>Requisitos de seguridad vial</td>
+</tr>
+</tbody></table></div>
+<br>
+#### Normativa Internacional
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Norma</td>
+<td>Título</td>
+<td>Aplicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>ISO TC-204</strong></td>
+<td>Intelligent Transport Systems</td>
+<td>Sistemas ITS en general</td>
+</tr>
+<tr>
+<td><strong>ITU-T H.550-H.569</strong></td>
+<td>Vehicular gateways and ITS</td>
+<td>Arquitectura y protocolos ITS</td>
+</tr>
+<tr>
+<td><strong>IEC 60529</strong></td>
+<td>Degrees of protection (IP Code)</td>
+<td>Protección IP65 mínima</td>
+</tr>
+<tr>
+<td><strong>IEEE 802.3</strong></td>
+<td>Ethernet</td>
+<td>Comunicaciones por fibra óptica</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.3 Certificaciones Requeridas</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Certificación</td>
+<td>Organismo</td>
+<td>Obligatoria</td>
+<td>Aplicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>CE</strong></td>
+<td>Conformidad Europea</td>
+<td>✅ Sí</td>
+<td>Equipos electrónicos importados</td>
+</tr>
+<tr>
+<td><strong>FCC</strong></td>
+<td>Federal Communications Commission</td>
+<td>✅ Sí</td>
+<td>Equipos de comunicaciones</td>
+</tr>
+<tr>
+<td><strong>IP65</strong></td>
+<td>IEC 60529</td>
+<td>✅ Sí</td>
+<td>Gabinete exterior</td>
+</tr>
+<tr>
+<td><strong>ISO 9001:2015</strong></td>
+<td>Sistema de Gestión de Calidad</td>
+<td>✅ Sí</td>
+<td>Fabricante</td>
+</tr>
+<tr>
+<td><strong>RETIE</strong></td>
+<td>Cumplimiento eléctrico Colombia</td>
+<td>✅ Sí</td>
+<td>Instalaciones eléctricas</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>3. ESPECIFICACIONES TÉCNICAS GENERALES</h2>
+<br>
+<h3>3.1 Características Ambientales</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Referencia</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Temperatura de operación</strong></td>
+<td>-10°C a +50°C</td>
+<td>Condiciones tropicales</td>
+</tr>
+<tr>
+<td><strong>Humedad relativa</strong></td>
+<td>0-95% sin condensación</td>
+<td>IEC 60068-2-78</td>
+</tr>
+<tr>
+<td><strong>Protección IP</strong></td>
+<td><strong>IP65 mínimo</strong></td>
+<td>IEC 60529</td>
+</tr>
+<tr>
+<td><strong>Resistencia a viento</strong></td>
+<td>120 km/h</td>
+<td>Zona tropical</td>
+</tr>
+<tr>
+<td><strong>Altitud operación</strong></td>
+<td>0-500 msnm</td>
+<td>Magdalena Medio</td>
+</tr>
+<tr>
+<td><strong>Resistencia UV</strong></td>
+<td>Mín. 10 años</td>
+<td>ASTM G154</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Condiciones específicas del proyecto:</strong>
+<li>✅ Clima tropical húmedo (Magdalena Medio)</li>
+<li>✅ Temperatura promedio: 27-32°C</li>
+<li>✅ Humedad promedio: 70-85%</li>
+<li>✅ Exposición directa al sol</li>
+<li>✅ Lluvias intensas frecuentes</li>
+<br>
+<h3>3.2 Requisitos Eléctricos</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tensión nominal</strong></td>
+<td>12-24 VDC (Sistema Solar) / 120 VAC (Opcional)</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Variación de tensión</strong></td>
+<td>±10%</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Consumo máximo</strong></td>
+<td><strong>50 W</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Consumo en espera</strong></td>
+<td><10 W</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Factor de potencia</strong></td>
+<td>≥0.9</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Respaldo Baterías</strong></td>
+<td><strong>48 horas mínimo (Autonomía Solar)</strong></td>
+<td>AT2 / Estándar 2024</td>
+</tr>
+<tr>
+<td><strong>Sistema de tierras</strong></td>
+<td><10 Ω</td>
+<td>RETIE</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>3.3 Requisitos de Comunicaciones</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Protocolo</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Medio físico</strong></td>
+<td><strong>Fibra óptica monomodo 9/125 μm</strong></td>
+<td>ITU-T G.652</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>100 Mbps mínimo</td>
+<td>IEEE 802.3</td>
+</tr>
+<tr>
+<td><strong>Protocolo de red</strong></td>
+<td>TCP/IP</td>
+<td>RFC 791, RFC 793</td>
+</tr>
+<tr>
+<td><strong>Protocolo VoIP</strong></td>
+<td>SIP / H.323</td>
+<td>ITU-T</td>
+</tr>
+<tr>
+<td><strong>Codec de audio</strong></td>
+<td>G.711 / G.729</td>
+<td>ITU-T</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td><strong>≥99% anual</strong></td>
+<td>AT2, AT4</td>
+</tr>
+<tr>
+<td><strong>Latencia máxima</strong></td>
+<td><150 ms</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Jitter</strong></td>
+<td><30 ms</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>4. ESPECIFICACIONES POR COMPONENTE</h2>
+<br>
+<h3>4.1 Poste SOS (Unidad Completa)</h3>
+<br>
+#### 4.1.1 Descripción General
+<br>
+El poste SOS es un dispositivo de comunicación de emergencia que permite a los usuarios del corredor vial establecer contacto directo y gratuito con el Centro de Control de Operaciones (CCO) en caso de emergencia, incidente o requerimiento de asistencia.
+<br>
+<strong>Sistema "Tres Bolillos":</strong>
+<li>Instalación <strong>alternada</strong> entre calzadas (izquierda/derecha)</li>
+<li>SOS impar (1, 3, 5...): Berma externa izquierda</li>
+<li>SOS par (2, 4, 6...): Berma externa derecha</li>
+<li>Cobertura efectiva: ~1.5 km por calzada</li>
+<br>
+#### 4.1.2 Especificaciones Técnicas del Poste
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Método de Verificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Altura total</strong></td>
+<td>4.90 m (Estructural) / SOS a 1.20 m</td>
+<td>Manual Señalización 2024</td>
+</tr>
+<tr>
+<td><strong>Ancho (base)</strong></td>
+<td>40 cm mínimo</td>
+<td>Inspección dimensional</td>
+</tr>
+<tr>
+<td><strong>Profundidad (base)</strong></td>
+<td>35 cm mínimo</td>
+<td>Inspección dimensional</td>
+</tr>
+<tr>
+<td><strong>Peso total</strong></td>
+<td>120-180 kg (incluye mástil alto)</td>
+<td>Pesaje</td>
+</tr>
+<tr>
+<td><strong>Visibilidad nocturna</strong></td>
+<td>500 m mínimo</td>
+<td>Prueba fotométrica</td>
+</tr>
+<tr>
+<td><strong>Resistencia impacto</strong></td>
+<td>IK10</td>
+<td>IEC 62262</td>
+</tr>
+<tr>
+<td><strong>Protección IP</strong></td>
+<td>IP65 exterior, IP54 interior</td>
+<td>IEC 60529</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.1.3 Materiales y Construcción
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Elemento</td>
+<td>Material</td>
+<td>Acabado</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Estructura principal</strong></td>
+<td>Acero galvanizado ASTM A36</td>
+<td>Pintura poliuretano RAL 2004 (Naranja)</td>
+<td>ASTM A123</td>
+</tr>
+<tr>
+<td><strong>Puerta frontal</strong></td>
+<td>Acero inoxidable AISI 304</td>
+<td>Pulido satinado</td>
+<td>ASTM A240</td>
+</tr>
+<tr>
+<td><strong>Panel frontal</strong></td>
+<td>Policarbonato antivandalismo</td>
+<td>Transparente UV-resistente</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Botón de emergencia</strong></td>
+<td>Acero inoxidable o aluminio anodizado</td>
+<td>Color rojo RAL 3020</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Bisagras y cerraduras</strong></td>
+<td>Acero inoxidable AISI 316</td>
+<td>-</td>
+<td>ASTM A240</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.1.4 Dimensiones y Pesos
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Dimensión</td>
+<td>Valor</td>
+<td>Tolerancia</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Alto total (sobre nivel terreno)</strong></td>
+<td>4.90 m</td>
+<td>Manual 2024</td>
+</tr>
+<tr>
+<td><strong>Ancho frontal</strong></td>
+<td>400 mm</td>
+<td>±10 mm</td>
+</tr>
+<tr>
+<td><strong>Profundidad</strong></td>
+<td>350 mm</td>
+<td>±10 mm</td>
+</tr>
+<tr>
+<td><strong>Altura del botón SOS</strong></td>
+<td>1.20 m (desde piso)</td>
+<td>±50 mm</td>
+</tr>
+<tr>
+<td><strong>Peso estructura</strong></td>
+<td>135 kg</td>
+<td>±10 kg</td>
+</tr>
+<tr>
+<td><strong>Peso con equipos</strong></td>
+<td>160 kg</td>
+<td>±15 kg</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.1.5 Señalización y Visibilidad
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Elemento</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Letrero "SOS"</strong></td>
+<td>Tamaño mínimo: 30 cm × 15 cm, retrorefléctivo Tipo IX</td>
+</tr>
+<tr>
+<td><strong>Pictograma teléfono</strong></td>
+<td>20 cm × 20 cm mínimo, según Manual Señalización Vial 2015</td>
+</tr>
+<tr>
+<td><strong>Iluminación LED</strong></td>
+<td>Color ámbar o blanco, visible 500 m, encendido nocturno automático</td>
+</tr>
+<tr>
+<td><strong>Cinta retrorefléctiva</strong></td>
+<td>Perímetro del poste, dos franjas blancas 10 cm (Tipo IV)</td>
+<td>Numeral 9.3.3.6 Manual 2024</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>4.2 Sistema de Comunicación de Voz</h3>
+<br>
+#### 4.2.1 Descripción General
+<br>
+Sistema de comunicación bidireccional full-duplex que permite conversación en tiempo real entre el usuario en campo y el operador del CCO.
+<br>
+#### 4.2.2 Especificaciones Técnicas
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación Mínima</td>
+<td>Método de Verificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tipo de comunicación</strong></td>
+<td>Full-duplex (habla y escucha simultáneos)</td>
+<td>Prueba funcional</td>
+</tr>
+<tr>
+<td><strong>Tiempo de establecimiento llamada</strong></td>
+<td><strong><3 segundos</strong></td>
+<td>Prueba con cronómetro</td>
+</tr>
+<tr>
+<td><strong>Calidad de audio</strong></td>
+<td>Inteligibilidad ≥90%</td>
+<td>Prueba MOS (Mean Opinion Score)</td>
+</tr>
+<tr>
+<td><strong>Cancelación de eco</strong></td>
+<td>Sí, automática</td>
+<td>Prueba funcional</td>
+</tr>
+<tr>
+<td><strong>Supresión de ruido ambiente</strong></td>
+<td>≥15 dB</td>
+<td>Prueba acústica</td>
+</tr>
+<tr>
+<td><strong>Rango de frecuencia</strong></td>
+<td>300-3400 Hz</td>
+<td>Análisis espectral</td>
+</tr>
+<tr>
+<td><strong>Nivel de presión sonora (altavoz)</strong></td>
+<td>80-90 dB @ 1 m</td>
+<td>Sonómetro</td>
+</tr>
+<tr>
+<td><strong>Sensibilidad micrófono</strong></td>
+<td>-45 dB @ 1 kHz</td>
+<td>Prueba de laboratorio</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.2.3 Funcionalidades Requeridas
+<br>
+<li>✅ <strong>Llamada automática al CCO</strong> al presionar botón SOS</li>
+<li>✅ <strong>Identificación automática</strong> de ubicación (PK, ruta, sentido)</li>
+<li>✅ <strong>Registro de llamadas</strong> (hora, duración, ubicación)</li>
+<li>✅ <strong>Grabación de conversaciones</strong> (almacenamiento mínimo 90 días)</li>
+<li>✅ <strong>Llamada prioritaria</strong> (interrumpe otras comunicaciones si es necesario)</li>
+<li>✅ <strong>Supervisión remota</strong> de estado operativo (conectado/desconectado)</li>
+<li>✅ <strong>Prueba periódica automática</strong> (diaria, sin intervención humana)</li>
+<br>
+<h3>4.3 Equipos Electrónicos Internos</h3>
+<br>
+#### 4.3.1 Unidad de Control Principal
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Especificación Mínima</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Procesador</strong></td>
+<td>ARM Cortex-A7 o superior, 1 GHz</td>
+</tr>
+<tr>
+<td><strong>Memoria RAM</strong></td>
+<td>512 MB mínimo</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento</strong></td>
+<td>8 GB flash mínimo (para logs y grabaciones)</td>
+</tr>
+<tr>
+<td><strong>Sistema operativo</strong></td>
+<td>Linux embebido o similar</td>
+</tr>
+<tr>
+<td><strong>Interfaz de red</strong></td>
+<td>Ethernet 10/100 Mbps</td>
+</tr>
+<tr>
+<td><strong>Protocolos</strong></td>
+<td>TCP/IP, SIP, SNMP v3</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.3.2 Conversor de Medios (Media Converter)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tipo</strong></td>
+<td>Fibra óptica (SC/APC) a Ethernet (RJ45)</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>100 Mbps full-duplex</td>
+</tr>
+<tr>
+<td><strong>Distancia máxima</strong></td>
+<td>20 km (fibra monomodo)</td>
+</tr>
+<tr>
+<td><strong>Longitud de onda</strong></td>
+<td>1310 nm o 1550 nm</td>
+</tr>
+<tr>
+<td><strong>Sensibilidad receptora</strong></td>
+<td>-30 dBm mínimo</td>
+</tr>
+<tr>
+<td><strong>Potencia de transmisión</strong></td>
+<td>-15 a -8 dBm</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.3.3 Sistema de Respaldo (UPS)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Capacidad</strong></td>
+<td><strong>2 horas mínimo</strong> a carga completa</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Baterías de ciclo profundo (AGM o gel)</td>
+</tr>
+<tr>
+<td><strong>Tensión</strong></td>
+<td>12 VDC</td>
+</tr>
+<tr>
+<td><strong>Capacidad mínima</strong></td>
+<td>20 Ah @ 12V</td>
+</tr>
+<tr>
+<td><strong>Tiempo de recarga</strong></td>
+<td><8 horas</td>
+</tr>
+<tr>
+<td><strong>Vida útil</strong></td>
+<td>>5 años</td>
+</tr>
+<tr>
+<td><strong>Indicador de estado</strong></td>
+<td>LED o display local + remoto vía SNMP</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 4.3.4 Sistema de Protección Eléctrica
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>DPS (Supresor de Picos)</strong></td>
+<td>Clase II, 20 kA mínimo</td>
+</tr>
+<tr>
+<td><strong>Breaker principal</strong></td>
+<td>10 A, curva C</td>
+</tr>
+<tr>
+<td><strong>Fusibles secundarios</strong></td>
+<td>Según consumo de cada equipo</td>
+</tr>
+<tr>
+<td><strong>Tierras</strong></td>
+<td>SPT independiente, <10 Ω</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>4.4 Fabricantes de Referencia</h3>
+<br>
+<strong>Fabricantes aceptables (sin orden de preferencia):</strong>
+<br>
+1. <strong>SWARCO</strong> (Austria/Alemania)
+<li>Modelo: EFA-S2 Emergency Phone</li>
+<li>Sitio: www.swarco.com</li>
+<br>
+2. <strong>COMARK</strong> (España)
+<li>Modelo: PTU-200 Series</li>
+<li>Sitio: www.comark.es</li>
+<br>
+3. <strong>Siemens Mobility</strong> (Alemania)
+<li>Modelo: Wayside Communication System</li>
+<li>Sitio: www.mobility.siemens.com</li>
+<br>
+4. <strong>GAI-TRONICS</strong> (USA)
+<li>Modelo: Commander Highway Emergency Telephone</li>
+<li>Sitio: www.gai-tronics.com</li>
+<br>
+5. <strong>TELERGON</strong> (España)
+<li>Modelo: TGN-SOS Series</li>
+<li>Sitio: www.telergon.es</li>
+<br>
+6. <strong>O equivalente</strong> que cumpla o supere las especificaciones
+<br>
+> <strong>Nota:</strong> La lista es referencial. El contratista puede proponer alternativas que cumplan o superen las especificaciones mediante documentación técnica y certificaciones.
+<br>
+<br>
+<h2>5. INTEGRACIÓN Y COMPATIBILIDAD</h2>
+<br>
+<h3>5.1 Integración con Sistema Central (CCO)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Aspecto</td>
+<td>Requisito</td>
+<td>Verificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Conexión a CCO</strong></td>
+<td>VoIP (SIP), 100 Mbps, fibra óptica</td>
+<td>Prueba de conectividad</td>
+</tr>
+<tr>
+<td><strong>Tiempo de establecimiento llamada</strong></td>
+<td><3 segundos</td>
+<td>Prueba cronometrada</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>≥99% anual</td>
+<td>Monitoreo 30 días piloto</td>
+</tr>
+<tr>
+<td><strong>Identificación automática</strong></td>
+<td>PK, ruta, sentido automático</td>
+<td>Verificación en pantalla CCO</td>
+</tr>
+<tr>
+<td><strong>Registro de eventos</strong></td>
+<td>Todos los eventos en SCADA</td>
+<td>Consulta base de datos</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>5.2 Integración con SCADA</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Requisito</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Protocolo</strong></td>
+<td>SNMP v3 o Modbus TCP/IP</td>
+</tr>
+<tr>
+<td><strong>Variables monitoreadas</strong></td>
+<td>Estado (online/offline), fallas, llamadas activas, batería</td>
+</tr>
+<tr>
+<td><strong>Frecuencia de actualización</strong></td>
+<td>60 segundos máximo</td>
+</tr>
+<tr>
+<td><strong>Alarmas</strong></td>
+<td>Falla de comunicación, batería baja, puerta abierta</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>5.3 Interfaz con Otros Sistemas</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Sistema</td>
+<td>Tipo de Interfaz</td>
+<td>Datos Intercambiados</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Telecomunicaciones</strong></td>
+<td>Fibra óptica (backbone)</td>
+<td>Voz VoIP, datos de estado</td>
+</tr>
+<tr>
+<td><strong>Energía Eléctrica</strong></td>
+<td>Acometida 120 VAC</td>
+<td>Alimentación eléctrica</td>
+</tr>
+<tr>
+<td><strong>CCO</strong></td>
+<td>VoIP + SNMP</td>
+<td>Voz, eventos, alarmas, estado</td>
+</tr>
+<tr>
+<td><strong>SCADA</strong></td>
+<td>SNMP v3</td>
+<td>Variables de operación</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>6. REQUISITOS DE INSTALACIÓN</h2>
+<br>
+<h3>6.1 Ubicaciones Exactas</h3>
+<br>
+<strong>Referencia:</strong> `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md`
+<br>
+<strong>Distribución por ruta:</strong>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ruta</td>
+<td>Cantidad</td>
+<td>PK Inicial</td>
+<td>PK Final</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>RN 4510</strong></td>
+<td>37</td>
+<td>PK 41+180</td>
+<td>PK 131+700</td>
+<td>Sistema tres bolillos</td>
+</tr>
+<tr>
+<td><strong>RN 4511</strong></td>
+<td>56</td>
+<td>PK 0+650</td>
+<td>PK 147+385</td>
+<td>Sistema tres bolillos</td>
+</tr>
+<tr>
+<td><strong>RN 4513</strong></td>
+<td>5</td>
+<td>PK 1+240</td>
+<td>PK 9+000</td>
+<td>Acceso CCO/Báscula + SOS #88</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>98</strong></td>
+<td>-</td>
+<td>-</td>
+<td>293.0 km cubiertos</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Criterio de separación:</strong>
+<li>✅ Máximo 3 km entre postes consecutivos</li>
+<li>✅ Alternados en bermas externas (izquierda/derecha)</li>
+<li>✅ Cobertura efectiva: ~1.5 km por calzada</li>
+<br>
+<h3>6.2 Obras Civiles Requeridas</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Elemento</td>
+<td>Especificación</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Cimentación</strong></td>
+<td>Dados de concreto 60×60×80 cm, f'c=21 MPa</td>
+<td>NSR-10</td>
+</tr>
+<tr>
+<td><strong>Profundidad</strong></td>
+<td>80 cm bajo nivel de terreno</td>
+<td>NSR-10</td>
+</tr>
+<tr>
+<td><strong>Pernos de anclaje</strong></td>
+<td>4 unid., Ø1/2", L=50 cm, galvanizados</td>
+<td>ASTM A307</td>
+</tr>
+<tr>
+<td><strong>Canalizaciones</strong></td>
+<td>HDPE Ø2" (50 mm), profundidad 0.80 m</td>
+<td>RETIE</td>
+</tr>
+<tr>
+<td><strong>Caja de registro</strong></td>
+<td>40×40×60 cm, tapa de concreto</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Tierras</strong></td>
+<td>SPT independiente, varilla copperweld 5/8"×2.4 m, <10 Ω</td>
+<td>RETIE</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>6.3 Conexiones</h3>
+<br>
+#### 6.3.1 Acometida Eléctrica
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tensión</strong></td>
+<td>120 VAC, 60 Hz</td>
+</tr>
+<tr>
+<td><strong>Corriente máxima</strong></td>
+<td>5 A</td>
+</tr>
+<tr>
+<td><strong>Calibre conductor</strong></td>
+<td>AWG 12, THHN/THWN</td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td>Breaker 10 A + DPS Clase II 20 kA</td>
+</tr>
+<tr>
+<td><strong>Ducto</strong></td>
+<td>PVC Ø3/4" desde poste más cercano</td>
+</tr>
+</tbody></table></div>
+<br>
+#### 6.3.2 Conectividad (Fibra Óptica)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Medio</strong></td>
+<td>Fibra óptica SM 9/125 μm, OS2</td>
+</tr>
+<tr>
+<td><strong>Ruta</strong></td>
+<td>Desde berma externa → cruce subterráneo → separador central (backbone)</td>
+</tr>
+<tr>
+<td><strong>Ducto</strong></td>
+<td>HDPE Ø2" (50 mm)</td>
+</tr>
+<tr>
+<td><strong>Profundidad cruce</strong></td>
+<td>0.80 m bajo calzada</td>
+</tr>
+<tr>
+<td><strong>Conectores</strong></td>
+<td>SC/APC</td>
+</tr>
+<tr>
+<td><strong>ODF más cercano</strong></td>
+<td>Variable según ubicación (ver layout)</td>
+</tr>
+<tr>
+<td><strong>Atenuación máxima</strong></td>
+<td><2 dB total (incluyendo conectores y empalmes)</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>7. PRUEBAS Y CRITERIOS DE ACEPTACIÓN</h2>
+<br>
+<h3>7.1 Pruebas en Fábrica (FAT)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Prueba</td>
+<td>Objetivo</td>
+<td>Criterio de Aceptación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Inspección dimensional</strong></td>
+<td>Verificar dimensiones según plano</td>
+<td>Dentro de tolerancias (±5%)</td>
+</tr>
+<tr>
+<td><strong>Inspección visual</strong></td>
+<td>Verificar acabados, soldaduras, pintura</td>
+<td>Sin defectos visibles, pintura uniforme</td>
+</tr>
+<tr>
+<td><strong>Prueba eléctrica</strong></td>
+<td>Verificar consumo y protección</td>
+<td>Consumo <50 W, DPS funcional</td>
+</tr>
+<tr>
+<td><strong>Prueba de hermeticidad</strong></td>
+<td>Verificar IP65</td>
+<td>Prueba con chorro de agua (12.5 L/min, 3 min)</td>
+</tr>
+<tr>
+<td><strong>Prueba de audio</strong></td>
+<td>Verificar calidad de voz</td>
+<td>Inteligibilidad ≥90%, cancelación de eco OK</td>
+</tr>
+<tr>
+<td><strong>Prueba de comunicación</strong></td>
+<td>Simular llamada a CCO</td>
+<td>Establecimiento <3 seg, comunicación clara</td>
+</tr>
+<tr>
+<td><strong>Prueba de UPS</strong></td>
+<td>Verificar autonomía</td>
+<td>≥2 horas a carga completa</td>
+</tr>
+<tr>
+<td><strong>Prueba de iluminación</strong></td>
+<td>Verificar LED y retroreflectividad</td>
+<td>Visible 500 m, retroreflectividad según norma</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>7.2 Pruebas en Sitio (SAT)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Prueba</td>
+<td>Objetivo</td>
+<td>Criterio de Aceptación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Inspección de instalación</strong></td>
+<td>Verificar verticalidad, cimentación, tierras</td>
+<td>Vertical ±2°, cimentación según plano, SPT <10 Ω</td>
+</tr>
+<tr>
+<td><strong>Prueba de conectividad</strong></td>
+<td>Verificar comunicación con CCO</td>
+<td>Ping <150 ms, sin pérdida de paquetes</td>
+</tr>
+<tr>
+<td><strong>Prueba de llamada real</strong></td>
+<td>Verificar funcionamiento end-to-end</td>
+<td>Llamada establecida <3 seg, audio claro ambos sentidos</td>
+</tr>
+<tr>
+<td><strong>Prueba de identificación</strong></td>
+<td>Verificar datos en pantalla CCO</td>
+<td>PK, ruta, sentido correctos</td>
+</tr>
+<tr>
+<td><strong>Prueba de grabación</strong></td>
+<td>Verificar almacenamiento de audio</td>
+<td>Grabación clara, audible, recuperable</td>
+</tr>
+<tr>
+<td><strong>Prueba de alimentación</strong></td>
+<td>Verificar acometida eléctrica</td>
+<td>120 VAC ±10%, protecciones funcionando</td>
+</tr>
+<tr>
+<td><strong>Prueba de UPS</strong></td>
+<td>Verificar autonomía en sitio</td>
+<td>Desconectar red, funcionamiento >2 horas</td>
+</tr>
+<tr>
+<td><strong>Prueba de integración SCADA</strong></td>
+<td>Verificar monitoreo remoto</td>
+<td>Todas las variables visibles en SCADA</td>
+</tr>
+<tr>
+<td><strong>Prueba de visibilidad</strong></td>
+<td>Verificar iluminación nocturna</td>
+<td>Visible 500 m de noche</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>7.3 Protocolos de Prueba</h3>
+<br>
+#### 7.3.1 Protocolo de Prueba FAT
+<br>
+<strong>Documento:</strong> `PROTOCOLO-FAT-SOS-XXX`
+<strong>Contenido mínimo:</strong>
+1. <strong>Identificación del equipo:</strong> Marca, modelo, serial, cantidad
+2. <strong>Lista de verificación dimensional:</strong> Tabla con dimensiones vs. plano
+3. <strong>Lista de verificación funcional:</strong> Checklist con resultado OK/NO OK
+4. <strong>Registro de mediciones:</strong> Consumo, autonomía, audio, iluminación
+5. <strong>Registro fotográfico:</strong> Mínimo 10 fotos (frontal, lateral, interior, detalles)
+6. <strong>Certificados:</strong> CE, FCC, IP65, ISO 9001
+7. <strong>Firmas:</strong> Fabricante / Contratista / Interventoría
+<br>
+#### 7.3.2 Protocolo de Prueba SAT
+<br>
+<strong>Documento:</strong> `PROTOCOLO-SAT-SOS-PKXX+XXX`
+<strong>Contenido mínimo:</strong>
+1. <strong>Identificación y ubicación:</strong> PK exacto, ruta, sentido, coordenadas GPS
+2. <strong>Verificación de instalación:</strong> Cimentación, verticalidad, tierras, cableado
+3. <strong>Pruebas funcionales:</strong> Llamada, audio, grabación, UPS
+4. <strong>Pruebas de integración:</strong> CCO, SCADA, identificación automática
+5. <strong>Registro fotográfico as-built:</strong> Mínimo 15 fotos (panorámica, detalle instalación, interior, conexiones)
+6. <strong>Plano as-built:</strong> Ubicación exacta, conexiones, rutas de fibra
+7. <strong>Firmas:</strong> Contratista / Interventoría / ANI
+<br>
+<br>
+<h2>8. DOCUMENTACIÓN REQUERIDA</h2>
+<br>
+<h3>8.1 Documentos del Fabricante</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Documento</td>
+<td>Descripción</td>
+<td>Idioma</td>
+<td>Cantidad</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Ficha técnica</strong></td>
+<td>Especificaciones detalladas del equipo</td>
+<td><strong>Español</strong></td>
+<td>3 copias impresas + PDF</td>
+</tr>
+<tr>
+<td><strong>Manual de instalación</strong></td>
+<td>Procedimiento paso a paso, planos, conexiones</td>
+<td><strong>Español</strong></td>
+<td>2 copias impresas + PDF</td>
+</tr>
+<tr>
+<td><strong>Manual de operación</strong></td>
+<td>Guía de usuario para operadores CCO</td>
+<td><strong>Español</strong></td>
+<td>3 copias impresas + PDF</td>
+</tr>
+<tr>
+<td><strong>Manual de mantenimiento</strong></td>
+<td>Procedimientos preventivos y correctivos</td>
+<td><strong>Español</strong></td>
+<td>2 copias impresas + PDF</td>
+</tr>
+<tr>
+<td><strong>Planos de taller</strong></td>
+<td>Dimensiones, ensamble, conexiones</td>
+<td>-</td>
+<td>PDF + DWG</td>
+</tr>
+<tr>
+<td><strong>Diagramas eléctricos</strong></td>
+<td>Unifilar, esquemático</td>
+<td>-</td>
+<td>PDF + DWG</td>
+</tr>
+<tr>
+<td><strong>Lista de repuestos</strong></td>
+<td>Repuestos recomendados con códigos</td>
+<td><strong>Español</strong></td>
+<td>PDF</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>8.2 Certificados Requeridos</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Certificado</td>
+<td>Emisor</td>
+<td>Vigencia</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Certificado de origen</strong></td>
+<td>Fabricante</td>
+<td>-</td>
+<td>Original</td>
+</tr>
+<tr>
+<td><strong>Certificado ISO 9001:2015</strong></td>
+<td>Organismo acreditado</td>
+<td>Vigente</td>
+<td>Copia certificada</td>
+</tr>
+<tr>
+<td><strong>Certificado CE</strong></td>
+<td>Laboratorio notificado</td>
+<td>-</td>
+<td>Original o copia certificada</td>
+</tr>
+<tr>
+<td><strong>Certificado FCC</strong></td>
+<td>FCC (USA) o equivalente</td>
+<td>-</td>
+<td>Original o copia certificada</td>
+</tr>
+<tr>
+<td><strong>Certificado IP65</strong></td>
+<td>Laboratorio acreditado IEC 60529</td>
+<td>-</td>
+<td>Original o copia certificada</td>
+</tr>
+<tr>
+<td><strong>Declaración RETIE</strong></td>
+<td>Fabricante o importador</td>
+<td>-</td>
+<td>Original firmada</td>
+</tr>
+<tr>
+<td><strong>Certificado de calibración</strong></td>
+<td>Laboratorio acreditado (si aplica)</td>
+<td>Vigente</td>
+<td>Original</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>8.3 Garantías</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Elemento</td>
+<td>Garantía Mínima</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Equipos electrónicos</strong></td>
+<td><strong>24 meses</strong></td>
+<td>Desde puesta en servicio, incluye mano de obra</td>
+</tr>
+<tr>
+<td><strong>Estructura metálica</strong></td>
+<td><strong>60 meses</strong></td>
+<td>Contra corrosión y defectos de fabricación</td>
+</tr>
+<tr>
+<td><strong>Pintura</strong></td>
+<td><strong>24 meses</strong></td>
+<td>Contra descascaramiento y decoloración</td>
+</tr>
+<tr>
+<td><strong>Batería UPS</strong></td>
+<td><strong>12 meses</strong></td>
+<td>Reemplazo gratuito si falla antes</td>
+</tr>
+<tr>
+<td><strong>Software</strong></td>
+<td><strong>24 meses</strong></td>
+<td>Actualizaciones incluidas</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>9. MANTENIMIENTO</h2>
+<br>
+<h3>9.1 Mantenimiento Preventivo</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Actividad</td>
+<td>Frecuencia</td>
+<td>Responsable</td>
+<td>Tiempo Est.</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Limpieza externa</strong></td>
+<td>Mensual</td>
+<td>Contratista</td>
+<td>30 min/und</td>
+</tr>
+<tr>
+<td><strong>Verificación funcional (llamada de prueba)</strong></td>
+<td>Semanal</td>
+<td>Contratista</td>
+<td>5 min/und</td>
+</tr>
+<tr>
+<td><strong>Inspección visual (estructura, pintura)</strong></td>
+<td>Trimestral</td>
+<td>Contratista</td>
+<td>15 min/und</td>
+</tr>
+<tr>
+<td><strong>Limpieza interna (equipos, ventilación)</strong></td>
+<td>Semestral</td>
+<td>Contratista</td>
+<td>1 hora/und</td>
+</tr>
+<tr>
+<td><strong>Verificación de tierras (SPT)</strong></td>
+<td>Anual</td>
+<td>Contratista</td>
+<td>30 min/und</td>
+</tr>
+<tr>
+<td><strong>Mantenimiento mayor (batería, lubricación)</strong></td>
+<td>Anual</td>
+<td>Fabricante autorizado</td>
+<td>2 horas/und</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>9.2 Repuestos Críticos</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Componente</td>
+<td>Cantidad Mínima en Stock</td>
+<td>Plazo de Entrega</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Batería UPS (12V 20Ah)</strong></td>
+<td>10 unidades</td>
+<td>15 días</td>
+</tr>
+<tr>
+<td><strong>Conversor de medios (fiber to ethernet)</strong></td>
+<td>5 unidades</td>
+<td>30 días</td>
+</tr>
+<tr>
+<td><strong>Botón de emergencia completo</strong></td>
+<td>5 unidades</td>
+<td>30 días</td>
+</tr>
+<tr>
+<td><strong>Micrófono y altavoz</strong></td>
+<td>5 juegos</td>
+<td>30 días</td>
+</tr>
+<tr>
+<td><strong>LED de iluminación</strong></td>
+<td>10 unidades</td>
+<td>15 días</td>
+</tr>
+<tr>
+<td><strong>DPS (supresor de picos)</strong></td>
+<td>10 unidades</td>
+<td>15 días</td>
+</tr>
+<tr>
+<td><strong>Breakers 10A</strong></td>
+<td>10 unidades</td>
+<td>15 días</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>9.3 Indicadores de Mantenimiento</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Indicador</td>
+<td>Meta</td>
+<td>Medición</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>≥99%</td>
+<td>Tiempo online / Tiempo total</td>
+</tr>
+<tr>
+<td><strong>MTBF (Mean Time Between Failures)</strong></td>
+<td>≥8760 horas (1 año)</td>
+<td>Tiempo operativo / # fallas</td>
+</tr>
+<tr>
+<td><strong>MTTR (Mean Time To Repair)</strong></td>
+<td>≤4 horas</td>
+<td>Tiempo reparación promedio</td>
+</tr>
+<tr>
+<td><strong>Llamadas exitosas</strong></td>
+<td>≥99%</td>
+<td>Llamadas completadas / Llamadas intentadas</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>10. REQUISITOS DE CAPACITACIÓN</h2>
+<br>
+<h3>10.1 Capacitación de Instalación</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tema</td>
+<td>Duración</td>
+<td>Audiencia</td>
+<td>Ubicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Instalación mecánica</strong></td>
+<td>4 horas</td>
+<td>Técnicos instaladores</td>
+<td>Sitio</td>
+</tr>
+<tr>
+<td><strong>Instalación eléctrica y tierras</strong></td>
+<td>4 horas</td>
+<td>Electricistas</td>
+<td>Sitio</td>
+</tr>
+<tr>
+<td><strong>Instalación de fibra óptica</strong></td>
+<td>4 horas</td>
+<td>Técnicos telecom</td>
+<td>Sitio</td>
+</tr>
+<tr>
+<td><strong>Puesta en servicio</strong></td>
+<td>4 horas</td>
+<td>Técnicos instaladores</td>
+<td>Sitio</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>10.2 Capacitación de Operación</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tema</td>
+<td>Duración</td>
+<td>Audiencia</td>
+<td>Ubicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Operación desde CCO</strong></td>
+<td>8 horas</td>
+<td>Operadores CCO</td>
+<td>CCO</td>
+</tr>
+<tr>
+<td><strong>Interpretación de alarmas</strong></td>
+<td>4 horas</td>
+<td>Operadores CCO</td>
+<td>CCO</td>
+</tr>
+<tr>
+<td><strong>Procedimientos de emergencia</strong></td>
+<td>4 horas</td>
+<td>Operadores CCO</td>
+<td>CCO</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>10.3 Capacitación de Mantenimiento</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Tema</td>
+<td>Duración</td>
+<td>Audiencia</td>
+<td>Ubicación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Mantenimiento preventivo</strong></td>
+<td>8 horas</td>
+<td>Técnicos mantenimiento</td>
+<td>Taller + Campo</td>
+</tr>
+<tr>
+<td><strong>Diagnóstico de fallas</strong></td>
+<td>8 horas</td>
+<td>Técnicos mantenimiento</td>
+<td>Taller + Campo</td>
+</tr>
+<tr>
+<td><strong>Reemplazo de componentes</strong></td>
+<td>4 horas</td>
+<td>Técnicos mantenimiento</td>
+<td>Taller</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>10.4 Entregables de Capacitación</h3>
+<br>
+<li>✅ Presentaciones en PowerPoint (español)</li>
+<li>✅ Videos tutoriales (español, mínimo 1080p)</li>
+<li>✅ Manuales de capacitación impresos</li>
+<li>✅ Certificados de asistencia para cada participante</li>
+<li>✅ Evaluaciones de aprendizaje (mínimo 80% aprobación)</li>
+<br>
+<br>
+<h2>11. PRESUPUESTO Y CANTIDADES</h2>
+<br>
+<h3>11.1 Resumen de Cantidades</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ítem</td>
+<td>Descripción</td>
+<td>Unidad</td>
+<td>Cantidad</td>
+<td>Precio Unit. (USD)</td>
+<td>Total (USD)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Poste SOS completo (4.90m, Naranja, Solar)</td>
+<td>und</td>
+<td>98</td>
+<td>$18,000</td>
+<td>$1,764,000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Instalación y puesta en servicio</td>
+<td>und</td>
+<td>98</td>
+<td>$4,500</td>
+<td>$441,000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Obras civiles (Cimentación local + derivación)</td>
+<td>und</td>
+<td>98</td>
+<td>$2,000</td>
+<td>$196,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Fibra óptica y conectividad</td>
+<td>und</td>
+<td>98</td>
+<td>$500</td>
+<td>$49,000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>TOTAL</strong></td>
+<td><strong>$2,450,000</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Precio unitario promedio:</strong> $25,000 USD/poste (instalado y operativo)
+<br>
+<h3>11.2 Desglose por Ruta</h3>
+<br>
+<strong>Ver:</strong> `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md` (detalle completo con PKs exactos)
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ruta</td>
+<td>Tramo</td>
+<td>Cantidad</td>
+<td>CAPEX (USD)</td>
+<td>Observaciones</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>RN 4510</strong></td>
+<td>PK 41+180 → PK 131+700</td>
+<td>37</td>
+<td>$925,000</td>
+<td>Sistema tres bolillos</td>
+</tr>
+<tr>
+<td><strong>RN 4511</strong></td>
+<td>PK 0+650 → PK 147+385</td>
+<td>56</td>
+<td>$1,400,000</td>
+<td>Sistema tres bolillos</td>
+</tr>
+<tr>
+<td><strong>RN 4513</strong></td>
+<td>PK 1+240 → PK 9+000</td>
+<td>5</td>
+<td>$125,000</td>
+<td>Acceso CCO/Báscula</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td>-</td>
+<td><strong>98</strong></td>
+<td><strong>$2,450,000</strong></td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>12. CRONOGRAMA DE SUMINISTRO E INSTALACIÓN</h2>
+<br>
+<h3>12.1 Hitos Principales</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Hito</td>
+<td>Fecha Estimada</td>
+<td>Duración</td>
+<td>Responsable</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Aprobación especificaciones T04</strong></td>
+<td>T+0</td>
+<td>-</td>
+<td>Interventoría/ANI</td>
+</tr>
+<tr>
+<td><strong>Licitación y adjudicación</strong></td>
+<td>T+30 días</td>
+<td>4 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Orden de compra</strong></td>
+<td>T+35 días</td>
+<td>-</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Fabricación</strong></td>
+<td>T+35 a T+95 días</td>
+<td>8 semanas</td>
+<td>Fabricante</td>
+</tr>
+<tr>
+<td><strong>FAT (Factory Acceptance Test)</strong></td>
+<td>T+95 a T+105 días</td>
+<td>10 días</td>
+<td>Fabricante/Interventoría</td>
+</tr>
+<tr>
+<td><strong>Transporte y entrega en sitio</strong></td>
+<td>T+105 a T+120 días</td>
+<td>2 semanas</td>
+<td>Logística</td>
+</tr>
+<tr>
+<td><strong>Instalación (lote 1: 30 und)</strong></td>
+<td>T+120 a T+160 días</td>
+<td>6 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Instalación (lote 2: 30 und)</strong></td>
+<td>T+140 a T+180 días</td>
+<td>6 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>Instalación (lote 3: 28 und)</strong></td>
+<td>T+160 a T+195 días</td>
+<td>5 semanas</td>
+<td>Contratista</td>
+</tr>
+<tr>
+<td><strong>SAT (Site Acceptance Test)</strong></td>
+<td>T+195 a T+210 días</td>
+<td>2 semanas</td>
+<td>Contratista/Interventoría</td>
+</tr>
+<tr>
+<td><strong>Puesta en servicio total</strong></td>
+<td>T+210 días</td>
+<td>-</td>
+<td>Contratista/ANI</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Tiempo total:</strong> ~7 meses desde aprobación de especificaciones
+<br>
+<br>
+<h2>13. ANEXOS</h2>
+<br>
+<h3>Anexo A: Planos de Referencia</h3>
+<li><strong>Plano de ubicaciones:</strong> Ver `42_LAYOUT_GEORREFERENCIADO_EQUIPOS_ITS_v1.0.md`</li>
+<li><strong>Plano de cimentación típica:</strong> A suministrar por contratista</li>
+<li><strong>Plano de conexiones eléctricas:</strong> A suministrar por contratista</li>
+<li><strong>Plano de conexiones de fibra óptica:</strong> A suministrar por contratista</li>
+<br>
+<h3>Anexo B: Hojas de Datos Técnicos</h3>
+<li>Datasheet del poste SOS (fabricante)</li>
+<li>Datasheet del conversor de medios</li>
+<li>Datasheet de la batería UPS</li>
+<li>Datasheet del DPS</li>
+<br>
+<h3>Anexo C: Certificaciones</h3>
+<li>Certificado ISO 9001:2015 del fabricante</li>
+<li>Certificado CE del equipo</li>
+<li>Certificado FCC del equipo</li>
+<li>Certificado IP65 del gabinete</li>
+<li>Declaración de conformidad RETIE</li>
+<br>
+<h3>Anexo D: Protocolos de Prueba</h3>
+<li>Formato protocolo FAT (PROTOCOLO-FAT-SOS-TEMPLATE.xlsx)</li>
+<li>Formato protocolo SAT (PROTOCOLO-SAT-SOS-TEMPLATE.xlsx)</li>
+<br>
+<br>
+<h2>14. REFERENCIAS</h2>
+<br>
+<h3>14.1 Documentos del Proyecto</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Código</td>
+<td>Título</td>
+<td>Versión</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>T01-ITS</td>
+<td>Ficha de Sistema ITS</td>
+<td>v1.2</td>
+</tr>
+<tr>
+<td>T02-ITS</td>
+<td>Análisis de Requisitos ITS</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>T03-ITS</td>
+<td>Arquitectura Conceptual ITS</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>VAL-SOS</td>
+<td>Validación Contractual Postes SOS</td>
+<td>v1.0</td>
+</tr>
+<tr>
+<td>LAYOUT-ITS</td>
+<td>Layout Georreferenciado Equipos ITS</td>
+<td>v1.0</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>14.2 Normativa Citada</h3>
+<br>
+#### Nacional
+<li>RETIE - Reglamento Técnico de Instalaciones Eléctricas (Resolución 40117 de 2024)</li>
+<li>Manual de Señalización Vial - Dispositivos uniformes para la regulación del tránsito (2015)</li>
+<li>Resolución 2273/2014 - Plan Nacional de Seguridad Vial</li>
+<li>Decreto 1079/2015 - Decreto Único Reglamentario del Sector Transporte</li>
+<li>NSR-10 - Reglamento Colombiano de Construcción Sismo Resistente</li>
+<br>
+#### Internacional
+<li>ISO TC-204 - Intelligent Transport Systems</li>
+<li>ITU-T H.550-H.569 - Vehicular gateways and ITS</li>
+<li>IEC 60529 - Degrees of protection provided by enclosures (IP Code)</li>
+<li>IEEE 802.3 - Ethernet</li>
+<li>ASTM A36 - Standard Specification for Carbon Structural Steel</li>
+<li>ASTM A240 - Standard Specification for Chromium and Chromium-Nickel Stainless Steel Plate</li>
+<li>ASTM A123 - Standard Specification for Zinc (Hot-Dip Galvanized) Coatings on Iron and Steel Products</li>
+<li>IEC 62262 - Degrees of protection provided by enclosures for electrical equipment against external mechanical impacts (IK code)</li>
+<br>
+<br>
+<strong>Elaborado por:</strong> Administrador Contractual EPC
+<strong>Revisado por:</strong> Ing. ITS / Ing. Telecomunicaciones
+<strong>Aprobado por:</strong> Gerente Técnico
+<br>
+<strong>Fecha de elaboración:</strong> 21/10/2025
+<strong>Fecha de revisión:</strong> Pendiente
+<strong>Fecha de aprobación:</strong> Pendiente
+<br>
+<br>
+<strong>FIN DEL DOCUMENTO T04 - ESPECIFICACIONES TÉCNICAS POSTES SOS v1.1</strong>
+<br>
+<br>
+<h2>15. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)</h2>
+<br>
+<strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (CON ALERTA DE OBRA CIVIL)</strong>
+<br>
+La especificación técnica es ROBUSTA Y CONTRACTUALMENTE SEGURA. Cumple con la obligación de resultado (cobertura total cada 3 km) y se alinea con la estrategia financiera de segregar el CAPEX (88 Postes Nuevos) del OPEX (10 Postes Existentes).
+<br>
+<strong>Advertencia de Delimitación de Alcance:</strong> El Manual de Señalización 2024 exige barreras de contención y accesibilidad. <strong>ESTE ALCANCE SE EXCLUYE DE ITS</strong> y se transfiere como riesgo al EPC, quien deberá resolverlo con sus especialistas de Arquitectura (Accesibilidad) y Seguridad Vial (Defensas).
+<br>
+<h3>15.1 Matriz de Cumplimiento "Hard Deck"</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Requisito Técnico</td>
+<td>Fuente Obligación</td>
+<td>Especificación T04</td>
+<td>Veredicto</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Separación</strong></td>
+<td>AT1: Máx 3.00 km</td>
+<td>2.99 km Promedio</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Cantidad Total</strong></td>
+<td>AT1: 98 Postes para 293 km</td>
+<td><strong>88 Nuevos + 10 Existentes</strong></td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Color y Altura</strong></td>
+<td>Manual 2024: Naranja RAL 2004, 4.90m</td>
+<td>Naranja RAL 2004 / 4.9m</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Dictamen: VoIP sobre Fibra</td>
+<td>SIP / VoIP Nativo</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Energía</strong></td>
+<td>RETIE 2024: Solar</td>
+<td>Solar Autónomo (48h)</td>
+<td>✅ CUMPLE</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>15.2 Análisis de Riesgos y Mitigación</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Riesgo</td>
+<td>Acción T04</td>
+<td>Estado</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Costo Oculto (Barreras)</strong></td>
+<td><strong>TRANSFERIDO:</strong> Responsabilidad del EPC (Arq/Seg. Vial).</td>
+<td>⚠️ RIESGO EPC</td>
+</tr>
+<tr>
+<td><strong>Rechazo 10 Existentes</strong></td>
+<td><strong>Retrofit:</strong> Exigencia de Pintura RAL 2004 y Stickering Nuevo.</td>
+<td>✅ MITIGADO</td>
+</tr>
+<tr>
+<td><strong>Certificación Solar</strong></td>
+<td><strong>RETIE:</strong> Gabinete pre-armado y certificado de fábrica.</td>
+<td>✅ MITIGADO</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Conclusión:</strong> ANEXO TÉCNICO APROBADO.
+*   <strong>Instrucción de Compra:</strong> Proceder con 88 Kits Nuevos + 10 Servicios de Retrofit.
+*   <strong>Exclusión:</strong> La obra civil de accesibilidad y defensas NO está en este presupuesto.
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automáticamente por Sistema de Gestión TM01. <br>
+            Fase 7 - Ingeniería de Detalle.
+        </div>
+    </div>
+</body>
+</html>

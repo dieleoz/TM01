@@ -62,10 +62,47 @@ Suministro, instalación e integración de **43 Sistemas de Mensajería Variable
 
 | Ítem | Ubicación | Tipo (Manual 2024) | Pitch | Cantidad |
 |:----:|:----------|:-------------------|:-----:|:--------:|
-| **1** | **Vía Principal** | Matriz Completa | P20/P16 | **25** |
+| **1** | **Vía Principal (Ver Detalle)** | Matriz Completa | P20/P16 | **25** |
 | **2** | **Aproximación Peaje**| Matriz Completa | P20 | **4** |
 | **3** | **Carril Peaje** | Alfanumérico Ámbar | P10 | **14** |
 | **TOTAL**| | | | **43** |
+
+### 3.1 DETALLE DE UBICACIONES (TABLA MAESTRA VÍA)
+*Fuente: Ingeniería de Tránsito (Enero 2026)*
+
+| RUTA | UF | LADO | PK | OBSERVACIÓN |
+| :--- | :--- | :--- | :--- | :--- |
+| **4510** | OD | DERECHA | K41+000 | INTER KORAN |
+| **4510** | OD | IZQUIERDA | K41+200 | |
+| **4510** | OD | IZQUIERDA | K57+350 | |
+| **4510** | OD | DERECHA | K58+950 | |
+| **4510** | OD | IZQUIERDA | K77+350 | |
+| **4510** | OD | DERECHA | K78+950 | |
+| **4510** | OD | IZQUIERDA | K97+250 | |
+| **4510** | OD | DERECHA | K98+750 | |
+| **4510** | OD | IZQUIERDA | K117+250 | |
+| **4510** | OD | DERECHA | K118+660 | |
+| **4511** | 5,1 | IZQUIERDA | K2+790 | |
+| **4511** | OD | DERECHA | K4+200 | PEATONAL |
+| **4511** | 5,1 | DERECHA | **K9+150** | **PEAJE ZAMBITO (Aproximación)** |
+| **4511** | 2 | IZQUIERDA | K14+200 | PEATONAL |
+| **4511** | OD | DERECHA | K22+300 | |
+| **4511** | OD | IZQUIERDA | K34+200 | |
+| **4511** | 5,1 | DERECHA | K42+300 | |
+| **4511** | 3 | IZQUIERDA | K54+200 | |
+| **4511** | 5,1 | DERECHA | K60+480 | |
+| **4511** | 4 | IZQUIERDA | K74+200 | PEATONAL |
+| **4511** | 11 | DERECHA | K77+350 | |
+| **4511** | 6 | DERECHA | **K81+800** | **PEAJE AGUAS NEGRAS (Aproximación)** |
+| **4511** | 7 | IZQUIERDA | K86+800 | |
+| **4511** | 11 | DERECHA | K97+200 | PEATONAL |
+| **4511** | 8 | IZQUIERDA | K106+580 | |
+| **4511** | 11 | DERECHA | K117+200 | |
+| **4511** | 10 | IZQUIERDA | K126+580 | |
+| **4511** | 11 | DERECHA | K136+750 | PEATONAL |
+| **4511** | 12 | IZQUIERDA | K146+580 | FIN RUTA |
+| **4513** | 11 | DERECHA | K5+900 | |
+
 
 ## 4. ENTREGABLES PARA RECIBO (CONDICIONES DE PAGO)
 1.  **Certificado UNE-EN 12966:** Laboratorio acreditado (TUV/SGS). *No se aceptan cartas de fábrica.*
@@ -80,19 +117,25 @@ Suministro, instalación e integración de **43 Sistemas de Mensajería Variable
 
 ---
 
-## 5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.0)
+## 5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)
 
-**Resultado:** 🟢 **T04 VALIDADO (LISTO PARA COMPRAS)**
+**Resultado:** 🟢 **T04 VALIDADO (CON ALERTA DE CANTIDADES)**
 
-El documento cubre las **43 Unidades** requeridas y blinda la adquisición técnica.
+El documento T04 es TÉCNICAMENTE SÓLIDO, cumpliendo con la normativa europea (EN 12966) exigida por el Manual 2024. Sin embargo, la Estrategia de Cantidades requiere una segregación presupuestal estricta.
 
-### Matriz de Blindaje (Risk Management)
+### 5.1 Distribución Financiera (Smart CAPEX)
+*   **Total Físico Validado:** 43 Unidades.
+*   **Presupuesto ITS:** 29 Unidades (25 Vía + 4 Aproximación).
+*   **Presupuesto Peajes:** 14 Unidades (Tarifarios de Carril). **(No cargar al CAPEX ITS).**
+
+### 5.2 Matriz de Blindaje (Risk Management)
 | Riesgo Detectado | Acción de Mitigación (T04) | Resultado |
 |:-----------------|:---------------------------|:----------|
-| **Rechazo por Interventoría (Visual)** | Exigencia Certificado **UNE-EN 12966** | ✅ MITIGADO |
-| **Rechazo por Interventoría (Eléctrico)** | Exigencia **RETIE 2024 + Anexo 5** | ✅ MITIGADO |
-| **Fallas de Integración** | Exigencia **NTCIP + MIBs** | ✅ MITIGADO |
-| **Seguridad Vial (Pasiva)** | Exigencia **Cinta Tipo IV + Defensas** | ✅ MITIGADO |
-| **Uniformidad Visual** | Exigencia **LED Binning** | ✅ MITIGADO |
+| **Pixel Pitch Peaje** | Exigencia Estricta **P10** (Ilegible si es P20) | ✅ MITIGADO |
+| **Seguridad Pasiva** | Exigencia **Cinta Tipo IV** (Gris galvanizado es rechazo) | ✅ MITIGADO |
+| **Autonomía Energía** | Exigencia **UPS Online** (Red) o **48h Batería** (Solar) | ✅ MITIGADO |
+| **Cantidad** | 43 Unidades (Reflejada en Tabla Maestra) | ✅ ALINEADO |
 
-**Conclusión:** ANEXO TÉCNICO CONSTRUCTIVO APROBADO. Copiar secciones 1-4 al Pliego de Licitación.
+**Conclusión:** ANEXO TÉCNICO APROBADO.
+*   **Instrucción de Compra:** Copiar especificaciones 1-4 al RFQ.
+*   **Alerta:** Cargar las 14 pantallas de peaje el centro de costos de Recaudo.

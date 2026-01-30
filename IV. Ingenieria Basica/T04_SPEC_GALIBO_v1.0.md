@@ -79,10 +79,18 @@
 
 ## 4. UBICACIONES
 
-**Lote 1 Confirmado (8 unidades):**
-- RN 4510: PK 41+350, PK 116+200
-- RN 4511: PK 3+600, PK 16+550, PK 72+890, PK 82+800, PK 127+250
-- RN 4513: PK 5+900
+**Tabla Maestra de Ubicaciones (8 unidades):**
+
+| RUTA | UF | LADO | PK | Observación |
+| :--- | :--- | :--- | :--- | :--- |
+| **4510** | OD | DERECHA | **K41+350** | |
+| **4510** | OD | IZQUIERDA | **K116+200** | |
+| **4511** | OD | DERECHA | **K3+600** | |
+| **4511** | 5,1 | IZQUIERDA | **K16+550** | |
+| **4511** | 5,1 | DERECHA | **K72+890** | |
+| **4511** | 6 | IZQUIERDA | **K82+800** | |
+| **4511** | 11 | DERECHA | **K127+250** | |
+| **4513** | 13 | IZQUIERDA | **K5+900** | |
 
 **Lote 2 En Validación (17 unidades):**
 - A definir en análisis geométrico completo

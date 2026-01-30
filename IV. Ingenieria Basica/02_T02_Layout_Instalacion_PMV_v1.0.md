@@ -1,89 +1,72 @@
-# T02: PLANOS TÍPICOS DE INSTALACIÓN - PMV (INPUT DIBUJANTE)
+# T02: PLANOS TÍPICOS DE INSTALACIÓN - PMV
 ## Proyecto APP Puerto Salgar - Barrancabermeja
 
 **Fecha:** 30 de Enero 2026  
-**Sistema:** PMV - Paneles de Mensaje Variable  
-**Uso:** Guía para elaboración de planos constructivos (Taller de Diseño)  
-**Versión:** 1.0 (Construction Ready)
+**Sistema:** Paneles de Mensaje Variable (PMV)  
+**Cantidad Total Reportada:** 28 Ubicaciones en Vía (Según Imagen Suministrada) + PMV de Peajes (18) = ~46 Total  
+*(Nota: Se utiliza la Tabla Maestra proporcionada para los equipos de Vía)*
 
 ---
 
-## 1. UBICACIÓN EXACTA (COORDENADAS)
+## 1. TABLA MAESTRA DE UBICACIONES (PMV DE VÍA)
 
-Para el plano de planta general, utilizar la **Tabla Maestra Georreferenciada**:
-> 📂 **Fuente:** `VII. Documentos Transversales/43_TABLA_MAESTRA_LAYOUT_PROYECTO_v1.0.md`
-> *Filtrar por Item: PMV-001 a PMV-043 (Incluye Peajes)*
+La siguiente tabla define la ubicación exacta (Abscisado) de los 28 Paneles de Mensaje Variable instalados sobre la vía (Pórticos y Postes).
 
----
-
-## 2. DETALLE DE MONTAJE (PÓRTICO TIPO BANDERA/TOTAL)
-
-**Referencia Visual para Plano de Detalle:**
-
-### 2.1 Alzado Frontal (Pórtico Estructural)
-*   **Norma Diseño:** CCP-14 (Col. de Puentes 2014) / AASHTO LRFD.
-*   **Altura Libre:** **5.50 metros** (Mínimo Gálibo Vertical).
-*   **Ancho Efectivo:** 12 metros (Cubre dos carriles + berma).
-*   **Panel LED:** Centrado sobre el eje de la calzada.
-    *   *Dimensiones Panel:* 3.0m (Ancho) x 2.0m (Alto).
-*   **Gabinete:** Ubicado en la columna (lado seguro), altura 1.5m.
-
-### 2.2 Detalle de Cimentación (Zapata Típica)
-> *Nota: El diseño final depende del estudio de suelos específico, este es el PRE-DISEÑO.*
-
-*   **Zapata Aislada:** Concreto 4000 PSI.
-*   **Dimensiones:** 2.0m x 2.0m x 1.8m (profundidad).
-*   **Pedestal:** 0.80m x 0.80m.
-*   **Pernos de Anclaje:** 8 pernos de 1-1/2" grado 55 por columna.
-*   **Ductos:** 3 tubos PVC 4" (Energía, Datos Fibra, Datos Cobre/Tierra).
-
-### 2.3 Seguridad Pasiva (Defensa Metálica)
-*   **Requisito:** Instalar defensa metálica certificada (TL-3) protegiendo la columna del pórtico si está en zona despejada (<9m del borde de vía).
-*   **Longitud:** Mínimo 30m de desarrollo antes del impacto.
-
----
-
-## 3. DIAGRAMA UNIFILAR (CONEXIÓN)
-
-```mermaid
-graph TD
-    Subestacion[Transformador 13.2kV / 220V] -->|AC 220V| Medidor[Medidor Energía]
-    Medidor -->|AC 220V| Tablero[Tablero Distribución T-Gral]
-    Tablero -->|AC 220V + Tierra| DPS[DPS Clase I+II]
-    Tablero -->|AC 220V| UPS[UPS Online 3kVA - Respaldo 4h]
-    UPS -->|AC 120V| PMV_Controller[Controlador PMV NTCIP]
-    PMV_Controller -->|DC/Datos| Modulos[Módulos LED RGB]
-    
-    Tablero -->|F.O. Monomodo| Switch[Switch Industrial L3]
-    Switch -->|Ethernet| PMV_Controller
-    
-    subgraph GABINETE_PISO [Gabinete Base Poste IP65]
-    Tablero
-    DPS
-    UPS
-    Switch
-    end
-    
-    subgraph PANTALLA [Pantalla LED IP66]
-    PMV_Controller
-    Modulos
-    end
-```
+| RUTA | UF | LADO | PK DE INSTALACIÓN | OBSERVACIÓN / REFERENCIA |
+| :--- | :--- | :--- | :--- | :--- |
+| **4510** | OD | DERECHA | K41+000 | INTER KORAN |
+| **4510** | OD | IZQUIERDA | K41+200 | |
+| **4510** | OD | IZQUIERDA | K57+350 | |
+| **4510** | OD | DERECHA | K58+950 | |
+| **4510** | OD | IZQUIERDA | K77+350 | |
+| **4510** | OD | DERECHA | K78+950 | |
+| **4510** | OD | IZQUIERDA | K97+250 | |
+| **4510** | OD | DERECHA | K98+750 | |
+| **4510** | OD | IZQUIERDA | K117+250 | |
+| **4510** | OD | DERECHA | K118+660 | |
+| **4511** | 5,1 | IZQUIERDA | K2+790 | |
+| **4511** | OD | DERECHA | K4+200 | PEATONAL (Ref K4+261) |
+| **4511** | 5,1 | DERECHA | **K9+150** | **PEAJE ZAMBITO (Aproximación)** |
+| **4511** | 2 | IZQUIERDA | K14+200 | PEATONAL (Ref K14+131) |
+| **4511** | OD | DERECHA | K22+300 | |
+| **4511** | OD | IZQUIERDA | K34+200 | |
+| **4511** | 5,1 | DERECHA | K42+300 | |
+| **4511** | 3 | IZQUIERDA | K54+200 | |
+| **4511** | 5,1 | DERECHA | K60+480 | |
+| **4511** | 4 | IZQUIERDA | K74+200 | PEATONAL (Ref K73+969) |
+| **4511** | 11 | DERECHA | K77+350 | |
+| **4511** | 6 | DERECHA | **K81+800** | **PEAJE AGUAS NEGRAS (Aproximación)** |
+| **4511** | 7 | IZQUIERDA | K86+800 | |
+| **4511** | 11 | DERECHA | K97+200 | PEATONAL (Ref K97+361) |
+| **4511** | 8 | IZQUIERDA | K106+580 | |
+| **4511** | 11 | DERECHA | K117+200 | |
+| **4511** | 10 | IZQUIERDA | K126+580 | |
+| **4511** | 11 | DERECHA | K136+750 | PEATONAL (Ref K135+633) |
+| **4511** | 12 | IZQUIERDA | K146+580 | FIN RUTA 4511 (Ref K148+995) |
+| **4513** | 11 | DERECHA | K5+900 | |
 
 ---
 
-## 4. LISTA DE PLANOS A GENERAR
+## 2. CONFIGURACIÓN DIBUJO TÍPICO
 
-El dibujante debe entregar los siguientes DWG/PDF:
+Para cada ubicación listada arriba, el Dibujante deberá generar el plano de implantación considerando:
 
-| Código Plano | Nombre | Escala | Contenido |
-|:-------------|:-------|:-------|:----------|
-| **DWG-PMV-001** | Planta General Distribución | 1:10,000 | Ubicación de los 43 PMV en corredor. |
-| **DWG-PMV-002** | Geometría Pórtico Típico | 1:50 | Alzado, planta y perfil del pórtico. |
-| **DWG-PMV-003** | Detalle Cimentación | 1:25 | Armado de hierro zapata y pedestal. |
-| **DWG-PMV-004** | Diagrama Unifilar y Comunicaciones | S/E | Tablero, UPS, DPS y Fibra Óptica. |
+### 2.1 PMV Tipo Pórtico (Vía Principal)
+*   **Estructura:** Pórtico Metálico Galvanizado (Paso total sobre 2 carriles).
+*   **Cimentación:** Zapata de Concreto Reforzado (Según Estudio de Suelos, ref T05).
+*   **Gabinete:** Gabinete de Control NEMA 4X instalado en la base del soporte derecho (sentido flujo).
+*   **Acometidas:**
+    *   **Energía:** Ducto PVC 2" desde punto de conexión (Transformador/Red).
+    *   **Datos:** Ducto Tritubo (Soplado) para Fibra Óptica, llegando a la caja de empalme en la base.
+*   **Protección:** Barrera de contención (Defensa Metálica) protegiendo la base del pórtico.
+*   **Altura Libre:** Mínimo 5.50 metros gálibo vertical.
 
----
+### 2.2 Detalle de Ubicación del Gabinete
+*   Lado seguro, protegido por barrera.
+*   Altura de montaje: 1.2m sobre nivel de piso.
+*   Orientación: Puerta perpendicular al tráfico para seguridad del técnico.
 
-**Aprobado por:** Ingeniería de Detalle TM01
-**Estado:** ✅ LISTO PARA DIBUJO
+### 2.3 PMV de Peajes (Referencia T02 Peajes)
+*   **Ubicación:** 200m antes y después de la estación.
+*   **Configuración:** Pórtico similar a Vía Principal.
+*   **Diferencia:** Mensajes enfocados en tarifas y carrilera.

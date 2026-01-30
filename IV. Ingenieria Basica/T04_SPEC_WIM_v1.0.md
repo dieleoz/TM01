@@ -343,6 +343,19 @@ Elementos comunes:
 | **Tierras** | SPT <10 Ω | RETIE |
 | **Drenajes** | Sistema de drenaje completo | INVÍAS |
 
+### 6.4 Recomendaciones Constructivas (Mitigación de Riesgo Civil)
+**Advertencia para el EPC:** El desempeño del WIM depende 100% de la calidad del pavimento. Se transfieren los siguientes requisitos de norma **ASTM E1318** al responsable de la Obra Civil:
+
+| Parámetro | Requisito (ASTM E1318) | Zona de Aplicación | Riesgo si se ignora |
+|:----------|:-----------------------|:-------------------|:--------------------|
+| **Alineación Horizontal** | Radio de curvatura **> 1.7 km** (Recta) | 60m antes, 30m después | Fuerzas centrífugas alteran el peso lateral. |
+| **Pendiente Longitudinal** | **< 2%** (Ideal < 1% para Clase IV) | 60m antes, 30m después | Transferencia de carga entre ejes por gravedad. |
+| **Pendiente Transversal** | **< 3%** (Bombeo mínimo) | 60m antes, 30m después | Desbalance de carga izquierda/derecha. |
+| **Lisura (Smoothness)** | **Regla de 5m:** Holgura **< 3mm** | Zona de sensores | Rebote de suspensión (Dinámica vehicular). |
+| **Material de Rodadura** | **Concreto Hidráulico (Losa)** | 50m continuos | El asfalto se deforma (ahuellamiento) y descalibra el sensor. |
+
+> **Nota:** El EPC debe garantizar estas condiciones **ANTES** de la instalación de los sensores. Cualquier corrección posterior implicará demolición.
+
 ---
 
 ## 7. PRUEBAS Y CRITERIOS DE ACEPTACIÓN
@@ -557,8 +570,34 @@ Elementos comunes:
 
 ---
 
-**✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO**
-- Ubicación confirmada: PR4+0100 RN 4513
-- Configuración: 1 estación bidireccional
-- CAPEX actualizado: $551,425 USD (Alineado T05 + A.I.U.)
-- Metodología PKD lineal aplicada
+## 15. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)
+
+**Resultado:** 🟢 **T04 VALIDADO (CON ALERTA DE OBRA CIVIL)**
+
+La especificación es TÉCNICAMENTE ROBUSTA y CONTRACTUALMENTE SEGURA. El diseño de 1 Estación Bidireccional Híbrida (Dinámica para selección + Estática para sanción) es la única configuración que permite la operación de la Policía de Carreteras bajo la normativa actual.
+
+**Alerta de Frontera Presupuestal:** El valor validado de **$551,425 USD** cubre solo la tecnología. La Losa de Concreto (50m) y las Bahías de Detención son costos civiles mayores que no están en este monto y deben verificarse en el presupuesto EPC Civil.
+
+### 15.1 Matriz de Cumplimiento "Hard Deck"
+| Requisito Técnico | Fuente Obligación | Especificación T05 WIM | Veredicto |
+|:------------------|:------------------|:-----------------------|:----------|
+| **Ubicación** | Adenda 4 / AT1 | PR 4+100 RN 4513 | ✅ CUMPLE |
+| **Tecnología Selección** | Res. 100/2024 (HS-WIM) | 2 Pistas HS-WIM (Cuarzo) | ✅ CUMPLE |
+| **Tecnología Sanción** | Metrología Legal | 2 Básculas Estáticas | ✅ CUMPLE |
+| **Segregación Peaje** | Res. IP/REV | No incluye WIM Peaje | ✅ CORRECTO |
+| **Obra Civil Losa** | Dictamen Jurídico | Losa Concreto 50m | ⚠️ CRÍTICO |
+
+### 15.2 Análisis de Riesgos Técnicos (Lo que el Civil olvida)
+| Riesgo | Descripción | Acción T04 |
+|:-------|:------------|:-----------|
+| **Trampa del Asfalto** | Sensores Piezoeléctricos fallan >5% en asfalto deformado. | **Exigencia:** Losa MR Concreto 50m (Planicidad <3mm). |
+| **Señalización Variable** | Manual 2024 exige decir "SIGA" o "ENTRE". | **Exigencia:** Semáforo Pórtico o PMV de Carril. |
+
+### 15.3 Especificación de Compra Blindada (RFQ)
+*   **Ítem 1 (Dinámico):** 2 Sistemas HS-WIM Cuarzo (Kistler o eq). Clase B+(7).
+*   **Ítem 2 (Estático):** 2 Básculas Camioneras 3x21m (100 Ton). Certificación OIML R-76.
+*   **Ítem 3 (Software):** Integración Dinámico+Estático, Tiquete con Foto y LPR.
+*   **Ítem 4 (Eléctrico):** Tableros RETIE 2024 con DPS Clase I+II.
+
+**Conclusión:** ANEXO TÉCNICO APROBADO.
+*   **Acción Crítica:** Enviar Plano de Losa de Concreto al Director de Obra Civil inmediatamente. Evitar pavimentación asfáltica en PR4+0100.
