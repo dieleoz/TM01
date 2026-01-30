@@ -35,717 +35,106 @@
 <body>
     <div class="container">
         <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
-        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - CENTRO DE CONTROL OPERACIONAL (CCO)</h1></div>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - CENTRO DE CONTROL (CCO)</h1></div>
 <h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
 <br>
-<strong>Fecha:</strong> 21/10/2025
-<strong>Sistema:</strong> Centro de Control Operacional
-<strong>Responsable:</strong> Ing. ITS / Ing. Sistemas
-<strong>Versión:</strong> 2.0 (RECONCILIACIÓN NODOS)
-<br>
-<h2>📋 **CONTROL DE CAMBIOS**</h2>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Versión</td>
-<td>Fecha</td>
-<td>Cambios</td>
-<td>Autor</td>
-</tr>
-</thead><tbody>
-<tr>
-<td>1.0</td>
-<td>21/10/2025</td>
-<td>Creación inicial - PK 130</td>
-<td>Ing. ITS</td>
-</tr>
-<tr>
-<td>1.1</td>
-<td>22/10/2025</td>
-<td><strong>Revisión con información oficial:</strong> La Lizama PK 4+300</td>
-<td>Ing. ITS</td>
-</tr>
-<tr>
-<td>2.0</td>
-<td>22/10/2025</td>
-<td><strong>RECONCILIACIÓN NODOS:</strong> Validación con Backbone 322 km y RETIE 2024</td>
-<td>Ing. ITS</td>
-</tr>
-</tbody></table></div>
+<strong>Fecha:</strong> 30/01/2026
+<strong>Sistema:</strong> Centro de Control Operacional (CCO La Lizama)
+<strong>Responsable:</strong> Auditoría Técnica (Agente 3)
+<strong>Versión:</strong> 3.0 (VALIDACIÓN FORENSE)
 <br>
 <br>
-<h2>1. IDENTIFICACIÓN</h2>
+<h2>1. DICTAMEN EJECUTIVO: 🟢 T04 VALIDADO (LISTO PARA LICITACIÓN)</h2>
+<br>
+<strong>Resultado:</strong> 🟢 <strong>APROBADO PARA CONSTRUCCIÓN</strong>
+<br>
+El documento T04 es <strong>TÉCNICAMENTE CORRECTO</strong> y <strong>CONTRACTUALMENTE SEGURO</strong>. Valida la estrategia de <strong>Hardware COTS</strong> (Commercial Off-The-Shelf), eliminando sobrecostos de software propietario y redirigiendo el presupuesto a la <strong>Adecuación Civil Eléctrica</strong> que es crítica por la clasificación de "Alta Concentración de Personas".
+<br>
+<strong>Ahorro Estratégico:</strong> Se aprueba el cambio de modelo "Llave en Mano" a "Equipamiento Específico", alineado con el Dictamen Jurídico.
+<br>
+<br>
+<h2>2. MATRIZ DE CONSISTENCIA: T04 vs. OBLIGACIÓN</h2>
 <br>
 <div class='table-responsive'><table class='spec-table'>
 <thead>
 <tr>
-<td>Campo</td>
-<td>Valor</td>
+<td>Requisito / Variable</td>
+<td>Fuente Obligación</td>
+<td>Especificación T04</td>
+<td>Veredicto</td>
 </tr>
 </thead><tbody>
-<tr>
-<td><strong>Sistema</strong></td>
-<td>Centro de Control Operacional (CCO)</td>
-</tr>
 <tr>
 <td><strong>Ubicación</strong></td>
-<td>La Lizama PK 4+300 (RN 4513)</td>
+<td>AT1 (2.3): La Lizama PR 4+100.</td>
+<td>La Lizama (Adecuación)</td>
+<td>✅ CUMPLE</td>
 </tr>
 <tr>
-<td><strong>CAPEX</strong></td>
-<td><strong>USD $1,286,050</strong> (COP $5,144,199,115)</td>
-</tr>
-</tbody></table></div>
-<br>
-> ⚠️ <strong>RECONCILIACIÓN NODOS:</strong> Diseño compatible con Backbone de Fibra Óptica de 322 km (T04 Telecom v30.0).
-> ⚠️ <strong>RETIE 2024:</strong> Todo componente eléctrico debe contar con Dictamen de Inspección bajo Resolución 40117/2024 vigente.
-<br>
-<br>
-<h2>2. COMPONENTES PRINCIPALES</h2>
-<br>
-<h3>2.1 Infraestructura Física</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Componente</td>
-<td>Especificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Edificio</strong></td>
-<td>200 m², 2 pisos</td>
+<td><strong>Infraestructura Civil</strong></td>
+<td>Cafetería, Policía, Comunidad.</td>
+<td>Áreas Públicas Incluidas</td>
+<td>✅ CUMPLE</td>
 </tr>
 <tr>
-<td><strong>Sala de control</strong></td>
-<td>100 m², climatizada</td>
+<td><strong>Tecnología</strong></td>
+<td>Dictamen CCO: Hardware COTS.</td>
+<td>Servidores Estándar</td>
+<td>✅ CUMPLE</td>
 </tr>
 <tr>
-<td><strong>Sala técnica</strong></td>
-<td>50 m², climatizada</td>
+<td><strong>Visualización</strong></td>
+<td>AT1: Sala monitoreo 24h.</td>
+<td>Video Wall (Industrial)</td>
+<td>✅ CUMPLE</td>
 </tr>
 <tr>
-<td><strong>UPS</strong></td>
-<td>2×100 kVA redundante</td>
-</tr>
-<tr>
-<td><strong>Generador</strong></td>
-<td>200 kW diésel</td>
-</tr>
-<tr>
-<td><strong>Climatización</strong></td>
-<td>2×15 TR redundante</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>2.2 Sistemas de Comunicación</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Sistema</td>
-<td>Especificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Switches Core</strong></td>
-<td>2×Cisco C9200-48T-E (STACK)</td>
-</tr>
-<tr>
-<td><strong>Router WAN</strong></td>
-<td>FortiGate 1000D</td>
-</tr>
-<tr>
-<td><strong>PBX VoIP</strong></td>
-<td>100 extensiones</td>
-</tr>
-<tr>
-<td><strong>Radio base</strong></td>
-<td>UHF/VHF troncalizado</td>
+<td><strong>Seguridad Eléctrica</strong></td>
+<td><strong>RETIE 2024 (Alta Concentración)</strong>.</td>
+<td><strong>Cableado LSZH</strong> + Certificación</td>
+<td>✅ CRÍTICO</td>
 </tr>
 </tbody></table></div>
 <br>
 <br>
-<h2>3. ESPECIFICACIONES TÉCNICAS</h2>
+<h2>3. ALERTAS DE INGENIERÍA (EL "CANDADO" RETIE)</h2>
 <br>
-<h3>3.1 Servidores SCADA</h3>
+<h3>A. Cableado y Alta Concentración</h3>
+*   <strong>Hecho:</strong> El CCO incluye Cafetería (100m²). Clasifica como "Alta Concentración".
+*   <strong>Consecuencia:</strong> Obligatorio <strong>Cableado LSZH (Libre de Halógenos)</strong> en todo el edificio (datos y potencia).
+*   <strong>Riesgo:</strong> Si instalan PVC, no habrá Dictamen RETIE y no se podrá energizar.
 <br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Servidor principal</strong></td>
-<td>Dell PowerEdge R750, 2×CPU, 64GB RAM</td>
-</tr>
-<tr>
-<td><strong>Servidor respaldo</strong></td>
-<td>Dell PowerEdge R750, 2×CPU, 64GB RAM</td>
-</tr>
-<tr>
-<td><strong>Almacenamiento</strong></td>
-<td>10TB RAID 6</td>
-</tr>
-<tr>
-<td><strong>Sistema operativo</strong></td>
-<td>Windows Server 2022</td>
-</tr>
-<tr>
-<td><strong>Software SCADA</strong></td>
-<td>Wonderware System Platform</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>3.2 Consolas de Operación</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Pantallas</strong></td>
-<td>6×55" LED 4K</td>
-</tr>
-<tr>
-<td><strong>PCs operador</strong></td>
-<td>3×Dell OptiPlex 7090</td>
-</tr>
-<tr>
-<td><strong>Software</strong></td>
-<td>Wonderware InTouch HMI</td>
-</tr>
-<tr>
-<td><strong>Redundancia</strong></td>
-<td>Hot standby</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>3.3 Sistema de Videowall</h3>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Configuración</strong></td>
-<td>3×2 pantallas</td>
-</tr>
-<tr>
-<td><strong>Resolución total</strong></td>
-<td>11520×2160 px</td>
-</tr>
-<tr>
-<td><strong>Controlador</strong></td>
-<td>Datapath x4</td>
-</tr>
-<tr>
-<td><strong>Fuentes</strong></td>
-<td>CCTV, SCADA, mapas</td>
-</tr>
-</tbody></table></div>
+<h3>B. Arquitectura de Software (3 Capas)</h3>
+1.  <strong>Capa Operativa:</strong> Gestión TR (CCTV, SOS).
+2.  <strong>Capa Negocio:</strong> Peaje/IP-REV (Seguridad bancaria).
+3.  <strong>Capa Auditoría:</strong> SICC (Reportes ANI).
 <br>
 <br>
-<h2>4. FUNCIONALIDADES</h2>
+<h2>4. ESPECIFICACIÓN DE COMPRA (ANEXO TÉCNICO)</h2>
 <br>
-<h3>4.1 Monitoreo ITS</h3>
+<h3>ÍTEM 1: CABLEADO ESTRUCTURADO Y ELÉCTRICO</h3>
+*   <strong>Tipo:</strong> <strong>LSZH (Low Smoke Zero Halogen)</strong> obligatorio.
+*   <strong>Prohibición:</strong> No se acepta PVC en áreas comunes o rutas de evacuación.
 <br>
-<li>✅ CCTV (30 cámaras)</li>
-<li>✅ PMV (28 paneles)</li>
-<li>✅ Postes SOS (87 unidades)</li>
-<li>✅ Radares/ETD (15 equipos)</li>
-<li>✅ WIM (1 estación)</li>
-<li>✅ Gálibos (25 unidades)</li>
+<h3>ÍTEM 2: CLIMATIZACIÓN (DATA CENTER)</h3>
+*   <strong>Tipo:</strong> Aire de Precisión o Industrial (Mochila/Cassette).
+*   <strong>Redundancia:</strong> Configuración <strong>N+1</strong>.
+*   <strong>Restricción:</strong> No se aceptan Mini-Splits de confort doméstico para el cuarto de racks.
 <br>
-<h3>4.2 Control Operacional</h3>
+<h3>ÍTEM 3: VISUALIZACIÓN (VIDEO WALL)</h3>
+*   <strong>Pantallas:</strong> Monitores Industriales 24/7 (Bisel < 1.8mm).
+*   <strong>Controlador:</strong> Workstation Gráfica independiente o embebida.
+*   <strong>Restricción:</strong> No monitores comerciales (TV).
 <br>
-<li>✅ Gestión de incidentes</li>
-<li>✅ Coordinación emergencias</li>
-<li>✅ Monitoreo peajes</li>
-<li>✅ Reportes automáticos</li>
-<li>✅ Integración SICC</li>
-<br>
-<br>
-<h2>5. PRESUPUESTO</h2>
-<br>
-<h2>5. PRESUPUESTO DETALLADO (REFERENCIA)</h2>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Ítem</td>
-<td>Descripción</td>
-<td>Cantidad</td>
-<td>Costo Unit. (COP)</td>
-<td>Total (COP)</td>
-<td>Total (USD)</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>11.01</strong></td>
-<td>Servidores</td>
-<td>3</td>
-<td>$276,476,873</td>
-<td>$829,430,619</td>
-<td>$207,358</td>
-</tr>
-<tr>
-<td><strong>11.02</strong></td>
-<td>Almacenamiento</td>
-<td>1</td>
-<td>$276,476,873</td>
-<td>$276,476,873</td>
-<td>$69,119</td>
-</tr>
-<tr>
-<td><strong>11.03</strong></td>
-<td>Servidor Backup</td>
-<td>1</td>
-<td>$276,476,873</td>
-<td>$276,476,873</td>
-<td>$69,119</td>
-</tr>
-<tr>
-<td><strong>11.04</strong></td>
-<td>Servidor SCADA</td>
-<td>1</td>
-<td>$276,476,873</td>
-<td>$276,476,873</td>
-<td>$69,119</td>
-</tr>
-<tr>
-<td><strong>11.05</strong></td>
-<td>KVM</td>
-<td>1</td>
-<td>$27,647,687</td>
-<td>$27,647,687</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>11.06</strong></td>
-<td>Licenciamiento General</td>
-<td>1</td>
-<td>$135,535,863</td>
-<td>$135,535,863</td>
-<td>$33,884</td>
-</tr>
-<tr>
-<td><strong>11.07</strong></td>
-<td>Licenciamiento Avanzado</td>
-<td>1</td>
-<td>$677,679,315</td>
-<td>$677,679,315</td>
-<td>$169,420</td>
-</tr>
-<tr>
-<td><strong>11.09</strong></td>
-<td>Software Gestión Video</td>
-<td>1</td>
-<td>$135,535,863</td>
-<td>$135,535,863</td>
-<td>$33,884</td>
-</tr>
-<tr>
-<td><strong>11.10</strong></td>
-<td>Workstations Operadores</td>
-<td>3</td>
-<td>$55,295,375</td>
-<td>$165,886,125</td>
-<td>$41,472</td>
-</tr>
-<tr>
-<td><strong>11.11</strong></td>
-<td>Joystick Control</td>
-<td>3</td>
-<td>$13,823,844</td>
-<td>$41,471,532</td>
-<td>$10,368</td>
-</tr>
-<tr>
-<td><strong>11.12</strong></td>
-<td>VideoWall</td>
-<td>1</td>
-<td>$97,851,196</td>
-<td>$97,851,196</td>
-<td>$24,463</td>
-</tr>
-<tr>
-<td><strong>11.13</strong></td>
-<td>Controlador VideoWall</td>
-<td>1</td>
-<td>$27,647,687</td>
-<td>$27,647,687</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>11.14</strong></td>
-<td>Monitores Operación</td>
-<td>6</td>
-<td>$13,823,844</td>
-<td>$82,943,064</td>
-<td>$20,736</td>
-</tr>
-<tr>
-<td><strong>11.15</strong></td>
-<td>PCs Administrativos</td>
-<td>2</td>
-<td>$41,471,531</td>
-<td>$82,943,062</td>
-<td>$20,736</td>
-</tr>
-<tr>
-<td><strong>11.16</strong></td>
-<td>Monitores Administrativos</td>
-<td>2</td>
-<td>$13,823,844</td>
-<td>$27,647,688</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>11.17</strong></td>
-<td>Mobiliario Workstations</td>
-<td>3</td>
-<td>$13,823,844</td>
-<td>$41,471,532</td>
-<td>$10,368</td>
-</tr>
-<tr>
-<td><strong>11.18</strong></td>
-<td>Impresora</td>
-<td>1</td>
-<td>$13,823,844</td>
-<td>$13,823,844</td>
-<td>$3,456</td>
-</tr>
-<tr>
-<td><strong>11.19</strong></td>
-<td>Mobiliario Impresora</td>
-<td>1</td>
-<td>$2,764,769</td>
-<td>$2,764,769</td>
-<td>$691</td>
-</tr>
-<tr>
-<td><strong>11.20</strong></td>
-<td>PC Técnico</td>
-<td>1</td>
-<td>$41,471,531</td>
-<td>$41,471,531</td>
-<td>$10,368</td>
-</tr>
-<tr>
-<td><strong>11.21</strong></td>
-<td>Software SCADA</td>
-<td>1</td>
-<td>$230,000,000</td>
-<td>$230,000,000</td>
-<td>$57,500</td>
-</tr>
-<tr>
-<td><strong>11.22</strong></td>
-<td>Firewall</td>
-<td>1</td>
-<td>$69,119,218</td>
-<td>$69,119,218</td>
-<td>$17,280</td>
-</tr>
-<tr>
-<td><strong>11.23</strong></td>
-<td>Servidor Comunicaciones</td>
-<td>1</td>
-<td>$138,238,437</td>
-<td>$138,238,437</td>
-<td>$34,560</td>
-</tr>
-<tr>
-<td><strong>11.24</strong></td>
-<td>PC Mantenimiento</td>
-<td>1</td>
-<td>$41,471,531</td>
-<td>$41,471,531</td>
-<td>$10,368</td>
-</tr>
-<tr>
-<td><strong>11.25</strong></td>
-<td>Central Telefónica IP</td>
-<td>1</td>
-<td>$69,119,218</td>
-<td>$69,119,218</td>
-<td>$17,280</td>
-</tr>
-<tr>
-<td><strong>11.27</strong></td>
-<td>Teléfonos IP</td>
-<td>10</td>
-<td>$6,911,922</td>
-<td>$69,119,220</td>
-<td>$17,280</td>
-</tr>
-<tr>
-<td><strong>11.28</strong></td>
-<td>Cable UTP Cat 6</td>
-<td>500</td>
-<td>$138,239</td>
-<td>$69,119,500</td>
-<td>$17,280</td>
-</tr>
-<tr>
-<td><strong>11.29</strong></td>
-<td>Gateway GSM</td>
-<td>1</td>
-<td>$27,647,687</td>
-<td>$27,647,687</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>11.30</strong></td>
-<td>Rack 19"</td>
-<td>2</td>
-<td>$13,823,844</td>
-<td>$27,647,688</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>11.31</strong></td>
-<td>ODF</td>
-<td>2</td>
-<td>$6,911,922</td>
-<td>$13,823,844</td>
-<td>$3,456</td>
-</tr>
-<tr>
-<td><strong>11.32</strong></td>
-<td>Patch Panel</td>
-<td>2</td>
-<td>$2,764,769</td>
-<td>$5,529,538</td>
-<td>$1,382</td>
-</tr>
-<tr>
-<td><strong>11.33</strong></td>
-<td>Patch Cord Fibra</td>
-<td>20</td>
-<td>$138,239</td>
-<td>$2,764,780</td>
-<td>$691</td>
-</tr>
-<tr>
-<td><strong>11.34</strong></td>
-<td>Tubería IMC</td>
-<td>100</td>
-<td>$138,239</td>
-<td>$13,823,900</td>
-<td>$3,456</td>
-</tr>
-<tr>
-<td><strong>11.35</strong></td>
-<td>Cableado Energía 3x10</td>
-<td>20</td>
-<td>$18,124,447</td>
-<td>$362,488,940</td>
-<td>$90,622</td>
-</tr>
-<tr>
-<td><strong>11.36</strong></td>
-<td>Tablero Energía</td>
-<td>1</td>
-<td>$69,119,218</td>
-<td>$69,119,218</td>
-<td>$17,280</td>
-</tr>
-<tr>
-<td><strong>11.37</strong></td>
-<td>UPS</td>
-<td>2</td>
-<td>$138,238,437</td>
-<td>$276,476,874</td>
-<td>$69,119</td>
-</tr>
-<tr>
-<td><strong>11.38</strong></td>
-<td>Aire Acondicionado</td>
-<td>2</td>
-<td>$69,119,218</td>
-<td>$138,238,436</td>
-<td>$34,560</td>
-</tr>
-<tr>
-<td><strong>11.39</strong></td>
-<td>Cableado Energía AC</td>
-<td>50</td>
-<td>$13,823,844</td>
-<td>$691,192,200</td>
-<td>$172,798</td>
-</tr>
-<tr>
-<td><strong>11.40</strong></td>
-<td>Material Instalación</td>
-<td>1</td>
-<td>$69,119,218</td>
-<td>$69,119,218</td>
-<td>$17,280</td>
-</tr>
-<tr>
-<td><strong>11.41</strong></td>
-<td>Control Acceso</td>
-<td>1</td>
-<td>$27,647,687</td>
-<td>$27,647,687</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>11.42</strong></td>
-<td>Integración SCADA</td>
-<td>1</td>
-<td>$230,000,000</td>
-<td>$230,000,000</td>
-<td>$57,500</td>
-</tr>
-<tr>
-<td><strong>11.43</strong></td>
-<td>Caja Empalme Fibra</td>
-<td>5</td>
-<td>$2,764,769</td>
-<td>$13,823,845</td>
-<td>$3,456</td>
-</tr>
-<tr>
-<td><strong>11.44</strong></td>
-<td>Cajas Red Troncal</td>
-<td>Global</td>
-<td>$1,382,384</td>
-<td>$13,823,840</td>
-<td>$3,456</td>
-</tr>
-<tr>
-<td><strong>11.45</strong></td>
-<td>Caja Reserva</td>
-<td>2</td>
-<td>$691,192</td>
-<td>$1,382,384</td>
-<td>$346</td>
-</tr>
-<tr>
-<td><strong>11.46</strong></td>
-<td>Canalización Ducto</td>
-<td>100</td>
-<td>$138,239</td>
-<td>$13,823,900</td>
-<td>$3,456</td>
-</tr>
-<tr>
-<td><strong>11.47</strong></td>
-<td>Empalmes Fibra</td>
-<td>20</td>
-<td>$691,192</td>
-<td>$13,823,840</td>
-<td>$3,456</td>
-</tr>
-<tr>
-<td><strong>11.48</strong></td>
-<td>Material Montaje</td>
-<td>1</td>
-<td>$27,647,687</td>
-<td>$27,647,687</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>11.49</strong></td>
-<td>Capacitación</td>
-<td>1</td>
-<td>$27,647,687</td>
-<td>$27,647,687</td>
-<td>$6,912</td>
-</tr>
-<tr>
-<td><strong>TOTAL COSTOS DIRECTOS</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>$3,934,077,023</strong></td>
-<td><strong>$983,519</strong></td>
-</tr>
-<tr>
-<td><strong>ADMINISTRACIÓN (22%)</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>$865,496,945</strong></td>
-<td><strong>$216,374</strong></td>
-</tr>
-<tr>
-<td><strong>IMPREVISTOS (4%)</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>$157,363,081</strong></td>
-<td><strong>$39,341</strong></td>
-</tr>
-<tr>
-<td><strong>UTILIDAD (4%)</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>$157,363,081</strong></td>
-<td><strong>$39,341</strong></td>
-</tr>
-<tr>
-<td><strong>IVA SOBRE UTILIDAD (19%)</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>$29,898,985</strong></td>
-<td><strong>$7,475</strong></td>
-</tr>
-<tr>
-<td><strong>TOTAL FINAL</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>$5,144,199,115</strong></td>
-<td><strong>$1,286,050</strong></td>
-</tr>
-</tbody></table></div>
-<br>
-<strong>Nota:</strong> Conversión USD a COP = 4,000 (aproximado)
+<h3>ÍTEM 4: ENERGÍA</h3>
+*   <strong>Respaldo:</strong> UPS Online Doble Conversión (Autonomía > 30 min).
+*   <strong>Emergencia:</strong> Planta Eléctrica con tanque para 24h de operación.
 <br>
 <br>
-<h2>6. PRUEBAS</h2>
+<h2>5. CONCLUSIÓN FINANCIERA</h2>
 <br>
-<h3>FAT</h3>
-<li>Servidores: Throughput, redundancia</li>
-<li>SCADA: Integración equipos ITS</li>
-<li>Videowall: Resolución, fuentes</li>
-<br>
-<h3>SAT</h3>
-<li>Disponibilidad 99.9%</li>
-<li>Tiempo respuesta <2 segundos</li>
-<li>Prueba falla servidor principal</li>
-<br>
-<br>
-<h2>7. FABRICANTES</h2>
-<br>
-<li><strong>Servidores:</strong> Dell, HP</li>
-<li><strong>SCADA:</strong> Wonderware (AVEVA)</li>
-<li><strong>Switches:</strong> Cisco</li>
-<li><strong>Videowall:</strong> Datapath, Barco</li>
-<br>
-<br>
-<br>
-<strong>✅ REVISADO CON INFORMACIÓN OFICIAL DEL PROYECTO</strong>
-<li>Ubicación actualizada: La Lizama PK 4+300 (RN 4513)</li>
-<li>CAPEX mantenido: USD $1,286,050</li>
-<li>Componentes confirmados según información oficial</li>
-<li>Metodología PKD lineal aplicada</li>
+<strong>Estado:</strong> 🟢 APROBADO
+<strong>Acción Inmediata:</strong> Verificar que el presupuesto civil contemple el sobrecosto del cable LSZH (+20%).
 <br>
         
         <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">

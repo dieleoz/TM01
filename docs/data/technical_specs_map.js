@@ -1,13 +1,15 @@
 window.TECHNICAL_SPECS_MAP = {
   "RADAR": "specs/T04_RADAR.html",
+  "RADIO": "specs/T04_RADIO.html",
   "PEAJE": "specs/T04_PEAJE.html",
   "SOS": "specs/T04_SOS.html",
   "METEO": "specs/T04_METEO.html",
   "GALIBO": "specs/T04_GALIBO.html",
   "_metadata": {
     "agentVersion": "Phase 7.0",
-    "generatedAt": "2026-01-30 10:08:33"
+    "generatedAt": "2026-01-30 11:10:31"
   },
+  "SAST": "specs/T04_SAST.html",
   "CCO": "specs/T04_CCO.html",
   "TELECOM": "specs/T04_TELECOM.html",
   "PMV": "specs/T04_PMV.html",

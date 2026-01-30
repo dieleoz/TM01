@@ -35,88 +35,84 @@
 <body>
     <div class="container">
         <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
-        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - SISTEMA METEOROLÓGICO</h1></div>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - SAST (FOTOMULTAS)</h1></div>
 <h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
 <br>
 <strong>Fecha:</strong> 30/01/2026
-<strong>Sistema:</strong> Estaciones Meteorológicas (Modelo de Eficiencia)
+<strong>Sistema:</strong> Sistemas Automáticos de Detección de Infracciones (SAST)
 <strong>Responsable:</strong> Auditoría Técnica (Agente 3)
-<strong>Versión:</strong> 3.0 (ALINEACIÓN JURÍDICA - DAVIS + API)
+<strong>Versión:</strong> 1.0 (VALIDACIÓN DE EXCLUSIÓN)
 <br>
 <br>
-<h2>1. DICTAMEN EJECUTIVO: 🟢 T04 VALIDADO (ESTRATEGIA JURÍDICA)</h2>
+<h2>1. DICTAMEN EJECUTIVO: ⚪ T04 VALIDADO (ALCANCE EXCLUIDO)</h2>
 <br>
-<strong>Resultado:</strong> 🟢 <strong>APROBADO PARA CONSTRUCCIÓN</strong>
+<strong>Resultado:</strong> ⚪ <strong>VALIDADO "SIN ALCANCE" ($0 CAPEX)</strong>
 <br>
-Se adopta la <strong>ESTRATEGIA DE VIRTUALIZACIÓN</strong> definida por el Dictamen Jurídico. Se prioriza la optimización de CAPEX mediante el uso de estaciones compactas de alta precisión para variables base y la integración de <strong>servicios de datos (API)</strong> para la variable visibilidad/neblina.
+El documento T04 es <strong>CORRECTO JURÍDICA Y FINANCIERAMENTE</strong>. Valida la estrategia de <strong>"CERO CAPEX ITS"</strong> para sistemas de fotomultas (SAST), protegiendo al proyecto de invertir en infraestructura fija que legalmente no puede operar sin permisos del Ministerio de Transporte.
 <br>
-*   <strong>Costo Validado:</strong> <strong>$16,500 USD</strong>.
-*   <strong>Tecnología Aprobada:</strong> Davis Vantage Pro2 Plus / API Climática.
-*   <strong>Unidades:</strong> 2 Unidades Físicas (Peajes Mandatorios).
+<strong>Decisión Estratégica:</strong> La obligación de "Control de Velocidad" se cumple mediante la entrega de <strong>Radares Móviles a la Policía de Carreteras</strong> (Dotación), no mediante porticos sancionatorios.
 <br>
 <br>
-<h2>2. MATRIZ DE CONFLICTO Y RESOLUCIÓN</h2>
+<h2>2. MATRIZ DE CONSISTENCIA</h2>
 <br>
 <div class='table-responsive'><table class='spec-table'>
 <thead>
 <tr>
 <td>Variable</td>
-<td>Estrategia Dictamen (Abogado)</td>
-<td>Estrategia T04 (Ingeniería)</td>
-<td>Veredicto Final</td>
+<td>Fuente Obligación</td>
+<td>Especificación T04</td>
+<td>Veredicto</td>
 </tr>
 </thead><tbody>
 <tr>
-<td><strong>Sensor de Niebla</strong></td>
-<td>Virtualizado (API).</td>
-<td>Virtualizado (API).</td>
-<td>✅ CUMPLE</td>
+<td><strong>Infraestructura Fija</strong></td>
+<td>AT2 (3.3.5.1): Exige monitores informativos.</td>
+<td>CANTIDAD: 0</td>
+<td>✅ CORRECTO</td>
 </tr>
 <tr>
-<td><strong>Tipo de Estación</strong></td>
-<td>Compacta (Davis).</td>
-<td>Compacta (Davis).</td>
-<td>✅ CUMPLE</td>
+<td><strong>Equipos Sancionatorios</strong></td>
+<td>AT2: Entrega a Policía.</td>
+<td>Dotación (No ITS)</td>
+<td>✅ CORRECTO</td>
 </tr>
 <tr>
-<td><strong>Cantidad</strong></td>
-<td>2 Unidades (Peajes).</td>
-<td>2 Unidades (Peajes).</td>
-<td>✅ CUMPLE</td>
+<td><strong>Monitoreo Técnico</strong></td>
+<td>AT4: Medición velocidad.</td>
+<td>ETD (Radares Estadísticos)</td>
+<td>✅ CUBIERTO</td>
 </tr>
 <tr>
-<td><strong>Presupuesto</strong></td>
-<td>$16,500 USD.</td>
-<td>$16,500 USD.</td>
-<td>✅ OPTIMIZADO</td>
+<td><strong>Gestión Legal</strong></td>
+<td>Ley 1843.</td>
+<td>Alcance Excluido</td>
+<td>✅ BLINDAJE</td>
 </tr>
 </tbody></table></div>
 <br>
 <br>
-<h2>3. ESPECIFICACIÓN TÉCNICA "HARD DECK"</h2>
+<h2>3. ANÁLISIS DE RIESGOS (POR QUÉ NO INSTALAR SAST FIJO)</h2>
 <br>
-<h3>ÍTEM 1: ESTACIÓN METEOROLÓGICA COMPACTA (2 UNIDADES)</h3>
-*   <strong>Modelo:</strong> Tipo Davis Vantage Pro2 Plus o equivalente funcional.
-*   <strong>Sensores Físicos:</strong>
-*   Viento (Velocidad y Dirección).
-*   Precipitación (Pluviómetro de balancín).
-*   Temperatura y Humedad Relativa.
-*   Radiación Solar y UV (Cálculo de Evapotranspiración ETo para IDEAM).
-*   <strong>Transmisión:</strong> Gateway Modbus TCP / NTCIP para SCADA CCO.
+<h3>A. Riesgo de "Activo Muerto"</h3>
+*   <strong>Hecho:</strong> Se requiere permiso ANSV/MinTransporte punto a punto.
+*   <strong>Riesgo:</strong> Si niegan el punto, los equipos instalados ($50k USD c/u) quedan inoperables.
+*   <strong>Estrategia:</strong> Usar <strong>Radares Móviles</strong> (Policía).
 <br>
-<h3>ÍTEM 2: INTEGRACIÓN VIRTUAL DE VISIBILIDAD</h3>
-*   <strong>Método:</strong> Webservice/API Rest integrado al software del CCO.
-*   <strong>Fuentes:</strong> Datos locales de peajes + AccuWeather Pro / IDEAM.
-*   <strong>Lógica:</strong> Disparo de alertas en PMV ante visibilidad < 200m reportada por el servicio.
+<h3>B. Confusión "Radar Pedagógico" vs "SAST"</h3>
+*   El <strong>Radar Pedagógico</strong> (Panel "Su Velocidad Es") SÍ es alcance ITS (Ver T04_RADAR).
+*   El <strong>SAST</strong> (Cámara de Multa) NO es alcance ITS.
 <br>
 <br>
-<h2>4. UBICACIÓN GEORREFERENCIADA</h2>
+<h2>4. INSTRUCCIÓN PARA EL PROCESO DE COMPRA (RFQ)</h2>
 <br>
-1.  <strong>Peaje Zambito:</strong> K9+200 Ruta 4511.
-2.  <strong>Peaje Aguas Negras:</strong> K81+800 Ruta 4511.
+<strong>NOTA ACLARATORIA - SISTEMAS DE FISCALIZACIÓN (SAST):</strong>
+> *"Se informa a los proponentes que el suministro de equipos de detección electrónica de infracciones (Fotomultas/SAST) <strong>ESTÁ EXCLUIDO</strong> del alcance de esta licitación de ITS. La obligación contractual de control de velocidad se gestionará mediante el suministro de equipos móviles a la autoridad de tránsito bajo el rubro de 'Dotación'."*
 <br>
 <br>
-<strong>ESTADO TÉCNICO:</strong> 🟢 CERRADO (Estrategia Davis + API)
+<h2>5. CONCLUSIÓN FINANCIERA</h2>
+<br>
+<strong>Estado:</strong> 🟢 APROBADO
+<strong>CAPEX ITS:</strong> <strong>$0 USD</strong>
 <br>
         
         <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">

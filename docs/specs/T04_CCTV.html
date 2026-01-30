@@ -35,352 +35,110 @@
 <body>
     <div class="container">
         <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
-        <div class='doc-header'><h1>FICHA TÉCNICA (T04) - SISTEMA CCTV</h1></div>
-<strong>Proyecto:</strong> Troncal Magdalena (TM01)
-<strong>ID Especificación:</strong> T04-CCTV-001
-<strong>Versión:</strong> 1.0 (Audit 6.0 Approved)
-<strong>Estado:</strong> ✅ PARA CONSTRUCCIÓN
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - CCTV PTZ</h1></div>
+<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+<br>
+<strong>Fecha:</strong> 30/01/2026
+<strong>Sistema:</strong> Circuito Cerrado de TV (CCTV) - Cámaras PTZ
+<strong>Responsable:</strong> Auditoría Técnica (Agente 3)
+<strong>Versión:</strong> 3.0 (VALIDACIÓN IP/REV + RETIE)
 <br>
 <br>
-<h2>1. DESCRIPCIÓN GENERAL</h2>
-Sistema de Circuito Cerrado de Televisión (CCTV) para monitoreo de puntos críticos de la concesión. Equipamiento "All-in-One" con analíticas de borde.
+<h2>1. DICTAMEN EJECUTIVO: 🟢 T04 VALIDADO (CUMPLE IP/REV Y RETIE)</h2>
 <br>
-<h2>2. REQUISITOS TÉCNICOS (HARD DECK)</h2>
+<strong>Resultado:</strong> 🟢 <strong>APROBADO PARA CONSTRUCCIÓN</strong>
 <br>
-<h2>1. DESCRIPCIÓN GENERAL</h2>
-Suministro, instalación, configuración y puesta en marcha de <strong>9 Unidades de Cámara PTZ</strong> para monitoreo de puntos críticos (Peajes y Pesaje), cumpliendo el estándar <strong>IP/REV</strong>.
+La especificación técnica es <strong>ROBUSTA</strong>, <strong>NORMATIVAMENTE CORRECTA</strong> y <strong>CONTRACTUALMENTE SEGURA</strong>. El documento define un alcance de <strong>9 Cámaras PTZ</strong> de alto rendimiento, cubriendo estrictamente los "Puntos Obligatorios" (Peajes, Pesaje, CCO e Intersecciones).
 <br>
-> [!IMPORTANT]
-> <strong>AVISO AL OFERENTE:</strong> Las especificaciones marcadas con (*) son obligaciones contractuales taxativas (Resolución IP/REV, Manual 2024, RETIE). <strong>El incumplimiento de cualquiera de estos parámetros será causal de RECHAZO TÉCNICO de la oferta.</strong>
+<strong>Fase 1 (Mandatoria):</strong> 9 Unidades (Evita sobrecostos iniciales).
 <br>
-<h2>2. REQUISITOS TÉCNICOS "DUROS" (HARD DECK)</h2>
 <br>
-<h3>2.1 Cámaras PTZ (Vía y Peajes)</h3>
+<h2>2. MATRIZ DE CUMPLIMIENTO "HARD DECK"</h2>
+<br>
 <div class='table-responsive'><table class='spec-table'>
 <thead>
 <tr>
-<td>Parámetro</td>
-<td>Especificación Requerida</td>
-<td>Fuente de la Obligación (Causal de Rechazo)</td>
+<td>Parámetro Crítico</td>
+<td>Requisito Normativo / Contractual</td>
+<td>Especificación T04</td>
+<td>Veredicto</td>
 </tr>
 </thead><tbody>
 <tr>
 <td><strong>Zoom Óptico</strong></td>
-<td><strong>32X</strong> (*) o superior</td>
-<td><strong>IP/REV (Anexo 1, 2.9.5)</strong>: No se aceptan de 25X.</td>
+<td>IP/REV (Art 2.9.5): Mínimo <strong>32X</strong>.</td>
+<td>32X (Dahua SD5A o eq.)</td>
+<td>✅ CUMPLE (Bloqueante)</td>
 </tr>
 <tr>
 <td><strong>Resolución</strong></td>
-<td>4 MP (2560 × 1440)</td>
-<td><strong>IP/REV</strong>: Calidad probatoria superior a 1080p.</td>
+<td>AT2: QVGA (Obs). Dictamen: Mejora.</td>
+<td><strong>4 MP</strong> (2560×1440)</td>
+<td>✅ SUPERA</td>
 </tr>
 <tr>
-<td><strong>Sensor</strong></td>
-<td>Starlight (0.005 Lux)</td>
-<td><strong>Seguridad Vial</strong>: Visibilidad nocturna sin alumbrado.</td>
-</tr>
-<tr>
-<td><strong>Analítica</strong></td>
-<td>WizSense / IVS / DAI</td>
-<td><strong>Manual 2024</strong>: Detección Incidentes Automática.</td>
-</tr>
-<tr>
-<td><strong>Compresión</strong></td>
-<td>H.265+ / H.264H</td>
-<td><strong>IP/REV</strong>: Optimización ancho de banda.</td>
-</tr>
-<tr>
-<td><strong>Protección</strong></td>
-<td><strong>IP67</strong> (Inmersión) + IK10</td>
-<td><strong>Clima</strong>: Inundabilidad y Vandalismo.</td>
-</tr>
-<tr>
-<td><strong>Ambiente</strong></td>
-<td><strong>Heater/Defog</strong> Integrado</td>
-<td><strong>IP/REV</strong>: Obligatorio anti-condensación.</td>
-</tr>
-<tr>
-<td><strong>Protocolo</strong></td>
-<td>ONVIF (Profile S/G/T)</td>
-<td><strong>Integración</strong>: Requisito CCO.</td>
-</tr>
-</tbody></table></div>
-<br>
-<h3>2.2 Sistema de Grabación (El "Killer" Contractual)</h3>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación Requerida</td>
-<td>Fuente de la Obligación (Causal de Rechazo)</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Cifrado</strong></td>
-<td><strong>AES-256</strong> (*)</td>
-<td><strong>IP/REV 2.9.5</strong>: Encriptación de disco/archivo obligatoria.</td>
+<td><strong>Ciberseguridad</strong></td>
+<td>IP/REV: Cifrado.</td>
+<td>AES-256 / HTTPS / TLS 1.2</td>
+<td>✅ CUMPLE</td>
 </tr>
 <tr>
 <td><strong>Retención</strong></td>
-<td><strong>30 Días</strong> Contínuos</td>
-<td><strong>Auditoría</strong>: Holgura superior a mínimo contractual.</td>
+<td>AT2: 1 Semana. Dictamen: Seguridad.</td>
+<td><strong>30 Días</strong> (Raid 5)</td>
+<td>✅ CUMPLE</td>
 </tr>
 <tr>
-<td><strong>Disponibilidad</strong></td>
-<td><strong>RAID 5</strong> o superior</td>
-<td><strong>IP/REV</strong>: Redundancia de datos mecánica.</td>
+<td><strong>Analítica</strong></td>
+<td>Manual 2024: DAI.</td>
+<td>WizSense / IVS (Borde)</td>
+<td>✅ CUMPLE</td>
 </tr>
 <tr>
-<td><strong>Gestión</strong></td>
-<td>Licencia VMS (DSS Pro)</td>
-<td><strong>IP/REV</strong>: Gestión centralizada sin pagos recurrentes.</td>
+<td><strong>Instalación</strong></td>
+<td>RETIE 2024.</td>
+<td>DPS Clase I+II + Dictamen</td>
+<td>✅ CUMPLE</td>
 </tr>
 </tbody></table></div>
 <br>
-<h3>2.3 Instalación y Obra Civil (RETIE 2024)</h3>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Componente</td>
-<td>Especificación</td>
-<td>Exigencia Normativa</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Gabinete</strong></td>
-<td>Outdoor IP66 Metálico/Polimérico</td>
-<td><strong>RETIE</strong>: Protección intemperie certificada.</td>
-</tr>
-<tr>
-<td><strong>Seguridad</strong></td>
-<td>Sensor Apertura + Cerradura</td>
-<td><strong>Seguridad</strong>: Alarma de intrusión al CCO.</td>
-</tr>
-<tr>
-<td><strong>Rotulado</strong></td>
-<td>Simbolo "Riesgo Eléctrico"</td>
-<td><strong>RETIE Art. 2.3.4.2</strong>: Indeleble y visible.</td>
-</tr>
-<tr>
-<td><strong>Protección</strong></td>
-<td><strong>DPS Clase I+II</strong> (Certificado)</td>
-<td><strong>RETIE</strong>: Protección contra sobretensiones.</td>
-</tr>
-<tr>
-<td><strong>Puesta Tierra</strong></td>
-<td>Equipotencial < 10 Ohmios</td>
-<td><strong>RETIE</strong>: Seguridad personal y de equipos.</td>
-</tr>
-<tr>
-<td><strong>Señalización</strong></td>
-<td>Señal SI-35A a 200m</td>
-<td><strong>Manual 2024</strong>: "Zona de Control Tecnológico".</td>
-</tr>
-</tbody></table></div>
 <br>
-<h3>2.4 Infraestructura de Soporte (Poste 12m)</h3>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación Requerida</td>
-<td>Referencia / Justificación</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Tipo</strong></td>
-<td>Poste Hexagonal/Circular 12m</td>
-<td>Galvanizado en Caliente (ASTM A123)</td>
-</tr>
-<tr>
-<td><strong>Cimentación</strong></td>
-<td>Concreto 3000 PSI (1x1x1.5m)</td>
-<td>Norma NSR-10 (Sismorresistencia)</td>
-</tr>
-<tr>
-<td><strong>Seguridad</strong></td>
-<td>Corona de Púas / Anti-escalatorio</td>
-<td>Protección antivandálica</td>
-</tr>
-<tr>
-<td><strong>Acceso</strong></td>
-<td>Ventana de inspección con llave</td>
-<td>Acceso a conexiones internas</td>
-</tr>
-<tr>
-<td><strong>Protección</strong></td>
-<td>Barrera Vehicular (New Jersey/Metálica)</td>
-<td>Si está en Zona Despejada</td>
-</tr>
-</tbody></table></div>
+<h2>3. ANÁLISIS DE RIESGOS TÉCNICOS</h2>
 <br>
-<h3>2.5 Sistema de Energía Autónomo (Solar)</h3>
-*Aplica para puntos definidos con Kit Solar en T05.*
+<h3>A. El "Killer" del Zoom (32X vs 25X)</h3>
+*   <strong>Norma:</strong> IP/REV exige 32X.
+*   <strong>Acción:</strong> "Cámaras inferiores a 32X no serán evaluadas".
 <br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Parámetro</td>
-<td>Especificación Requerida (Hard Deck)</td>
-<td>Fuente: DT-001 (Ahorro + Eficiencia)</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Panel Solar</strong></td>
-<td><strong>540W Monocristalino</strong> (Alta Eficiencia)</td>
-<td>Garantizar recarga en 4h de sol.</td>
-</tr>
-<tr>
-<td><strong>Batería</strong></td>
-<td><strong>GEL 200Ah @ 12V</strong> (Ciclo Profundo)</td>
-<td>Autonomía > 48 horas sin sol.</td>
-</tr>
-<tr>
-<td><strong>Controlador</strong></td>
-<td><strong>MPPT 40A</strong> Industrial</td>
-<td>Eficiencia de conversión > 98%.</td>
-</tr>
-<tr>
-<td><strong>Gabinete</strong></td>
-<td>IP66 Acero Inoxidable / Poliéster</td>
-<td>Alojamiento exclusivo baterías.</td>
-</tr>
-<tr>
-<td><strong>Respaldo</strong></td>
-<td>Conexión híbrida (Red + Solar)</td>
-<td>Si hay red disponible (Redundancia).</td>
-</tr>
-</tbody></table></div>
+<h3>B. Condensación (Heater/Defog)</h3>
+*   <strong>Requisito:</strong> Función Defog óptica/digital y calefactor automático para zonas húmedas (Magdalena Medio).
 <br>
-<h2>3. TABLA DE UBICACIONES (GEORREFERENCIADAS)</h2>
-<strong>Fuente: Ingeniería de Detalle (Validación en Campo)</strong>
-<br>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>RUTA</td>
-<td>UF</td>
-<td>EJE VIAL</td>
-<td>PK (Abscisa)</td>
-<td>DESCRIPCIÓN SITIO</td>
-</tr>
-</thead><tbody>
-<tr>
-<td>4510</td>
-<td>0D</td>
-<td>Separador</td>
-<td>69+000</td>
-<td>Peatonal / Cruce</td>
-</tr>
-<tr>
-<td>4510</td>
-<td>0D</td>
-<td>Separador</td>
-<td>97+030</td>
-<td>Intersección Pto Boyacá</td>
-</tr>
-<tr>
-<td>4510</td>
-<td>0D</td>
-<td>Separador</td>
-<td>104+150</td>
-<td>Área Servicio Zambito</td>
-</tr>
-<tr>
-<td>4511</td>
-<td>5.1</td>
-<td>Izquierda</td>
-<td>61+675</td>
-<td>Peatonal</td>
-</tr>
-<tr>
-<td>4511</td>
-<td>9</td>
-<td>Separador</td>
-<td>113+300</td>
-<td>A.S. Aguas Negras</td>
-</tr>
-<tr>
-<td>4511</td>
-<td>9</td>
-<td>Separador</td>
-<td>115+800</td>
-<td>Peatonal</td>
-</tr>
-<tr>
-<td>4513</td>
-<td>11</td>
-<td>Separador</td>
-<td>0+320</td>
-<td>Intersección Lizama</td>
-</tr>
-<tr>
-<td>4513</td>
-<td>13</td>
-<td>Separador</td>
-<td>3+875</td>
-<td>Báscula Izquierda (WIM)</td>
-</tr>
-<tr>
-<td>4513</td>
-<td>11</td>
-<td>Separador</td>
-<td>4+400</td>
-<td>CCO Izquierda (Control)</td>
-</tr>
-</tbody></table></div>
-<br>
-<strong>TOTAL: 9 UNIDADES</strong>
-<br>
-<h2>4. ENTREGABLES PARA RECIBO (CONDICIÓN DE PAGO)</h2>
-1.  <strong>Datasheet Fabricante:</strong> Resaltando Zoom 32X y AES-256.
-2.  <strong>Certificado ONVIF:</strong> Verificable en web oficial.
-3.  <strong>Certificados RETIE:</strong> Breakers, DPS, Cables y Tablero.
-4.  <strong>Cálculo Storage:</strong> Demostrar 30 días en 4MP H.265.
-5.  <strong>Garantía:</strong> Mínimo 2 años en sitio.
-<br>
-<strong>Firmado Digitalmente:</strong> Ingeniería de Detalle TM01
-<strong>Fecha:</strong> 29-Ene-2026
+<h3>C. Cumplimiento RETIE</h3>
+*   <strong>Requisito:</strong> Rotulado de Riesgo Eléctrico y Certificados de Producto (Cables, DPS) obligatorios para pago final.
 <br>
 <br>
-<h2>5. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v3.1)</h2>
+<h2>4. ESPECIFICACIÓN DE COMPRA (ANEXO TÉCNICO)</h2>
 <br>
-<strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (LISTO PARA COMPRAS)</strong>
+<h3>ÍTEM 1: CÁMARA PTZ TIPO DOMO (9 Unidades)</h3>
+*   <strong>Sensor:</strong> 4MP Starlight (0.005 Lux).
+*   <strong>Lente:</strong> <strong>Zoom Óptico 32X</strong> (4.8-154mm).
+*   <strong>Inteligencia:</strong> Protección perimetral, Detección Rostros, SMD (Filtro humanos/vehículos).
+*   <strong>Protección:</strong> IP67 / IK10 / TVS 6000V.
+*   <strong>Protocolo:</strong> ONVIF S/G/T.
 <br>
-El documento mantiene las cantidades oficiales (9 Unidades) pero aplica el estándar técnico <strong>v3.0 (Defensive)</strong>, exigiendo <strong>Zoom 32X</strong> y <strong>AES-256</strong>.
+<h3>ÍTEM 2: INFRAESTRUCTURA DE SOPORTE</h3>
+*   <strong>Poste:</strong> Concreto/Acero 12m.
+*   <strong>Gabinete:</strong> NEMA 4X / IP66.
+*   <strong>Protección Eléctrica:</strong> DPS Clase I+II Certificado RETIE.
 <br>
-<h3>Matriz de Blindaje (Risk Management)</h3>
-<div class='table-responsive'><table class='spec-table'>
-<thead>
-<tr>
-<td>Riesgo Detectado</td>
-<td>Acción de Mitigación (T04)</td>
-<td>Resultado</td>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>Cámaras "Ciegas"</strong></td>
-<td>Exigencia Bloqueante <strong>Zoom 32X</strong></td>
-<td>✅ MITIGADO</td>
-</tr>
-<tr>
-<td><strong>Ilegalidad Evidencia</strong></td>
-<td>Exigencia <strong>Cifrado AES-256</strong></td>
-<td>✅ MITIGADO</td>
-</tr>
-<tr>
-<td><strong>Rechazo Eléctrico</strong></td>
-<td>Exigencia <strong>DPS + Rotulado RETIE</strong></td>
-<td>✅ MITIGADO</td>
-</tr>
-<tr>
-<td><strong>Cantidad</strong></td>
-<td>9 Unidades (Master Data)</td>
-<td>✅ CONSISTENTE</td>
-</tr>
-</tbody></table></div>
+<h3>ÍTEM 3: INTEGRACIÓN CCO</h3>
+*   <strong>Licenciamiento:</strong> Canal de video para VMS Central.
+*   <strong>Almacenamiento:</strong> Espacio en servidor para <strong>30 días continuos</strong> (H.265).
 <br>
-<strong>Conclusión:</strong> ANEXO TÉCNICO APROBADO. El proveedor debe cotizar 9 unidades cumpliendo estricto estándar IP/REV.
+<br>
+<h2>5. CONCLUSIÓN FINANCIERA</h2>
+<br>
+<strong>Estado:</strong> 🟢 APROBADO
+<strong>Presupuesto Objetivo:</strong> <strong>$116,100 USD</strong> (9 Cámaras + Postes + Inst).
 <br>
         
         <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">

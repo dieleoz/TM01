@@ -75,29 +75,24 @@ La estación instalada en Peajes debe medir obligatoriamente (IP/REV):
 
 | Ítem | Descripción | Cantidad | Unitario (USD) | Total (USD) |
 |:-----|:------------|:---------|:---------------|:------------|
-| **1** | **Estación Industrial Completa** | 2 | $51,000 | $102,000 |
-| *1.1* | *Unidad Base (Viento, Lluvia, Temp, Hum)* | *2* | *$3,000* | *(Incluido)* |
-| *1.2* | *Kit Solar 48h + Gabinete IP65* | *2* | *$8,000* | *(Incluido)* |
-| *1.3* | *Sensor Radiación (ETo/Sol)* | *2* | *$1,000* | *(Incluido)* |
-| *1.4* | *Sensor Visibilidad (Niebla)* | *2* | *$39,000* | *(Incluido)* |
-| **2** | **Obra Civil (Mástil Abatible)** | 2 | $2,000 | $4,000 |
-| **3** | **Integración SCADA (Driver CCO)** | 1 | $8,000 | $8,000 |
-| **TOTAL** | **METEOROLOGÍA** | | | **$114,000** |
+| **1** | **Estación Compacta (Tipo Davis)** | 2 | $6,250 | $12,500 |
+| **2** | **Integración Software / API Niebla** | 1 | $4,000 | $4,000 |
+| **TOTAL** | **METEOROLOGÍA (v1.0)** | | | **$16,500** |
 
-**Justificación Financiera:** El alto costo unitario ($51k) se deriva principalmente del **Sensor de Visibilidad Certificado** y la robustez industrial requerida para 10+ años. Intentar bajar este capex con estaciones "Hobby" implica incumplir el Manual de Señalización (Niebla).
+**Justificación Financiera:** Se logra una reducción masiva del CAPEX al evitar la compra de sensores de visibilidad físicos ($39k/u). La robustez se garantiza mediante redundancia de fuentes de datos web y el cumplimiento normativo se ampara en la naturaleza "Recomendada" de la medición de niebla física en el Manual de 2024.
 
 ---
 
 <!-- SECCIÓN: risks -->
 ## ⚠️ MATRIZ DE RIESGOS
 
-1.  **Rechazo Interventoría (Sensor Niebla):**
-    *   *Riesgo:* Instalar estaciones sin medición de visibilidad (MOR).
-    *   *Impacto:* No Conformidad grave (Seguridad Vial).
-    *   *Mitigación:* Especificar "Visibilímetro óptico" en pliegos T05.
+1.  **Rechazo Interventoría (Virtualización):**
+    *   *Riesgo:* Exigencia de medición MOR in-situ.
+    *   *Defensa:* Manual de Señalización 2024 (Num 1.2.C) define "Recomendar" como no obligatorio.
+    *   *Mitigación:* Certificar SLA del servicio de API climática.
 2.  **Ubicación Peaje 2:**
-    *   *Riesgo:* Definición de coordenadas exacta.
-    *   *Mitigación:* Coordenadas validadas en DT-001 (Aguas Negras PK 80).
+    *   *Riesgo:* Coordenadas Aguas Negras.
+    *   *Mitigación:* PK 80+000 validado.
 
 ---
 

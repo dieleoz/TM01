@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T04 Spec</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
+        /* Headers */
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
+        /* Tables */
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
+        /* First column styling for parameters */
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
+        /* Badge */
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
+        /* Text */
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - RADIOCOMUNICACIONES</h1></div>
+<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+<br>
+<strong>Fecha:</strong> 30/01/2026
+<strong>Sistema:</strong> Radiocomunicaciones (Voz y Datos)
+<strong>Responsable:</strong> Auditoría Técnica (Agente 3)
+<strong>Versión:</strong> 1.0 (VALIDACIÓN RaaS)
+<br>
+<br>
+<h2>1. DICTAMEN EJECUTIVO: 🟢 T04 VALIDADO (MODELO "RADIO AS A SERVICE")</h2>
+<br>
+<strong>Resultado:</strong> 🟢 <strong>APROBADO (CAPEX $0)</strong>
+<br>
+El documento T04 es <strong>FINANCIERAMENTE ÓPTIMO</strong>. Valida la decisión estratégica de <strong>NO COMPRAR</strong> infraestructura propietaria (Torres/Repetidoras), transfiriendo la obligación a un modelo de Servicio Gestionado (OPEX) mediante <strong>Radio PoC (Celular)</strong>.
+<br>
+<strong>Alerta Operativa:</strong> Aunque no se compren radios, el EPC <strong>DEBE instalar la integración en el CCO (Gateway RoIP)</strong> para que las consolas de despacho funcionen.
+<br>
+<br>
+<h2>2. MATRIZ DE CONSISTENCIA</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Requisito</td>
+<td>Fuente Obligación</td>
+<td>Estrategia T04</td>
+<td>Veredicto</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Cobertura</strong></td>
+<td>AT1 (3.4): Inmediata y Permanente.</td>
+<td>Red Celular (PoC) + Multi-SIM.</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>AT1: Resultado.</td>
+<td>PoC sobre LTE.</td>
+<td>✅ VALIDADO</td>
+</tr>
+<tr>
+<td><strong>Dotación</strong></td>
+<td>AT2: Vehículos dotados.</td>
+<td>Radios PoC Vehiculares.</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Integración</strong></td>
+<td>AT1: Interconexión CCO.</td>
+<td><strong>Gateway RoIP</strong>.</td>
+<td>⚠️ VERIFICAR T05</td>
+</tr>
+<tr>
+<td><strong>Zona Sombra</strong></td>
+<td>Dictamen: Puerto Salgar.</td>
+<td>Gap-Filler (Proveedor).</td>
+<td>✅ RIESGO TRANSFERIDO</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>3. ESPECIFICACIÓN DE "NO COMPRA" (INSTRUCCIÓN DIRECTOR)</h2>
+<br>
+<h3>DIRECTRIZ DE PROCURA - SUBSISTEMA DE RADIO:</h3>
+<br>
+1.  <strong>Infraestructura Exterior:</strong> Se <strong>ELIMINAN</strong> del alcance EPC todas las torres, casetas y repetidoras. <strong>CAPEX: $0</strong>.
+2.  <strong>Equipos Terminales:</strong> Se <strong>ELIMINAN</strong> la compra de radios. Suministrados por Operador SPV (Arrendamiento).
+3.  <strong>Alcance Mantenido (EPC):</strong>
+*   <strong>Integración CCO:</strong> Suministro de licencia Software de Despacho o Gateway RoIP.
+*   <strong>Red de Datos:</strong> Internet Redundante en CCO.
+<br>
+<br>
+<h2>4. ANÁLISIS DE RIESGOS TÉCNICOS</h2>
+<br>
+<h3>A. Gateway RoIP</h3>
+*   <strong>Requisito:</strong> Puente de audio digital entre el mundo IP (PoC) y las consolas de operador.
+<br>
+<h3>B. Zona Sombra (Puerto Salgar)</h3>
+*   <strong>Acción:</strong> Contrato de servicio debe exigir <strong>"Garantizar cobertura 100%"</strong>. El proveedor instala repetidoras de relleno si es necesario.
+<br>
+<h3>C. Latencia y QoS</h3>
+*   <strong>Exigencia:</strong> SIMs M2M con APN Privado o QCI prioritario para voz.
+<br>
+<br>
+<h2>5. CONCLUSIÓN FINANCIERA</h2>
+<br>
+<strong>Estado:</strong> 🟢 APROBADO
+<strong>Ahorro CAPEX Estimado:</strong> <strong>$1.5M USD</strong> (Migrado a OPEX).
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automáticamente por Sistema de Gestión TM01. <br>
+            Fase 7 - Ingeniería de Detalle.
+        </div>
+    </div>
+</body>
+</html>

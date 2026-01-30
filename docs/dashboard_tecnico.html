@@ -341,7 +341,7 @@
 
                 let specPath = null;
                 // Try to find a key in specsMap that matches the system name
-                const mapKey = Object.keys(specsMap).find(k => sys.sistema.includes(k) || k.includes(sysKey));
+                const mapKey = Object.keys(specsMap).find(k => sys.sistema.toUpperCase().includes(k.toUpperCase()) || k.toUpperCase().includes(sysKey.toUpperCase()));
                 if (mapKey) specPath = specsMap[mapKey];
 
                 const hasSpec = !!specPath;

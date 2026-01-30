@@ -5,7 +5,7 @@ Import-Module (Join-Path $PSScriptRoot 'Logger.psm1') -Force
 Import-Module (Join-Path $PSScriptRoot 'MergeEngine.psm1') -Force
 Import-Module (Join-Path $PSScriptRoot 'Snapshotter.psm1') -Force
 
-$script:MasterFile = "Sistema_Validacion_Web/data/tm01_master_data.js"
+$script:MasterFile = "docs/data/tm01_master_data.js"
 $script:SnapshotsDir = "logs/snapshots"
 
 function Get-MasterDataContent {
@@ -47,10 +47,13 @@ function Get-MasterDataContent {
         # Convertir JSON-like a PSCustomObject
         $jsonStr = $dataMatch.Groups[1].Value
         # Normalizar: remover comentarios, trailing commas
-        $jsonStr = $jsonStr -replace '//.*$', '' -replace ',(\s*[}\]])', '$1'
+        $jsonStr = $jsonStr -replace '//.*$', ''
+        $jsonStr = $jsonStr -replace '/\*[\s\S]*?\*/', ''
+        $jsonStr = $jsonStr -replace ',(\s*[}\]])', '$1'
         $obj = $jsonStr | ConvertFrom-Json -ErrorAction Stop
         return $obj
-    } catch {
+    }
+    catch {
         Write-LogEntry -Level 'ERROR' -Message 'Error parseando data object' -Context @{ File = $FilePath; Error = $_.Exception.Message }
         return $null
     }
@@ -112,7 +115,7 @@ function Invoke-BidirectionalSync {
     Write-LogEntry -Level 'INFO' -Message 'Iniciando sincronización bidireccional' -Context @{ SnapshotId = $SnapshotId; DryRun = $DryRun.IsPresent }
     
     # 0. Verificar conflictos pendientes
-    $conflictsFile = "Sistema_Validacion_Web/data/tm01_master_data.conflicts.json"
+    $conflictsFile = "docs/data/tm01_master_data.conflicts.json"
     if ((Test-Path -LiteralPath $conflictsFile) -and -not $Force) {
         Write-LogEntry -Level 'ERROR' -Message 'Conflictos pendientes de resolución' -Context @{ File = $conflictsFile }
         Write-Host "`n❌ ERROR: Hay conflictos pendientes sin resolver" -ForegroundColor Red
@@ -129,10 +132,11 @@ function Invoke-BidirectionalSync {
             $baseFile = $snapshot.FilePath
             $baseData = Get-MasterDataContent -FilePath $baseFile
         }
-    } else {
+    }
+    else {
         # Usar último snapshot
         $snapshots = Get-ChildItem (Join-Path $script:SnapshotsDir '*.json') -ErrorAction SilentlyContinue | 
-            Sort-Object LastWriteTime -Descending | Select-Object -First 1
+        Sort-Object LastWriteTime -Descending | Select-Object -First 1
         if ($snapshots) {
             $snapJson = Get-Content -LiteralPath $snapshots.FullName -Raw | ConvertFrom-Json
             if ($snapJson.sourceFile -and (Test-Path -LiteralPath $snapJson.sourceFile)) {
@@ -169,9 +173,10 @@ function Invoke-BidirectionalSync {
             # Guardar reporte de conflictos en ruta contractual y bloquear
             if (Get-Command Save-ConflictReport -ErrorAction SilentlyContinue) {
                 Save-ConflictReport -Conflicts $mergeResult.Conflicts -OutputFile $conflictsFile | Out-Null
-            } else {
+            }
+            else {
                 # Fallback mínimo
-                $report = @{ timestamp=(Get-Date).ToUniversalTime().ToString('o'); conflictCount=$mergeResult.Conflicts.Count; conflicts=$mergeResult.Conflicts }
+                $report = @{ timestamp = (Get-Date).ToUniversalTime().ToString('o'); conflictCount = $mergeResult.Conflicts.Count; conflicts = $mergeResult.Conflicts }
                 $report | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $conflictsFile -Encoding UTF8
             }
             Write-LogEntry -Level 'ERROR' -Message 'Conflictos detectados, merge detenido' -Context @{ File = $conflictsFile; Count = $mergeResult.Conflicts.Count }

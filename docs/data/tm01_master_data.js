@@ -36,16 +36,7 @@ class TM01MasterData {
                 descripcion: 'Forensic v2.2 (43 Units: 29 ITS + 14 Peaje - Strict Segregation)',
                 estado: 'Validado'
             },
-            radioSummary: {
-                id: '12',
-                sistema: 'RADIO FM',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Eliminado alcance (Ver DT-TM01-002)',
-                estado: 'Eliminado'
-            },
+
             etdRadarSummary: {
                 id: '3',
                 sistema: 'ETD/RADAR',
@@ -67,7 +58,7 @@ class TM01MasterData {
                 capexUSD: 0,
                 capexCOP: 0,
                 capexUnitarioUSD: 0,
-                descripcion: 'Integrado en Dotación Policial (Suministros) - No ITS Fijo',
+                descripcion: 'Integrado en Dotación Policial (Suministros) - No ITS Fijo (Ver T04)',
                 estado: 'Eliminado'
             },
             pedagogicalRadarSummary: {
@@ -110,11 +101,11 @@ class TM01MasterData {
             meteoSummary: {
                 id: '7',
                 sistema: 'METEO',
-                cantidad: 3,
-                capexUSD: 105000,
-                capexCOP: 462000000,
-                capexUnitarioUSD: 35000,
-                descripcion: 'Estaciones Meteorológicas (3 Unidades - Contractual)',
+                cantidad: 2,
+                capexUSD: 16500,
+                capexCOP: 72600000,
+                capexUnitarioUSD: 8250,
+                descripcion: 'Estaciones Meteorológicas (2 Unidades - Davis + API Strategy)',
                 estado: 'Validado'
             },
             wimSummary: {
@@ -128,7 +119,7 @@ class TM01MasterData {
                 estado: 'Validado',
                 fuenteContractual: "AT1 Adenda 4 + Res 100/2024 (HS-WIM)",
                 validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_WIM_v1.0.md",
-                versionT05: "v2.0 (REQ: Fiber Optic + Concrete Slab)",
+                versionT05: "v2.0 (REQ: Fiber Optic + Concrete Slab)"
             },
             telecomSummary: {
                 id: '9',
@@ -245,11 +236,11 @@ class TM01MasterData {
             {
                 id: '7',
                 sistema: 'Meteorología',
-                cantidad: 2,
-                capexUSD: 114000,
-                capexCOP: 501600000,
-                capexUnitarioUSD: 57000,
-                descripcion: '2 Industrial Stations (Tolls) with Fog Sensors (Visibility). CCO Integration.',
+                cantidad: 4,
+                capexUSD: 140000,
+                capexCOP: 616000000,
+                capexUnitarioUSD: 35000,
+                descripcion: '4 Industrial Stations (Tolls+Road+CCO) with Fog Sensors (Visibility).',
                 estado: 'Validado'
             },
             {
@@ -403,7 +394,8 @@ class TM01MasterData {
             // CAPÃTULO 6: SISTEMA METEO
             { id: '6', nivel: 1, item: "6", descripcion: "SISTEMA METEO", sistema: "METEO", tipo: "capitulo" },
             { id: '6.1', nivel: 2, item: "6.1", descripcion: "SUMINISTROS METEO", sistema: "METEO", tipo: "subcapitulo" },
-            { id: '6.1.1', nivel: 3, item: "6.1.1", descripcion: "Estación Industrial complete (Neblina + ETo + Sol)", sistema: "METEO", cantidad: "3", unidad: "UND", tipo: "item", criterio: "Res. IP/REV + Blindaje ETo", vu: "35000", total: "105000", totalCOP: "462000000" },
+            { id: '6.1.1', nivel: 3, item: "6.1.1", descripcion: "Estación Compacta (Davis Pro2 - Virtual Visibility)", sistema: "METEO", cantidad: "2", unidad: "UND", tipo: "item", criterio: "Dictamen Jurídico 2026 (API Strategy)", vu: "6250", total: "12500", totalCOP: "55000000" },
+            { id: '6.1.2', nivel: 3, item: "6.1.2", descripcion: "Integración Software / API de Visibilidad", sistema: "METEO", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Sustitución Sensor Físico", vu: "4000", total: "4000", totalCOP: "17600000" },
 
             // CAPÃTULO 7: SISTEMA PEAJES
             { id: '7', nivel: 1, item: "7", descripcion: "SISTEMA PEAJES", sistema: "PEAJES", tipo: "capitulo" },
