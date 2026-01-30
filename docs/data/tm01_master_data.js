@@ -12,289 +12,7 @@ class TM01MasterData {
             contratos: [],
             dts: [],
             cambios: [],
-            cctvSummary: {
-                id: '1',
-                sistema: 'CCTV',
-                cantidad: 9,
-                capexUSD: 116100,
-                capexCOP: 510840000,
-                capexUnitarioUSD: 12900,
-                descripcion: '9 Unidades (1 por Edificación: Peajes/AS/CCO/Báscula) - Vía Diferida',
-                estado: 'Validado',
-                fuenteContractual: "AT2 (Edificaciones) + Directriz Minimización CAPEX",
-                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-CCTV-003.md",
-                analisisBase: "docs/ANALISIS_CCTV_PROMPT_MAESTRO_V3.2.md",
-                fechaValidacion: "2026-01-27"
-            },
-            pmvSummary: {
-                id: '2',
-                sistema: 'PMV',
-                cantidad: 43,
-                capexUSD: 2390000,
-                capexCOP: 10516000000,
-                capexUnitarioUSD: 55581,
-                descripcion: 'Forensic v2.2 (43 Units: 29 ITS + 14 Peaje - Strict Segregation)',
-                estado: 'Validado'
-            },
-
-            etdRadarSummary: {
-                id: '3',
-                sistema: 'ETD/RADAR',
-                cantidad: 2,
-                capexUSD: 22500,
-                capexCOP: 99000000,
-                capexUnitarioUSD: 11250,
-                descripcion: '2 Dahua ITC431 All-in-One Units (Radar+ANPR+Counting) + DSS Pro Software.',
-                estado: 'Validado',
-                fuenteContractual: "DT-TM01-ETD-001 (Optimización Smart CAPEX)",
-                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_ETD_v1.0.md",
-                analisisBase: "docs/ANALISIS_ETD_PROMPT_MAESTRO_V3.3.md",
-                fechaValidacion: "2026-01-29"
-            },
-            sastSummary: {
-                id: '4',
-                sistema: 'SAST (Sancionatorio)',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Integrado en Dotación Policial (Suministros) - No ITS Fijo (Ver T04)',
-                estado: 'Eliminado'
-            },
-            pedagogicalRadarSummary: {
-                id: '5',
-                sistema: 'RADAR PEDAGÓGICO',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Diferido a O&M (Solo si se identifican puntos críticos)',
-                estado: 'Eliminado'
-            },
-            sosSummary: {
-                id: '6',
-                sistema: 'SOS',
-                cantidad: 88,
-                capexUSD: 600659,  // $2,642,898,552 / 4400
-                capexCOP: 2642898552, // Subtotal COLSEIN OPOCOL-8866
-                capexUnitarioUSD: 6826,
-                descripcion: 'Oferta COLSEIN 2026 (88 Units - OPOCOL-8866)',
-                estado: 'Validado',
-
-                // Desglose detallado
-                desglose: {
-                    nuevos: 88,
-                    existentes: 0,
-                    total: 88,
-                    rn4510: { cantidad: 35, tramo: "Magdalena" },
-                    rn4511: { cantidad: 53, tramo: "Puerto Salgar" }
-                },
-
-                // Trazabilidad contractual
-                fuenteContractual: "Oferta COLSEIN S.A.S OPOCOL-8866 (Nov-2025)",
-                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-SOS-004.md",
-                analisisBase: "Cotización COLSEIN SOS Cielo Abierto",
-                fechaValidacion: "2026-01-30",
-                versionT05: "v3.1 (COLSEIN Reference)"
-            },
-            meteoSummary: {
-                id: '7',
-                sistema: 'METEO',
-                cantidad: 2,
-                capexUSD: 16500,
-                capexCOP: 72600000,
-                capexUnitarioUSD: 8250,
-                descripcion: 'Estaciones Meteorológicas (2 Unidades - Davis + API Strategy)',
-                estado: 'Validado'
-            },
-            wimSummary: {
-                id: '8',
-                sistema: 'WIM',
-                cantidad: 1,
-                capexUSD: 551425,
-                capexCOP: 2426273000,
-                capexUnitarioUSD: 551425,
-                descripcion: 'Forensic v1.1 (1 Station PR4+0100 - Rigid Pavement Mandatory)',
-                estado: 'Validado',
-                fuenteContractual: "AT1 Adenda 4 + Res 100/2024 (HS-WIM)",
-                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_WIM_v1.0.md",
-                versionT05: "v2.0 (REQ: Fiber Optic + Concrete Slab)"
-            },
-            telecomSummary: {
-                id: '9',
-                sistema: 'Telecomunicaciones',
-                cantidad: 322,
-                capexUSD: 7980000,
-                capexCOP: 35112000000,
-                capexUnitarioUSD: 24782,
-                descripcion: '322 km Cable 48H (293 Troncal + 10% Reserve). Unit: Cable-km. Dielectric G.652.D',
-                estado: 'Validado',
-                fuenteContractual: "AT3 Num 4.2.xiii (Min 48 Strands) + Nota 322KM",
-                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_FIBRA_v1.0.md",
-                versionT05: "v2.1 (Anti-RETIE Strategy: Dielectric)"
-            },
-            radioSummary: {
-                id: '12',
-                sistema: 'Radio VHF/LTE',
-                cantidad: 0, // 0 para EPC (Responsabilidad SPV)
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Forensic v1.2 (EPC Scope = $0. Transferred to SPV as Fleet Equipment/Service)',
-                estado: 'Validado',
-                fuenteContractual: "AT1 Numeral 3 (Radiocomunicación)",
-                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_RADIO_v1.0.md",
-                versionT05: "v3.0 (Zero CAPEX Model)"
-            },
-            peajesSummary: {
-                id: '10',
-                sistema: 'Peajes',
-                cantidad: 2,
-                capexUSD: 2086577.24,
-                capexCOP: 9180939856,
-                capexUnitarioUSD: 1043288.62,
-                descripcion: 'Forensic v2.2 (2 Stations - Includes FTS + WIM-DAC, Excludes PMV Approach)',
-                estado: 'Validado'
-            },
-            ccoSummary: {
-                id: '13',
-                sistema: 'Centro de Control (CCO)',
-                cantidad: 1,
-                capexUSD: 845000,
-                capexCOP: 3718000000,
-                capexUnitarioUSD: 845000,
-                descripcion: 'Hardware ($425k) + Civil/Power ($420k). Mandatory Areas (AT1) & RETIE.',
-                estado: 'Validado',
-                fuenteContractual: "AT1 (Áreas Mínimas) + AT2 (Disponibilidad) + DT-019",
-                validadoPor: "VII. Documentos Transversales/DICTAMEN_JURIDICO_CCO_v1.0.md",
-                versionT05: "v2.1 (Full Scope: IT + Civil + Power)"
-            }
         };
-
-        this.data.sistemas = [
-            {
-                id: '1',
-                sistema: 'CCTV',
-                cantidad: 9,
-                capexUSD: 116100,
-                capexCOP: 510840000,
-                capexUnitarioUSD: 12900,
-                descripcion: 'Forensic v2.2 (9 Units: 1 per Toll/Weigh/CCO/Bunker)',
-                estado: 'Validado'
-            },
-            {
-                id: '2',
-                sistema: 'PMV',
-                cantidad: 43,
-                capexUSD: 2390000,
-                capexCOP: 10516000000,
-                capexUnitarioUSD: 55581,
-                descripcion: 'Forensic v2.2 (43 Units: 29 ITS + 14 Peaje - Strict Segregation)',
-                estado: 'Validado'
-            },
-            {
-                id: '3',
-                sistema: 'ETD/RADAR',
-                cantidad: 2,
-                capexUSD: 22500,
-                capexCOP: 99000000,
-                capexUnitarioUSD: 11250,
-                descripcion: '2 Dahua ITC431 All-in-One Units (Radar+ANPR+Counting) + DSS Pro Software.',
-                estado: 'Validado'
-            },
-            {
-                id: '4',
-                sistema: 'SAST (Sancionatorio)',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Scope Transferred to Police Endowment (Mobile Lidar). Zero Fixed CAPEX.',
-                estado: 'Validado'
-            },
-            {
-                id: '5',
-                sistema: 'RADAR PEDAGÓGICO',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Deferred to O&M (Critical Points Analysis). Zero Initial CAPEX.',
-                estado: 'Validado'
-            },
-            {
-                id: '6',
-                sistema: 'SOS',
-                cantidad: 88,
-                capexUSD: 600659,
-                capexCOP: 2642898552,
-                capexUnitarioUSD: 6826,
-                descripcion: 'Validación COLSEIN OPOCOL-8866 (88 Postes)',
-                estado: 'Validado'
-            },
-            {
-                id: '7',
-                sistema: 'Meteorología',
-                cantidad: 4,
-                capexUSD: 140000,
-                capexCOP: 616000000,
-                capexUnitarioUSD: 35000,
-                descripcion: '4 Industrial Stations (Tolls+Road+CCO) with Fog Sensors (Visibility).',
-                estado: 'Validado'
-            },
-            {
-                id: '8',
-                sistema: 'WIM',
-                cantidad: 1,
-                capexUSD: 551425,
-                capexCOP: 2426273000,
-                capexUnitarioUSD: 551425,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
-            },
-            {
-                id: '9',
-                sistema: 'Telecomunicaciones',
-                cantidad: 322,
-                capexUSD: 7980000,
-                capexCOP: 35112000000,
-                capexUnitarioUSD: 24782,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
-            },
-            {
-                id: '10',
-                sistema: 'Peajes',
-                cantidad: 2,
-                capexUSD: 2086577.24,
-                capexCOP: 8346308960,
-                capexUnitarioUSD: 1043288.62,
-                descripcion: 'Forensic v2.1 (2 Stations - Includes WIM-DAC Integration)',
-                estado: 'Validado'
-            },
-            {
-                id: '11',
-                sistema: 'Centro de Control (CCO)',
-                cantidad: 1,
-                capexUSD: 1165000,
-                capexCOP: 5126000000,
-                capexUnitarioUSD: 1165000,
-                descripcion: 'Forensic v2.1 (39 Units: 25 Mainline + 14 Toll - RGB Full)',
-                estado: 'Validado'
-            },
-            {
-                id: '12',
-                sistema: 'RADIO FM',
-                cantidad: 0,
-                capexUSD: 0,
-                capexCOP: 0,
-                capexUnitarioUSD: 0,
-                descripcion: 'Modelo OpEx (Servicio de Difusión) - Sin Infraestructura Propia',
-                estado: 'Validado',
-                fuenteContractual: "DT-TM01-RADIO-001 (Modelo Servicio)",
-                validadoPor: "VII. Documentos Transversales/DTs/DT-TM01-RADIO-001.md"
-            }
-        ];
 
         this.initializeData();
     }
@@ -305,7 +23,7 @@ class TM01MasterData {
             // CAPÃTULO 1: SISTEMA SOS
             { id: '1', nivel: 1, item: "1", descripcion: "SISTEMA SOS", sistema: "SOS", tipo: "capitulo" },
             { id: '1.1', nivel: 2, item: "1.1", descripcion: "SUMINISTROS SOS", sistema: "SOS", tipo: "subcapitulo" },
-            { id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Suministro Equipos SOS Cielo Abierto (Intercom, Protecciones, VPN)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1005", vuCOP: "4,422,956", total: "88,460", totalCOP: "389,220,181" },
+            { id: '1.1.1', nivel: 3, item: "1.1.1", descripcion: "Suministro Equipos SOS Cielo Abierto (Intercom, Protecciones, VPN)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1004.94", vuCOP: "4,422,956", total: "88435.24", totalCOP: "389,115,056" },
             { id: '1.1.2', nivel: 3, item: "1.1.2", descripcion: "Suministro Estructuras Metálicas SOS (Poste, Gabinete, Barandas)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "3339", vuCOP: "14,692,348", total: "293,851", totalCOP: "1,292,926,654" },
             { id: '1.1.3', nivel: 3, item: "1.1.3", descripcion: "Suministro Arreglo Fotovoltaico SOS (Paneles, Baterías, Cargador)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", vu: "1592", vuCOP: "7,006,832", total: "140,137", totalCOP: "616,601,265" },
             { id: '1.1.4', nivel: 3, item: "1.1.4", descripcion: "Instalación Sistema SOS Cielo Abierto (Montaje, Cableado, Hincado)", sistema: "SOS", cantidad: "88", unidad: "UND", tipo: "item", tipoPresupuestal: "OBRA", vu: "723", vuCOP: "3,181,182", total: "63,624", totalCOP: "279,944,070" },
@@ -349,9 +67,9 @@ class TM01MasterData {
             // CAPÃTULO 4: SISTEMA PMV
             { id: '4', nivel: 1, item: "4", descripcion: "SISTEMA PMV", sistema: "PMV", tipo: "capitulo" },
             { id: '4.1', nivel: 2, item: "4.1", descripcion: "SUMINISTROS PMV", sistema: "PMV", tipo: "subcapitulo" },
-            { id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Panel PMV Graphic RGB (NTCIP 1203/1204)", sistema: "PMV", cantidad: "29", unidad: "UND", tipo: "item", criterio: "Blindaje Contractual (25 Vía + 4 Peaje Aprx)", vu: "45000", total: "1305000", totalCOP: "5742000000" },
-            { id: '4.1.2', nivel: 3, item: "4.1.2", descripcion: "Estructura Reforzada (CCP-14 / Poste)", sistema: "PMV", cantidad: "29", unidad: "UND", tipo: "item", criterio: "Estructura sismo-resistente", vu: "35000", total: "1015000", totalCOP: "4466000000" },
-            { id: '4.1.3', nivel: 3, item: "4.1.3", descripcion: "RETIE + Acometida + Software Central", sistema: "PMV", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Instalación y gestión", vu: "0", total: "0", totalCOP: "0" },
+            { id: '4.1.1', nivel: 3, item: "4.1.1", descripcion: "Panel PMV Graphic RGB (NTCIP 1203/1204)", sistema: "PMV", cantidad: "29", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", criterio: "Blindaje Contractual (25 Vía + 4 Peaje Aprx)", vu: "45000", total: "1305000", totalCOP: "5742000000" },
+            { id: '4.1.2', nivel: 3, item: "4.1.2", descripcion: "Estructura Reforzada (CCP-14 / Poste)", sistema: "PMV", cantidad: "29", unidad: "UND", tipo: "item", tipoPresupuestal: "SUMINISTRO", criterio: "Estructura sismo-resistente", vu: "35000", total: "1015000", totalCOP: "4466000000" },
+            { id: '4.1.3', nivel: 3, item: "4.1.3", descripcion: "Instalación, RETIE + Software Central PMV (Sincronizado)", sistema: "PMV", cantidad: "1", unidad: "GLB", tipo: "item", tipoPresupuestal: "OBRA", criterio: "Ajuste de Cierre Financiero", vu: "70000", total: "70000", totalCOP: "308000000" },
             { id: '4.1.4', nivel: 3, item: "4.1.4", descripcion: "Controlador/Switch (Incluido)", sistema: "PMV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Integrado en panel", vu: "0", total: "0", totalCOP: "0" },
             { id: '4.1.5', nivel: 3, item: "4.1.5", descripcion: "Conversor FO/Conectividad (Incluido)", sistema: "PMV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Integrado en panel", vu: "0", total: "0", totalCOP: "0" },
             { id: '4.1.6', nivel: 3, item: "4.1.6", descripcion: "Fuente/UPS (Incluida)", sistema: "PMV", cantidad: "0", unidad: "UND", tipo: "item", criterio: "Integrada en panel", vu: "0", total: "0", totalCOP: "0" },
@@ -526,7 +244,7 @@ class TM01MasterData {
 
             { id: '10.3', nivel: 2, item: "10.3", descripcion: "INSTALACIÓN Y EQUIPOS", sistema: "TELECOM", tipo: "subcapitulo" },
             { id: '10.3.1', nivel: 3, item: "10.3.1", descripcion: "Soplado fibra 48h", sistema: "TELECOM", cantidad: "252000", unidad: "ML", tipo: "item", criterio: "Blowing (Trunk)", vu: "1.88", total: "473760", totalCOP: "2084544000" },
-            { id: '10.3.2', nivel: 3, item: "10.3.2", descripcion: "Equipos de Red L2/L3 + Firewalls", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", criterio: "Activos (Switches+FW)", vu: "508578.45", total: "508578", totalCOP: "2237745180" },
+            { id: '10.3.2', nivel: 3, item: "10.3.2", descripcion: "Equipos de Red L2/L3 + Firewalls (Sincronizado Audit 6.0)", sistema: "TELECOM", cantidad: "1", unidad: "GLB", tipo: "item", tipoPresupuestal: "SUMINISTRO", criterio: "Activos (Switches+FW)", vu: "1109605", total: "1109605", totalCOP: "4882262000" },
 
             // CAPÍTULO 11: EMISORA DE RADIO FM
             { id: '11', nivel: 1, item: "11", descripcion: "SISTEMA RADIO FM", sistema: "RADIO", tipo: "capitulo" },
@@ -834,19 +552,32 @@ ${dt.documentosAfectados.map(doc => `- ${doc}`).join('\n')}
     }
 
     getContractualSummary() {
-        // Fuente: Summaries (Capa 2) - Hard Deck Certificado
-        const summaries = Object.keys(this.data)
-            .filter(key => key.includes('Summary'))
-            .map(key => this.data[key]);
+        // Fuente Dinámica: Agregación de Capa 5 (WBS)
+        const sistemasMap = {};
 
-        return summaries.map(s => ({
-            id: s.id,
-            sistema: s.sistema,
-            capexUSD: s.capexUSD || 0,
-            capexCOP: s.capexCOP || 0,
-            estado: s.estado,
-            descripcion: s.descripcion
-        })).sort((a, b) => b.capexCOP - a.capexCOP);
+        this.data.wbs.forEach(item => {
+            if (item.tipo !== 'item') return;
+
+            const sys = item.sistema || 'OTROS';
+            if (!sistemasMap[sys]) {
+                sistemasMap[sys] = {
+                    id: sys,
+                    sistema: sys,
+                    capexUSD: 0,
+                    capexCOP: 0,
+                    estado: 'Validado', // Por defecto todos los validados en Audit 6.0
+                    descripcion: `Resumen dinámico basado en WBS`
+                };
+            }
+
+            const totalUSD = parseFloat(String(item.total || '0').replace(/,/g, ''));
+            const totalCOP = parseFloat(String(item.totalCOP || '0').replace(/,/g, ''));
+
+            sistemasMap[sys].capexUSD += totalUSD;
+            sistemasMap[sys].capexCOP += totalCOP;
+        });
+
+        return Object.values(sistemasMap).sort((a, b) => b.capexCOP - a.capexCOP);
     }
 
     // MÃ‰TODOS DE EXPORTACIÓN
