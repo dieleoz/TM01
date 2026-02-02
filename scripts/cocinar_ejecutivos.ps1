@@ -78,14 +78,15 @@ foreach ($file in $files) {
         $tempMd = Join-Path $env:TEMP "temp_$baseName.md"
         [System.IO.File]::WriteAllText($tempMd, $markdownContent, [System.Text.UTF8Encoding]::new($false))
         
-        $htmlBody = & pandoc $tempMd -t html --no-highlight --from markdown+emoji 2>&1
+        # Ejecutar Pandoc con sintaxis correcta (sin warnings)
+        $pandocOutput = & pandoc $tempMd -t html --syntax-highlighting=none --from markdown+emoji 2>&1
         
         if ($LASTEXITCODE -ne 0) {
-            throw "Pandoc falló: $htmlBody"
+            throw "Pandoc falló: $pandocOutput"
         }
         
-        # Convertir el output de Pandoc a string UTF-8 limpio
-        $htmlBody = $htmlBody -join "`n"
+        # Filtrar warnings y convertir a string UTF-8 limpio
+        $htmlBody = ($pandocOutput | Where-Object { $_ -notmatch '^\[WARNING\]' }) -join "`n"
         
         Remove-Item -LiteralPath $tempMd -ErrorAction SilentlyContinue
         
