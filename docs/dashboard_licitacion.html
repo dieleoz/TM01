@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Licitación - TM01</title>
+    <link rel="stylesheet" href="css/tm01-design-system.css">
+    <style>
+        .deliverable-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+            transition: all 0.2s ease;
+        }
+
+        .deliverable-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--tm01-accent);
+        }
+
+        .deliverable-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        .deliverable-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--tm01-accent-bg);
+            color: var(--tm01-accent);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+
+        .deliverable-title {
+            flex: 1;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .deliverable-badge {
+            background: var(--success-bg);
+            color: var(--success);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.75em;
+            font-weight: 700;
+        }
+
+        .deliverable-description {
+            color: var(--text-sub);
+            margin-bottom: var(--space-md);
+            line-height: 1.6;
+        }
+
+        .deliverable-actions {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .section-divider {
+            margin: var(--space-2xl) 0;
+            border-top: 2px solid var(--border);
+            position: relative;
+        }
+
+        .section-divider::after {
+            content: attr(data-label);
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg);
+            padding: 0 var(--space-md);
+            color: var(--text-sub);
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="tm01-navbar">
+        <div class="tm01-brand">
+            📦 Dashboard Licitación
+            <span class="tm01-status-badge" style="margin-left: 10px;">Fase 7</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Volver al Menú</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="tm01-container" style="padding-top: var(--space-xl);">
+
+        <!-- Header -->
+        <div class="tm01-section"
+            style="background: linear-gradient(135deg, var(--tm01-primary) 0%, var(--tm01-secondary) 100%); color: white; margin-bottom: var(--space-xl);">
+            <div class="tm01-section-content" style="padding: var(--space-2xl);">
+                <h1 style="margin: 0 0 var(--space-sm) 0; font-size: 2rem;">Entregables & Servicios (Fase 7)</h1>
+                <p style="margin: 0; opacity: 0.9; font-size: 1.1rem;">
+                    Documentación final "servida" y certificada, lista para licitación y entrega al cliente.
+                </p>
+                <div style="margin-top: var(--space-lg); display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                    <div
+                        style="background: rgba(255,255,255,0.15); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md);">
+                        <strong>6</strong> Reportes Ejecutivos
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.15); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md);">
+                        <strong>13</strong> RFQs Blindados
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.15); padding: var(--space-sm) var(--space-md); border-radius: var(--radius-md);">
+                        ✅ <strong>Certificado</strong> Punto 42 v3.0
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reportes Ejecutivos Section -->
+        <h2 style="color: var(--tm01-primary); margin-bottom: var(--space-lg);">📑 Reportes Ejecutivos (HTML)</h2>
+        <p style="color: var(--text-sub); margin-bottom: var(--space-xl);">
+            Resúmenes por sistema generados automáticamente desde la Ingeniería de Detalle (T05). Formato HTML para
+            visualización web y exportación a PDF.
+        </p>
+
+        <div class="deliverable-card">
+            <div class="deliverable-header">
+                <div class="deliverable-icon">💰</div>
+                <div class="deliverable-title">SISTEMA 01: Recaudo y Peajes</div>
+                <span class="deliverable-badge">EJECUTIVO</span>
+            </div>
+            <div class="deliverable-description">
+                IPREV + Videoauditoría | 2 Estaciones (Zambito + Aguas Negras) | CAPEX: $2.08M USD
+            </div>
+            <div class="deliverable-actions">
+                <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_01_Recaudo_y_Peajes_IPREV.html"
+                    target="_blank" class="tm01-btn tm01-btn-primary">Ver Reporte</a>
+            </div>
+        </div>
+
+        <div class="deliverable-card">
+            <div class="deliverable-header">
+                <div class="deliverable-icon">📡</div>
+                <div class="deliverable-title">SISTEMA 02: Telecomunicaciones</div>
+                <span class="deliverable-badge">EJECUTIVO</span>
+            </div>
+            <div class="deliverable-description">
+                Fibra Óptica 322km + Red Activa (L2/L3) | Backbone Completo | CAPEX: $7.98M USD
+            </div>
+            <div class="deliverable-actions">
+                <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_02_Telecom_y_Fibra_322KM.html"
+                    target="_blank" class="tm01-btn tm01-btn-primary">Ver Reporte</a>
+            </div>
+        </div>
+
+        <div class="deliverable-card">
+            <div class="deliverable-header">
+                <div class="deliverable-icon">⚖️</div>
+                <div class="deliverable-title">SISTEMA 03: ITS y Pesaje</div>
+                <span class="deliverable-badge">EJECUTIVO</span>
+            </div>
+            <div class="deliverable-description">
+                SOS (98), PMV (43), CCTV (9), WIM (1), Radares (13) | Smart CAPEX Optimizado
+            </div>
+            <div class="deliverable-actions">
+                <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_03_ITS_y_Pesaje_WIM.html"
+                    target="_blank" class="tm01-btn tm01-btn-primary">Ver Reporte</a>
+            </div>
+        </div>
+
+        <div class="deliverable-card">
+            <div class="deliverable-header">
+                <div class="deliverable-icon">🚧</div>
+                <div class="deliverable-title">SISTEMA 04: Equipos Operación Vial</div>
+                <span class="deliverable-badge">EJECUTIVO</span>
+            </div>
+            <div class="deliverable-description">
+                Grúas, Ambulancias, Carros Taller | Flota Operativa Completa
+            </div>
+            <div class="deliverable-actions">
+                <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_04_Equipos_Operacion_Vial.html"
+                    target="_blank" class="tm01-btn tm01-btn-primary">Ver Reporte</a>
+            </div>
+        </div>
+
+        <div class="deliverable-card">
+            <div class="deliverable-header">
+                <div class="deliverable-icon">🏢</div>
+                <div class="deliverable-title">SISTEMA 05: Infraestructura Operativa</div>
+                <span class="deliverable-badge">EJECUTIVO</span>
+            </div>
+            <div class="deliverable-description">
+                CCO, Puestos de Control, Centros de Gestión | CAPEX: $845K USD
+            </div>
+            <div class="deliverable-actions">
+                <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_05_Infraestructura_Operativa_EJECUTIVO.html"
+                    target="_blank" class="tm01-btn tm01-btn-primary">Ver Reporte</a>
+            </div>
+        </div>
+
+        <div class="deliverable-card">
+            <div class="deliverable-header">
+                <div class="deliverable-icon">🧩</div>
+                <div class="deliverable-title">SISTEMA 06: Integración y Coordinación</div>
+                <span class="deliverable-badge">EJECUTIVO</span>
+            </div>
+            <div class="deliverable-description">
+                Software SCADA CCO + Interfaces | Plataforma Unificada de Control
+            </div>
+            <div class="deliverable-actions">
+                <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_06_Integracion_y_Coordinacion_EJECUTIVO.html"
+                    target="_blank" class="tm01-btn tm01-btn-primary">Ver Reporte</a>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="section-divider" data-label="PAQUETE DE LICITACIÓN"></div>
+
+        <!-- RFQs Section -->
+        <h2 style="color: var(--tm01-primary); margin-bottom: var(--space-lg);">📦 RFQs Blindados (Request for
+            Quotation)</h2>
+        <p style="color: var(--text-sub); margin-bottom: var(--space-xl);">
+            Solicitudes de cotización con bloques automáticos generados desde T05. Incluyen especificaciones técnicas
+            defensivas y cantidades certificadas.
+        </p>
+
+        <div class="tm01-grid-2" style="gap: var(--space-lg);">
+
+            <div class="deliverable-card">
+                <div class="deliverable-header">
+                    <div class="deliverable-icon" style="background: var(--info-bg); color: var(--info);">📹</div>
+                    <div class="deliverable-title">RFQ 003: CCTV</div>
+                </div>
+                <div class="deliverable-description">9 cámaras IP | Smart CAPEX: $116,100 USD</div>
+                <div class="deliverable-actions">
+                    <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_003_CCTV_v2.0.md" target="_blank" class="tm01-btn">Ver
+                        RFQ</a>
+                </div>
+            </div>
+
+            <div class="deliverable-card">
+                <div class="deliverable-header">
+                    <div class="deliverable-icon" style="background: var(--warning-bg); color: var(--warning);">🆘</div>
+                    <div class="deliverable-title">RFQ 002: SOS Postes</div>
+                </div>
+                <div class="deliverable-description">98 postes SOS | CAPEX: $2,450,000 USD</div>
+                <div class="deliverable-actions">
+                    <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_002_SOS_Postes_v2.0.md" target="_blank"
+                        class="tm01-btn">Ver RFQ</a>
+                </div>
+            </div>
+
+            <div class="deliverable-card">
+                <div class="deliverable-header">
+                    <div class="deliverable-icon" style="background: var(--success-bg); color: var(--success);">🌐</div>
+                    <div class="deliverable-title">RFQ 001: Fibra Óptica</div>
+                </div>
+                <div class="deliverable-description">322km FO 48H | CAPEX: $7,980,000 USD</div>
+                <div class="deliverable-actions">
+                    <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_001_FIBRA_OPTICA_v2.0.md" target="_blank"
+                        class="tm01-btn">Ver RFQ</a>
+                </div>
+            </div>
+
+            <div class="deliverable-card">
+                <div class="deliverable-header">
+                    <div class="deliverable-icon" style="background: var(--error-bg); color: var(--error);">📊</div>
+                    <div class="deliverable-title">RFQ 008: PMV</div>
+                </div>
+                <div class="deliverable-description">43 paneles | CAPEX: $2,390,000 USD</div>
+                <div class="deliverable-actions">
+                    <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_008_PMV_v1.0.md" target="_blank" class="tm01-btn">Ver
+                        RFQ</a>
+                </div>
+            </div>
+
+            <div class="deliverable-card">
+                <div class="deliverable-header">
+                    <div class="deliverable-icon" style="background: var(--info-bg); color: var(--info);">📡</div>
+                    <div class="deliverable-title">RFQ 007: Radares</div>
+                </div>
+                <div class="deliverable-description">13 nodos Dahua | CAPEX: $38,461 USD</div>
+                <div class="deliverable-actions">
+                    <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_007_RADARES_SANCIONATORIOS_v2.1.md" target="_blank"
+                        class="tm01-btn">Ver RFQ</a>
+                </div>
+            </div>
+
+            <div class="deliverable-card">
+                <div class="deliverable-header">
+                    <div class="deliverable-icon" style="background: var(--warning-bg); color: var(--warning);">🌡️
+                    </div>
+                    <div class="deliverable-title">Equipos L2/L3</div>
+                </div>
+                <div class="deliverable-description">Switches y Routers | Red Activa</div>
+                <div class="deliverable-actions">
+                    <a href="../X_ENTREGABLES_CONSOLIDADOS/SOLICITUD_COMPRA_EQUIPOS_L2_v1.0.md" target="_blank"
+                        class="tm01-btn">Ver L2</a>
+                    <a href="../X_ENTREGABLES_CONSOLIDADOS/SOLICITUD_COMPRA_EQUIPOS_L3_v1.0.md" target="_blank"
+                        class="tm01-btn">Ver L3</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Info -->
+        <div
+            style="margin-top: var(--space-2xl); padding: var(--space-xl); background: var(--bg-hover); border-radius: var(--radius-lg); text-align: center;">
+            <h3 style="color: var(--tm01-primary); margin-bottom: var(--space-sm);">📋 Información de Certificación</h3>
+            <p style="color: var(--text-sub); margin-bottom: var(--space-md);">
+                Todos los documentos han sido generados automáticamente mediante la <strong>Metodología Punto 42
+                    v3.0</strong> (Capa 5: Servicios).
+            </p>
+            <div
+                style="display: flex; justify-content: center; gap: var(--space-lg); flex-wrap: wrap; font-size: 0.9em;">
+                <div><strong>Fuente de Verdad:</strong> T05 (Ingeniería de Detalle)</div>
+                <div><strong>Validación:</strong> Agent 3 (Audit 6.0)</div>
+                <div><strong>Fecha:</strong> 02-Feb-2026</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
