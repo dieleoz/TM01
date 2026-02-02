@@ -47,10 +47,11 @@
         }
 
         .wbs-container {
-            background: white;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
             overflow: hidden;
+            margin-top: var(--space-lg);
         }
 
         .wbs-table {
@@ -64,6 +65,9 @@
             padding: var(--space-md);
             text-align: left;
             font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             position: sticky;
             top: 0;
             z-index: 10;
@@ -72,6 +76,7 @@
         .wbs-table td {
             padding: var(--space-sm) var(--space-md);
             border-bottom: 1px solid var(--border-light);
+            font-size: 0.9rem;
         }
 
         .wbs-table tr:hover {
@@ -117,51 +122,84 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>📊 Estructura de Desglose de Trabajo (WBS)</h1>
-        <p>Fuente de Verdad: Ingeniería de Detalle (T05) + Dictámenes Jurídicos</p>
+    <!-- Navbar -->
+    <nav class="tm01-navbar">
+        <div class="tm01-brand">
+            📊 WBS Completa
+            <span class="tm01-status-badge" style="margin-left: 10px;">T01</span>
+        </div>
+        <div class="tm01-nav-links">
+            <a href="index.html" class="tm01-nav-link">🏠 Inicio</a>
+            <a href="dashboard_tecnico.html" class="tm01-nav-link">📐 Dashboard Técnico</a>
+            <a href="presupuesto.html" class="tm01-nav-link">💰 Presupuesto</a>
+        </div>
+    </nav>
 
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-value" id="totalItems">-</div>
-                <div class="stat-label">Total Items WBS</div>
+    <!-- Main Container -->
+    <div class="tm01-container">
+        <!-- Header Card -->
+        <div class="tm01-card">
+            <div class="tm01-card-header">
+                <h1 class="tm01-card-title">📊 Estructura de Desglose de Trabajo (WBS)</h1>
+                <p class="tm01-card-subtitle">Fuente de Verdad: Ingeniería de Detalle (T05) + Dictámenes Jurídicos</p>
             </div>
-            <div class="stat-card">
-                <div class="stat-value" id="totalUSD">-</div>
-                <div class="stat-label">CAPEX Total (USD)</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value" id="totalCOP">-</div>
-                <div class="stat-label">CAPEX Total (COP)</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value" id="totalSistemas">-</div>
-                <div class="stat-label">Sistemas Activos</div>
+
+            <!-- Stats Grid -->
+            <div class="tm01-stats-grid">
+                <div class="tm01-stat-card">
+                    <div class="tm01-stat-icon">📦</div>
+                    <div class="tm01-stat-content">
+                        <div class="tm01-stat-value" id="totalItems">-</div>
+                        <div class="tm01-stat-label">Total Items WBS</div>
+                    </div>
+                </div>
+                <div class="tm01-stat-card">
+                    <div class="tm01-stat-icon">💵</div>
+                    <div class="tm01-stat-content">
+                        <div class="tm01-stat-value" id="totalUSD">-</div>
+                        <div class="tm01-stat-label">CAPEX Total (USD)</div>
+                    </div>
+                </div>
+                <div class="tm01-stat-card">
+                    <div class="tm01-stat-icon">💰</div>
+                    <div class="tm01-stat-content">
+                        <div class="tm01-stat-value" id="totalCOP">-</div>
+                        <div class="tm01-stat-label">CAPEX Total (COP)</div>
+                    </div>
+                </div>
+                <div class="tm01-stat-card">
+                    <div class="tm01-stat-icon">🔧</div>
+                    <div class="tm01-stat-content">
+                        <div class="tm01-stat-value" id="totalSistemas">-</div>
+                        <div class="tm01-stat-label">Sistemas Activos</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="wbs-container">
-        <table class="wbs-table">
-            <thead>
-                <tr>
-                    <th style="width: 100px">Item</th>
-                    <th>Descripción</th>
-                    <th style="width: 100px">Sistema</th>
-                    <th style="width: 80px">Cant.</th>
-                    <th style="width: 60px">Unid.</th>
-                    <th style="width: 120px">VU (USD)</th>
-                    <th style="width: 150px">VU (COP)</th>
-                    <th style="width: 120px">Total (USD)</th>
-                    <th style="width: 150px">Total (COP)</th>
-                </tr>
-            </thead>
-            <tbody id="wbsBody">
-                <tr>
-                    <td colspan="9" class="loading">⏳ Cargando datos...</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- WBS Table Card -->
+        <div class="wbs-container">
+            <table class="wbs-table">
+                <thead>
+                    <tr>
+                        <th style="width: 100px">Item</th>
+                        <th>Descripción</th>
+                        <th style="width: 100px">Sistema</th>
+                        <th style="width: 80px">Cant.</th>
+                        <th style="width: 60px">Unid.</th>
+                        <th style="width: 120px">VU (USD)</th>
+                        <th style="width: 150px">VU (COP)</th>
+                        <th style="width: 120px">Total (USD)</th>
+                        <th style="width: 150px">Total (COP)</th>
+                    </tr>
+                </thead>
+                <tbody id="wbsBody">
+                    <tr>
+                        <td colspan="9" class="loading">⏳ Cargando datos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Cargar datos -->
