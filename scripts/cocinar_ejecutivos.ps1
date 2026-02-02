@@ -74,21 +74,38 @@ foreach ($file in $files) {
         # Generar timestamp
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
         
-        # Convertir Markdown a HTML (solo body) usando Pandoc
-        $tempMd = Join-Path $env:TEMP "temp_$baseName.md"
-        [System.IO.File]::WriteAllText($tempMd, $markdownContent, [System.Text.UTF8Encoding]::new($false))
+        # Convertir Markdown a HTML usando Pandoc via STDIN (evita problemas de encoding)
+        $utf8NoBOM = New-Object System.Text.UTF8Encoding $false
+        $stdin = [System.Text.Encoding]::UTF8.GetBytes($markdownContent)
         
-        # Ejecutar Pandoc con sintaxis correcta (sin warnings)
-        $pandocOutput = & pandoc $tempMd -t html --syntax-highlighting=none --from markdown+emoji 2>&1
+        # Crear proceso Pandoc
+        $psi = New-Object System.Diagnostics.ProcessStartInfo
+        $psi.FileName = "pandoc"
+        $psi.Arguments = "-f markdown+emoji -t html --syntax-highlighting=none"
+        $psi.RedirectStandardInput = $true
+        $psi.RedirectStandardOutput = $true
+        $psi.RedirectStandardError = $true
+        $psi.UseShellExecute = $false
+        $psi.StandardOutputEncoding = [System.Text.Encoding]::UTF8
+        $psi.StandardErrorEncoding = [System.Text.Encoding]::UTF8
+        $psi.CreateNoWindow = $true
         
-        if ($LASTEXITCODE -ne 0) {
-            throw "Pandoc falló: $pandocOutput"
+        $process = New-Object System.Diagnostics.Process
+        $process.StartInfo = $psi
+        $process.Start() | Out-Null
+        
+        # Escribir Markdown a stdin
+        $process.StandardInput.BaseStream.Write($stdin, 0, $stdin.Length)
+        $process.StandardInput.Close()
+        
+        # Leer output
+        $htmlBody = $process.StandardOutput.ReadToEnd()
+        $errorOutput = $process.StandardError.ReadToEnd()
+        $process.WaitForExit()
+        
+        if ($process.ExitCode -ne 0) {
+            throw "Pandoc falló: $errorOutput"
         }
-        
-        # Filtrar warnings y convertir a string UTF-8 limpio
-        $htmlBody = ($pandocOutput | Where-Object { $_ -notmatch '^\[WARNING\]' }) -join "`n"
-        
-        Remove-Item -LiteralPath $tempMd -ErrorAction SilentlyContinue
         
         # Construir HTML completo con template
         $htmlOutput = @"
