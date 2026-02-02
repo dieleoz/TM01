@@ -1,4 +1,4 @@
-# SOLICITUD DE COTIZACIÓN (RFQ-008)  
+﻿# SOLICITUD DE COTIZACIÓN (RFQ-008)  
 ## SISTEMA DE PANELES DE MENSAJERÍA VARIABLE (PMV)
 
 **Proyecto:** APP Puerto Salgar - Barrancabermeja  
@@ -247,5 +247,6 @@ EPC Concesión TM01 Troncal Magdalena
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
 
 

@@ -1,4 +1,4 @@
-# SOLICITUD DE COTIZACIÓN (RFQ-003)
+﻿# SOLICITUD DE COTIZACIÓN (RFQ-003)
 ## SISTEMA CCTV (CIRCUITO CERRADO DE TELEVISIÓN) – VIDEOVIGILANCIA ITS
 
 ## **PROYECTO: APP Puerto Salgar - Barrancabermeja (Propuesta Optimizada - 15 Cámaras)**
@@ -612,5 +612,6 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
 
 

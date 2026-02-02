@@ -1,4 +1,4 @@
-# RFQ_002: SOLICITUD DE COTIZACIÓN – POSTES SOS (SISTEMA DE TELEFONÍA DE EMERGENCIA)
+﻿# RFQ_002: SOLICITUD DE COTIZACIÓN – POSTES SOS (SISTEMA DE TELEFONÍA DE EMERGENCIA)
 
 Proyecto: APP Puerto Salgar – Barrancabermeja (TM01 Troncal Magdalena)  
 Entidad: Concesión APP (ruta RN4510 + RN4511 + conexión CCO RN4513)  
@@ -166,5 +166,6 @@ Anexos recomendados:
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
 
 
