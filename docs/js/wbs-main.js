@@ -10,9 +10,11 @@
  * - datos_wbs_TM01_items.js (datos items)
  */
 
-let tm01Data = null;
-let wbsData = [];
-let filteredData = [];
+
+var tm01Data = null;
+var wbsData = [];
+var filteredData = [];
+
 
 // Función para verificar y cargar datos cuando el script externo esté listo
 function checkAndInit() {
