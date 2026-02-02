@@ -220,7 +220,7 @@ function renderizarWBS() {
 
     capitulos.forEach(capitulo => {
         // Filtrar items del capítulo usando tipo==="item" en lugar de nivel===3
-        const itemsCapitulo = filteredData.filter(item => 
+        const itemsCapitulo = filteredData.filter(item =>
             item.item.startsWith(capitulo.item + '.') && item.tipo === "item"
         );
 
@@ -254,7 +254,7 @@ function renderizarWBS() {
             </div>`;
 
         // Filtrar subcapítulos usando tipo==="subcapitulo" en lugar de nivel===2
-        const subcapitulos = filteredData.filter(item => 
+        const subcapitulos = filteredData.filter(item =>
             (item.tipo === "subcapitulo" || item.nivel === 2) && item.item.startsWith(capitulo.item + '.')
         );
 
@@ -266,11 +266,16 @@ function renderizarWBS() {
                 </div>`;
 
             // Filtrar items usando tipo==="item"
-            const items = filteredData.filter(item => 
+            const items = filteredData.filter(item =>
                 item.tipo === "item" && item.item.startsWith(subcapitulo.item + '.')
             );
 
             items.forEach(item => {
+                const vuUSD = item.vu || '0';
+                const vuCOP = item.vuCOP || '0';
+                const totalUSD = item.total || '0';
+                const totalCOP = item.totalCOP || '0';
+
                 html += `
                     <div class="wbs-item item">
                         <div>
@@ -279,12 +284,12 @@ function renderizarWBS() {
                         </div>
                         <div class="item-qty">${item.cantidad || '-'} ${item.unidad || ''}</div>
                         <div class="item-cost">
-                            $${item.vu || '0'} USD<br>
-                            <small>$${item.vuCOP || '0'} COP</small>
+                            $${vuUSD} USD<br>
+                            <small>$${vuCOP} COP</small>
                         </div>
                         <div class="item-cost">
-                            $${item.total || '0'} USD<br>
-                            <small>$${item.totalCOP || '0'} COP</small>
+                            $${totalUSD} USD<br>
+                            <small>$${totalCOP} COP</small>
                         </div>
                         <div class="item-actions">
                             <button class="btn btn-small btn-dt" onclick="crearDT('${item.id}', '${item.item}', '${item.descripcion}', '${item.sistema}')">📋 DT</button>
