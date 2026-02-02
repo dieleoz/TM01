@@ -23,6 +23,7 @@
 - [x] **METEO:** ✅ CERRADO ($16.5k Davis + API - Aligned)
 - [x] **RADAR/ETD:** ✅ CERRADO (2 Und + Virtual - Smart CAPEX)
 - [x] **DASHBOARDS:** ✅ CERRADO (WBS, Riesgos, Cronograma - Refactored & Aligned)
+- [x] **WBS PAGE:** ✅ CERRADO (Reescrita desde cero - vuCOP fix - UI/UX estándar aplicado)
 
 
 ## 📤 FASE 7: SERVICIOS (LAYER 5)
