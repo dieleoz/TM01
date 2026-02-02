@@ -1,7 +1,7 @@
 # SOLICITUD DE COTIZACIÓN (RFQ-003)
 ## SISTEMA CCTV (CIRCUITO CERRADO DE TELEVISIÓN) – VIDEOVIGILANCIA ITS
 
-## **PROYECTO: APP Puerto Salgar - Barrancabermeja (Propuesta Optimizada - 15 Cámaras)**
+## **PROYECTO: APP Puerto Salgar - Barrancabermeja (Alcance Optimizado - 9 Cámaras)**
 RFQ-003-CCTV  
 **Fecha de emisión:** 16 de enero de 2026  
 **Versión:** 2.0  
@@ -22,7 +22,7 @@ RFQ-003-CCTV
 
 ## 🎯 OBJETIVO DE LA COTIZACIÓN
 
-Solicitar oferta integral para el suministro, instalación, configuración, integración al CCO y puesta en marcha del **Sistema de Circuito Cerrado de Televisión (CCTV)** consistente en 30 cámaras IP PTZ distribuidas estratégicamente a lo largo del corredor vial para videovigilancia ITS, conforme a T04/T05 de CCTV y validación contractual vigente.
+Solicitar oferta integral para el suministro, instalación, configuración, integración al CCO y puesta en marcha del **Sistema de Circuito Cerrado de Televisión (CCTV)** consistente en **9 cámaras IP PTZ** distribuidas estratégicamente en edificaciones críticas del corredor vial para videovigilancia ITS, conforme a T04/T05 de CCTV v1.4 (Minimización de Activos - 1 cámara por edificación).
 
 ---
 
@@ -32,7 +32,7 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 
 | Parámetro | Especificación | Referencia |
 |:----------|:---------------|:-----------|
-| **Cantidad total** | 30 cámaras IP PTZ | Validación contractual |
+| **Cantidad total** | **9 cámaras IP PTZ** | T05 CCTV v1.4 (Minimización) |
 | **Distribución** | 13 Unidades Funcionales (UFs) | Tabla Maestra Layout |
 | **Tipo principal** | PTZ Domo IP con zoom 30× | T04 CCTV |
 | **Resolución** | 1080p (1920×1080) mínimo | AT3 |
@@ -61,7 +61,7 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 - DPS datos + energía
 - Accesorios montaje completos
 
-#### **2. INFRAESTRUCTURA SOPORTE (30 ubicaciones):**
+#### **2. INFRAESTRUCTURA SOPORTE (9 ubicaciones):**
 - **Poste Metálico 12m (Lateral):** 26 unidades.
 - **Poste Metálico 8m (Separador Central):** 4 unidades **(Tipo C)**.
   - Altura reducida para estabilidad.
@@ -573,8 +573,8 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 | **Streaming** | RTSP over TCP |
 | **Resolución grabación** | 1080p @ 15 fps (continuo) |
 | **Bitrate** | 4 Mbps promedio por cámara |
-| **Ancho de banda total** | 30 cámaras × 4 Mbps = 120 Mbps |
-| **Almacenamiento** | 30 días × 30 cámaras ≈ 15 TB |
+| **Ancho de banda total** | 9 cámaras × 4 Mbps = 36 Mbps |
+| **Almacenamiento** | 30 días × 9 cámaras ≈ 4.5 TB |
 | **Redundancia** | Grabación local (MicroSD) + NVR |
 | Lote | Cantidad | Tipo | Rutas | Duración |
 | **Lote 1** | 10 cámaras | Mixto (A+B+C) | RN 4510 | 5 semanas |
