@@ -36,6 +36,11 @@ if (document.readyState === 'loading') {
 
 function initWBS() {
     try {
+        console.log('🚀 Inicializando WBS...');
+
+        // Create local aliases for window variables
+        let tm01Data, wbsData, filteredData;
+
         // Esperar a que TM01MasterData esté disponible
         if (typeof TM01MasterData === 'undefined') {
             setTimeout(initWBS, 50);
@@ -52,22 +57,23 @@ function initWBS() {
             console.log('✅ Creando nueva instancia TM01MasterData');
         }
 
-        window.dataManager = tm01Data;
+        window.dataManager = window.tm01Data;
+        tm01Data = window.tm01Data;
 
         if (typeof window.wbsDataGlobal !== 'undefined' && Array.isArray(window.wbsDataGlobal.items)) {
             window.wbsData = window.wbsDataGlobal.items;
-            console.log('✅ Datos WBS detallados cargados (wbsDataGlobal):', wbsData.length, 'items');
+            console.log('✅ Datos WBS detallados cargados (wbsDataGlobal):', window.wbsData.length, 'items');
         } else if (typeof window.datos_wbs !== 'undefined' && Array.isArray(window.datos_wbs.items)) {
             window.wbsData = window.datos_wbs.items;
-            console.log('✅ Datos WBS detallados cargados (datos_wbs):', wbsData.length, 'items');
+            console.log('✅ Datos WBS detallados cargados (datos_wbs):', window.wbsData.length, 'items');
         } else if (tm01Data && tm01Data.data && Array.isArray(tm01Data.data.wbs)) {
-            window.wbsData = window.tm01Data.data.wbs;
-            console.log('✅ Datos Master Data cargados:', wbsData.length, 'items');
+            window.wbsData = tm01Data.data.wbs;
+            console.log('✅ Datos Master Data cargados:', window.wbsData.length, 'items');
         } else {
             throw new Error('No se encontraron datos WBS válidos');
         }
 
-        if (wbsData.length === 0) {
+        if (window.wbsData.length === 0) {
             throw new Error('Los datos WBS están vacíos');
         }
 
