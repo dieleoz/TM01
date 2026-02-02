@@ -76,13 +76,16 @@ foreach ($file in $files) {
         
         # Convertir Markdown a HTML (solo body) usando Pandoc
         $tempMd = Join-Path $env:TEMP "temp_$baseName.md"
-        $markdownContent | Set-Content -LiteralPath $tempMd -Encoding UTF8
+        [System.IO.File]::WriteAllText($tempMd, $markdownContent, [System.Text.UTF8Encoding]::new($false))
         
-        $htmlBody = & pandoc $tempMd -t html --no-highlight 2>&1
+        $htmlBody = & pandoc $tempMd -t html --no-highlight --from markdown+emoji 2>&1
         
         if ($LASTEXITCODE -ne 0) {
             throw "Pandoc falló: $htmlBody"
         }
+        
+        # Convertir el output de Pandoc a string UTF-8 limpio
+        $htmlBody = $htmlBody -join "`n"
         
         Remove-Item -LiteralPath $tempMd -ErrorAction SilentlyContinue
         
@@ -147,8 +150,8 @@ $htmlBody
 </html>
 "@
         
-        # Escribir HTML final
-        $htmlOutput | Set-Content -LiteralPath $outputPath -Encoding UTF8
+        # Escribir HTML final con UTF-8 sin BOM
+        [System.IO.File]::WriteAllText($outputPath, $htmlOutput, [System.Text.UTF8Encoding]::new($false))
         
         Write-Host " [OK] ✅" -ForegroundColor Green
         
