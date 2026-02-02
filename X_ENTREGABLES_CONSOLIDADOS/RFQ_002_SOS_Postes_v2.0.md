@@ -132,20 +132,19 @@ Anexos recomendados:
 | v1.3 | 15/01/2026 | Certificación Fase 0.5: Ajuste a 88 unidades (Optimización) | Adm. Contractual EPC |
 | v1.4 | 20/01/2026 | Blindaje Técnico .42: Reconciliación 88 unidades y $2.2M CAPEX | Adm. Contractual EPC |
 | v1.5 | 20/01/2026 | REVISIÓN NORMATIVA BLOQUEANTE: Restauración a 98 unidades, Color Naranja (RAL 2004), Altura 4.90m, Energía Solar Estándar | Administrador Contractual EPC |
-| **v1.8** | **30/01/2026** | **RECONCILIACIÓN OFERTA COLSEIN:** Optimización 88 unidades (Scope COLSEIN). | **Administrador Contractual EPC** |
+| **v1.8** | **30/01/2026** | **RECONCILIACIÓN OFERTA COLSEIN:** Ajuste a 88 unidades según Cotización OPOCOL-8866. CAPEX Directo: $2,642,898,552 COP. | **Administrador Contractual EPC** |
 | Parámetro | Valor | Referencia Contractual / Normativa |
-| **Cantidad total** | **88 unidades** | **Scope COLSEIN OPOCOL-8866** |
+| **Cantidad total** | **88 postes** | **Oferta COLSEIN OPOCOL-8866 (Scope EPC 2026)** |
 | **Color del poste** | **Naranja (RAL 2004)** | Manual de Señalización Vial 2024 |
 | **Altura estructural** | **4.90 m** | Manual de Señalización Vial 2024 |
 | **Energía** | **Solar Fotovoltaica** | Autonomía >72h (Colsein Standard) |
 | **Separación máxima** | 3.00 km | Apéndice Técnico 1, Línea 3175 |
 | **Longitud Corredor** | **293.0 km** | AT1 - Alcance |
-| **CAPEX Total** | **$2,642,898,552 COP** | Subtotal Directo COLSEIN |
+| **CAPEX Total** | **$2,642,898,552 COP** | Subtotal Directo (Sin IVA) |
 | **OPEX Anual** | **$52,800 USD** | $600/poste/año |
-| Componente | Cantidad | Costo Unit. (COP) | Total (COP) | % del Total |
-|:-----------|:---------|:------------------|:------------|:------------|
 | **1. SUMINISTRO EQUIPOS SOS** | 88 | $4,422,956 | $389,220,181 | 14.7% |
-| **2. SUMINISTRO ESTRUCTURAS** | 88 | $14,692,348 | $1,292,926,654 | 48.9% |
+| **2. SUMINISTRO ESTRUCTURAS** | 88 | $14,692,348 | 
+,292,926,654 | 48.9% |
 | **3. ARREGLO FOTOVOLTAICO** | 88 | $7,006,832 | $616,601,265 | 23.3% |
 | **4. INSTALACIÓN SISTEMA** | 88 | $3,181,182 | $279,944,071 | 10.6% |
 | **5. SUMINISTRO EQUIPOS CCO** | 1 | $64,206,380 | $64,206,380 | 2.4% |
@@ -161,11 +160,11 @@ Anexos recomendados:
 | **CAPEX (98 postes)** | $2,450,000 | 67.6% |
 | **OPEX (20 años)** | 
 ,176,000 | 32.4% |
-| **TOTAL 20 AÑOS** | **$3,626,000** | **100%** |
-
-> Actualizado: 2026-01-28
+| **TOTAL 20 AÑOS** | **$3,626,000** | **100%** |
+> Actualizado: 2026-02-02
 <!-- BLOQUE AUTOMATICO FIN -->
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
 
