@@ -5,189 +5,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WBS Completa - TM01 Troncal Magdalena</title>
-
-    <!-- Librerías -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
-    <!-- Estilos -->
     <link rel="stylesheet" href="css/tm01-design-system.css">
     <style>
-        /* Estilos específicos WBS */
-        .wbs-tree {
-            font-family: 'Segoe UI Mono', monospace;
-            font-size: 0.9em;
+        body {
+            padding: var(--space-lg);
+            background: var(--bg-main);
         }
 
-        .wbs-item {
+        .header {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+
+        .stat-card {
+            background: var(--bg-light);
+            padding: var(--space-md);
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--tm01-primary);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--tm01-primary);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: var(--space-xs);
+        }
+
+        .wbs-container {
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .wbs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .wbs-table th {
+            background: var(--tm01-primary);
+            color: white;
+            padding: var(--space-md);
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .wbs-table td {
             padding: var(--space-sm) var(--space-md);
             border-bottom: 1px solid var(--border-light);
-            display: flex;
-            align-items: center;
-            transition: background var(--transition-fast);
         }
 
-        .wbs-item:hover {
-            background-color: var(--bg-hover);
+        .wbs-table tr:hover {
+            background: var(--bg-hover);
         }
 
-        .wbs-level-1 {
-            background-color: var(--tm01-primary);
+        .capitulo-row {
+            background: var(--tm01-primary);
             color: white;
             font-weight: 700;
-            margin-top: var(--space-md);
-            border-radius: var(--radius-sm);
-            padding: var(--space-md);
         }
 
-        .wbs-level-2 {
-            background-color: var(--border-light);
-            color: var(--text-main);
+        .capitulo-row:hover {
+            background: var(--tm01-primary) !important;
+        }
+
+        .subcapitulo-row {
+            background: var(--border-light);
             font-weight: 600;
-            margin-top: var(--space-sm);
-            padding-left: var(--space-lg);
         }
 
-        .wbs-level-3 {
-            padding-left: var(--space-2xl);
-            color: var(--text-sub);
+        .item-row {
+            background: white;
         }
 
-        .wbs-id {
-            min-width: 100px;
-            font-weight: 700;
-            color: var(--tm01-accent);
+        .item-code {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: var(--tm01-primary);
         }
 
-        .wbs-desc {
-            flex-grow: 1;
-        }
-
-        .wbs-meta {
-            font-size: 0.85em;
-            color: var(--text-muted);
-            min-width: 180px;
+        .amount {
             text-align: right;
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-            align-items: center;
+            font-family: 'Courier New', monospace;
         }
 
-        .badge-capex {
-            background: var(--success);
-            color: white;
-            padding: 2px 8px;
-            border-radius: var(--radius-full);
-            font-size: 0.75em;
-            font-weight: 600;
+        .loading {
+            text-align: center;
+            padding: var(--space-xl);
+            color: var(--text-secondary);
         }
     </style>
 </head>
 
 <body>
+    <div class="header">
+        <h1>📊 Estructura de Desglose de Trabajo (WBS)</h1>
+        <p>Fuente de Verdad: Ingeniería de Detalle (T05) + Dictámenes Jurídicos</p>
 
-    <!-- Navbar -->
-    <nav class="tm01-navbar">
-        <div class="tm01-brand">
-            <span style="margin-right: 8px;">🏗️</span>
-            TM01 Troncal Magdalena
-            <span class="tm01-status-badge" style="margin-left: 10px;">Audit 6.0 Verified</span>
-        </div>
-        <div style="display: flex; gap: 10px;">
-            <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Volver al Menú</a>
-            <button class="tm01-btn" onclick="exportarExcel()">📊 Exportar Excel</button>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="tm01-container" style="padding-top: var(--space-xl);">
-
-        <!-- Header -->
-        <div style="margin-bottom: var(--space-lg); display: flex; justify-content: space-between; align-items: end;">
-            <div>
-                <h1 style="color: var(--tm01-primary); margin-bottom: 5px;">Estructura de Desglose de Trabajo (WBS)</h1>
-                <p style="color: var(--text-sub);">Fuente de Verdad: Ingeniería de Detalle (T05) + Dictámenes Jurídicos
-                </p>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="totalItems">-</div>
+                <div class="stat-label">Total Items WBS</div>
             </div>
-            <div>
-                <button class="tm01-btn tm01-btn-primary" onclick="window.print()">🖨️ Imprimir</button>
+            <div class="stat-card">
+                <div class="stat-value" id="totalUSD">-</div>
+                <div class="stat-label">CAPEX Total (USD)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalCOP">-</div>
+                <div class="stat-label">CAPEX Total (COP)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalSistemas">-</div>
+                <div class="stat-label">Sistemas Activos</div>
             </div>
         </div>
-
-        <!-- KPI Cards -->
-        <div class="tm01-grid-3" style="margin-bottom: var(--space-xl);">
-            <div class="tm01-stat">
-                <div class="tm01-stat-value" id="totalItems">...</div>
-                <div class="tm01-stat-label">Total Items WBS</div>
-            </div>
-            <div class="tm01-stat">
-                <div class="tm01-stat-value" id="costoTotal" style="color: var(--success);">...</div>
-                <div class="tm01-stat-label">CAPEX Total ITS (USD)</div>
-            </div>
-            <div class="tm01-stat">
-                <div class="tm01-stat-value" id="totalSistemas" style="color: var(--info);">...</div>
-                <div class="tm01-stat-label">Sistemas Activos</div>
-            </div>
-        </div>
-
-        <!-- Filters -->
-        <div class="tm01-card" style="margin-bottom: var(--space-lg);">
-            <h3>🔍 Filtros de Búsqueda</h3>
-            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-                <select id="sistemaFilter" class="tm01-btn"
-                    style="flex: 1; background: white; border-color: var(--border);">
-                    <option value="">Todos los Sistemas</option>
-                </select>
-                <select id="nivelFilter" class="tm01-btn"
-                    style="flex: 1; background: white; border-color: var(--border);">
-                    <option value="">Todos los Niveles</option>
-                    <option value="1">Capítulos (Nivel 1)</option>
-                    <option value="2">Subcapítulos (Nivel 2)</option>
-                    <option value="3">Items (Nivel 3)</option>
-                </select>
-                <input type="text" id="searchInput" class="tm01-btn" placeholder="Buscar item..."
-                    style="flex: 2; background: white; border-color: var(--border); cursor: text;">
-                <button class="tm01-btn tm01-btn-primary" onclick="filtrarWBS()">Filtrar</button>
-                <button class="tm01-btn" onclick="limpiarFiltros()">Limpiar</button>
-            </div>
-        </div>
-
-        <!-- Subtotals Panel -->
-        <div id="subtotalesSection" class="tm01-section" style="display: none;">
-            <div class="tm01-section-header">💰 Subtotales por Sistema</div>
-            <div id="subtotalesGrid" class="tm01-section-content tm01-grid-4"></div>
-        </div>
-
-        <div style="text-align: right; margin-bottom: var(--space-md);">
-            <button class="tm01-btn tm01-btn-link" onclick="toggleSubtotales()">👁️ Ver/Ocultar Subtotales</button>
-        </div>
-
-        <!-- WBS Tree -->
-        <div class="tm01-card" style="padding: 0; overflow: hidden;">
-            <div id="wbsTree" class="wbs-tree" style="max-height: 800px; overflow-y: auto;">
-                <div style="padding: 40px; text-align: center; color: var(--text-muted);">
-                    <div style="margin-bottom: 10px;">⏳</div> Cargando Datos Maestros...
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div style="margin: var(--space-2xl) 0; color: var(--text-muted); font-size: 0.8em; text-align: center;">
-            <p><strong>TM01 Troncal Magdalena</strong> - Sistema de Gestión Contractual</p>
-            <p>Metodología: Punto 42 v3.0 (Layer 5 Services) | Validación: Agent 3</p>
-        </div>
-
     </div>
 
-    <!-- Scripts -->
-    <script src="data/tm01_master_data.js?v=20260130"></script>
-    <script src="datos_wbs_TM01_items.js?v=20260130"></script>
+    <div class="wbs-container">
+        <table class="wbs-table">
+            <thead>
+                <tr>
+                    <th style="width: 100px">Item</th>
+                    <th>Descripción</th>
+                    <th style="width: 100px">Sistema</th>
+                    <th style="width: 80px">Cant.</th>
+                    <th style="width: 60px">Unid.</th>
+                    <th style="width: 120px">VU (USD)</th>
+                    <th style="width: 150px">VU (COP)</th>
+                    <th style="width: 120px">Total (USD)</th>
+                    <th style="width: 150px">Total (COP)</th>
+                </tr>
+            </thead>
+            <tbody id="wbsBody">
+                <tr>
+                    <td colspan="9" class="loading">⏳ Cargando datos...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <!-- Logic -->
-    <script src="js/wbs-dt.js"></script>
-    <script src="js/wbs-export.js"></script>
-    <script src="js/wbs-main.js"></script>
+    <!-- Cargar datos -->
+    <script src="datos_wbs_TM01_items.js"></script>
 
+    <!-- Script simple para renderizar -->
+    <script>
+        // Esperar a que los datos estén cargados
+        function init() {
+            // Verificar que los datos existan
+            if (typeof window.wbsDataGlobal === 'undefined' && typeof window.datos_wbs === 'undefined') {
+                setTimeout(init, 50);
+                return;
+            }
+
+            // Obtener los datos
+            const data = window.wbsDataGlobal || window.datos_wbs;
+            const items = data.items || [];
+
+            console.log('✅ Datos cargados:', items.length, 'items');
+
+            // Renderizar tabla
+            const tbody = document.getElementById('wbsBody');
+            tbody.innerHTML = '';
+
+            items.forEach(item => {
+                const tr = document.createElement('tr');
+
+                // Determinar clase según tipo
+                if (item.tipo === 'capitulo' || item.nivel === 1) {
+                    tr.className = 'capitulo-row';
+                } else if (item.tipo === 'subcapitulo' || item.nivel === 2) {
+                    tr.className = 'subcapitulo-row';
+                } else {
+                    tr.className = 'item-row';
+                }
+
+                // Formatear valores
+                const cantidad = item.cantidad || '';
+                const unidad = item.unidad || '';
+                const vu = item.vu || '';
+                const vuCOP = item.vuCOP || '';
+                const total = item.total || '';
+                const totalCOP = item.totalCOP || '';
+
+                tr.innerHTML = `
+                    <td class="item-code">${item.item}</td>
+                    <td>${item.descripcion}</td>
+                    <td>${item.sistema || ''}</td>
+                    <td class="amount">${cantidad}</td>
+                    <td>${unidad}</td>
+                    <td class="amount">${vu ? '$' + vu : ''}</td>
+                    <td class="amount">${vuCOP ? '$' + vuCOP : ''}</td>
+                    <td class="amount">${total ? '$' + total : ''}</td>
+                    <td class="amount">${totalCOP ? '$' + totalCOP : ''}</td>
+                `;
+
+                tbody.appendChild(tr);
+            });
+
+            // Calcular estadísticas
+            const itemsReales = items.filter(i => i.tipo === 'item' || i.nivel === 3);
+            const sistemas = [...new Set(items.map(i => i.sistema).filter(s => s))];
+
+            const totalUSD = itemsReales.reduce((sum, item) => {
+                const val = parseFloat(String(item.total || '0').replace(/,/g, ''));
+                return sum + (isNaN(val) ? 0 : val);
+            }, 0);
+
+            const totalCOPVal = itemsReales.reduce((sum, item) => {
+                const val = parseFloat(String(item.totalCOP || '0').replace(/,/g, ''));
+                return sum + (isNaN(val) ? 0 : val);
+            }, 0);
+
+            // Actualizar estadísticas
+            document.getElementById('totalItems').textContent = itemsReales.length;
+            document.getElementById('totalUSD').textContent = '$' + totalUSD.toLocaleString('en-US', { maximumFractionDigits: 2 });
+            document.getElementById('totalCOP').textContent = '$' + totalCOPVal.toLocaleString('en-US', { maximumFractionDigits: 0 });
+            document.getElementById('totalSistemas').textContent = sistemas.length;
+
+            console.log('✅ WBS renderizada correctamente');
+        }
+
+        // Iniciar cuando el DOM esté listo
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
 </body>
 
 </html>
