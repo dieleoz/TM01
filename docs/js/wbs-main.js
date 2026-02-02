@@ -11,9 +11,11 @@
  */
 
 
-var tm01Data = null;
-var wbsData = [];
-var filteredData = [];
+// Variables are created as window properties when first assigned
+// No declarations needed - avoids redeclaration errors
+
+
+
 
 
 // Función para verificar y cargar datos cuando el script externo esté listo
@@ -42,24 +44,24 @@ function initWBS() {
 
         // Intentar usar la instancia global primero
         if (typeof window.tm01MasterData !== 'undefined' && window.tm01MasterData instanceof TM01MasterData) {
-            tm01Data = window.tm01MasterData;
+            window.tm01Data = window.tm01MasterData;
             console.log('✅ Usando instancia global tm01MasterData');
         } else {
             // Si no hay instancia global, crear una nueva
-            tm01Data = new TM01MasterData();
+            window.tm01Data = new TM01MasterData();
             console.log('✅ Creando nueva instancia TM01MasterData');
         }
 
         window.dataManager = tm01Data;
 
         if (typeof window.wbsDataGlobal !== 'undefined' && Array.isArray(window.wbsDataGlobal.items)) {
-            wbsData = window.wbsDataGlobal.items;
+            window.wbsData = window.wbsDataGlobal.items;
             console.log('✅ Datos WBS detallados cargados (wbsDataGlobal):', wbsData.length, 'items');
         } else if (typeof window.datos_wbs !== 'undefined' && Array.isArray(window.datos_wbs.items)) {
-            wbsData = window.datos_wbs.items;
+            window.wbsData = window.datos_wbs.items;
             console.log('✅ Datos WBS detallados cargados (datos_wbs):', wbsData.length, 'items');
         } else if (tm01Data && tm01Data.data && Array.isArray(tm01Data.data.wbs)) {
-            wbsData = tm01Data.data.wbs;
+            window.wbsData = window.tm01Data.data.wbs;
             console.log('✅ Datos Master Data cargados:', wbsData.length, 'items');
         } else {
             throw new Error('No se encontraron datos WBS válidos');
@@ -69,7 +71,7 @@ function initWBS() {
             throw new Error('Los datos WBS están vacíos');
         }
 
-        filteredData = [...wbsData];
+        window.filteredData = [...window.wbsData];
         inicializarFiltros();
         actualizarEstadisticas();
         renderizarWBS();
@@ -310,7 +312,7 @@ function filtrarWBS() {
     const nivelFilter = document.getElementById('nivelFilter') ? document.getElementById('nivelFilter').value : '';
     const searchInput = document.getElementById('searchInput') ? document.getElementById('searchInput').value.toLowerCase() : '';
 
-    filteredData = wbsData.filter(item => {
+    window.filteredData = window.wbsData.filter(item => {
         let match = true;
         if (sistemaFilter && item.sistema !== sistemaFilter) match = false;
         if (nivelFilter && item.nivel.toString() !== nivelFilter) match = false;
@@ -327,7 +329,7 @@ function limpiarFiltros() {
     if (document.getElementById('nivelFilter')) document.getElementById('nivelFilter').value = '';
     if (document.getElementById('searchInput')) document.getElementById('searchInput').value = '';
 
-    filteredData = [...wbsData];
+    window.filteredData = [...window.wbsData];
     actualizarEstadisticas();
     renderizarWBS();
 }
