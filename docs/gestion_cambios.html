@@ -223,6 +223,62 @@
             </div>
         </div>
 
+        <!-- FASE 7: ACCESO RÁPIDO A ENTREGABLES -->
+        <div
+            style="background: linear-gradient(135deg, #059669 0%, #047857 100%); padding: 20px; border-radius: 12px; margin-bottom: 20px; color: white;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">📦 Documentos de Licitación (Fase 7)</h3>
+                    <p style="margin: 4px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Consulta los RFQs y reportes mientras
+                        gestionas cambios</p>
+                </div>
+                <button onclick="toggleEntregables()" class="btn"
+                    style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3);">
+                    <span id="toggleIcon">▼</span> Mostrar/Ocultar
+                </button>
+            </div>
+            <div id="panelEntregables"
+                style="display: none; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <!-- Reportes Ejecutivos -->
+                    <div style="background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 12px 0; font-size: 0.95rem;">📑 Reportes Ejecutivos (HTML)</h4>
+                        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+                            <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_01_Recaudo_y_Peajes_IPREV.html"
+                                target="_blank" style="color: white; text-decoration: none; opacity: 0.9;">→ Sistema
+                                01: Peajes</a>
+                            <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_02_Telecom_y_Fibra_322KM.html"
+                                target="_blank" style="color: white; text-decoration: none; opacity: 0.9;">→ Sistema 02:
+                                Telecom</a>
+                            <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_03_ITS_y_Pesaje_WIM.html"
+                                target="_blank" style="color: white; text-decoration: none; opacity: 0.9;">→ Sistema 03:
+                                ITS</a>
+                            <a href="dashboard_licitacion.html" target="_blank"
+                                style="color: white; text-decoration: none; font-weight: 600; margin-top: 4px;">Ver
+                                todos →</a>
+                        </div>
+                    </div>
+                    <!-- RFQs -->
+                    <div style="background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px;">
+                        <h4 style="margin: 0 0 12px 0; font-size: 0.95rem;">📦 RFQs Blindados (Markdown)</h4>
+                        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+                            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_003_CCTV_v2.0.md" target="_blank"
+                                style="color: white; text-decoration: none; opacity: 0.9;">→ RFQ 003: CCTV (9
+                                cámaras)</a>
+                            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_002_SOS_Postes_v2.0.md" target="_blank"
+                                style="color: white; text-decoration: none; opacity: 0.9;">→ RFQ 002: SOS (98
+                                postes)</a>
+                            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_001_FIBRA_OPTICA_v2.0.md" target="_blank"
+                                style="color: white; text-decoration: none; opacity: 0.9;">→ RFQ 001: Fibra (322km)</a>
+                            <a href="dashboard_licitacion.html" target="_blank"
+                                style="color: white; text-decoration: none; font-weight: 600; margin-top: 4px;">Ver
+                                todos →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="controls">
             <div>
                 <label>Sistema:</label>
@@ -611,6 +667,18 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+        }
+
+        function toggleEntregables() {
+            const panel = document.getElementById('panelEntregables');
+            const icon = document.getElementById('toggleIcon');
+            if (panel.style.display === 'none') {
+                panel.style.display = 'block';
+                icon.textContent = '▲';
+            } else {
+                panel.style.display = 'none';
+                icon.textContent = '▼';
+            }
         }
     </script>
 </body>
