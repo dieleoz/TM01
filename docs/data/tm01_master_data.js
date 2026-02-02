@@ -43,9 +43,9 @@ class TM01MasterData {
                 {
                     sistema: "Peajes",
                     cantidad: 14, // Carriles
-                    capexUnitarioUSD: 148571,
-                    capexUSD: 2080000,
-                    capexCOP: 8819200000,
+                    capexUnitarioUSD: 135015.64,
+                    capexUSD: 1890219,
+                    capexCOP: 8014528560,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -61,9 +61,9 @@ class TM01MasterData {
                 {
                     sistema: "METEO (Estaciones Meteorológicas)",
                     cantidad: 3,
-                    capexUnitarioUSD: 25000,
-                    capexUSD: 75000,
-                    capexCOP: 318000000,
+                    capexUnitarioUSD: 50000,
+                    capexUSD: 150000,
+                    capexCOP: 636000000,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -105,12 +105,12 @@ class TM01MasterData {
                 },
                 {
                     sistema: "ETD/RADAR",
-                    cantidad: 0, // Diferido (DT-ETD-001)
-                    capexUnitarioUSD: 0,
-                    capexUSD: 0,
-                    capexCOP: 0,
+                    cantidad: 16, // Audit 6.0 (T05 v1.0)
+                    capexUnitarioUSD: 50000,
+                    capexUSD: 800000,
+                    capexCOP: 3392000000,
                     categoria: "ITS",
-                    estado: "Diferido"
+                    estado: "Validado"
                 }
             ],
 
@@ -132,8 +132,8 @@ class TM01MasterData {
             },
             peajesSummary: {
                 cantidad: 14,
-                capexUSD: 2080000,
-                capexCOP: 8819200000
+                capexUSD: 1890219,
+                capexCOP: 8014528560
             },
             wimSummary: {
                 cantidad: 1,
@@ -142,8 +142,8 @@ class TM01MasterData {
             },
             meteoSummary: {
                 cantidad: 3,
-                capexUSD: 75000,
-                capexCOP: 318000000
+                capexUSD: 150000,
+                capexCOP: 636000000
             },
             telecomSummary: {
                 cantidad: 379, // 322 km fibra + 45 L2 + 12 L3
@@ -151,9 +151,9 @@ class TM01MasterData {
                 capexCOP: 7059600000
             },
 
-            // Totales del proyecto
-            totalCapexUSD: 9047525, // Suma de todos los sistemas
-            totalCapexCOP: 38361105000, // totalCapexUSD * 4240
+            // Totales del proyecto (Audit 6.0 Certified)
+            totalCapexUSD: 9732319, // Suma de todos los sistemas
+            totalCapexCOP: 41265032560, // totalCapexUSD * 4240
 
             // Normativa aplicable
             normativa: {
