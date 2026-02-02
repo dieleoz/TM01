@@ -1,7 +1,13 @@
 <#
 .SYNOPSIS
-    Genera los Reportes Ejecutivos HTML a partir de los Markdowns de Sistemas, usando Pandoc.
-    Esta es la CAPA 4 (Visualización) de la metodología Punto 42.
+    Genera Reportes Ejecutivos HTML Profesionales (Recipe TM01 v1.0)
+    Esta es la CAPA 5 (Servicios) de la metodología Punto 42 v3.0
+.DESCRIPTION
+    Transforma los Markdowns de sistemas en HTMLs branded con:
+    - Diseño profesional TM01
+    - Métricas destacadas
+    - Certificación Punto 42
+    - Responsive & Print-friendly
 #>
 
 $ErrorActionPreference = "Stop"
@@ -10,86 +16,149 @@ $scriptPath = $PSScriptRoot
 $proyectRoot = Split-Path -Parent $scriptPath
 $sourceDir = Join-Path $proyectRoot "X_ENTREGABLES_CONSOLIDADOS\7_SISTEMAS_EJECUTIVOS"
 $outputDir = Join-Path $proyectRoot "X_ENTREGABLES_CONSOLIDADOS\8_DOCUMENTOS_SERVIDOS\HTML"
+$cssTemplate = Join-Path $proyectRoot "templates\tm01_executive.css"
 
-Write-Host "Source: $sourceDir"
-Write-Host "Output: $outputDir"
+Write-Host "🧑‍🍳 INICIANDO 'COCINADO' DE EJECUTIVOS (Recipe TM01 v1.0)..." -ForegroundColor Yellow
+Write-Host "Source: $sourceDir" -ForegroundColor Cyan
+Write-Host "Output: $outputDir" -ForegroundColor Cyan
 
 # Crear directorio de salida si no existe
 if (-not (Test-Path -LiteralPath $outputDir)) {
     New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
-    Write-Host "📂 Directorio creado: $outputDir" -ForegroundColor Cyan
+    Write-Host "📂 Directorio creado: $outputDir" -ForegroundColor Green
 }
 
-# Estilos CSS Corporativos (Clean & Professional)
-$cssContent = @"
-<style>
-    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; background-color: #f9f9f9; border: 1px solid #ddd; }
-    h1 { color: #004085; border-bottom: 2px solid #004085; padding-bottom: 10px; margin-top: 0; }
-    h2 { color: #0056b3; margin-top: 30px; border-bottom: 1px solid #ddd; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
-    th, td { padding: 12px; border-bottom: 1px solid #dee2e6; text-align: left; }
-    th { background-color: #e9ecef; }
-    blockquote { background-color: #e8f4fd; border-left: 5px solid #007bff; padding: 15px; margin: 20px 0; }
-    .footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 12px; color: #666; text-align: center; }
-    .timestamp { color: #28a745; font-weight: bold; }
-</style>
-"@
+# Verificar que existe el CSS template
+if (-not (Test-Path -LiteralPath $cssTemplate)) {
+    Write-Host "❌ ERROR: No se encontró el template CSS en: $cssTemplate" -ForegroundColor Red
+    exit 1
+}
 
-$cssFile = Join-Path $scriptPath "temp_style_$(Get-Date -Format 'yyyyMMddHHmmss').css"
-$cssContent | Set-Content -LiteralPath $cssFile -Encoding UTF8
+# Leer CSS template
+$cssContent = Get-Content -LiteralPath $cssTemplate -Raw -Encoding UTF8
 
+# Obtener archivos Markdown
 $files = Get-ChildItem -LiteralPath $sourceDir -Filter "*.md"
 
-Write-Host "🧑‍🍳 INICIANDO 'COCINADO' DE EJECUTIVOS (v3.0)..." -ForegroundColor Yellow
+if ($files.Count -eq 0) {
+    Write-Host "⚠️  No se encontraron archivos .md en $sourceDir" -ForegroundColor Yellow
+    exit 0
+}
+
+Write-Host "📄 Archivos a procesar: $($files.Count)" -ForegroundColor Cyan
+Write-Host ""
 
 foreach ($file in $files) {
     $inputPath = $file.FullName
     $baseName = $file.BaseName
     $outputPath = Join-Path $outputDir "$baseName.html"
     
-    $date = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    
-    $footerContent = @"
-<div class='footer'>
-    <p>Documento generado automáticamente por <strong>Metodologia Punto 42 v3.0</strong></p>
-    <p>Fuente de Verdad: <strong>T05 (Ingeniería de Detalle)</strong> | Validación: <span class='timestamp'>$date</span></p>
-    <p>APP Puerto Salgar - Barrancabermeja | TM01</p>
-</div>
-"@
-    $footerFile = Join-Path $scriptPath "temp_footer_$($baseName)_$(Get-Date -Format 'HHmmss').html"
-    $footerContent | Set-Content -LiteralPath $footerFile -Encoding UTF8
-
     Write-Host "🍳 Cocinando: $baseName.html..." -NoNewline
-
+    
     try {
-        # Usar invocación directa en lugar de Start-Process para manejar correctamente rutas con espacios
-        $exitCode = 0
+        # Leer contenido Markdown
+        $markdownContent = Get-Content -LiteralPath $inputPath -Raw -Encoding UTF8
         
-        # Ejecutar Pandoc y capturar salida
-        $output = & pandoc $inputPath -o $outputPath -s --metadata "title=$baseName" -H $cssFile -A $footerFile 2>&1
-        $exitCode = $LASTEXITCODE
+        # Extraer metadatos del Markdown (primera línea con #)
+        $systemName = "Sistema TM01"
+        if ($markdownContent -match '^#\s+(.+)') {
+            $systemName = $matches[1]
+        }
         
-        if ($exitCode -eq 0) {
-            Write-Host " [OK] ✅" -ForegroundColor Green
+        # Determinar ID del sistema
+        $systemId = "SISTEMA XX"
+        if ($baseName -match 'SISTEMA_(\d+)') {
+            $systemId = "SISTEMA $($matches[1])"
         }
-        else {
-            Write-Host " [FAIL] ❌ (Exit Code: $exitCode)" -ForegroundColor Red
-            if ($output) {
-                Write-Host "  Error: $output" -ForegroundColor Red
-            }
+        
+        # Generar timestamp
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        
+        # Convertir Markdown a HTML (solo body) usando Pandoc
+        $tempMd = Join-Path $env:TEMP "temp_$baseName.md"
+        $markdownContent | Set-Content -LiteralPath $tempMd -Encoding UTF8
+        
+        $htmlBody = & pandoc $tempMd -t html --no-highlight 2>&1
+        
+        if ($LASTEXITCODE -ne 0) {
+            throw "Pandoc falló: $htmlBody"
         }
+        
+        Remove-Item -LiteralPath $tempMd -ErrorAction SilentlyContinue
+        
+        # Construir HTML completo con template
+        $htmlOutput = @"
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Metodología Punto 42 v3.0">
+    <meta name="author" content="TM01 Troncal Magdalena">
+    <title>$systemName - TM01 Executive Report</title>
+    <style>
+$cssContent
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="report-header">
+        <div class="brand">🛣️ TM01 | Troncal Magdalena</div>
+        <div class="system-badge">$systemId</div>
+    </header>
+
+    <!-- Metrics Bar -->
+    <div class="metrics-bar">
+        <div class="metric">
+            <span class="label">Estado</span>
+            <span class="value success">✅ CERTIFICADO</span>
+        </div>
+        <div class="metric">
+            <span class="label">Versión</span>
+            <span class="value">3.0</span>
+        </div>
+        <div class="metric">
+            <span class="label">Metodología</span>
+            <span class="value">Punto 42</span>
+        </div>
+        <div class="metric">
+            <span class="label">Fuente</span>
+            <span class="value">T05</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content">
+$htmlBody
+        </div>
+    </div>
+
+    <!-- Footer / Certification -->
+    <footer class="certification">
+        <div class="seal">
+            <p><strong>🔒 CERTIFICACIÓN PUNTO 42 v3.0</strong></p>
+            <p>Documento generado automáticamente desde Ingeniería de Detalle (T05)</p>
+        </div>
+        <p style="margin-top: 1.5rem;">Validación: <span class="timestamp">$timestamp</span></p>
+        <p>APP Puerto Salgar - Barrancabermeja | Gerencia Técnica TM01</p>
+    </footer>
+</body>
+</html>
+"@
+        
+        # Escribir HTML final
+        $htmlOutput | Set-Content -LiteralPath $outputPath -Encoding UTF8
+        
+        Write-Host " [OK] ✅" -ForegroundColor Green
+        
     }
     catch {
-        Write-Host " [ERROR] ❌ $_" -ForegroundColor Red
-    }
-    finally {
-        # Limpiar archivo temporal de footer de esta iteración
-        Remove-Item -LiteralPath $footerFile -ErrorAction SilentlyContinue
+        Write-Host " [ERROR] ❌" -ForegroundColor Red
+        Write-Host "  Detalle: $_" -ForegroundColor Red
     }
 }
 
-
-# Limpiar archivo CSS temporal
-Remove-Item -LiteralPath $cssFile -ErrorAction SilentlyContinue
-
-Write-Host "DONE."
+Write-Host ""
+Write-Host "✅ COCINADO COMPLETADO" -ForegroundColor Green
+Write-Host "📁 Reportes disponibles en: $outputDir" -ForegroundColor Cyan
