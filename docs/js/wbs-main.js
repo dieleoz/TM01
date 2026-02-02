@@ -216,11 +216,13 @@ function renderizarWBS() {
     }
 
     let html = '';
-    const capitulos = filteredData.filter(item => item.nivel === 1);
+    const capitulos = filteredData.filter(item => item.nivel === 1 || item.tipo === "capitulo");
 
     capitulos.forEach(capitulo => {
-        // Filtrar items del capítulo (nivel 3 que empiecen con el código del capítulo)
-        const itemsCapitulo = filteredData.filter(item => item.item.startsWith(capitulo.item + '.') && item.nivel === 3);
+        // Filtrar items del capítulo usando tipo==="item" en lugar de nivel===3
+        const itemsCapitulo = filteredData.filter(item => 
+            item.item.startsWith(capitulo.item + '.') && item.tipo === "item"
+        );
 
         let totalCapituloUSD = 0;
         let totalCapituloCOP = 0;
@@ -251,7 +253,10 @@ function renderizarWBS() {
                 </div>
             </div>`;
 
-        const subcapitulos = filteredData.filter(item => item.nivel === 2 && item.item.startsWith(capitulo.item + '.'));
+        // Filtrar subcapítulos usando tipo==="subcapitulo" en lugar de nivel===2
+        const subcapitulos = filteredData.filter(item => 
+            (item.tipo === "subcapitulo" || item.nivel === 2) && item.item.startsWith(capitulo.item + '.')
+        );
 
         subcapitulos.forEach(subcapitulo => {
             html += `
@@ -260,7 +265,10 @@ function renderizarWBS() {
                     <span class="item-desc">${subcapitulo.descripcion}</span>
                 </div>`;
 
-            const items = filteredData.filter(item => item.nivel === 3 && item.item.startsWith(subcapitulo.item + '.'));
+            // Filtrar items usando tipo==="item"
+            const items = filteredData.filter(item => 
+                item.tipo === "item" && item.item.startsWith(subcapitulo.item + '.')
+            );
 
             items.forEach(item => {
                 html += `
