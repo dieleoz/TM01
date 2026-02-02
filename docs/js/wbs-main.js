@@ -16,11 +16,12 @@
 
 
 
-
-
 // Función para verificar y cargar datos cuando el script externo esté listo
 function checkAndInit() {
-    if (typeof TM01MasterData !== 'undefined') {
+    // Verificar que al menos uno de los archivos de datos esté cargado
+    if (typeof window.wbsDataGlobal !== 'undefined' ||
+        typeof window.datos_wbs !== 'undefined' ||
+        typeof window.tm01Data !== 'undefined') {
         initWBS();
     } else {
         setTimeout(checkAndInit, 50);
