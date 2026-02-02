@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Compras - TM01</title>
+    <link rel="stylesheet" href="css/tm01-design-system.css">
+    <style>
+        .procurement-hero {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: var(--space-2xl);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-2xl);
+            text-align: center;
+        }
+
+        .procurement-hero h1 {
+            margin: 0 0 var(--space-md) 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .procurement-hero p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .role-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            margin-top: var(--space-md);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .instructions-box {
+            background: var(--info-bg);
+            border-left: 4px solid var(--info);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .instructions-box h3 {
+            margin-top: 0;
+            color: var(--info);
+        }
+
+        .instructions-box ol {
+            margin: var(--space-md) 0 0 var(--space-lg);
+        }
+
+        .instructions-box li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .rfq-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            transition: all 0.2s ease;
+        }
+
+        .rfq-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--tm01-accent);
+        }
+
+        .rfq-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .rfq-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--success-bg);
+            color: var(--success);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75em;
+            flex-shrink: 0;
+        }
+
+        .rfq-title {
+            flex: 1;
+        }
+
+        .rfq-title h3 {
+            margin: 0 0 var(--space-xs) 0;
+            color: var(--text-main);
+            font-size: 1.25rem;
+        }
+
+        .rfq-title .rfq-code {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            font-family: var(--font-mono);
+        }
+
+        .rfq-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+            padding: var(--space-md);
+            background: var(--bg-hover);
+            border-radius: var(--radius-md);
+        }
+
+        .rfq-metric {
+            text-align: center;
+        }
+
+        .rfq-metric-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-sub);
+            margin-bottom: var(--space-xs);
+        }
+
+        .rfq-metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--tm01-accent);
+        }
+
+        .rfq-description {
+            color: var(--text-sub);
+            margin-bottom: var(--space-md);
+            line-height: 1.6;
+        }
+
+        .warning-box {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning);
+            padding: var(--space-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .warning-box h3 {
+            margin-top: 0;
+            color: var(--warning);
+        }
+
+        .warning-box ul {
+            margin: var(--space-md) 0 0 var(--space-lg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="tm01-navbar">
+        <div class="tm01-brand">
+            📦 Dashboard de Compras
+            <span class="tm01-status-badge" style="margin-left: 10px; background: var(--success);">Procurement</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <a href="WBS_Menu_Principal.html" class="tm01-btn tm01-btn-link">← Volver al Menú</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="tm01-container" style="padding-top: var(--space-xl);">
+
+        <!-- Hero Section -->
+        <div class="procurement-hero">
+            <h1>📦 Dashboard de Compras</h1>
+            <p>Solicitudes de Cotización (RFQs) para Analistas de Compras</p>
+            <div class="role-badge">✅ Rol: Analista de Compras / Procurement</div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-box">
+            <h3>📋 ¿Cómo usar este dashboard?</h3>
+            <ol>
+                <li><strong>Selecciona el sistema</strong> que necesitas comprar (ej. CCTV, SOS, Fibra Óptica)</li>
+                <li><strong>Haz clic en "Abrir RFQ"</strong> para ver el documento completo</li>
+                <li><strong>Dentro del RFQ encontrarás:</strong>
+                    <ul>
+                        <li>Tabla de cantidades exactas</li>
+                        <li>Especificaciones técnicas defensivas</li>
+                        <li>Precios unitarios y totales</li>
+                        <li>Condiciones de entrega y garantías</li>
+                    </ul>
+                </li>
+                <li><strong>Usa el RFQ</strong> para crear tu solicitud de cotización a proveedores</li>
+            </ol>
+        </div>
+
+        <!-- Warning Box -->
+        <div class="warning-box">
+            <h3>⚠️ Documentos que NO debes usar para compras</h3>
+            <ul>
+                <li><strong>Reportes Ejecutivos (HTML):</strong> Son resúmenes para gerencia, no tienen tablas de compra
+                </li>
+                <li><strong>Gestión de Cambios:</strong> Es para MODIFICAR cantidades ya aprobadas, no para comprar</li>
+                <li><strong>SOLICITUD_COMPRA_EQUIPOS_L2/L3:</strong> Archivos antiguos y corruptos (ignorar)</li>
+            </ul>
+        </div>
+
+        <!-- RFQs Section -->
+        <h2 style="color: var(--tm01-primary); margin-bottom: var(--space-xl);">📦 RFQs Disponibles (13 Sistemas)</h2>
+
+        <!-- RFQ: CCTV -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">📹</div>
+                <div class="rfq-title">
+                    <h3>CCTV - Videovigilancia</h3>
+                    <div class="rfq-code">RFQ-003-CCTV v2.0</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Cantidad</div>
+                    <div class="rfq-metric-value">9 cámaras</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">CAPEX</div>
+                    <div class="rfq-metric-value">$116,100</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Tipo</div>
+                    <div class="rfq-metric-value">PTZ IP</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Cámaras IP PTZ 4MP con zoom 32×, instalación en postes, alimentación PoE+, almacenamiento 30 días.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_003_CCTV_v2.0.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: SOS -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">🆘</div>
+                <div class="rfq-title">
+                    <h3>SOS - Postes de Emergencia</h3>
+                    <div class="rfq-code">RFQ-002-SOS v2.0</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Cantidad</div>
+                    <div class="rfq-metric-value">98 postes</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">CAPEX</div>
+                    <div class="rfq-metric-value">$2,450,000</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Separación</div>
+                    <div class="rfq-metric-value">3 km</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Postes SOS con comunicación VoIP, botón de emergencia, panel solar, poste 6m galvanizado.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_002_SOS_Postes_v2.0.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: Fibra Óptica -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">🌐</div>
+                <div class="rfq-title">
+                    <h3>Fibra Óptica - Backbone</h3>
+                    <div class="rfq-code">RFQ-001-FIBRA v2.0</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Longitud</div>
+                    <div class="rfq-metric-value">322 km</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">CAPEX</div>
+                    <div class="rfq-metric-value">$7,980,000</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Hilos</div>
+                    <div class="rfq-metric-value">48H</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Cable microfibra 48 hilos, instalación subterránea, cajas de empalme, soplado, equipos L2/L3.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_001_FIBRA_OPTICA_v2.0.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: PMV -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">📊</div>
+                <div class="rfq-title">
+                    <h3>PMV - Paneles de Mensaje Variable</h3>
+                    <div class="rfq-code">RFQ-008-PMV v1.0</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Cantidad</div>
+                    <div class="rfq-metric-value">43 paneles</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">CAPEX</div>
+                    <div class="rfq-metric-value">$2,390,000</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Tipo</div>
+                    <div class="rfq-metric-value">LED Full Color</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Paneles LED full color, control remoto desde CCO, mensajes dinámicos, alimentación solar/red.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_008_PMV_v1.0.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: Radares -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">📡</div>
+                <div class="rfq-title">
+                    <h3>Radares Sancionatorios</h3>
+                    <div class="rfq-code">RFQ-007-RADARES v2.1</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Cantidad</div>
+                    <div class="rfq-metric-value">13 nodos</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">CAPEX</div>
+                    <div class="rfq-metric-value">$38,461</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Marca</div>
+                    <div class="rfq-metric-value">Dahua</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Radares Doppler con ANPR, detección de velocidad, certificación metrológica, pórticos.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_007_RADARES_SANCIONATORIOS_v2.1.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: Gálibos -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">📏</div>
+                <div class="rfq-title">
+                    <h3>Gálibos - Detección de Altura</h3>
+                    <div class="rfq-code">RFQ-004-GALIBOS v1.0</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Cantidad</div>
+                    <div class="rfq-metric-value">8 sistemas</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Ubicación</div>
+                    <div class="rfq-metric-value">Puentes</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Sensores de altura vehicular, alertas luminosas, integración con PMV, protección de puentes.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_004_GALIBOS_v1.0.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: SCADA CCO -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">🖥️</div>
+                <div class="rfq-title">
+                    <h3>SCADA - Software CCO</h3>
+                    <div class="rfq-code">RFQ-005-SCADA v1.0</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Tipo</div>
+                    <div class="rfq-metric-value">Software</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Integración</div>
+                    <div class="rfq-metric-value">Todos ITS</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Plataforma SCADA para control centralizado, videowall, gestión de incidentes, reportes.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_005_SCADA_CCO_v1.0.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: ETD -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">🚗</div>
+                <div class="rfq-title">
+                    <h3>ETD - Estaciones de Conteo</h3>
+                    <div class="rfq-code">RFQ-006-ETD v1.0</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Tipo</div>
+                    <div class="rfq-metric-value">Conteo</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Tecnología</div>
+                    <div class="rfq-metric-value">Video</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Estaciones de conteo vehicular, clasificación por tipo, integración con CCTV existente.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_006_ETD_v1.0.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- RFQ: Monitores Velocidad -->
+        <div class="rfq-card">
+            <div class="rfq-header">
+                <div class="rfq-icon">⚡</div>
+                <div class="rfq-title">
+                    <h3>Monitores de Velocidad Informativos</h3>
+                    <div class="rfq-code">RFQ-007-MONITORES v2.1</div>
+                </div>
+            </div>
+            <div class="rfq-summary">
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Tipo</div>
+                    <div class="rfq-metric-value">Informativo</div>
+                </div>
+                <div class="rfq-metric">
+                    <div class="rfq-metric-label">Función</div>
+                    <div class="rfq-metric-value">Prevención</div>
+                </div>
+            </div>
+            <div class="rfq-description">
+                Monitores LED de velocidad, radar Doppler, mensajes "Su velocidad es...", alimentación solar.
+            </div>
+            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_007_MONITORES_VELOCIDAD_INFORMATIVOS_v2.1.md" target="_blank"
+                class="tm01-btn tm01-btn-primary">Abrir RFQ</a>
+        </div>
+
+        <!-- Footer Info -->
+        <div
+            style="margin-top: var(--space-2xl); padding: var(--space-xl); background: var(--bg-hover); border-radius: var(--radius-lg); text-align: center;">
+            <h3 style="color: var(--tm01-primary); margin-bottom: var(--space-sm);">💡 ¿Necesitas ayuda?</h3>
+            <p style="color: var(--text-sub); margin-bottom: var(--space-md);">
+                Si tienes dudas sobre qué RFQ usar o cómo interpretarlo, contacta al equipo técnico.
+            </p>
+            <div
+                style="display: flex; justify-content: center; gap: var(--space-lg); flex-wrap: wrap; font-size: 0.9em;">
+                <div><strong>Email:</strong> compras@proyecto.com</div>
+                <div><strong>Tel:</strong> +57 (1) 234-5678</div>
+                <div><strong>Horario:</strong> Lun-Vie 8am-6pm</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
