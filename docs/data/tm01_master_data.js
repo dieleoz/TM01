@@ -194,8 +194,14 @@ if (typeof module !== 'undefined' && module.exports) {
 // Compatibilidad con navegador (para dashboards)
 if (typeof window !== 'undefined') {
     window.TM01_MASTER_DATA = tm01MasterData;
+    window.tm01MasterData = tm01MasterData; // Compatibility for dashboard-common.js
     window.tm01Data = tm01MasterData.data;
 }
 
 // Compatibilidad legacy
 this.data = tm01MasterData.data;
+
+// Function required by dashboards
+window.obtenerResumenContractual = function () {
+    return tm01MasterData.data.sistemas;
+};
