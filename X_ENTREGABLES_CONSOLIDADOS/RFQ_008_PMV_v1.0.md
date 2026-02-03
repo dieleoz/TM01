@@ -242,11 +242,12 @@ EPC Concesión TM01 Troncal Magdalena
 | **1. PMV TARIFARIO (Carril)** | **14** | **$5,000** | **$70,000** |
 | Panel P10 Ámbar/RGB (IP/REV) | 14 | $5,000 | $70,000 |
 | **TOTAL PEAJES** | **14** | | **$70,000** |
-> Actualizado: 2026-02-02
+> Actualizado: 2026-02-03
 <!-- BLOQUE AUTOMATICO FIN -->
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
 
 
 

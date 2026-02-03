@@ -607,11 +607,12 @@ Solicitar oferta integral para el suministro, instalación, configuración, inte
 | **Reemplazo equipos** | 1-2 cámaras/año | 
 ,800 |
 | **TOTAL OPEX** | - | **$18,000/año** |
-> Actualizado: 2026-02-02
+> Actualizado: 2026-02-03
 <!-- BLOQUE AUTOMATICO FIN -->
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
 
 
 

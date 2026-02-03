@@ -161,11 +161,12 @@ Anexos recomendados:
 | **OPEX (20 años)** | 
 ,176,000 | 32.4% |
 | **TOTAL 20 AÑOS** | **$3,626,000** | **100%** |
-> Actualizado: 2026-02-02
+> Actualizado: 2026-02-03
 <!-- BLOQUE AUTOMATICO FIN -->
 
 ---
 > CERTIFICACION DE COMPRAS: Sincronizado con T05. Cantidades oficiales.
+
 
 
 
