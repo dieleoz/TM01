@@ -2310,6 +2310,60 @@ Transmisión de video en tiempo real desde cámaras CCTV al Centro de Control Op
 
 ---
 
+## FASE 8: LAYER 5 - AUTOMATIZACIÓN DE ENTREGABLES
+
+### Duración: 2-3 días
+
+### PASO 8.1: Configurar "La Cocina" (Scripts de Automatización)
+
+La **Capa 5 (Services)** es donde la ingeniería (Capa 2) se transforma en productos entregables. No se edita manualmente.
+
+#### Estructura de Carpetas Layer 5:
+```bash
+X_ENTREGABLES_CONSOLIDADOS/
+├── 1_RFQs/                     # Solicitudes de Cotización (Blindados)
+├── 8_DOCUMENTOS_SERVIDOS/      # HTMLs Ejecutivos y Paquetes Finales
+└── scripts/                    # Scripts de "Cocina"
+```
+
+#### Script 1: `cocinar_rfqs.ps1`
+**Propósito:** Inyectar cantidades y precios del T05 directamente en los RFQs Markdown.
+**Lógica:**
+1. Lee `V. Ingenieria de Detalle/T05_*.md` (Fuente de Verdad).
+2. Busca el bloque `<!-- BLOQUE AUTOMATICO -->` en el RFQ.
+3. Reemplaza las tablas de precios con los datos maestros.
+4. Estampa fecha y versión de certificación.
+
+#### Script 2: `cocinar_ejecutivos.ps1`
+**Propósito:** Generar resúmenes ejecutivos HTML para la gerencia.
+**Lógica:**
+1. Lee `III. Ingenieria Conceptual/T01_*.md`.
+2. Convierte Markdown a HTML con estilo corporativo (CSS).
+3. Genera un "One-Pager" por sistema.
+
+### PASO 8.2: Implementación en Proyecto Vehicular
+
+1.  **Copiar Scripts Base:** Traer `cocinar_rfqs.ps1` y `cocinar_ejecutivos.ps1` del proyecto TM01.
+2.  **Adaptar Mapeo:**
+    *   Editar el array `$SYSTEM_MAP` en los scripts.
+    *   Apuntar `RFQ_Vehicular` -> `T05_Vehicular`.
+    *   **Ejemplo:** `RFQ_008_PMV_v1.0.md` mapeado a `08_T05_Ingenieria_Detalle_PMV.md`.
+3.  **Ejecutar Prueba:**
+    ```powershell
+    ./scripts/cocinar_rfqs.ps1 -System "PMV"
+    ```
+
+### PASO 8.3: Estrategia para Proyectos Legacy (Retrofit)
+
+Si se está aplicando esto a un proyecto antiguo (**Legacy**):
+
+1.  **Ingeniería Inversa (T05):** Si no existen los T05, créalos vacíos y llénalos con los datos del presupuesto actual (Excel/PDF). Esta será tu nueva "Fuente de Verdad".
+2.  **Limpieza de RFQs:** Toma los RFQs existentes (Word/PDF), conviértelos a Markdown y añade el `<!-- BLOQUE AUTOMATICO -->` donde deben ir los precios.
+3.  **Sincronización:** Ejecuta el script.
+    *   *Resultado:* Tendrás RFQs viejos pero con precios **vivos y controlados** desde el T05.
+
+---
+
 ## ADAPTACIONES ESPECÍFICAS VEHICULAR
 
 ### Diferencias Clave vs. Proyecto Férreo

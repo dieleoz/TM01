@@ -58,6 +58,7 @@ La ingeniería se divide en 5 tiempos lógicos:
 - **`sync_wbs_tm01.ps1`:** El "Parser Inteligente". Lee los Markdown T05 y genera JSONs.
 - **`generar_specs_tecnicas.ps1` (NUEVO FASE 7):** Transforma T04 Markdown en Fichas HTML (`docs/specs/`) y genera el mapa `technical_specs_map.js` para el dashboard técnico.
 - **Validaciones Contractuales:** Documentos (`34_VALIDACION_*.md`) que certifican cumplimiento.
+- **Robustez de Interfaz:** Todo script de transformación debe garantizar compatibilidad hacia atrás con los componentes de visualización (Layer 4). **Prohibido** cambiar nombres de variables globales exportadas (ej. `window.tm01MasterData`) sin refactorizar simultáneamente el consumidor web.
 
 ### **CAPA 4: VISUALIZACIÓN (Web Dashboard)**
 *Ubicación: `docs/`*

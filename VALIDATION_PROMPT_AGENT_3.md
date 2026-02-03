@@ -35,6 +35,7 @@ Validate the complete implementation of the TM01 "Troncal Magdalena" project, in
 - [ ] `X_ENTREGABLES_CONSOLIDADOS/RFQ_008_PMV_v1.0.md` has automatic block
 - [ ] All RFQs have "CERTIFICACIÓN DE COMPRAS" seal
 - [ ] Automatic blocks contain T05 data
+- [ ] **Narrative Consistency:** Scan manual text sections for "Ghost Data" (e.g., text saying "30 cameras" when table says "9"). Flag specific contradictions.
 
 #### C. Ejecutivos HTML
 **Verify generated executivesummaries:**
