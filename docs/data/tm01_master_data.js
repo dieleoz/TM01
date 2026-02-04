@@ -70,29 +70,29 @@ class TM01MasterData {
                 {
                     sistema: "Fibra Óptica",
                     cantidad: 322, // km (293 km corredor + 29 km redundancia)
-                    capexUnitarioUSD: 3913,
-                    capexUSD: 1260000,
-                    capexCOP: 5342400000,
+                    capexUnitarioUSD: 24782, // Promedio global T05
+                    capexUSD: 7980000, // T05 Ingenieria Detalle v1.1
+                    capexCOP: 35112000000,
                     categoria: "Telecomunicaciones",
                     estado: "Validado"
                 },
                 {
                     sistema: "Switches L2",
                     cantidad: 45,
-                    capexUnitarioUSD: 5000,
-                    capexUSD: 225000,
-                    capexCOP: 954000000,
+                    capexUnitarioUSD: 0,
+                    capexUSD: 0,
+                    capexCOP: 0,
                     categoria: "Telecomunicaciones",
-                    estado: "Validado"
+                    estado: "Incluido en Fibra"
                 },
                 {
                     sistema: "Switches L3",
                     cantidad: 12,
-                    capexUnitarioUSD: 15000,
-                    capexUSD: 180000,
-                    capexCOP: 763200000,
+                    capexUnitarioUSD: 0,
+                    capexUSD: 0,
+                    capexCOP: 0,
                     categoria: "Telecomunicaciones",
-                    estado: "Validado"
+                    estado: "Incluido en Fibra"
                 },
                 {
                     sistema: "Radio FM",
@@ -147,13 +147,13 @@ class TM01MasterData {
             },
             telecomSummary: {
                 cantidad: 379, // 322 km fibra + 45 L2 + 12 L3
-                capexUSD: 1665000,
-                capexCOP: 7059600000
+                capexUSD: 7980000,
+                capexCOP: 35112000000
             },
 
             // Totales del proyecto (Audit 6.0 Certified)
-            totalCapexUSD: 9732319, // Suma de todos los sistemas
-            totalCapexCOP: 41265032560, // totalCapexUSD * 4240
+            totalCapexUSD: 16047744, // Recalculado con Telecom T05
+            totalCapexCOP: 71036433560, // Recalculado
 
             // Normativa aplicable
             normativa: {
