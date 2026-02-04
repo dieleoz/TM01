@@ -269,7 +269,7 @@ function actualizarEstadisticas() {
     // Usar la función centralizada de cálculo para consistencia (incluye AIU/IVA)
     const calc = calcularAIUIVA(filteredItems);
 
-    const nSum = filteredItems.filter(i => (i._tipoCalc === 'SUMINISTRO')).length;
+    const nSum = filteredItems.filter(i => (i._tipoCalc === 'SUMINISTRO' || i._tipoCalc === 'CONSOLIDADO' || i._tipoCalc === 'VALIDADO')).length;
     const nObra = filteredItems.filter(i => (i._tipoCalc === 'OBRA')).length;
     const nServ = filteredItems.filter(i => (i._tipoCalc === 'SERVICIO')).length;
 
