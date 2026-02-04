@@ -9,7 +9,7 @@ class TM01MasterData {
             // Metadata del proyecto
             proyecto: "TM01 Troncal Magdalena",
             longitud: 293, // km
-            trmOficial: 4240, // COP/USD (Audit 6.0)
+            trmOficial: 4400, // COP/USD (Certificado Audit 6.0)
 
             // Sistemas ITS
             sistemas: [
@@ -18,7 +18,7 @@ class TM01MasterData {
                     cantidad: 88, // Nuevos a instalar (98 total - 10 existentes)
                     capexUnitarioUSD: 25000,
                     capexUSD: 2200000,
-                    capexCOP: 9328000000,
+                    capexCOP: 9680000000,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -27,7 +27,7 @@ class TM01MasterData {
                     cantidad: 39, // 25 mainline + 14 peajes
                     capexUnitarioUSD: 60513,
                     capexUSD: 2360000,
-                    capexCOP: 10006400000,
+                    capexCOP: 10384000000,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -36,7 +36,7 @@ class TM01MasterData {
                     cantidad: 9, // Optimizado (DT-CCTV-003)
                     capexUnitarioUSD: 12900,
                     capexUSD: 116100,
-                    capexCOP: 492264000,
+                    capexCOP: 510840000,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -45,7 +45,7 @@ class TM01MasterData {
                     cantidad: 14, // Carriles
                     capexUnitarioUSD: 135015.64,
                     capexUSD: 1890219,
-                    capexCOP: 8014528560,
+                    capexCOP: 8316963600,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -54,7 +54,7 @@ class TM01MasterData {
                     cantidad: 1, // Estación bidireccional
                     capexUnitarioUSD: 551425,
                     capexUSD: 551425,
-                    capexCOP: 2338041000,
+                    capexCOP: 2426270000,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -63,7 +63,7 @@ class TM01MasterData {
                     cantidad: 3,
                     capexUnitarioUSD: 50000,
                     capexUSD: 150000,
-                    capexCOP: 636000000,
+                    capexCOP: 660000000,
                     categoria: "ITS",
                     estado: "Validado"
                 },
@@ -105,55 +105,56 @@ class TM01MasterData {
                 },
                 {
                     sistema: "ETD/RADAR",
-                    cantidad: 16, // Audit 6.0 (T05 v1.0)
-                    capexUnitarioUSD: 50000,
-                    capexUSD: 800000,
-                    capexCOP: 3392000000,
+                    cantidad: 0, // Audit 6.0 (Estrategia Hard Deck)
+                    capexUnitarioUSD: 0,
+                    capexUSD: 0,
+                    capexCOP: 0,
                     categoria: "ITS",
-                    estado: "Validado"
+                    estado: "Cero Alcance Init"
                 }
             ],
 
-            // Resúmenes por categoría
+            // Resúmenes por categoría (Audit 6.0 Certified)
             cctvSummary: {
                 cantidad: 9,
                 capexUSD: 116100,
-                capexCOP: 492264000
+                capexCOP: 510840000
             },
             sosSummary: {
                 cantidad: 88,
                 capexUSD: 2200000,
-                capexCOP: 9328000000
+                capexCOP: 9680000000
             },
             pmvSummary: {
                 cantidad: 39,
                 capexUSD: 2360000,
-                capexCOP: 10006400000
+                capexCOP: 10384000000
             },
             peajesSummary: {
                 cantidad: 14,
                 capexUSD: 1890219,
-                capexCOP: 8014528560
+                capexCOP: 8316963600
             },
             wimSummary: {
                 cantidad: 1,
                 capexUSD: 551425,
-                capexCOP: 2338041000
+                capexCOP: 2426270000
             },
             meteoSummary: {
                 cantidad: 3,
                 capexUSD: 150000,
-                capexCOP: 636000000
+                capexCOP: 660000000
             },
             telecomSummary: {
-                cantidad: 379, // 322 km fibra + 45 L2 + 12 L3
+                cantidad: 322,
                 capexUSD: 7980000,
                 capexCOP: 35112000000
             },
 
-            // Totales del proyecto (Audit 6.0 Certified)
-            totalCapexUSD: 16047744, // Recalculado con Telecom T05
-            totalCapexCOP: 71036433560, // Recalculado
+            // Totales del proyecto
+            totalCapexUSD: 15247744,
+            totalCapexCOP: 67090073600,
+
 
             // Normativa aplicable
             normativa: {

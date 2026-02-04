@@ -76,6 +76,9 @@ function inferTipoPresupuestal(item) {
     // Si son servicios profesionales / pruebas / comisionamiento
     if (servRe.test(desc)) return 'SERVICIO';
 
+    // Señales de precios finales (no agregar AIU/IVA)
+    if (/validado|consolidado|global|certificado/.test(desc)) return 'CONSOLIDADO';
+
     // Caso por defecto
     return 'SUMINISTRO';
 }
@@ -148,48 +151,44 @@ function getChapterNamesFromWBS(all) {
  */
 function calcularAIUIVA(data) {
     // Suma por capítulo y por tipo SUM/OBRA/SERV
-    const subtotales = {}; // { cap: { SUMINISTRO, OBRA, SERVICIO } }
-    let totalSuministros = 0, totalObraCivil = 0, totalServicios = 0;
+    const subtotales = {}; // { cap: { SUMINISTRO, OBRA, SERVICIO, CONSOLIDADO } }
+    let totalSuministros = 0, totalObraCivil = 0, totalServicios = 0, totalConsolidado = 0;
 
     data.forEach(i => {
         const cap = String((i.item || '').split('.')[0] || '').trim() || 'OTROS';
-        if (!subtotales[cap]) subtotales[cap] = { SUMINISTRO: 0, OBRA: 0, SERVICIO: 0 };
+        if (!subtotales[cap]) subtotales[cap] = { SUMINISTRO: 0, OBRA: 0, SERVICIO: 0, CONSOLIDADO: 0 };
 
         const cantidad = num(i.cantidad);
         const totalCOP = num(i.totalCOP) || (cantidad * num(i.vuCOP));
-        const tipo = i._tipoCalc || 'SUMINISTRO';
+        const tipo = i.tipo_presupuesto || i._tipoCalc || inferTipoPresupuestal(i);
 
-        subtotales[cap][tipo] += totalCOP;
+        if (subtotales[cap][tipo] !== undefined) {
+            subtotales[cap][tipo] += totalCOP;
+        } else {
+            subtotales[cap]['SUMINISTRO'] += totalCOP;
+        }
+
         if (tipo === 'SUMINISTRO') totalSuministros += totalCOP;
-        if (tipo === 'OBRA') totalObraCivil += totalCOP;
-        if (tipo === 'SERVICIO') totalServicios += totalCOP;
+        else if (tipo === 'OBRA') totalObraCivil += totalCOP;
+        else if (tipo === 'SERVICIO') totalServicios += totalCOP;
+        else if (tipo === 'CONSOLIDADO' || tipo === 'VALIDADO') totalConsolidado += totalCOP;
     });
 
-    // ✅ CORRECCIÓN: Los valores de tm01_master_data.js NO incluyen AIU/IVA
-    // Son costos directos base, por lo tanto:
-    // - Suministros: Base sin IVA
-    // - Servicios: Base sin IVA  
-    // - Obra: Base sin AIU
-
-    // Para suministros y servicios, asumimos que vienen con IVA incluido (19%)
+    // Cálculos
+    // Suministros y servicios vienen con IVA 19%
     const baseSum = totalSuministros / 1.19;
     const baseServ = totalServicios / 1.19;
+    const baseObra = totalObraCivil; // Obra civil viene pura, se le agrega 33% AIU
 
-    // Para obra civil, el total NO incluye AIU, es costo directo
-    const baseObra = totalObraCivil;
-
-    // Cálculos
-    const costoDirecto = baseSum + baseServ + baseObra;
-    const aiu = baseObra * 0.33;  // ✅ AIU directo sobre base obra
-
-    // IVA: 19% sobre suministros, servicios, y utilidad de obra
+    const aiu = baseObra * 0.33;
     const ivaSum = totalSuministros - baseSum;
     const ivaServ = totalServicios - baseServ;
-    const ivaUtil = baseObra * 0.05 * 0.19;  // IVA sobre utilidad (5% de obra)
+    const ivaUtil = baseObra * 0.05 * 0.19;
     const iva = ivaSum + ivaServ + ivaUtil;
 
-    // Total = Suministros + Servicios + Obra + AIU + IVA
-    const total = totalSuministros + totalServicios + totalObraCivil + aiu + iva;
+    // El consolidado NO se le agrega nada, ya es el valor final.
+    const total = totalSuministros + totalServicios + totalObraCivil + aiu + iva + totalConsolidado;
+    const costoDirecto = baseSum + baseServ + baseObra + totalConsolidado;
 
     return {
         costoDirecto,

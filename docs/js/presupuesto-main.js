@@ -149,8 +149,8 @@ function renderTabla() {
 
     tbody.innerHTML = filteredItems.map(i => {
         const cantidad = num(i.cantidad);
-        const vuUSD = num(i.vu);
-        const totalUSD = cantidad * vuUSD;
+        const vuUSD = num(i.vu) || num(i.vuUSD);
+        const totalUSD = num(i.totalUSD) || (cantidad * vuUSD);
         const vuCOP = num(i.vuCOP);
         const totalCOP = num(i.totalCOP) || (cantidad * vuCOP);
         const ufBadge = i._uf && i._uf !== 'N/A' ? `<span class="badge" style="background: #e3f2fd; color: #1976d2;">${i._uf}</span>` : '<span style="color: #999;">N/A</span>';
@@ -263,10 +263,10 @@ function renderDesglose() {
 }
 
 function actualizarEstadisticas() {
-    const totUSD = filteredItems.reduce((s, i) => s + (num(i.cantidad) * num(i.vu)), 0);
-    const totCOP = filteredItems.reduce((s, i) => s + (num(i.totalCOP) || (num(i.cantidad) * num(i.vuCOP))), 0);
+    // Totales base desde items
+    const totUSD = filteredItems.reduce((s, i) => s + (num(i.totalUSD) || (num(i.cantidad) * (num(i.vu) || num(i.vuUSD)))), 0);
 
-    // Usar la función centralizada de cálculo para consistencia
+    // Usar la función centralizada de cálculo para consistencia (incluye AIU/IVA)
     const calc = calcularAIUIVA(filteredItems);
 
     const nSum = filteredItems.filter(i => (i._tipoCalc === 'SUMINISTRO')).length;
@@ -278,8 +278,8 @@ function actualizarEstadisticas() {
         if (el) el.textContent = val;
     };
 
-    setStat('statUSD', fm(totUSD, 'USD'));
-    setStat('statCOP', fm(totCOP, 'COP'));
+    setStat('statUSD', fm(calc.total / 4400, 'USD')); // Mostrar total proyectado con impuestos
+    setStat('statCOP', fm(calc.total, 'COP'));
     setStat('statAIU', fm(calc.aiu, 'COP'));
     setStat('statIVA', fm(calc.iva, 'COP'));
     setStat('statItems', String(filteredItems.length));
