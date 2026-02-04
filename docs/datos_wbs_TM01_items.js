@@ -20,6 +20,38 @@ window.wbsDataGlobal = window.datos_wbs = {
         { item: '6.1.1', id: '6.1.1', descripcion: 'Estación Davis Vantage Pro2 Plus', sistema: 'METEO', cantidad: '2', unidad: 'UND', tipo: 'item', vu: '3415.64', vuCOP: '15,028,800', total: '6831.27', totalCOP: '30057600' },
         { item: '6.2.1', id: '6.2.1', descripcion: 'Configuracion y Montaje METEO', sistema: 'METEO', cantidad: '1', unidad: 'GLB', tipo: 'item', vu: '1000', vuCOP: '4,400,000', total: '1000', totalCOP: '4400000' },
         { item: '7', descripcion: 'SISTEMA PEAJES', id: '7', nivel: 1, sistema: 'PEAJES', tipo: 'capitulo' },
-        { item: '7.1.1', id: '7.1.1', descripcion: 'Equipamiento Peajes (Certified)', sistema: 'PEAJES', cantidad: '2', unidad: 'UND', tipo: 'item', vu: '1043288.62', vuCOP: '4,590,469,528', total: '2086577.24', totalCOP: '8346308960' }
+        { item: '7.1.1', id: '7.1.1', descripcion: 'Equipamiento Peajes (Certified)', sistema: 'PEAJES', cantidad: '2', unidad: 'UND', tipo: 'item', vu: '1043288.62', vuCOP: '4,590,469,528', total: '2086577.24', totalCOP: '8346308960' },
+
+        // CAPÍTULO 10: TELECOMUNICACIONES ITS (Restored from Audit 6.0)
+        { item: '10', descripcion: 'TELECOMUNICACIONES ITS', id: '10', nivel: 1, sistema: 'TELECOM', tipo: 'capitulo' },
+        { item: '10.1', descripcion: 'EQUIPOS ACTIVOS L2/L3', id: '10.1', nivel: 2, sistema: 'TELECOM', tipo: 'subcapitulo' },
+        { item: '10.1.1', id: '10.1.1', descripcion: 'Switches L2 Advantech EKI-7706G', sistema: 'TELECOM', cantidad: '84', unidad: 'UND', tipo: 'item', vu: '258', vuCOP: '1,135', total: '21672', totalCOP: '95340' },
+        { item: '10.1.2', id: '10.1.2', descripcion: 'Switches L3 Cisco C9300-24P-E', sistema: 'TELECOM', cantidad: '7', unidad: 'UND', tipo: 'item', vu: '4525', vuCOP: '19,904', total: '31675', totalCOP: '139328' },
+        { item: '10.1.3', id: '10.1.3', descripcion: 'Stock repuestos L2 (25%)', sistema: 'TELECOM', cantidad: '1', unidad: 'GLB', tipo: 'item', vu: '5418', vuCOP: '23,840', total: '5418', totalCOP: '23840' },
+        { item: '10.1.4', id: '10.1.4', descripcion: 'Stock repuestos L3 (25%)', sistema: 'TELECOM', cantidad: '1', unidad: 'GLB', tipo: 'item', vu: '6902', vuCOP: '30,370', total: '6902', totalCOP: '30370' },
+
+        { item: '10.2', descripcion: 'FIBRA ÓPTICA - MATERIALES', id: '10.2', nivel: 2, sistema: 'TELECOM', tipo: 'subcapitulo' },
+        { item: '10.2.1', id: '10.2.1', descripcion: 'Cable fibra óptica 48h Lanpro', sistema: 'TELECOM', cantidad: '314824', unidad: 'ML', tipo: 'item', vu: '1.5', vuCOP: '6,600', total: '472236', totalCOP: '2077838400' },
+        { item: '10.2.2', id: '10.2.2', descripcion: 'Cable fibra óptica 12h Lanpro', sistema: 'TELECOM', cantidad: '10856', unidad: 'ML', tipo: 'item', vu: '1.5', vuCOP: '6,600', total: '16284', totalCOP: '71649600' },
+        { item: '10.2.3', id: '10.2.3', descripcion: 'Cajas empalme 120×120', sistema: 'TELECOM', cantidad: '185', unidad: 'UND', tipo: 'item', vu: '375', vuCOP: '1,650,000', total: '69375', totalCOP: '305250000' },
+        { item: '10.2.4', id: '10.2.4', descripcion: 'Cajas empalme 80×80', sistema: 'TELECOM', cantidad: '65', unidad: 'UND', tipo: 'item', vu: '344.1', vuCOP: '1,513,930', total: '22366.5', totalCOP: '98405450' },
+        { item: '10.2.5', id: '10.2.5', descripcion: 'Cajas empalme 60×60', sistema: 'TELECOM', cantidad: '843', unidad: 'UND', tipo: 'item', vu: '126.8', vuCOP: '557,920', total: '106892.4', totalCOP: '470329560' },
+        { item: '10.2.6', id: '10.2.6', descripcion: 'Cruces especiales puentes', sistema: 'TELECOM', cantidad: '4132', unidad: 'ML', tipo: 'item', vu: '34.5', vuCOP: '152,000', total: '142554', totalCOP: '628064000' },
+        { item: '10.2.7', id: '10.2.7', descripcion: 'Cruces especiales muros', sistema: 'TELECOM', cantidad: '236', unidad: 'ML', tipo: 'item', vu: '34.5', vuCOP: '152,000', total: '8142', totalCOP: '35872000' },
+        { item: '10.2.8', id: '10.2.8', descripcion: 'Cruces especiales box culvert', sistema: 'TELECOM', cantidad: '6732', unidad: 'ML', tipo: 'item', vu: '34.5', vuCOP: '152,000', total: '232254', totalCOP: '1023264000' },
+        { item: '10.2.9', id: '10.2.9', descripcion: 'Cruces especiales alcantarillas', sistema: 'TELECOM', cantidad: '2006', unidad: 'ML', tipo: 'item', vu: '34.5', vuCOP: '152,000', total: '69207', totalCOP: '304912000' },
+        { item: '10.2.10', id: '10.2.10', descripcion: 'Empalmes y conectores globales', sistema: 'TELECOM', cantidad: '1', unidad: 'GLB', tipo: 'item', vu: '39.7', vuCOP: '174,801', total: '39.7', totalCOP: '174801' },
+
+        { item: '10.3', descripcion: 'OBRA CIVIL TELECOM', id: '10.3', nivel: 2, sistema: 'TELECOM', tipo: 'subcapitulo' },
+        { item: '10.3.1', id: '10.3.1', descripcion: 'Excavación asfalto + tritubo', sistema: 'TELECOM', cantidad: '27140', unidad: 'ML', tipo: 'item', vu: '18.17', vuCOP: '79,934', total: '493134', totalCOP: '2169270960' },
+        { item: '10.3.2', id: '10.3.2', descripcion: 'Excavación andén + tritubo', sistema: 'TELECOM', cantidad: '13570', unidad: 'ML', tipo: 'item', vu: '18.17', vuCOP: '79,934', total: '246567', totalCOP: '1084635480' },
+        { item: '10.3.3', id: '10.3.3', descripcion: 'Excavación blanda + tritubo', sistema: 'TELECOM', cantidad: '238560', unidad: 'ML', tipo: 'item', vu: '5.19', vuCOP: '22,839', total: '1238126', totalCOP: '5448339840' },
+        { item: '10.3.4', id: '10.3.4', descripcion: 'Instalación cruces especiales (HDD)', sistema: 'TELECOM', cantidad: '13920', unidad: 'ML', tipo: 'item', vu: '11.7', vuCOP: '51,500', total: '162864', totalCOP: '716880000' },
+        { item: '10.3.5', id: '10.3.5', descripcion: 'Instalación cajas empalme', sistema: 'TELECOM', cantidad: '1257', unidad: 'UND', tipo: 'item', vu: '111.18', vuCOP: '489,200', total: '139754', totalCOP: '615025000' },
+
+        { item: '10.4', descripcion: 'HALADO E INSTALACIÓN', id: '10.4', nivel: 2, sistema: 'TELECOM', tipo: 'subcapitulo' },
+        { item: '10.4.1', id: '10.4.1', descripcion: 'Halado fibra óptica 48h', sistema: 'TELECOM', cantidad: '293190', unidad: 'ML', tipo: 'item', vu: '1.2', vuCOP: '5,280', total: '351828', totalCOP: '1547043200' },
+        { item: '10.4.2', id: '10.4.2', descripcion: 'Halado fibra óptica 12h', sistema: 'TELECOM', cantidad: '9440', unidad: 'ML', tipo: 'item', vu: '1.4', vuCOP: '6,160', total: '13216', totalCOP: '58150400' },
+        { item: '10.4.3', id: '10.4.3', descripcion: 'Trabajos instalación especializada', sistema: 'TELECOM', cantidad: '1', unidad: 'GLB', tipo: 'item', vu: '50000', vuCOP: '220,000,000', total: '50000', totalCOP: '220000000' }
     ]
 };
