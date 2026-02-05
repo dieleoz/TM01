@@ -179,10 +179,10 @@
                             protocolos estrictos.
                         </li>
                         <li style="background: var(--bg-hover); padding: 10px; border-radius: var(--radius-md);">
-                            <strong>Disponibilidad FO:</strong> Cobertura extensa (293 km); requiere redundancia.
+                            <strong>Logística de Acopios:</strong> Lote 3 (Feb 2027) es crítico para UF11.
                         </li>
                         <li style="background: var(--bg-hover); padding: 10px; border-radius: var(--radius-md);">
-                            <strong>Plazos Contractuales:</strong> Ruta crítica en UF5 y UF0 (Mes 36).
+                            <strong>Ruta Crítica:</strong> UF11 y UF5.1 (Fin Oct 2028). Sin margen de holgura.
                         </li>
                     </ul>
                 </div>
@@ -193,14 +193,14 @@
                 <div class="tm01-section-content">
                     <div class="tm01-card"
                         style="background: var(--success-bg); border-color: var(--success); padding: var(--space-md);">
-                        <h3 style="color: #065f46; font-size: 1rem;">Foco PMO</h3>
-                        <p style="color: #064e3b; margin:0; font-size: 0.9rem;">Supervisión intensiva a Items Pareto
-                            80%. Priorizar cierre de DTs.</p>
+                        <h3 style="color: #065f46; font-size: 1rem;">Optimización Financiera CCO</h3>
+                        <p style="color: #064e3b; margin:0; font-size: 0.9rem;">Certificado: $845k USD (Ahorro $1.5M).
+                            Mantener arquitectura COTS abierta.</p>
                     </div>
                     <div style="margin-top: 10px; font-size: 0.9rem; color: var(--text-sub);">
-                        <p>• <strong>QA Datos:</strong> Validar coherencia WBS vs Presupuesto en cada sincronización.
+                        <p>• <strong>Provisión Lotes:</strong> Asegurar Lote 1 en Feb 2026 para flujo inicial.</p>
+                        <p>• <strong>Foco UF11:</strong> Seguimiento semanal a frentes de obra en el tramo más largo.
                         </p>
-                        <p>• <strong>Plan de Obra:</strong> Mantener alineación con "Hard Deck" certificado.</p>
                     </div>
                 </div>
             </div>
@@ -228,14 +228,14 @@
             // Usar método oficial para obtener estadísticas
             const stats = md.getEstadisticas();
             const resumenContractual = md.getContractualSummary();
-            const items = md.data.wbs.filter(i => i.tipo === 'item');
+            const items = md.getWBSItems();
 
             // Calcular totales generales
             let totalUSD = 0, totalCOP = 0;
             const sistemasSet = new Set();
 
             items.forEach(i => {
-                totalUSD += n(i.total);
+                totalUSD += n(i.totalUSD || i.total);
                 totalCOP += n(i.totalCOP);
                 if (i.sistema) sistemasSet.add(i.sistema);
             });

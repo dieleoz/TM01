@@ -1,835 +1,681 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T04 Spec</title>
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            padding: 40px;
-            background: #f8fafc;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
+        body { font-family: 'Segoe UI', sans-serif; padding: 40px; background: #f8fafc; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        
         /* Headers */
-        h1 {
-            color: #0f172a;
-            margin: 0 0 20px 0;
-            font-size: 24px;
-            border-bottom: 2px solid #f59e0b;
-            padding-bottom: 15px;
-        }
-
-        h2 {
-            color: #1e40af;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 18px;
-            border-left: 5px solid #f59e0b;
-            padding-left: 15px;
-            background: #f8fafc;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        h3 {
-            color: #334155;
-            margin-top: 20px;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
+        h1 { color: #0f172a; margin: 0 0 20px 0; font-size: 24px; border-bottom: 2px solid #f59e0b; padding-bottom: 15px; }
+        h2 { color: #1e40af; margin-top: 40px; margin-bottom: 20px; font-size: 18px; border-left: 5px solid #f59e0b; padding-left: 15px; background: #f8fafc; padding-top: 5px; padding-bottom: 5px; }
+        h3 { color: #334155; margin-top: 20px; font-size: 16px; font-weight: 700; }
+        
         /* Tables */
-        .table-responsive {
-            overflow-x: auto;
-            margin-bottom: 20px;
-        }
-
-        .spec-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        .spec-table th,
-        .spec-table td {
-            padding: 12px;
-            border: 1px solid #e2e8f0;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        .spec-table thead tr {
-            background: #f1f5f9;
-            color: #334155;
-            font-weight: bold;
-        }
-
-        .spec-table tbody tr:nth-child(even) {
-            background: #f8fafc;
-        }
-
-        .spec-table tbody tr:hover {
-            background: #f1f5f9;
-        }
-
+        .table-responsive { overflow-x: auto; margin-bottom: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .spec-table th, .spec-table td { padding: 12px; border: 1px solid #e2e8f0; text-align: left; vertical-align: top; }
+        .spec-table thead tr { background: #f1f5f9; color: #334155; font-weight: bold; }
+        .spec-table tbody tr:nth-child(even) { background: #f8fafc; }
+        .spec-table tbody tr:hover { background: #f1f5f9; }
         /* First column styling for parameters */
-        .spec-table td:first-child {
-            font-weight: 600;
-            color: #475569;
-            width: 25%;
-        }
-
+        .spec-table td:first-child { font-weight: 600; color: #475569; width: 25%; }
+        
         /* Badge */
-        .status-badge {
-            float: right;
-            background: #dcfce7;
-            color: #166534;
-            padding: 6px 16px;
-            border-radius: 99px;
-            font-size: 0.75em;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-        }
-
-        .doc-header {
-            margin-bottom: 30px;
-        }
-
+        .status-badge { float: right; background: #dcfce7; color: #166534; padding: 6px 16px; border-radius: 99px; font-size: 0.75em; font-weight: 800; letter-spacing: 0.5px; }
+        .doc-header { margin-bottom: 30px; }
+        
         /* Text */
-        li {
-            margin-bottom: 5px;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px solid #e2e8f0;
-            margin: 30px 0;
-        }
+        li { margin-bottom: 5px; }
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <span class="status-badge">DOCUMENTACIÓN DE INGENIERÍA</span>
-        <div class='doc-header'>
-            <h1>T04: ESPECIFICACIONES TÉCNICAS - SISTEMA DE PEAJES</h1>
+        <span class="status-badge">DOCUMENTACIÃ“N DE INGENIERÃA</span>
+        <div class='doc-header'><h1>T04: ESPECIFICACIONES TÉCNICAS - SISTEMA DE PEAJES</h1></div>
+<h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
+<br>
+<strong>Fecha:</strong> 21/10/2025
+<strong>Sistema:</strong> Sistema de Peajes Electrónicos
+<strong>Responsable:</strong> Ing. ITS / Ing. Electrónico
+<strong>Versión:</strong> 1.1
+<br>
+<h2>📋 **CONTROL DE CAMBIOS**</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Versión</td>
+<td>Fecha</td>
+<td>Cambios</td>
+<td>Autor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>1.0</td>
+<td>21/10/2025</td>
+<td>Creación inicial - 2 estaciones de peaje</td>
+<td>Ing. ITS</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>22/10/2025</td>
+<td><strong>Revisión con información oficial:</strong> PK Aguas Negras corregido</td>
+<td>Ing. ITS</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>1. IDENTIFICACIÓN</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Campo</td>
+<td>Valor</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Sistema</strong></td>
+<td>Sistema de Peajes Electrónicos</td>
+</tr>
+<tr>
+<td><strong>Cantidad</strong></td>
+<td><strong>14 carriles</strong> (2 estaciones)</td>
+</tr>
+<tr>
+<td><strong>CAPEX</strong></td>
+<td><strong>USD $1,890,218.94</strong> (Blindaje Total: FTS + 14 Sensores WIM-DAC)</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>2. COMPONENTES PRINCIPALES</h2>
+<br>
+<h3>2.1 Estaciones de Peaje</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ubicación</td>
+<td>PK</td>
+<td>Carriles</td>
+<td>Tipo</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Peaje Zambito</strong></td>
+<td>RN 4511 PK 9+200</td>
+<td>7 (3+1+3)</td>
+<td>Principal</td>
+</tr>
+<tr>
+<td><strong>Peaje Aguas Negras</strong></td>
+<td>RN 4511 PK 80+000</td>
+<td>7 (3+1+3)</td>
+<td>Principal</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>2.2 Equipos por Estación</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Equipo</td>
+<td>Cantidad/Estación</td>
+<td>Función</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Antenas TAG</strong></td>
+<td>14</td>
+<td>Lectura automática</td>
+</tr>
+<tr>
+<td><strong>Cámaras ANPR</strong></td>
+<td>28</td>
+<td>Reconocimiento frontal/trasero</td>
+</tr>
+<tr>
+<td><strong>Barreras automáticas</strong></td>
+<td>14</td>
+<td>Control acceso (0.7s)</td>
+</tr>
+<tr>
+<td><strong>Sensores de presencia</strong></td>
+<td>28</td>
+<td>Detección vehículos</td>
+</tr>
+<tr>
+<td><strong>Sensores WIM-DAC</strong></td>
+<td>14</td>
+<td>Clasificación AT2 3.3.4.2 (Res. IP/REV)</td>
+</tr>
+<tr>
+<td><strong>PMV Banner (640x320)</strong></td>
+<td>14</td>
+<td>Tarifas/Saldos (Obligatorio)</td>
+</tr>
+<tr>
+<td><strong>CCTV Vigilancia</strong></td>
+<td>10</td>
+<td>Seguridad estación</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>3. ESPECIFICACIONES TÉCNICAS</h2>
+<br>
+<h3>3.1 Sistema TAG (Telepeaje)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>RFID 5.8 GHz</td>
+<td>ISO 18000-6C</td>
+</tr>
+<tr>
+<td><strong>Rango lectura</strong></td>
+<td>0-15 m</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Velocidad máxima</strong></td>
+<td>200 km/h</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Precisión</strong></td>
+<td>≥99.5%</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Integración</strong></td>
+<td>NTCIP 1202</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>3.2 Sistema ANPR (Reconocimiento Placas)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Norma</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Resolución</strong></td>
+<td>≥1920×1080 px</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>0-200 km/h</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Precisión</strong></td>
+<td>≥95%</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Iluminación</strong></td>
+<td>LED IR 850 nm</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento</strong></td>
+<td>30 días mínimo</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>3.3 Barreras Automáticas</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Tiempo apertura</strong></td>
+<td>≤0.7 segundos</td>
+</tr>
+<tr>
+<td><strong>Tiempo cierre</strong></td>
+<td>≤0.7 segundos</td>
+</tr>
+<tr>
+<td><strong>Resistencia viento</strong></td>
+<td>120 km/h</td>
+</tr>
+<tr>
+<td><strong>Protección</strong></td>
+<td>IP65</td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Automático + manual</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>4. INTEGRACIÓN</h2>
+<br>
+<h3>4.1 Conectividad</h3>
+<br>
+<li>✅ Fibra óptica al anillo L3</li>
+<li>✅ Switch L3 por estación</li>
+<li>✅ Redundancia de comunicaciones</li>
+<li>✅ Integración SCADA/CCO</li>
+<br>
+<h3>4.2 Protocolos</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Sistema</td>
+<td>Protocolo</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>TAG</td>
+<td>NTCIP 1202</td>
+</tr>
+<tr>
+<td>ANPR</td>
+<td>ONVIF</td>
+</tr>
+<tr>
+<td>Barreras</td>
+<td>Modbus TCP</td>
+</tr>
+<tr>
+<td>CCTV</td>
+<td>RTSP</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>4.3 Seguridad y Encriptación</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Referencia</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Encriptación datos</strong></td>
+<td>AES-256</td>
+<td>IP/REV Art 2.9.7</td>
+</tr>
+<tr>
+<td><strong>Protocolo seguro</strong></td>
+<td>TLS 1.2+</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Autenticación</strong></td>
+<td>Certificados digitales</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Integridad</strong></td>
+<td>Hash SHA-256</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Almacenamiento</strong></td>
+<td>Encriptado en reposo</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>4.4 Integración SiGT (Sistema de Gestión de Tráfico)</h3>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Parámetro</td>
+<td>Especificación</td>
+<td>Referencia</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Integración obligatoria</strong></td>
+<td>SiGT Nacional</td>
+<td>IP/REV Art 2.9.10</td>
+</tr>
+<tr>
+<td><strong>Formato datos</strong></td>
+<td>JSON (Taxonomía SiGT)</td>
+<td>IP/REV 2021</td>
+</tr>
+<tr>
+<td><strong>Frecuencia envío</strong></td>
+<td>Tiempo real (\u003c5 min)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Datos compartidos</strong></td>
+<td>Transacciones, flujos, eventos</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td>RESTful + WebSockets</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Disponibilidad</strong></td>
+<td>99.5% uptime</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<br>
+<strong>Datos enviados a SiGT:</strong>
+<li>✅ Volumen de tráfico por carril</li>
+<li>✅ Clasificación vehicular (WIM-DAC)</li>
+<li>✅ Tiempos de transacción</li>
+<li>✅ Eventos y alarmas</li>
+<li>✅ Estado operativo de equipos</li>
+<br>
+<br>
+<h2>5. PRESUPUESTO</h2>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ítem</td>
+<td>Cantidad</td>
+<td>Precio Unit. (USD)</td>
+<td>Total (USD)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td>Antenas TAG RFID</td>
+<td>14</td>
+<td>$8,000</td>
+<td>$112,000</td>
+</tr>
+<tr>
+<td>Cámaras ANPR Frontal/Trasero</td>
+<td>28</td>
+<td>$3,000</td>
+<td>$84,000</td>
+</tr>
+<tr>
+<td>Barreras Alta Velocidad (0.7s)</td>
+<td>14</td>
+<td>$15,000</td>
+<td>$210,000</td>
+</tr>
+<tr>
+<td>Sensores WIM-DAC (Clasificación)</td>
+<td>14</td>
+<td>$15,000</td>
+<td>$210,000</td>
+</tr>
+<tr>
+<td><strong>Sensores WIM para Clasificación en Peaje</strong></td>
+<td><strong>14</strong></td>
+<td><strong>$6,000</strong></td>
+<td><strong>$84,000</strong></td>
+</tr>
+<tr>
+<td>Lazos Inductivos (Presencia)</td>
+<td>28</td>
+<td>$500</td>
+<td>$14,000</td>
+</tr>
+<tr>
+<td>PMV Banners Tarifas (640x320)</td>
+<td>14</td>
+<td>$2,500</td>
+<td>$35,000</td>
+</tr>
+<tr>
+<td>Equipos Carril y Estación (FTS)</td>
+<td>Global</td>
+<td>-</td>
+<td>$1,200,000</td>
+</tr>
+<tr>
+<td>Otros e Instalación</td>
+<td>-</td>
+<td>-</td>
+<td>$221,577</td>
+</tr>
+<tr>
+<td><strong>Ajuste Audit - WIM-DAC Gap</strong></td>
+<td><strong>1</strong></td>
+<td><strong>$84,000</strong></td>
+<td><strong>$84,000</strong></td>
+</tr>
+<tr>
+<td><strong>TOTAL RECONCILIADO</strong></td>
+<td>-</td>
+<td>-</td>
+<td><strong>$2,170,577</strong></td>
+</tr>
+</tbody></table></div>
+<br>
+> [!WARNING]
+> <strong>NOTA DE VALIDACIÓN (2025-12-12)</strong>: Este presupuesto es una <strong>estimación preliminar</strong>. El presupuesto oficial validado se encuentra en el documento <strong>T05 - Ingeniería de Detalle</strong>, con un valor optimizado de <strong>$1,806,218.94 USD</strong> y una cantidad ajustada de <strong>14 carriles</strong>. Ver DT-TM01-PEAJES-019.
+<br>
+<br>
+<h2>6. PRUEBAS</h2>
+<br>
+<h3>FAT</h3>
+<li>Lectura TAG: ≥99.5% precisión</li>
+<li>ANPR: ≥95% reconocimiento</li>
+<li>Barreras: <3 seg apertura/cierre</li>
+<br>
+<h3>SAT</h3>
+<li>Prueba integración SCADA</li>
+<li>Prueba redundancia comunicaciones</li>
+<li>Prueba velocidad 200 km/h</li>
+<br>
+<br>
+<h2>7. FABRICANTES</h2>
+<br>
+<li><strong>TAG:</strong> Kapsch, TransCore</li>
+<li><strong>ANPR:</strong> Genetec, Milestone</li>
+<li><strong>Barreras:</strong> FAAC, CAME</li>
+<br>
+<br>
+<br>
+<h2>8. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)</h2>
+<br>
+<strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (CUMPLE IP/REV Y AT2)</strong>
+<br>
+La especificación es TÉCNICAMENTE ROBUSTA y CONTRACTUALMENTE SEGURA. El diseño para 2 Estaciones (Zambito y Aguas Negras) con un total de 14 Carriles equipados para interoperabilidad (IP/REV) cubre la obligación de recaudo y control.
+<br>
+<strong>Ahorro Estratégico Validado:</strong> La correcta segregación de los PMV Grandes (movidos al presupuesto ITS) y las Cámaras de Seguridad Vial (movidas al presupuesto CCTV) "limpia" el costo del peaje, dejándolo estrictamente en lo transaccional.
+<br>
+<h3>8.1 Matriz de Cumplimiento "Hard Deck"</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Requisito Técnico</td>
+<td>Fuente Obligación</td>
+<td>Especificación T04 Peajes</td>
+<td>Veredicto</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Ubicación</strong></td>
+<td>AT1 (Tablas 2, 55)</td>
+<td>Zambito (PR9+200) y Aguas Negras (PR80+000)</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Tecnología Cobro</strong></td>
+<td>AT2 (3.3.4.3)</td>
+<td>Antenas RFID ISO 18000-63 + LPR</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Clasificación</strong></td>
+<td>AT2 (3.3.4.2)</td>
+<td><strong>Sensores WIM-DAC en cada carril</strong></td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Información Usuario</strong></td>
+<td>Manual 2024 (9.3.3.2)</td>
+<td>14 Displays LED P10 Ámbar</td>
+<td>✅ CUMPLE</td>
+</tr>
+<tr>
+<td><strong>Video Auditoría</strong></td>
+<td>IP/REV (2.9.5)</td>
+<td>28 Cámaras (14 LPR + 14 Ejes)</td>
+<td>✅ CUMPLE</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>8.2 Análisis de Riesgos Técnicos (Lo que el Integrador calla)</h3>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Riesgo</td>
+<td>Descripción</td>
+<td>Acción T04</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Trampa del Pavimento</strong></td>
+<td>WIM-DAC falla en asfalto/adoquín.</td>
+<td><strong>Exigencia:</strong> Losa Concreto Rígido min. 20m en isleta.</td>
+</tr>
+<tr>
+<td><strong>Señalización Marquesina</strong></td>
+<td>Falta de soportes para Semáforos.</td>
+<td><strong>Alerta:</strong> Civil debe dejar soportes y ductos en canopy.</td>
+</tr>
+<tr>
+<td><strong>Certificación RETIE</strong></td>
+<td>Tableros armados en sitio sin certificado.</td>
+<td><strong>Exigencia:</strong> Tableros certificados de fábrica.</td>
+</tr>
+</tbody></table></div>
+<br>
+<h3>8.3 Conclusión Financiera</h3>
+El T04 está APROBADO.
+*   <strong>Proceda a Compras:</strong> Con el presupuesto validado de <strong>$1,890,218 USD</strong>.
+*   <strong>Advertencia:</strong> Este presupuesto cubre solo tecnología. Casetas, isletas y canopy son Obra Civil.
+<br>
+<br>
+<h2>9. MATRIZ DE RESPONSABILIDADES (PUNTO CERO)</h2>
+<br>
+<strong>CUADRO DE DEMARCACIÓN DE RESPONSABILIDADES (NO ASUMIR NADA):</strong>
+<br>
+<div class='table-responsive'><table class='spec-table'>
+<thead>
+<tr>
+<td>Ítem</td>
+<td>Responsable Suministro</td>
+<td>Responsable Instalación</td>
+<td>Especificación Crítica (Frontier)</td>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Acometida Media Tensión</strong></td>
+<td>Civil / OR</td>
+<td>Civil</td>
+<td>Llega hasta el Transformador.</td>
+</tr>
+<tr>
+<td><strong>Planta Eléctrica (Gen)</strong></td>
+<td>Civil</td>
+<td>Civil</td>
+<td>Tanque para 24 horas (IP/REV).</td>
+</tr>
+<tr>
+<td><strong>Acometida Baja Tensión</strong></td>
+<td>Civil</td>
+<td>Civil</td>
+<td>Llega hasta bornes de entrada de Transferencia.</td>
+</tr>
+<tr>
+<td><strong>Transferencia (ATS)</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td>Certificada UL 1008 / IEC 60947.</td>
+</tr>
+<tr>
+<td><strong>Tablero General (TGP)</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td><strong>Certificado RETIE de Producto (Fábrica).</strong></td>
+</tr>
+<tr>
+<td><strong>UPS + Baterías</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td>Online Doble Conversión. Autonomía >30min.</td>
+</tr>
+<tr>
+<td><strong>Racks y Gabinetes</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td>Verificar que quepan en el cuarto (Plano).</td>
+</tr>
+<tr>
+<td><strong>Certificación RETIE</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td><strong>INTEGRADOR</strong></td>
+<td>Del tablero aguas abajo (Incluyendo carriles).</td>
+</tr>
+</tbody></table></div>
+<br>
+<br>
+<h2>10. ESPECIFICACIONES DE COMPRA BLINDADA (RFQ)</h2>
+<br>
+<h3>ÍTEM 1: SISTEMA DE CONTROL DE CARRIL (DAC)</h3>
+*   <strong>Controlador:</strong> PC Industrial Fanless (-20°C a +70°C).
+*   <strong>Base de Datos Local:</strong> <strong>MANDATORIO.</strong> Proceso autónomo en carril (IP/REV 2.9.11). Opera desconectado.
+*   <strong>Gestión:</strong> Switch Industrial Gestionable.
+<br>
+<h3>ÍTEM 2: SISTEMA DE IDENTIFICACIÓN (IP/REV)</h3>
+*   <strong>Antenas:</strong> ISO 18000-63 (902-928 MHz).
+*   <strong>Cámaras:</strong> 1 Frontal LPR + 1 Lateral Ejes. Integradas al DAC.
+<br>
+<h3>ÍTEM 3: INTERFAZ USUARIO (MANUAL 2024)</h3>
+*   <strong>Display de Tarifa:</strong> <strong>LED P10 Ámbar</strong> (Lectura <10m). Mínimo 2 líneas.
+*   <strong>Semáforo de Paso:</strong> LED 200mm Rojo/Verde.
+<br>
+<h3>ÍTEM 4: RESPALDO ENERGÍA (UPS)</h3>
+*   <strong>Autonomía:</strong> 30 min a plena carga (Todos los carriles).
+*   <strong>Tipo:</strong> Online Doble Conversión.
+*   <strong>Monitoreo:</strong> Tarjeta SNMP (Red/Batería).
+<br>
+> <strong>NOTA MARCA Y REFERENCIA (CÁMARAS):</strong> Se exige referencia base <strong>Dahua SD5A432GB-HNR (32X)</strong> o Superior. <strong>Cámaras de 25X serán RECHAZADAS.</strong>
+<br>
+        
+        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+            Documento generado automÃ¡ticamente por Sistema de GestiÃ³n TM01. <br>
+            Fase 7 - IngenierÃ­a de Detalle.
         </div>
-        <h2>Proyecto APP Puerto Salgar - Barrancabermeja</h2>
-        <br>
-        <strong>Fecha:</strong> 30/01/2026
-        <strong>Sistema:</strong> Sistema de Peajes Electrónicos
-        <strong>Responsable:</strong> Ing. ITS / Ing. Electrónico
-        <strong>Versión:</strong> 1.5
-        <br>
-        <h2>📋 **CONTROL DE CAMBIOS**</h2>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Versión</td>
-                        <td>Fecha</td>
-                        <td>Cambios</td>
-                        <td>Autor</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1.0</td>
-                        <td>21/10/2025</td>
-                        <td>Creación inicial - 2 estaciones de peaje</td>
-                        <td>Ing. ITS</td>
-                    </tr>
-                    <tr>
-                        <td>1.5</td>
-                        <td>30/01/2026</td>
-                        <td><strong>Reconciliación Final:</strong> Ajuste a Hard Deck $2.08M (Eliminación Gap WIM-DAC).
-                        </td>
-                        <td>Ing. ITS</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <br>
-        <h2>1. IDENTIFICACIÓN</h2>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Campo</td>
-                        <td>Valor</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Sistema</strong></td>
-                        <td>Sistema de Peajes Electrónicos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cantidad</strong></td>
-                        <td><strong>14 carriles</strong> (2 estaciones)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>CAPEX</strong></td>
-                        <td><strong>USD $2,086,577.24</strong> (Blindaje Total: FTS + 14 Sensores WIM-DAC)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <br>
-        <h2>2. COMPONENTES PRINCIPALES</h2>
-        <br>
-        <h3>2.1 Estaciones de Peaje</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Ubicación</td>
-                        <td>PK</td>
-                        <td>Carriles</td>
-                        <td>Tipo</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Peaje Zambito</strong></td>
-                        <td>RN 4511 PK 9+200</td>
-                        <td>7 (3+1+3)</td>
-                        <td>Principal</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Peaje Aguas Negras</strong></td>
-                        <td>RN 4511 PK 80+000</td>
-                        <td>7 (3+1+3)</td>
-                        <td>Principal</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <h3>2.2 Equipos por Estación</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Equipo</td>
-                        <td>Cantidad/Estación</td>
-                        <td>Función</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Antenas TAG</strong></td>
-                        <td>14</td>
-                        <td>Lectura automática</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cámaras ANPR</strong></td>
-                        <td>28</td>
-                        <td>Reconocimiento frontal/trasero</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Barreras automáticas</strong></td>
-                        <td>14</td>
-                        <td>Control acceso (0.7s)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sensores de presencia</strong></td>
-                        <td>28</td>
-                        <td>Detección vehículos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sensores WIM-DAC</strong></td>
-                        <td>14</td>
-                        <td>Clasificación AT2 3.3.4.2 (Res. IP/REV)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>PMV Banner (640x320)</strong></td>
-                        <td>14</td>
-                        <td>Tarifas/Saldos (Obligatorio)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>CCTV Vigilancia</strong></td>
-                        <td>10</td>
-                        <td>Seguridad estación</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <br>
-        <h2>3. ESPECIFICACIONES TÉCNICAS</h2>
-        <br>
-        <h3>3.1 Sistema TAG (Telepeaje)</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Parámetro</td>
-                        <td>Especificación</td>
-                        <td>Norma</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Tecnología</strong></td>
-                        <td>RFID 5.8 GHz</td>
-                        <td>ISO 18000-6C</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Rango lectura</strong></td>
-                        <td>0-15 m</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Velocidad máxima</strong></td>
-                        <td>200 km/h</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Precisión</strong></td>
-                        <td>≥99.5%</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Integración</strong></td>
-                        <td>NTCIP 1202</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <h3>3.2 Sistema ANPR (Reconocimiento Placas)</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Parámetro</td>
-                        <td>Especificación</td>
-                        <td>Norma</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Resolución</strong></td>
-                        <td>≥1920×1080 px</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Velocidad</strong></td>
-                        <td>0-200 km/h</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Precisión</strong></td>
-                        <td>≥95%</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Iluminación</strong></td>
-                        <td>LED IR 850 nm</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Almacenamiento</strong></td>
-                        <td>30 días mínimo</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <h3>3.3 Barreras Automáticas</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Parámetro</td>
-                        <td>Especificación</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Tiempo apertura</strong></td>
-                        <td>≤0.7 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tiempo cierre</strong></td>
-                        <td>≤0.7 segundos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Resistencia viento</strong></td>
-                        <td>120 km/h</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Protección</strong></td>
-                        <td>IP65</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Control</strong></td>
-                        <td>Automático + manual</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <br>
-        <h2>4. INTEGRACIÓN</h2>
-        <br>
-        <h3>4.1 Conectividad</h3>
-        <br>
-        <li>✅ Fibra óptica al anillo L3</li>
-        <li>✅ Switch L3 por estación</li>
-        <li>✅ Redundancia de comunicaciones</li>
-        <li>✅ Integración SCADA/CCO</li>
-        <br>
-        <h3>4.2 Protocolos</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Sistema</td>
-                        <td>Protocolo</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>TAG</td>
-                        <td>NTCIP 1202</td>
-                    </tr>
-                    <tr>
-                        <td>ANPR</td>
-                        <td>ONVIF</td>
-                    </tr>
-                    <tr>
-                        <td>Barreras</td>
-                        <td>Modbus TCP</td>
-                    </tr>
-                    <tr>
-                        <td>CCTV</td>
-                        <td>RTSP</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <h3>4.3 Seguridad y Encriptación</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Parámetro</td>
-                        <td>Especificación</td>
-                        <td>Referencia</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Encriptación datos</strong></td>
-                        <td>AES-256</td>
-                        <td>IP/REV Art 2.9.7</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Protocolo seguro</strong></td>
-                        <td>TLS 1.2+</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Autenticación</strong></td>
-                        <td>Certificados digitales</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Integridad</strong></td>
-                        <td>Hash SHA-256</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Almacenamiento</strong></td>
-                        <td>Encriptado en reposo</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <h3>4.4 Integración SiGT (Sistema de Gestión de Tráfico)</h3>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Parámetro</td>
-                        <td>Especificación</td>
-                        <td>Referencia</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Integración obligatoria</strong></td>
-                        <td>SiGT Nacional</td>
-                        <td>IP/REV Art 2.9.10</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Formato datos</strong></td>
-                        <td>JSON (Taxonomía SiGT)</td>
-                        <td>IP/REV 2021</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Frecuencia envío</strong></td>
-                        <td>Tiempo real (\u003c5 min)</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Datos compartidos</strong></td>
-                        <td>Transacciones, flujos, eventos</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>API</strong></td>
-                        <td>RESTful + WebSockets</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Disponibilidad</strong></td>
-                        <td>99.5% uptime</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <strong>Datos enviados a SiGT:</strong>
-        <li>✅ Volumen de tráfico por carril</li>
-        <li>✅ Clasificación vehicular (WIM-DAC)</li>
-        <li>✅ Tiempos de transacción</li>
-        <li>✅ Eventos y alarmas</li>
-        <li>✅ Estado operativo de equipos</li>
-        <br>
-        <br>
-        <h2>5. PRESUPUESTO</h2>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Ítem</td>
-                        <td>Cantidad</td>
-                        <td>Precio Unit. (USD)</td>
-                        <td>Total (USD)</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Antenas TAG RFID</td>
-                        <td>14</td>
-                        <td>$8,000</td>
-                        <td>$112,000</td>
-                    </tr>
-                    <tr>
-                        <td>Cámaras ANPR Frontal/Trasero</td>
-                        <td>28</td>
-                        <td>$3,000</td>
-                        <td>$84,000</td>
-                    </tr>
-                    <tr>
-                        <td>Barreras Alta Velocidad (0.7s)</td>
-                        <td>14</td>
-                        <td>$15,000</td>
-                        <td>$210,000</td>
-                    </tr>
-                    <tr>
-                        <td>Sensores WIM-DAC (Clasificación)</td>
-                        <td>14</td>
-                        <td>$15,000</td>
-                        <td>$210,000</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sensores WIM para Clasificación en Peaje</strong></td>
-                        <td><strong>14</strong></td>
-                        <td><strong>$6,000</strong></td>
-                        <td><strong>$84,000</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Lazos Inductivos (Presencia)</td>
-                        <td>28</td>
-                        <td>$500</td>
-                        <td>$14,000</td>
-                    </tr>
-                    <tr>
-                        <td>PMV Banners Tarifas (640x320)</td>
-                        <td>14</td>
-                        <td>$2,500</td>
-                        <td>$35,000</td>
-                    </tr>
-                    <tr>
-                        <td>Equipos Carril y Estación (FTS)</td>
-                        <td>Global</td>
-                        <td>-</td>
-                        <td>$1,200,000</td>
-                    </tr>
-                    <tr>
-                        <td>Otros e Instalación</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>$137,577.24</td>
-                    </tr>
-                    <tr>
-                        <td><strong>TOTAL RECONCILIADO</strong></td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td><strong>$2,086,577.24</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        > [!NOTE]
-        > <strong>NOTA DE VALIDACIÓN (30/01/2026)</strong>: Presupuesto alineado estrictamente con <strong>T05 -
-            Ingeniería de Detalle</strong> ($2,086,577.24). Cubre tecnología de carril y estación. Obra civil
-        (casetas/pavimento) en presupuesto de Construcción.
-        <br>
-        <br>
-        <h2>6. PRUEBAS</h2>
-        <br>
-        <h3>FAT</h3>
-        <li>Lectura TAG: ≥99.5% precisión</li>
-        <li>ANPR: ≥95% reconocimiento</li>
-        <li>Barreras: <3 seg apertura/cierre</li>
-                <br>
-                <h3>SAT</h3>
-        <li>Prueba integración SCADA</li>
-        <li>Prueba redundancia comunicaciones</li>
-        <li>Prueba velocidad 200 km/h</li>
-        <br>
-        <br>
-        <h2>7. FABRICANTES</h2>
-        <br>
-        <li><strong>TAG:</strong> Kapsch, TransCore</li>
-        <li><strong>ANPR:</strong> Genetec, Milestone</li>
-        <li><strong>Barreras:</strong> FAAC, CAME</li>
-        <br>
-        <br>
-        <br>
-        <h2>8. DICTAMEN DE VALIDACIÓN (AUDITORÍA FORENSE DEFINITIVA v2.1)</h2>
-        <br>
-        <strong>Resultado:</strong> 🟢 <strong>T04 VALIDADO (CUMPLE IP/REV Y AT2)</strong>
-        <br>
-        La especificación es TÉCNICAMENTE ROBUSTA y CONTRACTUALMENTE SEGURA. El diseño para 2 Estaciones (Zambito y
-        Aguas Negras) con un total de 14 Carriles equipados para interoperabilidad (IP/REV) cubre la obligación de
-        recaudo y control.
-        <br>
-        <strong>Ahorro Estratégico Validado:</strong> La correcta segregación de los PMV Grandes (movidos al presupuesto
-        ITS) y las Cámaras de Seguridad Vial (movidas al presupuesto CCTV) "limpia" el costo del peaje, dejándolo
-        estrictamente en lo transaccional.
-        <br>
-        <h3>8.1 Matriz de Cumplimiento "Hard Deck"</h3>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Requisito Técnico</td>
-                        <td>Fuente Obligación</td>
-                        <td>Especificación T04 Peajes</td>
-                        <td>Veredicto</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Ubicación</strong></td>
-                        <td>AT1 (Tablas 2, 55)</td>
-                        <td>Zambito (PR9+200) y Aguas Negras (PR80+000)</td>
-                        <td>✅ CUMPLE</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tecnología Cobro</strong></td>
-                        <td>AT2 (3.3.4.3)</td>
-                        <td>Antenas RFID ISO 18000-63 + LPR</td>
-                        <td>✅ CUMPLE</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Clasificación</strong></td>
-                        <td>AT2 (3.3.4.2)</td>
-                        <td><strong>Sensores WIM-DAC en cada carril</strong></td>
-                        <td>✅ CUMPLE</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Información Usuario</strong></td>
-                        <td>Manual 2024 (9.3.3.2)</td>
-                        <td>14 Displays LED P10 Ámbar</td>
-                        <td>✅ CUMPLE</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Video Auditoría</strong></td>
-                        <td>IP/REV (2.9.5)</td>
-                        <td>28 Cámaras (14 LPR + 14 Ejes)</td>
-                        <td>✅ CUMPLE</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <h3>8.2 Análisis de Riesgos Técnicos (Lo que el Integrador calla)</h3>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Riesgo</td>
-                        <td>Descripción</td>
-                        <td>Acción T04</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Trampa del Pavimento</strong></td>
-                        <td>WIM-DAC falla en asfalto/adoquín.</td>
-                        <td><strong>Exigencia:</strong> Losa Concreto Rígido min. 20m en isleta.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Señalización Marquesina</strong></td>
-                        <td>Falta de soportes para Semáforos.</td>
-                        <td><strong>Alerta:</strong> Civil debe dejar soportes y ductos en canopy.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Certificación RETIE</strong></td>
-                        <td>Tableros armados en sitio sin certificado.</td>
-                        <td><strong>Exigencia:</strong> Tableros certificados de fábrica.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <h3>8.3 Conclusión Financiera</h3>
-        El T04 está APROBADO.
-        * <strong>Proceda a Compras:</strong> Con el presupuesto validado de <strong>$1,890,218 USD</strong>.
-        * <strong>Advertencia:</strong> Este presupuesto cubre solo tecnología. Casetas, isletas y canopy son Obra
-        Civil.
-        <br>
-        <br>
-        <h2>9. MATRIZ DE RESPONSABILIDADES (PUNTO CERO)</h2>
-        <br>
-        <strong>CUADRO DE DEMARCACIÓN DE RESPONSABILIDADES (NO ASUMIR NADA):</strong>
-        <br>
-        <div class='table-responsive'>
-            <table class='spec-table'>
-                <thead>
-                    <tr>
-                        <td>Ítem</td>
-                        <td>Responsable Suministro</td>
-                        <td>Responsable Instalación</td>
-                        <td>Especificación Crítica (Frontier)</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Acometida Media Tensión</strong></td>
-                        <td>Civil / OR</td>
-                        <td>Civil</td>
-                        <td>Llega hasta el Transformador.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Planta Eléctrica (Gen)</strong></td>
-                        <td>Civil</td>
-                        <td>Civil</td>
-                        <td>Tanque para 24 horas (IP/REV).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Acometida Baja Tensión</strong></td>
-                        <td>Civil</td>
-                        <td>Civil</td>
-                        <td>Llega hasta bornes de entrada de Transferencia.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Transferencia (ATS)</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td>Certificada UL 1008 / IEC 60947.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Tablero General (TGP)</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td><strong>Certificado RETIE de Producto (Fábrica).</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>UPS + Baterías</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td>Online Doble Conversión. Autonomía >30min.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Racks y Gabinetes</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td>Verificar que quepan en el cuarto (Plano).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Certificación RETIE</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td><strong>INTEGRADOR</strong></td>
-                        <td>Del tablero aguas abajo (Incluyendo carriles).</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <br>
-        <br>
-        <h2>10. ESPECIFICACIONES DE COMPRA BLINDADA (RFQ)</h2>
-        <br>
-        <h3>ÍTEM 1: SISTEMA DE CONTROL DE CARRIL (DAC)</h3>
-        * <strong>Controlador:</strong> PC Industrial Fanless (-20°C a +70°C).
-        * <strong>Base de Datos Local:</strong> <strong>MANDATORIO.</strong> Proceso autónomo en carril (IP/REV 2.9.11).
-        Opera desconectado.
-        * <strong>Gestión:</strong> Switch Industrial Gestionable.
-        <br>
-        <h3>ÍTEM 2: SISTEMA DE IDENTIFICACIÓN (IP/REV)</h3>
-        * <strong>Antenas:</strong> ISO 18000-63 (902-928 MHz).
-        * <strong>Cámaras:</strong> 1 Frontal LPR + 1 Lateral Ejes. Integradas al DAC.
-        <br>
-        <h3>ÍTEM 3: INTERFAZ USUARIO (MANUAL 2024)</h3>
-        * <strong>Display de Tarifa:</strong> <strong>LED P10 Ámbar</strong> (Lectura <10m). Mínimo 2 líneas. * <strong>
-            Semáforo de Paso:</strong> LED 200mm Rojo/Verde.
-            <br>
-            <h3>ÍTEM 4: RESPALDO ENERGÍA (UPS)</h3>
-            * <strong>Autonomía:</strong> 30 min a plena carga (Todos los carriles).
-            * <strong>Tipo:</strong> Online Doble Conversión.
-            * <strong>Monitoreo:</strong> Tarjeta SNMP (Red/Batería).
-            <br>
-            > <strong>NOTA MARCA Y REFERENCIA (CÁMARAS):</strong> Se exige referencia base <strong>Dahua SD5A432GB-HNR
-                (32X)</strong> o Superior. <strong>Cámaras de 25X serán RECHAZADAS.</strong>
-            <br>
-
-            <div
-                style="margin-top: 50px; padding-top: 20px; border-top: 1px dashed #cbd5e1; font-size: 0.85rem; color: #94a3b8; text-align: center;">
-                Documento generado automáticamente por Sistema de Gestión TM01. <br>
-                Fase 7 - Ingeniería de Detalle.
-            </div>
     </div>
 </body>
-
 </html>

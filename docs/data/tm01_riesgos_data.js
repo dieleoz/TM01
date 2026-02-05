@@ -79,6 +79,15 @@ const tm01RiesgosData = {
             imp: 4,
             estado: 'ABIERTO',
             mitigacion: 'Compras anticipadas de equipos importados clave (CCTV, Radares).'
+        },
+        {
+            id: 'R08',
+            titulo: 'Logística de Acopios Lote 3',
+            categoria: 'Logística',
+            prob: 3,
+            imp: 5,
+            estado: 'ABIERTO',
+            mitigacion: 'Sincronizar Lote 3 (Feb 2027) con frentes de obra en UF11 y UF5.1 para evitar demoras en ruta crítica.'
         }
     ]
 };

@@ -4,6 +4,7 @@
  */
 
 function num(val) {
+    if (typeof val === 'string' && (val.toUpperCase() === 'UND' || val.toUpperCase() === 'GLB' || val.toUpperCase() === 'PA' || val.toUpperCase() === 'MES')) return 1;
     const n = parseFloat(String(val ?? '').toString().replace(/[^0-9.\-]/g, ''));
     return isNaN(n) ? 0 : n;
 }
@@ -17,8 +18,11 @@ function fm(n, curr) {
 
 function inferTipoPresupuestal(item) {
     const desc = (item.descripcion || '').toLowerCase();
-    if (item.tipo_presupuesto) return item.tipo_presupuesto;
-    if (/validado|consolidado|global|certificado/.test(desc)) return 'CONSOLIDADO';
+    const typeAttr = item.tipo_presupuesto || item.tipoPresupuestal;
+    if (typeAttr && typeAttr !== 'CONSOLIDADO') return typeAttr;
+
+    // Inferencia por descripción
+    if (/validado|consolidado|global|certificado/.test(desc)) return 'SUMINISTRO'; // Default to SUM for AIU safety
     const obraRe = /(instalaci[oó]n|tendido|hincado|zanja|excavaci[oó]n|canalizaci[oó]n|ducto|obra civil|poste|torre|cimentaci[oó]n|concreto|montaje|tuber[ií]a|adecuaci[oó]n|estructura)/;
     const servRe = /(capacitaci[oó]n|pruebas|comisionamiento|mantenimiento|dise[nñ]o|ingenier[ií]a|configuraci[oó]n|servicio)/;
     if (obraRe.test(desc)) return 'OBRA';
@@ -50,9 +54,14 @@ function calcularAIUIVA(data) {
 
         const qty = num(i.cantidad);
         const tCOP = num(i.totalCOP) || (qty * num(i.vuCOP));
-        const tipo = i.tipo_presupuesto || inferTipoPresupuestal(i);
+        let tipo = i.tipo_presupuesto || i.tipoPresupuestal || inferTipoPresupuestal(i);
+
+        // REGLA DE NEGOCIO: CONSOLIDADO se trata como SUMINISTRO si no se puede inferir otra cosa, 
+        // para asegurar que al menos sume al costo directo y tenga IVA base.
+        if (tipo === 'CONSOLIDADO') tipo = 'SUMINISTRO';
 
         if (subtotales[cap][tipo] !== undefined) subtotales[cap][tipo] += tCOP;
+
         if (tipo === 'SUMINISTRO') totalSuministros += tCOP;
         else if (tipo === 'OBRA') totalObraCivil += tCOP;
         else if (tipo === 'SERVICIO') totalServicios += tCOP;

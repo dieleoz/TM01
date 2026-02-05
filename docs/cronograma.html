@@ -155,10 +155,11 @@
           <table class="tm01-table" id="tabla">
             <thead>
               <tr>
-                <th style="width: 15%">Fase / Tipo</th>
+                <th style="width: 12%">Fase / Tipo</th>
                 <th style="width: 25%">Actividad (UF)</th>
-                <th style="width: 15%; text-align: center;">Fecha Fin</th>
-                <th style="width: 10%; text-align: center;">Plazo (Meses)</th>
+                <th style="width: 8%; text-align: center;">Km</th>
+                <th style="width: 12%; text-align: center;">Fecha Fin</th>
+                <th style="width: 8%; text-align: center;">Plazo (M)</th>
                 <th style="width: 35%">Cronograma</th>
               </tr>
             </thead>
@@ -324,11 +325,14 @@
                             <div style="font-weight: 600; color: var(--text-main);">${t.nombre}</div>
                             ${t.nota ? `<div style="font-size: 0.8em; color: var(--text-muted); margin-top: 2px;">${t.nota}</div>` : ''}
                         </td>
+                        <td style="text-align: center; vertical-align: middle; color: var(--tm01-primary); font-weight: bold;">
+                            ${t.longitud ? `${t.longitud} km` : '-'}
+                        </td>
                         <td style="text-align: center; vertical-align: middle; font-family: monospace;">
                             ${fmt(t.dFin)}
                         </td>
                         <td style="text-align: center; vertical-align: middle;">
-                            ${t.hito ? '<span style="color:var(--warning); font-weight:bold; font-size:0.8em;">🏁 HITO</span>' : diffMonths(t.dInicio, t.dFin)}
+                            ${t.hito ? '<span style="color:var(--warning); font-weight:bold; font-size:0.8em;">🏁 HITO</span>' : (t.plazo || diffMonths(t.dInicio, t.dFin))}
                         </td>
                         <td style="vertical-align: middle; padding: 4px 10px;">
                             ${vizHtml}

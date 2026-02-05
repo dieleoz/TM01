@@ -158,18 +158,29 @@ function parseAmount(val) {
 
 // Calcular AIU Estimado (33% sobre ítems de OBRA)
 function getAIUEstimado(wbsData) {
-    if (!wbsData || !Array.isArray(wbsData)) return 0;
+    if (!wbsData) return 0;
+
+    // Si wbsData es el objeto global de master data completo
+    const items = Array.isArray(wbsData) ? wbsData : (wbsData.sistemas || []);
+    if (items.length === 0) return 0;
 
     let totalObra = 0;
-    wbsData.forEach(item => {
-        if (item.tipo !== 'item') return;
+    items.forEach(item => {
+        // En Master Data los sistemas ya son "items" macro. En WBS se filtra por tipo.
+        const isWBSItem = item.tipo === 'item';
+        const isMasterSystem = !item.tipo && item.sistema;
 
-        // Verificación dual: etiqueta explícita o inferencia por descripción
-        const isObra = item.tipoPresupuestal === 'OBRA' ||
-            (item.descripcion && /instalaci[oó]n|montaje|obra/i.test(item.descripcion));
+        if (!isWBSItem && !isMasterSystem) return;
+
+        // Verificación dual: etiqueta explícita o inferencia por descripción/nombre
+        const tipo = (item.tipoPresupuestal || item.tipo_presupuesto || '').toUpperCase();
+        const desc = (item.descripcion || item.sistema || '').toLowerCase();
+
+        const isObra = tipo === 'OBRA' ||
+            /instalaci[oó]n|montaje|obra civil|cimentaci[oó]n|ductos/i.test(desc);
 
         if (isObra) {
-            totalObra += parseAmount(item.totalCOP);
+            totalObra += parseAmount(item.totalCOP || item.capexCOP);
         }
     });
 

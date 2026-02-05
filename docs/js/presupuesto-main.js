@@ -99,40 +99,50 @@ function renderDesglose() {
     if (!b) return;
     const c = calcularAIUIVA(filteredItems);
     const n = getChapterNamesFromWBS(allItems);
-    const rs = [];
 
-    Object.keys(c.subtotales).sort().forEach(cap => {
+    b.innerHTML = Object.keys(c.subtotales).sort().map(cap => {
         const s = c.subtotales[cap];
         const baseSum = s.SUMINISTRO / 1.19;
         const baseServ = s.SERVICIO / 1.19;
         const aiu = s.OBRA * 0.33;
         const iva = (s.SUMINISTRO - baseSum) + (s.SERVICIO - baseServ) + (s.OBRA * 0.05 * 0.19);
+        const cd = baseSum + baseServ + s.OBRA + s.CONSOLIDADO;
         const total = s.SUMINISTRO + s.OBRA + s.SERVICIO + s.CONSOLIDADO + aiu + iva;
 
-        rs.push(`<tr>
-            <td><strong>${n[cap] || cap}</strong></td>
-            <td class="right">${fm(s.SUMINISTRO, 'COP')}</td>
-            <td class="right">${fm(s.OBRA, 'COP')}</td>
-            <td class="right">${fm(s.SERVICIO, 'COP')}</td>
-            <td class="right">${fm(baseSum + baseServ + s.OBRA + s.CONSOLIDADO, 'COP')}</td>
-            <td class="right">${fm(aiu, 'COP')}</td>
-            <td class="right">${fm(iva, 'COP')}</td>
-            <td class="right"><strong>${fm(total, 'COP')}</strong></td>
-            <td class="right">${fm(total / 4400, 'USD')}</td>
-        </tr>`);
-    });
-    b.innerHTML = rs.join('');
+        return `<tr>
+            <td>${n[cap] || cap}</td>
+            <td class="right">${fm(s.SUMINISTRO)}</td>
+            <td class="right">${fm(s.OBRA)}</td>
+            <td class="right">${fm(s.SERVICIO)}</td>
+            <td class="right highlight-cd">${fm(cd)}</td>
+            <td class="right">${fm(aiu)}</td>
+            <td class="right">${fm(iva)}</td>
+            <td class="right total">${fm(total)}</td>
+        </tr>`;
+    }).join('');
+
+    // Global Labels
+    document.getElementById('totalSuministros').innerText = fm(c.totalSuministros);
+    document.getElementById('totalObra').innerText = fm(c.totalObraCivil);
+    document.getElementById('totalServicios').innerText = fm(c.totalServicios);
 }
 
 function actualizarEstadisticas() {
     const c = calcularAIUIVA(filteredItems);
-    const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
-    set('statUSD', fm(c.total / 4400, 'USD'));
-    set('statCOP', fm(c.total, 'COP'));
-    set('statAIU', fm(c.aiu, 'COP'));
-    set('statIVA', fm(c.iva, 'COP'));
-    set('statItems', filteredItems.length);
-    set('statSum', filteredItems.filter(i => i._tipoCalc !== 'OBRA' && i._tipoCalc !== 'SERVICIO').length);
-    set('statObra', filteredItems.filter(i => i._tipoCalc === 'OBRA').length);
-    set('statServ', filteredItems.filter(i => i._tipoCalc === 'SERVICIO').length);
+    document.getElementById('statUSD').innerText = fm(c.total / 4400, 'USD');
+    document.getElementById('statCAPEX').innerText = fm(c.costoDirecto, 'COP');
+    document.getElementById('statCOP').innerText = fm(c.total, 'COP');
+    document.getElementById('statAIU').innerText = fm(c.aiu, 'COP');
+    document.getElementById('statIVA').innerText = fm(c.iva, 'COP');
+    document.getElementById('statItems').innerText = filteredItems.length;
+
+    const counts = filteredItems.reduce((acc, i) => {
+        const t = inferTipoPresupuestal(i);
+        acc[t] = (acc[t] || 0) + 1;
+        return acc;
+    }, {});
+
+    document.getElementById('statSum').innerText = counts['SUMINISTRO'] || 0;
+    document.getElementById('statObra').innerText = counts['OBRA'] || 0;
+    document.getElementById('statServ').innerText = counts['SERVICIO'] || 0;
 }

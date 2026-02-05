@@ -111,6 +111,24 @@ class TM01MasterData {
                     capexCOP: 0,
                     categoria: "ITS",
                     estado: "Cero Alcance Init"
+                },
+                {
+                    sistema: "Gálibos",
+                    cantidad: 20,
+                    capexUnitarioUSD: 21630,
+                    capexUSD: 432600,
+                    capexCOP: 1903440000,
+                    categoria: "ITS",
+                    estado: "Validado"
+                },
+                {
+                    sistema: "CCO/SCADA",
+                    cantidad: 1,
+                    capexUnitarioUSD: 845000,
+                    capexUSD: 845000,
+                    capexCOP: 3718000000,
+                    categoria: "ITS",
+                    estado: "Validado"
                 }
             ],
 
@@ -150,10 +168,20 @@ class TM01MasterData {
                 capexUSD: 7980000,
                 capexCOP: 35112000000
             },
+            galibosSummary: {
+                cantidad: 20,
+                capexUSD: 432600,
+                capexCOP: 1903440000
+            },
+            ccoSummary: {
+                cantidad: 1,
+                capexUSD: 845000,
+                capexCOP: 3718000000
+            },
 
-            // Totales del proyecto
-            totalCapexUSD: 15247744,
-            totalCapexCOP: 67090073600,
+            // Totales del proyecto (Audit 6.0 Baseline)
+            totalCapexUSD: 16525344,
+            totalCapexCOP: 72711513600,
 
 
             // Normativa aplicable
@@ -161,7 +189,40 @@ class TM01MasterData {
                 retie: "Resolución 40117 de 2024 (RETIE 2024)",
                 iprev: "Resolución 20213040035125 de 2021 (IP/REV)",
                 manual: "Manual de Señalización Vial 2024"
-            }
+            },
+
+            // Cronograma - Plan de Obras No Objetado (Audit 6.0 Certified)
+            cronograma: [
+                // Unidades Funcionales (Fuente: Plan de Obras No Objetado)
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF0 (Peaje Zambito)", inicio: "2024-11-29", fin: "2028-10-26", plazo: 47, longitud: 214.65, nota: "Acopio Lote 2" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF1.1", inicio: "2024-11-29", fin: "2026-10-26", plazo: 23, longitud: 4.9, nota: "Acopio Lote 1" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF1.2", inicio: "2024-11-29", fin: "2026-10-26", plazo: 23, longitud: 4.903, nota: "Acopio Lote 1" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF2.1", inicio: "2024-11-29", fin: "2027-06-27", plazo: 31, longitud: 4.31, nota: "Acopio Lote 2" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF2.2", inicio: "2024-11-29", fin: "2027-06-27", plazo: 31, longitud: 10.28, nota: "Acopio Lote 2" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF2.3", inicio: "2024-11-29", fin: "2027-06-27", plazo: 31, longitud: 12.25, nota: "Acopio Lote 2" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF3", inicio: "2024-11-29", fin: "2028-01-26", plazo: 38, longitud: 14.73, nota: "Acopio Lote 3" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF4", inicio: "2024-11-29", fin: "2028-05-27", plazo: 42, longitud: 10.93, nota: "Acopio Lote 3" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF5.1", inicio: "2024-11-29", fin: "2028-10-26", plazo: 47, longitud: 65.07, nota: "Acopio Lote 3" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF5.2", inicio: "2024-11-29", fin: "2028-10-26", plazo: 47, longitud: 5.84, nota: "Acopio Lote 3" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF6 (Peaje Aguas Negras)", inicio: "2024-11-29", fin: "2026-08-26", plazo: 21, longitud: 8.3, nota: "Acopio Lote 1" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF7", inicio: "2024-11-29", fin: "2027-06-27", plazo: 31, longitud: 15.261, nota: "Acopio Lote 2" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF8", inicio: "2024-11-29", fin: "2026-11-26", plazo: 24, longitud: 10.139, nota: "Acopio Lote 1" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF9", inicio: "2024-11-29", fin: "2027-08-26", plazo: 33, longitud: 12.25, nota: "Acopio Lote 2" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF10", inicio: "2024-11-29", fin: "2027-11-26", plazo: 36, longitud: 10.663, nota: "Acopio Lote 3" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF11", inicio: "2024-11-29", fin: "2028-10-26", plazo: 47, longitud: 84.63, nota: "Acopio Lote 3" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF12", inicio: "2024-11-29", fin: "2027-07-29", plazo: 32, longitud: 23.777, nota: "Acopio Lote 2" },
+                { fase: "UNIDADES FUNCIONALES", nombre: "UF13 (CCO y Pesaje)", inicio: "2024-11-29", fin: "2028-01-27", plazo: 38, longitud: 9.0, nota: "Acopio Lote 3" },
+
+                // Edificaciones
+                { fase: "EDIFICACIONES", nombre: "Peaje Zambito", inicio: "2027-03-01", fin: "2028-10-26", nota: "Construcción y Equipamiento" },
+                { fase: "EDIFICACIONES", nombre: "Área de Servicio Zambito", inicio: "2027-03-01", fin: "2028-10-26", nota: "Infraestructura Operativa" },
+                { fase: "EDIFICACIONES", nombre: "Peaje Aguas Negras", inicio: "2027-10-28", fin: "2028-10-26", hito: true, nota: "Hito de Entrega Final" },
+                { fase: "EDIFICACIONES", nombre: "Área de Servicio Aguas Negras", inicio: "2027-10-28", fin: "2028-10-26", hito: true, nota: "Hito de Entrega Final" },
+                { fase: "EDIFICACIONES", nombre: "Área de Pesaje", inicio: "2027-10-28", fin: "2028-10-26", hito: true, nota: "Hito de Entrega Final" },
+
+                // ITS
+                { fase: "ITS", nombre: "Sistema Inteligente de Transportes - ITS", inicio: "2028-02-20", fin: "2028-10-26", nota: "Integración Full Corredor" }
+            ]
         };
     }
 
@@ -181,6 +242,32 @@ class TM01MasterData {
     // Método para obtener sistemas por categoría
     getSistemasPorCategoria(categoria) {
         return this.data.sistemas.filter(s => s.categoria === categoria);
+    }
+
+    // Métodos requeridos por Dashboards Ejecutivos (Audit 6.0)
+    getEstadisticas() {
+        return {
+            totalUSD: this.data.totalCapexUSD,
+            totalCOP: this.data.totalCapexCOP,
+            trm: this.data.trmOficial
+        };
+    }
+
+    getContractualSummary() {
+        // Mapeo para tabla de sistemas contractuales
+        return this.data.sistemas.map(s => ({
+            sistema: s.sistema,
+            cantidad: s.cantidad,
+            capexUSD: s.capexUSD,
+            estado: s.estado
+        }));
+    }
+
+    getWBSItems() {
+        if (window.wbsDataGlobal && window.wbsDataGlobal.items) {
+            return window.wbsDataGlobal.items.filter(i => i.tipo === 'item');
+        }
+        return [];
     }
 }
 

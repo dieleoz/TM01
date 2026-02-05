@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de Cambios TM01 - Generador DT</title>
+    <link rel="stylesheet" href="css/tm01-design-system.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -206,125 +207,103 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div>
-                <h1>⚡ Gestor de Cambios & DT Generator</h1>
-                <p style="color: var(--secondary); margin-top: 4px;">Edita cantidades/precios y genera el Markdown para
-                    el agente.</p>
-            </div>
-            <div>
-                <button class="btn btn-secondary"
-                    onclick="window.location.href='WBS_Menu_Principal.html'">Volver</button>
-                <button class="btn" onclick="abrirModalNuevoItem()">➕ Agregar Ítem</button>
-                <button class="btn" style="background-color: #10b981;" onclick="exportarExcel()">📊 Exportar
-                    Excel</button>
-                <button class="btn btn-success" onclick="generarDT()">📝 Generar DT (.md)</button>
-            </div>
+    <nav class="tm01-navbar">
+        <div class="tm01-brand">
+            ⚡ TM01 Change Management <span class="tm01-status-badge">Audit 6.0</span>
         </div>
-
-        <!-- Clarification Banner -->
-        <div
-            style="background: var(--info-bg); border-left: 4px solid var(--info); padding: var(--space-lg); border-radius: var(--radius-md); margin-bottom: var(--space-xl);">
-            <h3 style="margin-top: 0; color: var(--info); display: flex; align-items: center; gap: var(--space-sm);">
-                ℹ️ ¿Para qué sirve este módulo?
-            </h3>
-            <p style="margin-bottom: var(--space-sm); color: var(--text-main);">
-                <strong>Gestión de Cambios</strong> es para <strong>MODIFICAR cantidades ya aprobadas</strong> en el
-                proyecto (órdenes de cambio, ajustes de alcance).
-            </p>
-            <p style="margin-bottom: var(--space-md); color: var(--text-main);">
-                Si necesitas <strong>COMPRAR por primera vez</strong>, usa el Dashboard de Compras para acceder a los
-                RFQs con tablas de cantidades.
-            </p>
-            <a href="dashboard_compras.html" class="tm01-btn"
-                style="background: var(--success); color: white; border-color: var(--success);">
-                📦 Ir al Dashboard de Compras
-            </a>
+        <div style="display: flex; gap: 10px;">
+            <a href="index.html" class="tm01-btn tm01-btn-secondary"
+                style="background:var(--bg-hover); color:var(--text-main);">Panel Principal</a>
+            <button class="tm01-btn tm01-btn-primary" onclick="abrirModalNuevoItem()">➕ Agregar Ítem</button>
+            <button class="tm01-btn tm01-btn-success" onclick="exportarExcel()">📊 Excel</button>
+            <button class="tm01-btn tm01-btn-warning" onclick="generarDT()">📝 Generar DT (.md)</button>
         </div>
+    </nav>
 
-        <!-- FASE 7: ACCESO RÁPIDO A ENTREGABLES -->
-        <div
-            style="background: linear-gradient(135deg, #059669 0%, #047857 100%); padding: 20px; border-radius: 12px; margin-bottom: 20px; color: white;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+    <div class="tm01-container" style="max-width: 1400px; margin-top: var(--space-xl);">
+
+        <!-- Welcome / Info Card -->
+        <div class="tm01-card" style="margin-bottom: var(--space-lg); border-left: 6px solid var(--tm01-accent);">
+            <div style="display: flex; gap: var(--space-lg); align-items: center;">
+                <div class="tm01-card-icon" style="background: var(--info-bg); color: var(--tm01-accent);">🛠️</div>
                 <div>
-                    <h3 style="margin: 0; font-size: 1.1rem;">📦 Documentos de Licitación (Fase 7)</h3>
-                    <p style="margin: 4px 0 0 0; opacity: 0.9; font-size: 0.9rem;">Consulta los RFQs y reportes mientras
-                        gestionas cambios</p>
+                    <h2 style="margin: 0; color: var(--tm01-primary);">Gestor de Órdenes de Cambio</h2>
+                    <p style="margin: 5px 0 0 0; color: var(--text-sub);">
+                        Utiliza este módulo para <strong>ajustar cantidades o precios unitarios</strong> de items
+                        aprobados.
+                        Para compras nuevas de sistemas completos, usa el <a href="dashboard_compras.html"
+                            style="color: var(--tm01-accent); font-weight: 600;">Dashboard de Compras</a>.
+                    </p>
                 </div>
-                <button onclick="toggleEntregables()" class="btn"
-                    style="background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3);">
-                    <span id="toggleIcon">▼</span> Mostrar/Ocultar
-                </button>
             </div>
-            <div id="panelEntregables"
-                style="display: none; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.2);">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <!-- Reportes Ejecutivos -->
-                    <div style="background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 12px 0; font-size: 0.95rem;">📑 Reportes Ejecutivos (HTML)</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
-                            <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_01_Recaudo_y_Peajes_IPREV.html"
-                                target="_blank" style="color: white; text-decoration: none; opacity: 0.9;">→ Sistema
-                                01: Peajes</a>
-                            <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_02_Telecom_y_Fibra_322KM.html"
-                                target="_blank" style="color: white; text-decoration: none; opacity: 0.9;">→ Sistema 02:
-                                Telecom</a>
-                            <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/SISTEMA_03_ITS_y_Pesaje_WIM.html"
-                                target="_blank" style="color: white; text-decoration: none; opacity: 0.9;">→ Sistema 03:
-                                ITS</a>
-                            <a href="dashboard_licitacion.html" target="_blank"
-                                style="color: white; text-decoration: none; font-weight: 600; margin-top: 4px;">Ver
-                                todos →</a>
+        </div>
+
+        <!-- FASE 7: Quick Links -->
+        <div class="tm01-section" style="margin-bottom: var(--space-lg);">
+            <div class="tm01-section-header"
+                style="display: flex; justify-content: space-between; align-items: center;">
+                <span>📦 Documentos de Licitación (Fase 7)</span>
+                <button onclick="toggleEntregables()" class="tm01-btn-link"
+                    style="font-size: 0.8rem;">Ver/Ocultar</button>
+            </div>
+            <div id="panelEntregables" class="tm01-section-content" style="display: none; background: var(--bg-main);">
+                <div class="tm01-grid-2">
+                    <div class="tm01-card" style="padding: var(--space-md);">
+                        <h4 style="margin-bottom: var(--space-sm);">📑 Reportes Ejecutivos</h4>
+                        <div style="display: grid; gap: 8px;">
+                            <a href="../X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/INDICE_Documentos_Servidos.html"
+                                target="_blank" class="tm01-btn-link">→ Índice de Servidos</a>
+                            <a href="dashboard_licitacion.html" target="_blank" class="tm01-btn-link">→ Todos los
+                                Componentes</a>
                         </div>
                     </div>
-                    <!-- RFQs -->
-                    <div style="background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px;">
-                        <h4 style="margin: 0 0 12px 0; font-size: 0.95rem;">📦 RFQs Blindados (Markdown)</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+                    <div class="tm01-card" style="padding: var(--space-md);">
+                        <h4 style="margin-bottom: var(--space-sm);">📦 RFQs Blindados</h4>
+                        <div style="display: grid; gap: 8px;">
                             <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_003_CCTV_v2.0.md" target="_blank"
-                                style="color: white; text-decoration: none; opacity: 0.9;">→ RFQ 003: CCTV (9
-                                cámaras)</a>
+                                class="tm01-btn-link">→ RFQ 003: CCTV</a>
                             <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_002_SOS_Postes_v2.0.md" target="_blank"
-                                style="color: white; text-decoration: none; opacity: 0.9;">→ RFQ 002: SOS (98
-                                postes)</a>
-                            <a href="../X_ENTREGABLES_CONSOLIDADOS/RFQ_001_FIBRA_OPTICA_v2.0.md" target="_blank"
-                                style="color: white; text-decoration: none; opacity: 0.9;">→ RFQ 001: Fibra (322km)</a>
-                            <a href="dashboard_licitacion.html" target="_blank"
-                                style="color: white; text-decoration: none; font-weight: 600; margin-top: 4px;">Ver
-                                todos →</a>
+                                class="tm01-btn-link">→ RFQ 002: SOS</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="controls">
-            <div>
-                <label>Sistema:</label>
-                <select id="filtroSistema" onchange="renderTable()">
-                    <option value="ALL">Todos</option>
-                </select>
-            </div>
-            <div style="flex-grow: 1;">
-                <label>Buscar:</label>
-                <input type="text" id="filtroTexto" placeholder="Buscar ítem..." oninput="renderTable()"
-                    style="width: 300px;">
+        <!-- Filters -->
+        <div class="tm01-card" style="margin-bottom: var(--space-lg); padding: var(--space-md);">
+            <div style="display: flex; gap: var(--space-lg); align-items: flex-end;">
+                <div style="flex: 1;">
+                    <label
+                        style="display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">FILTRAR
+                        POR SISTEMA</label>
+                    <select id="filtroSistema" onchange="renderTable()" style="width: 100%; height: 40px;">
+                        <option value="ALL">Cualquier Sistema</option>
+                    </select>
+                </div>
+                <div style="flex: 2;">
+                    <label
+                        style="display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">BÚSQUEDA
+                        RÁPIDA</label>
+                    <input type="text" id="filtroTexto" placeholder="Ej: Poste, Gabinete, Switch..."
+                        oninput="renderTable()" style="width: 100%; height: 40px;">
+                </div>
             </div>
         </div>
 
-        <div class="table-container">
-            <table>
+        <!-- Main Table -->
+        <div class="tm01-section">
+            <table class="tm01-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Descripción (Click 📝 para editar)</th>
-                        <th>Sistema</th>
-                        <th>Cant. Actual</th>
-                        <th>Nueva Cant.</th>
-                        <th>VU COP Actual</th>
-                        <th>Nuevo VU COP</th>
-                        <th>Delta Total</th>
+                        <th style="width: 80px">ID</th>
+                        <th>DESCRIPCIÓN / SPECS</th>
+                        <th style="width: 120px">SISTEMA</th>
+                        <th style="width: 100px; text-align: right;">CANT. INIT</th>
+                        <th style="width: 120px; text-align: right;">NUEVA CANT.</th>
+                        <th style="width: 140px; text-align: right;">V.U. (COP) INIT</th>
+                        <th style="width: 160px; text-align: right;">NUEVO V.U. (COP)</th>
+                        <th style="width: 160px; text-align: right;">DELTA TOTAL</th>
                     </tr>
                 </thead>
                 <tbody id="tablaItems">
@@ -411,6 +390,7 @@
 
     <!-- Carga de Datos -->
     <script src="data/tm01_master_data.js"></script>
+    <script src="datos_wbs_TM01_items.js"></script>
     <script>
         let wbsData = [];
         let cambios = {}; // Mapa de ID -> { cant, precio, nota }
@@ -418,13 +398,17 @@
         let currentEditingId = null;
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Cargar datos desde la instancia global creada por tm01_master_data.js
-            if (window.tm01MasterData && window.tm01MasterData.data) {
+            // Cargar datos desde window.wbsDataGlobal (Fuente: datos_wbs_TM01_items.js)
+            if (window.wbsDataGlobal && window.wbsDataGlobal.items) {
+                wbsData = window.wbsDataGlobal.items.filter(i => i.tipo === 'item');
+                initFiltros();
+                renderTable();
+            } else if (window.tm01MasterData && window.tm01MasterData.data && window.tm01MasterData.data.wbs) {
                 wbsData = window.tm01MasterData.data.wbs.filter(i => i.tipo === 'item');
                 initFiltros();
                 renderTable();
             } else {
-                alert("Error cargando Master Data. Verifica tm01_master_data.js");
+                console.error("No se encontraron items en wbsDataGlobal ni en tm01MasterData");
             }
         });
 

@@ -47,76 +47,106 @@
         }
 
         .wbs-container {
-            background: var(--surface);
+            background: var(--bg-surface);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            overflow-x: auto;
+            /* Habilitar scroll horizontal */
+            margin-top: var(--space-xl);
             border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            margin-top: var(--space-lg);
+            -webkit-overflow-scrolling: touch;
         }
 
         .wbs-table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
         }
 
         .wbs-table th {
-            background: var(--tm01-primary);
-            color: white;
+            background: var(--bg-gradient-start);
+            color: var(--text-inverse);
             padding: var(--space-md);
             text-align: left;
-            font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             position: sticky;
             top: 0;
-            z-index: 10;
+            z-index: 100;
         }
 
         .wbs-table td {
             padding: var(--space-sm) var(--space-md);
             border-bottom: 1px solid var(--border-light);
             font-size: 0.9rem;
+            transition: all var(--transition-fast);
         }
 
-        .wbs-table tr:hover {
-            background: var(--bg-hover);
-        }
-
+        /* JERARQUÍA WBS */
         .capitulo-row {
-            background: var(--tm01-primary);
-            color: white;
-            font-weight: 700;
-        }
-
-        .capitulo-row:hover {
-            background: var(--tm01-primary) !important;
+            background: #e0f2fe !important;
+            color: var(--tm01-primary);
+            font-weight: 800;
+            font-size: 1rem;
+            border-left: 6px solid var(--tm01-accent);
         }
 
         .subcapitulo-row {
-            background: var(--border-light);
-            font-weight: 600;
+            background: #f8fafc !important;
+            font-weight: 700;
+            color: var(--text-main);
+            border-left: 6px solid var(--text-muted);
         }
 
         .item-row {
             background: white;
         }
 
+        .item-row:hover {
+            background: var(--bg-hover) !important;
+            transform: translateX(4px);
+        }
+
+        /* INDENTACIÓN */
+        .indent-1 {
+            padding-left: var(--space-md) !important;
+        }
+
+        .indent-2 {
+            padding-left: var(--space-2xl) !important;
+        }
+
+        .indent-3 {
+            padding-left: calc(var(--space-2xl) * 1.5) !important;
+        }
+
         .item-code {
-            font-family: 'Courier New', monospace;
-            font-weight: 600;
-            color: var(--tm01-primary);
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-weight: 700;
+            color: var(--tm01-accent);
         }
 
         .amount {
             text-align: right;
-            font-family: 'Courier New', monospace;
+            font-family: 'Fira Code', monospace;
         }
 
-        .loading {
-            text-align: center;
-            padding: var(--space-xl);
-            color: var(--text-secondary);
+        .currency-symbol {
+            color: var(--text-muted);
+            font-size: 0.8em;
+            margin-right: 2px;
+        }
+
+        .system-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: var(--info-bg);
+            color: var(--tm01-accent);
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -136,7 +166,7 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="tm01-container">
+    <div class="tm01-container" style="max-width: 1500px;"> <!-- Ampliado para visualización completa de columnas -->
         <!-- Header Card -->
         <div class="tm01-card">
             <div class="tm01-card-header">
@@ -187,10 +217,10 @@
                         <th style="width: 100px">Sistema</th>
                         <th style="width: 80px">Cant.</th>
                         <th style="width: 60px">Unid.</th>
-                        <th style="width: 120px">VU (USD)</th>
-                        <th style="width: 150px">VU (COP)</th>
-                        <th style="width: 120px">Total (USD)</th>
-                        <th style="width: 150px">Total (COP)</th>
+                        <th style="width: 120px" class="amount">V.U. (USD)</th>
+                        <th style="width: 150px" class="amount">V.U. (COP)</th>
+                        <th style="width: 125px" class="amount">TOTAL (USD)</th>
+                        <th style="width: 155px" class="amount">TOTAL (COP)</th>
                     </tr>
                 </thead>
                 <tbody id="wbsBody">
@@ -227,34 +257,46 @@
 
             items.forEach(item => {
                 const tr = document.createElement('tr');
+                const lvl = item.nivel || 3;
 
-                // Determinar clase según tipo
-                if (item.tipo === 'capitulo' || item.nivel === 1) {
+                // Determinar clase según tipo y nivel profesional
+                if (item.tipo === 'capitulo' || lvl === 1) {
                     tr.className = 'capitulo-row';
-                } else if (item.tipo === 'subcapitulo' || item.nivel === 2) {
+                } else if (item.tipo === 'subcapitulo' || lvl === 2) {
                     tr.className = 'subcapitulo-row';
                 } else {
                     tr.className = 'item-row';
                 }
 
-                // Formatear valores
+                // Formatear valores - Mapeo de campos Audit 6.0
                 const cantidad = item.cantidad || '';
                 const unidad = item.unidad || '';
-                const vu = item.vu || '';
-                const vuCOP = item.vuCOP || '';
-                const total = item.total || '';
-                const totalCOP = item.totalCOP || '';
+                const totalUSD_Val = item.totalUSD || item.total || '';
+                const totalCOP_Val = item.totalCOP || '';
+
+                // Cálculo dinámico de VU si falta en la fuente
+                let vuUSD = item.vu || '';
+                let vuCOP = item.vuCOP || '';
+                if (!vuUSD && totalUSD_Val && cantidad && !isNaN(parseFloat(cantidad)) && parseFloat(cantidad) > 0) {
+                    vuUSD = (parseFloat(String(totalUSD_Val).replace(/,/g, '')) / parseFloat(cantidad)).toFixed(2);
+                }
+                if (!vuCOP && totalCOP_Val && cantidad && !isNaN(parseFloat(cantidad)) && parseFloat(cantidad) > 0) {
+                    vuCOP = Math.round(parseFloat(String(totalCOP_Val).replace(/,/g, '')) / parseFloat(cantidad));
+                }
+
+                // Aplicar Indentación Visual por Nivel (UX Standard)
+                const indentClass = `indent-${lvl}`;
 
                 tr.innerHTML = `
-                    <td class="item-code">${item.item}</td>
-                    <td>${item.descripcion}</td>
-                    <td>${item.sistema || ''}</td>
+                    <td class="item-code ${indentClass}">${item.item}</td>
+                    <td style="font-weight:${lvl < 3 ? 'bold' : 'normal'}">${item.descripcion}</td>
+                    <td><span class="system-tag">${item.sistema || ''}</span></td>
                     <td class="amount">${cantidad}</td>
-                    <td>${unidad}</td>
-                    <td class="amount">${vu ? '$' + vu : ''}</td>
-                    <td class="amount">${vuCOP ? '$' + vuCOP : ''}</td>
-                    <td class="amount">${total ? '$' + total : ''}</td>
-                    <td class="amount">${totalCOP ? '$' + totalCOP : ''}</td>
+                    <td style="text-align:center; color:var(--text-sub); font-size:0.8rem;">${unidad}</td>
+                    <td class="amount"><span class="currency-symbol">$</span>${vuUSD ? parseFloat(vuUSD).toLocaleString('en-US') : ''}</td>
+                    <td class="amount"><span class="currency-symbol">$</span>${vuCOP ? parseInt(vuCOP).toLocaleString('es-CO') : ''}</td>
+                    <td class="amount" style="font-weight:bold;"><span class="currency-symbol">$</span>${totalUSD_Val ? parseFloat(String(totalUSD_Val).replace(/,/g, '')).toLocaleString('en-US') : ''}</td>
+                    <td class="amount" style="font-weight:bold; background: rgba(16, 185, 129, 0.05);"><span class="currency-symbol">$</span>${totalCOP_Val ? parseFloat(String(totalCOP_Val).replace(/,/g, '')).toLocaleString('es-CO') : ''}</td>
                 `;
 
                 tbody.appendChild(tr);

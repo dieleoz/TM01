@@ -26,6 +26,7 @@ function EX($p) {
         '11_T05_Ingenieria_Detalle_Peaje_v1.0.md'                     = 'Peajes'
         '01_T05_Ingenieria_Detalle_Fibra_Optica_v1.0.md'              = 'Fibra Óptica'
         '09_T05_Ingenieria_Detalle_Estaciones_Meteorologicas_v1.0.md' = 'METEO (Estaciones Meteorológicas)'
+        '08_T05_Ingenieria_Detalle_Galibos_v1.0.md'                   = 'Gálibos'
     }
     $r = @()
     foreach ($f in $m.Keys) {
@@ -33,22 +34,35 @@ function EX($p) {
         if (Test-Path $fp) {
             $s = $m[$f]
             $l = Get-Content $fp -Encoding UTF8
+            $currentType = 'SUMINISTRO' # Default
             foreach ($line in $l) {
                 $t = $line.Trim()
+                
+                # Detect the type from headers or special lines
+                if ($t -match 'SUMINISTRO|EQUIPO') { $currentType = 'SUMINISTRO' }
+                elseif ($t -match 'OBRA|CIVIL|INSTALACI[OÓ]N|MONTAJE|CIMENTACI[OÓ]N') { $currentType = 'OBRA' }
+                elseif ($t -match 'SERVICIO|INGENIER[IÍ]A|PRUEBAS') { $currentType = 'SERVICIO' }
+                
                 # CRITICAL: Only extract rows with currency symbols ($) to avoid location tables
                 if ($t.StartsWith('|') -and $t.EndsWith('|') -and $t.Contains('$')) {
                     $parts = $t.Split('|')
                     if ($parts.Count -ge 5) {
+                        # Logic to avoid headers and separators
                         $c1 = $parts[1].Trim()
-                        if ($c1.Length -gt 2 -and $c1 -notmatch '---') {
-                            $obj = @{ Sistema = $s; Componente = $c1; Cantidad = '1'; Total = '0' }
+                        if ($c1.Length -gt 0 -and $c1 -notmatch '---' -and $c1 -notmatch 'Ítem|Componente|Tipo') {
+                            $obj = @{ Sistema = $s; Componente = $c1; Cantidad = '1'; Total = '0'; Tipo = $currentType; Unidad = '' }
+                            
                             $rawT = ''
                             if ($parts.Count -ge 7) {
+                                # New format: | Ítem | Desc | Und | Cant | VU | Total |
                                 $obj.Componente = $parts[2].Trim()
-                                $obj.Cantidad = $parts[3].Trim()
+                                if ($obj.Componente -eq '') { $obj.Componente = $parts[1].Trim() }
+                                $obj.Unidad = $parts[3].Trim()
+                                $obj.Cantidad = $parts[4].Trim()
                                 $rawT = [regex]::Replace($parts[6].Trim(), '[^0-9.]', '')
                             }
                             else {
+                                # Old format: | Comp | Cant | Total |
                                 $obj.Cantidad = $parts[2].Trim()
                                 $rawT = [regex]::Replace($parts[4].Trim(), '[^0-9.]', '')
                             }
@@ -56,7 +70,9 @@ function EX($p) {
                             if ($rawT -match '^[0-9]{3,}$') {
                                 # Only accept numbers with 3 or more digits (real prices)
                                 $obj.Total = $rawT
-                                if ($obj.Componente -notmatch 'TOTAL' -and $obj.Componente -notmatch 'CAPEX' -and $obj.Componente -notmatch '---') { $r += $obj }
+                                if ($obj.Componente -notmatch 'TOTAL' -and $obj.Componente -notmatch 'CAPEX' -and $obj.Componente -notmatch '---') { 
+                                    $r += $obj 
+                                }
                             }
                         }
                     }
@@ -101,12 +117,12 @@ try {
                     $id = $iSt + '.1.' + $j.ToString()
                     $tv = [double]$row.Total
                     $cv = [math]::Round($tv * 4400)
-                    $items += '{ item: ' + "'" + $id + "'" + ', id: ' + "'" + $id + "'" + ', nivel: 3, descripcion: ' + "'" + $row.Componente + "'" + ', sistema: ' + "'" + $n + "'" + ', cantidad: ' + "'" + $row.Cantidad + "'" + ', totalUSD: ' + $tv + ', totalCOP: ' + $cv + ', tipo: ' + "'" + 'item' + "'" + ', tipo_presupuesto: ' + "'" + 'CONSOLIDADO' + "'" + ' }'
+                    $items += '{ item: ' + "'" + $id + "'" + ', id: ' + "'" + $id + "'" + ', nivel: 3, descripcion: ' + "'" + $row.Componente + "'" + ', sistema: ' + "'" + $n + "'" + ', cantidad: ' + "'" + $row.Cantidad + "'" + ', unidad: ' + "'" + $row.Unidad + "'" + ', totalUSD: ' + $tv + ', totalCOP: ' + $cv + ', tipo: ' + "'" + 'item' + "'" + ', tipo_presupuesto: ' + "'" + $row.Tipo + "'" + ' }'
                 }
             }
             else {
                 $id = $iSt + '.1.1'
-                $items += '{ item: ' + "'" + $id + "'" + ', id: ' + "'" + $id + "'" + ', nivel: 3, descripcion: ' + "'" + $n + ' (Global)' + "'" + ', sistema: ' + "'" + $n + "'" + ', cantidad: ' + "'" + $qt + "'" + ', totalUSD: ' + $u + ', totalCOP: ' + $cp + ', tipo: ' + "'" + 'item' + "'" + ', tipo_presupuesto: ' + "'" + 'CONSOLIDADO' + "'" + ' }'
+                $items += '{ item: ' + "'" + $id + "'" + ', id: ' + "'" + $id + "'" + ', nivel: 3, descripcion: ' + "'" + $n + ' (Global)' + "'" + ', sistema: ' + "'" + $n + "'" + ', cantidad: ' + "'" + $qt + "'" + ', totalUSD: ' + $u + ', totalCOP: ' + $cp + ', tipo: ' + "'" + 'item' + "'" + ', tipo_presupuesto: ' + "'" + 'SUMINISTRO' + "'" + ' }'
             }
         }
     }
@@ -114,7 +130,7 @@ try {
     $joined = $items -join ",`n"
     $d = (Get-Date).ToString('yyyy-MM-dd')
     $t = $items.Count
-    $o = 'window.wbsDataGlobal = { fecha: ' + "'" + $d + "'" + ', total: ' + $t + ', items: [`n' + $joined + '`n] };'
+    $o = "window.wbsDataGlobal = { fecha: '$d', total: $t, items: [`n" + $joined + "`n] };"
     
     Set-Content $TargetPath $o -Encoding UTF8
     WL 'Sync success'

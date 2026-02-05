@@ -91,6 +91,8 @@ credentials.json
 # Documentos servidos (generados automáticamente)
 X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/WORD/*.docx
 X_ENTREGABLES_CONSOLIDADOS/8_DOCUMENTOS_SERVIDOS/HTML/*.html
+X_ENTREGABLES_CONSOLIDADOS/*.md
+X_ENTREGABLES_CONSOLIDADOS/7_SISTEMAS_EJECUTIVOS/*.md
 
 # JSON/JS generados (se regeneran con scripts)
 # layout_datos.js
