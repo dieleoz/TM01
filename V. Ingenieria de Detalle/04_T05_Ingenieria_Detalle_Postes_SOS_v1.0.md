@@ -40,18 +40,14 @@
 
 ## 💰 **PRESUPUESTO DETALLADO**
 
-### **CAPEX POR COMPONENTE:**
+### **CAPEX POR COMPONENTE (CONSOLIDADO 2026):**
 
 | Componente | Cantidad | Costo Unit. (COP) | Total (COP) | % del Total |
 |:-----------|:---------|:------------------|:------------|:------------|
-| **1. SUMINISTRO EQUIPOS SOS** | 88 | $4,422,956 | $389,220,181 | 14.7% |
-| **2. SUMINISTRO ESTRUCTURAS** | 88 | $14,692,348 | $1,292,926,654 | 48.9% |
-| **3. ARREGLO FOTOVOLTAICO** | 88 | $7,006,832 | $616,601,265 | 23.3% |
-| **4. INSTALACIÓN SISTEMA** | 88 | $3,181,182 | $279,944,071 | 10.6% |
-| **5. SUMINISTRO EQUIPOS CCO** | 1 | $64,206,380 | $64,206,380 | 2.4% |
-| **TOTAL CAPEX SOS (DIRECTO)** | | | **$2,642,898,552** | **100%** |
+| **1. SUMINISTRO EQUIPOS SOS** | 88 | $110,000,000 | $9,680,000,000 | 100.0% |
+| **TOTAL CAPEX SOS (CONSOLIDADO)** | | | **$9,680,000,000** | **100%** |
 
-**CAPEX/poste (Promedio):** **$30,032,938 COP** (~$6,826 USD @ 4400)
+**CAPEX/poste (Promedio):** **$110,000,000 COP** (~$25,000 USD @ 4400)
 
 **Nota:** 88 postes nuevos + 10 existentes en UF Rehabilitación = 98 total
 
@@ -100,14 +96,13 @@
 
 | Concepto | Valor (USD) | % |
 |:---------|:------------|:--|
-| **CAPEX (98 postes)** | $2,450,000 | 67.6% |
-| **OPEX (20 años)** | $1,176,000 | 32.4% |
-| **TOTAL 20 AÑOS** | **$3,626,000** | **100%** |
+| **CAPEX (88 postes)** | $2,200,000 | 100% |
+| **TOTAL CONSOLIDADO** | **$2,200,000** | **100%** |
 
 ---
 
 **✅ REVISADO CON INFORMACIÓN OFICIAL Y NORMATIVA 2024**
-- Cantidad restaurada a 98 unidades (AT1 compliance).
+- Cantidad restaurada a 88 unidades (Optimizada).
 - Espeficación de color Naranja RAL 2004 y Altura 4.90m agregada.
 - Sistema solar autónomo definido para mitigar riesgos de acometida.
-- CAPEX reconciliado en $2,450,000 USD.
+- CAPEX reconciliado en $2,200,000 USD.

@@ -36,15 +36,15 @@
 
 ## 💰 **PRESUPUESTO DETALLADO Y SEGREGADO**
 
-### **A. SUBSISTEMA ITS (WBS 3.01) - $2,320,000 USD**
+### **A. SUBSISTEMA ITS (WBS 3.01) - $2,290,000 USD**
 
 | Componente | Cantidad | Costo Unit. (USD) | Total (USD) |
 |:-----------|:---------|:------------------|:------------|
 | **1. PMV GRAN FORMATO (Vía)** | **29** | **$45,000** | **$1,305,000** |
 | Matriz Full RGB P20 (UNE-EN 12966) | 29 | $45,000 | $1,305,000 |
-| **2. ESTRUCTURA PÓRTICO** | **29** | **$35,000** | **$1,015,000** |
-| Diseño Sismo-Resistente (CCP-14) | 29 | $35,000 | $1,015,000 |
-| **TOTAL ITS** | **29** | | **$2,320,000** |
+| **2. ESTRUCTURA PÓRTICO** | **29** | **$33,965.52** | **$985,000** |
+| Diseño Sismo-Resistente (CCP-14) | 29 | $33,965.52 | $985,000 |
+| **TOTAL ITS** | **29** | | **$2,290,000** |
 
 ### **B. SUBSISTEMA PEAJES (WBS 5.01) - $70,000 USD**
 
@@ -54,7 +54,7 @@
 | Panel P10 Ámbar/RGB (IP/REV) | 14 | $5,000 | $70,000 |
 | **TOTAL PEAJES** | **14** | | **$70,000** |
 
-### **GRAN TOTAL CAPEX: $2,390,000 USD**
+### **GRAN TOTAL CAPEX: $2,360,000 USD**
 
 ---
 

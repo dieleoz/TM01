@@ -1,106 +1,125 @@
 # SCRIPT DE SINCRONIZACION WBS TM01
-# Archivo: scripts/sync_wbs_tm01.ps1
-# Version: 3.2 (Ultra-Safe Syntax)
+# Version: 3.10 (Budget Table Discrimination)
 
-param(
-    [string]$SourcePath = "docs/data/tm01_master_data.js",
-    [string]$TargetPath = "docs/datos_wbs_TM01_items.js",
-    [string]$T05Path = "V. Ingenieria de Detalle"
-)
+$SourcePath = 'docs/data/tm01_master_data.js'
+$TargetPath = 'docs/datos_wbs_TM01_items.js'
+$T05Path = 'V. Ingenieria de Detalle'
 
-function Write-Log([string]$msg) { 
-    $ts = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
-    Write-Host "[$ts] $msg" 
+function WL($m) { Write-Host (Get-Date -UFormat '%H:%M:%S') $m }
+
+function SN($n) {
+    if (!$n) { return "" }
+    $o = ""
+    foreach ($c in $n.ToUpper().ToCharArray()) {
+        if ([char]::IsLetter($c)) { $o += $c }
+    }
+    return $o
 }
 
-function Extract-T05 {
-    param($Path)
-    $map = @{
-        "04_T05_Ingenieria_Detalle_Postes_SOS_v1.0.md"                = "SOS (Postes de Auxilio)"
-        "07_T05_Ingenieria_Detalle_RADAR_ETD_v1.0.md"                 = "ETD/RADAR"
-        "05_T05_Ingenieria_Detalle_CCTV_v1.0.md"                      = "CCTV (Seguridad)"
-        "06_T05_Ingenieria_Detalle_PMV_v1.0.md"                       = "PMV (Mensajería Variable)"
-        "10_T05_Ingenieria_Detalle_WIM_v1.0.md"                       = "WIM (Pesaje Dinámico)"
-        "11_T05_Ingenieria_Detalle_Peaje_v1.0.md"                     = "Peajes"
-        "01_T05_Ingenieria_Detalle_Fibra_Optica_v1.0.md"              = "Fibra Óptica"
-        "09_T05_Ingenieria_Detalle_Estaciones_Meteorologicas_v1.0.md" = "METEO (Estaciones Meteorológicas)"
+function EX($p) {
+    $m = @{
+        '04_T05_Ingenieria_Detalle_Postes_SOS_v1.0.md'                = 'SOS (Postes de Auxilio)'
+        '07_T05_Ingenieria_Detalle_RADAR_ETD_v1.0.md'                 = 'ETD/RADAR'
+        '05_T05_Ingenieria_Detalle_CCTV_v1.0.md'                      = 'CCTV (Seguridad)'
+        '06_T05_Ingenieria_Detalle_PMV_v1.0.md'                       = 'PMV (Mensajería Variable)'
+        '10_T05_Ingenieria_Detalle_WIM_v1.0.md'                       = 'WIM (Pesaje Dinámico)'
+        '11_T05_Ingenieria_Detalle_Peaje_v1.0.md'                     = 'Peajes'
+        '01_T05_Ingenieria_Detalle_Fibra_Optica_v1.0.md'              = 'Fibra Óptica'
+        '09_T05_Ingenieria_Detalle_Estaciones_Meteorologicas_v1.0.md' = 'METEO (Estaciones Meteorológicas)'
     }
-    
-    $results = @()
-    foreach ($file in $map.Keys) {
-        $fpath = Join-Path $Path $file
-        if (Test-Path $fpath) {
-            $sys = $map[$file]
-            $lines = Get-Content $fpath -Encoding UTF8
-            foreach ($l in $lines) {
-                if ($l -match "\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|\s*([0-9.,]+)\s*\|\s*([^|]+)\s*\|\s*\$?([0-9,.]+)\s*\|\s*\$?([0-9,.]+)\s*\|") {
-                    $name = $Matches[2].Trim()
-                    $total = $Matches[6].Trim() -replace ",", ""
-                    if ($name -notmatch "TOTAL|CAPEX|---") {
-                        $results += @{ Sistema = $sys; Componente = $name; Cantidad = $Matches[3].Trim(); Total = $total }
-                    }
-                }
-                elseif ($l -match "\|\s*([^|]+)\s*\|\s*([0-9.,]+)\s*\|\s*\$?([0-9,.]+)\s*\|\s*\$?([0-9,.]+)\s*\|") {
-                    $name = $Matches[1].Trim()
-                    $total = $Matches[4].Trim() -replace ",", ""
-                    if ($name -notmatch "TOTAL|CAPEX|---") {
-                        $results += @{ Sistema = $sys; Componente = $name; Cantidad = $Matches[2].Trim(); Total = $total }
+    $r = @()
+    foreach ($f in $m.Keys) {
+        $fp = Join-Path $p $f
+        if (Test-Path $fp) {
+            $s = $m[$f]
+            $l = Get-Content $fp -Encoding UTF8
+            foreach ($line in $l) {
+                $t = $line.Trim()
+                # CRITICAL: Only extract rows with currency symbols ($) to avoid location tables
+                if ($t.StartsWith('|') -and $t.EndsWith('|') -and $t.Contains('$')) {
+                    $parts = $t.Split('|')
+                    if ($parts.Count -ge 5) {
+                        $c1 = $parts[1].Trim()
+                        if ($c1.Length -gt 2 -and $c1 -notmatch '---') {
+                            $obj = @{ Sistema = $s; Componente = $c1; Cantidad = '1'; Total = '0' }
+                            $rawT = ''
+                            if ($parts.Count -ge 7) {
+                                $obj.Componente = $parts[2].Trim()
+                                $obj.Cantidad = $parts[3].Trim()
+                                $rawT = [regex]::Replace($parts[6].Trim(), '[^0-9.]', '')
+                            }
+                            else {
+                                $obj.Cantidad = $parts[2].Trim()
+                                $rawT = [regex]::Replace($parts[4].Trim(), '[^0-9.]', '')
+                            }
+                            
+                            if ($rawT -match '^[0-9]{3,}$') {
+                                # Only accept numbers with 3 or more digits (real prices)
+                                $obj.Total = $rawT
+                                if ($obj.Componente -notmatch 'TOTAL' -and $obj.Componente -notmatch 'CAPEX' -and $obj.Componente -notmatch '---') { $r += $obj }
+                            }
+                        }
                     }
                 }
             }
         }
     }
-    return $results
+    return $r
 }
 
 try {
-    Write-Log "Sync v3.2 start"
-    $master = Get-Content $SourcePath -Raw -Encoding UTF8
-    $match = [regex]::Match($master, "(?s)sistemas:\s*\[(.*?)\]")
-    if (!$match.Success) { throw "No array" }
+    WL 'Sync 3.10 start'
+    $txt = Get-Content $SourcePath -Encoding UTF8 -Raw
+    $idx1 = $txt.IndexOf('sistemas: [')
+    if ($idx1 -lt 0) { throw "No systems array" }
+    $idx2 = $txt.IndexOf('],', $idx1)
+    $sc = $txt.Substring($idx1, $idx2 - $idx1)
     
-    $blocks = [regex]::Matches($match.Groups[1].Value, "(?s)\{.*?\}")
-    $comps = Extract-T05 $T05Path
-    $wbs_items = @()
-    $i = 0
+    $cs = EX $T05Path
+    $items = @()
+    $c = 0
     
-    foreach ($b in $blocks) {
-        $i++
-        $t = $b.Value
-        $name = [regex]::Match($t, "sistema:\s*[`"']([^`"']+)").Groups[1].Value
-        $cant = [regex]::Match($t, "cantidad:\s*(\d+)").Groups[1].Value
-        $usd = [regex]::Match($t, "capexUSD:\s*([\d.]+)").Groups[1].Value
-        $cop = [regex]::Match($t, "capexCOP:\s*([\d.]+)").Groups[1].Value
-        
-        $norm = $name.ToUpper() -replace "[^A-Z]", ""
-        
-        $wbs_items += "{ item: '$i', id: '$i', nivel: 1, descripcion: 'SISTEMA $($name.ToUpper())', sistema: '$name', tipo: 'capitulo' }"
-        
-        $found = $comps | Where-Object { ($_.Sistema.ToUpper() -replace "[^A-Z]", "") -eq $norm }
-        if ($found.Count -gt 0) {
-            $j = 0
-            foreach ($f in $found) {
-                $j++
-                $id = "$i.1.$j"
-                $cVal = [math]::Round([double]$f.Total * 4400)
-                $wbs_items += "{ item: '$id', id: '$id', nivel: 3, descripcion: '$($f.Componente)', sistema: '$name', cantidad: '$($f.Cantidad)', total: '$($f.Total)', totalCOP: '$cVal', tipo: 'item' }"
+    $blks = $sc.Split('}')
+    foreach ($b in $blks) {
+        if ($b.IndexOf('sistema:') -ge 0) {
+            $c++
+            $n = $b.Substring($b.IndexOf('sistema:') + 8).Split(',')[0].Replace('"', '').Replace("'", "").Trim()
+            $qt = $b.Substring($b.IndexOf('cantidad:') + 9).Split(',')[0].Trim()
+            $u = $b.Substring($b.IndexOf('capexUSD:') + 9).Split(',')[0].Trim()
+            $cp = $b.Substring($b.IndexOf('capexCOP:') + 9).Split(',')[0].Trim()
+            
+            $norm = SN $n
+            $iSt = $c.ToString()
+            
+            $items += '{ item: ' + "'" + $iSt + "'" + ', id: ' + "'" + $iSt + "'" + ', nivel: 1, descripcion: ' + "'" + 'SISTEMA ' + $n.ToUpper() + "'" + ', sistema: ' + "'" + $n + "'" + ', tipo: ' + "'" + 'capitulo' + "'" + ' }'
+            
+            $f = $cs | Where-Object { (SN $_.Sistema) -eq $norm }
+            if ($f.Count -gt 0) {
+                $j = 0
+                foreach ($row in $f) {
+                    $j++
+                    $id = $iSt + '.1.' + $j.ToString()
+                    $tv = [double]$row.Total
+                    $cv = [math]::Round($tv * 4400)
+                    $items += '{ item: ' + "'" + $id + "'" + ', id: ' + "'" + $id + "'" + ', nivel: 3, descripcion: ' + "'" + $row.Componente + "'" + ', sistema: ' + "'" + $n + "'" + ', cantidad: ' + "'" + $row.Cantidad + "'" + ', totalUSD: ' + $tv + ', totalCOP: ' + $cv + ', tipo: ' + "'" + 'item' + "'" + ', tipo_presupuesto: ' + "'" + 'CONSOLIDADO' + "'" + ' }'
+                }
             }
-        }
-        else {
-            $id = "$i.1.1"
-            $wbs_items += "{ item: '$id', id: '$id', nivel: 3, descripcion: '$name (Global)', sistema: '$name', cantidad: '$cant', total: '$usd', totalCOP: '$cop', tipo: 'item' }"
+            else {
+                $id = $iSt + '.1.1'
+                $items += '{ item: ' + "'" + $id + "'" + ', id: ' + "'" + $id + "'" + ', nivel: 3, descripcion: ' + "'" + $n + ' (Global)' + "'" + ', sistema: ' + "'" + $n + "'" + ', cantidad: ' + "'" + $qt + "'" + ', totalUSD: ' + $u + ', totalCOP: ' + $cp + ', tipo: ' + "'" + 'item' + "'" + ', tipo_presupuesto: ' + "'" + 'CONSOLIDADO' + "'" + ' }'
+            }
         }
     }
     
-    $joined = $wbs_items -join ",`n"
-    $date = Get-Date -Format "yyyy-MM-dd"
-    $count = $wbs_items.Count
-    $output = "window.wbsDataGlobal = { fecha: '$date', total: $count, items: [`n$joined`n] };"
+    $joined = $items -join ",`n"
+    $d = (Get-Date).ToString('yyyy-MM-dd')
+    $t = $items.Count
+    $o = 'window.wbsDataGlobal = { fecha: ' + "'" + $d + "'" + ', total: ' + $t + ', items: [`n' + $joined + '`n] };'
     
-    Set-Content $TargetPath $output -Encoding UTF8
-    Write-Log "Success"
+    Set-Content $TargetPath $o -Encoding UTF8
+    WL 'Sync success'
 }
 catch {
-    Write-Host "Error: $($_.Exception.Message)"
+    Write-Host 'Error: ' $_.Exception.Message
     exit 1
 }
