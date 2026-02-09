@@ -813,7 +813,153 @@ CONDICIONES ESPECIALES:
 
 ---
 
-## 📎 ANEXOS
+## � OBSERVACIONES ADICIONALES CRÍTICAS
+
+### 🔟 NORMAS APLICABLES - LIMPIEZA DE RUIDO NORMATIVO
+
+#### Observación:
+El TDR lista normas "Internacionales" genéricas (ISO, UIT, DIN, EIA, IEC, IEEE, ANSI/NEMA) sin especificar cuáles aplican a PMV.
+
+#### ERROR CRÍTICO - NORMA FALTANTE:
+
+> **ALERTA:** El listado del asesor **NO menciona la norma rectora** de los paneles en Colombia: **UNE-EN 12966**
+
+**Por qué es crítico:**
+- El Manual de Señalización Vial 2024 (Cap. 2.7.1) adopta esta norma europea taxativamente
+- Sin esta norma, pueden vender paneles "industriales" o "publicitarios" sin óptica para carreteras
+- Riesgo: Interventoría rechaza paneles sin clases L3/R2/B6
+
+#### NORMAS A ELIMINAR (Ruido):
+
+| Norma | Por qué ELIMINAR |
+|:------|:-----------------|
+| **NTC 2031** | Regula "Instrumentos de pesaje" (básculas). Error de copy-paste |
+| **Resolución 77506/2016 (SIC)** | Metrología para balanzas. Un PMV no pesa nada |
+| **DIN (Alemanas)** | Genera ruido. La norma europea unificada es UNE-EN |
+
+#### ESTRATEGIA SMART CAPEX - Reportes de Ensayo vs Certificación Completa:
+
+**Problema:** Pedir Certificado de Conformidad UNE-EN 12966 completo (€50,000) cierra competencia a integradores locales.
+
+**Solución:** Aceptar **Reportes de Ensayo de Laboratorio** (Type Test Reports) de los módulos LED.
+
+#### TEXTO CORREGIDO PARA EL TDR:
+
+```markdown
+A. NORMAS Y REGLAMENTOS APLICABLES
+
+El diseño, suministro e instalación de los PMV deberá cumplir con:
+
+1. Manual de Señalización Vial (MinTransporte 2024): Capítulos 2.7 y 9.3
+
+2. Requisito de Conformidad Óptica (Norma UNE-EN 12966):
+   
+   El Oferente deberá demostrar el cumplimiento de las Clases L3 
+   (Luminancia), R2 (Contraste) y B6 (Ancho de Haz) mediante:
+   
+   a) Reportes de Ensayo de Tipo (Type Test Reports) vigentes, emitidos 
+      por laboratorio independiente con acreditación internacional 
+      (ILAC/ENAC), realizados sobre la referencia exacta del Módulo LED 
+      ofertado
+   
+   b) Declaración de Conformidad del Fabricante (ISO/IEC 17050) 
+      certificando que los módulos instalados corresponden técnica y 
+      ópticamente a los ensayados en el reporte adjunto
+
+3. Protocolo de Comunicaciones: NTCIP 1203 v03 (Object Definitions for 
+   Dynamic Message Signs) para integración nativa
+
+4. Reglamento Eléctrico: RETIE 2024 (Resolución 40117 MinEnergía)
+   • Declaración de Conformidad del Proveedor (Art 4.2.1 RETIE 2024)
+   • Componentes certificados (Tableros, Cables, DPS)
+
+5. Código Eléctrico: NTC 2050 (Segunda Actualización)
+
+6. Estructuras: NSR-10 y CCP-14 para pórticos y cimentaciones
+
+7. Grado de Protección: IEC 60529 (IP55 gabinete, IP66 módulos LED)
+```
+
+#### Beneficio:
+
+- ✅ Abre competencia a integradores locales con módulos LED chinos/americanos de calidad
+- ✅ Ahorro: ~€50,000 en certificación europea innecesaria
+- ✅ Cumple Manual 2024 (demuestra desempeño técnico L3/R2)
+- ✅ Elimina "basura normativa" (NTC 2031, Res. 77506, DIN)
+
+---
+
+### 1️⃣1️⃣ DOCUMENTACIÓN AS-BUILT - ALCANCE ACOTADO
+
+#### Observación:
+El TDR pide documentación As-Built genérica sin definir alcance, generando riesgo de sobrecostos.
+
+#### RIESGOS IDENTIFICADOS:
+
+| Riesgo | Problema | Solución |
+|:-------|:---------|:---------|
+| **Levantamiento topográfico** | Puede interpretarse como topografía completa de vía | Acotar a "coordenadas GPS de puntos instalados" |
+| **ONAC/Metrología** | PMV no requiere certificación metrológica (no es WIM) | Eliminar referencia a ONAC |
+| **Base de datos SICC** | Software SICC es del concesionario, no del contratista | Entregar solo "listado estructurado" (Excel/Shapefile) |
+| **Vendor Lock-in** | Sin MIBs/API, SCADA queda secuestrado por marca PMV | Exigir entrega de MIBs y SDK/API |
+
+#### TEXTO CORREGIDO PARA EL TDR:
+
+```markdown
+3. DOCUMENTACIÓN AS-BUILT Y REQUISITOS DE RECIBO (PMV)
+
+El Contratista deberá entregar la documentación final "Como Construido" 
+(As-Built) como requisito para el Acta de Recibo Final:
+
+A. INGENIERÍA Y PLANOS:
+• Planos As-Built (DWG/PDF) de ubicación exacta (Abscisa/Coordenadas) 
+  de cada pórtico
+• Planos Eléctricos: Diagramas unifilares evidenciando capacidad de 
+  reserva (borneras y potencia) para futuros equipos ETD/Radar
+• Memorias de cálculo estructural firmadas por ingeniero calculista
+
+B. INTEGRACIÓN Y SOFTWARE (NTCIP):
+• Archivos MIBs (Management Information Base) específicos del fabricante 
+  para protocolo NTCIP 1203 v03
+• SDK, API, librerías (.jar/.dll) o documentación del protocolo TCP/IP 
+  que permita al integrador SCADA comandar el panel sin software 
+  propietario
+• Software de diagnóstico y configuración local (licencia perpetua)
+
+C. CERTIFICACIÓN NORMATIVA:
+• Dictamen de Inspección RETIE (instalación eléctrica de uso final)
+• Reportes de Ensayo de Laboratorio del Módulo LED (Clases L3/R2/B6)
+• Declaración de Conformidad del Fabricante (ISO/IEC 17050)
+• Certificados de componentes eléctricos (Tableros, Cables, DPS)
+• NOTA: NO aplica certificación ONAC de metrología para PMV
+
+D. INFORMACIÓN GEOGRÁFICA (ALCANCE ACOTADO):
+• Listado digital (Excel) con coordenadas GPS (WGS84) de cada pórtico 
+  y gabinete instalado, tomadas durante el montaje
+• Archivo Shapefile (.shp): Capa de puntos correspondiente ÚNICAMENTE 
+  a los activos instalados
+• NOTA: NO se requiere levantamiento topográfico de la vía ni 
+  cartografía base. Solo coordenadas de puntos instalados.
+
+E. INVENTARIO DE ACTIVOS:
+• Tabla digital (Excel) con: ID Sitio, Coordenadas, Marca, Modelo, 
+  Serial, Fecha Instalación
+• Registro fotográfico de instalación final
+• NOTA: El software SICC/GMAO es responsabilidad del Concesionario. 
+  El contratista solo entrega el listado estructurado.
+```
+
+#### Beneficio:
+
+- ✅ Elimina riesgo de cobro por levantamiento topográfico (~$15K-30K USD)
+- ✅ Previene vendor lock-in con entrega obligatoria de MIBs/API
+- ✅ Aclara que PMV no requiere ONAC (no es equipo de metrología)
+- ✅ Define que .shp es solo "puntos instalados" (5 minutos de trabajo)
+- ✅ Cumple requisito contractual de As-Built para liberar pago
+
+---
+
+## �📎 ANEXOS
 
 Los siguientes documentos de soporte están disponibles:
 
