@@ -19,6 +19,36 @@ Se han identificado **observaciones críticas** en el TDR de PMV que requieren c
 - ✅ Resolución IP/REV (Peajes)
 - ✅ Ingeniería de Detalle T04/T05 validada
 
+---
+
+## 🚨 OBSERVACIÓN CRÍTICA DE BLOQUEO: RADAR ANPR
+
+> **DICTAMEN GENERAL:** El documento del asesor contiene un **RIESGO CRÍTICO DE ALCANCE** al mezclar el sistema de PMV con el sistema de Radares/ANPR, lo cual **vicia el proceso de compra**.
+
+### El Problema:
+
+El TDR dice: *"Aprovechando la infraestructura del PMV se ha previsto la instalación de los doce (12) RADARES ANPR... conexión de datos al Switch del PMV"*
+
+### Por qué es CRÍTICO:
+
+| Aspecto | Problema | Impacto |
+|:--------|:---------|:--------|
+| **Competencia** | Los fabricantes de pantallas (Swarco, Daktronics) **NO fabrican radares de aforo de alta precisión** | Le cotizarán un radar de "juguete" o subcontratarán con sobrecosto |
+| **Presupuesto** | Los 12 Radares **ya están cubiertos en el T04_SPEC_RADAR** | **Duplicación de presupuesto: $1.2M USD** |
+| **Alcance** | Mezcla dos sistemas diferentes (PMV + ETD/ANPR) | Vicia el proceso de compra |
+
+### ACCIÓN INMEDIATA REQUERIDA:
+
+**ELIMINAR** el capítulo "RADAR ANPR" del TDR de PMV. La única obligación del PMV es:
+- ✅ Dejar un punto eléctrico disponible (80W, 24/36 VDC)
+- ✅ Dejar un puerto en el switch disponible
+- ❌ **NO** suministrar el RADAR
+- ❌ **NO** integrar el RADAR
+
+**Justificación:** Los radares son objeto de otro proceso de compra (T04-ETD). El alcance PMV se limita a dejar la infraestructura preparada.
+
+---
+
 ### Categorías de Observaciones:
 
 | Categoría | Cantidad | Impacto |
@@ -396,51 +426,89 @@ GABINETES PMV:
 
 ---
 
-### 5️⃣ RADAR ANPR - ALCANCE NO CLARO
+### 5️⃣ RADAR ANPR - RIESGO CRÍTICO DE ALCANCE ⚠️
 
 #### Observación:
 El TDR menciona "doce (12) RADARES ANPR distribuidos en algunos de los paneles".
 
-#### Problemas:
-1. **No está en AT1/AT2:** El contrato NO exige RADAR ANPR.
-2. **Consumo energético:** El TDR pide dimensionar sistema solar para alimentar RADAR (80W).
-3. **Responsabilidad:** ¿El proveedor de PMV debe proveer RADAR o solo preparar instalación?
+#### RIESGO CRÍTICO - DUPLICACIÓN DE PRESUPUESTO:
 
-#### Preguntas Críticas:
+> **ALERTA:** El asesor está pidiendo al proveedor de pantallas (PMV) que suministre los Radares de Tráfico (ETD/ANPR). Esto genera un **RIESGO CRÍTICO** de duplicación de presupuesto y vicia el proceso de compra.
 
-```
-1. ¿El RADAR ANPR es obligatorio?
-   a) ¿Está en el contrato?
-   b) ¿Es un adicional opcional?
+| Aspecto | Problema | Impacto Económico |
+|:--------|:---------|:------------------|
+| **Duplicación** | Los 12 Radares **ya están presupuestados en T04_SPEC_RADAR** | **$1.2M USD duplicados** |
+| **Competencia** | Fabricantes de PMV (Swarco, Daktronics) **NO fabrican radares de aforo** | Cotizarán radar "genérico" o subcontratarán con sobrecosto |
+| **Alcance** | Mezcla dos sistemas diferentes (PMV + ETD/ANPR) | Vicia el proceso de compra |
 
-2. ¿Quién provee el RADAR ANPR?
-   a) ¿Proveedor de PMV?
-   b) ¿Proveedor de SCADA?
-   c) ¿Proveedor separado?
+#### Por qué es un ERROR:
 
-3. ¿Qué debe incluir el proveedor de PMV?
-   a) Solo preparación (espacio, alimentación, switch)
-   b) Suministro completo de RADAR
-```
+1. **Competencia Técnica:**
+   - **Fabricantes de PMV:** Swarco, Daktronics, EKTA → Especialistas en **pantallas LED**
+   - **Fabricantes de RADAR:** Wavetronix, Flir, Sensys → Especialistas en **detección de tráfico**
+   - **Resultado:** Le cotizarán un radar de baja precisión o subcontratarán con sobrecosto
 
-#### Redacción Propuesta:
+2. **Presupuesto:**
+   - Los 12 Radares ANPR ya están cubiertos en el **T04_SPEC_RADAR** ($1.2M USD)
+   - Si los pide aquí también, **duplica el presupuesto**
+
+3. **Alcance:**
+   - PMV = Sistema de Información (WBS 3.01)
+   - RADAR = Sistema de Detección de Tráfico (WBS 3.02)
+   - **NO deben mezclarse en un solo TDR**
+
+#### ACCIÓN REQUERIDA:
+
+**ELIMINAR** completamente el capítulo "RADAR ANPR" del TDR de PMV.
+
+#### Alcance Correcto del PMV:
+
+La **única obligación** del proveedor de PMV respecto a los radares es:
 
 ```markdown
-RADAR ANPR (ACLARAR ALCANCE):
+PREPARACIÓN PARA FUTUROS RADARES (12 SITIOS):
 
-OPCIÓN A - Si es obligatorio y a cargo del proveedor PMV:
-• 12 RADAR ANPR integrados en PMV seleccionados
-• Consumo: 80W por RADAR
-• Alimentación: Incluida en sistema solar del PMV
-• Integración: Conexión a switch del PMV
-• Protocolo: NTCIP o API REST
+El proveedor de PMV deberá dejar preparada la infraestructura para la 
+futura instalación de Radares ANPR (a cargo de otro proveedor):
 
-OPCIÓN B - Si es opcional o a cargo de otro proveedor:
-• Proveedor PMV solo prepara instalación:
-  - Espacio en gabinete para RADAR
-  - Alimentación disponible (80W, 24/36 VDC)
-  - Puerto switch disponible
-• Suministro de RADAR: Por proveedor separado
+OBLIGATORIO:
+• Punto eléctrico disponible: 80W, 24/36 VDC (según especificación radar)
+• Puerto switch disponible: 1 puerto Ethernet RJ45 libre
+• Espacio en gabinete: Reservado para futuro equipo (si aplica)
+
+NO INCLUIDO EN ALCANCE PMV:
+• Suministro de RADAR ANPR
+• Instalación de RADAR ANPR
+• Integración de RADAR ANPR
+• Software de gestión de RADAR
+
+JUSTIFICACIÓN:
+Los radares son objeto de proceso de compra separado (T04-ETD).
+El alcance PMV se limita a dejar la infraestructura preparada.
+```
+
+#### Texto para Devolver al Asesor:
+
+```
+OBSERVACIÓN CRÍTICA - RADAR ANPR:
+
+ELIMINAR el requerimiento de suministro de Radares ANPR dentro de este 
+proceso de compra de PMV.
+
+JUSTIFICACIÓN:
+1. Los radares son objeto de otro proceso de compra (T04-ETD)
+2. Presupuesto de radares ya está cubierto ($1.2M USD)
+3. Mezclar PMV con RADAR vicia el proceso de compra
+4. Fabricantes de PMV no son especialistas en radares de tráfico
+
+ALCANCE PMV RESPECTO A RADARES:
+El proveedor de PMV solo debe dejar preparada la infraestructura:
+• Punto eléctrico disponible (80W, 24/36 VDC)
+• Puerto switch disponible
+• Espacio en gabinete (si aplica)
+
+El suministro, instalación e integración de radares es responsabilidad 
+de otro proveedor especializado.
 ```
 
 ---
@@ -673,25 +741,25 @@ CONDICIONES ESPECIALES:
 
 ### Copie y pegue estas instrucciones para devolver el documento al asesor:
 
-1. **Pixel Pitch:** "Definir Pitch 20mm (P20) para los 29 paneles de vía y Pitch 10mm (P10) para los 14 tarifarios de peaje. Eliminar exigencia generalizada de P10."
+1. **RADAR ANPR (CRÍTICO - PRIORIDAD #1):** "**ELIMINAR** el requerimiento de suministro de Radares ANPR dentro de este proceso de compra de PMV. Los radares son objeto de otro proceso de compra (T04-ETD) con presupuesto ya asignado ($1.2M USD). Mezclar PMV con RADAR vicia el proceso de compra. El alcance PMV se limita a dejar preparada la infraestructura (punto eléctrico 80W y puerto switch disponible)."
 
-2. **Norma Rectora:** "Reemplazar normas genéricas por cumplimiento estricto de **UNE-EN 12966 (Clases L3/R2/B6)** según Manual de Señalización 2024. Eliminar referencias a NEMA TS-4 y normas no vigentes en Colombia."
+2. **Pixel Pitch:** "Definir Pitch 20mm (P20) para los 29 paneles de vía y Pitch 10mm (P10) para los 14 tarifarios de peaje. Eliminar exigencia generalizada de P10."
 
-3. **Interoperabilidad:** "Exigir protocolo **NTCIP 1203 v03** y entrega de archivos **MIBs**. Rechazar protocolos propietarios que obliguen a usar software del fabricante para operación diaria."
+3. **Norma Rectora:** "Reemplazar normas genéricas por cumplimiento estricto de **UNE-EN 12966 (Clases L3/R2/B6)** según Manual de Señalización 2024. Eliminar referencias a NEMA TS-4 y normas no vigentes en Colombia."
 
-4. **Obra Civil:** "Incluir explícitamente el suministro e instalación de **Barreras de Contención Vehicular Certificadas** para la protección de la base del pórtico, conforme al Manual 2024."
+4. **Interoperabilidad:** "Exigir protocolo **NTCIP 1203 v03** y entrega de archivos **MIBs**. Rechazar protocolos propietarios que obliguen a usar software del fabricante para operación diaria."
 
-5. **Altura de Carácter:** "Ajustar a **400mm mínimo** (no 450mm) según Manual de Señalización 2024 para velocidades >90km/h."
+5. **Obra Civil:** "Incluir explícitamente el suministro e instalación de **Barreras de Contención Vehicular Certificadas** para la protección de la base del pórtico, conforme al Manual 2024."
 
-6. **Distancia de Lectura:** "Eliminar especificación de distancia mínima (180m). La altura de carácter (400mm) ya garantiza legibilidad."
+6. **Altura de Carácter:** "Ajustar a **400mm mínimo** (no 450mm) según Manual de Señalización 2024 para velocidades >90km/h."
 
-7. **Segregación:** "Separar obligatoriamente **29 PMV ITS (WBS 3.01)** de **14 PMV Peaje (WBS 5.01)**. No mezclar presupuestos."
+7. **Distancia de Lectura:** "Eliminar especificación de distancia mínima (180m). La altura de carácter (400mm) ya garantiza legibilidad."
 
-8. **Gabinetes:** "Eliminar normas UNE de gabinetes (UNE 4826, UNE-EN 2409, UNE 20-501-2-34). Mantener solo **IP65 + RETIE 2024**."
+8. **Segregación:** "Separar obligatoriamente **29 PMV ITS (WBS 3.01)** de **14 PMV Peaje (WBS 5.01)**. No mezclar presupuestos."
 
-9. **RETIE:** "Definir responsabilidades: EPC provee estudio de suelos y SPT. Proveedor PMV hace instalación conforme RETIE y emite Declaración de Conformidad."
+9. **Gabinetes:** "Eliminar normas UNE de gabinetes (UNE 4826, UNE-EN 2409, UNE 20-501-2-34). Mantener solo **IP65 + RETIE 2024**."
 
-10. **RADAR ANPR:** "Aclarar si es obligatorio y quién lo provee. Si es opcional, especificar solo preparación de instalación."
+10. **RETIE:** "Definir responsabilidades: EPC provee estudio de suelos y SPT. Proveedor PMV hace instalación conforme RETIE y emite Declaración de Conformidad."
 
 11. **Ciberseguridad:** "Exigir que el controlador del PMV soporte **SNMP v3** (encriptado) y no tenga passwords por defecto (admin/admin)."
 
