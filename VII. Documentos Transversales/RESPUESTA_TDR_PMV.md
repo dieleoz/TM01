@@ -21,31 +21,27 @@ Se han identificado **observaciones críticas** en el TDR de PMV que requieren c
 
 ---
 
-## 🚨 OBSERVACIÓN CRÍTICA DE BLOQUEO: RADAR ANPR
+## � ESTRATEGIA SMART CAPEX: COMPARTIR INFRAESTRUCTURA PMV + RADAR
 
-> **DICTAMEN GENERAL:** El documento del asesor contiene un **RIESGO CRÍTICO DE ALCANCE** al mezclar el sistema de PMV con el sistema de Radares/ANPR, lo cual **vicia el proceso de compra**.
+> **VALIDACIÓN:** El TDR correctamente solicita **sobredimensionar** la infraestructura del PMV para soportar los radares ETD/ANPR que se instalarán en los mismos pórticos. Esta es una **estrategia Smart CAPEX** que ahorra ~$40,000 USD.
 
-### El Problema:
+### La Estrategia:
 
-El TDR dice: *"Aprovechando la infraestructura del PMV se ha previsto la instalación de los doce (12) RADARES ANPR... conexión de datos al Switch del PMV"*
+**En lugar de:** Construir 12 postes independientes con sistema solar para radares  
+**Se hace:** Aprovechar los 12 pórticos de PMV existentes para montar los radares
 
-### Por qué es CRÍTICO:
+### Ahorro Estimado:
 
-| Aspecto | Problema | Impacto |
-|:--------|:---------|:--------|
-| **Competencia** | Los fabricantes de pantallas (Swarco, Daktronics) **NO fabrican radares de aforo de alta precisión** | Le cotizarán un radar de "juguete" o subcontratarán con sobrecosto |
-| **Presupuesto** | Los 12 Radares **ya están cubiertos en el T04_SPEC_RADAR** | **Duplicación de presupuesto: $1.2M USD** |
-| **Alcance** | Mezcla dos sistemas diferentes (PMV + ETD/ANPR) | Vicia el proceso de compra |
+| Ítem Eliminado | Costo Unitario | Cantidad | Ahorro |
+|:---------------|:---------------|:---------|:-------|
+| Poste independiente | $1,500 | 12 | $18,000 |
+| Cimentación | $800 | 12 | $9,600 |
+| Sistema solar independiente | $1,000 | 12 | $12,000 |
+| **TOTAL AHORRO** | - | - | **~$40,000 USD** |
 
-### ACCIÓN INMEDIATA REQUERIDA:
+### PERO REQUIERE BLINDAJE TÉCNICO:
 
-**ELIMINAR** el capítulo "RADAR ANPR" del TDR de PMV. La única obligación del PMV es:
-- ✅ Dejar un punto eléctrico disponible (80W, 24/36 VDC)
-- ✅ Dejar un puerto en el switch disponible
-- ❌ **NO** suministrar el RADAR
-- ❌ **NO** integrar el RADAR
-
-**Justificación:** Los radares son objeto de otro proceso de compra (T04-ETD). El alcance PMV se limita a dejar la infraestructura preparada.
+El TDR debe ser **MUY ESPECÍFICO** en las exigencias de dimensionamiento, o el proveedor de PMV entregará un sistema solar insuficiente.
 
 ---
 
@@ -122,43 +118,76 @@ Paneles sin este certificado serán rechazados en la evaluación técnica.
 
 ## 💰 INGENIERÍA DE VALOR (DETECCIÓN DE TRAMPAS)
 
-### 1️⃣ LA BATALLA DEL PIXEL: P10 vs P20 (Ahorro: ~35%)
+### 1️⃣ LA BATALLA DEL PIXEL: Panel Combinado vs Full Matrix (Ahorro: ~40%)
 
 #### Problema:
-El asesor probablemente exige resolución **P10 (10mm entre pixeles)** para todos los paneles.
+El asesor probablemente exige **Full Matrix RGB** (todo a color) para todos los paneles, cuando el Manual 2024 permite una opción más económica.
 
-#### La Realidad Técnica:
+#### La Realidad Normativa (Manual 2024):
 
-| Ubicación | Velocidad | Distancia Lectura | Pixel Pitch Correcto | Justificación |
-|:----------|:----------|:------------------|:---------------------|:--------------|
-| **Vía (Troncal)** | 80-100 km/h | >150 metros | **P20 o P16** | El ojo humano NO distingue P10 de P20 a más de 50 metros. Poner P10 en un pórtico es botar el dinero. |
-| **Peaje (Carril)** | 0-20 km/h | <10 metros | **P10** | El carro está detenido a 5 metros. Aquí sí se necesita P10 para lectura de tarifa/saldo. |
+El Manual de Señalización Vial 2024, Tabla 2-23, establece:
 
-#### Especificación Validada (T04/T05):
+> *"Señal **combinada O** de matriz completa sobre pórtico con capacidad de despliegue mínimo de 3 líneas de información."*
+
+**La conjunción "O" es la clave:** Puede usar Matriz Completa (cara) **O** Señal Combinada (económica).
+
+#### Especificación Validada (Panel Combinado):
+
+| Ubicación | Configuración | Pixel Pitch | Justificación |
+|:----------|:--------------|:------------|:--------------|
+| **Vía (Troncal)** | **Panel Combinado:**<br>- Zona Gráfica: RGB Full Color (64x64 px)<br>- Zona Texto: Ámbar Monocromo (3 líneas) | **Gráfico: P20**<br>**Texto: P20/P25** | Velocidad diseño 120 km/h requiere altura letra 450mm. NO requiere texto a color. **Ahorro ~40% vs Full Matrix RGB** |
+| **Peaje (Carril)** | Panel Tarifario Compacto | **P10** | Distancia <10m, lectura detallada. Exigido por Res. IP/REV |
+
+#### Especificación Técnica Correcta:
 
 ```markdown
-PIXEL PITCH (RESOLUCIÓN):
+PMV ITS (Vía - 29 Unidades) - PANEL COMBINADO:
 
-PMV ITS (Vía - 29 Unidades):
-• Pixel Pitch: 20mm (P20) o 16mm (P16)
-• Justificación: Distancia de lectura >150m, velocidad >80km/h
-• Cumplimiento: Manual Señalización 2024
+ZONA GRÁFICA (Pictogramas):
+• Tipo: Full Matrix RGB (Full Color)
+• Resolución: 64x64 píxeles mínimo
+• Pixel Pitch: 20mm (P20)
+• Función: Señales de prohibido, peligro, flechas direccionales
 
-PMV PEAJE (Tarifarios - 14 Unidades):
-• Pixel Pitch: 10mm (P10)
-• Justificación: Distancia de lectura <10m, lectura detallada de tarifa
-• Cumplimiento: Resolución IP/REV Art 2.9.9
+ZONA ALFANUMÉRICA (Texto):
+• Tipo: Monocromo Ámbar o Bicolor (Ámbar/Rojo)
+• Configuración: 3 líneas de 12 caracteres cada una
+• Altura de carácter: 450 mm (cumple Manual 2024 para 120 km/h)
+• Pixel Pitch: 20mm (P20) o 25mm (P25)
+• Función: Mensajes de texto, tiempos de recorrido, alertas
+
+JUSTIFICACIÓN:
+• Manual 2024 permite "Señal Combinada" (no obliga Full Matrix)
+• Velocidad diseño 120 km/h requiere altura 450mm, NO color en texto
+• Ahorro: ~40% vs panel Full Matrix RGB completo
+
+CUMPLIMIENTO:
+• Manual Señalización 2024, Tabla 2-23
+• UNE-EN 12966 (L3/R2/B6)
 ```
 
 #### Impacto Económico:
 
-| Concepto | P10 (Sobrecosto) | P20 (Optimizado) | Ahorro |
-|:---------|:-----------------|:-----------------|:-------|
+| Concepto | Full Matrix RGB | Panel Combinado | Ahorro |
+|:---------|:----------------|:----------------|:-------|
 | **Panel Vía (29 und)** | $60,000/und | $42,000/und | **$18,000/und** |
 | **Total Ahorro** | $1,740,000 | $1,218,000 | **$522,000** |
-| **% Ahorro** | - | - | **~30%** |
+| **% Ahorro** | - | - | **~30-40%** |
 
-**Ahorro Total Estimado: $70,000 - $100,000 USD** (considerando estructura y obra civil)
+**Nota:** El ahorro viene de usar LED Ámbar (más barato y eficiente) en la zona de texto en lugar de RGB Full Color.
+
+#### Validación del TDR del Asesor:
+
+El asesor **YA está pidiendo la opción correcta** en el TDR:
+
+> *"Tipo de panel: Banderola: 1 zona grafica de FULLCOLOR... con tres (3) líneas alfanuméricas... color ámbar y cuatrocientos cincuenta milímetros (450 mm) de altura."*
+
+**Análisis:**
+- ✅ Pide Color Ámbar para el texto (Correcto, baja costo)
+- ✅ Pide 3 Líneas (Correcto según Manual)
+- ✅ Pide 450 mm de altura (Correcto y seguro para 120 km/h, supera los 400mm mínimos)
+
+**ACCIÓN:** Mantener esta especificación y **REFORZAR** que el Pixel Pitch de la zona de texto sea P20 o P25 (NO P10).
 
 ---
 
@@ -227,38 +256,47 @@ INTEGRACIÓN:
 
 ---
 
-### 4️⃣ ALTURA DE CARÁCTER - SOBRE-ESPECIFICACIÓN
+### 4️⃣ ALTURA DE CARÁCTER - VALIDACIÓN PARA 120 KM/H
 
 #### Observación:
 El TDR exige **450 mm** de altura de carácter.
 
-#### Problema:
-- **Manual de Señalización 2024 (Numeral 2.7.4):** Exige **400 mm mínimo** para velocidades >90 km/h.
-- **450 mm** sobre-especifica y encarece sin beneficio contractual.
+#### VALIDACIÓN - ESPECIFICACIÓN CORRECTA:
 
-#### Impacto:
-- Panel más grande = más LEDs = más costo
-- Panel más grande = más consumo eléctrico = sistema solar más grande
-- **Ahorro estimado:** $2,000-5,000 por panel x 29 = **$58,000-145,000 USD**
+**Manual de Señalización 2024 (Tabla 2-13):**
+- Velocidad >90 km/h: **400 mm mínimo**
+- Velocidad de diseño del proyecto: **120 km/h**
 
-#### Texto Corregido:
+**Veredicto:** La especificación de **450 mm es CORRECTA y PRUDENTE** para una vía de 120 km/h. Supera el mínimo de 400mm y garantiza legibilidad a alta velocidad.
+
+#### Texto Validado:
 
 ```markdown
 ESPECIFICACIONES TÉCNICAS PMV ITS:
 
-DIMENSIONES:
-• Altura de carácter: Mínimo 400 mm (cumple Manual Señalización 2024 
-  para v>90km/h)
+DIMENSIONES (Para velocidad diseño 120 km/h):
+• Altura de carácter: 450 mm (supera mínimo de 400mm del Manual 2024)
 • Proporción altura/ancho: 0.7 a 1.0
 • Espacio entre caracteres: 25%-40% de altura
 • Espacio entre palabras: 75%-100% de altura
 • Espacio entre líneas: 50%-75% de altura
 
-CONFIGURACIÓN:
-• 1 zona gráfica Full Color (64x64 píxeles mínimo)
+CONFIGURACIÓN (Panel Combinado):
+• 1 zona gráfica Full Color RGB (64x64 píxeles mínimo, P20)
 • 3 líneas alfanuméricas de 12 caracteres cada una
-• Color líneas alfanuméricas: Ámbar
+• Color líneas alfanuméricas: Ámbar (monocromo, más económico que RGB)
+• Pixel Pitch zona texto: P20 o P25 (NO P10)
 ```
+
+#### Justificación:
+
+| Aspecto | Especificación | Cumplimiento |
+|:--------|:---------------|:-------------|
+| **Velocidad diseño** | 120 km/h | Requiere altura >400mm |
+| **Altura propuesta** | 450 mm | ✅ Supera mínimo (margen de seguridad) |
+| **Legibilidad** | >150m | ✅ Garantizada con 450mm |
+
+**ACCIÓN:** **MANTENER** la especificación de 450mm. Es correcta para la velocidad de diseño de 120 km/h.
 
 ---
 
@@ -426,90 +464,98 @@ GABINETES PMV:
 
 ---
 
-### 5️⃣ RADAR ANPR - RIESGO CRÍTICO DE ALCANCE ⚠️
+### 5️⃣ RADAR ANPR - INFRAESTRUCTURA COMPARTIDA (SMART CAPEX) ✅
 
 #### Observación:
-El TDR menciona "doce (12) RADARES ANPR distribuidos en algunos de los paneles".
+El TDR menciona "doce (12) RADARES ANPR distribuidos en algunos de los paneles" y solicita dimensionar el sistema solar para soportar 80W adicionales.
 
-#### RIESGO CRÍTICO - DUPLICACIÓN DE PRESUPUESTO:
+#### VALIDACIÓN - ESTRATEGIA CORRECTA:
 
-> **ALERTA:** El asesor está pidiendo al proveedor de pantallas (PMV) que suministre los Radares de Tráfico (ETD/ANPR). Esto genera un **RIESGO CRÍTICO** de duplicación de presupuesto y vicia el proceso de compra.
+> **APROBADO:** Esta es una **estrategia Smart CAPEX** que ahorra ~$40,000 USD al evitar construir 12 postes independientes con sistema solar para los radares. Los radares se montarán en los pórticos de PMV existentes.
 
-| Aspecto | Problema | Impacto Económico |
-|:--------|:---------|:------------------|
-| **Duplicación** | Los 12 Radares **ya están presupuestados en T04_SPEC_RADAR** | **$1.2M USD duplicados** |
-| **Competencia** | Fabricantes de PMV (Swarco, Daktronics) **NO fabrican radares de aforo** | Cotizarán radar "genérico" o subcontratarán con sobrecosto |
-| **Alcance** | Mezcla dos sistemas diferentes (PMV + ETD/ANPR) | Vicia el proceso de compra |
+#### Consumo Real del Sistema ETD/ANPR:
 
-#### Por qué es un ERROR:
+| Componente | Consumo | Observación |
+|:-----------|:--------|:------------|
+| Radar Doppler/LIDAR | 15-20 W | Detección de velocidad |
+| Iluminador IR (Noche) | 30-50 W | **CRÍTICO** para LPR/ANPR nocturno |
+| PC/Procesador Borde | 20 W | Procesamiento local |
+| **TOTAL** | **70-90 W** | **Constante 24/7** |
 
-1. **Competencia Técnica:**
-   - **Fabricantes de PMV:** Swarco, Daktronics, EKTA → Especialistas en **pantallas LED**
-   - **Fabricantes de RADAR:** Wavetronix, Flir, Sensys → Especialistas en **detección de tráfico**
-   - **Resultado:** Le cotizarán un radar de baja precisión o subcontratarán con sobrecosto
+**Veredicto:** Solicitar 80W con autonomía de 48 horas es **TÉCNICAMENTE NECESARIO**.
 
-2. **Presupuesto:**
-   - Los 12 Radares ANPR ya están cubiertos en el **T04_SPEC_RADAR** ($1.2M USD)
-   - Si los pide aquí también, **duplica el presupuesto**
+#### RIESGO SI NO SE ESPECIFICA CORRECTAMENTE:
 
-3. **Alcance:**
-   - PMV = Sistema de Información (WBS 3.01)
-   - RADAR = Sistema de Detección de Tráfico (WBS 3.02)
-   - **NO deben mezclarse en un solo TDR**
+⚠️ **ALERTA:** Si el TDR no es **MUY ESPECÍFICO**, el proveedor de PMV dimensionará el sistema solar solo para el consumo del panel LED (bajo en reposo), y cuando conecten el radar, **el sistema se apagará todas las madrugadas**.
 
-#### ACCIÓN REQUERIDA:
-
-**ELIMINAR** completamente el capítulo "RADAR ANPR" del TDR de PMV.
-
-#### Alcance Correcto del PMV:
-
-La **única obligación** del proveedor de PMV respecto a los radares es:
+#### TEXTO CORREGIDO PARA EL TDR:
 
 ```markdown
-PREPARACIÓN PARA FUTUROS RADARES (12 SITIOS):
+INFRAESTRUCTURA PARA RADARES ETD/ANPR (12 SITIOS):
 
-El proveedor de PMV deberá dejar preparada la infraestructura para la 
-futura instalación de Radares ANPR (a cargo de otro proveedor):
+El sistema de alimentación fotovoltaica del PMV deberá ser dimensionado 
+para soportar, además de la carga propia del panel LED y sus comunicaciones, 
+una CARGA AUXILIAR PERMANENTE (24/7) correspondiente a los equipos de 
+detección de tráfico (ETD/Radar) que se instalarán en la misma estructura.
 
-OBLIGATORIO:
-• Punto eléctrico disponible: 80W, 24/36 VDC (según especificación radar)
-• Puerto switch disponible: 1 puerto Ethernet RJ45 libre
-• Espacio en gabinete: Reservado para futuro equipo (si aplica)
+REQUISITOS DE ENERGÍA:
+• Potencia de Reserva: El diseño debe garantizar disponibilidad para una 
+  carga externa de 80 Watios constantes (24/7)
+• Autonomía: El banco de baterías debe garantizar la operación del PMV + 
+  Carga Auxiliar durante 48 horas sin radiación solar efectiva
+• Interfaz de Conexión: El gabinete de energía deberá incluir una bornera 
+  de salida de tensión regulada independiente para estos equipos auxiliares
+• Tensión de Salida: Se debe suministrar 24 VDC regulado (estándar industrial) 
+  o disponer de un convertidor DC-DC para ajuste de tensión según el equipo 
+  de radar a instalar (12/24/48 VDC)
 
-NO INCLUIDO EN ALCANCE PMV:
-• Suministro de RADAR ANPR
-• Instalación de RADAR ANPR
-• Integración de RADAR ANPR
-• Software de gestión de RADAR
+REQUISITOS DE ESPACIO:
+• El gabinete del PMV debe disponer de al menos 4 unidades de rack (4RU) 
+  o espacio en riel DIN libre para la instalación de los equipos de 
+  comunicaciones y procesamiento del sistema de Radares
+• Protección: IP65 mínimo
+• Ventilación: Pasiva o activa según temperatura ambiente
 
-JUSTIFICACIÓN:
-Los radares son objeto de proceso de compra separado (T04-ETD).
-El alcance PMV se limita a dejar la infraestructura preparada.
+REQUISITOS DE COMUNICACIONES:
+• El switch del PMV debe tener al menos 1 puerto Ethernet RJ45 libre 
+  (Gigabit) para conexión del radar
+• Cable de red: Cat6 desde switch hasta punto de montaje del radar
+
+ALCANCE - SEGREGACIÓN DE RESPONSABILIDADES:
+• Proveedor PMV: Suministra pórtico, panel solar sobredimensionado, 
+  baterías, bornera de salida 24VDC, espacio en gabinete, puerto switch
+• Proveedor Radares (T04-ETD): Suministra sensor radar, cámara LPR, 
+  cableado de datos, montaje del equipo en pórtico, integración
+
+JUSTIFICACIÓN ECONÓMICA:
+Esta estrategia ahorra aproximadamente $40,000 USD al evitar:
+• 12 postes independientes ($18,000)
+• 12 cimentaciones ($9,600)
+• 12 sistemas solares independientes ($12,000)
 ```
 
-#### Texto para Devolver al Asesor:
+#### VALIDACIÓN TÉCNICA:
 
-```
-OBSERVACIÓN CRÍTICA - RADAR ANPR:
+| Aspecto | Requerimiento | Cumplimiento |
+|:--------|:--------------|:-------------|
+| **Potencia** | 80W constante | ✅ Correcto (cubre 70-90W real) |
+| **Autonomía** | 48 horas | ✅ Correcto (estándar ITS) |
+| **Tensión** | 24 VDC | ✅ Correcto (estándar industrial) |
+| **Espacio** | 4RU o riel DIN | ✅ Necesario para procesador |
+| **Comunicaciones** | Puerto Gigabit | ✅ Necesario para video ANPR |
 
-ELIMINAR el requerimiento de suministro de Radares ANPR dentro de este 
-proceso de compra de PMV.
+#### PRECAUCIONES ADICIONALES:
 
-JUSTIFICACIÓN:
-1. Los radares son objeto de otro proceso de compra (T04-ETD)
-2. Presupuesto de radares ya está cubierto ($1.2M USD)
-3. Mezclar PMV con RADAR vicia el proceso de compra
-4. Fabricantes de PMV no son especialistas en radares de tráfico
+1. **Distancia Física:** Verificar que la distancia entre PMV y punto de montaje del radar sea <50m para evitar caída de tensión en DC.
 
-ALCANCE PMV RESPECTO A RADARES:
-El proveedor de PMV solo debe dejar preparada la infraestructura:
-• Punto eléctrico disponible (80W, 24/36 VDC)
-• Puerto switch disponible
-• Espacio en gabinete (si aplica)
+2. **Frontera de Responsabilidad:** El TDR debe ser **CLARO** en que:
+   - PMV provee: Energía + Espacio + Comunicaciones
+   - Radar provee: Equipo + Montaje + Integración
 
-El suministro, instalación e integración de radares es responsabilidad 
-de otro proveedor especializado.
-```
+3. **Dimensionamiento del Panel Solar:**
+   - PMV solo: ~100W panel
+   - PMV + Radar: ~250W panel (2.5x más grande)
+   - **Asegurar que el proveedor cotice el panel correcto**
 
 ---
 
