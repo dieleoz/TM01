@@ -404,7 +404,7 @@ El sistema deberá recibir llamadas de emergencia desde la red celular en el CCO
 
 ---
 
-## **OBSERVACIÓN 6: ALTURA DEL POSTE - SOBRE-ESPECIFICACIÓN**
+## **OBSERVACIÓN 6: ALTURA DEL POSTE - INCUMPLIMIENTO MANUAL 2024**
 
 ### **Observación:**
 
@@ -413,69 +413,191 @@ El TDR establece textualmente (línea 436):
 
 **Problemas identificados:**
 
-1. **Altura excesiva:** 6 metros es muy alto para un poste SOS. El estándar comercial es 3.5-4.5 metros
-2. **Baterías en altura = Riesgo:** Instalar baterías pesadas (40-80 kg) a 6m de altura:
-   - Dificulta mantenimiento
-   - Requiere grúa para reemplazo de baterías
-   - Aumenta carga de viento en estructura
-3. **Sobrecosto estructural:** Poste de 6m requiere:
+1. **Incumplimiento normativo:** El Manual de Señalización Vial 2024 (Sección 9.3.3.6) establece taxativamente: *"Los postes SOS deben tener una altura de 4,90 m"*
+2. **Altura arbitraria:** 6 metros no tiene sustento técnico ni normativo. No es estándar comercial ni cumple el Manual 2024
+3. **Sobrecosto estructural:** Poste de 6m vs 4.90m requiere:
    - Tubo estructural más grueso
    - Cimentación más profunda
-   - Sobrecosto: ~$800 USD/sitio × 88 = **$70,400 USD**
-4. **No es requisito contractual:** El contrato no exige altura específica, solo funcionalidad
+   - Sobrecosto estimado: ~$300 USD/sitio × 88 = **$26,400 USD**
+4. **Mantenimiento complejo:** Requiere grúa canasta para acceder a baterías en altura
 
 ### **¿Cómo atenderlo?**
 
-**MODIFICAR** especificación de altura:
+**REEMPLAZAR** especificación rígida de 6m con redacción que cumpla Manual 2024 y permita flexibilidad para nodos ITS:
 
 ### **TEXTO CORREGIDO:**
 
 ```markdown
 **ESPECIFICACIONES DEL POSTE:**
 
-**ALTURA:** 3.5 a 4.5 metros desde nivel de piso hasta parte superior del poste
+**ALTURA MORFOLÓGICA (Cumplimiento Manual 2024):**
 
-**JUSTIFICACIÓN:**
-- Altura suficiente para visibilidad desde calzada
-- Facilita mantenimiento sin equipo especial
-- Reduce carga de viento
-- Estándar comercial para postes SOS
+El poste deberá cumplir estrictamente la altura de **4.90 metros** y color **Naranja RAL 2004** definidos en el Manual de Señalización Vial 2024 (Sección 9.3.3.6) para efectos de señalización y morfología visual ante el usuario.
+
+**FLEXIBILIDAD ESTRUCTURAL (Nodos ITS):**
+
+Se permiten estructuras de mayor altura (10m - 12m) cuando el punto SOS se utilice como **Nodo ITS Multipropósito** (integración de cámaras CCTV, radares o enlaces de comunicaciones), siempre que:
+
+1. **Cumplimiento Visual:** Los primeros 4.90 metros del poste se traten visualmente como el dispositivo SOS reglamentario:
+   - Pintura Naranja RAL 2004 (0.00m a 5.00m)
+   - Señalización reflectiva "SOS" (letras blancas sobre fondo azul)
+   - Cintas retrorreflectivas Tipo IV hasta 2.50m de altura
+
+2. **Sección Superior (Soporte Técnico):** El tramo superior (>5.00m) se tratará con acabado neutro (Gris Galvanizado o Blanco) para no alterar la morfología visual estandarizada del dispositivo SOS.
 
 **UBICACIÓN DE COMPONENTES:**
 
-**Parte superior (2.5-3.0 m):**
-- Micrófono y altavoces
-- Señalización LED "SOS"
-- Panel solar (montaje en brazo lateral)
+**Configuración Estándar (Poste 4.90m):**
+- Botón SOS: 1.20m altura
+- Gabinete electrónica: Base del poste
+- Gabinete baterías: Base del poste (acceso fácil)
+- Panel solar: Montaje en brazo lateral o cima
 
-**Parte inferior (0.5-1.5 m):**
-- Gabinete con electrónica
-- Gabinete con baterías (acceso fácil para mantenimiento)
-- Botón de llamada de emergencia
+**Configuración Nodo ITS (Poste 10-12m):**
+- Botón SOS: 1.20m altura (zona naranja)
+- Gabinete baterías: 8.00m altura (anti-vandalismo)
+- Paneles solares: 10.00m altura (cima, sin sombras)
+- Cámaras/Antenas: Cima del poste
 
-**PROTECCIÓN ANTI-ESCALATORIA:**
+**JUSTIFICACIÓN BATERÍAS EN ALTURA:**
 
-Corona anti-escalatoria instalada a partir de 2.5 m de altura, impidiendo acceso no autorizado a la parte superior del poste.
+Para zonas de alto riesgo de vandalismo, se permite instalar las baterías en altura (>4m) con las siguientes condiciones:
 
-**CIMENTACIÓN:**
+1. **Upgrade Estructural:** El poste debe ser certificado para carga de rotura mínima **750 kgf** (RETIE 2024 Art. 2.3.26) para soportar el peso de baterías (60-120 kg) en altura
+2. **Upgrade Térmico:** Gabinete con doble pared aislada o uso de baterías de Litio (LiFePO4) que soporten temperaturas >50°C
+3. **Mantenimiento:** Incluir breaker de desconexión/reset en zona baja para evitar grúa en cada intervención
 
-Dado de concreto de **60×60×60 cm** (suficiente para poste de 4m según NSR-10)
-- 2 tubos de 3" para ingreso de cableado
-- 4 pernos de anclaje galvanizados 3/4" × 60 cm
+**MATERIAL DEL POSTE:**
 
-**MATERIAL:**
-
-Tubo estructural de acero galvanizado:
+**Opción A - Acero Galvanizado:**
+- Tubo estructural ASTM A36
 - Diámetro: 4" a 6" según cálculo estructural
 - Espesor: 3 mm mínimo
 - Galvanizado en caliente ASTM A123
 
-**COLOR:** RAL 2004 (naranja) según línea 633 del TDR
+**Opción B - Fibra de Vidrio (PRFV):**
+- Poste certificado RETIE (NTC 6275 / ASCE 104)
+- Carga de rotura: 510 kgf o 750 kgf
+- Incluir bajante de tierra interna (cable cobre desnudo) para aterrizar equipos metálicos
+
+**CIMENTACIÓN:**
+
+**Poste 4.90m:** Dado de concreto 60×60×60 cm  
+**Poste 10-12m:** Dado de concreto 80×80×100 cm (según cálculo NSR-10)
+
+**COLOR:** RAL 2004 (naranja) hasta 4.90m según Manual 2024
 ```
 
-**Fundamento Contractual:** NSR-10 + Estándares comerciales SOS + Optimización CAPEX
+**Fundamento Contractual:** Manual de Señalización Vial 2024 (Sección 9.3.3.6) + RETIE 2024 (Art. 2.3.26) + NSR-10
 
-**Ahorro estimado:** $800 × 88 = **$70,400 USD**
+**Ahorro estimado:** $300 × 88 = **$26,400 USD** (vs poste de 6m arbitrario)
+
+**NOTA ESTRATÉGICA:** Esta redacción permite al oferente optimizar costos usando postes estándar de 4.90m en puntos simples, y usar postes de 12m (PRFV 750kgf) solo donde se requiera integración ITS, evitando sobrecosto generalizado.
+
+---
+
+## **OBSERVACIÓN 7: ESTRATEGIA DE NODO ITS HÍBRIDO (CRÍTICA)**
+
+### **Observación:**
+
+El TDR actual define el Poste SOS como un dispositivo aislado (solo teléfono de emergencia). Sin embargo, la infraestructura de 88 puntos SOS representa una oportunidad estratégica para crear **Nodos ITS Multipropósito** que integren:
+
+- Sistema SOS (teléfono de emergencia)
+- Cámaras CCTV de seguridad vial
+- Radares de velocidad
+- Puntos de concentración de comunicaciones (switches)
+
+**Problemas del enfoque actual:**
+
+1. **Subutilización de infraestructura:** Instalar 88 postes solo para teléfonos es ineficiente cuando se pueden aprovechar como nodos tecnológicos
+2. **Doble inversión futura:** Si después se requieren cámaras, habrá que instalar nuevos postes cercanos (duplicando obra civil, energía, comunicaciones)
+3. **Energía insuficiente:** El kit solar dimensionado solo para SOS (140W/50Ah) no soporta cargas adicionales
+
+### **¿Cómo atenderlo?**
+
+**AGREGAR** sección de configuración opcional para Nodos ITS:
+
+### **TEXTO PROPUESTO (NUEVA SECCIÓN EN TDR):**
+
+```markdown
+**CONFIGURACIÓN OPCIONAL: NODO ITS MULTIPROPÓSITO**
+
+El oferente podrá proponer, para sitios estratégicos identificados en su oferta, una configuración de **Poste SOS como Nodo ITS**, integrando funcionalidades adicionales de seguridad vial.
+
+**ÍTEMS DE PAGO SEGREGADOS:**
+
+- **ÍTEM A:** Poste SOS Estándar (Solo teléfono) × XX unidades
+- **ÍTEM B:** Poste SOS + Nodo ITS (Teléfono + Cámara + Energía reforzada) × XX unidades
+
+**ESPECIFICACIONES NODO ITS:**
+
+**1. ESTRUCTURA:**
+- Poste PRFV o Acero Galvanizado: 10m - 12m altura total
+- Carga de rotura certificada: 750 kgf o 1350 kgf (RETIE 2024)
+- Acabado bicolor:
+  - 0.00m a 5.00m: Naranja RAL 2004 (Cumplimiento Manual 2024)
+  - 5.00m a cima: Gris/Blanco (Soporte técnico)
+
+**2. SISTEMA DE ENERGÍA REFORZADO:**
+
+**Paneles Solares:**
+- Potencia: 300W - 400W (Monocristalino, eficiencia >19%)
+- Montaje: Cima del poste (10m) para evitar sombras
+- Certificación: IEC 61215
+
+**Baterías:**
+- Capacidad: 200Ah - 250Ah (Banco 24V)
+- Tecnología: Litio LiFePO4 (preferido por peso y temperatura) o AGM/GEL ciclo profundo
+- Ubicación: Gabinete en altura (8m) para seguridad anti-vandalismo
+- Vida útil: >2,000 ciclos @ DoD 80%
+
+**Autonomía:** 48 horas sin aporte solar (Manual 2024 §2.7.6) para carga total (SOS + Cámara + Switch)
+
+**Consumo estimado:**
+- SOS: 2W continuo
+- Cámara CCTV: 15-25W continuo
+- Switch industrial: 10-15W continuo
+- **Total:** ~50W continuo = 1,200 Wh/día
+
+**3. EQUIPOS ITS INTEGRADOS:**
+
+**Cámara CCTV:**
+- Resolución: 2MP mínimo (1080p)
+- Compresión: H.265
+- Iluminación: IR 50m o Starlight
+- Montaje: Cima del poste (10-12m) con ángulo ajustable
+
+**Switch Industrial:**
+- Puertos: 5 puertos Gigabit Ethernet mínimo
+- Alimentación: PoE+ (802.3at) para cámara
+- Rango térmico: -40°C a +75°C
+- Certificación: IP67 (montaje intemperie)
+
+**4. PUESTA A TIERRA (RETIE):**
+
+Para postes de fibra de vidrio (material no conductor):
+- Cable de cobre desnudo 2/0 AWG bajante interno desde cima hasta malla de tierra
+- Borneras equipotenciales en cada gabinete metálico (baterías, cámara)
+- Resistencia de puesta a tierra: R ≤ 10 Ω (Kit Base + mejoramiento según Observación #2)
+
+**5. COMUNICACIONES:**
+
+- Fibra óptica (primaria) + GSM 4G (backup opcional)
+- Protocolos: ONVIF (cámara) + SNMP (monitoreo) + SIP (VoIP)
+
+**JUSTIFICACIÓN ESTRATÉGICA:**
+
+Esta configuración permite:
+- **Maximizar ROI:** Una sola estructura para múltiples funciones (SOS + Seguridad + Comunicaciones)
+- **Reducir OPEX futuro:** Evita duplicar mantenimiento de infraestructuras separadas
+- **Cumplimiento normativo:** Mantiene morfología SOS reglamentaria (4.90m naranja) mientras aprovecha altura para ITS
+```
+
+**Fundamento Contractual:** Optimización de infraestructura ITS + Manual de Señalización Vial 2024 + RETIE 2024
+
+**Ahorro estimado (vs instalar postes separados):** ~$150,000 USD en obra civil + energía + comunicaciones duplicadas
+
+**NOTA:** Esta observación no elimina la opción de postes SOS estándar (4.90m), sino que ofrece una alternativa estratégica para maximizar la inversión en sitios críticos.
 
 ---
 
@@ -484,16 +606,19 @@ Tubo estructural de acero galvanizado:
 | Concepto | Observación | Ahorro USD |
 |:---------|:------------|:-----------|
 | Eliminación reportes locales → Arquitectura SCADA centralizada | #4 | **$176,000** |
-| Altura poste 6m → 4m (estándar comercial) | #6 | **$70,400** |
 | Autonomía 72h → 48h (Manual 2024) | #3 | **$44,000** |
+| Altura poste 6m → 4.90m (Manual 2024) | #6 | **$26,400** |
 | Comunicación dual → Segregada (solo sitios sin fibra) | #5 | **$23,400** |
-| **SUBTOTAL AHORROS DIRECTOS** | - | **$313,800** |
+| **SUBTOTAL AHORROS DIRECTOS** | - | **$269,800** |
 | Riesgo eliminado: SPT con kit base + precios unitarios | #2 | **$35,000** |
 | Riesgo eliminado: Normas UNE (competencia artificialmente limitada) | #1 | Variable |
+| **Estrategia Nodo ITS Híbrido** (vs postes separados futuros) | #7 | **$150,000** |
 | **AHORRO OPEX ANUAL** (Plan datos GSM eliminado) | #5 | **$14,040/año** |
 
-**TOTAL AHORROS ESTIMADOS CAPEX:** **>$348,000 USD**  
+**TOTAL AHORROS ESTIMADOS CAPEX:** **>$454,000 USD**  
 **TOTAL AHORROS ESTIMADOS OPEX:** **$14,040 USD/año**
+
+**NOTA ESTRATÉGICA:** La Observación #7 (Nodo ITS Híbrido) no genera ahorro inmediato, pero evita duplicar infraestructura futura (postes + energía + comunicaciones) si se requieren cámaras o radares posteriormente.
 
 ---
 
@@ -533,10 +658,12 @@ Tubo estructural de acero galvanizado:
 
 | Categoría | Ahorro USD |
 |:----------|:-----------|
-| **Ahorros Principales (Obs. 1-6)** | **$348,800** |
-| **Ahorros Adicionales (Obs. 7-9)** | **$66,000** |
-| **TOTAL AHORROS CAPEX** | **$414,800** |
+| **Ahorros Principales (Obs. 1-7)** | **$454,800** |
+| **Ahorros Adicionales (Obs. 8-10)** | **$66,000** |
+| **TOTAL AHORROS CAPEX** | **$520,800** |
 | **AHORRO OPEX ANUAL** | **$14,040/año** |
+
+**NOTA:** Los ahorros de la Observación #7 (Nodo ITS Híbrido - $150K) se materializan al evitar duplicar infraestructura futura (postes + energía + comunicaciones) cuando se requieran cámaras o radares.
 
 ---
 
