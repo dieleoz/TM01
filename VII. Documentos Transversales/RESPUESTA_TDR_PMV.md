@@ -381,6 +381,160 @@ TOTAL: 43 Unidades PMV
 
 ---
 
+## 1️⃣-B. RIESGO DE INCREMENTO DE CANTIDADES POR MANUAL 2024
+
+### **Observación Crítica:**
+
+El TDR del asesor no considera que la aplicación del **Manual de Señalización Vial 2024** (que sustituye al Manual 2015 vigente a la firma del contrato) **incrementa significativamente** la cantidad de PMV requeridos debido a nuevos criterios de localización obligatorios.
+
+### **Problema Identificado:**
+
+1. **Alcance Contractual Base (AT1):** Mínimo 25 PMV en vía, separación máxima 20 km
+2. **Norma Vigente a la Firma:** Manual de Señalización Vial 2015
+3. **Norma Actual:** Manual de Señalización Vial 2024 (Resolución 20243040001135)
+4. **Impacto:** El Manual 2024 introduce **nuevos criterios de localización** (Tabla 2-23) que exigen PMV adicionales
+
+### **Análisis de Incremento por Manual 2024:**
+
+#### **Nuevos Criterios Obligatorios (Tabla 2-23 Manual 2024):**
+
+| Criterio Manual 2024 | Requisito Técnico | Ubicaciones en TM01 | PMV Adicionales |
+|:---------------------|:------------------|:--------------------|:----------------|
+| **Entradas a Municipios** | "Al menos 1 km antes del desvío" | Puerto Boyacá, Puerto Berrío, San Alberto, La Dorada | +4 a +6 |
+| **Variantes** | "Indicar dirección/desvío" | Variante Puerto Salgar, Variante La Dorada, El Trique, Dos y Medio, San Pedro de la Paz | +2 a +4 |
+| **Intercambiadores** | "Mínimo 500m antes de la infraestructura" | Intercambiador Caño Alegre, Intercambiador La Lizama | +2 |
+| **Túneles** | "Mínimo uno 300m antes de la entrada por cada sentido" | NO APLICA (Corredor a cielo abierto) | 0 |
+| **Plazas de Peaje/Pesaje** | "Máximo 5 km antes de cada una" | ✅ YA CUBIERTO en los 25 contractuales | 0 |
+
+**Total PMV requeridos si se aplica Manual 2024:** **31 a 35 Unidades**  
+**Diferencia vs Alcance Contractual:** **+6 a +10 PMV**
+
+### **Escenarios de Aplicación:**
+
+#### **ESCENARIO 1: Cumplimiento Contractual Base (25 PMV)**
+
+**Norma aplicable:** Manual 2015 (vigente a la firma)  
+**Distribución:**
+- 4 PMV en Peajes (Zambito, Aguas Negras - aproximación Norte/Sur)
+- 2 PMV en Pesajes (La Lizama, Río Ermitaño)
+- 19 PMV en Vía Abierta (distribución cada 15-18 km alternando sentidos)
+
+**Estado:** ✅ Cumple AT1 (mínimo 25, separación máx 20 km)
+
+---
+
+#### **ESCENARIO 2: Aplicación Manual 2024 (31-35 PMV)**
+
+**Norma aplicable:** Manual 2024 (Tabla 2-23)  
+**Distribución:**
+- **25 PMV Base** (Escenario 1)
+- **+4-6 PMV** en Entradas a Municipios:
+  - Puerto Boyacá (1 km antes del desvío)
+  - Puerto Berrío (1 km antes del desvío)
+  - San Alberto (1 km antes del desvío)
+  - La Dorada (1 km antes del desvío)
+  - Otros accesos municipales según geometría
+- **+2-4 PMV** en Variantes:
+  - Variante Puerto Salgar
+  - Variante La Dorada
+  - El Trique, Dos y Medio, San Pedro de la Paz (según aplique)
+- **+2 PMV** en Intercambiadores:
+  - Intercambiador Caño Alegre (500m antes)
+  - Intercambiador La Lizama (500m antes)
+
+**Estado:** ⚠️ Requiere definición contractual y presupuestal
+
+---
+
+### **Análisis de Riesgo Financiero:**
+
+
+#### **Costo Unitario PMV (Estimado):**
+
+| Componente | Costo Unitario |
+|:-----------|:---------------|
+| Panel LED (RGB + Ámbar, P20-P25) | $18,000 USD |
+| Estructura (Pórtico completo) | $38,000 USD |
+| Sistema Solar TIPO A (48h autonomía) | $12,000 USD |
+| Obra civil (Cimentación + SPT) | $12,000 USD |
+| **Total por PMV (con Pórtico)** | **$80,000 USD** |
+
+> **Nota:** Si se utiliza estructura tipo banderola en lugar de pórtico, el costo unitario se reduce a ~$44,000 USD.
+
+#### **Sobrecosto Total por Aplicación Manual 2024:**
+
+| Escenario | PMV Adicionales | Costo Total (Pórtico) | Costo Total (Banderola) |
+|:----------|:----------------|:----------------------|:------------------------|
+| **Conservador** (Solo entradas municipales) | 8 unidades | **$640,000 USD** | **$352,000 USD** |
+| **Medio** (Municipios + Variantes principales) | 10 unidades | **$800,000 USD** | **$440,000 USD** |
+| **Completo** (Tabla 2-23 al 100%) | 12-14 unidades | **$960,000 - $1,120,000 USD** | **$528,000 - $616,000 USD** |
+
+**Promedio de riesgo:** **~10 PMV adicionales = $800,000 USD** (con pórtico) o **$440,000 USD** (con banderola)
+
+
+
+---
+
+### **Estrategia Recomendada:**
+
+#### **FASE 1: Cumplimiento Base (25 PMV)**
+
+1. Diseñar e instalar los **25 PMV contractuales** según AT1 + Manual 2015
+2. Ubicación: Peajes, Pesajes y Vía Abierta (cada 15-18 km)
+3. ✅ Cumple obligación contractual mínima
+
+#### **FASE 2: Gestión del Riesgo Manual 2024**
+
+1. **Solicitar aclaración formal a ANI:**
+   - ¿Se requiere aplicación del Manual 2024 para este proyecto?
+   - ¿Se reconocerá el sobrecosto de los PMV adicionales?
+   - Mecanismo de pago: Subcuenta de Excedentes ANI o ajuste presupuestal
+
+2. **Marcar "sitios candidatos" en planos de ingeniería:**
+   - Identificar ubicaciones de los 6-10 PMV adicionales
+   - Estado: "Proyección Fase 2 - Sujeto a Aprobación Presupuestal ANI"
+
+3. **Documentar sobrecosto:**
+   - Cuantificar costo de los PMV adicionales ($264K-440K USD)
+   - Preparar justificación técnica (Tabla 2-23 Manual 2024)
+
+---
+
+### **Conclusión:**
+
+#### **Riesgo Identificado:**
+
+Si la Interventoría exige aplicación taxativa del Manual 2024 sin reconocimiento de sobrecosto, el Concesionario enfrentaría:
+
+- ❌ **Incumplimiento contractual** (si no instala los PMV adicionales)
+- ❌ **Sobrecosto no compensado de $440K-$960K USD** (si los instala sin aprobación)
+
+#### **Recomendación:**
+
+1. ✅ Instalar **29 PMV base** (cumple AT1 + Manual 2015: 25 vía + 4 aproximación peajes)
+2. ✅ Solicitar aclaración formal a ANI sobre aplicación del Manual 2024
+3. ✅ Documentar y valorar el sobrecosto de los **~10 PMV adicionales** ($800K USD promedio)
+4. ✅ Marcar ubicaciones adicionales en planos como **"Fase 2 - Sujeto a Aprobación Presupuestal ANI"**
+5. ✅ Proteger el presupuesto base del proyecto
+
+#### **Justificación Técnica:**
+
+- El AT1 establece "Manual de Señalización Vial 2015 **o la norma que lo sustituya**"
+- El Manual 2024 introduce criterios de localización más exigentes (Tabla 2-23)
+- La diferencia entre ambas normas representa **+10 a 14 PMV adicionales**
+- Este incremento no estaba contemplado en el alcance original de 29 unidades
+- Se requiere definición contractual clara sobre qué norma aplica y quién asume el sobrecosto
+
+#### **Alcance Condicionado (Texto Propuesto para TDR):**
+
+> *"El alcance base del contrato es el suministro e instalación de **29 PMV** distribuidos para cumplir la cobertura kilométrica del Apéndice Técnico 1 (25 PMV en vía con separación máxima de 20 km + 4 PMV en aproximación a peajes).*
+> 
+> *Cualquier cantidad adicional derivada de la aplicación de criterios específicos del Manual de Señalización Vial 2024 (como señalización de accesos a municipios, variantes específicas o refuerzo en intercambiadores) que exceda la cantidad base, será tratada como una **Obra Adicional** sujeta a la aprobación de recursos por parte de la ANI, dado que constituye una obligación sobreviniente al alcance original del contrato."*
+
+
+
+---
+
 ### 2️⃣ NORMAS NO APLICABLES - UNE (ESPAÑOLAS)
 
 #### Observación:
@@ -959,6 +1113,702 @@ E. INVENTARIO DE ACTIVOS:
 
 ---
 
+## 12. ESTRUCTURA DE SOPORTE Y ACCESIBILIDAD
+
+### **Observación:**
+
+El TDR especifica "Estructura de banderola" exclusivamente, lo cual limita la competencia y puede resultar en sobrecostos estructurales, especialmente considerando la carga adicional del sistema fotovoltaico.
+
+### **Problema Identificado:**
+
+1. **Limitación técnica:** Banderola (cantilever) genera momento de torsión elevado en un solo punto de anclaje
+2. **Sobrecosto estructural:** Requiere tubo vertical muy grueso y zapata de cimentación grande
+3. **Carga solar:** Paneles fotovoltaicos actúan como "vela" aumentando fuerza de viento
+4. **Término "visitable":** Sin definición clara genera incertidumbre en cotizaciones
+
+### **Corrección Técnica:**
+
+```markdown
+TIPOLOGÍA DE LA ESTRUCTURA DE SOPORTE
+
+El Proponente podrá ofertar diseño estructural tipo:
+• Pórtico (Dos apoyos), o
+• Banderola/Semipórtico (Un apoyo en voladizo)
+
+Seleccionando la opción más eficiente en relación costo-beneficio.
+
+REQUISITOS OBLIGATORIOS:
+
+1. Cargas de Diseño:
+   La estructura deberá diseñarse para soportar:
+   • Peso y área de exposición al viento del Panel LED (PMV)
+   • Carga adicional y efecto de vela del Sistema Fotovoltaico
+   • Gabinetes y equipos auxiliares instalados sobre ella
+
+2. Normativa:
+   • AASHTO LRFD (Specifications for Structural Supports for Highway Signs)
+   • NSR-10 (Norma Sismo Resistente Colombiana)
+
+3. Ubicación:
+   • Pórtico: Apoyo en laterales de vía o separador central y lateral
+   • Banderola: Anclaje en separador central o lateral derecho
+
+4. Gálibo:
+   • Altura libre mínima: 5.50m sobre parte más alta de calzada
+   • Cumplimiento: Manual de Señalización Vial 2024
+
+5. Protección:
+   • Barreras de Contención (Defensas Metálicas) certificadas
+   • Protección de todos los elementos verticales en zona despejada
+   • Cumplimiento: Manual de Señalización Vial 2024
+
+ACCESIBILIDAD Y MANTENIMIENTO:
+
+Diseño para mantenimiento seguro según Res. 4272/2021 (Trabajo en Alturas).
+
+Opciones aceptadas:
+
+A. Acceso Frontal/Trasero con Manlift:
+   • Puertas de acceso retenidas
+   • Puntos de anclaje certificados para línea de vida
+   • Operables desde camión canasta (Manlift)
+   • NO requiere escalar la estructura
+
+B. Acceso con Pasarela (Catwalk) - OPCIONAL:
+   • Pasarela trasera metálica con barandas de seguridad
+   • Línea de vida rígida o flexible
+   • Escalera de acceso con jaula guarda-hombre
+   • Permite mantenimiento sin vehículos de elevación
+
+NOTA: NO se requiere estructura visitable interiormente (Walk-in)
+```
+
+#### Justificación:
+
+- ✅ Permite competencia entre diseños estructurales eficientes
+- ✅ Pórtico distribuye carga en dos patas (perfiles más livianos, zapatas más pequeñas)
+- ✅ Elimina incertidumbre del término "visitable" sin especificación
+- ✅ Define claramente métodos de acceso seguro para mantenimiento
+- ✅ Cumple normativa colombiana (NSR-10) e internacional (AASHTO)
+
+---
+
+## 13. SISTEMA DE ENERGÍA FOTOVOLTAICA
+
+### **Observación:**
+
+El TDR no segrega los requerimientos de energía para sitios con y sin radar ANPR, ni especifica claramente la autonomía obligatoria según el Manual 2024.
+
+### **Problema Identificado:**
+
+1. **Falta de segregación:** No diferencia carga base vs carga con radar (80W adicionales)
+2. **Autonomía no especificada:** Manual 2024 exige 48 horas obligatorias
+3. **Voltaje no estandarizado:** Permite múltiples voltajes (12V, 24V, 36V)
+4. **Alternativa AC sin estructura:** Oferta alternativa de red comercial sin especificaciones claras
+
+### **Corrección Técnica:**
+
+```markdown
+SISTEMA DE ENERGÍA FOTOVOLTAICA
+
+1. TENSIÓN DE OPERACIÓN Y AUTONOMÍA
+
+• Tensión del Sistema: 24 VDC nominal (banco de baterías y distribución 
+  interna del gabinete)
+
+• Autonomía Normativa: 48 horas de operación continua sin radiación solar
+  - Cumplimiento: Manual de Señalización Vial 2024 (Numeral 2.7.6)
+  - Justificación: Garantiza operación durante 2 días completos sin sol
+
+2. DIMENSIONAMIENTO DE LA CARGA (TIPOLOGÍAS)
+
+El Oferente deberá considerar dos configuraciones según ubicación:
+
+TIPO A - PMV Estándar (Sin Radar) - Cantidad: 17 Unidades
+  • Panel LED (brillo diurno promedio)
+  • Controlador PMV
+  • Switch Industrial: 15W constante
+  • Módem/Comunicaciones
+
+TIPO B - PMV Reforzado (Con Radar) - Cantidad: 12 Unidades
+  • Incluye toda la carga del TIPO A
+  • Carga Adicional Obligatoria: Equipo de detección (Radar/ETD) 
+    con consumo estimado de 80W continuos (24/7)
+  • Banco de baterías deberá tener capacidad adicional (Ah) para 
+    sostener esta carga extra durante las 48 horas de autonomía
+
+  Cálculo carga adicional:
+  - 80W × 48h = 3,840 Wh adicionales
+  - A 24 VDC: 160 Ah consumo real
+  - Considerando descarga máxima 50%: ~320 Ah adicionales
+  - Equivalente: ~2 baterías de 200Ah extra por gabinete
+
+3. INTERFAZ DE ALIMENTACIÓN PARA EQUIPOS DE TERCEROS (RADAR)
+
+• El Contratista PMV entregará en los 12 sitios reforzados una bornera 
+  de alimentación protegida a 24 VDC
+
+• Delimitación de Responsabilidad: Si el equipo de detección (Radar/ETD) 
+  requiere voltaje diferente (12V, 36V, 48V o PoE), el suministro e 
+  instalación del convertidor DC-DC (elevador/reductor) o inyector será 
+  responsabilidad EXCLUSIVA del proveedor del Radar/ETD, quien deberá 
+  conectarse a la bornera de 24 VDC disponible
+
+4. COMPONENTES MÍNIMOS
+
+• Paneles solares policristalinos o monocristalinos
+• Controlador de carga MPPT
+• Banco de baterías de ciclo profundo (Gel o AGM)
+• Protecciones: Fusibles, DPS, desconectadores
+• Estructura de montaje galvanizada
+• Cableado dimensionado para 24 VDC
+
+5. OFERTA ALTERNATIVA: ENERGÍA DE RED (AC)
+
+El Oferente deberá cotizar como alternativa:
+
+• Fuentes de poder industriales conmutadas (Switching Power Supply)
+• Rango de Entrada: 100 VAC a 240 VAC (±10%) sin selectores manuales
+  - Justificación: Soporta fluctuaciones de tensión en zonas rurales
+• Protección: DPS Clase II en entrada AC
+• UPS Online: 10 minutos respaldo mínimo
+• Acometida eléctrica y trámites ante operador de red
+• Medidor de corriente a nombre de la Concesionaria
+```
+
+#### Justificación:
+
+- ✅ Cumple Manual 2024 (48h autonomía obligatoria)
+- ✅ Ahorro ~$25K-30K USD por segregación TIPO A/B
+- ✅ Estandarización 24 VDC reduce calibre de cables y simplifica mantenimiento
+- ✅ Responsabilidad clara sobre convertidor DC-DC (proveedor radar)
+- ✅ Alternativa AC permite evaluación técnico-económica real
+
+---
+
+## 14. ESPECIFICACIONES DE GABINETES
+
+### **Observación:**
+
+El TDR copia normas españolas (UNE) no exigibles en Colombia y especifica cargas estructurales inadecuadas (400 kg para gabinete de pared).
+
+### **Problema Identificado:**
+
+1. **Normas extranjeras:** UNE 4826, UNE-EN 2409, UNE 20-501, UNE 20-550, UNE 20460 no son exigibles en Colombia
+2. **Sobreespecificación:** 400 kg de carga estática para gabinete de pared (es para racks de servidores)
+3. **Falta RETIE:** No especifica cumplimiento del Reglamento Técnico de Instalaciones Eléctricas
+4. **Material no definido:** Permite materiales inadecuados para clima tropical húmedo
+
+### **Corrección Técnica:**
+
+```markdown
+ESPECIFICACIONES TÉCNICAS DE GABINETES Y ENCERRAMIENTOS
+
+Los gabinetes para alojamiento de equipos de control, comunicaciones y 
+energía deberán cumplir con RETIE 2024 (Resolución 40117) y las siguientes 
+características:
+
+1. ESPECIFICACIONES AMBIENTALES Y CONSTRUCTIVAS
+
+• Material: Aluminio marino (Serie 5052/6061) de mínimo 2.0 mm de espesor 
+  o Acero Inoxidable (AISI 304/316) con acabado en pintura electrostática 
+  (Powder Coating)
+
+• Color: RAL 7035 (Gris claro) o similar que minimice absorción térmica solar
+
+• Grado de Protección: Mínimo IP65 (Hermético al polvo y chorros de agua) 
+  según IEC 60529 o equivalente NEMA 4X
+
+• Resistencia a la Corrosión: Ambiente tropical húmedo
+  - Prueba de cámara salina (Salt Spray): Mínimo 400 horas según ASTM B117
+  - Cumplimiento: RETIE para ambientes exteriores
+
+• Protección Mecánica: Grado IK10 contra impactos mecánicos externos 
+  (Antivandálico)
+
+2. ESPECIFICACIONES MECÁNICAS Y DE MONTAJE
+
+• Tipo de Montaje: Fijación segura a estructura metálica mediante 
+  abrazaderas de acero inoxidable o pernos pasantes, sin comprometer 
+  estanqueidad (IP65)
+
+• Capacidad de Carga: Dimensionado para soportar peso de baterías 
+  (si van alojadas dentro), controlador y equipos de comunicaciones, 
+  con factor de seguridad de 1.5
+
+• Gestión Térmica: Ventilación forzada con filtros y termostato, o 
+  intercambio de calor aire-aire, garantizando que temperatura interna 
+  no supere límites operativos de equipos bajo sol directo
+
+3. ESPECIFICACIONES ELÉCTRICAS (CUMPLIMIENTO RETIE)
+
+• Seguridad: Todas las partes metálicas expuestas y puertas equipotencializadas 
+  a barra de tierra del gabinete
+
+• Protección contra Contacto: Contratapa o mandil interno (dead-front) que 
+  impida acceso directo a partes energizadas al abrir puerta principal
+
+• Certificación: Tablero ensamblado o gabinete vacío con Certificado de 
+  Conformidad de Producto (RETIE) expedido por organismo acreditado por ONAC 
+  bajo norma aplicable (IEC 61439 o NTC 2050)
+
+4. EQUIPAMIENTO INTERNO
+
+• Riel DIN para montaje de equipos
+• Iluminación LED interna activada por puerta
+• Toma de servicio (GFCI) para mantenimiento (laptop)
+• Espacio de reserva (20%) para futuros equipos
+• Prensestopas (glándulas) IP68 en base para entrada de fibra y energía
+
+5. SISTEMA DE GESTIÓN AMBIENTAL
+
+Para garantizar vida útil de electrónica en condiciones climáticas de la zona 
+(Alta temperatura y humedad relativa >90%):
+
+A. Gestión Térmica Activa:
+   • Ventilación forzada controlada por termostato
+   • Dimensionada para disipar carga térmica de LEDs + radiación solar
+   • Mantiene temperatura interna en rango seguro
+
+B. Control de Condensación:
+   • Sistema anti-condensación (resistencia calefactora)
+   • Controlado por higrostato o termostato diferencial
+   • Evita formación de humedad sobre tarjetas electrónicas
+
+C. Facilidades de Mantenimiento (RETIE):
+   • Iluminación interna LED tipo regleta
+   • Interruptor de puerta o manual
+   • Toma eléctrica de servicio (GFCI) para equipos de diagnóstico
+
+6. CONDICIONES AMBIENTALES DE OPERACIÓN
+
+Clase T1 según UNE-EN 12966:
+
+• Temperatura Ambiente: -10°C a +60°C
+• Humedad Relativa: 10% a 95% (sin condensación)
+
+Justificación:
+- Magdalena Medio: Humedad nocturna llega a saturación (95%)
+- Reducir especificación causaría fallas por condensación
+- NO afecta diseño estructural del pórtico (solo calidad de empaques)
+```
+
+#### Justificación:
+
+- ✅ Elimina normas UNE no exigibles en Colombia
+- ✅ Especifica materiales adecuados para clima tropical húmedo
+- ✅ Cumple RETIE 2024 (Resolución 40117)
+- ✅ Define gestión térmica y anti-condensación (protege inversión en LEDs)
+- ✅ Validación: 95% humedad es obligatoria para zona del proyecto
+
+---
+
+## 15. SISTEMA DE PUESTA A TIERRA (SPT)
+
+### **Observación:**
+
+El TDR especifica "tierra eléctrica acorde con RETIE" sin definir alcance base, generando riesgo de ofertas infladas o reclamaciones futuras por "condiciones imprevistas del terreno".
+
+### **Problema Identificado:**
+
+1. **Alcance indefinido:** No especifica configuración mínima del SPT
+2. **Riesgo financiero:** Contratista cobra "peor escenario" o genera reclamaciones posteriores
+3. **Falta de precios unitarios:** No hay mecanismo para pagar mejoramiento de suelo
+4. **Certificación no clara:** No especifica tipo de certificación RETIE requerida
+
+### **Corrección Técnica:**
+
+```markdown
+SISTEMA DE PUESTA A TIERRA (SPT) Y PROTECCIÓN ATMOSFÉRICA
+
+1. ALCANCE BASE (Incluir en valor global de oferta)
+
+El Proponente deberá incluir en su oferta básica el suministro e instalación 
+de un Sistema de Puesta a Tierra (SPT) estándar para cada PMV, compuesto 
+como mínimo por:
+
+• Configuración: Malla tipo "Delta" o "Contrapeso" de tres (3) electrodos
+
+• Materiales:
+  - Tres (3) varillas de Copperweld certificadas (mínimo 2.4m x 5/8")
+  - Cable de cobre desnudo 2/0 AWG para interconexión
+  - Soldadura exotérmica para todas las uniones enterradas
+    (NO se aceptan conectores mecánicos bajo suelo según RETIE 3.12.2.1)
+
+• Caja de Inspección: Suministro de caja de inspección (30x30cm) con tapa 
+  removible para medición y mantenimiento
+
+2. OBJETIVO DE DESEMPEÑO (Criterio de Aceptación)
+
+El sistema deberá garantizar una resistencia de puesta a tierra menor o igual 
+a 10 Ohmios (R≤10Ω):
+
+• Requisito obligatorio para protección de equipos electrónicos sensibles
+• Protección contra descargas atmosféricas
+• Cumplimiento: RETIE Art. 3.12.3
+
+3. MANEJO DE SUELOS DE ALTA RESISTIVIDAD (Riesgo Compartido)
+
+El Oferente deberá realizar medición de resistividad del terreno antes de 
+instalación.
+
+Si con el "Alcance Base" (3 varillas + tratamiento estándar) NO se logra 
+resistencia de 10Ω debido a condiciones geológicas adversas (roca, arena seca):
+
+• Contratista presentará diseño de mejoramiento a Interventoría
+• Mecanismo de Pago Adicional: Materiales y obra extra necesarios se pagarán 
+  a Precios Unitarios definidos en lista de "Ítems de Mejoramiento de SPT", 
+  previa aprobación de Interventoría
+
+Ítems de Mejoramiento (Precios Unitarios):
+
+| Ítem | Descripción | Unidad | Cant. Ref. |
+|:-----|:------------|:-------|:-----------|
+| Op1 | Varilla Copperweld 2.4m adicional con soldadura | UND | 10 |
+| Op2 | Dosis de Gel/Cemento Conductivo (25kg) | Bulto | 10 |
+| Op3 | Cable 2/0 AWG para extensión de contra-antena | ML | 50 |
+
+4. CERTIFICACIÓN
+
+El sistema deberá contar con Dictamen de Inspección RETIE (Anexo 5) expedido 
+por organismo acreditado por ONAC, como parte de la instalación de uso final.
+```
+
+#### Justificación:
+
+- ✅ Define alcance base claro (3 varillas) para comparar ofertas
+- ✅ Mecanismo contractual para pagar refuerzos solo donde suelo lo exija
+- ✅ Soldadura exotérmica obligatoria (garantiza continuidad en el tiempo)
+- ✅ Caja de inspección obligatoria (permite mediciones en auditorías)
+- ✅ Cumple RETIE 2024 (R≤10Ω para equipos electrónicos sensibles)
+- ✅ Ahorro estimado: Evita inflación de ofertas por incertidumbre (~15-20%)
+
+---
+
+## 16. IDENTIFICACIÓN Y ROTULADO
+
+### **Observación:**
+
+El TDR especifica norma EIA/TIA-606 (estándar para edificios comerciales) que no aplica para equipamiento industrial en carretera.
+
+### **Problema Identificado:**
+
+1. **Norma inadecuada:** EIA/TIA-606 es para infraestructura de telecomunicaciones en edificios
+2. **Burocracia innecesaria:** Exige registros de "cuartos de telecomunicaciones" inexistentes en poste
+3. **Falta enfoque en seguridad:** No prioriza identificación eléctrica según RETIE
+
+### **Corrección Técnica:**
+
+```markdown
+IDENTIFICACIÓN Y ROTULADO DE COMPONENTES
+
+Todos los componentes del sistema deberán estar claramente identificados 
+para facilitar operación y mantenimiento, cumpliendo con los siguientes 
+estándares:
+
+1. IDENTIFICACIÓN ELÉCTRICA (Potencia)
+
+• Todo cableado eléctrico, tableros, borneras y protecciones deberán 
+  marcarse según:
+  - Reglamento Técnico de Instalaciones Eléctricas (RETIE)
+  - NTC 2050
+
+• Código de Colores: Respetar estrictamente para conductores (fases, 
+  neutro y tierra) según nivel de tensión (24VDC / 120VAC / 220VAC)
+
+• Cuadro de Cargas: Tablero de control con Cuadro de Cargas actualizado 
+  y plastificado en interior de puerta
+
+2. IDENTIFICACIÓN DE COMUNICACIONES
+
+• Cables de red (Patch cords) y fibra óptica marquillados en ambos extremos 
+  indicando equipo de origen y destino
+  - Ejemplo: "Switch Pto 1 -> Controlador PMV"
+
+• Esquema lógico de identificación alfanumérica
+  - NO se requiere aplicación estricta de norma EIA/TIA-606 (edificios)
+
+3. IDENTIFICACIÓN DEL ACTIVO (Inventario)
+
+• Gabinete y Estructura (Pórtico/Poste) con placa externa o rotulado
+
+• Contenido:
+  - Código de Inventario (ID) asignado por Proyecto
+  - Ejemplo: "PMV-RN4510-K54+000"
+  - Resistente a intemperie y vandalismo
+
+• Etiquetas: Autoadhesivas plásticas específicas para sistemas de cableado
+```
+
+#### Justificación:
+
+- ✅ Elimina burocracia de EIA/TIA-606 (no aplica para postes)
+- ✅ Enfoca en seguridad eléctrica (RETIE) - previene electrocuciones
+- ✅ Asegura control de activos (ANI y Concesionario)
+- ✅ Identificación práctica para mantenimiento en campo
+
+---
+
+## 17. FORMULARIO DE OFERTA PMV - ESTRUCTURA DE COSTOS
+
+### **Observación:**
+
+El TDR no proporciona una estructura clara de desglose de costos, lo que genera incertidumbre en las cotizaciones y dificulta la comparación entre ofertas.
+
+### **Problema Identificado:**
+
+1. **TDR genérico:** Sin desglose de costos por componente
+2. **Inflación de precios:** Proveedores inflan precios por incertidumbre
+3. **Imposible comparar:** Ofertas mezclan solar + AC + radar sin segregación
+4. **Falta de alternativas:** No hay mecanismo para cotizar opciones (AC vs Solar)
+
+### **Corrección Técnica:**
+
+```markdown
+FORMULARIO DE PRECIOS UNITARIOS DESGLOSADOS - PMV
+
+TABLA DE PRECIOS - PMV
+
+Ítem | Descripción | Unidad | Cantidad | Valor Unitario | Valor Total
+-----|-------------|--------|----------|----------------|-------------
+1.0  | SUMINISTRO SISTEMA PMV ESTÁNDAR (SOLAR) | | | |
+1.1  | Panel LED (Gráfico RGB 64x64 + Texto Ámbar 3 líneas 450mm, P20-P25) | UND | 29 | $ | $
+1.2  | Estructura de Soporte (Pórtico o Banderola según diseño eficiente) con cimentación y defensas metálicas | UND | 29 | $ | $
+1.3  | Kit Solar TIPO A (Estándar): Paneles, Baterías 48h, Gabinete IP65, Controlador MPPT para PMV + Switch 15W | UND | 17 | $ | $
+     | | | | |
+2.0  | ADICIONALES PARA SITIOS CON RADAR | | | |
+2.1  | Kit Solar TIPO B (Reforzado): Sobredimensionamiento de paneles y baterías para soportar carga adicional de 100W (Radar) × 48h autonomía | UND | 12 | $ | $
+2.2  | Bornera auxiliar 24 VDC protegida (100W disponibles) para conexión de equipos de terceros | UND | 12 | Incluido | -
+     | | | | |
+3.0  | OFERTA ALTERNATIVA: ENERGÍA DE RED (AC) | | | |
+3.1  | Kit de Alimentación AC: Fuentes de poder universales (100-240VAC), DPS AC, UPS Online (10 min respaldo) EN REEMPLAZO del Kit Solar | UND | 1 | $ | $
+3.2  | Acometida Eléctrica y Trámites ante operador de red (valor estimado por punto) | GLB | 1 | $ | $
+     | | | | |
+4.0  | SOFTWARE E INTEGRACIÓN | | | |
+4.1  | Software de gestión propietario (licencia perpetua, instalable Windows/Linux) | GLB | 1 | Incluido | -
+4.2  | MIBs NTCIP 1203 v03 + documentación de integración API/SDK | GLB | 1 | Incluido | -
+```
+
+### **Especificaciones Técnicas del Formulario:**
+
+#### **1. ESTRUCTURA DE SOPORTE**
+
+```markdown
+TIPOLOGÍA DE LA ESTRUCTURA DE SOPORTE
+
+El Proponente podrá ofertar diseño estructural tipo:
+- Pórtico (Dos apoyos), o
+- Banderola/Semipórtico (Un apoyo en voladizo)
+
+Seleccionando la opción más eficiente en costo-beneficio.
+
+REQUISITOS OBLIGATORIOS:
+
+1. Cargas de Diseño:
+   • Peso y área de exposición al viento del Panel LED (PMV)
+   • Carga adicional y efecto de vela del Sistema Fotovoltaico
+   • Gabinetes y equipos auxiliares
+
+2. Normativa:
+   • AASHTO LRFD (Structural Supports for Highway Signs)
+   • NSR-10 (Norma Sismo Resistente Colombiana)
+
+3. Gálibo:
+   • Altura libre mínima: 5.50m sobre parte más alta de calzada
+
+4. Protección:
+   • Barreras de Contención (Defensas Metálicas) certificadas
+   • Protección de todos los elementos verticales en zona despejada
+   • Cumplimiento Manual de Señalización Vial 2024
+```
+
+#### **2. ACCESIBILIDAD Y MANTENIMIENTO**
+
+```markdown
+ACCESIBILIDAD Y MANTENIMIENTO
+
+ELIMINAR: Término "visitable" sin especificación
+
+ESPECIFICAR: Método de mantenimiento seguro según Res. 4272/2021
+
+OPCIONES ACEPTADAS:
+
+A. Acceso Frontal/Trasero con Manlift:
+   • Puertas de acceso retenidas
+   • Puntos de anclaje certificados para línea de vida
+   • Operables desde camión canasta (Manlift)
+   • NO requiere escalar la estructura
+
+B. Acceso con Pasarela (Catwalk) - OPCIONAL:
+   • Pasarela trasera metálica con barandas de seguridad
+   • Línea de vida rígida o flexible
+   • Escalera de acceso con jaula guarda-hombre
+   • Permite mantenimiento sin vehículos de elevación
+
+NOTA: NO se requiere estructura visitable interiormente (Walk-in)
+```
+
+#### **3. SISTEMA DE ALIMENTACIÓN ELÉCTRICA**
+
+```markdown
+ESPECIFICACIONES DEL SISTEMA DE ALIMENTACIÓN
+
+A. VERSIÓN SOLAR (Base):
+   • Operación nativa: 24 VDC
+   • Autonomía: 48 horas (Manual 2024 Numeral 2.7.6)
+   • Borneras de distribución protegidas para equipos auxiliares
+
+B. VERSIÓN RED COMERCIAL (Alternativa AC):
+   • Fuentes de poder industriales conmutadas (Switching Power Supply)
+   • Rango de Entrada: 100 VAC a 240 VAC (±10%)
+   • Universales o "Wide Range" sin selectores manuales
+   • Justificación: Soporta fluctuaciones de tensión en zonas rurales
+   • Protección: DPS Clase II en entrada AC
+   • UPS Online: 10 minutos respaldo mínimo
+
+C. INTERFAZ PARA RADAR (12 sitios):
+   • Salida: 24 VDC estabilizados
+   • Potencia disponible: Mínimo 100W reservados
+   • Responsabilidad convertidor: Si radar opera a voltaje diferente
+     (48V, PoE), proveedor radar suministra elevador DC-DC
+```
+
+#### **4. CONDICIONES AMBIENTALES**
+
+```markdown
+RANGO DE HUMEDAD Y TEMPERATURA
+
+✅ VALIDADO - NO MODIFICAR:
+
+• Humedad: 10% ~ 95% (sin condensación)
+• Temperatura: -10°C ~ 60°C
+
+Justificación:
+- Corresponde a Clase T1 según UNE-EN 12966
+- Magdalena Medio: Humedad nocturna llega a saturación (95%)
+- Reducir especificación causaría fallas por condensación
+
+Cumplimiento:
+- Manual de Señalización Vial 2024
+- Norma UNE-EN 12966 (Clase Ambiental T1)
+
+NOTA: Este requisito NO afecta diseño estructural del pórtico
+(solo calidad de empaques y ventiladores del gabinete)
+```
+
+#### **5. SISTEMA DE SERVICIOS AUXILIARES**
+
+```markdown
+SISTEMA DE GESTIÓN AMBIENTAL Y MANTENIMIENTO (Gabinete)
+
+MANTENER - NO ELIMINAR (Protección de inversión)
+
+1. Gestión Térmica Activa:
+   • Ventilación forzada controlada por termostato
+   • Dimensionada para disipar carga térmica de LEDs + radiación solar
+   • Mantiene temperatura interna en rango seguro
+
+2. Control de Condensación:
+   • Sistema anti-condensación (resistencia calefactora)
+   • Controlado por higrostato o termostato diferencial
+   • Evita formación de humedad sobre tarjetas electrónicas
+
+3. Facilidades de Mantenimiento (RETIE):
+   • Iluminación interna LED tipo regleta
+   • Interruptor de puerta o manual
+   • Toma eléctrica de servicio (GFCI) para equipos de diagnóstico
+
+Justificación:
+- Clima Magdalena Medio: Calor + Alta Humedad (>90%)
+- Sin control ambiental: Fallas por condensación o sobrecalentamiento
+- Costo marginal que protege inversión en módulos LED
+```
+
+#### **6. INTEGRACIÓN SCADA Y SOFTWARE**
+
+```markdown
+ARQUITECTURA DE GESTIÓN Y PROTOCOLOS DE CONTROL
+
+El controlador PMV deberá disponer de arquitectura dual:
+
+1. GESTIÓN LOCAL (Mantenimiento e Ingeniería):
+   • Configuración local vía puerto de servicio (Ethernet/USB)
+   • Software Propietario del fabricante
+   • Funciones: Diagnóstico profundo, actualización firmware,
+     carga de librerías gráficas, ajuste de parámetros eléctricos
+
+2. GESTIÓN REMOTA (Operación e Integración SCADA):
+   • Interfaz abierta: API documentada o NTCIP 1203 v03
+   • Permite que SCADA o software de terceros envíe comandos
+     (cambio de mensaje, brillo) y lea estados
+   • SIN requerir software propietario intermedio
+
+3. PROTOCOLO DE FALLO (Fail-Safe):
+   • Lógica de seguridad pre-programada
+   • En caso de pérdida de comunicación con SCADA
+   • Acciones: Desplegar mensaje de precaución por defecto,
+     apagar panel, o mostrar última trama válida
+   • Sin intervención externa
+
+ENTREGABLES OBLIGATORIOS:
+• Archivos MIB (Management Information Base) completos
+• Diccionario de objetos NTCIP
+• API/SDK documentada (si disponible)
+• Ejemplos de comandos básicos
+```
+
+### **Beneficios de esta Estructura:**
+
+#### **1. Elimina Incertidumbre:**
+- Proveedor sabe exactamente qué cotizar
+- No infla precios por "riesgos desconocidos"
+
+#### **2. Permite Comparación:**
+- Ofertas comparables "manzanas con manzanas"
+- Fácil identificar sobrecostos o faltantes
+
+#### **3. Flexibilidad Presupuestal:**
+- Si presupuesto ajustado: Eliminar ítem 3.0 (AC)
+- Si zona con red cercana: Evaluar AC vs Solar
+- Decisión basada en datos reales, no estimaciones
+
+#### **4. Optimización Técnica:**
+- Permite al proveedor elegir pórtico vs banderola
+- Competencia en diseño estructural eficiente
+- Ahorro en acero sin comprometer seguridad
+
+### **Validaciones Críticas:**
+
+#### **✅ Estructura:**
+- Permitir pórtico O banderola (más económico)
+- Eliminar "visitable" sin especificación
+- Especificar acceso seguro (manlift o pasarela)
+
+#### **✅ Energía:**
+- Segregar TIPO A (17 un.) vs TIPO B (12 un. con radar)
+- Fuentes AC universales 100-240VAC
+- Interfaz 24 VDC para radar (convertidor a cargo de proveedor radar)
+
+#### **✅ Ambiental:**
+- Mantener 95% humedad (obligatorio para zona)
+- Mantener -10°C ~ 60°C (estándar industrial)
+- NO afecta diseño estructural
+
+#### **✅ Software:**
+- NTCIP 1203 v03 + MIBs obligatorios
+- Software propietario para mantenimiento
+- API/SCADA para operación diaria
+
+#### Justificación:
+
+- ✅ Elimina incertidumbre en cotizaciones
+- ✅ Permite comparación clara entre ofertas
+- ✅ Flexibilidad presupuestal (AC vs Solar)
+- ✅ Optimización técnica (pórtico vs banderola)
+- ✅ Segregación clara de componentes y responsabilidades
+
+---
+
 ## �📎 ANEXOS
 
 Los siguientes documentos de soporte están disponibles:
@@ -976,8 +1826,11 @@ Los siguientes documentos de soporte están disponibles:
 **Metodología:** Punto 42 v3.0 (Contract-First Architecture) + Auditoría Forense  
 **Estado:** ✅ LISTO PARA ENVÍO AL ASESOR EXTERNO
 
+**OBSERVACIONES TOTALES:** 17 (11 originales + 6 nuevas secciones técnicas)  
+**AHORRO ESTIMADO:** $756,000 - $876,000 USD
+
 ---
 
 **CONCLUSIÓN:** El TDR debe dejar de parecer una lista de deseos de tecnología y convertirse en una **especificación de cumplimiento normativo**. Use el documento **T04_SPEC_PMV_VMS_v1.0.md** como la "Biblia" para copiar y pegar especificaciones correctas.
 
-**NOTA IMPORTANTE:** Este documento consolida todas las observaciones identificadas durante la revisión técnica y contractual del TDR de PMV. Se requiere respuesta del asesor externo y aclaraciones de la concesión antes de proceder a licitación.
+**NOTA IMPORTANTE:** Este documento consolida todas las observaciones identificadas durante la revisión técnica y contractual del TDR de PMV, incluyendo especificaciones detalladas de estructura, energía, gabinetes, puesta a tierra, identificación y formulario de oferta según normativa colombiana (RETIE 2024, NSR-10, AASHTO LRFD). Se requiere respuesta del asesor externo y aclaraciones de la concesión antes de proceder a licitación.
