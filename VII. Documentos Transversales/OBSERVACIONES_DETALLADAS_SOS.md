@@ -634,13 +634,26 @@ Esta configuración permite:
 
 ---
 
-### **8. Barandas de protección - Innecesarias**
+### **8. Barandas de protección - Especificación Incorrecta**
 
 **Línea 422:** "Se debe considerar la colocación de barandas de protección... 3 barandas de 1,3 m de ancho por 1,2 m de alto"
 
-**Problema:** Las barandas NO son requisito del Manual de Señalización Vial 2024. Solo se requieren en zonas de alto riesgo (puentes, curvas peligrosas)
+**Problema:** El TDR especifica "barandas peatonales" (pasamanos arquitectónicos), pero el Manual de Señalización Vial 2024 §9.3.3.6 exige: *"El área frente al poste SOS debe estar protegida con una barrera metálica que delimite una zona segura"*
 
-**Ahorro:** $400 × 88 = **$35,200 USD** (si se eliminan de sitios no críticos)
+**Diferencia crítica:**
+- **Barandas peatonales** (TDR): Pasamanos de 1.2m altura, función arquitectónica/estética - **CARO**
+- **Defensa Metálica** (Manual 2024): Guardarrail vehicular certificado, función de contención - **ESTÁNDAR**
+
+**Corrección:** Sustituir "barandas peatonales" por **Defensa Metálica Certificada** (Bionda/Guardarrail) según Manual 2024, instalada ÚNICAMENTE en sitios expuestos al tráfico vehicular (no en todos los 88 puntos).
+
+**Criterio de instalación:**
+- ✅ Poste en zona despejada con tráfico >60 km/h
+- ✅ Poste en curva o pendiente
+- ❌ Poste en berma protegida o zona peatonal
+
+**Ahorro:** $400 × ~50 sitios (estimado de sitios sin exposición vehicular directa) = **$20,000 USD**
+
+**NOTA LEGAL:** Esta corrección protege contractualmente ante accidentes, cumpliendo la exigencia de protección del Manual 2024 con solución técnica estándar y económica.
 
 ---
 
@@ -659,11 +672,13 @@ Esta configuración permite:
 | Categoría | Ahorro USD |
 |:----------|:-----------|
 | **Ahorros Principales (Obs. 1-7)** | **$454,800** |
-| **Ahorros Adicionales (Obs. 8-10)** | **$66,000** |
-| **TOTAL AHORROS CAPEX** | **$520,800** |
+| **Ahorros Adicionales (Obs. 8-10)** | **$51,000** |
+| **TOTAL AHORROS CAPEX** | **$505,800** |
 | **AHORRO OPEX ANUAL** | **$14,040/año** |
 
-**NOTA:** Los ahorros de la Observación #7 (Nodo ITS Híbrido - $150K) se materializan al evitar duplicar infraestructura futura (postes + energía + comunicaciones) cuando se requieran cámaras o radares.
+**NOTA:** 
+- Los ahorros de la Observación #7 (Nodo ITS Híbrido - $150K) se materializan al evitar duplicar infraestructura futura (postes + energía + comunicaciones) cuando se requieran cámaras o radares.
+- La Observación #8 fue corregida de "eliminar barandas" a "sustituir barandas peatonales por defensa metálica vehicular" para cumplir Manual 2024 §9.3.3.6 que SÍ exige protección.
 
 ---
 
